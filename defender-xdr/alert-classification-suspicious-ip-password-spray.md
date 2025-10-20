@@ -4,8 +4,8 @@ description: Investigate and review alerts related to suspicious IP address rela
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -188,7 +188,7 @@ AlertInfo
 2. Reset user accounts' credentials.
 3. Revoke access tokens of compromised accounts.
 4. [Block legacy authentication.](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
-5. [Require MFA for users](/microsoft-365/business-premium/m365bp-turn-on-mfa) if possible to [enhance account security](/azure/active-directory/authentication/tutorial-enable-azure-mfa) and make account compromise by a password spray attack difficult for the attacker.
+5. [Require MFA for users](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365) if possible to [enhance account security](/azure/active-directory/authentication/tutorial-enable-azure-mfa) and make account compromise by a password spray attack difficult for the attacker.
 6. Block the compromised user account from signing in if needed.
 
 ## See also

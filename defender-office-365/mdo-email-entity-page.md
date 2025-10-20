@@ -4,8 +4,8 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-ms.date: 07/07/2025
+manager: bagol
+ms.date: 10/08/2025
 audience: ITPro
 ms.topic: article
 ms.service: defender-office-365
@@ -261,6 +261,10 @@ The **Analysis** view contains information that helps you analyze the message in
     - `TempError`: The SPF check encountered a temporary error (for example, a DNS error). The same check later might succeed.
     - `PermError`: The SPF check encountered a permanent error. For example, the domain has a [badly formatted SPF record](email-authentication-spf-configure.md#troubleshooting-spf-txt-records).
   - **Composite authentication**: SPF, DKIM, DMARC, and other information determine if the message sender (the From address) is authentic. For more information, see [Composite authentication](email-authentication-about.md#composite-authentication).
+
+  > [!TIP]
+  > For more information about email authentication results and how to correct failures, see [Security Operations guide for email authentication in Microsoft 365](email-auth-sec-ops-guide.md).
+
 - **Related entities** section: Information about attachments and URLs in the message:
   - **Entity**: Selecting **Attachments** or **URLs** takes you to the Attachments view or the URL view of the Email entity page for the message.
   - **Total count**
@@ -297,7 +301,10 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 
 If you select an entry in the **Attachments** view by clicking on the **Attachment filename** value, a details flyout opens that contains the following information:
 
-- **Deep analysis** tab: Information is available on this tab if [Safe Attachments](safe-attachments-about.md) scanned (detonated) the attachment. You can identify these messages in Threat Explorer by using the query filter **Detection technology** with the value **File detonation**.
+- **Deep analysis** tab: Information is available on this tab if [Safe Attachments](safe-attachments-about.md) scanned (detonated) the attachment and it is identified as malicious through detonation. You can identify these messages in Threat Explorer using the following methods:
+  - **Detection technology** query filter with the value **File detonation**.
+  - **Detonation available** indicator in the **Details** column.
+  - The detonation count shown in the Email Summary Panel.
 
   - **Detonation chain** section: Safe Attachments detonation of a single file can trigger multiple detonations. The _detonation chain_ tracks the path of detonations, including the original malicious file that caused the verdict, and all other files affected by the detonation. These attached files might not be directly present in the email. But, including the analysis is important to determining why the file was found to be malicious.
 
@@ -359,7 +366,7 @@ If you select an entry in the **Attachments** view by selecting the check box ne
 
 ### URL view
 
-The **URL** view shows information about all URLs in the message, and the scanning results of those URLs.
+The **URL** view shows information about all original or rewritten URLs in the message, along with the scanning results for each URL.
 
 The following attachment information is available in this view. Select a column header to sort by that column. To add or remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns are selected.
 
@@ -378,7 +385,10 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 
 If you select an entry in the **URL** view by clicking on the **URL** value, a details flyout opens that contains the following information:
 
-- **Deep analysis** tab: Information is available on this tab if [Safe Links](safe-links-about.md) scanned (detonated) the URL. You can identify these messages in Threat Explorer by using the query filter **Detection technology** with the value **URL detonation**.
+- **Deep analysis** tab: Information is available on this tab if [Safe Links](safe-links-about.md) scanned (detonated) the URL and it is identified as malicious through detonation. You can identify these messages in Threat Explorer using the following methods:
+  - **Detection technology** query filter with the value **URL detonation**.
+  - **Detonation available** indicator in the **Details** column.
+  - The detonation count shown in the Email Summary Panel.
 
   - **Detonation chain** section: Safe Links detonation of a single URL can trigger multiple detonations. The _detonation chain_ tracks the path of detonations, including the original malicious URL that caused the verdict, and all other URLs affected by the detonation. These URLs might not be directly present in the email. But, including the analysis is important to determining why the URL was found to be malicious.
 
@@ -470,6 +480,8 @@ The following actions are available at the top of the Email entity page:
 
     > [!TIP]
     > **Download email** isn't available for messages that were quarantined. Instead, [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
+    >
+    > **Email preview** and **Download email** actions are available in **Audit Logs** and **CloudAppEvents** table of Advanced Hunting (Record type 38) for auditing and reporting.
 
 ¹ The **Email preview** and **Download email** actions require the **Preview** role. You can assign this role in the following locations:
 

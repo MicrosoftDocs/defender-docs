@@ -4,10 +4,10 @@ ms.reviewer:
 description: Use Microsoft Defender for Endpoint Flow connector to create a flow that will be triggered anytime a new event occurs on your tenant.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,18 +15,16 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 03/21/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # How to use Power Automate Connector to set up a Flow for events
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Automating security procedures is a standard requirement for every modern Security Operations Center (SOC). For SOC teams to operate in the most efficient way, automation is a must. Use Microsoft Power Automate to help you create automated workflows and build an end-to-end procedure automation within a few minutes. Microsoft Power Automate supports different connectors that were built exactly for that.  
 
@@ -86,5 +84,6 @@ The Alert trigger provides only the Alert ID and the Machine ID. You can use the
 You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
 
 ## Related topic
+
 - [Microsoft Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -1,14 +1,14 @@
----
+﻿---
 title: Implement attack surface reduction rules
 description: Provides guidance to implement your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: sugamar
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.topic: how-to
 ms.collection: 
@@ -19,14 +19,13 @@ ms.collection:
  - mde-asr
 ms.date: 06/10/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Implement attack surface reduction rules
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 When you're implementing attack surface reduction rules, move the first test ring into an enabled, functional state.
 
@@ -154,3 +153,4 @@ You can customize the notification for when a rule is triggered and blocks an ap
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

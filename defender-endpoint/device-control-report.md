@@ -1,13 +1,13 @@
----
+﻿---
 title: View device control events and information in Microsoft Defender for Endpoint
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/25/2024
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.topic: article
-manager: deniseb
+manager: bagol
 ms.reviewer: joshbregman
 audience: ITPro
 ms.subservice: asr
@@ -16,8 +16,11 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # View device control events and information in Microsoft Defender for Endpoint
 
 Microsoft Defender for Endpoint device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. Your security team can view information about device control events with advanced hunting or by using the device control report.
@@ -34,10 +37,6 @@ Select each tab to learn more about advanced hunting and the device control repo
 
 ## Advanced hunting
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 When a device control policy is triggered, an event is visible with advanced hunting, regardless of whether it was initiated by the system or by the user who signed in. This section includes some example queries you can use in advanced hunting.
 
@@ -143,3 +142,4 @@ There might be a delay of up to six hours from the time a media connection occur
 
 - [Device control in Microsoft Defender for Endpoint](device-control-overview.md)
 - [Device Control for macOS](mac-device-control-overview.md)
+

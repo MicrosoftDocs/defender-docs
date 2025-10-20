@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -99,7 +99,7 @@ By default, Outlook is configured to block automatic image downloads in messages
 
 ### I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?
 
-These events can occur when other security devices or applications inspect simulation messages. For example (but not limited to): 
+These events can occur when other security devices or applications inspect simulation messages. For example (but not limited to):
 
 - Applications or plugins within Outlook that inspect or intercept the message.
 - Email security applications.

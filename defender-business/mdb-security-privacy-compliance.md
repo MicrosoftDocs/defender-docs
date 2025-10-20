@@ -4,7 +4,7 @@ description: "Learn about security, privacy, and compliance in Defender for Busi
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -37,7 +37,7 @@ For information, see the [Microsoft Trust Center - Security](https://www.microso
 For related configuration information, see the following articles:
 
 - [Set up and configure Microsoft Defender for Business](mdb-setup-configuration.md)
-- [Microsoft 365 for business security best practices](/microsoft-365/business-premium/secure-your-business-data)
+- [Microsoft 365 for business security best practices](/microsoft-365/admin/security-and-compliance/m365b-security-best-practices)
 
 ## Privacy
 

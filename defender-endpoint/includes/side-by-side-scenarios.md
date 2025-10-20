@@ -1,6 +1,6 @@
 ---
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 ms.date: 06/19/2025
 ms.topic: include
 ms.service: defender-endpoint

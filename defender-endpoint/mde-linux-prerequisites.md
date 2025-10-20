@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -119,10 +119,9 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > [!WARNING]
 > Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
 > If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
-> You can still safely take advantage of Defender for Endpoint on Linux EDR functionality by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
->
-> **EXCEPTION: The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.**
-
+> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).> **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions. 
+> 
+> 
 ## Supported filesystems for real-time protection and quick, full, and custom scans 
 
 |Real-time protection and quick/full scans|Custom scans|
@@ -179,20 +178,15 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 - For DEBIAN the mdatp package requires `libc6 >= 2.23`.
 
 > [!NOTE]
+> For versions 101.25042.0003 and later, no external dependencies are required, whereas versions older than 101.25032.0000 require additional packages:
+> - RPM-based distributions: `mde-netfilter`, `pcre`, `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
+> - DEBIAN-based distributions: `mde-netfilter`, `libpcre3`, `libnetfilter-queue1`, `libglib2.0-0`
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
 > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following additional dependency on the auditd package exists for mdatp:
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-> 
-> For versions older than `101.25032.0000`, the following requirements apply:
-> - RPM package needs: `mde-netfilter` and `pcre`
-> - DEBIAN package needs: `mde-netfilter` and `libpcre3`
->
-> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
-> The `mde-netfilter` package also has the following package dependencies:
-> - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
-> - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+
 
 ## Installation instructions 
 

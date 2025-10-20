@@ -1,12 +1,12 @@
----
+﻿---
 title: Get started with troubleshooting mode in Microsoft Defender for Endpoint 
 description: Turn on the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: pricci
 audience: ITPro
 ms.collection: 
@@ -15,16 +15,15 @@ ms.collection:
 - mde-ngp
 ms.topic: get-started
 ms.subservice: ngp
-ms.date: 05/01/2025
----
+ms.date: 08/14/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Get started with troubleshooting mode in Microsoft Defender for Endpoint 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Troubleshooting mode in Microsoft Defender for Endpoint enables administrators to troubleshoot various Microsoft Defender Antivirus features, even if devices are managed by organizational policies. For example, if [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled, [certain settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) can't be modified or turned off, but you can use troubleshooting mode on a device to edit those settings temporarily.
 
@@ -74,7 +73,7 @@ You can query all troubleshooting mode events in advanced hunting.
 
 - Devices must be running a supported operating system.
 
-   - Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
+   - Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019 and later, or Azure Stack HCI OS, version 23H2 and later.
 
       |Semester/Redstone|OS version|Release|
       |:---|:---|:---|
@@ -183,3 +182,4 @@ DeviceEvents
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

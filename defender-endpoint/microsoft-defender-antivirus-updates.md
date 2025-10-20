@@ -3,70 +3,45 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 07/23/2025
+ms.date: 09/18/2025
 audience: ITPro
 ms.topic: reference
-author: emmwalshh
-ms.author: ewalsh
-ms.custom: nextgen
-ms.reviewer: pahuijbr, tudobril, yongrhee
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
 ms.subservice: ngp
-ms.collection: 
-- m365-security
-- tier2
-- mde-ngp
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Microsoft Defender Antivirus security intelligence and product updates
 
-**Applies to:**
+Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices have the latest technology and features needed to protect against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). This article includes information about the two types of updates for keeping Microsoft Defender Antivirus current:
+This article is aimed at **Windows** devices, and includes information about the following two types of updates:
 
 - [Security intelligence updates](#security-intelligence-updates)
+
 - [Product updates](#product-updates)
-
-This article also includes:
-
-- [Microsoft Defender Antivirus platform support](#microsoft-defender-antivirus-platform-and-engine-support)
-- [How to roll back an update](#how-to-roll-back-an-update) (if necessary)
-- [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)
-- [Updates for Deployment Image Servicing and Management (DISM)](#updates-for-deployment-image-servicing-and-management-dism)
-
-To see the most current engine, platform, and signature date, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
-
-[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Security intelligence updates
 
-Microsoft Defender Antivirus uses [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (also called the *Microsoft Advanced Protection Service*, or MAPS) and periodically downloads dynamic security intelligence updates to provide more protection. These dynamic updates don't take the place of regular security intelligence updates via security intelligence update KB2267602.
+Microsoft Defender Antivirus uses [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md), also known as *Microsoft Advanced Protection Service*, or *MAPS*. Defender Antivirus periodically downloads dynamic security [intelligence updates](https://www.microsoft.com/en-us/wdsi/defenderupdates). These updates don't replace regular security intelligence updates. Engine updates are included with security intelligence updates and are released monthly.
 
-> [!NOTE]
-> Updates are released under the following KBs:
->
-> - Microsoft Defender Antivirus: KB2267602
-> - System Center Endpoint Protection: KB2461484
+Updates are released under the following KBs:
 
-Cloud-delivered protection is always on and requires an active connection to the Internet to function. Security intelligence updates occur on a scheduled cadence (configurable via policy). For more information, see [Use Microsoft cloud-provided protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
+- Microsoft Defender Antivirus: KB2267602
 
-For a list of recent security intelligence updates, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+- System Center Endpoint Protection: KB2461484
 
-Engine updates are included with security intelligence updates and are released on a monthly cadence.
+[Cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) is always on and requires an active connection to the internet to function. Security intelligence updates occur on a scheduled cadence which you can configure using a policy.
 
 ## Product updates
 
 Microsoft Defender Antivirus requires monthly updates (KB4052623) known as *platform updates*.
 
-You can manage the distribution of updates through one of the following methods:
+You can manage the distribution of updates using one of the following methods:
 
 - [Windows Server Update Service (WSUS)](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
 - [Microsoft Configuration Manager](/configmgr/sum/understand/software-updates-introduction)
@@ -99,6 +74,17 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
+
+- Security intelligence update version: **1.437.1.0**
+- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
+- Platform: **4.18.25080.5**
+- Engine: **1.1.25080.5**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
 
 ### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
 
@@ -181,7 +167,7 @@ Refined exclusion processing and resolved false positives for the Attack Surface
 
 ### Previous version updates: Technical upgrade support only
 
-After a new package version is released, support for the previous two versions is reduced to technical support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
+After a new package version is released, support for the previous two versions is reduced to technical upgrade support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
 
 ## Microsoft Defender Antivirus platform and engine support
 
@@ -189,9 +175,9 @@ Platform and engine updates are provided on a monthly cadence. To be fully suppo
 
 - **Security and Critical Updates servicing phase** - When running the latest platform and engine version, you're eligible to receive both Security and Critical updates to the anti-malware platform.
 
-- **Technical Support (Only) phase** - After a new platform and engine version is released, support for older versions (N-2) reduce to [technical support only](msda-updates-previous-versions-technical-upgrade-support.md). Platform and engine versions older than N-2 are no longer supported. Technical support continues to be provided for upgrades from the Windows 10 release version (see [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)) to the latest platform version.
+- **Technical Upgrade Support (Only) phase** - After a new platform and engine version is released, support for older versions (N-2) reduce to [technical upgrade support only](msda-updates-previous-versions-technical-upgrade-support.md). Platform and engine versions older than N-2 are no longer supported. Technical upgrade support continues to be provided for upgrades from the Windows 10 release version (see [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)) to the latest platform version.
 
-During the technical support (only) phase, commercially reasonable support incidents are provided through Microsoft Customer Service & Support and Microsoft's managed support offerings (such as Premier Support). If a support incident requires escalation to development for further guidance, requires a nonsecurity update, or requires a security update, customers are asked to upgrade to the latest platform version or an intermediate update (*).
+During the technical upgrade support (only) phase, commercially reasonable support incidents are provided through Microsoft Customer Service & Support and Microsoft's managed support offerings (such as Premier Support). If a support incident requires escalation to development for further guidance, requires a nonsecurity update, or requires a security update, customers are asked to upgrade to the latest platform version or an intermediate update (*).
 
 > [!NOTE]
 > If you're manually deploying Microsoft Defender Antivirus Platform Update, or if you're using a script or a non-Microsoft management product to deploy Microsoft Defender Antivirus Platform Update, make sure that version `4.18.2001.10` is installed from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=4.18.2001.10) before the latest version of Platform Update (N-2) is installed.
@@ -258,7 +244,8 @@ For Windows 10 release information, see the [Windows lifecycle fact sheet](https
 To avoid a gap in protection, keep your OS installation images up to date with the latest antivirus and anti-malware updates. Updates are available for:
 
 - Windows 10 and 11 (Enterprise, Pro, and Home editions)
-- Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
+- Windows Server 2012 R2 and later
+- Azure Stack HCI OS, version 23H2 and later
 - WIM and VHD(x) files 
 
 Updates are released for x86, x64, and Arm64 Windows architecture.

@@ -1,11 +1,11 @@
----
+﻿---
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,20 +15,19 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Take response actions on a file
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -202,7 +201,7 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
 > - Client devices must be running Windows 11 or Windows 10, version 1703 or later
-> - Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016
+> - Server devices must be running Windows Server 2016 and later or Azure Stack HCI OS, version 23H2 and later
 
 ### Collect files
 
@@ -374,3 +373,4 @@ If you come across a problem when trying to submit a file, try each of the follo
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

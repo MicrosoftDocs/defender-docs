@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)
 description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
@@ -7,7 +7,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: sihamilt
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,17 +16,15 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 08/20/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-* [Microsoft Defender for Endpoint on macOS](./microsoft-defender-endpoint-mac.md)
-* [Microsoft Defender for Endpoint Plan 1](./defender-endpoint-plan-1.md)
-* [Microsoft Defender for Endpoint Plan 2](./microsoft-defender-endpoint.md)
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on macOS.
 
@@ -416,3 +414,4 @@ definitions_update_fail_reason              : ""
 * [Set preferences for Microsoft Defender for Endpoint on macOS](./mac-preferences.md)
 * [Microsoft Defender for Endpoint on macOS](./microsoft-defender-endpoint-mac.md)
 * [Resources for Microsoft Defender for Endpoint on macOS](./mac-resources.md)
+
