@@ -35,7 +35,6 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 ## Prerequisites
 
-
 ### Supported operating systems
 
 - Windows
