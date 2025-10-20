@@ -6,7 +6,7 @@ ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
 
-# Microsoft Defender for Identity sensor v3.x prerequisites (Preview)
+# Microsoft Defender for Identity sensor v3.x prerequisites
 
 This article describes the requirements for installing the Microsoft Defender for Identity sensor v3.x.
 
@@ -41,7 +41,7 @@ The following table summarizes the server requirements and recommendations for t
 
 |Prerequisite / Recommendation |Description  |
 |---------|---------|
-|Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.|
+|Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [October 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/october-14-2025-kb5066782-os-build-20348-4294-f4af3c9e-7a60-4d17-a964-cfe1f1dd15f6) or later.|
 |Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have Defender for Identity sensor V2.x already deployed.|
 |Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM|
 |Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
