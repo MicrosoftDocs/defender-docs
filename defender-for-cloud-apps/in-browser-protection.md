@@ -1,7 +1,7 @@
 ---
 title: In-browser protection with Microsoft Edge for Business | Microsoft Defender for Cloud Apps
 description: Learn about using in-browser protection with Microsoft Defender for Cloud Apps session policies and Microsoft Edge for Business.
-ms.date: 01/26/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 #customerIntent: As a Defender for Cloud Apps admin, I want to learn about the user experience with in-browser protection.
 ---
@@ -11,6 +11,9 @@ ms.topic: how-to
 Defender for Cloud Apps users who use Microsoft Edge for Business or Purview Data Loss Prevention policies for Cloud Apps in Edge and are subject to session policies are protected directly from within the browser. In-browser protection reduces the need for proxies, improving both security and productivity.
 
 Protected users experience a smooth experience with their cloud apps, without latency or app compatibility issues, and with a higher level of security protection.
+
+> [!NOTE]
+> In-browser protection with Microsoft Edge is only available to Microsoft Defender for Cloud Apps commercial tenants
 
 ## In-browser protection requirements
 
