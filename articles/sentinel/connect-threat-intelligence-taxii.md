@@ -47,7 +47,7 @@ TAXII 2.x servers advertise API roots, which are URLs that host collections of t
 
 ## Install the Threat Intelligence solution in Microsoft Sentinel
 
-To import threat indicators into Microsoft Sentinel from a TAXII server or export threat indicatorsfrom Microsoft Sentinel, install the Threat Intelligence solution:
+To import threat indicators into Microsoft Sentinel from a TAXII server or export threat indicators from Microsoft Sentinel, install the Threat Intelligence solution:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**.
 
@@ -67,7 +67,7 @@ To configure the TAXII data connector:
 
 1. Find and select the **Threat Intelligence - TAXII** data connector, and then select **Open connector page**.
 
-    :::image type="content" source="media/connect-threat-intelligence-taxii/taxi-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxi-data-connector.png":::
+    :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-data-connector.png":::
 
 1. Enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary). Choose the group of indicators and the polling frequency you want. Select **Add**.
 
@@ -120,7 +120,7 @@ To configure the TAXII data connector:
 
 1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
 
-    :::image type="content" source="media/connect-threat-intelligence-taxii/taxi-export-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII Export data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxi-export-data-connector.png":::
+    :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII Export data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png":::
 
 1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page: 
 
@@ -133,11 +133,11 @@ To configure the TAXII data connector:
 
       ### [Defender portal](#tab/defender-portal)
 
-      :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Defender portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxi-export.png":::
+      :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxii-export.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Defender portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxii-export.png":::
 
       ### [Azure portal](#tab/azure-portal)
 
-      :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Azure portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxi-export-azure.png":::
+      :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxii-export-azure.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Azure portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxii-export-azure.png":::
 
       ---
 

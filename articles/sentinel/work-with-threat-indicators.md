@@ -83,14 +83,14 @@ Reduce noise from your TI feeds, extend the validity of high value indicators, a
 
 1. Enter a descriptive name for your rule. The ingestion rules page has ample rule for the name, but it's the only text description available to differentiate your rules without editing them.
 
-1. Select the **Object type**. This use case is based on extending the `Valid from` property which is only available for `Indicator` object types.
+1. Select the **Object type**. This use case is based on extending the `Valid from` property, which is only available for `Indicator` object types.
 
 1. **Add condition** for `Source` `Equals` and select your high value `Source`.
 1. **Add condition** for `Confidence` `Greater than or equal` and enter a `Confidence` score.
 
 1. Select the **Action**. Since we want to modify this indicator, select `Edit`.
 1. Select the **Add action** for `Valid until`, `Extend by`, and select a time span in days.
-1. Consider adding a tag to indicate the high value placed on these indicators, like `Extended`. The modified date is not updated by ingestion rules.
+1. Consider adding a tag to indicate the high value placed on these indicators, like `Extended`. The modified date isn't updated by ingestion rules.
 1. Select the **Order** you want the rule to run. Rules run from lowest order number to highest. Each rule evaluates every object ingested.
 1. If the rule is ready to be enabled, toggle **Status** to on.
 1. Select **Add** to create the ingestion rule.
@@ -118,7 +118,7 @@ Connect threat intelligence objects with the relationship builder. There's a max
    | **Indicates** | `Indicator` Indicates `Attack pattern` or `Threat actor` |
    | **Impersonates** | `Threat actor` Impersonates `Identity` |
 
-1. Use the following image as an example in how to use the relationship builder. This example demonstrates how to make connections made between a threat actor and an attack pattern, indicator, and identity using the relationship builder in the Defender portal.
+1. Use the following image as an example of how to use the relationship builder. This example demonstrates how to connect between a threat actor and an attack pattern, indicator, and identity using the relationship builder in the Defender portal.
 
    :::image type="content" source="media/work-with-threat-indicators/relationship-example-defender-portal.png" alt-text="Screenshot showing the relationship builder." lightbox="media/work-with-threat-indicators/relationship-example-defender-portal.png":::
 
@@ -252,7 +252,7 @@ Microsoft Sentinel lets you export threat intelligence from to other destination
 > [!IMPORTANT]
 > Carefully consider both the threat intelligence data you export and its destination, which might reside in a different geographic or regulatory region. Data export cannot be undone. Ensure you own the data or have proper authorization before exporting or sharing threat intelligence with third parties.
 
-To export threat threat intelligence:
+To export threat intelligence:
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
