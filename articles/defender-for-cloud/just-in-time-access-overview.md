@@ -60,4 +60,5 @@ When Defender for Cloud finds a machine that can benefit from just-in-time acces
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Enable just-in-time access on VMs](just-in-time-access-usage.md)
+> [Enable just-in-time access on VMs](enable-just-in-time-access.md
+)
