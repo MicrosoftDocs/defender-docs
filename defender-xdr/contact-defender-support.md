@@ -1,11 +1,11 @@
 ---
-title: Contact Microsoft Defender support
-description: Learn how to contact Microsoft Defender  support
-ms.service: 
+title: Contact Microsoft Defender XDR support
+description: Learn how to contact Microsoft Defender XDR support via the Defender portal.
 ms.topic: how-to
 ms.date: 10/20/2025
+ms.service: defender-xdr
 ---
-# Contact Microsoft Defender support
+# Contact Microsoft Defender XDR support
 
 
 Microsoft Defender XDR support process is designed to help you find solutions to common problems and submit support cases to the Microsoft support team.
@@ -24,47 +24,45 @@ You must have a Microsoft Defender for Endpoint Plan 1 or Plan 2 license to open
 
 ## Access the widget
 
-Accessing the new support widget can be done in one of two ways:
 
-1. Clicking on the question mark on the top right of the portal and then clicking on "Microsoft support":
+1. Click on the question mark on the top right of the Defender portal page
 
-   :::image type="content" source="/defender/media/contactsupport.png" alt-text="The Microsoft support icon in the Microsoft Defender portal" lightbox="/defender/media/contactsupport.png":::
+    :::image type="content" source="media/contact-defender-support/contact-support-question-mark-icon.png" alt-text="Screenshot that shows the contact support question mark icon in the Defender portal.":::
 
-2. Clicking on the **Need help?**  button in the bottom right of the Microsoft Defender portal:
 
-   :::image type="content" source="media/need-help-option.png" alt-text="The Need help button" lightbox="media/need-help-option.png":::
+1. Type your question into the ***How can we help?*** search box.
 
-In the widget you'll be offered two options:
+    :::image type="content" source="media/contact-defender-support/how-can-we-help-box.png" alt-text="Screenshot that shows where to enter your support question.":::
 
-- Find solutions to common problems
-- Open a service request
 
-## Find solutions to common problems
+1. You'll be presented with two options:
 
-This option includes articles that might be related to the question you may ask. Just start typing the question in the search box and articles related to your search will be surfaced.
+- A short description of how to fix the specific issue you're facing. 
+- The option to contact support
 
-:::image type="content" source="/defender/media/contactsupport1.png" alt-text="How can we help?" lightbox="/defender/media/contactsupport1.png":::
+## View insights and suggested support articles
+
+This option includes articles that might be related to the question you might ask. Just start typing the question in the search box and articles related to your search show up.
+
+:::image type="content" source="media/contact-defender-support/answer-to-support-question.png" alt-text="Screenshot that shows the auto generated answer for the relevant support question entered in the how can we help question box. ":::
 
 In case the suggested articles aren't sufficient, you can open a service request.
 
-## Open a service request
+## Contact support
 
-Learn how to open support tickets by contacting Defender for Endpoint support.
+To open a service request, select the **Contact support** button. This opens a form where you can provide details about the issue you're facing.
 
-> [!NOTE]
-> If you have a premier support contract with Microsoft, you'll see the premier tag on the widget. If not, contact your Microsoft account manager.
 
-### Contact support
+1. Fill in a title and description for the issue you're facing, the phone number and email address where we can reach you.
 
-:::image type="content" source="/defender/media/contactsupport2.png" alt-text="The contact support 2" lightbox="/defender/media/contactsupport2.png"::: </br>
+1. (Optional) Include up to five attachments that are relevant to the issue to provide additional context for the support case.
 
-1. Fill in a title and description for the issue you are facing, the phone number and email address where we may reach you.
+1. Select your time zone and an alternative language, if applicable. The request will be sent to Microsoft Support Team. The team will respond to your service request shortly.
 
-2. (Optional) Include up to five attachments that are relevant to the issue to provide additional context for the support case.
 
-3. Select your time zone and an alternative language, if applicable. The request will be sent to Microsoft Support Team. The team will respond to your service request shortly.
+    :::image type="content" source="media/contact-defender-support/enter-contact-details.png" alt-text="Screenshot that shows what contact details you need to enter in order to open a support ticket via the Defender portal. ":::
 
-## Related topics
+## Related articles
 
 - [Troubleshoot service issues](troubleshoot-mdatp.md)
 - [Check service health](/microsoft-365/enterprise/view-service-health)
