@@ -33,7 +33,7 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 > [!TIP]
 > Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
 
-### Prerequisites
+## Prerequisites
 
 
 ### Supported operating systems

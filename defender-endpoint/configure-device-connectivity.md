@@ -48,11 +48,10 @@ To support network devices without hostname resolution or wildcard support, you 
 > - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.com` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
 > - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
 
-## Before you begin 
+
+## Prerequisites
 
 Devices must meet specific prerequisites to use the streamlined connectivity method for Defender for Endpoint. Ensure the prerequisites are met before proceeding with onboarding.
- 
-### Prerequisites
 
 **Minimum KB update (Windows)**
 
@@ -64,7 +63,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 - **Engine:** `1.1.19900.2` 
 - **Antivirus (Security Intelligence):** `1.391.345.0`
 
-**Supported operating systems**
+### Supported operating systems
 
 - Windows 10 version 1809 or later. 
 - Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
