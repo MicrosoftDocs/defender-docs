@@ -159,6 +159,11 @@
       "source_path": "defender-endpoint/mde-linux-arm.md",
       "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-linux",
       "redirect_document_id": false
-    } 
+    }, 
+    {
+      "source_path": "defender-endpoint/contact-support.md",
+      "redirect_url": "/defender-xdr/contact-defender-support",
+      "redirect_document_id": false
+    },
   ]
 }
