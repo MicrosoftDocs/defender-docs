@@ -24,16 +24,17 @@ appliesto:
 # Turn on network protection
 
 
+[Network protection](network-protection.md) helps to prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
+
+[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
+
+## Prerequisites
+
 ### Supported operating systems 
 
 - Windows
 - Linux (See [Network protection for Linux](network-protection-linux.md))
 - macOS (See [Network protection for macOS](network-protection-macos.md))
-
-> [!TIP]
-> [Network protection](network-protection.md) helps to prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
-
-[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
 ## Enable network protection
 

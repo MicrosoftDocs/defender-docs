@@ -27,13 +27,14 @@ appliesto:
 ---
 # Endpoint detection and response in block mode
 
+
+This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
+
+## Prerequisites
+
 ### Supported operating systems
 
 - Windows
-
-
-
-This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
 
 ## What is EDR in block mode?
 

@@ -34,6 +34,8 @@ In endpoint protection solutions, a false positive is an entity, such as a file 
 
  If you have Microsoft Defender XDR, review the "Alerts sources" as described in [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts?tabs=settings). If the alert source is Defender for Endpoint, continue to read this article. 
 
+ ## Prerequisites
+
 ### Supported operating systems
 
 - Windows

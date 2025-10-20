@@ -24,7 +24,7 @@ appliesto:
 ---
 # Configure Microsoft Defender Antivirus features
 
-
+## Prerequisites
 
 ### Supported operating systems
 

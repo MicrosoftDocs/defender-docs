@@ -24,17 +24,6 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-### Supported operating systems
-
-- Windows 7 SP1 Enterprise
-- Windows 7 SP1 Pro
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
-- Windows Server 2008 R2 SP1
-
-
-
 Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
 To onboard down-level Windows client endpoints to Defender for Endpoint, you need to:
@@ -49,6 +38,17 @@ For Windows Server 2008 R2 SP1, you have the option of [onboarding through Micro
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows 7 SP1 Enterprise
+- Windows 7 SP1 Pro
+- Windows 8.1 Pro
+- Windows 8.1 Enterprise
+- Windows Server 2008 R2 SP1
 
 ## Configure and update System Center Endpoint Protection clients
 

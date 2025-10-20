@@ -24,12 +24,6 @@ appliesto:
 ---
 # Configure behavioral, heuristic, and real-time protection
 
-
-
-### Supported operating systems
-
-- Windows
-
 Microsoft Defender Antivirus uses several methods to provide threat protection:
 
 - Cloud protection for near-instant detection and blocking of new and emerging threats
@@ -41,6 +35,14 @@ You can configure how Microsoft Defender Antivirus uses these methods with [Micr
 This section covers configuration for always-on scanning, including how to detect and block apps that are deemed unsafe, but might not be detected as malware.
 
 See [Use next-gen Microsoft Defender Antivirus technologies through cloud protection](cloud-protection-microsoft-defender-antivirus.md) for how to enable and configure Microsoft Defender Antivirus cloud protection.
+
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 
 ## In this section
 

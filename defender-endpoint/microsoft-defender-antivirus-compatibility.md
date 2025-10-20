@@ -25,6 +25,7 @@ appliesto:
 ---
 # Microsoft Defender Antivirus compatibility with other security products
 
+## Prerequisites
 
 ### Supported operating systems
 
@@ -35,6 +36,7 @@ appliesto:
 - Windows Server, version 1803, or later
 - Azure Stack HCI OS, version 23H2 and later
 
+
 Microsoft Defender Antivirus is also available for older versions of Windows under certain conditions.
 
 - On Windows Server 2012 R2, when onboarded using the [modern, unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Microsoft Defender Antivirus is installed in **Active mode**.
@@ -44,6 +46,8 @@ Microsoft Defender Antivirus is also available for older versions of Windows und
 - On [consumer devices on Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), Windows Defender is available (although it doesn't provide enterprise-level management).
 
 If you're using non-Microsoft antivirus/antimalware software, you might be able to run Microsoft Defender Antivirus alongside the other antivirus solution. This article describes what happens with Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware software, with and without [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+
+
 
 ## Antivirus protection without Defender for Endpoint
 

@@ -32,11 +32,8 @@ ms.date: 09/12/2025
 - [Group policy (GP)](#group-policy)
 - [PowerShell](#powershell)
 
-> [!TIP]
-
 
 ## Prerequisites
-
 
 To use the entire feature-set of attack surface reduction rules, the following requirements must be met:
 

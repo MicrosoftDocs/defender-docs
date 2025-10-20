@@ -26,9 +26,6 @@ appliesto:
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 
 
-### Supported operating systems
-
-- Windows
 
 This article is designed for customers who are using Microsoft Defender Antivirus capabilities only. If you have Microsoft Defender for Endpoint (which includes Microsoft Defender Antivirus alongside other device protection capabilities), see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
 
@@ -43,6 +40,12 @@ This guide describes how to configure Microsoft Defender Antivirus on your VMs f
 
 > [!IMPORTANT]
 > Although a VDI can be hosted on Windows Server 2012 or Windows Server 2016, virtual machines (VMs) should be running Windows 10, version 1607 at a minimum, due to increased protection technologies and features that are unavailable in earlier versions of Windows.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Set up a dedicated VDI file share for security intelligence
 

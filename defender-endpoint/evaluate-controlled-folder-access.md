@@ -24,23 +24,20 @@ appliesto:
 ---
 # Evaluate controlled folder access
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps.
 
+It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
 
-### Supported operating systems 
+This article helps you evaluate controlled folder access. It explains how to enable audit mode so you can test the feature directly in your organization.
+
+## Prerequisites
+
+### Supported operating systems
 
 - Windows
 - Windows Server 2019 and later
 -  Azure Stack HCI OS, version 23H2 and later
 - Windows 10 or Windows 11.
-
-
-
-[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. 
-
-It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
-
-This article helps you evaluate controlled folder access. It explains how to enable audit mode so you can test the feature directly in your organization.
 
 ## Use audit mode to measure impact
 

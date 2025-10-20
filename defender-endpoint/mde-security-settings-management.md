@@ -28,17 +28,6 @@ appliesto:
 
 This article describes how to manage Microsoft Defender Antivirus security policies on devices with Defender for Endpoint Security Settings Management (in the [Microsoft Defender portal](https://security.microsoft.com)). 
 
-## Prerequisites
-
-Review the prerequisites [here](/mem/intune/protect/mde-security-integration). 
-
-### Supported operating systems
-
-- Windows
-- Windows Server
-- macOS
-- Linux
-
 
 > [!NOTE]
 > The **Endpoint Security Policies** page in the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, can't access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in the scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
@@ -63,6 +52,18 @@ The following list provides a brief description of each endpoint security policy
 - **Endpoint detection and response** - When you integrate Microsoft Defender for Endpoint with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 
 - **Attack surface reduction** - When Microsoft Defender Antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for attack surface reduction to manage those settings for your devices.
+
+## Prerequisites
+
+Review the prerequisites [here](/mem/intune/protect/mde-security-integration). 
+
+### Supported operating systems
+
+- Windows
+- Windows Server
+- macOS
+- Linux
+
 
 ## Create an endpoint security policy
 

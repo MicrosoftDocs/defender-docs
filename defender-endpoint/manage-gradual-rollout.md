@@ -28,11 +28,6 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-
-### Supported operating systems
-
-- Windows
-
 It's important to ensure that client components are up to date to deliver critical protection capabilities and prevent attacks.
 
 Capabilities are provided through several components:
@@ -45,6 +40,13 @@ Updates are released monthly using a gradual release process. This process helps
 
 > [!NOTE]
 > For more information on how to control daily security intelligence updates, see [Schedule Microsoft Defender Antivirus protection updates](manage-protection-update-schedule-microsoft-defender-antivirus.md). Updates ensure that next-generation protection can defend against new threats, even if cloud-delivered protection is not available to the endpoint.
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
 
 ## Microsoft gradual rollout model
 

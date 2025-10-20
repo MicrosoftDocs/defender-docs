@@ -41,9 +41,16 @@ Here's an example:
 MpCmdRun.exe -Scan -ScanType 2
 ```
 
-In our example, the MpCmdRun utility starts a full antivirus scan on the device.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Commands
+
+In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 
 |Command|Description|
 |---|---|
@@ -78,11 +85,6 @@ In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 > - Scheduled Full Scans or MpCmdRun -scan: Seven day limit
 > - Scheduled Quick Scans or MpCmdRun -scan: One day limit
 
-## Prerequisites
-
-### Supported operating systems
-
-- Windows
 
 ## Common errors in running commands via mpcmdrun.exe
 

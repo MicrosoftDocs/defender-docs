@@ -33,6 +33,12 @@ Next-generation technologies in Microsoft Defender Antivirus provide near-instan
 > [!TIP]
 > We recommend keeping cloud protection turned on. To learn more, see [Why cloud protection should be turned on](enable-cloud-protection-microsoft-defender-antivirus.md#why-cloud-protection-should-be-turned-on). 
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 ## How cloud protection works
 
 Microsoft Defender Antivirus works seamlessly with Microsoft cloud services. These cloud protection services, also referred to as Microsoft Advanced Protection Service (MAPS), enhance standard real-time protection. With cloud protection, next-generation technologies provide rapid identification of new threats, sometimes even before a single endpoint is infected. 
@@ -56,11 +62,6 @@ The following blog posts illustrate how cloud protection works:
 > The Microsoft Defender Antivirus cloud service is a mechanism for delivering updated protection to your network and endpoints. As a cloud service, it is not simply protection for files stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection to your endpoints at a rate that is far faster than traditional security intelligence updates.
 
 
-## Prerequisites
-
-### Supported operating systems
-
-- Windows
 
 ## How to get cloud protection 
 

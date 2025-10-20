@@ -23,14 +23,19 @@ appliesto:
 ---
 # Turn on block at first sight
 
-### Supported operating systems
-
-- Windows
 
 This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization.
 
 > [!TIP]
 > This article is intended for enterprise admins and IT Pros who manage security settings for organizations. If you aren't an enterprise admin or IT Pro but you have questions about block at first sight, see the [Not an enterprise admin or IT Pro?](#not-an-enterprise-admin-or-it-pro) section.
+
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 
 ## What is "block at first sight"?
 

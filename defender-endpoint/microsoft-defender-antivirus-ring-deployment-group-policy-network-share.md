@@ -25,26 +25,21 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-### Supported operating systems
-
-- Windows
-- Windows Server
-
-
-
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
-> Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
-
-## Introduction
+> A new Microsoft Defender Vulnerability Management add-on is now available for Microsoft Defender for Endpoint Plan 2.
 
 This article describes how to deploy Microsoft Defender Antivirus in rings using Group Policy and Network share (also known as UNC path, SMB, CIFS).
 
 ## Prerequisites
 
 Review the _read me_ article at [Readme](https://github.com/microsoft/defender-updatecontrols/blob/main/README.md)
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 1. Download the latest Windows Defender .admx and .adml.
 

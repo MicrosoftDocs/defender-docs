@@ -24,9 +24,6 @@ appliesto:
 # Microsoft Defender Antivirus exclusions on Windows Server
 
 
-### Supported operating systems
-
-- Windows Server
 
 ## Important notes about automatic exclusions on Windows Server
 
@@ -44,6 +41,12 @@ This article describes the two main types of exclusions that you don't have to d
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
 
 For a more detailed overview of exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows Server
 
 ## Automatic server role exclusions
 

@@ -26,15 +26,18 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Prerequisites
+
+- This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer. 
+
 
 ### Supported operating systems
 
 - Windows
 
-> [!NOTE]
-> This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer.
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
+
 
 The following table lists the available group policy settings for configuring update channels:
 

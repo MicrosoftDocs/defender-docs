@@ -27,13 +27,6 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-### Supported operating systems
-
-- Windows
-- Windows Server
-
-
-
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
@@ -50,6 +43,12 @@ Download the latest Windows Defender .admx and .adml
 - [WindowsDefender.adml](https://github.com/microsoft/defender-updatecontrols/blob/main/WindowsDefender.adml)
 
 Copy the latest .admx and .adml to the Domain Controller [Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
+
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Setting up the Pilot (UAT/Test/QA) environment
 

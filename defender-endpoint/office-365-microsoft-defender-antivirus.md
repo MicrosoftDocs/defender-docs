@@ -27,11 +27,6 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-### Supported operating systems
-
-- Windows
-
 You might already know that:
 
 - **Microsoft Defender Antivirus protects your Windows device from software threats, such as viruses, malware, and spyware**. Microsoft Defender Antivirus is your complete, ongoing protection, built into Windows 10 and Windows 11, and ready to go. [Microsoft Defender Antivirus is your next-generation protection](./microsoft-defender-antivirus-windows.md). 
@@ -47,6 +42,12 @@ You might already know that:
  2. [Integration means better protection](#integration-means-better-protection).
 
 Read the following sections to learn more.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Ransomware protection and recovery
 

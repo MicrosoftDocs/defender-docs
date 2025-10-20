@@ -26,13 +26,18 @@ appliesto:
 # Manage tamper protection on an individual device
 
 
+[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed.
+
+If you're a home user, or you aren't subject to settings managed by a security team, you can use the Windows Security app to manage tamper protection on an individual Windows device. You must have appropriate admin permissions on your device to do change security settings, such as tamper protection.
+
+## Prerequisites
+
+
 ### Supported operating systems
 
 - Windows
 
-[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed.
-
-If you're a home user, or you aren't subject to settings managed by a security team, you can use the Windows Security app to manage tamper protection on an individual Windows device. You must have appropriate admin permissions on your device to do change security settings, such as tamper protection.
+## Turn tamper protection on or off
 
 1. On a Windows device, select **Start**, and start typing *Security*. In the search results, select **Windows Security**.
 

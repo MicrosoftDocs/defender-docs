@@ -24,13 +24,16 @@ appliesto:
 # Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date
 
 
-### Supported operating systems
-
-- Windows
-
 With Microsoft Defender Antivirus, your security team can define how long an endpoint can avoid an update or how many scans it can miss before it's required to receive the update and run a scan. This capability is especially useful in environments where devices aren't often connected to a corporate or external network, or for devices that aren't used on a daily basis.
 
 For example, an employee who uses a particular computer takes three days off of work, and doesn't sign on their computer during that time. When the employee returns to work and signs into their computer, Microsoft Defender Antivirus will immediately check and download the latest protection updates, and then run a scan.
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
 
 ## Set up catch-up protection updates for endpoints that haven't updated for a while
 

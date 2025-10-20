@@ -32,6 +32,7 @@ By default, Microsoft Defender Antivirus is installed and functional on Windows 
 
 This article describes how to enable the user interface, install or reinstall Microsoft Defender Antivirus, verify that Microsoft Defender Antivirus is running, and update your antimalware security intelligence. This article also describes how to set Microsoft Defender Antivirus to passive mode if you're using a non-Microsoft antivirus/anti-malware solution on Windows Server.
 
+## Prerequisites
 
 ### Supported operating systems
 

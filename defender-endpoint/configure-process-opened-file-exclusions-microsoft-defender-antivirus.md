@@ -25,15 +25,17 @@ appliesto:
 # Configure exclusions for files opened by processes
 
 
-### Supported operating systems
-
-- Windows 
-
 You can exclude files that are opened by specific processes from Microsoft Defender Antivirus scans. These types of exclusions are for files that are opened by processes and not the processes themselves. To exclude a process, add a file exclusion (see [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)).
 
 See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md) before defining your exclusion lists.
 
 This article describes how to configure exclusion lists.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows 
 
 ## Examples of process exclusions
 

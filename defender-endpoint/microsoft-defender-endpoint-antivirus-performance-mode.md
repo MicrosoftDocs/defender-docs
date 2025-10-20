@@ -25,10 +25,6 @@ appliesto:
 > Want to experience Microsoft Defender XDR? Learn more about how you can [evaluate and pilot Microsoft Defender XDR](/defender-xdr/eval-overview?ocid=cx-docs-MTPtriallab).
 
 
-### Supported operating systems
-
-- Windows 11
-
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
 ## What is performance mode
@@ -36,6 +32,12 @@ appliesto:
 Performance mode is now available on Windows 11 as a new Microsoft Defender Antivirus capability. Performance mode reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated Dev Drive. The goal of performance mode is to improve functional performance for developers who use Windows 11 devices. 
 
 It's important to note that performance mode can run only on Dev Drive. Additionally, real-time protection must be turned on for performance mode to function. Enabling this feature on a Dev Drive doesn't change standard real-time protection running on volumes with operating systems or other volumes formatted as `FAT32` or `NTFS`.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows 11
 
 ### Microsoft Defender Antivirus requirements for performance mode
 

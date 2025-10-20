@@ -38,8 +38,6 @@ Microsoft Defender for Endpoint utilizes the [Antimalware Scan Interface (AMSI)]
 - Windows 10 and later
 - Windows Server 2016 and later
 
-    
-
 ## Testing AMSI with Defender for Endpoint
 
 In this demonstration article, you have two engine choices to test AMSI:

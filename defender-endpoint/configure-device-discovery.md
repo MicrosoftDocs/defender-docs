@@ -30,6 +30,8 @@ Device discovery can be configured to be on standard or basic mode. Use the stan
 
 You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability, or you can select a subset of devices by specifying their device tags.
 
+## Prerequisites
+
 ### Supported operating systems
 
 - Windows 10 and later
