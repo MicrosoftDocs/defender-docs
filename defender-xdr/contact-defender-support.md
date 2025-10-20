@@ -29,12 +29,12 @@ For general information on admin roles, see [About admin roles](/microsoft-365/a
 
 1. Select the question mark on the top right of the Defender portal page
 
-    :::image type="content" source="media/contact-defender-support/contact-support-question-mark-icon.png" alt-text="Screenshot that shows the contact support question mark icon in the Defender portal.":::
+    :::image type="content" source="media/contact-defender-support/contact-support-question-mark-icon.png" alt-text="Screenshot that shows the contact support question mark icon in the Defender portal." lightbox="media/contact-defender-support/contact-support-question-mark-icon.png":::
 
 
 1. Type your question into the ***How can we help?*** search box.
 
-    :::image type="content" source="media/contact-defender-support/how-can-we-help-box.png" alt-text="Screenshot that shows where to enter your support question.":::
+    :::image type="content" source="media/contact-defender-support/how-can-we-help-box.png" alt-text="Screenshot that shows where to enter your support question." lightbox="media/contact-defender-support/how-can-we-help-box.png":::
 
 
 1. You can choose one of the following options
@@ -46,7 +46,7 @@ For general information on admin roles, see [About admin roles](/microsoft-365/a
 
 This option includes articles that might be related to the question you might ask. Just start typing the question in the search box and articles related to your search show up.
 
-:::image type="content" source="media/contact-defender-support/answer-to-support-question.png" alt-text="Screenshot that shows the auto generated answer for the relevant support question that was asked.":::
+:::image type="content" source="media/contact-defender-support/answer-to-support-question.png" alt-text="Screenshot that shows the auto generated answer for the relevant support question that was asked." lightbox="media/contact-defender-support/answer-to-support-question.png":::
 
 In case the suggested articles aren't sufficient, you can open a service request.
 
@@ -62,7 +62,7 @@ To open a service request, select the **Contact support**. This opens a form whe
 1. Select your time zone and an alternative language, if applicable. The request is sent to Microsoft Support Team. 
 
 
-    :::image type="content" source="media/contact-defender-support/enter-contact-details.png" alt-text="Screenshot that shows what contact details you need to enter in order to open a support ticket via the Defender portal. ":::
+    :::image type="content" source="media/contact-defender-support/enter-contact-details.png" alt-text="Screenshot that shows what contact details you need to enter in order to open a support ticket via the Defender portal. " lightbox="media/contact-defender-support/enter-contact-details.png":::
 
 ## Related content
 
