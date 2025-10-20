@@ -120,5 +120,5 @@ The following standards are available in Defender for Cloud:
 
 ## Related content
 
-- [Assign regulatory compliance standards](update-regulatory-compliance-packages.md)
+- [Assign regulatory compliance standards](assign-regulatory-compliance-standards.md)
 - [Improve regulatory compliance](regulatory-compliance-dashboard.md)
