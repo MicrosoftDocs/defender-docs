@@ -41,9 +41,9 @@ Resources containing sensitive data are at risk of exposure to unauthorized user
 
 1. [Remediate the recommendations](implement-security-recommendations.md).
 
-1. [Respond to the security alerts](managing-and-responding-alerts.md#respond-to-a-security-alert).
+1. [Respond to the security alerts](manage-respond-alerts.md#respond-to-a-security-alert).
 
 ## Related content
 
 - [Remediate recommendations](implement-security-recommendations.md)
-- [Respond to security alerts](managing-and-responding-alerts.md#respond-to-a-security-alert)
+- [Respond to security alerts](manage-respond-alerts.md#respond-to-a-security-alert)

@@ -90,7 +90,7 @@ URI: `https://management.azure.com/subscriptions/<SubscriptionId>/providers/Micr
 ## Related content
 
 - [Security alerts - a reference guide](alerts-reference.md) - Learn about the security alerts you might see in Microsoft Defender for Cloud's Threat Protection module.
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.md) - Learn how to manage and respond to security alerts.
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md) - Learn how to manage and respond to security alerts.
 - [Identify and remediate attack paths](how-to-manage-attack-path.md).
 - [Investigating risk with security explorer/attack paths](concept-attack-path.md)
 - [Workflow automation](workflow-automation.yml) - Automate responses to alerts with custom notification logic.

@@ -14,7 +14,7 @@ This article lists the security alerts you might get for Azure VM extensions fro
 > [!NOTE]
 > Some of the recently added alerts powered by Microsoft Defender Threat Intelligence and Microsoft Defender for Endpoint might be undocumented.
 
-[Learn how to respond to these alerts](managing-and-responding-alerts.md).
+[Learn how to respond to these alerts](manage-respond-alerts.md).
 
 [Learn how to export alerts](continuous-export.md).
 
@@ -203,5 +203,5 @@ Learn more about [Defender for Cloud latest protections against the abuse of Azu
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.md)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)

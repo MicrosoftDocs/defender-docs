@@ -84,5 +84,5 @@ The simulation tool runs using a Python-based CLI that deploys Helm charts in th
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.md)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)
