@@ -61,6 +61,9 @@ To create a snapshot report:
 
 Cloud discovery uses the data in your traffic logs. The more detailed your log, the better visibility you get. Cloud discovery requires web-traffic data with the following attributes:
 
+> [!NOTE]
+> Configure the appliance to forward only traffic logs. Including unrelated logs in the configuration can inflate the ingested traffic volume.
+
 - Date of the transaction
 - Source IP
 - Source user - highly recommended
