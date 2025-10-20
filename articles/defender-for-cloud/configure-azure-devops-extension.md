@@ -24,7 +24,7 @@ The Microsoft Security DevOps uses the following Open Source tools:
 | [Trivy](https://github.com/aquasecurity/trivy) | container images, Infrastructure as Code (IaC) | [Apache License 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
 
 > [!NOTE]
-> Effective September 20, 2023, the secrets scanning (CredScan) tool within the Microsoft Security DevOps (MSDO) Extension for Azure DevOps has been deprecated. MSDO secrets scanning will be replaced with [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
+> Effective September 20, 2023, the secrets scanning (CredScan) tool within the Microsoft Security DevOps (MSDO) Extension for Azure DevOps has been deprecated. MSDO secrets scanning is replaced with [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ If you don't have access to install the extension, you must request access from 
 1. Select **Shared**.
 
     > [!NOTE]
-    > If you've already [installed the Microsoft Security DevOps extension](https://marketplace.visualstudio.com/items?itemName=ms-securitydevops.microsoft-security-devops-azdevops), it will be listed in the Installed tab.
+    > If you've already [installed the Microsoft Security DevOps extension](https://marketplace.visualstudio.com/items?itemName=ms-securitydevops.microsoft-security-devops-azdevops), it is listed in the Installed tab.
 
 1. Select **Microsoft Security DevOps**.
 
@@ -110,7 +110,7 @@ If you don't have access to install the extension, you must request access from 
 
 1. To commit the pipeline, select **Save and run**.
 
-    The pipeline will run for a few minutes and save the results.
+    The pipeline runs for a few minutes and save the results.
 
     > [!NOTE]
     > Install the SARIF SAST Scans Tab extension on the Azure DevOps
@@ -132,7 +132,7 @@ You can use the 'PublishBuildArtifacts@1' task to ensure SARIF output is publish
     ArtifactName: 'CodeAnalysisLogs'
 ```
 
-Findings from third-party security tools will appear as 'Azure DevOps repositories should have code scanning findings resolved' assessments associated with the repository the security finding was identified in.
+Findings from third-party security tools appears as 'Azure DevOps repositories should have code scanning findings resolved' assessments associated with the repository the security finding was identified in.
 
 ## Related content:
   - [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline)
