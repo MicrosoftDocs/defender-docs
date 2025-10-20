@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 10/28/2024
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Business
 

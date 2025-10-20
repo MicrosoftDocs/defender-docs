@@ -5,7 +5,7 @@ manager: bagol
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/28/2025
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
 author: batamig
@@ -29,6 +29,14 @@ appliesto:
 # Protect security settings with tamper protection
 
 
+## What is tamper protection?
+
+Tamper protection is a capability in Microsoft Defender for Endpoint that helps protect certain security settings, such as virus and threat protection, from being disabled or changed. During some kinds of cyber attacks, bad actors try to disable security features on devices. Disabling security features provides bad actors with easier access to your data, the ability to install malware, and the ability to exploit your data, identity, and devices. Tamper protection helps guard against these types of activities. 
+
+Tamper protection is part of anti-tampering capabilities that include [standard protection attack surface reduction rules](attack-surface-reduction-rules-reference.md). Tamper protection is an important part of [built-in protection](built-in-protection.md).
+
+## Prerequisites
+
 ### Supported operating systems
 
 Tamper protection is available for devices that are running one of the following versions of Windows:
@@ -42,12 +50,6 @@ Tamper protection is available for devices that are running one of the following
 - Azure Stack HCI OS, version 23H2 and later.
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
-
-## What is tamper protection?
-
-Tamper protection is a capability in Microsoft Defender for Endpoint that helps protect certain security settings, such as virus and threat protection, from being disabled or changed. During some kinds of cyber attacks, bad actors try to disable security features on devices. Disabling security features provides bad actors with easier access to your data, the ability to install malware, and the ability to exploit your data, identity, and devices. Tamper protection helps guard against these types of activities. 
-
-Tamper protection is part of anti-tampering capabilities that include [standard protection attack surface reduction rules](attack-surface-reduction-rules-reference.md). Tamper protection is an important part of [built-in protection](built-in-protection.md).
 
 ## What happens when tamper protection is turned on?
 

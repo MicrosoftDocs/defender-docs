@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 04/30/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 appliesto:
@@ -25,12 +25,14 @@ appliesto:
 # Schedule antivirus scans using Microsoft Intune
 
 
+This article describes how to configure scheduled scans using Microsoft Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+
+## Prerequisites
+
 ### Supported operating systems
 
 - Windows
 - Windows Server
-
-This article describes how to configure scheduled scans using Microsoft Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
 ## Configure antivirus scans using Intune
 

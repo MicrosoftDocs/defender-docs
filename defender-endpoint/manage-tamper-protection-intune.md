@@ -5,7 +5,7 @@ manager: bagol
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/06/2025
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
 author: batamig

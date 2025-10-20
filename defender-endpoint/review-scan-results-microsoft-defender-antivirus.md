@@ -8,7 +8,7 @@ ms.author: bagol
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
-ms.date: 05/08/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -28,12 +28,13 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand](run-scan-microsoft-defender-antivirus.md) or [scheduled scan](schedule-antivirus-scans.md), the results are recorded and you can view the results.
+
+## Prerequisites
 
 ### Supported operating systems
 
 - Windows
-
-After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand](run-scan-microsoft-defender-antivirus.md) or [scheduled scan](schedule-antivirus-scans.md), the results are recorded and you can view the results.
 
 ## Use Microsoft Defender XDR to review scan results
 

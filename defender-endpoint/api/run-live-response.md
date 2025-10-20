@@ -17,12 +17,22 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/18/2023
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 # Run live response commands on a device
+
+
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+
+[!include[Prerelease information](../../includes/prerelease.md)]
+
+
+[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
+
+[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 
 ## Prerequisites
@@ -54,15 +64,6 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
   - **Linux servers**
       - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 

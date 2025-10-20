@@ -9,7 +9,7 @@ manager: bagol
 ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 10/08/2024
+ms.date: 10/20/2025
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security

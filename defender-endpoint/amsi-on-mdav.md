@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: bagol
 ms.reviewer: yongrhee
-ms.date: 12/05/2024
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

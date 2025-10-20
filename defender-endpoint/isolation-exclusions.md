@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
-ms.date: 07/01/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

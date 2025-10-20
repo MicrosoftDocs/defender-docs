@@ -5,7 +5,7 @@ manager: bagol
 description: Turn tamper protection on or off for an individual device.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
 author: batamig
@@ -31,7 +31,6 @@ appliesto:
 If you're a home user, or you aren't subject to settings managed by a security team, you can use the Windows Security app to manage tamper protection on an individual Windows device. You must have appropriate admin permissions on your device to do change security settings, such as tamper protection.
 
 ## Prerequisites
-
 
 ### Supported operating systems
 

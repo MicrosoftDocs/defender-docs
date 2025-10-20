@@ -8,7 +8,7 @@ manager: bagol
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 05/28/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2

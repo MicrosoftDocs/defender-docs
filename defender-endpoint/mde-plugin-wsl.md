@@ -15,7 +15,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 07/01/2025
+ms.date: 10/20/2025
 search.appverid: MET150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2

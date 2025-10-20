@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/10/2025
+ms.date: 10/20/2025
 audience: ITPro
 author: batamig
 ms.author: bagol

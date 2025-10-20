@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.topic: overview
 author: batamig
 ms.author: bagol

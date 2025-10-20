@@ -19,7 +19,7 @@ appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
 search.appverid: met150
-ms.date: 09/12/2025
+ms.date: 10/20/2025
 ---
 
 # Enable attack surface reduction rules

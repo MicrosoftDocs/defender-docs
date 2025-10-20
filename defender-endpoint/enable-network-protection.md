@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 author: batamig
 ms.author: bagol

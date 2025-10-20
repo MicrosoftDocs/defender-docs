@@ -6,7 +6,7 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/01/2025
+ms.date: 10/20/2025
 author: batamig
 ms.author: bagol
 ms.topic: install-set-up-deploy

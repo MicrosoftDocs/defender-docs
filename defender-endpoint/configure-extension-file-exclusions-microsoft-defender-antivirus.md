@@ -4,7 +4,7 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 10/20/2025
 author: batamig
 ms.author: bagol
 ms.topic: how-to

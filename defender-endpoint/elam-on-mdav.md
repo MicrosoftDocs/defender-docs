@@ -7,7 +7,7 @@ ms.reviewer: yongrhee
 manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution

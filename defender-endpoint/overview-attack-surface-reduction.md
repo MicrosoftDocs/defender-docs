@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 07/30/2025
+ms.date: 10/20/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

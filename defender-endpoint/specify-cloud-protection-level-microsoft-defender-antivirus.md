@@ -7,7 +7,7 @@ ms.topic: how-to
 author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-ms.date: 11/10/2024
+ms.date: 10/20/2025
 manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
@@ -25,11 +25,13 @@ appliesto:
 # Specify the cloud protection level
 
 
+Cloud protection works together with Microsoft Defender Antivirus to deliver protection to your devices faster than through traditional security intelligence updates. You can configure your level of cloud protection by using Microsoft Intune (recommended) or Group Policy.
+
+## Prerequisites
+
 ### Supported operating systems 
 
 - Windows
-
-Cloud protection works together with Microsoft Defender Antivirus to deliver protection to your devices faster than through traditional security intelligence updates. You can configure your level of cloud protection by using Microsoft Intune (recommended) or Group Policy.
 
 ## Use Microsoft Intune to specify the level of cloud protection
 

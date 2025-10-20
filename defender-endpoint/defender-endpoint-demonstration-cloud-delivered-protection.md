@@ -15,7 +15,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: ngp
-ms.date: 11/22/2024
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals

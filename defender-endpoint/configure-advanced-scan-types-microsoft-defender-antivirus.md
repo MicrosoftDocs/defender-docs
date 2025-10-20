@@ -9,7 +9,7 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: bagol
 ms.subservice: ngp
-ms.date: 02/18/2025
+ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2

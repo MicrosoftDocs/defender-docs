@@ -9,7 +9,7 @@ ms.author: bagol
 ms.reviewer: pahuijbr
 manager: bagol
 ms.topic: how-to
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2

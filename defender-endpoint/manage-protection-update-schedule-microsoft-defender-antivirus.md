@@ -4,7 +4,7 @@ description: Schedule the day, time, and interval for when protection updates sh
 ms.service: defender-endpoint
 search.appverid: met150
 ms.localizationpriority: medium
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 author: batamig
 ms.author: bagol

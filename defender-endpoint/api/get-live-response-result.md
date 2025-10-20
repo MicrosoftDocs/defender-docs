@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 06/03/2021
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -30,20 +30,9 @@ appliesto:
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-
-
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-## API description
-
-Retrieves a specific live response command result by its index.
-
-## Limitations
-
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per
-    hour.
 
 ## Prerequisites
 
@@ -63,11 +52,21 @@ Devices must be running one of the following versions of Windows:
   - **Windows Server 2019 - Only applicable for Public preview**
     - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
-    
-  - **Windows Server 2022**  
 
-  - **Windows Server 2025**
+  - **Windows Server 2022 and later**
+
   - **Azure Stack HCI OS, version 23H2 and later**
+
+## API description
+
+Retrieves a specific live response command result by its index.
+
+## Limitations
+
+1. Rate limitations for this API are 100 calls per minute and 1500 calls per
+    hour.
+
+
 
 ## Permissions
 

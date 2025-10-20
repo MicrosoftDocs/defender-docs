@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 03/01/2025
+ms.date: 10/20/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -22,18 +22,17 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
+
+Verifying that a device is added to the service successfully is a critical step in the entire deployment process. It helps ensure that all the devices expected are being managed. 
+
+## Prerequisites
 
 ### Supported operating systems
 
 - Windows Server 2012 R2
 - Windows Server 2016 and later
 - Azure Stack HCI OS, version 23H2 and later
-
-
-
-When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
-
-Verifying that a device is added to the service successfully is a critical step in the entire deployment process. It helps ensure that all the devices expected are being managed. 
 
 ## Verify Microsoft Defender for Endpoint onboarding of a device using a PowerShell detection test
 

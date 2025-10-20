@@ -10,7 +10,7 @@ manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.topic: concept-article
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2

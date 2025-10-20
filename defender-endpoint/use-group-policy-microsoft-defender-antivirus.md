@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 04/11/2025
+ms.date: 10/20/2025
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
 manager: bagol
 ms.subservice: ngp
@@ -27,12 +27,6 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-### Supported operating systems 
-
-- Windows
-- Windows Server
-
 We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
 
 > [!IMPORTANT]
@@ -40,6 +34,13 @@ We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) t
 > 
 > If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
 > 
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
+- Windows Server
 
 ## Configure Microsoft Defender Antivirus using Group Policy
 

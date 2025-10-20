@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/30/2025
+ms.date: 10/20/2025
 manager: bagol
 audience: ITPro
 ms.collection: 

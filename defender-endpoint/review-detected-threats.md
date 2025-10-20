@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/21/2024
+ms.date: 10/20/2025
 ms.subservice: edr
 search.appverid: met150
 appliesto:
@@ -23,6 +23,8 @@ appliesto:
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+## Prerequisites
 
 
 ### Supported operating systems

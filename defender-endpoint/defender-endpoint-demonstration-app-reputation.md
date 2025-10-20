@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - demo
 ms.topic: article
-ms.date: 07/22/2024
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

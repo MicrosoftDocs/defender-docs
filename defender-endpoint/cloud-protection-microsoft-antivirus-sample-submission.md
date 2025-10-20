@@ -9,7 +9,7 @@ ms.reviewer: mkaminska, yongrhee
 manager: bagol
 ms.subservice: ngp
 ms.topic: concept-article
-ms.date: 04/16/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2

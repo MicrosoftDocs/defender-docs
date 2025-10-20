@@ -5,7 +5,7 @@ manager: bagol
 description: Turn tamper protection on or off using tenant attach with Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
 author: batamig
