@@ -82,7 +82,7 @@ Customers can access Defender for Cloud related data from the following data str
 
 | Stream                                                                                | Data types                                                                                                                                                                                                          |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Azure Activity log](/azure/azure-monitor/essentials/activity-log)                       | All security alerts, approved Defender for Cloud [just-in-time](enable-just-in-time-access.md
+| [Azure Activity log](/azure/azure-monitor/essentials/activity-log)                       | All security alerts, approved Defender for Cloud [just-in-time](enable-just-in-time-access.md) access requests. |
 ) access requests.|
 | [Azure Monitor logs](/azure/azure-monitor/data-platform)                      | All security alerts.                                                                                                                                                                                                |
 | [Azure Resource Graph](/azure/governance/resource-graph/overview)                      | Security alerts, security recommendations, vulnerability assessment results, secure score information, status of compliance checks, and more.                                                                       |
