@@ -9,7 +9,6 @@ author: guywi-ms
 ---
 # Contact Microsoft Defender XDR support
 
-
 Microsoft Defender XDR support process is designed to help you find solutions to common problems and submit support cases to the Microsoft support team.
 
 ## Prerequisites
