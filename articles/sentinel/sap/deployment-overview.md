@@ -27,8 +27,7 @@ The Microsoft Sentinel solution for SAP applications includes a data connector, 
 
 The Microsoft Sentinel solution for SAP applications supports both an agentless data connector and a containerized data connector agent. Both agents collect application logs for all your onboarded SAP SIDs from across the entire SAP system landscape, and then send those logs to your Log Analytics workspace in Microsoft Sentinel.
 
-> [!NOTE]
-> The data connector agent for SAP is being deprecated. We recommend that you migrate to the agentless Data Connector.
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 Select one of the following tabs to learn more:
 

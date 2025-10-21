@@ -28,6 +28,8 @@ This article describes the third step in deploying one of the Microsoft Sentinel
 
 :::image type="content" source="media/deployment-steps/deploy-data-connector.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Connect your SAP system step." border="false" :::
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 Content in this article is relevant for your **security**, **infrastructure**, and  **SAP BASIS** teams. Make sure to perform the steps in this article in the order that they're presented.
 
 :::zone-end

@@ -25,6 +25,8 @@ Reviewing and ensuring that you have or understand all the prerequisites is the 
 
 :::image type="content" source="media/deployment-steps/prerequisites.png" alt-text="Diagram of the steps included in deploying the Microsoft Sentinel solution for SAP applications, with the prerequisites step highlighted." border="false":::
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 Content in this article is relevant for your **security**, **infrastructure**, and **SAP BASIS** teams.
 
 :::zone-end

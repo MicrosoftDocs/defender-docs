@@ -25,6 +25,8 @@ The Microsoft Sentinel solutions for SAP applications include an SAP data connec
 
 :::image type="content" source="media/deployment-steps/install-solution.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Install solution content step." border="false":::
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 :::zone-end
 
 :::zone pivot="connection-agentless"

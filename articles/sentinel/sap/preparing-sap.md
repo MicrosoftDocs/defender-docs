@@ -22,6 +22,8 @@ This article describes how to prepare your SAP environment for connecting to the
 :::zone pivot="connection-agent"
 This article is part of the second step in deploying the Microsoft Sentinel solution for SAP applications. 
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 :::image type="content" source="media/deployment-steps/prepare-sap-environment.png" alt-text="Diagram of the deployment flow for the Microsoft Sentinel solution for SAP applications, with the preparing SAP step highlighted." border="false":::
 
 The procedures in this article are typically performed by your **SAP BASIS** team.
