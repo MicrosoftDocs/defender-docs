@@ -41,7 +41,7 @@ For more information, see:
 - [Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel](connect-threat-intelligence-taxii.md)
 - [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
 
-## Standardized account entity naming in Microsoft Sentinel incidents and alerts - update KQL queries and automation logic by December 13, 2025
+### Standardized account entity naming in incidents and alerts - update queries and automation by December 13, 2025
 
 Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
 
