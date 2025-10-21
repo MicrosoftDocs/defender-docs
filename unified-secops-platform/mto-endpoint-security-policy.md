@@ -3,8 +3,8 @@ title: Endpoint security policies in multitenant management
 description: Learn how to manage endpoint security policies for Defender XDR multi-tenant management in the Microsoft Defender portal.
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
@@ -69,7 +69,7 @@ The policy page displays details of an endpoint security policy, including the s
 
 You can also view the policy in the Microsoft Intune admin center. To do so, select the More actions ellipsis (…) in the policy page, then select **View in Intune**.
 
-## View distributed policies (Preview)
+## View distributed policies
 
 Endpoint security policies that are distributed across tenants with the multitenant management portal appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy. For example:
 
