@@ -247,7 +247,7 @@ There's also a rich resource for [Azure Monitor workbooks on GitHub](https://git
 
 ## Export threat intelligence
 
-Microsoft Sentinel lets you export threat intelligence from to other destinations. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, you can export threat intelligence back to the source platform for bi-directional intelligence sharing. The export feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
+Microsoft Sentinel lets you export threat intelligence to other destinations. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, you can export threat intelligence back to the source platform for bi-directional intelligence sharing. The export feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
 
 > [!IMPORTANT]
 > Carefully consider both the threat intelligence data you export and its destination, which might reside in a different geographic or regulatory region. Data export cannot be undone. Ensure you own the data or have proper authorization before exporting or sharing threat intelligence with third parties.
