@@ -74,12 +74,12 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### September-2025 (Platform: 4.18.25090 | Engine: 1.1.25090)
+### September-2025 (Platform: 4.18.25090.3001 | Engine: 1.1.25090.xxxx)
 
 - Security intelligence update version: **1.439.345.0**
 - Release date:  **September 8, 2025 (Engine) / September 21, 2025 (Platform)**
-- Platform: **4.18.25090**
-- Engine: **1.1.25090.3001**
+- Platform: **4.18.25090.3001**
+- Engine: **1.1.25090.xxxx**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
