@@ -85,9 +85,9 @@ Updates contain:
 #### What's new
 
 - **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
-- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, addressing a reported security vulnerability.
+- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
 - **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
-- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations (e.g., robocopy to network shares) by reintroducing logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
+- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
 
 ### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
 
