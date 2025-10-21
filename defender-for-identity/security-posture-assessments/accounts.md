@@ -131,7 +131,7 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
 
     For example:
 
-    :::image type="content" source="../media/secure-score/remove-suspicious-access-rights.png" alt-text="Screenshot of the Admin SDHolder security assessment.":::
+    :::image type="content" source="../media/secure-score/remove-suspicious-access-rights.png" alt-text="Screenshot of the Admin SDHolder security assessment." lightbox="../media/secure-score/remove-suspicious-access-rights.png":::
 
 
 1. Review the list of exposed entities to discover which of your non-sensitive accounts have the **Admin SDHolder** permission.
@@ -189,7 +189,7 @@ Regularly updating the built-in Administrator account's password is essential du
 
    For example:
 
-:::image type="content" source="../media/change-password-domain-administrator-account/screenshot-of-report.png" alt-text="Screenshot that shows the security posture assessment for Change password for built-in domain Administrator accounts.":::
+:::image type="content" source="../media/change-password-domain-administrator-account/screenshot-of-report.png" alt-text="Screenshot that shows the security posture assessment for Change password for built-in domain Administrator accounts." lightbox="../media/change-password-domain-administrator-account/screenshot-of-report.png":::
 
 
 ## Dormant entities in sensitive groups
@@ -215,7 +215,7 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your sensitive accounts are dormant.
 
-    :::image type="content" source="../media/cas-isp-dormant-entities-sensitive-groups-1.png" alt-text="Screenshot that shows improvement actions for Remove dormant accounts from sensitive groups.":::
+    :::image type="content" source="../media/cas-isp-dormant-entities-sensitive-groups-1.png" alt-text="Screenshot that shows improvement actions for Remove dormant accounts from sensitive groups." lightbox="../media/cas-isp-dormant-entities-sensitive-groups-1.png":::
 
 
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
@@ -235,7 +235,7 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
-    :::image type="content" source="../media/secure-score/dcsync-permissions.png" alt-text="Screenshot that shows the recommended action to remove non-admin accounts with DCsync permissions.":::
+    :::image type="content" source="../media/secure-score/dcsync-permissions.png" alt-text="Screenshot that shows the recommended action to remove non-admin accounts with DCsync permissions." lightbox="../media/secure-score/dcsync-permissions.png":::
 
 
 1. Review this list of exposed entities to discover which of your accounts have DCSync permissions and are also nondomain admins.
@@ -270,7 +270,7 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 - For device accounts:  
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
-  ```
+  ```powershell
   $name = "ComputerA" 
   Get-ADComputer -Identity $name |
   Set-ADAccountControl -AccountNotDelegated:$true
@@ -299,9 +299,9 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions>.
 
-    :::image type="content" source="../media/cas-isp-clear-text-1.png" alt-text="Prevent clear text credentials exposure.":::
+    :::image type="content" source="../media/cas-isp-clear-text-1.png" alt-text="Prevent clear text credentials exposure." lightbox="../media/cas-isp-clear-text-1.png":::
 
-    :::image type="content" source="../media/cas-isp-clear-text-2.png" alt-text="Review top impacted entities and create an action plan.":::
+    :::image type="content" source="../media/cas-isp-clear-text-2.png" alt-text="Review top impacted entities and create an action plan." lightbox="../media/cas-isp-clear-text-2.png":::
 
 1. Research why those entities are using LDAP in clear text.
 1. Remediate the issues and stop the exposure.
@@ -334,16 +334,16 @@ LAPS simplifies password management while helping customers implement more recom
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have some (or all) compatible Windows devices that aren't protected by LAPS, or that haven't had their LAPS managed password changed in the last 60 days.
 
-    :::image type="content" source="../media/cas-isp-laps-1.png" alt-text="Screenshot that shows which domains have devices unprotected by LAPS.":::
+    :::image type="content" source="../media/cas-isp-laps-1.png" alt-text="Screenshot that shows which domains have devices unprotected by LAPS." lightbox="../media/cas-isp-laps-1.png":::
 
    
 1. For domains that are partially protected, select the relevant row to view the list of devices not protected by LAPS in that domain.
 
-   :::image type="content" source="../media/cas-isp-laps-2.png" alt-text="Screenshot that shows the list of devices not protected by LAPS in a selected domain.":::
+   :::image type="content" source="../media/cas-isp-laps-2.png" alt-text="Screenshot that shows the list of devices not protected by LAPS in a selected domain." lightbox="../media/cas-isp-laps-2.png":::
 
 1. Take appropriate action on those devices by downloading, installing, and configuring or troubleshooting [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282) or [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
-   :::image type="content" source="../media/laps-unprotected-devices.png" alt-text="Screenshot that shows the remediation steps for devices unprotected by LAPS.":::
+   :::image type="content" source="../media/laps-unprotected-devices.png" alt-text="Screenshot that shows the remediation steps for devices unprotected by LAPS." lightbox="../media/laps-unprotected-devices.png":::
 
 
 ## Remove discoverable passwords in Active Directory account attributes (Preview)
@@ -452,7 +452,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your **sensitive** accounts have risky LMPs.
 
-    :::image type="content" source="../media/cas-isp-riskiest-lmp-1.png" alt-text="Screenshot that shows the impacted entities and the actions to take to reduce lateral movement path risk to sensitive entities. ":::
+    :::image type="content" source="../media/cas-isp-riskiest-lmp-1.png" alt-text="Screenshot that shows the impacted entities and the actions to take to reduce lateral movement path risk to sensitive entities. " lightbox="../media/cas-isp-riskiest-lmp-1.png":::
 
 1. Take appropriate action:
     - Remove the entity from the group as specified in the recommendation.
@@ -482,7 +482,7 @@ The following is a description of the risk posed by different delegation types:
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your non-domain controller entities are configured for **unsecure Kerberos delegation**.
 
-    :::image type="content" source="../media/cas-isp-kerberos-delegation-2.png" alt-text="Screenshot that shows the Unsecure Kerberos delegation security assessment.":::
+    :::image type="content" source="../media/cas-isp-kerberos-delegation-2.png" alt-text="Screenshot that shows the Unsecure Kerberos delegation security assessment." lightbox="../media/cas-isp-kerberos-delegation-2.png":::
 
 1. Take appropriate action on those at-risk users, such as removing their unconstrained attribute or changing it to a more secure constrained delegation.
 
@@ -502,7 +502,7 @@ Restricts which services this account can impersonate.
 
 1. Review the sensitive users listed in the recommendations and remove them from the services to which the affected account can present delegated credentials.
 
-    :::image type="content" source="../media/cas-isp-unconstrained-kerberos-2.png" alt-text="Screenshot that shows a list of exposed entities with the recommendation to modify unsecure kerberos delegation to prevent impersonation. ":::
+    :::image type="content" source="../media/cas-isp-unconstrained-kerberos-2.png" alt-text="Screenshot that shows a list of exposed entities with the recommendation to modify unsecure kerberos delegation to prevent impersonation. " lightbox="../media/cas-isp-unconstrained-kerberos-2.png":::
 
 **Resource-based constrained delegation (RBCD)**
 
@@ -534,7 +534,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have an unsecure SID History attribute.
 
-    :::image type="content" source="../media/cas-isp-unsecure-sid-history-attribute-1.png" alt-text="Screenshot that shows improvement actions for Remove unsecure SID History attributes.":::
+    :::image type="content" source="../media/cas-isp-unsecure-sid-history-attribute-1.png" alt-text="Screenshot that shows improvement actions for Remove unsecure SID History attributes." lightbox="../media/cas-isp-unsecure-sid-history-attribute-1.png":::
 
 1. Take appropriate action to remove SID History attribute from the accounts using PowerShell using the following steps:
 
@@ -568,7 +568,7 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have unsecure attributes.
 
-    :::image type="content" source="../media/cas-isp-unsecure-account-attributes-1.png" alt-text="Screenshot that shows a list of unsecure account attributes that need to be resolved.":::
+    :::image type="content" source="../media/cas-isp-unsecure-account-attributes-1.png" alt-text="Screenshot that shows a list of unsecure account attributes that need to be resolved." lightbox="../media/cas-isp-unsecure-account-attributes-1.png":::
 
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
