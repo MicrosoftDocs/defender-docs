@@ -20,8 +20,6 @@ The listed features were released in the last six months. For information about 
 
 ## October 2025
 
-
-
 ### Export STIX threat intelligence objects (Preview)
 
 Microsoft Sentinel now supports exporting STIX threat intelligence objects to other destinations, such as external platforms. If you've ingested threat intelligence to Microsoft Sentinel from an external platform, such as when using the **Threat Intelligence - TAXII** data connector, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
@@ -43,6 +41,26 @@ For more information, see:
 - [Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel](connect-threat-intelligence-taxii.md)
 - [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
 
+## Standardized account entity naming in Microsoft Sentinel incidents and alerts - update KQL queries and automation logic by December 13, 2025
+
+Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
+
+This change might affect your analytic rules, automation rules/playbooks, workbooks, hunting queries, and custom integrations.
+
+Sentinel will now select the most reliable account identifier using the following priority:
+
+1. **UPN prefix** – the part before “@” in a User Principal Name
+   - Example: `john.doe@contoso.com` → `john.doe`
+
+1. **Name** – used if UPN prefix is unavailable
+1. **Display Name** – fallback if both above are missing
+
+Update your KQL queries and automation logic to follow the new precedence-aware pattern. Use the `coalesce()` function to ensure compatibility:
+
+```kql
+coalesce(Account.UPNprefix, Account.Name, Account.DisplayName)
+```
+Test all changes in a nonproduction workspace before rolling out to production.
 
 ## September 2025
 
