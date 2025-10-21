@@ -36,7 +36,7 @@ Each [threat analytics report](threat-analytics.md) includes an *indicators* sec
 
 Because IOCs are valuable information in the context of prevalent threats and threat campaigns, only verified Microsoft Defender customers can access to them. This article provides information on how you can check if you have access to the indicators section and how you unlock them if you don't.
 
-## Check if you have access to indicators
+## View IOCs in threat analytics
 To access the indicators section, in the **Threat analytics** page, open the report about the tracked threat and select the **Indicators** tab.
 
 If you're a verified customer, you can immediately see the list of IOCs displayed in this section. The tab also displays a green check icon next to it.
@@ -50,16 +50,19 @@ Otherwise, the page informs you that access to indicators is restricted. The tab
 ## Unlock access to indicators
 To unlock the indicators section, follow these steps:
 
-1. Select **Start verification**.
-2. On the **Tenant verification** page, provide the details required information and supporting documents, if applicable.
+1. Select **Complete verification**
+2. On the verification page, provide the details required information and supporting documents, if applicable
 
    [Screenshot]
 
 3. Select **Submit verification request**.
 
-The verification process might take at least an hour, after which, you can check and refresh the **Indicators** tab. If your account was validated successfully, you should now see the list of IOCs displayed in this section.
+The verification process might take at least an hour, after which, you can refresh the **Indicators** tab. If your tenant was validated successfully, you should now see the list of IOCs displayed in this section.
 
-If you still don't have access to the indicators section even after going through the validation process, contact the email address displayed on the page.
+>[!NOTE]
+>In some cases, we might require additional information or requirements from you during the verification process. We communicate these other requirements through email.
+
+If you still don't have access to the Indicators section even after going through the verification process, contact the email address displayed on the page.
 
 [Screenshot]
 
