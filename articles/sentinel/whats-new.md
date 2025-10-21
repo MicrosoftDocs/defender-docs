@@ -20,6 +20,9 @@ The listed features were released in the last six months. For information about 
 
 ## October 2025
 
+- [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
+- [Standardized account entity naming in incidents and alerts - update queries and automation by December 13, 2025](#standardized-account-entity-naming-in-incidents-and-alerts---update-queries-and-automation-by-december-13-2025)
+
 ### Export STIX threat intelligence objects (Preview)
 
 Microsoft Sentinel now supports exporting STIX threat intelligence objects to other destinations, such as external platforms. If you've ingested threat intelligence to Microsoft Sentinel from an external platform, such as when using the **Threat Intelligence - TAXII** data connector, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
