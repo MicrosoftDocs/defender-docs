@@ -14,5 +14,10 @@ When you enable Microsoft Defender for Cloud for the first time on your Azure su
 
 Once you activate the free trial it lasts for 30 days, or until the usage limit for certain plans is reached, whichever comes first. After reaching the usage limit or once the 30-day trial ends, charges begin based on the plans enabled in your environment. To learn more about these plans, their usage limits, and associated costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
+## Prequisites
 
-includes foundational CSPM capabilities and access to [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender) for free. You can add other paid plans to secure all aspects of your cloud resources. 
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+
+- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+
+## 
