@@ -76,7 +76,7 @@ Updates contain:
 
 ### September-2025 (Platform: 4.18.25090 | Engine: 1.1.25090)
 
-- Security intelligence update version: **x.x.x.x**
+- Security intelligence update version: **1.439.345.0**
 - Release date:  **September 8, 2025 (Engine) / September 21, 2025 (Platform)**
 - Platform: **4.18.25090**
 - Engine: **1.1.25090.3001**
