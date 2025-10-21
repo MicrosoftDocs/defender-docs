@@ -249,8 +249,11 @@ The following screenshot shows the results grouped by last email action with a s
 
 You can change the chart type of the timeline by selecting a different option from the chart type dropdown menu. The available chart types include:
 
+- Line chart
 - Column chart
 - Pie chart
+
+:::image type="content" source="/defender/media/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="/defender/media/advanced-hunting-column-chart.png":::
 
 ### Rendering conditions
 
