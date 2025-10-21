@@ -126,7 +126,7 @@ Connector execution logs for your Microsoft Sentinel solution for SAP applicatio
 
 ## Review and update the Microsoft Sentinel for SAP agent connector configuration file
 
-This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md).  If you [deployed your agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal), continue to maintain and change configuration settings via the portal.
+This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md).  If you [deployed your agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview), continue to maintain and change configuration settings via the portal.
 
 If you deployed via the command line, perform the following steps:
 
