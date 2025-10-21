@@ -22,14 +22,12 @@ Attackers may attempt to obtain information on Group Policy settings to uncover 
 A user, service or application that relies on these local permissions may stop functioning. 
 
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 This recommendation lists non-privileged users who are granted elevated permissions through GPO.
 
 Carefully review each assigned group membership, identify any dangerous group membership granted, and modify the GPO to remove any unnecessary or excessive user rights.  
-
-</details>
 
 
 ## GPO can be modified by unprivileged accounts
@@ -45,12 +43,11 @@ Attackers may attempt to obtain information on Group Policy settings to uncover 
 
 A user, service or application that relies on these permissions may stop functioning. 
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 Carefully review each assigned permission, identify any dangerous permission granted, and modify them to remove any unnecessary or excessive user rights. 
 
-</details>
 
 ## Reversible passwords found in GPOs
 
@@ -63,7 +60,7 @@ Group Policy Preferences (GPP) previously allowed administrators to include embe
 To prevent potential exploitation by adversaries, it is recommended to remove any existing preferences that contain embedded credentials.
 
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 In order to remove the preferences that contain passwords data, use Group Policy Management Console (GPMC) on a domain controller or from a client that has Remote Server Administration Tools (RSAT) installed. You can remove any preference following these steps: 
@@ -81,7 +78,7 @@ In order to remove the preferences that contain passwords data, use Group Policy
 
 1. Repeat steps 1 through 5 as needed to clean your whole environment.  
 
-</details>
+
 
 ## Next steps
 

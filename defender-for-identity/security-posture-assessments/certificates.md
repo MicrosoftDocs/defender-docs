@@ -28,7 +28,7 @@ If the RPC enrollment interface doesn't require packet privacy, it becomes vulne
 >[!NOTE]
 >This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs)
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for enforcing encryption for RPC certificate enrollment.
@@ -54,7 +54,7 @@ If the RPC enrollment interface doesn't require packet privacy, it becomes vulne
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 
-</details>
+
 
 
 ## Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
@@ -68,7 +68,7 @@ If the IIS endpoint allows NTLM authentication without enforcing protocol signin
 > [!NOTE]
 >This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [Configure sensors for AD FS, AD CS, and Microsoft Entra Connect](../deploy/active-directory-federation-services.md).
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for insecure AD CS certificate enrollment IIS endpoints.
@@ -77,7 +77,7 @@ The assessment lists the problematic HTTP endpoints in your organization and gui
 
 Once handled, the ESC8 attack risk is mitigated, reducing your attack surface significantly.
 
-</details>
+
 
 
 ## Edit misconfigured certificate templates owner (ESC4)
@@ -92,7 +92,7 @@ If the owner permissions grant a built-in, unprivileged group with permissions t
 
 Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*.
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner.
@@ -103,7 +103,7 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 1. Research why the template owner might be misconfigured.
 1. Remediate the issue by changing the owner to a privileged and monitored user.
 
-</details>
+
 
 ## Edit misconfigured Certificate Authority ACL (ESC7)
 
@@ -121,7 +121,7 @@ The effect of a misconfigured ACL varies based on the type of permission applied
 
 This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACLs. For example:
@@ -131,7 +131,7 @@ This assessment is available only to customers who installed a sensor on an AD C
 1. Research why the CA ACL is misconfigured.
 1. Remediate the issues by removing all permissions that grant unprivileged built-in groups with *Manage CA* and/or *Manage certificates* permissions.
 
-</details>
+
 
 ## Edit misconfigured certificate templates ACL (ESC4)
 
@@ -143,7 +143,7 @@ If for any reason, there's an entry in the ACL that grants a built-in, unprivile
 
 Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*.
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template ACL. For example:
 
@@ -153,7 +153,7 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 1. Remediate the issue by removing any entry that grants unprivileged group permissions that allow tampering with the template.
 1. Remove the certificate template from being published by any CA if they're not needed.
 
-</details>
+
 
 ## Edit misconfigured enrollment agent certificate template (ESC3)
 
@@ -163,7 +163,7 @@ Typically, users have an Enrollment Agent that enrolls their certificates for th
 
 When Microsoft Defender for Identity reports about Enrollment Agent certificate templates that endanger your organization, risky Enrollment Agent templates are listed on the **Exposed entities** pane.
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfgured enrollment agent certificate templates.  For example:
@@ -178,7 +178,7 @@ When Microsoft Defender for Identity reports about Enrollment Agent certificate 
     - Remove the certificate template from being published by any CA. Templates that aren't published can't be requested, and therefore can't be exploited.
     - Use Enrollment Agent restrictions on the Certificate Authority level. For example, you might want to restrict which users are allowed to act as an Enrollment Agent, and which templates can be requested.
 
-</details>
+
 
 ## Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)
 
@@ -190,7 +190,7 @@ When a certificate template has no EKUs or has an *Any Purpose* EKU, and it's en
 
 Even though the certificate can’t be used for impersonating user authentication, it compromises other components that relieve digital certificates for their trust model. Adversaries can craft TLS certificates and impersonate any website.
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU.  For example:
@@ -203,7 +203,7 @@ Even though the certificate can’t be used for impersonating user authenticatio
     - Restrict the template's overly permissive permissions.
     - Enforce extra mitigations like adding *Manager approval* and signing requirements if possible.
 
-</details>
+
 
 ## Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
 
@@ -218,7 +218,7 @@ These certificate templates expose organizations to significant risks, as they e
 > [!NOTE]
 > This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new).
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 1. Review the recommended action at [Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)](https://security.microsoft.com/securescore?viewid=actions).  
 
@@ -231,7 +231,7 @@ These certificate templates expose organizations to significant risks, as they e
 
 :::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot of exposed entities for Identified AD CS servers that are vulnerable.":::
 
-</details>
+
 
 ## Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)
 
@@ -250,7 +250,7 @@ If a certificate template has the *Supply in the request* option turned on, the 
 > This specific setting is one of the most common misconfigurations.
 > 
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. For example:
@@ -271,7 +271,7 @@ If a certificate template has the *Supply in the request* option turned on, the 
 
     - Remove the certificate template from being published by any CA. Templates that aren't published can't be requested, and therefore can't be exploited.
 
-</details>
+
     
 ## Edit vulnerable Certificate Authority setting (ESC6)  (Preview)
 
@@ -290,7 +290,7 @@ If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turn
 > [!NOTE]
 > This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see: [What's new in Microsoft Defender for Identity](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs)
 
-<a name="implementation"></a><details><summary>**Implementation**</summary>
+**Implementation**
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings.  For example:
@@ -311,7 +311,7 @@ If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turn
     net stop certsvc & net start certsvc
     ```
 
-</details>
+
 
 ## Next steps
 
