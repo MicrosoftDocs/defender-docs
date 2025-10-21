@@ -10,7 +10,7 @@ author: dcurwin
 
 # Enable Defender for open-source relational databases on Amazon Web Services (AWS) (Preview)
 
-Microsoft Defender for Cloud detects anomalous activities in your AWS environment indicating unusual and potentially harmful attempts to access or exploit databases for the following RDS instance types:
+The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS RDS databases. This plan supports the following database instance types:
 
 - Aurora PostgreSQL
 - Aurora MySQL
@@ -18,15 +18,15 @@ Microsoft Defender for Cloud detects anomalous activities in your AWS environmen
 - MySQL
 - MariaDB
 
-To get alerts from the Microsoft Defender plan, you need to follow the instructions on this page to enable Defender for open-source relational databases on AWS.
+This article explains how to enable Defender for open-source relational databases on AWS so that you can start receiving alerts for suspicious activity.
 
-The Defender for open-source relational databases on AWS plan also includes the ability to discover sensitive data within your account and enrich the Defender for Cloud experience with the findings. This is feature is also included with Defender Cloud Security Posture Management (CSPM).
+When you enable this plan, Defender for Cloud also discovers sensitive data in your AWS account and enriches security insights with these findings. This capability is also included in Defender Cloud Security Posture Management (CSPM).
 
 Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have one, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
@@ -44,16 +44,16 @@ Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender
 
 1. Select the relevant AWS account.
 
-1. Locate the Databases plan and select **Settings**.
+1. Locate the **Databases** plan and select **Settings**.
 
     :::image type="content" source="media/enable-defender-for-databases-aws/databases-settings.png" alt-text="Screenshot of the AWS environment settings page that shows where the settings button is located." lightbox="media/enable-defender-for-databases-aws/databases-settings.png":::
 
-1. Toggle open-source relation databases to **On**.  
+1. Toggle open-source relational databases to **On**.  
 
     :::image type="content" source="media/enable-defender-for-databases-aws/toggle-open-source-on.png" alt-text="Screenshot that shows how to toggle the open-source relational databases to on." lightbox="media/enable-defender-for-databases-aws/toggle-open-source-on.png":::
 
     > [!NOTE]
-    > Toggling the open-source relational databases to on also enables sensitive data discovery to on, which is a shared feature with Defender CSPM's sensitive data discovery for relation database service (RDS).
+    > Turning on Open-source relational databases also enables Sensitive data discovery, a shared feature with Defender CSPM for relational database service (RDS) resources.
     >
     > :::image type="content" source="media/enable-defender-for-databases-aws/cspm-shared.png" alt-text="Screenshot that shows the settings page for Defender CSPM and the sensitive data turned on with the protected resources." lightbox="media/enable-defender-for-databases-aws/cspm-shared.png":::
     >
@@ -63,46 +63,44 @@ Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender
 
 1. In the deployment method section, select **Download**.
 
-1. Follow the update stack in AWS instructions. This process creates or updates the CloudFormation template with the [required permissions](#required-permissions-for-defenderforcloud-datathreatprotectiondb-role).
+1. Follow the instructions to update the stack in AWS. This process creates or updates the CloudFormation template with the [required permissions](#required-permissions-for-defenderforcloud-datathreatprotectiondb-role).
 
-1. Check the box confirming the CloudFormation template has been updated on AWS environment (Stack).
+1. Check the box confirming the CloudFormation template was updated on AWS environment (Stack).
 
 1. Select **Review and generate**.
 
-1. Review the presented information and select **Update**.
+1. Review the information and select **Update**.
 
-Defender for Cloud automatically [changes your parameters and options group settings](#affected-parameter-and-option-group-settings).
+Defender for Cloud then automatically [updates the relevant parameter and option group settings](#affected-parameter-and-option-group-settings).
 
 ### Required permissions for DefenderForCloud-DataThreatProtectionDB Role
 
-The following table lists the required permissions for the role created or updated when you downloaded the CloudFormation template and updated the AWS Stack.
+The following permissions are required for the role that’s created or updated when you download the CloudFormation template and update the AWS stack. These permissions allow Defender for Cloud to manage auditing configuration and collect database activity logs from your AWS RDS instances.
 
-| Permission added | Description |
+| Permission | Description |
 |--|--|
-| rds:AddTagsToResource | to add tag on option group and parameter group created |
-| rds:DescribeDBClusterParameters | describe the parameters inside the cluster group |
-| rds:CreateDBParameterGroup | create database parameter group |
-| rds:ModifyOptionGroup | modify option inside the option group |
-| rds:DescribeDBLogFiles | describe the log file |
-| rds:DescribeDBParameterGroups | describe the database parameter group |
-| rds:CreateOptionGroup | create option group |
-| rds:ModifyDBParameterGroup | modify parameter inside the databases parameter group |
-| rds:DownloadDBLogFilePortion | download log file |
-| rds:DescribeDBInstances | describe the database |
-| rds:ModifyDBClusterParameterGroup | modify cluster parameter inside the cluster parameter group |
-| rds:ModifyDBInstance | modify databases to assign parameter group or option group if needed |
-| rds:ModifyDBCluster | modify cluster to assign cluster parameter group if needed |
-| rds:DescribeDBParameters | describe the parameters inside the database group |
-| rds:CreateDBClusterParameterGroup | create cluster parameter group |
-| rds:DescribeDBClusters | describe the cluster |
-| rds:DescribeDBClusterParameterGroups | describe the cluster parameter group |
-| rds:DescribeOptionGroups | describe the option group |
+| rds:AddTagsToResource | Adds tags on option and parameter groups created by the plan. |
+| rds:DescribeDBClusterParameters | Describes parameters inside the cluster group. |
+| rds:CreateDBParameterGroup | Creates a database parameter group. |
+| rds:ModifyOptionGroup | Modifies options inside an option group. |
+| rds:DescribeDBLogFiles | Describes database log files. |
+| rds:DescribeDBParameterGroups | Describes database parameter groups. |
+| rds:CreateOptionGroup | Creates an option group. |
+| rds:ModifyDBParameterGroup | Modifies parameters inside database parameter groups. |
+| rds:DownloadDBLogFilePortion | Downloads log file portions. |
+| rds:DescribeDBInstances | Describes database instances. |
+| rds:ModifyDBClusterParameterGroup | Modifies cluster parameters inside the cluster parameter group. |
+| rds:ModifyDBInstance | Modifies databases to assign parameter or option groups as needed. |
+| rds:ModifyDBCluster | Modifies clusters to assign cluster parameter groups as needed. |
+| rds:DescribeDBParameters | Describes parameters inside the database group. |
+| rds:CreateDBClusterParameterGroup | Creates a cluster parameter group. |
+| rds:DescribeDBClusters | Describes clusters. |
+| rds:DescribeDBClusterParameterGroups | Describes cluster parameter groups. |
+| rds:DescribeOptionGroups | Describes option groups. |
 
 ## Affected parameter and option group settings
 
-When you enable Defender for open-source relational databases on your RDS instances, Defender for Cloud automatically enables auditing by using audit logs in order to be able to consume and analyze access patterns to your database.
-
-Each relational database management system or service type has its own configurations. The following table describes the configurations affected by Defender for Cloud (you aren't required to manually set these configurations, this is provided as a reference).
+When you enable Defender for open-source relational databases, Defender for Cloud automatically configures auditing parameters in your RDS instances to consume and analyze access patterns. You don’t need to modify these settings manually; they’re listed here for reference
 
 | Type | Parameter | Value |
 |--|--|--|
@@ -113,7 +111,9 @@ Each relational database management system or service type has its own configura
 | Aurora MySQL cluster parameter group | server_audit_excl_users | If it exists, expand it to include rdsadmin. |
 | Aurora MySQL cluster parameter group | server_audit_incl_users | - If it exists with a value and rdsadmin as part of the included, then it isn't present in SERVER_AUDIT_EXCL_USER, and the value of include is empty. |
 
-An option group is required for MySQL and MariaDB with the following options for the MARIADB_AUDIT_PLUGIN (If the option doesn’t exist, add the option. If the option exists expand the values in the option):
+An option group is required for MySQL and MariaDB with the following options for the `MARIADB_AUDIT_PLUGIN`.  
+
+If the option doesn’t exist, add it; if it exists, expand the values as needed.
 
 | Option name | Value |
 |--|--|
@@ -122,19 +122,19 @@ An option group is required for MySQL and MariaDB with the following options for
 | SERVER_AUDIT_INCL_USERS | If it exists with a value and rdsadmin is part of the included, then it isn't present in SERVER_AUDIT_EXCL_USER, and the value of include is empty. |
 
 > [!IMPORTANT]
-> You might need to reboot your instances to apply the changes.
+> You might need to reboot your instances to apply these changes.
 >
-> If you're using the default parameter group, a new parameter group is created that includes the required parameter changes with the prefix `defenderfordatabases*`.
+> If you're using the default parameter group, Defender for Cloud creates a new parameter group with the required changes and the prefix `defenderfordatabases*`.
 >
-> If you create a new parameter group or update static parameters, they don't take effect until you reboot the instance.
+> If you create a new parameter group or update static parameters, the changes don't take effect until you reboot the instance.
 
 > [!NOTE]
 >
 > - If a parameter group already exists, it's updated accordingly.
 >
-> - MARIADB_AUDIT_PLUGIN is supported in MariaDB 10.2 and higher, MySQL 8.0.25 and higher 8.0 versions and All MySQL 5.7 versions.
+> - `MARIADB_AUDIT_PLUGIN` is supported in MariaDB 10.2 and higher, MySQL 8.0.25 and higher 8.0 versions, and All MySQL 5.7 versions.
 >
-> - Changes to [MARIADB_AUDIT_PLUGIN for MySQL instances are added to the next maintenance window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.AuditPlugin.html#Appendix.MySQL.Options.AuditPlugin.Add).
+> - Changes that Defender for Cloud makes to the `MARIADB_AUDIT_PLUGIN` for MySQL instances are applied during the next maintenance window. For more information, see [MARIADB_AUDIT_PLUGIN for MySQL instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.AuditPlugin.html#Appendix.MySQL.Options.AuditPlugin.Add).
 
 ## Related content
 
@@ -144,4 +144,4 @@ An option group is required for MySQL and MariaDB with the following options for
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to Defender OSS alerts](defender-for-databases-usage.md)
+> [Respond to Defender open-source database alerts](defender-for-databases-usage.md)
