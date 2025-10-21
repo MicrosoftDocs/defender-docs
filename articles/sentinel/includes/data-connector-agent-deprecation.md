@@ -6,4 +6,4 @@ author: mberdugo
 ---
 
 > [!IMPORTANT]
-> The data connector agent for SAP is being deprecated. We recommend that you migrate to the agentless Data Connector.
+> The data connector agent for SAP is being deprecated. We recommend that you migrate to the [agentless Data Connector](../sap/deploy-sap-security-content.md?pivots=connection-agentless).
