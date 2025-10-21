@@ -42,7 +42,7 @@ This article lists and compares the different features supported by Microsoft Se
 | | Sentinel automation rules with alert trigger | Supported | Planned |
 | **Audit and health visibility** | Rules audit logs available in advanced hunting | Supported (in the `SentinelAudit` table) | Exposed in the `CloudAppEvents` table for Microsoft Defender for Cloud Apps users.<br><br>This capability will be available for all custom detections users in the future. |
 | | Rules health logs available in advanced hunting | Supported (in the `SentinelHealth` table) | Planned |
-| **Control alerts and events grouping** | Customize alert grouping logic | Supported | Not supported. Not supported. In the SIEM and XDR solutions, the correlation engine takes care of the alerts' grouping logic and can address the need to configure the grouping logic. |
+| **Control alerts and events grouping** | Customize alert grouping logic | Supported | Not supported. In the SIEM and XDR solutions, the correlation engine takes care of the alerts' grouping logic and can address the need to configure the grouping logic. |
 | | Choose between all events under one alert and one alert per event | Supported | Not supported |
 | | Group events to one alert when custom details, alert dynamic details, and entities are identical | Not supported | Supported |
 | **Control incidents and alerts creation** | Exclude incidents from correlation engine - Ensure that incidents from different rules remain separated | Planned | Planned |
