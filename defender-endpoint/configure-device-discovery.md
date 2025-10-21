@@ -1,14 +1,14 @@
----
+﻿---
 title: Configure device discovery in Defender for Endpoint
 description: Learn how to configure device discovery in Microsoft Defender XDR using basic or standard discovery
 ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,16 +17,14 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 search.appverid: met150
 ms.date: 02/24/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure device discovery in Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Device discovery can be configured to be on standard or basic mode. Use the standard option to actively find devices in your network, which helps improve the discovery of endpoints and provide richer device classification.
 
@@ -125,3 +123,4 @@ DeviceInfo
 - [Device discovery FAQs](device-discovery-faq.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

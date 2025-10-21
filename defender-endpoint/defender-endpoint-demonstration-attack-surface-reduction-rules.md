@@ -1,13 +1,13 @@
----
+﻿---
 title: Microsoft Defender for Endpoint attack surface reduction rules demonstrations
 description: See how attack surface reduction rules block various known threat types.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh 
-author: emmwalshh
+ms.author: bagol 
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,15 +16,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: asr
 ms.date: 03/10/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Attack surface reduction rules demonstrations
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 or Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 Attack surface reduction rules target specific behaviors that are typically used by malware and malicious apps to infect machines, such as:
 
@@ -35,7 +35,7 @@ Attack surface reduction rules target specific behaviors that are typically used
 ## Scenario requirements and setup
 
 - Windows client devices must be running Windows 11, Windows 10 1709 build 16273, or later
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)).
+- Windows server devices must be running Windows Server 2012 R2 and later (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)) or Azure Stack HCI OS, version 23H2 and later.
 - Microsoft Defender Antivirus
 - Microsoft 365 Apps (formerly referred to as Office apps; required for Office rules and sample)
 - [Download attack surface reduction PowerShell scripts](https://demo.wd.microsoft.com/Content/WindowsDefender_ASR_scripts.zip)
@@ -209,3 +209,4 @@ Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://de
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

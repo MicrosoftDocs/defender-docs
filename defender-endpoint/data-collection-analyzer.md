@@ -1,14 +1,14 @@
----
+﻿---
 title:  Data collection for advanced troubleshooting on Windows
 description: Learn how to use the client analyzer to collect data for complex troubleshooting scenarios.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,15 +18,15 @@ ms.topic: troubleshooting-general
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 04/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Data collection for advanced troubleshooting on Windows
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
 
 > [!TIP]
 > Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
@@ -77,3 +77,4 @@ That same flag can be used with `MDEClientAnalyzer.cmd` to avoid a prompt to the
 When using `MDEClientAnalyzer.cmd`, the script checks for privileges using `net session`, which requires the service `Server` to be running. If it's not, you'll get the error message _Script is running with insufficient privileges_. Run it with administrator privileges if ECHO is off.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

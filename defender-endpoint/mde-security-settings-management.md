@@ -1,10 +1,10 @@
----
+﻿---
 title: Manage Microsoft Defender Antivirus by using Defender for Endpoint Security Settings Management
 description: Learn how to use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
@@ -18,15 +18,13 @@ ms.localizationpriority: medium
 ms.custom: 
 - nextgen
 - partner-contribution
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
 
 **Platforms**
 
@@ -454,4 +452,5 @@ To report False Negatives (FNs), see the following articles:
 - [Troubleshoot performance issues related to real-time protection](/defender-endpoint/troubleshoot-performance-issues)
 - [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+
 

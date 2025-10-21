@@ -1,9 +1,9 @@
----
+﻿---
 title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
-author: emmwalshh
-ms.author: ewalsh 
-manager: deniseb 
+author: batamig
+ms.author: bagol 
+manager: bagol 
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -15,17 +15,15 @@ ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
 ms.date: 06/27/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
@@ -86,6 +84,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
+- Azure Stack HCI OS, version 23H2 and later.
 
 > [!IMPORTANT]
 > - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
@@ -202,5 +201,6 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
 For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
+
 
 

@@ -1,14 +1,14 @@
----
+﻿---
 title: Protect important folders from ransomware from encrypting your files with controlled folder access
 description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/05/2025
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 audience: ITPro
 ms.reviewer: sugamar 
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to
@@ -17,23 +17,20 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Protect important folders with controlled folder access
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Applies to**
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Platforms
 
@@ -51,7 +48,7 @@ Controlled folder access is supported on:
 
 - Windows 11
 - Windows 10
-- Windows Server 2025
+- Windows Server 2025Azure Stack HCI OS, version 23H2 and later.
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
@@ -195,3 +192,4 @@ You can use the Windows Security app to view the list of folders that are protec
 [Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you can't remove them from the list. Subfolders are also included in protection when you add a new folder to the list.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

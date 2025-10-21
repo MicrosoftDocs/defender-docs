@@ -3,8 +3,8 @@ title: What's new in Microsoft Defender XDR
 description: Lists the new features and functionality in Microsoft Defender XDR
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 08/01/2025
 manager: deniseb
@@ -32,7 +32,15 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## September 2025
+
+- (Preview) You can now use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](./split-incidents-into-tasks.md)
+- (Preview) You can investigate incidents using [Blast radius analysis](investigate-incidents.md#blast-radius-analysis), which is an advanced graph visualization built on the Microsoft Sentinel data lake and graph infrastructure. This feature generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
+- (Preview) In advanced hunting, you can now hunt using the [hunting graph](advanced-hunting-graph.md), which renders rendering predefined threat scenarios as interactive graphs.
+
 ## August 2025
+
+- (Preview) In advanced hunting, you can now enrich your [custom detection rules](custom-detection-rules.md) by creating dynamic alert titles and descriptions, select more impacted entities, and add custom details to display in the alert side panel. Microsoft Sentinel customers that are onboarded to Microsoft Defender also now have the option to customize the alert frequency when the rule is based only on data that is ingested to Sentinel.
 - (Preview) The following advanced hunting schema tables are now available for preview:
    - The [`CloudStorageAggregatedEvents`](advanced-hunting-cloudstorageaggregatedevents-table.md) table contains information about storage activity and related events
    - The [`IdentityEvents`](advanced-hunting-identityevents-table.md) table contains information about identity events obtained from other cloud identity service providers
@@ -45,6 +53,8 @@ You can also get product updates and important notifications through the [messag
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
     - You can now view the details pane even for analytics rules.
     - You can now perform the following actions on analytics rules: Turn on/off, Delete, Edit.
+ - (GA) The **Sensitivity label** filter is now available in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. This filter lets you filter incidents and alerts based on the sensitivity label assigned to the affected resources. For more information, see [Filters in the incident queue](incident-queue.md#filters-) and [Investigate alerts](investigate-alerts.md).
+
 
 ## July 2025
 - (Preview) The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
@@ -55,8 +65,8 @@ You can also get product updates and important notifications through the [messag
 - (Preview) Microsoft Copilot now provides suggested prompts as part of incident summaries in the Microsoft Defender portal. Suggested prompts help you get more insights into the specific assets involved in an incident. For more information, see [Summarize incidents with Microsoft Copilot in Microsoft Defender](security-copilot-m365d-incident-summary.md).   
 - (GA) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
 
-
 ## May 2025
+
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
     - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 

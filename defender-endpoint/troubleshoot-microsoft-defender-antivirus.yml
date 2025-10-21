@@ -2,15 +2,15 @@
 metadata:
   title: Microsoft Defender Antivirus event IDs and error codes
   description: Look up the causes and solutions for Microsoft Defender Antivirus event IDs and errors.
-  author: emmwalshh
-  ms.author: ewalsh
+  author: batamig
+  ms.author: bagol
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting
   ms.date: 06/10/2025
   ms.localizationpriority: medium
   ms.custom: nextgen
-  manager: deniseb
+  manager: bagol
   ms.subservice: ngp
   ms.collection:
   - m365-security
@@ -886,9 +886,9 @@ sections:
 
           - BM state: Behavior Monitoring state (Enabled or Disabled)
 
-          - Antivirus signature age: Antivirus signature age (in days)
+          - Antivirus signature age: Antivirus signature age (in days). Calculated as the time starting from the Security Intelligence Update (SIU) release date, to the current date. Before a signature is updated for the first time, it'll display an age of 65535 days.
 
-          - Antispyware signature age: Antispyware signature age (in days)
+          - Antispyware signature age: Antispyware signature age (in days). Timestamp reflecting the Security Intelligence Update (SIU) release date (not the local installation time). Before the timestamp is updated for the first time, its value is null.
 
           - Last quick scan age: Last quick scan age (in days)
 

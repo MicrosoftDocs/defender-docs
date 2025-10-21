@@ -1,13 +1,13 @@
----
+﻿---
 title: Customize controlled folder access
 description: Add other folders that should be protected by controlled folder access, or allow apps that are incorrectly blocking changes to important files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -16,22 +16,20 @@ ms.collection:
 - mde-asr
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Customize controlled folder access
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
 
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
 
@@ -40,6 +38,7 @@ Controlled folder access helps you protect valuable data from malicious apps and
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
+- Azure Stack HCI OS, version 23H2 and later
 
 > [!IMPORTANT]
 > Controlled folder access is not supported on Linux servers.
@@ -189,3 +188,4 @@ For more information about customizing the notification when a rule is triggered
 - [Enable controlled folder access](enable-controlled-folders.md)
 - [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

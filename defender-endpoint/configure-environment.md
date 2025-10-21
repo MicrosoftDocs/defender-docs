@@ -1,13 +1,13 @@
----
+﻿---
 title: Configure your network environment to ensure connectivity with Defender for Endpoint service
 description: Learn how to configure your network environment to connect with the Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,17 +15,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 ms.date: 06/11/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service, by allowing outbound connection and bypassings HTTPS inspection for the service URLs. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 
@@ -77,3 +75,4 @@ For devices with no direct internet connection, the use of a proxy solution is t
 ## Next step
 
 [STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
+

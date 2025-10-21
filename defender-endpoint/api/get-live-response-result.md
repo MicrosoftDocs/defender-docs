@@ -1,14 +1,14 @@
----
+﻿---
 title: Get live response results
 description: Learn how to retrieve a specific live response command result by its index.
 search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,20 +18,19 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 ms.date: 06/03/2021
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Get live response results
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -70,6 +69,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
   - **Windows Server 2022**  
 
   - **Windows Server 2025**
+  - **Azure Stack HCI OS, version 23H2 and later**
 
 ## Permissions
 
@@ -155,3 +155,4 @@ C:\\windows\\TEMP\\OfficeClickToRun.dmp.zip\n51 MB\n\u0000\u0000\u0000",
 - [Cancel machine action](cancel-machine-action.md)
 - [Run live response](run-live-response.md) 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
