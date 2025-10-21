@@ -98,13 +98,10 @@ Improved Defender update reliability by allowing non-admin processes to trigger 
 
 - Enhanced Passive Mode Scanning Behavior
 When Microsoft Defender is in Passive mode, an Antivirus scan will not occur after a signature update , unless specifically set in the policy setting DisableScanOnUpdate.
-
 - Improved Tamper Protection Handling
 Optimized the configuration process for Tamper Protection in multi-threaded environments to ensure more reliable behavior.
-
 - Digital Signature Verification Performance Boost
 Enhanced the efficiency of digital signature verification to improve overall system performance.
-
 - Refined ASR Rule Exclusion Processing
 Refined exclusion processing and resolved false positives for the Attack Surface Reduction (ASR) rule: Block Office applications from injecting code into other processes.
 
