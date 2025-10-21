@@ -32,10 +32,11 @@ appliesto:
 
 While you can construct your [advanced hunting](advanced-hunting-overview.md) queries to return precise information, you can also work with the query results to gain further insight and investigate specific activities and indicators. You can take the following actions on your query results:
 
-- View results as a table or chart
-- Export tables and charts
-- Drill down to detailed entity information
-- Tweak your queries directly from the results
+- [View results as a table or chart](#view-query-results-as-a-table-or-chart)
+- [Export tables and charts](#export-tables-and-charts)
+- [Drill down to detailed entity information](#drill-down-from-query-results)
+- [Tweak your queries directly from the results](#tweak-your-queries-from-the-results)
+- [View timeline of events](#automatic-timeline-rendering)
 
 ## View query results as a table or chart
 
@@ -202,21 +203,23 @@ By default, a timeline appears above the advanced hunting results that displays 
 
 :::image type="content" source="/defender/media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="/defender/media/advanced-hunting-query-results-timeline.png":::
 
-You can select whether or not the timeline is displayed by default in the **Page preferences** settings.
+You can select whether or not the timeline is displayed by default in the **Chart preferences** settings.
 
-:::image type="content" source="/defender/media/advanced-hunting-page-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-page-preferences-zoom.png":::
+:::image type="content" source="/defender/media/advanced-hunting-chart-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-chart-preferences.png":::
 
-The timeline automatically adjusts its resolution based on the range of results. You can click any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period, so when you filter by a specific range, it zooms in to show event distribution in high resolution.
+The timeline automatically adjusts its resolution based on the range of results.
 
-The timeline only appears if there are more than 40 events in your results and there's `Timestamp` or `timeGenerated` column.
+### Filter the timeline results
 
-### [Unfiltered timeline](#tab/unfiltered)
+Select any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period, so when you filter by a specific range, it zooms in to show event distribution in high resolution.
+
+#### [Unfiltered timeline](#tab/unfiltered)
 
 The following screenshot shows the results of a query that returns 1,000 email events. The timeline is unfiltered, so it displays the full range of results with a timestamp for each day. Select a day or range of days to filter the results for that time period.
 
 :::image type="content" source="/defender/media/advanced-hunting-unfiltered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with all the results unfiltered." lightbox="/defender/media/advanced-hunting-unfiltered-results.png":::
 
-### [Filtered timeline](#tab/filtered)
+#### [Filtered timeline](#tab/filtered)
 
 The following screenshot shows the zoomed in results of a query filtered to a specific date.
 
@@ -224,21 +227,37 @@ The following screenshot shows the zoomed in results of a query filtered to a sp
 
 ---
 
-You can group the results in the timeline by any column that has at least two but less than 50 unique values.
+### Split the timeline by values
 
-### [Ungrouped timeline](#tab/ungrouped)
+You can split the results in the timeline by any column that has at least two but less than 50 unique values.
+
+#### [Ungrouped timeline](#tab/ungrouped)
 
 The following screenshot shows the results of a query that returns 1,000 email events. The timeline is ungrouped, so it displays all the results in a single line.
 
 :::image type="content" source="/defender/media/advanced-hunting-ungrouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results all together in one line." lightbox="/defender/media/advanced-hunting-ungrouped.png":::
 
-### [Grouped timeline](#tab/grouped)
+#### [Grouped timeline](#tab/grouped)
 
 The following screenshot shows the results grouped by last email action with a separate line for each action.
 
-:::image type="content" source="/defender/media/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="/defender/media/advanced-hunting-grouped-zoom.png":::
+:::image type="content" source="/defender/media/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="/defender/media/advanced-hunting-grouped.png":::
 
 ---
+
+### Change chart type
+
+You can change the chart type of the timeline by selecting a different option from the chart type dropdown menu. The available chart types include:
+
+- Column chart
+- Pie chart
+
+### Rendering conditions
+
+The timeline only appears if the following conditions are met:
+
+- There are more than 40 events in your results.
+- There's `Timestamp` or `timeGenerated` column.
 
 ## Related topics
 
