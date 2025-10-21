@@ -48,7 +48,7 @@ For more information, see:
 
 Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
 
-This change might affect your analytic rules, automation rules/playbooks, workbooks, hunting queries, and custom integrations.
+This change might affect your analytic rules, automation rules, playbooks, workbooks, hunting queries, and custom integrations.
 
 Sentinel will now select the most reliable account identifier using the following priority:
 
@@ -58,7 +58,7 @@ Sentinel will now select the most reliable account identifier using the followin
 1. **Name** – used if UPN prefix is unavailable
 1. **Display Name** – fallback if both above are missing
 
-Update your KQL queries and automation logic to follow the new precedence-aware pattern. Use the `coalesce()` function to ensure compatibility:
+Update your KQL queries and automation logic to follow the new precedence-aware pattern. Use the [`coalesce()`(/kusto/query/coalesce-function)](/kusto/query/coalesce-function) function to ensure compatibility:
 
 ```kql
 coalesce(Account.UPNprefix, Account.Name, Account.DisplayName)
