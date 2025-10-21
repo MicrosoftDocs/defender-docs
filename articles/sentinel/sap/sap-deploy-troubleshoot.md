@@ -43,7 +43,7 @@ For more information, see [Configure SAP Cloud Connector settings](preparing-sap
 
 When you set up the Microsoft Sentinel for SAP - agentless data connector, under the **Initial connector configuration > Step 1: Trigger automatic deployment of required Azure resources / SOC Engineer**, after you select **Deploy required resources**, you might see the "Deploy required Azure resources" error or similar (errors may vary). This error might indicate that you're missing the required permissions for the Entra ID app registration.
 
-If you don't have the **Entra ID Application Developer** role or higher, you need to work with a colleague that has this permission to finish setting up the Azure resources. For more information, follow the procedure in the [data connector agent connection](deploy-data-connector-agent-container.md#connect-your-agentless-data-connector-preview) step.
+If you don't have the **Entra ID Application Developer** role or higher, you need to work with a colleague that has this permission to finish setting up the Azure resources. For more information, follow the procedure in the [data connector agent connection](deploy-data-connector-agent-container.md#connect-your-agentless-data-connector) step.
 
 ## Missing "Last address routed"
 
@@ -124,7 +124,7 @@ Connector execution logs for your Microsoft Sentinel solution for SAP applicatio
 
 ## Review and update the Microsoft Sentinel for SAP agent connector configuration file
 
-This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md).  If you [deployed your agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview), continue to maintain and change configuration settings via the portal.
+This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md).  If you [deployed your agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal), continue to maintain and change configuration settings via the portal.
 
 If you deployed via the command line, perform the following steps:
 
