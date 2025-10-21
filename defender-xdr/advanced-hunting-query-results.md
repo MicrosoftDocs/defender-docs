@@ -201,7 +201,7 @@ You can do the same for your saved functions, queries, and custom detections in 
 
 By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
 
-:::image type="content" source="../media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="../media/advanced-hunting-query-results-timeline.png":::
+:::image type="content" source="/defender/media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="/defender/media/advanced-hunting-query-results-timeline.png":::
 
 You can select whether or not the timeline is displayed by default in the **Chart preferences** settings.
 
