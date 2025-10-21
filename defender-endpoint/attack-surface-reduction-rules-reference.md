@@ -197,7 +197,7 @@ For rules with the "Rule State" specified:
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | | Y| Y (in block mode)  |
-|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | Y (in block mode) |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) |   | Y | Y (in block mode)  |
