@@ -44,32 +44,34 @@ With live response, analysts can do all of the following tasks:
 
 Devices must be running one of the following versions of Windows
 
-  - **Windows 10 & 11**
+### Supported operating systems
+
+  - Windows 10 & 11
     - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
     - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
     - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
     - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
     - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
 
-  - **macOS** - Minimum required version: `101.43.84`. Supported for Intel-based and ARM-based macOS devices.
+  - macOS- Minimum required version: `101.43.84`. Supported for Intel-based and ARM-based macOS devices.
 
-  - **Linux** - Minimum required version: `101.45.13`
+  - Linux - Minimum required version: `101.45.13`
 
-  - **Windows Server 2012 R2** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
+  - Windows Server 2012 R2 - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
 
-  - **Windows Server 2016** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
+  - Windows Server 2016 - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
   
 
     > [!NOTE]
     > For Windows Server 2012 R2 or Windows Server 2016, you must have the [Unified Agent](update-agent-mma-windows.md#update-mma-on-your-devices) installed, and it is recommended to patch to latest sensor version with KB5005292. Live response doesn't work as expected for offline down-level servers onboarded using the streamlined method, because of the static proxy. Consider using a system proxy instead.
 
-  - **Windows Server 2019**
+  - Windows Server 2019
     - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
 
-  - **Windows Server 2022 and later**
+  - Windows Server 2022 and later
 
-  - **Azure Stack HCI OS, version 23H2 and later**
+  - Azure Stack HCI OS, version 23H2 and later
 
 - **Enable live response from the advanced settings page**.
 
