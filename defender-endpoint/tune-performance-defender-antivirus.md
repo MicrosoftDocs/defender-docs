@@ -111,21 +111,22 @@ Starting with Defender version `4.18.2206.X`, users are able to view scan skip r
 
 - **To export**:
 
-```powershell
-(Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | Export-CSV -Path .\Repro-Install-Scans.csv -Encoding UTF8 -NoTypeInformation
-```
+    ```powershell
+    (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | Export-CSV -Path .\Repro-Install-Scans.csv -Encoding UTF8 -NoTypeInformation
+    ```
 
 - **To convert**:
-```powershell
-(Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 100).TopScans | ConvertTo-Csv -NoTypeInformation
-```
+  
+    ```powershell
+    (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 100).TopScans | ConvertTo-Csv -NoTypeInformation
+    ```
 
 ### For JSON
 
 - **To convert**:
-```powershell
-(Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | ConvertTo-Json -Depth 1
-```
+    ```powershell
+    (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | ConvertTo-Json -Depth 1
+    ```
 
 To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. See the following sections for more details.
 
