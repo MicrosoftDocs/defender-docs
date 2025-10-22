@@ -59,6 +59,8 @@ Administrators can also review the changes in settings that take place during tr
 - Potential events can include events with IDs 5000, 5001, 5004, 5007 and others. See more details at [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml#event-id-5000).
 
 Troubleshooting mode automatically turns off after reaching its expiration time (it lasts for 4 hours). When troubleshooting mode has expired, all policy-managed configurations become read-only again and revert to how the device was configured before enabling troubleshooting mode. 
+> [!NOTE]
+> Troubleshooting mode is limited to 8 hours per day per device. This cannot be changed. The 8-hour quota resets 24 hours after troubleshooting mode is first enabled.
 
 It can take up to 15 minutes from the time the command is sent from Microsoft Defender XDR to when it becomes active on the device.
 
