@@ -125,7 +125,7 @@ An allowed application or service only has write access to a controlled folder a
 
 2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar) and then select **Manage ransomware protection**.
 
-3. Under the **Controlled folder access** section, select **Allow an app through Controlled folder access**
+3. Under the **Controlled folder access** section, select **Allow an app through Controlled folder access**.
 
 4. Select **Add an allowed app** and follow the prompts to add apps.
 
@@ -145,7 +145,7 @@ An allowed application or service only has write access to a controlled folder a
 
 ### Use PowerShell to allow specific apps
 
-1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**
+1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**.
 2. Enter the following cmdlet:
 
     ```PowerShell
@@ -174,7 +174,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedAppli
 Microsoft Defender for Endpoint certificate and file indicators can allow signed executable files to access protected folders. For implementation details, see [Create indicators based on certificates](indicator-certificates.md).
 
 > [!Note]
-> This does no apply to scripting engines, including Powershell
+> This does not apply to scripting engines, including Powershell.
 
 ## Customize the notification
 
