@@ -24,17 +24,6 @@ appliesto:
 ---
 # Protect important folders with controlled folder access
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to**
-- Windows
-
-
-
-Platforms
-
-- Windows
 
 ## What is controlled folder access?
 
@@ -42,17 +31,18 @@ Controlled folder access helps protect your valuable data from malicious apps an
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
-## Requirements for controlled folder access
+## Prerequisites
+
+### Supported operating systems
 
 Controlled folder access is supported on:
 
+- Windows
 - Windows 11
 - Windows 10
-- Windows Server 2025Azure Stack HCI OS, version 23H2 and later.
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
+- Windows Server 2016 and later
 - Windows Server 2012 R2
+- Azure Stack HCI OS, version 23H2 and later.
 
 Controlled folder access requires:
 

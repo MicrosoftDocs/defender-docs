@@ -27,9 +27,6 @@ appliesto:
 ---
 # Feedback-loop blocking
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 - Windows

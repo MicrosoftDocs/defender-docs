@@ -24,9 +24,6 @@ appliesto:
 ---
 # Evaluate Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 

@@ -25,9 +25,6 @@ appliesto:
 ---
 # Collect Microsoft Defender Antivirus diagnostic data
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 This article describes how to collect diagnostic data that's used by Microsoft support and engineering teams when they help troubleshoot issues with Microsoft Defender Antivirus.
 

@@ -24,8 +24,6 @@ appliesto:
 ---
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**:
 

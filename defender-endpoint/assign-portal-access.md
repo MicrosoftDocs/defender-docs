@@ -21,11 +21,6 @@ appliesto:
 ---
 # Assign user access 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Defender for Endpoint supports two ways to manage permissions:
 

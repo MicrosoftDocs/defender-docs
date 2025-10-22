@@ -22,8 +22,6 @@ appliesto:
 ---
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 

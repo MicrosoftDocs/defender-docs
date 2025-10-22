@@ -24,16 +24,16 @@ appliesto:
 ---
 # Create a custom gradual rollout process for Microsoft Defender updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-- Windows
 
 > [!NOTE]
 > This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer.
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
+
+## Prerequisites
+
+### Supported operating systems
+- Windows
 
 The following table lists the available group policy settings for configuring update channels:
 

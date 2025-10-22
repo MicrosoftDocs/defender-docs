@@ -23,11 +23,11 @@ appliesto:
 ---
 # Manage Microsoft Defender Antivirus in your business
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Prerequisites
 
+### Supported operating systems
 
-**Platforms**
 - Windows
 - Windows Server
 

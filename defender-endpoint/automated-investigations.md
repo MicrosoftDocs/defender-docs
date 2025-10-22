@@ -23,11 +23,6 @@ appliesto:
 ---
 # Overview of automated investigations
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-- Windows
 
 Want to see how it works? Watch the following video:
 
@@ -37,8 +32,11 @@ The technology in automated investigation uses various inspection algorithms and
 
 This article provides an overview of AIR and includes links to next steps and additional resources.
 
-> [!TIP]
+## Prerequisites
 
+### Supported operating systems 
+
+- Windows
 
 ## How the automated investigation starts
 
