@@ -58,7 +58,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
 - Azure Stack HCI OS, version 23H2 and later
 
-- macOS[(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
+- macOS [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
       - 13 (Ventura)
       - 12 (Monterey)
       - 11 (Big Sur)
@@ -90,8 +90,8 @@ Runs a sequence of live response commands on a device
 
 8. Multiple live response sessions can't be executed on the same machine (if live response action is already running, subsequent requests are responded to with HTTP 400 - ActiveRequestAlreadyExists).
 
-> [!NOTE]
-> Live response actions initiated from the Device page aren't available in the `machineactions` API.
+    > [!NOTE]
+    > Live response actions initiated from the Device page aren't available in the `machineactions` API.
 
 
 
