@@ -216,8 +216,8 @@ Use the following procedure to enable network protection on domain-joined comput
    |Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
    |Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
 
-> [!IMPORTANT]
-> Disable the "AllowDatagramProcessingOnWinServer" setting. This is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
+  > [!IMPORTANT]
+  > Disable the "AllowDatagramProcessingOnWinServer" setting. This is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
 
 1. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 
