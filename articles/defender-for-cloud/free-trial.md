@@ -85,3 +85,11 @@ The `FreeTrialRemainingTime` column shows the remaining time, if any, of the fre
 ## Check your free trial status with Defender for Cloud
 
 You can also check the status of your free trial directly within the Microsoft Defender for Cloud portal.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Search for and select **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select the relevant subscription.
+
+1. 
