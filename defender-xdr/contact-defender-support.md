@@ -1,15 +1,15 @@
 ---
-title: Contact Microsoft Defender XDR support
-description: Learn how to contact Microsoft Defender XDR support via the Defender portal.
+title: Contact Microsoft Defender support
+description: Learn how to contact Microsoft Defender support via the Defender portal.
 ms.topic: how-to
 ms.date: 10/20/2025
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ---
-# Contact Microsoft Defender XDR support
+# Contact Microsoft Defender support
 
-Microsoft Defender XDR support process is designed to help you find solutions to common problems and submit support cases to the Microsoft support team.
+Microsoft Defender support process is designed to help you find solutions to common problems and submit support cases to the Microsoft support team.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ You must meet the following requirements before you can open a support case:
 
 For more information on which roles have permission, see [Security Administrator permissions](/azure/active-directory/roles/permissions-reference#security-administrator). 
 
-For general information on admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true).
+For more information on admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true).
 
 - Microsoft Defender for Endpoint Plan 1 or Plan 2 license. If your organization uses only Defender for Servers Plan 1 or Plan 2, you must also have at least one Defender for Endpoint license to open a support case.
 
