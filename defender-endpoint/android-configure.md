@@ -130,14 +130,12 @@ Following privacy controls are available for configuring the data that is sent b
 
 ## Root Detection (Preview)
 
-Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, these events occur:
+Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, below events occur:
 
-- A high-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
+- A high-risk alert is reported to the Microsoft Defender portal. If Device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
 
-- User data on app is cleared. When user opens the app after rooted.
+- User data on app will be cleared after device is being detected as rooted. The feature is enabled by default; no action is required from admin or user.
 
-  The feature is enabled by default; no action is required from admin or user. Any android device running Defender version **1.0.8125.0302** (or later) will have it activated.
-  
 **Prerequisite**
 
 - Company portal must be installed, and version must be >=5.0.6621.0
