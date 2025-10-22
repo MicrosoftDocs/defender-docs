@@ -23,9 +23,6 @@ appliesto:
 ---
 # Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 Use this article to set up policies for Defender for Endpoint on macOS using Jamf Pro.
 
