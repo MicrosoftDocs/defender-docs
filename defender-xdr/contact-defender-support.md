@@ -15,13 +15,13 @@ Microsoft Defender support process is designed to help you find solutions to com
 
 You must meet the following requirements before you can open a support case:
 
-- Service Support Administrator **OR** Helpdesk Administrator role.
+- You must have either the **Service Support Administrator or Helpdesk Administrator role**.
 
-For more information on which roles have permission, see [Security Administrator permissions](/azure/active-directory/roles/permissions-reference#security-administrator). 
+For more information on role permissions, see [Security Administrator permissions](/azure/active-directory/roles/permissions-reference#security-administrator). 
 
 For more information on admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true).
 
-- Microsoft Defender for Endpoint Plan 1 or Plan 2 license. If your organization uses only Defender for Servers Plan 1 or Plan 2, you must also have at least one Defender for Endpoint license to open a support case.
+- You must have a Microsoft Defender for Endpoint Plan 1 or Plan 2 license. If your organization uses only Defender for Servers Plan 1 or Plan 2, you'll also need at least one Defender for Endpoint license to open a support case.
 
 ## Access the widget
 
@@ -36,7 +36,7 @@ For more information on admin roles, see [About admin roles](/microsoft-365/admi
     :::image type="content" source="media/contact-defender-support/how-can-we-help-box.png" alt-text="Screenshot that shows where to enter your support question." lightbox="media/contact-defender-support/how-can-we-help-box.png":::
 
 
-1. You can choose one of the following options
+1. You can choose one of the following options:
 
    - Review a short description that explains how to resolve your issue.  
    - Contact Microsoft Support to open a service request.
