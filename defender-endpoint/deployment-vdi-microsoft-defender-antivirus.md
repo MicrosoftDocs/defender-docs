@@ -119,7 +119,7 @@ You can also set up your single server or machine to fetch the updates on behalf
    
 ### Set a scheduled task to run the PowerShell script
 
-1. On the management machine, open the Start menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
+1. On the management machine, open the **Start** menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
 
 2. Specify the name as `Security intelligence unpacker`. 
 
@@ -185,9 +185,9 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Suppress all notifications: `Enabled`
 
-> [!NOTE]
-> Sometimes, Microsoft Defender Antivirus notifications are sent to or persist across multiple sessions. To help avoid user confusion, you can lock down the Microsoft Defender Antivirus user interface.
-> Suppressing notifications prevents notifications from Microsoft Defender Antivirus from showing up when scans are done or remediation actions are taken. However, your security operations team sees the results of a scan if an attack is detected and stopped. Alerts, such as an initial access alert, are generated, and appear in the [Microsoft Defender portal](https://security.microsoft.com).
+   > [!NOTE]
+   > Sometimes, Microsoft Defender Antivirus notifications are sent to or persist across multiple sessions. To help avoid user confusion, you can lock down the Microsoft Defender Antivirus user interface.
+   > Suppressing notifications prevents notifications from Microsoft Defender Antivirus from showing up when scans are done or remediation actions are taken. However, your security operations team sees the results of a scan if an attack is detected and stopped. Alerts, such as an initial access alert, are generated, and appear in the [Microsoft Defender portal](https://security.microsoft.com).
 
 ### MAPS
 
@@ -237,7 +237,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
 
    > [!NOTE]
-   > If you want to harden, you could change "Turn on catch-up quick scan" to enabled, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it will use additional CPU.
+   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it will use additional CPU.
 
 - Turn on e-mail scanning: `Enabled`
 
