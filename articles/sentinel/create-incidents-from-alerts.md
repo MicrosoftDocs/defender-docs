@@ -1,14 +1,13 @@
 ---
 title: Create incidents from alerts in Microsoft Sentinel | Microsoft Docs
 description: Learn how to create incidents from alerts in Microsoft Sentinel.
-author: yelevin
+author: guywi-ms
+ms.author: guywild
 ms.topic: how-to
 ms.date: 10/16/2024
-ms.author: yelevin
 ms.custom:
   - mvc
   - sfi-image-nochange
-
 
 #Customer intent: As a security analyst, I want to automatically create incidents from security alerts so that I can streamline incident management and improve response times.
 
@@ -85,5 +84,5 @@ You can create more than one **Microsoft Security** analytics rule per **Microso
 
 ## Next steps
 
-- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a [free trial](https://azure.microsoft.com/free/).
+- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a [free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - Learn how to [onboard your data to Microsoft Sentinel](quickstart-onboard.md), and [get visibility into your data and potential threats](get-visibility.md).

@@ -4,7 +4,7 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: batamig
 ms.author: bagol
 ms.topic: concept-article
-ms.date: 08/20/2025
+ms.date: 09/28/2025
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -18,9 +18,67 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## October 2025
+
+
+
+### Export STIX threat intelligence objects (Preview)
+
+Microsoft Sentinel now supports exporting STIX threat intelligence objects to other destinations, such as external platforms. If you've ingested threat intelligence to Microsoft Sentinel from an external platform, such as when using the **Threat Intelligence - TAXII** data connector, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
+
+Exporting TI objects is currently supported for TAXII 2.1-based platforms only. You can access the export feature from both the Defender portal and the Azure portal:
+
+#### [Defender portal](#tab/defender-portal)
+
+:::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-defender.png":::
+
+#### [Azure portal](#tab/azure-portal)
+
+:::image type="content" source="media/work-with-threat-indicators/export-azure.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
+
+---
+
+For more information, see:
+
+- [Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel](connect-threat-intelligence-taxii.md)
+- [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
+
+
 ## September 2025
 
+- [Microsoft Sentinel evolves into a SIEM and platform](#microsoft-sentinel-is-evolving-into-a-siem-and-platform)
+
+  Key additions include:
+
+  - [Microsoft Sentinel data lake is now generally available (GA)](#microsoft-sentinel-data-lake-is-now-generally-available-ga)
+  - [Microsoft Sentinel graph (Preview)](#microsoft-sentinel-graph-preview)  
+  - [Microsoft Sentinel Model Context Protocol (MCP) server (Preview)](#microsoft-sentinel-model-context-protocol-mcp-server-preview)
+
 - [New data sources and enhanced User and Entity Behavior Analytics (UEBA) (Preview)](#new-data-sources-for-enhanced-user-and-entity-behavior-analytics-ueba-preview)
+
+### Microsoft Sentinel is evolving into a SIEM and platform
+
+Security is being reengineered for the AI era, moving beyond static, rule-based controls and post-breach response toward platform-led, machine-speed defense. To address the challenge of fragmented tools, sprawling signals, and legacy architectures that can't match the velocity and scale of modern attacks, Microsoft Sentinel has evolved into both a SIEM and a platform that unifies data for agentic defense. This update reflects architectural enhancements that support AI-driven security operations at scale. For more information, see [What is Microsoft Sentinel?](sentinel-overview.md)
+
+Key additions include Microsoft Sentinel data lake, Microsoft Sentinel graph, and Microsoft Sentinel Model Context Protocol (MCP) server, as described below.
+
+#### Microsoft Sentinel data lake is now generally available (GA)
+
+A scalable, cost-efficient foundation for long-term data retention and multi-modal analytics. Microsoft Sentinel data lake enables organizations to unify security data across sources and run advanced analytics without infrastructure overhead.
+
+For more information, see [Microsoft Sentinel data lake](datalake/sentinel-lake-overview.md).
+
+#### Microsoft Sentinel graph (Preview)
+
+Unified graph analytics for deeper context and threat reasoning. Microsoft Sentinel graph models relationships across users, devices, and activities to support complex threat investigations and pre- and post-breach analysis.
+
+For more information, see [What is Microsoft Sentinel graph? (Preview)](datalake/sentinel-graph-overview.md). 
+
+#### Microsoft Sentinel Model Context Protocol (MCP) server (Preview) 
+
+A hosted interface for building intelligent agents using natural language. Microsoft Sentinel MCP server simplifies agent creation and data exploration by allowing engineers to query and reason over security data without needing schema knowledge.
+
+For more information, see [Model Context Protocol (MCP) overview](datalake/sentinel-mcp-overview.md).
 
 ### New data sources for enhanced User and Entity Behavior Analytics (UEBA) (Preview)
 
@@ -44,19 +102,17 @@ UEBA now supports anomaly detection using six new data sources:
   - **GCP audit logs - Failed IAM access events**: Capture denied access attempts in Google Cloud Platform, helping identify privilege escalation attempts or misconfigured roles.
   - **Okta MFA and authentication security change events**: Surface MFA challenges and changes to authentication policies in Okta—signals that might indicate targeted attacks or identity tampering.
 
-These new sources enhance UEBA’s ability to detect threats across Microsoft and hybrid environments based on enriched user, device, and service identity data, enhanced behavioral context, and new cross-platform anomaly detection capabilities. 
+These new sources enhance UEBA's ability to detect threats across Microsoft and hybrid environments based on enriched user, device, and service identity data, enhanced behavioral context, and new cross-platform anomaly detection capabilities. 
 
 To enable the new data sources, you must be onboarded to the Defender portal. 
 
-
 For more information, see:
 
-- [Microsoft Sentinel’s AI-driven UEBA ushers in the next era of behavioral analytics](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel%E2%80%99s-ai-driven-ueba-ushers-in-the-next-era-of-behavioral-analyti/4448390)
+- [Microsoft Sentinel's AI-driven UEBA ushers in the next era of behavioral analytics](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel%E2%80%99s-ai-driven-ueba-ushers-in-the-next-era-of-behavioral-analyti/4448390)
 - [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](./identify-threats-with-entity-behavior-analytics.md)
 - [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](./enable-entity-behavior-analytics.md)
 - [Microsoft Sentinel UEBA reference](ueba-reference.md)
 - [UEBA anomalies](./anomalies-reference.md#ueba-anomalies)
-
 
 ## August 2025
 
@@ -72,22 +128,22 @@ Workbooks are available in the Defender portal under **Microsoft Sentinel > Thre
 
 ## July 2025
 
-- [Microsoft Sentinel data lake (preview) ](#microsoft-sentinel-data-lake-preview)
+- [Microsoft Sentinel data lake](#microsoft-sentinel-data-lake)
 - [Table management and retention settings in the Microsoft Defender portal](#table-management-and-retention-settings-in-the-microsoft-defender-portal)
-- [Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (Preview)](#microsoft-sentinel-data-lake-permissions-integrated-with-microsoft-defender-xdr-unified-rbac-preview)
+- [Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC](#microsoft-sentinel-data-lake-permissions-integrated-with-microsoft-defender-xdr-unified-rbac)
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
 - [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
 - [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
 
-### Microsoft Sentinel data lake (preview) 
+### Microsoft Sentinel data lake
 
-Microsoft Sentinel is now enhanced with a modern data lake, purpose-built to streamline data management, reduce costs, and accelerate AI adoption for security operations teams. The new Microsoft Sentinel data lake offers cost-effective, long-term storage, eliminating the need to choose between affordability and robust security. Security teams gain deeper visibility and faster incident resolution, all within the familiar Sentinel experience, enriched through seamless integration with advanced data analytics tools.  
+Microsoft Sentinel is now enhanced with a modern data lake, purpose-built to streamline data management, reduce costs, and accelerate AI adoption for security operations teams. The new Microsoft Sentinel data lake offers cost-effective, long-term storage, eliminating the need to choose between affordability and robust security. Security teams gain deeper visibility and faster incident resolution, all within the familiar Microsoft Sentinel experience, enriched through seamless integration with advanced data analytics tools.  
 
 Key benefits of the Microsoft Sentinel data lake include:
-+	Single, open-format data copy for efficient and cost-effective storage
-+	Separation of storage and compute for greater flexibility
-+	Support for multiple analytics engines to unlock deeper insights from your security data
-+	Native integration with Microsoft Sentinel, including the ability to select tiering for log data across analytics and lake tiers
++Single, open-format data copy for efficient and cost-effective storage
++Separation of storage and compute for greater flexibility
++Support for multiple analytics engines to unlock deeper insights from your security data
++Native integration with Microsoft Sentinel, including the ability to select tiering for log data across analytics and lake tiers
 For more information, see 
 
 Explore the data lake using KQL queries, or use the new Microsoft Sentinel data lake notebook for VS Code to visualize and analyze your data.
@@ -104,11 +160,10 @@ For more information, see:
 Table management and retention settings are now available in the Microsoft Defender portals. You can view and manage table settings in the Microsoft Defender portal, including retention settings for Microsoft Sentinel and Defender XDR tables, and switch between analytics and data lake tiers.
 
 For more information, see:
-+ [Manage data tiers and retention in Microsoft Sentinel (preview)](manage-data-overview.md) 
-+ [Configure table settings in Microsoft Sentinel (preview)](manage-table-tiers-retention.md).
++ [Manage data tiers and retention in Microsoft Sentinel](manage-data-overview.md) 
++ [Configure table settings in Microsoft Sentinel](manage-table-tiers-retention.md).
 
-
-### Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (preview)
+### Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC
 
 Starting in July 2025, Microsoft Sentinel data lake permissions are provided through Microsoft Defender XDR unified RBAC. Support for unified RBAC is available in addition the support provided by global Microsoft Entra ID roles.
 
@@ -117,7 +172,7 @@ For more information, see:
 - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles)
 - [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details)
-- [Roles and permissions for the Microsoft Sentinel data lake (Preview)](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview)
+- [Roles and permissions for the Microsoft Sentinel data lake](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake)
 
 ### For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal
 
@@ -170,7 +225,7 @@ For more information, see [Create a codeless connector for Microsoft Sentinel](c
 We've consolidated the connector reference documentation, merging the separate connector articles into a single, comprehensive reference table.
 
 You can find the new connector reference at [Microsoft Sentinel data connectors](/azure/sentinel/data-connectors-reference#sentinel-data-connectors).
-For more information, see [Create a codeless connector](create-codeless-connector.md) and [Unlock the potential of Microsoft Sentinel’s Codeless Connector Framework and do more with Microsoft Sentinel faster](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/exciting-announcements-new-data-connectors-released-using-the-codeless-connector/4421104).
+For more information, see [Create a codeless connector](create-codeless-connector.md) and [Unlock the potential of Microsoft Sentinel's Codeless Connector Framework and do more with Microsoft Sentinel faster](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/exciting-announcements-new-data-connectors-released-using-the-codeless-connector/4421104).
 
 ### Summary rule templates now in public preview
 
@@ -229,7 +284,7 @@ For more information, see [Summarize Microsoft Sentinel incidents with Security 
 
 ### Multi workspace and multitenant support for Microsoft Sentinel in the Defender portal (Preview)
 
-For preview, in the Defender portal, connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. If you onboard Microsoft Sentinel with Defender XDR, a primary workspace's alerts are correlated with Defender XDR data. So incidents  include alerts from Microsoft Sentinel's primary workspace and Defender XDR. All other onboarded workspaces are considered secondary workspaces. Incidents are created based on the workspace’s data and won't include Defender XDR data. 
+For preview, in the Defender portal, connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. If you onboard Microsoft Sentinel with Defender XDR, a primary workspace's alerts are correlated with Defender XDR data. So incidents  include alerts from Microsoft Sentinel's primary workspace and Defender XDR. All other onboarded workspaces are considered secondary workspaces. Incidents are created based on the workspace's data and won't include Defender XDR data. 
 
 - If you plan to use Microsoft Sentinel in the Defender portal without Defender XDR, you can manage multiple workspaces. But, the primary workspace doesn't include Defender XDR data and you won't have access to Defender XDR capabilities.
 - If you're working with multiple tenants and multiple workspaces per tenant, you can also use Microsoft Defender multitenant management to view incidents and alerts, and to hunt for data in Advanced hunting, across both multiple workspaces and tenants.
@@ -254,7 +309,6 @@ For more information, see the following articles:
 
 - [Threat intelligence in Microsoft Sentinel](understand-threat-intelligence.md)
 - [Work with STIX objects and indicators to enhance threat intelligence and threat hunting in Microsoft Sentinel (Preview)](work-with-stix-objects-indicators.md)
-
 
 ### SOC optimization support for unused columns (Preview)
 
@@ -352,7 +406,6 @@ Both premium and standard Microsoft Defender Threat Intelligence data connectors
 Use Bicep files alongside or as a replacement of ARM JSON templates in Microsoft Sentinel repositories. Bicep provides an intuitive way to create templates of Azure resources and Microsoft Sentinel content items. Not only is it easier to develop new content items, Bicep makes reviewing and updating content easier for anyone that's a part of the continuous integration and delivery of your Microsoft Sentinel content.
 
 For more information, see [Plan your repository content](ci-cd-custom-content.md#plan-your-repository-content).
-
 
 ### SOC optimization updates for unified coverage management
 
