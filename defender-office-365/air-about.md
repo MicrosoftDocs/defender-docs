@@ -45,7 +45,7 @@ AIR in Defender for Office 365 Plan 2 requires that [audit logging is turned on]
 
 An alert is triggered, and a security playbook starts an automated investigation, which results in findings and recommended actions. Here's the overall flow of AIR, step by step:
 
-1. An automated investigation is started initiated in one of the following ways:
+1. An automated investigation is initiated in one of the following ways:
    - Specific alerts that are designed to initiate AIR. These alerts include:
      - Something suspicious is identified in email (for example, the message itself, an attachment, a URL, or a compromised user account).
      - [Zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).

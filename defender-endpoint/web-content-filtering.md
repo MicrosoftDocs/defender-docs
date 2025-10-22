@@ -1,4 +1,4 @@
----
+﻿---
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
@@ -17,18 +17,17 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Web content filtering
 
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## What is web content filtering?
 
@@ -51,7 +50,7 @@ Ensure you meet the requirements described in the following table:
 
 | Requirement | Description |
 |:---|:---|
-| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft 365 E5 Security<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
+| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft Defender Suite<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
 | Portal access | You must have access to the [Microsoft Defender portal](https://security.microsoft.com). |
 | Operating system | Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- Windows Server 2019 or later <br/>- For macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
 | Browser | Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
@@ -208,3 +207,4 @@ Use the time range filter at the top left of the page to select a time period. Y
 - [Requirements for Network Protection](web-content-filtering.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

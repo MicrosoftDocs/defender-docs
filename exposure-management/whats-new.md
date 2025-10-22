@@ -43,6 +43,11 @@ Key features include:
 This integration provides the first offering to combine the experience between Purview and Microsoft Defender Portal for classifying critical assets and gathering important pre-breach insights.
 
 For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+### Blast radius analysis
+
+Blast radius analysis is an advanced graph visualization integrated into incident investigation experience. Built on the Microsoft Sentinel data lake and graph infrastructure, it generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
+
+For more information, see [Blast radius analysis](/defender-xdr/investigate-incidents?branch=release-preview-sentinel-graph#blast-radius-analysis).
 
 ### New data connectors
 

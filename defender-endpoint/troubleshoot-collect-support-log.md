@@ -1,4 +1,4 @@
----
+﻿---
 title: Collect support logs in Microsoft Defender for Endpoint using live response
 description: Learn how to collect logs using live response to troubleshoot Microsoft Defender for Endpoint issues
 ms.service: defender-endpoint
@@ -15,15 +15,14 @@ ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
 ms.date: 07/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Collect support logs in Microsoft Defender for Endpoint using live response
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 When contacting support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
@@ -238,3 +237,4 @@ The Python Client Analyzer accepts command line parameters to perform different 
 - [Understand the analyzer HTML report](analyzer-report.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
