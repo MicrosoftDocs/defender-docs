@@ -6,7 +6,7 @@ metadata:
   author: chrisda
   ms.author: chrisda
   manager: bagol
-  ms.date: 05/21/2025
+  ms.date: 10/22/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -176,8 +176,7 @@ sections:
       - question: |
           Are wildcards supported when searching for quarantined messages? Can I search for quarantined messages for a specific domain?
         answer: |
-          Wildcards are supported in both the Microsoft Defender portal and Exchange Online PowerShell.
-          For example, you can use a wildcard such as *@contoso.com as a sender address and/or recipient address filter in the Quarantine portal or as PowerShell parameters to search for quarantined messages.
+          Wildcards are supported in both the Microsoft Defender portal and Exchange Online PowerShell. For example, you can use `*@contoso.com` as a sender address or recipient address filter to search for quarantined messages.
 
           For bulk search and release, copy the following PowerShell code into NotePad and save the file as .ps1 in a location that's easy for you to find (for example, C:\Data\QuarantineRelease.ps1).
 
