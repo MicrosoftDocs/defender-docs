@@ -302,11 +302,11 @@
               href: troubleshoot-analytics-rules.md
             - name: Tutorial - Detect threats using analytics rules
               href: tutorial-log4j-detection.md
+            - name: MITRE ATT&CK coverage
+              href: mitre-coverage.md
             - name: Compare analytics rules and custom detections
               href: compare-analytics-rules-custom-detections.md
-        - name: MITRE ATT&CK coverage
-          href: mitre-coverage.md
-        - name: Custom detections
+        - name: Custom detections in the Defender portal
           items:
             - name: Overview
               href: /defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
