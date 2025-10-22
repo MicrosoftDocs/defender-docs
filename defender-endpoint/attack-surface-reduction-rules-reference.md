@@ -19,8 +19,9 @@ ms.date: 10/20/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
+
 # Attack surface reduction rules reference
 
 

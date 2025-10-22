@@ -23,6 +23,8 @@ appliesto:
   - Microsoft Defender for Individuals
 
 ---
+
+
 # Cloud protection and Microsoft Defender Antivirus
 
 

@@ -19,8 +19,8 @@ ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Business
-
 ---
+
 # Start Investigation API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]

@@ -20,8 +20,8 @@ ms.custom: api
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Run live response commands on a device
 
 
