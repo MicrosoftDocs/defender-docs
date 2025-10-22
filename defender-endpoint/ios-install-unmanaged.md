@@ -23,10 +23,6 @@ appliesto:
 ---
 # Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 > [!NOTE]
 > Defender for Endpoint on iOS uses a VPN in order to provide the Web Protection feature. This isn't a regular VPN and is a local/self-looping VPN that doesn't take traffic outside the device.

@@ -23,8 +23,6 @@ appliesto:
 ---
 # Create indicators for IPs and URLs/domains
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ## Overview
 

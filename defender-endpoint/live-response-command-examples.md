@@ -21,11 +21,6 @@ appliesto:
 ---
 # Live response command examples
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Learn about common commands used in live response and see examples on how they're typically used.
 
