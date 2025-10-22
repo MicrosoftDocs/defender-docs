@@ -385,11 +385,11 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 10. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
-   |Description| Setting|
-   | -------- | -------- |
-   | TamperProtection (Device) | On|
+     |Description| Setting|
+     | -------- | -------- |
+     | TamperProtection (Device) | On|
 
-   For more information, see [Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
+     For more information, see [Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 
 #### Check the Cloud Protection network connectivity
 
@@ -443,7 +443,7 @@ To report False Negatives (FNs), see the following articles:
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.
 
-## **See also**
+## See also
 
 - [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
 - [Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated](/defender-endpoint/troubleshoot-security-intelligence-not-updated)
