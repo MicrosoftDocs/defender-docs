@@ -58,7 +58,7 @@ Using Configuration Manager with tenant attach, you can turn on (or off) the tam
 
 5. Deploy the policy to your devices.
 
-:::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
+    :::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
 
 ## See also
 
