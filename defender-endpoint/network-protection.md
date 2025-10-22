@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/10/2025
+ms.date: 10/20/2025
 audience: ITPro
 author: batamig
 ms.author: bagol
@@ -24,12 +24,6 @@ appliesto:
 # Use network protection to help prevent connections to malicious or suspicious sites
 
 
-**Platforms**
-
-- Windows
-- macOS
-- Linux
-
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
 
 ## Overview of network protection
@@ -41,6 +35,14 @@ Network protection extends the protection in [Web protection](web-protection-ove
 Watch this video to learn how network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=2d0270f9-f216-4e9e-85c7-5e2b183c6d73]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- macOS
+- Linux
 
 ### Network protection coverage
 
@@ -309,13 +311,13 @@ You can review the Windows event log to see events that are created when network
 
 2. Select **OK**.
 
-This procedure creates a custom view that filters to only show the following events related to network protection:
-
-|Event ID|Description|
-|---|---|
-|`5007`|Event when settings are changed|
-|`1125`|Event when network protection fires in audit mode|
-|`1126`|Event when network protection fires in block mode|
+    This procedure creates a custom view that filters to only show the following events related to network protection:
+    
+    |Event ID|Description|
+    |---|---|
+    |`5007`|Event when settings are changed|
+    |`1125`|Event when network protection fires in audit mode|
+    |`1126`|Event when network protection fires in block mode|
 
 ## Network protection and the TCP three-way handshake
 
@@ -390,10 +392,10 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
    - `EnableNetworkProtection` (DWORD) set to `1` (hex)
    - (On Windows Server 2012 R2 and Windows Server 2016 only) `AllowNetworkProtectionDownLevel` (DWORD) set to `1` (hex) 
 
-> [!NOTE]
-> Depending on your infrastructure, volume of traffic, and other conditions, **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Policies** > **Microsoft** > **Windows Defender** > **NIS** > **Consumers** > **IPS** - **AllowDatagramProcessingOnWinServer (dword) 1 (hex)** can have an effect on network performance.
+    > [!NOTE]
+    > Depending on your infrastructure, volume of traffic, and other conditions, **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Policies** > **Microsoft** > **Windows Defender** > **NIS** > **Consumers** > **IPS** - **AllowDatagramProcessingOnWinServer (dword) 1 (hex)** can have an effect on network performance.
 
-For more information, see: [Turn on network protection](enable-network-protection.md).
+    For more information, see [Turn on network protection](enable-network-protection.md).
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
