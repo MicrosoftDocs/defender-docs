@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 10/06/2025
+ms.date: 10/22/2025
 audience: ITPro
 ms.topic: how-to
 
@@ -504,8 +504,9 @@ If you'd rather use PowerShell to rotate DKIM keys for a domain, connect to [Exc
    To confirm the corresponding public key that's used to verify the DKIM signature (which infers the private key that was used to sign the message), check the **s=** value in the **DKIM-Signature** header field (the selector; for example, `s=selector1-contoso-com`).
 
    > [!IMPORTANT]
-   > If you change the bit depth of DKIM keys from 1024 to 2048 using the KeySize parameter, the update applies only to the next active selector during the first rotation. When you rotate the key again, the previously inactive selector becomes active, and its bit depth will also be updated to 2048.
-When you perform a DKIM key rotation on a domain, the change is not immediate, it takes four days (96 hours). While the key rotation is in progress, you cannot perform another rotation.
+   > If you change the bit depth of DKIM keys from 1024 to 2048 using the _KeySize_ parameter, the update applies only to the next active selector during the first key rotation. When you rotate keys again, the previously inactive selector becomes active, and the bit depth is also updated to 2048.
+   >
+   > When you rotate DKIM keys on a domain, the change isn't immediate. It takes four days (96 hours). While the key rotation is in progress, you can't do another key rotation.
 
 For detailed syntax and parameter information, see the following articles:
 
