@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,17 +23,6 @@ appliesto:
 # Onboard previous versions of Windows
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-
-- Windows 7 SP1 Enterprise
-- Windows 7 SP1 Pro
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
-- Windows Server 2008 R2 SP1
-
-
 
 Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
@@ -49,6 +38,17 @@ For Windows Server 2008 R2 SP1, you have the option of [onboarding through Micro
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows 7 SP1 Enterprise
+- Windows 7 SP1 Pro
+- Windows 8.1 Pro
+- Windows 8.1 Enterprise
+- Windows Server 2008 R2 SP1
 
 ## Configure and update System Center Endpoint Protection clients
 
