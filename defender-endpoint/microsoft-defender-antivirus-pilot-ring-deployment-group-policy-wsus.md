@@ -93,11 +93,11 @@ On about 10-500* Windows and/or Windows Server systems, depending on how many to
 
 1. On the **What's next** page, select **Finish**.
 
-The Windows Server Update Services Configuration Wizard is complete. 
+   The Windows Server Update Services Configuration Wizard is complete. 
 
 1. Open the **Update Services** snap-in console, and navigate to **YR2K19**. The console is shown in the following figure.
 
-   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png" alt-text="Screenshot that shows a screen capture of the Update Services snap-in console with YR2K19 shown." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png":::
+    :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png" alt-text="Screenshot that shows a screen capture of the Update Services snap-in console with YR2K19 shown." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png":::
 
 1. When synchronization is complete, you can see how many products and classifications have been added in the last 30 days. Check to ensure the status for **Last synchronization result** indicates _Succeeded_. You may see a warning indicating **"Your WSUS server currently shows that no computers are registered to receive updates"**. This warning is normal at this point of the deployment configuration process. 
 
