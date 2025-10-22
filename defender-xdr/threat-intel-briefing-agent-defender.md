@@ -94,7 +94,7 @@ To run the Threat Intelligence Briefing Agent for the first time, follow these s
 
 1. On the Threat Intelligence Briefing Agent banner at the top of the Threat analytics page, select **Set up agent**.
 
-   :::image type="content" source="media/ti-briefing-agent/setup-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page with the Setup agent button hightlighted." lightbox="media/ti-briefing-agent/etup-agent.png":::
+   :::image type="content" source="media/ti-briefing-agent/setup-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page with the Setup agent button hightlighted." lightbox="media/ti-briefing-agent/setup-agent.png":::
 
 2. On the pop-up window that appears, review the agent details then select **Next**.
 
@@ -102,7 +102,7 @@ To run the Threat Intelligence Briefing Agent for the first time, follow these s
 
 3. Connect a user account to the agent by selecting **Continue** to open a new window where you can select the user account. 
 
-   :::image type="content" source="media/ti-briefing-agent/connect-user.png" alt-text="Screenshots of the Threat Intelligence Briefing Agent setup page showing the steps to connect a user account." lightbox="media/ti-briefing-agent/onnect-user.png":::
+   :::image type="content" source="media/ti-briefing-agent/connect-user.png" alt-text="Screenshots of the Threat Intelligence Briefing Agent setup page showing the steps to connect a user account." lightbox="media/ti-briefing-agent/connect-user.png":::
 
 3. Wait for the agent to finish connecting to the account then select **Continue**.
 
@@ -139,7 +139,7 @@ You can also access the agent settings by:
 - Selecting the three dots in the agent banner and then selecting **Manage agent**.
 - Going to **System** > **Settings** > **Microsoft Defender XDR** > **Threat Intelligence Briefing Agent** in the Defender portal navigation menu.
 
-:::image type="content" source="media/ti-briefing-agent/settings.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent settings page in the Defender portal." lightbox="media/ti-briefing-agent/settings.png":::
+   :::image type="content" source="media/ti-briefing-agent/settings.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent settings page in the Defender portal." lightbox="media/ti-briefing-agent/settings.png":::
 
 ## Assess and provide feedback on the agent’s output
 
