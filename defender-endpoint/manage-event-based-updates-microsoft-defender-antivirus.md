@@ -186,8 +186,8 @@ If you have enabled cloud-delivered protection, Microsoft Defender Antivirus sen
 
 6. **Allow notifications to disable definitions-based reports to Microsoft MAPS** and set the option to **Enabled**. Then select **OK**.
 
-> [!NOTE]
-> **Allow notifications to disable definitions based reports** enables Microsoft MAPS to disable those definitions known to cause false-positive reports. You must configure your computer to join Microsoft MAPS for this function to work.
+    > [!NOTE]
+    > **Allow notifications to disable definitions based reports** enables Microsoft MAPS to disable those definitions known to cause false-positive reports. You must configure your computer to join Microsoft MAPS for this function to work.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
