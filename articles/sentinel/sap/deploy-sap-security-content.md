@@ -21,11 +21,11 @@ ms.custom: sfi-image-nochange
 
 The Microsoft Sentinel solutions for SAP applications include an SAP data connector, which collects logs from your SAP systems and sends them to your Microsoft Sentinel workspace, and out-of-the-box security content, which helps you gain insight into your organization's SAP environment and detect and respond to security threats. Installing your solution is a required step before you can configure your data connector.
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 :::zone pivot="connection-agent"
 
 :::image type="content" source="media/deployment-steps/install-solution.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Install solution content step." border="false":::
-
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 :::zone-end
 

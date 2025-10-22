@@ -19,10 +19,10 @@ zone_pivot_groups: sentinel-sap-connection
 
 This article describes how to prepare your SAP environment for connecting to the SAP data connector. Preparation differs, depending on whether you're using the containerized data connector agent. Select the option at the top of the page that matches your environment.
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 :::zone pivot="connection-agent"
 This article is part of the second step in deploying the Microsoft Sentinel solution for SAP applications. 
-
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 :::image type="content" source="media/deployment-steps/prepare-sap-environment.png" alt-text="Diagram of the deployment flow for the Microsoft Sentinel solution for SAP applications, with the preparing SAP step highlighted." border="false":::
 

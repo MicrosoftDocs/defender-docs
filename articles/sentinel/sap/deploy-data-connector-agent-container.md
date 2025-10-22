@@ -22,13 +22,13 @@ ms.custom:
 
 For the Microsoft Sentinel solution for SAP applications to operate correctly, you must first get your SAP data into Microsoft Sentinel. Do this by either deploying the Microsoft Sentinel SAP data connector agent, or by connecting the Microsoft Sentinel agentless data connector for SAP. Select the option at the top of the page that matches your environment.
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 This article describes the third step in deploying one of the Microsoft Sentinel solutions for SAP applications.
 
 :::zone pivot="connection-agent"
 
 :::image type="content" source="media/deployment-steps/deploy-data-connector.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Connect your SAP system step." border="false" :::
-
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 Content in this article is relevant for your **security**, **infrastructure**, and  **SAP BASIS** teams. Make sure to perform the steps in this article in the order that they're presented.
 
