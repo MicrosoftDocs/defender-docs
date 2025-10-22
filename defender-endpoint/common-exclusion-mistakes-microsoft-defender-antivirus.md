@@ -10,7 +10,7 @@ ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: ngp
 ms.topic: concept-article
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -24,16 +24,18 @@ appliesto:
 # Common mistakes to avoid when defining exclusions
 
 
-**Platforms**
-
-- Windows
-- macOS
-- Linux
-
 > [!IMPORTANT]
 > **Add exclusions with caution**. Exclusions for Microsoft Defender Antivirus scans reduce the level of protection for devices.
 
 You can define an exclusion list for items that you don't want Microsoft Defender Antivirus to scan. However, excluded items could contain threats that make your device vulnerable. This article describes some common mistakes that you should avoid when defining exclusions.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- macOS
+- Linux
 
 > [!TIP]
 > Before defining your exclusion lists, see [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and review the detailed information in [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
