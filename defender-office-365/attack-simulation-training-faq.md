@@ -165,7 +165,8 @@ If you own the sender domain, the undelivered simulation report is returned in a
 ## Reporting issues
 
 > [!TIP]
-> Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
+> Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.(Note that post December 2025, as described in admin notification MC1166864 - User interaction signals (such as compromise, report, read, delete, reply, forward, out-of-office, attachment opened) will be captured consistently until the simulation concludes. Training-related events (such as training completed or in progress) will continue to be reflected in simulation reporting even after the simulation ends, up to the training due date)
+ 
 
 ### Differences in user activity data from Attack simulation training reports and other reports
 
