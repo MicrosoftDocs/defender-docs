@@ -53,9 +53,6 @@ The technology in automated investigation uses various inspection algorithms and
 
 This article provides an overview of AIR and includes links to next steps and additional resources.
 
-> [!TIP]
-
-
 ## How the automated investigation starts
 
 An automated investigation can start when an alert is triggered or when a security operator initiates the investigation.
