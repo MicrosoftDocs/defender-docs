@@ -70,7 +70,7 @@ If you enabled CMK before onboarding, when you onboard your Microsoft Sentinel-e
 
 Analytic rules and other Sentinel content (such as automation rules) will continue to be CMK-encrypted. However, existing alerts and incidents will no longer be CMK-encrypted after onboarding.
 
-For more information about CNK, see [Set up Microsoft Sentinel customer-managed key](customer-managed-keys.md).
+For more information about CMK, see [Set up Microsoft Sentinel customer-managed key](customer-managed-keys.md).
 
 > [!IMPORTANT]
 > CMK encryption is not fully supported for data stored in the Microsoft Sentinel data lake. All data ingested into the data lake - such as custom tables or transformed data - is encrypted using Microsoft-managed keys. 
