@@ -81,3 +81,7 @@ You can also check the status of your free trial by using the Azure Resource Gra
    ```
 
 The `FreeTrialRemainingTime` column shows the remaining time, if any, of the free trial. If the column shows `“0 days, 0 hours, 0 minutes”`, it means that the free trial is complete.
+
+## Check your free trial status with Defender for Cloud
+
+You can also check the status of your free trial directly within the Microsoft Defender for Cloud portal.
