@@ -23,10 +23,6 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 **Microsoft Defender for Endpoint on iOS** offers protection against phishing and unsafe network connections from websites, emails, and apps. All alerts are available through a single pane of glass in the Microsoft Defender portal. The portal gives security teams a centralized view of threats on iOS devices along with other platforms.
 

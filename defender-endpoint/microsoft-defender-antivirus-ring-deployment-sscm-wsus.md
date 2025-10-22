@@ -25,8 +25,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus ring deployment using System Center Configuration Manager and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 

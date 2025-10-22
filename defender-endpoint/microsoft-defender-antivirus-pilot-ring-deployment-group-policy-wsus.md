@@ -25,8 +25,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus pilot ring deployment using Group Policy and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 

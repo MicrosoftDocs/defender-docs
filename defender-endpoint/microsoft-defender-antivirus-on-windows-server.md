@@ -23,8 +23,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus on Windows Server
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 

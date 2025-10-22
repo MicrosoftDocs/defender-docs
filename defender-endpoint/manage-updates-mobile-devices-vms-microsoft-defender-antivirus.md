@@ -23,8 +23,6 @@ appliesto:
 ---
 # Manage updates for mobile devices and virtual machines (VMs)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 **Platforms**

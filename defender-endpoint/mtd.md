@@ -22,10 +22,6 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint - Mobile Threat Defense
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Microsoft Defender for Endpoint on Android and iOS is our **mobile threat defense solution (MTD)**. Typically, companies are proactive in protecting PCs from vulnerabilities and attack while mobile devices often go unmonitored and unprotected. Where mobile platforms have built-in protection such as app isolation and vetted consumer app stores, these platforms remain vulnerable to web-based or other sophisticated attacks. As more employees use devices for work and to access sensitive information, it's imperative that companies deploy an MTD solution to protect devices and your resources from increasingly sophisticated attacks on mobiles.
 

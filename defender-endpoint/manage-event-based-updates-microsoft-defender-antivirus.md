@@ -20,15 +20,11 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
 ---
 # Manage event-based forced updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows

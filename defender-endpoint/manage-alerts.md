@@ -22,11 +22,6 @@ appliesto:
 ---
 # Manage Microsoft Defender for Endpoint alerts
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Defender for Endpoint notifies you of possible malicious events, attributes, and contextual information through alerts. A summary of new alerts is displayed and you can access all alerts in the **Alerts queue**.
 

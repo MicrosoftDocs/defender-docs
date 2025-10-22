@@ -24,8 +24,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus ring deployment using Intune and direct internet access for Microsoft Update
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 

@@ -23,8 +23,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus production ring deployment using Group Policy and network share
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 

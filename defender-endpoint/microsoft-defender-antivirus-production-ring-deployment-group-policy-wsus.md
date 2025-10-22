@@ -25,7 +25,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus production ring deployment using Group Policy and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Platforms**

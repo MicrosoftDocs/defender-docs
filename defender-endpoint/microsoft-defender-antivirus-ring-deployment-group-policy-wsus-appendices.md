@@ -25,7 +25,6 @@ appliesto:
 ---
 # Appendices for Microsoft Defender Antivirus ring deployment using Group Policy and Windows Server Update Services (WSUS)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Platforms**

@@ -25,11 +25,8 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint on macOS prerequisites
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article lists the prerequisites for installing and configuring Microsoft Defender for Endpoint on macOS. It also includes links to additional resources for more information.
-
-
 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]

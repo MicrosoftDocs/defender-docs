@@ -23,9 +23,6 @@ appliesto:
 ---
 # Offboard devices
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 

@@ -25,8 +25,6 @@ appliesto:
 
 # Better together: Microsoft Defender Antivirus and Office 365
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 - Windows

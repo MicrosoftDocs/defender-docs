@@ -22,8 +22,6 @@ appliesto:
 ---
 # Onboard previous versions of Windows
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 

@@ -25,9 +25,6 @@ appliesto:
 ---
 # Manage the gradual rollout process for Microsoft Defender updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 

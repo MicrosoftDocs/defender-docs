@@ -24,8 +24,6 @@ appliesto:
 ---
 # Deploy Microsoft Defender Antivirus in rings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 
