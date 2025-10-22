@@ -42,7 +42,7 @@ See [Overview of automated investigations](../automated-investigations.md) for m
 
 ## Prerequisites
 
-Your organization must have Defender for Endpoint see: [Minimum requirements for Microsoft Defender for Endpoint](../minimum-requirements.md).
+Your organization must have Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](../minimum-requirements.md).
 
 ### Supported operating systems
 
@@ -65,8 +65,8 @@ Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information).
+> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
 >
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
 
