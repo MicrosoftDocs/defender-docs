@@ -24,9 +24,6 @@ appliesto:
 ---
 # Restore quarantined files in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 - Windows

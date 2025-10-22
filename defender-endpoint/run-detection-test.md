@@ -18,8 +18,6 @@ ms.subservice: onboard
 
 # Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Applies to:**
 - Windows Server 2012 R2

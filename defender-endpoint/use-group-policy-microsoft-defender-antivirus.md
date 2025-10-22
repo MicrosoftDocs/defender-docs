@@ -25,9 +25,6 @@ appliesto:
 ---
 # Use Group Policy settings to configure and manage Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 **Platforms**
 - Windows
 - Windows Server

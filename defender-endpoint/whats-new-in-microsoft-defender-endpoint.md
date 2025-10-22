@@ -22,7 +22,6 @@ appliesto:
 ---
 # What's new in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 

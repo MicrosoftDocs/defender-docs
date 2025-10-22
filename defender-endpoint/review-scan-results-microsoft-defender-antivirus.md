@@ -26,8 +26,6 @@ appliesto:
 ---
 # Review Microsoft Defender Antivirus scan results
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 

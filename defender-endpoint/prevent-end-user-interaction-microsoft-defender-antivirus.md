@@ -24,9 +24,6 @@ appliesto:
 ---
 # Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 - Windows

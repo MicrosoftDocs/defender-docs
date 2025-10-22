@@ -25,8 +25,6 @@ appliesto:
 ---
 # Understand and use attack surface reduction capabilities
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 - Windows

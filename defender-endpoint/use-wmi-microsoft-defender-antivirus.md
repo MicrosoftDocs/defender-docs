@@ -25,9 +25,6 @@ appliesto:
 ---
 # Use Windows Management Instrumentation (WMI) to configure and manage Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 **Platforms**
 - Windows

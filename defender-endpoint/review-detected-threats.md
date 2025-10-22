@@ -22,10 +22,6 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 **Platforms**
 

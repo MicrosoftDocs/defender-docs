@@ -21,8 +21,6 @@ appliesto:
 ---
 # Troubleshoot performance issues related to real-time protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Platforms**
 - Windows

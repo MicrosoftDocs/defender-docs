@@ -24,8 +24,6 @@ appliesto:
 ---
 # Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 **Platforms**
