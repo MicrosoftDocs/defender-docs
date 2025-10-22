@@ -161,36 +161,36 @@ You can view detected threats by using the Event log or PowerShell.
 
 3. Look for `event ID 1116`. You should see the following information:
 
-```powershell
-
-Microsoft Defender Antivirus has detected malware or other potentially unwanted software.
-
-For more information please see the following: https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&t
-
-Name: Virus:Win32/MpTest!amsi
-
-ID: 2147694217
-
-Severity: Severe
-
-Category: Virus
-
-Path: \Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or C:\Users\Admin\Desktop\AMSI_jscri
-
-Detection Origin: Local machine or Unknown
-
-Detection Type: Concrete
-
-Detection Source: System
-
-User: NT AUTHORITY\SYSTEM
-
-Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or C:\Windows\System32\cscript.exe or C:\Windows\Sy
-
-Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
-
-Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
-```
+    ```powershell
+    
+    Microsoft Defender Antivirus has detected malware or other potentially unwanted software.
+    
+    For more information please see the following: https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&t
+    
+    Name: Virus:Win32/MpTest!amsi
+    
+    ID: 2147694217
+    
+    Severity: Severe
+    
+    Category: Virus
+    
+    Path: \Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or C:\Users\Admin\Desktop\AMSI_jscri
+    
+    Detection Origin: Local machine or Unknown
+    
+    Detection Type: Concrete
+    
+    Detection Source: System
+    
+    User: NT AUTHORITY\SYSTEM
+    
+    Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or C:\Windows\System32\cscript.exe or C:\Windows\Sy
+    
+    Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
+    
+    Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
+    ```
 
 #### Use PowerShell 
 
