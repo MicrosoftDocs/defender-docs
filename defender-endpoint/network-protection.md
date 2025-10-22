@@ -344,9 +344,9 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
-1. Run the following PowerShell commands:
+2. Run the following PowerShell commands:
 
-- `Set-MpPreference -EnableNetworkProtection Enabled`
+   - `Set-MpPreference -EnableNetworkProtection Enabled`
    - `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
    - `Set-MpPreference -AllowNetworkProtectionDownLevel 1`
    - `Set-MpPreference -AllowDatagramProcessingOnWinServer 1`
