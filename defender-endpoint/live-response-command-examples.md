@@ -107,7 +107,7 @@ get c:\Users\user\Desktop\work.txt -auto
 > - Empty files
 > - Virtual files, or files that aren't fully present locally
 >
-> These file types *are* supported by [PowerShell](/powershell/scripting/overview).
+> These file types are supported by [PowerShell](/powershell/scripting/overview).
 >
 > Use PowerShell as an alternative, if you have problems using this command from within Live Response.
 
