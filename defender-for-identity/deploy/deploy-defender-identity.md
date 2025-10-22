@@ -21,8 +21,8 @@ Once you've completed the steps to prepare your environment, and assigned roles 
 Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment. 
 
 |Server configuration   |Server Operating System  |Recommended deployment |
-|---------|---------|---------|---------|
-|Domain controller     | Windows Server 2019 or later with the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.<br> * **See Note**.|[Defender for Identity sensor v3.x (Preview)](prerequisites-sensor-version-3.md)<br> * **See Note**.        |
+|---------|---------|---------|
+|Domain controller     | Windows Server 2019 or later with the [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.<br> * **See Note**.|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)<br> * **See Note**.        |
 |Domain controller      |Windows Server 2016 or later         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
 |[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)     |    Windows Server 2016 or later      |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
@@ -34,7 +34,6 @@ Identify your architecture and your requirements, and then use the table below t
 > - Requires that Defender for Endpoint is deployed
 > - Doesn't currently support VPN integration
 > - Doesn't currently support ExpressRoute
-> - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 

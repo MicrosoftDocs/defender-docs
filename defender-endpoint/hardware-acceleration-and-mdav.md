@@ -1,4 +1,4 @@
----
+﻿---
 title: Hardware acceleration and Microsoft Defender Antivirus.
 description: How Microsoft Defender Antivirus incorporates hardware acceleration and Microsoft Defender Antivirus.
 author: batamig
@@ -17,14 +17,13 @@ ms.localizationpriority: medium
 ms.custom: partner-contribution
 search.appverid: MET150
 f1 keywords: NOCSH
----
+appliesto:
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Hardware acceleration and Microsoft Defender Antivirus
 
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 
 **Platforms:**
 
@@ -71,3 +70,4 @@ The regular Microsoft Defender Antivirus Event ID **1116**.
 ## Related articles
 
 - [Defending against ransomware with Microsoft Defender for Endpoint and Intel TDT: A Case Study](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-against-ransomware-with-microsoft-defender-for/ba-p/3243941).
+

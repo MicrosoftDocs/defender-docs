@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure and validate Microsoft Defender Antivirus network connections
 description: Configure and test your connection to the Microsoft Defender Antivirus cloud protection service.
 ms.service: defender-endpoint
@@ -16,13 +16,12 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender Antivirus
 
+---
 # Configure and validate Microsoft Defender Antivirus network connections
 
-**Applies to:**
-
-- Microsoft Defender Antivirus
 
 > [!IMPORTANT]
 > This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
@@ -110,7 +109,6 @@ The following table lists solutions:
 |Solution|Description|
 |:---|:---|
 | Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
-| Solution (Preferred 2) | 1. Go to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Public Key Policies** > **Certificate Path Validation Settings**.<br/>2. Select the **Network Retrieval** tab, and then select **Define these policy settings**.<br/>3. Clear the **Automatically update certificates in the Microsoft Root Certificate Program (recommended)** check box.<br/><br/> Here are some useful resources: <br/> - [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))<br/>- [Improving application Start up time: GeneratePublisherEvidence setting in Machine.config](/archive/blogs/amolravande/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config)|
 | Work-around solution (Alternative) <br/> *This is not a best practice since you're no longer checking for revoked certificates or certificate pinning.*| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet**, and then set `SSLOptions (dword)` to `2` (hex). <br/>For reference, here are possible values for the DWORD: <br/> - `0 – disable pinning and revocation checks` <br/> - `1 – disable pinning` <br/>  - `2 – disable revocation checks only` <br/> - `3 – enable revocation checks and pinning (default)` |
 
 ## Attempt to download a fake malware file from Microsoft
@@ -158,3 +156,4 @@ A similar message occurs if you're using Internet Explorer:
 - [Important changes to Microsoft Active Protection Services endpoint](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006) 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
