@@ -21,7 +21,7 @@ The listed features were released in the last six months. For information about 
 ## October 2025
 
 - [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
-- [Standardized account entity naming in incidents and alerts - update queries and automation by December 13, 2025](#standardized-account-entity-naming-in-incidents-and-alerts---update-queries-and-automation-by-december-13-2025)
+- [Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts](#call-to-action-update-queries-and-automation-by-december-13-2025---standardized-account-entity-naming-in-incidents-and-alerts)
 
 ### Export STIX threat intelligence objects (Preview)
 
