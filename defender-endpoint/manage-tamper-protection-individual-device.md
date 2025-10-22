@@ -44,17 +44,17 @@ If you're a home user, or you aren't subject to settings managed by a security t
 
 3. Set **Tamper Protection** to **On** or **Off**.
 
-Here's what you see in the Windows Security app:
+    Here's what you see in the Windows Security app:
+    
+    :::image type="content" source="media/tamperprotectionturnedon.png" alt-text="Turn tamper protection turned on in Windows 10 Home" lightbox="media/tamperprotectionturnedon.png":::
 
-:::image type="content" source="media/tamperprotectionturnedon.png" alt-text="Turn tamper protection turned on in Windows 10 Home" lightbox="media/tamperprotectionturnedon.png":::
 
-
-> [!NOTE]
-> Tamper protection blocks attempts to modify Microsoft Defender Antivirus settings through the registry. 
->
-> To help ensure that tamper protection doesn't interfere with non-Microsoft security products or enterprise installation scripts that modify these settings, go to **Windows Security** and update **Security intelligence** to version 1.287.60.0 or later. (See [Security intelligence updates](https://www.microsoft.com/wdsi/definitions).)
->
-> After you've made this update, tamper protection continues to protect your registry settings, and logs attempts to modify them without returning errors.
+    > [!NOTE]
+    > Tamper protection blocks attempts to modify Microsoft Defender Antivirus settings through the registry. 
+    >
+    > To help ensure that tamper protection doesn't interfere with non-Microsoft security products or enterprise installation scripts that modify these settings, go to **Windows Security** and update **Security intelligence** to version 1.287.60.0 or later. (See [Security intelligence updates](https://www.microsoft.com/wdsi/definitions).)
+    >
+    > After you've made this update, tamper protection continues to protect your registry settings, and logs attempts to modify them without returning errors.
 
 ## See also
 
