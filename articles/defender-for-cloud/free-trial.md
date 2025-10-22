@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to check the status of your 30 day free trial of Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 10/21/2025
+ms.date: 10/22/2025
 #customer intent: As a new user, I want to check the status of my free trial of Microsoft Defender for Cloud to understand my usage and remaining trial period.
 ---
 
@@ -45,3 +45,39 @@ Azure provides the ability to check the status of your free trial by using the b
    ```
 
 The `FreeTrialRemainingTime` field shows the remaining time, if any, of the free trial. If the field shows `“00:00:00”`, it means that the free trial is complete.
+
+## Check your free trial status with Azure Resource Graph Explorer
+
+You can also check the status of your free trial by using the Azure Resource Graph Explorer in the Azure portal.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Search for and select **Resource Graph Explorer**.
+
+1. Run the following query:
+
+   ```kusto
+    // Total volume
+    securityresources
+    | where type == "microsoft.security/pricings"
+    | extend iso = tostring(properties.freeTrialRemainingTime)
+    | extend
+    days = extract(@"P(\d+)D", 1, iso),
+    hours = extract(@"T(\d+)H", 1, iso),
+    minutes = extract(@"H(\d+)M", 1, iso)
+    | extend enablementDate = format_datetime(todatetime(properties.enablementTime), "yyyy-MM-dd HH:mm:ss")
+    | project
+    subscriptionId,
+    name,
+    pricingTier = properties.pricingTier,
+    FreeTrialRemainingTime = strcat(
+        coalesce(days, "0"), " days, ",
+        coalesce(hours, "0"), " hours, ",
+        coalesce(minutes, "0"), " minutes"
+    ),
+    resourcesCoverageStatus = properties.resourcesCoverageStatus,
+    enablementDate
+    | sort by subscriptionId asc
+   ```
+
+The `FreeTrialRemainingTime` column shows the remaining time, if any, of the free trial. If the column shows `“0 days, 0 hours, 0 minutes”`, it means that the free trial is complete.
