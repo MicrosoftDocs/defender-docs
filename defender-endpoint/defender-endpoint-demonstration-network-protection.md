@@ -24,7 +24,6 @@ appliesto:
 ---
 # Network protection demonstrations
 
-
 Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.
 
 ## Prerequisites
@@ -103,16 +102,15 @@ To test Network Protection on macOS/Linux
 1. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
 1. or from terminal 
 
-```bash
-curl -o ~/Downloads/smartscreentestratings2.net https://smartscreentestratings2.net/ 
-```
+    ```bash
+    curl -o ~/Downloads/smartscreentestratings2.net https://smartscreentestratings2.net/ 
+    ```
 
 Expected results
 
 Navigation to the website should be blocked and you should see a **Connection blocked** notification.
 
 Clean-up
-
 
 ```bash
 mdatp config network-protection enforcement-level --value audit
