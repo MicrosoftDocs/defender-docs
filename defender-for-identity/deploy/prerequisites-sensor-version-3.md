@@ -70,11 +70,11 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 **Steps to apply the configuration:**
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
-1. Select **Create a new rule**
+1. Select **Create a new rule**.
 
- ![Screenshot that shows how to add a new rule.](media/prerequisites-sensor-version-3/new-rule.png)
+    ![Screenshot that shows how to add a new rule.](media/prerequisites-sensor-version-3/new-rule.png)
 
-3. In the side panel:
+1. In the side panel:
 
    1. Enter a **Rule name** and **Description**.
    
@@ -86,17 +86,17 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
     
 1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
 
- ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
+    ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
 
 5. Select **Next** to review and finish creating the rule and then select **Submit**.
 
 ### Updating rules
    Offboarding a device from this configuration can be done **only** from **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
 
->[!NOTE]
+> [!NOTE]
 > It may take up to 1 hour for changes to be reflected in the portal.
 
-Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules)
+Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules).
 
 ## Configure Windows auditing
 
