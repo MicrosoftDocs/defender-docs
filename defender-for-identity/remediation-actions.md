@@ -37,24 +37,25 @@ The following Defender for Identity actions can be performed on Identities:
 
 | Remediation Action  | Description     |          Scope                        | 
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|Disable identity                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Entra ID and Okta
-|Enable identity              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Entra ID and Okta
-|Revoke all identities' sessions       | Revoke an identities active sessions. | Entra ID and Okta
-|Confirm accounts compromised      | Marks all accounts linked to the selected identity as compromised in Entra ID. | Entra ID
-| Reset user password| Forces a password reset for one or more accounts linked to the selected identity.This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts| Active Directory
+|Disable identity                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, and Okta
+|Enable identity              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, and Okta
+|Revoke all identities' sessions       | Revoke an identities active session. | Microsoft Entra ID and Okta
+|Confirm accounts compromised      | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID
+| Reset password| Reset a password for one or more accounts linked to the selected identity.This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.| Active Directory
 |Deactivate user in Okta | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
-| Set user risk to High/Medium/Low |Set one user risk scoring to one of the defined levels. This action will only be available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
+| Set user risk to High/Medium/Low |Set one user risk scoring to one of the defined levels. This action is only available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
 
 
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
 > [!NOTE]  
-> During rollout of the enhanced remediation experience, you'll see a banner at the top of the **Accounts** page in the Microsoft Defender portal that lets you temporarily revert to the previous version, where remediation actions apply to a single identity.  
-> In the new experience, actions can apply to one or multiple accounts linked to the same identity.
+> During rollout of the enhanced remediation experience, you'll see a banner at the top of the **Accounts** page in the Microsoft Defender portal.  
+> The banner allows you to temporarily switch back to the previous version, where response actions apply to a single user account instead of multiple accounts linked to an identity.
+
 
 ## Roles and Permissions
 
-| Remediation Action | Active Directory  |Entra ID   | Okta  |
+| Remediation Action | Active Directory  |Microsoft Entra ID   | Okta  |
 |--|--|--|--|
 | Disable user | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator   | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
 | Enable user | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
