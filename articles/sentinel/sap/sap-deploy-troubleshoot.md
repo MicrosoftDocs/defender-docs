@@ -19,11 +19,11 @@ zone_pivot_groups: sentinel-sap-connection
 
 This article includes troubleshooting steps to help you ensure accurate and timely data ingestion and monitoring for your SAP environment with Microsoft Sentinel.
 
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
-
 :::zone pivot="connection-agentless"
 
 When working with the agentless data connector, most troubleshooting is done directly in the SAP Integration Suite, where the message log displays errors indicating the nature of the issue encountered.
+
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 Start by examining the message processing logs. For more information, see the [SAP documentation](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/monitor-message-processing-monitor). The error messages there can help you diagnose issues with missing permissions, connectivity errors, and other misconfigurations. 
 

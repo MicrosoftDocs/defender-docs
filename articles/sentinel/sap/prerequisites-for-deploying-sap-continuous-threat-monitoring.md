@@ -19,11 +19,12 @@ zone_pivot_groups: sentinel-sap-connection
 
 This article lists the prerequisites required for deployment of the Microsoft Sentinel solution for SAP applications, which differ depending on whether you're deploying a data connector agent or using the agentless data connector with the SAP Cloud Connector. Select the option at the top of this page that matches your deployment.
 
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
-
 Reviewing and ensuring that you have or understand all the prerequisites is the first step in deploying the Microsoft Sentinel solution for SAP applications. Select a connection type to list the prerequisites for your environment.
 
 :::zone pivot="connection-agent"
+
+
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 :::image type="content" source="media/deployment-steps/prerequisites.png" alt-text="Diagram of the steps included in deploying the Microsoft Sentinel solution for SAP applications, with the prerequisites step highlighted." border="false":::
 

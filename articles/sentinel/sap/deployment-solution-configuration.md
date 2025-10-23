@@ -22,6 +22,8 @@ While deploying a Microsoft Sentinel data collector and solution for SAP provide
 
 :::zone pivot="connection-agent"
 
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 :::image type="content" source="media/deployment-steps/settings.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Configure solution settings step." border="false":::
 
 :::zone-end
