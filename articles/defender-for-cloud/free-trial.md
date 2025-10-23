@@ -117,3 +117,6 @@ If you decide not to continue using Microsoft Defender for Cloud during your fre
 1. Select **Save**.
 
 ## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn how to enable all paid plans on your subscriptionEnable all paid plans on your subscription](connect-azure-subscription.md#enable-all-paid-plans-on-your-subscription)

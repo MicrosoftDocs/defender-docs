@@ -76,7 +76,7 @@
       expanded: false
       items:
         - name: Connect Azure subscriptions
-          displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+          displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, free, trial, free trial
           href: connect-azure-subscription.md
         - name: Connect AWS accounts
           displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
@@ -234,6 +234,9 @@
     - name: Planning and operations guide
       displayName: guide, planning, roles, policies, recommendations
       href: defender-for-cloud-planning-and-operations-guide.md
+    - name: Check the status of your free trial
+      displayName: free, trial, status
+      href: free-trial.md
     - name: Protect VMs
       displayName: manage, access, harden
       href: tutorial-protect-resources.md
