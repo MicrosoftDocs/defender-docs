@@ -63,7 +63,7 @@ The following steps describe the Security Administrator’s required actions to 
     > [!IMPORTANT]
     > If the Microsoft 365 connector isn’t properly connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent. Alerts and incidents related to these actions won't show in the Microsoft Defender portal.
 
-1. Enter the App ID provided by your Power Platform administrator and Select **Save**.
+1. Enter the App ID provided by your Power Platform administrator and select **Save**.
       :::image type="content" source="media/protect-agents-real-time/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-agents-real-time/turn-on-real-time-agent-protection.png":::
 
     > [!IMPORTANT]
