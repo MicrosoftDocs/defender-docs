@@ -32,7 +32,7 @@ To simplify network configuration and management, you can now onboard new device
 
 ## Defender for Endpoint-recognized simplified domain
 
-The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for US government devices) consolidates connectivity to the following core Defender for Endpoint services:
+The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for US government devices - Preview) consolidates connectivity to the following core Defender for Endpoint services:
 
 - Cloud-delivered protection
 - Malware sample submission storage
@@ -47,7 +47,7 @@ To support network devices without hostname resolution or wildcard support, you 
 > [!NOTE]
 >
 > - The streamlined connectivity method **doesn't change Defender for Endpoint functionality or end-user experience**. Only the URLs or IPs used for service connectivity have changed.
-> - There are no plans to deprecate old service URLs. Devices onboarded with standard connectivity continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us` (for US government devices) for future services.
+> - There are no plans to deprecate old service URLs. Devices onboarded with standard connectivity continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us` (for US government devices - Preview) for future services.
 > - Service connections use certificate pinning and TLS. Traffic inspection is not supported. Connections are device-initiated, not user-initiated. Enforcing proxy (user) authentication breaks connectivity.
 
 ## Prerequisites
@@ -115,11 +115,11 @@ Streamlined connectivity allows you to use the following option to configure clo
 Configure your environment to allow connections to the simplified Defender for Endpoint domain:
 
 - For commercial devices: `*.endpoint.security.microsoft.com`
-- For US government devices: `*.endpoint.security.microsoft.us`
+- For US government devices (Preview): `*.endpoint.security.microsoft.us`
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL list](streamlined-device-connectivity-urls-gov.md). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL list (Preview)](streamlined-device-connectivity-urls-gov.md). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
 
 #### Option 2: Configure connectivity using static IP ranges 
 

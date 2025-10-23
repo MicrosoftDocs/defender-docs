@@ -21,6 +21,7 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint for US Government customers
 
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 Microsoft Defender for Endpoint for US Government customers, built in the Azure US Government environment, uses the same underlying technologies as Defender for Endpoint in Azure Commercial.
 
@@ -129,7 +130,7 @@ The following downloadable spreadsheet lists the services and their associated U
 
 | Spreadsheet of domains list  | Description  |
 |---------|---------|
-| Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD | List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md). |
+| Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview) | List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md). |
 | Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
 
 For more information, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).

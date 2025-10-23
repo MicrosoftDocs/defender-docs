@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments 
+title: Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments (Preview)
 description: Get a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).         
 author: limwainstein
 ms.author: lwainstein
@@ -18,9 +18,11 @@ ms.date: 10/05/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
-# Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments
+# Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).
 
