@@ -26,6 +26,8 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
+
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
 To simplify network configuration and management, you can now onboard new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
