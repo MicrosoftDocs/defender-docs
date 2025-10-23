@@ -24,8 +24,6 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
 
 ## Overview of onboarding client devices
 
