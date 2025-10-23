@@ -1,18 +1,18 @@
 ---
-title: Cloud Security Posture Management (CSPM)
+title: What is Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 06/17/2025
+ms.date: 10/19/2025
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
-# Cloud Security Posture Management (CSPM)
+# What is Cloud Security Posture Management (CSPM)
 
 Cloud Security Posture Management (CSPM) is a core feature of Microsoft Defender for Cloud. CSPM provides continuous visibility into the security state of your cloud assets and workloads, offering actionable guidance to improve your security posture across Azure, AWS, and GCP.
 
-## How CSPM Works
+Defender for Cloud continually assesses your cloud infrastructure against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations to help you identify and reduce cloud misconfigurations and security risks.
 
-Defender for Cloud continuously assesses your resources against security standards and issues recommendations to help you remediate risks. By default, enabling Defender for Cloud on an Azure subscription activates the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md), which provides recommendations for securing multicloud environments. Your [secure score](secure-score-security-controls.md) aggregates these recommendations, with a higher score indicating lower risk.
+By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) standard is enabled and provides recommendations to secure your multicloud environment. The [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations helps you monitor cloud compliance. A higher score indicates a lower identified risk level.
 
 ## CSPM Plans
 
@@ -21,7 +21,7 @@ Defender for Cloud offers two CSPM plans:
 - **Foundational CSPM** (free): Enabled by default for all onboarded subscriptions and accounts.
 - **Defender CSPM** (paid): Adds advanced capabilities such as AI security posture, attack path analysis, risk prioritization, and more.
 
-### Feature Comparison
+- **Defender CSPM** - A paid plan that provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
 
 | Feature | Foundational CSPM | Defender CSPM | Cloud Availability |
 |--|--|--|--|
@@ -78,15 +78,11 @@ Defender for Cloud supports integrations with partner systems for incident manag
 
 ## Supported Clouds and Resources
 
-Defender CSPM protects multicloud workloads, with billing applied only to specific resources. For details, see the pricing documentation.
+- DevOps security posture capabilities such as pull request annotations, code to cloud mapping, attack path analysis, and cloud security explorer are only available through the paid Defender CSPM plan. The free foundational security posture management plan provides Azure DevOps recommendations. Learn more about the features provided by [Azure DevOps security features](devops-support.md#azure-devops).
 
 ### Azure
 
-| Service | Resource Types | Exclusions |
-|---|---|---|
-| Compute | Virtual machines, VM scale sets, classic VMs | Deallocated VMs, Databricks VMs |
-| Storage | Storage accounts | Accounts without blob containers or file shares |
-| Databases | SQL servers, PostgreSQL/MySQL/MariaDB servers, Synapse workspaces | – |
+- Defender CSPM protects all multicloud workloads, but billing applies only on specific resources. The following tables list the billable resources when you enable Defender CSPM on Azure subscriptions, AWS accounts, or GCP projects.
 
 ### AWS
 
