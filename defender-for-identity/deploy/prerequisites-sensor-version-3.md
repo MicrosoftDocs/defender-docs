@@ -35,7 +35,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
     - `System settings (Read and manage)`
     - `Security setting (All permissions)`
 
-## Sensor requirements and recommendations
+## Sensor requirements and recommendations 
 
 The following table summarizes the server requirements and recommendations for the Defender for Identity sensor.
 
