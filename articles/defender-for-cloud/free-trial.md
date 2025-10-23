@@ -105,3 +105,15 @@ You can check the status of your free trial directly within the Microsoft Defend
 ## Disable the free trial
 
 If you decide not to continue using Microsoft Defender for Cloud during your free trial, you can disable it.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select the relevant subscription.
+
+1. Disable the relevant plan.
+
+1. Select **Save**.
+
+## Next steps
