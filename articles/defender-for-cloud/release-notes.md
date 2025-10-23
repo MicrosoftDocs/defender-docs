@@ -29,6 +29,39 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 
 
+## November 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|November 18, 2025 | GA | [Unified Security Experience in Microsoft Defender Portal](#unified-security-experience-in-microsoft-defender-portal)|
+
+### Unified Security Experience in Microsoft Defender Portal
+
+November 18, 2025
+
+Cloud security is now seamlessly integrated into the Microsoft Defender portal, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently and achieve a complete security posture view across workloads.
+
+**Key enhancements include:**
+
+- **Performance & Scalability Improvements**: The new portal resolves previous scale limitations, enabling seamless management of large and multi-cloud environments.
+
+- **Enhanced Role-Based Access Control (RBAC)**: Security teams can now grant more granular access to security content, ensuring that only the relevant personas see the information they need. This allows users to access security insights without requiring direct permissions to the underlying resources, improving both operational security and compliance.
+
+- **Unified Scoping Capabilities**: Cloud accounts can be segmented into logical groups, enabling better data pivoting, access control, and multi-tenant management.
+
+- **Integrated Exposure Management**: Cloud security posture, recommendations, and attack paths are now part of a single exposure management experience.
+
+- **Cloud-Agnostic Architecture**: Supports Azure, AWS, GCP, and other platforms, making it ideal for hybrid and multi-cloud organizations.
+
+- **Advanced Reporting & Visualization**: Users can filter and export data to generate detailed reports, and leverage rich visualizations for attack paths, asset relationships, and security recommendations.
+
+Learn more about:
+- [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
+- [Azure portal vs Defender portal feature comparison](azure-portal-vs-defender-portal-comparison.md)
+- [Getting started in the Defender portal](defender-portal/getting-started-defender-portal.md)
+- [Cloud Infrastructure Dashboard](cloud-infrastructure-dashboard.md)
+- [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md)
+
 ## October 2025
 
 |Date | Category | Update|
