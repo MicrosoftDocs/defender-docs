@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: pahuijbr
 manager: bagol
 ms.subservice: ngp
@@ -28,10 +28,6 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-
-**Platforms**
-- Windows
-
 Windows Management Instrumentation (WMI) is a scripting interface that allows you to retrieve, modify, and update settings.
 
 Read more about WMI at the [Microsoft Developer Network System Administration library](/windows/win32/wmisdk/wmi-start-page).
@@ -43,6 +39,12 @@ The [MSDN Windows Defender WMIv2 Provider reference library](/previous-versions/
 Changes made with WMI will affect local settings on the endpoint where the changes are deployed or made. This means that deployments of policy with Group Policy, Microsoft Endpoint Configuration Manager, or Microsoft Intune can overwrite changes made with WMI. 
 
 You can [configure which settings can be overridden locally  with local policy overrides](configure-local-policy-overrides-microsoft-defender-antivirus.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
