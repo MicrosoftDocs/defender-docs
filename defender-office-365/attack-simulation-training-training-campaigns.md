@@ -110,6 +110,8 @@ On the **Target users** page, select who receives the Training campaign. Use the
     - Distribution groups (static only)
     - Mail-enabled security groups (static only)
 
+Note that hidden membership groups are currently not supported. 
+
   The following search tools are available:
 
   - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
