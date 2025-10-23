@@ -33,7 +33,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
-    - `Security setting (All permissions)`
+    - `Security settings (All permissions)`
 
 ## Sensor requirements and recommendations 
 
@@ -41,7 +41,7 @@ The following table summarizes the server requirements and recommendations for t
 
 |Prerequisite / Recommendation |Description  |
 |---------|---------|
-|Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.|
+|Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [October 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/october-14-2025-kb5066782-os-build-20348-4294-f4af3c9e-7a60-4d17-a964-cfe1f1dd15f6) or later.|
 |Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have Defender for Identity sensor V2.x already deployed.|
 |Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM|
 |Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
@@ -70,10 +70,13 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 **Steps to apply the configuration:**
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
-2. Create a new rule.
-3. In the side panel:
+1. Select **Create a new rule**.
 
-   1. Select a **name** for the rule.
+    ![Screenshot that shows how to add a new rule.](media/prerequisites-sensor-version-3/new-rule.png)
+
+1. In the side panel:
+
+   1. Enter a **Rule name** and **Description**.
    
    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
    
@@ -81,11 +84,19 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
     
    1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
     
-1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.  
+1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
 
-1. Click **Submit** to save the rule.
+    ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
 
-   Offboarding a device from this configuration can be done by **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
+1. Select **Next** to review and finish creating the rule and then select **Submit**.
+
+### Updating rules
+   Offboarding a device from this configuration can be done **only** from **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
+
+> [!NOTE]
+> It may take up to 1 hour for changes to be reflected in the portal.
+
+Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules).
 
 ## Configure Windows auditing
 

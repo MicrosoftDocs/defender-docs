@@ -26,20 +26,11 @@ appliesto:
 # Run Microsoft Defender Antivirus in a sandbox
 
 
-**Platforms:**
-
-- Windows
-
-
-
-
 This article describes how to run Microsoft Defender Antivirus in a sandbox environment for enhanced protection against tampering. 
 
 Microsoft Defender Antivirus with its built-in antivirus capabilities can run within a sandbox on Windows as of October 26, 2018. It was the first complete antivirus solution to have this capability and continues to lead the industry in raising the bar for security.
 
 ## Prerequisites
-
-Before you begin, you must meet the following requirements:
 
 - Microsoft Defender Antivirus (active mode)
 - Windows client devices must be running Windows 11 or Windows 10 version 1703 or newer

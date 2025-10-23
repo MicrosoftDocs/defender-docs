@@ -285,6 +285,8 @@
                 href: linux-deploy-defender-for-endpoint-using-golden-images.md
               - name: Direct onboarding with Defender for Cloud
                 href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+                href: mde-linux-deployment-on-sap.md
           - name: Configure Defender for Endpoint on Linux
             items:
             - name: Configure security policies and settings

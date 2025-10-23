@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 06/10/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -28,23 +28,6 @@ appliesto:
 # Detect and block potentially unwanted applications
 
 
-**Platforms**
-
-- Windows
-
-Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
-
-- Windows Server 2016 and later
-- Windows Server, version 1803 or later
-- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
-- Windows 11
-- Windows 10
-- Windows 8.1
-- Azure Stack HCI OS, version 23H2 and later
-
-For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
-
-For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
 
 ## What are potentially unwanted applications?
 
@@ -64,6 +47,21 @@ Potentially unwanted applications can increase the risk of your network being in
 [Learn more about Windows Enterprise subscriptions](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise).
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
+- Windows 11
+- Windows 10
+- Windows 8.1
+- Azure Stack HCI OS, version 23H2 and later
+- For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
+- For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
 
 ## Microsoft Edge
 
