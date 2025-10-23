@@ -37,7 +37,7 @@ appliesto:
 
 ### For End Users
 
-- Microsoft Defender for Endpoint license assigned to the end users of the app. See [Microsoft Defender for Endpoint licensing requirements](minimum-requirements.md#licensing-requirements).
+- Microsoft Defender for Endpoint license assigned to the end users of the app. See [Microsoft Defender for Endpoint licensing requirements](minimum-requirements.md).
 
 - **For enrolled devices**: Devices are [enrolled](/mem/intune/user-help/enroll-your-device-in-intune-ios) via the Intune Company Portal app to enforce Intune device compliance policies. This configuration requires the end user to be assigned a Microsoft Intune license. The Intune Company Portal app can be downloaded from the [Apple App Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
 

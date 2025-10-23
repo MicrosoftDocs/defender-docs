@@ -23,17 +23,9 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-
-
-## October 2025 
-
-### Accounts tab and manual account linking is now available
-
-The Accounts tab shows all accounts linked to a single identity across your environment. By consolidating these details, the Accounts tab helps you understand how an identity appears in different systems and streamlines investigations by providing a unified view of all associated accounts.
-
-You can manually link or unlink accounts to an identity. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
-
-For more information, see [Link or Unlink an Account to an Identity](link-unlink-account-to-identity.md).
+## October 2025
+We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
+The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ## September 2025
 
@@ -49,7 +41,7 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified agent 
+### New API support for unified agent (preview)
 We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
 
