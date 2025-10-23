@@ -1,11 +1,11 @@
 ---
-title: Secure apps accessing non-Graph APIs using app governance | Microsoft Defender for Cloud Apps
-ms.date: 05/28/2023
+title: Secure apps accessing other APIs using app governance | Microsoft Defender for Cloud Apps
+ms.date: 10/23/2025
 ms.topic: how-to
-description: Learn how to secure apps accessing non-Graph APIs using app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps
+description: Learn how to secure apps accessing other APIs using app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps
 ---
 
-# Secure apps accessing non-Graph APIs using app governance
+# Secure apps accessing other APIs using app governance
 
 Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps as well as risks from APIs that they access, some of which might receive limited support and updates.
 
@@ -17,11 +17,13 @@ You can better protect your organization with the new functionalities and enhanc
 - Automatically get alerted for any threats or anomalies by apps using non-Graph or legacy APIs.
 - Get an enhanced experience for investigation of apps with more filters, columns, and properties.
 
-## Identify apps that use only non-Graph APIs
+## Identify apps that use other APIs
 
-App governance lists all Microsoft Entra ID OAuth apps on the [Apps governance](https://security.microsoft.com/cloudapps/app-governance?viewid=allApps) page. To find apps that don't use Graph API, apply the API access filter, and select **Non-Graph only**. You can also use the Graph API access column to identify apps that don't have Graph API permissions among the listed apps.
+App governance lists all Microsoft Entra ID OAuth apps on the [Apps governance](https://security.microsoft.com/cloudapps/app-governance?viewid=allApps) page. To find apps that don't use Graph API, apply the API access filter, and select **Other APIs**. You can also use the Graph API access column to identify apps that don't have Graph API permissions among the listed apps.
 
 For example:
+
+:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png" alt-text="Screenshot that shows the list of APIs plus the option to view other APIs." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png":::
 
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/apps-page-non-graph-only.png" alt-text="Screenshot of the Microsoft Entra apps tab showing non-Graph apps only.":::
 
