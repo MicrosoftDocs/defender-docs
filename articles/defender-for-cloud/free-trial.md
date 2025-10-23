@@ -10,11 +10,11 @@ ms.date: 10/22/2025
 
 # Check the status of your free trial
 
-When you enable Microsoft Defender for Cloud for the first time on your Azure subscription, you automatically start a 30-day free trial. During this trial period, you can explore the capabilities of Defender for Cloud, foundational CSPM, and access to [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender).
+When you enable Microsoft Defender for Cloud for the first time on your Azure subscription, you automatically start a 30-day free trial. During this trial period, you can explore the capabilities of Defender for Cloud, foundational Cloud Security Posture Management (CSPM), and access to [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender).
 
 The free trial lasts for 30 days, or until you reach the usage limit for certain plans, whichever comes first. 
 
-After reaching the usage limit or once the 30-day trial ends, charges begin based on the plans enabled in your environment. To learn more about these plans, their usage limits, and associated costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+Once the usage limit is met or once the 30-day trial ends, charges begin based on the plans enabled in your environment. To learn more about these plans, their usage limits, and associated costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ After reaching the usage limit or once the 30-day trial ends, charges begin base
 
 ## Check your free trial status with Azure CLI
 
-Azure provides the ability to check the status of your free trial by using the built-in Azure Command Line Interface (CLI).
+Azure allows you to check the status of your free trial by using the built-in Azure Command Line Interface (CLI).
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -48,7 +48,7 @@ The `FreeTrialRemainingTime` field shows the remaining time, if any, of the free
 
 ## Check your free trial status with Azure Resource Graph Explorer
 
-You can also check the status of your free trial by using the Azure Resource Graph Explorer in the Azure portal.
+You can check the status of your free trial by using the Azure Resource Graph Explorer in the Azure portal.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -84,7 +84,7 @@ The `FreeTrialRemainingTime` column shows the remaining time, if any, of the fre
 
 ## Check your free trial status with Defender for Cloud
 
-You can also check the status of your free trial directly within the Microsoft Defender for Cloud portal.
+You can check the status of your free trial directly within the Microsoft Defender for Cloud portal.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -92,7 +92,7 @@ You can also check the status of your free trial directly within the Microsoft D
 
 1. Select the relevant subscription.
 
-1. Locate the icon as applicable to your subscription:
+1. Locate the icon that applies to your subscription:
 
    :::image type="content" source="media/free-trial/icon-location.png" alt-text="Screenshot that shows where the icon is located on the plans page." lightbox="media/free-trial/icon-location.png":::
 
@@ -100,7 +100,7 @@ You can also check the status of your free trial directly within the Microsoft D
     |--|--|
     | :::image type="icon" source="media/free-trial/full-trial.png" border="false"::: | The full trial is still available. |
     | :::image type="icon" source="media/free-trial/trial-started.png" border="false"::: | The free trial is active. Hover over the icon to see the remaining time. |
-    | No icon | The free trial has been used. |
+    | No icon | The free trial is over. |
 
 ## Disable the free trial
 
