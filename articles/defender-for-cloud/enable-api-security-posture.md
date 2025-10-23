@@ -94,7 +94,7 @@ Review API security posture findings along with your API inventory in the Micros
 
 ## Investigate API security recommendations
 
-API endpoints are continuously assessed for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. Security recommendations are generated with associated risk factors like external exposure and data sensitivity risks. The importance of the security recommendations is calculated based on these risk factors. Learn more about [risk-based security recommendations](risk-prioritization.md#recommendations).
+API endpoints are continuously assessed for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. Security recommendations are generated with associated risk factors like external exposure and data sensitivity risks. The importance of the security recommendations is calculated based on these risk factors. Learn more about [risk-based security recommendations](review-security-recommendations.md#understanding-risk-prioritization).
 
 To investigate your API security posture recommendations:
 

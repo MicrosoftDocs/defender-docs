@@ -35,6 +35,47 @@ Review recommendations and make sure all the details are correct before you reso
 
 1. Select a recommendation.
 
+## Understanding risk prioritization
+
+Microsoft Defender for Cloud proactively utilizes a dynamic engine that assesses the risks in your environment while taking into account the potential for exploitation and the potential business impact to your organization. The engine prioritizes security recommendations based on the risk factors of each resource, which are determined by the context of the environment, including the resource's configuration, network connections, and security posture.
+
+When Defender for Cloud performs a risk assessment of your security issues, the engine identifies the most significant security risks while distinguishing them from less risky issues. The recommendations are then sorted based on their risk level, allowing you to address the security issues that pose immediate threats with the greatest potential of being exploited in your environment.
+
+### What are risk factors?
+
+Defender for Cloud utilizes the context of an environment, including the resource's configuration, network connections, and security posture, to perform a risk assessment of potential security issues. By doing so, it identifies the most significant security risks while distinguishing them from less risky issues. The recommendations are then sorted based on their risk level.
+
+This risk assessment engine considers essential risk factors, such as:
+- **Internet exposure**: Whether resources are accessible from the internet
+- **Data sensitivity**: The presence of sensitive or confidential data
+- **Lateral movement**: Potential for attackers to move between resources
+- **Attack paths**: Whether the security issue is part of potential attack scenarios
+
+### Risk levels and calculation
+
+Defender for Cloud uses a context-aware risk-prioritization engine to calculate the risk level of each security recommendation. The risk level is determined by the risk factors of each resource, such as its configuration, network connections, and security posture. The risk level is calculated based on the potential impact of the security issue being breached, the categories of risk, and the attack path that the security issue is part of.
+
+Recommendations are classified into five categories based on their risk level:
+
+- **Critical**: Recommendations that indicate a critical security vulnerability an attacker can exploit to gain unauthorized access to your systems or data.
+- **High**: Recommendations that indicate a potential security risk that should be addressed in a timely manner, but might not require immediate attention.
+- **Medium**: Recommendations that indicate a relatively minor security issue that can be addressed at your convenience.
+- **Low**: Recommendations that indicate a relatively minor security issue that can be addressed at your convenience.
+- **Not evaluated**: Recommendations that haven't been evaluated yet. This could be due to the resource not being covered by the Defender CSPM plan, which is a prerequisite for risk level.
+
+### Recommendations dashboard details
+
+On the recommendations page, you can review the following risk-prioritized details:
+
+- **Title**: The title of the recommendation
+- **Affected resource**: The resource that the recommendation applies to
+- **Risk level**: The exploitability and the business impact of the underlying security issue, taking into account environmental resource context such as: Internet exposure, sensitive data, lateral movement, and more
+- **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the exploitability and the business impact of the underlying security issue
+- **Attack paths**: The number of attack paths that the recommendation is part of based on the security engine's search for all potential attack paths
+- **Owner**: The person the recommendation is assigned to
+- **Status**: The current status of the recommendation (unassigned, on time, overdue)
+- **Insights**: Information related to the recommendation such as if it's in preview, if it can be denied, if there's a fix option available
+
 ::: zone-end
 
 ::: zone pivot="defender-portal"
@@ -75,6 +116,57 @@ Alternative access paths to recommendations:
 
 - **Cloud infrastructure**  > **Overview** > **Security posture** > **Security recommendations** > **View recommendations**
 - **Exposure Management** > **Initiatives** > **Cloud Security** > **Open initiative page** > **Security Recommendations** tab
+
+> [!NOTE]
+> **Why you might see different resources between the Azure portal and Defender portal:**
+> - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
+> - **Free subscription resources**: Resources from free subscriptions don't appear in the Defender portal during the preview period. This is a temporary limitation that will be addressed.
+> - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
+
+## Understanding risk prioritization in Defender portal
+
+The Defender portal's Exposure Management experience provides advanced risk prioritization capabilities that help security teams focus on the most critical threats. Microsoft Defender for Cloud's dynamic risk assessment engine evaluates the risks in your environment while considering the potential for exploitation and the potential business impact to your organization.
+
+The recommendations in the Defender portal are automatically prioritized based on effective risk, which takes into account multiple contextual factors about each resource and its environment. This risk-based approach ensures that security teams can address the most critical security issues first, making remediation efforts more efficient and effective.
+
+### Risk-based filtering and prioritization
+
+The Defender portal offers advanced filtering capabilities that allow you to focus on recommendations based on risk factors:
+
+- **Exposed assets**: Filter by resources that have direct exposure to threats, such as internet-facing resources or resources with vulnerable configurations
+- **Asset risk factors**: Target specific risk conditions like data sensitivity, lateral movement potential, or critical infrastructure exposure
+- **Risk level breakdown**: View recommendations categorized by Critical, High, Medium, and Low risk levels
+- **Attack path integration**: Focus on recommendations that are part of identified attack paths
+
+### Risk calculation in Exposure Management
+
+The unified Exposure Management experience calculates risk levels using a context-aware engine that considers:
+
+- **Environmental context**: Resource configuration, network topology, and security posture
+- **Exploitability factors**: How easily an attacker could exploit the vulnerability
+- **Business impact**: The potential consequences if the security issue were exploited
+- **Attack surface**: The resource's exposure to potential threats
+- **Choke point analysis**: Whether addressing the recommendation would disrupt multiple attack paths
+
+### Risk levels in Defender portal
+
+Recommendations in the Defender portal are classified into five risk levels:
+
+- **Critical**: Security vulnerabilities with immediate exploitability and high business impact that require urgent attention
+- **High**: Significant security risks that should be addressed promptly but may not require immediate action
+- **Medium**: Moderate security issues that can be addressed as part of regular security maintenance
+- **Low**: Minor security issues that can be addressed at your convenience during routine operations
+- **Not evaluated**: Recommendations that haven't been risk-assessed, typically due to resource coverage limitations
+
+### Enhanced recommendation details
+
+Each recommendation in the Defender portal provides comprehensive risk context:
+
+- **Risk assessment summary**: Overall risk calculation and contributing factors
+- **Attack surface mapping**: Visual representation of how the resource relates to potential attack scenarios
+- **Initiative correlation**: Connection to broader security initiatives and compliance frameworks
+- **CVE associations**: Links to relevant Common Vulnerabilities and Exposures when applicable
+- **Historical context**: Trends and changes in risk levels over time
 
 ::: zone-end
 
@@ -316,7 +408,7 @@ Examples of low severity recommendations include:
 An organization's internal policies might differ from Microsoft's classification of a specific recommendation. We recommend that you always carefully review each recommendation and consider its potential effect on your security posture before you decide how to address it.
 
 > [!NOTE]
-> Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** determination that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md).
+> Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** determination that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md) and detailed guidance in the risk prioritization sections above.
 
 ::: zone pivot="azure-portal"
 
