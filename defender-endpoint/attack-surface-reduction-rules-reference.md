@@ -15,18 +15,15 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 08/28/2025
+ms.date: 10/20/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
+
 # Attack surface reduction rules reference
 
-
-**Platforms:**
-
-- Windows
 
 This article provides information about Microsoft Defender for Endpoint attack surface reduction rules (ASR rules):
 
@@ -40,6 +37,12 @@ This article provides information about Microsoft Defender for Endpoint attack s
 [!Include[Prerelease information](../includes/prerelease.md)]
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Attack surface reduction rules by type
 
