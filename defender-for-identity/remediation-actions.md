@@ -37,11 +37,11 @@ The following Defender for Identity actions can be performed on Identities:
 
 | Remediation Action  | Description     |          Scope                        | 
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|Disable user                 | This temporarily prevents a user from signing in. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network. | Active Directory, Entra ID and Okta
-|Enable user              | Enable a user to sign in. | Active Directory, Entra ID and Okta
-|Revoke all Users' sessions       | Revoke a user's active sessions. | Entra ID and Okta
-|Confirm user compromised      | The user's risk level is set to High | Entra ID
-| Reset user password| This prompts the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts| Active Directory
+|Disable identity                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Entra ID and Okta
+|Enable identity              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Entra ID and Okta
+|Revoke all identities' sessions       | Revoke an identities active sessions. | Entra ID and Okta
+|Confirm accounts compromised      | Marks all accounts linked to the selected identity as compromised in Entra ID. | Entra ID
+| Reset user password| Forces a password reset for one or more accounts linked to the selected identity.This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts| Active Directory
 |Deactivate user in Okta | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
 | Set user risk to High/Medium/Low |Set one user risk scoring to one of the defined levels. This action will only be available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
 
