@@ -33,7 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 23, 2025 | Update | [GitHub Application Permissions Update](#gitHub-application-permissions-update)|
+|October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
 
 ### GitHub Application Permissions Update
