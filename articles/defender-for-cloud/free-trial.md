@@ -92,4 +92,16 @@ You can also check the status of your free trial directly within the Microsoft D
 
 1. Select the relevant subscription.
 
-1. 
+1. Locate the icon as applicable to your subscription:
+
+   :::image type="content" source="media/free-trial/icon-location.png" alt-text="Screenshot that shows where the icon is located on the plans page." lightbox="media/free-trial/icon-location.png":::
+
+    | Icon | Description |
+    |--|--|
+    | :::image type="icon" source="media/free-trial/full-trial.png" border="false"::: | The full trial is still available. |
+    | :::image type="icon" source="media/free-trial/trial-started.png" border="false"::: | The free trial is active. Hover over the icon to see the remaining time. |
+    | No icon | The free trial has been used. |
+
+## Disable the free trial
+
+If you decide not to continue using Microsoft Defender for Cloud during your free trial, you can disable it.
