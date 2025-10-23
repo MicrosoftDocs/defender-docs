@@ -43,9 +43,9 @@ In this article, you learn how to set up and use just-in-time access, including 
 | Request JIT access to a VM                | *Assign these actions to the user:* <ul><li> `Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action` </li><li> `Microsoft.Security/locations/jitNetworkAccessPolicies/*/read` </li><li> `Microsoft.Compute/virtualMachines/read` </li><li> `Microsoft.Network/networkInterfaces/*/read` </li> <li> `Microsoft.Network/publicIPAddresses/read` </li></ul> |
 | Read JIT policies                         | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/read`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/policies/read`</li><li>`Microsoft.Security/pricings/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/*/read`</li>|
 
-    > [!NOTE]
-    > Only the `Microsoft.Security` permissions are relevant for AWS.
-    > To create a least-privileged role for users that only need to request JIT access to a VM, use the Set-JitLeastPrivilegedRole script.
+> [!NOTE]
+> Only the `Microsoft.Security` permissions are relevant for AWS.
+> To create a least-privileged role for users that only need to request JIT access to a VM, use the Set-JitLeastPrivilegedRole script.
 
 ## Work with JIT VM access using Microsoft Defender for Cloud
 
@@ -163,8 +163,8 @@ You can enable JIT on a VM from the Azure virtual machines pages of the Azure po
     1.  From Defender for Cloud's menu, select **Just-in-time VM access**.
 
     1.  From the **Configured** tab, right-click on the VM to which you want to add a port, and select **Edit**.
-    
-    ![Editing a JIT VM access configuration in Microsoft Defender for Cloud.](./media/just-in-time-access-usage/jit-policy-edit-security-center.png)
+        
+        ![Editing a JIT VM access configuration in Microsoft Defender for Cloud.](./media/just-in-time-access-usage/jit-policy-edit-security-center.png)
 
     1.  Under **JIT VM access configuration**, you can either edit the existing settings of an already protected port or add a new custom port.
 
