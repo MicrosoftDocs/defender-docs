@@ -42,7 +42,7 @@ Here's how these stages map to Defender for Cloud.
 
 ### Apply Zero Trust to hybrid and multicloud scenarios
 
-With cloud workloads commonly spanning multiple cloud platforms, cloud security services must do the same.Defender for Cloud protects workloads wherever they're running. In Azure, on-premises, AWS, or GCP.
+With cloud workloads commonly spanning multiple cloud platforms, cloud security services must do the same. Defender for Cloud protects workloads wherever they're running. In Azure, on-premises, AWS, or GCP.
 
 - **AWS**: To protect AWS machines, you onboard AWS accounts into Defender for Cloud. This integration provides a unified view of Defender for Cloud recommendations and AWS Security Hub findings. Learn more about [connecting AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 - **GCP**: To protect GCP machines, you onboard GCP accounts into Defender for Cloud. This integration provides a unified view of Defender for Cloud recommendations and GCP Security Command Center findings. Learn more about [connecting GCP accounts to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
