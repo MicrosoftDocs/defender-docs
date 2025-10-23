@@ -5,7 +5,7 @@ manager: bagol
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/06/2025
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
 author: batamig
@@ -29,9 +29,6 @@ appliesto:
 # Manage tamper protection for your organization using Microsoft Intune
 
 
-**Platforms**
-- Windows
-
 Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), you can manage the tamper protection feature for your organization in the [Intune admin center](https://intune.microsoft.com). Or, you can use [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure). With Intune or Configuration Manager, you can perform the following tasks:
 
 - [Turn tamper protection on (or off) for some or all devices](#turn-tamper-protection-on-or-off-in-microsoft-intune). 
@@ -47,6 +44,13 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 > - You can use Intune or [Configuration Manager](manage-tamper-protection-configuration-manager.md) to exclude devices from tamper protection. 
 >
 > - If you're managing tamper protection through Intune, you can change [tamper-protected antivirus exclusions](#tamper-protection-for-antivirus-exclusions).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 
 ## Requirements for managing tamper protection in Intune
 

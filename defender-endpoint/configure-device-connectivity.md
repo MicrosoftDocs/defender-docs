@@ -18,6 +18,8 @@ audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Vulnerability Management
 
 ---
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -58,8 +60,8 @@ To support network devices without hostname resolution or wildcard support, you 
 | Microsoft Defender Antivirus - Windows (Antimalware Client) | 4.18.2211.5 | |
 | Microsoft Defender Antivirus - Windows (Engine) | 1.1.19900.2 | |
 | Microsoft Defender Antivirus - Windows (Security Intelligence) | 1.391.345.0 | |
-| Microsoft Defender Antivirus - macOS | [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+ | |
-| Microsoft Defender Antivirus - Linux | [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+ | |
+| Microsoft Defender Antivirus - macOS | [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.\*+ | |
+| Microsoft Defender Antivirus - Linux | [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.\*+ | |
 
 ### Supported Operating Systems
 
@@ -67,9 +69,7 @@ To support network devices without hostname resolution or wildcard support, you 
     - [Commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls).
     - [US government devices streamlined URL list](streamlined-device-connectivity-urls-gov.md)
 - Windows 11
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2019 and later
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
