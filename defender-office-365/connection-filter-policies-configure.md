@@ -193,7 +193,7 @@ For example, the source email server 192.168.1.25 sends email from the domains c
 
 ### Scenarios where messages from sources in the IP Allow List are still filtered
 
-> [!NOTE]  
+> [!NOTE]
 > These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model.
 
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:
