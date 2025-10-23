@@ -36,11 +36,11 @@ The **Incident queue** shows a collection of incidents that were created across 
 
 You can get to the incident queue from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents.png" alt-text="Screenshot of the Incidents queue in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="./media/incidents-queue/incidents-ss-incidents.png" alt-text="Screenshot of the Incidents queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incidents-ss-incidents.png":::
 
 Select **Most recent incidents and alerts** to toggle the expansion of the top section, which shows a timeline graph of the number of alerts received and incidents created in the last 24 hours.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="/defender/media/incidents-queue/incidents-ss-incidents2.png":::
+:::image type="content" source="./media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="./media/incidents-queue/incidents-ss-incidents2.png":::
 
 Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made. You can also find the **total number of incidents** in the queue indicated beside the Search bar. The total number of incidents varies depending on the filters used in the queue.
 
@@ -49,11 +49,11 @@ The incident queue has customizable columns that give you visibility into differ
 - Check/uncheck the columns you want to see in the incident queue.
 - Arrange the order of the columns by dragging them.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents-3.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="/defender/media/incidents-queue/incidents-ss-incidents-3.png":::
+:::image type="content" source="./media/incidents-queue/incidents-ss-incidents-3.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="./media/incidents-queue/incidents-ss-incidents-3.png":::
 
 The **Export** feature allows you to export the data in the incident queue that is displayed according to the applied filters and time ranges. It's available in the form of a button named **Export**, as displayed in the following screenshot:
 
-:::image type="content" source="/defender/media/defender/incidents-queue-with-export-button.png" alt-text="Shows the Export button in the Incidents page  of the Microsoft Defender portal":::
+:::image type="content" source="./media/incidents-queue/incidents-queue-with-export-button.png" alt-text="Shows the Export button in the Incidents page  of the Microsoft Defender portal":::
 
 When you click the **Export** button, the data is exported to a CSV file. You can apply various filters and time ranges to the incidents queue (not just in the context of exporting the data, but in a generic context). When you select **Export**, whichever filters and/or time ranges are applied to the incidents queue, such data is exported to the CSV file.
 
@@ -72,32 +72,6 @@ If you onboarded Microsoft Sentinel to the Defender portal, then any alerts and 
 
 We recommend that you avoid using the incident name as a condition for triggering [automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules). If the incident name is a condition, and the incident name changes, the rule will not be triggered.
 
-### Defender Boxed
-
-For a limited time during January and July of each year, **Defender Boxed** automatically appears when you first open the incident queue. Defender Boxed highlights your organization's security success, improvements, and response actions during the previous six months or calendar year.
-
-:::image type="content" source="/defender/media/defender-boxed/defender-boxed-recording.gif" alt-text="Defender Boxed as shown in the incident queue.":::
-
-> [!NOTE]
-> Defender Boxed is only available to users who performed applicable activities in the Microsoft Defender portal.
-
-You can do the following actions in the series of cards that appear in Defender Boxed:
-
-- Download a detailed summary of your achievements that can be shared with others in your organization.
-
-  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-summary-small.png" alt-text="Screenshot of Defender Boxed slide with the download summary option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-summary.png":::
-
-- Change the frequency of how often Defender Boxed will appear. You can choose between once (every January) or twice (every January and July) per year.
-
-  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-frequency-small.png" alt-text="Screenshot of Defender Boxed slide with the frequency highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-frequency.png":::
-
-- Share your achievement to your social media networks, email, and other forums by saving the slide as an image.
-
-  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-save-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-save.png":::
-
-To reopen Defender Boxed, go to the Incidents queue and then select **Your Defender Boxed** on the right side of the pane.
-
-:::image type="content" source="/defender/media/defender-boxed/defender-boxed-incident-small.png" alt-text="Screenshot of the Defender Boxed option highlighted in the Incidents page." lightbox="/defender/media/defender-boxed/defender-boxed-incident.png":::
 
 ## Filters <a name="available-filters"></a>
 
@@ -107,7 +81,7 @@ The **Filters** list above the list of incidents shows the currently applied fil
 
 From the default incident queue, you can select **Add filter** to see the **Add filter** drop-down, from which you specify filters to apply to the incidents queue to limit the set of incidents shown. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/incident-filters-small.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incident-filters.png":::
+:::image type="content" source="./media/incidents-queue/incident-filters-small.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incident-filters.png":::
 
 Select the filters you want to use, then select **Add** at the bottom of the list to make them available.
 
@@ -147,7 +121,7 @@ You can quickly remove a filter by selecting the **X** in the name of a filter i
 
 You can also create filter sets within the incidents page by selecting **Saved filter queries > Create filter set**. If no filter sets have been created, select **Save** to create one.
 
-:::image type="content" source="/defender/media/incidents-queue/fig2-newfilters.png" alt-text="The create filter sets option for the incident queue in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig2-newfilters.png":::
+:::image type="content" source="./media/incidents-queue/fig2-newfilters.png" alt-text="The create filter sets option for the incident queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/fig2-newfilters.png":::
 
 > [!NOTE]
 > Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
@@ -199,6 +173,33 @@ After you've determined which incident requires the highest priority, select it 
 
 - [Manage](manage-incidents.md) the properties of the incident for tags, assignment, immediate resolution for false positive incidents, and comments.
 - Begin your [investigations](investigate-incidents.md).
+
+### Defender Boxed
+
+For a limited time during January and July of each year, **Defender Boxed** automatically appears when you first open the incident queue. Defender Boxed highlights your organization's security success, improvements, and response actions during the previous six months or calendar year.
+
+:::image type="content" source="/defender/media/defender-boxed/defender-boxed-recording.gif" alt-text="Defender Boxed as shown in the incident queue.":::
+
+> [!NOTE]
+> Defender Boxed is only available to users who performed applicable activities in the Microsoft Defender portal.
+
+You can do the following actions in the series of cards that appear in Defender Boxed:
+
+- Download a detailed summary of your achievements that can be shared with others in your organization.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-summary-small.png" alt-text="Screenshot of Defender Boxed slide with the download summary option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-summary.png":::
+
+- Change the frequency of how often Defender Boxed will appear. You can choose between once (every January) or twice (every January and July) per year.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-frequency-small.png" alt-text="Screenshot of Defender Boxed slide with the frequency highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-frequency.png":::
+
+- Share your achievement to your social media networks, email, and other forums by saving the slide as an image.
+
+  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-save-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-save.png":::
+
+To reopen Defender Boxed, go to the Incidents queue and then select **Your Defender Boxed** on the right side of the pane.
+
+:::image type="content" source="/defender/media/defender-boxed/defender-boxed-incident-small.png" alt-text="Screenshot of the Defender Boxed option highlighted in the Incidents page." lightbox="/defender/media/defender-boxed/defender-boxed-incident.png":::
 
 ## See also
 
