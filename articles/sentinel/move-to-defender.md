@@ -66,7 +66,7 @@ For more information, see:
 
 ### Onboarding to the Defender portal with customer-managed keys (CMK)
 
-If you enabled CMK before onboarding, when you onboard your Microsoft Sentinel-enabled workspace to the Defender portal, previously and newly ingested log data in your workspace continues to be encrypted with CMK.
+If you enabled CMK before onboarding, when you onboard your Microsoft Sentinel-enabled workspace to the Defender portal, all log data in your workspace continues to be encrypted with CMK - including both previously and newly ingested data.
 
 Analytic rules, custom detections, and other Sentinel content, such as automation rules, also continue to be CMK-encrypted. However, alerts and incidents will no longer be CMK-encrypted after onboarding.
 
