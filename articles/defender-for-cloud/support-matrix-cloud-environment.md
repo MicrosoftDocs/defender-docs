@@ -17,7 +17,7 @@ This article indicates which Defender for Cloud features are supported in Azure 
 
 In the support table, **NA** indicates that the feature isn't available.
 
-|**Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**|
+|**Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**<sup>[3](#footnote3)</sup>|
 |--- | --- | --- | --- |
 |**GENERAL FEATURES** | | ||
 |[Continuous data export](continuous-export.md) | GA | GA | GA |
@@ -97,6 +97,7 @@ In the support table, **NA** indicates that the feature isn't available.
 
 <sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection.
 <sup><a name="footnote2"></a>2</sup>: GovCon Cloud Moderate (GCCM) doesn't support File Integrity Monitoring.
+<sup><a name="footnote3"></a>3</sup>: [!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 
