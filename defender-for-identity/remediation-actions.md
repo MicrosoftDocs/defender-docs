@@ -33,6 +33,11 @@ To perform any of the [supported actions](#supported-actions), you need to:
 
 ## Supported actions
 
+> [!NOTE]  
+> During rollout of the enhanced remediation experience, you'll see a banner at the top of the **Accounts** page in the Microsoft Defender portal that lets you temporarily revert to the previous version, where remediation actions apply to a single identity.  
+> In the new experience, actions can apply to one or multiple accounts linked to the same identity.
+
+
 The following Defender for Identity actions can be performed on Identities:
 
 | Remediation Action  | Description     |          Scope                        | 
