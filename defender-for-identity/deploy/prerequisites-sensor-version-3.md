@@ -88,7 +88,7 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
     ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
 
-5. Select **Next** to review and finish creating the rule and then select **Submit**.
+1. Select **Next** to review and finish creating the rule and then select **Submit**.
 
 ### Updating rules
    Offboarding a device from this configuration can be done **only** from **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
