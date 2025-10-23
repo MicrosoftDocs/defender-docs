@@ -50,26 +50,24 @@ To support network devices without hostname resolution or wildcard support, you 
 
 ## Prerequisites
 
-### Version and OS requirements
+Devices must meet specific prerequisites to use the streamlined connectivity method for Defender for Endpoint. Ensure the prerequisites are met before proceeding with onboarding.
 
-| Platform / Component | Minimum Version / Update | Notes |
-|---------------------|-------------------------|-------|
-| Windows (SENSE) | 10.8040.* / March 8, 2022 or higher | See [KB table](#required-kb-versions-windows). |
-| Microsoft Defender Antivirus - Windows (Antimalware Client) | 4.18.2211.5 | |
-| Microsoft Defender Antivirus - Windows (Engine) | 1.1.19900.2 | |
-| Microsoft Defender Antivirus - Windows (Security Intelligence) | 1.391.345.0 | |
-| Microsoft Defender Antivirus - macOS | [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+ | |
-| Microsoft Defender Antivirus - Linux | [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+ | |
+**Minimum KB update (Windows)**
 
-### Supported Operating Systems
+- SENSE version: 10.8040.*/ March 8, 2022 or higher (see table)
 
-- Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list. See one of the following lists: 
-    - [Commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls).
-    - [US government devices streamlined URL list](streamlined-device-connectivity-urls-gov.md)
+**Microsoft Defender Antivirus versions (Windows)**
+
+- **Antimalware Client:** `4.18.2211.5` 
+- **Engine:** `1.1.19900.2` 
+- **Antivirus (Security Intelligence):** `1.391.345.0`
+
+### Supported operating systems
+
+- Windows 10 version 1809 or later. 
+- Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
 - Windows 11
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2019 and later
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
@@ -77,12 +75,9 @@ To support network devices without hostname resolution or wildcard support, you 
 
 > [!IMPORTANT]
 >
-> - **Devices running on the MMA agent are not supported** on the streamlined connectivity method and need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent).
-> - Windows Server 2012 R2 and Server 2016 need to upgrade to a unified agent to leverage the new method. <br/>
-> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but use a longer list. For more information, see the [commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls) or the
->[US government devices streamlined URL list](streamlined-device-connectivity-urls-gov.md).
-
-### Required KB versions (Windows)
+> - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
+> - Windows Server 2012 R2 and Server 2016 will need to upgrade to unified agent to leverage the new method. <br/>
+> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
 
 | Windows   OS    |     Minimum   KB Required (March 8, 2022)    |
 |:---|:---|
