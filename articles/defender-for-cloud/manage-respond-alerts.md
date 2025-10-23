@@ -18,7 +18,7 @@ This article shows you how to view and process Defender for Cloud's alerts and p
 
 When triaging security alerts, you should prioritize alerts based on their alert severity, addressing higher severity alerts first. Learn more about [how alerts are classified](alerts-overview.md#how-are-alerts-classified).
 
-> **Tip**
+> [!TIP]
 > You can connect Microsoft Defender for Cloud to SIEM solutions including Microsoft Sentinel and consume the alerts from your tool of choice. Learn more how to [stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
 
 ## Prerequisites
@@ -30,6 +30,7 @@ For prerequisites and requirements, see [Support matrices for Defender for Cloud
 Follow these steps:
 
 1.  Sign in to the [Azure portal](https://portal.azure.com/).
+
 1.  Navigate to **Microsoft Defender for Cloud** > **Security alerts**.
 
     :::image type="content" source="media/managing-and-responding-alerts/overview-page-alerts-links.png" alt-text="Screenshot that shows the security alerts page from Microsoft Defender for Cloud's overview page.":::
@@ -108,10 +109,15 @@ After investigating a security alert, you can respond to the alert from within M
     :::image type="content" source="./media/managing-and-responding-alerts/alert-details-take-action.png" alt-text="Screenshot of the security alerts take action tab." lightbox="./media/managing-and-responding-alerts/alert-details-take-action.png":::
 
 1.  Review the **Mitigate the threat** section for the manual investigation steps necessary to mitigate the issue.
+
 1.  To harden your resources and prevent future attacks of this kind, remediate the security recommendations in the **Prevent future attacks** section.
+
 1.  To trigger a logic app with automated response steps, use the **Trigger automated response** section and select **Trigger logic app**.
+
 1.  If the detected activity *isn’t* malicious, you can suppress future alerts of this kind using the **Suppress similar alerts** section and select **Create suppression rule**.
+
 1.  Select **Configure email notification settings**, to view who receives emails regarding security alerts on this subscription. Contact the subscription owner, to configure the emails settings.
+
 1.  When you complete the investigation into the alert and responded in the appropriate way, change the status to **Dismissed**.
 
     :::image type="content" source="./media/managing-and-responding-alerts/set-status-dismissed.png" alt-text="Screenshot of the alert's status drop down menu.":::
@@ -124,7 +130,7 @@ After investigating a security alert, you can respond to the alert from within M
 
     :::image type="content" source="./media/managing-and-responding-alerts/alert-feedback.png" alt-text="Screenshot of the provide feedback to Microsoft window that allows you to select the usefulness of an alert.":::
 
-> **Tip**
+> [!Tip]
 > We review your feedback to improve our algorithms and provide better security alerts.
 
 To learn about the different types of alerts, see [Security alerts - a reference guide](alerts-reference.md).
@@ -137,7 +143,7 @@ Results for both the agent-based and agentless scanner appear on the Security al
 
 :::image type="content" source="media/managing-and-responding-alerts/agent-and-agentless-results.png" alt-text="Screenshot of the security alerts page that shows the results of both the agent-based and agentless scan results." lightbox="media/managing-and-responding-alerts/agent-and-agentless-results.png":::
 
-> **Note**
+> [!NOTE]
 > Remediating one of these alerts will not remediate the other alert until the next scan is completed.
 
 ## Related content
