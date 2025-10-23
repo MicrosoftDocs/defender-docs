@@ -18,6 +18,8 @@ audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Vulnerability Management
 
 ---
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
