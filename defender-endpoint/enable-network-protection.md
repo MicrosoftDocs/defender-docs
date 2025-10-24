@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 author: batamig
 ms.author: bagol
@@ -24,18 +24,17 @@ appliesto:
 # Turn on network protection
 
 
-**Platforms**
+[Network protection](network-protection.md) helps to prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
+
+[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
+
+## Prerequisites
+
+### Supported operating systems 
 
 - Windows
 - Linux (See [Network protection for Linux](network-protection-linux.md))
 - macOS (See [Network protection for macOS](network-protection-macos.md))
-
-> [!TIP]
-
-
-[Network protection](network-protection.md) helps to prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
-
-[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
 ## Enable network protection
 
@@ -217,8 +216,8 @@ Use the following procedure to enable network protection on domain-joined comput
    |Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
    |Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
 
-> [!IMPORTANT]
-> Disable the "AllowDatagramProcessingOnWinServer" setting. This is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
+  > [!IMPORTANT]
+  > Disable the "AllowDatagramProcessingOnWinServer" setting. This is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
 
 1. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 
