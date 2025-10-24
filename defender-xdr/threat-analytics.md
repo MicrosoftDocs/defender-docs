@@ -203,7 +203,7 @@ In the **Recommended actions** tab, review the list of specific actionable recom
 
 The **Indicators** tab provides a list of all indicators of compromise (IOCs) associated with the threat. Microsoft researchers update these IOCs in real time as they find new evidence related to the threat. This information helps your security operations center (SOC) and threat intelligence analysts with remediation and proactive hunting. The list also retains expired IOCs, so you can investigate past threats and understand their impact in your environment.
 
-:::image type="content" source="/media/ta-indicators/indicators-full.png" alt-text="Screenshot of the Indicators tab in a threat analytics report." lightbox="/media/ta-indicators/indicators-full.png":::
+:::image type="content" source="/defender-xdr/media/ta-indicators/indicators-full.png" alt-text="Screenshot of the Indicators tab in a threat analytics report." lightbox="/defender-xdr/media/ta-indicators/indicators-full.png":::
 
 >[!IMPORTANT]
 >Only verified customers can access the information in the **Indicators** tab. If you don't have access to this information, you need to verify your tenant. [Learn more about getting access to IOCs](threat-analytics-indicators.md)
