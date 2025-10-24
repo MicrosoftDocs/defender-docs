@@ -15,18 +15,15 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 08/28/2025
+ms.date: 10/20/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
+
 # Attack surface reduction rules reference
 
-
-**Platforms:**
-
-- Windows
 
 This article provides information about Microsoft Defender for Endpoint attack surface reduction rules (ASR rules):
 
@@ -40,6 +37,12 @@ This article provides information about Microsoft Defender for Endpoint attack s
 [!Include[Prerelease information](../includes/prerelease.md)]
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Attack surface reduction rules by type
 
@@ -197,7 +200,7 @@ For rules with the "Rule State" specified:
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | | Y| Y (in block mode)  |
-|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | Y (in block mode) |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) |   | Y | Y (in block mode)  |

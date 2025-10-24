@@ -55,8 +55,8 @@ The following table gives information about the supported Microsoft Defender for
 |[Device response capabilities: collect investigation package ](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)  |  ![Yes.](media/svg/check-yes.svg)  |
 |[Device response capabilities: run antivirus scan](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)        |  ![Yes.](media/svg/check-yes.svg)         |
 |[Device isolation](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)    |
-|File response capabilities: collect file, deep analysis  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg) |
-|File response capabilities: block file, stop, and quarantine processes  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![No](media/svg/check-no.svg) |  ![No](media/svg/check-no.svg) |
+|[File response capabilities: collect file, deep analysis](respond-file-alerts.md)  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg) |
+|[File response capabilities: block file, stop, and quarantine processes](respond-file-alerts.md)  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![No](media/svg/check-no.svg) |  ![No](media/svg/check-no.svg) |
 |[Live Response](live-response.md)       | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)      |
 
 > [!NOTE]
