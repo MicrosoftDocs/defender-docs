@@ -1,5 +1,5 @@
 ---
-title: Threat analytics in Microsoft Defender XDR
+title: Threat analytics in Microsoft Defender
 ms.reviewer: 
 description: Learn about emerging threats and attack techniques and how to stop them. Assess their impact to your organization and evaluate your organizational resilience.
 ms.service: defender-xdr
@@ -20,10 +20,10 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 10/22/2025
+ms.date: 11/18/2025
 ---
 
-# Threat analytics in Microsoft Defender XDR
+# Threat analytics in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

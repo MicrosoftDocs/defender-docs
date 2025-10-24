@@ -1,5 +1,5 @@
 ---
-title: Understand the analyst report section in threat analytics in Microsoft Defender XDR
+title: Understand the analyst report section in threat analytics in Microsoft Defender
 ms.reviewer: 
 description: Learn about the analyst report section of each threat analytics report. Understand how it provides information about threats, mitigations, detections, advanced hunting queries, and more.
 search.appverid: met150
@@ -20,10 +20,10 @@ ms.custom:
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020
-ms.date: 10/22/2025
+ms.date: 11/18/2025
 ---
 
-# Understand the analyst report in threat analytics in Microsoft Defender XDR
+# Understand the analyst report in threat analytics in Microsoft Defender 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
