@@ -16,7 +16,7 @@ ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 09/21/2025
+ms.date: 10/26/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
