@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to check the status of your 30 day free trial of Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 10/22/2025
+ms.date: 10/26/2025
 #customer intent: As a new user, I want to check the status of my free trial of Microsoft Defender for Cloud to understand my usage and remaining trial period.
 ---
 

@@ -227,16 +227,15 @@
               - name: Overview Microsoft Security Copilot integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
-
+    - name: Check the status of your free trial
+      displayName: free, trial, status
+      href: free-trial.md
 
 - name: Tutorials
   items:
     - name: Planning and operations guide
       displayName: guide, planning, roles, policies, recommendations
       href: defender-for-cloud-planning-and-operations-guide.md
-    - name: Check the status of your free trial
-      displayName: free, trial, status
-      href: free-trial.md
     - name: Protect VMs
       displayName: manage, access, harden
       href: tutorial-protect-resources.md
