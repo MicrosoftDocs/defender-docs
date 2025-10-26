@@ -1,7 +1,7 @@
 ---
 title: Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 description: Learn how to enable and manage real-time runtime protection for Microsoft Copilot Studio AI agents using Microsoft Defender.
-ms.date: 08/12/2025
+ms.date: 10/26/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
 ms.reviewer: gayasalomon
@@ -17,7 +17,7 @@ As AI agents become increasingly accessible through low-code/no‑code (LCNC) pl
 
 ## Capabilities
 
-Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent runs any actions. 
+Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting tool invocations before the agent runs any actions.
 
 If Microsoft Defender determines that a prompt is suspicious:
 
@@ -29,7 +29,7 @@ If Microsoft Defender determines that a prompt is suspicious:
 This capability adds another security layer on top of Microsoft Copilot Studio, helping ensure AI agents remain resilient against evolving threats.
 
 > [!NOTE]
-> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio custom engine.
+> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio custom agents.
 
 
 ## Prerequisites
