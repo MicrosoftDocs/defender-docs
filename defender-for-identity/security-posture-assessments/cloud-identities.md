@@ -62,7 +62,7 @@ This article describes the security risks associated with having a high number o
 
 This report lists Okta accounts with administrator roles - excluding Super Administrator, where the number of accounts assigned to these roles is greater than 25.  
 
-**Impact**
+**User impact**
 
 A high number of users with privileged roles increases the risk of misuse or unauthorized access to critical systems. By reducing the number of users assigned to roles such as Super Admin or Org Admin, organizations can better limit access to sensitive resources and reduce the attack surface. Maintaining a smaller, set of privileged accounts ensures more effective governance and minimizes potential security vulnerabilities.
 
@@ -96,7 +96,7 @@ Okta’s API tokens inherit the permissions of the user who creates them. If a u
 
 This report lists Okta accounts with Super Administrator role, where the number of users assigned to this role is greater than 5.
 
-**Impact**
+**User impact**
 
 A high number of users with privileged roles increases the risk of misuse or unauthorized access to critical systems. By reducing the number of users assigned to roles such as Super Admin or Org Admin, organizations can better limit access to sensitive resources and reduce the attack surface. Maintaining a smaller, set of privileged accounts ensures more effective governance and minimizes potential security vulnerabilities.
 
@@ -114,7 +114,7 @@ A high number of users with privileged roles increases the risk of misuse or una
 
 This assessment describes the security risks associated with dormant Okta privileged accounts and provides recommendations for mitigating these risks.
 
-**Impact**
+**User impact**
 
 Dormant privileged accounts represent a significant security risk, as they can become targets for unauthorized access or misuse without detection. Deactivating or removing unused privileged accounts ensures that only active, monitored users have access to critical administrative capabilities.
 

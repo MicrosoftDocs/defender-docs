@@ -78,8 +78,6 @@ The assessment lists the problematic HTTP endpoints in your organization and gui
 Once handled, the ESC8 attack risk is mitigated, reducing your attack surface significantly.
 
 
-
-
 ## Edit misconfigured certificate templates owner (ESC4)
 
 This article provides an overview of Microsoft Defender for Identity's **Misconfigured certificate templates owner (ESC4)** security posture assessment report.
@@ -310,8 +308,6 @@ If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turn
     ```cmd
     net stop certsvc & net start certsvc
     ```
-
-
 
 ## Next steps
 

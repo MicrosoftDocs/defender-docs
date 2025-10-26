@@ -17,7 +17,7 @@ ms.reviewer: LiorShapiraa
 Using Group Policy Objects (GPOs) to add membership to a local group can create a security risk if the target group has excessive permissions or rights. To mitigate this risk, it's important to identify any local groups, such as local administrators or terminal server access, where Authenticated Users or Everyone is granted access by a GPO.   
 Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment.  
 
-**Impact**
+**User impact**
 
 A user, service or application that relies on these local permissions may stop functioning. 
 
@@ -39,7 +39,7 @@ This recommendation lists any Group Policy Objects in your environment that can 
 Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment. 
 
 
-**Impact** 
+**User impact**
 
 A user, service or application that relies on these permissions may stop functioning. 
 

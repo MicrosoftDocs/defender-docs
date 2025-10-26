@@ -35,6 +35,7 @@ Defender for Identity security posture assessments have five key categories. Eac
 - **Certificates**: Assesses Active Directory Certificate Services (AD CS) for security gaps, such as misconfigured certificate templates or weak certificate authority settings. Identifying and addressing these issues helps prevent unauthorized access that could arise from certificate-related vulnerabilities.
 - **Group policy**: Analyzes Group Policy configurations to identify settings that might allow privilege escalation or unauthorized lateral movement within the network. Ensuring secure Group Policy settings helps maintain proper access controls and system configurations.
 - **Accounts**: Reviews users, devices, and groups to pinpoint security risks such as weak passwords, inactive accounts, or improper permissions.
+- **Cloud identities**: Evaluates cloud identity configurations for security gaps, such as missing MFA settings or privileged Okta accounts, and provides remediation guidance.
 
 ## Access Defender for Identity security posture assessments
 

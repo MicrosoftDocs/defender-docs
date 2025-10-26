@@ -22,7 +22,7 @@ This recommendation indicates whether an AD Guest account is enabled in your env
 The goal is to **ensure** that the Guest account of the domain is **not enabled**. 
 
 
-**Impact**
+**User impact**
 
 The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat.
 
@@ -99,8 +99,6 @@ While this security assessment focuses on domain controllers, any server is pote
 > - Make sure to investigate your **Print spooler** settings, configurations, and dependencies before disabling this service and preventing active printing workflows.
 > - The domain controller role [adds a thread to the spooler service](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. Therefore, the security recommendation to disable the **Print spooler** service is a trade-off between security and the ability to perform print pruning. To address the issue, you should consider periodically pruning stale print queue objects.
 
-
-
 ## Remove local admins on identity assets
 
 **Description**
@@ -125,8 +123,6 @@ Every local admin on a Tier-0 system is an indirect Domain Admin from an attacke
 1. Take appropriate action on those entities by removing their privileged access rights.
 
 1. To achieve a full score, you must remediate all exposed entities.
-
-
 
 ## Unmonitored domain controllers
 
@@ -168,8 +164,6 @@ Unmonitored Active Directory Certificate Services (AD CS) servers pose a signifi
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
 
 
-
-
 ## Unmonitored ADFS servers
 
 This article describes the Microsoft Defender for Identity's unmonitored Active Directory Federation Services (ADFS) servers security posture assessment report.
@@ -190,7 +184,6 @@ Unmonitored Active Directory Federation Services (ADFS) servers are a significan
 
 1. Go to the **Microsoft Defender portal > Settings > Identities > Sensors**. You can view the already installed sensors in your environment and download the install package to deploy them on your remaining servers.
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
-
 
 
 ## Unmonitored Microsoft Entra Connect servers
@@ -215,8 +208,6 @@ These servers operate at the intersection of on-premises and cloud identity, mak
 
 1. Go to the **Microsoft Defender portal > Settings > Identities > Sensors**. You can view the already installed sensors in your environment and download the install package to deploy them on your remaining servers.
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
-
-
 
 
 ## Resolve unsecure domain configurations
