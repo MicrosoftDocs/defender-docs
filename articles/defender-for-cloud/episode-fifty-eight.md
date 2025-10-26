@@ -2,7 +2,7 @@
 title: AKS security dashboard
 description: Learn more about the AKS security dashboard.
 ms.topic: reference
-ms.date: 02/19/2025
+ms.date: 10/05/2025
 ---
 
 # AKS security dashboard

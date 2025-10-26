@@ -75,11 +75,11 @@ If Defender for Servers is enabled and Defender for Endpoint integration is on i
 
 1. Select **Fix** to see the components that aren't enabled.
 
-    :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support.":::
+    :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support." lightbox="media/integration-defender-for-endpoint/fix-defender-for-endpoint.png":::
 
 1. In **Missing components** > **Unified solution**, select **Enable** to automatically install the Defender for Endpoint agent on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
 
-    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines.":::
+    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified-small.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines." lightbox="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png":::
 
 1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
@@ -106,7 +106,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
 1. In **Missing components** > **Linux machines**, select **Enable**.
 
-    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux.png" alt-text="Screenshot of enabling the integration between Defender for Cloud and Microsoft's EDR solution, Microsoft Defender for Endpoint for Linux.":::
+    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux-small.png" alt-text="Screenshot of enabling the integration between Defender for Cloud and Microsoft's EDR solution, Microsoft Defender for Endpoint for Linux." lightbox="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux.png":::
 
 1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
@@ -201,3 +201,22 @@ To remove the Defender for Endpoint solution from your machines:
 1. Select **Continue** and **Save** to save your settings.
 1. Remove the `MDE.Windows` or `MDE.Linux` extension from the machine.
 1. [Offboard the device from the Microsoft Defender for Endpoint service](/defender-endpoint/offboard-machines).
+
+### Remove Defender for Endpoint integration tags
+
+When a **Windows** device is onboarded through Defender for Cloud, Defender for Endpoint creates registry values related to Defender for Cloud. These registry tags remain on the device after offboarding and don’t affect functionality. 
+
+To remove these tags completely, follow these steps. On Linux, the system stores this information internally and doesn't show it in the registry.
+
+1. Select **Start**, type **regedit**, and press **Enter** to open **Registry Editor**. 
+1. In the left pane, go to: 
+
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\DeviceTags`
+    
+1. Delete these value names if they exist:
+    - `AzureResourceId`
+    - `SecurityWorkspaceId`
+    - `SecurityAgentId`
+
+> [!IMPORTANT]
+> Editing the registry incorrectly might cause issues on your device. 

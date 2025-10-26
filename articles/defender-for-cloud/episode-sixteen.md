@@ -3,12 +3,12 @@ title: Defender for Servers integration with Microsoft Defender for Endpoint
 
 description: Learn about the integration between Defender for Servers and Microsoft Defender for Endpoint.
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 10/05/2025
 ---
 
 # Defender for Servers integration with Microsoft Defender for Endpoint
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Erel Hansav joins Yuri Diogenes to talk about the latest updates regarding the Defender for Servers integration with Microsoft Defender for Endpoint. Erel explains the architecture of this integration for the different versions of Windows Servers, how this integration takes place in the backend, the deployment options for Windows and Linux and the deployment at scale using Azure Policy.
+**Episode description**: In this episode of Defender for Cloud in the Field, Erel Hansav joins Yuri Diogenes to talk about the latest updates regarding the Defender for Servers integration with Microsoft Defender for Endpoint. Erel explains the architecture of this integration for the different versions of Windows Servers, how this integration takes place in the backend, the deployment options for Windows and Linux, and the deployment at scale using Azure Policy.
 
 > [!VIDEO https://aka.ms/docs/player?id=aaf5dbcd-9a29-40c2-b355-8c832b27baa5]
 

@@ -13,7 +13,7 @@ ms.date: 07/15/2025
 > [!NOTE]
 > Effective April 1, 2025, Microsoft Entra Permissions Management will no longer be available for purchase.
 >
-> On October 1, 2025, Microsoft will retire and discontinue support for this product. Learn more about [the retirement of Microsoft Entra Permissions Management](https://aka.ms/mepmretire).
+> On November 1, 2025, Microsoft will retire and discontinue support for this product. Learn more about [the retirement of Microsoft Entra Permissions Management](https://aka.ms/mepmretire).
 > 
 > The deprecation of Microsoft Entra Permissions Management doesn't affect any existing CIEM capabilities in Microsoft Defender for Cloud. Learn more about [the future of CIEM in Microsoft Defender for Cloud](https://aka.ms/mdc-ciem).
 

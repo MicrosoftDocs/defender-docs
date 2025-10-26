@@ -14,7 +14,7 @@ Mapping Infrastructure as Code (IaC) templates to cloud resources helps you ensu
 
 To set Microsoft Defender for Cloud to map IaC templates to cloud resources, you need:
 
-- An Azure account with Defender for Cloud configured. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+- An Azure account with Defender for Cloud configured. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - An [Azure DevOps](quickstart-onboard-devops.md) environment set up in Defender for Cloud.
 - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) enabled.
 - Azure Pipelines set up to run the [Microsoft Security DevOps Azure DevOps extension](configure-azure-devops-extension.md) with the IaCFileScanner tool running.

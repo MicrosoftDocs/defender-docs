@@ -13,7 +13,7 @@ ms.date: 06/30/2025
 
 ## Prerequisites
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 ## Enable database protection at the subscription level
 

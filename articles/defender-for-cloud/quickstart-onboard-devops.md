@@ -16,7 +16,7 @@ By connecting your Azure DevOps environments to Defender for Cloud, you extend t
 
 To complete this quickstart, you need:
 
-- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - Note that API calls that Defender for Cloud performs count against the [Azure DevOps global consumption limit](/azure/devops/integrate/concepts/rate-limits). 
 - Review [common questions about DevOps security in Defender for Cloud](faq-defender-for-devops.yml).
 
