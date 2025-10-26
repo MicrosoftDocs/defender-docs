@@ -61,8 +61,6 @@ To create a snapshot report:
 
 Cloud discovery uses the data in your traffic logs. The more detailed your log, the better visibility you get. Cloud discovery requires web-traffic data with the following attributes:
 
-> [!NOTE]
-> Configure the appliance to forward only traffic logs. Including unrelated logs in the configuration can inflate the ingested traffic volume.
 
 - Date of the transaction
 - Source IP
@@ -80,9 +78,10 @@ Therefore, these attributes won't be shown in cloud discovery data for these log
 To successfully generate a cloud discovery report, your traffic logs must meet the following conditions:
 
 1. [Data source is supported](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
-2. Log format matches the expected standard format (format checked upon upload by the Log tool).
-3. Events aren't more than 90 days old.
-4. The log file is valid and includes outbound traffic information.
+1. Log format matches the expected standard format (format checked upon upload by the Log tool).
+1. Events aren't more than 90 days old.
+1. The log file is valid and includes outbound traffic information.
+1. Configure the appliance to forward only traffic logs. Including unrelated logs in the configuration can inflate the ingested traffic volume.
 
 ## Next steps
 
