@@ -33,8 +33,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|October 23, 2025 | Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
+### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
+
+Microsoft Defender for Containers updated the outbound network requirements for the Defender sensor. You must update your outbound rules to maintain proper functionality. 
+
+This change affects all subscriptions using Microsoft Defender for Containers. If you're not using the Defender sensor, no action is required. 
+
+Beginning now, the Defender for Containers sensor requires outbound traffic to the following fully qualified domain name (FQDN) and port: 
+
+`*.cloud.defender.microsoft.com` (HTTPS: port 443) 
+
+#### Recommended Actions 
+
+1. Add the new FQDN and port to your allowed traffic in your outbound restriction method, such as a proxy or firewall. 
+
+1. If you don't block egress traffic from your clusters, no action is required. 
+
+1. To verify connectivity to Microsoft Defender for Containers endpoints, run the connectivity test script to confirm network accessibility from your cluster. 
+
+#### Deadline
+
+To avoid service disruption, complete any necessary updates of GKE and EKS by September 30, 2026. If no action is taken where required, the Defender for Containers sensor won't function as expected.
 
 ### GitHub Application Permissions Update
 
