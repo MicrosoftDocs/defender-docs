@@ -16,6 +16,8 @@ The free trial lasts for 30 days, or until you reach the usage limit for certain
 
 Once the usage limit is met or once the 30-day trial ends, charges begin based on the plans enabled in your environment. To learn more about these plans, their usage limits, and associated costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
+If you have multiple subscriptions, each subscription has its own free trial period. and needs to be checked individually for the status of it's free trial. Azuregives you a 30-day free trial every time you activate a new plan. For example, If you activate Defender for Servers you get 30 days free. If at a later time you Activate Defender for Cloud Security Posture Management (DCSPM), you get another 30 days for that plan. Amazon Web Service (AWS) and Google Cloud Project get one trial per account or GCP project, regardless of which plan is enable or when.
+
 ## Prerequisites
 
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
