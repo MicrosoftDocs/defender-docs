@@ -9,8 +9,6 @@ ms.topic: how-to
 
 # Automate remediation responses
 
-# Automate remediation responses
-
 Every security program includes multiple workflows for incident response. These processes might include notifying relevant stakeholders, starting a change management process, and applying specific remediation steps.
 
 Security experts recommend that you automate as many steps of security procedures as you can. Automation reduces overhead. It can also improve your security by ensuring process steps are done quickly, consistently, and according to your predefined requirements.
