@@ -43,7 +43,7 @@ By correlating exposure queries with other graph data, such as incident data, yo
 
 ## Attack surface map
 
-The attack surface map helps you to visualize the exposure data that you query using the exposure graph schema, now including cloud resources and their relationships.  
+The attack surface map helps you to visualize the exposure data that you query using the exposure graph schema, including cloud resources and their relationships.  
 
 In the map you can explore the data across hybrid environments, check what assets are at risk, contextualize them in a broader network framework that spans on-premises and cloud, and prioritize security focus.
 
