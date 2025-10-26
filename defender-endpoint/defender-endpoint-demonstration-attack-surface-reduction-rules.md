@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
+  - Microsoft 365 Apps
 
 ---
 # Attack surface reduction rules demonstrations
@@ -32,12 +33,15 @@ Attack surface reduction rules target specific behaviors that are typically used
 - Scripts that are obfuscated or otherwise suspicious
 - Behaviors that apps undertake that aren't initiated during normal day-to-day work
 
-## Scenario requirements and setup
+## Prerequisites
 
 - Windows client devices must be running Windows 11, Windows 10 1709 build 16273, or later
-- Windows server devices must be running Windows Server 2012 R2 and later (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)) or Azure Stack HCI OS, version 23H2 and later.
-- Microsoft Defender Antivirus
-- Microsoft 365 Apps (formerly referred to as Office apps; required for Office rules and sample)
+- Windows server devices must be running Windows Server 2012 R2 and later (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
+- Azure Stack HCI OS, version 23H2 and later.
+
+
+## Setup
+
 - [Download attack surface reduction PowerShell scripts](https://demo.wd.microsoft.com/Content/WindowsDefender_ASR_scripts.zip)
 
 ## PowerShell commands
@@ -149,11 +153,11 @@ You should immediately see an "Action blocked" notification.
 
 1. Configure the rule for USB protection (`B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4`).
 
-```powershell
-Add-MpPreference -AttackSurfaceReductionRules_Ids B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 -AttackSurfaceReductionRules_Actions Enabled
-```
+    ```powershell
+    Add-MpPreference -AttackSurfaceReductionRules_Ids B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 -AttackSurfaceReductionRules_Actions Enabled
+    ```
 
-3. Download the file and put it on a USB stick and execute it [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)
+1. Download the file and put it on a USB stick and execute it [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)
 
 #### Scenario 3 expected results
 
@@ -198,7 +202,7 @@ Add-MpPreference -AttackSurfaceReductionRules_Ids 33ddedf1-c6e0-47cb-833e-de6133
 Add-MpPreference -AttackSurfaceReductionRules_Ids c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb -AttackSurfaceReductionRules_Actions Disabled
 ```
 
-Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
+Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe).
 
 ## See also
 

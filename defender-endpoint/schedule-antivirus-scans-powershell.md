@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 04/30/2025
+ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens
 manager: bagol
 ms.subservice: ngp
@@ -26,11 +26,14 @@ appliesto:
 # Schedule antivirus scans using PowerShell
 
 
-**Platforms**
+This article describes how to configure scheduled scans using PowerShell cmdlets. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
+
+## Prerequsites
+
+### Supported operating systems
+
 - Windows
 - Windows Server
-
-This article describes how to configure scheduled scans using PowerShell cmdlets. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Use PowerShell cmdlets for scheduling daily quick scans
 
