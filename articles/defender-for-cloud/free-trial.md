@@ -22,7 +22,9 @@ Once the usage limit is met or once the 30-day trial ends, charges begin based o
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- You must have a role of Reader or higher on the subscription.
+- To check the status of a free trial, you must have a role of Reader or higher on the subscription.
+
+- To enable a plan on your subscription, you must have the **Security Admin** or **Owner** role.
 
 ## Check your free trial status with Azure CLI
 
