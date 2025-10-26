@@ -12,7 +12,7 @@ ms.date: 10/15/2025
 
 # Review attack paths
 
-Attack paths in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) help you to proactively identify and visualize potential routes that attackers can exploit using vulnerabilities, gaps, and misconfigurations across endpoints, cloud environments, and hybrid infrastructures. With the integration of Defender for Cloud in the Defender portal, attack paths now include hybrid scenarios that span on-premises and cloud contexts, providing comprehensive visibility into cross-environment attack vectors. Simulated attack paths allow you to proactively investigate and remediate potential threats across your entire digital estate.
+Attack paths in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) help you to proactively identify and visualize potential routes that attackers can exploit using vulnerabilities, gaps, and misconfigurations across endpoints, cloud environments, and hybrid infrastructures. With the integration of Defender for Cloud in the Defender portal, attack paths include hybrid scenarios that span on-premises and cloud contexts, providing comprehensive visibility into cross-environment attack vectors. Simulated attack paths allow you to proactively investigate and remediate potential threats across your entire digital estate.
 
 ## Prerequisites
 
