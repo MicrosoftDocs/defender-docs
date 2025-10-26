@@ -18,9 +18,8 @@ See [Microsoft Defender for Identity sensor v3.x prerequisites](prerequisites-se
 The **Activation** page displays all servers from your device inventory. Defender for Identity detects all of your servers and their configuration. The server's activation state lets you know what you need to do to onboard the domain controller to Defender for Identity.
 
 You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, by selecting specific domain controllers from the list of eligible servers.
-
-   
-![blog](media/activate-sensor/blog.png)
+ 
+[![Screenshot that shows how to activate a new sensor.](media/activate-sensor/blog.png)](media/activate-sensor/blog.png#lightbox)
 
 |Activation State  |Next steps  |
 |---------|---------|
