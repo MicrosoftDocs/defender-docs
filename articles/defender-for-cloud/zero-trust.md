@@ -23,7 +23,7 @@ Zero Trust infrastructure solutions assess, monitor, and prevent security threat
 
 [Zero Trust infrastructure deployment guidance](/security/zero-trust/deploy/infrastructure) provides key stages of Zero Trust infrastructure strategy:
 
-1. [Assess compliance](update-regulatory-compliance-packages.yml) with chosen standards and policies.
+1. [Assess compliance](assign-regulatory-compliance-standards.md) with chosen standards and policies.
 1. [Harden configuration](recommendations-reference.md) wherever gaps are found.
 1. Employ other hardening tools such as [just-in-time (JIT)](just-in-time-access-usage.yml) VM access.
 1. Set up [threat protection](/azure/azure-sql/database/threat-detection-configure).
@@ -33,7 +33,7 @@ Here's how these stages map to Defender for Cloud.
 
 |Goal  | Defender for Cloud |
 |---------|---------|
-|Assess compliance | In Defender for Cloud, every subscription automatically has the [Microsoft cloud security benchmark (MCSB) security initiative assigned](security-policy-concept.md).<br>Using the [secure score tools](secure-score-security-controls.md) and the [regulatory compliance dashboard](update-regulatory-compliance-packages.yml) you can get a deep understanding of security posture. |
+|Assess compliance | In Defender for Cloud, every subscription automatically has the [Microsoft cloud security benchmark (MCSB) security initiative assigned](security-policy-concept.md).<br>Using the [secure score tools](secure-score-security-controls.md) and the [regulatory compliance dashboard](assign-regulatory-compliance-standards.md) you can get a deep understanding of security posture. |
 | Harden configuration | Infrastructure and environment settings are assessed against compliance standard, and recommendations are issued based on those assessments. You can [review and remediate security recommendations](review-security-recommendations.md) and [track secure score improvements] (secure-score-access-and-track.md) over time. You can prioritize which recommendations to remediate based on potential [attack paths](how-to-manage-attack-path.md). |
 |Employ hardening mechanisms | Least privilege access is a Zero Trust principle. Defender for Cloud can help you to harden VMs and network settings using this principle with features such as:<br>[Just-in-time (JIT) VM access](just-in-time-access-overview.md). |
 |Set up threat protection  | Defender for Cloud is a cloud workload protection platform (CWPP), providing advanced, intelligent protection of Azure and hybrid resources and workloads. [Learn more](defender-for-cloud-introduction.md). |
@@ -42,7 +42,7 @@ Here's how these stages map to Defender for Cloud.
 
 ### Apply Zero Trust to hybrid and multicloud scenarios
 
-With cloud workloads commonly spanning multiple cloud platforms, cloud security services must do the same.Defender for Cloud protects workloads wherever they're running. In Azure, on-premises, AWS, or GCP.
+With cloud workloads commonly spanning multiple cloud platforms, cloud security services must do the same. Defender for Cloud protects workloads wherever they're running. In Azure, on-premises, AWS, or GCP.
 
 - **AWS**: To protect AWS machines, you onboard AWS accounts into Defender for Cloud. This integration provides a unified view of Defender for Cloud recommendations and AWS Security Hub findings. Learn more about [connecting AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 - **GCP**: To protect GCP machines, you onboard GCP accounts into Defender for Cloud. This integration provides a unified view of Defender for Cloud recommendations and GCP Security Command Center findings. Learn more about [connecting GCP accounts to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
