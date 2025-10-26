@@ -1,6 +1,6 @@
 ---
 title: Configure a gMSA directory service account for Defender for Identity
-description: Create and configure a group managed service account (gMSA) for use as the Directory Service account in Microsoft Defender for Identity.
+description: Create and configure a group managed service account (gMSA) for use as the Directory service account in Microsoft Defender for Identity.
 ms.date: 10/12/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
@@ -35,7 +35,6 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
 ## Create the gMSA account
 
-
 1. If you've never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
     To generate a new root key for immediate use, run the following command:
 
@@ -43,9 +42,8 @@ This article describes how to create a [group managed service account (gMSA)](/w
     Add-KdsRootKey -EffectiveImmediately
     ```
 
-1. Update the following code with variable values for your environment.
-1. Give each gMSA a unique name for each forest or domain.
-1. Run the PowerShell commands as an administrator. This script creates a gMSA account, a group that can retrieve the account password, and adds the specified computer accounts to that group.
+1. Update the following code with variable values for your environment. Make sure to give each gMSA a unique name for each forest or domain.
+1. Run the PowerShell commands as an administrator. This script creates a gMSA account, and a group that can retrieve the account password. The script then adds the specified computer accounts to that group.
 
 ```powershell
 # Variables:
@@ -120,9 +118,9 @@ If you see this alert, check to see if the *Log on as a service policy* is confi
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure to add both **NT Service\All Services** and the gMSA account you created.
 
-## Configure a Directory Service account in Microsoft Defender XDR
+## Configure a Directory service account in Microsoft Defender XDR
 
-To connect your sensors with your Active Directory domains, configure Directory Service accounts in Microsoft Defender XDR.
+To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender XDR.
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings > Identities**.
 
