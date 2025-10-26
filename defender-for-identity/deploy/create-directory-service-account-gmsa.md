@@ -10,12 +10,6 @@ ms.reviewer: rlitinsky
 
 This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Microsoft Defender for Identity directory service account entry.
 
- 
->[!NOTE]
-> - In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
-> - Create a universal group in each domain that includes all sensors computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
-> - Give each gMSA a unique name for each forest or domain.
-
 ## Prerequisites
 
 - Make sure you have permissions to create gMSAs and security groups in Active Directory.
@@ -34,25 +28,24 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
     - **Forest with multiple domains**: If you use a single Directory service account (DSA), we recommend creating a universal group and adding each of the domain controllers and AD FS or AD CS servers to the universal group.
 
+- In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
+
+- Create a universal group in each domain that includes all sensors computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+
 
 ## Create the gMSA account
 
-To prepare the gMSA account for use:
 
-1. Create the gMSA account.
-1. Create a group that can retrieve the account's password.
-1. Test that the account is ready to use.
+1. If you've never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
+    To generate a new root key for immediate use, run the following command:
 
-    >[!NOTE]
-    > If you've never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
-    >
-    > To generate a new root key for immediate use, run the following command:
-    > ```powershell
-    > Add-KdsRootKey -EffectiveImmediately
-    > ```
+    ```powershell
+    Add-KdsRootKey -EffectiveImmediately
+    ```
 
 1. Update the following code with variable values for your environment.
-1. Run the PowerShell commands as an administrator.
+1. Give each gMSA a unique name for each forest or domain.
+1. Run the PowerShell commands as an administrator. This script creates a gMSA account, a group that can retrieve the account password, and adds the specified computer accounts to that group.
 
 ```powershell
 # Variables:
@@ -81,6 +74,7 @@ if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
  -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
 ```
+
 
 ## Refresh Kerberos tickets after changing group membership
 
