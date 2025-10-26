@@ -42,8 +42,15 @@ This article describes how to create a [group managed service account (gMSA)](/w
     Add-KdsRootKey -EffectiveImmediately
     ```
 
-1. Update the following code with variable values for your environment. Make sure to give each gMSA a unique name for each forest or domain.
-1. Run the PowerShell commands as an administrator. This script creates a gMSA account, and a group that can retrieve the account password. The script then adds the specified computer accounts to that group.
+1. Run the PowerShell commands as an administrator. This script will: 
+    - Create a gMSA account.
+    - Create a group for the gMSA account.
+    - Add the specified computer accounts to that group.
+
+1. Before running the script: 
+
+    - Update the variable values to match your environment.
+    - Make sure to give each gMSA a unique name for each forest or domain.
 
 ```powershell
 # Variables:
