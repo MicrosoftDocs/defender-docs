@@ -2,7 +2,7 @@
 title: Integrate CLI with CI/CD pipelines
 description: Learn how to integrate Defender for Cloud CLI with CI/CD pipelines.
 ms.topic: reference
-ms.date: 02/19/2025
+ms.date: 10/05/2025
 ---
 
 # Integrate CLI with CI/CD pipelines

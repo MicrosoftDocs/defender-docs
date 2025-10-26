@@ -3,7 +3,7 @@ title: Alerts for Linux machines
 description: This article lists the security alerts for Linux machines visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 06/03/2024
+ms.date: 10/21/2024
 ai-usage: ai-assisted
 ---
 
@@ -20,6 +20,9 @@ This article lists the security alerts you might get for Linux machines from Mic
 
 > [!NOTE]
 > Alerts from different sources might take different amounts of time to appear. For example, alerts that require analysis of network traffic might take longer to appear than alerts related to suspicious processes running on virtual machines.
+
+> [!NOTE]
+> VM client boot attestation alerts surfaced in Microsoft Defender for Cloud are informational and are not currently presented in the Defender portal.
 
 ## Linux machines alerts
 

@@ -5,6 +5,8 @@ ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 05/05/2025
 ai-usage: ai-assisted
+ms.author: elkrieger
+author: Elazark
 ---
 
 # Alerts for AI services
@@ -170,7 +172,7 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
-### (Preview) **Anomalous tool invocation**
+### **Anomalous tool invocation**
 
 (AI.Azure_AnomalousToolInvocation)
 

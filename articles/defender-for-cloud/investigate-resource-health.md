@@ -31,7 +31,7 @@ In this tutorial you'll learn how to:
 
 To step through the features covered in this tutorial:
 
-- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/) before you begin.
+- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - [Microsoft Defender for Cloud enabled on your subscription](connect-azure-subscription.md).
 
