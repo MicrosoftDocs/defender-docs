@@ -9,7 +9,7 @@ manager: bagol
 ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 10/08/2024
+ms.date: 10/20/2025
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
@@ -26,11 +26,13 @@ appliesto:
 > [!IMPORTANT]
 > This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
-**Platforms**
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
+
+## Prerequisites
+
+### Supported operating systems
 
 - Windows
-
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 

@@ -1,6 +1,6 @@
 ﻿---
 title: Onboard Windows Servers to Microsoft Defender for Endpoint via Group Policy
-description: Use Group Policy to deploy the configuration package on Windows devices so that they are onboarded to the service.
+description: Use Group Policy to deploy the configuration package on Windows devices so that they're onboarded to the service.
 ms.service: defender-endpoint
 ms.author: bagol
 author: batamig
@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
-ms.date: 02/04/2025
+ms.date: 10/13/2025
 ms.subservice: onboard
 search.appverid: met150
 appliesto:
@@ -20,15 +20,15 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Onboard Windows devices using Group Policy 
 
+## Prerequisites
 
-> [!NOTE]
-> To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
->
-> For Windows Server 2019 and newer, you may need to replace `NT AUTHORITY\Well-Known-System-Account` with `NT AUTHORITY\SYSTEM` of the XML file that the Group Policy preference creates.
->
-> If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and Windows Server 2016, make sure to use the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
+- To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
+- For Windows Server 2019 and newer, you may need to replace `NT AUTHORITY\Well-Known-System-Account` with `NT AUTHORITY\SYSTEM` of the XML file that the Group Policy preference creates.
+
+- If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and Windows Server 2016, make sure to use the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
 
@@ -40,7 +40,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
    1. In the **Deployment method** field, select **Group policy**.
 
-   1. Click **Download package** and save the .zip file.
+   1. Select **Download package** and save the .zip file.
 
 2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
 
@@ -156,7 +156,7 @@ Get the current list of attack surface reduction rules GUIDs from [Attack surfac
 
 1. Select the **Show** button.
 
-1. Add each GUID in the **Value Name** field with a value of `2`. This will set each up for audit only.
+1. Add each GUID in the **Value Name** field with a value of `2`. This sets each up for audit only.
 
    :::image type="content" source="media/asr-guid.png" alt-text="The Attack surface reduction configuration" lightbox="media/asr-guid.png":::
 
@@ -170,7 +170,7 @@ After onboarding the device, you can choose to run a detection test to verify th
 
 ## Offboard devices using Group Policy
 
-For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you'll be notified of the packages expiry date and it will also be included in the package name.
+For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package, you'll be notified of the packages expiry date and it will also be included in the package name.
 
 > [!NOTE]
 > Onboarding and offboarding policies must not be deployed on the same device at the same time, otherwise this will cause unpredictable collisions.
