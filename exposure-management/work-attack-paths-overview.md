@@ -48,7 +48,7 @@ Here's how Exposure Management helps you to identify and resolve attack paths.
 
 ### Cloud attack paths
 
-Cloud attack paths illustrate routes that adversaries could exploit to move laterally within your environment, starting from external exposure and progressing toward meaningful impact within your environment. With the integration of Defender for Cloud in the Defender portal, cloud attack paths now provide enhanced visualization and analysis capabilities across Azure, AWS, and GCP environments.
+Cloud attack paths illustrate routes that adversaries could exploit to move laterally within your environment, starting from external exposure and progressing toward meaningful impact within your environment. They help security teams visualize and prioritize real-world risks across their attack surface, focusing on externally-driven, exploitable threats that adversaries could use to compromise your organization. With the integration of Defender for Cloud in the Defender portal, cloud attack paths provide enhanced visualization and analysis capabilities across Azure, AWS, and GCP environments.
 
 :::image type="content" source="./media/defender-for-cloud-defender-portal/attack-paths-overview.png" alt-text="Screenshot of cloud attack paths overview in the Defender portal." lightbox="./media/defender-for-cloud-defender-portal/attack-paths-overview.png":::
 
