@@ -66,11 +66,11 @@ You can use Defender for Cloud or you can programmatically enable JIT VM access 
 
 ### Enable JIT on your VMs from Microsoft Defender for Cloud
 
-:::image type="content" source="./media/just-in-time-access-usage/configure-just-in-time-access.gif" alt-text="Screenshot showing configuring JIT VM access in Microsoft Defender for Cloud." lightbox="media/just-in-time-access-usage/configure-just-in-time-access.gif":::
-
 From Defender for Cloud, you can enable and configure the JIT VM access.
 
 1.  Open **Workload protections** and, in the advanced protections, select **Just-in-time VM access**.
+
+    :::image type="content" source="./media/just-in-time-access-usage/open-workload-protections.png" alt-text="Screenshot showing Workload protections and Just-in-time VM access in Microsoft Defender for Cloud." lightbox="./media/just-in-time-access-usage/open-workload-protections.png":::
 
 1.  In the **Not configured** virtual machines tab, mark the VMs to protect with JIT and select **Enable JIT on VMs**.
 
