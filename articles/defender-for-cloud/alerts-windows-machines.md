@@ -3,7 +3,7 @@ title: Alerts for Windows machines
 description: This article lists the security alerts visible for Windows machines in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 06/03/2024
+ms.date: 10/21/2024
 ai-usage: ai-assisted
 ---
 
@@ -14,6 +14,9 @@ This article lists the security alerts you might get for Windows machines in Mic
 [Learn how to respond to these alerts](managing-and-responding-alerts.yml).
 
 [Learn how to export alerts](continuous-export.md).
+
+> [!NOTE]
+> VM client boot attestation alerts surfaced in Microsoft Defender for Cloud are informational and are not currently presented in the Defender portal.
 
 ## Windows machines alerts
 

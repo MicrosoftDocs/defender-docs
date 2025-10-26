@@ -77,7 +77,8 @@ Run the following command to update an existing Helm-based deployment:
 helm upgrade microsoft-defender-for-containers-sensor \
 oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --devel \
---reuse-values
+--reuse-values \
+--namespace mdc
 ```
 
 ## Next steps

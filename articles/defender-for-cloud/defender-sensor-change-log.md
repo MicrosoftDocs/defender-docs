@@ -46,8 +46,27 @@ To see the version of the sensor run:
       For setup instructions and more details, see [Install Defender for Containers sensor using Helm](deploy-helm.md).
     
   - **DNS threat detections**
-    This version includes new DNS-based detection capabilities, enabling the sensor to generate alerts on suspicious or malicious domains using threat intelligence (TI) feeds. This enhancement improves visibility into potential network-based threats.
-
+  This version includes new DNS-based detection capabilities, enabling the sensor to generate alerts on suspicious or malicious domains using threat intelligence (TI) feeds. This enhancement improves visibility into potential network-based threats.
+  
   - Improves memory efficiency and reduces CPU consumption for large cluster deployments.
-
+    
   - Bug fixes and security enhancements.
+
+## Defender for Containers – Sensor Support Policy
+
+ 
+
+The support policy here applies to all Helm-based and multicloud installations. For scenarios where the sensor is deployed as part of AKS, please refer to: [Supported Kubernetes versions in Azure Kubernetes Service (AKS) - Azure Kubernetes Service | Microsoft Learn](/azure/aks/supported-kubernetes-versions?tabs=azure-cli)
+
+|Version|Preview Date|GA Date|End of support|
+| -------- | -------- | -------- | -------- |
+|0.8| |Feb 2025|Feb 2027|
+|0.9|July 2025|Feb 2026|Feb 2027|
+|0.10|Jan 2026|Apr 2026|Apr 2027|
+|0.11|Apr 2026|Jul  2026|Jul 2027|
+
+Each stable (GA) version is supported for 12 months from its GA release date.
+After the 12-month support window ends, the version is no longer supported.
+Customers are encouraged to upgrade to the latest stable or Public release prior to end of support to ensure continued support and access to new capabilities.
+
+
