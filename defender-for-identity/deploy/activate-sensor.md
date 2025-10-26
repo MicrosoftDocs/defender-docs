@@ -20,7 +20,7 @@ The **Activation** page displays all servers from your device inventory. Defende
 You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, by selecting specific domain controllers from the list of eligible servers.
 
    
-[![Screenshot that shows how to auto and manual activation.](media/activate-sensor/1.png)](media/activate-sensor/1.png#lightbox)
+![blog](media/activate-sensor/blog.png)
 
 |Activation State  |Next steps  |
 |---------|---------|
@@ -44,8 +44,8 @@ The process for activating the sensor depends on your configuration.
    
    
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
-   
-   [![Screenshot that shows successful activation.](media/activate-sensor/image1.png)](media/activate-sensor/image1.png#lightbox)
+
+   [![Screenshot that shows sucesseful activation.](media/activate-sensor/activated-sensor.png)](,edia/activate-sensor/activated-sensor.png#lightbox)
    
 <!--## Onboard the domain controller 
 
