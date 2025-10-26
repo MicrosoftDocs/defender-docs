@@ -52,12 +52,6 @@ Cloud attack paths illustrate routes that adversaries could exploit to move late
 
 :::image type="content" source="./media/defender-for-cloud-defender-portal/attack-paths-overview.png" alt-text="Screenshot of cloud attack paths overview in the Defender portal." lightbox="./media/defender-for-cloud-defender-portal/attack-paths-overview.png":::
 
-**Enhanced cloud capabilities:**
-- **Multi-cloud support**: Visualize attack paths across Azure, AWS, GCP, and hybrid environments
-- **Real-time analysis**: Dynamic generation based on current cloud configurations and exposure data
-- **Risk-based prioritization**: Focus on externally-driven, exploitable threats with the highest business impact
-- **Integrated remediation**: Direct links to cloud recommendations and remediation workflows
-
 Cloud attack paths reflect real, externally driven and exploitable risks, helping you cut through the noise and act faster. The paths focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
 
 **Comprehensive cloud coverage**: Attack paths expand cloud threat detection to cover a broad range of cloud resources, including storage accounts, containers, serverless environments, unprotected repositories, unmanaged APIs, and AI agents. Each attack path is built from a real, exploitable weakness such as exposed endpoints, misconfigured access settings, or leaked credentials, ensuring that identified threats reflect genuine risk scenarios.
