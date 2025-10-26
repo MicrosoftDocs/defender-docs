@@ -32,35 +32,43 @@ The Microsoft Defender portal applies correlation analytics and aggregates relat
 
 ## Incident queue
 
-The **Incident queue** shows a collection of incidents that were created across devices, users, mailboxes, and other resources. It helps you sort through incidents to prioritize and create an informed cybersecurity response decision, a process known as incident triage.
+The **Incident queue** shows a queue of incidents that were created across devices, users, mailboxes, and other resources. It helps you triage the incidents, prioritize and create an informed cybersecurity response decision.
 
-You can get to the incident queue from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. Here's an example.
+Find the incident queue at **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
 
-:::image type="content" source="./media/incidents-queue/incidents-ss-incidents.png" alt-text="Screenshot of the Incidents queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incidents-ss-incidents.png":::
+Select **Most recent incidents and alerts** to toggle a timeline chart of the number of alerts received and incidents created in the last 24 hours.
 
-Select **Most recent incidents and alerts** to toggle the expansion of the top section, which shows a timeline graph of the number of alerts received and incidents created in the last 24 hours.
+:::image type="content" source="./media/incidents-queue/most-recent-incidents.png" alt-text="Screenshot of 24-hour incident graph." lightbox="./media/incidents-queue/most-recent-incidents.png":::
 
-:::image type="content" source="./media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="./media/incidents-queue/incidents-ss-incidents2.png":::
+The incident queue includes Defender Queue Assistant that helps security teams cut through alert noise and focus on the incidents that matter most. By leveraging a new AI-based machine learning prioritization algorithm, the Queue Assistant surfaces the highest-priority incidents, explains the reasoning behind each score, and provides intuitive tools for sorting and filtering the incident queue. The priority score to each incident may be based on Microsoft native alerts, custom detections or third-party signals. The algorithm is trained on real-world anonymized data and considers the following data points when calculating the priority score:
++ Attack disruption signals
++ Threat analytics
++ Severity
++ SnR
++ MITRE techniques
++ Asset criticality
++	Alert types and rarity
 
-Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made. You can also find the **total number of incidents** in the queue indicated beside the Search bar. The total number of incidents varies depending on the filters used in the queue.
+Incidents are automatically assigned a priority score from 0 to 100, with 100 being the highest priority. Score ranges are color-coded as follows:
++	Red: Top priority (score > 85)
++	Orange: Medium priority (15–85)
++	Gray: Low priority (<15)
 
-The incident queue has customizable columns that give you visibility into different characteristics of the incident or the impacted entities. This filtering helps you make an informed decision regarding the prioritization of incidents for analysis. Select **Customize columns** to perform the following customizations based on your preferred view:
+:::image type="content" source="./media/incidents-queue/incidents-page.png" alt-text="Screenshot of the Incidents queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incidents-page.png":::
 
-- Check/uncheck the columns you want to see in the incident queue.
-- Arrange the order of the columns by dragging them.
 
-:::image type="content" source="./media/incidents-queue/incidents-ss-incidents-3.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="./media/incidents-queue/incidents-ss-incidents-3.png":::
+By default, the incident queue show incidents created in the last week. Choose a different time frame by selecting time selector drop-down above the queue. 
 
-The **Export** feature allows you to export the data in the incident queue that is displayed according to the applied filters and time ranges. It's available in the form of a button named **Export**, as displayed in the following screenshot:
+:::image type="content" source="./media/incidents-queue/time-selector.png" alt-text="Screenshot of the time selector for the incident queue." lightbox="./media/incidents-queue/time-selector.png":::
 
-:::image type="content" source="./media/incidents-queue/incidents-queue-with-export-button.png" alt-text="Shows the Export button in the Incidents page  of the Microsoft Defender portal":::
 
-When you click the **Export** button, the data is exported to a CSV file. You can apply various filters and time ranges to the incidents queue (not just in the context of exporting the data, but in a generic context). When you select **Export**, whichever filters and/or time ranges are applied to the incidents queue, such data is exported to the CSV file.
+The **total number of incidents** in the queue is displayed next to the time selector. The number of incidents varies depending on the filters in use. You can search for incidents by name or incident ID
 
-Once you export the incidents queue-related data onto the CSV file, you can analyze the data and filter it further, based on your requirements.
+Select **Customize columns** to select columns displayed in the queue. Check or uncheck the columns you want to see in the incident queue. Arrange the order of the columns by dragging them upa nd down.
 
-> [!NOTE]
-> The maximum number of records you can export to a CSV file is 10,000.
+:::image type="content" source="./media/incidents-queue/incident-toolbar.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="./media/incidents-queue/incident-toolbar.png":::
+
+The **Export** button allows you to export the filtered data in the incident queue to a CSV file. The maximum number of records you can export to a CSV file is 10,000.
 
 ### Incident names
 
@@ -77,19 +85,17 @@ We recommend that you avoid using the incident name as a condition for triggerin
 
 The incident queue also provides multiple filtering options, that when applied, enable you to perform a broad sweep of all existing incidents in your environment, or decide to focus on a specific scenario or threat. Applying filters on the incident queue can help determine which incident requires immediate attention.
 
-The **Filters** list above the list of incidents shows the currently applied filters.
+:::image type="content" source="./media/incidents-queue/incidents-filter-bar.png" alt-text="The incident queue filters list." lightbox="./media/incidents-queue/incidents-filter-bar.png":::
 
-From the default incident queue, you can select **Add filter** to see the **Add filter** drop-down, from which you specify filters to apply to the incidents queue to limit the set of incidents shown. Here's an example.
+The **Filters** list above the incident queue shows the current filters currently applied to the queue. Select **Add filter**  to apply additional filters to limit the set of incidents shown. 
 
 :::image type="content" source="./media/incidents-queue/incident-filters-small.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incident-filters.png":::
 
-Select the filters you want to use, then select **Add** at the bottom of the list to make them available.
+Select the filters you want to use, then select **Add** The selected filters are shown along with the existing applied filters. Select the new filter to specify its conditions. For example, if you chose the "Service/detection sources" filter, select it to choose the sources by which to filter the list.
 
-Now the filters you selected are shown along with the existing applied filters. Select the new filter to specify its conditions. For example, if you chose the "Service/detection sources" filter, select it to choose the sources by which to filter the list.
+You can remove a filter by selecting the **X** on the  filter name in the filters list.
 
-You can also see the **Filter** pane by selecting any of the filters in the **Filters** list above the list of incidents.
-
-This table lists the filter names that are available.
+The following table lists the available filters.
 
 | Filter name | Description/Conditions |
 |:-------|:-----|
@@ -117,7 +123,7 @@ This table lists the filter names that are available.
 
 The default filter is to show all alerts and incidents with a status of **New** and **In progress** and with a severity of **High**, **Medium**, or **Low**.
 
-You can quickly remove a filter by selecting the **X** in the name of a filter in the **Filters** list.
+
 
 You can also create filter sets within the incidents page by selecting **Saved filter queries > Create filter set**. If no filter sets have been created, select **Save** to create one.
 

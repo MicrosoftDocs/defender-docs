@@ -34,13 +34,9 @@ Within an incident, you analyze the alerts, understand what they mean, and colla
 
 Before diving into the details, take a look at the properties and the entire attack story of the incident.
 
-You can start by selecting the incident from the check mark column. Here's an example.
+You can start by selecting the incident from by selecting on the row, but not selecting the incident name. A summary pane opens with key information about the incident, including the priority assessment, the factors influencing the priority score, the incident's details, recommended actions, and related threats.  Use the up and down arrows at the top of the pane to navigate to the previous or next incident in the incident queue.
 
-:::image type="content" source="./media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incidents-ss-incident-select.png":::
-
-When you do, a summary pane opens with key information about the incident, like the incident's details, recommended actions, and related threats. Here's an example.
-
-:::image type="content" source="./media/investigate-incidents/incident-pane-small.png" alt-text="The pane that displays the summary details for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-pane.png":::
+:::image type="content" source="./media/investigate-incidents/incident-side-panel.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-side-panel.png":::
 
 From here, you can select **Open incident page**. This opens the main page for the incident where you'll find the full attack story information and tabs for alerts, devices, users, investigations, and evidence. You can also open the main page for an incident by selecting the incident name from the incident queue.
 
