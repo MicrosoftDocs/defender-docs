@@ -23,8 +23,6 @@ appliesto:
 # Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint
 
 
-**Applies to:**
-
 
 ## Overview of onboarding client devices
 
