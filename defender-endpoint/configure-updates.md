@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -26,14 +26,18 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Prerequisites
 
-**Platforms**
+- This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer. 
+
+
+### Supported operating systems
+
 - Windows
 
-> [!NOTE]
-> This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer.
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
+
 
 The following table lists the available group policy settings for configuring update channels:
 
