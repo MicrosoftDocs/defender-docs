@@ -19,8 +19,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
+#customer intent: As an IT admin or endpoint operator, I want a concise how‑to on using the Windows Security app to view and manage Microsoft Defender Antivirus settings so I can verify protection, run scans, and configure exclusions on endpoints.
 ---
+
 # Microsoft Defender Antivirus in the Windows Security app
 
 

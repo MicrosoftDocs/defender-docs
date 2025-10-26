@@ -15,7 +15,7 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: ngp
-ms.date: 11/22/2024
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
@@ -27,12 +27,18 @@ appliesto:
 
 Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as Microsoft Advanced Protection Service (MAPS), provides you with strong, fast protection in addition to our standard real-time protection.
 
-## Scenario requirements and setup
+## Prerequisites 
 
-- Windows 11, Windows 10, Windows 8.1, and Windows 7 SP1
 - Microsoft Defender Real-time protection is enabled
 - Cloud-delivered protection is enabled by default, however you may need to re-enable it if it has been disabled as part of previous organizational policies. For more information, see [Enable cloud-delivered protection in Microsoft Defender Antivirus](/windows/threat-protection/windows-defender-antivirus/enable-cloud-protection-windows-defender-antivirus?ocid=wd-av-demo-cloud-middle).
 - You can also download and use the [PowerShell script](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings/) to enable this setting and others on Windows 10 and Windows 11.
+
+### Supported operating systems 
+
+- Windows 11
+-  Windows 10
+-  Windows 8.1
+-  Windows 7 SP1
 
 ### Scenario
 
