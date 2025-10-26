@@ -18,7 +18,7 @@ ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 06/04/2025
+ms.date: 26/10/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -40,7 +40,7 @@ Select **Most recent incidents and alerts** to toggle a timeline chart of the nu
 
 :::image type="content" source="./media/incidents-queue/most-recent-incidents.png" alt-text="Screenshot of 24-hour incident graph." lightbox="./media/incidents-queue/most-recent-incidents.png":::
 
-The incident queue includes Defender Queue Assistant that helps security teams cut through alert noise and focus on the incidents that matter most. By leveraging a new AI-based machine learning prioritization algorithm, the Queue Assistant surfaces the highest-priority incidents, explains the reasoning behind each score, and provides intuitive tools for sorting and filtering the incident queue. The priority score to each incident may be based on Microsoft native alerts, custom detections or third-party signals. The algorithm is trained on real-world anonymized data and considers the following data points when calculating the priority score:
+The incident queue includes Defender Queue Assistant that helps security teams cut through alert noise and focus on the incidents that matter most. Using an AI-based, machine learning prioritization algorithm, the Queue Assistant surfaces the highest-priority incidents, explains the reasoning behind each score, and provides intuitive tools for sorting and filtering the incident queue. The priority score to each incident can be based on Microsoft native alerts, custom detections, or third-party signals. The algorithm is trained on real-world anonymized data and considers the following data points when calculating the priority score:
 + Attack disruption signals
 + Threat analytics
 + Severity
@@ -56,6 +56,9 @@ Incidents are automatically assigned a priority score from 0 to 100, with 100 be
 
 :::image type="content" source="./media/incidents-queue/incidents-page.png" alt-text="Screenshot of the Incidents queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incidents-page.png":::
 
+Select the incident row anywhere except the incident name, to display a summary pane with key information about the incident. The pane includes the priority assessment, the factors influencing the priority score, the incident's details, recommended actions, and related threats.  Use the up and down arrows at the top of the pane to navigate to the previous or next incident in the incident queue.  For more information on investigating the incident, see [Investigate incidents](investigate-incidents.md).
+
+:::image type="content" source="./media/investigate-incidents/incident-side-panel.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-side-panel.png":::
 
 By default, the incident queue show incidents created in the last week. Choose a different time frame by selecting time selector drop-down above the queue. 
 
@@ -64,7 +67,7 @@ By default, the incident queue show incidents created in the last week. Choose a
 
 The **total number of incidents** in the queue is displayed next to the time selector. The number of incidents varies depending on the filters in use. You can search for incidents by name or incident ID
 
-Select **Customize columns** to select columns displayed in the queue. Check or uncheck the columns you want to see in the incident queue. Arrange the order of the columns by dragging them upa nd down.
+Select **Customize columns** to select columns displayed in the queue. Check or uncheck the columns you want to see in the incident queue. Arrange the order of the columns by dragging them up and down.
 
 :::image type="content" source="./media/incidents-queue/incident-toolbar.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="./media/incidents-queue/incident-toolbar.png":::
 
@@ -87,11 +90,11 @@ The incident queue also provides multiple filtering options, that when applied, 
 
 :::image type="content" source="./media/incidents-queue/incidents-filter-bar.png" alt-text="The incident queue filters list." lightbox="./media/incidents-queue/incidents-filter-bar.png":::
 
-The **Filters** list above the incident queue shows the current filters currently applied to the queue. Select **Add filter**  to apply additional filters to limit the set of incidents shown. 
+The **Filters** list above the incident queue shows the current filters currently applied to the queue. Select **Add filter**  to apply more filters to limit the set of incidents shown. 
 
 :::image type="content" source="./media/incidents-queue/incident-filters-small.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal." lightbox="./media/incidents-queue/incident-filters.png":::
 
-Select the filters you want to use, then select **Add** The selected filters are shown along with the existing applied filters. Select the new filter to specify its conditions. For example, if you chose the "Service/detection sources" filter, select it to choose the sources by which to filter the list.
+Select the filters you want to use, then select **Add**. The selected filters are shown along with the existing applied filters. Select the new filter to specify its conditions. For example, if you chose the "Service/detection sources" filter, select it to choose the sources by which to filter the list.
 
 You can remove a filter by selecting the **X** on the  filter name in the filters list.
 
