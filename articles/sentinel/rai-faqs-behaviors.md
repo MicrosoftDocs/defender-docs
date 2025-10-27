@@ -1,0 +1,69 @@
+title: FAQ for the Microsoft Sentinel behaviors Layer
+description: This FAQ provides information about the AI technology used in Microsoft Sentinel, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.  
+ms.date: 10/27/2025  
+ms.custom:  
+  - responsible-ai-faqs  
+ms.topic: contributor-guide  
+author: Guy Wild  
+ms.author: guywild  
+ms.reviewer: [Reviewer]  
+---
+
+# FAQ for the Microsoft Sentinel behaviors Layer
+
+These frequently asked questions (FAQ) describe the AI impact of the Microsoft Sentinel behaviors layer feature in Microsoft Sentinel.
+
+---
+
+## What is the Microsoft Sentinel behaviors Layer?
+
+The Microsoft Sentinel behaviors Layer is an AI-powered capability in Microsoft Sentinel that transforms fragmented raw logs into contextualized behavioral insights that explain “who did what to whom”. 
+
+- **Inputs:** Raw security logs from sources, such as the AWS CloudTrail and CommonSecurityLog tables.  
+- **Outputs:** Structured behavior objects enriched with MITRE ATT&CK mappings, entity roles, and natural language explanations.
+
+## What are the capabilities of the Microsoft Sentinel behaviors Layer?
+
+- **Behavior aggregation:** Groups and sequences related events across multiple sources.  
+- **Contextualization:** Adds security context and maps behaviors to MITRE ATT&CK tactics and techniques.  
+- **Explainability:** Generates natural language summaries for easier investigation.  
+- **Detection authoring:** Simplifies KQL query creation for hunting and detection.  
+- **Responsible AI checks:** Includes validation steps to prevent exposure of sensitive data in generated queries.
+
+
+## What is the intended use of the Microsoft Sentinel behaviors Layer?
+
+The intended use is to accelerate threat detection and investigation by providing SOC analysts with a unified, AI-driven view of behaviors. It supports:  
+- Threat hunting  
+- Detection rule authoring  
+- Incident investigation and triage  
+
+
+## How was the Microsoft Sentinel behaviors Layer evaluated? What metrics are used to measure performance?
+
+Evaluation included:  
+- **Data source selection:** In collaboration with security researchers, we selected CommonSecurityLogs and AWSCloudTrail tables. These sources were chosen because they represent high-value telemetry for SOC workflows and allow testing across diverse event types.  
+- **Sampling mechanism:** We sampled one log per activity type to ensure representative coverage of the data source. This approach avoids bias toward frequent activities and helps validate that the AI pipeline generalizes across different behaviors.  
+- **AI pipeline testing:**  
+    - Hypothesis generation: An agent generates hypotheses for behaviors that describe multiple related events, simulating real-world attack patterns.
+    - Query conversion: A second agent converts these hypotheses into KQL queries that aim to capture the intended behaviors, ensuring operational usability.
+    - LLM validation: Queries are validated using a large language model (LLM) to confirm they reflect the behavioral intent and compile successfully, reducing false positives and operational friction.
+    - Sensitive data check: An additional LLM-based test ensures that sensitive data is not exposed in the KQL queries, embedding privacy safeguards and responsible AI principles into the process.  
+
+## What are the limitations of the Microsoft Sentinel behaviors Layer? How can users minimize the impact?
+
+- **Limited data source coverage:** Currently supports CommonSecurityLogs and AWSCloudTrail.  
+- **Dependence on log quality:** Incomplete or noisy logs can reduce accuracy.  
+- **Preview feature:** Behavior schema and AI models may evolve.  
+**Mitigation:** Ensure high-quality log ingestion, validate AI-generated queries, and use human review for critical detections.
+
+
+## What operational factors and settings allow for effective and responsible use of the feature?
+
+- **Enable supported connectors** for AWS and CommonSecurityLog sources.  
+- **Review AI-generated outputs** before deploying detection rules.  
+- **Monitor updates** as the feature expands to new sources and schemas.
+
+## See also
+
+- [Microsoft Sentinel behaviors layer](https://learn.microsoft.com/azure/sentinel/)  
