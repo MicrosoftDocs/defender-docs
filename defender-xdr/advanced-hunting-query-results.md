@@ -221,7 +221,7 @@ The following screenshot shows the results of a query that returns 1,000 email e
 
 The following screenshot shows the zoomed in results of a query filtered to a specific date.
 
-:::image type="content" source="/defender/media/advanced-hunting-filtered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results filtered to a specific date." lightbox="/defender/media/advanced-hunting-filtered-results.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-filtered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results filtered to a specific date." lightbox="./media/advanced-hunting-query-results/advanced-hunting-filtered-results.png":::
 
 ---
 
