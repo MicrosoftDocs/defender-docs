@@ -4,7 +4,7 @@ description: Learn how using Microsoft Defender XDR together with Microsoft Sent
 author: batamig
 ms.author: bagol
 ms.topic: conceptual
-ms.date: 07/16/2025
+ms.date: 10/25/2025
 appliesto:
     - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -198,7 +198,7 @@ The Defender XDR connector also lets you stream **advanced hunting** events&mdas
 
 ## Custom detection rules creation
 
-[Custom detections](/defender-xdr/custom-detections-overview) in Microsoft Defender is now the best way to create new rules across Microsoft Sentinel Security Information and Event Management (SIEM) and Microsoft Defender XDR. It supports a unified security operations center (SOC) experience in the Defender portal and provides greater opportunity for enhancements.
+[Custom detections](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) in Microsoft Defender is now the best way to create new rules across Microsoft Sentinel Security Information and Event Management (SIEM) and Microsoft Defender XDR. It supports a unified security operations center (SOC) experience in the Defender portal and provides greater opportunity for enhancements.
 
 With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. Microsoft Sentinel users can still use [analytics rules](threat-detection.md), but we encourage that they use custom detections to take advantage of the latest innovations.
 

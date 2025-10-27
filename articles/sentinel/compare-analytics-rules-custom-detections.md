@@ -5,8 +5,7 @@ description: Compare the different features supported by Microsoft Sentinel anal
 author: poliveria 
 ms.service: microsoft-sentinel  
 ms.topic: conceptual
-ms.custom: sentinel-graph
-ms.date: 10/15/2025
+ms.date: 10/27/2025
 ms.author: pauloliveria  
 
 ms.collection: ms-security
