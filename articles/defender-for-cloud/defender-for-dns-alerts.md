@@ -40,4 +40,4 @@ If the resource owner confirms that the activity is unexpected, the alert should
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage security alerts](managing-and-responding-alerts.yml)
+> [Manage security alerts](manage-respond-alerts.md)
