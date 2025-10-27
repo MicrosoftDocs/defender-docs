@@ -46,13 +46,13 @@ The following example demonstrates how to create a Flow that is triggered anytim
 
     :::image type="content" source="media/api-flow-2.png" alt-text=" The Choose your flow's trigger section in the Microsoft Defender 365 portal" lightbox="media/api-flow-2.png" :::
 
-Now you have a Flow that is triggered every time a new Alert occurs.
+    Now you have a Flow that is triggered every time a new Alert occurs.
 
-:::image type="content" source="media/api-flow-3.png" alt-text="A trigger description" lightbox="media/api-flow-3.png":::
+    :::image type="content" source="media/api-flow-3.png" alt-text="A trigger description" lightbox="media/api-flow-3.png":::
 
-All you need to do now is choose your next steps.
-For example, you can isolate the device if the Severity of the Alert is High and send an email about it.
-The Alert trigger provides only the Alert ID and the Machine ID. You can use the connector to expand these entities.
+    All you need to do now is choose your next steps.
+    For example, you can isolate the device if the Severity of the Alert is High and send an email about it.
+    The Alert trigger provides only the Alert ID and the Machine ID. You can use the connector to expand these entities.
 
 ### Get the Alert entity using the connector
 
@@ -78,7 +78,7 @@ The Alert trigger provides only the Alert ID and the Machine ID. You can use the
 
 4. Save your flow.
 
-You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
+    You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
 
 ## Related topic
 
