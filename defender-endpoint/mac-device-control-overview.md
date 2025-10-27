@@ -24,10 +24,6 @@ appliesto:
 ---
 # Device Control for macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 ## Requirements
 
