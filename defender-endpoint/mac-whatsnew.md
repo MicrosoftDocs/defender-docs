@@ -23,10 +23,6 @@ appliesto:
 ---
 # What's new in Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 For more information on Microsoft Defender for Endpoint on other operating systems:
 

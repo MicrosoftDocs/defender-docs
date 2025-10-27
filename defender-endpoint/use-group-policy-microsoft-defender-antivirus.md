@@ -23,9 +23,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Use Group Policy settings to configure and manage Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Use Group Policy settings to configure and manage Microsoft Defender Antivirus
 
 We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
 

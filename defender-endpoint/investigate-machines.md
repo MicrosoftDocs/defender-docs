@@ -21,10 +21,6 @@ appliesto:
 ---
 # Investigate devices in the Microsoft Defender for Endpoint Devices list
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Investigate the details of an alert raised on a specific device to identify other behaviors or events that might be related to the alert or the potential scope of the breach.
 
