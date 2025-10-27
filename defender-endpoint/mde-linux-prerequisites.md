@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/19/2025
+ms.date: 10/27/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -111,7 +111,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
 
 > [!NOTE]
-> Distributions & versions that aren't explicitly listed above and custom OS are unsupported (even if they're derived from the officially supported distributions). 
+> Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions). 
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
