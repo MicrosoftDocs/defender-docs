@@ -1,7 +1,7 @@
 ---
 title: Overview - AI security posture management
 description: Learn about AI security posture management in Microsoft Defender for Cloud and how it protects resources from AI threats.
-ms.date: 04/28/2025
+ms.date: 10/27/2025
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
@@ -48,6 +48,13 @@ Defender for Cloud automatically and continuously discovers deployed AI workload
 Defender for Cloud can also discover vulnerabilities within generative AI library dependencies such as TensorFlow, PyTorch, and Langchain by scanning source code for Infrastructure as Code (IaC) misconfigurations and container images for vulnerabilities. Regularly updating or patching the libraries can prevent exploits, protecting generative AI applications and maintaining their integrity.
 
 With these features, Defender for Cloud provides full visibility of AI workloads from code to cloud.
+
+## Discover AI agents
+
+AI Agents Inventory shows all AI agents built with Copilot Studio in one place for security and IT teams.
+
+A new table in Microsoft Defender Advanced Hunting lets you find deployed agents, check their settings, and spot possible risks.
+
 
 ## Reduce risks to generative AI apps
 
