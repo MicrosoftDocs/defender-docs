@@ -22,14 +22,12 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Restore quarantined files in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Restore quarantined files in Microsoft Defender Antivirus
 
 Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
 
 ## Prerequisites
-
 
 ### Supported operating systems
 

@@ -23,9 +23,6 @@ appliesto:
 ---
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 ## Configure your security settings
