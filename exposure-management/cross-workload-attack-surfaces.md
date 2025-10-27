@@ -6,12 +6,12 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 07/30/2025
+ms.date: 10/26/2025
 ---
 
 # Overview of attack surface management
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces spanning on-premises, cloud, and hybrid environments. With the integration of Defender for Cloud in the Defender portal, attack surface management now includes hybrid attack paths that bridge on-premises and cloud contexts, providing comprehensive visibility across your entire digital estate.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces spanning on-premises, cloud, and hybrid environments. With the integration of Defender for Cloud in the Defender portal, attack surface management includes hybrid attack paths that bridge on-premises and cloud contexts, providing comprehensive visibility across your entire digital estate.
 
 ## Enterprise exposure graph
 
@@ -43,7 +43,7 @@ By correlating exposure queries with other graph data, such as incident data, yo
 
 ## Attack surface map
 
-The attack surface map helps you to visualize the exposure data that you query using the exposure graph schema, now including cloud resources and their relationships.  
+The attack surface map helps you to visualize the exposure data that you query using the exposure graph schema, including cloud resources and their relationships.  
 
 In the map you can explore the data across hybrid environments, check what assets are at risk, contextualize them in a broader network framework that spans on-premises and cloud, and prioritize security focus.
 

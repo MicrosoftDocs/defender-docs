@@ -20,8 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
+#customer intent:  As an IT security leader or SOC engineer responsible for endpoint protection, I want a concise overview of Microsoft Defender for Endpoint's capabilities, integrations, and deployment considerations so I can evaluate its fit for my organization and plan onboarding and operations.
 ---
+
 # Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
