@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 10/07/2025
+ms.date: 10/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -789,7 +789,7 @@ The next section in the details flyout is related to quarantined Teams messages:
   - **Policy name**: The value is **Teams Protection Policy**.
   - **Quarantine policy**
 
-The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams mMessage entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
 
 When you're finished in the details flyout, select **Close**.
 
@@ -811,7 +811,7 @@ On the **Teams messages** tab, select the quarantined message by using either of
 
 Using either method to select the message, some actions are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**.
 
-After you select the quarantined message, the available actions are described in the following subsections.
+After you select the quarantined Teams message, the available actions are described in the following subsections.
 
 #### Release quarantined Teams messages
 
@@ -877,6 +877,16 @@ When you're finished on the **Download file** flyout, select **Download**.
 By default, The .html message file is saved in a compressed file named Quarantined Messages.zip in your **Downloads** folder. If the .zip file already exists, a number is appended to the filename (for example, Quarantined Messages(1).zip).
 
 Back on the **Download messages** flyout, select **Done**.
+
+#### Remove users from quarantined Teams chats
+
+> [!TIP]
+> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
+
+1. On the **Teams messages** tab, select the Teams message by clicking anywhere in the row other than the check box next to the first column.
+2. In the details flyout that opens (the Teams message entity panel), select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
+
+For complete instructions, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
 
 #### Take action on multiple quarantined Teams messages
 
