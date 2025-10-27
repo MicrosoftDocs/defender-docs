@@ -36,7 +36,7 @@ While you can construct your [advanced hunting](advanced-hunting-overview.md) qu
 - [Export tables and charts](#export-tables-and-charts)
 - [Drill down to detailed entity information](#drill-down-from-query-results)
 - [Tweak your queries directly from the results](#tweak-your-queries-from-the-results)
-- [View timeline of events](#automatic-timeline-rendering)
+- [View timeline of events](#automatic-timeline-rendering-preview)
 
 ## View query results as a table or chart
 
@@ -110,7 +110,6 @@ The line chart below clearly highlights time periods with more activity involvin
 
 :::image type="content" source="/defender/media/line-chart-a.png" alt-text="The line chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/line-chart-a.png":::
 
-
 ## Export tables and charts
 
 After running a query, select **Export** to save the results to local file. Your chosen view determines how the results are exported:
@@ -158,7 +157,6 @@ Furthermore, for JSON and array fields, you can right-click and update the exist
 
 :::image type="content" source="/defender/media/advanced-hunting-query-results-json-right.png" alt-text="Screenshot of options upon right-clicking an option for JSON and array fields" lightbox="/defender/media/advanced-hunting-query-results-json-right.png":::
 
-
 To quickly inspect a record in your query results, select the corresponding row to open the **Inspect record** panel. The panel provides the following information based on the selected record:
 
 - **Assets**—Summarized view of the main assets (mailboxes, devices, and users) found in the record, enriched with available information, such as risk and exposure levels
@@ -201,7 +199,7 @@ You can do the same for your saved functions, queries, and custom detections in 
 
 By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
 
-:::image type="content" source="/defender/media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="/defender/media/advanced-hunting-query-results-timeline.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png":::
 
 You can select whether or not the timeline is displayed by default in the **Chart preferences** settings.
 
