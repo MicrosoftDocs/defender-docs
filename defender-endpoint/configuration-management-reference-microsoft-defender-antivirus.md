@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: ngp
@@ -23,14 +23,6 @@ appliesto:
 ---
 # Manage Microsoft Defender Antivirus in your business
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-**Platforms**
-- Windows
-- Windows Server
-
 > [!TIP]
 > For the best experience, please choose 1 method for configuring the Microsoft Defender Antivirus policies.
 
@@ -44,6 +36,13 @@ You can manage and configure Microsoft Defender Antivirus with the following too
 - [PowerShell cmdlets](./use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Windows Management Instrumentation (WMI)](./use-wmi-microsoft-defender-antivirus.md)
 - The [Microsoft Malware Protection Command Line Utility](./command-line-arguments-microsoft-defender-antivirus.md) (referred to as the *mpcmdrun.exe* utility)
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 The following articles provide further information, links, and resources for using these tools to manage and configure Microsoft Defender Antivirus.
 

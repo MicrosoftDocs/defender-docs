@@ -75,7 +75,10 @@ You can query all troubleshooting mode events in advanced hunting.
 
 - Devices must be running a supported operating system.
 
-   - Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019 and later, or Azure Stack HCI OS, version 23H2 and later.
+   - Windows 10 (version 19044.1618 or later)
+   -  Windows 11
+   -  Windows Server 2019 and later
+   -  Azure Stack HCI OS, version 23H2 and later.
 
       |Semester/Redstone|OS version|Release|
       |:---|:---|:---|

@@ -22,11 +22,6 @@ appliesto:
 ---
 # Investigate domains and URLs
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Investigate a domain to see if the devices and servers in your enterprise network have been communicating with a known malicious domain.
 
