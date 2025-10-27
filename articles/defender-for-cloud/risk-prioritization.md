@@ -31,12 +31,16 @@ To learn how to use risk prioritization effectively in your security operations,
 - **For Defender portal users**: [Review security recommendations - Understanding risk prioritization in Defender portal](review-security-recommendations.md?pivots=defender-portal#understanding-risk-prioritization-in-defender-portal)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f609a3c035898f7cf0df1f6532ac5d457d3a575
 These comprehensive guides include:
 - Risk factors and how they influence prioritization
 - Risk calculation methodology
 - Risk level classifications (Critical, High, Medium, Low, Not evaluated)
 - Recommendations dashboard details and filtering options
 - Integration with attack path analysis
+<<<<<<< HEAD
 =======
 - **Title** - The title of the recommendation.
 
@@ -104,6 +108,8 @@ Recommendations can be classified into five categories based on their risk level
 
 The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [identifies and remediates attack paths](how-to-manage-attack-path.md).
 >>>>>>> de27737207707996f47a9f2aff23d1d859afceed
+=======
+>>>>>>> 4f609a3c035898f7cf0df1f6532ac5d457d3a575
 
 ## Related content
 

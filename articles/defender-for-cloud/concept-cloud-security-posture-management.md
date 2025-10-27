@@ -19,40 +19,7 @@ By default, when you enable Defender for Cloud on an Azure subscription, the [Mi
 Defender for Cloud offers two CSPM plans:
 
 - **Foundational CSPM** (free): Enabled by default for all onboarded subscriptions and accounts.
-- **Defender CSPM** (paid): Adds advanced capabilities such as AI security posture, attack path analysis, risk prioritization, and more.
-
-- **Defender CSPM** - A paid plan that provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
-
-| Feature | Foundational CSPM | Defender CSPM | Cloud Availability |
-|--|--|--|--|
-| Security recommendations | ✔️ | ✔️ | Azure, AWS, GCP, on-premises, Docker Hub, JFrog Artifactory |
-| Asset inventory | ✔️ | ✔️ | Azure, AWS, GCP, on-premises, Docker Hub, JFrog Artifactory |
-| Secure score | ✔️ | ✔️ | Azure, AWS, GCP, on-premises, Docker Hub, JFrog Artifactory |
-| Data visualization (Azure Workbooks) | ✔️ | ✔️ | Azure, AWS, GCP, on-premises |
-| Data exporting | ✔️ | ✔️ | Azure, AWS, GCP, on-premises |
-| Workflow automation | ✔️ | ✔️ | Azure, AWS, GCP, on-premises |
-| Remediation tools | ✔️ | ✔️ | Azure, AWS, GCP, on-premises, Docker Hub, JFrog Artifactory |
-| Microsoft Cloud Security Benchmark | ✔️ | ✔️ | Azure, AWS, GCP |
-| AI security posture management | – | ✔️ | Azure, AWS |
-| Agentless VM vulnerability scanning | – | ✔️ | Azure, AWS, GCP |
-| Agentless VM secrets scanning | – | ✔️ | Azure, AWS, GCP |
-| Attack path analysis | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| Risk prioritization | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| Security explorer (risk hunting) | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| Code-to-cloud mapping (containers/IaC) | – | ✔️ | GitHub, Azure DevOps, Docker Hub, JFrog Artifactory |
-| PR annotations | – | ✔️ | GitHub, Azure DevOps |
-| Internet exposure analysis | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| External attack surface management | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| Regulatory compliance assessments | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| ServiceNow integration | – | ✔️ | Azure, AWS, GCP |
-| Critical assets protection | – | ✔️ | Azure, AWS, GCP |
-| Governance at scale | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| Data security posture management (DSPM) | – | ✔️ | Azure, AWS, GCP |
-| Agentless discovery for Kubernetes | – | ✔️ | Azure, AWS, GCP |
-| Custom recommendations | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| Agentless code-to-cloud containers vulnerability assessment | – | ✔️ | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
-| API security posture management | – | ✔️ | Azure |
-| AKS security dashboard | – | ✔️ | Azure |
+- **Defender CSPM** (paid): Provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
 
 ## Plan availability
 
@@ -65,8 +32,11 @@ Defender CSPM is available across multiple deployment models and cloud environme
 - **DevOps**: GitHub and Azure DevOps integration
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
 =======
+=======
+>>>>>>> 4f609a3c035898f7cf0df1f6532ac5d457d3a575
 | Feature | Foundational CSPM | Defender CSPM | Cloud availability |
 |--|--|--|--|
 | [Security recommendations](review-security-recommendations.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::| Azure, AWS, GCP, on-premises , Docker Hub, JFrog Artifactory|
@@ -98,7 +68,16 @@ For specific regional availability and government cloud support details, see the
 | [Agentless code-to-cloud containers vulnerability assessment](agentless-vulnerability-assessment-azure.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [API security posture management](api-security-posture-overview.md)| - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Azure Kubernetes Service security dashboard (Preview)](cluster-security-dashboard.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
+<<<<<<< HEAD
 >>>>>>> de27737207707996f47a9f2aff23d1d859afceed
+=======
+
+
+<sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
+<sup><a name="footnote1"></a>2</sup>: DevOps security capabilities, such as code-to-cloud contextualization powering security explorer, attack paths, and pull request annotations for Infrastructure-as-Code security findings, are only available when you enable the paid Defender CSPM plan. Learn more about DevOps security [support and prerequisites](devops-support.md).
+
+For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
+>>>>>>> 4f609a3c035898f7cf0df1f6532ac5d457d3a575
 
 ## Plan Pricing
 
