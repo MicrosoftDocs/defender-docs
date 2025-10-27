@@ -23,10 +23,6 @@ appliesto:
 ---
 # Onboard Windows devices using a local script
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 You can also manually onboard individual devices to Defender for Endpoint. You might want to onboard some devices when you're testing the service before you commit to onboarding all devices in your network.
 
@@ -38,6 +34,9 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 ## Onboard devices
 
 1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
+
+> [!NOTE]
+> If the Endpoints section isn't visible, try accessing other Defender features (such as Incidents or Hunting) or wait a few minutes for the environment to initialize. Also ensure you have the required roles (like Security Administrator) and appropriate licensing.
 
    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    

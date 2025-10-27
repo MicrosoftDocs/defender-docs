@@ -23,7 +23,6 @@ ms.date: 10/27/2025
 > [!TIP]
 > Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in GA.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, such as what's included in this offering, see the following articles:
 

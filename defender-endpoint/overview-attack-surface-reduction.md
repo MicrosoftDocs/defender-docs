@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 07/30/2025
+ms.date: 10/20/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -23,18 +23,16 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Understand and use attack surface reduction capabilities
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-- Windows
-
-> [!TIP]
-
-
 Attack surfaces are all the places where your organization is vulnerable to cyberthreats and attacks. Defender for Endpoint includes several capabilities to help reduce your attack surfaces. Watch the following video to learn more about attack surface reduction.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Configure attack surface reduction capabilities
 

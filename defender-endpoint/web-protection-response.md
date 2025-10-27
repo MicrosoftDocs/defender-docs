@@ -22,10 +22,6 @@ appliesto:
 ---
 # Respond to web threats
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Web protection in Microsoft Defender for Endpoint lets you efficiently investigate and respond to alerts related to malicious websites and websites in your custom indicator list.
 

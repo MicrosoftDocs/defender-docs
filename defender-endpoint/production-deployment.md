@@ -25,10 +25,6 @@ appliesto:
 ---
 # Prepare to deploy Microsoft Defender for Endpoint deployment
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 The first step when deploying Microsoft Defender for Endpoint is to set up your Defender for Endpoint environment.
 

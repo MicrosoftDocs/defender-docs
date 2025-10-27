@@ -15,15 +15,13 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: 
 search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 # Create indicators for IPs and URLs/domains
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 ## Overview
@@ -39,6 +37,22 @@ The default threat-intelligence data set to block malicious IPs/URLs is managed 
 
 You can block additional malicious IPs/URLs by configuring "**Custom network indicators**".
 
+## Prerequisites
+
+It's important to understand the following prerequisites before creating indicators for IPs, URLs, or domains.
+
+Integration into Microsoft browsers is controlled by the browser's SmartScreen setting. For other browsers and applications, your organization must have:
+
+- [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows) configured in active mode.
+
+- [Behavior Monitoring](/defender-endpoint/behavior-monitor) enabled.
+
+- [Cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus) turned on.
+
+- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+
+- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
+
 ### Supported operating systems
 
 - Windows 11
@@ -53,23 +67,6 @@ You can block additional malicious IPs/URLs by configuring "**Custom network ind
 - Linux
 - iOS 
 - Android
-
-## Before you begin
-
-It's important to understand the following prerequisites before creating indicators for IPs, URLs, or domains.
-
-### Microsoft Defender Antivirus version requirements
-Integration into Microsoft browsers is controlled by the browser's SmartScreen setting. For other browsers and applications, your organization must have:
-
-- [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows) configured in active mode.
-
-- [Behavior Monitoring](/defender-endpoint/behavior-monitor) enabled.
-
-- [Cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus) turned on.
-
-- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
-
-- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
 
 ### Network Protection requirements
 
