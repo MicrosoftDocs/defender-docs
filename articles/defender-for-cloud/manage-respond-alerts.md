@@ -149,5 +149,5 @@ Results for both the agent-based and agentless scanner appear on the Security al
 ## Related content
 
 -   [Configure alert suppression rules](alerts-suppression-rules.md)
--   [Automate responses to Defender for Cloud triggers](workflow-automation.yml)
+-   [Automate responses to Defender for Cloud triggers](workflow-automations.md)
 -   [Security alerts - a reference guide](alerts-reference.md)
