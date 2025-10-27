@@ -22,10 +22,6 @@ appliesto:
 ---
 # Onboard Windows devices to Defender for Endpoint using Intune 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 You can use mobile device management (MDM) solutions to configure Windows 10 devices. Defender for Endpoint supports MDMs by providing OMA-URIs to create policies to manage devices.
 

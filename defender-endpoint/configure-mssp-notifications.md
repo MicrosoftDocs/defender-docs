@@ -21,10 +21,6 @@ appliesto:
 ---
 # Configure alert notifications that are sent to MSSPs
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 > [!NOTE]
 > This step can be done by either the MSSP customer or MSSP. MSSPs must be granted the appropriate permissions to configure this on behalf of the MSSP customer.
