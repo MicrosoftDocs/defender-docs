@@ -2,8 +2,8 @@
 title: Onboard Windows devices using Configuration Manager
 description: Use Configuration Manager to deploy the configuration package on devices so that they are onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
-ms.date: 12/13/2024
+ms.date: 10/27/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
