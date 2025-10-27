@@ -45,7 +45,7 @@ You can explore the full breadth of Microsoft's security recommendations without
    - **Cloud** - Azure, AWS, and GCP recommendations with risk-based prioritization
    - **Identity** - Identity-related security recommendations
    - **SaaS** - Software-as-a-Service application recommendations
-   - **Data** - Data protection and governance recommendations
+   - **Data** - Data protection recommendations
 
 1. **Separate views for issue types**: On the Devices tab, you'll find separate views for:
    - **Misconfigurations** - Configuration-related security issues from MDVM, Microsoft Secure Score, and Security Exposure Management, contributing to the Devices Secure Score
@@ -55,9 +55,9 @@ You can explore the full breadth of Microsoft's security recommendations without
 
 ## Cloud recommendations with risk-based prioritization
 
-In the Defender portal, cloud recommendations are prioritized by risk, helping you focus on what matters most. The Cloud tab presents security recommendations related to cloud assets across your environment with enhanced context.
+In the Defender portal, cloud recommendations are prioritized by risk, helping you focus on what matters most. The Cloud assets tab presents security recommendations related to cloud assets across your environment with enhanced context. It has separate views for misconfigurations, vulnerabilities, and exposed secrets.
 
-:::image type="content" source="./media/vulnerability-management/vulnerabilities-cloud.png" alt-text="Screenshot of cloud vulnerabilities with risk-based prioritization." lightbox="./media/vulnerability-management/vulnerabilities-cloud.png":::
+:::image type="content" source="media/security-recommendations/cloud-assets-security-recommendations.png" alt-text="Screenshots of cloud assets recommendations tab" lightbox="media/security-recommendations/cloud-assets-security-recommendations.png":::
 
 With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
 

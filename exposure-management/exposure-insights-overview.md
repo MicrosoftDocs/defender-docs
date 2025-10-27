@@ -96,15 +96,15 @@ Grayed out metrics aren't considered for score calculation.
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft Defender for Endpoint, Microsoft threat analytics, and other Microsoft workloads. With the integration of Defender for Cloud in the Defender portal, MIcrosoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
+Security Exposure Management ingests security recommendations from multiple source lists, including Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft Defender for Endpoint, Microsoft threat analytics, and other Microsoft workloads. With the integration of Defender for Cloud in the Defender portal, MIcrosoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
 
 ### Unified Recommendations Experience
 
 - **New unified Recommendations page**: All recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one catalog view in the Defender portal
 - **Organized by attack surface**: Recommendations are organized by tabs for different domains - Devices, Cloud, Identity, SaaS, and Data
 - **Categorized by issue type**: Recommendations are separated by type - misconfigurations vs vulnerabilities vs secrets. For example, on the Devices tab, you'll find separate views for Misconfigurations and Vulnerabilities, aligning with different remediation workflows
-- **Risk-based prioritization**: For cloud recommendations, MSEM now calculates a risk score that takes into account asset value and other factors, helping prioritize critical issues beyond traditional severity ratings
-- **Unified remediation flow**: You can review and remediate recommendations within a specific security initiative or metric, or from the centralized Recommendations page
+- **Risk-based prioritization**: Combines vulnerability data from endpoints and cloud environments into a unified, actionable view, including contextual risk-based Secure Score.
+- **Unified remediation flow**: Side-by-side visibility into device and cloud weaknesses enabling security teams to efficiently track posture improvements, remediate vulnerabilities, and understand attack paths in real time through a streamlined interface.
 
 ### Recommendation management
 
@@ -124,7 +124,7 @@ Security Exposure Management categorizes recommendations by compliance status, a
 
 ### Secure Score integration
 
-[Microsoft Secure Score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional Secure Score and new Cloud Security scores side-by-side for comprehensive posture management.
+[Microsoft Secure Score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional Secure Score and new Cloud secure scores side-by-side for comprehensive posture management.
 
 #### Unified Secure Score experience
 
