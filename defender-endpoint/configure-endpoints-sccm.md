@@ -19,9 +19,6 @@ search.appverid: met150
 
 # Onboard Windows devices using Configuration Manager
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 You can use Configuration Manager to onboard endpoints to the Microsoft Defender for Endpoint service. 
 

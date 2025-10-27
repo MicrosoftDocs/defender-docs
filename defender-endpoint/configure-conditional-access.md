@@ -20,10 +20,6 @@ appliesto:
 ---
 # Configure Conditional Access in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This section guides you through all the steps you need to take to properly implement Conditional Access.
 

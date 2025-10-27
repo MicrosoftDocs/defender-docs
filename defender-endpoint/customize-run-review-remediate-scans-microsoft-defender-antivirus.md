@@ -25,9 +25,6 @@ appliesto:
 ---
 # Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 You can use Group Policy, PowerShell, and Windows Management Instrumentation (WMI) to configure Microsoft Defender Antivirus scans. 
 
