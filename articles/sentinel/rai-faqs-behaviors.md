@@ -14,7 +14,6 @@ ms.reviewer: mschechter
 
 These frequently asked questions (FAQ) describe the AI impact of the Microsoft Sentinel behaviors layer feature in Microsoft Sentinel.
 
----
 
 ## What is the Microsoft Sentinel behaviors Layer?
 
