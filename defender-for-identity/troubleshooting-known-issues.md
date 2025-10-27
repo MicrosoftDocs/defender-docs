@@ -252,7 +252,7 @@ The domain controller doesn't have permissions to retrieve the password of the g
 
 **Resolution 1**:
 
-Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password).
+Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites).
 
 ### Cause 2
 
