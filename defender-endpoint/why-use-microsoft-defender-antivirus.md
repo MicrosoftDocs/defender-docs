@@ -22,9 +22,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint
 
 Microsoft Defender Antivirus is the next-generation protection component of [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Microsoft Defender for Endpoint).
 
@@ -35,7 +34,6 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 ### Supported operating systems
 
 - Windows
-
 
 ## 13 reasons to use Microsoft Defender Antivirus together with Microsoft Defender for Endpoint
 

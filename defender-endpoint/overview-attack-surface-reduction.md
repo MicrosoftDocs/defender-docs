@@ -23,14 +23,12 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Understand and use attack surface reduction capabilities
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Understand and use attack surface reduction capabilities
 
 Attack surfaces are all the places where your organization is vulnerable to cyberthreats and attacks. Defender for Endpoint includes several capabilities to help reduce your attack surfaces. Watch the following video to learn more about attack surface reduction.
 
 ## Prerequisites
-
 
 ### Supported operating systems
 

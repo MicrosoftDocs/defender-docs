@@ -20,9 +20,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Onboard previous versions of Windows
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Onboard previous versions of Windows
 
 Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
