@@ -23,10 +23,6 @@ appliesto:
 ---
 # Deploy updates for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Microsoft regularly publishes software updates to improve performance, security, and to deliver new features.
 

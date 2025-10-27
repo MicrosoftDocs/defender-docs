@@ -28,6 +28,17 @@ appliesto:
 
 Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows, yet is isolated using virtualization technology. The Defender for Endpoint for WSL plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
 
+## Prerequisites
+
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
+
+- The Windows client device must be onboarded to Defender for Endpoint.
+
+### Supported operating systems
+
+- Windows 10, version 2004 and later (build 19044 and later)
+- Windows 11 to support the WSL versions that can work with the plug-in.
+
 ## Known issues and limitations
 
 Be aware of the following considerations before you start:
@@ -44,13 +55,6 @@ Be aware of the following considerations before you start:
 
 - The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
 
-## Software prerequisites
-
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
-
-- The Windows client device must be onboarded to Defender for Endpoint.
-
-- The Windows client device must be running Windows 10, version 2004 and later (build 19044 and later), or Windows 11 to support the WSL versions that can work with the plug-in.
 
 ## Software components and installer file names
 

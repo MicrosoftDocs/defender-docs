@@ -23,9 +23,6 @@ appliesto:
 ---
 # Resources for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 ## Collecting diagnostic information
