@@ -20,7 +20,7 @@ search.appverid: met150
 
 # Exclusions overview 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Defender for Business](/defender-business/mdb-overview) includes a wide range of capabilities to prevent, detect, investigate, and respond to advanced cyberthreats. Microsoft preconfigures the product to perform well on the operating system that it's installed. No other changes should be needed. Despite preconfigured settings, sometimes unexpected behaviors occur. Here are some examples:
 

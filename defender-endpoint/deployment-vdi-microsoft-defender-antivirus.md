@@ -1,8 +1,8 @@
----
+﻿---
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 12/30/2024
+ms.date: 10/20/2025
 ms.topic: how-to
 author: batamig
 ms.author: bagol
@@ -17,19 +17,15 @@ ms.collection:
 - ContentEngagementFY23
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 
-**Applies to:**
 
-- Microsoft Defender Antivirus
-- [Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-**Platforms**
-
-- Windows
 
 This article is designed for customers who are using Microsoft Defender Antivirus capabilities only. If you have Microsoft Defender for Endpoint (which includes Microsoft Defender Antivirus alongside other device protection capabilities), see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
 
@@ -44,6 +40,12 @@ This guide describes how to configure Microsoft Defender Antivirus on your VMs f
 
 > [!IMPORTANT]
 > Although a VDI can be hosted on Windows Server 2012 or Windows Server 2016, virtual machines (VMs) should be running Windows 10, version 1607 at a minimum, due to increased protection technologies and features that are unavailable in earlier versions of Windows.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Set up a dedicated VDI file share for security intelligence
 
@@ -117,7 +119,7 @@ You can also set up your single server or machine to fetch the updates on behalf
    
 ### Set a scheduled task to run the PowerShell script
 
-1. On the management machine, open the Start menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
+1. On the management machine, open the **Start** menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
 
 2. Specify the name as `Security intelligence unpacker`. 
 
@@ -183,9 +185,9 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Suppress all notifications: `Enabled`
 
-> [!NOTE]
-> Sometimes, Microsoft Defender Antivirus notifications are sent to or persist across multiple sessions. To help avoid user confusion, you can lock down the Microsoft Defender Antivirus user interface.
-> Suppressing notifications prevents notifications from Microsoft Defender Antivirus from showing up when scans are done or remediation actions are taken. However, your security operations team sees the results of a scan if an attack is detected and stopped. Alerts, such as an initial access alert, are generated, and appear in the [Microsoft Defender portal](https://security.microsoft.com).
+   > [!NOTE]
+   > Sometimes, Microsoft Defender Antivirus notifications are sent to or persist across multiple sessions. To help avoid user confusion, you can lock down the Microsoft Defender Antivirus user interface.
+   > Suppressing notifications prevents notifications from Microsoft Defender Antivirus from showing up when scans are done or remediation actions are taken. However, your security operations team sees the results of a scan if an attack is detected and stopped. Alerts, such as an initial access alert, are generated, and appear in the [Microsoft Defender portal](https://security.microsoft.com).
 
 ### MAPS
 
@@ -235,7 +237,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
 
    > [!NOTE]
-   > If you want to harden, you could change "Turn on catch-up quick scan" to enabled, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it will use additional CPU.
+   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it will use additional CPU.
 
 - Turn on e-mail scanning: `Enabled`
 
@@ -358,3 +360,4 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

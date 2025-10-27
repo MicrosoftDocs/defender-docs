@@ -1,4 +1,4 @@
----
+﻿---
 title: Integrate Microsoft Defender for Endpoint with other Microsoft solutions
 description: Learn how Microsoft Defender for Endpoint integrates with other Microsoft solutions, including Microsoft Defender for Identity and Microsoft Defender for Cloud.
 author: batamig
@@ -14,20 +14,14 @@ ms.collection:
 ms.topic: concept-article
 search.appverid: met150
 ms.date: 03/26/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint and other Microsoft solutions
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Integrate with other Microsoft solutions
 
@@ -83,3 +77,4 @@ With Microsoft Defender XDR, Microsoft Defender for Endpoint, and various Micros
 - [Turn on Microsoft Defender XDR](/defender-xdr/m365d-enable)
 - [Protect users, data, and devices with Conditional Access](conditional-access.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

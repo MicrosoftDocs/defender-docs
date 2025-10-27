@@ -1,4 +1,4 @@
----
+﻿---
 title: Device control for macOS
 description: Learn how to configure Microsoft Defender for Endpoint on Mac to reduce threats from removable storage such as USB devices.
 ms.service: defender-endpoint
@@ -16,20 +16,14 @@ ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Device Control for macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Requirements
 
@@ -487,3 +481,4 @@ In this case, only have one access rule policy, but if you have multiple, make s
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

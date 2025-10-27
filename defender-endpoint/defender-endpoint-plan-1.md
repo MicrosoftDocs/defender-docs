@@ -11,6 +11,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.date: 05/02/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
@@ -21,9 +23,6 @@ ms.custom: intro-overview
 
 # Overview of Microsoft Defender for Endpoint Plan 1
 
-**Applies to**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations to prevent, detect, investigate, and respond to advanced threats. Defender for Endpoint is now available in two plans: 
 

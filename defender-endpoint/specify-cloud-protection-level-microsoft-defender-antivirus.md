@@ -1,4 +1,4 @@
----
+﻿---
 title: Specify the cloud protection level for Microsoft Defender Antivirus
 description: Set your level of cloud protection for Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -7,7 +7,7 @@ ms.topic: how-to
 author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-ms.date: 11/10/2024
+ms.date: 10/20/2025
 manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
@@ -16,20 +16,22 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Specify the cloud protection level
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Cloud protection works together with Microsoft Defender Antivirus to deliver protection to your devices faster than through traditional security intelligence updates. You can configure your level of cloud protection by using Microsoft Intune (recommended) or Group Policy.
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Use Microsoft Intune to specify the level of cloud protection
 
@@ -91,3 +93,4 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 - [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

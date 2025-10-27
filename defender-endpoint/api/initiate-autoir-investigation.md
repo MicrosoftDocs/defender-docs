@@ -1,4 +1,4 @@
----
+﻿---
 title: Start Investigation API
 description: Use this API to start investigation on a device.
 ms.service: defender-endpoint
@@ -15,19 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Business
 ---
 
 # Start Investigation API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -43,11 +40,11 @@ See [Overview of automated investigations](../automated-investigations.md) for m
 
 1. Rate limitations for this API are 50 calls per hour.
 
-## Requirements for AIR
+## Prerequisites
 
-Your organization must have Defender for Endpoint see: [Minimum requirements for Microsoft Defender for Endpoint](../minimum-requirements.md).
+Your organization must have Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](../minimum-requirements.md).
 
-Currently, AIR only supports the following OS versions:
+### Supported operating systems
 
 - Windows 11
 - Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
@@ -68,8 +65,8 @@ Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information).
+> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
 >
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
 
@@ -114,3 +111,4 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
 }
 ```
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

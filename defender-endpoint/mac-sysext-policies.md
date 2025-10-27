@@ -1,4 +1,4 @@
----
+﻿---
 title: New configuration profiles for macOS Big Sur and newer versions of macOS
 description: This topic describes the changes that are must be made in order to benefit from the system extensions, which are a replacement for kernel extensions on macOS Big Sur and newer versions of macOS.
 search.appverid: met150
@@ -17,18 +17,13 @@ ms.topic: install-set-up-deploy
 ROBOTS: noindex,nofollow
 ms.subservice: macos
 ms.date: 05/08/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # New configuration profiles for macOS Big Sur and newer versions of macOS 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 If you have deployed Microsoft Defender for Endpoint on macOS in a managed environment (through JAMF, Intune, or another MDM solution), you must deploy new configuration profiles. Failure to do these steps will result in users getting approval prompts to run these new components.
 
@@ -312,3 +307,4 @@ To deploy this custom configuration profile:
 5. In the `Assignments` tab, assign this profile to **All Users & All devices**.
 6. Review and create this configuration profile.
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

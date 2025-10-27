@@ -19,7 +19,7 @@ ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 04/25/2025
+ms.date: 08/24/2025
 appliesto: 
 - Microsoft Defender XDR 
 ---
@@ -32,11 +32,11 @@ Microsoft Defender XDR integrates with several different Microsoft security serv
 
 ## Collected data
 
-Customer data collected from integrated services includes *processed data*, such as incidents and alerts, and *configuration data*, such as connector settings, rules and so on.
+Customer data collected from integrated services includes *processed data*, such as incidents and alerts, and *configuration data*, such as connector settings, rules, and so on.
 
 ## Data storage location
 
-Microsoft Defender XDR operations in Microsoft Azure data centers in the following geographical regions:
+Microsoft Defender XDR operates in Microsoft Azure data centers in the following geographical regions:
 
 - **European Union**: North Europe and West Europe
 - **United Kingdom**: UK South and UK West
@@ -44,8 +44,9 @@ Microsoft Defender XDR operations in Microsoft Azure data centers in the followi
 - **Australia**: Australia East and Australia Southeast
 - **Switzerland**: Switzerland North and Switzerland West
 - **India**: Central India and South India
+- **UAE**: UAE North and UAE Central
 
-Once created, the Microsoft Defender XDR tenant isn't movable to a different region. Your geographical region is shown in the Microsoft Defender portal, under **Settings > Microsoft Defender XDR > Account**.
+Once created, the Microsoft Defender XDR tenant can't be moved to a different region. Your geographical region is shown in the Microsoft Defender portal, under **Settings > Microsoft Defender XDR > Account**.
 
 Customer data stored by integrated services might also be stored in the following locations:
 
@@ -54,7 +55,7 @@ Customer data stored by integrated services might also be stored in the followin
 
 ## Data retention
 
-Microsoft Defender XDR data is retained for 180 days, and is visible across the Microsoft Defender portal during that time, except for in **Advanced hunting** queries. 
+Microsoft Defender XDR data is retained for 180 days, and is visible across the Microsoft Defender portal during that time, except for in **Advanced hunting** queries. Cases are an exception and are not deleted.
 
 In the Microsoft Defender portal's **Advanced hunting** page, data is accessible via queries for only 30 days, unless it's streamed through [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration?toc=%2Fdefender-xdr%2Ftoc.json&bc=%2Fdefender-xdr%2Fbreadcrumb%2Ftoc.json&tabs=defender-portal), where retention periods may be longer.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender Antivirus ring deployment guide overview
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides an overview about how to use ring deployment methods to update your Microsoft Defender Antivirus clients.
 ms.service: defender-endpoint
@@ -16,25 +16,14 @@ ms.custom: intro-overview
 ms.topic: concept-article
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
 
 # Deploy Microsoft Defender Antivirus in rings
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
@@ -42,6 +31,13 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 > Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
 
 Deploying Microsoft Defender for Endpoint can be done using a ring-based deployment approach and updating using the gradual rollout process.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Ring deployment overview
 
@@ -82,3 +78,4 @@ Customers that prioritize availability over security, should take a crawl, walk,
 - Ring deployment using Group Policy and Windows Server Update Services
    - [Pilot ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-pilot-ring-deployment-group-policy-wsus.md)
    - [Production ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-production-ring-deployment-group-policy-wsus.md)
+

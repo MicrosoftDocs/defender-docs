@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 09/21/2025
 ---
 
 # Getting value from your data connectors

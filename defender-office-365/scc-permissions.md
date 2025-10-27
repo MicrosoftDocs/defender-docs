@@ -83,6 +83,7 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 |**Data Estate Insights Readers**|Provides read-only access to all insights reports across platforms and providers.|Data Map Reader <br/><br/> Insights Reader|
 |**Data Governance**|Grants access to data governance roles within Microsoft Purview.|Data Governance Administrator|
 |**Data Investigator**|Perform searches on mailboxes, SharePoint sites, and OneDrive locations.|Communication <br/><br/> Compliance Search <br/><br/> Custodian <br/><br/> Data Investigation Management <br/><br/> Export <br/><br/> Preview <br/><br/> Review <br/><br/> RMS Decrypt <br/><br/> Search And Purge|
+|**Data Security AI Admins**|Use this group to assign editing capabilities for Data Loss Prevention policies related to Copilot and viewing AI content in Data Security Posture Management. Review the role description for access details.|Data Security AI Admin|
 |**Data Security AI Content Viewers**|Use this group to assign read-only permissions to users in Data Security Posture Management for AI to view prompts and responses of interactions in AI apps.|Data Security AI Content Viewer|
 |**Data Security AI Viewers**|Use this group to assign read-only permissions to users for Data Security Posture Management for AI.|Data Security AI Viewer|
 |**Data Security Investigations Administrators**|Administrators for Data Security Investigations that can create and manage all investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Admin <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
@@ -178,6 +179,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Data Security Investigations Admin**|Used to create and manage investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Administrators|
 |<sup>\*</sup>**Data Security Investigations Investigator**|Used to create and manage assigned investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Investigators|
 |<sup>\*</sup>**Data Security Investigations Reviewer**|Used to review assigned investigations in Data Security Investigations.|Data Security Investigations Reviewers|
+|**Data Security AI Admin**|Role for editing Data Loss Prevention policies related to Copilot and viewing AI content in Data Security Posture Management. This role does not have access to read prompts and responses of AI interactions.|Data Security AI Admins|
 |**Data Security AI Content Viewer**|Role for read-only access to prompts and responses of AI interactions in Data Security Posture Management for AI.|Data Security AI Content Viewers|
 |**Data Security AI Viewer**|Role for read-only access to all pages in Data Security Posture Management for AI. This role does not have access to read prompts and responses of AI interactions.|Data Security AI Viewers|
 |**Data Security Viewer**|View access to Data Security Posture Management dashboard insights. Allows users to use Copilot for Security to view details.|Data Security Management|
@@ -197,6 +199,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Insider Risk Management Analysis**|Access all insider risk management alerts, cases, and notices templates.|Insider Risk Management <br/><br/> Insider Risk Management Analysts|
 |<sup>\*</sup>**Insider Risk Management Approval**|Perform investigation, remediation, and review message violations in Privacy Management solution. Can view message metadata and full messages.|Insider Risk Management <br/><br/> Insider Risk Management Approvers|
 |<sup>\*</sup>**Insider Risk Management Audit**|Allow viewing Insider Risk audit trails.|Insider Risk Management <br/><br/> Insider Risk Management Auditors|
+|<sup>\*</sup>**Insider Risk Management Graph Reader**|Allow viewing to data risk graphs for alerts.|Insider Risk Management <br/><br/> Insider Risk Management Analysts <br/><br/> Insider Risk Management Investigators|
 |<sup>\*</sup>**Insider Risk Management Investigation**|Access all insider risk management alerts, cases, notices templates, and the Content Explorer for all cases.|Insider Risk Management <br/><br/> Insider Risk Management Investigators|
 |<sup>\*</sup>**Insider Risk Management Permanent contribution**|This role group is visible, but is used by background services only.|IRM Contributors|
 |<sup>\*</sup>**Insider Risk Management Reports Administrator**||Insider Risk Management|

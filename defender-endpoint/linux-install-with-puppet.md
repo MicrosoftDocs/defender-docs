@@ -1,4 +1,4 @@
----
+﻿---
 title: Deploy Microsoft Defender for Endpoint on Linux with Puppet
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Puppet.
@@ -16,18 +16,13 @@ ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 08/11/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Puppet. To use another method, refer to the [Related content section](#related-content).
 
@@ -355,3 +350,4 @@ class remove_mdatp {
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

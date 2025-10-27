@@ -1,4 +1,4 @@
----
+﻿---
 title: Migrate to Microsoft Defender for Endpoint from non-Microsoft endpoint protection
 description: Move to Microsoft Defender for Endpoint, which includes Microsoft Defender Antivirus for your endpoint protection solution.
 ms.service: defender-endpoint
@@ -20,14 +20,13 @@ ms.date: 09/21/2024
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 ms.subservice: onboard
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Migrate to Microsoft Defender for Endpoint from non-Microsoft endpoint protection
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 If you're ready to move from a non-Microsoft endpoint protection solution to [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), or you're interested in what all is involved in the process, use this article as a guide. This article describes the overall process of moving to [Defender for Endpoint Plan 1 or Plan 2](microsoft-defender-endpoint.md). The following image depicts the migration process at a high level:
 
@@ -56,3 +55,4 @@ The process of migrating to Defender for Endpoint can be divided into three phas
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
