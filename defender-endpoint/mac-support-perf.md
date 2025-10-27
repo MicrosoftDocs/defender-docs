@@ -24,9 +24,6 @@ appliesto:
 ---
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 This article provides some general steps that can be used to narrow down performance issues related to Defender for Endpoint on macOS.

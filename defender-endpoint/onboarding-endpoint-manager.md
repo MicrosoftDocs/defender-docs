@@ -24,10 +24,6 @@ appliesto:
 ---
 # Onboarding using Microsoft Intune
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This article acts as an example onboarding method.
 
