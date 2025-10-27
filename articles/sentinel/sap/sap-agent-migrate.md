@@ -58,7 +58,7 @@ The agentless data connector provides built-in feature parity with the container
 > [!IMPORTANT]
 > Review the authorizations of the Sentinel user and role on your SAP systems used with the containerized agent. The agentless data connector requires less but different authorizations compared to the containerized SAP agent. Refer to the [configuration guide](/azure/sentinel/sap/preparing-sap?pivots=connection-agentless#configure-the-microsoft-sentinel-role) for details and SAP role sample for minimum authorizations.
 
-All analytics rules and workbooks built on the underlying SAP sources mentioned on the [table reference](sap-solution-log-reference.md#logs-collected-by-the-agentless-data-connector-preview) remain functional without any changes. 
+All analytics rules and workbooks built on the underlying SAP sources mentioned on the [table reference](./sap-solution-log-reference.md#logs-collected-by-the-agentless-data-connector) remain functional without any changes.
 
 These sources include but are not limited to the following [logs](sap-solution-security-content.md#built-in-analytics-rules):
 
