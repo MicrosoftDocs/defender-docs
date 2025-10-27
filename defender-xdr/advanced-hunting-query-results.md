@@ -203,7 +203,7 @@ By default, a timeline appears above the advanced hunting results that displays 
 
 You can select whether or not the timeline is displayed by default in the **Chart preferences** settings.
 
-:::image type="content" source="/defender/media/advanced-hunting-chart-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-chart-preferences.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-chart-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-chart-preferences.png":::
 
 The timeline automatically adjusts its resolution based on the range of results.
 
@@ -215,7 +215,7 @@ Select any point on the timeline to filter both the results and the timeline to 
 
 The following screenshot shows the results of a query that returns 1,000 email events. The timeline is unfiltered, so it displays the full range of results with a timestamp for each day. Select a day or range of days to filter the results for that time period.
 
-:::image type="content" source="/defender/media/advanced-hunting-unfiltered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with all the results unfiltered." lightbox="/defender/media/advanced-hunting-unfiltered-results.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-unfiltered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with all the results unfiltered." lightbox="./media/advanced-hunting-query-results/advanced-hunting-unfiltered-results.png":::
 
 #### [Filtered timeline](#tab/filtered)
 
@@ -233,13 +233,13 @@ You can split the results in the timeline by any column that has at least two bu
 
 The following screenshot shows the results of a query that returns 1,000 email events. The timeline is ungrouped, so it displays all the results in a single line.
 
-:::image type="content" source="/defender/media/advanced-hunting-ungrouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results all together in one line." lightbox="/defender/media/advanced-hunting-ungrouped.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-ungrouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results all together in one line." lightbox="./media/advanced-hunting-query-results/advanced-hunting-ungrouped.png":::
 
 #### [Grouped timeline](#tab/grouped)
 
 The following screenshot shows the results grouped by last email action with a separate line for each action.
 
-:::image type="content" source="/defender/media/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="/defender/media/advanced-hunting-grouped.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="./media/advanced-hunting-query-results/advanced-hunting-grouped.png":::
 
 ---
 
