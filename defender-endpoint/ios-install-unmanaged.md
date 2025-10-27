@@ -21,9 +21,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management
 
 
 > [!NOTE]
