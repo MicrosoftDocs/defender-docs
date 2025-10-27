@@ -1,12 +1,13 @@
+---
 title: FAQ for the Microsoft Sentinel behaviors Layer
 description: This FAQ provides information about the AI technology used in Microsoft Sentinel, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.  
 ms.date: 10/27/2025  
 ms.custom:  
   - responsible-ai-faqs  
 ms.topic: contributor-guide  
-author: Guy Wild  
+author: guywi-ms  
 ms.author: guywild  
-ms.reviewer: [Reviewer]  
+ms.reviewer: mschechter  
 ---
 
 # FAQ for the Microsoft Sentinel behaviors Layer
