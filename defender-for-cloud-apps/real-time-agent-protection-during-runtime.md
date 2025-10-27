@@ -67,8 +67,8 @@ The following steps describe the Security Administrator’s required actions to 
       :::image type="content" source="media/protect-agents-real-time/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-agents-real-time/turn-on-real-time-agent-protection.png":::
 
     > [!IMPORTANT]
-    > - Completing the onboarding process requires collaboration with a Power Platform administrator. The onboarding instructions on the Power Platform side are speficied here: [Enable external threat detection and protection for Copilot Studio custom agents](/microsoft-copilot-studio/external-security-provider#step-2-configure-the-threat-detection-system).
-    > - The application ID that the Power Platform administrator needs to provide is this [Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application)
+    > - Completing the onboarding process requires collaboration with a Power Platform administrator. The onboarding instructions on the Power Platform side are specified here: [Enable external threat detection and protection for Copilot Studio custom agents](/microsoft-copilot-studio/external-security-provider#step-2-configure-the-threat-detection-system).
+    > - The application ID that the Power Platform administrator needs to provide is this [Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application).
     > - To allow the Power Platform administrator to complete the onboarding steps, share the URL provided in the Defender portal with them.
     
 1. No further action is needed on your part. Once the Power Platform administrator completes the onboarding steps on their side, you’ll see a green **Connected** status.
