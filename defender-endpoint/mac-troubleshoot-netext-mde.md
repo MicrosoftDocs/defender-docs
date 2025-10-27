@@ -23,8 +23,6 @@ appliesto:
 ---
 # Troubleshoot Network Extension (NetExt) issues in Defender for Endpoint on Mac 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 > [!NOTE]
 > You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device, and going to **Help** > **Send feedback**. Another option is to submit feedback via the Microsoft Defender portal. Go to [security.microsoft.com](https://security.microsoft.com), and selecting the **Give feedback** tab. 

@@ -19,9 +19,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Troubleshoot performance issues related to real-time protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Troubleshoot performance issues related to real-time protection
 
 If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Anti-malware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
 
