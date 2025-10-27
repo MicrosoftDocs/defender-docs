@@ -186,9 +186,9 @@ Follow the steps to complete installation of endpoint protection client from the
      > [!NOTE]
      > After the Endpoint Protection client install completes, the client automatically performs a definition update check. If this update check succeeds, you don't have to manually install the latest definition update package.
 
-**Example: install the client with an antimalware policy**
+    **Example: install the client with an antimalware policy**
 
-`scepinstall.exe /policy <full path>\<policy file>`
+    `scepinstall.exe /policy <full path>\<policy file>`
 
 
 ### Verify the Endpoint Protection client installation
