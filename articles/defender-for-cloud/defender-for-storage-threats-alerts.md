@@ -43,7 +43,7 @@ For a comparison between malware scanning and hash reputation analysis, see [Und
 ## What kind of security alerts does Microsoft Defender for Storage provide?
 
 > [!TIP]
-> For a comprehensive list of all Defender for Storage alerts, see the [alerts reference guide](alerts-azure-storage.md) page. This is useful for workload owners who want to know what threats can be detected and help SOC teams gain familiarity with detections before investigating them. Learn more about [Defender for Cloud security alerts and how to respond to them](managing-and-responding-alerts.yml).
+> For a comprehensive list of all Defender for Storage alerts, see the [alerts reference guide](alerts-azure-storage.md) page. This is useful for workload owners who want to know what threats can be detected and help SOC teams gain familiarity with detections before investigating them. Learn more about [Defender for Cloud security alerts and how to respond to them](manage-respond-alerts.md).
 
 Security alerts are triggered in the following scenarios:
 
