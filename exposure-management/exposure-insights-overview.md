@@ -96,7 +96,7 @@ Grayed out metrics aren't considered for score calculation.
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple source lists, including Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft Defender for Endpoint, Microsoft threat analytics, and other Microsoft workloads. With the integration of Defender for Cloud in the Defender portal, MIcrosoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
+Security Exposure Management ingests security recommendations from multiple source, including Expsosure Management, [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), and Microsoft Defender for Cloud. With the integration of Defender for Cloud in the Defender portal, Microsoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
 
 ### Unified Recommendations Experience
 
@@ -112,15 +112,6 @@ Security Exposure Management ingests security recommendations from multiple sour
 - Each recommendation provides remediation steps to fix detected compliance issues
 - Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics
 - Use the new filtering capabilities to focus on specific domains (Cloud, Devices, etc.) or issue types (misconfigurations, vulnerabilities, etc.)
-
-Security Exposure Management categorizes recommendations by compliance status, as follows:
-
-- **Compliant**: Indicates that the recommendation was implemented successfully.
-- **Not compliant**: Indicates that the recommendation hasn't been fixed.
-- **Mitigated by organization**: Displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
-- **Not available**: Means there isn't enough information to determine the compliance status.
-
-:::image type="content" source="./media//exposure-insights-overview/recommendation-ransomware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
 
 ### Secure Score integration
 
