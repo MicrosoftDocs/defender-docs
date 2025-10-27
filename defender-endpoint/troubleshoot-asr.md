@@ -124,10 +124,6 @@ If the attack surface reduction rule is blocking something that it shouldn't blo
 
 To add an exclusion, see [Customize attack surface reduction](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules).
 
-> [!IMPORTANT]
-> You can specify individual files and folders to be excluded, but you can't specify individual rules.
-> This means any files or folders that are excluded from all ASR rules.
-
 ## Report a false positive or false negative
 
 Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for network protection. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
