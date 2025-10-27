@@ -43,4 +43,4 @@ These comprehensive guides include:
 - [Remediate security recommendations](implement-security-recommendations.md)
 - [Manage attack paths](how-to-manage-attack-path.md)
 - [Drive remediation with governance rules](governance-rules.md)
-- [Automate remediation responses](workflow-automation.yml)
+- [Automate remediation responses](workflow-automations.md)
