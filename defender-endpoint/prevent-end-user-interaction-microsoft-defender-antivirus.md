@@ -22,14 +22,13 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 You can use Group Policy to prevent users on endpoints from seeing the Microsoft Defender Antivirus interface. You can also prevent them from pausing scans.
 
 ## Prerequisites
-
 
 ### Supported operating systems
 
