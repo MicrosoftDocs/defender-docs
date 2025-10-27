@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 10/22/2024
+ms.date: 10/23/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -210,6 +210,9 @@ On the **Target users** page, select who receives the simulation. Use the follow
     - Microsoft 365 Groups (static and dynamic)
     - Distribution groups (static only)
     - Mail-enabled Security group (static only)
+
+    > [!TIP]
+    > Currently, hidden membership groups aren't supported.
 
     The following search tools are available:
 
