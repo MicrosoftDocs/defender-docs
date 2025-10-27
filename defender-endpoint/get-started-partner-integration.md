@@ -22,8 +22,6 @@ appliesto:
 ---
 # Become a Microsoft Defender for Endpoint partner
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 To become a Defender for Endpoint solution partner, complete steps outlined in this article.
