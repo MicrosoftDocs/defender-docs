@@ -21,9 +21,6 @@ appliesto:
 ---
 # Increase compliance to the Microsoft Defender for Endpoint security baseline
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 Security baselines ensure that security features are configured according to guidance from both security experts and expert Windows system administrators. When deployed, the Defender for Endpoint security baseline sets Defender for Endpoint security controls to provide optimal protection.
