@@ -5,13 +5,15 @@ ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 05/05/2025
 ai-usage: ai-assisted
+ms.author: elkrieger
+author: Elazark
 ---
 
 # Alerts for AI services
 
 This article lists the security alerts you might get for AI services from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration. 
 
-[Learn how to respond to these alerts](managing-and-responding-alerts.yml).
+[Learn how to respond to these alerts](manage-respond-alerts.md).
 
 [Learn how to export alerts](continuous-export.md).
 
@@ -170,7 +172,7 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
-### (Preview) **Anomalous tool invocation**
+### **Anomalous tool invocation**
 
 (AI.Azure_AnomalousToolInvocation)
 
@@ -186,5 +188,5 @@ This article lists the security alerts you might get for AI services from Micros
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)

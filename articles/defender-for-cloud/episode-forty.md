@@ -2,12 +2,12 @@
 title: Live from Microsoft Ignite 2023
 description: Learn about the Defender for Cloud innovations released at Microsoft Ignite 2023.
 ms.topic: reference
-ms.date: 12/20/2023
+ms.date: 10/05/2025
 ---
 
 # Live from Microsoft Ignite 2023
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Microsoft MVPs Alan Armstrong and Morten Waltorp Knudsen joined Yuri Diogenes live from the expo hall at Microsoft Ignite 2023 to talk about their experience using Microsoft Defender for Cloud. Alan and Morten also shared their perspectives about Defender for Cloud announcements at Ignite, including use case scenarios for Defender CSPM features such as Attack Path, Cloud Security Explorer and Governance. Thomas Zou, Product Marketing Manager, also joined to share his insights about Defender for Cloud innovations that were released at Microsoft Ignite 2023.
+**Episode description**: In this episode of Defender for Cloud in the Field, Microsoft MVPs Alan Armstrong and Morten Waltorp Knudsen join Yuri Diogenes live from the expo hall at Microsoft Ignite 2023 to talk about their experience using Microsoft Defender for Cloud. Alan and Morten also share their perspectives about Defender for Cloud announcements at Ignite, including use case scenarios for Defender CSPM features such as Attack Path, Cloud Security Explorer, and Governance. Thomas Zou, Product Marketing Manager, also joins to share his insights about Defender for Cloud innovations that were released at Microsoft Ignite 2023.
 
 > [!VIDEO https://aka.ms/docs/player?id=91f8f5a2-5467-47fc-b9a1-eb0aa1f153ff]
 

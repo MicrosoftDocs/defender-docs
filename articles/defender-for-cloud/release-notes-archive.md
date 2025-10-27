@@ -880,7 +880,7 @@ Defender for Cloud alert [integration](other-threat-protections.md#display-azure
 
 August 1, 2024
 
-You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
+You can now enable Microsoft Defender for SQL servers on machines at scale on government clouds. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
 
 Learn how to [enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
@@ -1362,7 +1362,7 @@ Check out the [full list of supported compliance standards](concept-regulatory-c
 
 We're continuously working on adding and updating new standards for Azure, AWS, and GCP environments.
 
-Learn how to [assign a security standard](update-regulatory-compliance-packages.yml).
+Learn how to [assign a security standard](assign-regulatory-compliance-standards.md).
 
 ### Update: Defender for open-source relational databases updates
 
@@ -1440,7 +1440,7 @@ February 28, 2024
 
 The updated experience for managing security policies, initially released in Preview for Azure, is expanding its support to cross cloud (AWS and GCP) environments. This Preview release includes:
 
-- Managing [regulatory compliance standards](update-regulatory-compliance-packages.yml) in Defender for Cloud across Azure, AWS, and GCP environments.
+- Managing [regulatory compliance standards](assign-regulatory-compliance-standards.md) in Defender for Cloud across Azure, AWS, and GCP environments.
 - Same cross cloud interface experience for creating and managing [Microsoft Cloud Security Benchmark(MCSB) custom recommendations](manage-mcsb.md).
 - The updated experience is applied to AWS and GCP for [creating custom recommendations with a KQL query](create-custom-recommendations.md).
 
@@ -2602,7 +2602,7 @@ We recommend updating your custom scripts, workflows, and governance rules to co
 Legacy PCI DSS v3.2.1 and legacy SOC TSP have been fully deprecated in the Defender for Cloud compliance dashboard, and replaced by [SOC 2  Type 2](/azure/compliance/offerings/offering-soc-2) initiative and [PCI DSS v4](/azure/compliance/offerings/offering-pci-dss) initiative-based compliance standards.
 We have fully deprecated support of [PCI DSS](/azure/compliance/offerings/offering-pci-dss) standard/initiative in Microsoft Azure operated by 21Vianet.
 
-Learn how to [customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+Learn how to [customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 ### Defender for DevOps includes Azure DevOps scan findings
 
@@ -2941,7 +2941,7 @@ We're updating these standards for customers in Azure Government and Microsoft A
 - [SOC 2 Type 2](/azure/compliance/offerings/offering-soc-2)
 - [ISO 27001:2013](/azure/compliance/offerings/offering-iso-27001)
 
-Learn how to [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+Learn how to [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 ### New preview recommendation for Azure SQL Servers
 
@@ -2991,7 +2991,7 @@ Learn more about [viewing vulnerabilities for running images](defender-for-conta
 
 ### Announcing support for the AWS CIS 1.5.0 compliance standard
 
-Defender for Cloud now supports the CIS Amazon Web Services Foundations v1.5.0 compliance standard. The standard can be [added to your Regulatory Compliance dashboard](update-regulatory-compliance-packages.yml), and builds on MDC's existing offerings for multicloud recommendations and standards.
+Defender for Cloud now supports the CIS Amazon Web Services Foundations v1.5.0 compliance standard. The standard can be [added to your Regulatory Compliance dashboard](assign-regulatory-compliance-standards.md), and builds on MDC's existing offerings for multicloud recommendations and standards.
 
 This new standard includes both existing and new recommendations that extend Defender for Cloud's coverage to new AWS services and resources.
 
@@ -3732,7 +3732,7 @@ All of the alerts for Microsoft Defender for Storage will continue to include th
 
 ### See the activity logs that relate to a security alert
 
-As part of the actions you can take to [evaluate a security alert](managing-and-responding-alerts.yml#respond-to-a-security-alert), you can find the related platform logs in **Inspect resource context** to gain context about the affected resource.
+As part of the actions you can take to [evaluate a security alert](manage-respond-alerts.md#respond-to-a-security-alert), you can find the related platform logs in **Inspect resource context** to gain context about the affected resource.
 Microsoft Defender for Cloud identifies platform logs that are within one day of the alert.
 
 The platform logs can help you evaluate the security threat and identify steps that you can take to mitigate the identified risk.
@@ -4134,7 +4134,7 @@ The initial access alerts now have improved accuracy and more data to support in
 
 Threat actors use various techniques in the initial access to gain a foothold within a network. Two of the [Microsoft Defender for Storage](defender-for-storage-introduction.md) alerts that detect behavioral anomalies in this stage now have improved detection logic and additional data to support investigations.
 
-If you've [configured automations](workflow-automation.yml) or defined [alert suppression rules](alerts-suppression-rules.md) for these alerts in the past, update them in accordance with these changes.
+If you've [configured automations](workflow-automations.md) or defined [alert suppression rules](alerts-suppression-rules.md) for these alerts in the past, update them in accordance with these changes.
 
 #### Detecting access from a Tor exit node
 
@@ -4242,7 +4242,7 @@ Security recommendations in Defender for Cloud are supported by the Azure Securi
 
 [Azure Security Benchmark](/security/benchmark/azure/introduction) is the Microsoft-authored, Azure-specific set of guidelines for security and compliance best practices based on common compliance frameworks. This widely respected benchmark builds on the controls from the [Center for Internet Security (CIS)](https://www.cisecurity.org/benchmark/azure/) and the [National Institute of Standards and Technology (NIST)](https://www.nist.gov/) with a focus on cloud-centric security.
 
-From Ignite 2021, Azure Security Benchmark **v3** is available in [Defender for Cloud's regulatory compliance dashboard](update-regulatory-compliance-packages.yml) and enabled as the new default initiative for all Azure subscriptions protected with Microsoft
+From Ignite 2021, Azure Security Benchmark **v3** is available in [Defender for Cloud's regulatory compliance dashboard](assign-regulatory-compliance-standards.md) and enabled as the new default initiative for all Azure subscriptions protected with Microsoft
 Defender for Cloud.
 
 Enhancements for v3 include:
@@ -4733,7 +4733,7 @@ In February 2021, we added a **preview** third data type to the trigger options 
 
 With this update, this trigger option is released for general availability (GA).
 
-Learn how to use the workflow automation tools in [Automate responses to Security Center triggers](workflow-automation.yml).
+Learn how to use the workflow automation tools in [Automate responses to Security Center triggers](workflow-automations.md).
 
 :::image type="content" source="media/release-notes/regulatory-compliance-triggers-workflow-automation.png" alt-text="Using changes to regulatory compliance assessments to trigger a workflow automation." lightbox="media/release-notes/regulatory-compliance-triggers-workflow-automation.png":::
 
@@ -5097,13 +5097,13 @@ We've added three standards for use with Azure Security Center. Using the regula
 - [CMMC Level 3](/azure/governance/policy/samples/cmmc-l3)
 - [New Zealand ISM Restricted](/azure/governance/policy/samples/new-zealand-ism)
 
-You can assign these to your subscriptions as described in [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+You can assign these to your subscriptions as described in [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 :::image type="content" source="media/release-notes/additional-regulatory-compliance-standards.png" alt-text="Three standards added for use with Azure Security Center's regulatory compliance dashboard." lightbox="media/release-notes/additional-regulatory-compliance-standards.png":::
 
 Learn more in:
 
-- [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml)
+- [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md)
 - [Tutorial: Improve your regulatory compliance](regulatory-compliance-dashboard.md)
 - [FAQ - Regulatory compliance dashboard](faq-regulatory-compliance.yml)
 
@@ -5250,7 +5250,7 @@ From the regulatory compliance dashboard's toolbar, you can now download Azure a
 
 You can select the tab for the relevant reports types (PCI, SOC, ISO, and others) and use filters to find the specific reports you need.
 
-Learn more about [Managing the standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+Learn more about [Managing the standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 :::image type="content" source="media/release-notes/audit-reports-list-regulatory-compliance-dashboard.png" alt-text="Filtering the list of available Azure Audit reports.":::
 
@@ -5283,7 +5283,7 @@ There are two updates to the features of these policies:
 
 Get started with [workflow automation templates](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation).
 
-Learn more about how to [Automate responses to Security Center triggers](workflow-automation.yml).
+Learn more about how to [Automate responses to Security Center triggers](workflow-automations.md).
 
 ### Two legacy recommendations no longer write data directly to Azure activity log
 
@@ -5383,7 +5383,7 @@ For a full list of all security controls, together with their scores and a list 
 
 We've added a third data type to the trigger options for your workflow automations: changes to regulatory compliance assessments.
 
-Learn how to use the workflow automation tools in [Automate responses to Security Center triggers](workflow-automation.yml).
+Learn how to use the workflow automation tools in [Automate responses to Security Center triggers](workflow-automations.md).
 
 :::image type="content" source="media/release-notes/regulatory-compliance-triggers-workflow-automation.png" alt-text="Using changes to regulatory compliance assessments to trigger a workflow automation." lightbox="media/release-notes/regulatory-compliance-triggers-workflow-automation.png":::
 
@@ -5442,7 +5442,7 @@ Existing recommendations are unaffected and as the benchmark grows, changes will
 To learn more, see the following pages:
 
 - [Learn more about Azure Security Benchmark](/security/benchmark/azure/introduction)
-- [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml)
+- [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md)
 
 ### Vulnerability assessment for on-premises and multicloud machines is released for general availability (GA)
 
@@ -5807,7 +5807,7 @@ Related links:
 
 The NIST SP 800-171 R2 standard is now available as a built-in initiative for use with Azure Security Center's regulatory compliance dashboard. The mappings for the controls are described in [Details of the NIST SP 800-171 R2 Regulatory Compliance built-in initiative](/azure/governance/policy/samples/nist-sp-800-171-r2).
 
-To apply the standard to your subscriptions and continuously monitor your compliance status, use the instructions in [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+To apply the standard to your subscriptions and continuously monitor your compliance status, use the instructions in [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 :::image type="content" source="media/release-notes/nist-sp-800-171-r2-standard.png" alt-text="The NIST SP 800 171 R2 standard in Security Center's regulatory compliance dashboard":::
 
@@ -5923,7 +5923,7 @@ Security Center's regulatory compliance dashboard provides insights into your co
 
 The dashboard includes a default set of regulatory standards. If any of the supplied standards isn't relevant to your organization, it's now a simple process to remove them from the UI for a subscription. Standards can be removed only at the *subscription* level; not the management group scope.
 
-Learn more in [Remove a standard from your dashboard](update-regulatory-compliance-packages.yml).
+Learn more in [Remove a standard from your dashboard](assign-regulatory-compliance-standards.md).
 
 ### Microsoft.Security/securityStatuses table removed from Azure Resource Graph (ARG)
 
@@ -6458,7 +6458,7 @@ Learn more about [extensions for Azure Arc machines](/azure/azure-arc/servers/ma
 
 Automating your organization's monitoring and incident response processes can greatly improve the time it takes to investigate and mitigate security incidents.
 
-To deploy your automation configurations across your organization, use these built-in 'DeployIfdNotExist' Azure policies to create and configure [continuous export](continuous-export.md) and [workflow automation](workflow-automation.yml) procedures:
+To deploy your automation configurations across your organization, use these built-in 'DeployIfdNotExist' Azure policies to create and configure [continuous export](continuous-export.md) and [workflow automation](workflow-automations.md) procedures:
 
 The policy definitions can be found in Azure Policy:
 
@@ -6471,7 +6471,7 @@ The policy definitions can be found in Azure Policy:
 
 Get started with [workflow automation templates](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation).
 
-Learn more about using the two export policies in [Configure workflow automation at scale using the supplied policies](workflow-automation.yml) and [Set up a continuous export](continuous-export.md).
+Learn more about using the two export policies in [Configure workflow automation at scale using the supplied policies](workflow-automations.md) and [Set up a continuous export](continuous-export.md).
 
 ### New recommendation for using NSGs to protect non-internet-facing virtual machines
 
@@ -6644,7 +6644,7 @@ Now, you can add standards such as:
 
 In addition, we've recently added the [Azure Security Benchmark](/security/benchmark/azure/introduction), the Microsoft-authored Azure-specific guidelines for security and compliance best practices based on common compliance frameworks. Additional standards will be supported in the dashboard as they become available.
 
-Learn more about [customizing the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+Learn more about [customizing the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 ### Identity recommendations now included in Azure Security Center free tier
 
@@ -6674,7 +6674,7 @@ The workflow automation feature of Azure Security Center is now generally availa
 
 Every security program includes multiple workflows for incident response. These processes might include notifying relevant stakeholders, launching a change management process, and applying specific remediation steps. Security experts recommend that you automate as many steps of those procedures as you can. Automation reduces overhead and can improve your security by ensuring the process steps are done quickly, consistently, and according to your predefined requirements.
 
-For more information about the automatic and manual Security Center capabilities for running your workflows, see [workflow automation](workflow-automation.yml).
+For more information about the automatic and manual Security Center capabilities for running your workflows, see [workflow automation](workflow-automations.md).
 
 Learn more about [creating Logic Apps](/azure/logic-apps/logic-apps-overview).
 
@@ -6781,7 +6781,7 @@ Organizations with centrally managed security and IT/operations implement intern
 
 Today we're introducing a new capability in Security Center that allows customers to create automation configurations leveraging Azure Logic Apps and to create policies that will automatically trigger them based on specific ASC findings such as Recommendations or Alerts. Azure Logic App can be configured to do any custom action supported by the vast community of Logic App connectors, or use one of the templates provided by Security Center such as sending an email or opening a ServiceNow&trade; ticket.
 
-For more information about the automatic and manual Security Center capabilities for running your workflows, see [workflow automation](workflow-automation.yml).
+For more information about the automatic and manual Security Center capabilities for running your workflows, see [workflow automation](workflow-automations.md).
 
 To learn about creating Logic Apps, see [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
 
@@ -6809,7 +6809,7 @@ The Regulatory Compliance dashboard provides insights into your compliance postu
 
 The regulatory compliance dashboard has thus far supported four built-in standards:  Azure CIS 1.1.0, PCI-DSS, ISO 27001, and SOC-TSP. We're now announcing the public preview release of additional supported standards: NIST SP 800-53 R4, SWIFT CSP CSCF v2020, Canada Federal PBMM and UK Official together with UK NHS. We're also releasing an updated version of Azure CIS 1.1.0, covering more controls from the standard and enhancing extensibility.
 
-[Learn more about customizing the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+[Learn more about customizing the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 ### Threat Protection for Azure Kubernetes Service (preview)
 

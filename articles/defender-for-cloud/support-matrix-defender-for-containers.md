@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: dcurwin
 ms.author: dacurwin
-ms.date: 04/09/2025
+ms.date: 09/11/2025
 ms.custom: references_regions
 ---
 
@@ -12,6 +12,8 @@ ms.custom: references_regions
 
 > [!CAUTION]
 > This article references CentOS, a Linux distribution that is End Of Service as of June 30, 2024. Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 This article summarizes support information for Container capabilities in Microsoft Defender for Cloud.
 
@@ -84,7 +86,7 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported**<br> * [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) with [Kubernetes RBAC](/azure/aks/concepts-identity#kubernetes-rbac) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1azrt)</sup> <sup>[2](#footnote2azrt)</sup><br> * [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Kubernetes](https://kubernetes.io/docs/home/)<br> * [AKS Engine](https://github.com/Azure/aks-engine)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br /> |
+| Kubernetes distributions and configurations | **Supported**<br> * [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) with [Kubernetes RBAC](/azure/aks/concepts-identity#kubernetes-rbac) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1azrt)</sup> <sup>[2](#footnote2azrt)</sup><br> * [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Kubernetes](https://kubernetes.io/docs/home/)<br> * [AKS Engine](https://github.com/Azure/aks-engine)|
 
 <sup><a name="footnote1azrt"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested on Azure.
 
@@ -158,7 +160,7 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br> * [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br> * [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>|
 
 <sup><a name="footnote1arc"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters have been tested.
 

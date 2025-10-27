@@ -2,12 +2,12 @@
 title: Security alert correlation | Defender for Cloud in the Field 
 description: Security alert correlation
 ms.topic: reference
-ms.date: 08/08/2023
+ms.date: 10/05/2025
 ---
 
 # Security alert correlation
 
-**Episode description**:  In this episode of Defender for Cloud in the Field, Daniel Davrayev joins Yuri Diogenes to talk about security alert correlation capability in Defender for Cloud. Daniel talks about the importance of have a built-in capability to correlate alerts in Defender for Cloud, how this capability saves time for SOC analysts to investigate alert and respond to potential threats. Daniel also explains how data correlation works and demonstrate how this correlation appears in Defender for Cloud dashboard as a security incident.
+**Episode description**: In this episode of Defender for Cloud in the Field, Daniel Davrayev joins Yuri Diogenes to talk about the security alert correlation capability in Defender for Cloud. Daniel talks about the importance of having a built-in capability to correlate alerts in Defender for Cloud, and how this capability saves time for SOC analysts to investigate alerts and respond to potential threats. Daniel also explains how data correlation works and demonstrates how this correlation appears in the Defender for Cloud dashboard as a security incident.
 
 > [!VIDEO https://aka.ms/docs/player?id=6573561d-70a6-4b4c-ad16-9efe747c9a61]
 
@@ -15,7 +15,7 @@ ms.date: 08/08/2023
 - [02:15](/shows/mdc-in-the-field/security-alert-correlation#time=02m15s) - How Defender for Cloud handles alert prioritization
 - [04:29](/shows/mdc-in-the-field/security-alert-correlation#time=04m29s) - How Defender for Cloud can help with alert correlation
 - [07:05](/shows/mdc-in-the-field/security-alert-correlation#time=07m05s) - How Defender for Cloud creates alerts correlation
-- [09:06](/shows/mdc-in-the-field/security-alert-correlation#time=09m06s) - Does alert correlation works across different Defender for Cloud plans?
+- [09:06](/shows/mdc-in-the-field/security-alert-correlation#time=09m06s) - Does alert correlation work across different Defender for Cloud plans?
 - [11:42](/shows/mdc-in-the-field/security-alert-correlation#time=11m42s) - Demonstration
 
 ## Recommended resources

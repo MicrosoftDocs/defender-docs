@@ -31,7 +31,7 @@ In this tutorial you'll learn how to:
 
 To step through the features covered in this tutorial:
 
-- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/) before you begin.
+- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - [Microsoft Defender for Cloud enabled on your subscription](connect-azure-subscription.md).
 
@@ -90,7 +90,7 @@ To ensure your resource is hardened according to the policies applied to your su
 
 1. From the right pane, select an alert.
 
-1. Follow the instructions in [Respond to security alerts](managing-and-responding-alerts.yml).
+1. Follow the instructions in [Respond to security alerts](manage-respond-alerts.md).
 
 ## Next steps
 
@@ -98,5 +98,5 @@ In this tutorial, you learned about using Defender for Cloud’s resource health
 
 To learn more, see these related pages:
 
-- [Respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert)
+- [Respond to security alerts](manage-respond-alerts.md#respond-to-a-security-alert)
 - [Review your security recommendations](review-security-recommendations.md)

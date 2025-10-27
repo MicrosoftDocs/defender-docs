@@ -14,7 +14,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 > [!NOTE]
 > Some of the recently added alerts powered by Microsoft Defender Threat Intelligence and Microsoft Defender for Endpoint might be undocumented.
 
-[Learn how to respond to these alerts](managing-and-responding-alerts.yml).
+[Learn how to respond to these alerts](manage-respond-alerts.md).
 
 [Learn how to export alerts](continuous-export.md).
 
@@ -31,7 +31,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Suspicious spike in API traffic from a single IP address to an API endpoint**
 
@@ -41,7 +41,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Unusually large response payload transmitted between a single IP address and an API endpoint**
 
@@ -51,7 +51,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Unusually large request body transmitted between a single IP address and an API endpoint**
 
@@ -61,7 +61,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **(Preview) Suspicious spike in latency for traffic between a single IP address and an API endpoint**
 
@@ -71,7 +71,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **API requests spray from a single IP address to an unusually large number of distinct API endpoints**
 
@@ -81,7 +81,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Discovery
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Parameter enumeration on an API endpoint**
 
@@ -91,7 +91,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Distributed parameter enumeration on an API endpoint**
 
@@ -101,7 +101,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Parameter value(s) with anomalous data types in an API call**
 
@@ -111,7 +111,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Previously unseen parameter used in an API call**
 
@@ -121,7 +121,7 @@ This article lists the security alerts you might get for Defender for APIs from 
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Access from a Tor exit node to an API endpoint**
 
@@ -159,5 +159,5 @@ This article lists the security alerts you might get for Defender for APIs from 
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)

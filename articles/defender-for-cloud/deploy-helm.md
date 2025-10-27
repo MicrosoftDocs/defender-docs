@@ -41,6 +41,21 @@ Now you're ready to set up the Defender for Containers sensor with Helm.
 
 ## Step 2: Install the sensors Helm chart
 
+### For AKS Automatic Only
+For AKS Automatic you'll need to run the following:
+
+
+```bash
+# Update Azure CLI to the latest version 
+az upgrade 
+
+# If you don't have the AKS preview extension installed yet 
+az extension add --name aks-preview 
+
+# Update the AKS extension specifically 
+az extension update --name aks-preview
+```
+
 ### Installation prerequisites
 
 - Helm >= 3.8 (OCI support is GA)
@@ -189,7 +204,8 @@ Run the following command to update an existing Helm-based deployment:
 helm upgrade microsoft-defender-for-containers-sensor \
 oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --devel \
---reuse-values
+--reuse-values \
+--namespace mdc
 ```
 
 
