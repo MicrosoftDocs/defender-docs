@@ -31,7 +31,7 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 -   To set up just-in-time access on your AWS VMs, you need to [connect your AWS account](quickstart-onboard-aws.md) to Microsoft Defender for Cloud.
 
--   To JIT policy, the policy name, together with the targeted VM name, must not exceed a total of 56 characters.
+-   To create a JIT policy, the policy name, together with the targeted VM name, must not exceed a total of 56 characters.
 
 -   You need **Reader** and **SecurityReader** permissions, or a custom role can view the JIT status and parameters.
 
@@ -164,7 +164,7 @@ You can enable JIT on a VM from the Azure virtual machines pages of the Azure po
 
     1.  From the **Configured** tab, right-click on the VM to which you want to add a port, and select **Edit**.
         
-        ![Editing a JIT VM access configuration in Microsoft Defender for Cloud.](./media/just-in-time-access-usage/jit-policy-edit-security-center.png)
+        :::image type="content" source="./media/just-in-time-access-usage/jit-policy-edit-security-center.png" alt-text="Screenshot of editing just-in-time VM access settings, showing allowed ports and access duration options.":::
 
     1.  Under **JIT VM access configuration**, you can either edit the existing settings of an already protected port or add a new custom port.
 
@@ -174,7 +174,7 @@ You can enable JIT on a VM from the Azure virtual machines pages of the Azure po
 
 When a VM has a JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
 
-![Screenshot showing jit just-in-time request.](./media/just-in-time-access-usage/jit-request-vm.png)
+:::image type="content" source="./media/just-in-time-access-usage/jit-request-vm.png" alt-text="Screenshot of a just-in-time VM access request showing selected ports and access duration.":::
 
 To request access from Azure virtual machines:
 
@@ -291,12 +291,12 @@ You can gain insights into VM activities using log search. To view the logs:
 
 1.  Select **Activity Log** from the menu.
 
-    ![Select just-in-time JIT activity log.](./media/just-in-time-access-usage/jit-select-activity-log.png)
+    :::image type="content" source="./media/just-in-time-access-usage/jit-select-activity-log.png" alt-text="Screenshot of selecting the just-in-time VM access activity log in Defender for Cloud.":::
 
     The activity log provides a filtered view of previous operations for that VM along with time, date, and subscription.
 
 1.  To download the log information, select **Download as CSV**.
 
-## Next Step
+## Next step
 
 -   [Understand just-in-time VM access management](just-in-time-access-overview.md)
