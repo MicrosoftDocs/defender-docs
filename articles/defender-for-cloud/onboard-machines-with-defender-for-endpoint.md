@@ -12,12 +12,6 @@ ms.author: dacurwin
 
 Use Microsoft Defender for Cloud to onboard your on-premises or multicloud servers through Microsoft Defender for Endpoint. This setup protects non-Azure machines without deploying extra agents, and shows all your servers, Azure and non-Azure, in one unified security view.
 
-In this article, you’ll learn how to:
-
-- Enable direct onboarding for your tenant
-- Deploy the Defender for Endpoint agent on servers
-- Review limitations and supported plans
-
 > [!NOTE]
 > To connect your non-Azure machines via Azure Arc, see [Connect your non-Azure machines to Microsoft Defender for Cloud with Azure Arc](quickstart-onboard-machines.md).
 
@@ -36,13 +30,16 @@ Defender for Cloud uses the selected subscription for licensing, billing, alerts
 
 ## Availability
 
-| Aspect | Details |
-| ------- | -------- |
-| **Release state** | GA |
-| **Supported operating systems** | All [Windows](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions) and [Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) **Server** versions supported by Defender for Endpoint |
-| **Required roles and permissions** | **Subscription Owner** on the chosen subscription, and **Microsoft Entra Security Administrator** or higher on the tenant |
-| **Environments** | On-premises servers <br/> Multicloud VMs – limited support (see [limitations](#current-limitations)) |
-| **Supported plans** | Defender for Servers Plan 1 <br/> Defender for Servers Plan 2 – limited features (see [limitations](#current-limitations)) |
+This capability is **generally available (GA)** and supports on-premises servers and multicloud VMs.
+
+Supported operating systems include all Windows Server and Linux server versions supported by Defender for Endpoint. For OS-specific requirements, see:
+
+- [Supported Windows Server versions](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions)
+- [Supported Linux server versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements)
+
+This capability works with both:
+- **Defender for Servers Plan 1**
+- **Defender for Servers Plan 2** (with some limitations — see [Current limitations](#current-limitations))
 
 ## Enable direct onboarding
 
@@ -50,7 +47,9 @@ When you enable direct onboarding, Defender for Cloud applies the setting to bot
 
 Before you begin:
 
-- Confirm you have the [required permissions](#availability)
+- Confirm you have the required permissions:
+    - **Subscription Owner** permissions on the subscription you select for onboarding.
+    -  **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
 - If your tenant already has a Defender for Endpoint for Servers license, [indicate it](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-) in Defender for Cloud
 - Review the [current limitations](#current-limitations)
 
