@@ -22,8 +22,6 @@ appliesto:
 ---
 # Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Security Management for Microsoft Defender for Endpoint is a capability for devices that aren't managed by Microsoft Intune to receive security configurations.
 

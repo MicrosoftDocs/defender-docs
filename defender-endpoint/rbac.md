@@ -22,11 +22,6 @@ appliesto:
 > [!NOTE]
 > If you are running the Microsoft Defender XDR preview program, you can now experience the new Microsoft Defender 365 Unified role-based access control (RBAC) model. For more information, see [Microsoft Defender 365 Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 > [!IMPORTANT]
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
 > Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
