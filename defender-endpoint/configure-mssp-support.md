@@ -21,10 +21,6 @@ appliesto:
 ---
 # Configure managed security service provider integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 ## Managed security service provider partnership opportunities
 

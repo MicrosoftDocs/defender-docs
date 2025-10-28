@@ -22,19 +22,12 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Enable controlled folder access
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Enable controlled folder access
 
 
 [Controlled folder access](controlled-folders.md) helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is included with Windows 10, Windows 11, and Windows Server 2019. Controlled folder access is also included as part of the [modern, unified solution for Windows Server 2012R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
-## Prerequisites
-
-
-### Supported operating systems
-
-- Windows
 
 You can enable controlled folder access by using any of these methods:
 
@@ -45,6 +38,13 @@ You can enable controlled folder access by using any of these methods:
   - [Group Policy](#group-policy)
   - [PowerShell](#powershell)
   - [See also](#see-also)
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 
 1. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
 

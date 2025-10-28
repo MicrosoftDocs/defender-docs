@@ -22,10 +22,6 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Android.
 

@@ -6,10 +6,9 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security
@@ -46,7 +45,7 @@ Users with access to Security Copilot have access to this capability in advanced
 
 ## Try your first request
 
-1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender XDR. The Security Copilot side pane for advanced hunting appears at the right hand side.
+1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
     :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane-big.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
 

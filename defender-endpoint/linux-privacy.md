@@ -23,10 +23,6 @@ appliesto:
 ---
 # Privacy for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Microsoft is committed to provide you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
 

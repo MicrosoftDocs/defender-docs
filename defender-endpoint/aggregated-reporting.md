@@ -19,7 +19,6 @@ appliesto:
 
 # Aggregated reporting in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 Aggregated reporting addresses constraints on event reporting in Microsoft Defender for Endpoint. Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.
 

@@ -23,10 +23,6 @@ appliesto:
 ---
 # View and organize the Microsoft Defender for Endpoint Incidents queue
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 The **Incidents queue** shows a collection of incidents that were flagged from devices in your network. It helps you sort through incidents to prioritize and create an informed cybersecurity response decision.
 
