@@ -36,7 +36,7 @@ The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enh
 
 ## September 2025
 
-### Unlock additional security value in the unified agent (Preview)
+### Unlock additional security value in the unified agent
 Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
