@@ -22,11 +22,9 @@ In this tutorial, you'll learn how to:
 
 ## Prerequisites
 
-Before you begin, make sure that:
-
-You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
-- [Microsoft Defender for Cloud is enabled](connect-azure-subscription.md) on your subscription.  
-- You’re signed in with an account with one of these permissions:
+- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+- [Enable Microsoft Defender for Cloud](connect-azure-subscription.md) on your subscription.  
+- Make sure you’re signed in with an account with one of these permissions:
   - To apply security recommendations: Resource Group Contributor, Resource Group Owner, Subscription Contributor, or Subscription Owner.  
   - To dismiss alerts: Security Admin, Subscription Contributor, or Subscription Owner.
 
