@@ -11,37 +11,35 @@ Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other 
 
 App governance provides visibility over OAuth apps registered on Microsoft Entra ID, regardless of whether they access Graph API or other APIs. Additionally, you can monitor these apps and automatically take action if they're noncompliant or exhibit suspicious behavior.
 
-
 You can better protect your organization with the new functionalities and enhancements in the following ways:
 
 - Get improved coverage of OAuth apps with powerful app governance insights and monitoring capabilities.
 - Automatically get alerted for threats or anomalies from apps using other APIs.
 - Get an enhanced experience for investigation of apps with more filters, columns, and properties.
 
-## Identify apps that use other APIs
+## View Other APIs used by Microsoft 365 apps
 
-App governance lists all Microsoft Entra ID OAuth apps on the [Apps governance](https://security.microsoft.com/cloudapps/app-governance?viewid=allApps) page. 
+To view Microsoft 365 apps that access APIs other than Microsoft Graph, Office 365 Exchange Online, Office 365 SharePoint Online, or Windows Azure Active Directory:
 
-To view Microsoft 365 apps that access APIs other than Microsoft Graph, Exchange Online, SharePoint Online, or Windows Azure Active Directory, select the **Microsoft 365** tab, open the **API access** filter, choose **Other APIs**, and then select **Apply**.
+1. Go to **Settings** > **Cloud apps** > **[Apps governance](https://security.microsoft.com/cloudapps/app-governance?viewid=allApps)** in the [Microsoft Defender portal](https://security.microsoft.com).
+1. Select the **Microsoft 365** tab
+1. Open the **API access** filter
+1. Choose **Other APIs**
+1. Select **Apply**.
 
-The Other APIs filter shows apps that have at least one API permission outside those four standard Microsoft APIs.
-
-For example:
 
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png" alt-text="Screenshot that shows the list of APIs plus the option to view other APIs." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png":::
 
 
-## View Other APIs used by Microsoft 365 apps
+## View APIs used by an app
 
 To view the APIs used by an app, go to the **Permissions** tab on an app details pane. You can find the names of the consented permissions and the APIs accessed by the app.
 
-For example:
 
-Insert : Screenshot of the Permissions tab on an app details pane. 
 
 ## Track API access
 
-With visibility over apps that access other APIs, you can use the policy template to find and monitor such apps.
+With visibility over apps that access other APIs, you can now use the New app with non-Graph API permissions policy template or the Non-graph API permission policy condition to find and monitor such apps.
 
 For example:
 
