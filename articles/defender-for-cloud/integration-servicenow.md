@@ -48,7 +48,7 @@ By centralizing cloud configuration findings in ServiceNow, your organization ca
 
 ### Requirements
 
-To set up this this integration, make sure you:
+To set up this integration, make sure you:
 
 **In Azure:**
 - Have an active Azure subscription with Defender for Cloud onboarded.
