@@ -104,7 +104,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Manage and respond to security alerts
-            url: managing-and-responding-alerts.yml
+            url: manage-respond-alerts.md
           - text: Security alerts and incidents
             url: alerts-overview.md
           - text: Review security recommendations
