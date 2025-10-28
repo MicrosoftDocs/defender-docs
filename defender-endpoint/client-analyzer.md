@@ -1,11 +1,10 @@
 ---
-title: Defender for Endpoint with Defender Antivirus in passive mode
+title: Diagnose Defender for Endpoint issues with Client Analyzer
 ms.topic: conceptual
-description: Understand how Defender Antivirus in passive mode works and when to use it.
+description: Understand how to Diagnose Defender for Endpoint issues with Client Analyzer so that you can send the right data to Microsoft support for troubleshooting.
 ms.service: defender-endpoint
 author: KesemSharabi
 ms.author: kesharab
-ms.localizationpriority: high
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -13,7 +12,7 @@ ms.collection:
 - mde-ngp
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/28/2025
 ---
 
 # Diagnose Defender for Endpoint issues with Client Analyzer
@@ -24,19 +23,13 @@ This article lists different types of issues and how to collect data for them us
 
 ## Categorize your issue
 
-AAA
+Use the categories listed below to identify the type of issue you are experiencing. Run the Client Analyzer tool with the appropriate flags when collecting data.
 
-### Non reproducible issues
+### Issues that can't be reproduced
 
 Non reproducible issues issues are issues that occur sporadically or are triggered by automated processes and cannot be reproduced. This includes problems related to scheduled tasks such as automatic updates and scans, and attack surface reduction (ARS) rules triggered unpredictably.
 
-To collect data for non reproducible issues, run Client Analyzer without any arguments. When no arguments are passed, the tool collects general system and Defender information for analyzing intermittent or scheduled task-related issues.
-
-```powershell
-
-MDEClientAnalyzer.cmd 
-
-```
+To collect data for non reproducible issues, [run Client Analyzer](#run-the-client-analyzer-tool) without any arguments. When no arguments are passed, the tool collects general system and Defender information for analyzing intermittent or scheduled task-related issues.
 
 ### Issues that can be reproduced
 
@@ -46,13 +39,38 @@ Issues that can be reproduced, are problems that can be consistently reproduced 
 
 * **General issues** - For example, problems with on-demand scans, manual updates, sense portal and alert issues, ASR issues that can be triggered on command, and app compatibility problems.
 
-Follow the steps in this section to collect data for issues that can be reproduced. If you have scenarios the involve both working and non-working conditions, collect separate log packages for each scenario and clearly label each collection. The comparison helps identify the differences that cause the performance issue.
+To collect data for issues that can be reproduced, [run Client Analyzer](#run-the-client-analyzer-tool) with the `-a` and `-v` [flags](#client-analyzer-flags).
 
-1. Start log collection with performance and verbose tracing by running:
+### Performance issues that cannot be reproduced
+
+Performance problems that cannot be reproduced include gradual performance degradation over extended periods, such as slow system performance that develops over time, intermittent high resource usage, and unpredictable performance issues that don't have clear triggers.
+
+### System hang issues
+
+System hang issues include unresponsive systems and freezes. These issues may require advanced debugging techniques including memory dumps and crash analysis.
+
+To prepare a machine for a full memory dump run the command below. This command requires a system reboot.
+
+```powershell
+
+MDEClientAnalyzer.cmd -z
+
+```
+
+### Compatibility issues
+
+To Compatibility issues with other applications or security solutions
+
+
+## Run the Client Analyzer tool
+
+Follow the steps in this section to collect data for the issues you've identified. Use the appropriate flags when needed. If you have scenarios the involve both working and non-working conditions, collect separate log packages for each scenario and clearly label each collection. The comparison helps identify the differences that cause the performance issue.
+
+1. Start log collection running:
 
     ```powershell
     
-    MDEClientAnalyzer.cmd -a -v 
+    MDEClientAnalyzer.cmd
     
     ```
 
@@ -66,13 +84,12 @@ Follow the steps in this section to collect data for issues that can be reproduc
 
     * Press `q` to manually stop the collection.
 
-### Performance issues that cannot be reproduced
+### Client Analyzer flags
 
-Performance problems that cannot be reproduced include gradual performance degradation over extended periods, such as slow system performance that develops over time, intermittent high resource usage, and unpredictable performance issues that don't have clear triggers.
+When running the Client Analyzer tool, select the appropriate flags based on the issue you are troubleshooting. The following table lists the flags available for the Client Analyzer tool:
 
-### Compatibility issues
-
-
-## Flag list
-
-options that should be selected based on the specific type of issue being investigated. Using the appropriate flags ensures that the diagnostic package contains sufficient relevant data for Microsoft support engineers to analyze and resolve the problem efficiently.  By following these best practices and selecting the right collection parameters, you can significantly improve the quality of diagnostic data and reduce the time needed for issue resolution. 
+| Flag | Description |
+|------|-------------|
+| `-a` | Enable all available data collection options. |
+| `-v` | Enable verbose logging for more detailed output. |
+| `-z` | Prepare the machine for a full memory dump. |
