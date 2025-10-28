@@ -1752,7 +1752,7 @@ For a list of all supported operating systems, see [Registries and images suppor
 | November 22 | [Defender for Cloud integration with ServiceNow](#defender-for-cloud-integration-with-servicenow) |
 | November 20 | [General Availability of the autoprovisioning process for SQL Servers on machines](#general-availability-of-the-autoprovisioning-process-for-sql-servers-on-machines-plan)|
 | November 15 | [General availability of Defender for APIs](#general-availability-of-defender-for-apis) |
-| November 15 | [Defender for Cloud is now integrated with Microsoft Defender XDR (Preview)](#defender-for-cloud-is-now-integrated-with-defender-xdr) |
+| November 15 | [Defender for Cloud is now integrated with Microsoft Defender XDR (Preview)](#defender-for-cloud-is-now-integrated-with-microsoft-defender-xdr-preview) |
 | November 15 | [General availability of Containers Vulnerability Assessment powered by Microsoft Defender Vulnerability Management (MDVM) in Defender for Containers and Defender for Container Registries](#general-availability-of-containers-vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management-mdvm-in-defender-for-containers-and-defender-for-container-registries) |
 | November 15 | [Change to Container Vulnerability Assessments recommendation names](#change-to-container-vulnerability-assessments-recommendation-names) |
 | November 15 | [Risk prioritization is now available for recommendations](#risk-prioritization-is-now-available-for-recommendations) |
