@@ -206,16 +206,16 @@ The following example shows a suspicious RDP activity taking place:
 
 This page shows the details regarding the time that the attack took place, the source hostname, the target VM and also gives recommendation steps. In some circumstances, the source information of the attack might be empty. Read [Missing Source Information in Defender for Cloud alerts](/archive/blogs/azuresecurity/missing-source-information-in-azure-security-center-alerts) for more information about this type of behavior.
 
-Once you identify the compromised system, you can run a [workflow automation](workflow-automation.yml) that was previously created. Workflow automations are a collection of procedures that can be executed from Defender for Cloud once triggered by an alert.
+Once you identify the compromised system, you can run a [workflow automation](workflow-automations.md) that was previously created. Workflow automations are a collection of procedures that can be executed from Defender for Cloud once triggered by an alert.
 
 > [!NOTE]
-> Read [Managing and responding to security alerts in Defender for Cloud](managing-and-responding-alerts.yml) for more information on how to use Defender for Cloud capabilities to assist you during your Incident Response process.
+> Read [Managing and responding to security alerts in Defender for Cloud](manage-respond-alerts.md) for more information on how to use Defender for Cloud capabilities to assist you during your Incident Response process.
 
 ## Next steps
 
 In this document, you learned how to plan for Defender for Cloud adoption. Learn more about Defender for Cloud:
 
-- [Managing and responding to security alerts in Defender for Cloud](managing-and-responding-alerts.yml)
+- [Managing and responding to security alerts in Defender for Cloud](manage-respond-alerts.md)
 - [Monitoring partner solutions with Defender for Cloud](./partner-integration.md) - Learn how to monitor the health status of your partner solutions.
 - [Defender for Cloud common questions](faq-general.yml) - Find frequently asked questions about using the service.
 - [Azure Security blog](/archive/blogs/azuresecurity/) - Read blog posts about Azure security and compliance.

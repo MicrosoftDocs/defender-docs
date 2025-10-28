@@ -80,11 +80,11 @@ Use the alerts tab to review active security alerts for a selected resource.
 
 1. In the right pane, select an alert.
 
-1. Follow the steps in [Respond to security alerts](managing-and-responding-alerts.yml) to review and address the issue.
+1. Follow the steps in [Respond to security alerts](manage-respond-alerts.md) to review and address the issue.
 
 ## Next steps
 
 Learn more about managing and improving your resource security:
 
-- [Respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert)
+- [Respond to security alerts](manage-respond-alerts.md#respond-to-a-security-alert)
 - [Review your security recommendations](review-security-recommendations.md)
