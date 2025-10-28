@@ -98,7 +98,7 @@ Calculated data, such as attack paths, might be kept for an additional 14 days. 
 
 This information is collected in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement).
 
-Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securelyand retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
+Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securely and retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
 
 ## Defender for Cloud and Microsoft Defender 365 Defender integration
 
