@@ -31,20 +31,34 @@ To view Microsoft 365 apps that access APIs other than Microsoft Graph, Office 3
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png" alt-text="Screenshot that shows the list of APIs plus the option to view other APIs." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png":::
 
 
-## View APIs used by an app
+## Create policies for apps accessing other APIs
 
-To view the APIs used by an app, go to the **Permissions** tab on an app details pane. You can find the names of the consented permissions and the APIs accessed by the app.
+You can create app governance policies that specifically target apps accessing APIs other than Microsoft Graph, Office 365 Exchange Online, Office 365 SharePoint Online, or Windows Azure Active Directory. This allows you to monitor and manage these apps effectively, ensuring they comply with your organization's security standards.
 
+1. In the App governance page, select the **Policies** tab.
+1. Select **+ Create policy**.
+1. Select the category **usage** and then the template **New app with Non-Graph API permissions**.
+1. Configure the policy settings as needed:
+    - Give the policy a name and description
+    - Set the severity level to low, medium or high.
+    - Set policy scope and conditions, you can choose to apply the default settings or customize the policy.
+    - Choose an action you'd like to take on apps that match the conditions in this policy. For example, disabling the app.
+    - Set the policy actions to active or disabled.
 
-
-## Track API access
-
-With visibility over apps that access other APIs, you can now use the New app with non-Graph API permissions policy template or the Non-graph API permission policy condition to find and monitor such apps.
-
-For example:
 
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/choose-policy-template.png" alt-text="Screenshot of the policy template page.":::
 
+## View APIs used by an app
+
+To view the APIs that an app uses:
+
+1. In the App governance page, select the app you want to investigate.
+
+1. In the app details pane, select the **Permissions** tab.
+
+The Permissions tab lists all permissions granted to the app, including those that access other APIs. You can see each permission’s privilege level, whether it’s in use, and the permission type. This information helps you assess whether the app has appropriate access and determine if you need to take further action, such as reviewing policies or disabling the app.
+
+:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png" alt-text="Screenshot that shows the list of APIs and their assigned permissions.":::
 
 ## Next steps
 
