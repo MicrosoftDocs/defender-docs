@@ -17,32 +17,32 @@ ms.date: 10/28/2025
 
 # Diagnose Defender for Endpoint issues with Client Analyzer
 
-When you troubleshoot Microsoft Defender for Endpoint, collecting diagnostic data is crucial for problem resolution. Different issues such as performance, connectivity and detection-related concerns, require different telemetry. As security expert investigating these issues, you can use the MDE Client Analyzer tool to troubleshoot your organization's Defender for Endpoint issues.
+When you troubleshoot Microsoft Defender for Endpoint, collecting diagnostic data is crucial for problem resolution. Different issues such as performance, connectivity and detection-related concerns, require different telemetry. As security expert investigating these issues, you can use the [Client Analyzer](overview-client-analyzer.md) tool to troubleshoot your organization's Defender for Endpoint issues.
 
 This article lists different types of issues and how to collect data for them using the Client Analyzer tool.
 
 ## Categorize your issue
 
-Use the categories listed below to identify the type of issue you are experiencing. [Run the Client Analyzer tool](#run-the-client-analyzer-tool) with the appropriate flags when collecting data.
+Use the categories listed in the table to identify the type of issue you're experiencing. [Run the Client Analyzer tool](#run-the-client-analyzer-tool) with the appropriate flags when collecting data.
 
 |Issue  |Description and examples  |Flags  |
 |---------|---------|---------|
-|Issues that can't be reproduced     |Issues that occur sporadically or are triggered by automated processes and cannot be reproduced. This includes problems related to scheduled tasks such as automatic updates and scans, and attack surface reduction (ARS) rules triggered unpredictably.         | Run without flags         |
+|Issues that can't be reproduced     |Issues that occur sporadically or are triggered by automated processes and can't be reproduced. This includes problems related to scheduled tasks such as automatic updates and scans, and attack surface reduction (ARS) rules triggered unpredictably.         | Run without flags         |
 |Performance issues that can be reproduced     |High CPU usage, memory consumption problems, and slow response times.         |`-a` and `-v`         |
 |Performance issues that can't be reproduced     |High CPU usage, memory consumption problems, and slow response times.         |Run without flags         |
-|General     |On-demand scans, manual updates, sense portal and alert issues, ASR issues that can be triggered on command, and app compatibility problems.         |`-e` and `-v`         |
+|General     |On-demand scans, manual updates, sense portal and alert issues, Azure Site Recovery (ASR) issues that can be triggered on command, and app compatibility problems.         |`-e` and `-v`         |
 |Hanging systems     |Unresponsive systems and freezes. Require advanced debugging techniques including memory dumps and crash analysis.         |`-z`         |
 |Compatibility     |Issues with third-party applications, other security solutions, system software, performance problems, and functional issues.         |`-c`, `-e` and `-v`         |
-|Controlled folder access (CFA)    |Include blocked applications, unexpected access permissions, and issues related to protected folders configuration.         |Reproducible: `-cfa`, `-e` and `-v`</br>Non-reproducible: `-cfa`         |
-|Data loss prevention (DLP)     |Include policy enforcement problems, content detection false positives and negatives, and DLP client health and connectivity issues.         |Reproducible: `-e`, `-t` and `-v`</br>Non-reproducible: `-t`          |
+|Controlled folder access (CFA)    |Include blocked applications, unexpected access permissions, and issues related to protected folders configuration.         |Reproducible: `-cfa`, `-e` and `-v`</br>Nonreproducible: `-cfa`         |
+|Data loss prevention (DLP)     |Include policy enforcement problems, content detection false positives and negatives, and DLP client health and connectivity issues.         |Reproducible: `-e`, `-t` and `-v`</br>Nonreproducible: `-t`          |
 |Indicator     |Include problems with URLs, domains, IP addresses, files, and certificates that aren't enforced as expected.         |URL, IP, domain in first-party browser: `-a`, `-i` and `-v`</br>File indicator: `-v`          |
 |Web content filtering (WCF)    |Unenforced WCF policy when accessing web content using first and third party browsers.         |`-a`, `-i` and `-v`         |
 |Network protection     |Network protection doesn't trigger configured policies when URLs, domains, and IPs are accessed through third-party browsers.        |`-i` and `-v`         |
-|Device control |Issues related to device control and blocking USB devices.  | `-v` with a five minute limit. Then reproduce with a USB that's working as expected. |
+|Device control |Issues related to device control and blocking USB devices.  | `-v` with a five-minute limit. Then reproduce with a USB that's working as expected. |
 
 ## Run the Client Analyzer tool
 
-Follow the steps in this section to collect data for the issues you've identified. Use the appropriate flags when needed. If you have scenarios the involve both working and non-working conditions, collect separate log packages for each scenario and clearly label each collection. The comparison helps identify the differences that cause the performance issue.
+Follow the steps in this section to collect data for the issues you've identified. Use the appropriate flags when needed. If you have scenarios that involve both working and nonworking conditions, collect separate log packages for each scenario and clearly label each collection. The comparison helps identify the differences that cause the performance issue.
 
 1. Start log collection running:
 
@@ -64,7 +64,7 @@ Follow the steps in this section to collect data for the issues you've identifie
 
 ### Client Analyzer flags
 
-When running the Client Analyzer tool, select the appropriate flags based on the issue you are troubleshooting. The following table lists the flags available for the Client Analyzer tool:
+When running the Client Analyzer tool, select the appropriate flags based on the issue you're troubleshooting. The following table lists the flags available for the Client Analyzer tool:
 
 | Flag   | Description |
 |--------|-------------|
