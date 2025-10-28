@@ -59,7 +59,7 @@ Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with
 - **Teams message entity panel**: A single place to store all Teams message metadata for immediate SecOps review. Any threats coming from Teams chats, group chats, meeting chats, and other channels can be found in one place as soon as they're assessed. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
 
   > [!TIP]
-  > To delete users from Teams chats in the Teams message entity panel, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
+  > To remove users from Teams chats, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
 
 - **Attack simulation training using Teams messages**: To ensure users are resilient to phishing attacks in Microsoft Teams, admins can configure phishing simulations using Teams messages instead of email messages. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
 
