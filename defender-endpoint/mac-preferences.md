@@ -23,7 +23,6 @@ appliesto:
 ---
 # Set preferences for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 > [!IMPORTANT]

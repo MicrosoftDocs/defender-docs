@@ -24,10 +24,6 @@ appliesto:
 ---
 # Web protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 ## About web protection
 

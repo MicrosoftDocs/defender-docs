@@ -22,9 +22,6 @@ appliesto:
 ---
 # Investigate incidents in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 Investigate incidents that affect your network, understand what they mean, and collate evidence to resolve them.
 

@@ -23,10 +23,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Use Windows Management Instrumentation (WMI) to configure and manage Microsoft Defender Antivirus
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Windows Management Instrumentation (WMI) is a scripting interface that allows you to retrieve, modify, and update settings.
 

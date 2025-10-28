@@ -20,10 +20,6 @@ appliesto:
 ---
 # Manage automation file uploads
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Enable the content analysis capability so that certain files and email attachments can automatically be uploaded to the cloud for additional inspection in Automated investigation.
 

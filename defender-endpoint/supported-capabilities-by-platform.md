@@ -22,10 +22,6 @@ appliesto:
 ---
 # Supported Microsoft Defender for Endpoint capabilities by platform
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Learn how to [Onboard devices and configure Microsoft Defender for Endpoint capabilities](onboard-configure.md).
 

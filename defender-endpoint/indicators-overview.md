@@ -23,8 +23,6 @@ appliesto:
 ---
 # Overview of indicators in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ## Indicator of compromise (IoC) overview
 
