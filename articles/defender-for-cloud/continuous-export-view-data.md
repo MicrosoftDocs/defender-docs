@@ -14,7 +14,7 @@ After you've set up continuous export of Microsoft Defender for Cloud security a
 
 ## Prerequisites
 
-Before you begin, make sure continuous export is set up in Microsoft Defender for Cloud. If not, see one of the following:
+Before you begin, setup continuous export with one of these methods:
 
 - [Setup continuous export in the Azure portal](continuous-export.md) 
 - [Setup continuous export with Azure Policy](continuous-export-azure-policy.md)
