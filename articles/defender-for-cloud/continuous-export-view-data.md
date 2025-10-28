@@ -39,15 +39,15 @@ You can query these tables in Log Analytics to confirm that continuous export is
 
 1. In the query window, enter one of the following queries and select **Run**:
 
-```kusto
-SecurityAlert
-```
-
-or 
-
-```kusto
-SecurityRecommendation
-```
+    ```kusto
+    SecurityAlert
+    ```
+    
+    or 
+    
+    ```kusto
+    SecurityRecommendation
+    ```
 
 ## View exported data in Azure Event Hubs
 
