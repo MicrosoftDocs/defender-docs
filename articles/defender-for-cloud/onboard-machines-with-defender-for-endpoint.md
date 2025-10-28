@@ -47,7 +47,7 @@ When you enable direct onboarding, Defender for Cloud applies the setting to bot
 
 Before you begin:
 
-- Confirm you have the required permissions:
+- Make sure you have the required permissions:
     - **Subscription Owner** permissions on the subscription you select for onboarding.
     -  **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
 - If your tenant already has a Defender for Endpoint for Servers license, [indicate it](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-) in Defender for Cloud
