@@ -4,7 +4,7 @@ description: Learn how to review security recommendations in Microsoft Defender 
 ms.topic: how-to
 author: ElazarK
 ms.author: elkrieger
-ms.date: 04/22/2025
+ms.date: 10/28/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -366,8 +366,6 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Review the results.
 
-::: zone-end
-
 ## How are recommendations classified?
 
 Every security recommendation from Defender for Cloud is given one of three severity ratings.
@@ -409,8 +407,6 @@ An organization's internal policies might differ from Microsoft's classification
 
 > [!NOTE]
 > Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** determination that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md) and detailed guidance in the risk prioritization sections above.
-
-::: zone pivot="azure-portal"
 
 ### Example
 
