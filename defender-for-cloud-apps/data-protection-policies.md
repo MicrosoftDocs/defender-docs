@@ -48,7 +48,7 @@ The following are examples of file policies that can be created:
 
 To set up the first File Policy in a tenant, you need:
 -  Microsoft Entra **Service Principal** permissions. <br>
-**Service Principal** permissions are only automatically given if no file policy exists yet. After the first file policy is created, you can create more  without needing those permissions.
+**Service Principal** permissions are only automatically given if no file policy exists yet. After the first file policy is created, you can create more without needing those permissions.
 
 
 ## Create a new file policy
@@ -98,7 +98,7 @@ To create a new file policy, follow this procedure:
     - **Send an alert as email**
     - **Daily alert limit per policy**. Governance actions aren't impacted by the daily alert limit.
     - **Send alerts to Power Automate**
-    -
+    
 1. Choose the **Governance** actions you want Defender for Cloud Apps to take when a match is detected. Be careful when you set governance actions, they could lead to irreversible loss of access permissions to your files.
 
 1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately. We recommended narrowing down the filters using multiple search fields to get the files that you want to work with. The narrower the filters, the better. You can use the **Edit and preview results** button next to the filters.
@@ -106,7 +106,7 @@ To create a new file policy, follow this procedure:
     :::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot that shows how you can see a preview of the filtered results for file policies.":::
 
 
-1. To view file policy matches,  go to **Policies** -> **Policy management**. Here you can see files that are suspected to violate the policy. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**. This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
+1. To view file policy matches, go to **Policies** -> **Policy management**. Here you can see files that are suspected to violate the policy. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**. This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
 
 ## Limitations
 
