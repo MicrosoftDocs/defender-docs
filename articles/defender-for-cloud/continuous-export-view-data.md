@@ -10,7 +10,7 @@ ms.date: 10/12/2025
 
 # View exported data in Azure Monitor
 
-After you've set up continuous export of Microsoft Defender for Cloud security alerts and recommendations, you can view the data in Azure Monitor. This article describes how to view the data in Log Analytics or in Azure Event Hubs, and create alert rules in Azure Monitor based on that data.
+After you've set up continuous export of Microsoft Defender for Cloud security alerts and recommendations, you can view the data in Azure Monitor. This article describes how to view the data in Log Analytics or in Azure Event Hubs and create alert rules in Azure Monitor based on that data.
 
 ## Prerequisites
 
