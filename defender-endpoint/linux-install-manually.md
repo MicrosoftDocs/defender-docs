@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -20,7 +20,6 @@ ms.date: 08/11/2025
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

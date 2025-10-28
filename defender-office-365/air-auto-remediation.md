@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -48,7 +48,7 @@ After you select the cluster types to automatically remediate, the selected reme
 
 Use the following steps to select the cluster types to automatically remediate:
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **MDO automation settings**.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **MDO automation settings**. Or, to go directly to the **Automation settings** page, use <https://security.microsoft.com/securitysettings/mdoAutomationSettings>.
 
 The following settings are available on the **Automation settings** page:
 

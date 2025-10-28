@@ -6,10 +6,10 @@ metadata:
   ms.subservice: ngp
   ms.localizationpriority: medium
   audience: ITPro
-  author: emmwalshh
-  ms.author: ewalsh
+  author: batamig
+  ms.author: bagol
   ms.reviewer: sugamar, kausd
-  manager: deniseb
+  manager: bagol
   ms.custom: 
   - asr
   - partner-contribution
@@ -43,7 +43,7 @@ sections:
       - question: |
           Will EDR in block mode affect a user's antivirus protection?
         answer: |
-          EDR in block mode does not affect non-Microsoft antivirus protection running on users' devices. EDR in block mode works if the primary antivirus solution misses something, or if there is a post-breach detection. EDR in block mode works just like Microsoft Defender Antivirus in passive mode, except that EDR in block mode also blocks and remediates malicious artifacts or behaviors that are detected.
+          EDR in block mode doesn't affect non-Microsoft antivirus protection running on users' devices. EDR in block mode works if the primary antivirus solution misses something, or if there's a post-breach detection. EDR in block mode works just like Microsoft Defender Antivirus in passive mode, except that EDR in block mode also blocks and remediates malicious artifacts or behaviors that are detected.
 
       - question: |
           Why do I need to keep Microsoft Defender Antivirus up to date?
@@ -58,7 +58,7 @@ sections:
       - question: |
           What is the difference between active and passive mode?
         answer: |
-          For endpoints running Windows 10, Windows 11, Windows Server, version 1803 or later, Windows Server 2019, Windows Server 2022, or Windows Server 2025, when Microsoft Defender Antivirus is in active mode, it is used as the primary antivirus on the device. When running in passive mode, Microsoft Defender Antivirus is not the primary antivirus product. In this case, threats are not remediated by Microsoft Defender Antivirus in real time.
+          For endpoints running Windows 10, Windows 11, Windows Server version 1803 or later, Windows Server 2019 and later, or Azure Stack HCI OS, version 23H2 and later, when Microsoft Defender Antivirus is in active mode, it's used as the primary antivirus on the device. When running in passive mode, Microsoft Defender Antivirus isn't the primary antivirus product. In this case, threats aren't remediated by Microsoft Defender Antivirus in real time.
 
           > [!NOTE]
           > Microsoft Defender Antivirus can run in passive mode only when the device is onboarded to Microsoft Defender for Endpoint.
@@ -87,7 +87,7 @@ sections:
           3. Confirm that the result, `EDR Block Mode`, is displayed.
 
            > [!TIP]
-           > If Microsoft Defender Antivirus is in active mode, you will see `Normal` instead of `EDR Block Mode`. To learn more, see [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus).
+           > If Microsoft Defender Antivirus is in active mode, you'll see `Normal` instead of `EDR Block Mode`. To learn more, see [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus).
 
       - question: |
           Is EDR in block mode supported on Windows Server 2016 and Windows Server 2012 R2?

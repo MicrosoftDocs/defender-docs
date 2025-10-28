@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.topic: overview
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
@@ -16,25 +16,25 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus in Windows Overview
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint Plans 1 and 2
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 Microsoft Defender Antivirus is available in Windows 10 and Windows 11, and in versions of Windows Server.
 
 Microsoft Defender Antivirus is a major component of your next-generation protection in Microsoft Defender for Endpoint. This protection brings together machine learning, big-data analysis, in-depth threat resistance research, and the Microsoft cloud infrastructure to protect devices (or endpoints) in your organization. Microsoft Defender Antivirus is built into Windows, and it works with Microsoft Defender for Endpoint to provide protection on your device and in the cloud.
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Microsoft Defender Antivirus capabilities
 
@@ -165,3 +165,4 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

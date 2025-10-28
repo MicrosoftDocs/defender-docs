@@ -1,14 +1,14 @@
----
+﻿---
 title: Device discovery frequently asked questions
 description: Find answers to frequently asked questions (FAQs) about device discovery
 ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,17 +16,13 @@ ms.collection:
 ms.topic: faq
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Device discovery frequently asked questions
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
@@ -38,7 +34,7 @@ This mode allows every Microsoft Defender for Endpoint onboarded device to colle
 
 ## Can I disable Basic discovery?
 
-You have the option to turn off device discovery through the [Advanced features](advanced-features.md) page. However, you'll lose visibility on unmanaged devices in your network. Note that even if device discovery is turned off, SenseNDR.exe will still be running on the onboarded devices. 
+You have the option to turn off device discovery through the [Advanced features](advanced-features.md) page. However, you'll lose visibility on unmanaged devices in your network. If device discovery is turned off, SenseNDR.exe will still be running on the onboarded devices.
 
 ## What is Standard discovery mode?
 
@@ -60,9 +56,8 @@ Onboarded devices running the following versions of Windows can perform device d
 
 - Windows 11
 - Windows 10, version 1809 or later
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2019 and later
+- Azure Stack HCI OS, version 23H2 and later
 
 ## What happens if my onboarded devices is connected to my home network, or to public access point?
 
@@ -70,7 +65,7 @@ The discovery engine distinguishes between network events that are received in t
 
 ## What protocols are you capturing and analyzing?
 
-By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025 are capturing and analyzing the following protocols:
+By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019 and later, or Azure Stack HCI OS, version 23H2 and later are capturing and analyzing the following protocols:
 
 - `ARP`
 - `CDP`
@@ -152,7 +147,7 @@ Active probing can generate up to 50Kb of traffic between the onboarded device a
 
 You may notice differences between the number of listed devices under "can be onboarded" in the device inventory, "onboard to Microsoft Defender for Endpoint" security recommendation, and "devices to onboard" dashboard widget.
 
-The security recommendation and the dashboard widget are for devices that are stable in the network; excluding ephemeral devices, guest devices and others. The idea is to recommend on persistent devices that also imply on the overall security score of the organization.
+The security recommendation and the dashboard widget are for devices that are stable in the network; excluding ephemeral devices, guest devices, and others. The idea is to recommend on persistent devices that also imply on the overall security score of the organization.
 
 ## Can I onboard unmanaged devices that were found?
 
@@ -176,7 +171,7 @@ Unmanaged devices would typically get probed no more than once in a three-week p
 
 ### Your Windows device already runs active discovery
 
-Active discovery capabilities have always been embedded in the Windows operating system, to find nearby devices, endpoints, and printers, for easier "plug and play" experiences and file sharing between endpoints in the network. Similar functionality is implemented in mobile devices, network equipment and inventory applications just to name a few.  
+Active discovery capabilities have always been embedded in the Windows operating system, to find nearby devices, endpoints, and printers, for easier "plug and play" experiences and file sharing between endpoints in the network. Similar functionality is implemented in mobile devices, network equipment, and inventory applications just to name a few.  
 
 Standard discovery uses the same discovery methods to identify devices and to have a unified visibility for all the devices in your network in the Microsoft Defender XDR Device Inventory. For example – Standard discovery identifies nearby endpoints in the network the same way Windows lists available printers in the network. 
 
@@ -191,3 +186,4 @@ The device discovery capabilities have been built to only discover and identify 
 Standard discovery supports exclusion of devices or ranges (subnets) from active probing. If you have network lures deployed in place, you can use the Device Discovery settings to define exclusions based on IP addresses or subnets (a range of IP addresses). Defining those exclusions ensure that those devices won't be actively probed and won't be alerted. Those devices are discovered using passive methods only (similar to Basic discovery mode).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

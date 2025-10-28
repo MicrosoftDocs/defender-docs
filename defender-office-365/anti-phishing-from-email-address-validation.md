@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -111,4 +111,4 @@ You can't override the From address requirements for outbound email that you sen
 
 ## Other ways to prevent and protect against cybercrimes in Microsoft 365
 
-For more information on how to strengthen your organization against phishing, spam, data breaches, and other threats, see [Best practices for securing Microsoft 365 for business plans](/microsoft-365/business-premium/secure-your-business-data).
+For more information on how to strengthen your organization against phishing, spam, data breaches, and other threats, see [Best practices for securing Microsoft 365 for business plans](/microsoft-365/admin/security-and-compliance/m365b-security-best-practices).

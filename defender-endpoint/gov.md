@@ -1,28 +1,27 @@
----
+﻿---
 title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 05/30/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: get-started
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint for US Government customers
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 Microsoft Defender for Endpoint for US Government customers, built in the Azure US Government environment, uses the same underlying technologies as Defender for Endpoint in Azure Commercial.
 
@@ -123,12 +122,16 @@ The following OS versions are supported when using [Microsoft Defender for serve
 
 If a proxy or firewall is blocking all traffic by default and allowing only specific domains through, add the domains listed in the downloadable sheet to the allowed domains list.
 
+> [!NOTE]
+> You can use the [streamlined connectivity feature](configure-device-connectivity.md) to onboard new government devices to Defender for Endpoint, using a reduced URL set or static IP ranges. A dedicated endpoint group supports streamlined connectivity in government environments, and consolidates several service dependencies into a smaller set of URLs.
+
 The following downloadable spreadsheet lists the services and their associated URLs your network must be able to connect to. Verify there are no firewall or network-filtering rules that would deny access to these URLs, or create an *allow* rule specifically for them.
 
 
 | Spreadsheet of domains list  | Description  |
 |---------|---------|
-| Microsoft Defender for Endpoint URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
+| Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview) | List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md). |
+| Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
 
 For more information, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
@@ -186,3 +189,4 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 > - Request CVE support
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

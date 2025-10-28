@@ -1,11 +1,11 @@
----
+﻿---
 title: Investigate entities on devices using live response in Microsoft Defender for Endpoint
 description: Access a device using a secure remote shell connection to do investigative work and take immediate response actions on a device in real time.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,17 +15,12 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Investigate entities on devices using live response
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Live response gives security operations teams instantaneous access to a device (also referred to as a machine) using a remote shell connection. Live response gives you the power to do in-depth investigative work and take immediate response actions to promptly contain identified threats in real time.
 
@@ -41,39 +36,38 @@ With live response, analysts can do all of the following tasks:
 - Upload a PowerShell script or executable to the library and run it on a device from a tenant level.
 - Take or undo remediation actions.
 
-## Before you begin
+## Prerequisites
 
-Before you can initiate a session on a device, make sure you fulfill the following requirements:
+Devices must be running one of the following versions of Windows
 
-- **Verify that you're running a supported version of Windows**.
+### Supported operating systems
 
-  Devices must be running one of the following versions of Windows
-
-  - **Windows 10 & 11**
+  - Windows 10 & 11
     - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
     - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
     - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
     - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
     - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
 
-  - **macOS** - Minimum required version: `101.43.84`. Supported for Intel-based and ARM-based macOS devices.
+  - macOS- Minimum required version: `101.43.84`. Supported for Intel-based and ARM-based macOS devices.
 
-  - **Linux** - Minimum required version: `101.45.13`
+  - Linux - Minimum required version: `101.45.13`
 
-  - **Windows Server 2012 R2** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
+  - Windows Server 2012 R2 - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
 
-  - **Windows Server 2016** - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
+  - Windows Server 2016 - with [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)
+  
 
     > [!NOTE]
     > For Windows Server 2012 R2 or Windows Server 2016, you must have the [Unified Agent](update-agent-mma-windows.md#update-mma-on-your-devices) installed, and it is recommended to patch to latest sensor version with KB5005292. Live response doesn't work as expected for offline down-level servers onboarded using the streamlined method, because of the static proxy. Consider using a system proxy instead.
-    
-  - **Windows Server 2019**
+
+  - Windows Server 2019
     - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
 
-  - **Windows Server 2022**
+  - Windows Server 2022 and later
 
-  - **Windows Server 2025**
+  - Azure Stack HCI OS, version 23H2 and later
 
 - **Enable live response from the advanced settings page**.
 
@@ -351,3 +345,4 @@ Select the **Command log** tab to see the commands used on the device during a s
 - [Live response command examples](live-response-command-examples.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

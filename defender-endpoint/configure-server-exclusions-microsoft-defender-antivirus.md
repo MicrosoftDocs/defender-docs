@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender Antivirus exclusions on Windows Server
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 description: Windows Server includes automatic exclusions, based on server role. You can also add custom exclusions.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/01/2025
-author: emmwalshh
-ms.author: ewalsh
+ms.date: 10/20/2025
+author: batamig
+ms.author: bagol
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
@@ -16,19 +16,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus exclusions on Windows Server
 
-**Applies to:**
 
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows Server
 
 ## Important notes about automatic exclusions on Windows Server
 
@@ -46,6 +41,12 @@ This article describes the two main types of exclusions that you don't have to d
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
 
 For a more detailed overview of exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows Server
 
 ## Automatic server role exclusions
 
@@ -260,7 +261,7 @@ Because Microsoft Defender Antivirus is built into Windows, it doesn't require e
 
 ### Windows Update files or Automatic Update files
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb`
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb`
 - `%windir%\SoftwareDistribution\Datastore\*\edb.chk`
 - `%windir%\SoftwareDistribution\Datastore\*\edb\*.log`
 - `%windir%\SoftwareDistribution\Datastore\*\Edb\*.jrs`
@@ -336,7 +337,7 @@ Because Microsoft Defender Antivirus is built into Windows, it doesn't require e
 In Windows Server 2016 and later, the predefined exclusions delivered by [Security intelligence updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates) only exclude the default paths for a role or feature. If you installed a role or feature in a custom path, or you want to manually control the set of exclusions, make sure to opt out of the automatic exclusions delivered in Security intelligence updates. But keep in mind that the exclusions that are delivered automatically are optimized for Windows Server 2016 and later. See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) before defining your exclusion lists.
 
 > [!WARNING]
-> Opting out of automatic exclusions might adversely impact performance, or result in data corruption. Automatic server role exclusions are optimized for Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025. 
+> Opting out of automatic exclusions might adversely impact performance, or result in data corruption. Automatic server role exclusions are optimized for Windows Server 2016 and later and Azure Stack HCI OS, version 23H2 and later.
 
 
 Because predefined exclusions only exclude **default paths**, if you move NTDS and SYSVOL folders to another drive or path that is *different from the original path*, you must add exclusions manually. See [Configure the list of exclusions based on folder name or file extension](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).
@@ -395,3 +396,4 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

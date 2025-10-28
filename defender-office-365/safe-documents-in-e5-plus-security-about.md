@@ -2,7 +2,7 @@
 title: Safe Documents in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
@@ -35,7 +35,7 @@ Users don't need Defender for Endpoint installed on their local devices to get S
 - Licenses from a required licensing plan are assigned to the users. Safe Documents is controlled by the **Office 365 SafeDocs** (or **SAFEDOCS** or **bf6f5520-59e3-4f82-974b-7dbbc4fd27c7**) service plan (also known as a service). This service plan is available in the following licensing plans (also known as license plans, Microsoft 365 plans, or products):
   - Microsoft 365 A5 for Faculty
   - Microsoft 365 A5 for Students
-  - Microsoft 365 E5 Security
+  - Microsoft Defender Suite
 
   Safe Documents isn't included in Microsoft Defender for Office 365 licensing plans.
 
@@ -57,7 +57,7 @@ Users don't need Defender for Endpoint installed on their local devices to get S
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ### How does Microsoft handle your data?
 

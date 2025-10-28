@@ -1,14 +1,14 @@
----
+﻿---
 title: Block potentially unwanted applications with Microsoft Defender Antivirus
 description: Enable the potentially unwanted application (PUA) antivirus feature to block unwanted software such as adware.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -16,39 +16,18 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 06/10/2025
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Detect and block potentially unwanted applications
 
-**Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Edge](/microsoft-edge/deploy/microsoft-edge)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-
-Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
-
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server, version 1803 or later
-- Windows Server 2016
-- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
-- Windows 11
-- Windows 10
-- Windows 8.1
-
-For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
-
-For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
 
 ## What are potentially unwanted applications?
 
@@ -68,6 +47,21 @@ Potentially unwanted applications can increase the risk of your network being in
 [Learn more about Windows Enterprise subscriptions](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise).
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
+- Windows 11
+- Windows 10
+- Windows 8.1
+- Azure Stack HCI OS, version 23H2 and later
+- For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
+- For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
 
 ## Microsoft Edge
 
@@ -277,3 +271,4 @@ For more information, see [Configure and validate exclusions based on file exten
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

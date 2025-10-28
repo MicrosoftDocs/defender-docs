@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
@@ -89,7 +89,7 @@ The actions that are available for messages in the quarantine notification depen
 - **Request release**: Available for messages quarantined by features using a quarantine policy with the **Limited access** permission group or the individual **Allow recipients to request a message to be released from quarantine** (_PermissionToRequestRelease_) permission. For example, custom quarantine policies.
 
   Selecting the action opens an informational web page that acknowledges the request to release the message from quarantine (**The message release request has been initiated. The tenant admin will determine if the request should be approved or denied.**). The **Release status** value of the message on the **Email** tab of the **Quarantine** page is **Release requested**.
-  
+
   By default, release requests are sent to members of the hidden TenantAdmins role group (all users with admin privileges) as configured in the **User requested to release a quarantined message** alert policy on the **Alert policy** page in the Defender portal at <https://security.microsoft.com/alertpoliciesv2>.
 
 - **Block Sender**: Available for messages quarantined by features using a custom quarantine policy with the **Block sender** (_PermissionToBlockSender_) permission.

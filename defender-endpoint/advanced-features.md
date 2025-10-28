@@ -1,12 +1,12 @@
----
+﻿---
 title: Configure advanced features in Microsoft Defender for Endpoint
 description: Turn on advanced features such as block file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,18 +15,12 @@ ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 02/25/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure advanced features in Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Defender for Endpoint with.
 
@@ -219,3 +213,4 @@ For proactive hunting across the full scope of Microsoft Defender XDR, including
 - [Configure alert notifications](/defender-xdr/configure-email-notifications)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

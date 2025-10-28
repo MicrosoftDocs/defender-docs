@@ -1,4 +1,4 @@
----
+﻿---
 title: Deploy Microsoft Defender for Endpoint on Linux with SaltStack
 ms.reviewer: dmcwee, gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Saltstack.
@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,16 +16,15 @@ ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 08/11/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploy Microsoft Defender for Endpoint on Linux with Saltstack
 
-**Applies to:**
 
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, refer to the [Related content section](#related-content).)
 
@@ -153,7 +152,7 @@ In this step, you create a SaltState state file in your configuration repository
    ```console
    install_mdatp_package:
      pkg.installed:
-       - name: matp
+       - name: mdatp
        - required: add_ms_repo
    ```
 
@@ -318,3 +317,4 @@ When upgrading your operating system to a new major version, you must first unin
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

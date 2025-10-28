@@ -1,13 +1,13 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on iOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 08/12/2025
-manager: deniseb
+ms.date: 09/05/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,20 +16,52 @@ ms.collection:
 ms.topic: reference
 ms.subservice: ios
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Releases for Defender for Endpoint on iOS
+
+#### October 2025
+
+| Build | 1.1.69250104|
+| -------- | -------- |
+| Release Date | October 7, 2025  |
+
+**What's New**
+
+- Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile, refer - [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).
+
+- Performance Improvement and Bug fixes.
+
+#### September 2025
+
+| Build| 1.1.68200103 |
+| -------- | -------- |
+| Release Date | September 4, 2025   |
+
+**What's New**
+
+- [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads.
+
+#### August 2025
+
+| Build| 1.1.68140102|
+| -------- | -------- |
+| Release Date| August 19, 2025|
+
+**What's New**
+
+- Fixed push notification bug to ensure heartbeat signals are sent reliably
+
+- Performance improvements and bug fixes
 
 ### July-2025 
 
@@ -232,3 +264,4 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 - Bug fixes.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

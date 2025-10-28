@@ -4,7 +4,7 @@ description: Your security center in Defender for Business is the Microsoft Defe
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: get-started
 ms.service: defender-business
@@ -19,6 +19,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.custom: intro-get-started
+#customer intent: As a Defender for Business admin, I need quick guidance to navigate the Microsoft Defender portal and find first steps so I can get started securing devices and email.
 ---
 
 # Visit the Microsoft Defender portal

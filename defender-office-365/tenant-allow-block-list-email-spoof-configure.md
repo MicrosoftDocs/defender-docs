@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -20,6 +20,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As a security administrator, I need step‑by‑step procedures to create, modify, and troubleshoot Tenant Allow/Block List entries (including spoofed senders) using the Microsoft Defender portal and Exchange Online PowerShell so I can control delivery overrides, prevent spoofing, and reduce false positives without increasing security risk.
 ---
 
 # Allow or block email using the Tenant Allow/Block List
@@ -60,10 +61,10 @@ This article describes how admins can manage entries for email senders in the Mi
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): 
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
       - **Authorization and settings/Security settings/Detection tuning (manage)**
-    - *Read-only access to the Tenant Allow/Block List*: 
+    - *Read-only access to the Tenant Allow/Block List*:
       - **Authorization and settings/Security settings/Read-only**.
       - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
@@ -78,7 +79,7 @@ This article describes how admins can manage entries for email senders in the Mi
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Domains and email addresses in the Tenant Allow/Block List
 
@@ -237,7 +238,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
-- **Modified by**: Provide an incomplete or complete email address to search by it. 
+- **Modified by**: Provide an incomplete or complete email address to search by it.
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
