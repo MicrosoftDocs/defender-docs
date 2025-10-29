@@ -1,6 +1,6 @@
 ﻿---
 title: Deploy, manage, and report on Microsoft Defender Antivirus
-description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI
+description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
@@ -33,8 +33,7 @@ You can manage and report on Microsoft Defender Antivirus using one of several t
   - [PowerShell](#powershell)
   - [Group Policy and Microsoft Entra ID](#group-policy-and-microsoft-entra-id)
   - [Windows Management Instrumentation](#windows-management-instrumentation)
-  - [See also](#see-also)
-
+ 
 This article describes these options for deployment, management, and reporting.
 
 ## Prerequisites
@@ -74,7 +73,7 @@ For reporting, you can choose from several options:
 
 ## PowerShell
 
-You can use PowerShell with Group Policy or Configuration Manager to manage Microsoft Defender Antivirus on client devices. You can also use PowerShell to manage Microsoft Defender Antivirus manually on individual devices that are not managed by a security team. 
+You can use PowerShell with Group Policy or Configuration Manager to manage Microsoft Defender Antivirus on client devices. You can also use PowerShell to manage Microsoft Defender Antivirus manually on individual devices that aren't managed by a security team. 
 
 - Use the appropriate [Get- cmdlets available in the Defender module](/powershell/module/defender).
 
@@ -124,6 +123,6 @@ For reporting, Windows events comprise several security event sources, including
 
 
 > [!TIP]
-> **Performance tip** Due to a variety of factors, Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues. You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
+> **Performance tip**: Due to various factors, Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues. You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
