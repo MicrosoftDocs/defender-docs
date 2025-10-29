@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/06/2024
+ms.date: 09/21/2025
 ---
 
 # Overview
@@ -29,7 +29,7 @@ Benefits include:
 
 The support for external solutions helps to further streamline, integrate, and orchestrate defenses from other security vendors with Exposure Management. This enables security teams to effectively manage their posture and exposure across the entire attack surface.
 
-:::image type="content" source="media/connect-data-sources/data-connectors.png" alt-text="Screenshot of data connectors in MSEM" lightbox="media/connect-data-sources/data-connectors.png":::
+:::image type="content" source="media/connect-data-sources/data-connectors.png" alt-text="Screenshot of data connectors available in MSEM" lightbox="media/connect-data-sources/data-connectors.png":::
 
 Data Connectors in Microsoft Security Exposure Management is currently in public preview.
 

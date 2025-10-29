@@ -1,4 +1,4 @@
----
+﻿---
 title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 03/03/2025
+ms.date: 10/20/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -22,22 +22,23 @@ ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Address false positives/negatives in Microsoft Defender for Endpoint
 
-**Applies to:**
-
-- [Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 In endpoint protection solutions, a false positive is an entity, such as a file or a process that was detected and identified as malicious even though the entity isn't actually a threat. A false negative is an entity that wasn't detected as a threat, even though it actually is malicious. False positives/negatives can occur with any threat protection solution, including [Defender for Endpoint](microsoft-defender-endpoint.md).
 
  If you have Microsoft Defender XDR, review the "Alerts sources" as described in [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts?tabs=settings). If the alert source is Defender for Endpoint, continue to read this article. 
+
+ ## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Identify the detection source
 
@@ -415,3 +416,4 @@ If you've worked through all the steps in this article and still need help, cont
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

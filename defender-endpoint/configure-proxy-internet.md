@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure your devices to connect to the Defender for Endpoint service using a proxy
 description: Learn how to configure your devices to enable communication with the cloud service using a proxy.
 search.appverid: met150
@@ -14,18 +14,13 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 ms.date: 07/01/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 or Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Defender for Endpoint for servers
-- Defender for Servers Plan 1 or Plan 2
 
 > [!IMPORTANT]
 > Devices that are configured for IPv6-only traffic are not supported.
@@ -187,3 +182,4 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 - [Onboard devices without Internet access to Microsoft Defender for Endpoint](configure-environment.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

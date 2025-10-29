@@ -1,4 +1,4 @@
----
+﻿---
 title: Isolation exclusions in Microsoft Defender for Endpoint
 description: Learn about to exclude specific processes, IP addresses, or services from network isolation when applying selective isolation action to devices.
 ms.service: defender-endpoint
@@ -14,27 +14,28 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
-ms.date: 07/01/2025
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
-# Isolation exclusions (preview)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-[!include[Prerelease information](../includes/prerelease.md)]
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+# Isolation exclusions
 
 Isolation exclusion refers to the ability to exclude specific processes, IP addresses, or services from network isolation by applying the selective isolation response action to devices.
 
 Network isolation in Microsoft Defender for Endpoint (MDE) restricts a compromised device's communication to prevent threat spread. However, certain critical services, such as management tools or security solutions, might need to remain operational.
 
 Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions (for example, remote remediation or monitoring) continue while limiting broader network exposure.
+
+## Prerequisites
+
+* Isolation exclusion must be enabled. 
+* Enabling isolation exclusion requires Security Admin or Manage Security settings permissions or above. 
+
+### Supported operating systems 
+
+* Isolation exclusion is available on Windows 11, Windows 10 version 1703 or later, Windows Server 2016 and later, Windows Server 2012 R2, macOS and Azure Stack HCI OS, version 23H2 and later.
 
 > [!WARNING]
 > **Any exclusion weakens device isolation and increases security risks. To minimize risk, configure exclusions only when strictly necessary**.
@@ -53,12 +54,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 ## How to use isolation exclusion
 
-There are two steps to using isolation exclusion: defining isolation exclusion rules, and applying isolation exclusion on a device. These steps are described in the following sections. To use isolation exclusion, the feature must be enabled, as described in the prerequisites.
-
-### Prerequisites
-
-* Isolation exclusion is available on Windows 11, Windows 10 version 1703 or later, Windows Server 2016 and later, Windows Server 2012 R2, macOS and Azure Stack HCI OS, version 23H2 and later.
-* Isolation exclusion must be enabled. Enabling isolation exclusion requires Security Admin or Manage Security settings permissions or above. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Exclusion Rules** feature.
+There are two steps to using isolation exclusion: defining isolation exclusion rules, and applying isolation exclusion on a device.  
 
    :::image type="content" source="./media/isolation-exclusions/enable-exclusions.png" alt-text="Screenshot showing how to enable isolation exclusions." lightbox="./media/isolation-exclusions/enable-exclusions.png":::
 
@@ -67,9 +63,11 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
    >
    > Note that Skype has been deprecated and is no longer included in any default exclusions.
 
+
+
 ### Step 1: Define global exclusions in the settings
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Isolation Exclusion Rules**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Advanced features** > **Isolation Exclusion Rules**.
 
 1. Select the relevant OS tab (Windows rules or Mac rules).
 
@@ -158,3 +156,4 @@ This behavior ensures that isolation rules remain consistent throughout the dura
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

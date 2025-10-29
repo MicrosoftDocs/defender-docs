@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 07/24/2025
+ms.date: 09/17/2025
 audience: ITPro
 ms.topic: how-to
 
@@ -24,6 +24,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an IT administrator responsible for email deliverability and security, I want to understand how SPF works and how to configure it to protect my organization's email reputation.
 ---
 
 # Set up SPF to identify valid email sources for your custom cloud domains
@@ -48,7 +49,7 @@ Before we get started, here's what you need to know about SPF in Microsoft 365 b
       > [!TIP]
       > Email authentication protection for _undefined_ subdomains is covered by DMARC. Any subdomains (defined or not) inherit the DMARC settings of the parent domain (which can be overridden per subdomain). For more information, see [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md).
 
-  - **If you own registered but unused domains**: If you own registered domains that aren't used for email or anything at all (also known as _parked domains_), configure SPF TXT records to indicate that no email should ever come from those domains as described later in this article.
+  - **If you own registered but unused domains**: If you own registered domains that aren't used for email or anything at all (also known as _parked domains_), configure SPF TXT records to indicate that no email should ever come from those domains as described [later in this article](#scenario-parked-domains).
 
 - **SPF alone is not enough**. For the best level of email protection for your custom domains, you also need to configure DKIM and DMARC as part of your overall [email authentication](email-authentication-about.md) strategy. For more information, see the [Next Steps](#next-steps) section at the end of this article.
 
@@ -127,43 +128,56 @@ Important points to remember:
 > [!TIP]
 > As previously mentioned in this article, you create the SPF TXT record for a domain or subdomain at the domain registrar for the domain. No SPF TXT record configuration is available in Microsoft 365.
 
-- **Scenario**: You use contoso.com for email in Microsoft 365, and Microsoft 365 is the only source of email from contoso.com.
+### Scenario: Microsoft 365 email only
 
-  **SPF TXT record for contoso.com in Microsoft 365 and Microsoft 365 Government Community Cloud (GCC)**:
+You use contoso.com for email in Microsoft 365, and Microsoft 365 is the only source of email from contoso.com
+
+- **SPF TXT record for contoso.com in Microsoft 365 and Microsoft 365 Government Community Cloud (GCC)**:
 
   ```text
   v=spf1 include:spf.protection.outlook.com -all
   ```
 
-  **SPF TXT record for contoso.com in Microsoft 365 Government Community Cloud High (GCC High) and Microsoft 365 Department of Defense (DoD)**:
+- **SPF TXT record for contoso.com in Microsoft 365 Government Community Cloud High (GCC High) and Microsoft 365 Department of Defense (DoD)**:
 
   ```text
   v=spf1 include:spf.protection.office365.us -all
   ```
 
-  **SPF TXT record for contoso.com in Microsoft 365 operated by 21Vianet**
+- **SPF TXT record for contoso.com in Microsoft 365 operated by 21Vianet**:
 
   ```text
   v=spf1 include:spf.protection.partner.outlook.cn -all
   ```
 
-- **Scenario**: You use contoso.com for email in Microsoft 365, and you already configured the SPF TXT record in contoso.com with all sources of email from the domain. You also own the domains contoso.net and contoso.org, but you don't use them for email. You want to specify that no one is authorized to send email from contoso.net or contoso.org.
+### Scenario: Parked domains
 
-  **SPF TXT record for contoso.net**:
+You own the domains contoso.net and contoso.org, but you don't use them for email. You want to specify no one is authorized to send email from contoso.net or contoso.org.
 
-  ```txt
-  v=spf1 -all
-  ```
-
-  **SPF TXT record for contoso.org**:
+- **SPF TXT record for contoso.net**:
 
   ```txt
   v=spf1 -all
   ```
 
-- **Scenario**: You use contoso.com for email in Microsoft 365. You plan on sending mail from the following sources:
-  - An on-premises email server with the external email address of 192.168.0.10. Because you have direct control over this email source, we consider it OK to use the server for senders in the contoso.com domain.
-  - The Adatum bulk mailing service. Because you don't have direct control over this email source, we recommend using a subdomain, so you create marketing.contoso.com for that purpose. According to the Adatum service documentation, you need to add `include:servers.adatum.com` to the SPF TXT record for your domain.
+- **SPF TXT record for contoso.org**:
+
+  ```txt
+  v=spf1 -all
+  ```
+
+> [!NOTE]
+> As previously mentioned in this article, each subdomain requires its own SPF TXT record. For parked domains, it's virtually impossible to guess which subdomains might be needed. **If** the domain registrar supports wildcard records, you can use the following syntax to specify no one is authorized to send email from any subdomains of the parked domain:
+>
+> **Hostname**: `_*.contoso.net` or `_*.contoso.org`<br/>
+> **TXT value**: `v=spf1 -all`
+
+### Scenario: Microsoft 365 email with on-premises email and a non-Microsoft email service
+
+You use contoso.com for email in Microsoft 365. You plan on sending mail from the following sources:
+
+- An on-premises email server with the external email address of 192.168.0.10. Because you have direct control over this email source, we consider it OK to use the server for senders in the contoso.com domain.
+- The Adatum bulk mailing service. Because you don't have direct control over this email source, we recommend using a subdomain, so you create marketing.contoso.com for that purpose. According to the Adatum service documentation, you need to add `include:servers.adatum.com` to the SPF TXT record for your domain.
 
   **SPF TXT record for contoso.com**:
 

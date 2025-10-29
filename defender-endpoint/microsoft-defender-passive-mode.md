@@ -26,8 +26,6 @@ Some of the key benefits of Defender Antivirus in passive mode are:
 
 * **EDR Block mode** - Post-breach protection by detecting and remediating threats missed by the active antimalware solution
 
-* **Data Loss Prevention (DLP)** - Endpoint DLP functionalities operate normally, ensuring sensitive data is safeguarded.
-
 * **Security intelligence updates** - Microsoft Defender Antivirus continues to receive updates to stay aware of the latest threats.
 
 * **Data Loss Prevention (DLP)** - Endpoint DLP functionalities operate normally, ensuring sensitive data is safeguarded.

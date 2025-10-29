@@ -1,4 +1,4 @@
----
+﻿---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
 author: batamig
@@ -14,29 +14,27 @@ ms.custom:
 - next-gen
 - mde-edr
 - admindeeplinkDEFENDER
-ms.date: 02/10/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Endpoint detection and response in block mode
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## What is EDR in block mode?
 
@@ -133,3 +131,4 @@ The following table lists requirements for EDR in block mode:
 - [Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)](edr-block-mode-faqs.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

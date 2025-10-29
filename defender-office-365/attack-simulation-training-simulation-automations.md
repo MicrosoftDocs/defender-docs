@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 10/23/2024
+ms.date: 10/23/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -195,6 +195,9 @@ On the **Target users** page, select who receives the simulation. Use the follow
     - Microsoft 365 Groups (static and dynamic)
     - Distribution groups (static only)
     - Mail-enabled Security groups (static only)
+
+    > [!TIP]
+    > Currently, hidden membership groups aren't supported.
 
     The following search tools are available:
 
@@ -574,12 +577,12 @@ When you're finished, select **Next**.
 What you see on the **Schedule details** page depends on whether you selected **Randomized** or **Fixed** for the simulation schedule on the previous page.
 
 - **Randomized** simulation schedule: The following settings are available:
-  - **Automation start** section: Use **Select the date you want the automation to start from** to select the start date for the simulations. You can select any future date of up to a year. 
+  - **Automation start** section: Use **Select the date you want the automation to start from** to select the start date for the simulations. You can select any future date of up to a year.
 
   - **Automation scoping** section: Configure the following settings:
     - **Select the days of the week that simulations are allowed to start on**: Select one or more days of the week.
     - **Enter the maximum number of simulations that can be started between the start and end dates**: Enter a value from 1 to 10. This number will also determine the number of payloads to be used. If you choose more payloads than simulations, e.g., 12 payloads for 10 simulations, any 10 of the 12 payloads will be used. If you choose fewer payloads than simulations, e.g., 5 payloads for 8 simulations, some payloads will repeat to cover all the simulations, unless you have chosen **Use unique payloads across simulations within an automation** in the **Launch details**.
-    - **Randomize the time of day that simulation emails can be sent for delivery**: Select **Randomize send times** to randomize the send times. This will stagger email delivery over a 12 hour window. 
+    - **Randomize the time of day that simulation emails can be sent for delivery**: Select **Randomize send times** to randomize the send times. This will stagger email delivery over a 12 hour window.
 
   - **Automation end** section: Use **Select the date you want the automations to end** to select the end date for the simulations. You can select any future date of upto a year.
 
@@ -605,7 +608,7 @@ When you're finished on the **Schedule details** page, select **Next**.
 
 On the **Launch details** page, configure the following additional settings for the automation:
 
-- **Use unique payloads across simulations within an automation** section: By default, **Unique payloads** isn't selected. Make sure you have chosen enough payloads for the number of simulations you want to run. If you have fewer payloads than simulations you want to run, only a fraction of users will be targeted (calculated as ratio of number of payloads by the number of simulations). 
+- **Use unique payloads across simulations within an automation** section: By default, **Unique payloads** isn't selected. Make sure you have chosen enough payloads for the number of simulations you want to run. If you have fewer payloads than simulations you want to run, only a fraction of users will be targeted (calculated as ratio of number of payloads by the number of simulations).
 
 - **Target all selected users in every simulation run** section: By default, the target users are divided across different simulations. If you select this option, all chosen target users will be included in every simulation run. Make sure you have chosen as many payloads as the number of simulations you want to run; otherwise, the payloads will start repeating.
 
@@ -664,7 +667,7 @@ For simulation automations with the **Status** value **Active** or **Inactive**,
 
 ## View reports of automated simulations
 
-You can view the simulation reports for automated campaigns in the **Simulations** tab. Click on the name of the simulation, having a prefix of **AutomatedSimulation_** and automation name available under the column **Created by**. To view the report click anywhere in the simulation row other than the check box next to the name. 
+You can view the simulation reports for automated campaigns in the **Simulations** tab. Click on the name of the simulation, having a prefix of **AutomatedSimulation_** and automation name available under the column **Created by**. To view the report click anywhere in the simulation row other than the check box next to the name.
 
 ## Frequently asked questions (FAQ) for simulations automations
 

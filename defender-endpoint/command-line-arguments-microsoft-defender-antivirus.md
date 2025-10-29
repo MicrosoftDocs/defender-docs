@@ -1,4 +1,4 @@
----
+﻿---
 title: Use the command line to manage Microsoft Defender Antivirus
 description: Run Microsoft Defender Antivirus scans and configure next-generation protection with a dedicated command-line utility.
 ms.service: defender-endpoint
@@ -8,7 +8,7 @@ ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: bagol
-ms.date: 01/16/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -16,18 +16,13 @@ ms.collection:
 - tier3
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure and manage Microsoft Defender Antivirus with the mpcmdrun.exe command-line tool
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus 
-
-**Platforms**
-- Windows
 
 You can perform various functions in Microsoft Defender Antivirus using the dedicated command-line tool **mpcmdrun.exe**. This utility is useful when you want to automate Microsoft Defender Antivirus tasks. You can find the utility in `%ProgramFiles%\Windows Defender\MpCmdRun.exe`. Run it from a command prompt.
 
@@ -46,9 +41,16 @@ Here's an example:
 MpCmdRun.exe -Scan -ScanType 2
 ```
 
-In our example, the MpCmdRun utility starts a full antivirus scan on the device.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Commands
+
+In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 
 |Command|Description|
 |---|---|
@@ -112,3 +114,4 @@ The following table lists common errors that can occur while using the MpCmdRun 
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
