@@ -7,9 +7,9 @@ ms.date: 05/18/2025
 
 # Configure the Microsoft Security DevOps Azure DevOps extension
 
-Microsoft Security DevOps is a command line application that integrates static analysis tools into the development lifecycle. Microsoft Security DevOps installs, configures, and runs the latest versions of static analysis tools (including, but not limited to, SDL/security and compliance tools). Microsoft Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
+Microsoft Security DevOps is a command-line application that integrates static analysis into your development lifecycle. It installs, configures, and runs the latest SDL, security, and compliance analyzers using portable configurations to ensure consistent, deterministic execution across environments.
 
-The Microsoft Security DevOps uses the following Open Source tools:
+Microsoft Security DevOps uses the following open-source tools:
 
 | Name | Language | License |
 |--|--|--|
@@ -24,20 +24,16 @@ The Microsoft Security DevOps uses the following Open Source tools:
 | [Trivy](https://github.com/aquasecurity/trivy) | container images, Infrastructure as Code (IaC) | [Apache License 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
 
 > [!NOTE]
-> Effective September 20, 2023, the secrets scanning (CredScan) tool within the Microsoft Security DevOps (MSDO) Extension for Azure DevOps has been deprecated. MSDO secrets scanning is replaced with [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
+> As of September 20, 2023, the secrets scanning (CredScan) tool within the Microsoft Security DevOps (MSDO) Extension for Azure DevOps has been deprecated. MSDO secrets scanning is replaced with [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
 
 ## Prerequisites
 
-- Project Collection Administrator privileges to the Azure DevOps organization are required to install the extension.
-
-If you don't have access to install the extension, you must request access from your Azure DevOps organization's administrator during the installation process.
+- Project Collection Administrator privileges in the Azure DevOps organization are required to install the extension. If you don't have access, request it from your Azure DevOps administrator during installation.
 
 ## Configure the Microsoft Security DevOps Azure DevOps extension
 
-**To configure the Microsoft Security DevOps Azure DevOps extension:**
-
 1. Sign in to [Azure DevOps](https://dev.azure.com/).
-1. Navigate to **Shopping Bag** > **Manage extensions**.
+1. Go to **Shopping Bag** > **Manage extensions**.
 
     :::image type="content" source="media/msdo-azure-devops-extension/manage-extensions.png" alt-text="Screenshot that shows how to navigate to the manage extensions screen.":::
 
@@ -55,14 +51,11 @@ If you don't have access to install the extension, you must request access from 
 1. Select **Install**.
 1. Select **Proceed to organization**.
 
-## Configure your pipelines using YAML
-
-**To configure your pipeline using YAML**:
+## Configure pipelines using YAML
 
 1. Sign into [Azure DevOps](https://dev.azure.com/).
 1. Select your project.
-1. Navigate to **Pipelines**.
-1. Select **New pipeline**.
+1. Go to **Pipelines** > **New pipeline**.
 
     :::image type="content" source="media/msdo-azure-devops-extension/create-pipeline.png" alt-text="Screenshot showing where to locate create pipeline in DevOps." lightbox="media/msdo-azure-devops-extension/create-pipeline.png":::
 
@@ -108,22 +101,16 @@ If you don't have access to install the extension, you must request access from 
     > Defender for Cloud. **For additional tool configuration options and environment variables, see
     > [the Microsoft Security DevOps wiki](https://github.com/microsoft/security-devops-action/wiki)**
 
-1. To commit the pipeline, select **Save and run**.
-
-    The pipeline runs for a few minutes and save the results.
+1. Select **Save and run** to commit and run the pipeline.
 
     > [!NOTE]
-    > Install the SARIF SAST Scans Tab extension on the Azure DevOps
-    > organization in order to ensure that the generated analysis results
-    > will be displayed automatically under the Scans tab.
+    > Install the SARIF SAST Scans Tab extension to automatically display SARIF analysis results in the pipeline’s **Scans** tab.
 
-## Uploading findings from third-party security tooling into Defender for Cloud
+## Uploading findings from third-party security tools into Defender for Cloud
 
-While Defender for Cloud provides the MSDO CLI for standardized functionality and policy controls across a set of open source security analyzers, you have the flexibility to upload results from other third-party security tooling that you might have configured in CI/CD pipelines to Defender for Cloud for comprehensive code-to-cloud contextualization. All results uploaded to Defender for Cloud must be in standard SARIF format.
+Defender for Cloud can ingest SARIF results from other security tools for code-to-cloud visibility. To upload these results, ensure your Azure DevOps repositories are [onboarded to Defender for Cloud](quickstart-onboard-devops.md). After onboarding, Defender for Cloud continuously monitors the `CodeAnalysisLogs` artifact for SARIF output.
 
-First, ensure your Azure DevOps repositories are [onboarded to Defender for Cloud](quickstart-onboard-devops.md). After you successfully onboard Defender for Cloud, it continuously monitors the 'CodeAnalysisLogs' artifact for SARIF output.
-
-You can use the 'PublishBuildArtifacts@1' task to ensure SARIF output is published to the correct artifact. For example, if a security analyzer outputs `results.sarif`, you can configure the following task in your job to ensure results are uploaded to Defender for Cloud:
+Use the `PublishBuildArtifacts@1` task to publish SARIF files to the `CodeAnalysisLogs` artifact. For example:
 
 ```yml
 - task: PublishBuildArtifacts@1
@@ -131,8 +118,7 @@ You can use the 'PublishBuildArtifacts@1' task to ensure SARIF output is publish
     PathtoPublish: 'results.sarif'
     ArtifactName: 'CodeAnalysisLogs'
 ```
-
-Findings from third-party security tools appears as 'Azure DevOps repositories should have code scanning findings resolved' assessments associated with the repository the security finding was identified in.
+Defender for Cloud displays these findings under the *Azure DevOps repositories should have code scanning findings resolved* assessment for the affected repository.
 
 ## Related content:
   - [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline)
