@@ -3,6 +3,7 @@ title: Secure apps accessing other APIs using app governance
 ms.date: 10/23/2025
 ms.topic: how-to
 description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
+ms.reviewer: shragar
 ---
 
 # Secure apps accessing other APIs using app governance
