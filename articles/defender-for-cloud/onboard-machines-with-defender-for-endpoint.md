@@ -61,7 +61,7 @@ Before you begin:
 
 1. Go to **Environment settings** > **Direct onboarding**.
 
-1. Turn the **Direct onboarding** toggle **On**.
+1. Toggle direct onboarding to **On**.
 
 1. Select the subscription you want to use for servers onboarded through Defender for Endpoint.
 
