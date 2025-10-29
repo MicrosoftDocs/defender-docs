@@ -150,7 +150,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
 
 1. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
-1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example `mpam-fe.exe /X`.
+1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example, `mpam-fe.exe /X`.
 
    > [!NOTE]
    > The VMs pick up the updated package whenever a new GUID folder is created with an extracted update package or whenever an existing folder is updated with a new extracted package.
@@ -235,7 +235,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
 
    > [!NOTE]
-   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it uses additional CPU.
+   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs are offline, and have missed two or more consecutive scheduled scans. But since it's running a scheduled scan, it uses additional CPU.
 
 - Turn on e-mail scanning: `Enabled`
 
