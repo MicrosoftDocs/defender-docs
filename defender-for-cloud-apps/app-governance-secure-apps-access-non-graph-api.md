@@ -49,7 +49,6 @@ You can create app governance policies that specifically target apps accessing A
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/new-policy-non-graph-api.png" alt-text="Screenshot that shows the new policy creation page for non-Graph API apps." lightbox="media/app-governance-secure-apps-access-non-graph-api/new-policy-non-graph-api.png":::
 
 
-
 ## View APIs used by an app
 
 To view the APIs that an app uses:
@@ -65,3 +64,4 @@ The Permissions tab lists all permissions granted to the app, including those th
 ## Next steps
 
 [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)
+[View your app details with app governance](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
