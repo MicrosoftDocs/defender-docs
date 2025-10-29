@@ -584,7 +584,7 @@
           href: governance-rules.md
         - name: Automate remediation responses
           displayName: workflow, triggers, logic app, automation, policies, breaking change
-          href: workflow-automation.yml
+          href: workflow-automations.md
       - name: Improve regulatory compliance
         href: regulatory-compliance-dashboard.md
       - name: Investigate with security explorer and attack path
@@ -634,7 +634,7 @@
       items:
         - name: Manage and respond to security alerts
           displayName: security alerts, alerts
-          href: managing-and-responding-alerts.yml
+          href: manage-respond-alerts.md
         - name: Create and manage alerts suppression rules
           displayName: alert suppression, alert suppression, create, suppressions rules,
             rules
@@ -682,7 +682,7 @@
           href: alert-validation.md
         - name: Automate responses to alerts
           displayName: workflow, alerts, response
-          href: workflow-automation.yml
+          href: workflow-automations.md
     - name: Resolve connector issues
       items:
       - name: Troubleshoot connectors guide
@@ -860,7 +860,7 @@
             href: deploy-vulnerability-assessment-byol-vm.md
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-            href: how-to-transition-to-built-in.yml
+            href: transition-to-built-in.md
       - name: Machine secrets scanning
         items:
           - name: Overview
@@ -899,7 +899,8 @@
             href: just-in-time-access-overview.md
           - name: Enable just-in-time access 
             displayName: jit, management, ports
-            href: just-in-time-access-usage.yml
+            href: enable-just-in-time-access.md
+
     - name: Investigate and remediate 
       items:
       - name: Remediate EDR solutions (agentless)
