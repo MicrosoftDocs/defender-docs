@@ -10,7 +10,7 @@ ms.author: dacurwin
 
 # Connect your non-Azure servers to Microsoft Defender for Cloud with Defender for Endpoint
 
-Use Microsoft Defender for Cloud to onboard your on-premises or multicloud servers through Microsoft Defender for Endpoint. This setup protects non-Azure machines without deploying extra agents, and shows all your servers, Azure and non-Azure, in one unified security view.
+Microsoft Defender for Cloud lets you onboard on-premises and multicloud servers through Microsoft Defender for Endpoint. This setup protects non-Azure machines without the need for any additional agents and shows all servers, Azure and non-Azure, in one unified security view.
 
 > [!NOTE]
 > To connect your non-Azure machines via Azure Arc, see [Connect your non-Azure machines to Microsoft Defender for Cloud with Azure Arc](quickstart-onboard-machines.md).
