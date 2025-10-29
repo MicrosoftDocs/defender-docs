@@ -520,9 +520,6 @@ For technical support, contact the software vendor.
 
 This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) that attackers can use when a user's credentials are compromised.
 
-> [!NOTE]
-> This rule blocks DLP policy tips and ToolTips in Outlook. This rule applies to Outlook and Outlook.com only.
-
 Intune name: `Process creation from Office communication products (beta)`
 
 Configuration Manager name: Not available
