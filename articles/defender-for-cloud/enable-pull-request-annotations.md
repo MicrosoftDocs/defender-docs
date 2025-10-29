@@ -21,14 +21,14 @@ Users with access to the repository can add annotations, to suggest changes, ask
 
 **For GitHub**:
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - Be a [GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security) customer.
 - [Connect your GitHub repositories to Microsoft Defender for Cloud](quickstart-onboard-github.md).
 - [Configure the Microsoft Security DevOps GitHub action](github-action.md).
 
 **For Azure DevOps**:
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Have write access (owner/contributor) to the Azure subscription](/azure/active-directory/privileged-identity-management/pim-how-to-activate-role).
 - [Connect your Azure DevOps repositories to Microsoft Defender for Cloud](quickstart-onboard-devops.md).
 - [Configure the Microsoft Security DevOps Azure DevOps extension](configure-azure-devops-extension.md).
