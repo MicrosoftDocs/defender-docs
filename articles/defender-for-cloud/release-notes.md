@@ -33,8 +33,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|October 29, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview) |
 |October 23, 2025 | Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
+|October 29, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview) |
+
+### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
+
+Microsoft Cloud Security Benchmark (MCSB) v2 is now available in Defender for Cloud as a public preview. This version includes expanded risk-based guidance, additional Azure Policy mappings, and controls for securing AI workloads. You can use the Regulatory compliance dashboard to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
+
+For more information about the benchmark, see [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
 
 ### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
 
