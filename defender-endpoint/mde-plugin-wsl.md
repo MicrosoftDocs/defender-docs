@@ -1,8 +1,8 @@
 ﻿---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 description: Learn how to set up and use the Defender for Endpoint plug-in for Windows Subsystem for Linux.
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.reviewer: gokulgiju, priyankagill, kvitta, pahuijbr
 ms.service: defender-endpoint
@@ -15,7 +15,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 10/20/2025
+ms.date: 10/27/2025
 search.appverid: MET150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -50,6 +50,8 @@ Be aware of the following considerations before you start:
 - Running a custom kernel and custom kernel command line is not supported. Although the plug-in does not block running in that configuration, it does not guarantee visibility within WSL when you're running a custom kernel and custom kernel command line. We recommend blocking such configurations with [Microsoft Intune wsl settings](/windows/wsl/intune).
 
 - The plug-in is not supported on machines with an ARM64 processor.
+
+- The plug-in is not supported on multi-session variants of Windows 10 and 11.
 
 - The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
 

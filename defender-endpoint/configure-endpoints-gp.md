@@ -20,10 +20,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Onboard Windows devices using Group Policy 
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ## Prerequisites
 
@@ -46,7 +44,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
 
-3. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and click **New**. Enter the name of the new GPO in the dialogue box that is displayed and click **OK**.
+3. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and click **New**. Enter the name of the new GPO in the dialog box that is displayed and click **OK**.
 
 4. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
 
@@ -64,7 +62,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 11. Select **OK** and close any open GPMC windows.
 
-12. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link. Click **OK**.
+12. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialog box that is displayed, select the Group Policy Object that you wish to link. Click **OK**.
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that the device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md).

@@ -23,10 +23,6 @@ appliesto:
 ---
 # Review events and errors using Event Viewer
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 ## View events in the Defender for Endpoint service event log
 

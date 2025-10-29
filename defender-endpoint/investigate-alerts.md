@@ -22,9 +22,6 @@ appliesto:
 ---
 # Investigate alerts in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 Investigate alerts that are affecting your network, understand what they mean, and how to resolve them.

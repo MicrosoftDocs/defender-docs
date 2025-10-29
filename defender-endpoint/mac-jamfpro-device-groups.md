@@ -23,10 +23,6 @@ appliesto:
 ---
 # Set up Microsoft Defender for Endpoint on macOS device groups in Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  

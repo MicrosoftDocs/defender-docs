@@ -20,10 +20,6 @@ appliesto:
 ---
 # Exclude devices
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 ## Exclude devices from vulnerability management
 
