@@ -46,8 +46,9 @@ You can create app governance policies that specifically target apps accessing A
     - Choose an action you'd like to take on apps that match the conditions in this policy. For example, disabling the app.
     - Set the policy actions to active or disabled.
 
+:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/new-policy-non-graph-api.png" alt-text="Screenshot that shows the new policy creation page for non-Graph API apps." lightbox="media/app-governance-secure-apps-access-non-graph-api/new-policy-non-graph-api.png":::
 
-:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/choose-policy-template.png" alt-text="Screenshot of the policy template page.":::
+
 
 ## View APIs used by an app
 
@@ -59,7 +60,7 @@ To view the APIs that an app uses:
 
 The Permissions tab lists all permissions granted to the app, including those that access other APIs. You can see each permission’s privilege level, whether it’s in use, and the permission type. This information helps you assess whether the app has appropriate access and determine if you need to take further action, such as reviewing policies or disabling the app.
 
-:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png" alt-text="Screenshot that shows the list of APIs and their assigned permissions.":::
+:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png" alt-text="Screenshot that shows the list of APIs and their assigned permissions." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png":::
 
 ## Next steps
 
