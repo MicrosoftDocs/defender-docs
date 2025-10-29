@@ -108,6 +108,9 @@ For editable queries, more options are available:
 
 ## Create custom analytics and detection rules
 
+>[!IMPORTANT]
+> [**Custom detections**](custom-detections-overview.md) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [this blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
+
 To help discover threats and anomalous behaviors in your environment, you can create customized detection rules. There are two kinds:
 - Analytics rules - to generate detections from rules that query data that is ingested through Microsoft Sentinel
 - Custom detection rules - to generate detections from rules that query data from Defender XDR or from both Microsoft Sentinel and Defender XDR
