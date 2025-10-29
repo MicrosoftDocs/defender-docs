@@ -26,11 +26,6 @@ From the [asset inventory page](asset-inventory.md), use the resource type filte
 
 :::image type="content" source="./media/protect-network-resources/network-filters-inventory.png" alt-text="Asset inventory network resource types." lightbox="./media/protect-network-resources/network-filters-inventory.png":::
 
-
-:::image type="content" source="./media/protect-network-resources/network-map-info.png" alt-text="Screenshot of the Defender for Cloud networking topology map." lightbox="./media/protect-network-resources/network-map-info.png":::
-
-[![Networking traffic map.](./media/protect-network-resources/network-map-traffic.png)](./media/protect-network-resources/network-map-traffic.png#lightbox)
-
 ## Next steps
 
 To learn more about recommendations that apply to other Azure resource types, see the following:
