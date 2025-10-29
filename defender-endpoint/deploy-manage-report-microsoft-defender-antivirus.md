@@ -24,7 +24,6 @@ appliesto:
 ---
 # Deploy, manage, and report on Microsoft Defender Antivirus
 
-
 You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
 
 - [Deploy, manage, and report on Microsoft Defender Antivirus](#deploy-manage-and-report-on-microsoft-defender-antivirus)
@@ -33,7 +32,7 @@ You can manage and report on Microsoft Defender Antivirus using one of several t
   - [PowerShell](#powershell)
   - [Group Policy and Microsoft Entra ID](#group-policy-and-microsoft-entra-id)
   - [Windows Management Instrumentation](#windows-management-instrumentation)
- 
+  
 This article describes these options for deployment, management, and reporting.
 
 ## Prerequisites
