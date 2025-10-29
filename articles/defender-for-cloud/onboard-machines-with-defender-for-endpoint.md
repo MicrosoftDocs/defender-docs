@@ -38,7 +38,7 @@ Supported operating systems include all Windows Server and Linux server versions
 - [Supported Linux server versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements)
 
 This capability works with both:
-- **Defender for Servers Plan 1**
+- **Defender for Servers Plan 1 (P1)**
 - **Defender for Servers Plan 2 (P2)** (with [limitations](#current-limitations))
 
 ## Enable direct onboarding
