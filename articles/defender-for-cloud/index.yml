@@ -95,7 +95,8 @@ landingContent:
           - text: Regulatory compliance 
             url: concept-regulatory-compliance-standards.md
           - text: Enable just-in-time access on VMs
-            url: just-in-time-access-usage.yml
+            url: enable-just-in-time-access.md
+
 
   # Card
   - title: Threat Protection & Response
