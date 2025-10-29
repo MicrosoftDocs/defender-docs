@@ -22,13 +22,14 @@ Before you begin, make sure you meet the following requirements:
 - Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Global Administrator or Security Administrator privileges.
 
 ### Configure scoping rules
+
 To enable identity scoping, follow these steps:​
 
 1. Navigate to **Permissions > Microsoft Defender XDR >  Roles​**.
 
     :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal.":::
 
-1. Select **+ Create custom role** and follow the instructions in [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
+1. Select **+ Create custom role** and follow the instructions in [Create custom roles with Microsoft Defender XDR Unified RBAC.](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
 
     :::image type="content" source="media/custom-roles/create-custom-role.png" alt-text="Screenshot showing the create custom roles button.":::
 
@@ -42,7 +43,6 @@ To enable identity scoping, follow these steps:​
     1. Under **Scope**, select the user groups (AD domains) that will be scoped to the assignment.
      :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role.":::
 1. Select **Add**.
-
 
 
 ### Known limitations (Preview)
@@ -76,4 +76,3 @@ Defender for Identity scoping is currently in Public preview. The following tabl
 - [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles)
 - [Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/import-rbac-roles)
 - [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac)
-

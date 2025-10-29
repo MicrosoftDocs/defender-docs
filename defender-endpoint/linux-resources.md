@@ -23,11 +23,6 @@ appliesto:
 ---
 # Resources
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 This article provides resources for resolving issues or configuring Microsoft Defender for Endpoint on Linux. This article describes how to collect diagnostic information, log installation issues, and configure Defender for Endpoint on Linux using the command line. This article also describes how to uninstall Defender for Endpoint on Linux.
 
 ## Collect diagnostic information

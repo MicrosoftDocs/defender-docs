@@ -22,9 +22,6 @@ appliesto:
 ---
 # Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
 
 
 ## Overview of onboarding client devices

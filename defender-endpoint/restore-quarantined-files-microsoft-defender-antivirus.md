@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee, pahuijbr
 manager: bagol
 ms.subservice: ngp
@@ -22,16 +22,16 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Restore quarantined files in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-**Platforms**
-- Windows
-
 Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ### Using the Windows Security app
 

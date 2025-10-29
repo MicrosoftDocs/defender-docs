@@ -21,8 +21,6 @@ appliesto:
 ---
 # STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 > [!IMPORTANT]
 > Devices that are configured for IPv6-only traffic are not supported.
