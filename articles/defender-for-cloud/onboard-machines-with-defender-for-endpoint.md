@@ -49,7 +49,7 @@ Before you begin:
 
 - Make sure you have the required permissions:
     - **Subscription Owner** permissions on the subscription you select for onboarding.
-    -  **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
+    - **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
 - If your tenant already has a Defender for Endpoint for Servers license, [indicate it](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-) in Defender for Cloud
 - Review the [current limitations](#current-limitations)
 
