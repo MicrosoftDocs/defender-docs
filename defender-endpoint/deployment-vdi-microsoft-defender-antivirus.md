@@ -55,15 +55,15 @@ In Windows 10, version 1903, Microsoft introduced the shared security intelligen
 
 1. On your Group Policy management computer, open the Group Policy Management Console, right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the Group Policy Management Editor, go to **Computer configuration**.
+1. In the Group Policy Management Editor, go to **Computer configuration**.
 
-3. Select **Administrative templates**. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Security Intelligence Updates**.
+1. Select **Administrative templates**. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Security Intelligence Updates**.
 
-4. Double-click **Define security intelligence location for VDI clients**, and then set the option to **Enabled**. A field automatically appears.
+1. Double-click **Define security intelligence location for VDI clients**, and then set the option to **Enabled**. A field automatically appears.
 
-5. In the field, type `\\<File Server shared location\>\wdav-update`. (For help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates).)
+1. In the field, type `\\<File Server shared location\>\wdav-update`. (For help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates).)
 
-6. Select **OK**, and then deploy the Group Policy Object to the VMs you want to test.
+1. Select **OK**, and then deploy the Group Policy Object to the VMs you want to test.
 
 ### PowerShell
 
@@ -71,7 +71,7 @@ In Windows 10, version 1903, Microsoft introduced the shared security intelligen
 
    `Set-MpPreference -SharedSignaturesPath \\<File Server shared location>\wdav-update`
    
-2. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.) 
+1. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.) 
 
 ## Download and unpackage the latest updates
 
@@ -100,7 +100,7 @@ You can also set up your single server or machine to fetch the updates on behalf
 
 1. Create an SMB/CIFS file share.
 
-2. Use the following example to create a file share with the following share permissions.
+1. Use the following example to create a file share with the following share permissions.
 
    ```PowerShell
    
@@ -121,19 +121,19 @@ You can also set up your single server or machine to fetch the updates on behalf
 
 1. On the management machine, open the **Start** menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
 
-2. Specify the name as `Security intelligence unpacker`. 
+1. Specify the name as `Security intelligence unpacker`. 
 
-3. On the **Trigger** tab, select **New...** > **Daily**, and select **OK**.
+1. On the **Trigger** tab, select **New...** > **Daily**, and select **OK**.
 
-4. On the **Actions** tab, select **New...**.
+1. On the **Actions** tab, select **New...**.
 
-5. Specify `PowerShell` in the **Program/Script** field. 
+1. Specify `PowerShell` in the **Program/Script** field. 
 
-6. In the **Add arguments**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
+1. In the **Add arguments**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
 
-7. Configure any other settings as appropriate.
+1. Configure any other settings as appropriate.
 
-8. Select **OK** to save the scheduled task.
+1. Select **OK** to save the scheduled task.
 
 To initiate the update manually, right-click on the task, and then select **Run**.
 
@@ -143,19 +143,19 @@ If you would prefer to do everything manually, here's what to do to replicate th
 
 1. Create a new folder on the system root called `wdav_update` to store intelligence updates. For example, create the folder `c:\wdav_update`.
 
-2. Create a subfolder under `wdav_update` with a GUID name, such as `{00000000-0000-0000-0000-000000000000}`
+1. Create a subfolder under `wdav_update` with a GUID name, such as `{00000000-0000-0000-0000-000000000000}`
 
    Here's an example: `c:\wdav_update\{00000000-0000-0000-0000-000000000000}`
 
    > [!NOTE]
    > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change this so that the file is downloaded to the same folder each time.
 
-3. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
+1. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
-4. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example `mpam-fe.exe /X`.
+1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example `mpam-fe.exe /X`.
 
    > [!NOTE]
-   > The VMs will pick up the updated package whenever a new GUID folder is created with an extracted update package or whenever an existing folder is updated with a new extracted package.
+   > The VMs pick up the updated package whenever a new GUID folder is created with an extracted update package or whenever an existing folder is updated with a new extracted package.
 
 ## Microsoft Defender Antivirus configuration settings
 
@@ -204,7 +204,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Enable file hash computation feature: `Enabled`
 
 > [!NOTE]
-> "Enable file hash computation feature" is only needed if using Indicators – File hash. It can cause higher amount of CPU utilization, since it has to parse thru each binary on disk to get the file hash.
+> "Enable file hash computation feature" is only needed if using Indicators – File hash. It can cause higher amount of CPU utilization, since it has to parse through each binary on disk to get the file hash.
 
 ### Real-time protection
 
@@ -237,7 +237,7 @@ It's important to take advantage of the included threat protection capabilities 
 - Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
 
    > [!NOTE]
-   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which will help when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it will use additional CPU.
+   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs have been offline, and have missed two or more consecutive scheduled scans. But since it is running a scheduled scan, it uses additional CPU.
 
 - Turn on e-mail scanning: `Enabled`
 
@@ -327,12 +327,12 @@ Optimize the "Windows Defender Cache Maintenance" scheduled task for non-persist
 
 1. Open up the **Task Scheduler** mmc (`taskschd.msc`).
 
-2. Expand **Task Scheduler Library** > **Microsoft** > **Windows** > **Windows Defender**, and then right-click on **Windows Defender Cache Maintenance**.
+1. Expand **Task Scheduler Library** > **Microsoft** > **Windows** > **Windows Defender**, and then right-click on **Windows Defender Cache Maintenance**.
 
-3. Select **Run**, and let the scheduled task finish.
+1. Select **Run**, and let the scheduled task finish.
 
    > [!WARNING]
-   > If you do not do this, it can cause higher cpu utilization while the cache maintenance task is running on each of the VMs.
+   > If you don't do this, it can cause higher cpu utilization while the cache maintenance task is running on each of the VMs.
 
 ### Enable tamper protection
 
