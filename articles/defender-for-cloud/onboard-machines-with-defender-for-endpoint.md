@@ -39,7 +39,7 @@ Supported operating systems include all Windows Server and Linux server versions
 
 This capability works with both:
 - **Defender for Servers Plan 1**
-- **Defender for Servers Plan 2** (with some limitations — see [Current limitations](#current-limitations))
+- **Defender for Servers Plan 2 (P2)** (with [limitations](#current-limitations))
 
 ## Enable direct onboarding
 
