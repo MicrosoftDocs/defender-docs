@@ -63,7 +63,7 @@ Before you begin:
 
 1. Turn the **Direct onboarding** toggle **On**.
 
-1. Select the subscription you want to use for servers onboarded directly through Defender for Endpoint.
+1. Select the subscription you want to use for servers onboarded through Defender for Endpoint.
 
 1. Select **Save**.
 
