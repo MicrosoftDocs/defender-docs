@@ -48,8 +48,22 @@ To complete the procedures in this article, you need:
 
 - Contributor level permission for the relevant Azure subscription.
 
-- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
+- If CIEM is enabled as part of Defender for CSPM. The user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
 
+- To Ingest GCP Cloud Logging with Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice
+
+   1. If you create new cloud logging and Pub/Sub
+   
+      1. Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
+      
+      1. IAM permissions to configure Pub/Sub and manage service accounts.
+      
+   1. If you plan to use existing logs and Pub/Sub
+   
+      1. Access to existing Cloud Logging and Pub/Sub resources.
+      
+      1. Know your organization's existing log retention and Pub/Sub configurations.
+      
 You can learn more about Defender for Cloud pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 When you're connecting GCP projects to specific Azure subscriptions, consider the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail) and these guidelines:
@@ -257,8 +271,8 @@ To configure the Defender for Databases plan:
 
     :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan.":::
 
-    If the toggle for Azure Arc is **Off**, you need to follow the manual installation process mentioned earlier.
-
+   If the toggle for Azure Arc is **Off**, you need to follow the manual installation process mentioned earlier.
+   
 1. Select **Save**.
 
 1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
@@ -323,6 +337,62 @@ To configure the Defender CSPM plan:
 1. Select **Save**.
 
 1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
+
+## Ingest GCP Cloud Logging with Pub/Sub
+
+Integrating Google Cloud Platform (GCP) Cloud Logging with Microsoft Defender for Cloud allows you to ingest activity logs from GCP, enhancing your ability to monitor, detect, and respond to security events across your Google Cloud environments. You can configure log ingestion either at the project level or centrally at the organization level. Data streamed from GCP Pub/Sub provides the necessary context for Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud dependent on the log activity and calculated risk-based recommendations, security posture insights and power attack paths.
+
+### Deployment Options
+
+Select your deployment scenario that meets your requirement:
+
+- __Project-Level__: Configure log ingestion for individual GCP projects.
+
+- __Organization-Level__: Centralize log ingestion across all projects within a GCP organization.
+
+### Deployment Steps
+
+To configure the GCP cloud logging:
+
+1. Follow the [steps to connect your GCP project](#connect-your-gcp-project).
+
+1. On the **Select plans** tab, select **Settings** under Monitoring coverage column
+
+1. On the **Plan configuration** pane, turn the toggles to **On,** selecting one of the following methods:
+
+   1. Create a new GCP Cloud Logging and give a name for your new Pub/Sub Subscription Name  
+      ![User's image](media/quickstart-onboard-gcp/image6.png)
+      
+      > [!IMPORTANT]
+      > Selecting this option will incur additional cost. [Learn more about GCP Cloud Logging pricing](https://cloud.google.com/pubsub/pricing)
+      
+   1. Bring your existing GCP cloud logging by manually providing your existing Pub/Sub Subscription Name
+   
+1. Select **Save**.
+
+1. Continue with next steps to [Configure Access](#connect-your-gcp-project).
+
+1. Review and generate the GCP connector to complete your log ingestion onboarding to Defender for Cloud. 
+
+### How GCP Logging Ingestion Works
+
+Once configured, Defender for Cloud ingests and analyzes activity logs from Google Cloud to discover cloud identity and permissions insights, and CIEM recommendations.
+
+1. Google Cloud records activity logs (including Admin Activity and Data Access logs) in [Cloud Logging.](https://cloud.google.com/logging/docs)
+
+1. Logs are exported to the configured **Pub/Sub topic** using a [Cloud Logging sink.]()
+
+1. **Pub/Sub subscription** streams log messages to Defender for Cloud when new logs arrive.
+
+1. Defender for Cloud pulls the logs from Pub/Sub, processes the activity events, and provides:
+
+- Identity and permission insights
+
+- CIEM posture recommendations
+
+1. Access between GCP and Defender for Cloud is secured via Google Cloud **IAM roles** and **service accounts** to ensure least-privilege operation.
+
+1. Optional: If **IAM Recommender** is enabled in your GCP environment, Defender for Cloud leverages its insights to enhance the accuracy of the CIEM recommendations with inactive and over-privileged roles. 
 
 ## Monitor your GCP resources
 
