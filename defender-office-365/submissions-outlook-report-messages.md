@@ -84,7 +84,7 @@ Based on the [User reported settings](submissions-user-reported-messages-custom-
 
 ### Use the built-in Report button in Outlook to report messages that aren't junk
 
-In a supported version of Outlook, select one or more messages in the Junk Email folder, select **Report**, and then select **Not junk** in the dropdown list. Fo example:
+In a supported version of Outlook, select one or more messages in the Junk Email folder, select **Report**, and then select **Not junk** in the dropdown list. For example:
 
 - **Outlook for Microsoft 365**:
 
