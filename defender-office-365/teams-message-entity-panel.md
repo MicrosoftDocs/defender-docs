@@ -34,10 +34,12 @@ This article explains the information and actions on the Teams message entity pa
 
 To use the Email entity page, you need to be assigned permissions. You have the following options:
 
-- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
-  - _Full access_: Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Operator** roles.
-  - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
+- _Full access_:
+  - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in one of the following roles gives users the required permissions _and_ permissions for other features in Microsoft 365: **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Operator**.
+- _Read-only access_:
+  - Microsoft Entra permissions: **Global Reader** or **Security Reader**.
+- _[Remove users from Teams chats](#remove-users-from-teams-chats-in-the-teams-message-entity-panel)_: Requires membership in one of the following Microsoft Entra roles: **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Operator**.
 
   > [!IMPORTANT]
   > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
@@ -50,9 +52,11 @@ There are no direct links to the Teams message entity panel from the top levels 
 
 - From the **Submissions** page at <https://security.microsoft.com/reportsubmission>:
   - Select the **Teams messages** tab \> select an entry by clicking anywhere in the row other than the check box.
-  - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
+  - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. The details flyout that opens is the Teams message entity panel.
 
-- From the **Advanced Hunting** page at <https://security.microsoft.com/v2/advanced-hunting>, select a **TeamsMessageId** value (link) from the **MessageEvents** table in the query results. For example:
+    You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
+
+- From the **Advanced Hunting** page at <https://security.microsoft.com/v2/advanced-hunting>, select a **TeamsMessageId** value (link) from the **MessageEvents** table in the query results. The details flyout that opens is the Teams message entity panel. For example:
 
   ```kusto
   UrlClickEvents
@@ -124,8 +128,6 @@ The rest of the Teams message entity panel contains the following information, r
 > [!TIP]
 > Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
 >
-> This feature works only for Teams chats and group chats that contain URLs.
->
 > You can only remove _internal_ users in your organization from a chat.
 >
 > When you remove users from a chat, the sender of the chat isn't blocked, and the removed users can start new chats with the sender.
@@ -143,7 +145,7 @@ Do the following steps in the **Take action** wizard:
 
    - **Impacted asset**: The email address of the user.
    - **Action**: This value is always **Remove user from conversation**.
-   - **Target entity**: The **Threat id** GUID value of the chat.
+   - **Target entity**: The **Thread id** GUID value of the chat.
    - **Expires on**
 
    By default, all users in the chat are selected, including external users you can't remove from the chat. Verify the _internal_ users to remove from the chat are selected.
