@@ -121,7 +121,7 @@ You can manage settings for Microsoft Defender XDR in the **Settings > Microsoft
 
 The Microsoft Defender portal's search function is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
 
-:::image type="content" source="/defender/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/search-panel.png":::
+:::image type="content" source="/defender-xdr/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender-xdr/media/microsoft-365-defender-portal/search-panel.png":::
 
 Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
 
@@ -138,7 +138,7 @@ Search also provides results from relevant links in the Microsoft Tech Community
 
 Notifications are messages that inform you about important events or updates in the Defender portal. They help you stay on top of your security tasks and alerts.
 
-:::image type="content" source="/defender/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/notifications-panel.png":::
+:::image type="content" source="/defender-xdr/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender-xdr/media/microsoft-365-defender-portal/notifications-panel.png":::
 
 Notifications are in the top bar of the portal's user interface. You can access them by clicking on the notification icon, which looks like a bell. A number on the icon indicates that you have that number of unread notifications.
 
