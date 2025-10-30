@@ -156,6 +156,8 @@ Share reports, emails, screenshots, log files, and more, all centralized in the 
 
 :::image type="content" source="media/cases-overview/case-attachments.png" alt-text="Screenshot of the details of the Attachments tab of a case.":::
 
+You can attach up to 10 files per comment.
+
 #### Add attachment to a case
 
 To add attachments to your case, go to the **Case details** page, select the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. Once uploaded, the file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If the file you want to upload is actually a malware sample, you can wrap it in a password-protected ZIP file.
@@ -182,7 +184,7 @@ To delete a case:
 
     :::image type="content" source="media/cases-overview/delete-case.png" alt-text="Screenshot showing the Remove option in the case details pane.":::
 
-1. In the pop-up window, check the consent box and then select **Confirm**.
+1. In the pop-up window, type *delete* and then select **Confirm**.
 
     :::image type="content" source="media/cases-overview/delete-case-confirm.png" alt-text="Screenshot showing the confirmation dialog for deleting a case.":::
 
