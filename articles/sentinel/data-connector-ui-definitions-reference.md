@@ -302,12 +302,12 @@ Here are some examples of the `Textbox` type. These examples correspond to the p
 ```
 
 | Array Value  | Required | Type  | Description  |
-|---------------|------|-------------|-------------|
-|**fillWith**     | |  ENUM       | Array of environment variables used to populate a placeholder. Separate multiple placeholders with commas. For example: `{0},{1}`  <br><br>Supported values: `workspaceId`, `workspaceName`, `primaryKey`, `MicrosoftAwsAccount`, `subscriptionId` |
-|**label**     | True | String       |  Defines the text for the label above a text box.      |
-|**value**     | True | String       |  Defines the value to present in the text box, supports placeholders.       |
-|**rows**     | |  Rows      |  Defines the rows in the user interface area. By default, set to **1**.       |
-|**wideLabel**    | | Boolean     | Determines a wide label for long strings. By default, set to `false`.        |
+|---------------|----------|-------------|-------------|
+|**fillWith**   |          | ENUM        | Array of environment variables used to populate a placeholder. Separate multiple placeholders with commas. For example: `{0},{1}`  <br><br>Supported values: `workspaceId`, `workspaceName`, `primaryKey`, `MicrosoftAwsAccount`, `subscriptionId` |
+|**label**      | True     | String      | Defines the text for the label above a text box.      |
+|**value**      | True     | String      | Defines the value to present in the text box, supports placeholders.       |
+|**rows**       |          | Rows        | Defines the rows in the user interface area. By default, set to **1**.       |
+|**wideLabel**  |          | Boolean     | Determines a wide label for long strings. By default, set to `false`.        |
 
 ##### Dropdown
 
