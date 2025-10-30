@@ -179,7 +179,7 @@ Follow the steps in the setup wizard, which includes:
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. Your incident queue now contains the Phishing Triage Agent card with the agent’s relevant metrics. This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
 
-The card currently contains the following data:
+The card shows:
 
 - **Incidents addressed:** Incidents containing user-reported phishing alerts that the agent classified as true phishing threats or false alarms.
 - **Incidents resolved:** Incidents that no longer require further handling, like false alarms.
@@ -303,7 +303,7 @@ To manage the Phishing Triage Agent’s settings, review its activity, and revie
 To view all previous runs by the agent:
 
 1. Select **Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview**.
-1. Select **View agent activity**. This opens the Security Copilot portal in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
+1. Select **View agent activity**.<br>This opens the Security Copilot portal in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
 
 ### View and manage feedback to the agent
 
