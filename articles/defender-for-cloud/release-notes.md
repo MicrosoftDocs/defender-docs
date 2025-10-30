@@ -39,7 +39,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
 
-Microsoft Cloud Security Benchmark (MCSB) v2 is now available in Defender for Cloud in public preview. This version includes expanded risk-based guidance, additional Azure Policy mappings, and controls for securing AI workloads. You can use the Regulatory compliance dashboard to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
+Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) v2 compliance standard v2 in public preview. 
+
+MCSB v2 includes expanded risk-based guidance, additional Azure Policy mappings, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
 
 Learn more about the [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
 
