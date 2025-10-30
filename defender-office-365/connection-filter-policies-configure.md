@@ -95,6 +95,13 @@ This article describes how to configure the default connection filter policy in 
 
    When you're finished in the flyout, select **Save**.
 
+> [!NOTE]
+> If the IP ranges you add don’t appear in the connection filter policy immediately, try refreshing the portal or verify the changes using PowerShell:
+> ```powershell
+> Get-HostedConnectionFilterPolicy -Identity Default
+> ```
+> Ensure that you have the required permissions (Security Administrator or Organization Management roles) to modify anti-spam policies. If the issue persists, it may indicate a synchronization delay or service-side issue. 
+
 4. Back on the policy details flyout, select **Close**.
 
 ## Use the Microsoft Defender portal to view the default connection filter policy
