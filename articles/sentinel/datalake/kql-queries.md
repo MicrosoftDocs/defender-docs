@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel  
 ms.topic: how-to
 ms.subservice: sentinel-graph
-ms.date: 08/27/2025
+ms.date: 10/29/2025
 ms.author: edbaynash  
 
 ms.collection: ms-security  
@@ -44,6 +44,7 @@ The **Query history** tab shows a list of your previously run queries, query pro
 
 :::image type="content" source="media/kql-queries/query-editor.png" alt-text="Screenshot of the Kql queries page in the Defender portal." lightbox="media/kql-queries/query-editor.png":::
 
+
 ### Select workspaces
 
 Queries can run against a single workspace or multiple workspaces.  Select workspaces in the upper right corner of the query editor using the **Selected workspaces** dropdown. The workspaces you select determine the tables available for querying. The selected workspaces apply to all query tabs in the query editor. When using multiple workspaces, the `union()` operator is applied by default to tables with the same name and schema from different workspaces. Use the `workspace()` operator to query a table from a specific workspace, for example `workspace("MyWorkspace").AuditLogs`. 
@@ -71,6 +72,25 @@ The schema browser provides a list of available tables and their columns for the
 
 :::image type="content" source="media/kql-queries/schema-browser.png" lightbox="media/kql-queries/schema-browser.png" alt-text="A screenshot showing the schema browser panel in the KQL editor.":::
 
+## Out of the box queries
+
+The **Queries** tab provides a collection of out-of-the-box KQL queries grouped by scenarios. Initial scenarios include the following which each scenario containing several queries:
++ Sudden expansion of sign-in locations for users and apps 
++ Rare or sensitive Azure subscription-level operations 
++ SharePoint downloads from previously unseen IPs (data exfiltration) 
++ Suspected beaconing C2 from an internal host 
++ Windows logons outside normal hours 
++ New process executions on endpoints 
++ Rare or risky tenant audit actions by apps or users 
++ Unusual user agents at signin or service access 
++ Daily summarization for anomaly detection
++ Threat intelligence matching
+
+More scenarios and queries will be added over time. For community contributions see the [Microsoft Sentinel GitHub repository](https://aka.ms/sentinel-github-outofthebox-queries).
+
+Select a query from the list to open it in a new query tab in the editor.
+
+:::image type="content" source="media/kql-queries/out-of-the-box-queries.png" alt-text="Screenshot of the Sample queries tab in the KQL query editor." lightbox="media/kql-queries/out-of-the-box-queries.png":::
 
 ### Result window
 
