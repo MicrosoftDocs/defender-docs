@@ -516,6 +516,7 @@ When the data source can't send the entire response payload all at once, the CCF
 | <ul><li>[LinkHeader](#configure-linkheader-or-persistentlinkheader)</li><li>[PersistentLinkHeader](#configure-linkheader-or-persistentlinkheader)</li><li>[NextPageUrl](#configure-nextpageurl)</li></ul> | Does the API response have links to next and previous pages? |
 | <ul><li>[NextPageToken](#configure-nextpagetoken-or-persistenttoken)</li><li>[PersistentToken](#configure-nextpagetoken-or-persistenttoken)</li> | Does the API response have a token or cursor for the next and previous pages? |
 | <ul><li>[Offset](#configure-offset)</li></ul> | Does the API response support a parameter for the number of objects to skip when paging? | 
+| <ul><li>[CountBasedPaging](#configure-countbasedpaging)</li></ul> | Does the API response support a parameter for the number of objects to return? |
 
 #### Configure LinkHeader or PersistentLinkHeader
 
@@ -631,6 +632,35 @@ Paging: {
        "pagingType": "Offset", 
         "offsetParaName": "offset" 
  }
+```
+
+#### Configure CountBasedPaging
+
+`CountBasedPaging` allows the client to specify the number of items to return in the response. This is useful for APIs that support pagination based on a count parameter as part of the response payload.
+
+| Field | Required | Type | Description |
+|----|----|----|----|
+| **pageNumberParaName** | True | String | Parameter name of page number in HTTP request |
+| **PageSize** | False | Integer | How many events per page |
+| **ZeroBasedIndexing** | False | Boolean | Flag to indicate if count is zero based |
+| **HasNextFlagJsonPath** | False | String | JSON path of flag in HTTP response payload to indicate there are more pages |
+| **TotalResultsJsonPath** | False | String | JSON path of total number of results in HTTP response payload |
+| **PageNumberJsonPath** | False | String | Required if totalResultsJsonPath is provided. JSON path of page number in HTTP response payload |
+| **PageCountJsonPath** | False | String | Required if totalResultsJsonPath is provided. JSON path of page count in HTTP response payload |
+
+Example:
+
+```json
+Paging: {
+ "pagingType" : "CountBasedPaging", 
+ "pageNumberParaName" : "page", 
+ "pageSize" : 10, 
+ "zeroBasedIndexing" : true, 
+ "hasNextFlagJsonPath" : "$.hasNext", 
+ "totalResultsJsonPath" : "$.totalResults", 
+ "pageNumberJsonPath" : "$.pageNumber", 
+ "pageCountJsonPath" : "$.pageCount"
+}
 ```
 
 ## DCR configuration
