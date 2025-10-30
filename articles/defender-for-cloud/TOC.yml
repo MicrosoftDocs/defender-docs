@@ -994,9 +994,13 @@
           - name: Gated deployment
             items:
               - name: Overview
-                href: gated-deployment-introduction.md
+                href: runtime-gated-overview.md
               - name: Enable gated deployment
-                href: enable-gated-deployment.md
+                href: enablement-guide-runtime-gated.md
+              - name: Troubleshooting
+                href: troubleshooting-runtime-gated.md
+              - name: Frequently asked questions
+                href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
         displayName: k8s, containers
         href: cluster-security-dashboard.md
