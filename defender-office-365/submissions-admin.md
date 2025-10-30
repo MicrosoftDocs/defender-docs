@@ -239,7 +239,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
        - **30 days**
        - **Never expire**
        - **Specific date**: The maximum value is 30 days from today.
-     - **Block entry note (optional)**: Enter optional information about why you're blocking this itme.
+     - **Block entry note (optional)**: Enter optional information about why you're blocking this item.
 
      When you're finished in the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
@@ -293,7 +293,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
        For spoofed senders, this value is meaningless, because entries for spoofed senders never expire.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry exipres on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry expires on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
