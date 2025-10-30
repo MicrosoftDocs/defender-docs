@@ -4,7 +4,7 @@ description: This document addresses recommendations in Microsoft Defender for C
 ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
-ms.date: 10/29/2025
+ms.date: 10/30/2025
 ms.custom: sfi-image-nochange
 ---
 # Protect network resources
@@ -14,11 +14,6 @@ Microsoft Defender for Cloud continuously analyzes the security state of your Az
 Review Defender for Cloud [networking recommendations](recommendations-reference-networking.md).
 
 This article addresses recommendations that apply to your Azure resources from a network security perspective. Networking recommendations center around next generation firewalls, Network Security Groups, JIT VM access, overly permissive inbound traffic rules, and more. For a list of networking recommendations and remediation actions, see [Managing security recommendations in Microsoft Defender for Cloud](review-security-recommendations.md).
-
-The **Networking** features of Defender for Cloud include:
-
-- Network map requires Microsoft Defender for Servers Plan 2.
-- Networking security recommendations
 
 ## View your networking resources and their recommendations
 
