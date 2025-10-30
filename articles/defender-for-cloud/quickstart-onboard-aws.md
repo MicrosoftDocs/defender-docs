@@ -37,11 +37,6 @@ Before you connect your AWS account, make sure you have:
 
 - Permission to create resources in Azure (Contributor or above).
 
-
-- **Contributor** permission on the Azure subscription where you create the connector.
-
-- **Security Admin** role and `Application.ReadWrite.All` permissions in Entra ID if you're enabling CIEM.
-
 Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review:
 - [Prerequisites for Defender plans on AWS](prerequisites-defender-plans-aws.md)
 
