@@ -57,7 +57,13 @@ You can decide to create a custom policy or use an existing template.
 1. In the App governance page, select the **Policies** tab.
 1. Select **+ Create policy**.
 1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed.
+
+    :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/choose-policy-template.png" alt-text="Screenshot that shows the option to create a custom policy.":::
+
 1. To use a template, select **usage** and then the template **New app with Non-Graph API permissions**.
+
+    :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/new-policy-non-graph-api.png" alt-text="Screenshot that shows the option to use a template for a new policy.":::
+
 1. Configure the policy settings as follows:
     - Give the policy a name and description
     - Set the severity level to low, medium, or high.
