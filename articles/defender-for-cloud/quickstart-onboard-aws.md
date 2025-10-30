@@ -27,17 +27,24 @@ To learn more, see
 
 ## Prerequisites
 
+Before you connect your AWS account, make sure you have:
+
 - A Microsoft Azure subscription. If you don't have one, [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
 - [Microsoft Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on that subscription.
 
 - Access to an AWS account.
 
+- Permission to create resources in Azure (Contributor or above).
+
+
 - **Contributor** permission on the Azure subscription where you create the connector.
 
 - **Security Admin** role and `Application.ReadWrite.All` permissions in Entra ID if you're enabling CIEM.
 
-- Additional prerequisites apply when enabling specific Defender plans (such as Azure Arc for EC2 virtual machines or Kubernetes access for EKS clusters). Review the [prerequisites for Defender plans on AWS](prerequisites-defender-plans-aws.md).
+Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review:
+- [Prerequisites for Defender plans on AWS](prerequisites-defender-plans-aws.md)
+
 
 > [!NOTE]
 > The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
@@ -60,7 +67,7 @@ To learn more, see
 
 1. Select a scan interval (4, 6, 12, or 24 hours). 
 
-   Some data collectors run on fixed intervals regardless of your selection. The following collectors always run at:
+   This selection defines the standard interval for most posture checks. Some data collectors with fixed intervals run more frequently, regardless of this setting:
 
    | Scan interval | Data collectors |
    |--|--|
