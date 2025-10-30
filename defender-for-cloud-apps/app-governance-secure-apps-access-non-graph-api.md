@@ -50,17 +50,17 @@ The Permissions tab lists all permissions granted to the app, including Graph AP
 
 ## Create policies for apps accessing other APIs
 
-You can create app governance policies that specifically target apps accessing non-Graph APIs. This allows you to monitor and manage these apps effectively, ensuring they comply with your organization's security standards.
+Create app governance policies to monitor and take action on apps that access non-Graph APIs.
 
 You can decide to create a custom policy or use an existing template.
 
 1. In the App governance page, select the **Policies** tab.
 1. Select **+ Create policy**.
 1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed.
-1. To use a template, select **usagae** and then the template **New app with Non-Graph API permissions**.
-1. Configure the policy settings as needed:
+1. To use a template, select **usage** and then the template **New app with Non-Graph API permissions**.
+1. Configure the policy settings as follows:
     - Give the policy a name and description
-    - Set the severity level to low, medium or high.
+    - Set the severity level to low, medium, or high.
     - Set policy scope and conditions, you can choose to apply the default settings or customize the policy.
     - Choose an action you'd like to take on apps that match the conditions in this policy. For example, disabling the app.
     - Set the policy actions to active or disabled.
