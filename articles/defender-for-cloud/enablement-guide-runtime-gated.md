@@ -9,42 +9,38 @@ ms.date: 10/29/2025
 ms.topic: concept-article
 ---
 
-# Enablement Guide: Configure Gated Deployment in Defender for Containers
+# Enable gated deployment in Defender for Containers
 
-This guide shows how to enable and configure Gated Deployment for Kubernetes clusters by using Microsoft Defender for Containers.
+This article shows how to enable and configure gated deployment for Kubernetes clusters with Microsoft Defender for Containers.
 
-Gated Deployment enforces container image security policies at deployment time, based on vulnerability scan results from supported container registries, including Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google’s Artifact Registry. It integrates with the Kubernetes admission controller to evaluate container images before they are admitted into the cluster.
+Gated deployment enforces container image security policies during deployment by using vulnerability scan results from supported registries—Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry. It works with the Kubernetes admission controller to evaluate images before the cluster admits them.
 
-Supported Kubernetes platforms include:
+Supported Kubernetes platforms
 
 - Azure Kubernetes Service (AKS)
-
 - Amazon Elastic Kubernetes Service (EKS)
-
 - Google Kubernetes Engine (GKE)
 
 ## Prerequisites
 
 | **Requirement** | **Details** |
 |-----------------|-------------|
-| Defender Plan | Defender for Containers must be enabled |
-| Plan Extensions | Defender Sensor, Security Findings, and Registry Access<br/>!Note: You can configure these three Defender for Containers plan extensions (enable or disable) through the Defender for Containers plan setting. New Defender for Containers enabled environments have these extensions enabled by default upon plan enablement. |
-| Kubernetes Version | AKS must be version 1.31 or higher |
-| Registry Support | Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry are supported |
-| Permissions | To create and modify Gated Deployment policies, you need Security Admin or higher permissions on the tenant. To view Gated Deployment policies, you need Security Reader or higher permissions on the tenant. |
+| Defender plan | Enable Defender for Containers. |
+| Plan extensions | Defender Sensor, Security Findings, and Registry Access.<br/>Turn these plan extensions on or off in the Defender for Containers plan setting. They're enabled by default in new Defender for Containers environments. |
+| Kubernetes version | Use AKS 1.31 or later. |
+| Registry support | Use Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), or Google Artifact Registry. |
+| Permissions | Create or change gated deployment policies with Security Admin or higher tenant permission. View them with Security Reader or higher tenant permission. |
 
-## Step-by-Step: Enable Gated Deployment and Create a Security Rule
+## Enable gated deployment and create a security rule
 
 ### Step 1: Enable required plan extensions
 
 1.  Go to **Microsoft Defender for Cloud** > **Environment Settings**.
-1.  Select the relevant subscription, AWS account, or GCP projects.
-1.  Under **Settings & Monitoring**, ensure the following toggles are enabled:
+1.  Select the relevant subscription, AWS account, or GCP project.
+1.  Under **Settings & Monitoring**, turn on these toggles:
 
     - Defender Sensor
-
     - Registry Access
-
     - Security Findings
 
 **\[Insert screenshot: Environment Settings showing enabled toggles\]**
@@ -53,20 +49,20 @@ Supported Kubernetes platforms include:
 
 ### Step 2: Access security rules
 
-1.  In the Environment Settings view, go to **Security Rules** tile.
+1.  In Environment Settings, go to the **Security Rules** tile.
 1.  Select the **Vulnerability Assessment** tab.
 
 **\[Insert screenshot: Security Rules pane with Vulnerability Assessment tab\]**
 
 :::image type="content" source="media/enablement-guide-runtime-gating/image2.png" alt-text="Screenshot of Security Rules pane with Vulnerability Assessment tab in Microsoft Defender for Cloud.":::
 
-:::image type="content" source="media/enablement-guide-runtime-gating/image3.png" alt-text="Screenshot of a computer":::
+:::image type="content" source="media/enablement-guide-runtime-gating/image3.png" alt-text="Screenshot of a generic computer interface.":::
 
 ### Step 3: Create a new rule
 
 
 > [!NOTE]
-> By default, if you meet all prerequisites (for example, enabling Defender plans and required extensions), the portal automatically creates a default Audit rule to flag images with High or Critical vulnerabilities.
+> By default, after you enable the Defender plans and required extensions, the portal creates an audit rule that flags images with high or critical vulnerabilities.
 
 1.  Select **Add Rule**.
 1.  Fill in the following fields:
@@ -92,7 +88,7 @@ Supported Kubernetes platforms include:
 
 ### Step 5: Define exclusions
 
-Exclusions allow trusted resources to bypass gating rules.
+Exclusions let trusted resources bypass gating rules.
 
 **Supported exclusion types**
 
@@ -109,11 +105,8 @@ Exclusions allow trusted resources to bypass gating rules.
 **Matching criteria**
 
 - Equals
-
 - Starts With
-
 - Ends With
-
 - Contains
 
 **Time-bound configuration**
@@ -123,14 +116,14 @@ Exclusions allow trusted resources to bypass gating rules.
 | Default | Exclusion is indefinite |
 | Time-Bound Enabled | A date picker appears. The exclusion expires at the end of the selected day |
 
-You configure exemptions during rule creation. They apply to both Audit and Deny mode rules.
+Configure exemptions during rule creation. They apply to audit and deny rules.
 
 **\[Insert screenshot: Exemption configuration panel with time-bound toggle\]**
 
 ### Step 6: Finalize and save
 
 1.  Review the rule configuration.
-1.  Select **Add Rule** to save and activate the rule.
+1.  To save and activate the rule, select **Add Rule**.
 
 **\[Insert screenshot: Confirmation screen after rule creation\]**
 
@@ -151,11 +144,8 @@ Use this view to track Audit and Deny decisions across your Kubernetes clusters.
 ## Best practices for rule design
 
 - Start with Audit mode to monitor impact before enforcing Deny mode.
-
 - Scope rules narrowly (for example, by namespace or deployment) to reduce false positives.
-
 - Use time-bound exemptions to unblock critical workflows while maintaining oversight.
-
 - Regularly review rule activity in the Admission Monitoring view to refine enforcement strategy.
 
 ## Disable or delete a Gated Deployment security rule
@@ -163,28 +153,24 @@ Use this view to track Audit and Deny decisions across your Kubernetes clusters.
 1.  **Disable a Gated Deployment security rule**
 
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
-
     - Select **Vulnerability Assessment** to view a list of defined Gated Deployment security rules.
-
     - Select a security rule and then select **Disable**.
 
 1.  **Delete a Gated Deployment security rule**
 
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
-
     - Select **Vulnerability Assessment** to view a list of defined security rules.
-
     - Select a security rule and then select **Delete**.
 
-## Additional resources
+## Related content
 
 For more detailed guidance and support, see the following documentation:
 
-- **Overview: Gated Deployment of Container Images to a Kubernetes Cluster**  
+- [Overview: Gated Deployment of Container Images to a Kubernetes Cluster](runtime-gated-overview.md)  
   Introduction to the feature, its benefits, key capabilities, and how it works
 
-- **FAQ: Gated Deployment in Defender for Containers**  
+- [FAQ: Gated Deployment in Defender for Containers](faq-runtime-gated.md)  
   Answers to common customer questions about gated deployment behavior and configuration
 
-- **Troubleshooting Guide: Gated Deployment and Developer Experience**  
+- [Troubleshooting Guide: Gated Deployment and Developer Experience](troubleshooting-runtime-gated.md)  
   Help resolving onboarding issues, deployment failures, and interpreting developer-facing messages

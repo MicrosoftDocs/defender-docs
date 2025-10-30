@@ -9,24 +9,21 @@ ms.date: 10/29/2025
 ms.topic: concept-article
 ---
 
-# Troubleshooting Guide: Gated Deployment and Developer Experience
+# Troubleshoot gated deployment in Kubernetes
 
-This guide helps security teams and developers resolve common issues encountered when configuring or using Gated Deployment in Kubernetes with Microsoft Defender for Containers.
+This article helps you fix common issues when you set up or use gated deployment in Kubernetes with Microsoft Defender for Containers.
 
-Gated Deployment enforces container image security policies at deployment time, based on vulnerability scan results from supported container registry services. It integrates with the Kubernetes admission controller to evaluate container images before they're admitted into the cluster.
+Gated deployment enforces container image security policies at deploy time based on vulnerability scan results from supported container registries. It integrates with the Kubernetes admission controller to check images before they enter the cluster.
 
-## Onboarding and Configuration Issues
+## Onboarding and configuration issues
 
 ### Issue: Gated deployment isn't active after enabling Defender for Containers
 
 **Possible causes:**
 
 - Required plan extensions are disabled
-
 - Defender Sensor is disabled or not provisioned to the cluster
-
 - AKS version is earlier than 1.31
-
 - Registry access or security findings are disabled
 
 **Resolution:**
@@ -34,36 +31,30 @@ Gated Deployment enforces container image security policies at deployment time, 
 - Confirm the following toggles are enabled in the Defender for Containers plan:
 
   - Defender Sensor
-
   - Registry Access
-
   - Security Findings
 
-- Ensure your AKS cluster is running version 1.31 or higher
+- Make sure your AKS cluster runs version 1.31 or later.
 
-- Verify that the cluster has access to the container registry (ACR) and that Microsoft Entra ID authentication is configured. For AKS clusters, ensure that the cluster has a *kubelet* identity, and that the admission controller pod's service account is included in the *kubelet* identity’s federated credentials.
+- Check that the cluster has access to the container registry (ACR) and that Microsoft Entra ID authentication is configured. For AKS clusters, make sure the cluster has a *kubelet* identity, and that the admission controller pod's service account is included in the *kubelet* identity's federated credentials.
 
-### Issue: Security rule not triggering
+### Issue: Security rule doesn't trigger
 
 **Possible causes:**
 
 - Rule scope doesn't match the deployed resource.
-
 - CVE conditions aren't met.
-
-- Image deployed before scan results were available.
+- The image deploys before scan results are available.
 
 **Resolution:**
 
-- Review the rule’s scope and matching criteria.
+- Check the rule scope and matching criteria.
+- Check that the image has vulnerabilities that match the rule conditions.
+- Make sure the image is in a supported container registry. The registry must belong to a subscription, account, or project with Registry Access and Security Findings enabled.
 
-- Confirm that the image has vulnerabilities that match the rule’s conditions.
-
-- Make sure the image resides in a supported container registry that's located within a subscription, account, or project where registry access and security findings are enabled.
-
-- Ensure Defender for Cloud scans the image before deployment. If not, gating doesn't apply.  
+- Make sure Defender for Cloud scans the image before deployment. If it doesn't, gating doesn't apply.  
   > [!NOTE]
-  > Defender for Containers scans an image residing in a supported container registry within a few hours following the initial push event. For more information about scanning triggers, see [Vulnerability assessments for Defender for Container supported environments](/azure/defender-for-cloud/agentless-vulnerability-assessment-azure?tabs=azure-new%2Cazure-old#scanning-images-in-defender-for-containers-supported-registries).
+  > Defender for Containers scans an image in a supported container registry within a few hours after the initial push event. For more information about scanning triggers, see [Vulnerability assessments for Defender for Container supported environments](/azure/defender-for-cloud/agentless-vulnerability-assessment-azure?tabs=azure-new%2Cazure-old#scanning-images-in-defender-for-containers-supported-registries).
 
 ## Deny mode deployment failures
 
@@ -73,56 +64,49 @@ Gated Deployment enforces container image security policies at deployment time, 
 
 **Possible causes:**
 
-- Exclusion scope doesn't match the resource
-
-- Exclusion expired
-
-- Matching criteria misconfigured
+- The exclusion scope doesn't match the resource.
+- The exclusion expired
+- The matching criteria are misconfigured.
 
 **Resolution:**
 
-- Review the Exclusion configuration during rule creation
-
-- Confirm the Exclusion is still active
-
-- Check that the resource (for example, image, pod, namespace) matches the Exclusion criteria
+- Review the exclusion configuration when you create the rule.
+- Confirm the exclusion is still active.
+- Check that the resource (like image, pod, or namespace) matches the exclusion criteria.
 
 **\[Insert screenshot: Exclusion configuration panel with time-bound toggle\]**
 
 ## Developer experience and CI/CD integration
 
-Gated deployment introduces enforcement at deployment time. Developers might encounter specific messages or behaviors when deploying container images.
+Gated deployment enforces policies when you deploy. You might see specific messages or behaviors when you deploy container images.
 
 ### Common developer messages
 
 | **Scenario** | **Message** |
 |----|----|
 | Image blocked due to CVE | @ENG to provide detail |
-| Image blocked due to missing scan results | @ENG to provide detail |
-| Image allowed but monitored (Audit mode) | Admission request Allowed. A Security scan is running in the background (audit mode). Learn more: aka.ms/KubernetesDefenderAuditRule |
-| Image allowed before scan completed but monitored (Audit mode) | @ENG to provide detail |
+| Image blocked because scan results are missing | @ENG to provide detail |
+| Image allowed but monitored (audit mode) | Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule |
+| Image allowed without scan results (audit mode) | @ENG to provide detail |
 
 **\[Insert screenshot: Admission Monitoring view showing developer-facing results\]**
 
 ## Best practices for developers
 
-- Ensure images are scanned before deployment to avoid bypassing gating
+- Scan images before deployment to avoid bypassing gating.
+- Use audit mode during initial rollout to monitor impact without blocking.
+- Coordinate with security teams to request exclusions when needed.
+- Monitor the **Admission Monitoring** view to see rule evaluation and enforcement.
 
-- Use Audit mode during initial rollout to monitor impact without blocking
+## Related content
 
-- Coordinate with security teams to request Exclusions when needed
+For detailed guidance and support, see these articles:
 
-- Monitor the Admission Monitoring view to understand rule evaluations and enforcement
-
-## More resources
-
-For more detailed guidance and support, see the following documentation:
-
-- **Overview: Gated Deployment of Container Images to a Kubernetes Cluster**  
+- [Overview: Gated Deployment of Container Images to a Kubernetes Cluster](runtime-gated-overview.md) 
   Introduction to the feature, its value, and how it works
 
-- **Enablement Guide: Configure Gated Deployment in Defender for Containers**  
+- [Enablement Guide: Configure Gated Deployment in Defender for Containers](enablement-guide-runtime-gated.md)
   Step-by-step instructions for onboarding, rule creation, Exclusions, and monitoring
 
-- **FAQ: Gated Deployment in Defender for Containers**  
+- [FAQ: Gated Deployment in Defender for Containers](faq-runtime-gated.md)
   Answers to common customer questions about gated deployment behavior and configuration
