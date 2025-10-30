@@ -29,7 +29,7 @@ Fully performing and testing the procedures in this article requires that you ha
 - [Create Microsoft Defender for Cloud Apps access policies](access-policy-aad.md)
 - [Create Microsoft Defender for Cloud Apps session policies](session-policy-aad.md)
 
-## Supported Apps
+## Supported Apps (preview)
 
 All SaaS apps listed in the Microsoft Entra ID catalog will be available for filtering within the Microsoft Defender for Cloud Apps session and access policies. Each app chosen in the filter will automatically be onboarded into the system and will be controlled.
 
