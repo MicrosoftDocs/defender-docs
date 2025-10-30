@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 09/05/2025
+ms.date: 10/30/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -96,6 +96,19 @@ This article describes how to configure the default connection filter policy in 
    When you're finished in the flyout, select **Save**.
 
 4. Back on the policy details flyout, select **Close**.
+
+> [!TIP]
+> If the IP address ranges you added don't immediately appear in the connection filter policy, do the following steps:
+>
+> - Try refreshing the portal or verify the changes in Exchange Online PowerShell:
+>
+>   ```powershell
+>   Get-HostedConnectionFilterPolicy -Identity Default
+>   ```
+>
+> - Verify you have the required Microsoft Entra ID permissions as described in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+>
+> If the issue persists, it might indicate a synchronization delay or a service issue.
 
 ## Use the Microsoft Defender portal to view the default connection filter policy
 
