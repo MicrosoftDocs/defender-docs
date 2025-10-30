@@ -110,7 +110,7 @@ The Phishing Triage Agent currently only operates with existing user accounts. F
 When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
 
 > [!TIP]
-> Microsoft recommends creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+> We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
 
 The agent's specified user identity isn't compatible with PIM or TAP, as they don't support long-term background operations.
 
@@ -257,7 +257,7 @@ The agent utilizes stored feedback to triage and classify similar alerts in the 
 
 ### Best practices for writing feedback
 
-Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine phishing threat or a false alarm. To ensure the agent effectively incorporates your feedback, Microsoft recommends following these best practices when providing input to the Phishing Triage Agent:
+Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine phishing threat or a false alarm. To ensure the agent effectively incorporates your feedback, follow these best practices when providing input to the Phishing Triage Agent:
 
 1. **Ensure feedback is relevant and contextual.** Feedback should pertain only to the email currently under review. It must also align with the updated classification you’ve assigned.
 1. **Be descriptive and specific.** Clearly explain the characteristics of the email. Provide relevant details like the email subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
