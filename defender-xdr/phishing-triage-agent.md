@@ -153,7 +153,7 @@ You can access the Phishing Triage Agent setup in two ways:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png":::
 
-- Alternatively, go to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview > Set up** to start the process.
+- Alternatively, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Set up** to start the process.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
 
@@ -302,7 +302,7 @@ To manage the Phishing Triage Agent’s settings, review its activity, and revie
 
 To view all previous runs by the agent:
 
-1. Select **Settings > Microsoft Defender XDR > Phishing Triage Agent > **Overview**.
+1. Select **Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview**.
 1. Select **View agent activity**. This opens the Security Copilot portal in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
 
 ### View and manage feedback to the agent
@@ -344,7 +344,9 @@ To reject specific feedback, open the Review feedback pane and select **Reject f
 
 ### Change the agent’s identity and role
 
-The agent’s identity and role can be managed at any time by navigating to the **Identity and role** page under **Agents**. On this page, users can view the agent's current identity, access details about the last update, and select a new identity type for the agent if necessary. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
+To manage the agent’s identity and role at any time, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Identity and role**. 
+
+On this page, you can view the agent's current identity, access details about the last update, and select a new identity type for the agent if necessary. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png":::
 
@@ -354,7 +356,7 @@ Pausing the agent temporarily stops all triage activity, including any in-progre
 
 To pause or resume the agent:
 
-1. Navigate to the **Overview** page under **Agents** in Defender portal.
+1. Select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview** in Defender portal.
 1. Select **Pause** to temporarily stop the agent. Once paused, the button updates to **Resume**, which you can select when you’re ready to reactivate the agent’s activities.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png" alt-text="Screenshot of the Agents Overview page highlighting the pause agent option" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png":::
@@ -363,7 +365,10 @@ To pause or resume the agent:
 
 Removing the agent permanently disables it. Once removed, triage and classification of new incidents stop, and all feedback is deleted. However, the history of previously triaged incidents is retained for your reference.
 
-To remove the agent, navigate to the **Overview** page under **Agents**, then select **Remove agent**.
+To remove the agent: 
+
+1. Select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview**.
+2. Select **Remove agent**.
 
 ## Frequently asked questions
 
