@@ -22,7 +22,7 @@ ms.custom:
 description: Is Microsoft Defender for Office 365 worth it? Let's find out.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 07/09/2025
+ms.date: 10/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -50,7 +50,7 @@ The protection ladder in Defender for Office 365 contains the following elements
 
 1. **Default email protections for cloud mailboxes**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
 2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
-3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 E5, Microsoft 365 A5, and Microsoft 365 GCC G5).
+3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 A5/E5/G5).
 
 Defender for Office 365 is also available as an add-on subscription to many Microsoft 365 subscriptions with cloud mailboxes.
 
@@ -107,7 +107,7 @@ The extra features you get in **Defender for Office 365 Plan 1** on top of the d
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|
-|<ul><li>The following [additional features in anti-phishing policies](anti-phishing-protection-about.md#additional-anti-phishing-protection-in-microsoft-defender-for-office-365), including the [impersonation insight](anti-phishing-mdo-impersonation-insight.md): <ul><li>User and domain impersonation protection</li><li>Mailbox intelligence impersonation protection (contact graph)</li><li>[Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul></li><li>[Safe Attachments in email](safe-attachments-about.md)</li><li>[Safe Attachments for files in SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li><li>[Safe Links in email, Office clients, and Teams](safe-links-about.md)</li><li>Email & collaboration alerts at <https://security.microsoft.com/viewalertsv2><li>SIEM integration API for **alerts**</li></ul>|<ul><li>[Real-time detections](threat-explorer-real-time-detections-about.md)<sup>\*</sup></li><li>[User tags, including Priority account](user-tags-about.md)</li><li>[The Email entity page](mdo-email-entity-page.md)</li><li>SIEM integration API for **detections**</li><li>[URL trace](/defender-endpoint/investigate-domain)</li><li>[Defender for Office 365 reports](reports-defender-for-office-365.md)</li></ul>|<ul><li>Same</li></ul>|
+|<ul><li>The following [extra features in anti-phishing policies](anti-phishing-protection-about.md#additional-anti-phishing-protection-in-microsoft-defender-for-office-365), including the [impersonation insight](anti-phishing-mdo-impersonation-insight.md): <ul><li>User and domain impersonation protection</li><li>Mailbox intelligence impersonation protection (contact graph)</li><li>[Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul></li><li>[Safe Attachments in email](safe-attachments-about.md)</li><li>[Safe Attachments for files in SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li><li>[Safe Links in email, Office clients, and Teams](safe-links-about.md)</li><li>Email & collaboration alerts at <https://security.microsoft.com/viewalertsv2><li>Security information and event management (SIEM) integration from Office 365 Management APIs for **alerts**. For more information, see [Security and Compliance Alerts schema](/office/office-365-management-api/office-365-management-activity-api-schema#security-and-compliance-alerts-schema).</li></ul>|<ul><li>[Real-time detections](threat-explorer-real-time-detections-about.md)<sup>\*</sup></li><li>[User tags, including Priority account](user-tags-about.md)</li><li>[The Email entity page](mdo-email-entity-page.md)</li><li>SIEM integration from Office 365 Management APIs for **detections**. For more information, see [Microsoft Defender for Office 365 and Threat Investigation and Response schema](/office/office-365-management-api/office-365-management-activity-api-schema#microsoft-defender-for-office-365-and-threat-investigation-and-response-schema).</li><li>[URL trace](/defender-endpoint/investigate-domain)</li><li>[Defender for Office 365 reports](reports-defender-for-office-365.md)</li></ul>|<ul><li>Same</li></ul>|
 
 <sup>\*</sup> The presence of **Email & collaboration** \> **Real-time detections** in the Microsoft Defender portal is a quick way to differentiate between Defender for Office 365 Plan 1 and Plan 2.
 
@@ -121,7 +121,7 @@ The extra features that you get in **Defender for Office 365 Plan 2** on top of 
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|
-|<ul><li>[Attack simulation training](attack-simulation-training-get-started.md)</li><li>[Priority account protection](priority-accounts-turn-on-priority-account-protection.md)</li></ul>|<ul><li>[Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md) instead of Real-time detections.<sup>\*</sup></li><li>[Threat Trackers](threat-trackers.md)</li><li>[Campaigns](campaigns.md)</li></ul>|<ul><li>[Automated Investigation and Response (AIR)](air-about.md): <ul><li>AIR from Threat Explorer</li><li>AIR for compromised users</li></ul></li><li>SIEM Integration API for **Automated Investigations**</li></ul>|
+|<ul><li>[Attack simulation training](attack-simulation-training-get-started.md)</li><li>[Priority account protection](priority-accounts-turn-on-priority-account-protection.md)</li></ul>|<ul><li>[Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md) instead of Real-time detections.<sup>\*</sup></li><li>[Threat Trackers](threat-trackers.md)</li><li>[Campaigns](campaigns.md)</li></ul>|<ul><li>[Automated Investigation and Response (AIR)](air-about.md): <ul><li>AIR from Threat Explorer</li><li>AIR for compromised users</li></ul></li><li>SIEM Integration from Office 365 Management APIs for **automated investigations**. For more information, see [Automated investigation and response events in Microsoft Defender for Office 365 Plan 2](/office/office-365-management-api/office-365-management-activity-api-schema#automated-investigation-and-response-events-in-office-365).</li><li>SIEM Integration from Office 365 Management APIs for **Attack simulation training**. For more information, see [Attack sim schema in Microsoft Defender for Office 365 Plan 2](/office/office-365-management-api/office-365-management-activity-api-schema#attack-sim-schema).</li><li>SIEM Integration from Defender XDR APIs for **Advanced hunting**, **Incidents**, and **Streaming**. For more information, see [Overview of Microsoft Defender XDR APIs](/defender-xdr/api-overview).</li></ul>|
 
 <sup>\*</sup> The presence of **Email & collaboration** \> **Explorer** in the Microsoft Defender portal is a quick way to differentiate between Defender for Office 365 Plan 2 and Plan 1.
 
@@ -138,7 +138,7 @@ This quick-reference section summarizes the different capabilities between Defen
 - For more information, see [Feature availability across Defender for Office 365 plans](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
 - [Safe Documents](safe-documents-in-e5-plus-security-about.md) is available to users with the Microsoft 365 A5 or Microsoft Defender Suite licenses (not included in Defender for Office 365 plans).
 - If your current subscription doesn't include Defender for Office 365 Plan 2, you can [try Defender for Office 365](try-microsoft-defender-for-office-365.md) free for 90 days. Or, [contact sales to start a trial](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html).
-- Defender for Office 365 Plan 2 organizations have access to **Microsoft Defender Extended detection and response (XDR) integration** to efficiently detect, review, and respond to incidents and alerts.
+- Organizations with Defender for Office 365 Plan 2 have access to **Microsoft Defender Extended detection and response (XDR) integration** to efficiently detect, review, and respond to incidents and alerts.
 
 ## Where to go next
 
