@@ -27,23 +27,28 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
-
-
-## October 2025
+# November 2025
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 29, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview) |
-|October 23, 2025 | Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
-|October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
+|November 11, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview) |
 
 ### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
+
+November 11, 2025  
 
 Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) v2 compliance standard v2 in public preview. 
 
 MCSB v2 includes expanded risk-based guidance, additional Azure Policy mappings, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
 
 Learn more about the [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
+
+## October 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|October 23, 2025 | Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
+|October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
 ### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
 
