@@ -42,6 +42,23 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
+
+|Build:             |**101.25092.0001**    |
+|-------------------|----------------------|
+|Released:          |**October 31, 2025**|
+|Published:         |**October 31, 2025**|
+|Expiry:            |**July 10, 2026**|
+|Release version:   |**30.125092.0001.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.558.0**|
+
+What's new
+
+- Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability.
+
+- Other quality and stability fixes.
+
 ### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
 
 |Build:             |**101.25082.0003**    |
