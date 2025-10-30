@@ -37,7 +37,7 @@ The [inventory page](asset-inventory.md) allows you to view your resources by ty
 
 1. Hover over the recommendation indicator to see the number of active recommendations for each resource.
 
-    :::image type="content" source="./media/protect-network-resources/resource-recommendations" alt-text="Screenshot that shows the active recommendations for a resources." lightbox="./media/protect-network-resources/resource-recommendations":::
+    :::image type="content" source="./media/protect-network-resources/resource-recommendations.png" alt-text="Screenshot that shows the active recommendations for a resources." lightbox="./media/protect-network-resources/resource-recommendations.png":::
 
 ## Next steps
 
