@@ -50,9 +50,9 @@ Otherwise, the page informs you that access to indicators is restricted.
 ## Unlock access to indicators
 To unlock the indicators section, follow these steps:
 
-1. On the **Indicators** page, select **Get started**
+1. On the **Indicators** page, select **Complete Verification**
 1. On the verification page that opens, provide the required information and supporting documents, if applicable
-1. Select **Submit verification request**.
+1. Select **Submit verification request**
 
 The verification process might take at least an hour. After the process completes, refresh the **Indicators** tab. If your tenant is validated successfully, you see the list of IOCs displayed in this section.
 
