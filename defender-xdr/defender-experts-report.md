@@ -74,6 +74,8 @@ This section is a table that shows the threat title, whether we identified impac
 
 :::image type="content" source="media/hunting-report-emerging-threats.png" alt-text="Screenshot of the Emerging threats section of the Defender Experts for Hunting report." lightbox="media/hunting-report-emerging-threats.png":::
 
+Selecting one of the threat titles opens a side panel with its [hunting summary](#hunting-summaries), which summarizes our findings about the threat. Hunting summaries give you insight into our investigations and keep you updated with the threat landscape.
+
 ### Hunts by threat category
 
 The **Hunts by threat category** section displays hunting activity tiles that are sorted according to their threat categories. This sorting helps you visualize what an activity is trying to achieve in each attack phase so you can plan the corresponding containment and remediation actions.
@@ -92,9 +94,9 @@ Each activity tile shows the number of hunts Defender Experts conducted related 
 
 ### Hunting summaries
 
-Each hunt Defender Experts conduct tells a story, even when no active threat is found. In nearly each hunt Defender Experts conduct in your environment, there's a corresponding investigation summary that goes along with it, regardless if we identified a confirmed threat.
+Each hunt that Defender Experts conduct tells a story, even when they don't find an active threat. In nearly every hunt that Defender Experts conduct in your environment, there's a corresponding investigation summary that goes along with it, regardless of whether they identified a confirmed threat.
 
-When you select one of the threat titles in the **Emerging threats** section or one of the activity tiles with the scroll icon in the **Hunts by threat category** section, the report opens a side panel that provides a **hunting summary**, or summary of our investigation: what we hunted for, why we hunted for it, and how we reached our final determination. The summary also provides the dates and times the hunt started and concluded, the hunt classification, and impacted assets. If applicable, it also provides links to view related Defender Experts Notifications.
+When you select one of the threat titles in the **Emerging threats** section or one of the activity tiles with the scroll icon in the **Hunts by threat category** section, a side panel opens that displays the **hunting summary**, or summary of the investigation related to the threat or activity: what the Defender Experts hunted for, why they hunted for it, and how they reached their final determination. The summary also provides the dates and times the hunt started and concluded, the hunt classification, and impacted assets. If applicable, it also provides links to view related Defender Experts Notifications.
 
 :::image type="content" source="media/hunting-report-hunt-summary.png" alt-text="Screenshot of a hunting summary in the Defender Experts for Hunting report." lightbox="media/hunting-report-hunt-summary.png":::
 
@@ -104,7 +106,7 @@ The **Top trending suspicious activities** section of the report identifies up t
 
 :::image type="content" source="/defender/media/defender-experts/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="/defender/media/defender-experts/top-trending-suspicious-activities.png":::
 
-By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment
+By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment.
 
 Select **View details** in each card to open a flyout panel that details the impacted devices and users. If applicable, the page also provides links to view related Defender Expert Notifications.
 
