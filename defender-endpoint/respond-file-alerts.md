@@ -315,7 +315,7 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
    :::image type="content" source="media/submit-file.png" alt-text="The submit PE files button" lightbox="media/submit-file.png":::
 
    > [!NOTE]
-   > Only PE files are supported, including _.exe_ and _.dll_ files.
+   > Only PE files are supported, including _.exe_ and _.dll_ files. Additionally, Windows Store Executables are unsupported
 
    A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
