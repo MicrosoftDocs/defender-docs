@@ -23,9 +23,6 @@ appliesto:
 ---
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 ## Configure your security settings
@@ -157,7 +154,7 @@ The following configuration profile contains entries for all settings described 
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
-      "offlineDefintionUpdateFallbackToCloud":false,
+      "offlineDefinitionUpdateFallbackToCloud":false,
       "offlineDefinitionUpdate":"disabled"
    },
    "cloudService":{

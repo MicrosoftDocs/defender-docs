@@ -15,7 +15,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: article
-ms.date: 07/07/2025
+ms.date: 10/28/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
@@ -59,9 +59,10 @@ You can run any query that you already have access to in the multitenant managem
    DeviceEvents
    | take 10
    | project TenantId = WorkspaceID
-
+   ```
+   
    Or, to query multiple workspaces in the same tenant, use a query similar to the following:
-
+   
    ```kusto
    Usage
    | union workspace("WorkpaceA").Usage

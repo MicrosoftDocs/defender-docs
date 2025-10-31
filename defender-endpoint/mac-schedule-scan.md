@@ -23,9 +23,6 @@ appliesto:
 ---
 # Schedule scans with Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 ## Schedule a scan built into Microsoft Defender for Endpoint on macOS
