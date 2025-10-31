@@ -33,8 +33,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 23, 2025 | Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
+|October 31, 2025|Public Preview|GCP Cloud Logging Ingestion Support (Preview)|
+|October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
+
+### GCP Cloud Logging Ingestion Support (Preview)
+
+October 23, 2025
+
+Defender for Cloud is updating its GitHub connector to request a new permission: `artifact_metadata:write`. This enables new capabilities that support [artifact attestations](https://docs.github.com/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations) - providing verifiable build provenance and strengthening your software supply chain security. The permission is narrowly scoped, aligning with least privilege principles to support faster and easier security approvals.
+
+#### How to approve the new permission:
+
+- **Via GitHub settings:** In your GitHub organization, go to **Settings > GitHub Apps**, select the **Microsoft Security DevOps** application, and approve the pending permission request.
+
+- **Via email (for organization owners):** GitHub sends an automated email to **organization owners** with the subject **"Review permissions request for Microsoft Security DevOps"**. Click **Review permission request** to approve or reject the change.
+
+> **Didn’t get the email?**
+> Only GitHub **organization owners** receive this notification. If you're not an owner, please contact one in your organization to approve the request via GitHub settings.
+
+**Note:** existing connectors will continue to work without this permission, but the new functionality will only be available once the permission is approved.
 
 ### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
 
