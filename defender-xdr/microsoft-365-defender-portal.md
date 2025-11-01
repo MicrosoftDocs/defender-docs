@@ -5,10 +5,10 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: dansimp
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -19,7 +19,7 @@ ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
 ms.topic: article
-ms.date: 01/10/2025
+ms.date: 10/31/2025
 ---
 
 # Microsoft Defender XDR in the Microsoft Defender portal
@@ -88,7 +88,6 @@ Automated actions are capabilities within Microsoft Defender XDR that help you a
 
 - [Automated investigation and response](m365d-autoir.md)
 - [Attack disruption](automatic-attack-disruption.md)
-- [Deception](deception-overview.md)
 
 These actions can be reviewed and managed in the [**Action Center**](m365d-action-center.md) page in the Microsoft Defender portal.
 
