@@ -13,11 +13,11 @@ Defender for Cloud continuously assesses your hybrid cloud environment against t
 
 When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) v1 assesses resources in scope. MCSB v2 (Preview) is also available and can be enabled from the Regulatory compliance dashboard.
 
-This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds. It provides risk-based guidance and includes controls to secure emerging workloads such as artificial intelligence (AI).
+This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds. MCSB v2 (Preview) expands this guidance with additional risk-based controls for securing emerging workloads such as artificial intelligence (AI).
 
 :::image type="content" source="media/concept-regulatory-compliance/microsoft-security-benchmark.png" alt-text="Image that shows the components that make up the Microsoft cloud security benchmark." lightbox="media/concept-regulatory-compliance/microsoft-security-benchmark.png":::
 
-The compliance dashboard provides a dedicated benchmark view to help you monitor resource compliance against benchmark controls. The benchmark includes expanded control coverage and Azure Policy mappings. Non-Azure platforms follow the same cloud-neutral security principles as Azure. Each control provides a consistent level of technical guidance across Azure and other cloud resources.
+The compliance dashboard provides a dedicated benchmark view to help you monitor resource compliance against benchmark controls. Non-Azure platforms follow the same cloud-neutral security principles as Azure. Each control provides a consistent level of technical implementation guidance across Azure and other cloud resources.
 
 From the compliance dashboard, you're able to manage all of your compliance requirements for your cloud deployments, including automatic, manual, and shared responsibilities.
 
