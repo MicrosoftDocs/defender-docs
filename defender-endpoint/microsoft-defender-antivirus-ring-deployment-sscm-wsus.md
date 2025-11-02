@@ -25,8 +25,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus ring deployment using System Center Configuration Manager and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 

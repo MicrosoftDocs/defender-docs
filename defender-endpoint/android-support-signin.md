@@ -22,8 +22,6 @@ appliesto:
 
 # Troubleshooting issues on Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 When onboarding a device, you might see sign in issues after the app is installed.
 

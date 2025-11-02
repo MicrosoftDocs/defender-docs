@@ -23,8 +23,6 @@ appliesto:
 ---
 # Create indicators based on certificates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 You can create indicators for certificates. Some common use cases include:

@@ -24,8 +24,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus production ring deployment using Group Policy and Microsoft Updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 

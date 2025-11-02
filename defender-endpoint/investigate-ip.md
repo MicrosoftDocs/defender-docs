@@ -22,12 +22,6 @@ appliesto:
 ---
 # Investigate an IP address associated with a Microsoft Defender for Endpoint alert
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
-
 
 Examine possible communication between your devices and external internet protocol (IP) addresses.
 
