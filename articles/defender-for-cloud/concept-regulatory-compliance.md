@@ -7,13 +7,11 @@ ms.date: 10/29/2025
 
 # Microsoft cloud security benchmark in Defender for Cloud
 
-Microsoft Defender for Cloud presents industry standards, regulatory standards, and benchmarks as [security standards](security-policy-concept.md). These standards are assigned to scopes such as Azure subscriptions, AWS accounts, and GCP projects.
+Microsoft Defender for Cloud presents industry standards, regulatory standards, and benchmarks as [security standards](security-policy-concept.md). These standards are assigned to scopes such as Azure subscriptions, AWS accounts, and GCP projects, and are assessed continuously in the **Regulatory compliance** dashboard.
 
-Defender for Cloud continuously assesses your hybrid cloud environment against these standards, and provides information about compliance in the **Regulatory compliance** dashboard.
+When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) assesses resources in scope by default. This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds.
 
-When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) v1 assesses resources in scope. MCSB v2 (Preview) is also available and can be enabled from the Regulatory compliance dashboard.
-
-This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds. MCSB v2 (Preview) expands this guidance with additional risk-based controls for securing emerging workloads such as artificial intelligence (AI).
+**MCSB v2 (preview)** is also available and can be enabled from the Regulatory compliance dashboard. This version introduces expanded guidance with additional risk-based controls, expanded Azure Policy mappings, and coverage for emerging workloads such as artificial intelligence (AI).
 
 :::image type="content" source="media/concept-regulatory-compliance/microsoft-security-benchmark.png" alt-text="Image that shows the components that make up the Microsoft cloud security benchmark." lightbox="media/concept-regulatory-compliance/microsoft-security-benchmark.png":::
 
