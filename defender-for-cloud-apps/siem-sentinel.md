@@ -1,13 +1,30 @@
 ---
 title: Microsoft Sentinel integration 
 description: This article provides information integrating Microsoft Sentinel with Defender for Cloud Apps.
-ms.date: 01/29/2023
+ms.date: 10/29/2025
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
 ---
+
 # Microsoft Sentinel integration (Preview)
 
-
+> [!IMPORTANT]
+> **Deprecation Notice: Microsoft Defender for Cloud Apps SIEM Agents**
+>
+> As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
+>
+>
+> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
+>
+> We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
+> These APIs enhance security monitoring and management and offer additional capabilities using data from multiple Microsoft Defender workloads.
+>
+> To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
+>
+> - For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
+> - For Microsoft Entra ID Protection logon events, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
+> - For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+> - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 You can integrate Microsoft Defender for Cloud Apps with Microsoft Sentinel (a scalable, cloud-native SIEM and SOAR) to enable centralized monitoring of alerts and discovery data. Integrating with Microsoft Sentinel allows you to better protect your cloud applications while maintaining your usual security workflow, automating security procedures, and correlating between cloud-based and on-premises events.
 

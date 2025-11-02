@@ -20,12 +20,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Create and manage device tags
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Add tags on devices to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident. Tags can be used as a filter in the **Device inventory** view, or to group devices. For more information on device grouping, see [Create and manage device groups](machine-groups.md).
 
@@ -46,6 +42,19 @@ You can add tags on devices using the following ways:
 > There might be some latency between the time a tag is added to a device and its availability in the devices list and device page.
 
 To add device tags using API, see [Add or remove device tags API](api/add-or-remove-machine-tags.md).
+
+## Supported operating systems
+
+Device tagging is supported on the following operating systems:
+
+ - Windows 11
+ - Windows 10, version 1709 or later
+ - Windows Server, version 1803 or later
+ - Windows Server 2016
+ - Windows Server 2012 R2
+ - Windows Server 2008 R2 SP1
+ - Windows 8.1
+ - Windows 7 SP1
 
 ## Add device tags using the portal
 
@@ -84,18 +93,6 @@ You can create and manage rules that automatically assign and remove tags from d
 - [Asset rule management - Dynamic rules for devices](/defender-xdr/configure-asset-rules)
 
 ## Add device tags by setting a registry key value
-
-> [!NOTE]
-> Applicable only on the following devices:
->
-> - Windows 11
-> - Windows 10, version 1709 or later
-> - Windows Server, version 1803 or later
-> - Windows Server 2016
-> - Windows Server 2012 R2
-> - Windows Server 2008 R2 SP1
-> - Windows 8.1
-> - Windows 7 SP1
 
 > [!NOTE]
 > The maximum number of characters that can be set in a tag is 200.

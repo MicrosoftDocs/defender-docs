@@ -21,7 +21,6 @@ search.appverid: met150
 
 # Troubleshoot attack surface reduction rules
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

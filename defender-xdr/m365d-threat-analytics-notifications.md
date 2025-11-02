@@ -41,23 +41,23 @@ To set up email notifications for threat analytics reports, perform the followin
    > [!NOTE]
    > The name and description fields for a new notification rule only accept English letters and numbers. Punctuations like spaces, dashes, underscores, aren't supported.
 
-   ![Screenshot of the naming screen, with all fields filled out and the "Turn rule on" checkbox checked](/defender/media/threat-analytics/ta_create_notification_2.png)
+   ![Screenshot of the naming screen, with all fields filled out and the "Turn rule on" checkbox checked](media/m365d-threat-analytics-notifications/ta_create_notification_2.png)
 
 4. Choose the reports you want to be notified about. You can choose to be updated about all newly published or updated reports or only those reports of a certain type or with a specific tag.
 
-   ![Screenshot of the notification screen, with Ransomware tags selected and a drop down menu for types open](/defender/media/threat-analytics/ta_create_notification_3.png)
+   ![Screenshot of the notification screen, with Ransomware tags selected and a drop down menu for types open](media/m365d-threat-analytics-notifications/ta_create_notification_3.png)
 
 5. Add at least one recipient to receive the notification emails. You can also use this screen to send a test email to check the notification settings.
 
-   ![Screenshot of the recipients screen. There are 3 recipients listed, and a test email has been sent, as indicated by a green checkmark](/defender/media/threat-analytics/ta_create_notification_4.png)
+   ![Screenshot of the recipients screen. There are 3 recipients listed, and a test email has been sent, as indicated by a green checkmark](media/m365d-threat-analytics-notifications/ta_create_notification_4.png)
 
 6. Review your new rule. Select **Edit** at the end of each subsection to change any of the settings. Once your review is complete, select **Create rule**.
 
-   ![Screenshot of the review screen. An edit button is highlighted in red](/defender/media/threat-analytics/ta_create_notification_5.png)
+   ![Screenshot of the review screen. An edit button is highlighted in red](media/m365d-threat-analytics-notifications/ta_create_notification_5.png)
 
 7. Select **Done** to complete the process and close the flyout. 
 
-   ![Screenshot of the rule created screen. A successfully created rule will display green checkmarks along the sidebar, and a big green check in the main area of the screen](/defender/media/threat-analytics/ta_create_notification_6.png)
+   ![Screenshot of the rule created screen. A successfully created rule will display green checkmarks along the sidebar, and a big green check in the main area of the screen](media/m365d-threat-analytics-notifications/ta_create_notification_6.png)
 
 Your new rule now appears in the list of Threat analytics email notifications.
 
