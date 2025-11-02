@@ -32,12 +32,10 @@ The **AI Agents** section of the **Assets** tab in the Defender portal includes 
 - Microsoft Copilot Studio
 - Azure AI Foundry.
 
-This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
+This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization. 
 
-## Advanced hunting with AI agents
-
-- Use exposure hunting to identify misconfigured or potentially risky agents that may pose security or compliance risks.
-- Use threat hunting to get visibility into agents’ configurations and metadata to investigate suspicious activity and detect potential threats.
+## Advanced hunting with AI Agents
+Once you've enabled AI agent protection, the AI agent inventory provides visibility into each agent's configuration, permissions, and activity history with advanced hunting. [Add link here to information about AI agent schemas and queries for advanced hunting.]
 
 ## Real time protection during agent runtime
 
@@ -51,13 +49,11 @@ If Microsoft Defender determines that a prompt is suspicious:
 - The user gets notified that their message was blocked.
 - An alert is created and appears in the Microsoft Defender portal under XDR Incidents and Alerts. 
 
-> [!NOTE]
-> Microsoft E5 and E5 Security customers can enable AI agents inventory.
-
 ## Enable AI Agent protection
 
 > [!NOTE]
->- The onboarding process for AI Agent protection requires collaboration with Power Platform administrators.
+> - Microsoft E5 and E5 Security customers can enable AI agents inventory.
+ - The onboarding process for AI Agent protection requires collaboration with Power Platform administrators.
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
