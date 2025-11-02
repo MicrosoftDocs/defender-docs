@@ -24,7 +24,7 @@ The Microsoft Sentinel behaviors layer is an AI-powered capability in Microsoft 
 
 ## What are the capabilities of the Microsoft Sentinel behaviors layer?
 
-The Microsoft Sentinel behaviors ayer provides these key capabilities:
+The Microsoft Sentinel behaviors layer provides these key capabilities:
 - **Behavior aggregation:** Automatically groups and sequences related security events across multiple data sources. Instead of analysts manually correlating raw logs, the behaviors layer creates unified behavior objects that present “what happened” in a structured way.
 
 - **Contextualization:** Each behavior is enriched with security context, including mapping to MITRE ATT&CK tactics and techniques. This helps analysts understand the intent behind an activity - for example, lateral movement, privilege escalation - without needing deep familiarity with every log format.
