@@ -97,7 +97,7 @@ To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scro
 - **Open in query editor** – Loads the query in the query editor.
 - **View details** – Opens the query details side pane where you can inspect the query, run the query, or open the query in the editor.
 
-  :::image type="content" source="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png":::
+   :::image type="content" source="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png":::
 
 
 For editable queries, more options are available:
