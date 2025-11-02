@@ -37,7 +37,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November 11, 2025  
 
-Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) v2 compliance standard v2 in public preview. 
+Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) compliance standard v2 in public preview. 
 
 MCSB v2 includes expanded risk-based guidance, additional Azure Policy mappings, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
 

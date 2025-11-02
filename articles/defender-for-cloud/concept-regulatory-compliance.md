@@ -11,7 +11,7 @@ Microsoft Defender for Cloud presents industry standards, regulatory standards, 
 
 Defender for Cloud continuously assesses your hybrid cloud environment against these standards, and provides information about compliance in the **Regulatory compliance** dashboard.
 
-When Defender for Cloud is enabled, the [Microsoft cloud security benchmark (MCSB) v2 (preview)](/security/benchmark/azure/introduction) automatically begins assessing resources in scope.
+When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) v1 assesses resources in scope. MCSB v2 (Preview) is also available and can be enabled from the Regulatory compliance dashboard.
 
 This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds. It provides risk-based guidance and includes controls to secure emerging workloads such as artificial intelligence (AI).
 
