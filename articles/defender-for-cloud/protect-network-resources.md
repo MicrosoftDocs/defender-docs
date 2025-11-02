@@ -28,7 +28,7 @@ The [inventory page](asset-inventory.md) shows your resources by type. Use the r
 
 1. Enter **Network**. 
 
-    :::image type="content" source="./media/protect-network-resources/network-filters-inventory.png" alt-text="Asset inventory network resource types." lightbox="./media/protect-network-resources/network-filters-inventory.png":::
+    :::image type="content" source="./media/protect-network-resources/network-filters-inventory.png" alt-text="Screenshot that shows asset inventory network resource types." lightbox="./media/protect-network-resources/network-filters-inventory.png":::
 
 1. Select the relevant resource types.
 
