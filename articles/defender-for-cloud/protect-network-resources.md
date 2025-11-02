@@ -12,17 +12,17 @@ Microsoft Defender for Cloud continuously analyzes the security state of your Az
 
 Review Defender for Cloud [networking recommendations](recommendations-reference-networking.md).
 
-This article addresses recommendations that apply to your Azure resources from a network security perspective. Networking recommendations center around next generation firewalls, Network Security Groups, JIT VM access, overly permissive inbound traffic rules, and more. For a list of networking recommendations and remediation actions, see [Managing security recommendations in Microsoft Defender for Cloud](review-security-recommendations.md).
+This article addresses recommendations that apply to your Azure resources from a network security perspective. Networking recommendations center around next generation firewalls, Network Security Groups, Just In Time (JIT) Virtual Machine (VM) access, overly permissive inbound traffic rules, and more. For a list of networking recommendations and remediation actions, see [Managing security recommendations in Microsoft Defender for Cloud](review-security-recommendations.md).
 
 ## Review networking resources and their recommendations
 
-The [inventory page](asset-inventory.md) allows you to view your resources by type. With the resource type filter you can narrow down the visibile resources to only show the networking resources that exist in your environment.
+The [inventory page](asset-inventory.md) shows your resources by type. Use the resource type filter to see only the networking resources in your environment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Microsoft Defender for Cloud** > **Inventory**.
 
-    :::image type="content" source="media/protect-network-resources/inventory.png" alt-text="Screenshot that shows where teh inventory page is located in Defender for Cloud." lightbox="media/protect-network-resources/inventory.png":::
+    :::image type="content" source="media/protect-network-resources/inventory.png" alt-text="Screenshot that shows where the inventory page is located in Defender for Cloud." lightbox="media/protect-network-resources/inventory.png":::
 
 1. Select the **Resource type** filter.
 
@@ -36,7 +36,7 @@ The [inventory page](asset-inventory.md) allows you to view your resources by ty
 
 1. Hover over the recommendation indicator to see the number of active recommendations for each resource.
 
-    :::image type="content" source="./media/protect-network-resources/resource-recommendations.png" alt-text="Screenshot that shows the active recommendations for a resources." lightbox="./media/protect-network-resources/resource-recommendations.png":::
+    :::image type="content" source="./media/protect-network-resources/resource-recommendations.png" alt-text="Screenshot that shows the active recommendations for a resource." lightbox="./media/protect-network-resources/resource-recommendations.png":::
 
 1. Select a resource to view the affiliated recommendations.
 
