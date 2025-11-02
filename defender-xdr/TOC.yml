@@ -147,12 +147,6 @@
           href: autoad-results.md
         - name: Exclude assets from automated responses
           href: automatic-attack-disruption-exclusions.md           
-      - name: Manage the deception capability
-        items:
-        - name: Overview
-          href: deception-overview.md
-        - name: Configure capabilities
-          href: configure-deception.md
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
