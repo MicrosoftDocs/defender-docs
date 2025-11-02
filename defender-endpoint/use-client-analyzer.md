@@ -27,9 +27,9 @@ Use the categories listed in the table to identify the type of issue you're expe
 
 |Issue  |Description and examples  |Flags  |
 |---------|---------|---------|
-|Issues that can't be reproduced     |Issues that occur sporadically or are triggered by automated processes and can't be reproduced. This includes problems related to scheduled tasks such as automatic updates and scans, and Attack Surface Reduction (ARS) rules triggered unpredictably.         | Run without flags         |
+|Issues that can't be reproduced     |Issues that occur sporadically or are triggered by automated processes and can't be reproduced. This includes problems related to scheduled tasks such as automatic updates and scans, and Attack Surface Reduction (ASR) rules triggered unpredictably.         | Run without flags         |
 |Performance issues that can be reproduced     |High CPU usage, memory consumption problems, and slow response times.         |`-a` and `-v`         |
-|General     |On-demand scans, manual updates, sense portal and alert issues, Azure Site Recovery (ASR) issues that can be triggered on command, and app compatibility problems.         |`-e` and `-v`         |
+|General     |On-demand scans, manual updates, sense portal and alert issues, Attack Surface Reduction (ASR) issues that can be triggered on command, and app compatibility problems.         |`-e` and `-v`         |
 |Hanging systems     |Unresponsive systems and freezes. Require advanced debugging techniques including memory dumps and crash analysis.         |`-z`         |
 |Compatibility     |Issues with third-party applications, other security solutions, system software, performance problems, and functional issues.         |`-c`, `-e` and `-v`         |
 |Controlled Folder Access (CFA)    |Include blocked applications, unexpected access permissions, and issues related to protected folders configuration.         |Reproducible: `-cfa`, `-e` and `-v`</br>Nonreproducible: `-cfa`         |
@@ -37,7 +37,6 @@ Use the categories listed in the table to identify the type of issue you're expe
 |Indicator     |Include problems with URLs, domains, IP addresses, files, and certificates that aren't enforced as expected.         |URL, IP, domain in first-party browser: `-a`, `-i` and `-v`</br>File indicator: `-v`          |
 |Web Content Filtering (WCF)    |Unenforced WCF policy when accessing web content using first and third party browsers.         |`-a`, `-i` and `-v`         |
 |Network protection     |Network protection doesn't trigger configured policies when URLs, domains, and IPs are accessed through third-party browsers.        |`-i` and `-v`         |
-|Device control |Issues related to device control and blocking USB devices.  | `-v` with a five-minute limit. Then reproduce with a USB that's working as expected. |
 
 ## Run the Client Analyzer tool
 
