@@ -33,7 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)]()|
+|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)](#gcp-cloud-logging-ingestion-support-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
