@@ -43,7 +43,7 @@ Defender for Office 365 contributes to a Zero Trust architecture by helping to p
 
 This is article 3 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
-:::image type="content" source="./media/pilot-deploy-defender-office-365/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/pilot-deploy-defender-office-365/defender-xdr-pilot-deploy-flow-office-365.svg" border="false":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" border="false":::
 
 The articles in this series correspond to the following phases of end-to-end deployment:
 
