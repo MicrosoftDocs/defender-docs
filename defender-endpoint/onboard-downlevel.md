@@ -114,7 +114,7 @@ Once completed, you should see onboarded endpoints in the portal within an hour.
 
 If your servers need to use a proxy to communicate with Defender for Endpoint, use one of the following methods to configure the MMA to use the proxy server:
 
-- [Configure the MMA to use a proxy server](/azure/azure-monitor/platform/agent-windows#install-agent-using-setup-wizard)
+- [Configure the MMA to use a proxy server](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard#install-the-agent)
 
 - [Configure Windows to use a proxy server for all connections](configure-proxy-internet.md)
 
