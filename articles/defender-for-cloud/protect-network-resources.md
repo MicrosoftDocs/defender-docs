@@ -4,8 +4,7 @@ description: This document addresses recommendations in Microsoft Defender for C
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 10/30/2025
-ms.custom: sfi-image-nochange
+ms.date: 11/02/2025
 ---
 # Protect network resources
 
@@ -39,8 +38,13 @@ The [inventory page](asset-inventory.md) allows you to view your resources by ty
 
     :::image type="content" source="./media/protect-network-resources/resource-recommendations.png" alt-text="Screenshot that shows the active recommendations for a resources." lightbox="./media/protect-network-resources/resource-recommendations.png":::
 
-## Next steps
+1. Select a resource to view the affiliated recommendations.
 
-To learn more about recommendations that apply to other Azure resource types, see the following:
+1. Select a recommendation.
 
-- [Protecting your machines and applications in Microsoft Defender for Cloud](./asset-inventory.md)
+1. [Remediate the recommendation](implement-security-recommendations.md).
+
+## Next step
+
+> [!div class="nextstep"]
+> [Remediate recommendations](implement-security-recommendations.md)
