@@ -18,6 +18,7 @@ You must meet the following requirements before you can open a support case:
 - You must have either the **Service Support Administrator or Helpdesk Administrator role**.
 
     For more information on role permissions, see [Security Administrator permissions](/azure/active-directory/roles/permissions-reference#security-administrator). 
+    
 
     For more information on admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true).
 
