@@ -2,8 +2,8 @@
 title: Onboard previous versions of Windows on Microsoft Defender for Endpoint
 description: Onboard supported previous versions of Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint sensor
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: pahuijbr
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 11/02/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -96,12 +96,12 @@ Review the following details to verify minimum system requirements:
    - Copy the workspace ID and workspace key
 
 3. Using the Workspace ID and Workspace key choose any of the following installation methods to install the agent:
-    - [Manually install the agent using setup](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard).
+    - [Manually install the agent using setup](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard#install-the-agent).
 
       On the **Agent Setup Options** page, select **Connect the agent to Azure Log Analytics (OMS)**
 
-    - [Install the agent using the command line](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line).
-    - [Configure the agent using a script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation).
+    - [Install the agent using the command line](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=command-line#install-the-agent).
+    - [Configure the agent using a script](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=azure-automation#install-the-agent).
 
    > [!NOTE]
    > If you're a [US Government customer](gov.md), under "Azure Cloud", you need to choose "Azure US Government" if using the setup wizard, or if using a command line or a script - set the "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parameter to 1.
