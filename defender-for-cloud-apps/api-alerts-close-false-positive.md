@@ -20,9 +20,9 @@ POST /api/v1/alerts/close_false_positive/
 
 | Parameter | Description |
 | --- | --- |
-| filters | Filter objects with all the search filters for the request, see [alert filters](api-alerts.md#filters) for more details |
+| filters | Filter objects with all the search filters for the request. For more information, see: [alert filters](api-alerts.md#filters) for more details |
 | comment | A comment about why the alerts are dismissed |
-| reasonId | The reason for closing the alerts as false positive. Providing a reason helps improve the accuracy of the detection over time. Possible values include:<br /><br />**0**: Not of interest<br />**1**: Too many similar alerts<br />**3**: Alert is not accurate<br />**4**: Other |
+| reasonId | The reason for closing the alerts as false positive. Providing a reason helps improve the accuracy of the detection over time. Possible values include:<br /><br />**0**: Not of interest<br />**1**: Too many similar alerts<br />**3**: Alert isn't accurate<br />**4**: Other |
 | sendFeedback | A boolean value indicating that feedback about this alert is provided. Default value: false |
 | feedbackText | The text of the feedback |
 | allowContact | A boolean value indicating that consent to contact the user is provided. Default value: false |
@@ -32,7 +32,7 @@ POST /api/v1/alerts/close_false_positive/
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/alerts/close_false_positive/" -d '{
