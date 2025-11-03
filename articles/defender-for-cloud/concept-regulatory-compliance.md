@@ -17,6 +17,8 @@ When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCS
 
 The compliance dashboard provides a dedicated benchmark view to help you monitor resource compliance against benchmark controls. Non-Azure platforms follow the same cloud-neutral security principles as Azure. Each control provides a consistent level of technical implementation guidance across Azure and other cloud resources.
 
+:::image type="content" source="media/concept-regulatory-compliance/compliance-dashboard.png" alt-text="Screenshot of a sample regulatory compliance page in Defender for Cloud." lightbox="media/concept-regulatory-compliance/compliance-dashboard.png":::
+
 From the compliance dashboard, you're able to manage all of your compliance requirements for your cloud deployments, including automatic, manual, and shared responsibilities.
 
 > [!NOTE]
