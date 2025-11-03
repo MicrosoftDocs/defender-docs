@@ -1,6 +1,6 @@
 ---
-title: include file
-description: include file
+title: Include file
+description: Include file
 ms.collection: M365-security-compliance
 ms.service: defender-for-cloud-apps
 author: batamig
