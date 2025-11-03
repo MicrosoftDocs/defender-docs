@@ -492,7 +492,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
 ## Defender for Endpoint package external package dependencies
 
-For information about Defender for Endpoint package external package dependencies, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](../mde-linux-prerequisites.md#external-package-dependency).
+For information about Defender for Endpoint package external package dependencies, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
