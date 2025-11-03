@@ -31,12 +31,8 @@ Defender CSPM is available across multiple deployment models and cloud environme
 - **Hybrid**: On-premises resources through Azure Arc
 - **DevOps**: GitHub and Azure DevOps integration
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
-=======
-=======
->>>>>>> 4f609a3c035898f7cf0df1f6532ac5d457d3a575
+
 | Feature | Foundational CSPM | Defender CSPM | Cloud availability |
 |--|--|--|--|
 | [Security recommendations](review-security-recommendations.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::| Azure, AWS, GCP, on-premises , Docker Hub, JFrog Artifactory|
@@ -68,16 +64,11 @@ For specific regional availability and government cloud support details, see the
 | [Agentless code-to-cloud containers vulnerability assessment](agentless-vulnerability-assessment-azure.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [API security posture management](api-security-posture-overview.md)| - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Azure Kubernetes Service security dashboard (Preview)](cluster-security-dashboard.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
-<<<<<<< HEAD
->>>>>>> de27737207707996f47a9f2aff23d1d859afceed
-=======
-
 
 <sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
 <sup><a name="footnote1"></a>2</sup>: DevOps security capabilities, such as code-to-cloud contextualization powering security explorer, attack paths, and pull request annotations for Infrastructure-as-Code security findings, are only available when you enable the paid Defender CSPM plan. Learn more about DevOps security [support and prerequisites](devops-support.md).
 
 For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
->>>>>>> 4f609a3c035898f7cf0df1f6532ac5d457d3a575
 
 ## Plan Pricing
 
