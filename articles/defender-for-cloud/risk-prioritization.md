@@ -31,6 +31,7 @@ To learn how to use risk prioritization effectively in your security operations,
 - **For Defender portal users**: [Review security recommendations - Understanding risk prioritization in Defender portal](review-security-recommendations.md?pivots=defender-portal#understanding-risk-prioritization-in-defender-portal)
 
 These comprehensive guides include:
+
 - Risk factors and how they influence prioritization
 - Risk calculation methodology
 - Risk level classifications (Critical, High, Medium, Low, Not evaluated)
