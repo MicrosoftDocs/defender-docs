@@ -11,7 +11,7 @@ When you connect an AWS account to Microsoft Defender for Cloud, Defender for Cl
 
 ## Federated authentication overview
 
-Defender for Cloud does not store long-lived AWS credentials. Instead, it requests a token from Microsoft Entra ID and exchanges it through AWS Security Token Service (STS) for short-lived AWS credentials. These temporary credentials let Defender for Cloud:
+Defender for Cloud doesn't store long-lived AWS credentials. Instead, it requests a token from Microsoft Entra ID and exchanges it through AWS Security Token Service (STS) for short-lived AWS credentials. These temporary credentials let Defender for Cloud:
 
 - Scan AWS configuration posture
 - Collect metadata for security assessments
@@ -26,7 +26,7 @@ During onboarding, the CloudFormation template creates authentication components
 - An **OpenID Connect (OIDC) identity provider** bound to Microsoft Entra ID
 - One or more **IAM roles** that Defender for Cloud can assume through web identity federation
 
-These resources establish the trust boundary between Microsoft Entra ID and AWS.
+These resources create the trust boundary between Microsoft Entra ID and AWS.
 
 ## Cross-cloud authentication flow
 
@@ -50,11 +50,11 @@ AWS grants access only when all validation rules succeed.
 
 ## Role trust relationships
 
-The IAM role defined by the CloudFormation template includes a trust policy that allows assumption through web identity federation. Because the principal of the role is a federated identity, AWS only accepts tokens that satisfy the trust relationship conditions. This prevents unauthorized principals from reusing the role.
+The IAM role defined by the CloudFormation template includes a trust policy that allows Defender for Cloud to assume the role through web identity federation. AWS only accepts tokens if they meet the trust relationship conditions. This policy prevents unauthorized principals from assuming the same role.
 
 ## Related articles
 
 - [Connect your AWS account](quickstart-onboard-aws.md)
-- [Prerequisites for Defender plans on AWS](prerequisites-defender-plans-aws.md)
+- [Prerequisites for Defender plans on AWS](aws-plans-prerequisites.md)
 - [Troubleshoot multicloud connectors](troubleshoot-connectors.md)
 - [Agentless data collection](concept-agentless-data-collection.md)

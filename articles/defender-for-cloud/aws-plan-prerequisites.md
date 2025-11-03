@@ -15,7 +15,7 @@ Microsoft Defender for Cloud provides cloud security posture management (CSPM) a
 
 ## Defender Cloud Security Posture Management (CSPM)
 
-The Defender CSPM plan establishes the base onboarding connection and provides agentless security posture assessment across AWS resources.
+The Defender CSPM plan creates the onboarding connection and provides agentless security posture assessment across AWS resources.
 
 Requirements:
 - A Microsoft Azure subscription with Defender for Cloud enabled.

@@ -4,7 +4,7 @@ description: Defend your AWS resources with Microsoft Defender for Cloud, a guid
 author: ElazarK
 ms.author: elkrieger
 ms.topic: install-set-up-deploy
-ms.date: 10/30/2025
+ms.date: 11/03/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -38,7 +38,7 @@ Before you connect your AWS account, make sure you have:
 - Permission to create resources in Azure (Contributor or above).
 
 Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review:
-- [Prerequisites for Defender plans on AWS](prerequisites-defender-plans-aws.md)
+- [Prerequisites for Defender plans on AWS](aws-plans-prerequisites.md)
 
 
 > [!NOTE]
