@@ -73,23 +73,23 @@ An **edge**  indicates the relationship or connection properties between two nod
 
 | **Icon** | **Edge type** |
 |---|---|
-|![Contain edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-01.png) | Contains |
-|![Route edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-02.png) | Routes traffic to |
-|![Permission edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-03.png) | Has permission to / Has role on |
-|![Authenticate edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-04.png) | Can authenticate as / Can authenticate to |
-| ![Push edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-05.png)| Pushes |
-|![Maintain edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-06.png) | Maintains |
-|![Application edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-07.png) | Application |
-|![Move edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-08.png) | Moves data to |
-|![Exposed edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-09.png) | Exposed to internet |
-|![Login edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-10.png) | Can interactive logon to / Can logon over the network to / Can remote interactive logon to |
-|![Run edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-11.png) | Runs on |
-|![Provision edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-12.png) | Provisions |
-|![Identify edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-13.png) | Identified as owner of |
-|![Member edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-14.png) | Member of |
-|![Running edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-15.png) | Is running |
-|![Generic edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-16.png) | Generic / Affects |
-|![Create edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-17.png) | Created from / Used to create |
+|![Contain edge icon.](./media/understand-graph-icons/edge-icon-01.png) | Contains |
+|![Route edge icon.](./media/understand-graph-icons/edge-icon-02.png) | Routes traffic to |
+|![Permission edge icon.](./media/understand-graph-icons/edge-icon-03.png) | Has permission to / Has role on |
+|![Authenticate edge icon.](./media/understand-graph-icons/edge-icon-04.png) | Can authenticate as / Can authenticate to |
+| ![Push edge icon.](./media/understand-graph-icons/edge-icon-05.png)| Pushes |
+|![Maintain edge icon.](./media/understand-graph-icons/edge-icon-06.png) | Maintains |
+|![Application edge icon.](./media/understand-graph-icons/edge-icon-07.png) | Application |
+|![Move edge icon.](./media/understand-graph-icons/edge-icon-08.png) | Moves data to |
+|![Exposed edge icon.](./media/understand-graph-icons/edge-icon-09.png) | Exposed to internet |
+|![Login edge icon.](./media/understand-graph-icons/edge-icon-10.png) | Can interactive logon to / Can logon over the network to / Can remote interactive logon to |
+|![Run edge icon.](./media/understand-graph-icons/edge-icon-11.png) | Runs on |
+|![Provision edge icon.](./media/understand-graph-icons/edge-icon-12.png) | Provisions |
+|![Identify edge icon.](./media/understand-graph-icons/edge-icon-13.png) | Identified as owner of |
+|![Member edge icon.](./media/understand-graph-icons/edge-icon-14.png) | Member of |
+|![Running edge icon.](./media/understand-graph-icons/edge-icon-15.png) | Is running |
+|![Generic edge icon.](./media/understand-graph-icons/edge-icon-16.png) | Generic / Affects |
+|![Create edge icon.](./media/understand-graph-icons/edge-icon-17.png) | Created from / Used to create |
 
 Selecting an edge opens a side panel that provides more details about the connection properties. If two nodes have more than one relationship, a number appears on the edge, in place of an icon. You can find more information about these nodes’ relationships by hovering over the number or opening the side panel.
 
