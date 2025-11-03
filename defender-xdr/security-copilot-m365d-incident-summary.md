@@ -83,7 +83,7 @@ To summarize an incident:
 
    :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
 
-## Manage Copilot incident summaries settings (preview)
+### Manage Copilot incident summaries settings (preview)
 
 By default, Copilot generates a summary for each incident, but you can change this setting to display incident summaries only in specific instances. You can choose to have summaries generated:
 
