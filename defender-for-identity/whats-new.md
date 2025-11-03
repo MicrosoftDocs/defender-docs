@@ -23,6 +23,13 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## November 2025
+
+### Expansion of identity scoping - support for Organizational units (preview) 
+
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
 ## October 2025
 
 We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
