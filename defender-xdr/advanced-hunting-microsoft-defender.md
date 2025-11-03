@@ -66,7 +66,7 @@ You can use advanced hunting KQL (Kusto Query Language) queries to hunt through 
 When you open the advanced hunting page for the first time after connecting a workspace, you can find many of that workspace's tables  organized by solution after the Microsoft Defender XDR tables under the **Schema** tab.
 
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="/defender/media/advanced-hunting-unified-sentinel-data.png":::
+:::image type="content" source="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-sentinel-data.png":::
 
 
 Likewise, you can find the functions from Microsoft Sentinel in the **Functions** tab, and your shared and sample queries from Microsoft Sentinel can be found in the **Queries** tab inside folders marked **Sentinel**.
@@ -81,7 +81,7 @@ In the unified portal, in addition to viewing the schema column names and descri
 - **Data retention period** – how long the data is set to be kept
 - **Tags** – available for Sentinel data tables
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-schema.png":::
+:::image type="content" source="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-view-schema.png":::
 
 ## Known issues
 
