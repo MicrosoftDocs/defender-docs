@@ -43,7 +43,7 @@ The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enh
 
 ## September 2025
 
-### Unlock additional security value in the unified agent
+### Unlock additional security value in the unified sensor (v3.x)
 Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
@@ -55,18 +55,18 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified agent (preview)
-We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
+### New API support for unified sensor (preview)
+We are excited to announce the availability of a new Graph-based API for managing unified sensor server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of unified agent servers
+* Monitor the status of unified sensor servers
 * Enable or disable the automatic activation of eligible servers
-* Activate or deactivate the agent on eligible servers
+* Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing unified sensor actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
