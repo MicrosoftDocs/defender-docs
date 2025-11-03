@@ -19,7 +19,7 @@ ms.topic: how-to
 ms.custom: 
 - cx-ti
 - cx-ta
-ms.date: 11/18/2025
+ms.date: 11/03/2025
 ---
 
 # Get access to IOCs in threat analytics in Microsoft Defender (preview)
