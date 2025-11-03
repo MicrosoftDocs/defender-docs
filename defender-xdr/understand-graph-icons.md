@@ -37,32 +37,32 @@ A **node** pertains to an entity in your environment (for example, a device, use
 
 | **Icon** | **Node type** | **Entity type examples** |
 |---|---|---|
-|![General node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-01.png) | General | App service plan |
-|![Compute node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-02.png) | Compute | Device, virtual machine, Microsoft Azure Logic App |
-|![Networking node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-03.png) | Networking | Interface, public IP address, network security group |
-|![Data node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-04.png) | Data | SQL data store, Azure Monitor Log Analytics workspace, storage account, Azure Event Hubs |
-|![Containers node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-05.png) | Containers | Kubernetes cluster |
-|![Keys node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-06.png) | Keys & secrets | Key vault |
-|![DevOps node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-07.png) | DevOps | Azure DevOps repositories |
-|![APIs node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-08.png) | APIs | Cloud applications |
-|![Identity node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-09.png) | Identity & access | User account, Microsoft Entra ID service principal |
-|![IoT node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-10.png) | IoT | |
-|![Certificate node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-11.png) | Certificate | |
-|![IP node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-12.png) | IP address | |
-|![Subscriptions node icon.](/defender-xdr/media/ah-hunting-graph/node-icon-13.png) | Subscriptions | |
+|![General node icon.](./media/understand-graph-icons/node-icon-01.png) | General | App service plan |
+|![Compute node icon.](./media/understand-graph-icons/node-icon-02.png) | Compute | Device, virtual machine, Microsoft Azure Logic App |
+|![Networking node icon.](./media/understand-graph-icons/node-icon-03.png) | Networking | Interface, public IP address, network security group |
+|![Data node icon.](./media/understand-graph-icons/node-icon-04.png) | Data | SQL data store, Azure Monitor Log Analytics workspace, storage account, Azure Event Hubs |
+|![Containers node icon.](./media/understand-graph-icons/node-icon-05.png) | Containers | Kubernetes cluster |
+|![Keys node icon.](./media/understand-graph-icons/node-icon-06.png) | Keys & secrets | Key vault |
+|![DevOps node icon.](./media/understand-graph-icons/node-icon-07.png) | DevOps | Azure DevOps repositories |
+|![APIs node icon.](./media/understand-graph-icons/node-icon-08.png) | APIs | Cloud applications |
+|![Identity node icon.](./media/understand-graph-icons/node-icon-09.png) | Identity & access | User account, Microsoft Entra ID service principal |
+|![IoT node icon.](./media/understand-graph-icons/node-icon-10.png) | IoT | |
+|![Certificate node icon.](./media/understand-graph-icons/node-icon-11.png) | Certificate | |
+|![IP node icon.](./media/understand-graph-icons/node-icon-12.png) | IP address | |
+|![Subscriptions node icon.](./media/understand-graph-icons/node-icon-13.png) | Subscriptions | |
 
 Selecting a node opens a side panel that provides more details about the chosen entity, such as entity name, type, last updated date, and discovery source. This panel might also display additional information such as attack paths and blast radius, depending on the selected node and its relationship to other nodes in the graph.
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-node-details.png" alt-text="Screenshot of the side panel in the hunting graph containing node details." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-node-details.png":::
+:::image type="content" source="./media/understand-graph-icons/hunting-graph-node-details.png" alt-text="Screenshot of the side panel in the hunting graph containing node details." lightbox="./media/understand-graph-icons/hunting-graph-node-details.png":::
 
 Entities and might also appear as **grouped nodes**, which have numerical indicators (for example, to indicate the total number of user accounts). To expand and view all nodes in a grouped node, use the **ungroup** toggle.
 
 A node might also have any of the following indicators around it:
 
-- **Critical asset** - Indicates that an entity is classified as business-critical or valuable, as identified in the [critical asset management](/security-exposure-management/critical-asset-management) in Microsoft Security Exposure Management. This indicator appears as a golden crown ![Critical asset icon.](/defender-xdr/media/ah-hunting-graph/critical-asset-icon.png). The nodes representing critical assets also have a golden halo surrounding them. 
-- **Vulnerability** - Indicates that at least one vulnerability was detected on the entity. This indicator appears as a red bug ![Vulnerability icon.](/defender-xdr/media/ah-hunting-graph/vulnerability-icon.png).
-- **Explore connected assets** - Indicates that the node can expand the hunting graph further beyond the initial results. Expanding the graph lets you explore other relationships the selected entity has with the other ones. This indicator appears as a blue plus sign ![Explore connected asset icon.](/defender-xdr/media/ah-hunting-graph/explore-icon.png). 
-- **Discovery source** - Indicates the entity's data source. This indicator appears as the icon of the Defender product protecting the entity in blue (for example, ![Defender for Endpoint icon.](/defender-xdr/media/ah-hunting-graph/discovery-source-endpoint.png) for Microsoft Defender for Endpoint, or ![Defender for Cloud icon.](/defender-xdr/media/ah-hunting-graph/discovery-source-cloud.png) for Microsoft Defender for Cloud).
+* **Critical asset** - Indicates that an entity is classified as business-critical or valuable, as identified in the [critical asset management](/security-exposure-management/critical-asset-management) in Microsoft Security Exposure Management. This indicator appears as a golden crown ![Critical asset icon.](./media/understand-graph-icons/critical-asset-icon.png). The nodes representing critical assets also have a golden halo surrounding them. 
+* **Vulnerability** - Indicates that at least one vulnerability was detected on the entity. This indicator appears as a red bug ![Vulnerability icon.](./media/understand-graph-icons/vulnerability-icon.png).
+* **Explore connected assets** - Indicates that the node can expand the hunting graph further beyond the initial results. Expanding the graph lets you explore other relationships the selected entity has with the other ones. This indicator appears as a blue plus sign ![Explore connected asset icon.](./media/understand-graph-icons/explore-icon.png). 
+* **Discovery source** - Indicates the entity's data source. This indicator appears as the icon of the Defender product protecting the entity in blue (for example, ![Defender for Endpoint icon.](./media/understand-graph-icons/discovery-source-endpoint.png) for Microsoft Defender for Endpoint, or ![Defender for Cloud icon.](./media/understand-graph-icons/discovery-source-cloud.png) for Microsoft Defender for Cloud).
 
   >[!TIP]
   > You can turn this indicator on and off a graph by toggling the **Discovery Source** switch in the graph's **Layers**.
@@ -93,7 +93,7 @@ An **edge**  indicates the relationship or connection properties between two nod
 
 Selecting an edge opens a side panel that provides more details about the connection properties. If two nodes have more than one relationship, a number appears on the edge, in place of an icon. You can find more information about these nodes’ relationships by hovering over the number or opening the side panel.
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-edge-details.png" alt-text="Screenshot of the side panel in the hunting graph containing edge details." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-edge-details.png":::
+:::image type="content" source="./media/understand-graph-icons/hunting-graph-edge-details.png" alt-text="Screenshot of the side panel in the hunting graph containing edge details." lightbox="./media/understand-graph-icons/hunting-graph-edge-details.png":::
 
 ## See also
 - [Hunt for threats using the hunting graph](advanced-hunting-graph.md)
