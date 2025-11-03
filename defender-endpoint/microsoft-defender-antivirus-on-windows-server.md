@@ -23,8 +23,6 @@ appliesto:
 ---
 # Microsoft Defender Antivirus on Windows Server
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ## Overview
 

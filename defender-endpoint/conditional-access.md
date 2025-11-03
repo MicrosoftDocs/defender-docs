@@ -21,9 +21,6 @@ appliesto:
 
 # Enable Conditional Access to better protect users, devices, and data
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 Conditional Access is a capability that helps you better protect your users and enterprise information by making sure that only secure devices have access to applications.
 

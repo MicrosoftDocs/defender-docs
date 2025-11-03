@@ -23,13 +23,26 @@ appliesto:
 ---
 # What's new in Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Releases for Defender for Endpoint on iOS
 
+#### October 2025
+
+| Build| 1.1.70230101|
+| -------- | -------- |
+| Release Date   |October 30, 2025|
+
+**What's New**
+
+- Simplified return to compliance experience in iOS/iPadOS - please refer to this [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more details.
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/ios-whatsnew/image.png)
+  
 #### October 2025
 
 | Build | 1.1.69250104|

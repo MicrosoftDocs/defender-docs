@@ -23,10 +23,6 @@ appliesto:
 ---
 # Sign in to Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 1. Enter your credentials.
 

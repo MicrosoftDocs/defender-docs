@@ -23,11 +23,6 @@ appliesto:
 ---
 # Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 ## Configuration isn't applied as expected
 

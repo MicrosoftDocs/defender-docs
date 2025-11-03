@@ -40,6 +40,9 @@ This article describes the controls and notifications that are designed to help 
 
 ## What admins can do to control outbound spam
 
+> [!NOTE]
+> If messages are blocked or marked as spam, admins can review the issue in the **Exchange admin center (EAC)** using **Message trace** or delivery reports. For investigation and resolution guidance, see [Troubleshoot outbound email issues in Exchange Online](/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)
+
 - **Use built-in notifications**: When a user exceeds [sending limits of the service](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options) or [outbound spam policies](outbound-spam-policies-configure.md) and is restricted from sending email, the default alert policy named **User restricted from sending email** sends email notifications to members of the **TenantAdmins** group (**Global Administrator** members). To configure who else receives these notifications, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). Also, the default alert policies named **Email sending limit exceeded** and **Suspicious email sending patterns detected** send email notifications to members of the **TenantAdmins** group (**Global Administrator** members). For more information about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
 
 - **Review spam complaints from non-Microsoft email providers**: Many email services like Outlook.com, Yahoo, and AOL provide a feedback loop where we review our messages that are identified as spam by their users. To learn more about sender support for Outlook.com, go to the [Microsoft Sender Support and Blocklist Removal Tool](https://sendersupport.olc.protection.outlook.com/pm/services.aspx).

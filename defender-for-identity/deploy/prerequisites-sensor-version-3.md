@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity sensor v3.x prerequisites | Microsoft Defender for Identity
 description: This article describes the prerequisites for installing the Microsoft Defender for Identity sensor version 3.x.
-ms.date: 06/30/2025
+ms.date: 10/24/2025
 ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
@@ -14,11 +14,10 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
-- Requires that Defender for Endpoint is deployed
- - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed
- - Doesn't currently support VPN integration
- - Doesn't currently support ExpressRoute
- - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.
+- Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
+ - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
+ - Doesn't currently support VPN integration.
+ - Doesn't currently support ExpressRoute.
 
 ## Licensing requirements
 

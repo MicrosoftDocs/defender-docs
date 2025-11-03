@@ -22,9 +22,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Deploy Microsoft Defender Antivirus in rings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Deploy Microsoft Defender Antivirus in rings
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 

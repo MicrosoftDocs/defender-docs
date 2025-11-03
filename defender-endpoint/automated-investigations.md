@@ -23,9 +23,6 @@ appliesto:
 
 # Overview of automated investigations
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 ## Prerequisites
 
 Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).

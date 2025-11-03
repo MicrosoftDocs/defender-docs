@@ -25,10 +25,6 @@ appliesto:
 ---
 # Onboarding using Microsoft Configuration Manager
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This article acts as an example onboarding method.
 

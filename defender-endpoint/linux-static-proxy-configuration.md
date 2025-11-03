@@ -23,10 +23,6 @@ appliesto:
 ---
 # Configure Microsoft Defender for Endpoint on Linux for static proxy discovery
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Microsoft Defender for Endpoint can discover a proxy server using the `HTTPS_PROXY` environment variable. This setting must be configured **both** at installation time and after the product has been installed.
 

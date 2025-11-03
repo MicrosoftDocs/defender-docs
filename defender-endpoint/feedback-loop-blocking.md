@@ -25,9 +25,9 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Feedback-loop blocking
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 ## Overview
 

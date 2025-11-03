@@ -22,10 +22,6 @@ appliesto:
 ---
 # Troubleshoot Microsoft Defender for Endpoint live response issues
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This page provides detailed steps to troubleshoot live response issues.
 

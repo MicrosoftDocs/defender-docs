@@ -21,8 +21,6 @@ appliesto:
 ---
 # Take response actions on a device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 

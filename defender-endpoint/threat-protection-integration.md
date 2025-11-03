@@ -21,10 +21,6 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint and other Microsoft solutions
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 
 ## Integrate with other Microsoft solutions
