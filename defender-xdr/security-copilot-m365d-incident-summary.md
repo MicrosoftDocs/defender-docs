@@ -99,7 +99,6 @@ To change the settings for Copilot incident summaries in Microsoft Sentinel, fol
 
 1. Under **Auto-generated Content**, select **Incident Summary**.
 1. Select either **Auto-generate** or **Generate on demand**, depending on your preference.
-1. Choose your preferences for incident summaries. Select **Auto-generate** or **Generate on demand**.
 1. If you select **Auto-generate**, choose between **Always** or **Incident severity**. If you select **Incident severity**, choose the *minimum* severity level for which you want Copilot to generate incident summaries automatically.
 
     :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-settings-preferences.png" alt-text="Screenshot that shows the Copilot settings preferences page in Microsoft Sentinel.":::
