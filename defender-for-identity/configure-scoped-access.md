@@ -59,20 +59,21 @@ The following table lists the current limitations and supported scenarios for sc
 >
 > - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
-|Defender for Identity experience |Scoping by OU's|Scoping by AD doamin|
+|Defender for Identity experience |Scoping by OU's|Scoping by AD domain|
 |---------| -------- |---------|
 |MDI alerts and incidents  |Available| Available|
-|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents, IdentityLogonEvents, IdentityQueryEvents     ||   Available      |
-|User page and user global search  ||   Available      |
-|MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     ||   Available      |
-|Health issues       ||   Available      |
-|Identities inventory and service accounts discovery page     ||  Available      |
-|Identities settings: sensors page, manual tagging, health issues notifications  ||   Available      |
-|Defender XDR Incident email notifications     || Unavailable      |
-|ISPMs and exposure management     ||   Unavailable      |
-|Download scheduled reports and Graph API    ||   Unavailable      |
-|Device and group global search and entity page     ||   Unavailable      |
-|Alert tuning and critical asset management   ||   Unavailable      |
+|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents, IdentityLogonEvents, IdentityQueryEvents     |Available|   Available      |
+|User page and user global search  |Available|   Available      |
+|MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     |Available|   Available      |
+|Health issues       |Unavailable|   Available      |
+|Identities inventory and service accounts discovery page     |Available|  Available      |
+|Identities settings: manual tagging|Available|Available|
+|Identities settings: sensors page, health issues notifications  |Unavailable|   Available      |
+|Defender XDR Incident email notifications     |Available| Unavailable      |
+|ISPMs and exposure management     |Unavailable|   Unavailable      |
+|Download scheduled reports and Graph API    |Unavailable|   Unavailable      |
+|Device and group global search and entity page     |Available|   Available      |
+|Alert tuning and critical asset management   |Unavailable|   Unavailable      |
 
 ### Related articles
 
