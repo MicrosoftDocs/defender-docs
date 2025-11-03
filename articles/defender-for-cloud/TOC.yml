@@ -347,9 +347,6 @@
         - name: Secure score
           displayName: security, posture, secure, score, calculate, control, improve
           href: secure-score-security-controls.md
-        - name: Track secure score
-          displayName: secure score, rest api, resource graph
-          href: secure-score-access-and-track.md
         - name: Review the asset inventory
           displayName: asset, inventory, resources
           href: asset-inventory.md
