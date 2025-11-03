@@ -31,9 +31,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|December 1, 2025| GA | General availability of the Endor Labs connector |
+|December 1, 2025| GA | [General availability of the Endor Labs integration](#general-availability-of-the-endor-labs-integration) |
 
-### General availability of the Endor Labs connector
+### General availability of the Endor Labs integration
 
 Defender for Cloud's integration with Endor labs is now generally available.
 
