@@ -338,7 +338,7 @@ To configure the Defender CSPM plan:
 
 1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
 
-## Ingest GCP Cloud Logging with Pub/Sub
+## Ingest GCP Cloud Logging with Pub/Sub (Preview)
 
 Integrating Google Cloud Platform (GCP) Cloud Logging with Microsoft Defender for Cloud allows you to ingest activity logs from GCP, enhancing your ability to monitor, detect, and respond to security events across your Google Cloud environments. You can configure log ingestion either at the project level or centrally at the organization level. Data streamed from GCP Pub/Sub provides the necessary context for Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud dependent on the log activity and calculated risk-based recommendations, security posture insights and power attack paths.
 
