@@ -5,15 +5,10 @@ author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
 ms.date: 09/09/2024
-zone_pivot_groups: defender-portal-experience
 #customer intent: As a cloud security professional, I want to understand how Defender for Cloud helps me meet regulatory compliance standards, so that I can ensure my organization is compliant with industry standards and regulations.
 ---
 
 # Regulatory compliance standards in Microsoft Defender for Cloud
-
-::: zone pivot="azure-portal"
-
-## Azure portal
 
 Microsoft Defender for Cloud streamlines the regulatory compliance process by helping you to identify issues that are preventing you from meeting a particular compliance standard, or achieving compliance certification.
 
@@ -60,69 +55,6 @@ For each compliance standard you can view:
   - Unavailable controls are those that can't be automatically assessed and thus Defender for Cloud is unable to access whether resources are compliant.
 
 You can drill down into controls to get information about resources that have passed/failed assessments, and for remediation steps.
-
-::: zone-end
-
-::: zone pivot="defender-portal"
-
-## Defender portal
-
-The Defender portal provides a consumption-focused experience for regulatory compliance, allowing you to monitor and track your compliance posture across assigned standards. 
-
-Configuration and assignment of compliance standards is managed through the [Azure portal experience](?pivots=azure-portal), while the Defender portal focuses on providing enhanced visualization and tracking of your compliance progress through the unified security dashboard.
-
-## Compliance controls
-
-Each security standard consists of multiple compliance controls, which are logical groups of related security recommendations.
-
-Defender for Cloud continually assesses the environment-in-scope against any compliance controls that can be automatically assessed. Based on assessments, it shows resources as being compliant or non-compliant with controls.
-
-> [!NOTE]
-> It's important to note that if standards have compliance controls that can't be automatically assessed, Defender for Cloud isn't able to decide whether a resource complies with the control. In this case, the control will show as greyed out. In addition, if a subscription has no relevant resources to a specific standard, the standard won't be shown in the regulatory compliance dashboard at all, even if it assigned.
-
-## View compliance standards
-
-The Defender portal provides a consumption-focused regulatory compliance experience through the enhanced M1 widget and integrated dashboard views. 
-
-> [!IMPORTANT]
-> To configure and assign compliance standards to your environment, use the [Azure portal experience](?pivots=azure-portal). The Defender portal focuses on monitoring and tracking compliance progress for already assigned standards.
-
-### Compliance status monitoring
-
-The regulatory compliance widget displays the current status of your assigned compliance frameworks, providing:
-
-- Real-time compliance score for each assigned standard
-- Visual representation of compliance progress
-- Quick identification of frameworks requiring attention
-- Integration with the unified security dashboard
-
-### Recommendations filtering
-
-You can drill down into specific compliance requirements through the recommendations page by:
-
-- Filtering recommendations by compliance framework
-- Viewing framework-specific security recommendations 
-- Tracking remediation progress for compliance-related findings
-- Accessing detailed remediation guidance for each control
-
-For comprehensive compliance management including standard assignment and policy configuration, refer to the [Azure portal regulatory compliance experience](?pivots=azure-portal).
-
-## Compliance standard details
-
-The Defender portal provides read-only access to compliance standard details for monitoring purposes:
-
-- View assigned standards and their current compliance status
-- Review compliance progress across different framework controls
-- Access compliance assessment summaries within your assigned scope
-- The status displays reflect compliance with the standard through three states:
-  - A green circle indicates that resources in scope are compliant with the control
-  - A red circle indicates that resources are not compliant with the control  
-  - Unavailable controls are those that can't be automatically assessed
-
-> [!NOTE]
-> For detailed configuration, scope assignment, and policy management of compliance standards, use the [Azure portal experience](?pivots=azure-portal).
-
-::: zone-end
 
 ## Default compliance standards
 

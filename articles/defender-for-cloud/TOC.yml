@@ -29,7 +29,7 @@
       displayName: comparison, features, azure portal, defender portal, capabilities, differences
       href: azure-portal-vs-defender-portal-comparison.md
 
-- name: Deploy and configure
+- name: Deploy 
   items:
     - name: Support & requirements
       items:
@@ -38,6 +38,9 @@
         - name: Defender for Cloud support matrices
           displayName: coverage, supported platforms, Cloud services, roles, permissions
           href: support-matrix-defender-for-cloud.md
+        - name: Defender for Cloud Cloud support matrices
+          displayName: matrices, gov, government, 21via, net, support
+          href: support-matrix-cloud-environment.md
         - name: Regional availability for Defender for Cloud plans
           href: regional-availability.md
     - name: Connect environments and enable all plans
@@ -304,7 +307,7 @@
             displayName: connector, GCP, VPC, service, controls, restriction, issues
             href: resolve-vpc-service-controls-issues.md
 
-- name: Posture Management
+- name: Cloud Security Posture Management (CSPM)
   items:
     - name: Get started
       items:
@@ -427,17 +430,20 @@
               href: remediate-server-secrets.md
             - name: Remediate Cloud deployment secrets
               href: remediate-cloud-deployment-secrets.md
-    - name: Review and prioritize
+    - name: Investigate and remediate
       items:
+        - name: Review workload protection
+          displayName: workloads, dashboard, protections
+          href: workload-protections-dashboard.md
         - name: Improve regulatory compliance
           href: regulatory-compliance-dashboard.md
-        - name: Review with security explorer and attack path
+        - name: Investigate with security explorer and attack path
           items:
             - name: Identify and remediate attack paths
-              displayName: attack paths, paths, review, easm,
+              displayName: attack paths, paths, investigate, easm,
               href: how-to-manage-attack-path.md
             - name: Retrieve attack path data with API
-              displayName: attack paths, paths, review, easm, rest api
+              displayName: attack paths, paths, investigate, easm, rest api
               href: attack-path-api.md
             - name: Build queries with Cloud security explorer
               displayName: queries, security explorer, explorer, templates, query
@@ -445,7 +451,7 @@
             - name: Detect internet exposed IP addresses
               displayName: exposed, ip, addresses, easm
               href: detect-exposed-ip-addresses.md
-        - name: Review security recommendations
+        - name: Investigate security recommendations
           items:
             - name: Review security recommendations
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
@@ -1600,7 +1606,7 @@
       href: gain-end-user-context-ai.md
 >>>>>>> de27737207707996f47a9f2aff23d1d859afceed
 
-- name: Workload protection
+- name: Protect workloads
   items:
   - name: Settings & monitoring
     items:
@@ -1710,7 +1716,7 @@
             href: deploy-vulnerability-assessment-byol-vm.md
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-            href: transition-to-built-in.md
+            href: how-to-transition-to-built-in.yml
       - name: Machine secrets scanning
         items:
           - name: Overview
@@ -1749,7 +1755,7 @@
             href: just-in-time-access-overview.md
           - name: Enable just-in-time access 
             displayName: jit, management, ports
-            href: enable-just-in-time-access.md
+            href: just-in-time-access-usage.yml
   - name: Defender for Containers
     items:
       - name: Overview
@@ -1962,6 +1968,18 @@
       - name: Respond to Microsoft Defender for DNS alerts
         displayName: DNS
         href: defender-for-dns-alerts.md
+  - name: DevOps security
+    items:
+      - name: DevOps security overview
+        href: defender-for-devops-introduction.md
+      - name: Support and prerequisites
+        href: devops-support.md
+      - name: DevOps environment security posture
+        href: concept-devops-environment-posture-management-overview.md
+      - name: Reliability in Cloud for DevOps security
+        href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
+      - name: Common questions about DevOps security
+        href: faq-defender-for-devops.yml
   - name: Defender for AI services
     items:
       - name: Overview
@@ -1971,20 +1989,7 @@
         displayName: AI, Defender for AI, threat protection
         href: gain-end-user-context-ai.md
 
-- name: DevOps security
-  items:
-    - name: DevOps security overview
-      href: defender-for-devops-introduction.md
-    - name: Support and prerequisites
-      href: devops-support.md
-    - name: DevOps environment security posture
-      href: concept-devops-environment-posture-management-overview.md
-    - name: Reliability in Cloud for DevOps security
-      href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
-    - name: Common questions about DevOps security
-      href: faq-defender-for-devops.yml
-
-- name: Investigation and response
+- name: Investigate & Respond
   items:
     - name: What's new in recommendations, alerts, and incidents
       href: release-notes-recommendations-alerts.md
@@ -2175,109 +2180,6 @@
       href: investigate-resource-health.md
     - name: Queries - Azure Resource Graph
       href: ./resource-graph-samples.md
-
-- name: Integrations
-  items:
-    - name: Integrate partner integrations
-      expanded: false
-      items:
-        - name: Overview of partner integrations
-          displayName: partner, integration, integrations, partners
-          href: partner-integrations.md
-        - name: Integrate partner integrations
-          displayName: partner, integration, integrations, partners
-          href: integrate-partner-integrations.md
-        - name: Connect an integration
-          displayName: partner, integration, integrations, partners
-          href: connect-an-integration.md
-        - name: Partner integrations
-          items:
-          - name: Endor Labs
-            items:
-            - name: Overview 
-              displayName: CSPM, Cloud security, posture, management, Endor labs
-              href: integration-endor-labs.md
-            - name: Connect Endor Labs to Defender for Cloud
-              displayName: CSPM, Cloud security, posture, management, Endor labs
-              href: connect-endor-labs.md
-            - name: Common questions 
-              displayName: FAQ, questions, endor labs
-              href: faq-endor-labs.yml
-          - name: ServiceNow
-            items:
-            - name: Overview ServiceNow integration
-              displayName: CSPM, Cloud security, posture, management, ServiceNow
-              href: integration-servicenow.md
-            - name: Connect ServiceNow to Defender for Cloud
-              displayName: CSPM, Cloud security, posture, management, ServiceNow
-              href: connect-servicenow.md
-          - name: Mend.io
-            items:
-            - name: Overview Mend.io integration
-              displayName: CSPM, Cloud security, posture, management, Mend.io
-              href: integration-mend-io.md
-            - name: Connect Mend.io to Defender for Cloud
-              displayName: CSPM, Cloud security, posture, management, Mend.io
-              href: connect-mend-io.md
-          - name: API security testing partners
-            items:
-                - name: Overview of API security testing integrations
-                  href: defender-partner-applications.md
-                - name: Onboard 42Crunch (preview)
-                  href: onboarding-guide-42crunch.md
-                - name: Onboard StackHawk (preview)
-                  href: onboarding-guide-stackhawk.md
-                - name: Onboard Bright Security (preview)
-                  href: onboarding-guide-bright.md
-        - name: Security solutions (legacy)
-          displayName: security, solutions, integrate, integrated, data sources
-          href: partner-integration.md
-    - name: Integrate Microsoft solutions
-      expanded: false
-      items:
-          - name: Power BI
-            items:
-            - name: Overview Power BI integration
-              displayName: CSPM, Cloud security, posture, management, Power BI
-              href: integration-power-bi.md
-            - name: Add Defender for Cloud data to Power BI
-              displayName: CSPM, Cloud security, posture, management, Power BI
-              href: add-data-power-bi.md
-          - name: Microsoft Defender for Endpoint
-            items:
-              - name: Overview Microsoft Defender for Endpoint integration
-                displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
-                href: integration-defender-for-endpoint.md
-              - name: Enable the Defender for Endpoint integration
-                displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
-                href: enable-defender-for-endpoint.md
-          - name: Microsoft Defender XDR
-            items:
-              - name: Overview Microsoft Defender XDR integration
-                displayName: CSPM, Cloud security, posture, management, Microsoft Defender XDR
-                href: concept-integration-365.md
-          - name: Microsoft Defender external attack surface management (EASM)
-            items:
-              - name: Overview Microsoft Defender EASM integration
-                displayName: CSPM, Cloud security, posture, management, Microsoft Defender EASM
-                href: concept-easm.md
-          - name: Microsoft Security Copilot
-            items:
-              - name: Overview Microsoft Security Copilot integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
-                href: copilot-security-in-defender-for-cloud.md
-              - name: Summarize recommendations with Microsoft Security Copilot
-                displayName: copilot, security, recommendations, summarize
-                href: summarize-with-copilot.md
-              - name: Remediate recommendations with Microsoft Security Copilot
-                displayName: copilot, security, recommendations, remediate
-                href: remediate-with-copilot.md
-              - name: Delegate recommendations with Microsoft Security Copilot
-                displayName: copilot, security, recommendations, delegate
-                href: delegate-with-copilot.md
-              - name: Remediate code with Microsoft Security Copilot
-                displayName: copilot, security, recommendations, code, remediate, iac, infrastructure as code
-                href: remediate-code-with-copilot.md
 
 - name: References
   items:

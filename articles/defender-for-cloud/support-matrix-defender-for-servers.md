@@ -118,7 +118,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
-| [Just-in-time VM access](enable-just-in-time-access.md) | ✔ | - |
+| [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
 | [Network map](protect-network-resources.md#network-map) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
