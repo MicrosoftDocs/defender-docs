@@ -66,8 +66,28 @@ Learn more about:
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 23, 2025 | Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
+|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)](#gcp-cloud-logging-ingestion-support-preview)|
+|October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
+
+### GCP Cloud Logging Ingestion Support (Preview)
+
+October 31, 2025
+
+Microsoft Defender for Cloud now supports **GCP Cloud Logging ingestion** in Public Preview, further strengthening multi-cloud identity posture and permissions management across GCP environments. 
+
+This new capability enables enhanced cloud identity activity insights, permission-usage visibility, and least-privilege recommendations and ensures uninterrupted CIEM recommendations for your GCP environments. To maintain continuous CIEM insights and recommendations for your connected GCP environments, you must enable GCP Cloud Logging ingestion going forward.
+
+#### Recommended Action
+
+Turn on **GCP Cloud Logging ingestion (Preview)** by following the steps in our [documentation ](https://aka.ms/multicloudconnectors) and choosing one of the following options:
+
+1. Create a new Pub/Sub subscription within the wizard, or
+
+1. Provide details for an existing Pub/Sub subscription to ingest logs
+
+> [!NOTE]
+> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform.
 
 ### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
 
