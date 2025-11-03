@@ -1460,7 +1460,7 @@
           displayName: asset, inventory, resources
           href: asset-inventory.md
         - name: Protect network resources
-          displayName: map, network map
+          displayName: network, resources, protect
           href: protect-network-resources.md
         - name: Other threat protections
           displayName: network layer, display recommendations, stream, security, alerts,
