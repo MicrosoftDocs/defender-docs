@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/28/2025
+ms.date: 11/03/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -27,7 +27,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## December 2025
 
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|December 1, 2025| GA | General availability of the Endor Labs connector |
+
+### General availability of the Endor Labs connector
+
+Defender for Cloud's integration with Endor labs is now generally available.
+
+Defender for Cloud's integration with Endor Labs enhances vulnerability analysis by using reachability-based Software Composition Analysis (SCA), which shows exploitable vulnerabilities from code to runtime.
+
+Learn more about the [Endor Labs integration](integration-endor-labs.md).
 
 ## October 2025
 
