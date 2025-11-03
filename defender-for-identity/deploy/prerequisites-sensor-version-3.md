@@ -12,7 +12,7 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 ## Sensor version limitations 
 
-Before activating the Defender for Identity sensor v3.x, Keep these limitations in mind before activating the sensor.
+Before activating the Defender for Identity sensor v3.x, keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
 - Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
  - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
