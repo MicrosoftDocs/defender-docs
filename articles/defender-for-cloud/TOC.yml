@@ -1079,10 +1079,6 @@
           displayName: connector, GCP, VPC, service, controls, restriction, issues
           href: resolve-vpc-service-controls-issues.md
           
->>>>>>> de27737207707996f47a9f2aff23d1d859afceed
-=======
-
-
 - name: Tutorials
   items:
     - name: Planning and operations guide
