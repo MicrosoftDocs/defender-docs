@@ -610,7 +610,7 @@
           displayName: asset, inventory, resources
           href: asset-inventory.md
         - name: Protect network resources
-          displayName: map, network map
+          displayName: network, resources, protect
           href: protect-network-resources.md
         - name: Other threat protections
           displayName: network layer, display recommendations, stream, security, alerts,
@@ -860,7 +860,7 @@
             href: deploy-vulnerability-assessment-byol-vm.md
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-            href: how-to-transition-to-built-in.yml
+            href: transition-to-built-in.md
       - name: Machine secrets scanning
         items:
           - name: Overview
@@ -899,7 +899,8 @@
             href: just-in-time-access-overview.md
           - name: Enable just-in-time access 
             displayName: jit, management, ports
-            href: just-in-time-access-usage.yml
+            href: enable-just-in-time-access.md
+
     - name: Investigate and remediate 
       items:
       - name: Remediate EDR solutions (agentless)
