@@ -1,7 +1,7 @@
 ---
 title: Overview - AI security posture management
 description: Learn about AI security posture management in Microsoft Defender for Cloud and how it protects resources from AI threats.
-ms.date: 10/27/2025
+ms.date: 11/03/2025
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
@@ -10,7 +10,7 @@ author: Elazark
 
 # Overview - AI security posture management
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI (Preview). The CSPM plan secures generative AI applications throughout their entire lifecycle.
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI (Preview). The Defender CSPM plan secures generative AI applications and AI agents throughout their entire lifecycle.
  Defender for Cloud reduces risks to cross-cloud AI workloads by:
 
 - Discover the generative AI Bill of Materials (AI BOM), which includes application components, data, and AI artifacts from code to cloud.
@@ -51,10 +51,16 @@ With these features, Defender for Cloud provides full visibility of AI workloads
 
 ## Discover AI agents
 
-AI Agents Inventory shows all AI agents built with Copilot Studio in one place for security and IT teams.
+Defender for Cloud discovers AI agent workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI agent applications from potential threats.
 
-A new table in Microsoft Defender Advanced Hunting lets you find deployed agents, check their settings, and spot possible risks.
+Defender for Cloud automatically and continuously discovers deployed AI agents across the following services:
 
+- Azure Foundry AI Agents (requires access to Defender for Cloud with the [Defender CSPM plan enabled](tutorial-enable-cspm-plan.md))
+- Copilot Studio AI Agents (requires a [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps?branch=main) license) 
+
+Once you have enabled the Defender CSPM plan on your Azure subscription, AI agents deployed using Azure Foundry are automatically discovered and inventoried in Microsoft Defender XDR's AI inventory.
+
+Learn how to [protect AI agents in Microsoft Defender XDR](/defender-xdr/protect-ai-agents).
 
 ## Reduce risks to generative AI apps
 
