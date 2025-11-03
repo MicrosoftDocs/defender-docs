@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 10/29/2025
+ms.date: 10/28/2025
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -50,8 +50,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
 | October 21, 2025 | Alert         | Update |The following changes will apply to K8S.Node_* Alerts for EKS and GKE clusters. The resourceIdentifiers property will reference the MDC Connector Identifier: Microsoft.Security/securityConnectors/CONNECTOR_NAME/securityentitydata/EKS_CLUSTER_NAME instead of the Arc resource ID Microsoft.Kubernetes/connectedClusters/ARC_CLUSTER_NAME. The Entitiesproperty will reference the Cloud Native Identifier arn:aws:eks:AWS_REGION:AWS_ACCOUNT:cluster/CLUSTER_NAME or container.googleapis.com/projects/PROJECT_ID/zones/ZONE/clusters/CLUSTER_NAME, rather than the Arc resource ID Microsoft.Kubernetes/connectedClusters/ARC_CLUSTER_NAME. The resourceTypefield under extendedPropertieswill change from "Kubernetes – Azure Arc" to the respective "AWS EKS Cluster" or "GCP GKE Cluster" resource type.
 | June 1, 2025       | Alert          | Upcoming deprecation | The following alert will be deprecated since the method is no longer supported in PowerZure:<br/>* Usage of PowerZure function to maintain persistence in your Azure environment |
-| May 15, 2025       | Alert          | Upcoming Deprecation | The following [alerts](/azure/ddos-protection/ddos-view-alerts-defender-for-cloud)will be deprecated and will not be available through XDR Integration: <br/>* DDoS Attack detected for Public IP <br/>* DDoS Attack mitigated for Public IP <br/> **Note**: The alerts will be available on Defender for Cloud portal. |
-| May 1, 2025 | Alert | Deprecation | The following alert is deprecated:<br/> *Suspicious process name detected*|
+| May 15, 2025       | Alert          | Upcoming Deprecation | The following [alerts ](/azure/ddos-protection/ddos-view-alerts-defender-for-cloud)will be deprecated and will not be available through XDR Integration: <br/>* DDoS Attack detected for Public IP <br/>* DDoS Attack mitigated for Public IP <br/> **Note**: The alerts will be available on Defender for Cloud portal. |
 | May 1, 2025      | Alert          | GA                   | [AI alerts](alerts-ai-workloads.md) have been released to GA with the plan's official GA release |
 | April 20, 2025     | Alert          | Preview              | [(Preview) AI - Suspicious anomaly detected in sensitive data exposed by AI resource](alerts-ai-workloads.md#preview-suspicious-anomaly-detected-in-sensitive-data-exposed-by-an-ai-resource), this replaces the previous sensitive data exposure alert |
 | April 29, 2025   | Recommendation | GA                   | [Role-Based Access Control should be used on Keyvault Services](recommendations-reference-keyvault.md#role-based-access-control-should-be-used-on-keyvault-services) |

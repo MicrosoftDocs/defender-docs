@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 10/29/2025
+ms.date: 09/11/2025
 ---
 
 # Defender for Servers support
@@ -70,6 +70,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
+| [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | - | - | Yes |
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
@@ -94,6 +95,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
+| [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | ✔ | ✔ | Yes |
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
@@ -118,6 +120,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
 | [Just-in-time VM access](enable-just-in-time-access.md) | ✔ | - |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
+| [Network map](protect-network-resources.md#network-map) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
 | [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |
