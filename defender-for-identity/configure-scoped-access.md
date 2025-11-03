@@ -50,6 +50,8 @@ To enable identity scoping, follow these steps:​
 
 
 
+### Known limitations
+
 The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
 
 > [!NOTE]
