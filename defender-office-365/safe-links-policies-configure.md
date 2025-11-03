@@ -98,7 +98,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
 
    > [!TIP]
    > Leave **Users**, **Groups**, and **Domains** blank to create a policy that applies to all recipients.
-   > 
+   >
    > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png"::: next to the value.

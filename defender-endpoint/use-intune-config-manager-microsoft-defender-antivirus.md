@@ -24,9 +24,6 @@ appliesto:
 ---
 # Use Microsoft Intune to configure and manage Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 ## Compatibility
 

@@ -10,7 +10,7 @@ ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 11/10/2024
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -25,17 +25,18 @@ appliesto:
 # Configure the cloud block time out period
 
 
-**Platforms**
-- Windows
-- Windows Server
-
 When Microsoft Defender Antivirus finds a suspicious file, it can prevent the file from running while it queries the [Microsoft Defender Antivirus cloud service](cloud-protection-microsoft-defender-antivirus.md).
 
 The default period that the file is [blocked](configure-block-at-first-sight-microsoft-defender-antivirus.md) is 10 seconds. If you're a security administrator, you can specify more time to wait before the file is allowed to run. Extending the cloud block time out period can help ensure there's enough time to receive a proper determination from the Microsoft Defender Antivirus cloud service.
 
-## Prerequisites to use the extended cloud block time out
+## Prerequisites
 
 [Block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) and its prerequisites must be enabled before you can specify an extended time out period.
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Specify the extended time out period using Microsoft Defender for Endpoint Security settings management
 

@@ -23,10 +23,6 @@ appliesto:
 ---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring. The exclusions described in this article don't apply to other Defender for Endpoint on macOS capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
 

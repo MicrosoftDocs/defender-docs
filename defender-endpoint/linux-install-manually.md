@@ -20,7 +20,6 @@ ms.date: 08/11/2025
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

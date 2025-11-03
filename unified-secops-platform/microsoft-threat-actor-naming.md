@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 ms.topic: article
 search.appverid: met150
-ms.date: 09/08/2025
+ms.date: 10/15/2025
 ---
 
 # How Microsoft names threat actors
@@ -167,7 +167,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-1101](https://www.microsoft.com/en-us/security/blog/2023/03/13/dev-1101-enables-high-volume-aitm-campaigns-with-open-source-phishing-kit/)|Group in development||
 |[Storm-1113](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated|APOTHECARY SPIDER|
 |[Storm-1152](https://blogs.microsoft.com/on-the-issues/2023/12/13/cybercrime-cybersecurity-storm-1152-fraudulent-accounts/)|Financially motivated||
-|[Storm-1175](https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/)|China, Financially motivated||
+|[Storm-1175](https://www.microsoft.com/en-us/security/blog/2025/10/06/investigating-active-exploitation-of-cve-2025-10035-goanywhere-managed-file-transfer-vulnerability/)|China, Financially motivated||
 |Storm-1194|Group in development|MONTI|
 |[Storm-1249](https://www.microsoft.com/en-us/security/blog/2025/05/29/defending-against-evolving-identity-attack-techniques/)|Group in development||
 |Storm-1516|Russia, Influence operations||
@@ -176,10 +176,12 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-1674](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated||
 |[Storm-1679](https://blogs.microsoft.com/on-the-issues/2024/09/17/russian-election-interference-efforts-focus-on-the-harris-walz-campaign/)|Influence operations||
 |[Storm-1811](https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/)|Financially motivated|CURLY SPIDER|
+|Storm-1849|China|UAT4356|
 |[Storm-1865](https://www.microsoft.com/en-us/security/blog/2025/03/13/phishing-campaign-impersonates-booking-com-delivers-a-suite-of-credential-stealing-malware/)|Group in development||
 |Storm-1982|China|SneakyCheff, UNK_SweetSpecter|
 |[Storm-2035](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/5bc57431-a7a9-49ad-944d-b93b7d35d0fc.pdf)|Iran, Influence operations||
 |[Storm-2077](https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/#storm-2077)|China|TAG-100|
+|[Storm-2246](https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-seizes-338-websites-to-disrupt-rapidly-growing-raccoono365-phishing-service/)|Group in development||
 |[Storm-2372](https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/)|Group in development||
 |[Storm-2603](https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/)|China||
 |Strawberry Tempest|Financially motivated|DEV-0537, SLIPPY SPIDER, LAPSUS$|

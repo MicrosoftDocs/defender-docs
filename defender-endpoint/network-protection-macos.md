@@ -23,9 +23,6 @@ appliesto:
 ---
 # Network protection for macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 ### Prerequisites
 
 - Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.

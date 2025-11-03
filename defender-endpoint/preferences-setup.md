@@ -22,10 +22,6 @@ appliesto:
 ---
 # Configure general Defender for Endpoint settings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Use the **Settings > Endpoints** menu to modify general settings, advanced features, enable the preview experience, email notifications, and the custom threat intelligence feature.
 

@@ -22,10 +22,6 @@ appliesto:
 ---
 # Configure Microsoft Defender for Cloud Apps in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 To benefit from Microsoft Defender for Endpoint cloud app discovery signals, turn on Microsoft Defender for Cloud Apps integration.
 

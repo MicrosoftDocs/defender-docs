@@ -22,10 +22,6 @@ appliesto:
 ---
 # Create and manage roles for role-based access control
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 [!include[Prerelease information](../includes/prerelease.md)]
 

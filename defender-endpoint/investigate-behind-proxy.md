@@ -22,10 +22,6 @@ appliesto:
 ---
 # Investigate connection events that occur behind forward proxies
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Defender for Endpoint supports network connection monitoring from different levels of the network stack. A challenging case is when the network uses a forward proxy as a gateway to the Internet.
 

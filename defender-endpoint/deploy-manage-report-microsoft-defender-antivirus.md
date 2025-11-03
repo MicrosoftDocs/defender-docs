@@ -3,7 +3,7 @@ title: Deploy, manage, and report on Microsoft Defender Antivirus
 description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.topic: install-set-up-deploy
 author: batamig
 ms.author: bagol
@@ -25,11 +25,7 @@ appliesto:
 # Deploy, manage, and report on Microsoft Defender Antivirus
 
 
-**Platforms**
-
-- Windows
-
-Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later (Windows Server 2012 requires Microsoft Defender for Endpoint). You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
+You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
 
 - [Deploy, manage, and report on Microsoft Defender Antivirus](#deploy-manage-and-report-on-microsoft-defender-antivirus)
   - [Microsoft Intune](#microsoft-intune)
@@ -40,6 +36,15 @@ Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, a
   - [See also](#see-also)
 
 This article describes these options for deployment, management, and reporting.
+
+## Prerequisites
+
+### Supported operating systems
+
+Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later.
+
+> [!NOTE]
+> Windows Server 2012 requires Microsoft Defender for Endpoint.
 
 ## Microsoft Intune
 
@@ -103,7 +108,8 @@ With Windows Management Instrumentation (WMI), you can manage Microsoft Defender
 
 - Use the [MSFT_MpComputerStatus](/previous-versions/windows/desktop/defender/msft-mpcomputerstatus) class and the get method of associated classes in the [Windows Defender WMIv2 Provider](/windows/win32/wmisdk/wmi-providers).
 
-For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511)). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+
 
 ## See also
 

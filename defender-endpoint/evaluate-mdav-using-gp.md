@@ -7,7 +7,7 @@ ms.topic: how-to
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 02/12/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: ngp
@@ -24,18 +24,20 @@ appliesto:
 ---
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**:
-
-- Windows
 
 In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
 This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information.
 
-This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer.
+This article describes configuration options in Windows 10 or newer and Windows Server 2016 or later.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows 10
+- Windows 2016 and later
 
 ## Use Microsoft Defender Antivirus using Group Policy to enable the features
 

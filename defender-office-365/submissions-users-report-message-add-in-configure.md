@@ -89,7 +89,7 @@ The rest of this article describes how to remove the Report Message and Report P
    > Although the screenshots in the following steps show the **Report Phishing** add-in, the steps are identical for the **Report Message** add-in.
 
 2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by clicking anywhere in the row.
-  
+
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/microsoft-365-admin-center-select-report-phish-add-in.png" alt-text="Screenshot of selecting the Report Phishing add-in on the Integrated apps page in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-select-report-phish-add-in.png":::
 
@@ -99,7 +99,7 @@ The rest of this article describes how to remove the Report Message and Report P
    > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png" alt-text="Screenshot of the Overview tab on the details flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-details-overview-tab.png":::
 
 4. In the **Remove apps** confirmation flyout that opens, select **Yes, I'm sure I want to  remove the app and associated data**, and then select **Remove**.
- 
+
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-remove-overview-tab.png" alt-text="Screenshot of the tab on the removal flyout of the Report Phishing add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-remove-overview-tab.png":::
 
@@ -122,7 +122,7 @@ The rest of this article describes how to remove the Report Message and Report P
 2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by doing one of the following steps:
    - Select the add-in by clicking anywhere in the row. In the details flyout that opens, select the **Users** tab.
    - In the **Name** column, select **⋮** \> **Edit users**.
-  
+
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/microsoft-365-admin-center-select-report-phish-add-in.png" alt-text="Screenshot of selecting the Report Phishing add-in on the Integrated apps page in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-select-report-phish-add-in.png":::
 
@@ -131,9 +131,9 @@ The rest of this article describes how to remove the Report Message and Report P
    Any existing users or groups are shown in the **Added users** section.
 
    Click in the search box to find and select users or groups. New selections are added to the **To be added** section that appears.
-   
+
    To remove a user or group, select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: on the entry:
-   
+
    - From the **Added users** section: The user or group is added to the **To be removed** section that appears.
    - From the **To be added** section: The user or group is removed from this section and won't be added.
    - From the **To be removed** section: The user or group is removed from this section and won't be removed.
@@ -144,7 +144,7 @@ The rest of this article describes how to remove the Report Message and Report P
    > :::image type="content" source="media/microsoft-365-admin-center-report-phish-add-in-details-users-tab.png" alt-text="Screenshot of the Users tab on the details flyout of the Report Message add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-phish-add-in-details-users-tab.png":::
 
    After a few moments, the **Updating users completed** flyout appears. Select **Done** to return to the **Users** tab of the add-in details flyout where your updates are shown in the **Added users** section.
-   
+
    Select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: **Close flyout** to return to the **Integrated apps** page.
 
 ## Frequently asked questions
