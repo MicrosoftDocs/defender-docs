@@ -95,7 +95,8 @@ landingContent:
           - text: Regulatory compliance 
             url: concept-regulatory-compliance-standards.md
           - text: Enable just-in-time access on VMs
-            url: just-in-time-access-usage.yml
+            url: enable-just-in-time-access.md
+
 
   # Card
   - title: Threat Protection & Response
@@ -103,7 +104,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Manage and respond to security alerts
-            url: managing-and-responding-alerts.yml
+            url: manage-respond-alerts.md
           - text: Security alerts and incidents
             url: alerts-overview.md
           - text: Review security recommendations

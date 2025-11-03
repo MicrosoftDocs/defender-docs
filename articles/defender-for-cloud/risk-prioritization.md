@@ -66,7 +66,7 @@ When you select a recommendation, you can view the details of the recommendation
 
 - **Due date** - The assigned date the recommendation must be resolved by.
 
-- **Severity** - The severity of the recommendation (High, Medium, or Low). More details below.
+- **Severity** - The severity of the recommendation (High, Medium, or Low).
 
 - **Tactics & techniques** - The tactics and techniques mapped to MITRE ATT&CK.
 
@@ -103,4 +103,4 @@ The risk level is determined by a context-aware risk-prioritization engine that 
 - [Review security recommendations](review-security-recommendations.md)
 - [Remediate security recommendations](implement-security-recommendations.md)
 - [Drive remediation with governance rules](governance-rules.md)
-- [Automate remediation responses](workflow-automation.yml)
+- [Automate remediation responses](workflow-automations.md)
