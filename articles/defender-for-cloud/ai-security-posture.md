@@ -10,7 +10,7 @@ author: Elazark
 
 # Overview - AI security posture management
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI (Preview). The Defender CSPM plan secures generative AI applications and AI agents throughout their entire lifecycle.
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI (Preview). The Defender CSPM plan secures generative AI applications and AI agents (Preview) throughout their entire lifecycle.
  Defender for Cloud reduces risks to cross-cloud AI workloads by:
 
 - Discover the generative AI Bill of Materials (AI BOM), which includes application components, data, and AI artifacts from code to cloud.
@@ -49,7 +49,7 @@ Defender for Cloud can also discover vulnerabilities within generative AI librar
 
 With these features, Defender for Cloud provides full visibility of AI workloads from code to cloud.
 
-## Discover AI agents
+## Discover AI agents (Preview)
 
 Defender for Cloud discovers AI agent workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI agent applications from potential threats.
 
