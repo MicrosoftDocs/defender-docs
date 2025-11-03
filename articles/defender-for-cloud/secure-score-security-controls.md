@@ -143,13 +143,45 @@ The following table lists the security controls in Microsoft Defender for Cloud.
 0 | **Enable enhanced security features**: Use these recommendations to enable any Defender for Cloud plans.
 0 | **Implement security best practices**: This collection of recommendations is important for your organizational security but doesn't affect your secure score.
 
+## Next steps
 
-## Track your secure score
+[Track your secure score](secure-score-access-and-track.md)
 
-You can find your overall secure score, and your score per subscription, through the Azure portal or programmatically as described in the following sections:
+::: zone-end
 
-> [!TIP]
-> For a detailed explanation of how your scores are calculated, see [Calculations - understanding your score](secure-score-security-controls.md).
+::: zone pivot="azure-portal"
+
+# Secure score in Defender for Cloud
+
+The secure score in Microsoft Defender for Cloud can help you improve your cloud security posture. The secure score aggregates security findings into a single score so that you can assess, at a glance, your current security situation. The higher the score, the lower the identified risk level is.
+
+When you turn on Defender for Cloud in a subscription, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) standard is applied by default in the subscription. Assessment of resources in scope against the MCSB standard begins.
+
+The MCSB issues recommendations based on assessment findings. Only built-in recommendations from the MCSB affect the secure score. Currently, [risk prioritization](risk-prioritization.md) doesn't affect the secure score.
+
+> [!NOTE]
+> Recommendations flagged as **Preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
+> Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
+
+## View the secure score
+
+When you view the Defender for Cloud **Overview** dashboard, you can view the secure score for all of your environments. The dashboard shows the secure score as a percentage value and includes the underlying values.
+
+:::image type="content" source="./media/secure-score-security-controls/single-secure-score-via-ui.png" alt-text="Screenshot of the portal dashboard that shows an overall secure score and underlying values." lightbox="media/secure-score-security-controls/single-secure-score-via-ui.png":::
+
+The Azure mobile app shows the secure score as a percentage value. Tap it to see details that explain the score.
+
+:::image type="content" source="./media/secure-score-security-controls/single-secure-score-via-mobile.png" alt-text="Screenshot of the Azure mobile app that shows an overall secure score and details." lightbox="media/secure-score-security-controls/single-secure-score-via-mobile.png":::
+
+## Explore your security posture
+
+The **Security posture** page in Defender for Cloud shows the secure score for your environments overall and for each environment separately.
+
+:::image type="content" source="media/secure-score-security-controls/security-posture-page.png" alt-text="Screenshot of the Defender for Cloud page for security posture." lightbox="media/secure-score-security-controls/security-posture-page.png":::
+
+On this page, you can see the subscriptions, accounts, and projects that affect your overall score, information about unhealthy resources, and relevant recommendations. You can filter by environment, such as Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and Azure DevOps. You can then drill down into each Azure subscription, AWS account, and GCP project.
+
+:::image type="content" source="media/secure-score-security-controls/bottom-half.png" alt-text="Screenshot of the bottom half of the security posture page." lightbox="media/secure-score-security-controls/bottom-half.png":::
 
 ## Get your secure score from the portal
 
@@ -236,12 +268,6 @@ The dashboard contains the following two reports to help you analyze your securi
 - **Secure Score Summary** - provides summarized data regarding your score progress. Use the "Secure score over time per subscription" chart to view changes in the score. If you notice a dramatic change in your score, check the "detected changes that might affect your secure score" table for possible changes that could have caused the change. This table presents deleted resources, newly deployed resources, or resources that their security status changed for one of the recommendations.
 
 :::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="The optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes.":::
-
-## Next steps
-
-- [Learn about the different elements of a recommendation](review-security-recommendations.md)
-- [Learn how to remediate recommendations](implement-security-recommendations.md)
-- [View the GitHub-based tools for working programmatically with secure score](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score)
 
 ::: zone-end
 
