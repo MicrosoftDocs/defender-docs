@@ -12,7 +12,7 @@ ms.date: 09/09/2024
 
 Microsoft Defender for Cloud streamlines the regulatory compliance process by helping you to identify issues that are preventing you from meeting a particular compliance standard, or achieving compliance certification.
 
-Industry standards, regulatory standards, and benchmarks are represented in Defender for Cloud as [security standards](security-policy-concept.md), and appear in the **Regulatory compliance** dashboard.
+Industry standards, regulatory standards, and benchmarks are represented in Defender for Cloud as [security standards](security-policy-concept.md), and appear in the Regulatory compliance dashboard.
 
 ## Compliance controls
 
@@ -25,7 +25,7 @@ Defender for Cloud continually assesses the environment-in-scope against any com
 
 ## View compliance standards
 
-The **Regulatory compliance** dashboard provides an interactive overview of compliance state.
+The Regulatory compliance dashboard provides an interactive overview of compliance state.
 
 :::image type="content" source="media/concepts-regulatory-compliance-standards/compliance-standards.png" alt-text="Screenshot showing the regulatory compliance dashboard." lightbox="media/concepts-regulatory-compliance-standards/compliance-standards.png":::
 
