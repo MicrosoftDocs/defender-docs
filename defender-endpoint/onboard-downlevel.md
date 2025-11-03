@@ -145,10 +145,10 @@ After completing the onboarding steps, you'll need to [Configure and update Syst
 Verify that Microsoft Defender Antivirus and Microsoft Defender for Endpoint are running.
 
 > [!NOTE]
-> Running Microsoft Defender Antivirus is not required but it is recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Microsoft Defender for Endpoint sensor (SENSE) is running.
+> Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Microsoft Defender for Endpoint sensor (SENSE) is running.
 
 > [!NOTE]
-> As Microsoft Defender Antivirus is only supported for Windows 10 and Windows 11, step 1 does not apply when running Windows Server 2008 R2 SP1.
+> As Microsoft Defender Antivirus is only supported for Windows 10 and Windows 11, step 1 doesn't apply when running Windows Server 2008 R2 SP1.
 
 1. Run the following command to verify that Microsoft Defender Antivirus is installed:
 
@@ -181,16 +181,16 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
 
     For Windows Server 2008 R2 SP1, following updates are also required:
 
-    February 2018 Monthly Roll up - KB4074598 (Windows Server 2008 R2)
+    - February 2018 Monthly Roll up - KB4074598 (Windows Server 2008 R2)
 
-    [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)<br>
-    Download updates for Windows Server 2008 R2 x64
+    - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)<br>
+    - Download updates for Windows Server 2008 R2 x64
 
-    .NET Framework 3.5.1 (KB315418)<br>
-    [For Windows Server 2008 R2 x64](/iis/install/installing-iis-7/install-windows-server-2008-and-windows-server-2008-r2)
+    - .NET Framework 3.5.1 (KB315418)<br>
+    - [For Windows Server 2008 R2 x64](/iis/install/installing-iis-7/install-windows-server-2008-and-windows-server-2008-r2)
 
     > [!NOTE]
-    > This article assumes you are using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
+    > This article assumes you're using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
 
 **Step 2: Create a file name DeployMMA.cmd (using notepad)**
 Add the following lines to the cmd file. Note that you'll need your WORKSPACE ID and KEY.
@@ -250,7 +250,7 @@ Once this is done, you'll need to create a start-up script policy:
 
 :::image type="content" source="media/startupprops.png" alt-text="Screenshot of the start up properties." lightbox="media/startupprops.png":::
 
-The name of the file to run here is c:\windows\MMA\DeployMMA.cmd.
+The name of the file to run here's c:\windows\MMA\DeployMMA.cmd.
 Once the server is restarted as part of the start-up process it will install the Update for customer experience and diagnostic telemetry KB, and then install the MMA Agent, while setting the Workspace ID and Key, and the server will be onboarded.
 
 You could also use an **immediate task** to run the deployMMA.cmd if you don't want to reboot all the servers.
@@ -273,7 +273,7 @@ For Windows Server 2008 R2 SP1, ensure that you fulfill the following requiremen
 - Install the [February 2018 monthly update rollup](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598)
 - Install either [.NET framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) (or later) or [KB3154518](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the-net-framework)
 
-Please check the KBs are present before onboarding Windows Server 2008 R2. This process allows you to onboard all the servers if you don't have Configuration Manager managing Servers.
+Check the KBs are present before onboarding Windows Server 2008 R2. This process allows you to onboard all the servers if you don't have Configuration Manager managing Servers.
 
 ## Offboard endpoints
 
