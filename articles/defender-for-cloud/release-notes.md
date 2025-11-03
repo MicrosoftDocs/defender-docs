@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/28/2025
+ms.date: 10/19/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -27,7 +27,80 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## November 2025
 
+| Date | Category | Update |
+|------|---------|-------|
+| November 11, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+
+### General availability of compliance frameworks
+
+November 11, 2025
+
+The following regulatory compliance standards, previously available in preview, are now generally available in Microsoft Defender for Cloud.
+
+|Standard|Cloud|
+|------------|--------|
+| APRA CPS 234 2019 | Azure, AWS |
+| Australian Government ISM PROTECTED | Azure |
+| Australian Government Information Security Manual 12.2023 | AWS, GCP |
+| AWS Foundational Security Best Practices | AWS |
+| AWS Well-Architected Framework 2024 | AWS |
+| Brazil General Data Protection Law (LGPD) 2018 | Azure, AWS, GCP |
+| California Consumer Privacy Act (CCPA) | AWS, GCP |
+| Canada Federal PBMM 3.2020 | Azure, AWS, GCP |
+| CIS Amazon Elastic Kubernetes Service (EKS) Benchmark | AWS |
+| CIS AWS Foundations v3.0.0 | AWS |
+| CIS Azure Foundations v2.1.0 | Azure |
+| CIS Azure Kubernetes Service (AKS) Benchmark | Azure |
+| CIS Controls v8.1 | Azure, AWS, GCP |
+| CIS GCP Foundations v3.0 | GCP |
+| CIS Google Cloud Platform Foundation Benchmark | GCP |
+| CIS Google Kubernetes Engine (GKE) Benchmark | GCP |
+| CRI Profile | AWS, GCP |
+| Criminal Justice Information Services Security Policy v5.9.5 | Azure, AWS, GCP |
+| CSA Cloud Controls Matrix v4.0.12 | Azure, AWS, GCP |
+| Cyber Essentials v3.1 | Azure, AWS, GCP |
+| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
+| EU 2022/2555 (NIS2) 2022 | Azure, AWS, GCP |
+| EU General Data Protection Regulation (GDPR) 2016/679 | Azure, AWS, GCP |
+| FedRAMP ‘H’ & ‘M’ | Azure |
+| FedRAMP High Baseline Rev5 | AWS, GCP |
+| FedRAMP Moderate Baseline Rev5 | AWS, GCP |
+| FFIEC CAT 2017 | Azure, AWS, GCP |
+| HIPAA | Azure |
+| HITRUST CSF v11.3.0 | Azure, AWS, GCP |
+| ISO/IEC 27001:2022 | Azure, AWS, GCP |
+| ISO/IEC 27002:2022 | Azure, AWS, GCP |
+| ISO/IEC 27017:2015 | Azure, AWS, GCP |
+| NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
+| NIST 800-171 Rev 3 | Azure, AWS, GCP |
+| NIST CSF v2.0 | Azure, AWS, GCP |
+| NIST SP 800-53 R5 | AWS |
+| NIST SP 800-53 R5.1.1 | Azure, AWS, GCP |
+| NIST SP 800-172 2021 | AWS, GCP |
+| NZISM v3.7 | Azure, AWS, GCP |
+| PCI DSS 3.2.1 | GCP |
+| PCI DSS v4.0.1 | Azure, AWS, GCP |
+| RMIT Malaysia | Azure |
+| Sarbanes–Oxley Act 2022 (SOX) | Azure, AWS, GCP |
+| SOC 2023 | Azure, AWS, GCP |
+| SOC 2 | Azure, GCP |
+| Spanish ENS | Azure |
+| SWIFT Customer Security Controls Framework 2024 | Azure, AWS, GCP |
+| SWIFT CSP-CSCF v2020 | Azure |
+| UK OFFICIAL and UK NHS | Azure |
+| Reserve Bank of India – IT Framework for NBFC | Azure |
+| Cybersecurity Maturity Model Certification (CMMC) Level 3 | Azure, AWS, GCP |
+| ISO/IEC 27018:2019 | Azure, AWS, GCP |
+| ISO/IEC 27019:2020 | Azure, AWS, GCP |
+| NIST SP 800-53 R6 | Azure, AWS, GCP |
+| NIST SP 800-82 R3 | Azure, AWS, GCP |
+| NIST AI Risk Management Framework (AI RMF 1.0) | Azure, AWS, GCP |
+| US Executive Order 14028 | Azure, AWS, GCP |
+| Singapore MTCS SS 584:2015 | Azure, AWS, GCP |
+| Thailand PDPA 2019 | Azure, AWS, GCP |
+| Japan ISMAP | Azure, AWS, GCP |
 
 ## October 2025
 
