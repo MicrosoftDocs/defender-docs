@@ -1020,5 +1020,10 @@
       "redirect_url": "/defender-xdr/contact-defender-support",
       "redirect_document_id": false
     },
+    {
+      "source_path": "defender-for-cloud-apps/classic-support-and-ts.md",
+      "redirect_url": "/previous-versions/defender-cloud-apps/classic-support-and-ts",
+      "redirect_document_id": false
+    },
   ]
 }

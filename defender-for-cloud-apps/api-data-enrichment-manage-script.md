@@ -26,18 +26,18 @@ Here's an example of the CSV file contents:
 1. Update the values for the following script variables: **OPTION_DELETE_ENABLED**, **IP_RANGES_BASE_URL**, **CSV_ABSOLUTE_PATH**, **YOUR_TOKEN**
 
     > [!IMPORTANT]
-    > If you set **OPTION_DELETE_ENABLED** to **True**, any IP address ranges that are defined in your tenant but do not exist in the CSV files will be deleted from the tenant by the script. If you use this option, make sure that the CSV file defines all the IP address ranges you want in your tenant.
+    > If you set **OPTION_DELETE_ENABLED** to **True**, any IP address ranges that are defined in your tenant but don't exist in the CSV files will be deleted from the tenant by the script. If you use this option, make sure that the CSV file defines all the IP address ranges you want in your tenant.
 
 1. Run the script to create new records and update existing rules with the matching name.
 
 ## Request body parameters
 
-- "filters": Filter objects with all the search filters for the request, see [Data Enrichment filters](api-data-enrichment.md#filters) for more information. To avoid having your requests be throttled, make sure to include a limitation on your query.
+- "filters": Filter objects with all the search filters for the request. For more information, see: [Data Enrichment filters](api-data-enrichment.md#filters) for more information. To avoid having your requests be throttled, make sure to include a limitation on your query.
 - "limit": Integer. In scan mode, between 500 and 5000 (defaults to 500). Controls the number of iterations used for scanning all the data.
 
 ## Response parameters
 
-- "data": the returned data. Will contain up to "limit" number of records each iteration. If there are more records to be pulled (hasNext=true), the last few records will be dropped to ensure that all data is listed only once.
+- "data": the returned data. Will contain up to "limit" number of records each iteration. If there are more records to be pulled (hasNext=true), the last few records are dropped to ensure that all data is listed only once.
 - "hasNext": Boolean. Denotes whether another iteration on the data is needed.
 - "nextQueryFilters": If another iteration is needed, it contains the consecutive JSON query to be run. Use this as the "filters" parameter in the next request.
 

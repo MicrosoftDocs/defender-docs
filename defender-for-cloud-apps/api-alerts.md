@@ -31,7 +31,7 @@ The following table lists the requests deprecated as obsolete, and the requests 
 | Dismiss alert | [Close false positive](api-alerts-close-false-positive.md) |
 
 > [!NOTE]
-> The deprecated requests have been mapped to their alternatives to avoid disruption. However, if you are using obsolete requests in your environment, we recommend updating them to their alternatives.
+> The deprecated requests have been mapped to their alternatives to avoid disruption. However, if you're using obsolete requests in your environment, we recommend updating them to their alternatives.
 
 ## Properties
 
