@@ -85,10 +85,10 @@ To summarize an incident:
 
 ### Manage Copilot incident summaries settings (preview)
 
-By default, Copilot generates a summary for each incident, but you can change this setting to display incident summaries only in specific instances. You can choose to have summaries generated:
+By default, Copilot generates a summary for each incident the user opens, but you can change this setting to display incident summaries only in specific instances. You can choose to have summaries generated:
 
-- Always
-- Based  on the severity level of the incident
+- Always (for every incident opened)
+- Based on the severity level of the incident
 - On demand only
 
 To change the settings for Copilot incident summaries in Microsoft Sentinel, follow these steps:
@@ -105,11 +105,11 @@ To change the settings for Copilot incident summaries in Microsoft Sentinel, fol
 
 1. Select **Save**.
 
-- When you select **Incident severity**, an estimate of the number of incidents of each severity level reviewed per day is displayed, along with the estimated SCU cost.
+- When you select **Incident severity**, an estimate of the number of incidents of each severity level reviewed per day is displayed, along with the estimated SCU consumption.
 
     :::image type="content" source="./media/security-copilot-m365d-incident-summary/incident-severity.png" alt-text="Screenshot that shows the approximate number of incidents of each severity level.":::
 
-- Copilot saves generated incident summaries for a week. If you select an incident whose summary is in the cache, the summary is automatically redisplayed at no cost regardless of the setting.
+- Copilot saves generated incident summaries for a week. If you select an incident whose summary is in the cache, and the incident hasn't changed significantly, the summary is automatically redisplayed at no cost regardless of the setting.
 - To generate a summary on demand for an incident that's not automatically generated, select the **Generate** button.
 
     :::image type="content" source="media/security-copilot-m365d-incident-summary/generate-summary.png" alt-text="Screenshot that shows the Generate summary button on the incident page.":::
