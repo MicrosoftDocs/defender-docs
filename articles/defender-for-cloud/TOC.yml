@@ -38,9 +38,6 @@
         - name: Defender for Cloud support matrices
           displayName: coverage, supported platforms, Cloud services, roles, permissions
           href: support-matrix-defender-for-cloud.md
-        - name: Defender for Cloud Cloud support matrices
-          displayName: matrices, gov, government, 21via, net, support
-          href: support-matrix-cloud-environment.md
         - name: Regional availability for Defender for Cloud plans
           href: regional-availability.md
     - name: Connect environments and enable all plans
@@ -900,13 +897,13 @@
 - name: DevOps security
   items:
   - name: DevOps security overview
-  href: defender-for-devops-introduction.md
+    href: defender-for-devops-introduction.md
   - name: Support and prerequisites
-  href: devops-support.md
+    href: devops-support.md
   - name: DevOps environment security posture
-  href: concept-devops-environment-posture-management-overview.md
+    href: concept-devops-environment-posture-management-overview.md
   - name: Reliability in Cloud for DevOps security
-  href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
+    href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
   - name: Common questions about DevOps security
   href: faq-defender-for-devops.yml
 
