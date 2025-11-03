@@ -576,11 +576,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-for-cloud-apps/classic-support-and-ts.md",
-      "redirect_url": "/previous-versions/defender-cloud-apps/classic-support-and-ts",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "defender-for-cloud-apps/e-books.md",
       "redirect_url": "/defender-cloud-apps/what-is-defender-for-cloud-apps",
       "redirect_document_id": false
