@@ -134,4 +134,4 @@ Returns a list of alerts in JSON format. For detailed information on each proper
 
 ```
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).

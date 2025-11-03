@@ -79,4 +79,4 @@ The following table describes the supported filters:
 | ID | string | eq, neq | Filter by alert IDs |
 | source | string | eq | The alert's origin, either built-in or policy |
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).

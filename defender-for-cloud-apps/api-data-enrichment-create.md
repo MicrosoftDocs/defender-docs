@@ -51,4 +51,4 @@ curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: applicat
 
 Returns the id of the new range as a string.
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
