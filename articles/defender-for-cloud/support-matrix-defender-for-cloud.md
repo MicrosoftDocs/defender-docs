@@ -63,4 +63,4 @@ To learn more about the specific Defender for Cloud features available on Window
 ## Next steps
 
 - [Manage security recommendations in Defender for Cloud](review-security-recommendations.md)
-- [Manage and respond to security alerts in Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Defender for Cloud](manage-respond-alerts.md)
