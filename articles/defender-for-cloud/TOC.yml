@@ -666,9 +666,9 @@
       - name: Risk prioritization
         displayName: risk, prioritization, security, posture, management, prioritization
         href: risk-prioritization.md
-        - name: Secure score
-          displayName: security, posture, secure, score, calculate, control, improve,
-          href: secure-score-security-controls.md
+      - name: Secure score
+        displayName: security, posture, secure, score, calculate, control, improve,
+        href: secure-score-security-controls.md
       - name: Regulatory compliance standards
         href: concept-regulatory-compliance-standards.md
       - name: Microsoft Cloud Security Benchmark (MCSB)
