@@ -1142,9 +1142,9 @@
       - name: Risk prioritization
         displayName: risk, prioritization, security, posture, management, prioritization
         href: risk-prioritization.md
-      - name: Cloud secure score
-        displayName: security, posture, secure, score, calculate, control, improve, 
-        href: secure-score-security-controls.md
+        - name: Cloud secure score
+          displayName: security, posture, secure, score, calculate, control, improve, 
+          href: secure-score-security-controls.md
       - name: Regulatory compliance standards
         href: concept-regulatory-compliance-standards.md
       - name: Microsoft Cloud Security Benchmark (MCSB)
@@ -1594,6 +1594,8 @@
       href: ai-onboarding.md
     - name: Gain application and end-user context
       href: gain-end-user-context-ai.md
+>>>>>>> de27737207707996f47a9f2aff23d1d859afceed
+
 - name: Workload protection
   items:
   - name: Settings & monitoring
