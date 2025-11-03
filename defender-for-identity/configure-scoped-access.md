@@ -8,8 +8,8 @@ ms. reviewer: 'LiorShapiraa'
 
 # Configure scoped access for Microsoft Defender for Identity
 
-As organizations grow and their identity environments become more complex, it's important to control who has access to which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific Active Directory domains or Organizational units. This helps improve efficiency by reducing noise from nonessential data and focusing on critical assets. You can also limit visibility to specific entities, so access matches each person's responsibilities.
-Scoped access is implemented by creating a custom role using Microsoft Defender XDR Unified RBAC. During the role configuration process, you define which users or groups have access to specific Active Directory domains or Microsoft Entra ID groups.
+As organizations grow and their identity environments become more complex, it's important to control who has access to which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific **Active Directory domains or Organizational units**. This helps improve efficiency by reducing noise from nonessential data and focusing on critical assets. You can also limit visibility to specific entities, so access matches each person's responsibilities.
+Scoped access is implemented by creating a custom role using Microsoft Defender XDR Unified RBAC. During the role configuration process, you define which users or Entra ID groups have access to specific Active Directory domains or Organizational units.
 
 ## Prerequisites
 
@@ -39,15 +39,15 @@ To enable identity scoping, follow these steps:​
 1. Select Add assignments and add the Assignment name.
     1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
     1. Select Microsoft Defender for Identity as the data source.
-    1. Under **Scope**, select the user groups (AD domains) that will be scoped to the assignment.
-     :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role.":::
+   1. Under **Scope**, select the user groups (AD domains or OU's) that will be scoped to the assignment.
+   :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role.":::
 1. Select **Add**.
 
 
 
-### Known limitations (Preview)
+### Known limitations 
 
-Defender for Identity scoping is currently in Public preview. The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
+The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
 
 > [!NOTE]
 > - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
