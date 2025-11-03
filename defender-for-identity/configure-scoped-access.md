@@ -59,20 +59,20 @@ The following table lists the current limitations and supported scenarios for sc
 >
 > - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
-|Defender for Identity experience |Status |
-|---------|---------|
-|MDI alerts and incidents  | Available
-|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents, IdentityLogonEvents, IdentityQueryEvents     |   Available      |
-|User page and user global search  |   Available      |
-|MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     |   Available      |
-|Health issues       |   Available      |
-|Identities inventory and service accounts discovery page     |  Available      |
-|Identities settings: sensors page, manual tagging, health issues notifications  |   Available      |
-|Defender XDR Incident email notifications     | Unavailable      |
-|ISPMs and exposure management     |   Unavailable      |
-|Download scheduled reports and Graph API    |   Unavailable      |
-|Device and group global search and entity page     |   Unavailable      |
-|Alert tuning and critical asset management   |   Unavailable      |
+|Defender for Identity experience |Scoping by OU's|Scoping by AD doamin|
+|---------| -------- |---------|
+|MDI alerts and incidents  |Available| Available|
+|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents, IdentityLogonEvents, IdentityQueryEvents     ||   Available      |
+|User page and user global search  ||   Available      |
+|MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     ||   Available      |
+|Health issues       ||   Available      |
+|Identities inventory and service accounts discovery page     ||  Available      |
+|Identities settings: sensors page, manual tagging, health issues notifications  ||   Available      |
+|Defender XDR Incident email notifications     || Unavailable      |
+|ISPMs and exposure management     ||   Unavailable      |
+|Download scheduled reports and Graph API    ||   Unavailable      |
+|Device and group global search and entity page     ||   Unavailable      |
+|Alert tuning and critical asset management   ||   Unavailable      |
 
 ### Related articles
 
