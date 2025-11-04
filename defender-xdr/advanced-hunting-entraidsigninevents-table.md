@@ -1,6 +1,6 @@
 ---
-title: AADSignInEventsBeta table in the advanced hunting schema
-description: Learn about the Microsoft Entra sign-in events table of the advanced hunting schema
+title: EntraIdSignInEvents table in the advanced hunting schema (preview)
+description: Learn about the Microsoft Entra sign-in events table of the advanced hunting schema.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -24,27 +24,28 @@ ms.topic: reference
 ms.date: 11/04/2025
 ---
 
-# AADSignInEventsBeta
+# EntraIdSignInEvents (Preview)
 
 
 
 > [!IMPORTANT]
-> On December 9, 2025, the `AADSignInEventsBeta` table will be replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding. 
+> On December 9, 2025, the `EntraIdSignInEvents` table will replace [`AADSignInEventsBeta`](advanced-hunting-aadsignineventsbeta-table.md). This change will be made to remove the latter's preview status and to align it with the existing product branding. Both tables will coexist until `AADSignInEventsBeta` is deprecated after the said date.
 >
->The `EntraIdSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSignInEventsBeta` table to use `EntraIdSignInEvents` before the previously mentioned date. 
+>To ensure a smooth transition, make sure that you update your queries that use the `AADSignInEventsBeta` table to use `EntraIdSignInEvents` before the previously mentioned date. Your custom detections will be updated automatically and won't require any changes.
 
->[!IMPORTANT]
-> The `AADSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
+> [!IMPORTANT]
+> Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+>
+> Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
-The `AADSignInEventsBeta` table in the advanced hunting schema contains information about Microsoft Entra interactive and non-interactive sign-ins. Learn more about sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
+The `EntraIdSignInEvents` table in the advanced hunting schema contains information about Microsoft Entra interactive and non-interactive sign-ins. Learn more about sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
 
 Use this reference to construct queries that return information from the table. 
 
 For information on other tables in the advanced hunting schema, see the [advanced hunting reference](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
 
-<br>
 
-****
+
 
 |Column name|Data type|Description|
 |---|---|---|
@@ -66,8 +67,7 @@ For information on other tables in the advanced hunting schema, see the [advance
 |`ResourceId`|`string`|Unique identifier of the resource accessed|
 |`ResourceTenantId`|`string`|Unique identifier of the tenant of the resource accessed|
 |`DeviceName`|`string`|Fully qualified domain name (FQDN) of the device|
-|`AadDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID. This is the legacy device identifier columnn, which is being replaced by `EntraIdDeviceId`.|
-|`EntraIdDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID.|
+|`EntraIdDeviceId`|`string`|Unique identifier for the device in Microsoft Entra ID|
 |`OSPlatform`|`string`|Platform of the operating system running on the device. Indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10, and Windows 7.|
 |`DeviceTrustType`|`string`|Indicates the trust type of the device that signed in. For managed device scenarios only. Possible values are Workplace, AzureAd, and ServerAd.|
 |`IsManaged`|`int`|Indicates whether the device that initiated the sign-in is a managed device (1) or not a managed device (0)|
@@ -96,8 +96,9 @@ For information on other tables in the advanced hunting schema, see the [advance
 
 ## Related articles
 
-- [AADSpnSignInEventsBeta](./advanced-hunting-aadspnsignineventsbeta-table.md)
+- [EntraIdSpnSignInEvents](./advanced-hunting-aadspnsignineventsbeta-table.md)
 - [Advanced hunting overview](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)
 - [Learn the query language](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-query-language)
 - [Understand the schema](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-schema-reference)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
