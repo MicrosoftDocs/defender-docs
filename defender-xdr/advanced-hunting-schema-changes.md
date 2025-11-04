@@ -41,7 +41,7 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 
 The [`AADSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) and  [`AADSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) tables are being replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) and [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md), respectively. These changes are being made to remove the former tables' preview status and to align them with the existing product branding.
 
-The `EntraIdSignInEvents` and `EntraIdSpnSignInEvents` tables are now available. The legacy `AADSignInEventsBeta`and `AADSignInEventsBeta` tables will remain in the schema for 30 days to allow time for updating your queries. On December 9, 2025, `AADSignInEventsBeta`and `AADSignInEventsBeta` will be removed from the schema.
+The `EntraIdSignInEvents` and `EntraIdSpnSignInEvents` tables are now available. The legacy `AADSignInEventsBeta`and `AADSignInEventsBeta` tables will remain in the schema for 30 days to allow time for updating your queries. Your custom detections will be updated automatically and won't require any changes. On December 9, 2025, `AADSignInEventsBeta`and `AADSignInEventsBeta` will be removed from the schema.
 
 ## September 2025
 
