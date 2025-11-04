@@ -3,8 +3,8 @@ title: Resources for Microsoft Defender for Endpoint for mobile devices
 description: Learn about the configurations and privacy settings for all the features in Defender for Endpoint on mobile devices.
 ms.service: defender-endpoint
 ms.reviewer: priyankagill
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: concept-article
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 10/24/2025
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices
 
@@ -52,10 +52,11 @@ Microsoft Defender for Endpoint provides multiple capabilities on mobile devices
 |Anti-phishing (Defender warning overlooked)|Low |  |  |
 |Anti-malware|Medium | Information about malicious APKs including install source, storage location, time of install, etc.; [More information](android-privacy.md#app-information)||
 | ||||
-|Jailbreak|High | NA |NA |
+|Root Detection (Preview)|High|NA|NA|
+|Jailbreak Detection|High | NA |NA |
 |Rogue Wifi |Low |  |  |
-|Open Network Detection (Migrated from alert to event in the device timeline)|NA | | |
-|Suspicious Certificates Downloaded/Installed (Migrated from alert to event in the device timeline)|NA| | |
+|Open Network Detection (Migrated from alert to event in the device timeline)|NA (Event)| | |
+|Suspicious Certificates Downloaded/Installed (Migrated from alert to event in the device timeline)|NA (Event)| | |
 
 [Complete privacy information for Android](android-privacy.md)
 

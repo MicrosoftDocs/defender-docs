@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 author: batamig
 ms.author: bagol
@@ -25,18 +25,17 @@ appliesto:
 ---
 # Microsoft Defender Antivirus compatibility with other security products
 
+## Prerequisites
 
-**Platforms**
+### Supported operating systems
 
 - Windows
-
-Microsoft Defender Antivirus is available on endpoints running the following versions of Windows:
-
 - Windows 11
 - Windows 10 
 - Windows Server 2016 and later 
 - Windows Server, version 1803, or later
 - Azure Stack HCI OS, version 23H2 and later
+
 
 Microsoft Defender Antivirus is also available for older versions of Windows under certain conditions.
 
@@ -47,6 +46,8 @@ Microsoft Defender Antivirus is also available for older versions of Windows und
 - On [consumer devices on Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), Windows Defender is available (although it doesn't provide enterprise-level management).
 
 If you're using non-Microsoft antivirus/antimalware software, you might be able to run Microsoft Defender Antivirus alongside the other antivirus solution. This article describes what happens with Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware software, with and without [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+
+
 
 ## Antivirus protection without Defender for Endpoint
 

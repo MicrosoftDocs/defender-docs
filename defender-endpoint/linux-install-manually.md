@@ -15,12 +15,11 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/11/2025
+ms.date: 11/03/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -493,27 +492,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
 ## Defender for Endpoint package external package dependencies
 
-The following external package dependencies exist for the `mdatp` package:
-
-- The mdatp RPM package requires `glibc >= 2.17`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`
-- For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`
-
-> [!NOTE]
-> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following other dependencies on the auditd package exist for mdatp:
-> - The mdatp RPM package requires `audit`, `semanage`.
-> - For DEBIAN, the mdatp package requires `auditd`.
-> - For Mariner, the mdatp package requires `audit`.
-> For version older than `101.25032.0000`:
-> - RPM package needs: `mde-netfilter`, `pcre`
-> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
-> - The `mde-netfilter` package also has the following package dependencies:
-    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
-> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
-
-If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
+For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
 
 ## Troubleshoot installation issues
 

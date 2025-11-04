@@ -21,11 +21,6 @@ appliesto:
 ---
 # Assign user access 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Defender for Endpoint supports two ways to manage permissions:
 
@@ -39,7 +34,7 @@ Defender for Endpoint supports two ways to manage permissions:
 
 ## Change from basic permissions to RBAC
 
-If you have basic permissions, you can switch to RBAC anytime. Consider the following before making the switch:
+If you have basic permissions, you can switch to Role-based access control (RBAC) anytime. Consider the following before making the switch:
 
 - Users who have full access are automatically assigned the default Defender for Endpoint administrator role.
 - Other Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC.

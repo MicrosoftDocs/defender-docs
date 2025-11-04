@@ -23,11 +23,6 @@ appliesto:
 ---
 # Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 ## No license found
 

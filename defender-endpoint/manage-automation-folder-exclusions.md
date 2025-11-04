@@ -21,11 +21,6 @@ appliesto:
 ---
 # Manage automation folder exclusions
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Automation folder exclusions allow you to specify folders that the Automated investigation will skip.
 

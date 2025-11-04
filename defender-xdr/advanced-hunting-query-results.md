@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 08/04/2025
+ms.date: 10/27/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -32,10 +32,11 @@ appliesto:
 
 While you can construct your [advanced hunting](advanced-hunting-overview.md) queries to return precise information, you can also work with the query results to gain further insight and investigate specific activities and indicators. You can take the following actions on your query results:
 
-- View results as a table or chart
-- Export tables and charts
-- Drill down to detailed entity information
-- Tweak your queries directly from the results
+- [View results as a table or chart](#view-query-results-as-a-table-or-chart)
+- [Export tables and charts](#export-tables-and-charts)
+- [Drill down to detailed entity information](#drill-down-from-query-results)
+- [Tweak your queries directly from the results](#tweak-your-queries-from-the-results)
+- [View timeline of events](#automatic-timeline-rendering-preview)
 
 ## View query results as a table or chart
 
@@ -77,7 +78,7 @@ AlertInfo
 | render columnchart
 ```
 
-:::image type="content" source="/defender/media/advanced-hunting-column-chart-new.png" alt-text="An example of a chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-column-chart-new.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-column-chart-new.png" alt-text="An example of a chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/advanced-hunting-column-chart-new.png":::
 
 #### Phishing emails across top ten sender domains
 
@@ -92,7 +93,7 @@ EmailEvents
 
 Use the pie chart view to effectively show distribution across the top domains:
 
-:::image type="content" source="/defender/media/advanced-hunting-pie-chart-new.png" alt-text="The pie chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-pie-chart-new.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-pie-chart-new.png" alt-text="The pie chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/advanced-hunting-pie-chart-new.png":::
 
 
 #### File activities over time
@@ -107,8 +108,7 @@ CloudAppEvents
 
 The line chart below clearly highlights time periods with more activity involving `invoice.doc`:
 
-:::image type="content" source="/defender/media/line-chart-a.png" alt-text="The line chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/line-chart-a.png":::
-
+:::image type="content" source="./media/advanced-hunting-query-results/line-chart-a.png" alt-text="The line chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/line-chart-a.png":::
 
 ## Export tables and charts
 
@@ -121,50 +121,48 @@ After running a query, select **Export** to save the results to local file. Your
 
 After running a query, select **Filter** to narrow down the results. 
 
-:::image type="content" source="/defender/media/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="/defender/media/add-filter1.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter1.png":::
 
 To add a filter, select the data you want to filter for by selecting one or more of the check boxes. Then select **Add**.
 
-:::image type="content" source="/defender/media/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="/defender/media/add-filter2.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter2.png":::
 
 You can narrow the results down even further to specific data by selecting the newly added filter. 
 
-:::image type="content" source="/defender/media/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="/defender/media/add-filter3.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter3.png":::
 
 This opens a dropdown showing the possible filters you can use further. Select one or more of the check boxes, then select **Apply**.
 
-:::image type="content" source="/defender/media/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="/defender/media/add-filter4.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter4.png":::
 
-Confirm that you have added the filters that you wanted by checking the Filters section. 
+Confirm that you have added the filters that you wanted by checking the Filters section.
 
-:::image type="content" source="/defender/media/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="/defender/media/add-filter5.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter5.png":::
 
 ## Drill down from query results
 
 You can also explore the results in-line with the following features:
+
 - Expand a result by selecting the dropdown arrow at the left of each result
 - Where applicable, expand details for results that are in JSON and array formats by selecting the dropdown arrow at the left of applicable column names for added readability
 - Open the side pane to see a record's details (concurrent with expanded rows)
 
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-expand.png" alt-text="Screenshot of expanding results to drill down" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-expand.png":::
 
+You can also right-click on any result value in a row so that you can use it to add more filters to the existing query or copy the value for use in further investigation.
 
-:::image type="content" source="/defender/media/advanced-hunting-query-results-expand.png" alt-text="Screenshot of expanding results to drill down" lightbox="/defender/media/advanced-hunting-query-results-expand.png":::
-
-You can also right-click on any result value in a row so that you can use it to add more filters to the existing query or copy the value for use in further investigation. 
-
-:::image type="content" source="/defender/media/advanced-hunting-query-results-rightclick.png" alt-text="Screenshot of options upon right-clicking an option" lightbox="/defender/media/advanced-hunting-query-results-rightclick.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-rightclick.png" alt-text="Screenshot of options upon right-clicking an option" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-rightclick.png":::
 
 Furthermore, for JSON and array fields, you can right-click and update the existing query to include or exclude the field, or to extend the field to a new column.
 
-:::image type="content" source="/defender/media/advanced-hunting-query-results-json-right.png" alt-text="Screenshot of options upon right-clicking an option for JSON and array fields" lightbox="/defender/media/advanced-hunting-query-results-json-right.png":::
-
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-json-right.png" alt-text="Screenshot of options upon right-clicking an option for JSON and array fields" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-json-right.png":::
 
 To quickly inspect a record in your query results, select the corresponding row to open the **Inspect record** panel. The panel provides the following information based on the selected record:
 
 - **Assets**—Summarized view of the main assets (mailboxes, devices, and users) found in the record, enriched with available information, such as risk and exposure levels
 - **All details**—All the values from the columns in the record
 
-:::image type="content" source="/defender/media/results-inspect-record.png" alt-text="The selected record with panel for inspecting the record in the Microsoft Defender portal" lightbox="/defender/media/results-inspect-record.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/results-inspect-record.png" alt-text="The selected record with panel for inspecting the record in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/results-inspect-record.png":::
 
 To view more information about a specific entity in your query results, such as a machine, file, user, IP address, or URL, select the entity identifier to open a detailed profile page for that entity.
 
@@ -178,9 +176,8 @@ Select the three dots to the right of any column in the **Inspect record** panel
 
 :::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="/defender/media/work-with-query-tweak-query.png":::
 
-
-
 ## Add items to Favorites
+
 You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
 
 :::image type="content" source="media/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/faves-1.png":::
@@ -197,6 +194,71 @@ You can do the same for your saved functions, queries, and custom detections in 
 
 > [!NOTE]
 > Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+
+## Automatic timeline rendering (preview)
+
+By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
+
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png":::
+
+You can select whether or not the timeline is displayed by default in the **Chart preferences** settings.
+
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-chart-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-chart-preferences.png":::
+
+The timeline automatically adjusts its resolution based on the range of results.
+
+### Filter the timeline results
+
+Select any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period, so when you filter by a specific range, it zooms in to show event distribution in high resolution.
+
+#### [Unfiltered timeline](#tab/unfiltered)
+
+The following screenshot shows the results of a query that returns 1,000 email events. The timeline is unfiltered, so it displays the full range of results with a timestamp for each day. Select a day or range of days to filter the results for that time period.
+
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-unfiltered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with all the results unfiltered." lightbox="./media/advanced-hunting-query-results/advanced-hunting-unfiltered-results.png":::
+
+#### [Filtered timeline](#tab/filtered)
+
+The following screenshot shows the zoomed in results of a query filtered to a specific date.
+
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-filtered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results filtered to a specific date." lightbox="./media/advanced-hunting-query-results/advanced-hunting-filtered-results.png":::
+
+---
+
+### Split the timeline by values
+
+You can split the results in the timeline by any column that has at least two but less than 50 unique values.
+
+#### [Ungrouped timeline](#tab/ungrouped)
+
+The following screenshot shows the results of a query that returns 1,000 email events. The timeline is ungrouped, so it displays all the results in a single line.
+
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-ungrouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results all together in one line." lightbox="./media/advanced-hunting-query-results/advanced-hunting-ungrouped.png":::
+
+#### [Grouped timeline](#tab/grouped)
+
+The following screenshot shows the results grouped by last email action with a separate line for each action.
+
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="./media/advanced-hunting-query-results/advanced-hunting-grouped.png":::
+
+---
+
+### Change chart type
+
+You can change the chart type of the timeline by selecting a different option from the chart type dropdown menu. The available chart types include:
+
+- Line chart
+- Column chart
+- Pie chart
+
+:::image type="content" source="/defender/media/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="/defender/media/advanced-hunting-column-chart.png":::
+
+### Rendering conditions
+
+The timeline only appears if the following conditions are met:
+
+- There are more than 40 events in your results.
+- There's `Timestamp` or `timeGenerated` column.
 
 ## Related topics
 

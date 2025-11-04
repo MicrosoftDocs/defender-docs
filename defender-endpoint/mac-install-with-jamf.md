@@ -23,11 +23,6 @@ appliesto:
 ---
 # Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro.
 

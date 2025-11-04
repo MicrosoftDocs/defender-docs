@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 03/03/2025
+ms.date: 10/20/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -30,12 +30,15 @@ appliesto:
 # Address false positives/negatives in Microsoft Defender for Endpoint
 
 
-**Platforms**
-- Windows
-
 In endpoint protection solutions, a false positive is an entity, such as a file or a process that was detected and identified as malicious even though the entity isn't actually a threat. A false negative is an entity that wasn't detected as a threat, even though it actually is malicious. False positives/negatives can occur with any threat protection solution, including [Defender for Endpoint](microsoft-defender-endpoint.md).
 
  If you have Microsoft Defender XDR, review the "Alerts sources" as described in [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts?tabs=settings). If the alert source is Defender for Endpoint, continue to read this article. 
+
+ ## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Identify the detection source
 

@@ -8,7 +8,7 @@ ms.author: bagol
 ms.reviewer: marcmcc
 manager: bagol
 ms.custom: nextgen
-ms.date: 07/25/2024
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -24,13 +24,18 @@ appliesto:
 # Turn on block at first sight
 
 
-**Platforms**
-- Windows
-
 This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization.
 
 > [!TIP]
 > This article is intended for enterprise admins and IT Pros who manage security settings for organizations. If you aren't an enterprise admin or IT Pro but you have questions about block at first sight, see the [Not an enterprise admin or IT Pro?](#not-an-enterprise-admin-or-it-pro) section.
+
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 
 ## What is "block at first sight"?
 
