@@ -108,7 +108,7 @@ From here, you can decide which resources you want to protect based on the secur
 
 Once you selected the plans, you want to enable and the resources you want to protect you have to configure access between Defender for Cloud and your GCP project.
 
-:::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access.":::
+:::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png":::
 
 In this step, you can find the GCloud script that needs to be run on the GCP project that is going to onboarded. The GCloud script is generated based on the plans you selected to onboard.
 
@@ -245,11 +245,11 @@ To configure the Defender for Servers plan:
 
 1. On the **Select plans** tab, select **Configure**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender for Servers plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender for Servers plan." lightbox="media/quickstart-onboard-gcp/view-configuration.png":::
 
 1. On the **Auto-provisioning configuration** pane, turn the toggles to **On** or **Off**, depending on your need.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Servers plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Servers plan." lightbox="media/quickstart-onboard-gcp/auto-provision-screen.png":::
 
     If **Azure Arc agent** is **Off**, you need to follow the manual installation process mentioned earlier.
 
@@ -269,7 +269,7 @@ To configure the Defender for Databases plan:
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**, depending on your need.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan." lightbox="media/quickstart-onboard-gcp/auto-provision-databases-screen.png":::
 
     If the toggle for Azure Arc is **Off**, you need to follow the manual installation process mentioned earlier.
    
@@ -328,7 +328,7 @@ To configure the Defender CSPM plan:
 
 1. On the **Select plans** tab, select **Configure**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender CSPM plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender CSPM plan." lightbox="media/quickstart-onboard-gcp/view-configuration.png":::
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**. To get the full value of Defender CSPM, we recommend that you turn all toggles to **On**.
 
