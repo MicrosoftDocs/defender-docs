@@ -23,10 +23,6 @@ appliesto:
 ---
 # Deploy Microsoft Defender for Endpoint on Linux with Ansible
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Ansible. To use another method, refer to the [Related content section](#related-content).
 

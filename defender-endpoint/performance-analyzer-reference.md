@@ -30,6 +30,15 @@ You can use the following new PowerShell cmdlets to tune the performance of Micr
 - [New-MpPerformanceRecording](#new-mpperformancerecording)
 - [Get-MpPerformanceReport](#get-mpperformancereport)
 
+## Prerequsites
+
+### Supported operating systems
+
+Windows Version 10 and later.
+
+> [!NOTE]
+> This feature is available starting with platform version `4.18.2108.X` and later.
+
 ### New-MpPerformanceRecording
 
 The following section describes the reference for the new PowerShell cmdlet `New-MpPerformanceRecording`. This cmdlet Collects a performance recording of Microsoft Defender Antivirus scans.
@@ -127,12 +136,6 @@ The performance analyzer provides an insight into problematic files that could c
 
 For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
 
-**Supported OS versions**:
-
-Windows Version 10 and later.
-
-> [!NOTE]
-> This feature is available starting with platform version `4.18.2108.X` and later.
 
 #### Examples: Get-MpPerformanceReport
 

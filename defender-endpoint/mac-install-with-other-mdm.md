@@ -23,11 +23,6 @@ appliesto:
 ---
 # Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
  
 ## Prerequisites and system requirements
 

@@ -19,6 +19,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I need to configure Outlook reporting and understand how reported phishing and suspicious emails are processed by Microsoft Defender so I can triage and remediate threats.
 ---
 
 # Report phishing and suspicious emails in Outlook for admins
@@ -83,7 +84,7 @@ Based on the [User reported settings](submissions-user-reported-messages-custom-
 
 ### Use the built-in Report button in Outlook to report messages that aren't junk
 
-In a supported version of Outlook, select one or more messages in the Junk Email folder, select **Report**, and then select **Not junk** in the dropdown list. Fo example:
+In a supported version of Outlook, select one or more messages in the Junk Email folder, select **Report**, and then select **Not junk** in the dropdown list. For example:
 
 - **Outlook for Microsoft 365**:
 

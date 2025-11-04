@@ -17,13 +17,11 @@ ms.collection:
 ms.topic: reference
 ms.subservice: edr
 ms.date: 06/03/2021
+appliesto:
+  - Microsoft Defender for Endpoint
 ---
 
 #  Live response library methods and properties
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:** [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 

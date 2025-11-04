@@ -15,18 +15,15 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 08/28/2025
+ms.date: 11/01/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
+
 # Attack surface reduction rules reference
 
-
-**Platforms:**
-
-- Windows
 
 This article provides information about Microsoft Defender for Endpoint attack surface reduction rules (ASR rules):
 
@@ -40,6 +37,12 @@ This article provides information about Microsoft Defender for Endpoint attack s
 [!Include[Prerelease information](../includes/prerelease.md)]
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Attack surface reduction rules by type
 
@@ -197,7 +200,7 @@ For rules with the "Rule State" specified:
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | | Y| Y (in block mode)  |
-|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | Y (in block mode) |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) |   | Y | Y (in block mode)  |
@@ -330,7 +333,7 @@ This rule helps prevent credential stealing by locking down Local Security Autho
 
 LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
 
-By default the state of this rule is set to block. In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
+By default the state of this rule is set to *not configured* (disabled). In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
 
 Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection can't be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
@@ -516,9 +519,6 @@ For technical support, contact the software vendor.
 ### Block Office communication application from creating child processes
 
 This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) that attackers can use when a user's credentials are compromised.
-
-> [!NOTE]
-> This rule blocks DLP policy tips and ToolTips in Outlook. This rule applies to Outlook and Outlook.com only.
 
 Intune name: `Process creation from Office communication products (beta)`
 

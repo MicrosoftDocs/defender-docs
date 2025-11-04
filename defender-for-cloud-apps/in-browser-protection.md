@@ -1,7 +1,7 @@
 ---
 title: In-browser protection with Microsoft Edge for Business | Microsoft Defender for Cloud Apps
 description: Learn about using in-browser protection with Microsoft Defender for Cloud Apps session policies and Microsoft Edge for Business.
-ms.date: 01/26/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 #customerIntent: As a Defender for Cloud Apps admin, I want to learn about the user experience with in-browser protection.
 ---
@@ -11,6 +11,9 @@ ms.topic: how-to
 Defender for Cloud Apps users who use Microsoft Edge for Business or Purview Data Loss Prevention policies for Cloud Apps in Edge and are subject to session policies are protected directly from within the browser. In-browser protection reduces the need for proxies, improving both security and productivity.
 
 Protected users experience a smooth experience with their cloud apps, without latency or app compatibility issues, and with a higher level of security protection.
+
+> [!NOTE]
+> In-browser protection with Microsoft Edge is only available to Microsoft Defender for Cloud Apps commercial tenants.
 
 ## In-browser protection requirements
 
@@ -27,8 +30,8 @@ To use in-browser protection, users must also have the following environmental r
 |**Operating systems**|Windows 10 or 11, macOS|
 |**Identity platform**|Microsoft Entra ID|
 |**Microsoft Edge for Business versions**|The last two stable versions. For example, if the newest Microsoft Edge is 126, in-browser protection works for v126 and v125. <br> For more information, see [Microsoft Edge releases](/deployedge/microsoft-edge-release-schedule#microsoft-edge-releases).|
-|**Supported session policies**|<ul><li>Block\Monitor of file download (all files\\*sensitive files)</li><li>Block\Monitor file upload (all files\\*sensitive files)</li><li>Block\Monitor copy\cut\paste</li><li>Block\Monitor print</li><li>Block\Monitor malware upload</li><li>Block\Monitor malware download</li></ul> <br> Users that are served by multiple policies, including at least one policy that's *not* supported by Microsoft Edge for Business, their sessions are always served by the reverse proxy. <br><br> Policies defined in the Microsoft Entra ID portal are also always served by reverse proxy.<br> *Sensitive files identified by built-in DLP scanning are not supported for Microsoft Edge in-browser protection|
-|**Supported Purview DLP policies**|Please see: [Activities you can monitor and take action on in the browser](/purview/dlp-browser-dlp-learn#activities-you-can-monitor-and-take-action-on) <br>Purview policies are always served by in-browser protection.|
+|**Supported session policies**|<ul><li>Block\Monitor of file download (all files\\*sensitive files)</li><li>Block\Monitor file upload (all files\\*sensitive files)</li><li>Block\Monitor copy\cut\paste</li><li>Block\Monitor print</li><li>Block\Monitor malware upload</li><li>Block\Monitor malware download</li></ul> <br> Users that are served by multiple policies, including at least one policy that's *not* supported by Microsoft Edge for Business, their sessions are always served by the reverse proxy. <br><br> Policies defined in the Microsoft Entra ID portal are also always served by reverse proxy.<br> *Sensitive files identified by built-in DLP scanning aren't supported for Microsoft Edge in-browser protection|
+|**Supported Purview DLP policies**|See: [Activities you can monitor and take action on in the browser](/purview/dlp-browser-dlp-learn#activities-you-can-monitor-and-take-action-on) <br>Purview policies are always served by in-browser protection.|
 
 All other scenarios are served automatically with the standard reverse proxy technology, including user sessions from browsers that don't support in-browser protection, or for policies not supported by in-browser protection.
 
@@ -53,7 +56,7 @@ Also, the `.mcas.ms` suffix doesn't appear in the browser address bar with in-br
 
 ### Work profile enforcement for in-browser protection
 
-To access a work resource in *contoso.com* with in-browser protection, you must sign in with your `username@contoso.com` profile. If you try to access the work resource from outside the work profile, you will be prompted to switch to the work profile or create one if it doesn't exist. If access from the Microsoft Edge work profile isn't enforced, you can also choose to continue with your current profile, in which case you're served by the [reverse proxy architecture](proxy-intro-aad.md).
+To access a work resource in *contoso.com* with in-browser protection, you must sign in with your `username@contoso.com` profile. If you try to access the work resource from outside the work profile, you'll be prompted to switch to the work profile or create one if it doesn't exist. If access from the Microsoft Edge work profile isn't enforced, you can also choose to continue with your current profile, in which case you're served by the [reverse proxy architecture](proxy-intro-aad.md).
 
 If you decide to create a new work profile, you'll see a prompt with the **Allow my organization to manage my device** option. In such cases, you don't need to select this option to create the work profile or benefit from in-browser protection.
 

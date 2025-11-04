@@ -23,11 +23,6 @@ appliesto:
 ---
 # Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 ## Enroll macOS devices
 

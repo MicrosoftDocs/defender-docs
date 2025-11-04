@@ -71,11 +71,11 @@ items:
           - name: Listen for SIEM events
             href: deploy/configure-event-collection.md
             displayName: standalone
-    - name: Deploy the Defender for Identity sensor v3.x (Preview)
+    - name: Deploy the Defender for Identity sensor v3.x
       items:
         - name: Prerequisites
           href: deploy/prerequisites-sensor-version-3.md
-        - name: Activate the Defender for Identity sensor (Preview)
+        - name: Activate the Defender for Identity sensor
           href: deploy/activate-sensor.md
     - name: Validate the sensor deployment
       href: deploy/test-sensor.md
@@ -111,6 +111,8 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
+    - name: Configure scoped access
+      href: configure-scoped-access.md
     - name: VPN integration
       href: vpn-integration.md
     - name: Set entity tags
@@ -162,7 +164,7 @@ items:
     items:
     - name: Remediation actions
       href: remediation-actions.md
-  - name: Security posture
+  - name: Security posture assessments
     items:
      - name: Identity security initiative (Preview)
        href: identity-security-initiative.md
@@ -205,7 +207,7 @@ items:
          href: security-assessment-unsecure-domain-configurations.md
      - name: Certificates
        items: 
-       - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
+       - name: Enforce encryption for RPC certificate enrollment interface  (ESC11)
          href: security-assessment-enforce-encryption-rpc.md
        - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
          href: security-assessment-insecure-adcs-certificate-enrollment.md
@@ -234,39 +236,7 @@ items:
         - name: Reversible passwords found in GPOs
           href: reversible-passwords-group-policy.md
      - name: Accounts
-       items: 
-         - name: Accounts with non-default Primary Group ID
-           href: accounts-with-non-default-pgid.md 
-         - name: Admin SDHolder permissions
-           href: security-assessment-remove-suspicious-access-rights.md
-         - name: Change password for krbtgt account
-           href: change-password-krbtgt-account.md
-         - name: Change password of built-in domain Administrator account
-           href: change-password-domain-administrator-account.md
-         - name: Dormant entities in sensitive groups assessment
-           href: security-assessment-dormant-entities.md
-         - name: DCSync permissions
-           href: security-assessment-non-admin-accounts-dcsync.md
-         - name: Ensure privileged accounts are not delegated
-           href: ensure-privileged-accounts-with-sensitive-flag.md
-         - name: Entities exposing credentials in clear text assessment
-           href: security-assessment-clear-text.md
-         - name: LAPS usage assessment
-           href: security-assessment-laps.md
-         - name: Remove discoverable passwords in Active Directory account attributes
-           href: remove-discoverable-passwords-active-directory-account-attributes.md
-         - name: Remove inactive service accounts
-           href: remove-inactive-service-account.md
-         - name: Riskiest lateral movement paths
-           href: security-assessment-riskiest-lmp.md
-         - name: Unsecure Kerberos delegation assessment
-           href: security-assessment-unconstrained-kerberos.md
-         - name: Unsecure SID History attributes
-           href: security-assessment-unsecure-sid-history-attribute.md
-         - name: Unsecure account attributes
-           href: security-assessment-unsecure-account-attributes.md
-         - name: Weak cipher usage assessment
-           href: security-assessment-weak-cipher.md    
+       href: security-posture-assessments\accounts.md
      - name: Cloud identities
        items:
        - name: Assign multi-factor authentication to Okta privileged user accounts
