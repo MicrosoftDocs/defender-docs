@@ -118,7 +118,7 @@ Empower your security organization to make informed decisions with the latest th
 
 Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Security Copilot in threat intelligence](/defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr).
 
-:::image type="content" source="/defender/media/copilot-in-defender/TI/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="/defender/media/copilot-in-defender/TI/copilot-defender-threat-intel-full.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-full.png":::
 
 <a name='access-security-copilot-in-microsoft-365-defender'></a>
 
@@ -132,11 +132,11 @@ In the Microsoft Defender portal, you can find sample prompts to help you naviga
 
 Advanced hunting prompts:
 
-:::image type="content" source="/defender/media/copilot-in-defender/sample-prompt-adv-hunting-small.png" alt-text="Screenshot highlighting the Copilot prompts in the advanced hunting page." lightbox="/defender/media/copilot-in-defender/sample-prompt-adv-hunting.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/sample-prompt-adv-hunting-small.png" alt-text="Screenshot highlighting the Copilot prompts in the advanced hunting page." lightbox="./media/security-copilot-in-microsoft-365-defender/sample-prompt-adv-hunting.png":::
 
 Threat intelligence prompts:
 
-:::image type="content" source="/defender/media/copilot-in-defender/sample-prompt-threat-intel-small.png" alt-text="Screenshot highlighting the Copilot prompts in the threat intelligence page." lightbox="/defender/media/copilot-in-defender/sample-prompt-threat-intel.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/sample-prompt-threat-intel-small.png" alt-text="Screenshot highlighting the Copilot prompts in the threat intelligence page." lightbox="./media/security-copilot-in-microsoft-365-defender/sample-prompt-threat-intel.png":::
 
 You can extend your investigation in the Security Copilot standalone portal using natural language prompts. The following are sample prompts that you can type in the prompt bar to help you summarize an incident with recommendations:
 

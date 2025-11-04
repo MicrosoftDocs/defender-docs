@@ -180,7 +180,7 @@ To add an attachment to a comment:
 
 To delete a case:
 
-1. Open the Cases screen, select the case you want to remove, and select **Remove**.
+1. Open the Cases screen, select the case you want to remove, and select **Delete**.
 
     :::image type="content" source="media/cases-overview/delete-case.png" alt-text="Screenshot showing the Remove option in the case details pane.":::
 
