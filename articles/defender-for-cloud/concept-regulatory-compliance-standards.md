@@ -4,7 +4,7 @@ description: Learn about regulatory compliance in Microsoft Defender for Cloud, 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
-ms.date: 09/09/2024
+ms.date: 11/04/2025
 #customer intent: As a cloud security professional, I want to understand how Defender for Cloud helps me meet regulatory compliance standards, so that I can ensure my organization is compliant with industry standards and regulations.
 ---
 
@@ -86,16 +86,16 @@ The following standards are available in Defender for Cloud:
 | CIS GCP Foundations v3.0 | GCP |
 | CIS Google Cloud Platform Foundation Benchmark | GCP |
 | CIS Google Kubernetes Engine (GKE) Benchmark | GCP |
-| (CIS) Microsoft Azure Foundations Benchmark v3.0 (Preview) | Azure |
+| CIS Azure Foundations v3.0.0 (Preview) | Azure |
 | CRI Profile | AWS, GCP |
 | Criminal Justice Information Services Security Policy v5.9.5 | Azure, AWS, GCP |
 | CSA Cloud Controls Matrix v4.0.12 | Azure, AWS, GCP |
 | Cyber Essentials v3.1 | Azure, AWS, GCP |
 | Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
-| Digital Operational Resilience Act (DORA) (Preview) | Azure, AWS, GCP |
+| DORA 2022 2554 (Preview) | Azure, AWS, GCP |
 | EU 2022 2555 (NIS2) 2022 | Azure, AWS, GCP |
 | EU General Data Protection Regulation (GDPR) 2016 679 | Azure, AWS, GCP |
-| European Union Artificial Intelligence Act (EU AI Act) (Preview) | Azure, AWS, GCP |
+| EU AI Act 2024 1689 (Preview) | Azure, AWS, GCP |
 | FedRAMP ‘H’ & ‘M’ | Azure |
 | FedRAMP High Baseline Rev5 | AWS, GCP |
 | FedRAMP Moderate Baseline Rev5 | AWS, GCP |
@@ -106,7 +106,7 @@ The following standards are available in Defender for Cloud:
 | ISO IEC 27001:2022 | Azure, AWS, GCP |
 | ISO IEC 27002:2022 | Azure, AWS, GCP |
 | ISO IEC 27017:2015 | Azure, AWS, GCP |
-| Korean Information Security Management System for Public Cloud (k-ISMS-P) (Preview) | Azure, AWS, GCP |
+| K ISMS P 2023 (Preview) | Azure, AWS, GCP |
 | NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
 | NIST 800 171 Rev3 | Azure, AWS, GCP |
 | NIST CSF v2.0 | Azure, AWS, GCP |
