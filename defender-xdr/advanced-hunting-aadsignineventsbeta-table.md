@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -29,7 +29,7 @@ ms.date: 11/04/2025
 
 
 > [!IMPORTANT]
-> On December 4, 2025, the `AADSignInEventsBeta` table will be replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding.
+> On December 9, 2025, the `AADSignInEventsBeta` table will be replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding. 
 >
 >The `EntraIdSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSignInEventsBeta` table to use `EntraIdSignInEvents` before the previously mentioned date. 
 
