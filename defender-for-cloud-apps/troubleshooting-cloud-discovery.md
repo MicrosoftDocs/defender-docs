@@ -52,6 +52,8 @@ You can track the processing of cloud discovery logs using the governance log. T
 |----|----|
 |Discovery data was uploaded and parsed successfully but the cloud discovery dashboard looks empty|The Dashboard might be filtered on data your logs don't have so there's no data to show. Try changing the filters in the cloud discovery dashboard to show different types of data to see the results.|
 
+[Log collector Diagnostic script](https://github.com/microsoft/Microsoft-Defender-for-Cloud-Apps/tree/main/Sample%20scripts/Log-Collector-Diag-Script) automates the collection and compression of logs and diagnostic data for troubleshooting Log Collector containers on Linux (Docker/Podman), improving workflow efficiency. If contacting support, please run the script and share the generated log bundle for faster resolution
+
 ## Next steps
 
 > [!div class="nextstepaction"]
