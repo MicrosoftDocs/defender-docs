@@ -100,16 +100,16 @@ You can onboard Windows clients and other devices in Intune by using the Intune 
 
 When you set up automatic enrollment, users add their work account to the device. In the background, the device registers and joins Microsoft Entra ID and is enrolled in Intune.
 
-1. Go to the Azure portal ([https://portal.azure.com/](https://portal.azure.com/)) and sign in.
+1. Go to the Microsoft Entra admin center ([https://entra.microsoft.com/](https://entra.microsoft.com/)) and sign in.
 
-2. Select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+2. Select **Entra ID** > **Mobility** > **Microsoft Intune**.
 
-3. Configure the **MDM User scope** and the **MAM user scope**.
+3. Configure the **MDM User scope** and the **Windows Information Protection (WIP) user scope**.
 
    :::image type="content" source="media/mem-mam-scope-azure-ad.png" alt-text="Screenshot of setting MDM user scope and MAM user scope in Intune.":::
 
    - For MDM User scope, we recommend that you select **All** so that all users can automatically enroll their Windows devices.
-   - In the MAM user scope section, we recommend the following default values for the URLs:
+   - In the WIP user scope section, we recommend the following default values for the URLs:
 
        - **MDM Terms of use URL**
        - **MDM Discovery URL**
