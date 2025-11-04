@@ -66,7 +66,7 @@ For information on other tables in the advanced hunting schema, see the [advance
 |`ResourceId`|`string`|Unique identifier of the resource accessed|
 |`ResourceTenantId`|`string`|Unique identifier of the tenant of the resource accessed|
 |`DeviceName`|`string`|Fully qualified domain name (FQDN) of the device|
-|`AadDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID. This is the legacy device identifier columnn, which is being replaced by `EntraIdDeviceId`.|
+|`AadDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID. This is the legacy device identifier column, which is being replaced by `EntraIdDeviceId`.|
 |`EntraIdDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID.|
 |`OSPlatform`|`string`|Platform of the operating system running on the device. Indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10, and Windows 7.|
 |`DeviceTrustType`|`string`|Indicates the trust type of the device that signed in. For managed device scenarios only. Possible values are Workplace, AzureAd, and ServerAd.|
