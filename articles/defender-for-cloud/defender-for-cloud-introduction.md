@@ -86,7 +86,7 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 | [Cloud Security Explorer](concept-attack-path.md#what-is-cloud-security-explorer) | A map of your cloud environment that lets you build queries to find security risks. | [Build queries to find security risks](how-to-manage-cloud-security-explorer.md) | Defender CSPM                         |
 | [Security governance](governance-rules.md)                   | Drive security improvements through your organization by assigning tasks to resource owners and tracking progress in aligning your security state with your security policy. | [Define governance rules](governance-rules.md)               | Defender CSPM                         |
 | [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/) | Provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP. | [Review your Permission Creep Index (PCI)](other-threat-protections.md#entra-permission-management-formerly-cloudknox) | Defender CSPM                         |
-| [AI SPM](identify-ai-workload-model.md) | Provides a comprehensive view of your organization's AI Bill of Materials (AI BOM) which asses s the security posture of the scanned AI workloads. | [Discover generative AI workloads](identify-ai-workload-model.md) | Defender CSPM |
+| [AI SPM](identify-ai-workload-model.md) | Provides a comprehensive view of your organization's AI Bill of Materials (AI BOM) which assess the security posture of the scanned AI workloads. | [Discover generative AI workloads](identify-ai-workload-model.md) | Defender CSPM |
 
 ## Cloud workload protection platform (CWPP)
 
