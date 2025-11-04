@@ -31,11 +31,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-| November 11, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### General availability of compliance frameworks
 
-November 11, 2025
+November 3, 2025
 
 The following regulatory compliance standards, previously available in preview, are now generally available in Microsoft Defender for Cloud.
 
