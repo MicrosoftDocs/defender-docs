@@ -1,15 +1,15 @@
 ---
 title: Manage incidents in Microsoft Defender
-description: Learn how to assign, update the status,
+ms.reviewer: yotam segev
+description: Discover how to assign, tag, and resolve incidents in Microsoft Defender. Improve your security operations with actionable insights and streamlined processes.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: yelevin
-author: yelevin
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
-ms.collection: 
+ms.collection:
   - m365-security
   - usx-security
   - tier1
@@ -19,10 +19,12 @@ ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 11/18/2024
+ms.date: 11/04/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+- 
+- #customer intent: As a security operations analyst, I want to gain insights into specific incidents so that I can manage my workload effectively.
 ---
 
 # Manage incidents in Microsoft Defender
@@ -63,28 +65,28 @@ This article shows you how to perform various incident management tasks associat
 
 Most of these tasks are accessible from the **Manage incident** pane for an incident. You can reach this pane from any of several locations.
 
-### From the incident queue
+Select **IIncidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal.
 
-1. Select **Investigation & response > Incidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal.
+### [From the incident queue](#tab/queue)
 
-1. From the incident queue, access the **Manage incident** pane in one of two ways:
+From the incident queue, access the **Manage incident** pane in one of two ways:
 
     - Select the check box of an incident, and select **Manage incidents** from the toolbar above the filters. Manage many incidents at once by selecting multiple check boxes.
     - Select the row of an incident (without selecting the incident name), so that the incident details pane appears, and select **Manage incident** from the incident details pane.
 
         :::image type="content" source="./media/manage-incidents/manage-incidents-from-queue.png" alt-text="Screenshot showing how to manage incidents from the incidents queue in the Microsoft Defender portal." lightbox="./media/manage-incidents/select-manage-incident.png":::
 
-### From the incident page
-
-1. Select **Investigation & response > Incidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal.
+### [From the incident page](#tab/incident-page)
 
 1. Select the name of an incident from the queue. Or, select the row of an incident in the queue and then select **Open incident page** from the incident details pane.
 
 1. From the incident page, select **Manage incident** from the top panel.
 
-    If **Manage incident** isn't visible, select the three dots in the upper right corner (visible in the following screenshot next to "Manage incident"), and select it from the menu that appears.
+    If **Manage incident** isn't visible, select the three dots in the upper right corner, and select it from the menu that appears.
 
     :::image type="content" source="./media/manage-incidents/select-manage-incident.png" alt-text="Screenshot showing how to manage an incident from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/select-manage-incident.png":::
+
+---
 
 ## Incident triage
 
