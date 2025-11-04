@@ -362,7 +362,7 @@ To configure GCP Cloud Logging:
 
    1. Create a new GCP Cloud Logging configuration and provide a Pub/Sub subscription name.
 
-      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-create-new-option-page.png" alt-text="Screenshot with the Create a new GCP Cloud Logging option selected and a Pub/Sub subscription name field." lightbox="media/quickstart-onboard-gcp/gcp-cloud-logging-create-new-option.png":::
+      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-create-new-option-page.png" alt-text="Screenshot with the Create a new GCP Cloud Logging option selected and a Pub/Sub subscription name field." lightbox="media/quickstart-onboard-gcp/cloud-logging-create-new-option-page.png":::
       
       > [!IMPORTANT]
       > Selecting this option will incur additional cost. [Learn more about GCP Cloud Logging pricing](https://cloud.google.com/pubsub/pricing)
