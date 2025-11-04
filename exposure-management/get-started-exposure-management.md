@@ -6,10 +6,10 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 07/30/2025
+ms.date: 11/04/2025
 ---
 
-# Start using Microsoft Security Exposure Management
+# Get started with Microsoft Security Exposure Management
 
 This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard in the unified Microsoft Defender XDR portal.
 
@@ -18,27 +18,20 @@ This article describes how to start working with the [Microsoft Security Exposur
 Microsoft Security Exposure Management is now fully integrated into the Microsoft Defender XDR portal at [security.microsoft.com](https://security.microsoft.com). All Exposure Management functions are accessible through the unified portal under the **Exposure Management** section in the navigation.
 
 ### Prerequisites for access
+
 - Ensure you have appropriate licensing: MSEM features are available with Microsoft 365 E5, certain E3 with add-ons, or Defender suite licenses
 - Verify you have the required permissions: A dedicated Exposure Management role provides granular access, or you can use traditional roles like Security Admin or Global Admin
 - Enable any preview features if needed, such as external data connectors, which are currently in public preview with separate consumption-based pricing
 
 ### Navigation in the unified portal
+
 Navigate to **Exposure Management** in the Microsoft Defender XDR portal to access:
+
 - Overview dashboard
 - Attack surface management tools
 - Critical asset management
 - Exposure insights and recommendations
 - Data connectors configuration
-
-With the integration of Defender for Cloud, you also have access to:
-
-- **Cloud Infrastructure**: Unified cloud security dashboard and overview
-- **Cloud Asset Inventory**: Multi-cloud asset management across Azure, AWS, and GCP
-- **Cloud Recommendations**: Risk-based prioritization of cloud security recommendations
-- **Cloud Attack Paths**: Visualization of attack paths including cloud assets
-- **Cloud Scopes**: Granular access control and resource segmentation
-
-:::image type="content" source="./media/defender-for-cloud-defender-portal/exposure-management-overview.png" alt-text="Screenshot of the enhanced Exposure Management overview with cloud integration." lightbox="./media/defender-for-cloud-defender-portal/exposure-management-overview.png":::
 
 ## Reviewing security exposure state
 

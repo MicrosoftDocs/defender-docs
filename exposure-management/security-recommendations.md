@@ -25,7 +25,7 @@ The unified recommendations catalog brings together all Microsoft security recom
 
 - Microsoft Secure Score
 - Microsoft Security Exposure Management Recommendations Catalog  
-- Azure Security Recommendations (for cloud recommendations)
+- Microsoft Defender for Cloud (for cloud recommendations)
 - Microsoft Defender for Vulnerability Management
 
 You can explore the full breadth of Microsoft's security recommendations without navigating multiple separate experiences across different Microsoft Security products.
@@ -42,7 +42,7 @@ You can explore the full breadth of Microsoft's security recommendations without
 
 1. **Use the attack surface tabs**: The recommendations are now organized by tabs for different domains:
    - **Devices** - Device-related recommendations including misconfigurations and vulnerabilities
-   - **Cloud** - Azure, AWS, and GCP recommendations with risk-based prioritization
+   - **Cloud** - Multicloud (Azure, AWS, and GCP), hybrid environments and code recommendations with risk-based prioritization. 
    - **Identity** - Identity-related security recommendations
    - **SaaS** - Software-as-a-Service application recommendations
    - **Data** - Data protection recommendations
