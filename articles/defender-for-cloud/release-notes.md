@@ -102,6 +102,8 @@ The following regulatory compliance standards, previously available in preview, 
 | Thailand PDPA 2019 | Azure, AWS, GCP |
 | Japan ISMAP | Azure, AWS, GCP |
 
+Learn more about [regulatory compliance standards in Microsoft Defender for Cloud](concept-regulatory-compliance-standards.md).
+
 ## October 2025
 
 |Date | Category | Update|
