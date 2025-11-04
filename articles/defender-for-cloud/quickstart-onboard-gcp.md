@@ -368,6 +368,9 @@ To configure GCP Cloud Logging:
       > Selecting this option will incur additional cost. [Learn more about GCP Cloud Logging pricing](https://cloud.google.com/pubsub/pricing)
       
    1. Use your existing Cloud Logging configuration by manually providing your existing Pub/Sub subscription name.
+
+    > [!NOTE]
+    > Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
    
 1. Select **Save**.
 

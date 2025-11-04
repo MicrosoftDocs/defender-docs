@@ -116,9 +116,11 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 
 October 31, 2025
 
-Microsoft Defender for Cloud now supports **GCP Cloud Logging ingestion** in Public Preview, further strengthening multi-cloud identity posture and permissions management across GCP environments. 
+GCP Cloud Logging ingestion is now available in preview, improving CIEM insights and permission-usage visibility across Google Cloud environments.
 
-This new capability enables enhanced cloud identity activity insights, permission-usage visibility, and least-privilege recommendations and ensures uninterrupted CIEM recommendations for your GCP environments. To maintain continuous CIEM insights and recommendations for your connected GCP environments, you must enable GCP Cloud Logging ingestion going forward.
+To maintain continuous CIEM recommendations for connected GCP environments, enable Cloud Logging ingestion using a new or existing Pub/Sub subscription.
+
+Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
 
 #### Recommended Action
 
