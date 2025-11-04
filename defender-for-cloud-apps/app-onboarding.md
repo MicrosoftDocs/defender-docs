@@ -12,7 +12,7 @@ ms.reviewer: adipavekatz
 search.appverid: MET150  
 ---  
 
-# Automatically onboard Microsoft Entra ID apps to conditional access app control
+# Automatically onboard Microsoft Entra ID apps to conditional access app control (preview)
 
 All SaaS applications that exist in the Microsoft Entra ID catalog will be available automatically in the policy app filter. The following image shows the high-level process for configuring and implementing Conditional Access app control:
 
@@ -29,7 +29,7 @@ Fully performing and testing the procedures in this article requires that you ha
 - [Create Microsoft Defender for Cloud Apps access policies](access-policy-aad.md)
 - [Create Microsoft Defender for Cloud Apps session policies](session-policy-aad.md)
 
-## Supported Apps (preview)
+## Supported Apps
 
 All SaaS apps listed in the Microsoft Entra ID catalog will be available for filtering within the Microsoft Defender for Cloud Apps session and access policies. Each app chosen in the filter will automatically be onboarded into the system and will be controlled.
 
