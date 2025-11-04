@@ -106,7 +106,7 @@ When you set up automatic enrollment, users add their work account to the device
 
 3. Configure the **MDM User scope** and the **Windows Information Protection (WIP) user scope**.
 
-   :::image type="content" source="media/mem-mam-scope-azure-ad.png" alt-text="Screenshot of setting MDM user scope and WIP user scope in Intune.":::
+   :::image type="content" source="media/mem-wip-scope-entra-admin.png" alt-text="Screenshot of setting MDM user scope and WIP user scope in Entra admin center.":::
 
    - For MDM User scope, we recommend that you select **All** so that all users can automatically enroll their Windows devices.
    - In the WIP user scope section, we recommend the following default values for the URLs:
