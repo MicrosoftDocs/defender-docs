@@ -1,5 +1,5 @@
 ---
-title: FAQ for the Microsoft Sentinel behaviors layer
+title: Responsible AI FAQ for the Microsoft Sentinel behaviors layer
 description: This FAQ provides information about the AI technology used in Microsoft Sentinel, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.  
 ms.date: 10/27/2025  
 ms.custom:  
@@ -10,7 +10,7 @@ ms.author: guywild
 ms.reviewer: mschechter  
 ---
 
-# FAQ for the Microsoft Sentinel behaviors layer
+# Responsible AI FAQ for the Microsoft Sentinel behaviors layer
 
 These frequently asked questions (FAQ) describe the AI impact of the Microsoft Sentinel behaviors layer feature in Microsoft Sentinel.
 
