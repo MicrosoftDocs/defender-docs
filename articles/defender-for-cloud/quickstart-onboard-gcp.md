@@ -332,7 +332,7 @@ To configure the Defender CSPM plan:
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**. To get the full value of Defender CSPM, we recommend that you turn all toggles to **On**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/cspm-configuration.png" alt-text="Screenshot that shows toggles for Defender CSPM." lightbox="media/quickstart-onboard-gcp/cspm-configuration-big.png:::
+    :::image type="content" source="media/quickstart-onboard-gcp/cspm-configuration.png" alt-text="Screenshot that shows toggles for Defender CSPM." lightbox="media/quickstart-onboard-gcp/cspm-configuration-big.png":::
 
 1. Select **Save**.
 
