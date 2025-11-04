@@ -109,9 +109,11 @@ Categories are presented at the top of the threat analytics page. Counters show 
 
 To add report filter types in your dashboard, select **Filters**, choose from the list, and select **Add**.
 
+:::image type="content" source="/defender/media/threat-analytics/ta-taglist-mtp.png" alt-text="Screenshot of the threat analytics Add filters option." lightbox="/defender/media/threat-analytics/ta-taglist-mtp.png":::
+
 To set the types of reports you want in the list based on the available filters, select a filter type (for example, **Threat tags**), choose from the list, and select **Apply**.
 
-:::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
+:::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list in Threat tags." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
 
 ## View a threat analytics report
 
