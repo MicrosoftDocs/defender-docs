@@ -56,6 +56,7 @@ This article shows you how to perform various incident management tasks associat
 
 - [Edit the incident name](#edit-the-incident-name).
 - Assess the activity audit and add comments in the [Activity log](#view-the-activity-log-of-an-incident).
+- [Generate a summary of the incident investigation and analysis](#)
 - [Export incident data to PDF](#export-incident-data-to-pdf).
 
 > [!TIP]
@@ -298,6 +299,26 @@ You can also [add your own comments](#add-comments-to-an-incident) using the com
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+## AI generated analyst notes
+
+When you finish investigating an incident, you can use AI to generate a summary of the investigation.
+
+After investigation is finished, do the following:
+
+…-> Prepare analyst notes
+Activity tab (new tab) line -Investigation (analyst notes)
+
+Takes time (20 min)
+After preprocessing
+Analyst notes appear in new line in activities tab
+Select that line – window opens.
+Click Generate analyst notes – few seconds generation
+Shows log of what was done
+
+Log has AI disclaimer. Edit it and it goes away
+
+1. Optional: post as comment – posts in comments section of incident summary (way to export it for other uses)
 
 ## Export incident data to PDF
 
