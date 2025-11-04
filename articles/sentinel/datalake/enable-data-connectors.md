@@ -106,7 +106,7 @@ To execute KQL queries on asset data in the Sentinel data lake, ensure that you 
 
 1. Ensure that the *System tables* workspace is selected.
 
-    :::image type="content" source="./media.enable-data-connectors/workspace-scope.png" alt-text="Screenshot of the KQL queries information bar showing the System tables workspace selected.":::
+    :::image type="content" source="./media/enable-data-connectors/workspace-scope.png" alt-text="Screenshot of the KQL queries information bar showing the System tables workspace selected.":::
 
 Asset data tables are shown under the Asset category:
 
