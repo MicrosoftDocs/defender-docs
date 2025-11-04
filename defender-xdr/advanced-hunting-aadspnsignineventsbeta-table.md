@@ -21,13 +21,13 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 11/04/2025
 ---
 
 # AADSpnSignInEventsBeta
 
 > [!IMPORTANT]
-> On November 16, 2025, the `AADSpnSignInEventsBeta` table will be replaced by [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding.
+> On December 4, 2025, the `AADSpnSignInEventsBeta` table will be replaced by [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding.
 >
 >The `EntraIdSpnSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSpnSignInEventsBeta` table to use `EntraIdSpnSignInEvents` before the previously mentioned date. 
 

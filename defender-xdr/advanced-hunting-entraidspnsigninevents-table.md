@@ -28,7 +28,7 @@ ms.date: 10/15/2025
 
 
 > [!IMPORTANT]
-> On November 16, 2025, the `EntraIdSpnSignInEvents` table will replace [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md). This change will be made to remove the latter's preview status and to align it with the existing product branding.
+> On December 4, 2025, the `EntraIdSpnSignInEvents` table will replace [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md). This change will be made to remove the latter's preview status and to align it with the existing product branding.
 >
 >To ensure a smooth transition, make sure that you update your queries that use the `AADSpnSignInEventsBeta` table to use `EntraIdSpnSignInEvents` before the previously mentioned date. 
 
