@@ -2,11 +2,11 @@
 title: User experiences in Microsoft Defender for Endpoint on iOS
 description: Learn about major user experience changes for versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulilnbar
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/21/2025
+ms.date: 11/04/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -21,6 +21,23 @@ search.appverid: met150
 # User Experiences in Microsoft Defender for Endpoint on iOS
 
 As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of our MDE mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users. This document outlines the planned updates for MDE Mobile users.
+
+## Key changes - November 2025
+
+Experience change:
+
+### Bottom Pane Experience
+
+When users select **Help and Feedback** in the left navigation pane (accessible by tapping the profile picture), a new bottom feedback pane opens. This pane has been updated to improve readability and make it easier for users to share feedback (as shown in screen 2).
+
+:::image type="content" source="./media/android-new-ux/feedback-panes-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu.":::
+
+The **Send feedback** option enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they are redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
+
+### One-Click *Send Logs* Experience
+
+A new **Send logs to Microsoft** option has been added directly to the left navigation pane. This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 4). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from both the Defender app - it won't include logs from the Authenticator app.
+
 
 ## Key changes
 
