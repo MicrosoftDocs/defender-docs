@@ -17,18 +17,18 @@ ms.date: 10/28/2025
 
 # Diagnose issues with Client Analyzer
 
-When you troubleshoot Microsoft Defender for Endpoint, collecting diagnostic data is crucial for problem resolution. Different issues such as performance, connectivity and detection-related concerns, require different telemetry. As security expert investigating these issues, you can use the [Client Analyzer](overview-client-analyzer.md) tool to gather data about your organization's Defender for Endpoint issues. With this data, you can troubleshoot your organization's Defender for Endpoint issues, and if needed [work with Microsoft support](contact-support.md) to resolve them
+When you troubleshoot Microsoft Defender for Endpoint, collecting diagnostic data is crucial for problem resolution. Different issues such as performance, connectivity and detection-related concerns, require different telemetry. As a security expert investigating these issues, you can use the [Client Analyzer](overview-client-analyzer.md) tool to gather data about your organization's Defender for Endpoint issues. With this data, you can troubleshoot your organization's Defender for Endpoint issues, and if needed [work with Microsoft support](contact-support.md) to resolve them
 
 This article lists different types of issues and how to collect data for them using the Client Analyzer tool. The tool's flags are listed in [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md).
 
 ## Categorize your issue
 
-Use the categories listed in the table to identify the type of issue you're experiencing. [Run the Client Analyzer tool](#run-the-client-analyzer-tool) with the appropriate flags when collecting data.ch
+Use the categories listed in the table to identify the type of issue you're experiencing. [Run the Client Analyzer tool](#run-the-client-analyzer-tool) with the appropriate flags when collecting data.
 
 |Issue  |Description and examples  |Flags  |
 |---------|---------|---------|
 |Issues that can't be reproduced     |Issues that occur sporadically or are triggered by automated processes and can't be reproduced. This includes problems related to scheduled tasks such as automatic updates and scans, and Attack Surface Reduction (ASR) rules triggered unpredictably.         | Run without flags         |
-|Performance issues that can be reproduced     |High CPU usage, memory consumption problems, and slow response times.         |`-a` and `-v`         |
+|Performance issues that can be reproduced     |Includes high CPU usage, memory consumption problems, and slow response times.         |`-a` and `-v`         |
 |General     |On-demand scans, manual updates, sense portal and alert issues, Attack Surface Reduction (ASR) issues that can be triggered on command, and app compatibility problems.         |`-e` and `-v`         |
 |Hanging systems     |Unresponsive systems and freezes. Require advanced debugging techniques including memory dumps and crash analysis.         |`-z`         |
 |Compatibility     |Issues with third-party applications, other security solutions, system software, performance problems, and functional issues.         |`-c`, `-e` and `-v`         |
@@ -50,14 +50,8 @@ Follow the steps in this section to collect data for the issues you've identifie
     
     ```
 
-2. When prompted for the number of minutes to collect logs, to ensure sufficient collection time enter a large number such as 1,000.
+    If you used a flag that includes a timespan, such as `-a`, `-e`, or `-v`, you're asked to specify the duration of the log collection.
 
-3. Once the log collection starts, reproduce the issue so that the issue's data is captured while the logs are being collected.
+2. Once the log collection starts, reproduce the issue so that the issue's data is captured while the logs are being collected.
 
-    If you used a when a flag that includes a timespan, such as `-a`, `-e`, or `-v`, you're asked to specify the duration of the log collection.
-
-4. To stop the log collection press Press `q`.
-
-    * 
-
-
+3. To stop the log collection press Press `q`.
