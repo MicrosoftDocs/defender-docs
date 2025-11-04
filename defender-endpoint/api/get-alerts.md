@@ -2,8 +2,8 @@
 title: List alerts API
 description: Learn how to use the List alerts API to retrieve a collection of alerts in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -70,13 +70,13 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account) | Alert.Read | `Read alerts`|
 |Delegated (work or school account) | Alert.ReadWrite | `Read and write alerts`|
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md) for more information)
-> - The response includes only alerts that are associated with devices that the user can access, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md) for more information)
+
+- The response includes only alerts that are associated with devices that the user can access, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+
 
 ## HTTP request
 
@@ -323,5 +323,5 @@ Here's an example of the response.
 
 [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

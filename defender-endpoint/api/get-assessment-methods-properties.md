@@ -2,8 +2,8 @@
 title: Export assessment methods and properties per device
 description: Provides information about the APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/04/2021
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -245,5 +245,5 @@ Other related
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

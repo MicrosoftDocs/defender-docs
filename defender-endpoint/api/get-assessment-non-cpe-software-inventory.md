@@ -2,8 +2,8 @@
 title: Export non product code software inventory assessment per device
 description: Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion for software that doesn't have a Common Platform Enumeration (CPE)
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

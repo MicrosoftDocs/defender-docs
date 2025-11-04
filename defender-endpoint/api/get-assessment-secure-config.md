@@ -2,8 +2,8 @@
 title: Export secure configuration assessment per device
 description: Returns  an entry for every unique combination of DeviceId, ConfigurationId.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -291,5 +291,4 @@ Other related
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 

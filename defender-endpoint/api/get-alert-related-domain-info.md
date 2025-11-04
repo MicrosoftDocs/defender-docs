@@ -2,8 +2,8 @@
 title: Get alert related domains information
 description: Retrieve all domains related to a specific alert using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -48,13 +48,13 @@ Permission type|Permission|Permission display name
 Application|URL.Read.All|'Read URLs'
 Delegated (work or school account)|URL.Read.All|'Read URLs'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](../user-roles.md))
-> - The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md))
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](../user-roles.md))
+
+- The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md))
+
 
 ## HTTP request
 
@@ -104,5 +104,5 @@ Here's an example of the response.
     ]
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

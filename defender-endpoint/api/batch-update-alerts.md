@@ -3,8 +3,8 @@ title: Batch Update alert entities API
 description: Learn how to update Microsoft Defender for Endpoint alerts in a batch by using this API. You can update the status, determination, classification, and assignedTo properties.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
@@ -55,13 +55,13 @@ Permission type | Permission | Permission display name
 Application | Alert.ReadWrite.All | 'Read and write all alerts'
 Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'Alerts investigation'. For more information, see [Create and manage roles](../user-roles.md).
-> - The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'Alerts investigation'. For more information, see [Create and manage roles](../user-roles.md).
+
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
 
 ## HTTP request
 
@@ -120,5 +120,5 @@ POST https://api.securitycenter.microsoft.com/api/alerts/batchUpdate
     "comment": "Resolve my alert and assign to secop2"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

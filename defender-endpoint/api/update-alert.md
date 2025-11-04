@@ -53,13 +53,13 @@ Permission type|Permission|Permission display name
 Application|Alerts.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'Alerts investigation' (For more information, see [Create and manage roles](../user-roles.md))
-> - The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'Alerts investigation' (For more information, see [Create and manage roles](../user-roles.md))
+
+- The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md))
+
 
 ## HTTP request
 
@@ -116,5 +116,5 @@ PATCH https://api.securitycenter.microsoft.com/api/alerts/121688558380765161_213
     "comment": "Resolve my alert and assign to secop2"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 
