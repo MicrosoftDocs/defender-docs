@@ -304,7 +304,7 @@
             displayName: connector, GCP, VPC, service, controls, restriction, issues
             href: resolve-vpc-service-controls-issues.md
 
-- name: Posture Management
+- name: Posture management
   items:
     - name: Get started
       items:
@@ -907,7 +907,7 @@
   - name: Common questions about DevOps security
   href: faq-defender-for-devops.yml
 
-- name: Investigation & Response
+- name: Investigation & response
   items:
     - name: What's new in recommendations, alerts, and incidents
       href: release-notes-recommendations-alerts.md
