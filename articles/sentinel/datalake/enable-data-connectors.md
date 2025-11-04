@@ -110,7 +110,7 @@ To execute KQL queries on asset data in the Sentinel data lake, ensure that you 
 
 Asset data tables are shown under the Asset category:
 
-:::image type="content" source="./media/enable-data-connectors/kql-queries.png" alt-text="Screenshot of the KQL queries table picker showing asset data tables under the Asset category.":::
+:::image type="content" source="./media/enable-data-connectors/kql-queries.png" alt-text="Screenshot of the KQL queries table picker showing asset data tables under the Asset category." lightbox="./media/enable-data-connectors/kql-queries.png":::
 
 ## Next Steps
 
