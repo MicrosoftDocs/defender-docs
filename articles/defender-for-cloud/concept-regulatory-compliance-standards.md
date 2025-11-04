@@ -107,6 +107,7 @@ The following standards are available in Defender for Cloud:
 | ISO IEC 27002:2022 | Azure, AWS, GCP |
 | ISO IEC 27017:2015 | Azure, AWS, GCP |
 | Korean Information Security Management System for Public Cloud (k-ISMS-P) (Preview) | Azure, AWS, GCP |
+| Microsoft Cloud Security Benchmark (MCSB) v2 (Preview) | Azure, AWS, GCP |
 | NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
 | NIST 800 171 Rev3 | Azure, AWS, GCP |
 | NIST CSF v2.0 | Azure, AWS, GCP |
