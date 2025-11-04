@@ -108,11 +108,11 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)](#gcp-cloud-logging-ingestion-support-preview)|
+|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
-### GCP Cloud Logging Ingestion Support (Preview)
+### GCP Cloud Logging Ingestion (Preview)
 
 October 31, 2025
 
