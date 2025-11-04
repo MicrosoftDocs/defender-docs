@@ -31,7 +31,29 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+| November 18, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 | November 11, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+
+### Defender for Cloud integration into the Defender portal (preview)
+
+November 18, 2025
+
+Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal and part of the boarder Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud security solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid and code environments - all from one place. 
+
+This integration brings new values and benefits for security personas:
+
+**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multi-cloud organizations seeking comprehensive exposure management too. For more information, see [Getting started in the Defender portal](defender-portal/getting-started-defender-portal.md).
+
+**Cloud dashboard** - This new cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and includes tools to track security progress over time out of the box. New unified dashboard consolidates Security Posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments. For more information, see [Cloud Infrastructure Dashboard](cloud-infrastructure-dashboard.md).
+
+**Cloud asset inventory** – A new centralized inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, device actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. For more information, see [Asset inventory](asset-inventory.md?pivots=defender-portal).
+
+**Unified cloud security posture capabilities** – We are unifying all the cloud security posture management (CSPM) capabilities into Microsoft Security Exposure Management (MSEM). Security personas can now view secure scores, prioritized recommendations, attack paths and vulnerabilities —all in a single pane of glass, empowering them to reduce risk and get an holistic view of all their posture end-to-end including devices, identities, SaaS apps and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
+
+**Granular access maagement** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capabilitty, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
+
+For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
+
 
 ### General availability of compliance frameworks
 
@@ -71,7 +93,7 @@ The following regulatory compliance standards, previously available in preview, 
 | HIPAA | Azure |
 | HITRUST CSF v11.3.0 | Azure, AWS, GCP |
 | ISO/IEC 27001:2022 | Azure, AWS, GCP |
-| ISO/IEC 27002:2022 | Azure, AWS, GCP |
+| ISO/IEC 27002:2022 | Azure, AWS, GCP |<link to the release notes on MSEM> 
 | ISO/IEC 27017:2015 | Azure, AWS, GCP |
 | NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
 | NIST 800-171 Rev 3 | Azure, AWS, GCP |
@@ -101,39 +123,6 @@ The following regulatory compliance standards, previously available in preview, 
 | Singapore MTCS SS 584:2015 | Azure, AWS, GCP |
 | Thailand PDPA 2019 | Azure, AWS, GCP |
 | Japan ISMAP | Azure, AWS, GCP |
-
-## November 2025
-
-|Date | Category | Update|
-| -------- | -------- | -------- |
-|November 18, 2025 | Public preview | [Unified Security Experience in Microsoft Defender Portal](#unified-security-experience-in-microsoft-defender-portal)|
-
-### Unified Security Experience in Microsoft Defender Portal
-
-November 18, 2025
-
-Some key features of Cloud security are now seamlessly integrated into the Microsoft Defender portal, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently and achieve a complete security posture view across workloads.
-
-**Key enhancements include:**
-
-- **Performance and scalability improvements**: The new portal resolves previous scale limitations, enabling seamless management of large and multi-cloud environments.
-
-- **Enhanced Role-Based Access Control (RBAC)**: Security teams can now grant more granular access to security content, ensuring that only the relevant personas see the information they need. This allows users to access security insights without requiring direct permissions to the underlying resources, improving both operational security and compliance.
-
-- **Unified scoping capabilities**: Cloud accounts can be segmented into logical groups, enabling better data pivoting, access control, and multi-tenant management.
-
-- **Integrated Exposure Management**: Cloud security posture, recommendations, and attack paths are now part of a single exposure management experience.
-
-- **Cloud-Agnostic architecture**: Supports Azure, AWS, GCP, and other platforms, making it ideal for hybrid and multi-cloud organizations.
-
-- **Advanced reporting and visualization**: Users can filter and export data to generate detailed reports, and leverage rich visualizations for attack paths, asset relationships, and security recommendations.
-
-Learn more about:
-- [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
-- [Azure portal vs Defender portal feature comparison](azure-portal-vs-defender-portal-comparison.md)
-- [Getting started in the Defender portal](defender-portal/getting-started-defender-portal.md)
-- [Cloud Infrastructure Dashboard](cloud-infrastructure-dashboard.md)
-- [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md)
 
 ## October 2025
 
