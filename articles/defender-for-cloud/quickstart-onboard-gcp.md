@@ -370,9 +370,9 @@ To configure GCP Cloud Logging:
    1. Use your existing Cloud Logging configuration by manually providing your existing Pub/Sub subscription name.
    
      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Manually provide GCP Cloud Logging details option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
-    
-    > [!NOTE]
-    > Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
+
+> [!NOTE]
+> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
    
 1. Select **Save**.
 

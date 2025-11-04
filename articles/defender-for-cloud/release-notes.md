@@ -122,17 +122,6 @@ To maintain continuous CIEM recommendations for connected GCP environments, enab
 
 Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
 
-#### Recommended Action
-
-Turn on **GCP Cloud Logging ingestion (Preview)** by following the steps in our [documentation ](https://aka.ms/multicloudconnectors) and choosing one of the following options:
-
-1. Create a new Pub/Sub subscription within the wizard, or
-
-1. Provide details for an existing Pub/Sub subscription to ingest logs
-
-> [!NOTE]
-> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform.
-
 ### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
 
 Microsoft Defender for Containers updated the outbound network requirements for the Defender sensor. You must update your outbound rules to maintain proper functionality. 
