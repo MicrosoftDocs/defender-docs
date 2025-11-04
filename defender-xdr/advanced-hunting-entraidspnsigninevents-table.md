@@ -58,7 +58,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 |`ResourceId`|`string`|Unique identifier of the resource accessed|
 |`ResourceTenantId`|`string`|Unique identifier of the tenant of the resource accessed|
 |`IPAddress`|`string`|IP address assigned to the endpoint and used during related network communications|
-|`Country`|`string`|Two-letter code indicating the country where the client IP address is geolocated|
+|`Country`|`string`|Two-letter code indicating the country/region where the client IP address is geolocated|
 |`State`|`string`|State where the sign-in occurred, if available|
 |`City`|`string`|City where the account user is located|
 |`Latitude`|`string`|The north to south coordinates of the sign-in location|
