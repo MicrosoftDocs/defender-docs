@@ -102,7 +102,7 @@ To execute KQL queries on asset data in the Sentinel data lake, ensure that you 
 1. Navigate to the **Microsoft Sentinel** menu **Data lake exploration** > **KQL queries**
 1. Select the **Selected workspace** button.
 
-    :::image type="content" source="./media.enable-data-connectors/select-workspace.png" alt-text="Screenshot of the KQL queries information bar showing a button to select the workspace.":::
+    :::image type="content" source="./media/enable-data-connectors/select-workspace.png" alt-text="Screenshot of the KQL queries information bar showing a button to select the workspace.":::
 
 1. Ensure that the *System tables* workspace is selected.
 
