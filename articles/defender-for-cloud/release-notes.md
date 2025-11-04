@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 |------|---------|-------|
 | November 18, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
-| November 11, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### Defender for Cloud integration into the Defender portal (preview)
 
@@ -57,12 +57,12 @@ For more information, see [Defender for Cloud in the Defender portal](defender
 
 ### General availability of compliance frameworks
 
-November 11, 2025
+November 3, 2025
 
 The following regulatory compliance standards, previously available in preview, are now generally available in Microsoft Defender for Cloud.
 
-|Standard|Cloud|
-|------------|--------|
+| Standard | Cloud |
+|----------|-------|
 | APRA CPS 234 2019 | Azure, AWS |
 | Australian Government ISM PROTECTED | Azure |
 | Australian Government Information Security Manual 12.2023 | AWS, GCP |
@@ -93,7 +93,7 @@ The following regulatory compliance standards, previously available in preview, 
 | HIPAA | Azure |
 | HITRUST CSF v11.3.0 | Azure, AWS, GCP |
 | ISO/IEC 27001:2022 | Azure, AWS, GCP |
-| ISO/IEC 27002:2022 | Azure, AWS, GCP |<link to the release notes on MSEM> 
+| ISO/IEC 27002:2022 | Azure, AWS, GCP |
 | ISO/IEC 27017:2015 | Azure, AWS, GCP |
 | NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
 | NIST 800-171 Rev 3 | Azure, AWS, GCP |
@@ -123,6 +123,8 @@ The following regulatory compliance standards, previously available in preview, 
 | Singapore MTCS SS 584:2015 | Azure, AWS, GCP |
 | Thailand PDPA 2019 | Azure, AWS, GCP |
 | Japan ISMAP | Azure, AWS, GCP |
+
+Learn more about [regulatory compliance standards in Microsoft Defender for Cloud](concept-regulatory-compliance-standards.md).
 
 ## October 2025
 
