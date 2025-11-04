@@ -123,7 +123,7 @@ The GCloud script creates all of the required resources on your GCP environment 
 
 The final step for onboarding is to review all of your selections and to create the connector.
 
-:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate.png":::
+:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
 
 > [!NOTE]
 > The following APIs must be enabled in order to discover your GCP resources and allow the authentication process to occur:
@@ -192,7 +192,7 @@ Some of the APIs aren't in direct use with the management project. Instead the A
 
 The final step for onboarding is to review all of your selections and to create the connector.
 
-:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate-organization.png" alt-text="Screenshot of the review and generate screen with all of your selections listed for your organization." lightbox="media/quickstart-onboard-gcp/review-and-generate-organization.png":::
+:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate-organization.png" alt-text="Screenshot of the review and generate screen with all of your selections listed for your organization." lightbox="media/quickstart-onboard-gcp/review-and-generate-organization-big.png":::
 
 > [!NOTE]
 > The following APIs must be enabled in order to discover your GCP resources and allow the authentication process to occur:
@@ -249,7 +249,7 @@ To configure the Defender for Servers plan:
 
 1. On the **Auto-provisioning configuration** pane, turn the toggles to **On** or **Off**, depending on your need.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Servers plan." lightbox="media/quickstart-onboard-gcp/auto-provision-screen.png":::
+    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Servers plan." lightbox="media/quickstart-onboard-gcp/auto-provision-screen-big.png":::
 
     If **Azure Arc agent** is **Off**, you need to follow the manual installation process mentioned earlier.
 
@@ -269,7 +269,7 @@ To configure the Defender for Databases plan:
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**, depending on your need.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan." lightbox="media/quickstart-onboard-gcp/auto-provision-databases-screen.png":::
+    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan." lightbox="media/quickstart-onboard-gcp/auto-provision-databases-screen-big.png":::
 
     If the toggle for Azure Arc is **Off**, you need to follow the manual installation process mentioned earlier.
    
@@ -332,7 +332,7 @@ To configure the Defender CSPM plan:
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**. To get the full value of Defender CSPM, we recommend that you turn all toggles to **On**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/cspm-configuration.png" alt-text="Screenshot that shows toggles for Defender CSPM.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/cspm-configuration.png" alt-text="Screenshot that shows toggles for Defender CSPM." lightbox="media/quickstart-onboard-gcp/cspm-configuration-big.png:::
 
 1. Select **Save**.
 
