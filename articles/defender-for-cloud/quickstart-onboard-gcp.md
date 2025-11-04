@@ -362,13 +362,15 @@ To configure GCP Cloud Logging:
 
    1. Create a new GCP Cloud Logging configuration and provide a Pub/Sub subscription name.
 
-      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-create-new-option-page.png" alt-text="Screenshot with the Create a new GCP Cloud Logging option selected and a Pub/Sub subscription name field." lightbox="media/quickstart-onboard-gcp/cloud-logging-create-new-option-page.png":::
+      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-create-new.png" alt-text="Screenshot with the Create a new GCP Cloud Logging option selected and a Pub/Sub subscription name field." lightbox="media/quickstart-onboard-gcp/cloud-logging-create-new.png":::
       
       > [!IMPORTANT]
       > Selecting this option will incur additional cost. [Learn more about GCP Cloud Logging pricing](https://cloud.google.com/pubsub/pricing)
       
    1. Use your existing Cloud Logging configuration by manually providing your existing Pub/Sub subscription name.
-
+   
+     :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Create a new GCP Cloud Logging option selected and a Pub/Sub subscription name field." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
+    
     > [!NOTE]
     > Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
    
@@ -390,9 +392,8 @@ Once configured, Defender for Cloud ingests and analyzes activity logs from Goog
 
 1. Defender for Cloud pulls the logs from Pub/Sub, processes the activity events, and provides:
 
-- Identity and permission insights
-
-- CIEM posture recommendations
+    - Identity and permission insights
+    - CIEM posture recommendations
 
 1. Access between GCP and Defender for Cloud is secured via Google Cloud **IAM roles** and **service accounts** to ensure least-privilege operation.
 
