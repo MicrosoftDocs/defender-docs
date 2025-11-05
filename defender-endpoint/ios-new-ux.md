@@ -20,36 +20,41 @@ search.appverid: met150
 
 # User Experiences in Microsoft Defender for Endpoint on iOS
 
-As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of our MDE mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users. This document outlines the planned updates for MDE Mobile users.
+As part of our ongoing commitment to deliver exceptional user experiences, we're excited to announce a series of upcoming changes to the user interface and overall experience of our **Microsoft Defender for Endpoint** mobile app.
+
+The new enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
 
 ## Key changes - November 2025
 
-Experience change:
+We're please changes make it easier for users to share feedback, including logs, to the Microsoft Defender team. The changes include:
+
+- [A new bottom pane that makes it easer for users to share feedback and logs](#bottom-pane-experience)
+- [A new **Send logs to Microsoft** option that enables users to quickly send logs to Microsoft](#one-click-send-logs-experience)
 
 ### Bottom Pane Experience
 
-When users select **Help and Feedback** in the left navigation pane (accessible by tapping the profile picture), a new bottom feedback pane opens. This pane has been updated to improve readability and make it easier for users to share feedback (as shown in screen 2).
+When users select **Help and Feedback** in the left navigation pane (Screen 1, accessible by tapping the profile picture), a new bottom feedback pane opens. This pane has been updated to improve readability and make it easier for users to share feedback (Screen 2).
 
-:::image type="content" source="./media/android-new-ux/feedback-panes-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu.":::
+The **Send feedback** option in the updated bottom pane enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they are redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
 
-The **Send feedback** option enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they are redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
+:::image type="content" source="./media/ios-new-ux/bottom-experience-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu.":::
 
 ### One-Click *Send Logs* Experience
 
 A new **Send logs to Microsoft** option has been added directly to the left navigation pane. This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 4). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from both the Defender app - it won't include logs from the Authenticator app.
 
 
-## Key changes
+## Key changes - Previous
 
 We are pleased to introduce the **Device Protection** feature card for our enterprise users which includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed. Additionally, a list of features will now be presented in the form of tiles as a part of L2 screens enhancing ease of use and navigation.
 
 **The main changes involved are**:
 
-- Main dashboard changes
-- List the features inside one feature card
-- Detailed features experience
-- Recommendation cards for alerts
-- Onboarding screens
+- [Main dashboard changes](#main-dashboard-changes)
+- [List the features inside one feature card](#list-the-features-inside-one-feature-card)
+- [Detailed features experience](#detailed-features-experience)
+- [Recommendation cards for alerts](#recommendation-cards-for-alerts)
+- [Onboarding screens](#onboarding-screens)
 
 ### Main Dashboard changes
 
