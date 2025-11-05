@@ -1059,8 +1059,8 @@
       "source_path": "defender-for-identity/reversible-passwords-group-policy.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
       "redirect_document_id": false
-    }
-     {
+    },
+    {
       "source_path": "defender-for-identity/built-in-active-directory-guest-account-is-enabled.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
       "redirect_document_id": false
@@ -1075,11 +1075,6 @@
       "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
       "redirect_document_id": false
     },
-    {
-      "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
-      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
-      "redirect_document_id": false
-    }
     {
       "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
