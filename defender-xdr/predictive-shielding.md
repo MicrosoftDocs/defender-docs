@@ -50,11 +50,9 @@ Predictive shielding uses [graph-based prediction logic](#graph-based-prediction
 
 ## How predictive shielding expands on automatic attack disruption
 
-While [automatic attack disruption](automatic-attack-disruption.md) focuses on identifying and neutralizing confirmed malicious activities, Predictive Shielding goes a step further by anticipating potential threats before they materialize. This capability enables organizations to stay ahead of attackers, reducing the likelihood of successful breaches.
+While [automatic attack disruption](automatic-attack-disruption.md) focuses on identifying and neutralizing confirmed malicious activities, predictive shielding goes a step further by anticipating potential threats before they materialize. This capability enables organizations to stay ahead of attackers, reducing the likelihood of successful breaches.
 
-By leveraging predictive analytics and real-time insights, Predictive Shielding dynamically identifies emerging risks and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic threat disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
-
-## Predictive shielding logic
+By leveraging predictive analytics and real-time insights, predictive shielding dynamically identifies emerging risks and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic attack disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
 
 ## Prediction logic
 
@@ -64,7 +62,7 @@ Defender leverages multiple layers of insight to make accurate predictions. Thes
 
 A critical component of this prediction capability is the Exposure Graph, which continuously updates the live topology of the organization. This graph models relationships between assets, identities, and vulnerabilities, providing the context needed to anticipate attacker movements and prioritize defenses effectively.
 
-## Graph-based prediction logic
+## Graph-based logic
 
 Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. By combining live activity data with the structural map of the environment, this approach enables Defender to forecast attacker movements in real time and prioritize defenses effectively.
 
