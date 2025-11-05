@@ -39,7 +39,7 @@ This article provides an overview of predictive shielding so that you can unders
 
 Predictive shielding represents a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Unlike reactive models that rely on high-confidence signals, predictive shielding integrates posture, activity, and scenario context to predict attack progression in real time. This approach enables organizations to identify potential attack paths and targets, selectively hardening critical areas to minimize impact and provide security teams with more time to respond.
 
-The evolving threat landscape exposes the limitations of reactive defense models. Persistent, human-operated attacks exploit the asymmetry between defenders, who must protect every asset, and attackers, who need only one weak point. Predictive shielding addresses this imbalance by dynamically forecasting risks and applying tailored protections where they are most needed, reducing operational overhead and maintaining productivity.
+The evolving threat landscape exposes the limitations of reactive defense models. Persistent, human-operated attacks exploit the asymmetry between defenders, who must protect every asset, and attackers, who need only one weak point. Predictive shielding addresses this imbalance by dynamically forecasting risks and applying tailored protections where they're most needed, reducing operational overhead and maintaining productivity.
 
 Predictive shielding relies on two pillars:  
 
@@ -56,7 +56,7 @@ Predictive shielding uses predictive analytics and real-time insights and dynami
 
 ## Prediction logic
 
-Prediction allows organizations to identify assets at risk and apply tailored protections in real time. By focusing on emerging risks rather than static prevention, this approach minimizes operational friction and ensures that security measures are applied precisely where needed.
+Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed.
 
 Defender XDR uses multiple layers of insight to make accurate predictions:
 
@@ -68,7 +68,7 @@ Together, these insights create a dynamic understanding of the environment and i
 
 ## Graph-based logic
 
-Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. By combining live activity data with the structural map of the environment, this approach enables Defender to forecast attacker movements in real time and prioritize defenses effectively.
+Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment, which enables Defender XDR to forecast attacker movements in real time and prioritize defenses effectively.
 
 The process involves three key stages: 
 
@@ -76,7 +76,7 @@ The process involves three key stages:
 1. Defender identifies the "blast radius"—the assets and configurations that could be impacted next. 
 1. Reasoning models predict paths attackers are most likely to take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
-This dynamic understanding allows Defender to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. By unifying these perspectives, organizations gain a proactive edge in mitigating threats and safeguarding their environments.
+This dynamic understanding allows Defender XDR to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. Organizations can use these three perspectives to gain a proactive edge in mitigating threats and safeguarding their environments.
 
 ## Predictive shielding actions
 
