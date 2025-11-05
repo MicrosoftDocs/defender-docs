@@ -26,9 +26,13 @@ The new enhancements are designed to improve usability, streamline navigation, a
 
 ## Key changes - November 2025
 
-Experience change:
+In this release, we've made it easier for users to share feedback, including logs, to the Microsoft Defender team. The changes include:
 
-### Bottom Pane Experience
+- [A new bottom pane that makes it easier for users to share feedback and logs](#bottom-pane-experience)
+- [A new **Send logs to Microsoft** option that enables users to quickly send logs to Microsoft](#one-click-send-logs-experience)
+
+
+### Bottom pane experience
 
 When users select **Help and Feedback** in the left navigation pane (Screen 1, accessible by tapping the profile picture), a new bottom feedback pane opens (Screen 2). This pane has been updated to improve readability and make it easier for users to share feedback.
 
@@ -36,7 +40,7 @@ The **Send feedback** option in the updated bottom pane enables users to share p
 
 :::image type="content" source="./media/android-new-ux/bottom-experience-android.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu." border="false":::
 
-### One-Click *Send Logs* Experience
+### One-click *Send Logs* experience
 
 A new **Send logs to Microsoft** option has been added directly to the left navigation pane. This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 4). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team will not have access to the logs unless an incident ID is explicitly shared via mail or support request. This option collects logs from both the Defender and Authenticator apps.
 
