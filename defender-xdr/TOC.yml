@@ -146,7 +146,13 @@
         - name: View details and results
           href: autoad-results.md
         - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md           
+          href: automatic-attack-disruption-exclusions.md  
+      - name: Predictive shielding
+        items:
+        - name: Overview
+          href: shield-predict-threats.md        
+        - name: View details and results
+          href: shield-predict-threats-manage.md         
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
