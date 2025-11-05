@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel  
 ms.topic: conceptual
 ms.subservice: sentinel-graph
-ms.date: 10/28/2025
+ms.date: 11/05/2025
 ms.author: edbaynash  
 
 ms.collection: ms-security  
@@ -36,7 +36,7 @@ To configure retention and tiering for the data connector see [Configure data co
 
  ## Microsoft Sentinel XDR data
 
-By default, Microsoft Defender XDR retains threat hunting data in the XDR default tier for 30 days. XDR data isn't ingested into the analytics or data lake tiers by default. Some XDR tables can be ingested into the analytics and data lake tiers by increasing the retention time to more than 30 days. You can also ingest XDR data directly into the data lake tier without the analytics tier. For more information, see [Manage XDR data in Microsoft Sentinel](../manage-data-overview.md#manage-xdr-data-in-microsoft-sentinel). 
+By default, Microsoft Defender XDR retains threat hunting data in the Analytics tier for 30 days. This data is always available. Some XDR tables can be ingested into the analytics and data lake tiers by increasing the retention time to more than 30 days. You can also ingest XDR data directly into the data lake tier without the analytics tier. For more information, see [Manage XDR data in Microsoft Sentinel](../manage-data-overview.md#manage-xdr-data-in-microsoft-sentinel). 
 
 
 ## Custom log tables

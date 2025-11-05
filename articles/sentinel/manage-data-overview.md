@@ -5,7 +5,7 @@ ms.reviewer: dzatakovi
 ms.author: guywild
 author: guywi-ms
 ms.topic: conceptual
-ms.date: 10/28/2025
+ms.date: 11/05/2025
 # Customer intent: As an Microsoft Defender Portal administrator or subscription owner, I want to configure log table tiers and data retention settings to optimize security operations needs and cost efficiency.
 ---
 
@@ -26,7 +26,7 @@ This section describes the table types you can manage in the Microsoft Defender 
 
 | Table type                      | Description                                                                                                    | Examples                                             | Is in Microsoft Sentinel workspace?         |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------|----------------------------------|
-| **Microsoft Sentinel**    | Built-in tables, including:<br>- Azure tables, such as AzureDiagnostics and SigninLogs.<br>- Microsoft Sentinel tables.<br>- [Microsoft Defender XDR integration with Microsoft Sentinel](connect-microsoft-365-defender.md?tabs=MDE#connect-events), which are created in your Microsoft Sentinel workspace when you increase the retention period beyond 30 days. See the **XDR** table type for Defender XDR tables that are currently unsupported.             | - Azure tables: `AzureDiagnostics`, `SigninLogs`<br>- Microsoft Sentinel tables: `AWSCloudTrail`, `SecurityAlert`<br>- XDR tables: `DeviceEvents`,<br>`AlertInfo`                 | Yes                              |
+| **Microsoft Sentinel**    | Built-in tables, including:<br>- Azure tables, such as AzureDiagnostics and SigninLogs.<br>- Microsoft Sentinel tables.<br>- [Microsoft Defender XDR integration with Microsoft Sentinel](connect-microsoft-365-defender.md?tabs=MDE#connect-events), which are created in your Microsoft Sentinel workspace when you increase the analytics retention period beyond 30 days. See the **XDR** table type for Defender XDR tables that are currently unsupported.             | - Azure tables: `AzureDiagnostics`, `SigninLogs`<br>- Microsoft Sentinel tables: `AWSCloudTrail`, `SecurityAlert`<br>- XDR tables: `DeviceEvents`,<br>`AlertInfo`                 | Yes                              |
 | **Custom**                | Tables you create manually or through jobs in your Microsoft Sentinel workspace, including summary rule and search job results tables, and custom data source tables. | Tables with `_CL` or `_SRCH` suffixes.                                                      | Yes                              |
 | **XDR**| Tables in the XDR default tier, which have 30 days of analytics retention by default. You can view these tables, but you can't manage them from the Defender portal.                                                                       | `IdentityInfo` | No |
 
@@ -44,7 +44,7 @@ You can retain data in Microsoft Sentinel in one of two tiers:
 
 * **Data lake tier**: In this low-cost "cold" tier, Microsoft Sentinel retains your data in the lake only. Data in the data lake tier isn't available for real-time analytics features and threat hunting. However, you can access data in the lake whenever you need it through [KQL jobs](datalake/kql-jobs.md), analyze trends over time by running scheduled KQL or Spark jobs, and aggregate insights from incoming data at a regular cadence by using summary rules. 
 
-* **XDR default tier**: By default, Microsoft Defender XDR retains threat hunting data in the XDR default tier, which includes 30 days of analytics retention, included in the XDR license. This data isn't ingested into the analytics or data lake tiers unless you extend the retention period of supported Defender XDR tables beyond 30 days and ingest the data into the analytics tier and the data lake tier. You can also ingest exclusively into the data lake tier. For more information, see [Manage XDR data in Microsoft Sentinel](#manage-xdr-data-in-microsoft-sentinel).
+* **XDR data**: By default, Microsoft Defender XDR threat hunting data is always available in the analytics tier for 30 days. Customers can extend retention of this data in analytics tier to up to 90 days, included in the XDR license for no additional cost. You can also ingest exclusively into the data lake tier but the data is always available in analytics tier for 30 days in this state. 
 
 For more information about the differences between these two retention types, see [Compare the analytics and data lake tiers](#compare-the-analytics-and-data-lake-tiers).
 
@@ -125,7 +125,6 @@ In the following examples, XDR data is available through advanced hunting for at
 | 30 days default | 30 days default| No additional costs | N/A  | N/A |
 | 90 days | 90 days | Costs apply for analytics tier ingestion. | No additional costs. 90 days included free. | No additional costs. Total retention matches analytics tier retention.|
 | 90 days | 180 days | Costs apply for analytics tier ingestion. | No additional costs; 90 days included free. | Costs apply for 90 days of additional data lake retention (180 - 90 days). |
-| 30 days with connector enabled | 180 days | Costs apply for analytics tier ingestion. | No additional costs; 90 days included free. | Costs apply for 150 days of additional data lake retention (180 - 30 days). |
 | 180 days | 1 year | Costs apply for analytics tier ingestion. | Costs apply for 90 days of additional analytics tier retention. | Costs apply for 185 days of additional data lake retention (365 - 180 days). |
 | 0 days (data lake only) | 5 years | N/A | N/A | Costs apply for ingestion and for 5 years of data lake retention. |
 

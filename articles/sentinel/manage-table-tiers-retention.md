@@ -5,7 +5,7 @@ ms.reviewer: dzatakovi
 ms.author: guywild
 author: guywi-ms
 ms.topic: conceptual
-ms.date: 10/28/2025
+ms.date: 11/05/2025
 # Customer intent: As an IT administrator or subscription owner, I want to manage Microsoft Sentinel and Defender XDR table tiers and retention settings in Microsoft Defender Portal to optimize security operations needs and cost efficiency.
 ---
 
@@ -62,7 +62,7 @@ To view and manage table settings in the Microsoft Defender portal, follow these
     
     - **Analytics tier retention settings**:     
       - **Analytics retention**: 30 days to two years.
-      - **Total retention**: Up to 12 years of long-term storage in the data lake. By default, total retention is equal to analytics retention, which means long-term retention isn't applied. To enable long-term retention, set the total retention to a value greater than analytics retention. 
+      - **Total retention**: Up to 12 years of long-term storage in the data lake. By default, all analytics tier data is mirrored to the data lake tier, total retention is equal to analytics retention, which means there's no additional long-term retention. To enable long-term retention, set the total retention to a value greater than analytics retention. 
       
         Example: To retain six months of data in long-term retention total and 90 days of data in analytics retention, set **Analytics retention** to 90 days and **Total retention** to 180 days.
     - **Data lake tier**: Set **Retention** to a value between 30 days and 12 years. Selecting **Data lake tier** stores data exclusively in the data lake.
