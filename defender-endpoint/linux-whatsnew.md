@@ -46,8 +46,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 |Build:             |**101.25092.0001**    |
 |-------------------|----------------------|
-|Released:          |**October 31, 2025**|
-|Published:         |**October 31, 2025**|
+|Released:          |**November 05, 2025**|
+|Published:         |**November 05, 2025**|
 |Expiry:            |**July 10, 2026**|
 |Release version:   |**30.125092.0001.0**|
 |Engine version:    |**1.1.25090.6000**|
