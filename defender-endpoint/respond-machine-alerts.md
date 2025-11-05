@@ -360,7 +360,7 @@ When an identity in your network might be compromised, you must prevent that ide
 
 ### Contain user important notes
 
-- When the contain user action is triggered by [predictive shielding](/defender-xdr/shield-predict-threats.md), the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
+- When the contain user action is triggered by [predictive shielding](/defender-xdr/shield-predict-threats), the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
 - Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
 - **Important**: Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
 
@@ -402,9 +402,9 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 
 ## Predictive shielding actions
 
-As part of the [predictive shielding](/defender-xdr/shield-predict-threats.md) feature, Defender for Endpoint automatically applies the following actions.
+As part of the [predictive shielding](/defender-xdr/shield-predict-threats) feature, Defender for Endpoint automatically applies the following actions.
 
-To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage.md#enrich-predictive-shielding-data).
+To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage#enrich-predictive-shielding-data).
 
 ### GPO hardening
 
@@ -416,7 +416,7 @@ Defender for Endpoint automatically applies Safeboot hardening to Windows device
 
 ### Investigative capabilities with predictive shielding actions
 
-After predictive shielding actions are applied, you can view the actions' impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage.md).
+After predictive shielding actions are applied, you can view the actions' impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
 ## Consult a threat expert
 
