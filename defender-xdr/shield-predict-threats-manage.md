@@ -36,7 +36,7 @@ This article describes how to manage predictive shielding so that you can unders
 
 Enrich predictive shielding data to improve security insights and expand coverage. The unified sensor combines endpoint and identity data into a single installation, removing the need for separate setups and enhancing detection capabilities. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
 
-For more information, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity.md).
+For more information, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
 
 For example, this screenshot shows how enriched data appears in an incident, in an environment with both Microsoft Defender for Endpoint and Microsoft Defender for Identity enabled:
 
