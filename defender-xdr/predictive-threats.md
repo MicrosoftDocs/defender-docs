@@ -72,21 +72,23 @@ Graph-based prediction logic bridges the gap between pre-breach and post-breach 
 
 The process involves three key stages: 
 
-1. Defender overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. 
-1. Defender identifies the "blast radius"—the assets and configurations that could be impacted next. 
+1. Defender XDR overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. 
+1. Defender XDR identifies the "blast radius"—the assets and configurations that could be impacted next. 
 1. Reasoning models predict paths attackers are most likely to take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
 This dynamic understanding allows Defender XDR to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. Organizations can use these three perspectives to gain a proactive edge in mitigating threats and safeguarding their environments.
 
 ## Predictive shielding actions
 
-Predictive shielding uses Defender XDR-based XDR response actions. Examples of these actions are:
+Predictive shielding uses Defender for Endpoint-based response actions.  To use these actions, you need a Defender for Endpoint license. 
 
-- Safeboot hardening - based on Microsoft Defender for Endpoint capability. This action hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
+These actions are:
 
-- GPO hardening - based on Microsoft Defender for Endpoint capability, this action hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
+- Safeboot hardening - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
-- [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with devices onboarded to Defender for Endpoint.
+- GPO hardening - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
+
+- [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with devices onboarded to Defender for Endpoint.
 
 ## Identify when predictive shielding happens in your environment
 
