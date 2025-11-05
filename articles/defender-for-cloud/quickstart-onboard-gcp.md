@@ -52,17 +52,17 @@ To complete the procedures in this article, you need:
 
 - To ingest GCP Cloud Logging with Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice:
 
-   1. If you create new Cloud Logging and Pub/Sub resources:
+   - If you create new Cloud Logging and Pub/Sub resources:
    
       - Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
       
       - IAM permissions to configure Pub/Sub and manage service accounts.
       
-   1. If you plan to use existing Cloud Logging and Pub/Sub resources:
+   - If you plan to use existing Cloud Logging and Pub/Sub resources:
    
-      1. Access to the existing Cloud Logging and Pub/Sub resources.
+      - Access to the existing Cloud Logging and Pub/Sub resources.
       
-      1. Understanding of your organization's existing log retention and Pub/Sub configurations.
+      - Understanding of your organization's existing log retention and Pub/Sub configurations.
       
 You can learn more about Defender for Cloud pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
