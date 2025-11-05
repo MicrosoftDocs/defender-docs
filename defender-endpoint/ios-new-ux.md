@@ -37,7 +37,7 @@ When users select **Help and Feedback** in the left navigation pane (Screen 1, a
 
 The **Send feedback** option in the updated bottom pane enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they are redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
 
-:::image type="content" source="./media/ios-new-ux/bottom-experience-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu.":::
+:::image type="content" source="./media/ios-new-ux/bottom-pane-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu.":::
 
 ### One-Click *Send Logs* Experience
 
