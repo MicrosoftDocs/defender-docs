@@ -874,8 +874,8 @@
       "source_path": "defender-for-identity/support.md",
       "redirect_url": "/defender-xdr/contact-defender-support",
       "redirect_document_id": false
-    }
-     {
+    },
+    {
       "source_path": "defender-for-identity/assign-multi-factor-authentication-okta-privileged-user-accounts.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
       "redirect_document_id": false
@@ -994,8 +994,8 @@
       "source_path": "defender-for-identity/security-assessment-weak-cipher.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
       "redirect_document_id": false
-    }
-     {
+    },
+    {
       "source_path": "defender-for-identity/security-assessment-enforce-encryption-rpc.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
       "redirect_document_id": false
