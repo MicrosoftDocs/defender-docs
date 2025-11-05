@@ -64,7 +64,7 @@ You can also specify a time range in the KQL query syntax, for example:
 
 
 > [!NOTE]
-> Queries are limited to 500,000 rows or 64 MB of data and timeout after eight minutes. When selecting a broad time range, your query might exceed these limits.
+> Queries are limited to 500,000 rows or 64 MB of data and timeout after 8 minutes. When selecting a broad time range, your query might exceed these limits.
 
 ### View schema information
 
@@ -96,11 +96,14 @@ Select a query from the list to open it in a new query tab in the editor.
 
 You can run long-running queries asynchronously, so you can keep working while the query runs on the server. To run a query asynchronously, select the down arrow on the **Run query** button, then select **Run async query**. Enter a query name to identify your async query. After submitting the query, you can monitor its status in the **Async Queries** tab. When the query completes, you can view the results by selecting the query name from the list.
 
-If a synchronous query takes longer than two minutes to run, a prompt appears asking if you want to run the query asynchronously. Select **Run async** to change the query to run asynchronously.
 
 Select the completed async query from the **Async Queries** tab to view its results in a new query tab. Results are stored for 24 hours and can be accessed multiple times. You can export the results to a CSV file by using the **Export** button in the upper left corner of the result window.
 
 :::image type="content" source="media/kql-queries/run-async-query.png" lightbox="media/kql-queries/run-async-query.png" alt-text="A screenshot showing the Async Queries tab in the KQL query editor.":::
+
+If a synchronous query takes longer than 2 minutes to run, a prompt appears asking if you want to run the query asynchronously. Select **Run async** to change the query to run asynchronously.
+
+:::image type="content" source="media/kql-queries/change-to-async-query.png" lightbox="media/kql-queries/change-to-async-query.png" alt-text="A screenshot showing the prompt to change a long-running query to an async query.":::
 
 
 ### Result window
