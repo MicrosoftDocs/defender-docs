@@ -29,6 +29,18 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 #### October 2025
 
+| Build| 1.0.8217.0101 |
+| -------- | -------- |
+| Release Date   | October 28   |
+
+**What's New**
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/android-whatsnew/image.png)
+  
+- #### October 2025
+
 | Build| 1.0.8201.0101|
 | -------- | -------- |
 | Release Date | October 2, 2025 |
