@@ -1275,7 +1275,7 @@
           - name: Connect GitLab environments
             href: quickstart-onboard-gitlab.md
           - name: Configure the Microsoft Security DevOps Azure DevOps extension
-            href: azure-devops-extension.yml
+            href: configure-azure-devops-extension.md
           - name: Configure the Microsoft Security DevOps GitHub action
             href: github-action.md
           - name: Integrate Defender for Cloud CLI with CI/CD pipelines
