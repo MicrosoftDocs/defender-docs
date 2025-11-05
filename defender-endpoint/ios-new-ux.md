@@ -53,7 +53,7 @@ We're pleased to introduce the **Device Protection** feature card for our enterp
 
 - [Main dashboard changes](#main-dashboard-changes)
 - [List the features inside one feature card](#list-the-features-inside-one-feature-card)
-- [Detailed features experience](#detailed-features-experience)
+- [Detailed features experience](#detailed-feature-experience)
 - [Recommendation cards for alerts](#recommendation-cards-for-alerts)
 - [Onboarding screens](#onboarding-screens)
 
@@ -69,7 +69,7 @@ One feature card called **Device Protection** lists Web Protection, Device Healt
 
 :::image type="content" source="media/mde-ios-list-new.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint Feature Card." lightbox="media/mde-ios-list-new.png":::
 
-### Detailed Feature Experience
+### Detailed feature experience
 
 We updated all the subordinating screens associated with the **Device Protection** feature
 
@@ -81,7 +81,7 @@ We updated all the subordinating screens associated with the **Device Protection
 
    :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the Defender for Endpoint on iOS app." lightbox="media/mde-device-health-new.png":::
 
-### Recommendation Cards for Alerts
+### Recommendation cards for alerts
 
 The structure of the dashboard is updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards are implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard. Here are a few examples:
 
@@ -93,7 +93,7 @@ The structure of the dashboard is updated to include a recommendation card that 
 
     :::image type="content" source="media/mde-ios-device-health-rec-card.png" alt-text="Screenshot that shows the device health recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-device-health-rec-card.png":::
 
-### Onboarding Screens
+### Onboarding screens
 
 This section details these changes:
 
@@ -103,7 +103,7 @@ This section details these changes:
 
 * TVM EUPI Screen
 
-### VPN Permission flow while Onboarding 
+### VPN permission flow while onboarding 
 
 This is the main VPN Permission screen that appears to the enterprise's users as per our latest rollout of enhancements in the application. 
 
@@ -124,13 +124,13 @@ This is the main VPN Permission screen that appears to the enterprise's users as
    :::column-end:::
 :::row-end:::
 
-### VPN Permission flow after Onboarding
+### VPN permission flow after onboarding
 
 This screen is seen when the VPN configuration is deleted from user's device, and the VPN needs to be re-enabled.
 
 :::image type="content" source="media/ios-vpn-re-enable.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint mobile iOS re-enable screen." lightbox="media/mde-ios-list-new.png":::
 
-### TVM EUPI Screen
+### TVM EUPI screen
 
 We've enhanced the TVM EUPI screen as made it align with our current code flow.
 
