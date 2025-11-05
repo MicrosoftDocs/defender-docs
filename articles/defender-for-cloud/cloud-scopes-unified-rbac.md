@@ -337,4 +337,12 @@ Full lifecycle management (creation, membership, advanced filtering, multicloud 
 
 For end-to-end cloud scopes and unified RBAC administration, use the Defender portal.
 
+> [!NOTE]
+> **Understanding Permissions in Defender vs. Azure**  
+> Defender uses **uRBAC (Unified Role-Based Access Control)**, which is separate from **Azure RBAC**.  
+> - **Azure RBAC** controls access at the Azure resource level (subscriptions, resource groups).  
+> - **uRBAC** provides finer-grained permissions within the Defender portal, letting you assign roles for specific security actions and cloud scopes across Defender solutions.  
+>
+> This means permissions in Defender are tailored for security tasks and do not depend on Azure RBAC roles.
+
 ::: zone-end
