@@ -23,8 +23,8 @@ ms.date: 11/04/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
-- 
-- #customer intent: As a security operations analyst, I want to gain insights into specific incidents so that I can manage my workload effectively.
+
+#customer intent: As a security operations analyst, I want to gain insights into specific incidents so that I can manage my workload effectively.
 ---
 
 # Manage incidents in Microsoft Defender
@@ -70,12 +70,11 @@ Select **IIncidents & alerts > Incidents** on the quick launch of the Microsoft 
 
 ### [From the incident queue](#tab/queue)
 
-From the incident queue, access the **Manage incident** pane in one of two ways:
+To access the **Manage incident** pane from the incident queue, select the check box of an incident, and select **Manage incidents** from the toolbar above the filters. Manage many incidents at once by selecting multiple check boxes.
 
-    - Select the check box of an incident, and select **Manage incidents** from the toolbar above the filters. Manage many incidents at once by selecting multiple check boxes.
-    - Select the row of an incident (without selecting the incident name), so that the incident details pane appears, and select **Manage incident** from the incident details pane.
+Alternatively, you can select the row of an incident (without selecting the incident name), so that the incident details pane appears, and select **Manage incident** from the incident details pane.
 
-        :::image type="content" source="./media/manage-incidents/manage-incidents-from-queue.png" alt-text="Screenshot showing how to manage incidents from the incidents queue in the Microsoft Defender portal." lightbox="./media/manage-incidents/select-manage-incident.png":::
+    :::image type="content" source="./media/manage-incidents/manage-incidents-from-queue.png" alt-text="Screenshot showing how to manage incidents from the incidents queue in the Microsoft Defender portal." lightbox="./media/manage-incidents/select-manage-incident.png":::
 
 ### [From the incident page](#tab/incident-page)
 
