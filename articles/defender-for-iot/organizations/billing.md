@@ -15,6 +15,10 @@ As you plan your Microsoft Defender for IoT deployment, you typically want to un
 
 **Enterprise IoT monitoring** supports 5 devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as standalone, per-device licenses for Microsoft Defender for Endpoint P2 customers.
 
+This article is relevant for commercial Defender for IoT customers.
+
+If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
+
 ## Free trial
 
 To evaluate Defender for IoT, start a free trial as follows:
