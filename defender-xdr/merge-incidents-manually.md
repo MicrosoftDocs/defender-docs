@@ -44,6 +44,8 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 1. In the **Reason for merging** text box, type a description of the reason why you want to merge the incidents.
 
+1. Provide feedback explaining why you are merging the incidents by selecting one of the predefined options. This step helps Microsoft improve alert correlation in the future.
+
 1. Select **Merge incidents** at the bottom of the flyout to execute the merge.
 
     :::image type="content" source="media/merge-incidents-manually/merge-incidents-panel-from-queue.png" alt-text="Screenshot of merging incidents from queue.":::
