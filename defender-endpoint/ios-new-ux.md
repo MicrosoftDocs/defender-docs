@@ -33,7 +33,7 @@ In this release, we've made it easier for users to share feedback, including log
 
 ### Bottom pane experience
 
-When users select **Help and Feedback** in the left navigation pane (Screen 1, accessible by tapping the profile picture), a new bottom feedback pane opens. This pane has been updated to improve readability and make it easier for users to share feedback (Screen 2).
+When users select **Help and Feedback** in the left navigation pane (Screen 1, accessible by tapping the profile picture), a new bottom feedback pane opens (Screen 2). This pane has been updated to improve readability and make it easier for users to share feedback.
 
 The **Send feedback** option in the updated bottom pane enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they're redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
 
