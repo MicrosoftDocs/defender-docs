@@ -4,8 +4,8 @@ description: Predictive shielding dynamically infers risk, anticipates attacker 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: limwainstein
-author: lwainstein
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
