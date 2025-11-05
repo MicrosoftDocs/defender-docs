@@ -150,10 +150,10 @@ The following table lists the available uRBAC roles and their permissions.
 
 | **Role**                | **Permissions**                                                                                              | **Description**                                                                 |
 |-------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| **Security data basics** - | Read | Access alerts, incidents, investigations, hunting, devices, cloud assets, and reports. Includes cloud inventory and threat protection. |
-| **Alerts**        | Manage | Manage alerts, investigations, scans, device tags, and packages. Includes cloud threat protection features. |
-| **Vulnerability Management** | Read | View vulnerability data: software inventory, weaknesses, missing KBs, baselines, hunting, and devices. Includes data lake (Preview). |
-| **Exposure Management**| Read/Manage  | View or manage exposure insights, including Secure Score, recommendations, initiatives, and metrics.|
+| **Security data basics**: Security operations / Security data / Security data basics (read)   | Read | Access alerts, incidents, investigations, hunting, devices, cloud assets, and reports. Includes cloud inventory and threat protection. |
+| **Alerts**: Security operations / Security data / Alerts (manage) | Manage | Manage alerts, investigations, scans, device tags, and packages. Includes cloud threat protection features. |
+| **Vulnerability Management**: Security posture / Posture management / Vulnerability management (read) | Read | View vulnerability data: software inventory, weaknesses, missing KBs, baselines, hunting, and devices. Includes data lake (Preview). |
+| **Exposure Management**: Security posture / Posture management / Exposure Management (read); Security posture / Posture management / Exposure Management (manage) | Read/Manage  | View or manage exposure insights, including Secure Score, recommendations, initiatives, and metrics.|
 
 > [!NOTE]
 > Roles can be combined for broader access, but always apply least-privilege principles. Some capabilities may require additional permissions or feature enablement.
