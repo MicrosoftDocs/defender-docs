@@ -85,21 +85,15 @@ When using file integrity monitoring with the Defender for Endpoint agent, we re
 
 You can create custom rules to monitor specific files or folders as long as they meet the following validation criteria:
 
-- A maximum of three asterisks `*` are allowed in the path (maximum depth).
+- A maximum of three asterisks `*` are allowed in the path (maximum depth). Wildcards (`*`) are allowed only at the start or end of a path segment.
 
 - Paths with three asterisks must not end with `/` or `\`.
 
-- Windows registry paths must start with `HKLM\` and follow standard registry naming rules.
+- Windows registry paths must start with `HKLM` or `hklm` and may only contain letters, numbers, spaces, `_`, `.`, `\`, `:`. Wildcards (`*`) are allowed only at the start or end of a path segment.
 
-- Windows file paths must be valid and can't include `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, or `|`.
+- Windows file paths may only contain letters, numbers, spaces, `_`, `.`, `\`, `*`, `?`, `:` and must not contain `/`.
 
-- Linux file paths must be absolute (start with `/`) and can't include `< > : | "`.
-
-- Windows paths can only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `*`, `?`, `:`, and must not contain `/`.
-
-- Linux paths can only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `/`, `*`, or `:`.
-
-- Registry paths can only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `:`, and must not contain `*`.
+- Linux file paths must be absolute (start with `/`) and may only contain letters, numbers, spaces, `_`, `.`, `/`, `*`, `:`.
 
 - All paths must meet the system’s maximum path length (260 characters) and maximum depth (three asterisks) rules.
 
