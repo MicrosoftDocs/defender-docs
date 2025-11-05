@@ -53,6 +53,13 @@ The incident page includes the following information:
 
 To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
 
+## Track the actions in the Action center
+
+The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) brings together [remediation](m365d-remediation-actions.md) and response actions across your devices, email and collaboration content, and identities. Actions listed include manual or automatic remediation actions. You can view predictive shielding actions in the Action center.
+
+You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
 ## Next steps
 
 TBD
