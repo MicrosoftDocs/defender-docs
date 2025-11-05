@@ -26,7 +26,7 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
   - **GKE clusters should have Microsoft Defender's extension for Azure Arc installed**
   - **Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed**
   - **GKE clusters should have the Azure Policy extension installed**
-- If you're experiencing problems with deleting the AWS or GCP connector, check the Azure Activity log in **Monitor** for failed delete operations caused by resource locks. If a lock is present, see [Manage locks to prevent resources from being deleted or changed](/azure/azure-resource-manager/management/lock-resources) to remove it and try again.
+- If you're experiencing problems with deleting the AWS or GCP connector, check the Azure Activity log for failed delete operations caused by resource locks. If a lock is present, see [Manage locks to prevent resources from being deleted or changed](/azure/azure-resource-manager/management/lock-resources) to remove it and try again.
 - Check that workloads exist in the AWS account or GCP project.
 
 ### Tips for AWS connector problems
