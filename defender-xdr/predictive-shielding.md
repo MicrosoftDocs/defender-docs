@@ -70,7 +70,11 @@ Together, these insights create a dynamic understanding of the environment and i
 
 Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. By combining live activity data with the structural map of the environment, this approach enables Defender to forecast attacker movements in real time and prioritize defenses effectively.
 
-The process involves three key stages. First, Defender overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. Next, it identifies the "blast radius"—the assets and configurations that could be impacted next. Finally, reasoning models predict the most likely paths attackers will take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
+The process involves three key stages: 
+
+1. Defender overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. 
+1. Defender identifies the "blast radius"—the assets and configurations that could be impacted next. 
+1. Reasoning models predict the most likely paths attackers will take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
 This dynamic understanding allows Defender to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. By unifying these perspectives, organizations gain a proactive edge in mitigating threats and safeguarding their environments.
 
