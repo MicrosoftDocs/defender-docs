@@ -144,7 +144,7 @@ To help you control your Analytics tier budget, you can create a cost management
 
 The Microsoft Sentinel GitHub community provides the [`Send-IngestionCostAlert`](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Send-IngestionCostAlert) cost management playbook on GitHub. This playbook is activated by a recurrence trigger, and gives you a high level of flexibility. You can control execution frequency, ingestion volume, and the message to trigger, based on your requirements.
 
-## Manage and monitor costs for the Data lake tier
+## Manage and monitor costs for the data lake tier
 
 Once onboarded, usage of data lake tier capabilities is billed using new Microsoft Sentinel data lake meters. For more information on the new meters, see [Data lake tier](billing.md#data-lake-tier).
 
@@ -153,7 +153,7 @@ Once onboarded, usage of data lake tier capabilities is billed using new Microso
 The new cost management experience, currently in preview and under **Microsoft Sentinel** > **Cost management** in the [Microsoft Defender portal](https://security.microsoft.com), helps you manage and monitor costs associated with your use of the data lake tier.
 
 >[!IMPORTANT]
->You must have both the Billing Administrator and Security Administrator roles to access the Sentinet cost management pages. 
+>You must have both the Billing Administrator and Security Administrator roles to access the Sentinel cost management pages. 
 
 #### Usage
 
