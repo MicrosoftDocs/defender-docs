@@ -74,7 +74,7 @@ To access the **Manage incident** pane from the incident queue, select the check
 
 Alternatively, you can select the row of an incident (without selecting the incident name), so that the incident details pane appears, and select **Manage incident** from the incident details pane.
 
-    :::image type="content" source="./media/manage-incidents/manage-incidents-from-queue.png" alt-text="Screenshot showing how to manage incidents from the incidents queue in the Microsoft Defender portal." lightbox="./media/manage-incidents/select-manage-incident.png":::
+:::image type="content" source="./media/manage-incidents/manage-incidents-from-queue.png" alt-text="Screenshot showing how to manage incidents from the incidents queue in the Microsoft Defender portal." lightbox="./media/manage-incidents/select-manage-incident.png":::
 
 ### [From the incident page](#tab/incident-page)
 
