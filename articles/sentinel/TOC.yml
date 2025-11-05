@@ -606,6 +606,8 @@
             href: datalake/sentinel-mcp-data-exploration-tool.md
           - name: Agent creation
             href: datalake/sentinel-mcp-agent-creation-tool.md
+          - name: Microsoft Defender
+            href: datalake/sentinel-mcp-defender-tool.md
         - name: Troubleshooting
           href: datalake/troubleshoot-sentinel-mcp.md
         - name: Billing, limits, and availability
