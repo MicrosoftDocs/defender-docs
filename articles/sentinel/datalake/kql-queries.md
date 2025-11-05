@@ -14,7 +14,7 @@ ms.collection: ms-security
  
 #  Run KQL queries against the Microsoft Sentinel data lake
  
-Data lake exploration in the Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them.
+Data lake exploration in the Microsoft Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them.
 
 The **KQL queries** page under **Data lake exploration** lets you edit and run KQL queries on data lake resources. Create jobs to promote data from the data lake to the analytics tier, or create aggregate tables in the data lake tier. Run jobs on demand or schedule them. The **Jobs** page lets you manage jobs; enable, disable, edit, or delete. For more information, see [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md).
 
@@ -38,23 +38,23 @@ Writing queries for the data lake is similar to writing queries in the advanced 
 
 ## KQL queries in the Defender portal
 
-Select **New query** to create a new query tab. The last query in each tab is saved. Switch between tabs to work on multiple queries simultaneously.   
+Select **New query** to create a new query tab. The portal saves the last query in each tab. Switch between tabs to work on multiple queries simultaneously.   
 
-The **Query history** tab shows a list of your previously run queries, query processing time and completion state. You can open a previous query in a new tab by selecting it from the list. The query history is saved for 30 days. Select a query to edit or run it again.
+The **Query history** tab shows a list of your previously run queries, query processing time, and completion state. You can open a previous query in a new tab by selecting it from the list. The portal saves the query history for 30 days. Select a query to edit or run it again.
 
 :::image type="content" source="media/kql-queries/query-editor.png" alt-text="Screenshot of the Kql queries page in the Defender portal." lightbox="media/kql-queries/query-editor.png":::
 
 
 ### Select workspaces
 
-Queries can run against a single workspace or multiple workspaces.  Select workspaces in the upper right corner of the query editor using the **Selected workspaces** dropdown. The workspaces you select determine the tables available for querying. The selected workspaces apply to all query tabs in the query editor. When using multiple workspaces, the `union()` operator is applied by default to tables with the same name and schema from different workspaces. Use the `workspace()` operator to query a table from a specific workspace, for example `workspace("MyWorkspace").AuditLogs`. 
+You can run queries against a single workspace or multiple workspaces.  Select workspaces in the upper right corner of the query editor by using the **Selected workspaces** dropdown. The workspaces you select determine the tables available for querying. The selected workspaces apply to all query tabs in the query editor. When you use multiple workspaces, the `union()` operator is applied by default to tables with the same name and schema from different workspaces. Use the `workspace()` operator to query a table from a specific workspace, for example `workspace("MyWorkspace").AuditLogs`. 
 
-If you select a single, empty workspace or a workspace in the process of onboarding, no tables are displayed in the schema browser.
+If you select a single, empty workspace or a workspace in the process of onboarding, the schema browser doesn't display any tables.
 
 :::image type="content" source="media/kql-queries/select-a-workspace.png" lightbox="media/kql-queries/select-a-workspace.png" alt-text="A screenshot showing the workspaces selection panel.":::
 
 ### Time range selection
-Use the time picker above the query editor to select the time range for your query. Using the **Custom time range** option, you can set a specific start and end time. Time ranges can be up to 12 years in duration.
+Use the time picker above the query editor to select the time range for your query. By using the **Custom time range** option, you can set a specific start and end time. Time ranges can be up to 12 years in duration.
 
 :::image type="content" source="media/kql-queries/time-range-selector.png" lightbox="media/kql-queries/time-range-selector.png" alt-text="A screenshot showing the time range selector.":::
 
@@ -64,17 +64,17 @@ You can also specify a time range in the KQL query syntax, for example:
 
 
 > [!NOTE]
-> Queries are limited to 500,000 rows or 64 MB of data and timeout after 8 minutes. When selecting a broad time range, your query may exceed these limits.
+> Queries are limited to 500,000 rows or 64 MB of data and timeout after eight minutes. When selecting a broad time range, your query might exceed these limits.
 
 ### View schema information
 
-The schema browser provides a list of available tables and their columns for the selected workspaces, grouped by category. System tables appear in the **Assets** category. Custom tables have `_CL`, `_KQL_CL`, `_SPARK`,`_SPARK_CL` are grouped the **Custom logs** category. Use the schema browser to explore the data available in your data lake and discover tables and columns. Use the search box to quickly find specific tables.
+The schema browser provides a list of available tables and their columns for the selected workspaces, grouped by category. System tables appear in the **Assets** category. Custom tables with `_CL`, `_KQL_CL`, `_SPARK`, and `_SPARK_CL` are grouped in the **Custom logs** category. Use the schema browser to explore the data available in your data lake and discover tables and columns. Use the search box to quickly find specific tables.
 
 :::image type="content" source="media/kql-queries/schema-browser.png" lightbox="media/kql-queries/schema-browser.png" alt-text="A screenshot showing the schema browser panel in the KQL editor.":::
 
-## Out of the box queries
+## Out-of-the-box queries
 
-The **Queries** tab provides a collection of out-of-the-box KQL queries grouped by scenarios. Initial scenarios include the following which each scenario containing several queries:
+The **Queries** tab provides a collection of out-of-the-box KQL queries grouped by scenarios. Initial scenarios include the following scenarios, each containing several queries:
 + Sudden expansion of sign-in locations for users and apps 
 + Rare or sensitive Azure subscription-level operations 
 + SharePoint downloads from previously unseen IPs (data exfiltration) 
@@ -86,11 +86,22 @@ The **Queries** tab provides a collection of out-of-the-box KQL queries grouped 
 + Daily summarization for anomaly detection
 + Threat intelligence matching
 
-More scenarios and queries will be added over time. For community contributions see the [Microsoft Sentinel GitHub repository](https://aka.ms/sentinel-github-outofthebox-queries).
+More scenarios and queries will be added over time. For community contributions, see the [Microsoft Sentinel GitHub repository](https://aka.ms/sentinel-github-outofthebox-queries).
 
 Select a query from the list to open it in a new query tab in the editor.
 
 :::image type="content" source="media/kql-queries/out-of-the-box-queries.png" alt-text="Screenshot of the Sample queries tab in the KQL query editor." lightbox="media/kql-queries/out-of-the-box-queries.png":::
+
+## Async queries
+
+You can run long-running queries asynchronously, so you can keep working while the query runs on the server. To run a query asynchronously, select the down arrow on the **Run query** button, then select **Run async query**. Enter a query name to identify your async query. After submitting the query, you can monitor its status in the **Async Queries** tab. When the query completes, you can view the results by selecting the query name from the list.
+
+If a synchronous query takes longer than two minutes to run, a prompt appears asking if you want to run the query asynchronously. Select **Run async** to change the query to run asynchronously.
+
+Select the completed async query from the **Async Queries** tab to view its results in a new query tab. Results are stored for 24 hours and can be accessed multiple times. You can export the results to a CSV file by using the **Export** button in the upper left corner of the result window.
+
+:::image type="content" source="media/kql-queries/run-async-query.png" lightbox="media/kql-queries/run-async-query.png" alt-text="A screenshot showing the Async Queries tab in the KQL query editor.":::
+
 
 ### Result window
 
@@ -118,10 +129,10 @@ external_table("AADRiskyUsers")
 
 ## Query considerations and limitations
 
-+ Queries are run against a single workspace. Make sure you select the correct workspace before running a query.
++ Queries are run against the workspaces you selected. Make sure you select the correct workspaces before running a query.
 + Executing KQL queries on the Microsoft Sentinel data lake incurs charges based on query billing meters. For more information, see [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md#data-lake-tier).
 + Review data ingestion and table retention policy. Before setting query time range, be aware of data retention on your data lake tables and whether data is available for selected time range. For more information, see [Manage data tiers and retention in Microsoft Defender portal](https://aka.ms/manage-data-defender-portal-overview).
-+ KQL queries against the data lake are lower performant than queries on analytics tier. It’s recommended to use KQL queries against the data lake only when exploring historical data or when tables are stored in data lake-only mode.
++ KQL queries against the data lake are less performant than queries on analytics tier. Use KQL queries against the data lake only when exploring historical data or when tables are stored in data lake-only mode.
 
 + The following KQL control commands are currently supported: 
     + `.show version`
@@ -129,7 +140,7 @@ external_table("AADRiskyUsers")
     + `.show databases entities`
     + `.show database`
 
-+ Using out of the box or custom functions isn't supported in KQL queries against the data lake.
++ Using out-of-the-box or custom functions isn't supported in KQL queries against the data lake.
 
 + Calling external data via KQL query against the data lake isn't supported. 
 
