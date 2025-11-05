@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: lwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 11/04/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -41,6 +41,25 @@ This article is updated frequently to let you know what's new in the latest rele
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## Releases for Defender for Endpoint on Linux
+
+### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
+
+|Build:             |**101.25092.0001**    |
+|-------------------|----------------------|
+|Released:          |**October 31, 2025**|
+|Published:         |**October 31, 2025**|
+|Expiry:            |**July 10, 2026**|
+|Release version:   |**30.125092.0001.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.558.0**|
+
+What's new
+
+- Added support for CentOS Stream 9, CentOS Stream 10 and RHEL 10.
+
+- Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability.
+
+- Other quality and stability fixes.
 
 ### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
 
