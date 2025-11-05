@@ -150,11 +150,10 @@ The following table lists the available uRBAC roles and their permissions.
 
 | **Role**                | **Permissions**                                                                                              | **Description**                                                                 |
 |-------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| **Security operations** | - View and manage alerts<br>- Start automated investigations<br>- Run antivirus scans<br>- Collect investigation packages | Core role for day-to-day security operations and incident response.       |
-| **Security data**       | - Access security data across Defender services<br>- View incidents and alerts<br>- Perform advanced hunting queries | Provides visibility into alerts, incidents, and telemetry for analysis.   |
-| **Alerts – Manage**     | - Create, update, and close alerts<br>- Assign alerts to analysts<br>- Trigger response actions            | Focused on alert lifecycle management and escalation workflows.           |
-| **MDC access**          | - Read incidents, alerts, investigations<br>- Access advanced hunting, devices, and reports               | Enables access to Microsoft Defender for Cloud inventory and dashboards.  |
-| **Security data basics**| - View basic security data<br>- Limited access to incidents and alerts                                    | Entry-level visibility for monitoring without full operational privileges.|
+| **Security data basics** - | Read | Access alerts, incidents, investigations, hunting, devices, cloud assets, and reports. Includes cloud inventory and threat protection. |
+| **Alerts**        | Manage | Manage alerts, investigations, scans, device tags, and packages. Includes cloud threat protection features. |
+| **Vulnerability Management** | Read | View vulnerability data: software inventory, weaknesses, missing KBs, baselines, hunting, and devices. Includes data lake (Preview). |
+| **Exposure Management**| Read/Manage  | View or manage exposure insights, including Secure Score, recommendations, initiatives, and metrics.|
 
 > [!NOTE]
 > Roles can be combined for broader access, but always apply least-privilege principles. Some capabilities may require additional permissions or feature enablement.
