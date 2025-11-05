@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: lwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 11/04/2025
 manager: bagol
 audience: ITPro
 ms.collection:
