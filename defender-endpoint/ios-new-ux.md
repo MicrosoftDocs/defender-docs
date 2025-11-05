@@ -41,7 +41,7 @@ The **Send feedback** option in the updated bottom pane enables users to share p
 
 ### One-click *Send Logs* experience
 
-A new **Send logs to Microsoft** option has been added directly to the left navigation pane (Screen 1). This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 2). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from both the Defender app - it won't include logs from the Authenticator app.
+A new **Send logs to Microsoft** option has been added directly to the left navigation pane (Screen 1). This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 2). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from the Defender app - it won't include logs from the Authenticator app.
 
 :::image type="content" source="./media/ios-new-ux/one-click-feedback-ios.png" alt-text="Screenshots showing how to send logs directly to Microsoft from the Microsoft Defender mobile app options menu." border="false":::
 
