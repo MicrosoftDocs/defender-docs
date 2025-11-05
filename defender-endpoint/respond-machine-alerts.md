@@ -414,7 +414,7 @@ Defender for Endpoint automatically applies Group Policy Object (GPO) hardening 
 
 Defender for Endpoint automatically applies Safeboot hardening to Windows devices in your organization. Safeboot hardening helps protect devices from known attack techniques by applying security configurations that reduce the attack surface of the device while in Safe Mode.
 
-## Investigative capabilities with predictive shielding actions
+### Investigative capabilities with predictive shielding actions
 
 After predictive shielding actions are applied, you can view the actions' impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage.md).
 
