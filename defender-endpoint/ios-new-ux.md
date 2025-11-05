@@ -37,11 +37,13 @@ When users select **Help and Feedback** in the left navigation pane (Screen 1, a
 
 The **Send feedback** option in the updated bottom pane enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they are redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
 
-:::image type="content" source="./media/ios-new-ux/bottom-pane-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu.":::
+:::image type="content" source="./media/ios-new-ux/bottom-experience-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu." border="false":::
 
 ### One-Click *Send Logs* Experience
 
-A new **Send logs to Microsoft** option has been added directly to the left navigation pane. This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 4). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from both the Defender app - it won't include logs from the Authenticator app.
+A new **Send logs to Microsoft** option has been added directly to the left navigation pane (Screen 1). This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 2). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from both the Defender app - it won't include logs from the Authenticator app.
+
+:::image type="content" source="./media/ios-new-ux/one-click-feedback-ios.png" alt-text="Screenshots showing how to send logs directly to Microsoft from the Microsoft Defender mobile app options menu." border="false":::
 
 
 ## Key changes - Previous
