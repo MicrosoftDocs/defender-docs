@@ -12,8 +12,9 @@ ms.custom: enterprise-iot
 > [!NOTE]
 > This article is relevant for commercial Defender for IoT customers.
 > If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
-> 
-> As you plan your Microsoft Defender for IoT deployment, you typically want to understand the Defender for IoT pricing plans and billing models so you can optimize your costs.
+
+
+As you plan your Microsoft Defender for IoT deployment, you typically want to understand the Defender for IoT pricing plans and billing models so you can optimize your costs.
 
 **OT monitoring** is billed using site-based licenses, where each license applies to an individual site, based on the site size. A site is a physical location, such as a facility, campus, office building, hospital, rig, and so on. Each site can contain any number of network sensors, all of which monitor devices detected in connected networks.
 
