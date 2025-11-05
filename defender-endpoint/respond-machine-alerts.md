@@ -400,6 +400,24 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
+## Predictive shielding actions
+
+As part of the [predictive shielding](/defender-xdr/shield-predict-threats.md) feature, Defender for Endpoint automatically applies the following actions.
+
+To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage.md#enrich-predictive-shielding-data).
+
+### GPO hardening
+
+Defender for Endpoint automatically applies Group Policy Object (GPO) hardening to domain-joined Windows devices in your organization. GPO hardening helps protect devices from known attack techniques by applying security configurations that reduce the attack surface of the device.
+
+### Safeboot hardening
+
+Defender for Endpoint automatically applies Safeboot hardening to Windows devices in your organization. Safeboot hardening helps protect devices from known attack techniques by applying security configurations that reduce the attack surface of the device while in Safe Mode.
+
+## Investigative capabilities with predictive shielding actions
+
+After predictive shielding actions are applied, you can view the actions' impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage.md).
+
 ## Consult a threat expert
 
 You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender XDR for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
