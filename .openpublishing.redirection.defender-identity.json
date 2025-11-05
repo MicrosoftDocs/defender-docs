@@ -1109,6 +1109,11 @@
       "source_path": "defender-for-identity/change-password-microsoft-entra-seamless-single-sign-on.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/rotate-password-microsoft-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
     }
 
   ]
