@@ -47,9 +47,9 @@ You must also have the following access or permissions:
 
 You can find the **hunting graph** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Investigation & response** > **Hunting** > **Advanced hunting**. 
 
-In the advanced hunting page, select the hunting graph icon ![Screenshot of the hunting graph icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-icon.png) at the top of the page or select the **Create new** icon ![Screenshot of the Create new icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-create-icon.png) and choose **Hunting graph**.
+In the advanced hunting page, select the hunting graph icon ![Screenshot of the hunting graph icon.](./media/advanced-hunting-graph/hunting-graph-icon.png) at the top of the page or select the **Create new** icon ![Screenshot of the Create new icon.](./media/advanced-hunting-graph/hunting-graph-create-icon.png) and choose **Hunting graph**.
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-new.png" alt-text="Screenshot of the Create new Hunting graph option in the advanced hunting page." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-new.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-new.png" alt-text="Screenshot of the Create new Hunting graph option in the advanced hunting page." lightbox="./media/advanced-hunting-graph/hunting-graph-new.png":::
 
 A new hunting graph page appears as tab labeled **New hunt** in the advanced hunting page.
 
@@ -59,7 +59,7 @@ The interactive graphs generated in the hunting graph are composed of **nodes** 
 
 The lower right-hand corner of the graph also has control buttons that let you **Zoom in** and **Zoom out**, and view the graph's **Layers**.
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-render.png" alt-text="Screenshot of a rendered graph in the hunting graph page." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-render.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-render.png" alt-text="Screenshot of a rendered graph in the hunting graph page." lightbox="./media/advanced-hunting-graph/hunting-graph-render.png":::
 
 ## Get started with hunting graph
 
@@ -73,7 +73,7 @@ To start hunting using a predefined scenario, on a new hunting graph page, selec
 1. [Apply filters on the graph](#step-2-apply-filters)
 1. [Render the graph](#step-3-render-the-graph)
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-predefined-scenarios.png" alt-text="Screenshot of the hunting graph page highlighting the Search with Predefined scenarios button." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-predefined-scenarios.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-predefined-scenarios.png" alt-text="Screenshot of the hunting graph page highlighting the Search with Predefined scenarios button." lightbox="./media/advanced-hunting-graph/hunting-graph-predefined-scenarios.png":::
 
 #### Step 1: Select a scenario and enter scenario inputs
 
@@ -90,21 +90,21 @@ The following table describes the predefined scenarios in the hunting graph and 
 | **Identities with access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository |
 | **Identify nodes in the highest number of paths to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) |
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-select-scenario.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="./media/advanced-hunting-graph/hunting-graph-select-scenario.png":::
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-input.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the required scenario inputs." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-input.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-input.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the required scenario inputs." lightbox="./media/advanced-hunting-graph/hunting-graph-input.png":::
 
 #### Step 2: Apply filters
 
 You can add relevant filters to make the map view of your selected scenario more precise. For example, if you want to **Show only the shortest paths**, tick this option.
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-filter.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the Show only the shortest paths filter." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-filter.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-filter.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the Show only the shortest paths filter." lightbox="./media/advanced-hunting-graph/hunting-graph-filter.png":::
 
 ##### Advanced filters
 
 By default, the predefined scenarios automatically apply certain filters, which you can view in the **Advanced Filters** section of the side panel. You can remove these filters or add new ones to further refine the graph you want to generate. 
 
-To remove filters, select the **Remove filter** icon ![Screenshot of the remove filter icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-remove-filter-icon.png) beside each filter or select **Clear all** to remove them all at once.
+To remove filters, select the **Remove filter** icon ![Screenshot of the remove filter icon.](./media/advanced-hunting-graph/hunting-graph-remove-filter-icon.png) beside each filter or select **Clear all** to remove them all at once.
 
 To add a filter, select **Add filter** then the select any of the supported node or edge filters. The following table lists these supported operators and filters. Depending on your chosen scenario, some of these filters might not be available as options.  
 
@@ -114,7 +114,7 @@ To add a filter, select **Add filter** then the select any of the supported node
 | **Target Node** | equals |<ul><li>Has sensitive data<li>Has risk score<li>Is vulnerable</ul> |
 | **Edge Type** | equals |<ul><li>has permissions to<li>routes traffic to<li>affecting<li>member of<li>defines<li>can impersonate as<li>contains<li>can authenticate as<li>runs on<li>has role on<li>is running<li>used to create<li>maintains<li>frequently logged in by<li>has credentials of<li>defined in<li>can authenticate to<li>pushes<li>provisions</ul>|
 
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-advanced-filters.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the advanced filter section." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-advanced-filters.png":::
+:::image type="content" source="./media/advanced-hunting-graph/hunting-graph-advanced-filters.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the advanced filter section." lightbox="./media/advanced-hunting-graph/hunting-graph-advanced-filters.png":::
 
 #### Step 3: Render the graph
 

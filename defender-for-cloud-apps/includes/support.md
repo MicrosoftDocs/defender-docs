@@ -1,6 +1,6 @@
 ---
-title: include file
-description: include file
+title: Include file
+description: Include file
 ms.collection: M365-security-compliance
 ms.service: defender-for-cloud-apps
 author: batamig
@@ -10,4 +10,4 @@ ms.author: bagol
 ms.custom: include file
 ---
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](../support-and-ts.md).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
