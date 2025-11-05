@@ -52,7 +52,7 @@ If the RPC enrollment interface doesn't require packet privacy, it becomes vulne
     net stop certsvc & net start certsvc
     ```
 
-Make sure to test your settings in a controlled environment before turning them on in production.
+  Make sure to test your settings in a controlled environment before turning them on in production.
 
 
 
@@ -95,7 +95,7 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner.
 
-    :::image type="content" source="../media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="../media/secure-score/misconfigured-owner.png":::
+   :::image type="content" source="../media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="../media/secure-score/misconfigured-owner.png":::
 
 
 1. Research why the template owner might be misconfigured.
@@ -202,7 +202,6 @@ Even though the certificate can’t be used for impersonating user authenticatio
     - Enforce extra mitigations like adding *Manager approval* and signing requirements if possible.
 
 
-
 ## Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
 
 **Description**
@@ -227,7 +226,7 @@ These certificate templates expose organizations to significant risks, as they e
 3. Identify the AD CS servers which are vulnerable to CVE-2024-49019 and apply the relevant patch. 
 
 
-:::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot of exposed entities for Identified AD CS servers that are vulnerable.":::
+   :::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot of exposed entities for Identified AD CS servers that are vulnerable.":::
 
 
 
