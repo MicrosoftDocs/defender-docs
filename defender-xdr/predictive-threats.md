@@ -58,7 +58,7 @@ Predictive shielding uses predictive analytics and real-time insights and dynami
 
 Prediction allows organizations to identify assets at risk and apply tailored protections in real time. By focusing on emerging risks rather than static prevention, this approach minimizes operational friction and ensures that security measures are applied precisely where needed.
 
-Defender leverages multiple layers of insight to make accurate predictions:
+Defender XDR uses multiple layers of insight to make accurate predictions:
 
 - Threat intelligence aligns observed activity with known attacker tools and tactics.
 - Learnings from past incidents, used to recognize statistical patterns and extrapolate the most probable next steps.
@@ -74,7 +74,7 @@ The process involves three key stages:
 
 1. Defender overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. 
 1. Defender identifies the "blast radius"—the assets and configurations that could be impacted next. 
-1. Reasoning models predict the most likely paths attackers will take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
+1. Reasoning models predict paths attackers are most likely to take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
 This dynamic understanding allows Defender to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. By unifying these perspectives, organizations gain a proactive edge in mitigating threats and safeguarding their environments.
 
