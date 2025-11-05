@@ -24,7 +24,7 @@ appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-# Predictive shielding in Microsoft Defender XDR (Defender XDR)
+# Predictive shielding in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -37,63 +37,47 @@ This article provides an overview of predictive shielding and includes links to 
 
 ## How predictive shielding works
 
-Predictive Shielding is a new capability in Microsoft Defender (Defender) that expands autonomous protection beyond the reactive paradigm. The industry’s reactive model - waiting to confirm something as malicious before acting - has reached its glass ceiling. Against today’s human-operated, multi-wave attacks, reacting after compromise isn't enough. Certain attacker activities, such as credential theft or data exfiltration, must be prevented outright. Yet traditional static prevention introduces operational overhead and potential friction when applied uniformly across an organization, making it difficult to balance protection with productivity.
+Predictive Shielding represents a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Unlike traditional reactive models that rely on high-confidence signals, Predictive Shielding integrates posture, activity, and scenario context to predict attack progression in real time. This approach enables organizations to identify potential attack paths and targets, selectively hardening critical areas to minimize impact and provide security teams with more time to respond.
 
-Predictive Shielding bridges that gap by introducing just-in-time, post-breach, contextual preemptive actions - enabling Defender to dynamically infer risk, anticipate attacker progression, and harden the environment only where and when it matters most.
+The evolving threat landscape has exposed the limitations of reactive defense models. Persistent, human-operated attacks exploit the asymmetry between defenders, who must protect every asset, and attackers, who need only one weak point. Predictive Shielding addresses this imbalance by dynamically forecasting risks and applying tailored protections where they are most needed, reducing operational overhead and maintaining productivity.
 
-### Predictive shielding pillars
+At its core, Predictive Shielding relies on two pillars: prediction and enforcement. Prediction involves analyzing attacker behavior, past incidents, and organizational exposure to identify emerging risks. Enforcement applies automated protective controls to disrupt potential attack paths in real time. This dual approach ensures that protection is both precise and timely.
 
-At its core, Predictive Shielding is built on two pillars:
+A key innovation in Predictive Shielding is its graph-based prediction logic, which unifies pre-breach and post-breach insights. By overlaying live attacker activity onto an organization’s exposure graph, Defender can model potential blast radii and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
 
-- Prediction, our ability to infer risk and forecast attack progression across assets that aren't yet compromised. 
-- Enforcement, the automated application of protective controls to disrupt potential attack paths and shield critical targets in real time.
+## How predictive shielding expands on automatic threat disruption
+
+Predictive Shielding builds upon the foundation of automatic threat disruption by introducing a proactive layer of defense. While automatic threat disruption focuses on identifying and neutralizing confirmed malicious activities, Predictive Shielding goes a step further by anticipating potential threats before they materialize. This capability enables organizations to stay ahead of attackers, reducing the likelihood of successful breaches.
+
+By leveraging predictive analytics and real-time insights, Predictive Shielding dynamically identifies emerging risks and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic threat disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
 
 ## Predictive shielding logic
 
 ## Prediction logic
 
-Prediction is at the core of Predictive Shielding. It enables Defender to identify, contextually and surgically, which specific assets are at risk and in reference to what kind of risk, so it can apply the right, tailored protection. Instead of relying on static prevention that creates operational overhead and friction when applied uniformly, prediction allows Defender to act just-in-time and in context, focusing protection only where risk is emerging. 
+Prediction is the cornerstone of Predictive Shielding, enabling organizations to identify assets at risk and apply tailored protections in real time. By focusing on emerging risks rather than static prevention, this approach minimizes operational friction and ensures that security measures are applied precisely where needed.
 
-To perform these predictions, Defender draws from multiple layers of insight spanning both attacker behavior and organizational context — including: 
+Defender leverages multiple layers of insight to make accurate predictions. These include threat intelligence to align observed activity with known attacker tools and tactics, historical incident data to identify patterns, and organizational exposure data to map vulnerabilities and potential attack paths. Together, these insights create a dynamic understanding of the environment and its risks.
 
-Threat intelligence, to understand what type of activity is observed and which threat actors, tools, or playbooks it aligns with. 
-
-Learnings from past incidents, to recognize statistical patterns and extrapolate the most probable next steps. 
-
-Organizational exposure data, to map how the environment is structured — which assets and identities are connected, what vulnerabilities or misconfigurations exist, and how risk can propagate across them. 
-
-Among these layers, the organizational exposure layer plays a particularly critical role. It represents the live topology of the environment and the relationships that shape how cyberattackers can move within it. This layer is modeled and continuously updated through what we call the Exposure Graph — the foundation of Defender’s graph-based prediction logic.
+A critical component of this prediction capability is the Exposure Graph, which continuously updates the live topology of the organization. This graph models relationships between assets, identities, and vulnerabilities, providing the context needed to anticipate attacker movements and prioritize defenses effectively.
 
 ## Graph-based prediction logic
 
-In cybersecurity, pre-breach and post-breach systems often operate separately.
+Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. By combining live activity data with the structural map of the environment, this approach enables Defender to forecast attacker movements in real time and prioritize defenses effectively.
 
-Post-breach systems, like incident and detection platforms, show the attacker activity, compromised assets, and evidence of malicious behavior that already occurred. Pre-breach posture tools map the organization’s structure, exposures, configurations, and potential paths that an attacker could take. But without connecting the two systems, defenders are left asking the crucial question that Waze always answers: given where the car is now, where can it go next? 
+The process involves three key stages. First, Defender overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. Next, it identifies the "blast radius"—the assets and configurations that could be impacted next. Finally, reasoning models predict the most likely paths attackers will take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
-Our graph-based prediction logic solves this problem. It brings these two perspectives together - the live activity and the structural map of the environment - into a single reasoning layer that lets Defender forecast attacker movement in real time.
+This dynamic understanding allows Defender to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. By unifying these perspectives, organizations gain a proactive edge in mitigating threats and safeguarding their environments.
 
-We use three key stages: 
-
-Unify pre-breach and post-breach signals - see both the roads and the cars. 
-The first step is overlaying post-breach activity (the cars) onto the organization’s exposure graph (the roads). By bringing these worlds together, Defender can see not just that an attacker exists, but where they are within the topology and what routes are open from that position. 
-
-Identify the blast radius - understand where the car can drive next. 
-Once the maps are unified, Defender models the reachable paths from the current point of compromise - the set of assets, identities, and configurations that are exposed or adjacent. This view shows the blast radius: what can be impacted next, and through which connections or weaknesses. 
-
-Predict the most probable paths and targets - anticipate where the car is heading. 
-Finally, Defender applies reasoning models to determine which of those paths are most likely to be taken. It factors in the attacker’s past behaviors, the characteristics of the compromised assets, and the “terrain” of the environment - vulnerabilities, privileges, and data value - to forecast the most probable next destination. 
-
-By unifying these perspectives, Defender gains what the security industry has long lacked: a live, dynamic understanding of both the environment and the adversary’s movement within it. It's no longer about reacting to where the attacker was, but about foreseeing where they're going - and applying just-in-time protection to stop them before they get there. 
-
-## Predictive shielding controls
+## Predictive shielding actions
 
 Predictive shielding uses Defender XDR-based XDR response actions. Examples of these actions are:
 
-- Safeboot hardening
+- Safeboot hardening - based on Microsoft Defender for Endpoint capability, this action hardens the device against booting into Safe Mode, which is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
-- GPO hardening
+- GPO hardening - based on Microsoft Defender for Endpoint capability, this action hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
-- [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint (MDFE)'s capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with MDFE's onboarded devices.
+- [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with MDFE's onboarded devices.
 
 ## Identify when predictive shielding happens in your environment
 
