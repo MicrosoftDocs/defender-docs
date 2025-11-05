@@ -82,7 +82,7 @@ This dynamic understanding allows Defender to move beyond reactive responses, en
 
 Predictive shielding uses Defender XDR-based XDR response actions. Examples of these actions are:
 
-- Safeboot hardening - based on Microsoft Defender for Endpoint capability, this action hardens the device against booting into Safe Mode, which is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
+- Safeboot hardening - based on Microsoft Defender for Endpoint capability. This action hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
 - GPO hardening - based on Microsoft Defender for Endpoint capability, this action hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
@@ -94,7 +94,7 @@ The Defender XDR incident page reflects the automatic predictive shielding actio
 
 TBD - image
 
-The Defender XDR user experience now includes additional visual cues to ensure visibility of these automatic actions. You can find them across the following experiences:
+The Defender XDR user experience now includes more visual cues to ensure visibility of these automatic actions. You can find them across the following experiences:
 
 - In the incident queue: A tag titled *Predictive Shielding* appears next to affected incidents
 
