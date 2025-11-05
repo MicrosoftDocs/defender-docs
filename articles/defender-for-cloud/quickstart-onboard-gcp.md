@@ -54,9 +54,9 @@ To complete the procedures in this article, you need:
 
    1. If you create new Cloud Logging and Pub/Sub resources:
    
-      1. Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
+      - Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
       
-      1. IAM permissions to configure Pub/Sub and manage service accounts.
+      - IAM permissions to configure Pub/Sub and manage service accounts.
       
    1. If you plan to use existing Cloud Logging and Pub/Sub resources:
    
@@ -338,11 +338,11 @@ To configure the Defender CSPM plan:
 
 1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
 
-## Ingest GCP Cloud Logging with Pub/Sub (Preview)
+## Ingest GCP cloud logging with Pub/Sub (Preview)
 
 Integrating Google Cloud Platform (GCP) Cloud Logging with Microsoft Defender for Cloud allows you to ingest activity logs from GCP, enhancing your ability to monitor, detect, and respond to security events across your Google Cloud environments. You can configure log ingestion either at the project level or centrally at the organization level. Data streamed from GCP Pub/Sub provides the necessary context for Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud, dependent on the log activity, calculated risk-based recommendations, security posture insights, and attack path analysis.
 
-### Deployment Options
+### Deployment options
 
 Select the deployment scenario that meets your requirement:
 
@@ -350,7 +350,7 @@ Select the deployment scenario that meets your requirement:
 
 - __Organization-Level__: Centralize log ingestion across all projects within a GCP organization.
 
-### Deployment Steps
+### Deployment steps
 
 To configure GCP Cloud Logging:
 
@@ -369,10 +369,10 @@ To configure GCP Cloud Logging:
       
    1. Use your existing Cloud Logging configuration by manually providing your existing Pub/Sub subscription name.
    
-     :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Manually provide GCP Cloud Logging details option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
+   :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Manually provide GCP Cloud Logging details option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
 
-> [!NOTE]
-> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
+    > [!NOTE]
+    > Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
    
 1. Select **Save**.
 
@@ -380,7 +380,7 @@ To configure GCP Cloud Logging:
 
 1. Review and generate the GCP connector to complete log ingestion onboarding into Defender for Cloud. 
 
-### How GCP Logging Ingestion Works
+### How GCP logging ingestion works
 
 Once configured, Defender for Cloud ingests and analyzes activity logs from Google Cloud to discover cloud identity and permissions insights, and CIEM recommendations.
 

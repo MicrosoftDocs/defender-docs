@@ -112,7 +112,7 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
-### GCP Cloud Logging Ingestion (Preview)
+### GCP Cloud Logging ingestion (preview)
 
 October 31, 2025
 
@@ -122,7 +122,7 @@ To maintain continuous CIEM recommendations for connected GCP environments, enab
 
 Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
 
-### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
+### Deprecation notice: update outbound rules for Microsoft Defender for Containers 
 
 Microsoft Defender for Containers updated the outbound network requirements for the Defender sensor. You must update your outbound rules to maintain proper functionality. 
 
@@ -132,7 +132,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 `*.cloud.defender.microsoft.com` (HTTPS: port 443) 
 
-#### Recommended Actions 
+#### Recommended actions 
 
 1. Add the new FQDN and port to your allowed traffic in your outbound restriction method, such as a proxy or firewall. 
 
@@ -144,7 +144,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 To avoid service disruption, complete any necessary updates of GKE and EKS by September 30, 2026. If no action is taken where required, the Defender for Containers sensor won't function as expected.
 
-### GitHub Application Permissions Update
+### GitHub application permissions update
 
 October 23, 2025
 
