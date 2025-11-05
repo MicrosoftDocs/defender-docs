@@ -2,12 +2,16 @@
 title: Microsoft Defender for IoT billing
 description: Learn how you're billed for the Microsoft Defender for IoT service.
 ms.topic: concept-article
-ms.date: 03/25/2024
+ms.date: 11/05/2025
 ms.custom: enterprise-iot
 #CustomerIntent: As a Defender for IoT customer, I want to understand how I'm billed for Defender for IoT services so that I can best plan my deployment.
 ---
 
 # Defender for IoT billing
+
+This article is relevant for commercial Defender for IoT customers.
+
+If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
 
 As you plan your Microsoft Defender for IoT deployment, you typically want to understand the Defender for IoT pricing plans and billing models so you can optimize your costs.
 
@@ -15,9 +19,6 @@ As you plan your Microsoft Defender for IoT deployment, you typically want to un
 
 **Enterprise IoT monitoring** supports 5 devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as standalone, per-device licenses for Microsoft Defender for Endpoint P2 customers.
 
-This article is relevant for commercial Defender for IoT customers.
-
-If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
 
 ## Free trial
 
