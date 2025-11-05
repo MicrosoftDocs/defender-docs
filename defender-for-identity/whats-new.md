@@ -140,7 +140,7 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
 
-For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/security-posture-assessments/accounts#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -178,11 +178,11 @@ Use these assessments to improve monitoring coverage and strengthen your hybrid 
 
 For more information, see:
 
-[Security Assessment: Unmonitored ADCS servers](unmonitored-active-directory-certificate-services-server.md)
+[Security Assessment: Unmonitored ADCS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure.md#security-assessment-unmonitored-active-directory-certificate-services-servers)
 
-[Security Assessment: Unmonitored ADFS servers](unmonitored-active-directory-federation-services-servers.md)
+[Security Assessment: Unmonitored ADFS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure.md#security-assessment-unmonitored-active-directory-federation-services-servers)
 
-[Security Assessment: Unmonitored Microsoft Entra Connect servers](unmonitored-entra-connect-servers.md)
+[Security Assessment: Unmonitored Microsoft Entra Connect servers](/defender-for-identity/security-posture-assessments/identity-infrastructure.md#security-assessment-unmonitored-microsoft-entra-connect-servers)
 
 
 
@@ -402,9 +402,9 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 * **Rotate password for Microsoft Entra Connect connector account**
    * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment, we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, select [Rotate password for Microsoft Entra Connect connector account](../defender-for-identity/security-posture-assessments/hybrid-security.md#rotate-password-for-microsoft-entra-connect-ad-ds-connector-account).
 * **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
-   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, see [Remove replication permissions for Microsoft Entra account](remove-replication-permissions-microsoft-entra-connect.md)
+   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, see [Remove replication permissions for Microsoft Entra account](/defender-for-identity/security-posture-assessments/hybrid-security.md#remove-replication-permissions-for-microsoft-entra-account).
 * **Change password for Microsoft Entra seamless SSO account configuration**
-   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, see: [Change password for Microsoft Entra seamless SSO account configuration](change-password-microsoft-entra-seamless-single-sign-on.md).    
+   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, see: [Change password for Microsoft Entra seamless SSO account configuration](/defender-for-identity/security-posture-assessments/hybrid-security.md#change-password-for-microsoft-entra-seamless-sso-account-configuration).
 
 **New Microsoft Entra Connect detections:**
 
@@ -556,7 +556,7 @@ The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recom
 
 For more information, see:
 
-- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](security-assessment-insecure-adcs-certificate-enrollment.md)
+- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-insecure-adcs-certificate-enrollment-iis-endpoints-esc8)
 - [Security posture assessments for AD CS sensors](#security-posture-assessments-for-ad-cs-sensors-preview)
 - [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
 
@@ -692,11 +692,11 @@ Recommended actions now include the following new security posture assessments, 
 
 - **Certificate templates recommended actions**:
 
-   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](security-assessment-prevent-users-request-certificate.md)
-   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](security-assessment-edit-overly-permissive-template.md)
-   - [Misconfigured enrollment agent certificate template (ESC3)](security-assessment-edit-misconfigured-enrollment-agent.md)
-   - [Edit misconfigured certificate templates ACL (ESC4)](security-assessment-edit-misconfigured-acl.md)
-   - [Edit misconfigured certificate templates owner (ESC4)](security-assessment-edit-misconfigured-owner.md)
+   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-prevent-users-request-certificate)
+   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-overly-permissive-template)
+   - [Misconfigured enrollment agent certificate template (ESC3)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-misconfigured-enrollment-agent)
+   - [Edit misconfigured certificate templates ACL (ESC4)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-misconfigured-acl)
+   - [Edit misconfigured certificate templates owner (ESC4)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-misconfigured-owner)
 
 - **Certificate authority recommended actions**:
 
