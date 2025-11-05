@@ -13,22 +13,22 @@ Microsoft Security DevOps uses the following open-source tools:
 
 | Name | Language | License |
 |--|--|--|
-| [AntiMalware](https://www.microsoft.com/windows/comprehensive-security) | AntiMalware protection in Windows from Microsoft Defender for Endpoint, that scans for malware and breaks the build if malware was found. This tool scans by default on windows-latest agent. | Not Open Source |
+| [AntiMalware](https://www.microsoft.com/windows/comprehensive-security) | Anti-malware protection in Windows from Microsoft Defender for Endpoint. Scans for malware and breaks the build if malicious content is detected. Runs by default on the Windows-latest agent. | Not open source |
 | [Bandit](https://github.com/PyCQA/bandit) | Python | [Apache License 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE) |
-| [BinSkim](https://github.com/Microsoft/binskim) | Binary--Windows, ELF | [MIT License](https://github.com/microsoft/binskim/blob/main/LICENSE) |
+| [BinSkim](https://github.com/Microsoft/binskim) | Binary targets: Windows, ELF | [MIT License](https://github.com/microsoft/binskim/blob/main/LICENSE) |
 | [Checkov](https://github.com/bridgecrewio/checkov) | Terraform, Terraform plan, CloudFormation, AWS SAM, Kubernetes, Helm charts, Kustomize, Dockerfile, Serverless, Bicep, OpenAPI, ARM | [Apache License 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE) |
-| [ESlint](https://github.com/eslint/eslint) | JavaScript | [MIT License](https://github.com/eslint/eslint/blob/main/LICENSE) |
-| [IaCFileScanner](iac-template-mapping.md) | Template mapping tool for Terraform, CloudFormation, ARM Template, Bicep | Not Open Source |
-| [Template Analyzer](https://github.com/Azure/template-analyzer) | ARM Template, Bicep | [MIT License](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt) |
+| [ESLint](https://github.com/eslint/eslint) | JavaScript | [MIT License](https://github.com/eslint/eslint/blob/main/LICENSE) |
+| [IaCFileScanner](iac-template-mapping.md) | Template mapping tool for Terraform, CloudFormation, ARM templates, and Bicep | Not open source |
+| [Template Analyzer](https://github.com/Azure/template-analyzer) | ARM templates, Bicep | [MIT License](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt) |
 | [Terrascan](https://github.com/accurics/terrascan) | Terraform (HCL2), Kubernetes (JSON/YAML), Helm v3, Kustomize, Dockerfiles, CloudFormation | [Apache License 2.0](https://github.com/accurics/terrascan/blob/master/LICENSE) |
-| [Trivy](https://github.com/aquasecurity/trivy) | container images, Infrastructure as Code (IaC) | [Apache License 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
+| [Trivy](https://github.com/aquasecurity/trivy) | Container images, infrastructure as code (IaC) | [Apache License 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
 
 > [!NOTE]
 > As of September 20, 2023, the secrets scanning (CredScan) tool within the Microsoft Security DevOps (MSDO) Extension for Azure DevOps has been deprecated. MSDO secrets scanning is replaced with [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
 
 ## Prerequisites
 
-- Project Collection Administrator privileges in the Azure DevOps organization are required to install the extension. If you don't have access, request it from your Azure DevOps administrator during installation.
+- You need Project Collection Administrator privileges in your Azure DevOps organization to install the extension. If you don't have access, request it from your Azure DevOps administrator during installation.
 
 ## Configure the Microsoft Security DevOps Azure DevOps extension
 
