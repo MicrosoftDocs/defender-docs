@@ -130,30 +130,21 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)](#gcp-cloud-logging-ingestion-support-preview)|
+|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
-### GCP Cloud Logging Ingestion Support (Preview)
+### GCP Cloud Logging ingestion (preview)
 
 October 31, 2025
 
-Microsoft Defender for Cloud now supports **GCP Cloud Logging ingestion** in Public Preview, further strengthening multicloud identity posture and permissions management across GCP environments. 
+GCP Cloud Logging ingestion is now available in preview, improving CIEM insights and permission-usage visibility across Google Cloud environments.
 
-This new capability enables enhanced cloud identity activity insights, permission-usage visibility, and least-privilege recommendations and ensures uninterrupted CIEM recommendations for your GCP environments. To maintain continuous CIEM insights and recommendations for your connected GCP environments, you must enable GCP Cloud Logging ingestion going forward.
+To maintain continuous CIEM recommendations for connected GCP environments, enable Cloud Logging ingestion using a new or existing Pub/Sub subscription.
 
-#### Recommended Action
+Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
 
-Turn on **GCP Cloud Logging ingestion (Preview)** by following the steps in our [documentation ](https://aka.ms/multicloudconnectors) and choosing one of the following options:
-
-1. Create a new Pub/Sub subscription within the wizard, or
-
-1. Provide details for an existing Pub/Sub subscription to ingest logs
-
-> [!NOTE]
-> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform.
-
-### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
+### Deprecation notice: update outbound rules for Microsoft Defender for Containers 
 
 Microsoft Defender for Containers updated the outbound network requirements for the Defender sensor. You must update your outbound rules to maintain proper functionality. 
 
@@ -163,7 +154,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 `*.cloud.defender.microsoft.com` (HTTPS: port 443) 
 
-#### Recommended Actions 
+#### Recommended actions 
 
 1. Add the new FQDN and port to your allowed traffic in your outbound restriction method, such as a proxy or firewall. 
 
@@ -175,7 +166,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 To avoid service disruption, complete any necessary updates of GKE and EKS by September 30, 2026. If no action is taken where required, the Defender for Containers sensor won't function as expected.
 
-### GitHub Application Permissions Update
+### GitHub application permissions update
 
 October 23, 2025
 
