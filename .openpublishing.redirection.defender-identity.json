@@ -909,7 +909,7 @@
       "source_path": "defender-for-identity/remove-dormant-okta-privileged-accounts.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
       "redirect_document_id": false
-    }
+    },
     {
       "source_path": "defender-for-identity/accounts-with-non-default-pgid.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
