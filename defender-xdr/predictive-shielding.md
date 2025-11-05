@@ -46,7 +46,7 @@ Predictive shielding relies on two pillars:
 - **Prediction** involves analyzing attacker behavior, past incidents, and organizational exposure to identify emerging risks.
 - **Enforcement** applies automated protective controls to disrupt potential attack paths in real time. This dual approach ensures that protection is both precise and timely.
 
-Predictive shielding uses [graph-based prediction logic](#graph-based-prediction-logic), which unifies pre-breach and post-breach insights. By overlaying live attacker activity onto an organization’s exposure graph, Defender can model the potential blast radius and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
+Predictive shielding uses [graph-based prediction logic](#graph-based-logic), which unifies pre-breach and post-breach insights. By overlaying live attacker activity onto an organization’s exposure graph, Defender can model the potential blast radius and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
 
 ## How predictive shielding expands on automatic attack disruption
 
@@ -56,11 +56,15 @@ By leveraging predictive analytics and real-time insights, predictive shielding 
 
 ## Prediction logic
 
-Prediction is the cornerstone of Predictive Shielding, enabling organizations to identify assets at risk and apply tailored protections in real time. By focusing on emerging risks rather than static prevention, this approach minimizes operational friction and ensures that security measures are applied precisely where needed.
+Prediction allows organizations to identify assets at risk and apply tailored protections in real time. By focusing on emerging risks rather than static prevention, this approach minimizes operational friction and ensures that security measures are applied precisely where needed.
 
-Defender leverages multiple layers of insight to make accurate predictions. These include threat intelligence to align observed activity with known attacker tools and tactics, historical incident data to identify patterns, and organizational exposure data to map vulnerabilities and potential attack paths. Together, these insights create a dynamic understanding of the environment and its risks.
+Defender leverages multiple layers of insight to make accurate predictions:
 
-A critical component of this prediction capability is the Exposure Graph, which continuously updates the live topology of the organization. This graph models relationships between assets, identities, and vulnerabilities, providing the context needed to anticipate attacker movements and prioritize defenses effectively.
+- Threat intelligence aligns observed activity with known attacker tools and tactics.
+- Learnings from past incidents, used to recognize statistical patterns and extrapolate the most probable next steps.
+- Organizational exposure data, used to map how the environment is structured — which assets and identities are connected, what vulnerabilities or misconfigurations exist, and how risk can propagate across them.
+
+Together, these insights create a dynamic understanding of the environment and its risks.
 
 ## Graph-based logic
 
