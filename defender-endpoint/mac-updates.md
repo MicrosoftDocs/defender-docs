@@ -2,8 +2,8 @@
 title: Deploy updates for Microsoft Defender for Endpoint on macOS
 description: Control updates for Microsoft Defender for Endpoint on macOS in enterprise environments.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/16/2025
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -58,7 +58,7 @@ For the latest information on this setting, see [ChannelName](/deployoffice/mac/
 
 The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`. 
 
-The `Current` channel contains the most stable version of the product.
+The `Current` channel contains the most stable version of the product. If this entry is not included or if the entry provided in ChannelName is invalid, MAU reverts to the default "Current" channel.
 
 > [!IMPORTANT]
 > Prior to Microsoft AutoUpdate version 4.29, channels had different names:
@@ -70,41 +70,27 @@ The `Current` channel contains the most stable version of the product.
 > [!TIP]
 > In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to `Beta` or `Preview`.
 
-<br>
-
-
-
-
-
-****
-
 |Section|Value|
 |---|---|
 |**Domain**|`com.microsoft.autoupdate2`|
 |**Key**|ChannelName|
 |**Data type**|String|
 |**Possible values**|Beta <p> Preview <p> Current|
-|||
+|**Notes on channels**| Beta - Absolute latest in development. Only to be used for testing and error reporting purposes.<p> Preview - This channel provides a preview of official releases. <p> Current - This channel distributes all official releases and is the default setting.|
 
 > [!WARNING]
 > This setting changes the channel for all applications that are updated through Microsoft AutoUpdate. To change the channel only for Microsoft Defender for Endpoint on macOS, execute the following command after replacing `[channel-name]` with the desired channel:
->
+> 
 > ```bash
 > defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
 > ```
+> Admins can also control this per app setting via the example configuration provided at the bottom of this page. 
 
 ### Change whether the "Check for Updates" button is enabled
 
 For the latest information on this setting, see [EnableCheckForUpdatesButton](/deployoffice/mac/mau-preferences#enablecheckforupdatesbutton).
 
 Change whether local users are able to select the "Check for Updates" option in the Microsoft AutoUpdate user interface. 
-<br>
-
-
-
-
-
-****
 
 |Section|Value|
 |---|---|
@@ -119,13 +105,6 @@ Change whether local users are able to select the "Check for Updates" option in 
 For the latest information on this setting, see [DisableInsiderCheckbox](/deployoffice/mac/mau-preferences#disableinsidercheckbox).
 
 Set to true to make the "Join the Office Insider Program..." checkbox unavailable / greyed out to users.
-<br>
-
-
-
-
-
-****
 
 |Section|Value|
 |---|---|
@@ -226,11 +205,77 @@ The following configuration profile is used to:
 </plist>
 ```
 
+### Intune - Defender specific channel name
+
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1">
+    <dict>
+        <key>PayloadUUID</key>
+        <string>B762FF60-6ACB-4A72-9E72-459D00C936F3</string>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadOrganization</key>
+        <string>Microsoft</string>
+        <key>PayloadIdentifier</key>
+        <string>com.microsoft.autoupdate2</string>
+        <key>PayloadDisplayName</key>
+        <string>Microsoft AutoUpdate settings</string>
+        <key>PayloadDescription</key>
+        <string>Microsoft AutoUpdate configuration settings</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadRemovalDisallowed</key>
+        <true/>
+        <key>PayloadScope</key>
+        <string>System</string>
+        <key>PayloadContent</key>
+        <array>
+            <dict>
+            <key>PayloadUUID</key>
+            <string>5A6F350A-CC2C-440B-A074-68E3F34EBAE9</string>
+            <key>PayloadType</key>
+            <string>com.microsoft.autoupdate2</string>
+            <key>PayloadOrganization</key>
+            <string>Microsoft</string>
+            <key>PayloadIdentifier</key>
+            <string>com.microsoft.autoupdate2</string>
+            <key>PayloadDisplayName</key>
+            <string>Microsoft AutoUpdate configuration settings</string>
+            <key>PayloadDescription</key>
+            <string/>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadEnabled</key>
+            <true/>
+			<key>Applications</key>
+			<dict>  
+				<key>/Applications/Microsoft Defender.app</key>
+				<dict>  
+					<key>App Domain</key>
+					<string>com.microsoft.wdav</string>
+					<key>Application ID</key>
+					<string>WDAV00</string>
+					<key>ChannelName</key>
+					<string>Current</string>
+				</dict> 
+			</dict>
+            </dict>
+        </array>
+    </dict>
+</plist>
+```
+
 To configure MAU, you can deploy this configuration profile from the management tool that your enterprise is using:
 
 - From Jamf Pro, upload this configuration profile and set the Preference Domain to *com.microsoft.autoupdate2*.
 - From Intune, upload this configuration profile and set the custom configuration profile name to *com.microsoft.autoupdate2*.
- 
+
+- You can specify a ChannelName for Defender by adding a ChannelName key and value under the Applications key. The value of the per app ChannelName key is the same as the global setting - Beta, Preview, and Current. 
+
 For more information, see: [Configuring Preferences for Microsoft AutoUpdate (MAU) in Microsoft 365 Enterprise](/deployoffice/mac/mau-preferences#howtocheck)
 
 ## Resources
