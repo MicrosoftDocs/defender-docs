@@ -36,7 +36,7 @@ More specifically, entity pages consist of three parts:
 
 If you're investigating an incident using the **[new investigation experience](investigate-incidents.md)**, you'll be able to see a panelized version of the entity page right inside the incident details page. You have a [list of all the entities in a given incident](investigate-incidents.md#explore-the-incidents-entities), and selecting an entity opens a side panel with three "cards"&mdash;**Info**, **Timeline**, and **Insights**&mdash; showing all the same information described above, within the specific time frame corresponding with that of the alerts in the incident.
 
-If you're using the **[Microsoft Sentinel in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)**, the **timeline** and **insights** panels appear in the **Sentinel events** tab of the Defender entity page.
+If you're using the **[Microsoft Sentinel in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)**, the **timeline** and **insights** panels appear in the **Sentinel events** tab of the Defender entity page. Additionally, for user entities with UEBA enabled, an **Anomalies** section displays the top 3 anomalies from the last 30 days directly in the user panel.
 
 # [Defender portal](#tab/defender-portal)
 
@@ -45,6 +45,42 @@ If you're using the **[Microsoft Sentinel in the Defender portal](https://go.mic
 # [Azure portal](#tab/azure-portal)
 
 :::image type="content" source="./media/entity-pages/entity-page-sentinel.png" alt-text="Screenshot of an example of an entity page in the Azure portal." lightbox="./media/entity-pages/entity-page-sentinel.png":::
+
+## Anomalies section (UEBA)
+
+For workspaces with UEBA enabled and onboarded to the Defender portal, user entity panels include a dedicated **Anomalies** section that displays contextual UEBA insights. This section helps analysts quickly identify users who may require priority investigation based on recent anomalous behavior.
+
+### What's displayed
+
+The Anomalies section shows:
+- **Top 3 anomalies** from the last 30 days for the selected user
+- **Workspace-scoped results** - anomalies are filtered to the currently selected workspace
+- **Direct navigation links** to:
+  - Anomalies query filtered for the specific user
+  - Sentinel events tab with the user's timeline
+
+### Where to find it
+
+The Anomalies section appears in multiple locations within the Defender portal:
+- **User side panels** - accessible from various locations throughout the portal
+- **User entity overview tab** - within the dedicated user entity page
+- **Incident investigation workflows** - when reviewing user entities in incident context
+
+### Prerequisites
+
+To see the Anomalies section, your environment must meet these requirements:
+- UEBA must be enabled in your Microsoft Sentinel workspace
+- The workspace must be onboarded to the Microsoft Defender portal
+- The user must have appropriate permissions to view UEBA data
+
+### Investigation workflow
+
+The Anomalies section enables analysts to:
+1. **Quickly assess user risk** - see if a user has recent anomalous behavior at a glance
+2. **Prioritize investigations** - focus on users with UEBA anomalies first
+3. **Seamlessly pivot** - use the provided links to dive deeper into specific anomalies or user timeline
+
+For more information about UEBA anomalies and how they're detected, see [Microsoft Sentinel UEBA reference](ueba-reference.md) and [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
 
 ---
 

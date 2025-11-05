@@ -18,6 +18,40 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## November 2025
+
+### Enhanced UEBA Insights Integration
+
+Microsoft Sentinel now provides seamless integration of User and Entity Behavior Analytics (UEBA) insights directly into analyst workflows across multiple experiences in the Defender portal. These enhancements help analysts prioritize investigations and leverage UEBA context more effectively.
+
+#### Anomalies in User Panel
+
+User entity panels now display the top 3 anomalies from the last 30 days in a dedicated section, available in:
+- User side panels accessible from various portal locations
+- Overview tab of user entity pages
+- Direct links to anomalies queries and Sentinel events timeline
+
+#### Go Hunt Anomalies Query
+
+Incident investigation workflows now include a built-in "Go Hunt" query for user anomalies:
+- Accessible directly from the incident graph
+- Provides contextual UEBA results in the hunt pane
+- Enables immediate context and investigation expansion based on UEBA outcomes
+
+#### Anomalies Table Recommendation
+
+Advanced hunting and custom detection experiences now include intelligent recommendations:
+- Contextual banner suggests adding the UEBA Anomalies table to queries
+- Appears when querying eligible tables that feed the UEBA engine
+- Helps analysts improve query effectiveness and signal quality
+
+All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
+
+For more information, see:
+- [Entity pages in Microsoft Sentinel](entity-pages.md)
+- [Hunt for threats](hunting.md)
+- [Advanced threat detection with UEBA](identify-threats-with-entity-behavior-analytics.md)
+
 ## October 2025
 
 
