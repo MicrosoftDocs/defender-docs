@@ -203,8 +203,6 @@ items:
     href: cef-format-sa.md
   - name: PowerShell
     href: /powershell/defenderforidentity/overview-defenderforidentity
-  - name: Support
-    href: support.md
   - name: Defender for Identity data security and privacy
     href: privacy-compliance.md
   - name: Security baseline
