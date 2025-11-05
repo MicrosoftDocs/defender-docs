@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud, a cloud-native application protection platform (CNAPP) that utilizes both cloud security posture management (CSPM), and Cloud workload protection platform (CWPP) to protect your Azure, AWS, GCP and on premises environments. 
 ms.topic: overview
-ms.date: 11/04/2025
+ms.date: 11/05/2025
 ms.author: elkrieger
 author: Elazark
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
@@ -55,7 +55,7 @@ Defender for Cloud's available plans and their CNAPP benefits include:
 | **Defender for Databases** |  Protects your entire database estate with attack detection and threat response for the various database types in Azure. | [Overview of Microsoft Defender for Azure SQL](defender-for-sql-introduction.md) <br><br>  [Protect your databases with Defender for Databases](tutorial-enable-databases-plan.md) <br><br> [What is Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md) <br><br> [Overview of Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) |
 | **Defender for Key Vault** | Detects unusual and potentially harmful attempts to access or exploit Key Vault accounts. | [Overview of Microsoft Defender for Key Vault](defender-for-key-vault-introduction.md) <br><br> [Protect your key vaults with Defender for Key Vault](tutorial-enable-key-vault-plan.md) | 
 | **Defender for APIs**| Provides visibility into business critical APIs, improves API security posture, prioritization of vulnerability fixes, and quickly detect active real-time threats. | [About Microsoft Defender for APIs](defender-for-apis-introduction.md) <br><br> [Protect your APIs with Defender for APIs](defender-for-apis-deploy.md) |
-| AI Services | Identifies threats to generative AI applications in real time and helps respond to security issues. | [AI threat protection](ai-threat-protection.md) <br><br> [Enable threat protection for AI services](ai-onboarding.md) |
+| **AI Services** | Identifies threats to generative AI applications in real time and helps respond to security issues. | [AI threat protection](ai-threat-protection.md) <br><br> [Enable threat protection for AI services](ai-onboarding.md) |
 
 You can also check out the E-book ["From plan to deployment: Implementing a Cloud Native Application Protection Platform (CNAPP) strategy"](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Implementing-A-Cloud-Native-Application-Protection-Strategy-Ebook.pdf), to learn more about implementing CNAPP in Defender for Cloud.
 
