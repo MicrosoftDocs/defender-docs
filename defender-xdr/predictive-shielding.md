@@ -28,26 +28,29 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Defender XDR correlates millions of individual signals to identify active ransomware campaigns or other sophisticated attacks in the environment with high confidence. TBD - overview.
+Defender XDR uses predictive shielding as a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Learn [how predictive shielding works](#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
 
-This article provides an overview of predictive shielding and includes links to the next steps and other resources.
+This article provides an overview of predictive shielding so that you can understand its capabilities and how it enhances your security posture.
 
 > [!TIP]
 > This article describes how attack disruption works. To enrich these capabilities, see Enrich predictive shielding in Defender XDR - TBD.
 
 ## How predictive shielding works
 
-Predictive Shielding represents a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Unlike traditional reactive models that rely on high-confidence signals, Predictive Shielding integrates posture, activity, and scenario context to predict attack progression in real time. This approach enables organizations to identify potential attack paths and targets, selectively hardening critical areas to minimize impact and provide security teams with more time to respond.
+Predictive shielding represents a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Unlike reactive models that rely on high-confidence signals, predictive shielding integrates posture, activity, and scenario context to predict attack progression in real time. This approach enables organizations to identify potential attack paths and targets, selectively hardening critical areas to minimize impact and provide security teams with more time to respond.
 
-The evolving threat landscape has exposed the limitations of reactive defense models. Persistent, human-operated attacks exploit the asymmetry between defenders, who must protect every asset, and attackers, who need only one weak point. Predictive Shielding addresses this imbalance by dynamically forecasting risks and applying tailored protections where they are most needed, reducing operational overhead and maintaining productivity.
+The evolving threat landscape has exposed the limitations of reactive defense models. Persistent, human-operated attacks exploit the asymmetry between defenders, who must protect every asset, and attackers, who need only one weak point. Predictive shielding addresses this imbalance by dynamically forecasting risks and applying tailored protections where they are most needed, reducing operational overhead and maintaining productivity.
 
-At its core, Predictive Shielding relies on two pillars: prediction and enforcement. Prediction involves analyzing attacker behavior, past incidents, and organizational exposure to identify emerging risks. Enforcement applies automated protective controls to disrupt potential attack paths in real time. This dual approach ensures that protection is both precise and timely.
+Predictive shielding relies on two pillars:  
 
-A key innovation in Predictive Shielding is its graph-based prediction logic, which unifies pre-breach and post-breach insights. By overlaying live attacker activity onto an organization’s exposure graph, Defender can model potential blast radii and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
+- **Prediction** involves analyzing attacker behavior, past incidents, and organizational exposure to identify emerging risks.
+- **Enforcement** applies automated protective controls to disrupt potential attack paths in real time. This dual approach ensures that protection is both precise and timely.
 
-## How predictive shielding expands on automatic threat disruption
+Predictive shielding uses [graph-based prediction logic](#graph-based-prediction-logic), which unifies pre-breach and post-breach insights. By overlaying live attacker activity onto an organization’s exposure graph, Defender can model the potential blast radius and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
 
-Predictive Shielding builds upon the foundation of automatic threat disruption by introducing a proactive layer of defense. While automatic threat disruption focuses on identifying and neutralizing confirmed malicious activities, Predictive Shielding goes a step further by anticipating potential threats before they materialize. This capability enables organizations to stay ahead of attackers, reducing the likelihood of successful breaches.
+## How predictive shielding expands on automatic attack disruption
+
+While [automatic attack disruption](automatic-attack-disruption.md) focuses on identifying and neutralizing confirmed malicious activities, Predictive Shielding goes a step further by anticipating potential threats before they materialize. This capability enables organizations to stay ahead of attackers, reducing the likelihood of successful breaches.
 
 By leveraging predictive analytics and real-time insights, Predictive Shielding dynamically identifies emerging risks and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic threat disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
 
