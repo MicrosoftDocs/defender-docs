@@ -45,7 +45,6 @@ A new **Send logs to Microsoft** option has been added directly to the left navi
 
 :::image type="content" source="./media/ios-new-ux/one-click-feedback-ios.png" alt-text="Screenshots showing how to send logs directly to Microsoft from the Microsoft Defender mobile app options menu." border="false":::
 
-
 ## Key changes - Previous
 
 We are pleased to introduce the **Device Protection** feature card for our enterprise users which includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed. Additionally, a list of features will now be presented in the form of tiles as a part of L2 screens enhancing ease of use and navigation.
