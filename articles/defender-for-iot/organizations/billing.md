@@ -9,9 +9,8 @@ ms.custom: enterprise-iot
 
 # Defender for IoT billing
 
-This article is relevant for commercial Defender for IoT customers.
-
 > [!NOTE]
+> This article is relevant for commercial Defender for IoT customers.
 > If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
 > 
 > As you plan your Microsoft Defender for IoT deployment, you typically want to understand the Defender for IoT pricing plans and billing models so you can optimize your costs.
