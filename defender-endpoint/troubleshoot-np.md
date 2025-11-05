@@ -24,8 +24,6 @@ appliesto:
 ---
 # Troubleshoot network protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 This article provides troubleshooting information for [network protection](network-protection.md), in cases, such as:
 

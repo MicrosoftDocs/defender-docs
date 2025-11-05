@@ -23,13 +23,27 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## November 2025
+
+### Expansion of identity scoping - support for Organizational units (preview) 
+
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
 ## October 2025
+
 We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
 The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
+
 ## September 2025
 
-### Unlock additional security value in the unified agent (Preview)
+### Unlock additional security value in the unified sensor (v3.x)
 Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
@@ -41,24 +55,24 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified agent (preview)
-We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
+### New API support for unified sensor (preview)
+We are excited to announce the availability of a new Graph-based API for managing unified sensor server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of unified agent servers
+* Monitor the status of unified sensor servers
 * Enable or disable the automatic activation of eligible servers
-* Activate or deactivate the agent on eligible servers
+* Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing unified sensor actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
 |---------|---------|
-|2.248|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
+|2.249|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ### Updates to multiple detections to reduce noise and improve alert accuracy
 

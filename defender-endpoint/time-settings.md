@@ -21,11 +21,6 @@ appliesto:
 ---
 # Microsoft Defender XDR time zone settings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 This article describes time zone settings and options. You can use **Time zone** menu to configure the time zone and view license information.
 

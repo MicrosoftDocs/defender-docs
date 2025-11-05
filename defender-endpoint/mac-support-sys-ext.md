@@ -23,11 +23,6 @@ appliesto:
 ---
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device and by navigating to **Help > Send feedback**.
 

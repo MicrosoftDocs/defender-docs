@@ -20,12 +20,10 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 ## Prerequisites
-
 
 ### Supported operating systems
 

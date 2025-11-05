@@ -23,9 +23,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Manage event-based forced updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Manage event-based forced updates
 
 Microsoft Defender Antivirus allows you to determine if updates should (or shouldn't) occur after certain events, such as at startup or after receiving specific reports from the cloud-delivered protection service.
 

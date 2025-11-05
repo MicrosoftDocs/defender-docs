@@ -21,10 +21,6 @@ appliesto:
 ---
 # Create a notification rule when a local onboarding or offboarding script is used
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]

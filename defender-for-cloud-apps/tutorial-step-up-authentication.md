@@ -85,4 +85,4 @@ Defender for Cloud Apps session policies allow you to restrict a session based o
 
 [How to create a session policy](session-policy-aad.md)
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](support-and-ts.md).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).

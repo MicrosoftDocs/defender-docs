@@ -22,10 +22,6 @@ appliesto:
 ---
 # Fix unhealthy sensors in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Devices can be categorized as misconfigured or inactive are flagged for different reasons. This article provides information about why a device might be categorized as inactive or misconfigured.
 
