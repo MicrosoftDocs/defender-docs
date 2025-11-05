@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Defender XDR uses predictive shielding as a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Learn [how predictive shielding works](#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
+Microsoft Defender XDR uses predictive shielding as a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Learn [how predictive shielding works](shield-predict-threats.md#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
 
 This article describes how to manage predictive shielding so that you can understand its capabilities and how it enhances your security posture.
 
@@ -36,7 +36,7 @@ This article describes how to manage predictive shielding so that you can unders
 
 Enrich predictive shielding data to improve security insights and expand coverage. The unified sensor combines endpoint and identity data into a single installation, removing the need for separate setups and enhancing detection capabilities. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
 
-For more information, see [Deploy Microsoft Defender for Identity](../defender-for-identity/deploy/deploy-defender-identity.md).
+For more information, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity.md).
 
 For example, this screenshot shows how enriched data appears in an incident, in an environment with both Microsoft Defender for Endpoint and Microsoft Defender for Identity enabled:
 
@@ -48,8 +48,7 @@ Predictive shielding is built-in in the incident view. Review the incident graph
 
 The incident page includes the following information:
 
-- Disrupted incidents include a tag for 'Attack Disruption' and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
-- A highlighted notification below the incident title indicating that the incident was disrupted.
+- Incidents where predictive shielding is applied include a tag for 'Predictive Shielding' and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
 - Suspended users and contained devices appear with a label indicating their status.
 
 To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
