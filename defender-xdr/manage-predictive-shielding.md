@@ -42,6 +42,18 @@ For example, this screenshot shows how enriched data appears in an incident, in 
 
 TBD - screenshot
 
+## Review the incident graph
+
+Predictive shielding is built-in in the incident view. Review the incident graph to get the entire attack story and assess the predictive shielding impact and status.
+
+The incident page includes the following information:
+
+- Disrupted incidents include a tag for 'Attack Disruption' and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
+- A highlighted notification below the incident title indicating that the incident was disrupted.
+- Suspended users and contained devices appear with a label indicating their status.
+
+To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
+
 ## Next steps
 
 TBD

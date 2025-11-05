@@ -90,6 +90,9 @@ These actions are:
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with devices onboarded to Defender for Endpoint.
 
+    > [!NOTE]
+    > With predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
+
 ## Identify when predictive shielding happens in your environment
 
 The Defender XDR incident page reflects the automatic predictive shielding actions through the attack story. The incident shows a dedicated predictive tag, highlights the status of the assets contained in the incident graph, and adds an action to the Action Center.
