@@ -53,7 +53,7 @@ The AI-generated rules are then validated in various ways to ensure that:
 
 - **Limited data source coverage:** Currently supports CommonSecurityLogs and AWSCloudTrail.  
 - **Dependence on log quality:** Incomplete or noisy logs can reduce accuracy.  
-- **Preview feature:** Behavior schema and AI models may evolve.  
+- **Preview feature:** Behavior schema and AI models might evolve.  
 **Mitigation:** Ensure high-quality log ingestion, validate AI-generated queries, and use human review for critical detections.
 
 
