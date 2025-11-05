@@ -58,7 +58,30 @@ To release a user account or a device from containment, select the contained ass
 The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) brings together [remediation](m365d-remediation-actions.md) and response actions across your devices, email and collaboration content, and identities. Actions listed include manual or automatic remediation actions. You can view predictive shielding actions in the Action center.
 
 You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
+## Track the actions in advanced hunting
+
+You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track contain device or user, and disable user account actions.
+
+### Track containment-related events
+
+Containment in Microsoft Defender for Endpoint prevents further threat actor activity by blocking communication from contained entities. For containment related queries in advanced hunting, see [Containment-related events in advanced hunting](autoad-results.md#containment-related-events-in-advanced-hunting) article.
+
+### Track policy modifications
+
+This sample query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md). 
+
+```Kusto
+  DisruptionAndResponseEvents
+let hardeningPolicyType = 
+let lookBackTime = 
+DisruptionAndResponseEvents
+| where Timestamp > lookBackTime
+| where PolicyName == hardeningPolicyType
+| where DomainName == domainName
+| summarize arg_max(Timestamp, IsPolicyOn) by DeviceId
+| where IsPolicyOn
+```
 
 ## Next steps
 
