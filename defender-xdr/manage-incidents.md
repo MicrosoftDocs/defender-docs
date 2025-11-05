@@ -300,25 +300,33 @@ You can also [add your own comments](#add-comments-to-an-incident) using the com
 > [!IMPORTANT]
 > Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-## AI generated analyst notes
+### AI generated analyst notes
 
 When you finish investigating an incident, you can use AI to generate a summary of the investigation.
 
-After investigation is finished, do the following:
+To generate analyst notes after investigation is finished, do the following:
 
-…-> Prepare analyst notes
-Activity tab (new tab) line -Investigation (analyst notes)
+1. From the three dots menu in the top right, select **Prepare analyst notes**.
 
-Takes time (20 min)
-After preprocessing
-Analyst notes appear in new line in activities tab
-Select that line – window opens.
-Click Generate analyst notes – few seconds generation
-Shows log of what was done
+    :::image type="content" source="./media/manage-incidents/prepare-analyst-notes.png" alt-text="Screenshot highlighting the prepare analyst notes option from the incident page in the Microsoft Defender portal.":::
 
-Log has AI disclaimer. Edit it and it goes away
+1. Choose **Start processing** to confirm. The preparation process can take up to 30 minutes.
 
-1. Optional: post as comment – posts in comments section of incident summary (way to export it for other uses)
+1. When the preparation is done, go to the **Activities** tab. The analyst notes appear as a new line in the activity log.
+
+    :::image type="content" source="./media/manage-incidents/activities-tab.png" alt-text="Screenshot highlighting the analyst notes in the first line of the activities tab from the incident page in the Microsoft Defender portal.":::
+
+1. Open the analyst notes line and select **Generate analyst notes**.
+
+    :::image type="content" source="./media/manage-incidents/generate-note.png" alt-text="Screenshot highlighting the generate notes option in the analyst notes from the incident page in the Microsoft Defender portal.":::
+
+    In a few seconds, the analyst notes are generated showing everything that was done during the investigation.
+
+:::image type="content" source="./media/manage-incidents/analyst-notes.png" alt-text="Screenshot of the generated analyst notes from the incident page in the Microsoft Defender portal.":::
+
+- Notice that this generated log has a disclaimer saying that it was AI generated. Select **Edit Copilot generated content** to review and modify the notes as needed. When you save the edited notes, the disclaimer is removed.
+
+- Optionally, you can post the note as a comment in the comments section of the incident summary. This is a good way to export it for other uses.
 
 ## Export incident data to PDF
 
