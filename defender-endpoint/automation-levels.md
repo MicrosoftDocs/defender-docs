@@ -1,4 +1,4 @@
----
+﻿---
 title: Automation levels in automated investigation and remediation
 description: Get an overview of automation levels and how they work in Microsoft Defender for Endpoint
 author: batamig
@@ -16,15 +16,13 @@ ms.collection:
 ms.topic: article
 ms.custom: AIR
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Automation levels in automated investigation and remediation capabilities
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 Automated investigation and remediation (AIR) capabilities in Microsoft Defender for Business are preconfigured and aren't configurable. In Microsoft Defender for Endpoint, you can configure AIR to one of several levels of automation. Your automation level affects whether remediation actions following AIR investigations are taken automatically or only upon approval.
 
@@ -68,3 +66,4 @@ Automated investigation and remediation (AIR) capabilities in Microsoft Defender
 - [Configure automated investigation and remediation capabilities in Defender for Endpoint](configure-automated-investigations-remediation.md)
 - [Visit the Action Center](auto-investigation-action-center.md#the-unified-action-center)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

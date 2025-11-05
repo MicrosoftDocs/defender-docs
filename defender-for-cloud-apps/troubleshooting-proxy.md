@@ -207,7 +207,7 @@ Certificates must contain the CA's public key, which is then used to sign the cl
 
 1. Verify that activities from these devices are populating the log. In Defender for Cloud Apps, on the **Activity log** page, add a [filter](activity-filters.md) on **Device Tag** equal to **Valid client certificate**.
 
-1. If you still don't see the prompt, open a [support ticket](support-and-ts.md) and include the following information:
+1. If you still don't see the prompt, open a [support ticket](/defender-xdr/contact-defender-support) and include the following information:
 
     - The details of the browser or native app where you experienced the problem
     - The operating system version, such as iOS/Android/Windows 10
@@ -445,7 +445,7 @@ If the **Data Classification Service** inspection method isn't available, use th
 1. Determine whether the **Data Classification Service** feature is available in your [region](dcs-inspection.md):
 
     - If the feature isn't available in your region, use the **Built-in DLP** inspection method.
-    - If the feature is available in your region but you still can't see the **Data Classification Service** inspection method, open a [support ticket](support-and-ts.md).
+    - If the feature is available in your region but you still can't see the **Data Classification Service** inspection method, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ### Can't choose Action: Protect
 

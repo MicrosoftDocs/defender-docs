@@ -1,4 +1,4 @@
-- name: Microsoft Defender for Endpoint
+﻿- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -126,15 +126,13 @@
             - name: Step 2 - Configure device proxy and Internet settings
               href: configure-proxy-internet.md
             - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md
-            
-        - name: Streamlined connectivity
-          items:
-            - name: Onboarding devices using streamlined method
-              href: configure-device-connectivity.md
-            - name: Migrating devices to streamlined method
+              href: verify-connectivity.md        
+            - name: Onboard devices using streamlined method
+              href: configure-device-connectivity.md            
+            - name: Migrate devices to streamlined method
               href: migrate-devices-streamlined.md
-
+            - name: Enable access to service URLs - US government            
+              href: streamlined-device-connectivity-urls-gov.md                       
         - name: Onboard client devices
           items:
           - name: Onboard client devices running Windows or macOS
@@ -285,6 +283,8 @@
                 href: linux-deploy-defender-for-endpoint-using-golden-images.md
               - name: Direct onboarding with Defender for Cloud
                 href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+                href: mde-linux-deployment-on-sap.md
           - name: Configure Defender for Endpoint on Linux
             items:
             - name: Configure security policies and settings
@@ -512,6 +512,8 @@
             href: run-analyzer-linux.md
           - name: Run the client analyzer on macOS
             href: run-analyzer-macos.md
+          - name: Diagnose issues with Client Analyzer
+            href: use-client-analyzer.md        
           - name: Data collection for advanced troubleshooting on Windows
             href: data-collection-analyzer.md
           - name: Understand the analyzer HTML report

@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
 description: Use the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
@@ -16,15 +16,14 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: ngp
 ms.date: 02/24/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft Defender for Endpoint troubleshooting mode allows you to troubleshoot various Microsoft Defender Antivirus features by enabling them from the device and testing different scenarios, even if they're controlled by the organization policy. The troubleshooting mode is disabled by default and requires you to turn it on for a device (and/or group of devices) for a limited time. This is exclusively an enterprise-only feature, and requires Microsoft Defender XDR access.
 
@@ -138,3 +137,4 @@ For more information, see [Use network protection to help prevent connections to
 - [Get an overview of Microsoft Defender for Endpoint](/defender-endpoint/)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

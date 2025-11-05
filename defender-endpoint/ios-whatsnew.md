@@ -1,4 +1,4 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on iOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
@@ -16,20 +16,44 @@ ms.collection:
 ms.topic: reference
 ms.subservice: ios
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Releases for Defender for Endpoint on iOS
+
+#### October 2025
+
+| Build| 1.1.70230101|
+| -------- | -------- |
+| Release Date   |October 28, 2025|
+
+**What's New**
+
+- Simplified return to compliance experience in iOS/iPadOS - please refer to this [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more details.
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/ios-whatsnew/image.png)
+  
+#### October 2025
+
+| Build | 1.1.69250104|
+| -------- | -------- |
+| Release Date | October 7, 2025  |
+
+**What's New**
+
+- Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile, refer - [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).
+
+- Performance Improvement and Bug fixes.
 
 #### September 2025
 
@@ -254,3 +278,4 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 - Bug fixes.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

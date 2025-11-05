@@ -1,4 +1,4 @@
----
+﻿---
 title: List software by recommendation
 description: Retrieves a security recommendation related to a specific software.
 ms.service: defender-endpoint
@@ -16,16 +16,16 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 08/11/2021
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # List software by recommendation
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -98,3 +98,4 @@ Here is an example of the response.
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Defender Vulnerability Management security recommendation](/defender-vulnerability-management/tvm-security-recommendation)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

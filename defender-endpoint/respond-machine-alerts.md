@@ -1,4 +1,4 @@
----
+﻿---
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
@@ -15,16 +15,12 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Business
 
+---
 # Take response actions on a device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -210,6 +206,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**: 
 
+- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices may not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings are not required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
@@ -428,3 +425,4 @@ All other related details are also shown, for example, submission date/time, sub
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 - [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Create an onboarding or offboarding notification rule
 description: Get a notification when a local onboarding or offboarding script is used.
 search.appverid: met150
@@ -14,19 +14,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 ms.date: 03/26/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Create a notification rule when a local onboarding or offboarding script is used
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
 
@@ -214,3 +209,4 @@ You can split it to two queries:
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

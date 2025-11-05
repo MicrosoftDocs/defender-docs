@@ -16,18 +16,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Configure your security settings
 
@@ -158,7 +154,7 @@ The following configuration profile contains entries for all settings described 
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
-      "offlineDefintionUpdateFallbackToCloud":false,
+      "offlineDefinitionUpdateFallbackToCloud":false,
       "offlineDefinitionUpdate":"disabled"
    },
    "cloudService":{
@@ -582,10 +578,8 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 
 ### Exclusion setting preferences
 
-**Exclusion setting preferences are currently in preview**.
-
 > [!NOTE] 
-> Global exclusions are currently in public preview, and are available in Defender for Endpoint beginning with version `101.23092.0012` or later in the Insiders Slow and Production rings.
+> Global exclusions are available in Defender for Endpoint beginning with version `101.24092.0001` or above.
 
 The `exclusionSettings` section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
 

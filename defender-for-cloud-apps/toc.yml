@@ -182,8 +182,6 @@ items:
         href: create-snapshot-cloud-discovery-reports.md
     - name: Create app discovery policies
       href: cloud-discovery-policies.md
-    - name: Create cloud discovery anomaly detection policies
-      href: cloud-discovery-anomaly-detection-policy.md
     - name: Common cloud discovery policies
       href: policies-cloud-discovery.md
     - name: Troubleshooting cloud discovery
@@ -556,8 +554,6 @@ items:
     href: https://security.microsoft.com
   - name: How to buy Defender for Cloud Apps
     href: https://www.microsoft.com/security/business/cloud-apps-defender
-  - name: Support and troubleshooting
-    href: support-and-ts.md
   - name: External integrations
     href: additional-integrations.md
   - name: Watch our webinars

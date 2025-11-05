@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure automated investigation and remediation capabilities
 description: Set up your automated investigation and remediation capabilities in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -16,13 +16,12 @@ ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 search.appverid: met150
 ms.date: 09/21/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 If your organization is using [Defender for Endpoint](/windows/security/threat-protection/) (or [Defender for Business](/defender-business/mdb-overview)), [automated investigation and remediation capabilities](automated-investigations.md) can save your security operations team time and effort. As outlined in [this blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946), these capabilities mimic the ideal steps that a security analyst takes to investigate and remediate threats. [Learn more about automated investigation and remediation](automated-investigations.md).
 
@@ -58,3 +57,4 @@ If you're using Defender for Endpoint, you can specify an automation level so th
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Automation levels in automated investigation and remediation](automation-levels.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

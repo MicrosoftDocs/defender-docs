@@ -1,4 +1,4 @@
----
+﻿---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: paulinbar
 ms.author: painbar
-ms.reviewer: sugamar, yongrhee
+ms.reviewer: sugamar, ericlaw
 manager: bagol
 ms.custom: asr
 ms.topic: reference
@@ -15,22 +15,15 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 08/28/2025
+ms.date: 11/01/2025
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 ---
+
 
 # Attack surface reduction rules reference
 
-**Applies to:**
-
-- [Microsoft Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms:**
-
-- Windows
 
 This article provides information about Microsoft Defender for Endpoint attack surface reduction rules (ASR rules):
 
@@ -44,6 +37,12 @@ This article provides information about Microsoft Defender for Endpoint attack s
 [!Include[Prerelease information](../includes/prerelease.md)]
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Attack surface reduction rules by type
 
@@ -201,7 +200,7 @@ For rules with the "Rule State" specified:
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | | Y| Y (in block mode)  |
-|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
+|[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | Y (in block mode) |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) |   | Y | Y (in block mode)  |
@@ -334,7 +333,7 @@ This rule helps prevent credential stealing by locking down Local Security Autho
 
 LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
 
-By default the state of this rule is set to block. In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
+By default the state of this rule is set to *not configured* (disabled). In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
 
 Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection can't be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
 
@@ -466,7 +465,7 @@ Dependencies: Microsoft Defender Antivirus, AMSI
 
 ### Block Office applications from creating executable content
 
-This rule prevents Office apps, including Word, Excel, and PowerPoint, from creating potentially malicious executable content, by blocking malicious code from being written to disk. Malware that abuses Office as a vector might attempt to break out of Office and save malicious components to disk. These malicious components would survive a computer reboot and persist on the system. Therefore, this rule defends against a common persistence technique. This rule also blocks execution of untrusted files that might have been saved by Office macros that are allowed to run in Office files.
+This rule prevents Office apps, including Word, Excel, and PowerPoint, from being used as a vector to persist malicious code on disk. Malware that abuses Office as a vector might attempt to save malicious components to disk that would survive a computer reboot and persist on the system. This rule defends against this persistence technique by blocking access (open/execute) to the code written to disk. This rule also blocks execution of untrusted files that might have been saved by Office macros that are allowed to run in Office files.
 
 Intune name: `Office apps/macros creating executable content`
 
@@ -520,9 +519,6 @@ For technical support, contact the software vendor.
 ### Block Office communication application from creating child processes
 
 This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) that attackers can use when a user's credentials are compromised.
-
-> [!NOTE]
-> This rule blocks DLP policy tips and ToolTips in Outlook. This rule applies to Outlook and Outlook.com only.
 
 Intune name: `Process creation from Office communication products (beta)`
 
@@ -583,10 +579,7 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block rebooting machine in Safe Mode
 
-> [!NOTE]
-> This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
-
-This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
+This rule prevents the execution of certain commands to restart machines in Safe Mode. In Windows' Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such abuse of Safe Mode by preventing commonly abused commands like `bcdedit` and `bootcfg` from restarting machines in Safe Mode. Safe Mode is still accessible manually from the Windows Recovery Environment.
 
 Intune Name: ` Block rebooting machine in Safe Mode`
 
@@ -601,6 +594,9 @@ Advanced hunting action type:
 - `AsrSafeModeRebootWarnBypassed`
 
 Dependencies: Microsoft Defender Antivirus
+
+> [!NOTE]
+> This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
 
 ### Block untrusted and unsigned processes that run from USB
 
@@ -624,9 +620,6 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block use of copied or impersonated system tools
 
-> [!NOTE]
-> This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
-
 This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
 
 Intune Name: `Block use of copied or impersonated system tools`
@@ -645,6 +638,9 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
+> [!NOTE]
+> This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
+
 ### Block Webshell creation for Servers
 
 This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a crafted script that allows an attacker to control the compromised server. 
@@ -658,7 +654,7 @@ GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management. This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Exchange servers.
+> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management. This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
 
 ### Block Win32 API calls from Office macros
 
@@ -717,3 +713,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

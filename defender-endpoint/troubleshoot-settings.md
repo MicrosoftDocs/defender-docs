@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshoot Microsoft Defender Antivirus settings
 description: Find out where settings for Microsoft Defender Antivirus are coming from.
 author: batamig
@@ -15,17 +15,14 @@ ms.custom: partner-contribution
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Troubleshoot Microsoft Defender Antivirus settings
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-- Microsoft Defender Antivirus
 
 Microsoft Defender Antivirus provides numerous ways to manage the product, which provides small and medium-sized businesses and enterprise organizations with flexibility by working with the management tools that they already have.
 
@@ -91,3 +88,4 @@ The following table describes how to identify policies and settings.
 ## Step 4: Remove or revise conflicting policies
 
 Once you have identified the conflicting policy, work with your security administrators to change device targeting so that devices receive the correct Microsoft Defender Antivirus settings.
+

@@ -1,7 +1,7 @@
 ---
 title: Govern discovered apps 
 description: This article describes the procedure for governing your discovered apps by blocking their usage in your organization.
-ms.date: 01/29/2023
+ms.date: 09/30/2025
 ms.topic: how-to
 ms.reviewer: Mravela
 ---
@@ -9,8 +9,15 @@ ms.reviewer: Mravela
 # Govern discovered apps
 
 
-
 After you review the list of discovered apps in your environment, you can secure your environment by approving safe apps (**Sanctioned**) or prohibiting unwanted apps (**Unsanctioned**) in the following ways.
+
+## Prerequisites
+
+Before you can block discovered cloud apps, you must meet the following requirements:
+
+- [Turn on **Cloud Protection** in Microsoft Defender for Endpoint](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus)
+- [Turn on **Network Protection** in Microsoft Defender for Endpoint.](/defender-endpoint/network-protection#required-browser-configuration)
+- Install the **Microsoft Defender Browser Protection** add-on across all non-Microsoft browsers in your organization.
 
 ## Sanctioning/unsanctioning an app
 
