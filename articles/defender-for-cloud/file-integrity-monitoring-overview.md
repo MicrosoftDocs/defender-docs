@@ -91,9 +91,9 @@ You can create custom rules to monitor specific files or folders as long as they
 
 - Windows registry paths must start with `HKLM` or `hklm` and may only contain letters, numbers, spaces, `_`, `.`, `\`, `:`. Wildcards (`*`) are allowed only at the start or end of a path segment.
 
-- Windows file paths may only contain letters, numbers, spaces, `_`, `.`, `\`, `*`, `?`, `:` and must not contain `/`.
+- Windows file paths may only contain letters, numbers, spaces, `_`, `.`, `\`, `*`, `?`, `:` and must not contain `/`. Wildcards (`*`) are allowed only at the start or end of a path segment.
 
-- Linux file paths must be absolute (start with `/`) and may only contain letters, numbers, spaces, `_`, `.`, `/`, `*`, `:`.
+- Linux file paths must be absolute (start with `/`) and may only contain letters, numbers, spaces, `_`, `.`, `/`, `*`, `:`. Wildcards (`*`) are allowed only at the start or end of a path segment.
 
 - All paths must meet the system’s maximum path length (260 characters) and maximum depth (three asterisks) rules.
 
