@@ -26,20 +26,20 @@ The new enhancements are designed to improve usability, streamline navigation, a
 
 ## Key changes - November 2025
 
-We're please changes make it easier for users to share feedback, including logs, to the Microsoft Defender team. The changes include:
+In this release, we've made it easier for users to share feedback, including logs, to the Microsoft Defender team. The changes include:
 
-- [A new bottom pane that makes it easer for users to share feedback and logs](#bottom-pane-experience)
+- [A new bottom pane that makes it easier for users to share feedback and logs](#bottom-pane-experience)
 - [A new **Send logs to Microsoft** option that enables users to quickly send logs to Microsoft](#one-click-send-logs-experience)
 
-### Bottom Pane Experience
+### Bottom pane experience
 
 When users select **Help and Feedback** in the left navigation pane (Screen 1, accessible by tapping the profile picture), a new bottom feedback pane opens. This pane has been updated to improve readability and make it easier for users to share feedback (Screen 2).
 
-The **Send feedback** option in the updated bottom pane enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they are redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
+The **Send feedback** option in the updated bottom pane enables users to share positive or negative feedback, along with Microsoft Defender and authenticator logs, which will be accessible to the Microsoft Defender team. When a user selects **Send feedback**, they're redirected to a new screen (Screen 3) where they can include logs along with their feedback submission.
 
 :::image type="content" source="./media/ios-new-ux/bottom-experience-ios.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu." border="false":::
 
-### One-Click *Send Logs* Experience
+### One-click *Send Logs* experience
 
 A new **Send logs to Microsoft** option has been added directly to the left navigation pane (Screen 1). This enables users to quickly send logs to Microsoft. It redirects them to the logs submission page (Screen 2). This option is particularly useful when a support case has been created and a support engineer is assigned, providing a convenient way for users to submit logs. Because this option doesn't allow users to include written feedback, the Defender team won't have access to the logs unless the incident ID is explicitly shared via mail or support request. This option only collects logs from both the Defender app - it won't include logs from the Authenticator app.
 
@@ -47,7 +47,7 @@ A new **Send logs to Microsoft** option has been added directly to the left navi
 
 ## Key changes - Previous
 
-We are pleased to introduce the **Device Protection** feature card for our enterprise users which includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed. Additionally, a list of features will now be presented in the form of tiles as a part of L2 screens enhancing ease of use and navigation.
+We're pleased to introduce the **Device Protection** feature card for our enterprise users that includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed. Additionally, a list of features will now be presented in the form of tiles as a part of L2 screens enhancing ease of use and navigation.
 
 **The main changes involved are**:
 
@@ -95,7 +95,7 @@ The structure of the dashboard is updated to include a recommendation card that 
 
 ### Onboarding Screens
 
-This sections details these changes:
+This section details these changes:
 
 * VPN Permission flow while Onboarding
 
@@ -105,7 +105,7 @@ This sections details these changes:
 
 ### VPN Permission flow while Onboarding 
 
-This is the main VPN Permission screen that will appear to the enterprise's users as per our latest rollout of enhancements in the application. 
+This is the main VPN Permission screen that appears to the enterprise's users as per our latest rollout of enhancements in the application. 
 
 :::row:::
    :::column span="":::
