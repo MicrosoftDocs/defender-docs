@@ -18,15 +18,24 @@ ms.custom: references_regions
 > Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-This article provides you with information on pricing, limits, and availability when setting up and using Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools.
+This article provides information on pricing, limits, and availability when setting up and using Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools.
 
 ## Pricing and billing
 
-Pricing in Microsoft Sentinel is based on the tier that the data is ingested into. The **data lake tier** is a cost-effective option for ingesting secondary security data and querying security data over long term. In this tier, Microsoft Sentinel's unified MCP server interface is offered **at no additional cost**. You're charged for invoking tools that search and retrieve data using Kusto Query Language (KQL) queries from Microsoft Sentinel data lake—using Microsoft Sentinel data lake's billing model, you pay as you go for queries that retrieve data. [Read more about Microsoft Sentinel data lake’s pricing here](../billing.md#data-lake-tier).
+### Sentinel data lake tools
+
+Pricing in Microsoft Sentinel is based on the tier that you ingest data into. The **data lake tier** is a cost-effective option for ingesting secondary security data and querying security data over the long term. In this tier, Microsoft Sentinel's unified MCP server interface is offered **at no extra cost**. You pay for invoking tools that search and retrieve data by using Kusto Query Language (KQL) queries from Microsoft Sentinel data lake. With Microsoft Sentinel data lake's billing model, you pay as you go for queries that retrieve data. [Read more about Microsoft Sentinel data lake’s pricing here](../billing.md#data-lake-tier).
+
+### Microsoft Defender tool
+
+You can use the Microsoft Defender tool collection at no extra cost, provided that you’re onboarded to the required products and services.
+
 
 ## Quotas and limits
 
-All [service parameters and limits for Microsoft Sentinel data lake](sentinel-lake-service-limits.md#service-parameters-and-limits-for-tables-data-management-and-ingestion) also apply when using Microsoft Sentinel's MCP collection of tools. 
+### Sentinel data lake tools
+
+All [service parameters and limits for Microsoft Sentinel data lake](sentinel-lake-service-limits.md#service-parameters-and-limits-for-tables-data-management-and-ingestion) also apply when you use Microsoft Sentinel's MCP collection of tools. 
 
 The following limits are specific to this service:
 
@@ -34,6 +43,10 @@ The following limits are specific to this service:
 |----------|----------|
 | MCP streaming | 120 seconds | 
 | Query window for tools | 800 characters |
+
+### Microsoft Defender tool
+Regular API throttling applies to the tools in the Defender collection. In addition, tools that call the advanced hunting API are bound by the existing advanced hunting quotas and service limits. [Learn more about advanced hunting quotas and usage parameters](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters)
+
 
 ## Language and region availability
 Microsoft Sentinel’s collection of MCP tools supports English prompts only. For optimal performance, customers located in the following countries and regions can use Microsoft Sentinel's collection of MCP tools:

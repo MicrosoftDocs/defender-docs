@@ -20,7 +20,7 @@ ms.service: microsoft-sentinel
 Microsoft Sentinel’s Model Context Protocol (MCP) Server collections are logical groupings of related security-focused MCP tools that you can use in any [compatible client](sentinel-mcp-get-started.md#supported-code-editors-and-agent-platforms) to search and retrieve data from tables and create agents.
 
 Our collections are scenario-focused and have security-optimized descriptions that help AI models pick the right tools and deliver those outcomes. For example, you can use the following sample prompts to get the appropriate tool:
-- Find the top three users that are at risk and explain why they are at risk.
+- Find the top three users that are at risk and explain why they're at risk.
 - Find sign-in failures in the last 24 hours and give me a brief summary of key findings.
 - Identify devices that showed an outstanding number of outgoing network connections.
 
@@ -29,10 +29,11 @@ Our collections are scenario-focused and have security-optimized descriptions th
 
 The following table lists the available collections you can use:
 
-| Collection | Description | 
-|----------|----------|
-| [Data exploration](sentinel-mcp-data-exploration-tool.md) | Explore security data in Microsoft Sentinel data lake by searching for relevant tables and query lake | 
-| [Security Copilot agent creation](sentinel-mcp-agent-creation-tool.md) | Create Microsoft Security Copilot agents for complex workflows | 
+| Collection | Description | Server URL |
+|----------|----------|----------|
+| [Data exploration](sentinel-mcp-data-exploration-tool.md) | Explore security data in Microsoft Sentinel data lake by searching for relevant tables and query lake | `https://sentinel.microsoft.com/mcp/data-exploration`|
+| [Security Copilot agent creation](sentinel-mcp-agent-creation-tool.md) | Create Microsoft Security Copilot agents for complex workflows |`https://sentinel.microsoft.com/mcp/security-copilot-agent-creation`|
+| [Microsoft Defender](sentinel-mcp-defender-tool.md) | Triage incidents rapidly and hunt over your own data easily using Defender APIs | `https://sentinel.microsoft.com/mcp/defender`|
 
 ## Related content
 - [What is Microsoft Sentinel’s support for Model Context Protocol (MCP)?](sentinel-mcp-overview.md) 

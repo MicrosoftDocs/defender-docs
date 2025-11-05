@@ -17,24 +17,24 @@ ms.service: microsoft-sentinel
 > Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Microsoft Sentinel, our security platform, is introducing support for Model Context Protocol (MCP). This support comprises multiple scenario-focused collections of security tools through a unified server interface, allowing customers to interactively query security data in natural language and build effective security agents that can perform complex automation. Our collection of security tools help security teams bring AI into their daily security operations to assist with common tasks like data exploration and building agentic automation.
+Microsoft Sentinel, our security platform, introduces support for Model Context Protocol (MCP). This support includes multiple scenario-focused collections of security tools through a unified server interface. With this support, you can interactively query security data in natural language and build effective security agents that can perform complex automation. Our collection of security tools helps security teams bring AI into their daily security operations to assist with common tasks like data exploration and building agentic automation.
 
 ## Key features of Microsoft Sentinel’s support for MCP
 
-The following are some of the key features and benefits of Microsoft Sentinel’s MCP servers:
+The following features and benefits are part of Microsoft Sentinel’s MCP servers:
 
 - **Unified, hosted interface for AI-driven security operations**: Microsoft Sentinel’s unified MCP server interface is fully hosted, requires no infrastructure deployment, and uses Microsoft Entra for identity. Security teams can connect compatible clients to streamline daily AI operations.
 
-- **Scenario-focused and natural language security tools**: Microsoft Sentinel’s MCP support comes through scenario-focused collections of ready-to-use security tools. These collections help Security teams interact and reason over security data in Microsoft Sentinel data lake using natural language, removing the need for code-first integration, understanding data schema, or writing well-formed data queries.
+- **Scenario-focused and natural language security tools**: Microsoft Sentinel’s MCP support comes through scenario-focused collections of ready-to-use security tools. These collections help Security teams interact and reason over security data in Microsoft Sentinel data lake and Microsoft Defender using natural language, removing the need for code-first integration, understanding data schema, or writing well-formed data queries.
 
-- **Accelerated development of effective security agents**: Microsoft Sentinel’s collection of security tools automate discovery and retrieval of security data and deliver predictable, actionable responses to customize agents, speeding up efficient security agent creation and delivering better and highly effective security agents.
+- **Accelerated development of effective security agents**: Microsoft Sentinel’s collection of security tools automates discovery and retrieval of security data and delivers predictable, actionable responses to customize agents. This support speeds up efficient security agent creation and delivers better and highly effective security agents.
 
-- **Cost-Effective, Context-Rich Security Data Integration**: The data lake lets you bring all your security data into Microsoft Sentinel cost-effectively, removing the need to choose between coverage and cost. Microsoft Sentinel’s collection of tools natively integrates with the security data lake, letting you build comprehensive security context engineering.
+- **Cost-effective, context-rich security data integration**: The data lake lets you bring all your security data into Microsoft Sentinel cost-effectively, so you don't need to choose between coverage and cost. Microsoft Sentinel’s collection of tools natively integrates with the security data lake and Microsoft Defender, letting you build comprehensive security context engineering.
 
 
 ## Introduction to MCP 
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open protocol designed to manage how language models interact with external tools, memory, and context in a safe, structured, and stateful way. MCP defines a client-server architecture with several components: 
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open protocol that manages how language models interact with external tools, memory, and context in a safe, structured, and stateful way. MCP uses a client-server architecture with several components: 
 
 - **MCP host**: The AI application that coordinates and manages one or multiple MCP clients
 
@@ -48,7 +48,7 @@ For example, Visual Studio Code acts as an MCP host. When Visual Studio Code est
 
 ## Scenarios for using Microsoft Sentinel’s MCP collections
 
-Once you connect a [compatible client](sentinel-mcp-get-started.md#supported-code-editors-and-agent-platforms) with Microsoft Sentinel’s MCP collections, you can use tools to:
+When you connect a [compatible client](sentinel-mcp-get-started.md#supported-code-editors-and-agent-platforms) with Microsoft Sentinel’s MCP collections, you can use tools to:
 
 - **Interactively explore long term security data**: Security analysts and threat hunters, like those focusing on identity-based attacks, need to quickly query and correlate data across various security tables. Today, they must have knowledge of all tables and what data each table contains. With our data exploration collection, analysts can now use natural language prompts to search and retrieve relevant data from tables in Microsoft Sentinel data lake without needing to remember tables and their schema or writing well-formed Kusto Query Language (KQL) queries.  
 
@@ -60,6 +60,9 @@ Once you connect a [compatible client](sentinel-mcp-get-started.md#supported-cod
 
   [Get started with building agents](sentinel-mcp-agent-creation-tool.md)
 
+-	**Triage incidents and hunt for threats using Defender APIs:** SOC engineers need to prioritize incidents rapidly and hunt over your organization’s own data easily without having to worry about security workflow issues and interoperability among platforms and tools that they use. Our Microsoft Defender collection of tools integrates your AI models with Defender APIs that support incident triage and hunting. This integration reduces mean time to resolution, risk exposure, and dwell time and empowers your team to leverage AI for smarter and faster decision-making. 
+ 
+    [Get started with incident triage and threat hunting](sentinel-mcp-defender-tool.md)
 
 ## Related content
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)

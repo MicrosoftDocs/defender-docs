@@ -19,13 +19,19 @@ ms.service: microsoft-sentinel
 
 This article shows you how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries against your security data. Sentinel's support for MCP enables security teams to bring AI into their security operations by allowing AI models to access security data in a standard way. 
 
-Sentinel's [collection](sentinel-mcp-tools-overview.md) of security tools are designed to work with multiple clients and automation platforms. You can use these tools to search for relevant tables, retrieve data, and create Security Copilot agents.
+Sentinel's [collection](sentinel-mcp-tools-overview.md) of security tools works with multiple clients and automation platforms. You can use these tools to search for relevant tables, retrieve data, and create Security Copilot agents.
 
 ## Prerequisites
 
-To use Microsoft Sentinel MCP server and access its collection of tools, you need to be onboarded to Microsoft Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake and Microsoft Sentinel graph (preview)](sentinel-lake-onboarding.md).
+To use Microsoft Sentinel MCP server and access its collection of tools, you need to be onboarded to at least one of the following products:
+- [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
+- [Microsoft Sentinel in Microsoft Defender portal](/unified-secops/microsoft-sentinel-onboard)
+- [Microsoft Defender XDR or Microsoft Defender for Endpoint](/unified-secops/overview-deploy)
 
-You also need the **Security reader** role to list and invoke Sentinel's collection of MCP tools.
+For more information about a tool collection's specific product prerequisites, see their respective articles. 
+
+
+You also need the **Security reader** role to list and invoke Sentinel's collection of MCP tools. The [Microsoft Defender tool collection](sentinel-mcp-defender-tool.md) lets you use any tool your existing permissions grant you.
 
 ### Supported code editors and agent platforms
 
@@ -46,9 +52,7 @@ Microsoft Sentinel's support for MCP tools works with the following AI-powered c
 
         :::image type="content" source="media/sentinel-mcp/mcp-get-started-http.png" alt-text="Screenshot of Visual Studio Code with HTTP or Server-Sent Events highlighted." lightbox="media/sentinel-mcp/mcp-get-started-http.png":::
 
-    1. Enter the URL of the MCP server you want to access then press **Enter**:
-        - [Data exploration](sentinel-mcp-data-exploration-tool.md): `https://sentinel.microsoft.com/mcp/data-exploration` 
-        - [Security Copilot agent creation](sentinel-mcp-agent-creation-tool.md): `https://sentinel.microsoft.com/mcp/security-copilot-agent-creation`
+    1. Enter the URL of the [MCP server](sentinel-mcp-tools-overview.md#available-collections) you want to access then press **Enter**.
     
     1. Assign a friendly **Server ID** (for example, `Microsoft Sentinel MCP server`)
     1. Choose whether to make the server available in all Visual Studio Code workspaces or just the current one.
@@ -66,13 +70,13 @@ Microsoft Sentinel's support for MCP tools works with the following AI-powered c
 # [Security Copilot](#tab/security-copilot)
 
 >[!IMPORTANT]
->You first need to build your own custom Security Copilot agent before you can add Sentinel's collection of MCP tools. For more information, see [Build an agent from scratch using the lite experience](/copilot/security/developer/create-agent-dev#steps-to-create-your-custom-agent).
+>You need to build your own custom Security Copilot agent before you can add Sentinel's collection of MCP tools. For more information, see [Build an agent from scratch using the lite experience](/copilot/security/developer/create-agent-dev#steps-to-create-your-custom-agent).
 
 To add Microsoft Sentinel's collection of MCP tools during custom agent building:
 
 1. Select **Add tool** to open the Tools catalog modal.
-2.	In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "data exploration" to find the data exploration tool.
-4.	Select **Add selected** to add the tools to your agent.
+1. In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "data exploration" to find the data exploration tool.
+1. Select **Add selected** to add the tools to your agent.
 
 
 ---
