@@ -12,10 +12,8 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
->
 
-
-## Identify service accounts in privileged groups 
+## Identify service accounts in privileged groups
 
 
 **Description**
@@ -23,7 +21,7 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 Lists Active Directory service accounts within your environment that are members of privileged groups, including direct and nested membership.
 
 
-**Impact**
+**User impact**
 
 Service accounts often have long-lived credentials and are used by applications, scripts, or automated tasks. When these accounts are members of highly privileged groups (for example, Domain Admins or Enterprise Admins), they increase the organization’s attack surface. Compromise of one of these accounts can grant an attacker broad administrative access to critical systems and data. Additionally, because service accounts aren't tied to a specific user and often lack interactive monitoring, malicious activity performed under these accounts might go unnoticed, delaying detection and response.
 
@@ -66,7 +64,7 @@ For example:
 Lists Active Directory accounts (users, service accounts, and groups) that are members of built-in operator groups such as Server Operators, Backup Operators, Print Operators or Account Operators, including direct and indirect membership. These groups grant elevated privileges that can be used to compromise domain controllers or sensitive servers.
 
 
-**Impact**
+**User impact**
 
 Operator groups provide broad control over servers, files, and system operations. Members of these groups can perform administrative actions such as stopping critical services, modifying files, or restoring data which can be exploited to escalate privileges or gain persistence. Because these groups are rarely needed in modern environments, leaving accounts in them unnecessarily increases the risk of privilege abuse or lateral movement.
 
@@ -87,14 +85,13 @@ For example:
 - If operator group membership is essential for a specific administrative function, monitor the account, restrict it to required hosts, and review it regularly  periodically to confirm ongoing necessity.
 
 
-
 ## Accounts with non-default Primary Group ID
 
 **Description**
 
 This recommendation lists all computers and users accounts whose primaryGroupId (PGID) attribute isn't the default for domain users and computers in Active Directory.
 
-**Impact**
+**User impact**
 
 The primaryGroupId attribute of a user or computer account grants implicit membership to a group. Membership through this attribute doesn't appear in the list of group members in some interfaces. This attribute might be used as an attempt to hide group membership. It might be a stealthy way for an attacker to escalate privileges without triggering normal auditing for group membership changes. 
 
@@ -153,7 +150,7 @@ To achieve the full score, remediate all exposed entities.
 
 This recommendation lists any krbtgt account within your environment with password last set over 180 days ago.
 
-**Impact**
+**User impact**
 
 The krbtgt account in Active Directory is a built-in account used by the Kerberos authentication service. It encrypts and signs all Kerberos tickets, enabling secure authentication within the domain. The account can't be deleted, and securing it's crucial, as compromise could allow attackers to forge authentication tickets.  
 If the KRBTGT account's password is compromised, an attacker can use its hash to generate valid Kerberos authentication tickets, allowing them to perform Golden Ticket attacks and gain access to any resource in the AD domain. Since Kerberos relies on the KRBTGT password to sign all tickets, closely monitoring and regularly changing this password is essential to mitigating the risk of such attacks.
@@ -175,7 +172,7 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 
 This recommendation lists any built-in domain Administrator accounts within your environment with password last set over 180 days ago. 
 
-**Impact**
+**User impact**
 
 The built-in domain Administrator account is a default, highly privileged AD account with full control over the domain. It can't be deleted, has unrestricted access, and is critical for managing the domain's resources.
 
@@ -202,7 +199,7 @@ However, **Sensitive** accounts can also become *dormant* if they aren't used fo
 
 For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](../entity-tags.md#default-sensitive-entities).
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their dormant user accounts leave the door unlocked to their sensitive data safe.
 
@@ -251,7 +248,7 @@ To achieve the maximum score, remediate all exposed entities.
 
 This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
-**Impact**
+**User impact**
 
 If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
 For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
@@ -288,7 +285,7 @@ The safest approach is to use a PowerShell script to configure the device to pre
 
 This security assessment monitors your traffic for any entities exposing credentials in clear text and alerts you to the current exposure risks (most impacted entities) in your organization with suggested remediation.
 
-**Impact**
+**User impact**
 
 Entities exposing credentials in clear text are risky not only for the exposed entity in question, but for your entire organization.
 
@@ -320,7 +317,7 @@ Microsoft's "Local Administrator Password Solution" (LAPS) provides management o
 
 This security assessment supports [legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) and [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
-**Impact**
+**User impact**
 
 LAPS provides a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolves this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
 
@@ -401,7 +398,7 @@ To address this security assessment, follow these steps:
 
 This recommendation lists Active Directory service accounts detected as stale within the past 90 days. 
 
-**Impact**
+**User impact**
 
 Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Stale service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
 
@@ -440,7 +437,7 @@ For more information about lateral movement paths, see:
 - [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](../understand-lateral-movement-paths.md)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their **sensitive** accounts leave the door unlocked for malicious actors.
 
@@ -465,7 +462,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
 Kerberos delegation is a delegation setting that allows applications to request end-user access credentials to access resources on behalf of the originating user.
 
-**Impact**
+**User impact**
 
 Unsecure Kerberos delegation gives an entity the ability to impersonate you to any other chosen service. For example, imagine you have an IIS website, and the application pool account is configured with unconstrained delegation. The IIS website site also has Windows Authentication enabled, allowing native Kerberos authentication, and the site uses a back-end SQL Server for business data. With your Domain Admin account, you browse to the IIS website and authenticate to it. The website, using unconstrained delegation can get a service ticket from a domain controller to the SQL service, and do so in your name.
 
@@ -522,7 +519,7 @@ SID History is an attribute that supports [migration scenarios](/previous-versio
 
 The assessment checks for accounts with SID History attributes which Microsoft Defender for Identity profiles to be risky.
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -556,7 +553,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 
 Microsoft Defender for Identity continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -596,4 +593,4 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)
