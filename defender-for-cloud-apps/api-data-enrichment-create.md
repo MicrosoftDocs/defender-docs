@@ -21,16 +21,16 @@ POST /api/v1/subnet/create_rule/
 | Parameter | Description |
 | --- | --- |
 | name | The unique name of the range |
-| category | The id of the range category. Providing a category helps you easily recognize activities from interesting IP addresses. Possible values include:<br /><br />**1**: Corporate<br />**2**: Administrative<br />**3**: Risky<br />**4**: VPN<br />**5**: Cloud provider<br />**6**: Other |
+| category | The ID of the range category. Providing a category helps you easily recognize activities from interesting IP addresses. Possible values include:<br /><br />**1**: Corporate<br />**2**: Administrative<br />**3**: Risky<br />**4**: VPN<br />**5**: Cloud provider<br />**6**: Other |
 | subnets | An array of masks as strings (IPv4 / IPv6) |
 | organization (Optional) | The registered ISP |
-| tags (Optional) | An array of new or existing objects including the tag name, id, description, name template, and tenant id |
+| tags (Optional) | An array of new or existing objects including the tag name, ID, description, name template, and tenant ID |
 
 ## Example
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/subnet/create_rule/" -d '{
@@ -49,6 +49,6 @@ curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: applicat
 
 ### Response
 
-Returns the id of the new range as a string.
+Returns the ID of the new range as a string.
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
