@@ -98,9 +98,11 @@ Analysts can launch built-in queries to retrieve all user anomalies directly fro
 
 For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
 
-### Investigation workflow integration
+### Enrich analysis in Advanced Hunting using UEBA data
 
-- **Enhanced investigation graph**: When investigating incidents containing user entities, access UEBA anomalies queries directly from the investigation graph for immediate behavioral context.
+When analysts use Advanced Hunting to query data in tables that are data sources for UEBA, the Defender portal displays a banner that prompts the analyst to join the Anomlies table and enrich their anlysis with behavioral insights.
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomlies table and enrich their anlysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png":::
 
 Learn more about investigation enhancements in [Investigate Microsoft Sentinel incidents in depth](investigate-incidents.md).
 
