@@ -42,37 +42,49 @@ For example, this screenshot shows how enriched data appears in an incident, in 
 
 TBD - screenshot
 
-## Review the incident
+## Review predictive shielding details and results
 
-Predictive shielding is built-in in the incident view. Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
+### Review the incident information
+
+Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
 TBD - image
 
 The incident page includes the following information:
 
-- Incidents where predictive shielding is applied include a tag for 'Predictive Shielding' and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
-- Suspended users and contained devices appear with a label indicating their status.
+- Filter by the the **Predictive Shielding** label to find incidents where predictive shielding is applied.
+- Review the incident summary pane, which shows how predictive shielding is applied across your environment:
 
-To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
+    - The **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
+    - The number of hardening policies applied as part of predictive shielding, and the number of devices each policy applies to.
 
-The incident summary pane shows historical data on the attack, and how predictive shielding was applied. Specifically, it shows:
+    TBD - screenshot
 
-- The number of hardening policies applied as part of predictive shielding.
-- The number of devices each policy applies to.
+## Review the activity information
 
-In the incident **Activity** tab, filter by the **Response** category to get a live snapshot of the activities where a predictive shielding action is applied. The action is specified under the **Type** column. In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions were applied as part of predictive shielding.
+Select the incident's **Activity** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied. Each action is specified under the **Type** column.
+    
+In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions are applied as part of predictive shielding.
 
-Select an action to open the activity details, which shows the number of devices that currently apply the relevant policy.
+TBD - screenshot
 
 > [!NOTE]
 > The **Performed by** column indicates **Attack Disruption** both for attack disruption and predictive shielding actions. To understand which specific actions apply to predictive shielding, see the [Predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions).
 
-Select the **Triggering alert** column to investigate the alert that led to the predictive shielding action, including the risk, activity, and exposure data that led to the alert. In the alert page, you can also see the alert that triggered the prediction as part of the **Alert chain**.
+Select a specific action to open the activity details pane, which shows the number of devices where the relevant policy is currently applied.
 
-To summarize:
+TBD - screenshot
 
-- In the alert body, you can see which assets are at risk.
-- In the alert chain, you can see the triggering malicious activity.
+## Review the triggering alert information
+
+To investigate the alert that led to the predictive shielding action, select the triggering alert either from the incident details pane or from the activity page.
+
+TBD - screenshot
+
+In the alert, you can review:
+
+- Which assets are at risk.
+- The triggering malicious activity from the **Alert chain**.
 - The exposure data used to calculate this risk.
 
 ## Track the actions in the Action center
