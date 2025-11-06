@@ -84,18 +84,19 @@ The UEBA experience in the Defender portal provides analysts with behavioral ins
 
 This section outlines the key UEBA analyst experiences available in the Defender portal when you enable UEBA.
 
-### User-focused investigations
+### UEBA insights in user-focused investigations
 
-Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on anomalous behavior patterns. For more information, see [User entity page in Microsoft Defender](/defender-xdr/investigate-users).
+Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on anomalous behavior patterns. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
 
-### Enhanced hunting and detection
+### Built-in user anomaly queries in incident investigations
 
-- **Go Hunt Anomalies Query**: Access built-in anomalies queries directly from incident graphs when investigating user entities, providing immediate contextual hunting based on UEBA outcomes.
-- **Anomalies Table Recommendations**: Receive intelligent suggestions to enhance your hunting queries by adding the UEBA Anomalies table when querying eligible data sources.
+Analysts can launch built-in queries to retrieve all user anomalies directly from incident graphs when investigating incidents.
 
-These hunting enhancements are detailed in [Threat hunting in Microsoft Sentinel](hunting.md).
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png":::
+
+For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
 
 ### Investigation workflow integration
 
