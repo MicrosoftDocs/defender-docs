@@ -26,7 +26,7 @@ Connectors created using the CCF are fully SaaS, with no requirements for servic
 
 This article will show you how to complete each step and provide an [example codeless connector](#example) to build along the way.
 
-If you're a software development partner and need support to build a CCF data connector, contact [Microsoft Sentinel Partners](mailto:AzureSentinelPartner@microsoft.com) for assistance.
+If you're a software development partner and need support to build a CCF data connector, contact Microsoft Sentinel Partners at [AzureSentinelPartner@microsoft.com](mailto:AzureSentinelPartner@microsoft.com) for assistance.
 
 ## How is this CCF different from the previous version?
 
