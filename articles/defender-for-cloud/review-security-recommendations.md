@@ -117,7 +117,6 @@ Alternative access paths to recommendations:
 > [!NOTE]
 > **Why you might see different resources between the Azure portal and Defender portal:**
 > - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
-> - **Free subscription resources**: Resources from free subscriptions don't appear in the Defender portal during the preview period. This is a temporary limitation that will be addressed.
 > - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
 
 ## Understanding risk prioritization in Defender portal
@@ -143,13 +142,13 @@ The unified Exposure Management experience calculates risk levels using a contex
 - **Exploitability factors**: How easily an attacker could exploit the vulnerability
 - **Business impact**: The potential consequences if the security issue were exploited
 - **Attack surface**: The resource's exposure to potential threats
-- **Choke point analysis**: Whether addressing the recommendation would disrupt multiple attack paths
+- **Choke point analysis**: Whether the resource serves as a critical junction in potential attack paths
 
 ### Risk levels in Defender portal
 
 Recommendations in the Defender portal are classified into five risk levels:
 
-- **Critical**: Security vulnerabilities with immediate exploitability and high business impact that require urgent attention
+- **Critical**: The most severe security issues with immediate exploitability and high business impact that require urgent attention
 - **High**: Significant security risks that should be addressed promptly but may not require immediate action
 - **Medium**: Moderate security issues that can be addressed as part of regular security maintenance
 - **Low**: Minor security issues that can be addressed at your convenience during routine operations
