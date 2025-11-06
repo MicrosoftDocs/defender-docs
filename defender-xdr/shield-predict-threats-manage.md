@@ -60,7 +60,7 @@ The incident page includes the following information:
 
     TBD - screenshot
 
-## Review the activity information
+### Review the activity information
 
 Select the incident's **Activity** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied. Each action is specified under the **Type** column.
     
@@ -75,7 +75,7 @@ Select a specific action to open the activity details pane, which shows the numb
 
 TBD - screenshot
 
-## Review the triggering alert information
+### Review the triggering alert information
 
 To investigate the alert that led to the predictive shielding action, select the triggering alert either from the incident details pane or from the activity page.
 
