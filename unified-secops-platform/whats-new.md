@@ -21,6 +21,33 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
+## November 2025
+
+### New Entity Behavior Analytics (UEBA) experiences in the Defender portal (Preview)
+
+Microsoft Sentinel introduces new UEBA experiences in the Defender portal, bringing behavioral insights directly into key analyst workflows. These enhancements help analysts prioritize investigations and apply UEBA context more effectively.
+
+#### Prioritize users with anomalies
+
+Analysts can view the top three anomalies from the last 30 days in a dedicated section on the User entity page and side panel, available in:
+- User side panels accessible from various portal locations.
+- Overview tab of user entity pages.
+- Direct links to anomalies queries and Sentinel events timeline.
+
+#### Launch anomaly queries from incident graphs
+
+Incident graphs include a built-in Go Hunt query for user anomalies:
+- Accessible directly from the incident graph.
+- Provides contextual UEBA results in the hunt pane.
+- Enables immediate context and investigation expansion based on UEBA outcomes.
+
+#### Enrich Advanced Hunting and custom detection queries with behavior insights
+
+Advanced hunting and custom detection experiences now include a contextual banner that suggests joining the UEBA Anomalies table to queries that include UEBA data sources. The banner appears when you query eligible tables that feed the UEBA engine. 
+
+All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
+
+For more information, see [How UEBA empowers analysts and streamlines workflows](/azure/sentinel/identify-threats-with-entity-behavior-analytics.md#how-ueba-empowers-analysts-and-streamlines-workflows).
 
 ## September 2025
 
