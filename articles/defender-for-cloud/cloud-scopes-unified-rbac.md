@@ -344,5 +344,7 @@ For end-to-end cloud scopes and unified RBAC administration, use the Defender po
 > - **uRBAC** provides finer-grained permissions within the Defender portal, letting you assign roles for specific security actions and cloud scopes across Defender solutions.  
 >
 > This means permissions in Defender are tailored for security tasks and do not depend on Azure RBAC roles.
+>
+> **Important:** Users will require two separate permissions: their existing Azure RBAC permissions as well as an additional uRBAC role. In addition to the existing Azure RBAC permissions, you must provide users with a new uRBAC role in order to grant them access to the new portal.
 
 ::: zone-end

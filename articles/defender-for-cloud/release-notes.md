@@ -93,7 +93,7 @@ The following regulatory compliance standards, previously available in preview, 
 | HIPAA | Azure |
 | HITRUST CSF v11.3.0 | Azure, AWS, GCP |
 | ISO/IEC 27001:2022 | Azure, AWS, GCP |
-| ISO/IEC 27002:2022 | Azure, AWS, GCP |<link to the release notes on MSEM> 
+| ISO/IEC 27002:2022 | Azure, AWS, GCP |
 | ISO/IEC 27017:2015 | Azure, AWS, GCP |
 | NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
 | NIST 800-171 Rev 3 | Azure, AWS, GCP |
@@ -280,7 +280,7 @@ August 12, 2025
 
 Microsoft [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) is generally available to government cloud customers. The service helps U.S. federal and government agencies, secure their storage accounts.
 All features of [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) are available in government clouds, aligning the feature coverage with commercial cloud services.
-Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-defender-for-cloud.md).
 
 ### General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud
 

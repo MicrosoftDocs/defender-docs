@@ -19,7 +19,7 @@ From within Azure DNS, Defender for DNS monitors the queries from these resource
 
 **Microsoft Defender for DNS** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
-Review Defender for DNS [cloud availability](support-matrix-cloud-environment.md).
+Review Defender for DNS [cloud availability](support-matrix-defender-for-cloud.md).
 
 ## What are the benefits of Microsoft Defender for DNS?
 

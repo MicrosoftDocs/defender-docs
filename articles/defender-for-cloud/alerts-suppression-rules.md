@@ -17,7 +17,7 @@ Required roles and permissions:
 - **Security admin** and **Owner** can create/delete rules.
 - **Security reader** and **Reader** can view rules.
 
-For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md).
+For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## What are suppression rules?
 

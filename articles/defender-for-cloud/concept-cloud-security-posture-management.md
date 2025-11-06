@@ -31,7 +31,7 @@ Defender CSPM is available across multiple deployment models and cloud environme
 - **Hybrid**: On-premises resources through Azure Arc
 - **DevOps**: GitHub and Azure DevOps integration
 
-For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
+For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-defender-for-cloud.md).
 
 | Feature | Foundational CSPM | Defender CSPM | Cloud availability |
 |--|--|--|--|
@@ -106,7 +106,7 @@ Defender for Cloud supports integrations with partner systems for incident manag
 
 ## Azure Cloud Support
 
-For commercial and national cloud coverage, see [Azure cloud environment support matrix](support-matrix-cloud-environment.md).
+For commercial and national cloud coverage, see [Azure cloud environment support matrix](support-matrix-defender-for-cloud.md).
 
 ## Next Steps
 

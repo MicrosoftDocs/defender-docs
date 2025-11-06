@@ -22,7 +22,7 @@ You can customize which scanners to run and define exactly which organizations, 
   - [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
   - [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
 
-- [Supported cloud availability](support-matrix-cloud-environment.md).
+- [Supported cloud availability](support-matrix-defender-for-cloud.md).
 
 - **Supported regions**: Australia East, Canada Central, Central US, East Asia, East US, North Europe, Sweden Central, UK South, West Europe.
 
@@ -230,4 +230,3 @@ During the **public preview** phase, the following limitations apply:
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
 
 - [Connect Azure DevOps environments to Defender for Cloud](quickstart-onboard-devops.md)
-
