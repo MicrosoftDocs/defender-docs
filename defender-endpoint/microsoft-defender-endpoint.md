@@ -23,13 +23,13 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 Defender for Endpoint is part of [Microsoft Defender XDR](/defender-xdr/) and can be [integrated](threat-protection-integration.md) with other Microsoft solutions, including:
 
+* [Intune](/intune/intune-service/)
 * [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
 * [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 * [Microsoft Defender for Identity](/defender-for-identity/)
 * [Microsoft Defender for Office](/defender-office-365/)
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 * [Microsoft Sentinel](/azure/sentinel/)
-* [Intune](/intune/intune-service/)
 
 ## Operating systems
 
