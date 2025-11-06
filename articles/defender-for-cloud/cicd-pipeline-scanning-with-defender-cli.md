@@ -15,14 +15,14 @@ Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you em
 
 ## Key capabilities
 
-* Container‑image vulnerability assessment and automatic ingestion into MDC Cloud Security Explorer.
+* Container‑image vulnerability assessment and automatic ingestion into Cloud Security Explorer.
 * Unified, cross‑platform CLI that works with any CI runner (Azure Pipelines, GitHub Actions, Jenkins, Bitbucket, GitLab, CircleCI, Travis CI, AWS CodeBuild, and more).
 * Standards‑based SARIF output that integrates with pull‑request annotations and quality gates.
 * Token‑based authentication scoped to a single Azure subscription for granular control or Azure DevOps Connector authentication.
 
 ## Prerequisites
 
-* An Azure Subscription with Defender for Cloud onboarded. If you don't already have an Azure account, create one for free.
+* An Azure Subscription with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account).
 * Defender CSPM enabled.
 * One of the following CI/CD pipeline tools: Jenkins, BitBucket Pipelines, Google Cloud Build, Bamboo, CircleCI, Travis CI, TeamCity, Oracle DevOps services, or AWS CodeBuild.
 * Linux terminal (or WSL).
@@ -70,7 +70,7 @@ Choose the configuration example that matches your CI/CD platform and authentica
     - name: Run Defender CLI Scan (Built)
       run: |
         #replace image-name with the Container image built      
-        ./defender scan image '${{ image-name }}" 
+        ./defender scan image '${{ image-name }}'
       continue-on-error: true
       env:
         DEFENDER_TENANT_ID: ${{ secrets.DEFENDER_TENANT_ID }}

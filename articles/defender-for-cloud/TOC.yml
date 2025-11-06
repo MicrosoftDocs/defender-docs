@@ -1277,11 +1277,11 @@
           - name: Defender for Cloud CLI
             items:
               - name: Overview
-                href: devops-cli-overview.md
+                href: defender-cli-overview.md
               - name: Authentication
-                href: devops-cli-authentication.md
+                href: defender-cli-authentication.md
               - name: Syntax
-                href: devops-cli-syntax.md
+                href: defender-cli-syntax.md
               - name: CI/CD in pipeline scanning
                 href: cicd-pipeline-scanning-with-defender-cli.md
               - name: Reviewing results

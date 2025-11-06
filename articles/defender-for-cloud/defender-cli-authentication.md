@@ -15,7 +15,7 @@ Defender CLI supports two authentication methods to align with enterprise securi
 
 ## Connector Based (ADO only)
 Connector‑based authentication integrates Azure DevOps directly with Microsoft Defender for Cloud through a secure connector. Once the connection is established, authentication is managed automatically, removing the need to store or inject tokens in your pipelines.  
-This method is the preferred authentication method for Azure DevOps. [Learn on how to create a connector](/quickstart-onboard-devops.md).
+This method is the preferred authentication method for Azure DevOps. [Learn on how to create a connector](quickstart-onboard-devops.md).
 
 ## Token Based
 
@@ -25,20 +25,20 @@ Token‑based authentication allows security admins to generate tokens in the Mi
 
 1. Navigate to **Management ▸ Environment settings ▸ Integrations**.
 
-   :::image type="content" source="media/cli-cicd/env-settings-integrations.png" alt-text="Screenshot of Integration Environment Settings in Defender for Cloud.":::
+   :::image type="content" source="media/cli-cicd/env-settings-integrations.png" alt-text="Screenshot of the Environment settings Integrations page showing available integration options.":::
 
 1. Select **+ Add integration ▸ DevOps Ingestion (Preview)**
 
-   :::image type="content" source="media/cli-cicd/new-devops-ingestion.png" alt-text="Screenshot of new DevOps Ingestion option.":::
+   :::image type="content" source="media/cli-cicd/new-devops-ingestion.png" alt-text="Screenshot of the Add integration menu with DevOps Ingestion (Preview) option highlighted.":::
 
 1. Enter an application name.
    1. Choose the tenant to store the secret.
    1. Set an expiration date, and enable the token.
    1. Select **Save**.
 
-   :::image type="content" source="media/cli-cicd/add-devops-ingestion.png" alt-text="Screenshot of new DevOps Ingestion option.":::  
-   :::image type="content" source="media/cli-cicd/devops-ingestion-created.png" alt-text="Screenshot of creating DevOps Ingestion and creation of tokens."::: 
+   :::image type="content" source="media/cli-cicd/add-devops-ingestion.png" alt-text="Screenshot of the Add DevOps Ingestion form with application name, tenant, expiration, and token settings.":::  
+   :::image type="content" source="media/cli-cicd/devops-ingestion-created.png" alt-text="Screenshot of the completed DevOps ingestion configuration showing generated client and secret values."::: 
  
 1. After saving, copy the Client ID, Client Secret, and Tenant ID. You can't retrieve them again.
 
-   :::image type="content" source="media/cli-cicd/devops-ingestion-created-success.png" alt-text="Screenshot of new DevOps Ingestion option.":::
+   :::image type="content" source="media/cli-cicd/devops-ingestion-created-success.png" alt-text="Screenshot of the success confirmation panel displaying Client ID, Client Secret, and Tenant ID.":::

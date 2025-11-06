@@ -35,15 +35,15 @@ After your CI/CD pipeline completes a scan with Defender CLI, you can review the
 
 1. Select the scope you selected during the creation of the integration in Environment settings.  
    
-   :::image type="content" source="media/cli-cicd/cloud-security-explorer-scope.png" alt-text="Screenshot of selecting scope Cloud Security Explorer.":::  
+   :::image type="content" source="media/cli-cicd/cloud-security-explorer-scope.png" alt-text="Screenshot of selecting scope in Cloud Security Explorer.":::  
 
 1. Select **Search**.  
    
-   :::image type="content" source="media/cli-cicd/cloud-security-explorer.png" alt-text="Screenshot of searching in Cloud Security Explorer.":::  
+   :::image type="content" source="media/cli-cicd/cloud-security-explorer.png" alt-text="Screenshot of CI/CD pipeline in Cloud Security Explorer.":::  
 
 1. See the results of pipeline to images mapping.  
 
 ## Correlate with monitored containers
 
-1. In Cloud Security Explorer, enter the following query: **CI/CD Pipeline** -> **Pipeline** + **Container Images** -> **Contained in** + **Container registers (group)**.  
+1. In Cloud Security Explorer, enter the following query: **CI/CD Pipeline** -> **Pipeline** + **Container Images** -> **Contained in** + **Container registries (group)**.  
 1. Review the resource names to see the container mapping.
