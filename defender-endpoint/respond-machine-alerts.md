@@ -403,9 +403,9 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 
 ## Predictive shielding actions
 
-As part of the [predictive shielding](/defender-xdr/shield-predict-threats) feature, Defender for Endpoint automatically applies the following actions.
+As part of the [predictive shielding](../defender-xdr/shield-predict-threats.md) feature, Defender for Endpoint automatically applies the following actions.
 
-To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage#enrich-predictive-shielding-data).
+To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](../defender-xdr/shield-predict-threats-manage.md#enrich-predictive-shielding-data).
 
 ### GPO hardening
 
