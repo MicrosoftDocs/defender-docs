@@ -41,6 +41,20 @@ Defender for Endpoint is part of [Microsoft Defender XDR](/defender-xdr/) and ca
 
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
+## Operating systems
+
+Defender for Endpoint supports the following operating systems:
+
+* Windows
+
+* macOS
+
+* Linux
+
+* Android
+
+* iOS
+
 ## Licensing
 
 Defender for Endpoint is available in three plans. You can find more information about these plans and additional Defender licenses in [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
