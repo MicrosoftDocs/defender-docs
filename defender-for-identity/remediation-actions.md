@@ -37,13 +37,13 @@ The following Defender for Identity actions can be performed on Identities:
 
 | Remediation Action  | Description     |          Scope                        | 
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|Disable identity                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, and Okta
-|Enable identity              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, and Okta
+|Disable                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, and Okta
+|Enable              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, and Okta
 |Revoke session     | Revoke an identity's active session. | Microsoft Entra ID and Okta
 |Confirm accounts compromised      | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID
-| Reset password| Reset a password for one or more accounts linked to the selected identity.This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.| Active Directory
-|Deactivate accounts in Okta | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
-| Set account risk to High/Medium/Low |Set account risk scoring to one of the defined levels. This action is only available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
+|Reset password| Reset a password for one or more accounts linked to the selected identity.This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.| Active Directory
+|Deactivate | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
+|Set account risk to High/Medium/Low |Set account risk scoring to one of the defined levels. This action is only available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
 
 
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
