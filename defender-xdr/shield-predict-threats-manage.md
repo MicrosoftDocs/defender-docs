@@ -34,9 +34,9 @@ This article describes how to manage predictive shielding so that you can enrich
 
 ## Enrich predictive shielding data
 
-Enrich predictive shielding data to improve security insights and expand coverage. The unified sensor combines endpoint and identity data into a single installation, removing the need for separate setups and enhancing detection capabilities. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
+We recommend that you use the Microsoft Defender for Identity unified sensor to improve security insights and expand coverage. The unified sensor combines endpoint and identity data into a single installation, removing the need for separate setups and enhancing detection capabilities. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
 
-For more information, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
+To add the unified sensor, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
 
 For example, this screenshot shows how enriched data appears in an incident, in an environment with both Microsoft Defender for Endpoint and Microsoft Defender for Identity enabled:
 
@@ -44,7 +44,7 @@ TBD - screenshot
 
 ## Review the incident graph
 
-Predictive shielding is built-in in the incident view. Review the incident graph to get the entire attack story and assess the predictive shielding impact and status.
+Predictive shielding is built-in in the incident view. Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
 The incident page includes the following information:
 
@@ -55,9 +55,7 @@ To release a user account or a device from containment, select the contained ass
 
 ## Track the actions in the Action center
 
-The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) brings together [remediation](m365d-remediation-actions.md) and response actions across your devices, email and collaboration content, and identities. Actions listed include manual or automatic remediation actions. You can view predictive shielding actions in the Action center.
-
-You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
+To track predictive shielding actions in the Action center, see [Track the actions in the Action center](autoad-results.md#track-the-actions-in-the-action-center) article.
 
 ## Track the actions in advanced hunting
 
@@ -69,7 +67,7 @@ Containment in Microsoft Defender for Endpoint prevents further threat actor act
 
 ### Track policy modifications
 
-This sample query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md). 
+This sample query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
 ```Kusto
   DisruptionAndResponseEvents
@@ -82,9 +80,3 @@ DisruptionAndResponseEvents
 | summarize arg_max(Timestamp, IsPolicyOn) by DeviceId
 | where IsPolicyOn
 ```
-
-## Next steps
-
-TBD
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
