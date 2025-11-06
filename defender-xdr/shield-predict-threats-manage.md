@@ -69,6 +69,12 @@ Select an action to open the activity details, which shows the number of devices
 
 Select the **Triggering alert** column to investigate the alert that led to the predictive shielding action, including the risk, activity, and exposure data that led to the alert. In the alert page, you can also see the alert that triggered the prediction as part of the **Alert chain**.
 
+To summarize:
+
+- In the alert body, you can see which assets are at risk.
+- In the alert chain, you can see the triggering malicious activity.
+- The exposure data used to calculate this risk.
+
 ## Track the actions in the Action center
 
 To track predictive shielding actions in the Action center, see [Track the actions in the Action center](autoad-results.md#track-the-actions-in-the-action-center) article.
