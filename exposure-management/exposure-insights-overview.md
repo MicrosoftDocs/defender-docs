@@ -96,7 +96,7 @@ Grayed out metrics aren't considered for score calculation.
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple source, including Expsosure Management, [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), and Microsoft Defender for Cloud. With the integration of Defender for Cloud in the Defender portal, Microsoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
+Security Exposure Management ingests security recommendations from multiple sources, including Exposure Management, [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), and Microsoft Defender for Cloud. With the integration of Defender for Cloud in the Defender portal, Microsoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
 
 ### Unified Recommendations Experience
 
