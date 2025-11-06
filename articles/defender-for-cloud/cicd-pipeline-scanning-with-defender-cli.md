@@ -64,7 +64,7 @@ Choose the configuration example that matches your CI/CD platform and authentica
 
 ```yaml
 - name: Download Defender CLI
- run: |
+  run: |
     curl -L -o defender "https://aka.ms/defender-cli_linux-x64" && chmod +x defender
 - name: Run Defender CLI Scan (Built)
   run: |
@@ -79,7 +79,7 @@ Choose the configuration example that matches your CI/CD platform and authentica
 
 ### Jenkins (Token-based authentication)
 
-```yaml
+```groovy
 environment {
   DEFENDER_TENANT_ID=credentials('defender-tenant-id')
   DEFENDER_CLIENT_ID=credentials('defender-client-id')
