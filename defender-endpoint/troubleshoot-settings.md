@@ -7,7 +7,7 @@ manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
-ms.date: 04/01/2025
+ms.date: 11/06/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Troubleshoot Microsoft Defender Antivirus settings
 
 
@@ -53,7 +54,7 @@ To remove policy conflicts, here's our current, recommended process:
 ## Step 1: Understand the order of precedence
 
 > [!NOTE]
-> MDE Attach Configurations can be overridden by other configuration tools that write to the same registry location
+> Microsoft Defender for Endpoint attach configurations can be overridden by other configuration tools that write to the same registry location.
 
 When policies and settings are configured in multiple tools, in general, here's the order of precedence:
 
