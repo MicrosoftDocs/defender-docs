@@ -63,8 +63,8 @@ Prediction allows organizations to identify assets at risk and apply tailored pr
 Defender XDR uses multiple layers of insight to make accurate predictions:
 
 - Threat intelligence aligns observed activity with known attacker tools and tactics.
-- Learnings from past incidents, used to recognize statistical patterns, and extrapolate the most probable next steps.
-- Organizational exposure data, used to map how the environment is structured—which assets and identities are connected, what vulnerabilities or misconfigurations exist, and how risk can propagate across them.
+- Learnings from past incidents are used to recognize statistical patterns, and extrapolate the most probable next steps.
+- Organizational exposure data is used to map how the environment is structured—which assets and identities are connected, what vulnerabilities or misconfigurations exist, and how risk can propagate across them.
 
 Together, these insights create a dynamic understanding of the environment and its risks.
 
@@ -84,11 +84,9 @@ This dynamic understanding allows Defender XDR to move beyond reactive responses
 
 Predictive shielding uses Defender for Endpoint-based response actions.  To use these actions, you need a Defender for Endpoint license. 
 
-These actions are:
+- [Safeboot hardening] [Take response actions on a device](/defender-endpoint/respond-machine-alerts#safeboot-hardening) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
-- Safeboot hardening - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
-
-- GPO hardening - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
+- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with devices onboarded to Defender for Endpoint.
 
