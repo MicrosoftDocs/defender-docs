@@ -42,9 +42,11 @@ For example, this screenshot shows how enriched data appears in an incident, in 
 
 TBD - screenshot
 
-## Review the incident graph
+## Review the incident
 
 Predictive shielding is built-in in the incident view. Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
+
+TBD - image
 
 The incident page includes the following information:
 
@@ -52,6 +54,16 @@ The incident page includes the following information:
 - Suspended users and contained devices appear with a label indicating their status.
 
 To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
+
+The incident summary pane shows:
+
+- The number hardening policies applied as part of predictive shielding.
+- The number of devices each policy applies to.
+
+In the incident **Activity** tab, filter by the **Response** category to get a live snapshot of the activities where a predictive shielding action is applied. The action is specified under the **Type** column. In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions were applied as part of predictive shielding.
+
+> [!NOTE]
+> The **Performed by** column indicates **Attack Disruption** both for attack disruption and predictive shielding actions. To understand which specific actions apply to predictive shielding, see the [Predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions).
 
 ## Track the actions in the Action center
 
