@@ -33,7 +33,7 @@ appliesto:
 This guide outlines how to access the guided response capability, including information on providing feedback about the responses.
 
 > [!TIP]
-> Microsoft Security Copilot provides contextual recommendations to help you respond to incidents more effectively. If your organization has its own recommended guidelines, your admin can [upload them](/copilot/security/upload-file) so that the guided response will reflect the specific needs and policies for your organization.
+> Microsoft Security Copilot provides contextual recommendations to help you respond to incidents more effectively. If your organization has its own recommended guidelines, your admin can [upload them](security-upload-guide.md) so that the guided response will reflect the specific needs and policies for your organization.
 
 ## Know before you begin
 
