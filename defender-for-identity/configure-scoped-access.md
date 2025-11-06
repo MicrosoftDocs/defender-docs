@@ -41,7 +41,7 @@ To enable identity scoping, follow these steps:​
     1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
     1. Select Microsoft Defender for Identity as the data source.
    1. Under **Scope**, select the user groups (AD domains or OU's) that will be scoped to the assignment. For an optimal experience, use the filter or search box.
-   ![User's image](media/configure-scoped-access/image1.png)
+   ![Scoped access step 1](media/configure-scoped-access/image1.png)
    
    ![User's image](media/configure-scoped-access/image2.png)
    
