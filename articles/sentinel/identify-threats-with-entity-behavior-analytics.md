@@ -78,7 +78,7 @@ Learn more about [entities in Microsoft Sentinel](entities.md) and see the full 
 
 Information about **entity pages** can now be found at [Entity pages in Microsoft Sentinel](entity-pages.md).
 
-##  How UEBA delivers helps streamline analyst workflows 
+##  How UEBA empowers analysts and streamlines workflows
 
 UEBA provides analysts with real-time behavioral insights that enhance security operations workflows. By surfacing anomalies in investigation graphs and user pages, and by incorporating anomaly data in hunting queries, UEBA enables faster threat detection, smarter prioritization, and more efficient incident response. This integration empowers security teams to focus on high-risk behaviors, accelerate investigations, and respond with greater precision.
 
