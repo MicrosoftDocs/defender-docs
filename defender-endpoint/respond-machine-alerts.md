@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 09/01/2025
+ms.date: 11/05/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Business
 
 ---
+
 # Take response actions on a device
 
 
