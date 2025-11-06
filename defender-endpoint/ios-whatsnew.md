@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 09/05/2025
+ms.date: 11/06/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -37,7 +37,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- An improved user feedback experience: See [Key Changes - November 2025](/defender-endpoint/ios-new-ux) for details.
+- An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux#key-changes---november-2025) for details.
 
 - Added Landscape mode UI support for the Defender app.
 
