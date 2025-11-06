@@ -95,24 +95,11 @@ Predictive shielding uses Defender for Endpoint-based response actions.  To use 
 
 ## Identify when predictive shielding happens in your environment
 
-The Defender XDR incident page reflects the automatic predictive shielding actions through the attack story. The incident shows a dedicated predictive tag, highlights the status of the assets contained in the incident graph, and adds an action to the Action Center.
-
-TBD - image
-
-The Defender XDR user experience now includes more visual cues to ensure visibility of these automatic actions. You can find them across the following experiences:
-
-- In the incident queue: A tag titled *Predictive Shielding* appears next to affected incidents
-
-- On the incident page:
-
-    - A tag titled *Predictive Shielding*
-    - A yellow banner at the top of the page that highlights the automatic action taken
-   - The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
-
-For more information, see view predictive shielding details and results - TBD.
+The Defender XDR incident page reflects the automatic predictive shielding actions through the attack story. The incident shows a dedicated predictive tag, highlights the status of the assets contained in the incident graph, and adds an action to the Action center. For more information, see [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md).
 
 ## Next steps
 
-TBD
+- [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md) - Learn how to manage predictive shielding actions and investigate their impact in your environment.
+- [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md) - Learn how automatic attack disruption works to identify and neutralize confirmed malicious activities.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
