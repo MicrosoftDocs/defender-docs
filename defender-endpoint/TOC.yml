@@ -176,7 +176,7 @@
             href: mde-sap-custom-detection-rules.md
 
         - name: Onboard devices using the Defender deployment tool
-          href: defender-deployment-tool-windoes.md
+          href: defender-deployment-tool-windows.md
 
         - name: Defender for Endpoint on macOS
           items:
