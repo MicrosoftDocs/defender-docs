@@ -55,15 +55,19 @@ The incident page includes the following information:
 
 To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
 
-The incident summary pane shows:
+The incident summary pane shows historical data on the attack, and how predictive shielding was applied. Specifically, it shows:
 
-- The number hardening policies applied as part of predictive shielding.
+- The number of hardening policies applied as part of predictive shielding.
 - The number of devices each policy applies to.
 
 In the incident **Activity** tab, filter by the **Response** category to get a live snapshot of the activities where a predictive shielding action is applied. The action is specified under the **Type** column. In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions were applied as part of predictive shielding.
 
+Select an action to open the activity details, which shows the number of devices that currently apply the relevant policy.
+
 > [!NOTE]
 > The **Performed by** column indicates **Attack Disruption** both for attack disruption and predictive shielding actions. To understand which specific actions apply to predictive shielding, see the [Predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions).
+
+Select the **Triggering alert** column to investigate the alert that led to the predictive shielding action, including the risk, activity, and exposure data that led to the alert. In the alert page, you can also see the alert that triggered the prediction as part of the **Alert chain**.
 
 ## Track the actions in the Action center
 
