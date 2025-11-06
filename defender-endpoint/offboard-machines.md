@@ -74,7 +74,7 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 
    Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
 
-     :::image type="content" source="media/offboard-machines/remove-endpoint.png" alt-text="Screenshot that shows how to offboard endpoints in the Microsoft Defender portal. ":::  
+     :::image type="content" source="media/offboard-machines/remove-endpoint.png" alt-text="Screenshot that shows how to offboard endpoints in the Microsoft Defender portal. " lightbox="media/offboard-machines/remove-endpoint.png":::  
 
 5. Uninstall the Defender for Endpoint app on Mac devices.
 
