@@ -43,7 +43,7 @@ To enable identity scoping, follow these steps:​
    1. Under **Scope**, select the user groups (AD domains or OU's) that will be scoped to the assignment. For an optimal experience, use the filter or search box.
    ![Scoped access step 1](media/configure-scoped-access/add-scope-mdi.png)
    
-   ![Custom scoped access](media/configure-scoped-access/image2.png)
+   ![Custom scoped access](media/configure-scoped-access/custom-scope.png)
    
    
 1. Select **Apply** and **Add**.
