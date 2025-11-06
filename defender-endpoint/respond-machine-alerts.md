@@ -407,17 +407,7 @@ As part of the [predictive shielding](../defender-xdr/shield-predict-threats.md)
 
 To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](../defender-xdr/shield-predict-threats-manage.md#enrich-predictive-shielding-data).
 
-### GPO hardening
-
-Defender for Endpoint automatically applies Group Policy Object (GPO) hardening to domain-joined Windows devices in your organization. GPO hardening helps protect devices from known attack techniques by applying security configurations that reduce the attack surface of the device.
-
-### Safeboot hardening
-
-Defender for Endpoint automatically applies Safeboot hardening to Windows devices in your organization. Safeboot hardening helps protect devices from known attack techniques by applying security configurations that reduce the attack surface of the device while in Safe Mode.
-
-### Investigative capabilities with predictive shielding actions
-
-After predictive shielding actions are applied, you can view the actions' impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
+After predictive shielding actions are applied, you can view the actions' impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](../defender-xdr/shield-predict-threats-manage.md).
 
 ## Consult a threat expert
 

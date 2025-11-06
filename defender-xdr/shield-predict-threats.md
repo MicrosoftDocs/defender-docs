@@ -44,7 +44,9 @@ The evolving threat landscape exposes the limitations of reactive defense models
 Predictive shielding relies on two pillars:  
 
 - **Prediction** involves analyzing attacker behavior, past incidents, and organizational exposure to identify emerging risks.
-- **Enforcement** applies automated protective controls to disrupt potential attack paths in real time. This dual approach ensures that protection is both precise and timely.
+- **Enforcement** applies automated protective controls to disrupt potential attack paths in real time. 
+
+This dual approach ensures that protection is both precise and timely.
 
 Predictive shielding uses [graph-based prediction logic](#graph-based-logic), which unifies pre-breach and post-breach insights. Defender XDR uses the live attacker activity in an organization’s exposure graph to model the potential blast radius and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
 
