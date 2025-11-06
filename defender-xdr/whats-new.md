@@ -33,7 +33,7 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## November 2025
-- (Preview) Defender XDR now includes the predictive shielding capability, which uses predictive analytics and real-time insights to dynamically infer risk, anticipate attacker progression, and harden your environment before threats materialize. [Learn more](shield-predict-threats.md) and [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md).
+- (Preview) Defender XDR now includes the predictive shielding capability, which uses predictive analytics and real-time insights to dynamically infer risk, anticipate attacker progression, and harden your environment before threats materialize. [Learn more](shield-predict-threats.md)
 - (Preview) Threat analytics now has an **Indicators** tab that provides a list of all indicators of compromise (IOCs) associated with a threat. Microsoft researchers update these IOCs in real time as they find new evidence related to the threat. This information helps your security operations center (SOC) and threat intelligence analysts with remediation and proactive hunting. [Learn more](threat-analytics-indicators.md)
 - (Preview) The overview section of [threat analytics](threat-analytics.md) now includes additional details about a threat, such as alias, origin, and related intelligence, providing you with more insights on what the threat is and how it might impact your organization.
 
