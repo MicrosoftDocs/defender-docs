@@ -102,3 +102,14 @@ DisruptionAndResponseEvents
 | summarize arg_max(Timestamp, IsPolicyOn) by DeviceId
 | where IsPolicyOn
 ```
+
+## Undo predictive shielding actions
+
+If a predictive shielding action isn't needed or doesn't reflect the current risk level, you can manually undo the action from the incident page. 
+
+To undo an incident: 
+
+1. Select the incident from the incident page. 
+1. In the incident details pane, select **Undo** under the incident name. 
+
+    Predictive shielding actions are no longer applied to the selected incident.
