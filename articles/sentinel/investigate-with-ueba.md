@@ -29,6 +29,24 @@ Before you can use UEBA data in your investigations, you must [enable User and E
 
 Start looking for machine powered insights about one week after enabling UEBA.
 
+## Look for user anomalies and prioritize investigations of users with anomalies (Defender portal)
+
+In the Defender portal, a **UEBA Anomalies** tag identifies users with anomalies. Prioritize investigations of users with this tag.
+
+The User entity page and side panel displays the user's top three anomalies from the last 30 days.
+
+Use the links in the **Top UEBA anomalies** section of user pages to launch anomaly queries and view the Sentinel events timeline.
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
+
+When investigating a user involved in an incident, select **Go Hunt > All user anomalies** from the user entity in the incident graph to retrieve all anomalies related to the user.
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png":::
+
+For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
+
+
+
 ## Run proactive, routine searches in entity data
 
 We recommend running regular, proactive searches through user activity to create leads for further investigation.
