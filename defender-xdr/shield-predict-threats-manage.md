@@ -44,13 +44,18 @@ TBD - screenshot
 
 ## Review predictive shielding details and results
 
+The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
+
+> [!NOTE]
+> After you review the predictive shielding data in your environment, you might find that specific areas or scenarios don't require predictive shielding actions. To address this, you can undo the relevant incident, which cancels all related predictive shielding actions. For more information, see [Undo predictive shielding actions](#undo-predictive-shielding-actions).
+
 ### Review the incident information
 
 Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
 TBD - image
 
-The incident page includes the following information:
+Review the incident page for predictive shielding details and results:
 
 - Filter by the the **Predictive Shielding** label to find incidents where predictive shielding is applied.
 - Review the incident summary pane, which shows how predictive shielding is applied across your environment:
@@ -89,7 +94,7 @@ In the alert, you can review:
 
 ## Track the actions in the Action center
 
-To track predictive shielding actions in the Action center, see [Track the actions in the Action center](autoad-results.md#track-the-actions-in-the-action-center) article.
+To track predictive shielding actions in the Action center, see [Track the actions in the Action center](autoad-results.md#track-the-actions-in-the-action-center).
 
 ## Track the actions in advanced hunting
 

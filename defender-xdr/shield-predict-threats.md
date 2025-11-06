@@ -82,7 +82,7 @@ This dynamic understanding allows Defender XDR to move beyond reactive responses
 
 ## Predictive shielding actions
 
-Predictive shielding uses Defender for Endpoint-based response actions.  To use these actions, you need a Defender for Endpoint license. 
+Predictive shielding uses Defender for Endpoint-based response actions. To use these actions, you need a Defender for Endpoint license. 
 
 - [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
