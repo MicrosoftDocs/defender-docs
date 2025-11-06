@@ -86,7 +86,7 @@ This section outlines the key UEBA analyst experiences available in the Defender
 
 ### UEBA insights in user investigations
 
-Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on recent anomalies. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
+Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA anomalies** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on recent anomalies. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
 
