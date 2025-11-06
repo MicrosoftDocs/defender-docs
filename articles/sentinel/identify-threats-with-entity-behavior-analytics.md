@@ -98,11 +98,11 @@ Analysts can launch built-in queries to retrieve all user anomalies directly fro
 
 For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
 
-### Enrich analysis in Advanced Hunting using UEBA data
+### Enrich Advanced Hunting queries and or custom detections with UEBA data
 
-When analysts use Advanced Hunting to query data in tables that are data sources for UEBA, the Defender portal displays a banner that prompts the analyst to join the Anomlies table and enrich their anlysis with behavioral insights.
+When analysts write Advanced Hunting or custom detection queries that include tables that are data sources for UEBA, the Defender portal displays a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights.
 
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomlies table and enrich their anlysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png":::
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png":::
 
 For more information, see: 
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
