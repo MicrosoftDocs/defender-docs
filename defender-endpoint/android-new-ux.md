@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/05/2025
+ms.date: 11/06/2025
 ---
 
 # User experiences in Microsoft Defender for Endpoint on Android

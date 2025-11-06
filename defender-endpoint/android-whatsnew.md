@@ -15,17 +15,30 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 09/05/2025
+ms.date: 11/06/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
 ---
+
 # What's new in Microsoft Defender for Endpoint on Android
 
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ### Releases for Defender for Endpoint on Android
+
+#### November 2025
+
+| Build| 1.0.8303.0101|
+| -------- | -------- |
+| Release Date |November 4, 2025|
+
+**What's New**
+
+- An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
+  
+- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
 
 #### October 2025
 
