@@ -32,6 +32,9 @@ appliesto:
 
 This guide outlines how to access the guided response capability, including information on providing feedback about the responses.
 
+> [!TIP]
+> Microsoft Security Copilot provides contextual recommendations to help you respond to incidents more effectively. If your organization has its own recommended guidelines, your admin can [upload them](/copilot/security/upload-file) so that the guided response will reflect the specific needs and policies for your organization.
+
 ## Know before you begin
 
 If you're new to Security Copilot, you should familiarize yourself with it by reading the following articles:
@@ -113,5 +116,6 @@ Microsoft highly encourages you to provide feedback to Copilot, as it's crucial 
 
 - [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
 - [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)
+- [Upload organization-specific guidelines for Microsoft Security Copilot guided response](/defender-xdr/security-upload-guide)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
