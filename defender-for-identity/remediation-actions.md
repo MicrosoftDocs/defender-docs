@@ -48,11 +48,6 @@ The following Defender for Identity actions can be performed on Identities:
 
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
-> [!NOTE]  
-> During rollout of the enhanced remediation experience, you'll see a banner at the top of the **Identity** page in the Microsoft Defender portal.  
-> The banner allows you to temporarily switch back to the previous version, where response actions apply to a single user account instead of multiple accounts linked to an identity.
-
-
 ## Roles and Permissions
 
 | Remediation Action | Active Directory  |Microsoft Entra ID   | Okta  |
