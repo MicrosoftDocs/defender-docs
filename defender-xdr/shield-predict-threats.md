@@ -33,7 +33,7 @@ Microsoft Defender XDR uses predictive shielding as a proactive defense strategy
 This article provides an overview of predictive shielding so that you can understand its capabilities and how it enhances your security posture.
 
 > [!TIP]
-> This article describes how predictive shielding works. To enrich these capabilities, see Enrich predictive shielding in Defender XDR - TBD.
+> This article describes how predictive shielding works. To enrich these capabilities and view the predictive shielding details and results, see [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md).
 
 ## How predictive shielding works
 
