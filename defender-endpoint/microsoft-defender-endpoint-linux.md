@@ -17,48 +17,96 @@ ms.subservice: linux
 search.appverid: met150
 ms.date: 03/31/2025
 appliesto:
+  - Microsoft Defender for Business
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Microsoft Defender for Endpoint on Linux
+# Install Defender for Endpoint on Linux
+
+[Defender for Endpoint](microsoft-defender-endpoint.md) supports Linux servers, including Arm64-based Linux servers. This article is aimed at security admins who want to learn how to install and use Defender for Endpoint on Linux servers.
+
+## Prerequisites
+
+To install Defender for Endpoint on Linux, you need the following:
+
+* Administrative privileges on the Linux server endpoint.
+* An appropriate [role](/defender-endpoint/prepare-deployment#role-based-access-control) assigned in Defender for Endpoint. 
+* `*.endpoint.security.microsoft.com` access. If needed, you can [configure static proxy access](linux-static-proxy-configuration.md).
+* Installed *systemd* system manager.
+
+### Minimum system requirements
+
+* **CPU** - One CPU core
+* **Disk Space** - 2GB
+* **Memory** - 1GB of RAM
+
+## Supported Linux distributions
+
+|Distribution  |Version  |x64 (AMD64/EM64T)  |
+|---------|---------|---------|
+|Row1     |         |         |
+|Row2     |         |         |
+|Row3     |         |         |
+|Row4     |         |         |
+|Row5     |         |         |
+|Row6     |         |         |
+|Row7     |         |         |
+|Row8     |         |         |
+|Row9     |         |         |
+|Row10     |         |         |
+|Row11     |         |         |
 
 
-> [!TIP]
-> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
+The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
+
+- Red Hat Enterprise Linux 7.2 and higher 
+- Red Hat Enterprise Linux 8.x 
+- Red Hat Enterprise Linux 9.x 
+- CentOS 7.2 and higher, excluding CentOS Stream 
+- CentOS 8.x
+- Ubuntu 16.04 LTS 
+- Ubuntu 18.04 LTS 
+- Ubuntu 20.04 LTS 
+- Ubuntu 22.04 LTS 
+- Ubuntu 24.04 LTS 
+- Debian 9 - 12 
+- SUSE Linux Enterprise Server 12.x 
+- SUSE Linux Enterprise Server 15.x 
+- Oracle Linux 7.2 and higher 
+- Oracle Linux 8.x 
+- Oracle Linux 9.x 
+- Amazon Linux 2 
+- Amazon Linux 2023 
+- Fedora 33-42
+- Rocky 8.7 and higher 
+- Rocky 9.2 and higher 
+- Alma 8.4 and higher 
+- Alma 9.2 and higher 
+- Mariner 2 
+
+**The following Linux server distributions on ARM64 are now GA:**
+
+- Ubuntu 20.04 ARM64 
+- Ubuntu 22.04 ARM64 
+- Ubuntu 24.04 ARM64
+- Debian 11, 12 ARM64
+- Amazon Linux 2 ARM64 
+- Amazon Linux 2023 ARM64 
+- RHEL 8.x ARM64
+- RHEL 9.x ARM64
+- Oracle Linux 8.x ARM64
+- Oracle Linux 9.x ARM64
+- SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
+- 
 
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-## What is Microsoft Defender for Endpoint on Linux?
 
-Microsoft Defender for Endpoint is a comprehensive enterprise endpoint security platform designed to help organizations prevent, detect, investigate, and respond to advanced threats. It safeguards a wide range of devices, including Windows and Mac client computers, Windows and Linux servers, as well as iOS and Android mobile devices.
 
-The following table describes capabilities in Defender for Endpoint on Linux:
 
-|Category|Description|
-|---|---|
-|Posture management| Defender for Endpoint on Linux combines monitoring and risk-based vulnerability management with intelligent prioritization, remediation, and tracking to help effectively manage and secure your Linux servers. <br><br>With a single pane-of-glass experience, your security team gains a comprehensive view of your organization's exposure score, recommendations, remediation, inventories, and more.|
-|Threat protection| Defender for Endpoint on Linux includes next-generation antivirus protection using local & cloud-based machine learning models, behavior analysis, and heuristics. <br><br>Cloud protection provides near-instant detection and blocking of new/emerging threats.<br><br>You get dedicated, continuous protection with regular security intelligence and product updates. <br><br>You can also investigate and define policies for customer IP- and URL-based indicators of compromise.|
-|Endpoint detection and response| Defender for Endpoint on Linux uses AI and advanced analytics to detect and respond to threats close to real time. <br><br> In the Microsoft Defender portal, you have a central location to view detections across the Microsoft Defender suite and your organization's devices. <br><br>You can use advanced hunting to view raw data and get more insight into your network events. <br><br>Response actions are available to act swiftly and nimbly on security alerts.|
-|Streamlined management and operations| Defender for Endpoint on Linux offers broad coverage across a breadth of Linux distributions while making operations easier for your security team. <br><br>You can manage your security settings in the Microsoft Defender portal and plan your update cycles in advance, while supporting your Linux servers where they are, with offline and multicloud options.|
-|Enterprise-grade scale, performance, and reliability| Microsoft Defender for Endpoint on Linux ensures stable and durable performance with a rich sensor framework that operates without kernel modules and integrates eBPF for operational stability. <br><br>Defender for Endpoint seamlessly integrates with the larger Microsoft Defender suite, offering extensibility through API integration, SIEM connectors, Power BI support, role-based access control (RBAC), and MSPP support.|
-
-## Server licenses 
-
-To onboard servers to Defender for Endpoint, server licenses are required. You can choose from the following options:
-
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender for Endpoint for servers
-- [Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
-
-For more detailed information about licensing requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint licensing information](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
-
-For detailed licensing information, see [Product Terms: Microsoft Defender for Endpoint]( https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS) and work with your account team to learn more about the terms and conditions.
-
-<!---If/when we add a page about server licensing, let's add that link here.--->
   
-## Deploy and configure policies for Defender for Endpoint on Linux 
+## Deploy and configure policies for Defender for Endpoint on Linux
 
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux. Make sure to meet the [prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md).
 
