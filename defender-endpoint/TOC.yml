@@ -8,7 +8,7 @@
     items:
     - name: What is Microsoft Defender for Endpoint?
       items: 
-      - name: Defender for Endpoint on Windows
+      - name: Defender for Endpoint
         href: microsoft-defender-endpoint.md
       - name: Defender for Endpoint on macOS
         href: microsoft-defender-endpoint-mac.md
