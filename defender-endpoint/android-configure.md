@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: android
 search.appverid: met150
-ms.date: 10/23/2025
+ms.date: 11/06/2025
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
@@ -33,7 +33,7 @@ For more information about how to set up Defender for Endpoint on Android and Co
 ## Configure custom indicators
 
 > [!NOTE]
-> Defender for Endpoint on Android supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on Android.
+> Defender for Endpoint on Android supports creating custom indicators only for URLs and domains. IP-based custom indicators aren't supported on Android.
 > 
 > IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
 > Also, alerts for custom indicators are currently not supported for Defender for Endpoint on Android.
