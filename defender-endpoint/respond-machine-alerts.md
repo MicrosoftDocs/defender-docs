@@ -403,7 +403,7 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 
 ## GPO hardening
 
-As part of the [predictive shielding](/defender-xdr/shield-predict-threats) feature, Defender for Endpoint automatically applies the GPO hardening action. GPO hardening helps protect devices from being compromised by enforcing stricter Group Policy Object (GPO) settings on devices that are predicted to be at high risk of compromise.
+As part of the [predictive shielding](/defender-xdr/shield-predict-threats) feature, Defender for Endpoint automatically applies the GPO hardening action. Group Policy Object (GPO) hardening helps protect devices from being compromised by enforcing stricter GPO settings on devices that are predicted to be at high risk of compromise.
 
 To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage#enrich-predictive-shielding-data).
 
