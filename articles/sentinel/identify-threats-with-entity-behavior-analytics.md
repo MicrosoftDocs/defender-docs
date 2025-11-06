@@ -80,11 +80,15 @@ Information about **entity pages** can now be found at [Entity pages in Microsof
 
 ##  How UEBA empowers analysts and streamlines workflows
 
-UEBA provides analysts with real-time behavioral insights that enhance security operations workflows. By surfacing anomalies in investigation graphs and user pages, and by incorporating anomaly data in hunting queries, UEBA enables faster threat detection, smarter prioritization, and more efficient incident response. This integration empowers security teams to focus on high-risk behaviors, accelerate investigations, and respond with greater precision.
+The UEBA experience in the Defender portal provides analysts with behavioral insights that enhance security operations workflows. By surfacing anomalies in investigation graphs and user pages, and by prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. UEBA experiences in the Defender portal empower security teams to focus on high-risk behaviors, accelerate investigations, and respond with greater precision.
+
+This section outlines the key UEBA analyst experiences available in the Defender portal when you enable UEBA.
 
 ### User-focused investigations
 
-- **Anomalies in User Panel**: View the top 3 user anomalies from the last 30 days directly in user side panels and overview tabs across the portal. This immediate UEBA context helps prioritize which users to investigate first based on anomalous behavior patterns. For more information, see [Entity pages in Microsoft Sentinel](entity-pages.md).
+Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on anomalous behavior patterns. For more information, see [User entity page in Microsoft Defender](/defender-xdr/investigate-users).
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
 
 ### Enhanced hunting and detection
 
