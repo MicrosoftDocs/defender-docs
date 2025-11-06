@@ -25,10 +25,6 @@ appliesto:
 
 # Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. Example endpoints include laptops, phones, tablets, PCs, access points, routers, and firewalls.
 

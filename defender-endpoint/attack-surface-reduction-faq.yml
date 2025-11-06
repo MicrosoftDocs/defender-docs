@@ -16,18 +16,12 @@ metadata:
   - m365-security
   - mde-asr
   ms.date: 04/04/2025
+  appliesto: 
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
 title: Attack surface reduction frequently asked questions (FAQ)
 summary: |
-  [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-  **Applies to:**
-  - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-  - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-  - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-  - [Microsoft Defender XDR](/defender-xdr)
-
-
 
 sections:
   - name: Ignored

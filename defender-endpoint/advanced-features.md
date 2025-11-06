@@ -22,9 +22,6 @@ appliesto:
 # Configure advanced features in Defender for Endpoint
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Defender for Endpoint with.
 
 ## Enable advanced features

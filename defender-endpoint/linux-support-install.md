@@ -23,10 +23,6 @@ appliesto:
 ---
 # Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 ## Verify that the installation succeeded
 

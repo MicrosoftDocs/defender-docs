@@ -61,7 +61,6 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `ConsentedUsersCount` | `integer` | Count of users who have consented to the app; this information is only available when the app isn't admin consented|
 | `IsAdminConsented` | `boolean` | Value is True if a user has provided admin consent to the app on behalf of all the users in the org, otherwise the value is False|
 | `AppOrigin` | `string` | Specifies whether the app is internal to the organization or registered in an external tenant|
-| `LastUsedTime` | `datetime` | Date and time when the app was last used|
 | `AppOwnerTenantId` | `string` |Specifies the ID of the tenant where the app was registered|
 
 

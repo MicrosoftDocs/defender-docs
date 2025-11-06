@@ -25,7 +25,6 @@ appliesto:
 ---
 # Use limited periodic scanning in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]  
 > **Microsoft does not support using this feature in Enterprise environments.** This feature only uses a limited subset of the Microsoft Defender Antivirus capabilities to detect malware, and can't detect most malware and potentially unwanted software. Management of the feature isn't supported, the feature can't be enabled or disabled through policies, and reporting capabilities are limited. Microsoft recommends that enterprise organizations choose a primary antivirus/antimalware solution, and use it exclusively. 

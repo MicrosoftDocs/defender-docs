@@ -23,7 +23,6 @@ appliesto:
 ---
 # Manage Microsoft Defender Antivirus in your business
 
-
 > [!TIP]
 > For the best experience, please choose 1 method for configuring the Microsoft Defender Antivirus policies.
 
@@ -39,7 +38,6 @@ You can manage and configure Microsoft Defender Antivirus with the following too
 - The [Microsoft Malware Protection Command Line Utility](./command-line-arguments-microsoft-defender-antivirus.md) (referred to as the *mpcmdrun.exe* utility)
 
 ## Prerequisites
-
 
 ### Supported operating systems
 

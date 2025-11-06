@@ -21,9 +21,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Manage updates for mobile devices and virtual machines (VMs)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Manage updates for mobile devices and virtual machines (VMs)
 
 Mobile devices and VMs may require more configuration to ensure performance is not impacted by updates.
 

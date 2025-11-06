@@ -22,11 +22,10 @@ appliesto:
 ---
 # Network protection for Linux (preview)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 > [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Overview
 
@@ -59,7 +58,7 @@ You can use web content filtering for testing with network protection for Linux.
 - **Microsoft Defender for Endpoint Linux client version**: 101.78.13 or later on Insiders-Slow or insiders-Fast channel.
     
 > [!IMPORTANT]
-> In order to evaluate network protection for Linux, please send email to `xplatpreviewsupport@microsoft.com` with your Org ID. We will enable the feature on your tenant per request basis. Network Protection feature is available in preview only for AMD64 based Linux servers. 
+> In order to evaluate network protection for Linux, send an email to `xplatpreviewsupport@microsoft.com` with your Org ID. We'll enable the feature on your tenant per request basis. Network Protection feature is available in preview only for AMD64 based Linux servers. 
 
 ## Instructions
 
@@ -147,7 +146,7 @@ Also, make sure that in **Microsoft Defender** \> **Settings** \> **Endpoints** 
 3. Explore [Web content filtering](web-content-filtering.md).
 
    > [!NOTE]
-   > If you are removing a policy or changing device groups at the same time, this might cause a delay in policy deployment.
+   > If you're removing a policy or changing device groups at the same time, this might cause a delay in policy deployment.
    > Pro tip: You can deploy a policy without selecting any category on a device group. This action will create an audit only policy, to help you understand user behavior before creating a block policy.
    >
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.

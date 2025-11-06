@@ -18,7 +18,6 @@ The Defender for Identity sensor v3.x:
  - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
  - Doesn't currently support VPN integration.
  - Doesn't currently support ExpressRoute.
- - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.
 
 ## Licensing requirements
 

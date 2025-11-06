@@ -23,10 +23,6 @@ appliesto:
 ---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), and behavior monitoring (BM). Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all the associated antivirus detections, EDR alerts, and visibility for the excluded item.
 

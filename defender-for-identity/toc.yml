@@ -111,6 +111,8 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
+    - name: Configure scoped access
+      href: configure-scoped-access.md
     - name: VPN integration
       href: vpn-integration.md
     - name: Set entity tags

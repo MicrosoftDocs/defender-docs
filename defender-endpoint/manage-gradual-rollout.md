@@ -23,10 +23,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Manage the gradual rollout process for Microsoft Defender updates
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 It's important to ensure that client components are up to date to deliver critical protection capabilities and prevent attacks.
 

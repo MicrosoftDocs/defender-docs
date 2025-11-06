@@ -20,9 +20,6 @@ appliesto:
 ---
 # Contact Microsoft Defender for Endpoint support
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 Defender for Endpoint has recently upgraded the support process to offer a more modern and advanced support experience.
 

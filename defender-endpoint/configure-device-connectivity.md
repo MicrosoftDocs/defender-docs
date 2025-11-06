@@ -22,9 +22,9 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
