@@ -80,13 +80,13 @@ Information about **entity pages** can now be found at [Entity pages in Microsof
 
 ##  How UEBA empowers analysts and streamlines workflows
 
-The UEBA experience in the Defender portal provides analysts with behavioral insights that enhance security operations workflows. By surfacing anomalies in investigation graphs and user pages, and by prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. UEBA experiences in the Defender portal empower security teams to focus on high-risk behaviors, accelerate investigations, and respond with greater precision.
+UEBA experiences embedded in the Defender portal provide analysts with behavioral insights that enhance security operations workflows. By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. UEBA experiences in the Defender portal empower security teams to focus on high-risk behaviors, accelerate investigations, and respond with greater precision.
 
 This section outlines the key UEBA analyst experiences available in the Defender portal when you enable UEBA.
 
-### UEBA insights in user-focused investigations
+### UEBA insights in user investigations
 
-Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on anomalous behavior patterns. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
+Analysts see the top three user anomalies from the last 30 days directly in user side panels and the overview tabs of user pages across the portal. The portal sets a **UEBA** tag on user entities with anomalous behavior patterns. This immediate UEBA context helps prioritize which users to investigate first based on recent anomalies. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
 
@@ -98,7 +98,7 @@ Analysts can launch built-in queries to retrieve all user anomalies directly fro
 
 For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
 
-### Enrich Advanced Hunting queries and or custom detections with UEBA data
+### Enrich Advanced Hunting queries and custom detections with UEBA data
 
 When analysts write Advanced Hunting or custom detection queries that include tables that are data sources for UEBA, the Defender portal displays a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights.
 
