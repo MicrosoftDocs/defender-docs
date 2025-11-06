@@ -34,7 +34,7 @@ This article describes how to manage predictive shielding so that you can enrich
 
 ## Enrich predictive shielding data
 
-We recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage.This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
+We recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
 
 To add the unified sensor, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
 
