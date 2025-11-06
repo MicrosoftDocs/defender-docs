@@ -43,8 +43,7 @@ When investigating a user involved in an incident, select **Go Hunt > All user a
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png":::
 
-For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
-
+For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt) and [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 
 ## Run proactive, routine searches in entity data
