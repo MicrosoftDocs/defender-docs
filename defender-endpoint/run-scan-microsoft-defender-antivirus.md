@@ -65,10 +65,10 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
 
 3. In the list of tabs, select **Windows 10 unhealthy endpoints** or **Windows 11 unhealthy endpoints**.
 
-4. From the list of actions provided, select **Quick Scan** (recommended) or **Full Scan**.
+1. From the list of actions provided, select **Quick Scan** (recommended) or **Full Scan**.
 
    [![Scan options on the Windows 10 unhealthy endpoints tab.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
-
+   
 > [!TIP]
 > For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
 
@@ -102,7 +102,10 @@ Set-MpPreference -QuickScanIncludeExclusions 1
 ```
 
 > [!NOTE]
-> A value of `1` enables the inclusion of the antivirus excluded processes, folders, files, and extensions. A value of `0` (default) disables the inclusion of the antivirus excluded processes, folders, files, and extensions.
+> A value of `1` enables the inclusion of paths that are excluded from antivirus using contextual exclusions with the following restrictions: `ScanTrigger:OnAccess`, `ScanTrigger:BM`, and `Process:`. For more information on how to set such exclusions see [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md). A value of `0` (default) disables the inclusion of the contextually excluded paths.
+
+> [!WARNING]
+> Including very large directories in quick scans using this setting may significantly increase the time it takes for the quick scan to complete.
 
 For more information on how to use PowerShell with Microsoft Defender Antivirus, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
 
