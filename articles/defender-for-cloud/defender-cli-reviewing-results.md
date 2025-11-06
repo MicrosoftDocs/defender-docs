@@ -17,7 +17,7 @@ After your CI/CD pipeline completes a scan with Defender CLI, you can review the
 
 1. After the pipeline runs successfully, go to Microsoft Defender for Cloud.  
 1. In the **Defender for Cloud** menu, select **Cloud Security Explorer**.  
-1. Select **Select resource types** dropdown, select **DevOps**, and then select **Done**  
+1. Select **Select resource types** dropdown, select **DevOps**, and then select **Done**.
    
    :::image type="content" source="media/cli-cicd/cloud-security-explorer.png" alt-text="Screenshot of CI/CD pipeline in Cloud Security Explorer."::: 
 
@@ -34,11 +34,11 @@ After your CI/CD pipeline completes a scan with Defender CLI, you can review the
    :::image type="content" source="media/cli-cicd/cloud-security-explorer-containers.png" alt-text="Screenshot of selecting container images in Cloud Security Explorer.":::
 
 1. Select the scope you selected during the creation of the integration in Environment settings.  
-   
+
    :::image type="content" source="media/cli-cicd/cloud-security-explorer-scope.png" alt-text="Screenshot of selecting scope in Cloud Security Explorer.":::  
 
 1. Select **Search**.  
-   
+
    :::image type="content" source="media/cli-cicd/cloud-security-explorer.png" alt-text="Screenshot of CI/CD pipeline in Cloud Security Explorer.":::  
 
 1. See the results of pipeline to images mapping.  

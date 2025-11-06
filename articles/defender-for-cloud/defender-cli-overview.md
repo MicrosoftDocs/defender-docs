@@ -27,9 +27,7 @@ The Defender CLI is a developer‑first command‑line tool that orchestrates se
 1. You review results in the console, export if needed, and upload to Defender for Cloud.
 
 ## Authentication
-Defender CLI supports two authentication methods to align with enterprise security practices. The first and preferred method is connector‑based authentication, currently available only for Azure DevOps. By establishing a connector between Azure DevOps and Defender for Cloud, authentication is handled automatically, eliminating the need to add tokens to pipelines. The second method is token‑based authentication, where security admins create tokens in the Microsoft Defender for Cloud portal and configure them as environment variables in CI/CD pipelines or local terminals. This approach offers flexibility across build systems and enables targeted scoping by subscription. For detailed steps and examples:  
-
-[Connect your Azure DevOps organizations](quickstart-onboard-devops.md)
+Defender CLI supports two authentication methods to align with enterprise security practices. The first and preferred method is connector‑based authentication, currently available only for Azure DevOps. By establishing a connector between Azure DevOps and Defender for Cloud, authentication is handled automatically, eliminating the need to add tokens to pipelines. The second method is token‑based authentication, where security admins create tokens in the Microsoft Defender for Cloud portal and configure them as environment variables in CI/CD pipelines or local terminals. This approach offers flexibility across build systems and enables targeted scoping by subscription. For detailed steps and examples, wee[Connect your Azure DevOps organizations](quickstart-onboard-devops.md).
 
 ## CI/CD integration
 The Defender CLI is platform‑agnostic and works if you use a native connector or authentication tokens. Teams can adopt it progressively, optimize YAML with defaults, and rely on stable, consistent exit codes to wire in checks. Examples and marketplace entries (Azure DevOps Task) are part of the standard rollout to accelerate onboarding.  

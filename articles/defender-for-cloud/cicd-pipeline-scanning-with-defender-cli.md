@@ -42,7 +42,7 @@ Connector-based authentication is currently available only for Azure DevOps. Whe
 
 For detailed steps and examples, see:
 
-* [Defender CLI Authentication Token based instructions](defender-cli-authentication.md)
+* [Defender CLI Authentication token-based instructions](defender-cli-authentication.md)
 * [Connect your Azure DevOps organizations](quickstart-onboard-devops.md)
 
 ## Configure your CI/CD pipeline
@@ -64,18 +64,17 @@ Choose the configuration example that matches your CI/CD platform and authentica
 
 ```yaml
 - name: Download Defender CLI
-      run: |
-       curl -L -o defender "https://aka.ms/defender-cli_linux-x64" && chmod +x defender
-
-    - name: Run Defender CLI Scan (Built)
-      run: |
-        #replace image-name with the Container image built      
-        ./defender scan image '${{ image-name }}'
-      continue-on-error: true
-      env:
-        DEFENDER_TENANT_ID: ${{ secrets.DEFENDER_TENANT_ID }}
-        DEFENDER_CLIENT_ID: ${{ secrets.DEFENDER_CLIENT_ID }}
-        DEFENDER_CLIENT_SECRET: ${{ secrets.DEFENDER_CLIENT_SECRET }}
+ run: |
+    curl -L -o defender "https://aka.ms/defender-cli_linux-x64" && chmod +x defender
+- name: Run Defender CLI Scan (Built)
+  run: |
+    #replace image-name with the Container image built      
+    ./defender scan image '${{ image-name }}'
+  continue-on-error: true
+  env:
+    DEFENDER_TENANT_ID: ${{ secrets.DEFENDER_TENANT_ID }}
+    DEFENDER_CLIENT_ID: ${{ secrets.DEFENDER_CLIENT_ID }}
+    DEFENDER_CLIENT_SECRET: ${{ secrets.DEFENDER_CLIENT_SECRET }}
 ```
 
 ### Jenkins (Token-based authentication)
