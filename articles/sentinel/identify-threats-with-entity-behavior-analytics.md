@@ -105,8 +105,8 @@ When analysts use Advanced Hunting to query data in tables that are data sources
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomlies table and enrich their anlysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png":::
 
 For more information, see: 
-- [Proactively hunt for threats with advanced hunting in Microsoft Defender](defender-xdr/advanced-hunting-overview).
-- [KQL join operator](kusto/query/join-operator?view=microsoft-sentinel).
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+- [KQL join operator](/kusto/query/join-operator?view=microsoft-sentinel).
 - [UEBA data sources](ueba-reference.md#data-sources).
 - [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
 
