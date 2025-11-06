@@ -148,7 +148,7 @@ items:
     items:
       - name: Alerts overview
         href: alerts-overview.md
-      - name: Defender for Identity classic alerts
+      - name: Defender for Identity security alerts
         href: alerts-mdi-classic.md
       - name: Defender for Identity XDR alerts
         href: alerts-xdr.md
