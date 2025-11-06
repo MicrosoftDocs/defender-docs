@@ -30,7 +30,7 @@ jobs:
         with:
             PayloadJson: ${{ needs.download-payload.outputs.WorkflowPayload }}
             AutoAssignUsers: 1
-            AutoAssignReviewers: 1
+            AutoAssignReviewers: 0
             AutoLabel: 1
             ExcludedUserList: '["user1", "user2"]'
             ExcludedBranchList: '["branch1", "branch2"]'

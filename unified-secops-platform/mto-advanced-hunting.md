@@ -63,6 +63,7 @@ You can run any query that you already have access to in the multitenant managem
    
    Or, to query multiple workspaces in the same tenant, use a query similar to the following:
    
+   ```kusto
    Usage
    | union workspace("WorkpaceA").Usage
    | take 10
