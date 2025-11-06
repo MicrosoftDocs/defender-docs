@@ -24,12 +24,12 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 Defender for Endpoint is part of [Microsoft Defender XDR](/defender-xdr/) and can be [integrated](threat-protection-integration.md) with other Microsoft solutions, including:
 
 * [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
-* [Microsoft Sentinel](/azure/sentinel/)
-* [Intune](/intune/intune-service/)
 * [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 * [Microsoft Defender for Identity](/defender-for-identity/)
 * [Microsoft Defender for Office](/defender-office-365/)
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+* [Microsoft Sentinel](/azure/sentinel/)
+* [Intune](/intune/intune-service/)
 
 ## Operating systems
 
@@ -56,9 +56,9 @@ This section lists key Defender for Endpoint capabilities and provides links to 
 | Capability | Description |
 |---|---|
 |[Attack surface reduction](overview-attack-surface-reduction.md) |Ensures endpoint settings are properly configured and secure, and that vulnerabilities are mitigated. Includes [network protection](network-protection.md) and [web protection](web-protection-overview.md), which regulate access to malicious IP addresses, domains, and URLs. |
-|[Next-generation protection](next-generation-protection.md) |Designed to emerging threats to enforce the security perimeter of your network. |
+|[Next-generation protection](next-generation-protection.md) |Catch and block all types of emerging threats. |
 |[Endpoint detection and response](overview-endpoint-detection-response.md) |Detect, investigate, and respond to advanced threats. Includes [advanced hunting](/defender-xdr/advanced-hunting-overview) which provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections. |
-|[Automated investigation and remediation](automated-investigations.md) |Automatic investigation and remediation capabilities |
+|[Automated investigation and remediation](automated-investigations.md) |Automatic investigation and remediation capabilities. |
 |[Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices) |Assess the security state of your network, identify unprotected systems, and take actions to improve your organization's security. |
 |[Endpoint Attack Notifications](endpoint-attack-notifications.md) |Proactive hunting, prioritization, and insights that help identify and respond to threats. |
 |[APIs](api/management-apis.md) |Automate Defender for Endpoint and integrate it into your existing workflows. |
