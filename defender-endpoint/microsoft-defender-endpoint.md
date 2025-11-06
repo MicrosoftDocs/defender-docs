@@ -61,7 +61,7 @@ Defender for Endpoint is available in three plans. You can find more information
 
 * [Microsoft Defender for Business](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-business) - An endpoint security solution designed for small and medium-sized businesses.
 
-* [Defender for Endpoint Plan 1](defender-endpoint-plan-1) - Provides core endpoint protection capabilities.
+* [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) - Provides core endpoint protection capabilities.
 
 * [Defender for Endpoint Plan 2](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-licenses-provide-the-rights-for-users-to-benefit-from-the-service-1) - A comprehensive endpoint protection solution that includes advance capabilities.
 
