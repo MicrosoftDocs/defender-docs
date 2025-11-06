@@ -45,7 +45,7 @@ See [Auditing and Advanced hunting for AI agents](../defender-for-cloud-apps/ai-
 
 AI agents empower people to build and deploy custom agents without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
- [Real-time protection during agent runtime for AI agents created using Copilot Studio (Preview)](../defender-for-cloud-apps/real-time-agent-protection-during-runtime.md) reduces these risks by inspecting tool invocations before the agent runs any actions.
+ [Real-time protection during agent runtime for AI agents created using Copilot Studio (Preview)](../defender-for-cloud-apps/ai-agent-protection.md) reduces these risks by inspecting tool invocations before the agent runs any actions.
 
 If Microsoft Defender determines that a prompt is suspicious:
 
