@@ -39,7 +39,7 @@ The following Defender for Identity actions can be performed on Identities:
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |Disable identity                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, and Okta
 |Enable identity              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, and Okta
-|Revoke all sessions for this identity       | Revoke an identity's active session. | Microsoft Entra ID and Okta
+|Revoke session     | Revoke an identity's active session. | Microsoft Entra ID and Okta
 |Confirm accounts compromised      | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID
 | Reset password| Reset a password for one or more accounts linked to the selected identity.This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.| Active Directory
 |Deactivate accounts in Okta | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
