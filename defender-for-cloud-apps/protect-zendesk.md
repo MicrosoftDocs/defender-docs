@@ -137,7 +137,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ## Rate limits
 
-The default rate limit is 200 requests per minute. To increase the rate limit, [open a support ticket](support-and-ts.md).
+The default rate limit is 200 requests per minute. To increase the rate limit, [open a support ticket](/defender-xdr/contact-defender-support).
 
 >[!NOTE]
 >The maximum rate limit for every subscription is described [here](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).

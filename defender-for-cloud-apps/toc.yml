@@ -552,8 +552,6 @@ items:
     href: https://security.microsoft.com
   - name: How to buy Defender for Cloud Apps
     href: https://www.microsoft.com/security/business/cloud-apps-defender
-  - name: Support and troubleshooting
-    href: support-and-ts.md
   - name: External integrations
     href: additional-integrations.md
   - name: Watch our webinars

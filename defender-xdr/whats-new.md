@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 10/31/2025
+ms.date: 11/03/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -32,9 +32,13 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## November 2025
+- (Preview) Threat analytics now has an **Indicators** tab that provides a list of all indicators of compromise (IOCs) associated with a threat. Microsoft researchers update these IOCs in real time as they find new evidence related to the threat. This information helps your security operations center (SOC) and threat intelligence analysts with remediation and proactive hunting. [Learn more](threat-analytics-indicators.md)
+- (Preview) The overview section of [threat analytics](threat-analytics.md) now includes additional details about a threat, such as alias, origin, and related intelligence, providing you with more insights on what the threat is and how it might impact your organization.
+
 ## October 2025
-- [Microsoft Defender Experts for XDR reports](reports-xdr.md) now include a **Trends** tab provides you with the monthly volume of investigated and resolved incidents for the last six months, visualized according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
-- [Microsoft Defender Experts for Hunting reports](defender-experts-report.md) now include an **Emerging threats** section that details the proactive, hypothesis-based hunts we conducted in your environment. Each report also now includes investigation summaries for nearly every hunt that Defender Experts conduct in your environment, regardless of whether they identified a confirmed threat.
+- [Microsoft Defender Experts for XDR reports](reports-xdr.md) now include a **Trends** tab that provides you with the monthly volume of investigated and resolved incidents for the last six months, visualized according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
+- [Microsoft Defender Experts for Hunting reports](defender-experts-report.md) now include an **Emerging threats** section that details the proactive, hypothesis-based hunts Defender Experts conducted in your environment. Each report also now includes investigation summaries for nearly every hunt that Defender Experts conduct in your environment, regardless of whether they identified a confirmed threat.
 
 ## September 2025
 

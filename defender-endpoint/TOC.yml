@@ -1,4 +1,4 @@
-- name: Microsoft Defender for Endpoint
+﻿- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -8,7 +8,7 @@
     items:
     - name: What is Microsoft Defender for Endpoint?
       items: 
-      - name: Defender for Endpoint on Windows
+      - name: Defender for Endpoint
         href: microsoft-defender-endpoint.md
       - name: Defender for Endpoint on macOS
         href: microsoft-defender-endpoint-mac.md
@@ -512,6 +512,8 @@
             href: run-analyzer-linux.md
           - name: Run the client analyzer on macOS
             href: run-analyzer-macos.md
+          - name: Diagnose issues with Client Analyzer
+            href: use-client-analyzer.md        
           - name: Data collection for advanced troubleshooting on Windows
             href: data-collection-analyzer.md
           - name: Understand the analyzer HTML report
