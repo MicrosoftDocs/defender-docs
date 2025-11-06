@@ -15,7 +15,7 @@ Defender CLI supports two authentication methods to align with enterprise securi
 
 ## Connector Based (ADO only)
 Connector‑based authentication integrates Azure DevOps directly with Microsoft Defender for Cloud through a secure connector. Once the connection is established, authentication is managed automatically, removing the need to store or inject tokens in your pipelines.  
-This method is the preferred authentication method for Azure DevOps. [Learn on how to create a connector](quickstart-onboard-devops.md).
+This method is the preferred authentication method for Azure DevOps. [Learn how to create a connector](quickstart-onboard-devops.md).
 
 ## Token Based
 
