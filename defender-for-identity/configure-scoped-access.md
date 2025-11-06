@@ -9,7 +9,7 @@ ms. reviewer: 'LiorShapiraa'
 # Configure scoped access for Microsoft Defender for Identity
 
 As organizations grow and their identity environments become more complex, it's important to control who has access to which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific Active Directory domains or organizational units. This helps improve efficiency by reducing noise from nonessential data and focusing on critical assets. You can also limit visibility to specific entities, so access matches each person's responsibilities.
-Scoped access is implemented by [creating a custom role using Microsoft Defender XDR Unified RBAC](https://review.learn.microsoft.com/en-us/defender-xdr/create-custom-rbac-roles). During the role configuration process, you define which users or Entra ID groups have access to specific Active Directory domains or Organizational units.
+Scoped access is implemented by [creating a custom role using Microsoft Defender XDR Unified RBAC](.../defender-xdr/create-custom-rbac-roles). During the role configuration process, you define which users or Entra ID groups have access to specific Active Directory domains or Organizational units.
 
 ## Prerequisites
 
