@@ -14,10 +14,6 @@ ms.custom: intro-overview
 ms.topic: article
 search.appverid: met150
 ms.date: 11/05/2025
-appliesto:
-  - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender Vulnerability Management
 #customer intent:  As an IT security leader or SOC engineer responsible for endpoint protection, I want a concise overview of Microsoft Defender for Endpoint's capabilities, integrations, and deployment considerations, so I can evaluate its fit for my organization and plan onboarding and operations.
 ---
 
@@ -28,17 +24,11 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 Defender for Endpoint is part of [Microsoft Defender XDR](/defender-xdr/) and can be [integrated](threat-protection-integration.md) with other Microsoft solutions, including:
 
 * [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
-
 * [Microsoft Sentinel](/azure/sentinel/)
-
 * [Intune](/intune/intune-service/)
-
 * [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
-
 * [Microsoft Defender for Identity](/defender-for-identity/)
-
 * [Microsoft Defender for Office](/defender-office-365/)
-
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 ## Operating systems
@@ -46,13 +36,9 @@ Defender for Endpoint is part of [Microsoft Defender XDR](/defender-xdr/) and ca
 Defender for Endpoint supports the following operating systems:
 
 * Windows
-
 * macOS
-
 * Linux
-
 * Android
-
 * iOS
 
 ## Licensing
@@ -60,9 +46,7 @@ Defender for Endpoint supports the following operating systems:
 Defender for Endpoint is available in three plans. You can find more information about these plans and additional Defender licenses in [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 * [Microsoft Defender for Business](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-business) - An endpoint security solution designed for small and medium-sized businesses.
-
 * [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) - Provides core endpoint protection capabilities.
-
 * [Defender for Endpoint Plan 2](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-licenses-provide-the-rights-for-users-to-benefit-from-the-service-1) - A comprehensive endpoint protection solution that includes advance capabilities.
 
 ## Defender for Endpoint capabilities
@@ -84,9 +68,6 @@ This section lists key Defender for Endpoint capabilities and provides links to 
 Follow these links to learn more about privacy and compliance at Microsoft, and Defender for Endpoint.
 
 * [Zero Trust](zero-trust-with-microsoft-defender-endpoint.md)
-
 * [Microsoft Trust Center - Data protection and privacy](https://www.microsoft.com/trust-center/privacy)
-
 * [Privacy at Microsoft](https://privacy.microsoft.com/)
-
 * [Privacy & data management overview](/compliance/assurance/assurance-privacy)
