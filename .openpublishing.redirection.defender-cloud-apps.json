@@ -11,6 +11,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-for-cloud-apps\real-time-agent-protection-during-runtime.md",
+      "redirect_url": "/defender-cloud-apps/ai-agent-protection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-for-cloud-apps/content-inspection-built-in.md",
       "redirect_url": "/defender-cloud-apps/dcs-inspection",
       "redirect_document_id": false

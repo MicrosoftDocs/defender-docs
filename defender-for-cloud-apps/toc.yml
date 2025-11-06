@@ -307,7 +307,7 @@ items:
     - name: CloudAppEvents schema for advanced hunting
       href: /defender-xdr/advanced-hunting-cloudappevents-table?toc=/cloud-app-security/toc.json&bc=/cloud-app-security/breadcrumb/toc.json
   - name: Protect Copilot Studio AI agents
-    href: real-time-agent-protection-during-runtime.md
+    href: ai-agent-protection.md
   - name: Investigate alerts
     items:
     - name: Investigate anomaly detection alerts
