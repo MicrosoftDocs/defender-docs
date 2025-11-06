@@ -26,7 +26,7 @@ Microsoft Defender includes these features to close that visibility gap, enablin
 - Auditing and advanced hunting with AI agents
 - Real time protection during agent runtime
 
-## Discover your AI agents with the AI agent Threat Protection inventory
+## Discover your AI agents with the AI agent inventory
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
@@ -39,7 +39,7 @@ Microsoft Defender detects all of the AI agents created with Microsoft Copilot S
 ## Detect threats on your AI Agents with advanced hunting
 Once you've enabled AI agent protection, Microsoft Defender starts running detections and creating alerts and incidents for suspicious activity on your AI agents. AI agent data is included in Defender for Cloud Apps advanced hunting, to give you visibility into potential threats.
 
-See [Auditing and Advanced hunting for AI agents](../defender-for-cloud-apps/ai-agent-protection.md#auditing-and-advanced-hunting-for-ai-agents).
+See [Detect threats on your Microsoft Copilot Studio AI Agents](../defender-for-cloud-apps/ai-agent-protection.md#detect-threats-on-your-microsoft-copilot-studio-ai-agents).
 
 ## Protect your environment in real-time during agent runtime
 
