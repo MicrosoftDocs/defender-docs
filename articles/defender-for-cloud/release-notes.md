@@ -290,7 +290,7 @@ Microsoft Defender for Cloud's [Cloud Security Posture Management (CSPM)](/azure
 
 All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
 
-Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-defender-for-cloud.md).
 
 ### AKS Security Dashboard
 

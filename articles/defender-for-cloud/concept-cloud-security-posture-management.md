@@ -68,7 +68,7 @@ For specific regional availability and government cloud support details, see the
 <sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
 <sup><a name="footnote1"></a>2</sup>: DevOps security capabilities, such as code-to-cloud contextualization powering security explorer, attack paths, and pull request annotations for Infrastructure-as-Code security findings, are only available when you enable the paid Defender CSPM plan. Learn more about DevOps security [support and prerequisites](devops-support.md).
 
-For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
+For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-defender-for-cloud.md).
 
 ## Plan Pricing
 
