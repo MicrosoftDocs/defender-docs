@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 05/28/2025
+ms.date: 11/04/2025
 ---
 
 # Advanced hunting schema - Naming changes
@@ -36,6 +36,12 @@ The [advanced hunting schema](advanced-hunting-schema-tables.md) is updated regu
 Naming changes are automatically applied to queries that are saved in Microsoft Defender XDR, including queries used by custom detection rules. You don't need to update these queries manually. However, you will need to update the following queries:
 - Queries that are run using the API
 - Queries that are saved elsewhere outside Microsoft Defender XDR
+
+## November 2025
+
+The [`AADSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) and  [`AADSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) tables are being replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) and [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md), respectively. These changes are being made to remove the former tables' preview status and to align them with the existing product branding.
+
+The `EntraIdSignInEvents` and `EntraIdSpnSignInEvents` tables are now available. The legacy `AADSignInEventsBeta`and `AADSignInEventsBeta` tables will remain in the schema for 30 days to allow time for updating your queries. Your custom detections will be updated automatically and won't require any changes. On December 9, 2025, `AADSignInEventsBeta`and `AADSignInEventsBeta` will be removed from the schema.
 
 ## September 2025
 

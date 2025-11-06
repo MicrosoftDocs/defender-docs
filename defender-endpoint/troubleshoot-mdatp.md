@@ -21,8 +21,6 @@ appliesto:
 ---
 # Troubleshoot service issues
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 This section addresses issues that might arise as you use the Microsoft Defender for Endpoint service.
 

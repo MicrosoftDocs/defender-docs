@@ -20,8 +20,6 @@ appliesto:
 ---
 # Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 <a name='use-the-new-microsoft-365-defender-api-for-all-your-alerts'></a>
 

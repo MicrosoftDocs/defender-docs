@@ -24,9 +24,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Review Microsoft Defender Antivirus scan results
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Review Microsoft Defender Antivirus scan results
 
 After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand](run-scan-microsoft-defender-antivirus.md) or [scheduled scan](schedule-antivirus-scans.md), the results are recorded and you can view the results.
 

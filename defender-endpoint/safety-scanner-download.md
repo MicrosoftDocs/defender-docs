@@ -18,7 +18,7 @@ ms.collection:
 ms.topic: get-started
 search.appverid: met150
 ms.date: 04/04/2025
-
+#customer intent: As an IT or security operations engineer responsible for endpoint recovery, I want a simple, trusted tool I can download and run to detect and removemalware so I can quickly restore infected devices and validate remediation.
 ---
 
 # Microsoft Safety Scanner Download
