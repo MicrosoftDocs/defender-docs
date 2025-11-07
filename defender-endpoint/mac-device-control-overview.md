@@ -1,4 +1,4 @@
-﻿---
+
 title: Device control for macOS
 description: Learn how to configure Microsoft Defender for Endpoint on Mac to reduce threats from removable storage such as USB devices.
 ms.service: defender-endpoint
@@ -27,11 +27,7 @@ appliesto:
 
 ## Requirements
 
-Device control for macOS has the following prerequisites:
-
-- Defender for Endpoint or Defender for Business licenses (can be a trial subscription)
-- Minimum OS version: macOS 11 or higher
-- Minimum product version: `101.34.20`
+Device control for macOS is available on the versions listed in the [System requirements](/defender-endpoint/microsoft-defender-endpoint-mac) section of Defender for Endpoint on macOS documentation.
 
 ## Overview
 
