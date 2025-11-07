@@ -124,8 +124,8 @@ The following table lists publicly disclosed threat actor names with their origi
 |Patched Lightning||Storm-0113|
 |[Peach Sandstorm](https://www.microsoft.com/en-us/security/blog/2024/08/28/peach-sandstorm-deploys-new-custom-tickler-malware-in-long-running-intelligence-gathering-operations/)|Iran|HOLMIUM, REFINED KITTEN, APT33, Elfin|
 |Pearl Sleet|North Korea|LAWRENCIUM|
-|Periwinkle Tempest|Russia|DEV-0193, WIZARD SPIDER|
 |Pepper Typhoon|China|LIMINAL PANDA, CL-STA-0969|
+|Periwinkle Tempest|Russia|DEV-0193, WIZARD SPIDER|
 |Phlox Tempest|Israel, Financially motivated|DEV-0796|
 |Pink Sandstorm|Iran|AMERICIUM, SPECTRAL KITTEN, Agrius, Deadwood, BlackShadow, SharpBoys, FireAnt, Justice Blade|
 |Pinstripe Lightning||NIOBIUM, RENEGADE JACKAL, Desert Falcons, Scimitar, Arid Viper|
