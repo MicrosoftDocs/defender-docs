@@ -17,7 +17,7 @@ ms.service: microsoft-sentinel
 > Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-You can access the value of Microsoft Sentinel Model Context Protocol (MCP) server in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md). Security analysts and automation engineers often spend significant time creating complex strengths, opportunities, aspirations, and results (SOAR) analysis templates to enrich entities and reach verdicts.
+You can access the value of Microsoft Sentinel Model Context Protocol (MCP) server in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
 
 The entity analyzer, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into preexisting playbooks.
 
