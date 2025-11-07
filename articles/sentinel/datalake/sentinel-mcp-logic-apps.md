@@ -45,7 +45,7 @@ For specific cases that need additional permissions, see [Roles and permissions 
 
 You have two options for adding the entity analyzer tool to your logic app:
 - [Add to a preexisting logic app](#add-to-a-preexisting-logic-app)
-- [Use the prexisting logic app template](#use-existing-logic-app-template)
+- [Use the preexisting logic app template](#use-existing-logic-app-template)
 
 ### Add to a preexisting logic app
 
@@ -77,7 +77,7 @@ To add the entity analyzer tool by using a preexisting logic app:
 The following screenshot is an example output you receive from the action in the logic app. For more information about the specific input and output in the Connector, see [link].
  
 ### Use existing logic app template 
-You can use the following logic app template for an easy and quick implementation of the analyzer: [insert link]
+You can use the following logic app template for an easy and quick implementation of the analyzer: [Insert link]
 
 This logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer, then sends that analysis as a comment to the original incident.
 
@@ -87,3 +87,6 @@ The following sample output from the Incident Logic App shows entity analyzer in
 ## Authenticate to the connector
 Every logic app connector requires an authentication connection. This new action type supports Microsoft Entra ID, service principals, and managed identities. For more information on setting up managed identities or service principals, see [link].
  
+## Related content
+- [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)
+- [Tool collection in Microsoft Sentinel MCP server](sentinel-mcp-tools-overview.md)
