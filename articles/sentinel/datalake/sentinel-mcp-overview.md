@@ -25,7 +25,7 @@ The following features and benefits are part of Microsoft Sentinel’s MCP serve
 
 - **Unified, hosted interface for AI-driven security operations**: Microsoft Sentinel’s unified MCP server interface is fully hosted, requires no infrastructure deployment, and uses Microsoft Entra for identity. Security teams can connect compatible clients to streamline daily AI operations.
 
-- **Scenario-focused and natural language security tools**: Microsoft Sentinel’s MCP support comes through scenario-focused collections of ready-to-use security tools. These collections help Security teams interact and reason over security data in Microsoft Sentinel data lake and Microsoft Defender using natural language, removing the need for code-first integration, understanding data schema, or writing well-formed data queries.
+- **Scenario-focused and natural language security tools**: Microsoft Sentinel’s MCP support comes through scenario-focused collections of ready-to-use security tools. These collections help security teams interact and reason over security data in Microsoft Sentinel data lake and Microsoft Defender using natural language, removing the need for code-first integration, understanding data schema, or writing well-formed data queries.
 
 - **Accelerated development of effective security agents**: Microsoft Sentinel’s collection of security tools automates discovery and retrieval of security data and delivers predictable, actionable responses to customize agents. This support speeds up efficient security agent creation and delivers better and highly effective security agents.
 
@@ -56,7 +56,9 @@ When you connect a [compatible client](sentinel-mcp-get-started.md#supported-cod
   
     [Get started with data exploration over long term data](sentinel-mcp-data-exploration-tool.md)
   
-- **Build Security Copilot agents through natural language:** Security Operations Center (SOC) engineers often spend weeks manually automating playbooks due to fragmented data sources and rigid schema requirements. With our agent creation tools, engineers can describe their intent in natural language to quickly build agents with the right AI model instructions and tools that reason over their security data, creating automations that are customized to their organization's workflows and processes.  
+-	**Analyze entities across your security data:** Security Operations Center (SOC) engineers, analysts, and even agents need an easy way to analyze and triage entities, such as URLs and users, using all of an organizations security data with no lookback time limits. However, today’s fragmented data sources make this process complex and time-consuming to automate. As one of the most common incident triage tasks, entity enrichment therefore often becomes a manual context-gathering effort, slowing down response times. With the entity analysis tools in the data exploration collection, analysts and SOC engineers have a one-click action that can retrieve, reason over, and clearly present comprehensive verdicts and analyses on entities using the security data in the data lake, making it easy to automate entity enrichment for you and the agents you build.
+
+- **Build Security Copilot agents through natural language:** SOC engineers often spend weeks manually automating playbooks due to fragmented data sources and rigid schema requirements. With our agent creation tools, engineers can describe their intent in natural language to quickly build agents with the right AI model instructions and tools that reason over their security data, creating automations that are customized to their organization's workflows and processes.  
 
   [Get started with building agents](sentinel-mcp-agent-creation-tool.md)
 

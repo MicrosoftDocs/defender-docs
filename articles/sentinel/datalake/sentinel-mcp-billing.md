@@ -43,6 +43,7 @@ The following limits are specific to this service:
 |----------|----------|
 | MCP streaming | 120 seconds | 
 | Query window for tools | 800 characters |
+| Running analyzer tools | 100 times a day |
 
 ### Microsoft Defender tool
 Regular API throttling applies to the tools in the Defender collection. In addition, tools that call the advanced hunting API are bound by the existing advanced hunting quotas and service limits. [Learn more about advanced hunting quotas and usage parameters](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters)

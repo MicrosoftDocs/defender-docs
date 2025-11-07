@@ -23,7 +23,9 @@ Our collections are scenario-focused and have security-optimized descriptions th
 - Find the top three users that are at risk and explain why they're at risk.
 - Find sign-in failures in the last 24 hours and give me a brief summary of key findings.
 - Identify devices that showed an outstanding number of outgoing network connections.
-
+- Help me understand if the user <user object ID\> is compromised.
+- Investigate users with a password spray alert in the last seven days and tell me if any of them are compromised.
+- Find all the URL IOCs from <TI article\> and analyze them to tell me everything Microsoft knows about them.
 
 ## Available collections
 
@@ -31,7 +33,7 @@ The following table lists the available collections you can use:
 
 | Collection | Description | Server URL |
 |----------|----------|----------|
-| [Data exploration](sentinel-mcp-data-exploration-tool.md) | Explore security data in Microsoft Sentinel data lake by searching for relevant tables and query lake | `https://sentinel.microsoft.com/mcp/data-exploration`|
+| [Data exploration](sentinel-mcp-data-exploration-tool.md) | Explore security data in Microsoft Sentinel data lake by searching for relevant tables, querying the lake, and analyzing entities | `https://sentinel.microsoft.com/mcp/data-exploration`|
 | [Security Copilot agent creation](sentinel-mcp-agent-creation-tool.md) | Create Microsoft Security Copilot agents for complex workflows |`https://sentinel.microsoft.com/mcp/security-copilot-agent-creation`|
 | [Microsoft Defender](sentinel-mcp-defender-tool.md) | Triage incidents rapidly and hunt over your own data easily using Defender APIs | `https://sentinel.microsoft.com/mcp/defender`|
 

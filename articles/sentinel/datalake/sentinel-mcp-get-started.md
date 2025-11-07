@@ -86,6 +86,9 @@ After adding Microsoft Sentinel's collection of tools, you can use the following
 - Find the top three users that are at risk and explain why they are at risk.
 - Find sign-in failures in the last 24 hours and give me a brief summary of key findings.
 - Identify devices that showed an outstanding number of outgoing network connections.
+- Help me understand if the user <user object ID\> is compromised.
+- Investigate users with a password spray alert in the last seven days and tell me if any of them are compromised.
+- Find all the URL IOCs from <TI article\> and analyze them to tell me everything Microsoft knows about them.
 
 To understand how agents invoke our tools to answer these prompts, see [How Microsoft Sentinel MCP tools work alongside your agent](sentinel-mcp-data-exploration-tool.md#how-microsoft-sentinel-mcp-tools-work-alongside-your-agent).
 
