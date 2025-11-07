@@ -62,14 +62,14 @@ To add the entity analyzer tool by using a preexisting logic app:
             ```
             {
             "entityType": "Url",
-            "url": "[URL]”
+            "url": "[URL]"
             }
             ```
         - For user entity 
             ```
             {
             "entityType": "User",
-            "userId": "[User]”
+            "userId": "[User]"
             }
             ```
         You can enter these properties either manually or as dynamic values from previous actions.
