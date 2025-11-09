@@ -31,18 +31,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-| November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-release-for-jfrog-artifactory-anddocker-hub-container-registries-support-by-defender-for-containers-and-defender-cspm)|
+| November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### General Availability of Jfrog Artifactory and Docker Hub container registry support
 
 November 3, 2025
 
-We’re announcing the the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
+We’re announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
 
-This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
+This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
 
-Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessmentDocker Hub](agentless-vulnerability-assessment-docker-hub.md).
+Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md).
 
 > [!NOTE]
 > Billing for Jfrog Artifactory (Cloud) & container registry support by Defender for Containers & Defender CSPM will begin on **December 2, 2025**.
