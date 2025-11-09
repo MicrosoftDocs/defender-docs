@@ -693,11 +693,11 @@ Recommended actions now include the following new security posture assessments, 
 
 - **Certificate templates recommended actions**:
 
-   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](/defender-for-identity/security-posture-assessments/certificates.md#prevent-users-to-request-a-certificate-valid-for-arbitrary-users-based-on-the-certificate-template-esc1--preview)
-   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](/defender-for-identity/security-posture-assessments/certificates.md#edit-overly-permissive-certificate-template-with-privileged-eku-any-purpose-eku-or-no-eku-esc2)
-   - [Misconfigured enrollment agent certificate template (ESC3)](/defender-for-identity/security-posture-assessments/certificates.md#edit-misconfigured-enrollment-agent-certificate-template-esc3)
-   - [Edit misconfigured certificate templates ACL (ESC4)](/defender-for-identity/security-posture-assessments/certificates.md#edit-misconfigured-certificate-templates-acl-esc4)
-   - [Edit misconfigured certificate templates owner (ESC4)](/defender-for-identity/security-posture-assessments/certificates.md#edit-misconfigured-certificate-templates-owner-esc4)
+   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](security-posture-assessments/certificates.md#prevent-users-to-request-a-certificate-valid-for-arbitrary-users-based-on-the-certificate-template-esc1--preview)
+   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](security-posture-assessments/certificates.md#edit-overly-permissive-certificate-template-with-privileged-eku-any-purpose-eku-or-no-eku-esc2)
+   - [Misconfigured enrollment agent certificate template (ESC3)](security-posture-assessments/certificates.md#edit-misconfigured-enrollment-agent-certificate-template-esc3)
+   - [Edit misconfigured certificate templates ACL (ESC4)](security-posture-assessments/certificates.md#edit-misconfigured-certificate-templates-acl-esc4)
+   - [Edit misconfigured certificate templates owner (ESC4)](security-posture-assessments/certificates.md#edit-misconfigured-certificate-templates-owner-esc4)
 
 - **Certificate authority recommended actions**:
 
