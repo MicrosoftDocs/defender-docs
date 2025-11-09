@@ -30,7 +30,6 @@ Alerts from the last seven days are displayed with the following information:
 :::image type="content" source="media/understanding-security-alerts/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Defender portal. Two alerts named Suspected brute-force are listed with full alert details."  lightbox="media/understanding-security-alerts/filtered-alerts.png":::
 
 
-
 ## Customize the view of the alerts queue
 
 You can customize the view of the alerts queue in a few ways. Using the tools at the top of the page, you can:
