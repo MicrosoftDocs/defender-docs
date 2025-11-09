@@ -50,11 +50,9 @@ Predictive shielding relies on two pillars:
 - **Prediction** 
     - Involves analyzing threat intelligence, attacker behavior, past incidents, and organizational exposure. 
     - Defender XDR uses this prediction data to identify emerging risks, to understand likely attack progression, and to infer risk on non-compromised assets.
-- **Enforcement** applies automated protective controls to disrupt potential attack paths in real time. 
+- **Enforcement** applies preventative protective controls to disrupt potential attack paths in real time.
 
 This dual approach ensures that protection is both precise and timely.
-
-Predictive shielding uses [graph-based prediction logic](#graph-based-logic), which unifies pre-breach and post-breach insights. Defender XDR uses the live attacker activity in an organization’s exposure graph to model the potential blast radius and forecast the most probable attack paths. This dynamic understanding allows for just-in-time protection, stopping attackers before they reach critical assets.
 
 ## How predictive shielding expands on automatic attack disruption
 
@@ -76,7 +74,7 @@ Together, these insights create a dynamic understanding of the environment and i
 
 ## Graph-based logic
 
-Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment, which enables Defender XDR to forecast attacker movements in real time and prioritize defenses effectively.
+Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment. This logic enables Defender XDR to forecast attacker movements in real time, prioritize defenses effectively, and stop attackers before they reach critical assets.
 
 The process involves three key stages: 
 
