@@ -1,9 +1,9 @@
----
+﻿---
 title: Use network protection to help prevent connections to malicious or suspicious sites
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/10/2025
+ms.date: 10/20/2025
 audience: ITPro
 author: batamig
 ms.author: bagol
@@ -17,21 +17,12 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender Antivirus
 
+---
 # Use network protection to help prevent connections to malicious or suspicious sites
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- macOS
-- Linux
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
 
@@ -44,6 +35,14 @@ Network protection extends the protection in [Web protection](web-protection-ove
 Watch this video to learn how network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=2d0270f9-f216-4e9e-85c7-5e2b183c6d73]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- macOS
+- Linux
 
 ### Network protection coverage
 
@@ -77,7 +76,7 @@ There might be up to two hours of latency (usually less) between when an indicat
 Network protection requires devices running one of the following operating systems:
 
 - Windows 10 or 11 (Pro or Enterprise) (see [Supported Windows versions](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint))
-- Windows Server, version 1803 or later (see [Supported Windows versions](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint))
+- Windows Server 2012 R2, Windows Server 2016, or Windows Server version 1803 or later (see [Supported Windows versions](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint))
 - macOS version 12 (Monterey) or later (see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md))
 - A supported Linux version (see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md))
 
@@ -90,7 +89,7 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 
 ## Why network protection is important
 
-Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in Microsoft Edge browser. The network protection functionality can be extended to:
+Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in the Microsoft Edge browser. The network protection functionality can be extended to:
 
 - Block IP/URL addresses from your own threat intelligence ([indicators](indicator-ip-domain.md))
 - Block unsanctioned services from [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
@@ -148,13 +147,18 @@ When an end user attempts to visit a website in an environment in which network 
 A user visits a website. If the url has an unknown or uncertain reputation, a toast notification presents the user with the following options:
 
 - **Ok**: The toast notification is released (removed), and the attempt to access the site is ended.
-- **Unblock**: The user has access to the site for 24 hours; at which point the block is reenabled. The user can continue to use **Unblock** to access the site until such time that the administrator prohibits (blocks) the site, thus removing the option to **Unblock**.
+- **Unblock**: The user has access to the site for 24 hours; at which point the block is re-enabled. The user can continue to use **Unblock** to access the site until such time that the administrator prohibits (blocks) the site, thus removing the option to **Unblock**.
 - **Feedback**: The toast notification presents the user with a link to submit a ticket, which the user can use to submit feedback to the administrator in an attempt to justify access to the site.
 
 :::image type="content" source="media/network-protection-phishing-warn-2.png" alt-text="Shows a network protection phishing content warn notification.":::
 
 > [!NOTE]
 > The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.  
+
+> [!NOTE]
+> To receive this toast notification, make sure the **“Files or activities are blocked”** option is enabled under **Virus & Threat Protection notifications**. The corresponding registry key should be set as follows:
+> HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender Security Center\Virus and threat protection\FilesBlockedNotificationDisabled = 0
+> More details see [Windows Security app settings](https://support.microsoft.com/windows/windows-security-app-settings-1ec98620-4e41-4b6b-b055-3c4bb115d4ee#bkmk_notifications). 
 
 #### Use CSP to enable `Convert warn verdict to block`
 By default, SmartScreen verdicts for malicious sites result in a warning that can be overridden by the user. A policy can be set to convert the warning to blocks, preventing such overrides.
@@ -185,7 +189,7 @@ When a user visits a website whose url has a bad reputation, a toast notificatio
 - **Ok**: The toast notification is released (removed), and the attempt to access the site is ended.
 - **Feedback**: The toast notification presents the user with a link to submit a ticket, which the user can use to submit feedback to the administrator in an attempt to justify access to the site.
 
-:::image type="content" source="media/network-protection-phishing-blocked.png" alt-text="Shows a network protection known phishing content blocked notification." lightbox="media/network-protection-phishing-blocked.png":::
+:::image type="content" source="media/network-protection-phishing-blocked.png" alt-text="Shows a network protection known phishing content blocked notification." lightbox="media/network-protection-phishing-blocked.png":::Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) shown for a blocked connection with your organization's details and contact information.
 
 ## SmartScreen Unblock
 
@@ -193,7 +197,7 @@ With indicators in Defender for Endpoint, administrators can allow end users to 
 
 :::image type="content" source="media/network-protection-smart-screen-block-notification.png" alt-text="Windows Security notification for network protection.":::
 
-Microsoft Defender for Endpoint administrators can configure SmartScreen Unblock functionality in the [Microsoft Defender portal](https://security.microsoft.com) using an allow indicator for IPs, URLs, and domains.
+Microsoft Defender for Endpoint administrators can unblock any URL in the [Microsoft Defender portal](https://security.microsoft.com) using an allow indicator for IPs, URLs, and domains.
 
 :::image type="content" source="media/network-protection-smart-screen-block-configuration.png" alt-text="Network protection SmartScreen block configuration URL and IP form.":::
 
@@ -272,15 +276,12 @@ DeviceEvents
 
 You can use the resulting list of URLs and IPs to determine what would be blocked if network protection is set to block mode on the device. You can also see which features would block URLs and IPs. Review the list to identify any URLS or IPs that are necessary for your environment. You can then create an allow indicator for those URLs or IP addresses. Allow indicators take precedence over any blocks. See [Order of precedence for Network protection blocks](web-protection-overview.md#order-of-precedence).
 
-After creating an indicator to unblock a site, you may attempt to resolve the original block as follows:
+After creating an allow indicator to unblock a site, you may attempt to resolve the original block as follows:
 
 - **SmartScreen**: report false positive, if appropriate
 - **Indicator**: modify existing indicator
 - **MCA**: review unsanctioned app
 - **WCF**: request recategorization
-
-> [!NOTE]
-> As this is a per-device setting, if there are devices that cannot move to Block mode you can simply leave them on audit to receive the auditing events.
 
 For information about how to report false positives in SmartScreen data, see [Report false positives](web-protection-overview.md#report-false-positives).
 
@@ -301,11 +302,7 @@ In non-Microsoft Edge processes, Network Protection determines the fully qualifi
 
 ## Viewing network protection events
 
-Network protection works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into exploit protection events and blocks as part of [alert investigation scenarios](investigate-alerts.md).
-
-When network protection blocks a connection, a notification is displayed on the client. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information.
-
-<a name='review-network-protection-events-in-the-microsoft-365-defender-portal'></a>
+Network protection works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting as part of [alert investigation scenarios](investigate-alerts.md).<a name='review-network-protection-events-in-the-microsoft-365-defender-portal'></a>
 
 ## Review network protection events in the Microsoft Defender portal
 
@@ -319,13 +316,13 @@ You can review the Windows event log to see events that are created when network
 
 2. Select **OK**.
 
-This procedure creates a custom view that filters to only show the following events related to network protection:
-
-|Event ID|Description|
-|---|---|
-|`5007`|Event when settings are changed|
-|`1125`|Event when network protection fires in audit mode|
-|`1126`|Event when network protection fires in block mode|
+    This procedure creates a custom view that filters to only show the following events related to network protection:
+    
+    |Event ID|Description|
+    |---|---|
+    |`5007`|Event when settings are changed|
+    |`1125`|Event when network protection fires in audit mode|
+    |`1126`|Event when network protection fires in block mode|
 
 ## Network protection and the TCP three-way handshake
 
@@ -350,7 +347,7 @@ Due to the multi-user nature of Windows 10 Enterprise, keep the following points
 
 ### Alternative option for network protection
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection can be enabled using the following method:
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
@@ -362,8 +359,8 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
    - `Set-MpPreference -AllowDatagramProcessingOnWinServer 1`
 
    > [!NOTE]
-   > In some cases, depending on your infrastructure, volume of traffic, and other conditions, `Set-MpPreference -AllowDatagramProcessingOnWinServer 1` can have an effect on network performance.
-
+   > Depending on your infrastructure, volume of traffic, and other conditions, `Set-MpPreference -AllowDatagramProcessingOnWinServer 1` can have an effect on network performance.
+   
 ### Network protection for Windows Servers
 
 The following information is specific to Windows Servers.
@@ -388,7 +385,7 @@ Verify whether network protection is enabled on a local device by using Registry
 
 For more information, see [Turn on network protection](enable-network-protection.md).
 
-#### Network protection suggested registry keys
+#### Network protection registry keys
 
 For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
 
@@ -400,10 +397,10 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
    - `EnableNetworkProtection` (DWORD) set to `1` (hex)
    - (On Windows Server 2012 R2 and Windows Server 2016 only) `AllowNetworkProtectionDownLevel` (DWORD) set to `1` (hex) 
 
-> [!NOTE]
-> Depending on your infrastructure, volume of traffic, and other conditions, **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Policies** > **Microsoft** > **Windows Defender** > **NIS** > **Consumers** > **IPS** - **AllowDatagramProcessingOnWinServer (dword) 1 (hex)** can have an effect on network performance.
+    > [!NOTE]
+    > Depending on your infrastructure, volume of traffic, and other conditions, **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Policies** > **Microsoft** > **Windows Defender** > **NIS** > **Consumers** > **IPS** - **AllowDatagramProcessingOnWinServer (dword) 1 (hex)** can have an effect on network performance.
 
-For more information, see: [Turn on network protection](enable-network-protection.md).
+    For more information, see [Turn on network protection](enable-network-protection.md).
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
@@ -422,7 +419,7 @@ Set-MpPreference -AllowDatagramProcessingOnWinServer 1
 ```
 
 > [!NOTE]
-> In some cases, depending on your infrastructure, volume of traffic, and other conditions, `Set-MpPreference -AllowDatagramProcessingOnWinServer 1` can affect network performance.
+> Depending on your infrastructure, volume of traffic, and other conditions, `Set-MpPreference -AllowDatagramProcessingOnWinServer 1` can affect network performance.
 
 ## Network protection troubleshooting
 
@@ -454,7 +451,7 @@ New-NetFirewallRule @ruleParams
 
 ## Optimizing network protection performance
 
-Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. 
+Network protection includes a performance optimization that allows `block` mode to inspect long-lived connections asynchronously, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. 
 
 #### Use CSP to enable AllowSwitchToAsyncInspection
 
@@ -492,3 +489,4 @@ You can turn on this capability by using the following PowerShell cmdlet:
 - [Network protection for macOS](network-protection-macos.md) | To learn more about Microsoft Network protection for macOS
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 09/03/2025
+ms.date: 09/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -33,7 +33,7 @@ With the increased use of collaboration tools like Microsoft Teams, the possibil
 All licenses of Microsoft Teams in Microsoft 365 include the following built-in protections:
 
 - [Built-in virus protection in SharePoint, SharePoint Embedded, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)
-- **Near real-time URL protection in Teams messages (currently in Preview)**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and teams for all URL verdicts (not just malware or high confidence phishing).
+- **Near real-time URL protection in Teams messages (currently in Preview)**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and channels for all URL verdicts (not just malware or high confidence phishing).
 
   :::image type="content" source="media/teams-message-url-warning.png" alt-text="Screenshot showing a Microsoft Teams message with a URL warning." lightbox="media/teams-message-url-warning.png":::
 
@@ -46,7 +46,7 @@ Microsoft Defender for Office 365 provides the following extra Teams protection 
 
 Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with a set of extra capabilities designed to disrupt the attack chain:
 
-- **Report suspicious Teams messages**: Users can report malicious Teams messages. Depending on the reported message settings in the organization, the reported messages go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md).
+- **Report Teams messages**: Users can report Teams messages as malicious or not malicious. Depending on the reported message settings in the organization, reported messages go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md).
 
 - **Zero-hour auto protection (ZAP) for Teams**: ZAP is an existing email protection feature that detects and neutralizes spam, phishing, and malware messages after delivery by moving the messages to the Junk Email folder or quarantine.
 

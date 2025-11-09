@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshoot Microsoft Defender for Endpoint service issues
 description: Find solutions and workarounds to known issues such as server errors when trying to access the service.
 ms.service: defender-endpoint
@@ -14,16 +14,13 @@ ms.collection:
 ms.topic: troubleshooting
 search.appverid: met150
 ms.date: 02/24/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot service issues
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 This section addresses issues that might arise as you use the Microsoft Defender for Endpoint service.
 
@@ -73,7 +70,7 @@ The following date and time formats are currently not supported:
 
 Support of use of comma as a separator in numbers aren't supported. Regions where a number is separated with a comma to indicate a thousand, will only see the use of a dot as a separator. For example, 15,5 K is displayed as 15.5 K.
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Microsoft Defender for Endpoint tenant was automatically created in Europe
 
@@ -84,3 +81,4 @@ When you use Microsoft Defender for Cloud to monitor servers, a Microsoft Defend
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Review events and errors using Event Viewer](event-error-codes.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

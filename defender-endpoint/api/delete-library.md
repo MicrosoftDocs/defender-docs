@@ -1,4 +1,4 @@
----
+﻿---
 title: Delete a file from the live response library
 description: Learn how to delete a file from the live response library.
 search.appverid: met150
@@ -18,14 +18,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 ms.date: 04/17/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # Delete a file from the live response library
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -88,3 +88,4 @@ DELETE https://api.security.microsoft.com/api/libraryfiles/script1.ps1
 
 - [Run live response](run-live-response.md) 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

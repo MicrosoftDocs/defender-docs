@@ -1,4 +1,4 @@
----
+﻿---
 title: List library files 
 description: Learn how to list live response library files.
 search.appverid: met150
@@ -18,16 +18,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 ms.date: 03/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 #  List library files 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -133,3 +131,4 @@ Content-type: application/json
 ## Related article
 - [Run live response](run-live-response.md) 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 09/05/2025
+ms.date: 09/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -239,7 +239,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
        - **30 days**
        - **Never expire**
        - **Specific date**: The maximum value is 30 days from today.
-     - **Block entry note (optional)**: Enter optional information about why you're blocking this itme.
+     - **Block entry note (optional)**: Enter optional information about why you're blocking this item.
 
      When you're finished in the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
@@ -293,7 +293,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
        For spoofed senders, this value is meaningless, because entries for spoofed senders never expire.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry exipres on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry expires on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
@@ -1084,9 +1084,6 @@ The rest of the details flyout contains the **Delivery details**, **Email detail
 When you're finished in the details flyout, select **Close**.
 
 ### View user reported Teams message details in Defender for Office 365 Plan 2
-
-> [!TIP]
-> [User reporting of messages in Microsoft Teams](submissions-teams.md#how-users-report-messages-in-teams) is currently in Preview, isn't available in all organizations, and is subject to change.
 
 In Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), user reported Teams messages are available on the **User reported** tab of the **Submissions** page. It's easy to find them if you filter the results by the **Message type** value **Teams message**.
 

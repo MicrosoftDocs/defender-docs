@@ -1,0 +1,1120 @@
+{
+  "redirections": [
+    {
+      "source_path": "defender-for-identity/security-assessment-do-not-expire-passwords.md",
+      "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-old-passwords.md",
+      "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/active-directory-federation-services.md",
+      "redirect_url": "/defender-for-identity/deploy/active-directory-federation-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/deploy/quick-installation-guide.md",
+      "redirect_url": "/defender-for-identity/deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/deploy/prerequisites.md",
+      "redirect_url": "/defender-for-identity/deploy/prerequisites-sensor-version-2",
+      "redirect_document_id": false
+    },
+        {
+      "source_path": "defender-for-identity/deploy/activate-capabilities.md",
+      "redirect_url": "/defender-for-identity/deploy/activate-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-event-collection.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-event-forwarding.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-event-forwarding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-port-mirroring.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/manage-action-accounts.md",
+      "redirect_url": "/defender-for-identity/deploy/manage-action-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/multi-forest.md",
+      "redirect_url": "/defender-for-identity/deploy/multi-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remote-calls-sam.md",
+      "redirect_url": "/defender-for-identity/deploy/remote-calls-sam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/capacity-planning.md",
+      "redirect_url": "/defender-for-identity/deploy/capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-proxy.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-sensor-settings.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-windows-event-collection.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-windows-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/deploy-defender-identity.md",
+      "redirect_url": "/defender-for-identity/deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/directory-service-accounts.md",
+      "redirect_url": "/defender-for-identity/deploy/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/download-sensor.md",
+      "redirect_url": "/defender-for-identity/deploy/download-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-sensor.md",
+      "redirect_url": "/defender-for-identity/deploy/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/prerequisites.md",
+      "redirect_url": "/defender-for-identity/deploy/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/quick-installation-guide.md",
+      "redirect_url": "/defender-for-identity/deploy/quick-installation-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/playbooks.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/playbook-lab-overview.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/playbook-setup-lab.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/playbook-reconnaissance.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/playbook-lateral-movement.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/playbook-domain-dominance.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/credential-access-alerts.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/persistence-privilege-escalation-alerts.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/reconnaissance-discovery-alerts.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/lateral-movement-alerts.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/other-alerts.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-activities-filtering-mcas.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-activities-filtering-mcas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-activities-search.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-activities-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-configure-detection-exclusions.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-entity-profiles.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-entity-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-health-center.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-install-step1.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-install-step2.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-install-step3.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-install-step6-vpn.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step6-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-integrate-mde.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-integrate-mde",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-investigate-entity.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-investigate-entity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-investigate-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-investigate-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-manage-sensitive-honeytoken-accounts.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-manage-sensitive-honeytoken-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-mcas-integration.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-mcas-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-modifying-config-dcpassword.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-modifying-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-nnr-policy.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-nnr-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-notifications.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-reports.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-sensor-monitoring.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-sensor-monitoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-setting-syslog.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-setting-syslog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-uninstall-sensor.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-uninstall-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-use-case-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-use-case-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-working-with-suspicious-activities.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-working-with-suspicious-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/classic-workspace-portal.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-workspace-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/validate-port-mirroring.md",
+      "redirect_url": "/defender-for-identity/configure-port-mirroring#validate-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-baseline.md",
+      "redirect_url": "/security/benchmark/azure/baselines/defender-for-identity-security-baseline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/known-issues.md",
+      "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/monitoring-alerts.md",
+      "redirect_url": "/defender-for-identity/health-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/advanced-audit-policy.md",
+      "redirect_url": "/defender-for-identity/configure-windows-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/ata-atp-move-overview.md",
+      "redirect_url": "/defender-for-identity/migrate-from-ata-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-activities-filtering-mcas.md",
+      "redirect_url": "/defender-for-identity/activities-filtering-mcas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-activities-search.md",
+      "redirect_url": "/defender-for-identity/activities-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-architecture.md",
+      "redirect_url": "/defender-for-identity/architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-capacity-planning.md",
+      "redirect_url": "/defender-for-identity/capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-clear-text.md",
+      "redirect_url": "/defender-for-identity/cas-isp-clear-text",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/cas-isp-dormant-entities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-laps.md",
+      "redirect_url": "/defender-for-identity/cas-isp-laps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-legacy-protocols.md",
+      "redirect_url": "/defender-for-identity/cas-isp-legacy-protocols",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-print-spooler.md",
+      "redirect_url": "/defender-for-identity/cas-isp-print-spooler",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/cas-isp-riskiest-lmp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unconstrained-kerberos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unmonitored-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unsecure-account-attributes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/cas-isp-unsecure-sid-history-attribute",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-cas-isp-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/cas-isp-weak-cipher",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-compromised-credentials-alerts.md",
+      "redirect_url": "/defender-for-identity/compromised-credentials-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-domain-dominance-alerts.md",
+      "redirect_url": "/defender-for-identity/domain-dominance-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-exfiltration-alerts.md",
+      "redirect_url": "/defender-for-identity/exfiltration-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-health-center.md",
+      "redirect_url": "/defender-for-identity/health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-isp-overview.md",
+      "redirect_url": "/defender-for-identity/isp-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-lateral-movement-alerts.md",
+      "redirect_url": "/defender-for-identity/lateral-movement-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-mcas-integration.md",
+      "redirect_url": "/defender-for-identity/mcas-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-multi-forest.md",
+      "redirect_url": "/defender-for-identity/multi-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-nnr-policy.md",
+      "redirect_url": "/defender-for-identity/nnr-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-playbook-domain-dominance.md",
+      "redirect_url": "/defender-for-identity/playbook-domain-dominance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-playbook-lab-overview.md",
+      "redirect_url": "/defender-for-identity/playbook-lab-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-playbook-lateral-movement.md",
+      "redirect_url": "/defender-for-identity/playbook-lateral-movement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-playbook-reconnaissance.md",
+      "redirect_url": "/defender-for-identity/playbook-reconnaissance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-playbook-setup-lab.md",
+      "redirect_url": "/defender-for-identity/playbook-setup-lab",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-prerequisites.md",
+      "redirect_url": "/defender-for-identity/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-privacy-compliance.md",
+      "redirect_url": "/defender-for-identity/privacy-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-reconnaissance-alerts.md",
+      "redirect_url": "/defender-for-identity/reconnaissance-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-release-reference.md",
+      "redirect_url": "/defender-for-identity/release-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-resources.md",
+      "redirect_url": "/defender-for-identity/resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-role-groups.md",
+      "redirect_url": "/defender-for-identity/role-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-sensor-monitoring.md",
+      "redirect_url": "/defender-for-identity/sensor-monitoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-silent-installation.md",
+      "redirect_url": "/defender-for-identity/silent-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-support.md",
+      "redirect_url": "/defender-for-identity/support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-technical-faq.md",
+      "redirect_url": "/defender-for-identity/technical-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-us-govt-gcc-high.md",
+      "redirect_url": "/defender-for-identity/us-govt-gcc-high",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/atp-whats-new.md",
+      "redirect_url": "/defender-for-identity/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step1.md",
+      "redirect_url": "/defender-for-identity/install-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step2.md",
+      "redirect_url": "/defender-for-identity/install-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step3.md",
+      "redirect_url": "/defender-for-identity/install-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step4.md",
+      "redirect_url": "/defender-for-identity/install-step4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step5.md",
+      "redirect_url": "/defender-for-identity/install-step5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step6-vpn.md",
+      "redirect_url": "/defender-for-identity/install-step6-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step7.md",
+      "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step7.md",
+      "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/excluding-entities-from-detections.md",
+      "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-atp-step8-samr.md",
+      "redirect_url": "/defender-for-identity/install-step8-samr",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/modifying-atp-config-dcpassword.md",
+      "redirect_url": "/defender-for-identity/modifying-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/troubleshooting-atp-known-issues.md",
+      "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/troubleshooting-atp-using-logs.md",
+      "redirect_url": "/defender-for-identity/troubleshooting-using-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/integrate-wd-atp.md",
+      "redirect_url": "/defender-for-identity/integrate-msde",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/what-is-atp.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step8-samr.md",
+      "redirect_url": "/defender-for-identity/remote-calls-sam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step4.md",
+      "redirect_url": "/defender-for-identity/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step3.md",
+      "redirect_url": "/defender-for-identity/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step5.md",
+      "redirect_url": "/defender-for-identity/configure-sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/workspace-portal.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/sensor-update.md",
+      "redirect_url": "/defender-for-identity/sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/sensor-monitoring.md",
+      "redirect_url": "/defender-for-identity/sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step6-vpn.md",
+      "redirect_url": "/defender-for-identity/vpn-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/manage-sensitive-honeytoken-accounts.md",
+      "redirect_url": "/defender-for-identity/entity-tags",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/configure-detection-exclusions.md",
+      "redirect_url": "/defender-for-identity/exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/use-case-lateral-movement-path.md",
+      "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/suspicious-activity-guide.md",
+      "redirect_url": "/defender-for-identity/alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/working-with-suspicious-activities.md",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/isp-overview.md",
+      "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-print-spooler.md",
+      "redirect_url": "/defender-for-identity/security-assessment-print-spooler",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/security-assessment-dormant-entities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-clear-text.md",
+      "redirect_url": "/defender-for-identity/security-assessment-clear-text",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-laps.md",
+      "redirect_url": "/defender-for-identity/security-assessment-laps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-legacy-protocols.md",
+      "redirect_url": "/defender-for-identity/security-assessment-legacy-protocols",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/security-assessment-riskiest-lmp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unmonitored-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unsecure-account-attributes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unconstrained-kerberos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unsecure-sid-history-attribute",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/security-assessment-weak-cipher",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/release-reference.md",
+      "redirect_url": "/defender-for-identity/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step1.md",
+      "redirect_url": "/defender-for-identity/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/install-step2.md",
+      "redirect_url": "/defender-for-identity/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/setting-syslog.md",
+      "redirect_url": "/defender-for-identity/notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/modifying-config-dcpassword.md",
+      "redirect_url": "/defender-for-identity/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/health-center.md",
+      "redirect_url": "/defender-for-identity/sensor-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/integrate-mde.md",
+      "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/defender-for-identity-in-microsoft-365-defender.md",
+      "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/resources.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/silent-installation.md",
+      "redirect_url": "/defender-for-identity/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/investigate-lateral-movement-path.md",
+      "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/activities-search.md",
+      "redirect_url": "/defender-for-identity/monitored-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/cas-isp-unsecure-domain-configurations.md",
+      "redirect_url": "/defender-for-identity/security-assessment-unsecure-domain-configurations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/activities-filtering-mcas.md",
+      "redirect_url": "/defender-for-identity/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/mcas-integration.md",
+      "redirect_url": "/defender-for-identity/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/understand-entities.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/entity-profiles.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/investigate-a-computer.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/investigate-a-user.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/investigate-entity.md",
+      "redirect_url": "/defender-for-identity/investigate-assets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/sensor-health.md",
+      "redirect_url": "/defender-for-identity/health-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/domain-dominance-alerts.md",
+      "redirect_url": "/defender-for-identity/persistence-privilege-escalation-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/compromised-credentials-alerts.md",
+      "redirect_url": "/defender-for-identity/credential-access-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/reconnaissance-alerts.md",
+      "redirect_url": "/defender-for-identity/reconnaissance-discovery-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/exfiltration-alerts.md",
+      "redirect_url": "/defender-for-identity/other-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/sensitive-accounts.md",
+      "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-legacy-protocols.md",
+      "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/manage-security-alerts.md",
+      "redirect_url": "/defender-for-identity/understanding-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/automated-response-exclusions.md",
+      "redirect_url": "/defender-xdr/automatic-attack-disruption-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/support.md",
+      "redirect_url": "/defender-xdr/contact-defender-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/assign-multi-factor-authentication-okta-privileged-user-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-okta-password-privileged-user-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/high-number-of-okta-accounts-with-privileged-role-assigned.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/highly-privileged-okta-api-token.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/limit-number-okta-super-admin-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-dormant-okta-privileged-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/accounts-with-non-default-pgid.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-suspicious-access-rights.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-krbtgt-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-domain-administrator-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-non-admin-accounts-dcsync.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/ensure-privileged-accounts-with-sensitive-flag.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-clear-text.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-laps.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-discoverable-passwords-active-directory-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-inactive-service-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-enforce-encryption-rpc.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-insecure-adcs-certificate-enrollment.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-owner.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-ca-acl.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-acl.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-enrollment-agent.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-overly-permissive-template.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/prevent-certificate-enrollment-esc15.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-prevent-users-request-certificate.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-vulnerable-ca-setting.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/gpo-assigns-unprivileged-identities.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/modified-unprivileged-accounts-gpo.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/reversible-passwords-group-policy.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/built-in-active-directory-guest-account-is-enabled.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/domain-controller-account-password-change.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-print-spooler.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-certificate-services-server.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-federation-services-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-entra-connect-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-domain-configurations.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-replication-permissions-microsoft-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-unsafe-permissions-sensitive-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/replace-entra-connect-default-admin.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-microsoft-entra-seamless-single-sign-on.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/rotate-password-microsoft-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    }
+
+  ]
+}

@@ -1,11 +1,11 @@
----
+﻿---
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 09/01/2025
+ms.date: 11/05/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -15,16 +15,13 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Business
+
 ---
 
 # Take response actions on a device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -103,19 +100,19 @@ Or, use this alternate procedure:
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
    
-2. Add comments and then select **Confirm**.
+1. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
    
-3. Select **Action center** from the response actions section of the device page.
+1. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
    
-4. Select **Package collection package available** to download the collection package.
+1. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
-
-   > [!NOTE]
+   
+      > [!NOTE]
    > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
    
 ### Investigation package contents for Windows devices
@@ -210,13 +207,15 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**: 
 
+- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices may not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings are not required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
 - You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](mde-linux-prerequisites.md). Ensure that the following prerequisites are enabled:
    - `iptables`
    - `ip6tables`
-   - Linux kernel with `CONFIG_NETFILTER`, `CONFID_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER`
+   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+    
 - Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
@@ -427,3 +426,4 @@ All other related details are also shown, for example, submission date/time, sub
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 - [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

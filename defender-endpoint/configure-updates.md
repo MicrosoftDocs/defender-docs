@@ -1,4 +1,4 @@
----
+﻿---
 title: Create a custom gradual rollout process for Microsoft Defender updates
 description: Learn how to use supported tools to create a custom gradual rollout process for updates
 ms.service: defender-endpoint
@@ -15,24 +15,25 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
 
 # Create a custom gradual rollout process for Microsoft Defender updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+## Prerequisites
 
-**Applies to:**
+- This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer. 
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
-> [!NOTE]
-> This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer.
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
 
@@ -114,3 +115,4 @@ These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWA
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

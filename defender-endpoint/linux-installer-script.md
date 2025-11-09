@@ -1,4 +1,4 @@
----
+﻿---
 title: Installer script based deployment for Microsoft Defender for Endpoint on Linux 
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using an installer script.
 ms.service: defender-endpoint
@@ -16,16 +16,13 @@ ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 08/11/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Introduction
 
@@ -291,3 +288,4 @@ To configure antivirus and EDR settings, see the following articles:
 
 > [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
+
