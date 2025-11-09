@@ -78,9 +78,9 @@ Learn more about [entities in Microsoft Sentinel](entities.md) and see the full 
 
 Information about **entity pages** can now be found at [Entity pages in Microsoft Sentinel](entity-pages.md).
 
-##  How UEBA empowers analysts and streamlines workflows
+##  UEBA experiences in the Defender portal empower analysts and streamline workflows
 
-UEBA experiences embedded in the Defender portal provide analysts with behavioral insights that enhance security operations workflows. By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. UEBA experiences in the Defender portal empower security teams to focus on high-risk behaviors, accelerate investigations, and respond with greater precision.
+By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
 
 This section outlines the key UEBA analyst experiences available in the Defender portal when you enable UEBA.
 
