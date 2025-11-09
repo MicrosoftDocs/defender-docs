@@ -24,8 +24,14 @@ Microsoft Defender addresses these critical security gaps with comprehensive AI 
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
- - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory).
- - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
+ - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory). When you've enabled AI agent inventory for Copilot Studio agents, Microsoft Defender for Cloud Apps automatically:
+    - Runs detections on your AI Agents created using Copilot Studio
+    - Creates alerts and incidents for suspicious activity
+    - Includes AI agent data in advanced hunting
+ - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture). When you've enabled AI agent inventory for Azure AI Foundry agents, Microsoft Defender for Cloud automatically:
+    - Monitors your AI agents for misconfigurations and vulnerabilities
+    - Provides security recommendations to improve the security posture of your AI agents
+    - Includes AI agent data in advanced hunting
 
 
 ## The AI agent inventory page
@@ -63,13 +69,13 @@ These AI agent details are displayed:
 |Creation time     |         |
 |Project     |         |
 |Model     |         |
-|Recommendations     |         |    
+|Recommendations     |         |
 
 
 #### [Copilot Studio](#tab/copilot-studio)
 
 
-- Select **Open agent page** to opens the Copilot Studio AI Agent page. 
+- Select **Open agent page** to open the Copilot Studio AI Agent page in the Defender portal. 
 - Select **Go hunt** to perform [advanced hunting](advanced-hunting-overview.md).
 
 
@@ -89,6 +95,8 @@ These AI agent details are displayed:
 |Authentication trigger     |         |
 |Authorized security group IDs     |         |
 |Alerts     | Notifies you of any Microsoft Defender alerts related to the AI agent. |
+
+
 --- 
 
 
