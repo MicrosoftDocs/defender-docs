@@ -715,7 +715,7 @@ Recommended actions now include the following new security posture assessments, 
 
 - **Certificate authority recommended actions**:
 
-   - [Edit vulnerable Certificate Authority setting (ESC6)](security-posture-assessments/certificates.md#edit-vulnerable-certificate-authority-setting-esc6)
+   - [Edit vulnerable Certificate Authority setting (ESC6)](security-posture-assessments/certificates.md#edit-vulnerable-certificate-authority-setting-esc6--preview)
    - [Edit misconfigured Certificate Authority ACL (ESC7)](security-posture-assessments/certificates.md#edit-misconfigured-certificate-authority-acl-esc7)
    - [Enforce encryption for RPC certificate enrollment interface (ESC11)](security-posture-assessments/certificates.md#enforce-encryption-for-rpc-certificate-enrollment-interface-esc11)
 
