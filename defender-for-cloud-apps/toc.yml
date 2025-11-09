@@ -306,8 +306,6 @@ items:
         href: investigate-risky-oauth.md
     - name: CloudAppEvents schema for advanced hunting
       href: /defender-xdr/advanced-hunting-cloudappevents-table?toc=/cloud-app-security/toc.json&bc=/cloud-app-security/breadcrumb/toc.json
-  - name: Protect Copilot Studio AI agents
-    href: ai-agent-protection.md
   - name: Investigate alerts
     items:
     - name: Investigate anomaly detection alerts
@@ -430,6 +428,14 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
+- name: Protect AI agents
+  items:
+  - name: Overview
+    href: ai-agent-protection.md
+  - name: Enable AI agent inventory 
+    href: ai-agent-inventory.md
+  - name: Enable real-time protection for AI agents during runtime
+    href: real-time-agent-protection-during-runtime.md
 - name: View and manage applications
   items:
     - name: Assets

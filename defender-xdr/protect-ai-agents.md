@@ -16,7 +16,7 @@ appliesto:
 
 # Protect your AI agents (Preview)
 
-As organizations adopt no-code and low-code AI agents to automate business processes and boost productivity, these tools can introduce significant security vulnerabilities when left unmonitored. Without proper visibility and controls, misconfigured AI agents can lead to data breaches, unauthorized system access, privilege escalation, and unintended automated actions that compromise your organization's security posture.
+As organizations adopt AI agents to automate business processes and boost productivity, these tools can introduce significant security vulnerabilities when left unmonitored. Without proper visibility and controls, misconfigured AI agents can lead to data breaches, unauthorized system access, privilege escalation, and unintended automated actions that compromise your organization's security posture.
 
 Microsoft Defender addresses these critical security gaps with comprehensive AI agent protection that includes real-time threat detection, configuration monitoring, and proactive risk assessment capabilities. 
 
