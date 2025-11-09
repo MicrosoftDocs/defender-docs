@@ -57,7 +57,7 @@ TBD - image
 
 Review the incident page for predictive shielding details and results:
 
-- Filter by the the **Predictive Shielding** label to find incidents where predictive shielding is applied.
+- Filter by the **Predictive Shielding** label to find incidents where predictive shielding is applied.
 - Review the incident summary pane, which shows how predictive shielding is applied across your environment:
 
     - The **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
