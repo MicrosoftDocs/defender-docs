@@ -140,7 +140,7 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
 
-For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/security-posture-assessments/accounts.md#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](\security-posture-assessments\accounts.md#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -178,11 +178,12 @@ Use these assessments to improve monitoring coverage and strengthen your hybrid 
 
 For more information, see:
 
-[Security Assessment: Unmonitored ADCS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure.md#unmonitored-adcs-servers)
+[Security Assessment: Unmonitored ADCS servers](security-posture-assessments/identity-infrastructure.md#unmonitored-adcs-servers)
+
 
 [Security Assessment: Unmonitored ADFS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure.md#unmonitored-adfs-servers)
 
-[Security Assessment: Unmonitored Microsoft Entra Connect servers](/defender-for-identity/security-posture-assessments/identity-infrastructure.md#unmonitored-microsoft-entra-connect-servers)
+[Security Assessment: Unmonitored Microsoft Entra Connect servers](security-posture-assessments/identity-infrastructure.md#unmonitored-microsoft-entra-connect-servers)
 
 
 
