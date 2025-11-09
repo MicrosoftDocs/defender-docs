@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Defender XDR uses predictive shielding as a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Learn [how predictive shielding works](#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
+Microsoft Defender XDR uses predictive shielding as a proactive defense strategy designed to anticipate and mitigate threats as part of an ongoing attack. Learn [how predictive shielding works](#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
 
 This article provides an overview of predictive shielding so that you can understand its capabilities and how it enhances your security posture.
 
@@ -37,7 +37,9 @@ This article provides an overview of predictive shielding so that you can unders
 
 ## How predictive shielding works
 
-Predictive shielding represents a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Unlike reactive models that rely on high-confidence signals, predictive shielding integrates posture, activity, and scenario context to predict attack progression in real time. This approach enables organizations to identify potential attack paths and targets, selectively hardening critical areas to minimize impact and provide security teams with more time to respond.
+Predictive shielding represents a proactive defense strategy designed to anticipate and mitigate threats as part of an ongoing attack. 
+
+Predictive shielding integrates posture, activity, and scenario context to predict attack progression in real time. Predictive shielding integrates posture, activity, and scenario context to identify potential attack paths and targets, selectively hardening critical assets or constraining attack paths just in time. This approach minimizes operational overhead and provides security teams with more time to respond.
 
 The evolving threat landscape exposes the limitations of reactive defense models. Persistent, human-operated attacks exploit the asymmetry between defenders, who must protect every asset, and attackers, who need only one weak point. Predictive shielding addresses this imbalance by dynamically forecasting risks and applying tailored protections where they're most needed, reducing operational overhead and maintaining productivity.
 
