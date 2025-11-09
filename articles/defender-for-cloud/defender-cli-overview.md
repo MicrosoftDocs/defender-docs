@@ -1,7 +1,7 @@
 ---
-title: Defender CLI Overview
-description: "Defender CLI: Orchestrate security scans in CI/CD pipelines or locally with minimal setup. Upload results to Defender for Cloud for prioritization and tracking."
-#customer intent: As a developer, I want to integrate Defender CLI into my CI/CD pipeline so that I can automate security scans with minimal setup.
+title: Defender for Cloud CLI Overview
+description: "Defender for Cloud CLI: Orchestrate security scans in CI/CD pipelines or locally with minimal setup. Upload results to Defender for Cloud for prioritization and tracking."
+#customer intent: As a developer, I want to integrate Defender for Cloud CLI into my CI/CD pipeline so that I can automate security scans with minimal setup.
 author: dcurwin
 ms.author: dacurwin
 ms.reviewer: dacurwin
@@ -9,11 +9,11 @@ ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
-# Defender CLI overview
+# Defender for Cloud CLI overview
 
-The Defender CLI is a developer‑first command‑line tool that orchestrates security scans in CI/CD pipelines and locally. It uploads results to Microsoft Defender for Cloud for posture management, code‑to‑runtime context, prioritization, and tracking. It accelerates secure delivery with minimal setup, easy-to-use command-line options, and actionable guidance that helps teams fix issues fast without breaking flow.  
+The Defender for Cloud CLI is a developer‑first command‑line tool that orchestrates security scans in CI/CD pipelines and locally. It uploads results to Microsoft Defender for Cloud for posture management, code‑to‑runtime context, prioritization, and tracking. It accelerates secure delivery with minimal setup, easy-to-use command-line options, and actionable guidance that helps teams fix issues fast without breaking flow.  
 
-## What the Defender CLI does
+## What the Defender for Cloud CLI does
 
 * **Run security scans anywhere:** You can initiate scans from your laptop or any CI/CD pipeline system (such as GitHub Actions, Azure DevOps, Jenkins, Bitbucket, and more). The tool requires minimal configuration—a single executable, sensible defaults, and streamlined authentication.
 * **Unify scanners with one tool:** Orchestrate multiple engines (for example, container image analysis and more as they become available) with consistent output and exit codes that optimize pipeline gating and automation.
@@ -27,13 +27,13 @@ The Defender CLI is a developer‑first command‑line tool that orchestrates se
 1. You review results in the console, export if needed, and upload to Defender for Cloud.
 
 ## Authentication
-Defender CLI supports two authentication methods to align with enterprise security practices. The first and preferred method is connector‑based authentication, currently available only for Azure DevOps. By establishing a connector between Azure DevOps and Defender for Cloud, authentication is handled automatically, eliminating the need to add tokens to pipelines. The second method is token‑based authentication, where security admins create tokens in the Microsoft Defender for Cloud portal and configure them as environment variables in CI/CD pipelines or local terminals. This approach offers flexibility across build systems and enables targeted scoping by subscription. For detailed steps and examples, see [Connect your Azure DevOps organizations](quickstart-onboard-devops.md).
+Defender for Cloud CLI supports two authentication methods to align with enterprise security practices. The first and preferred method is connector‑based authentication, currently available only for Azure DevOps. By establishing a connector between Azure DevOps and Defender for Cloud, authentication is handled automatically, eliminating the need to add tokens to pipelines. The second method is token‑based authentication, where security admins create tokens in the Microsoft Defender for Cloud portal and configure them as environment variables in CI/CD pipelines or local terminals. This approach offers flexibility across build systems and enables targeted scoping by subscription. For detailed steps and examples, see [Connect your Azure DevOps organizations](quickstart-onboard-devops.md).
 
 ## CI/CD integration
-The Defender CLI is platform‑agnostic and works if you use a native connector or authentication tokens. Teams can adopt it progressively, optimize YAML with defaults, and rely on stable, consistent exit codes to wire in checks. Examples and marketplace entries (Azure DevOps Task) are part of the standard rollout to accelerate onboarding.  
+The Defender for Cloud CLI is platform‑agnostic and works if you use a native connector or authentication tokens. Teams can adopt it progressively, optimize YAML with defaults, and rely on stable, consistent exit codes to wire in checks. Examples and marketplace entries (Azure DevOps Task) are part of the standard rollout to accelerate onboarding.  
 
 ## Command reference design
-Defender CLI syntax follows a simple reference `name` - `command` - `parameter` - `parameter value` pattern. For example, here's how to scan a container: 
+Defender for Cloud CLI syntax follows a simple reference `name` - `command` - `parameter` - `parameter value` pattern. For example, here's how to scan a container: 
 
 ```bash
 defender scan image myregistry.azurecr.io/app:build-123
@@ -47,8 +47,8 @@ defender scan image myregistry.azurecr.io/app:build-123
 When findings are uploaded, Defender for Cloud models repository, pipeline, image, and runtime resource relationships so security teams can target the right owners, understand blast radius, and align remediation with risk.  
 
 ## Migration from MSDO CLI
-If you're using the legacy Microsoft Security DevOps (MSDO) CLI, consider moving to the Defender CLI to get:
+If you're using the legacy Microsoft Security DevOps (MSDO) CLI, consider moving to the Defender for Cloud CLI to get:
 
 * Microsoft Container Security Scanner (MDVM‑backed) container scanning (replacing Trivy image scanning in pipelines).
 * Enhanced developer experience (run locally and in CI with the same commands).
-* A future‑proof path as new scanners are orchestrated by Defender CLI. MSDO CLI remains in maintenance support.
+* A future‑proof path as new scanners are orchestrated by Defender for Cloud CLI. MSDO CLI remains in maintenance support.

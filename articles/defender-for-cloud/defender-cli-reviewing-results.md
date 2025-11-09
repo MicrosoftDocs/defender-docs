@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 # Review CI/CD pipeline results in Cloud Security Explorer
 
-After your CI/CD pipeline completes a scan with Defender CLI, you can review the results in Cloud Security Explorer. Cloud Security Explorer lets you query and visualize the relationship between your CI/CD pipelines and container images, helping you identify vulnerabilities and track security findings across your DevOps environment.
+After your CI/CD pipeline completes a scan with Defender for Cloud CLI, you can review the results in Cloud Security Explorer. Cloud Security Explorer lets you query and visualize the relationship between your CI/CD pipelines and container images, helping you identify vulnerabilities and track security findings across your DevOps environment.
 
 ## Query pipeline results
 

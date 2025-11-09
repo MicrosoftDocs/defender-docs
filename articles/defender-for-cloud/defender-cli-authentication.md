@@ -1,5 +1,5 @@
 ---
-title: Defender CLI Authentication
+title: Defender for Cloud CLI Authentication
 description: Learn how to securely integrate Azure DevOps with Microsoft Defender for Cloud using connector-based authentication. Simplify token management and enhance security.
 #customer intent: As a DevOps engineer, I want to integrate Azure DevOps with Microsoft Defender for Cloud using a connector so that I can automate authentication securely.
 author: dcurwin
@@ -9,9 +9,9 @@ ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
-# Defender CLI authentication
+# Defender for Cloud CLI authentication
 
-Defender CLI supports two authentication methods to align with enterprise security practices: connector-based authentication for Azure DevOps, which handles authentication automatically, and token-based authentication, which provides flexibility across different build systems and local environments.
+Defender for Cloud CLI supports two authentication methods to align with enterprise security practices: connector-based authentication for Azure DevOps, which handles authentication automatically, and token-based authentication, which provides flexibility across different build systems and local environments.
 
 ## Connector Based (ADO only)
 Connector‑based authentication integrates Azure DevOps directly with Microsoft Defender for Cloud through a secure connector. Once the connection is established, authentication is managed automatically, removing the need to store or inject tokens in your pipelines.  

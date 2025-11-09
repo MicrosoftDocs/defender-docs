@@ -1283,7 +1283,7 @@
               - name: Syntax
                 href: defender-cli-syntax.md
               - name: CI/CD in pipeline scanning
-                href: cicd-pipeline-scanning-with-defender-cli.md
+                href: ci-cd-pipeline-scanning-with-defender-cli.md
               - name: Reviewing results
                 href: defender-cli-reviewing-results.md
           - name: Configure pull request annotations

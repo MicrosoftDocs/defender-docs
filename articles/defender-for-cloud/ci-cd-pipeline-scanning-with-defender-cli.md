@@ -1,7 +1,7 @@
 ---
-title: CI/CD in pipeline-scanning with Defender CLI
-description: Learn how to integrate Microsoft Defender CLI into your CI/CD workflows for automated security scanning and standards-based SARIF output.
-#customer intent: As a developer, I want to integrate Microsoft Defender CLI into my CI/CD pipeline so that I can automate security scanning for container images.
+title: CI/CD in pipeline-scanning with Defender for Cloud CLI
+description: Learn how to integrate Microsoft Defender for Cloud CLI into your CI/CD workflows for automated security scanning and standards-based SARIF output.
+#customer intent: As a developer, I want to integrate Microsoft Defender for Cloud CLI into my CI/CD pipeline so that I can automate security scanning for container images.
 author: dcurwin
 ms.author: dacurwin
 ms.reviewer: dacurwin
@@ -9,9 +9,9 @@ ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
-# CI/CD in pipeline-scanning with Defender CLI
+# CI/CD in pipeline-scanning with Defender for Cloud CLI
 
-Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you embed security scanning directly in your continuous integration and continuous deployment (CI/CD) workflows. The CLI orchestrates security scanners and can run locally for developers.
+Microsoft Defender for Cloud Command‑Line Interface (Defender for Cloud CLI) lets you embed security scanning directly in your continuous integration and continuous deployment (CI/CD) workflows. The CLI orchestrates security scanners and can run locally for developers.
 
 ## Key capabilities
 
@@ -25,12 +25,12 @@ Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you em
 * An Azure Subscription with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account).
 * Defender CSPM enabled.
 * One of the following CI/CD pipeline tools: Jenkins, BitBucket Pipelines, Google Cloud Build, Bamboo, CircleCI, Travis CI, TeamCity, Oracle DevOps services, or AWS CodeBuild.
-* Linux terminal (or WSL).
+* Linux terminal (or WSL) for local desktop scans.
 * Security Admin permission to create the client ID and secret tokens if using token‑based authentication, or an Azure DevOps connector established if using connector‑based authentication.
 
 ## Authentication setup
 
-Defender CLI supports two authentication methods to align with enterprise security practices.
+Defender for Cloud CLI supports two authentication methods to align with enterprise security practices.
 
 ### Token‑based authentication
 
@@ -42,7 +42,7 @@ Connector-based authentication is currently available only for Azure DevOps. Whe
 
 For detailed steps and examples, see:
 
-* [Defender CLI Authentication token-based instructions](defender-cli-authentication.md)
+* [Defender for Cloud CLI Authentication token-based instructions](defender-cli-authentication.md)
 * [Connect your Azure DevOps organizations](quickstart-onboard-devops.md)
 
 ## Configure your CI/CD pipeline
@@ -63,10 +63,10 @@ Choose the configuration example that matches your CI/CD platform and authentica
 ### GitHub (Token-based authentication)
 
 ```yaml
-- name: Download Defender CLI
+- name: Download Defender for Cloud CLI
   run: |
     curl -L -o defender "https://aka.ms/defender-cli_linux-x64" && chmod +x defender
-- name: Run Defender CLI Scan (Built)
+- name: Run Defender for Cloud CLI Scan (Built)
   run: |
     #replace image-name with the Container image built      
     ./defender scan image '${{ image-name }}'
@@ -86,7 +86,7 @@ environment {
   DEFENDER_CLIENT_SECRET=credentials('defender-client-secret')
 } 
 
-stage('Download & Run Defender CLI') {
+stage('Download & Run Defender for Cloud CLI') {
   steps {
     script {
       node {
