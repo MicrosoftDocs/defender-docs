@@ -47,7 +47,9 @@ Predictive Shielding addresses these challenges by anticipating risks and applyi
 
 Predictive shielding relies on two pillars:  
 
-- **Prediction** involves analyzing attacker behavior, past incidents, and organizational exposure to identify emerging risks.
+- **Prediction** 
+    - Involves analyzing threat intelligence, attacker behavior, past incidents, and organizational exposure. 
+    - Defender XDR uses this prediction data to identify emerging risks, to understand likely attack progression, and to infer risk on non-compromised assets.
 - **Enforcement** applies automated protective controls to disrupt potential attack paths in real time. 
 
 This dual approach ensures that protection is both precise and timely.
