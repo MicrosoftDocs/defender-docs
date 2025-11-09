@@ -29,7 +29,7 @@ Before you can use UEBA data in your investigations, you must [enable User and E
 
 Start looking for machine powered insights about one week after enabling UEBA.
 
-## Quickly identify and investigate users with anomalies in the Defender portal (Preview)
+## Find and investigate user anomalies in the Defender portal (Preview)
 
 In the Defender portal, a **UEBA Anomalies** tag identifies users with anomalies, making it easier to prioritize investigations.
 
