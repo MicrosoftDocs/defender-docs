@@ -268,13 +268,19 @@ For more information, see [ERSPAN ports](best-practices/traffic-mirroring-method
 
         |Name  |Description  |
         |---------|---------|
-        |**Mode**     | Select one of the following: <br><br>- **SPAN Traffic (no encapsulation)** to use the default SPAN port mirroring. <br>- **ERSPAN** if you're using ERSPAN mirroring. <br><br>For more information, see [Choose a traffic mirroring method for OT sensors](best-practices/traffic-mirroring-methods.md).       |
+        |**Mode**     | Select one of the following: <br><br>- **SPAN Traffic (no encapsulation)** to use the default SPAN port mirroring. <br>- **Tunneling** if you're using ERSPAN mirroring. <br><br>For more information, see [Choose a traffic mirroring method for OT sensors](best-practices/traffic-mirroring-methods.md).       |
         |**Description**     |  Enter an optional description for the interface. You'll see this later on in the sensor's **System settings > Interface configurations** page, and these descriptions may be helpful in understanding the purpose of each interface.  |
+        |**Interface IP**     | The ERSPAN IP on the sensor side. <br> - The Management interface IP and the ERSPAN interface IP must be configured on separate network subnets. <br>  - Configuring both the Management and ERSPAN IP addresses on the same subnet may lead to asymmetric routing issues.   |
+        | **Subnet** | The subnet Mask of the ERSPAN interface IP. |
+        |**Name**     | The virtual ERSPAN interface name, must be unique. |
+        |**ID** - ERSPAN tunnel ID | The ID value must be identical to the erspan-id value on cisco side. <br> In case of ID mismatch, the sensor will discard all incoming tunnel traffic.  |
+        | **Source IP** | The IP address of the ERSPAN interface on Cisco side, that sends the tunnel traffic. |
+        | **Add tunneling** | Sensor supports multiple tunnels. Additional tunnels can be added. Each tunnel must have a unique name and ID. |
         |**Auto negotiation**     | Relevant for physical machines only. Use this option to determine which sort of communication methods are used, or if the communication methods are automatically defined between components. <br><br>**Important**: We recommend that you change this setting only on the advice of your networking team. |
 
     For example:
 
-    :::image type="content" source="media/how-to-manage-individual-sensors/configure-erspan.png" alt-text="Screenshot of how to configure ERSPAN on the Interface configurations page.":::
+    :::image type="content" source="media/how-to-manage-individual-sensors/tunneling-advanced-settings.png" alt-text="Screenshot of how to configure Tunneling for ERSPAN on the Interface configurations page." lightbox="media/how-to-manage-individual-sensors/tunneling-advanced-settings.png":::
 
 1. Select **Save** to save your changes. Your sensor software restarts to implement your changes.
 
