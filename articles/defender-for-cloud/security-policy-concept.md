@@ -16,13 +16,26 @@ Security standards define rules, compliance conditions, and actions (effects) if
 
 Security standards in Defender for Cloud originate from these sources:
 
-- **Microsoft cloud security benchmark (MCSB)**: The MCSB standard applies by default when you onboard cloud accounts to Defender. Your [secure score](secure-score-security-controls.md) is based on assessment against some MCSB recommendations.
+- **Security benchmarks**: When you use Defender for Cloud, your environments are continuously assessed against the Microsoft Cloud Security Benchmark (MCSB) and other cloud-provider benchmarks that define baseline security best practices.
 
 - **Regulatory compliance standards**: When you enable one or more [Defender for Cloud plans](defender-for-cloud-introduction.md), you can add standards from various predefined regulatory compliance programs.
 
 - **Custom standards**: You can create custom security standards in Defender for Cloud and add built-in and custom recommendations as needed.
 
 Security standards in Defender for Cloud are based on [Azure Policy](/azure/governance/policy/overview) [initiatives](/azure/governance/policy/concepts/initiative-definition-structure) or the Defender for Cloud native platform. Currently, Azure standards are based on Azure Policy, while AWS and GCP standards are based on Defender for Cloud.
+
+### Security benchmarks in Defender for Cloud
+
+When you enable Defender for Cloud, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) is applied by default to all connected environments.  
+
+MCSB defines cloud-neutral security principles and provides detailed implementation guidance across Azure, Amazon Web Services (AWS), and Google Cloud.
+
+The latest version, [MCSB v2 (preview)](concept-regulatory-compliance.md), expands coverage with additional risk-based controls and updated guidance, and can be enabled from the Regulatory compliance dashboard.
+
+AWS and GCP environments also include additional provider-specific benchmarks that extend coverage beyond the MCSB baseline:
+
+- **AWS**: [AWS Foundational Security Best Practices Standard](https://docs.aws.amazon.com/securityhub/latest/userguide/fsbp-standard.html)
+- **GCP**: GCP Default
 
 ### Work with security standards
 

@@ -10,9 +10,9 @@ ms.date: 11/04/2025
 
 # Regulatory compliance standards in Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud streamlines the regulatory compliance process by helping you to identify issues that are preventing you from meeting a particular compliance standard, or achieving compliance certification.
+Microsoft Defender for Cloud helps you identify and remediate issues that might prevent your organization from meeting specific compliance standards or achieving certification.
 
-Industry standards, regulatory standards, and benchmarks are represented in Defender for Cloud as [security standards](security-policy-concept.md), and appear in the Regulatory compliance dashboard.
+Compliance standards are represented in Defender for Cloud as [security standards](security-policy-concept.md), and appear in the Regulatory compliance dashboard.
 
 ## Compliance controls
 
@@ -55,14 +55,6 @@ For each compliance standard you can view:
   - Unavailable controls are those that can't be automatically assessed and thus Defender for Cloud is unable to access whether resources are compliant.
 
 You can drill down into controls to get information about resources that have passed/failed assessments, and for remediation steps.
-
-## Default compliance standards
-
-By default, when you enable Defender for Cloud, the following standards are enabled:
-
-- For **Azure**: [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md).
-- For **AWS**: [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) and [AWS Foundational Security Best Practices standard](https://docs.aws.amazon.com/securityhub/latest/userguide/fsbp-standard.html).
-- For **GCP**: [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) and **GCP Default**.
 
 ## Available compliance standards
 
