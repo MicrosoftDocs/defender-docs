@@ -363,9 +363,7 @@ When an identity in your network might be compromised, you must prevent that ide
 > Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
 
 > [!IMPORTANT]
-> As part of the active protection provided by Microsoft Defender for Endpoint, a distributed mechanism can apply LSA Policy to prevent compromised users from accessing machines in your organization. Currently, when this policy is applied on Domain Controllers, it may cause Group Policy synchronization activity across domain controllers.
->
-> We are gradually rolling out a new solution by integrating with new OS APIs. This deployment will be phased and thoroughly tested to ensure stability and security. During this rollout, LSA Policy enforcement on your servers will be temporarily removed to prevent potential GPO sync. This change will remain in effect until the rollout is complete.
+> Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
 
 ### How to contain a user
 
