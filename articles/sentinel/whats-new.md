@@ -24,23 +24,24 @@ The listed features were released in the last six months. For information about 
 
 Microsoft Sentinel introduces new UEBA experiences in the Defender portal, bringing behavioral insights directly into key analyst workflows. These enhancements help analysts prioritize investigations and apply UEBA context more effectively.
 
-#### Prioritize users with anomalies
+#### Anomaly-focused user investigations
 
-Analysts can view the top three anomalies from the last 30 days in a dedicated section on the User entity page and side panel, available in:
+In the Defender portal, users with behavioral anomalies are automatically tagged with **UEBA Anomalies**, helping analysts quickly identify which users to prioritize.
+
+Analysts can view the top three anomalies from the past 30 days in a dedicated Top UEBA anomalies section, available in:
+
 - User side panels accessible from various portal locations.
-- Overview tab of user entity pages.
-- Direct links to anomalies queries and Sentinel events timeline.
+- The **Overview** tab of user entity pages.
 
-#### Launch anomaly queries from incident graphs
+This section also includes direct links to anomaly queries and the Sentinel events timeline, enabling deeper investigation and faster context gathering.
 
-Incident graphs include a built-in Go Hunt query for user anomalies:
-- Accessible directly from the incident graph.
-- Provides contextual UEBA results in the hunt pane.
-- Enables immediate context and investigation expansion based on UEBA outcomes.
+#### Drilldown to user anomalies from incident graphs
 
-#### Enrich Advanced Hunting and custom detections queries with behavior insights
+Analysts can quickly access all anomalies related to a user by selecting **Go Hunt > All user anomalies** from the incident graph. This built-in query provides immediate UEBA context to support deeper investigation.
 
-Advanced hunting and custom detection experiences now include a contextual banner that suggests joining the UEBA Anomalies table to queries that include UEBA data sources. The banner appears when you query eligible tables that feed the UEBA engine. 
+#### Enriched advanced hunting and custom detections queries with behavior insights
+
+Advanced hunting and custom detection experiences now include a contextual banner that prompts analysts to join the UEBA Anomalies table to queries that include UEBA data sources.  
 
 All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
 
