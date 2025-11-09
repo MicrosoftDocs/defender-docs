@@ -24,12 +24,18 @@ Microsoft Defender addresses these critical security gaps with comprehensive AI 
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
- - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory). When you've enabled AI agent inventory for Copilot Studio agents, Microsoft Defender for Cloud Apps automatically:
+ - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory).
+ 
+    When you've enabled AI agent inventory for Copilot Studio agents, Microsoft Defender for Cloud Apps automatically:
+
     - Runs detections on your AI Agents created using Copilot Studio
     - Creates alerts and incidents for suspicious activity
     - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](/defender-xdr/advanced-hunting-overview.md).
 
- - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture). When you've enabled AI agent inventory for Azure AI Foundry agents, Microsoft Defender for Cloud automatically:
+ - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
+
+     When you've enabled AI agent inventory for Azure AI Foundry agents, Microsoft Defender for Cloud automatically:
+
     - Monitors your AI agents for misconfigurations and vulnerabilities
     - Provides security recommendations to improve the security posture of your AI agents
     - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](/defender-xdr/advanced-hunting-overview.md).
