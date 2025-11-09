@@ -2,10 +2,10 @@
 title: EDR detection test for verifying device's onboarding and reporting service
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,16 +16,15 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 04/30/2025
+appliesto: 
+    - Microsoft Defender for Endpoint Plan 2
+    - Microsoft Defender for Business
+
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
 
-#### Applies to:
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
-## Scenario requirements and setup
+## Prerequisites
 
 - Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
 - Windows server devices must be running Windows Server 2008 R2 SP1, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.

@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 02/05/2025
+ms.date: 10/06/2025
 audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -23,6 +23,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I need concise guidance to configure and control automatic external email forwarding so I can prevent data exfiltration and reduce risk.
 ---
 
 # Control automatic external email forwarding from cloud mailboxes
@@ -45,6 +46,8 @@ You can use outbound spam filter policies to control automatic forwarding to ext
 - **On - Forwarding is enabled**: Automatic external forwarding is allowed and not restricted.
 - **Off - Forwarding is disabled**: Automatic external forwarding is disabled and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
+:::image type="content" source="media/outbound-spam-protection-settings.png" alt-text="Screenshot of the Protection settings flyout in the properties of the default outbound spam filter policy with the Automatic forwarding rules options highlighted." lightbox="media/outbound-spam-protection-settings.png":::
+
 For instructions on how to configure these settings, see [Configure outbound spam filtering](outbound-spam-policies-configure.md).
 
 > [!NOTE]
@@ -57,7 +60,12 @@ For instructions on how to configure these settings, see [Configure outbound spa
 As an admin, you might use other controls to allow or block automatic email forwarding. For example:
 
 - [Remote domains](/exchange/mail-flow-best-practices/remote-domains/remote-domains) to allow or block automatic email forwarding to some or all external domains.
-- Conditions and actions in Exchange [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to detect and block automatically forwarded messages to external recipients.
+
+  :::image type="content" source="media/outbound-spam-remote-domains-auto-forwarding.png" alt-text="Screenshot of the Email reply types flyout in the properties of a remote domain in the Exchange admin center with the Allow automatic forwarding option highlighted." lightbox="media/outbound-spam-remote-domains-auto-forwarding.png":::
+
+- Conditions and actions in Exchange [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to detect and block automatically forwarded messages to external recipients by Inbox rules.
+
+  :::image type="content" source="media/outbound-spam-mail-flow-rule-detect-block-forwarded.png" alt-text="Screenshot of a mail flow rule to detect and block messages automatically forwarded to external recipients by Inbox rules." lightbox="media/outbound-spam-mail-flow-rule-detect-block-forwarded.png":::
 
 When one setting allows external forwarding, but another setting blocks external forwarding, the block typically wins. Examples are described in the following table:
 

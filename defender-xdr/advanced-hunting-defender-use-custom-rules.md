@@ -56,7 +56,7 @@ adx('<Cluster URI>/<Database Name>').<Table Name>
 
 For example, to get the first 10 rows of data from the `StormEvents` table stored in a certain URI:
 
-:::image type="content" source="/defender-xdr/media/adx-sample.png" alt-text="Screenshot of adx operator in advanced hunting." lightbox="/defender-xdr/media/adx-sample.png":::
+:::image type="content" source="./media/advanced-hunting-defender-use-custom-rules/adx-sample.png" alt-text="Screenshot of adx operator in advanced hunting." lightbox="./media/advanced-hunting-defender-use-custom-rules/adx-sample.png":::
 
 > [!NOTE]
 > The `adx()` operator isn't supported for custom detections.
@@ -76,7 +76,7 @@ In the query editor, enter *arg("").* followed by the Azure Resource Graph table
 
 For example:
 
-:::image type="content" source="/defender-xdr/media/arg-operator2.png" alt-text="Screenshot of arg operator in advanced hunting." lightbox="/defender-xdr/media/arg-operator2.png":::
+:::image type="content" source="./media/advanced-hunting-defender-use-custom-rules/arg-operator2.png" alt-text="Screenshot of arg operator in advanced hunting." lightbox="./media/advanced-hunting-defender-use-custom-rules/arg-operator2.png":::
 
 You can also, for instance, filter a query that searches over Microsoft Sentinel data based on the results of an Azure Resource Graph query:
 
@@ -97,7 +97,7 @@ To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scro
 - **Open in query editor** – Loads the query in the query editor.
 - **View details** – Opens the query details side pane where you can inspect the query, run the query, or open the query in the editor.
 
-   :::image type="content" source="/defender/media/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-unified-view-details.png":::
+   :::image type="content" source="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png":::
 
 
 For editable queries, more options are available:
@@ -108,6 +108,9 @@ For editable queries, more options are available:
 
 ## Create custom analytics and detection rules
 
+>[!IMPORTANT]
+> [**Custom detections**](custom-detections-overview.md) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [this blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
+
 To help discover threats and anomalous behaviors in your environment, you can create customized detection rules. There are two kinds:
 - Analytics rules - to generate detections from rules that query data that is ingested through Microsoft Sentinel
 - Custom detection rules - to generate detections from rules that query data from Defender XDR or from both Microsoft Sentinel and Defender XDR
@@ -117,7 +120,7 @@ To help discover threats and anomalous behaviors in your environment, you can cr
 
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
+  :::image type="content" source="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="./media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-rules.png":::
 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 

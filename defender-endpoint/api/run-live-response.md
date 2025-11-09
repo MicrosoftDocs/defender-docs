@@ -1,14 +1,14 @@
----
+﻿---
 title: Run live response commands on a device
 description: Learn how to run a sequence of live response commands on a device.
 search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,24 +17,54 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/18/2023
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Run live response commands on a device
 
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
+
+
+## Prerequisites
+
+Before you can initiate a session on a device, make sure you fulfill the following requirements:
+
+### Supported operating systems
+
+  - Windows 11
+  
+  - Windows 10
+    - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
+    - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
+    - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
+    - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
+    - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
+
+  - Windows Server 2019 - Only applicable for Public preview
+    - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
+    - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
+    
+- Windows Server 2022 and later
+
+- Azure Stack HCI OS, version 23H2 and later
+
+- macOS [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
+      - 13 (Ventura)
+      - 12 (Monterey)
+      - 11 (Big Sur)
+
+- Linux servers
+      - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
 
 ## API description
 
@@ -60,42 +90,10 @@ Runs a sequence of live response commands on a device
 
 8. Multiple live response sessions can't be executed on the same machine (if live response action is already running, subsequent requests are responded to with HTTP 400 - ActiveRequestAlreadyExists).
 
-> [!NOTE]
-> Live response actions initiated from the Device page aren't available in the `machineactions` API.
+    > [!NOTE]
+    > Live response actions initiated from the Device page aren't available in the `machineactions` API.
 
-## Minimum Requirements
 
-Before you can initiate a session on a device, make sure you fulfill the following requirements:
-
-- **Verify that you're running a supported Windows, macOS, or Linux version**.
-
-  Devices must be running one of the following:
-
-  - **Windows 11**
-  
-  - **Windows 10**
-    - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
-    - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
-    - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
-    - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
-    - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
-
-  - **Windows Server 2019 - Only applicable for Public preview**
-    - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
-    - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
-    
-  - **Windows Server 2022**
-
-- **Windows Server 2025**
-- **Azure Stack HCI OS, version 23H2 and later**
-
-  - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
-      - 13 (Ventura)
-      - 12 (Monterey)
-      - 11 (Big Sur)
-
-  - **Linux servers**
-      - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
 
 ## Permissions
 
@@ -249,3 +247,4 @@ Content-type: application/json
 - [Cancel machine action](cancel-machine-action.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

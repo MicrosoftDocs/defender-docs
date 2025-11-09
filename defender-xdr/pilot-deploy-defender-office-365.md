@@ -63,7 +63,7 @@ You start by evaluating the product or service and how it will work within your 
 
 Here is the workflow for piloting and deploying Defender for Office 365 in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Office 365." lightbox="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" border="false":::
+:::image type="content" source="./media/pilot-deploy-defender-office-365/defender-office-365-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Office 365." lightbox="./media/pilot-deploy-defender-office-365/defender-office-365-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
@@ -157,21 +157,21 @@ For detailed information, see [Try Microsoft Defender for Office 365](/defender-
 
 2. On the *Evaluation mode* page, click **Start evaluation**.
 
-   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png" alt-text="Screenshot of the Evaluation mode page and the Start evaluation button to click." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png":::
+   :::image type="content" source="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_05.png" alt-text="Screenshot of the Evaluation mode page and the Start evaluation button to click." lightbox="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_05.png":::
 
 3. In the *Turn on protection* dialog, select **No, I only want reporting**, and then click **Continue**.
 
-   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png" alt-text="Screenshot of the Turn on protection dialog and the No, I only want reporting option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png":::
+   :::image type="content" source="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_06.png" alt-text="Screenshot of the Turn on protection dialog and the No, I only want reporting option to select." lightbox="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_06.png":::
 
 4. In the *Select the users you want to include* dialog, select **All users**, and then click **Continue**.
 
-   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png" alt-text="Screenshot of the Select the users you want to include dialog and the All users option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png":::
+   :::image type="content" source="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_07.png" alt-text="Screenshot of the Select the users you want to include dialog and the All users option to select." lightbox="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_07.png":::
 
 5. In the *Help us understand your mail flow* dialog, one of the following options is automatically selected based on our detection of the MX record for your domain:
 
    - **I'm only using Microsoft Exchange Online**: The MX records for your domain point to Microsoft 365. There's nothing left to configure, so click **Finish**.
 
-     :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png" alt-text="Screenshot of the Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png":::
+     :::image type="content" source="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_08a.png" alt-text="Screenshot of the Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="./media/pilot-deploy-defender-office-365/mdo-eval-activate-eval_08a.png":::
 
    - **I'm using a third-party and/or on-premises service provider**: In the upcoming screens, select the vendor name along with the inbound connector that accepts mail from that solution. You also decide if you need an Exchange Online mail flow rule (also known as a transport rule) that skips spam filtering for incoming messages from the third-party protection service or device. When you're finished, click **Finish**.
 
@@ -188,11 +188,11 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 1. Sign in to the Exchange Admin Center (EAC) at <https://admin.exchange.microsoft.com> using an account that has been granted Recipient Administrator role or been delegated group management permissions.
 2. Go to **Recipients** \> **Groups**.
 
-   :::image type="content" source="/defender/media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" Screenshot of the Groups menu item." lightbox="/defender/media/mdo-eval/1_mdo-eval-pilot.png":::
+   :::image type="content" source="./media/pilot-deploy-defender-office-365/1_mdo-eval-pilot.png" alt-text=" Screenshot of the Groups menu item." lightbox="./media/pilot-deploy-defender-office-365/1_mdo-eval-pilot.png":::
 
 3. On the **Groups** page, select ![Add a group icon.](/defender/media/m365-cc-sc-add-internal-icon.png) **Add a group**.
 
-   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Screenshot of the Add a group option." lightbox="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
+   :::image type="content" source="./media/pilot-deploy-defender-office-365/2_mdo-eval-pilot-add-group.png" alt-text="Screenshot of the Add a group option." lightbox="./media/pilot-deploy-defender-office-365/2_mdo-eval-pilot-add-group.png":::
 
 4. For group type, select **Distribution**, and then click **Next**.
 

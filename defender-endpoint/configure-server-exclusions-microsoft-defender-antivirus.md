@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender Antivirus exclusions on Windows Server
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 description: Windows Server includes automatic exclusions, based on server role. You can also add custom exclusions.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/01/2025
-author: emmwalshh
-ms.author: ewalsh
+ms.date: 10/20/2025
+author: batamig
+ms.author: bagol
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
@@ -16,19 +16,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus exclusions on Windows Server
 
-**Applies to:**
 
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows Server
 
 ## Important notes about automatic exclusions on Windows Server
 
@@ -46,6 +41,12 @@ This article describes the two main types of exclusions that you don't have to d
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
 
 For a more detailed overview of exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows Server
 
 ## Automatic server role exclusions
 
@@ -395,3 +396,4 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

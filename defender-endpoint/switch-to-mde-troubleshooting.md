@@ -1,11 +1,11 @@
----
+﻿---
 title: Troubleshooting issues when moving to Microsoft Defender for Endpoint
 description: Learn how to troubleshoot issues when you migrate to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365solution-scenario
@@ -18,14 +18,13 @@ ms.date: 02/12/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.subservice: onboard
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshooting issues when migrating to Microsoft Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 This article provides troubleshooting information for security administrators who are experiencing issues when moving from a non-Microsoft endpoint protection solution to Microsoft Defender for Endpoint.
 
@@ -54,6 +53,8 @@ To resolve this issue, take the following steps:
 
 > [!TIP]
 > If you're planning to keep Microsoft Defender Antivirus in passive mode for your Windows Servers, the `ForceDefenderPassiveMode` setting needs to be set **before** onboarding the device to Microsoft Defender for Endpoint.
+
+## Prerequisites
 
 You must set Microsoft Defender Antivirus to passive mode manually on Windows Server 2012 R2 and later,  Windows Server, version 1803 and later, or Azure Stack HCI OS, version 23H2 and later. This action helps prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key.
 
@@ -103,3 +104,4 @@ If you're using a non-Microsoft antivirus/antimalware solution on Windows Server
 - [Onboarding tools and methods for Windows and Mac devices in Defender for Endpoint](onboard-client.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

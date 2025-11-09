@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: bagol
 audience: ITPro
 ms.topic: concept-article
-ms.date: 08/28/2025
+ms.date: 09/08/2025
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -69,14 +69,14 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
     - _Move messages in and delete messages from mailboxes_: Requires the **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
   - _Read-only access_: Membership in the **Security Reader** role group.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles. More permissions are required to do all available actions:
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default.
   - _Search for Exchange mail flow rules (transport rules) by name in Threat Explorer_: Membership in the **Security Administrator** or **Security Reader** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 > [!TIP]
 > End-user spam notifications and system generated messages aren't available in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
@@ -103,18 +103,18 @@ Threat Explorer and Real-time detections contain the following elements:
   |**Malware**|✔|✔|Default view for Real-time detections. Information about email messages that contain malware.|
   |**Phish**|✔|✔|Information about email messages that contain phishing threats.|
   |**Campaigns**|✔||Information about malicious email that Defender for Office 365 Plan 2 identified as part of a [coordinated phishing or malware campaign](campaigns.md).|
-  |**Content malware**|✔|✔|Information about files detected by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
+  |**Content malware**|✔|✔|Information about files processed by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
   |**URL clicks**|✔||Information about user clicks on URLs in email messages, Teams messages, SharePoint files, and OneDrive files.|
 
   These views are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
-  
+
   > [!TIP]
   > Real-time detections show the malicious email detections at the time of delivery only. Threat Explorer shows all email detections at the time of delivery along with post-delivery activities.
 
 - **Date/time filters**: By default, the view is filtered by yesterday and today. To change the date filter, select the date range, and then select **Start Date** and **End date** values up to 30 days ago.
 
   :::image type="content" source="media/te-rtd-date-filter.png" alt-text="Screenshot of the date filter used in Threat Explorer and Real-time detections in the Defender portal." lightbox="media/te-rtd-date-filter.png":::
-  
+
 - **Property filters (queries)**: Filter the results in the view by the available message, file, or threat properties. The available filterable properties depend on the view. Some properties are available in many views, while other properties are limited to a specific view.
 
   The available property filters for each view are listed in this article, including the differences between Threat Explorer and Real-time detections.
@@ -203,7 +203,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |**Advanced**||
 |Internet Message ID|Text. Separate multiple values by commas. <br/><br/> Available in the **Message-ID** header field in the message header. An example value is `<08f1e0f6806a47b4ac103961109ae6ef@server.domain>` (note the angle brackets).|
 |Network message ID|Text. Separate multiple values by commas. <br/><br/> A GUID value that's available in the **X-MS-Exchange-Organization-Network-Message-Id** header field in the message header.|
-|Sender IP|Text. Separate multiple values by commas.|
+|Sender IP²|Text. Separate multiple values by commas.|
 |Attachment SHA256|Text. Separate multiple values by commas.|
 |Cluster ID|Text. Separate multiple values by commas.|
 |Alert ID|Text. Separate multiple values by commas.|
@@ -212,10 +212,10 @@ The filterable properties that are available in the **Delivery action** box in t
 |ZAP URL signal|Text. Separate multiple values by commas.|
 |**Urls**||
 |URL Count|Integer. Separate multiple values by commas.|
-|URL domain²|Text. Separate multiple values by commas.|
-|URL domain and path²|Text. Separate multiple values by commas.|
-|URL²|Text. Separate multiple values by commas.|
-|URL path²|Text. Separate multiple values by commas.|
+|URL domain³|Text. Separate multiple values by commas.|
+|URL domain and path³|Text. Separate multiple values by commas.|
+|URL³|Text. Separate multiple values by commas.|
+|URL path³|Text. Separate multiple values by commas.|
 |URL source|Select one or more values: <ul><li>**Attachments**</li><li>**Cloud attachment**</li><li>**Email body**</li><li>**Email header**</li><li>**QR Code**</li><li>**Subject**</li><li>**Unknown**</li></ul>|
 |Click verdict|Select one or more values: <ul><li>**Allowed**: The user was allowed to open the URL.</li><li>**Block overridden**: The user was blocked from directly opening the URL, but they overrode the block to open the URL.</li><li>**Blocked**: The user was blocked from opening the URL.</li><li>**Error**: The user was presented with the error page, or an error occurred in capturing the verdict.</li><li>**Failure**: An unknown exception occurred while capturing the verdict. The user might have opened the URL.</li><li>**None**: Unable to capture the verdict for the URL. The user might have opened the URL.</li><li>**Pending verdict**: The user was presented with the detonation pending page.</li><li>**Pending verdict bypassed**: The user was presented with the detonation page, but they overrode the message to open the URL.</li></ul>|
 |URL Threat|Select one or more values: <ul><li>**Malware**</li><li>**Phish**</li><li>**Spam**</li></ul>|
@@ -232,19 +232,26 @@ The filterable properties that are available in the **Delivery action** box in t
 |Composite|Select one or more values: <ul><li>**Fail**</li><li>**None**</li><li>**Pass**</li><li>**Soft pass**</li></ul>|
 
 > [!TIP]
-> ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
-> There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
+> - ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
-> - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
-> - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
+>   There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
 >
-> ² By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+>   - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
+>   - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
 >
-> - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
-> - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
-> - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
-> - `/` at the end of the **URL** field is ignored.
+> - ² **Sender IP** values are sometimes logged as empty or 0.0.0.0 in the following scenarios:
+>   - Automatic replies.
+>   - Undelivered email where delivery has failed.
+>   - Email where the sender IP address is Microsoft internal. For example, system generated notifications, alerts, or forwarded messages delivered from Microsoft IP addresses.
+>
+>   IP addresses in these scenarios might be visible in Exchange message trace.
+>
+> - ³ By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+>   - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
+>   - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
+>   - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
+>   - `/` at the end of the **URL** field is ignored.
 
 ### Pivots for the chart in the All email view in Threat Explorer
 

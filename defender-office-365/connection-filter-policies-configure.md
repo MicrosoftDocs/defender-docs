@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 10/30/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -60,7 +60,7 @@ This article describes how to configure the default connection filter policy in 
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - To find the source IP addresses of the email servers (senders) that you want to allow or block, you can check the connecting IP (**CIP**) header field in the message header. To view a message header in various email clients, see [View internet message headers in Outlook](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
 
@@ -96,6 +96,19 @@ This article describes how to configure the default connection filter policy in 
    When you're finished in the flyout, select **Save**.
 
 4. Back on the policy details flyout, select **Close**.
+
+> [!TIP]
+> If the IP address ranges you added don't immediately appear in the connection filter policy, do the following steps:
+>
+> - Try refreshing the portal or verify the changes in Exchange Online PowerShell:
+>
+>   ```powershell
+>   Get-HostedConnectionFilterPolicy -Identity Default
+>   ```
+>
+> - Verify you have the required Microsoft Entra ID permissions as described in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+>
+> If the issue persists, it might indicate a synchronization delay or a service issue.
 
 ## Use the Microsoft Defender portal to view the default connection filter policy
 
@@ -192,6 +205,9 @@ For example, the source email server 192.168.1.25 sends email from the domains c
    - Rule exception: **The sender** \> **domain is** \> fabrikam.com (only the domain or domains that you want to skip spam filtering).
 
 ### Scenarios where messages from sources in the IP Allow List are still filtered
+
+> [!NOTE]
+> These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model.
 
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:
 

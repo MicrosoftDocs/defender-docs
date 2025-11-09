@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-ms.date: 08/28/2025
+ms.date: 09/15/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,13 +39,24 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## September 2025
+
+- **Near real-time URL protection in Teams messages**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and channels for all URL verdicts (not just malware or high confidence phishing).
+
+- Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) as non-malicious (not a security risk) from the following locations:
+  - Chats
+  - Standard, shared, and private channels
+  - Meeting conversations
+
+[User reported settings](submissions-user-reported-messages-custom-mailbox.md) determine whether reported messages are sent to the specified reporting mailbox, to Microsoft, or both. Also added support for Teams message reporting on Teams mobile client.
+
 ## Aug 2025
 
 - SecOps can now dispute Microsoft's verdict on previously submitted email or URLs when they believe the result is incorrect. Disputing an item links back to the original submission and triggers a reevaluation with full context and audit history. [Learn more](submissions-admin.md).
 
 ## July 2025
 
-- Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard and private channels, meeting conversations to Microsoft, the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard, shared, and private channels, meeting conversations to Microsoft as malicious (security risk) the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 ## June 2025
 
@@ -280,7 +291,7 @@ For more information on what's new with other Microsoft Defender security produc
 - Global Administrators<sup>\*</sup> and Security Administrators can turn on or off redirection in the Microsoft Defender portal by navigating to **Settings** \> **Email & collaboration** > **Portal redirection** and switch the redirection toggle.
 
   > [!IMPORTANT]
-  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+  > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - **Built-in protection**: A profile that enables a base level of Safe Links and Safe Attachments protection that's on by default for all Defender for Office 365 customers. To learn more about this new policy and order of precedence, see [Preset security policies](preset-security-policies.md). To learn about the specific Safe Links and Safe Attachment controls that are set, see [Safe Attachments settings](recommended-settings-for-eop-and-office365.md#safe-attachments-settings) and [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 - **Bulk Complaint Level** is now available in the EmailEvents table in Advanced Hunting with numeric BCL values from 0 to 9. A higher BCL score indicates that bulk message is more likely to generate complaints and is more likely to be spam.

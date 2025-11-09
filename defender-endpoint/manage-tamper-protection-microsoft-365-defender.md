@@ -1,15 +1,15 @@
----
+﻿---
 title: Manage tamper protection for your organization using Microsoft Defender XDR
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
-manager: deniseb
+manager: bagol
 description: Turn tamper protection on or off for your tenant using the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -19,20 +19,16 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Manage tamper protection for your organization using Microsoft Defender portal
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-- [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
-
-**Platforms**
-- Windows
 
 [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, you can turn tamper protection on (or off) tenant wide by using the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
 
@@ -41,11 +37,11 @@ search.appverid: met150
 
 <a name='requirements-for-managing-tamper-protection-in-the-microsoft-365-defender-portal'></a>
 
-## Requirements for managing tamper protection in the Microsoft Defender portal
+## Prerequisites
 
 - You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. (See [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).)
 
-- Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#on-what-devices-can-tamper-protection-be-enabled)?)
+- Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#)
 
 - Devices must be [onboarded to Microsoft Defender for Endpoint](onboarding.md).
 
@@ -55,6 +51,10 @@ search.appverid: met150
 
 > [!NOTE]
 > When tamper protection is enabled via the Microsoft Defender portal, [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) is required so that the enabled state of tamper protection can be controlled. Starting with the November 2021 update (platform version `4.18.2111.5`), if cloud-delivered protection isn't already turned on for a device, when tamper protection is turned on, cloud-delivered protection is turned on automatically on the device.   
+
+### Supported operating systems
+
+- Windows
 
 <a name='turn-tamper-protection-on-or-off-in-the-microsoft-365-defender-portal'></a>
 
@@ -87,3 +87,4 @@ search.appverid: met150
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/19/2025
+ms.date: 10/27/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -23,7 +23,6 @@ ms.date: 08/19/2025
 > [!TIP]
 > Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in GA.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, such as what's included in this offering, see the following articles:
 
@@ -111,9 +110,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
 
 > [!NOTE]
-> The workstation and desktop versions of these distributions are unsupported
-> Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions).
-> After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that which are listed in this section are provided for technical upgrade support only.
+> Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions). 
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
@@ -144,8 +141,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 |`xfs`|
 
 > [!NOTE]
-> NFS v3 mount points to be scanned thoroughly and are required to set the `no_root_squash` export option on these mount points.
-> Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
+> To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
 ## Verify if devices can connect to Defender for Endpoint cloud services
 
@@ -178,20 +174,15 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 - For DEBIAN the mdatp package requires `libc6 >= 2.23`.
 
 > [!NOTE]
+> For versions 101.25042.0003 and later, no external dependencies are required, whereas versions older than 101.25032.0000 require additional packages:
+> - RPM-based distributions: `mde-netfilter`, `pcre`, `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
+> - DEBIAN-based distributions: `mde-netfilter`, `libpcre3`, `libnetfilter-queue1`, `libglib2.0-0`
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
 > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following additional dependency on the auditd package exists for mdatp:
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-> 
-> For versions older than `101.25032.0000`, the following requirements apply:
-> - RPM package needs: `mde-netfilter` and `pcre`
-> - DEBIAN package needs: `mde-netfilter` and `libpcre3`
->
-> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
-> The `mde-netfilter` package also has the following package dependencies:
-> - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
-> - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+
 
 ## Installation instructions 
 
@@ -207,7 +198,7 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
-> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+> On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
 If you experience any installation issues, self-troubleshooting resources are available. See the links in the [Related content section](#related-content).
 
