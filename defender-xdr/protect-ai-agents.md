@@ -30,9 +30,9 @@ Microsoft Defender includes these features to close that visibility gap, enablin
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
-:::image type="content" source="../media/protect-ai-agents/ai-agent-inventory.png" alt-text="Screenshot of AI inventory page in the Defender portal.":::
+:::image type="content" source="media/protect-ai-agents/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal.":::
 
- - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory.md)
+ - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory)
  - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Decurity posture management](/azure/defender-for-cloud/ai-security-posture).
  
 
@@ -45,7 +45,7 @@ See [Detect threats on your Microsoft Copilot Studio AI Agents](/defender-for-cl
 
 AI agents empower people to build and deploy custom agents without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
- [Real-time protection during agent runtime for AI agents created using Copilot Studio (Preview)](/defender-for-cloud-apps/real-time-agent-protection-during-runtime.md) reduces these risks by inspecting tool invocations before the agent runs any actions.
+ [Real-time protection during agent runtime for AI agents created using Copilot Studio (Preview)](/defender-for-cloud-apps/real-time-agent-protection-during-runtime) reduces these risks by inspecting tool invocations before the agent runs any actions.
 
 If Microsoft Defender determines that a prompt is suspicious:
 
