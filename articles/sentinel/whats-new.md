@@ -18,6 +18,33 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## November 2025
+
+- [Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts](#call-to-action-update-queries-and-automation-by-december-13-2025---standardized-account-entity-naming-in-incidents-and-alerts)
+
+### Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts
+
+Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
+
+> [!IMPORTANT]
+> This change might affect your analytic rules, automation rules, playbooks, workbooks, hunting queries, and custom integrations.
+
+Sentinel will now select the most reliable account identifier using the following priority:
+
+1. **UPN prefix** – the part before “@” in a User Principal Name
+   - Example: `john.doe@contoso.com` → `john.doe`
+
+1. **Name** – used if UPN prefix is unavailable
+1. **Display Name** – fallback if both above are missing
+
+Update your KQL queries and automation logic to follow the new precedence-aware pattern. Use the [`coalesce()`(/kusto/query/coalesce-function)](/kusto/query/coalesce-function) function to ensure compatibility:
+
+```kql
+coalesce(Account.UPNprefix, Account.Name, Account.DisplayName)
+```
+Test all changes in a nonproduction workspace before rolling out to production.
+
+
 ## October 2025
 
 - [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
@@ -44,27 +71,6 @@ For more information, see:
 - [Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel](connect-threat-intelligence-taxii.md)
 - [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
 
-### Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts
-
-Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
-
-> [!IMPORTANT]
-> This change might affect your analytic rules, automation rules, playbooks, workbooks, hunting queries, and custom integrations.
-
-Sentinel will now select the most reliable account identifier using the following priority:
-
-1. **UPN prefix** – the part before “@” in a User Principal Name
-   - Example: `john.doe@contoso.com` → `john.doe`
-
-1. **Name** – used if UPN prefix is unavailable
-1. **Display Name** – fallback if both above are missing
-
-Update your KQL queries and automation logic to follow the new precedence-aware pattern. Use the [`coalesce()`(/kusto/query/coalesce-function)](/kusto/query/coalesce-function) function to ensure compatibility:
-
-```kql
-coalesce(Account.UPNprefix, Account.Name, Account.DisplayName)
-```
-Test all changes in a nonproduction workspace before rolling out to production.
 
 ## September 2025
 
