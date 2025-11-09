@@ -701,9 +701,9 @@ Recommended actions now include the following new security posture assessments, 
 
 - **Certificate authority recommended actions**:
 
-   - [Edit vulnerable Certificate Authority setting (ESC6)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-vulnerable-ca-setting)
-   - [Edit misconfigured Certificate Authority ACL (ESC7)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-edit-misconfigured-ca-acl)
-   - [Enforce encryption for RPC certificate enrollment interface (ESC11)](/defender-for-identity/security-posture-assessments/certificates.md#security-assessment-enforce-encryption-rpc)
+   - [Edit vulnerable Certificate Authority setting (ESC6)](security-posture-assessments/certificates.md#security-assessment-edit-vulnerable-ca-setting)
+   - [Edit misconfigured Certificate Authority ACL (ESC7)](security-posture-assessments/certificates.md#security-assessment-edit-misconfigured-ca-acl)
+   - [Enforce encryption for RPC certificate enrollment interface (ESC11)](security-posture-assessments/certificates.md#security-assessment-enforce-encryption-rpc)
 
 The new assessments are available in Microsoft Secure Score, surfacing security issues, and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
 
