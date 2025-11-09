@@ -269,24 +269,6 @@ The investigation graph provides you with:
 
 1. For each exploration query, you can select the option to open the raw event results and the query used in Log Analytics, by selecting **Events\>**.
 
-### Enhanced investigation with UEBA anomalies
-
-For workspaces with UEBA enabled and onboarded to the Microsoft Defender portal, the investigation graph includes enhanced capabilities for leveraging User and Entity Behavior Analytics insights:
-
-**Go Hunt Anomalies Query**: When investigating user entities in the incident graph, you can access built-in anomalies queries that provide immediate UEBA context. This feature enables:
-
-- **Direct access from incident graph**: Available when right-clicking on user entities during investigation
-- **Contextual hunting**: Query results appear in the hunt pane while maintaining investigation context
-- **Anomaly insights**: Immediate visibility into recent anomalous behavior patterns for the user
-- **Investigation prioritization**: Helps analysts focus on users with documented anomalous activities
-
-**Prerequisites for UEBA-enhanced investigation**:
-- UEBA must be enabled in your Microsoft Sentinel workspace
-- Your workspace must be onboarded to the Microsoft Defender portal
-- User entities must be present in the incident for the feature to be available
-
-This integration provides seamless access to UEBA insights directly within your investigation workflow, enabling more informed decisions about investigation direction and priority.
-
 1. In order to understand the incident, the graph gives you a parallel timeline.
 
     :::image type="content" source="media/investigate-incidents/map-timeline.png" alt-text="Screenshot: view timeline in map." lightbox="media/investigate-incidents/map-timeline.png":::
