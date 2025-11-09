@@ -12,7 +12,7 @@ ms.reviewer: gayasalomon
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
-:::image type="content" source="../defender-xdr/media/protect-ai-agents/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal.":::
+:::image type="content" source="/defender-xdr/media/protect-ai-agents/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal.":::
 
 ## Enable AI agent inventory for Microsoft Copilot Studio agents
 
@@ -25,7 +25,7 @@ Microsoft Defender detects all of the AI agents created with Microsoft Copilot S
     
     Enabling Copilot Studio AI Agents allows Microsoft Defender to start discovering AI agents in your environment.
 
-    :::image type="content" source="../defender-xdr/media/protect-ai-agents/ai-agent-configuration.png" alt-text="Screenshot of the Copilot Studio AI Agent configuration page":::
+    :::image type="content" source="/defender-xdr/media/protect-ai-agents/ai-agent-configuration.png" alt-text="Screenshot of the Copilot Studio AI Agent configuration page":::
 
 1. Work together with the Power Platform administrator to complete these steps in the [Power Platform Portal](https://admin.preview.powerplatform.microsoft.com/security/threatdetection):  
     1. Select **Microsoft Defender - Copilot Studio AI Agents**.
@@ -57,4 +57,4 @@ When the Microsoft 365 app connector is enabled, Microsoft Defender populates th
 
 You can use this data to create custom queries and hunt for potential threats.
 
-See [Proactively hunt for threats with advanced hunting in Microsoft Defender](../defender-xdr/advanced-hunting-overview.md) and [AIAgentsInfo](../defender-xdr/advanced-hunting-aiagentsinfo-table.md) to learn how to use queries to proactively hunt for threats.
+See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview.md) and [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table.md) to learn how to use queries to proactively hunt for threats.
