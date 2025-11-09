@@ -8,7 +8,7 @@ ms.reviewer: Almog Omrad
 #customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity’s footprint across the organization and validate accounts correlated are correct. 
 ---
 
-# Link or Unlink an Account to an Identity
+# Link or Unlink an Account to an Identity (Preview)
 
 ## Overview
 
