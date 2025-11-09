@@ -23,22 +23,13 @@ appliesto:
 ---
 # Install Defender for Endpoint on Linux
 
-[Defender for Endpoint](microsoft-defender-endpoint.md) supports Linux servers, including Arm64-based Linux servers. This article is aimed at security admins who want to learn how to install and use Defender for Endpoint on Linux servers. The article covers prerequisites, and links to additional deployment and configuration articles.
+This article is aimed at security admins who want to learn how to install and use [Defender for Endpoint](microsoft-defender-endpoint.md) on Linux servers. The article covers prerequisites, and links to additional deployment and configuration documents.
 
-Microsoft publishes Defender for Endpoint [Linux software updates](linux-whatsnew.md) on a monthly basis. Follow the [Deploy updates](linux-updates.md) instructions to deploy these updates. Each versions of Defender for Endpoint on Linux is set to expire automatically after nine months. [How to deploy updates for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
+Microsoft publishes Defender for Endpoint [Linux software updates](linux-whatsnew.md) on a monthly basis. Each version of Defender for Endpoint on Linux is set to expire after nine months. To deploy new updates, follow the [deploy updates](linux-updates.md) instructions.
 
 ## Prerequisites
 
 This section lists the prerequisites for installing Defender for Endpoint on Linux.
-
-### Permissions
-
-To install Defender for Endpoint on Linux, you need the following permissions:
-
-* Administrative privileges on the Linux server endpoint.
-* An appropriate [role](/defender-endpoint/prepare-deployment#role-based-access-control) assigned in Defender for Endpoint. 
-* `*.endpoint.security.microsoft.com` access. If needed, you can [configure static proxy access](linux-static-proxy-configuration.md).
-* Installed *systemd* system manager.
 
 ### Minimum system requirements
 
@@ -64,6 +55,21 @@ The table in this section lists supported distributions. When running Defender f
 |Rocky     |8.7 and higher         |         |
 |SUSE Linux Enterprise Server     |12.x</br>15.x         |SP5</br>SP6          |
 |Ubuntu     |16.04 LTS</br>18.04 LTS</br>20.04 LTS</br>22.04 LTS</br>24.04 LTS         |20.04</br>22.04</br>24.04         |
+
+### Permissions
+
+To install Defender for Endpoint on Linux, you need the following permissions:
+
+* Administrative privileges on the Linux server endpoint.
+* An appropriate [role](/defender-endpoint/prepare-deployment#role-based-access-control) assigned in Defender for Endpoint.
+
+### Network access
+
+`*.endpoint.security.microsoft.com` access. If needed, you can [configure static proxy access](linux-static-proxy-configuration.md).
+
+### Management tools
+
+Installed *systemd* system manager.
 
 ### Supported filesystems for scans
 
