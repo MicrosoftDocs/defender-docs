@@ -19,7 +19,7 @@ If Microsoft Defender determines that a prompt is suspicious:
 - The user gets notified that their message was blocked.
 - An informative alert is created and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
 
-## Enable real-time protection for Microsoft Copilot Studio Agents during runtime
+## Enable real-time protection for Microsoft Copilot Studio agents during runtime
 
 > [!NOTE]
 > - The onboarding process for real-time protection during agent runtime requires configuration in Power Platform and collaboration with other administrators.
