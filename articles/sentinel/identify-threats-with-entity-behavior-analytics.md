@@ -94,7 +94,7 @@ Each user page includes a **Top UEBA anomalies** section, showing the top three 
 
 ### Built-in user anomaly queries in incident investigations
 
-Analysts can launch built-in queries to retrieve all user anomalies directly from incident graphs when investigating incidents.
+During incident investigations, analysts can launch built-in queries directly from incident graphs to retrieve all user anomalies related to the case.
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png":::
 
@@ -102,7 +102,7 @@ For more information, see [Investigate incidents in the Microsoft Defender porta
 
 ### Enrich Advanced Hunting queries and custom detections with UEBA data
 
-When analysts write Advanced Hunting or custom detection queries that include tables that are data sources for UEBA, the Defender portal displays a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights.
+When analysts write Advanced Hunting or custom detection queries using UEBA-related tables, the Defender portal displays a banner that prompts them to join the **Anomalies** table. This helps enrich investigations with behavioral insights and strengthens the overall analysis.
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png":::
 
