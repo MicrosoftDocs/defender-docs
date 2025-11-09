@@ -45,65 +45,18 @@ To install Defender for Endpoint on Linux, you need the following:
 
 |Distribution  |Version  |x64 (AMD64/EM64T)  |
 |---------|---------|---------|
-|Row1     |         |         |
-|Row2     |         |         |
-|Row3     |         |         |
-|Row4     |         |         |
-|Row5     |         |         |
-|Row6     |         |         |
-|Row7     |         |         |
-|Row8     |         |         |
-|Row9     |         |         |
-|Row10     |         |         |
-|Row11     |         |         |
-
-
-The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
-
-- Red Hat Enterprise Linux 7.2 and higher 
-- Red Hat Enterprise Linux 8.x 
-- Red Hat Enterprise Linux 9.x 
-- CentOS 7.2 and higher, excluding CentOS Stream 
-- CentOS 8.x
-- Ubuntu 16.04 LTS 
-- Ubuntu 18.04 LTS 
-- Ubuntu 20.04 LTS 
-- Ubuntu 22.04 LTS 
-- Ubuntu 24.04 LTS 
-- Debian 9 - 12 
-- SUSE Linux Enterprise Server 12.x 
-- SUSE Linux Enterprise Server 15.x 
-- Oracle Linux 7.2 and higher 
-- Oracle Linux 8.x 
-- Oracle Linux 9.x 
-- Amazon Linux 2 
-- Amazon Linux 2023 
-- Fedora 33-42
-- Rocky 8.7 and higher 
-- Rocky 9.2 and higher 
-- Alma 8.4 and higher 
-- Alma 9.2 and higher 
-- Mariner 2 
-
-**The following Linux server distributions on ARM64 are now GA:**
-
-- Ubuntu 20.04 ARM64 
-- Ubuntu 22.04 ARM64 
-- Ubuntu 24.04 ARM64
-- Debian 11, 12 ARM64
-- Amazon Linux 2 ARM64 
-- Amazon Linux 2023 ARM64 
-- RHEL 8.x ARM64
-- RHEL 9.x ARM64
-- Oracle Linux 8.x ARM64
-- Oracle Linux 9.x ARM64
-- SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
-- 
-
-
-
-
-
+|Alma     |8.4 and higher         |         |
+|Amazon Linux     |2</br>2023         |2</br>2023         |
+|CentOS     |7.2 and higher, excluding CentOS Stream         |         |
+|Debian     |9 - 12         |11</br>12         |
+|Fedora     |33 - 42         |         |
+|Mariner     |2         |         |
+|Oracle Linux     |7.2 and higher         |8.x</br>9.x         |
+|Red Hat Enterprise Linux     |7.2 and higher         |         |
+|RHEL     |         |8.x</br>9.x         |
+|Rocky     |8.7 and higher         |         |
+|SUSE Linux Enterprise Server     |12.x</br>15.x         |SP5</br>SP6          |
+|Ubuntu     |16.04 LTS</br>18.04 LTS</br>20.04 LTS</br>22.04 LTS</br>24.04 LTS         |20.04</br>22.04</br>24.04         |
 
   
 ## Deploy and configure policies for Defender for Endpoint on Linux
