@@ -105,41 +105,6 @@ Create or edit a query and save it as your own query or share it with users who 
 
 For more information, see [Create custom hunting queries in Microsoft Sentinel](hunts-custom-queries.md).
 
-## UEBA-enhanced hunting workflows
-
-Microsoft Sentinel integrates UEBA insights directly into hunting workflows, providing contextual anomaly information and intelligent recommendations to enhance your threat hunting effectiveness.
-
-### Go Hunt Anomalies Query
-
-When investigating incidents, you can now access built-in anomalies queries directly from the incident graph. This feature enables immediate contextual hunting based on UEBA outcomes:
-
-- **Contextual access**: Available directly from incident graphs when investigating user entities
-- **Integrated results**: Query results appear in the hunt pane, maintaining investigation context
-- **Immediate expansion**: Enables rapid investigation expansion based on UEBA findings
-- **Priority guidance**: Helps analysts prioritize which users to investigate first based on anomalous behavior
-
-The Go Hunt Anomalies Query allows analysts to get immediate UEBA context during incident investigation, enabling more informed decisions about investigation direction and priority.
-
-### Anomalies Table Recommendations
-
-Advanced hunting and custom detection experiences now include intelligent recommendations to help improve query effectiveness:
-
-- **Contextual suggestions**: Banner appears when querying eligible tables that feed the UEBA engine
-- **Query enhancement**: Suggests adding the UEBA Anomalies table to improve signal quality
-- **Workspace-aware**: Recommendations are scoped to your current workspace
-- **UEBA customer focused**: Only appears for customers with UEBA enabled
-
-This feature helps analysts leverage UEBA data more effectively by proactively suggesting when anomalies data could enhance their hunting queries.
-
-### Prerequisites for UEBA hunting features
-
-To access these enhanced hunting capabilities:
-- UEBA must be enabled in your Microsoft Sentinel workspace
-- Your workspace must be onboarded to the Microsoft Defender portal
-- Appropriate permissions to view UEBA data and run hunting queries
-
-For more information about enabling UEBA, see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md).
-
 <a name="create-bookmarks"></a>
 
 
