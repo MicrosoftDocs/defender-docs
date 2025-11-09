@@ -16,40 +16,80 @@ appliesto:
 
 # Protect your AI agents (Preview)
 
-As organizations adopt AI agents to automate business processes and boost productivity, these tools can introduce significant security vulnerabilities when left unmonitored. Without proper visibility and controls, misconfigured AI agents can lead to data breaches, unauthorized system access, privilege escalation, and unintended automated actions that compromise your organization's security posture.
+As organizations adopt AI agents to automate business processes and boost productivity, these tools can introduce significant security vulnerabilities. Without proper visibility and controls, misconfigured AI agents can lead to data breaches, unauthorized system access, privilege escalation, and unintended automated actions that compromise your organization's security posture.
 
-Microsoft Defender addresses these critical security gaps with comprehensive AI agent protection that includes real-time threat detection, configuration monitoring, and proactive risk assessment capabilities. 
+Microsoft Defender addresses these critical security gaps with comprehensive AI agent protection that includes proactive exposure and threat hunting.
 
-Microsoft Defender includes these features to close that visibility gap, enabling proactive exposure and threat hunting.
-
-- AI Agents Inventory
-- Auditing and advanced hunting with AI agents
-- Real time protection during agent runtime
-
-## Discover your AI agents with the AI agent inventory
+## Discover your AI agents with the AI agent inventory in the Defender portal
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
-:::image type="content" source="media/protect-ai-agents/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal.":::
+ - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory).
+ - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
 
- - To set up AI agent inventory for agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory)
- - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Decurity posture management](/azure/defender-for-cloud/ai-security-posture).
- 
 
-## Detect threats on your AI agents with advanced hunting
-Once you've enabled AI agent protection, Microsoft Defender starts running detections and creating alerts and incidents for suspicious activity on your AI agents. AI agent data is included in Defender for Cloud Apps advanced hunting, to give you visibility into potential threats.
+## The AI agent inventory page
+The AI agent inventory page in Microsoft Defender provides a centralized view of all detected AI agents, along with their key attributes and security status. 
 
-See [Detect threats on your Microsoft Copilot Studio AI Agents](/defender-for-cloud-apps/ai-agent-inventory.md#detect-threats-on-your-microsoft-copilot-studio-ai-agents).
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
+1. In the left navigation pane, select **Assets** > **AI Agents**.
 
-## Protect your environment in real-time during agent runtime
+    A list of all detected AI agents appears. 
 
-AI agents empower people to build and deploy custom agents without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
+    :::image type="content" source="media/protect-ai-agents/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal.":::  
 
- [Real-time protection during agent runtime for AI agents created using Copilot Studio (Preview)](/defender-for-cloud-apps/real-time-agent-protection-during-runtime) reduces these risks by inspecting tool invocations before the agent runs any actions.
+1. Select **Copilot Studio** or **Azure AI Foundry** to see a filtered list of AI agents based on the tool used to create the agent.
+1. To see detailed information about a specific AI agent, select the agent from the list. 
 
-If Microsoft Defender determines that a prompt is suspicious:
+## AI agent details
+When you select an AI agent from the inventory, the **Agent** pane opens, providing detailed information about the selected agent. The information displayed varies based on whether the agent was created in Azure AI Foundry or Copilot Studio.
 
-- The tool invocation is blocked before it runs.
-- The user gets notified that their message was blocked.
-- An alert is created and appears in the Microsoft Defender portal under XDR Incidents and Alerts. 
+### [Azure AI Foundry](#tab/azure-ai-foundry)
+
+-  Select **Open agent page** to opens the [**AI Agent** page](https://learn.microsoft.com/en-us/azure/defender-for-cloud/identify-ai-workload-model). 
+- Select **Go hunt** to perform [advanced hunting](advanced-hunting-overview.md).
+- Select **View on map** to see the agent's [location and related attack paths](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-attack-path).
+
+These AI agent details are displayed:
+
+|AI Agent Information  |Description  |
+|---------|---------|
+|ID     |         |
+|Name     |         |
+|Account     |         |
+|Deployment     |         |
+|Attack paths     |         |
+|Risk factors |         |
+|Creation time     |         |
+|Project     |         |
+|Model     |         |
+|Recommendations     |         |    
+
+
+#### [Copilot Studio](#tab/copilot-studio)
+
+
+- Select **Open agent page** to opens the Copilot Studio AI Agent page. 
+- Select **Go hunt** to perform [advanced hunting](advanced-hunting-overview.md).
+
+
+These AI agent details are displayed:
+
+|AI Agent Information  |Description  |
+|---------|---------|
+|Description     |         |
+|ID     |         |
+|Environment ID     |         |
+|Name     |         |
+|Creator     |         |
+|Authentication type |         |
+|Access control     |         |
+|Creation time     |         |
+|Owner     |         |
+|Authentication trigger     |         |
+|Authorized security group IDs     |         |
+|Alerts     | Notifies you of any Microsoft Defender alerts related to the AI agent. |
+--- 
+
+
 
