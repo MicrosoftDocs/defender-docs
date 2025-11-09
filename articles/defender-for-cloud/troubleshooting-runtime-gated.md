@@ -65,7 +65,7 @@ Gated deployment enforces container image security policies at deploy time based
 **Possible causes:**
 
 - The exclusion scope doesn't match the resource.
-- The exclusion expired
+- The exclusion expired.
 - The matching criteria are misconfigured.
 
 **Resolution:**

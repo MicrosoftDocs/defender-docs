@@ -13,7 +13,7 @@ ms.topic: overview
 
 Microsoft Defender for Containers supports **gated deployment**, which enforces container image security policies at deployment time in Kubernetes environments, including Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE). Enforcement uses vulnerability scan results from supported container registries, including Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry.
 
-Gated deployment integrates with the Kubernetes admission controller to ensure that only container images meeting your organization's security requirements run in your Kubernetes environment. It evaluates container images against defined security rules before they're admitted into the cluster, enabling security teams to block vulnerable workloads and maintain compliance.
+Gated deployment integrates with the Kubernetes admission controller to ensure that only container images that meet your organization's security requirements run in your Kubernetes environment. It evaluates container images against defined security rules before they're admitted into the cluster, enabling security teams to block vulnerable workloads and maintain compliance.
 
 ## Benefits
 
@@ -40,12 +40,12 @@ Start in Audit mode to assess impact, then move to Deny mode to enforce rules.
 - When a rule matches, the system takes its defined action.
 - The admission controller uses vulnerability scan results from registries like ACR, ECR, and Google Artifact Registry.
 
-## Key capabilities
+## Key features
 
-- Default Audit rule, to flag image deployment with High or Critical vulnerabilities, is automatically enabled for eligible clusters.
+- Use the default Audit rule that automatically flags image deployments with High or Critical vulnerabilities on eligible clusters
 - Set time-bound, scoped exemptions.
 - Target rules granularly by cluster, namespace, pod, or image.
-- Monitoring admission event via Defender for Cloud.
+- Monitor admission events via Defender for Cloud.
 
 ## Related content
 
