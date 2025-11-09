@@ -259,11 +259,9 @@
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
-            - name: Prerequisites
-              href: mde-linux-prerequisites.md
-            - name: Choose a deployment method
+            - name: Install Defender for Endpoint on Linux            
               href: install-defender-endpoint-linux.md
-            - name: Install Defender for Endpoint on Linux           
+            - name: Choose a deployment method                       
               items:
               - name: Enabling deployment to a custom location
                 href: linux-custom-location-installation.md
