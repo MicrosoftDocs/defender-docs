@@ -27,7 +27,7 @@ Excluded accounts:
 
 - Disabled or deleted accounts.
 
-**Impact**
+**User impact**
 
 Stale accounts pose a security risk because they provide potential targets for attackers without being actively monitored. Compromised stale accounts can be used to gain unauthorized access, move laterally in the environment, or escalate privileges. Removing or disabling them reduces unnecessary exposure and strengthens overall security posture.
 
@@ -52,7 +52,7 @@ This recommendation lists any user accounts that have privileged roles in Entra 
 > Guest users, external identities, and accounts not synchronized to Microsoft Entra ID are excluded from this report. Only accounts that are enabled and hold privileges in both Entra ID and Active Directory are included.
 
 
-**Impact**
+**User impact**
 
 Accounts with privileges in both Entra ID and Active Directory can be leveraged by attackers to gain full control over both cloud and on-premises environments. Compromise of a single account may allow lateral movement, privilege escalation, and access to sensitive resources across hybrid environments. Dual-privileged accounts are high-value targets and can accelerate attacks if not properly managed.
 
