@@ -30,13 +30,16 @@ For updates about versions and features released six months ago or earlier, see 
 The following new feature is now available in Microsoft Defender for Identity:
 
 **Accounts tab in Identity Inventory**
+
 A new Accounts tab has been added to the Identity Inventory experience. This tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers.
 
 **Manual link and unlink of accounts**
+
 You can now manually link or unlink accounts from an identity directly in the Accounts tab. This feature helps correlate identity components from different directory sources and provides a complete identity context during investigations.
 For more information, see: [Link or Unlink an Account to an Identity](link-unlink-account-to-identity.md).
 
 **Identity-level remediation actions**
+
 Remediation actions, such as disabling accounts or resetting passwords, can now be applied to one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 
 ### Expansion of identity scoping - support for Organizational units (preview) 
