@@ -10,13 +10,13 @@ zone_pivot_groups: defender-portal-experience
 #customer intent: As a user, I want to learn how to customize email notifications for alerts and attack paths in Microsoft Defender for Cloud.
 ---
 
+# Configure email notifications for alerts and attack paths
+
 ::: zone pivot="defender-portal"
 
 > [!NOTE] 
 > This capability is currently in preview.   
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
-
-# Configure email notifications for alerts and attack paths
 
 Microsoft Defender for Cloud allows you to configure email notifications for alerts and attack paths through the unified Defender portal experience. The NextGen portal enhances notification management by integrating with the centralized Cloud Infrastructure dashboard and Exposure Management insights, ensuring that security teams receive timely notifications for the most critical threats across their cloud environment.
 

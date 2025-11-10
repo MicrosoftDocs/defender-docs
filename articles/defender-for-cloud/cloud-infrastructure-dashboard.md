@@ -9,15 +9,11 @@ zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to use the Cloud Infrastructure Overview Dashboard to get unified visibility into my cloud security posture across Azure, AWS, and GCP.
 ---
 
+# Cloud Infrastructure Overview dashboard (preview)
+
 ::: zone pivot="defender-portal"
 
-> [!NOTE] 
-> This capability is currently in preview.   
-> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
-
-# Cloud Infrastructure Overview Dashboard
-
-> [!NOTE]
+> > [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:

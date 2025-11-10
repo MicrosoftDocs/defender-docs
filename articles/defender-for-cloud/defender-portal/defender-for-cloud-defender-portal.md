@@ -8,11 +8,7 @@ ms.date: 11/10/2025
 ms.service: defender-for-cloud
 ---
 
-# Overview of Defender for Cloud in Defender portal
-
-> [!NOTE] 
-> This capability is currently in preview.   
-> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
+# Defender for Cloud in Defender portal (preview)
 
 > [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
@@ -70,7 +66,7 @@ Cloud security insights are now included as part of Exposure Management, providi
 
 **Cloud threat detection** within Incidents and Alerts workflows for real-time insights into suspicious activities.
 
-**Pre- and post-breach insights** to support comprehensive investigation and response.
+**Pre-breach and post-breach insights** to support comprehensive investigation and response.
 
 **Advanced hunting tools** for in-depth investigation of cloud threats and incidents.
 
