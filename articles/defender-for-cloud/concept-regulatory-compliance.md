@@ -9,11 +9,11 @@ ms.date: 10/29/2025
 
 Microsoft Defender for Cloud presents industry standards, regulatory standards, and benchmarks as [security standards](security-policy-concept.md). These standards are assigned to scopes such as Azure subscriptions, AWS accounts, and GCP projects, and are assessed continuously in the [Regulatory compliance dashboard](concept-regulatory-compliance-standards.md#view-standards-in-the-regulatory-compliance-dashboard).
 
-When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) automaticaly starts assessing resources in scope. This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds.
+When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) automatically starts assessing resources in scope. This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds.
 
 **MCSB v2 (preview)** is also available and can be enabled from the Regulatory compliance dashboard. This version introduces expanded guidance with additional risk-based controls, expanded Azure Policy mappings, and coverage for emerging workloads such as artificial intelligence (AI).
 
-In addition to MCSB, Defender for Cloud applies additonal default benchmarks for AWS and GCP. Learn more about [Default security benchmarks](concept-regulatory-compliance-standards.md#cloud-specific-default-benchmarks).
+In addition to MCSB, Defender for Cloud applies additional default benchmarks for AWS and GCP. Learn more about [Default security benchmarks](concept-regulatory-compliance-standards.md#cloud-specific-default-benchmarks).
 
 :::image type="content" source="media/concept-regulatory-compliance/microsoft-security-benchmark.png" alt-text="Image that shows the components that make up the Microsoft cloud security benchmark." lightbox="media/concept-regulatory-compliance/microsoft-security-benchmark.png":::
 
