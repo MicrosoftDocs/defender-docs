@@ -1,6 +1,6 @@
 ﻿---
 title: Get scan agent by ID
-description: Learn how to use the "Get-Agent-Details" api. 
+description: Learn how to use the "Get-Agent-Details" API. 
 keywords: apis, graph api, supported apis, agent details, definition
 ms.service: defender-endpoint
 ms.author: kesharab
@@ -37,7 +37,7 @@ Retrieves the details for a specified agent by its ID.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 

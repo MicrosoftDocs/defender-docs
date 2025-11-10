@@ -35,7 +35,7 @@ appliesto:
 
 Retrieves a list of all the permissions requested by a specific browser extension. This is a static data description and would mainly be used to enhance the data returned by the [Export browser extensions assessment API](get-assessment-browser-extensions.md).
 
-By combining these APIs you'll be able to see a description of the permissions requested by the browser extensions that come up in the [Export browser extensions assessment](get-assessment-browser-extensions.md) results.
+By combining these APIs, you'll be able to see a description of the permissions requested by the browser extensions that come up in the [Export browser extensions assessment](get-assessment-browser-extensions.md) results.
 
 <br>Supports [OData V4 queries](https://www.odata.org/documentation/).
 <br>OData supported operators:
@@ -77,7 +77,7 @@ If successful, this method returns 200 OK with the list of all permissions reque
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/browserextensions/permissionsinfo
@@ -85,7 +85,7 @@ GET https://api.securitycenter.microsoft.com/api/browserextensions/permissionsin
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
