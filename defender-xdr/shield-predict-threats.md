@@ -92,10 +92,10 @@ Predictive shielding uses Defender for Endpoint-based actions. To use these acti
 
 - [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
-- [Proactive user containment](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with devices onboarded to Defender for Endpoint.
+- [Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity. Proactively restricts the activity of the users associated with those credentials.
 
     > [!NOTE]
-    > With predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
+    > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
 
 ## Identify when predictive shielding happens in your environment
 
