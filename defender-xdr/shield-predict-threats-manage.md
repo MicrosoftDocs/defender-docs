@@ -47,10 +47,7 @@ TBD - screenshot
 The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
 
 > [!NOTE]
-> With Defender XDR, you get full visibility into the actions taken, the reason for the actions, the current status, and the impact of the action in your environment. If needed, you might choose to [undo the action](#undo-predictive-shielding-actions), such as in the following scenarios:
-> - You review the data and take necessary remediation or follow-up actions. 
-> - You assess that the threat is mitigated.
-> - You assess that the impact in your environment outweighs the protection value.
+> After you review data on how predictive shielding actions are applied in your environment, you might choose to undo an incident where an action applies, for example, if you've taken remediation steps. For more information, see [Undo incidents where actions are applied](#undo-incidents-where-actions-are-applied).
 
 ### Review the incident information
 
@@ -86,6 +83,8 @@ Select a specific action to open the activity details pane, which shows the numb
 
 TBD - screenshot
 
+While the **Activity** tab displays actions that are specific to the current incident, the Action Center displays all activites. To track predictive shielding actions in the Action center, see Track the actions in the Action center.
+
 ### Review the triggering alert information
 
 To investigate the alert that led to the predictive shielding action, select the triggering alert either from the incident details pane or from the activity page.
@@ -98,19 +97,9 @@ In the alert, you can review:
 - The triggering malicious activity from the **Alert chain**.
 - The exposure data used to calculate this risk.
 
-## Track the actions in the Action center
+## Track policy modifications
 
-To track predictive shielding actions in the Action center, see [Track the actions in the Action center](autoad-results.md#track-the-actions-in-the-action-center).
-
-## Track the actions in advanced hunting
-
-You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track contain device or user, and disable user account actions.
-
-### Track containment-related events
-
-Containment in Microsoft Defender for Endpoint prevents further threat actor activity by blocking communication from contained entities. For containment related queries in advanced hunting, see [Containment-related events in advanced hunting](autoad-results.md#containment-related-events-in-advanced-hunting) article.
-
-### Track policy modifications
+You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track policy modifications in your environment.
 
 This sample query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
@@ -126,9 +115,13 @@ DisruptionAndResponseEvents
 | where IsPolicyOn
 ```
 
-## Undo predictive shielding actions
+## Undo incidents where actions are applied
 
-If a predictive shielding action isn't needed or doesn't reflect the current risk level, you can manually undo the action from the incident page. 
+With Defender XDR, you get full visibility into the actions taken, the reason for the actions, the current status, and the impact of the action in your environment. If needed, you might choose to undo the incident where the action applies, such as in the following scenarios:
+
+- You review the data and take necessary remediation or follow-up actions. 
+- You assess that the threat is mitigated.
+- You assess that the impact in your environment outweighs the protection value.
 
 To undo an incident: 
 
