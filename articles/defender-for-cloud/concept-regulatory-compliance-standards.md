@@ -12,11 +12,13 @@ ms.date: 11/04/2025
 
 Microsoft Defender for Cloud helps you assess and monitor compliance with security, regulatory, and organizational requirements across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
-All frameworks, regulations, and benchmarks in Defender for Cloud are represented as security standards. Each standard defines a set of rules and assessment logic that Defender for Cloud continuously evaluates across your connected environments. The results of these evaluations appear in the Regulatory compliance dashboard, where you can track compliance state and investigate noncompliant resources.
+Defender for Cloud represents all frameworks, regulations, and benchmarks as security standards. Each standard defines a set of rules and assessment logic that Defender for Cloud continuously evaluates across your connected environments. The results of these evaluations appear in the Regulatory compliance dashboard, where you can track compliance state and investigate noncompliant resources.
 
 ## Compliance assessments
 
 Each standard contains multiple controls that represent specific security requirements. Defender for Cloud automatically evaluates your resources against these controls and marks them as compliant, noncompliant, or unavailable for automated assessment.
+
+Failed controls generate security recommendations that describe the issue and provide remediation steps.
 
 If no relevant resources exist for a particular standard, it doesn’t appear in the dashboard, even if it’s assigned to the scope.
 
@@ -48,27 +50,12 @@ The latest version, **MCSB v2 (preview)**, introduces expanded guidance with ris
  
 Learn more about the [Microsoft Cloud Security Benchmark in Defender for Cloud](concept-regulatory-compliance.md).
 
-### Default cloud-specific benchmarks
+### Cloud-specific default benchmarks
 
 In addition to MCSB, Defender for Cloud applies default benchmarks that extend coverage for specific cloud providers:
 
 - AWS: [AWS Foundational Security Best Practices Standard](https://docs.aws.amazon.com/securityhub/latest/userguide/fsbp-standard.html)  
 - GCP: GCP Default benchmark  
-
-### Custom standards
-
-You can create custom standards that include built-in or custom recommendations to meet organizational security or compliance needs. Custom standards appear alongside built-in ones in the Regulatory compliance dashboard. 
-
-Learn more about [creating custom standards and recommendations](create-custom-recommendations.md).
-
-## Compliance controls
-
-Each security standard consists of multiple compliance controls, which are logical groups of related security recommendations.
-
-Defender for Cloud continually assesses the environment-in-scope against any compliance controls that can be automatically assessed. Based on assessments, it shows resources as being compliant or non-compliant with controls.
-
-> [!NOTE]
-> It's important to note that if standards have compliance controls that can't be automatically assessed, Defender for Cloud isn't able to decide whether a resource complies with the control. In this case, the control will show as greyed out. In addition, if a subscription has no relevant resources to a specific standard, the standard won't be shown in the regulatory compliance dashboard at all, even if it assigned.
 
 ## Regulatory and industry standards
 
@@ -133,6 +120,12 @@ The following standards are available in Defender for Cloud:
 | SWIFT CSP-CSCF v2020 | Azure, AWS, GCP |
 | UK OFFICIAL and UK NHS | Azure |
 | Reserve Bank of India - IT Framework for NBFC | Azure, AWS, GCP |
+
+## Custom standards
+
+You can create custom standards that include built-in or custom recommendations to meet organizational compliance needs. Custom standards appear alongside built-in ones in the Regulatory compliance dashboard. 
+
+Learn more about [creating custom standards and recommendations](create-custom-recommendations.md).
 
 ## Related content
 

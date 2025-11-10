@@ -20,11 +20,9 @@ Security policies in Defender for Cloud can include several types of standards:
 
 - **Security benchmarks** – Built-in baselines such as the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) and cloud-provider benchmarks that define foundational best practices.
 
-- **Regulatory compliance standards**:
-- **Regulatory standards** – Frameworks from industry and compliance programs available when you enable a [Defender for Cloud plan](defender-for-cloud-introduction.md).
-- **Custom standards** – Organization-defined standards that include built-in or [custom recommendations](#custom-recommendations) to align Defender for Cloud assessments with internal security policies.
+- **Regulatory compliance standards** – Frameworks from industry and compliance programs available when you enable a [Defender for Cloud plan](defender-for-cloud-introduction.md).
 
-Security standards in Defender for Cloud are based on [Azure Policy](/azure/governance/policy/overview) [initiatives](/azure/governance/policy/concepts/initiative-definition-structure) or the Defender for Cloud native platform. Currently, Azure standards are based on Azure Policy, while AWS and GCP standards are based on Defender for Cloud. (remove)
+- **Custom standards** – Organization-defined standards that include built-in or [custom recommendations](#custom-recommendations) to align Defender for Cloud assessments with internal security policies.
 
 Learn more about [security standards in Defender for Cloud](concept-regulatory-compliance-standards.md). 
 
