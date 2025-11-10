@@ -30,10 +30,8 @@ To see the version of the sensor run:
 
   - Bug fixes and security enhancements
     
-  - New feature: Gated deployment
-  
-  - Added new ingestion method (when network outbound access to *.cloud-defender.microsoft.com is enabled, see more at [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-…](/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-deploy-cli%2Ck8s-deploy-asc%2Ck8s-verify-cli%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-eks%22https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-deploy-cli%2ck8s-deploy-asc%2ck8s-verify-cli%2ck8s-remove-cli%2caks-removeprofile-api&pivots=defender-for-container-eks#:~:text=data%20and%20events.-,note,-the%20azure%20domains%22))
-    
+  Gated deployment: Now globally available
+  Added support for new defender endpoints (when network outbound access to *.cloud-defender.microsoft.com is enabled, see more at [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-…](/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-deploy-cli%2Ck8s-deploy-asc%2Ck8s-verify-cli%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-eks"https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-deploy-cli%2ck8s-deploy-asc%2ck8s-verify-cli%2ck8s-remove-cli%2caks-removeprofile-api&pivots=defender-for-container-eks#:~:text=data%20and%20events.-,note,-the%20azure%20domains"))
 - **Sensor v0.8.30 - GA**
 
 - **Released:** August, 2025
