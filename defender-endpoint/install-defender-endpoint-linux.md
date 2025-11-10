@@ -23,9 +23,7 @@ appliesto:
 ---
 # Install Defender for Endpoint on Linux
 
-This article is aimed at security admins who want to learn how to install and use [Defender for Endpoint](microsoft-defender-endpoint.md) on Linux servers. The article covers prerequisites, and links to additional deployment and configuration documents.
-
-Microsoft publishes Defender for Endpoint [Linux software updates](linux-whatsnew.md) on a monthly basis. Each version of Defender for Endpoint on Linux is set to expire after nine months. To deploy new updates, follow the [deploy updates](linux-updates.md) instructions.
+This article is aimed at security admins who want to install [Defender for Endpoint](microsoft-defender-endpoint.md) on Linux servers. The article covers prerequisites, and links to additional deployment and configuration documents.
 
 ## Prerequisites
 
@@ -39,7 +37,7 @@ This section lists the prerequisites for installing Defender for Endpoint on Lin
 
 ### Supported Linux distributions
 
-The table in this section lists supported distributions. When running Defender for Endpoint on an unsupported distribution, the minimal kernel version is `3.10.0-327`.
+The table in this section lists supported distributions. When running Defender for Endpoint on unsupported distributions, the kernel version has to be at least `3.10.0-327`.
 
 |Distribution  |Version  |x64 (AMD64/EM64T)  |
 |---------|---------|---------|
@@ -60,12 +58,12 @@ The table in this section lists supported distributions. When running Defender f
 
 To install Defender for Endpoint on Linux, you need the following permissions:
 
-* Administrative privileges on the Linux server endpoint.
-* An appropriate [role](/defender-endpoint/prepare-deployment#role-based-access-control) assigned in Defender for Endpoint.
+* Administrative privileges on the Linux server endpoint
+* An appropriate [role](/defender-endpoint/prepare-deployment#role-based-access-control) assigned in Defender for Endpoint
 
 ### Network access
 
-`*.endpoint.security.microsoft.com` access. If needed, you can [configure static proxy access](linux-static-proxy-configuration.md).
+You need access to `*.endpoint.security.microsoft.com`. If needed, you can [configure static proxy access](linux-static-proxy-configuration.md).
 
 ### Management tools
 
@@ -100,7 +98,7 @@ The links in this section describe the methods you can use to deploy Defender fo
 
 Installing Defender for Endpoint in any location other than the default install path isn't supported.
 
-Defender for Endpoint creates a *mdatp* user with random UID and GID values. If you want to control these values, create an *mdatp* user before installation using the `/usr/sbin/nologin` shell option. For example, `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+Defender for Endpoint creates an *mdatp* user with random UID and GID values. If you want to control these values, create an *mdatp* user before installation using the `/usr/sbin/nologin` shell option. For example, `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
 * [Installer script](/defender-endpoint/linux-installer-script)
 * [Ansible](/defender-endpoint/linux-install-with-ansible)
@@ -124,7 +122,11 @@ To manage your Defender for Endpoint security settings, select one of these conf
 
 ### Exclusions
 
-High I/O workloads from certain applications can experience performance issues when Defender for Endpoint is installed. Such applications include *Jenkins*, *Jira*, and database workloads such as *OracleDB* and *Postgres*. If you see performance degradation, consider setting exclusions for trusted applications.
+High input and output (I/O) workloads from certain applications can experience performance issues when Defender for Endpoint is installed. Such applications include *Jenkins*, *Jira*, and database workloads such as *OracleDB* and *Postgres*. If you see performance degradation, consider setting exclusions for trusted applications.
 
 * [Configure and validate exclusions](/defender-endpoint/linux-exclusions)
 * [Mistakes to avoid when defining exclusions](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus)
+
+## Updates
+
+Microsoft publishes Defender for Endpoint [Linux software updates](linux-whatsnew.md) on a monthly basis. Each version of Defender for Endpoint on Linux is set to expire after nine months. To deploy new updates, follow the [deploy updates](linux-updates.md) instructions.
