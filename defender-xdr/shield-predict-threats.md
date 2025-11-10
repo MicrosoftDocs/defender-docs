@@ -58,6 +58,8 @@ This dual approach ensures that protection is both precise and timely.
 
 While [automatic attack disruption](automatic-attack-disruption.md) focuses on identifying and neutralizing confirmed malicious activities, predictive shielding goes a step further by anticipating potential threats before they materialize. This capability enables organizations to stay ahead of attackers, reducing the likelihood of successful breaches.
 
+Predictive Shielding enhances Defender's autonomous protection by complementing attack disruption. While attack disruption identifies and contains compromised assets using high-fidelity signals, Predictive Shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths. This approach reduces operational overhead, ensures critical assets remain secure, and provides a comprehensive defense strategy against both immediate and future threats.
+
 Predictive shielding uses predictive analytics and real-time insights and dynamically identifies emerging risks and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic attack disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
 
 ## Prediction logic
