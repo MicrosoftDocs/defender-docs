@@ -10,6 +10,20 @@ ms.service: defender-for-cloud
 
 # What is Defender for Cloud in the Defender portal?
 
+> [!NOTE]
+> Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
+> 
+> This change is designed to:
+> - Unlock new cloud and posture management experiences.
+> - Provide deep integration with other Microsoft security services.
+> - Empower security teams with streamlined workflows by bringing all tools together in one portal.
+> 
+> To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
+> 
+> Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
+> 
+> Review the known limitations article to understand current gaps during the preview phase.
+
 Microsoft Defender for Cloud is now fully integrated into the Defender portal, offering a unified and enhanced experience for managing cloud security. The new Cloud Security Dashboard provides comprehensive insights from both cloud and code environments, bringing together information that was previously only available in the Azure portal. With this seamless integration, users benefit from advanced security insights powered by the Microsoft Threat Protection suite.
 
 The combined value of Defender workloads—like Defender for Endpoint, Defender for Identity, and others—comes from delivering comprehensive, integrated security across endpoints, identities, email, and cloud resources. This unified approach streamlines threat detection, correlates insights, and strengthens an organization's security posture. Powered by advanced AI and Microsoft's global threat intelligence, Defender solutions identify emerging risks faster and enable proactive defense against sophisticated attacks.

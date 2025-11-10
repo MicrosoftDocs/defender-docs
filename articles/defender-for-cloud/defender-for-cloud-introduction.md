@@ -10,6 +10,20 @@ author: Elazark
 
 # What is Microsoft Defender for Cloud?
 
+> [!NOTE]
+> Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
+> 
+> This change is designed to:
+> - Unlock new cloud and posture management experiences.
+> - Provide deep integration with other Microsoft security services.
+> - Empower security teams with streamlined workflows by bringing all tools together in one portal.
+> 
+> To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
+> 
+> Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
+> 
+> Review the known limitations article to understand current gaps during the preview phase.
+
 Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp), which is a unified solution that combines multiple cloud security tools to protect applications across their entire lifecycle. The solution provides a comprehensive view of your security posture across your cloud and on-premises resources. It also helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. It has three core components:
 
 - [Cloud Security Posture Management (CSPM)](#cloud-security-posture-management-cspm) checks and improves the security posture of cloud resources.
