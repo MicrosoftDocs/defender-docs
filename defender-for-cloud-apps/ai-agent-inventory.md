@@ -1,7 +1,7 @@
 ---
 title: Discover and detect threats on your AI agents (Preview)
 ms.author: abbyweisberg
-author: abbyweisberg_microsoft
+author: AbbyMSFT
 description: Learn how to view all of the AI Agents in your organization using Microsoft Defender.
 ms.date: 11/02/2025
 ms.topic: how-to
