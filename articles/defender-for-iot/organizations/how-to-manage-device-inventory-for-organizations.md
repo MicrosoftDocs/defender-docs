@@ -147,6 +147,12 @@ In the **Device inventory** page, select the device you want to delete, and then
 
 At the prompt, select **Yes** to confirm that you want to delete the device from Defender for IoT.
 
+> [!NOTE]
+> Device deletions are one-directional.  
+> When you delete a device from the **Azure portal**, the deletion doesn't sync to the sensor connected to the same site.  
+> When you delete a device from the **sensor**, the deletion syncs to the **Device inventory** in the Azure portal.
+
+
 ## Next steps
 
 For more information, see:
