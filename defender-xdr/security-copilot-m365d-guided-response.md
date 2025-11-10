@@ -48,7 +48,8 @@ Responding to incidents in the Microsoft Defender portal often requires familiar
 
 Guided responses are available in the Microsoft Defender portal for customers who have provisioned access to Security Copilot.
 
-Microsoft Security Copilot provides contextual recommendations to help you respond to incidents more effectively. If your organization has its own recommended guidelines, your admin can [upload them](security-upload-guide.md) so that the guided response will reflect the specific needs and policies for your organization.
+> [!NOTE]
+> Microsoft Security Copilot provides contextual recommendations to help you respond to incidents more effectively. If your organization has its own recommended guidelines, your admin can [upload them](security-upload-guide.md) so that the guided response will reflect the specific needs and policies for your organization.
 
 Guided responses are also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
