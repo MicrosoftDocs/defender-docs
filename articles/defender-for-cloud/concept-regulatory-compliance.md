@@ -13,7 +13,7 @@ When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCS
 
 **MCSB v2 (preview)** is also available and can be enabled from the Regulatory compliance dashboard. This version introduces expanded guidance with additional risk-based controls, expanded Azure Policy mappings, and coverage for emerging workloads such as artificial intelligence (AI).
 
-In addition to MCSB, Defender for Cloud applies additonal default benchmarks for AWS and GCP. Learn more about [Default security benchmarks](security-policy-concept.md#security-benchmarks-in-defender-for-cloud).
+In addition to MCSB, Defender for Cloud applies additonal default benchmarks for AWS and GCP. Learn more about [Default security benchmarks](concept-regulatory-compliance-standards.md#cloud-specific-default-benchmarks).
 
 :::image type="content" source="media/concept-regulatory-compliance/microsoft-security-benchmark.png" alt-text="Image that shows the components that make up the Microsoft cloud security benchmark." lightbox="media/concept-regulatory-compliance/microsoft-security-benchmark.png":::
 
