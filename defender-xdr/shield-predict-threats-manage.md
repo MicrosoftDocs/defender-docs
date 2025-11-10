@@ -47,7 +47,10 @@ TBD - screenshot
 The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
 
 > [!NOTE]
-> After you review the predictive shielding data in your environment, you might find that specific areas or scenarios don't require predictive shielding actions. To address this, you can undo the relevant incident, which cancels all related predictive shielding actions. For more information, see [Undo predictive shielding actions](#undo-predictive-shielding-actions).
+> With Defender XDR, you get full visibility into the actions taken, the reason for the actions, the current status, and the impact of the action in your environment. If needed, you might choose to [undo the action](#undo-predictive-shielding-actions), such as in the following scenarios:
+> - You review the data and take necessary remediation or follow-up actions. 
+> - You assess that the threat is mitigated.
+> - You assess that the impact in your environment outweighs the protection value.
 
 ### Review the incident information
 
@@ -61,7 +64,10 @@ Review the incident page for predictive shielding details and results:
 - Review the incident summary pane, which shows how predictive shielding is applied across your environment:
 
     - The **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
-    - The number of hardening policies applied as part of predictive shielding, and the number of devices each policy applies to.
+    - The number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
+
+    > [!NOTE]
+    > The incident shows historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
 
     TBD - screenshot
 
