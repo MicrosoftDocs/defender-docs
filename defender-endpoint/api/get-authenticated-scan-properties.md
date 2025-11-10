@@ -2,8 +2,8 @@
 title: Authenticated scan methods and properties
 description: The API response contains Microsoft Defender Vulnerability Management authenticated scans created in your tenant. You can request all the scans, all the scan definitions or add a new network our authenticated scan.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,19 +15,17 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/14/2022
+ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
 
 ---
-# Authenticated scan methods and properties
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+# Authenticated scan properties
 
 
-
+Learn more about [Windows authenticated scan](/defender-vulnerability-management/windows-authenticated-scan) and [Network authenticated scans](../network-devices.md).
 
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
@@ -37,18 +35,6 @@ appliesto:
 
 [!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
-## Methods
-
-Method|Description
-:---|:---|:---
-[Get all scan definitions](get-all-scan-definitions.md)|List all scan definitions.
-[Add, delete, or update a scan definition](add-a-new-scan-definition.md)|Add, delete, or update a new scan definition.
-[Get all scan agents](get-all-scan-agents.md)|List all scan agents.
-[Get scan agent by ID](Get-agent-details.md)| Retrieves the details for a specified agent by its ID.
-[Get scan history by definition](get-scan-history-by-definition.md)|List scan definition history.
-[Get scan history by session](get-scan-history-by-session.md)|List scan history for a session.
-
-Learn more about [Windows authenticated scan](/defender-vulnerability-management/windows-authenticated-scan) and [Network authenticated scans](../network-devices.md).
 
 ## Properties
 
@@ -83,5 +69,5 @@ Property|Data type|Description
 |PrivProtocol|String (Optional)|Priv protocol to use with `SnmpAuthParams` and `AuthPriv`. Possible values are `DES`, `3DES`, `AES`.|
 |PrivPassword|String (Optional)|Priv password to use with `SnmpAuthParams` and `AuthPriv`.|
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

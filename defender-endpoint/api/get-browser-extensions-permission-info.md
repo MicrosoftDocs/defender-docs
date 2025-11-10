@@ -2,8 +2,8 @@
 title: Get browser extensions permission info
 description: Retrieves a list of all permissions required for a browser extension
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,22 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/05/2025
+ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
+  - Microsoft Defender for Cloud Plan 2
+  - Microsoft Defender Vulnerability Management
 
 ---
 # Get browser extensions permission information
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities#vulnerability-management-capabilities-for-endpoints) (add-on for Defender for Endpoint Plan 2 or the standalone version)
-- [Microsoft Defender for Cloud Plan 2](/azure/defender-for-cloud/defender-for-cloud-introduction)
-
-.
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -130,10 +123,7 @@ Here is an example of the response.
 
 - [Get browser extensions permission info](get-assessment-browser-extensions.md)
 - [Browser extensions assessment](/defender-vulnerability-management/tvm-browser-extensions)
-
-## Other related
-
 - [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 
