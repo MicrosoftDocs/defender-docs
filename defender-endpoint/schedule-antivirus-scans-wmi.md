@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens, yongrhee
 manager: bagol
 ms.subservice: ngp
@@ -26,11 +26,14 @@ appliesto:
 # Schedule antivirus scans using Windows Management Instrumentation (WMI)
 
 
-**Platforms**
+This article describes how to configure scheduled scans using WMI. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+
+## Prerequisites
+
+### Supported operating systems
+
 - Windows
 - Windows Server
-
-This article describes how to configure scheduled scans using WMI. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
 ## Use Windows Management Instruction (WMI) to schedule scans
 

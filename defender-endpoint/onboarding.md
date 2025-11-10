@@ -26,10 +26,6 @@ appliesto:
 ---
 # Onboard devices to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 

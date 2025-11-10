@@ -21,8 +21,6 @@ appliesto:
 ---
 # Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 > [!NOTE]
 > On Windows Server 2016, always ensure the operating system and Microsoft Defender Antivirus are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](/defender-endpoint/microsoft-defender-antivirus-updates/#platform-and-engine-releases).

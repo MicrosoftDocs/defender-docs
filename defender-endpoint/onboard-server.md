@@ -22,8 +22,6 @@ appliesto:
 ---
 # Onboard servers through Microsoft Defender for Endpoint's onboarding experience
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ## Overview
 

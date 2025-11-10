@@ -21,8 +21,6 @@ appliesto:
 ---
 # Troubleshoot subscription and portal access issues
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 This page provides detailed steps to troubleshoot issues that might occur when setting up your Microsoft Defender for Endpoint service.
 

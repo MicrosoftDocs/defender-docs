@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 10/06/2025
+ms.date: 10/22/2025
 audience: ITPro
 ms.topic: how-to
 
@@ -24,6 +24,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an IT administrator responsible for Microsoft 365 email delivery and security, I want step‑by‑step instructions to configure, verify, rotate, and troubleshoot DKIM for custom domains so I can prevent spoofing and ensure reliable message authentication.
 ---
 
 # Set up DKIM to sign mail from your cloud domain
@@ -502,6 +503,11 @@ If you'd rather use PowerShell to rotate DKIM keys for a domain, connect to [Exc
    After the **RotateOnDate** date/time, DKIM uses the new private key to sign messages, and destination email systems use the corresponding public key in the CNAME record that's identified by the **SelectorAfterRotateOnDate** property to verify the DKIM signature in messages.
 
    To confirm the corresponding public key that's used to verify the DKIM signature (which infers the private key that was used to sign the message), check the **s=** value in the **DKIM-Signature** header field (the selector; for example, `s=selector1-contoso-com`).
+
+   > [!IMPORTANT]
+   > If you change the bit depth of DKIM keys from 1024 to 2048 using the _KeySize_ parameter, the update applies only to the next active selector during the first key rotation. When you rotate keys again, the previously inactive selector becomes active, and the bit depth is also updated to 2048.
+   >
+   > When you rotate DKIM keys on a domain, the change isn't immediate. It takes four days (96 hours). While the key rotation is in progress, you can't do another key rotation.
 
 For detailed syntax and parameter information, see the following articles:
 

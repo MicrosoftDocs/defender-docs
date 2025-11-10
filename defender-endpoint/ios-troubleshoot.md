@@ -22,10 +22,6 @@ appliesto:
 ---
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 This article provides troubleshooting information to help you address issues that might arise with Microsoft Defender for Endpoint on iOS.
 

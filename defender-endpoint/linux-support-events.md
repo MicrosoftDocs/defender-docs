@@ -24,8 +24,6 @@ appliesto:
 ---
 # Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 This article provides some general steps to mitigate missing events or alerts in the [Microsoft Defender portal](https://security.microsoft.com).
 

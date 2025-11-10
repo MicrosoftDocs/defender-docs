@@ -23,7 +23,7 @@ ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 09/08/2025
+ms.date: 10/30/2025
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
@@ -66,7 +66,7 @@ You can use advanced hunting KQL (Kusto Query Language) queries to hunt through 
 When you open the advanced hunting page for the first time after connecting a workspace, you can find many of that workspace's tables  organized by solution after the Microsoft Defender XDR tables under the **Schema** tab.
 
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="/defender/media/advanced-hunting-unified-sentinel-data.png":::
+:::image type="content" source="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-sentinel-data.png":::
 
 
 Likewise, you can find the functions from Microsoft Sentinel in the **Functions** tab, and your shared and sample queries from Microsoft Sentinel can be found in the **Queries** tab inside folders marked **Sentinel**.
@@ -81,17 +81,15 @@ In the unified portal, in addition to viewing the schema column names and descri
 - **Data retention period** – how long the data is set to be kept
 - **Tags** – available for Sentinel data tables
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-schema.png":::
+:::image type="content" source="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-view-schema.png":::
 
 ## Known issues
 
 - The Microsoft Sentinel `SecurityAlert` table is replaced by `AlertInfo` and `AlertEvidence` tables, which both contain all the data on alerts. While SecurityAlert isn't available in the schema tab, you can still use it in queries using the advanced hunting editor. This provision is made so as not to break existing queries from Microsoft Sentinel that use this table. 
 - Guided hunting mode and take actions capabilities are supported for Defender XDR data only.
 - Custom detections have the following limitations:
-    - Custom detections aren't available for KQL queries that don't include Defender XDR data.
     - Near real-time detection frequency isn't available for detections that include Microsoft Sentinel data. 
     - Custom functions that were created and saved in Microsoft Sentinel aren't supported.
-    - Defining entities from Sentinel data isn't yet supported in custom detections.
 - Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. Alternatively, you can use the [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature to link query results to new or existing incidents.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the`Timestamp` and `TimeGenerated` columns. In case the data arrives to Log Analytics after 48 hours, it's being overridden upon ingestion to `now()`. Therefore, to get the actual time the event happened, we recommend relying on the `Timestamp` column.
 - When prompting [Security Copilot](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.

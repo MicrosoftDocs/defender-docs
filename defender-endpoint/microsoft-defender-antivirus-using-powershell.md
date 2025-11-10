@@ -24,8 +24,6 @@ appliesto:
 ---
 # Evaluate Microsoft Defender Antivirus using PowerShell
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 In Windows 10 (or newer) and Windows Server 2016 (or newer), you can use next-generation protection features offered by Microsoft Defender Antivirus with exploit protection.
 

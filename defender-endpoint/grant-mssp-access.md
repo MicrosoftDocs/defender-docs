@@ -21,9 +21,6 @@ appliesto:
 ---
 # Grant managed security service provider (MSSP) access (preview)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 > [!IMPORTANT]

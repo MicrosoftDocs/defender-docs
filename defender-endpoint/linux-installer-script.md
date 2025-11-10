@@ -23,8 +23,6 @@ appliesto:
 ---
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ## Introduction
 

@@ -7,7 +7,7 @@ ms.topic: how-to
 author: batamig
 ms.author: bagol
 ms.custom: nextgen
-ms.date: 03/25/2025
+ms.date: 10/20/2025
 ms.reviewer: pahuijbr
 manager: bagol
 ms.subservice: ngp
@@ -20,20 +20,20 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
 ---
+
 # Manage event-based forced updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
 Microsoft Defender Antivirus allows you to determine if updates should (or shouldn't) occur after certain events, such as at startup or after receiving specific reports from the cloud-delivered protection service.
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
 
 ## Check for protection updates before running a scan
 
@@ -185,8 +185,8 @@ If you have enabled cloud-delivered protection, Microsoft Defender Antivirus sen
 
 6. **Allow notifications to disable definitions-based reports to Microsoft MAPS** and set the option to **Enabled**. Then select **OK**.
 
-> [!NOTE]
-> **Allow notifications to disable definitions based reports** enables Microsoft MAPS to disable those definitions known to cause false-positive reports. You must configure your computer to join Microsoft MAPS for this function to work.
+    > [!NOTE]
+    > **Allow notifications to disable definitions based reports** enables Microsoft MAPS to disable those definitions known to cause false-positive reports. You must configure your computer to join Microsoft MAPS for this function to work.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

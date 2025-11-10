@@ -22,8 +22,6 @@ appliesto:
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Microsoft Defender for Endpoint on Android, which already protects enterprise users on Mobile Device Management (MDM) scenarios, now extends support to Mobile App Management (MAM), for devices that aren't enrolled using Intune mobile device management (MDM). It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for mobile application management (MAM). This capability allows you to manage and protect your organization's data within an application.
 
