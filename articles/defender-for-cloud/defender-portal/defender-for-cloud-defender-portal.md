@@ -106,7 +106,7 @@ Defender for Cloud is deeply integrated with Microsoft Defender XDR, providing:
 - **Cloud asset visibility**: Cloud resources appear as first-class entities in incident investigations, with dedicated asset pages and detailed activity timelines.
 - **Unified API access**: Export security data from all integrated services through a single Microsoft Defender XDR API.
 
-## Navigation Hub - Quick Access to Key Capabilities
+## Navigation hub - Quick access to key capabilities
 
 Navigate quickly to Microsoft Defender for Cloud's key capabilities and features in the unified Microsoft Defender portal.
 
