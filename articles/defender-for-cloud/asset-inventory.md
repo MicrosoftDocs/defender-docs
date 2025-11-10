@@ -44,7 +44,7 @@ This article describes how to use the unified cloud asset inventory in Microsoft
 
 The cloud asset inventory provides a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP environments. It categorizes assets by workload, criticality, and coverage status while integrating health data, device actions, and risk signals into a single interface.
 
-:::image type="content" source="./media/defender-for-cloud-defender-portal/cloud-inventory.png" alt-text="Screenshot of the cloud asset inventory interface." lightbox="./media/defender-for-cloud-defender-portal/cloud-inventory.png":::
+:::image type="content" source="./media/defender-portal-dashboard/overview-dashboard.png" alt-text="Screenshot of the cloud asset inventory interface." lightbox="./media/defender-portal-dashboard/overview-dashboard.png":::
 
 ## Key capabilities
 

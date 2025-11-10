@@ -49,7 +49,7 @@ Cloud security data and signals can be accessed through several experiences. Som
       #### Posture Management
       - [Cloud secure score](../secure-score-access-and-track.md?pivots=defender-portal)
       - [Recommendations](../review-security-recommendations.md?pivots=defender-portal)
-      - [Attack paths](../how-to-manage-attack-paths.md?pivots=defender-portal)
+      - [Attack paths](../how-to-manage-attack-path.md?pivots=defender-portal)
       - [Vulnerabilities](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)
    :::column-end:::
    :::column span="":::
