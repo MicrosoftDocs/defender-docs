@@ -31,13 +31,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-|November 12, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#Updates-to-container-image-continues-vulnerability-re-scan-policy)|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#Updates-to-container-image-continues-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### Updates to container image continuous vulnerability re-scan policy
 
-November 12, 2025
+November 10, 2025
 
 Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability re-scan policy.
 
