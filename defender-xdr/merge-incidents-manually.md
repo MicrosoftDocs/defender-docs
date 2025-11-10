@@ -2,7 +2,7 @@
 title: Merge incidents manually in the Microsoft Defender portal
 description: Learn how to merge two or more incidents into a single incident in the Microsoft Defender portal, to help you investigate incidents more efficiently and effectively and resolve them more quickly and accurately.
 ms.service: defender-xdr
-ms.author: yelevin
+ms.author: raynew
 author: yelevin
 ms.localizationpriority: medium
 manager: raynew
