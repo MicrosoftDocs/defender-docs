@@ -108,7 +108,7 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 
 **Comprehensive coverage** – Critical asset management now covers the unified inventory spanning endpoints, cloud resources, and external assets discovered through third-party integrations.
 
-For more information, see [Defender for Cloud in the Defender portal](defender-for-cloud-defender-portal.md) and [Microsoft Defender Vulnerability Management integration with Exposure Management](vulnerability-management-integration.md).
+For more information, see [Microsoft Defender Vulnerability Management integration with Exposure Management](vulnerability-management-integration.md).
 
 ## September 2025
 

@@ -97,7 +97,6 @@ For each view you will view the **Cloud secure score**, **Score history**, **Rec
 
 With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
 
-:::image type="content" source="./media/defender-for-cloud-defender-portal/recommendations.png" alt-text="Screenshot of unified cloud recommendations in the Defender portal." lightbox="./media/defender-for-cloud-defender-portal/recommendations.png":::
 
 Key improvements in the cloud recommendations experience include:
 
