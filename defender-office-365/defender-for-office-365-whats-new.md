@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-ms.date: 09/15/2025
+ms.date: 11/10/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -41,8 +41,8 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## October 2025
 
-- **New Email Actions in Advanced Hunting**: This update introduces the ability to perform "Submit to Microsoft", "Add to TABL" and "Initiate automated investigation" actions directly from the Advanced Hunting interface in Microsoft Defender XDR. These actions, previously only available in Threat Explorer, will now be accessible via custom queries in Advanced Hunting, enabling security teams to take investigative and response actions more efficiently and programmatically.
-  
+- **New Email Actions in Advanced Hunting**: This update introduces the ability to perform **Submit to Microsoft**, **Add to TABL** and **Initiate automated investigation** actions directly from the Advanced Hunting interface in Microsoft Defender XDR. These actions, previously only available in Threat Explorer, are now accessible via custom queries in Advanced Hunting, enabling security teams to take investigative and response actions more efficiently and programmatically.
+
 ## September 2025
 
 - **Near real-time URL protection in Teams messages**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and channels for all URL verdicts (not just malware or high confidence phishing).
