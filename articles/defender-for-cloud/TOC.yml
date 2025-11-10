@@ -19,9 +19,6 @@
     - name: Overview of Defender for Cloud in Defender portal
       displayName: defender portal, integration, dashboard, overview, mdc, Cloud security, navigation, hub
       href: defender-portal/defender-for-cloud-defender-portal.md
-    - name: Getting started in the Defender portal
-      displayName: getting started, defender portal, onboarding, quick start, new users
-      href: defender-portal/getting-started-defender-portal.md
     - name: Enable preview features
       displayName: preview, features, enable, defender portal, preview features
       href: defender-portal/enable-preview-features.md
@@ -37,6 +34,9 @@
 
 - name: Deploy and configure
   items:
+    - name: Getting started in the Defender portal
+      displayName: getting started, defender portal, onboarding, quick start, new users
+      href: defender-portal/getting-started-defender-portal.md
     - name: Support & requirements
       items:
         - name: User roles and permissions
@@ -338,10 +338,7 @@
           href: concept-regulatory-compliance.md
         - name: Regulatory compliance standards
           href: concept-regulatory-compliance-standards.md
-        - name: Review cloud security posture
-          displayName: overview, compliance, inventory
-          href: overview-page.md
-        - name: Cloud infrastructure overview dashboard
+        - name: Cloud overview dashboard
           displayName: dashboard, overview, cloud infrastructure, multi-cloud, visibility
           href: cloud-infrastructure-dashboard.md
         - name: Cloud scopes and unified RBAC
