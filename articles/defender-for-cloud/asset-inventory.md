@@ -296,8 +296,6 @@ Some assets may appear outside defined cloud scopes:
     - **Compliance status** against security standards
     - **Risk factors** including internet exposure and lateral movement potential
 
-::: zone-end
-
 ## Review software inventory
 
 :::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
@@ -429,3 +427,5 @@ securityresources
     ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
 
 Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
+
+::: zone-end

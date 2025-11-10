@@ -344,7 +344,7 @@
         - name: Cloud scopes and unified RBAC
           displayName: rbac, permissions, scopes, access control, unified
           href: cloud-scopes-unified-rbac.md
-        - name: Secure score
+        - name: Cloud secure score
           displayName: security, posture, secure, score, calculate, control, improve
           href: secure-score-security-controls.md
         - name: Cloud asset inventory

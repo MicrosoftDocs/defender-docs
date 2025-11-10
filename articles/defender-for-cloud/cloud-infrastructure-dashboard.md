@@ -2,7 +2,7 @@
 title: Cloud overview dashboard in Microsoft Defender for Cloud
 description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multi-cloud environment.
 ms.topic: how-to
-ms.date: 09/03/2025
+ms.date: 11/10/2025
 ms.author: dacurwin
 author: dcurwin
 zone_pivot_groups: defender-portal-experience
@@ -12,6 +12,8 @@ zone_pivot_groups: defender-portal-experience
 # Cloud overview dashboard (preview)
 
 ::: zone pivot="defender-portal"
+
+The Cloud Overview dashboard is the landing page for Microsoft Defender for Cloud in the unified security portal (Defender portal). It gives security teams a clear, actionable view of their cloud security status both pre and post breach helping them understand where to focus, track progress over time, and take immediate action. It also provides a scale view at the tenant-level or scope based.
 
 > [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
@@ -27,7 +29,10 @@ zone_pivot_groups: defender-portal-experience
 > 
 > Review the known limitations article to understand current gaps during the preview phase.
 
-The Cloud overview dashboard in the Microsoft Defender portal revolutionizes cloud visibility by embedding Microsoft Defender for Cloud directly into the Defender XDR experience. This unified dashboard consolidates Security Posture, Defender coverage, cloud assets, health data, and Exposure Management insights and trends across Azure, AWS, and GCP environments.
+## Who is this for?
+
+- Cloud Security Admins & Architects: Monitor posture, threats, and trends across environments.
+- Workload Owners (DevOps, Developers): Track scoped issues and act to resolve them.
 
 ## Access the dashboard
 
@@ -35,147 +40,73 @@ You can access the Cloud Overview dashboard from the left navigation bar in the 
 
 1. Navigate to **Cloud** > **Overview**
 
-The dashboard eliminates the need to toggle between portals, enabling security teams to triage, investigate, and respond to threats with full context.
+## Top controls
 
-## Dashboard components
+At the top of the dashboard, you’ll find key filters:
 
-The unified Cloud Overview dashboard consolidates security posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP. The dashboard is organized into key sections:
+- **Scope Filter**: Narrow the dashboard view to a specific scope you’re authorized to access, based on [unified scopes](cloud-scopes-unified-rbac.md).
+- **Environment Filter**: Pivot the dashboard by the cloud environment you want to view, such as Azure, AWS, GCP.
+- **Time Range**: Select 30 days, 3 months, or 6 months to view trends over time. This applies to all historical graphs and trend indicators.
+
+:::image type="content" source="media/defender-portal-dashboard/top-controls.png" alt-text="Screenshot of filters on cloud overview dashboard":::
+
+## Dashboard sections
+
+### Security at a glance
+
+This section gives you a quick snapshot of your current security status:
+
+- **Cloud Secure Score**: Your overall cloud security risk score with a trend indicator.
+- **Threat Protection**: Number of alerts by severity.
+- **Assets Coverage**: Number of protected assets by Defender for Cloud plans and their coverage status.
+    - **Full** - assets covered by posture and protection plans
+    - **Partial** - assets protected by posture or protection plans
+    - **None** - unprotected assets
+
+In addition, all cloud and code environments that are currently connected to Defender for Cloud are presented.
+
+:::image type="content" source="media/defender-portal-dashboard/overview-highlights.png" alt-text="Screenshot of cloud overview dashboard highlights":::
 
 ### Top Actions
 
-Quick access to high-priority security tasks:
-- **Critical attack paths**: Immediate investigation of high-risk attack scenarios
-- **High-priority security recommendations**: Focus on most impactful security improvements
-- **Urgent threat responses**: Quick access to active security incidents requiring attention
+This section helps you understand where to start and is designed to guide your next steps and reduce the attack surface efficiently. It highlights:
 
-### Security Posture
+**Critical Recommendations**: Help you focus on the most critical recommendations found in your environment.
+**High-Severity Incidents**: Investigate active alerts.
+**Attack Paths**: Understand potential lateral movement.
 
-Comprehensive security posture management with:
-- **Cloud Secure Score trends**: View score progression over time with built-in overtime tracking
-- **Security Recommendations**: Prioritized list of security improvements
-- **Compliance insights**: Track compliance with security standards and frameworks
-- **Remediation tracking**: Monitor progress of security improvements
+:::image type="content" source="media/defender-portal-dashboard/top-actions.png" alt-text="Screenshot of cloud overview dashboard top actions":::
 
-### Threat Detection
+### Trends over time
 
-Advanced threat protection monitoring:
-- **Security alerts across environments**: Unified view of threats across Azure, AWS, and GCP
-- **Alert severity breakdown**: Categorized view of High, Medium, and Low severity threats
-- **Incident correlation**: Connection between cloud threats and broader organizational security events
-- **Response workflows**: Streamlined incident response across all Microsoft security solutions
+Track how your security posture and threat detection evolve.
+
+**Security Posture**: View over time of the new cloud secure score in addition to recommendations by severity.
+
+:::image type="content" source="media/defender-portal-dashboard/security-posture-trends.png" alt-text="Screenshot of cloud overview dashboard security posture trends":::
+
+**Threat Detection**: View alert trends by severity.
+
+:::image type="content" source="media/defender-portal-dashboard/threat-detection-trends.png" alt-text="Screenshot of cloud overview dashboard threat detection trends":::
+
+Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
 
 ### Workload Insights
 
-Workload-specific pivots with detailed asset summary, coverage, insights, and risk level:
+Each tile in this section surfaces insights from Microsoft’s CNAPP (Cloud-Native Application Protection Platform).
 
-- **VMs (Virtual Machines)**: 
-  - Asset count and security coverage status
-  - Vulnerability insights and patch management
-  - Risk level assessment based on exposure factors
+Workloads include:
 
-- **Data**: 
-  - Database and storage security posture
-  - Data sensitivity and classification insights
-  - Access control and encryption status
+- Virtual Machines (VMs)
+- Containers
+- APIs
+- Data
+- DevOps
+- CIEM
 
-- **APIs**: 
-  - API security posture and threat exposure
-  - Authentication and authorization controls
-  - Traffic analysis and anomaly detection
+Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views. This helps teams focus on what matters most for each workload.
 
-- **DevOps**: 
-  - Code repository security insights
-  - CI/CD pipeline security assessment
-  - Infrastructure as Code (IaC) security validation
-
-- **CIEM (Cloud Infrastructure Entitlement Management)**: 
-  - Identity and access rights analysis
-  - Privilege escalation risk assessment
-  - Unused and excessive permissions identification
-
-Each workload section provides:
-- **Asset Summary**: Total count and categorization of resources
-- **Coverage Status**: Defender for Cloud protection deployment status
-- **Security Insights**: Key security findings and recommendations
-- **Risk Level**: Contextual risk assessment based on environmental factors
-
-## Dashboard filtering and customization
-
-### Time frame selection
-
-Use the time frame selector to customize your view:
-
-1. Click the **"Last 7 days"** button in the top-right corner
-1. Select from predefined ranges or custom date ranges up to 6 months
-1. View historical trends and long-term security posture evolution
-
-### Environment filtering
-
-Focus on specific environments using the Environment filter:
-
-1. Select **Environment filter** to choose specific cloud environments
-1. Filter by individual subscriptions, AWS accounts, or GCP projects
-1. View consolidated data across selected environments
-
-### Scope filtering
-
-Apply granular filtering using the scope filter:
-
-1. Use **Scope filter** to focus on specific areas:
-   - **Unified Defender RBAC with cloud scopes**: Filter based on organizational boundaries
-   - **Device groups**: Focus on endpoint-specific data when relevant
-
-The scope filter maintains your selection as you navigate between different experiences, ensuring consistent context throughout your security review process.
-
-## Key capabilities
-
-### Enriched inventory views
-
-- **Asset visibility**: Comprehensive view of all cloud resources across environments
-- **Health indicators**: Real-time status of asset security and compliance
-- **Coverage metrics**: Track which assets are protected by Defender for Cloud
-
-### Attack path mapping
-
-- **Visual attack paths**: See potential routes attackers could take through your environment
-- **Critical path identification**: Focus on the most dangerous attack scenarios
-- **Choke point analysis**: Identify convergence points where multiple attack paths intersect
-
-### Defender coverage metrics
-
-- **Protection status**: Monitor which workloads have Defender protection enabled
-- **Coverage gaps**: Identify unprotected resources that need attention
-- **Deployment insights**: Track Defender for Cloud deployment across your environment
-
-## Best practices for dashboard use
-
-### Daily security review
-
-1. **Start with the overview**: Review the summary cards for overall security health
-1. **Check recent trends**: Look for significant changes in security posture or alert volumes
-1. **Investigate critical items**: Drill down into high-priority alerts or attack paths
-1. **Monitor coverage**: Ensure critical assets maintain appropriate Defender coverage
-
-### Incident response workflow
-
-1. **Use filtering**: Apply appropriate scope and environment filters to focus on affected areas
-1. **Correlate data**: View security alerts in the context of attack paths and asset exposure
-1. **Track progress**: Monitor remediation efforts through historical trend data
-
-### Regular security posture assessment
-
-1. **Review score trends**: Analyze Cloud Secure Score progression over time
-1. **Identify patterns**: Look for recurring security issues or improvement opportunities
-1. **Plan remediation**: Use recommendation trends to prioritize security investments
-
-## Integration with other experiences
-
-The Cloud Overview dashboard serves as a central hub that connects to detailed experiences:
-
-- **Attack surface management**: Navigate to detailed attack path analysis
-- **Asset inventory**: Drill down into specific resource details
-- **Vulnerability management**: Access comprehensive vulnerability insights
-- **Exposure management**: Explore detailed risk analysis and mitigation recommendations
+:::image type="content" source="media/defender-portal-dashboard/workload-insights.png" alt-text="Screenshot of cloud overview dashboard workload insights":::
 
 ::: zone-end
 
