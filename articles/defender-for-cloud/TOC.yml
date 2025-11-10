@@ -1,4 +1,4 @@
----
+# TOC for Microsoft Defender for Cloud
 - name: Microsoft Defender for Cloud documentation
   href: index.yml
 - name: Overview
@@ -13,21 +13,27 @@
       displayName: changelog, news, release notes
       href: release-notes.md
 
-- name: Experience in Defender portal
+- name: Defender portal experience
   expanded: true
   items:
-    - name: Navigation hub
-      displayName: navigation, hub, guide, intro, get started, security posture, threat protection
-      href: defender-portal/defender-portal-four-column-overview.md
-    - name: Defender for Cloud in the Defender portal
-      displayName: defender portal, integration, dashboard, overview, mdc, Cloud security
+    - name: Overview of Defender for Cloud in Defender portal
+      displayName: defender portal, integration, dashboard, overview, mdc, Cloud security, navigation, hub
       href: defender-portal/defender-for-cloud-defender-portal.md
     - name: Getting started in the Defender portal
-      displayName: get started, onboarding, defender portal, mdc, introduction
+      displayName: getting started, defender portal, onboarding, quick start, new users
       href: defender-portal/getting-started-defender-portal.md
+    - name: Enable preview features
+      displayName: preview, features, enable, defender portal, preview features
+      href: defender-portal/enable-preview-features.md
     - name: Azure portal vs Defender portal feature comparison
       displayName: comparison, features, azure portal, defender portal, capabilities, differences
       href: azure-portal-vs-defender-portal-comparison.md
+    - name: Known limitations
+      displayName: limitations, known issues, defender portal, preview
+      href: defender-portal/known-limitations.md
+    - name: Integration FAQ
+      displayName: integration, faq, frequently asked questions, defender portal
+      href: defender-portal/integration-faq.md
 
 - name: Deploy and configure
   items:
