@@ -10,6 +10,10 @@ ms.service: defender-for-cloud
 
 # Defender for Cloud Navigation Hub
 
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
+
 Navigate quickly to Microsoft Defender for Cloud's key capabilities and features in the unified Microsoft Defender portal.
 
 :::row:::

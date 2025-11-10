@@ -11,6 +11,10 @@ ms.service: defender-for-cloud
 
 # Getting started in the Defender portal
 
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
+
 Welcome to Microsoft Defender for Cloud in the Microsoft Defender portal. This guide will help you get started, understand key concepts, and navigate essential features to secure your cloud environment.
 
 ## What is Microsoft Defender for Cloud?

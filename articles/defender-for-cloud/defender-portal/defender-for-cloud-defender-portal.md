@@ -1,16 +1,20 @@
 ---
-title: Defender for Cloud in the Defender portal - Integration and Dashboard Overview
-description: Learn about the integration of Microsoft Defender for Cloud in the Defender portal, including unified security management, dashboard features, and comprehensive cloud security insights.
+title: Overview of Defender for Cloud in Defender portal
+description: Comprehensive overview of Microsoft Defender for Cloud in the Defender portal, including navigation hub, dashboard features, and unified security management capabilities.
 author: dlanger
 ms.author: dlanger
 ms.topic: overview
-ms.date: 09/03/2025
+ms.date: 11/10/2025
 ms.service: defender-for-cloud
 ---
 
-# What is Defender for Cloud in the Defender portal?
+# Overview of Defender for Cloud in Defender portal
 
-> [!NOTE]
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
+
+> [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:
@@ -227,6 +231,43 @@ Defender for Cloud is deeply integrated with Microsoft Defender XDR, providing:
 - **Cloud asset visibility**: Cloud resources appear as first-class entities in incident investigations, with dedicated asset pages and detailed activity timelines.
 - **Unified API access**: Export security data from all integrated services through a single Microsoft Defender XDR API.
 
+## Navigation Hub - Quick Access to Key Capabilities
+
+Navigate quickly to Microsoft Defender for Cloud's key capabilities and features in the unified Microsoft Defender portal.
+
+:::row:::
+   :::column span="":::
+      ### Getting Started
+
+      - [Microsoft Defender for Cloud](../defender-for-cloud-introduction.md)
+      - [Getting started in the Defender portal](getting-started-defender-portal.md)
+      - [Cost calculator](../cost-calculator.md)
+      - [Planning and operations guide](../defender-for-cloud-planning-and-operations-guide.md)
+   :::column-end:::
+   :::column span="":::
+      ### Security Posture Management
+
+      - [Secure Score overview](../secure-score-access-and-track.md?pivots=defender-portal)
+      - [Attack path analysis](../concept-attack-path.md?pivots=defender-portal)
+      - [Cloud Infrastructure Dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)
+      - [Asset Inventory](../asset-inventory.md?pivots=defender-portal)
+      - [Cloud Scopes & RBAC](../cloud-scopes-unified-rbac.md?pivots=defender-portal)
+      - [Vulnerability Management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)
+      - [Email notifications](../configure-email-notifications.md?pivots=defender-portal)
+      - [Data security posture management](../concept-data-security-posture.md)
+   :::column-end:::
+   :::column span="":::
+      ### Threat Detection & Response
+
+      - [Attack Path Management](../how-to-manage-attack-path.md?pivots=defender-portal)
+      - [Security alerts overview](../alerts-overview.md)
+      - [Microsoft Defender XDR integration](../concept-integration-365.md)
+      - [Alert validation](../alert-validation.md)
+      - [Microsoft Security Copilot](../copilot-security-in-defender-for-cloud.md)
+      - [Automated response](../continuous-export.md)
+   :::column-end:::
+:::row-end:::
+
 ## Core capabilities
 
 | Capability                           | Description                                               |
@@ -241,7 +282,6 @@ Defender for Cloud is deeply integrated with Microsoft Defender XDR, providing:
 ## Next steps
 
 - [Get started with the Defender portal experience](getting-started-defender-portal.md)
-- [Explore the Complete overview - four-column guide](defender-portal-four-column-overview.md)
 - [Explore the Cloud Infrastructure Dashboard](../cloud-infrastructure-dashboard.md)
 - [Configure Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md)
 - [Review cloud infrastructure assets](../asset-inventory.md?pivots=defender-portal)
