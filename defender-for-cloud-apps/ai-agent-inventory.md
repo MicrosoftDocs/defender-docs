@@ -30,7 +30,7 @@ To enable AI agent detection for your Microsoft Copilot Studio agents, follow th
     
     Enabling Copilot Studio AI Agents allows Microsoft Defender to start discovering AI agents in your environment.
 
-:::image type="content" source="media/protect-ai-agents/ai-agent-configuration.png" alt-text="Screenshot of the Copilot Studio AI Agent configuration page.":::
+:::image type="content" source="media/protect-ai-agents/copilot-studio-ai-agents-button.png" alt-text="Screenshot of the Copilot Studio AI Agent configuration toggle.":::
 
 1. Work together with the Power Platform administrator to complete these steps in the [Power Platform Portal](https://admin.preview.powerplatform.microsoft.com/security/threatdetection):  
     1. Select **Microsoft Defender - Copilot Studio AI Agents**.
