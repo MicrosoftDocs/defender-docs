@@ -29,10 +29,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## November 2025
 
-|Date | Category | Update|
-| -------- | -------- | -------- |
-| November 11, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview) |
-| November 03, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+| Date | Category | Update |
+|------|---------|-------|
+| November 11, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]
+| November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
+| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
 
@@ -43,6 +44,20 @@ Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) c
 The MCSB provides a collection of high-impact security controls and recommendations to help secure cloud services across single and multi-cloud environments. MCSB v2 adds expanded risk and threat-based guidance, expanded Azure Policy measurments, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
 
 Learn more about the [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
+
+### General Availability of Jfrog Artifactory and Docker Hub container registry support
+
+November 3, 2025
+
+We’re announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
+
+This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
+
+Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md).
+
+> [!NOTE]
+> Billing for Jfrog Artifactory (Cloud) & container registry support by Defender for Containers & Defender CSPM will begin on **December 2, 2025**.
+> For more information, see the [Microsoft Defender for Cloud Pricing Page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
 
 ### General availability of compliance frameworks
 
