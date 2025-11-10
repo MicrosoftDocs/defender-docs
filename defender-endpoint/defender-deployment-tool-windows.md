@@ -58,3 +58,15 @@ The deployment tool offers the following functionality:
 
 > [!NOTE]
 > *For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender release that will be installed is currently in public preview. For more information, please reference [New Defender on legacy Windows operating systems]
+
+## Using the deployment tool to onboard and offboard devices
+
+### Scenario 1: Standard deployment for single devices
+
+#### Onboarding
+
+#### Offboarding
+
+### Scenario 2: Customized or large-scale deployment
+
+## Options

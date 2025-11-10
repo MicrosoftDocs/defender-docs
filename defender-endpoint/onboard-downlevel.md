@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/02/2025
+ms.date: 11/010/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -58,6 +58,28 @@ The following steps are required to enable this integration:
 - Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
 - Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
 - Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
+
+## Install the Defender for Endpoint agent for Windows 7 SP1 andWindows Server 2008 R2 SP1 devices
+
+### Known issues and limitations
+
+- You may get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
+
+- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you may see a notification from Action Center "Windows did not find antivirus software on this computer". This is not indicative of a problem.
+
+- In Vulnerability Management – software inventory, you may see a duplicate entry for the Defender for Endpoint software.
+
+- The preview ("beta") version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can be used to collect logs and perform connectivity troubleshooting on Windows 7 & 2008 R2. It requires PowerShell 5.1 or later to be installed.
+
+- There is no local user interface for Antivirus. If you wish to manage Antivirus settings locally using PowerShell, version 5.1 or later is required.
+
+- Configuration via Group Policy is supported using a central store with updated group policy templates on a domain controller. For local group policy configuration, templates (WindowsDefender.admx/WindowsDefender.adml) will need to be manually updated to a newer version (Windows 11) if you wish to use the local group policy editor to apply settings.
+
+- The agent will be installed to *C:\Program Files\Microsoft Defender for Endpoint*.
+
+- Windows 7 devices may show up as "Server" in the portal until you update to the latest Sense version by applying KB5005292.
+
+- Passive mode is currently not supported on Windows 7.
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 
