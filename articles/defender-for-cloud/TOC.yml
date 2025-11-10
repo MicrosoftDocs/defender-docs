@@ -347,8 +347,8 @@
         - name: Secure score
           displayName: security, posture, secure, score, calculate, control, improve
           href: secure-score-security-controls.md
-        - name: Review the asset inventory
-          displayName: asset, inventory, resources
+        - name: Cloud asset inventory
+          displayName: asset, inventory, resources, cloud
           href: asset-inventory.md
         - name: Internet exposure analysis
           displayName: internet, exposure, analysis
