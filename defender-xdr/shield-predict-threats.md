@@ -56,7 +56,7 @@ This dual approach ensures that protection is both precise and timely.
 
 ## How predictive shielding expands on automatic attack disruption
 
-Defender XDR's autonomous protection solution now includes both attack disruption and predictive shielding. While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths.
+Predictive shielding enhances Defender XDR's autonomous protection stack by incorporating both [attack disruption](automatic-attack-disruption.md) and predictive shielding. While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths.
 
 Predictive shielding uses predictive analytics and real-time insights to dynamically identify emerging risks, and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic attack disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
 
