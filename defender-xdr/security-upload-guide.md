@@ -1,5 +1,5 @@
 ---
-title: Upload organization-specific guidelines for Microsoft Security Copilot guided response
+title: Customize Copilot for your organization
 description: Learn how to upload your organization's specific guidelines to Microsoft Security Copilot to enhance guided response recommendations.
 ms.service: defender-xdr
 ms.author: guywild
@@ -20,7 +20,7 @@ appliesto:
 - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
 ---
 
-# Upload organization-specific guidelines for Microsoft Security Copilot guided response
+# Customize Copilot for your organization
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -33,7 +33,7 @@ This guide outlines how to upload your organization's specific guidelines to Mic
 - You must be at least a security administrator to upload, approve or delete files. Security operators can review the guidebooks but not manage them.
 - Your organization-specific guidelines should be in a supported format (PDF, DOCX, TXT) and should not exceed the maximum file size limit of 3 MB.
 
-## Steps to upload organization-specific guidelines
+## Steps to customize Copilot's guided response using your organization's guidebook
 
 Upload your guidebook from Copilot settings. You can get there in one of two ways:
 
