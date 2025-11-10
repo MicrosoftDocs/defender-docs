@@ -56,7 +56,7 @@ This dual approach ensures that protection is both precise and timely.
 
 ## How predictive shielding expands on automatic attack disruption
 
-Predictive shielding enhances Defender XDR's autonomous protection stack by incorporating both [attack disruption](automatic-attack-disruption.md) and predictive shielding. While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths.
+Predictive shielding enhances Defender XDR's autonomous protection stack, expanding [attack disruption](automatic-attack-disruption.md) to include proactive measures during an attack. While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths.
 
 Predictive shielding uses predictive analytics and real-time insights to dynamically identify emerging risks, and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic attack disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
 
@@ -68,7 +68,7 @@ Defender XDR uses multiple layers of insight to make accurate predictions:
 
 - Threat intelligence aligns observed activity with known attacker tools and tactics.
 - Learnings from past incidents are used to recognize statistical patterns, and extrapolate the most probable next steps.
-- Organizational exposure data is used to map how the environment is structured—which assets and identities are connected, what vulnerabilities or misconfigurations exist, and how risk can propagate across them.
+- Organizational exposure data is used to map how the environment is structured—which assets and identities are connected, which permissions these identities have, which vulnerabilities or misconfigurations exist, and how risk can propagate across them.
 
 Together, these insights create a dynamic understanding of the environment and its risks.
 
