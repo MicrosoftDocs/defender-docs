@@ -73,8 +73,14 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Red Hat Enterprise Linux 7.2 and higher 
 - Red Hat Enterprise Linux 8.x 
 - Red Hat Enterprise Linux 9.x 
+- Red Hat Enterprise Linux 10.x 
+
 - CentOS 7.2 and higher, excluding CentOS Stream 
 - CentOS 8.x
+- CentOS Stream 9
+
+- CentOS Stream 10
+
 - Ubuntu 16.04 LTS 
 - Ubuntu 18.04 LTS 
 - Ubuntu 20.04 LTS 
