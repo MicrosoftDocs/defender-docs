@@ -26,13 +26,13 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## November 2025
 
-### Integration of Microsoft Defender for Cloud’s CSPM capabilities and Microsoft Defender Vulnerability Management and into Exposure Management** 
+### Integration of Microsoft Defender for Cloud’s CSPM capabilities and Microsoft Defender Vulnerability Management and into Exposure Management
 
-This major milestone brings comprehensive Microsoft Defender for Cloud’s posture capabilities (secure score, recommendations and attck paths) and vulnerability management integration to Microsoft Security Exposure Management, which significantly expanding the scope and capabilities of the platform. 
+This major milestone brings comprehensive Microsoft Defender for Cloud’s posture capabilities (secure score, recommendations, and attack paths) and vulnerability management integration to Microsoft Security Exposure Management, which significantly expands the scope and capabilities of the platform.
 
 #### New unified recommendations catalog
 
-**One place, full coverage** – You can now explore all Microsoft security recommendations in a single, streamlined experience that consolidates recommendations from: 
+**One place, full coverage** – You can now explore all Microsoft security recommendations in a single, streamlined experience that consolidates recommendations from:
 
 - Microsoft secure score
 
@@ -42,25 +42,25 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 
 - Microsoft Defender for Vulnerability Management
 
-**Organized by attack surfaces** – The catalog is divided into tabs based on attack surfaces: 
+**Organized by attack surfaces** – The catalog is divided into tabs based on attack surfaces:
 
-- **Devices** - Including separate views for Misconfigurations and Vulnerabilities 
+- **Devices** - Including separate views for **Misconfigurations** and **Vulnerabilities**
 
-- **Cloud** – Inclduing multi-cloud (Azure, AWS, GCP), hybrid and code recommendations 
+- **Cloud** – Including multicloud (Azure, AWS, GCP), hybrid, and code recommendations
 
-- **Identity** - Identity protection recommendations 
+- **Identity** - Identity protection recommendations
 
-- **SaaS Apps** - Software-as-a-Service application recommendations 
+- **SaaS Apps** - Software-as-a-Service application recommendations
 
-- **Data** - Data security recommendations 
+- **Data** - Data security recommendations
 
-**Enhanced capabilities** – Each tab incorporates unified fields and functionalities from previous experiences, providing consistent and efficient ways to discover, evaluate, and prioritize security recommendations. 
+**Enhanced capabilities** – Each tab incorporates unified fields and functionalities from previous experiences, providing consistent and efficient ways to discover, evaluate, and prioritize security recommendations.
 
 #### Devices misconfigurations and vulnerabilities
 
-**Separated workflows** – For the first time, misconfigurations recommendations are separated from vulnerabilities, recognizing they represent distinct workflows handled by different personas: 
+**Separated workflows** – For the first time, misconfigurations recommendations are separated from vulnerabilities, recognizing they represent distinct workflows handled by different personas.
 
-- **Devices Misconfigurations**: Configuration issues from Vulnerability Management, Microsoft Secure Score, and Security Exposure Management, contributing to Devices Secure Score 
+- **Devices Misconfigurations**: Configuration issues from Vulnerability Management, Microsoft Secure Score, and Security Exposure Management, contributing to Devices Secure Score
 
 - **Devices Vulnerabilities**: Software vulnerabilities from Vulnerability Management with the same exposure score and prioritization logic customers know, preserving familiar structure and workflows
 
@@ -70,13 +70,13 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 
 - Risk factors per asset for broader exposure context
 
-- New risk-based scoring that weighs recommendations based on severity, asset context, and potential impact 
+- New risk-based scoring that weighs recommendations based on severity, asset context, and potential impact
 
-- Enhanced recommendation data from Azure Security Center enriched with Exposure Management capabilities 
+- Enhanced recommendation data from Azure Security Center enriched with Exposure Management capabilities
 
-#### New Secure Score integration
+#### New secure score integration
 
-- **Side-by-side scoring** – Both Microsoft Secure Score and the newly introduced Cloud Secure Score are now available in Security Exposure Management, viewable side by side for comprehensive posture tracking. 
+- **Side-by-side scoring** – Both Microsoft secure score and the newly introduced Cloud secure score are now available in Security Exposure Management, viewable side by side for comprehensive posture tracking.
 
 #### Enhanced Attack Path analysis
 
@@ -126,7 +126,7 @@ Key features include:
   - Azure Storage Account Key
 - **Enhanced visibility**: Critical assets are surfaced across Microsoft Defender XDR experiences for improved security posture management
 
-This integration provides the first offering to combine the experience between Purview and Microsoft Defender Portal for classifying critical assets and gathering important pre-breach insights.
+This integration provides the first offering to combine the experience between Purview and Microsoft Defender Portal for classifying critical assets and gathering important prebreach insights.
 
 For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 ### Blast radius analysis
@@ -169,7 +169,7 @@ For more information, see [Predefined classification](predefined-classification-
 
 Cloud Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
 
-On-premises Attack Path now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+On-premises Attack Path now terminates automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
 
 The changes bring greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
@@ -189,7 +189,7 @@ For more information, see [External attack surface management initiative](extern
 
 The device groups scoping within Exposure Management has been expanded. This update enhances the existing capability to filter the list of affected devices based on your assigned scope by extending it to security metrics and exposed entities in recommendations. With this enhancement, initiative scores, metric progress, security events, and historical insights will now be calculated and displayed according to your specific user scope. As a result, the data presented, including on the Overview page, will be tailored to align with your designated scope.
 
-We will also support the device groups filter, which is already available in Microsoft Defender Vulnerability Management experiences. This filter enables end users to refine their view within their access scope, allowing them to focus on specific devices as needed. Once the filter is adjusted based on the user’s selection, all related data will be refreshed accordingly.
+We'll also support the device groups filter, which is already available in Microsoft Defender Vulnerability Management experiences. This filter enables end users to refine their view within their access scope, allowing them to focus on specific devices as needed. Once the filter is adjusted based on the user’s selection, all related data will be refreshed accordingly.
 
 > [!NOTE]
 > The device groups scoping capability applies only to data associated with Endpoint devices.
