@@ -73,7 +73,7 @@ Installed *systemd* system manager.
 
 ### Supported filesystems for scans
 
-This table lists the supported filesystems for [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), and quick, full, and custom scans.
+This table lists supported filesystems for [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), and quick, full, and custom scans.
 
 |Real-time protection and quick or full scans|Custom scans|
 |---|---|
@@ -98,13 +98,15 @@ This table lists the supported filesystems for [real-time protection](configure-
 
 The links in this section describe the methods you can use to deploy Defender for Endpoint on Linux.
 
-Installing Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Defender for Endpoint creates a *mdatp* user with random UID and GID values. If you want to control these values, create an *mdatp* user before installation using the `/usr/sbin/nologin` shell option. For example, `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+Installing Defender for Endpoint in any location other than the default install path isn't supported.
 
-* [Installer script based deployment](/defender-endpoint/linux-installer-script)
-* [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
-* [Chef based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef)
-* [Puppet based deployment](/defender-endpoint/linux-install-with-puppet)
-* [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
+Defender for Endpoint creates a *mdatp* user with random UID and GID values. If you want to control these values, create an *mdatp* user before installation using the `/usr/sbin/nologin` shell option. For example, `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+
+* [Installer script](/defender-endpoint/linux-installer-script)
+* [Ansible](/defender-endpoint/linux-install-with-ansible)
+* [Chef](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef)
+* [Puppet](/defender-endpoint/linux-install-with-puppet)
+* [SaltStack](/defender-endpoint/linux-install-with-saltack)
 * [Manual deployment](/defender-endpoint/linux-install-manually)
 * [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 * [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
@@ -115,7 +117,7 @@ After installing Defender for Endpoint on Linux, use the links in this section t
 
 ### Security settings
 
-After installing Defender for Endpoint on Linux, select one of these configuration options.
+To manage your Defender for Endpoint security settings, select one of these configuration options.
 
 * [Security settings management](/defender-endpoint/mde-security-settings-management) - Use the Defender portal to configure and manage your policies.
 * [Configure security settings on Linux](/defender-endpoint/linux-preferences) - Use a JSON file to configure your security settings.
