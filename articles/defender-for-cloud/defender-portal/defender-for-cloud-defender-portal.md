@@ -26,178 +26,55 @@ ms.service: defender-for-cloud
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
 > 
-> Review the known limitations article to understand current gaps during the preview phase.
+> Review the [known limitations](known-limitations.md) article to understand current gaps during the preview phase.
 
-Microsoft Defender for Cloud is now fully integrated into the Defender portal, offering a unified and enhanced experience for managing cloud security. The new Cloud Security Dashboard provides comprehensive insights from both cloud and code environments, bringing together information that was previously only available in the Azure portal. With this seamless integration, users benefit from advanced security insights powered by the Microsoft Threat Protection suite.
+## Overview
+
+Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud security solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid and code environments - all from one place.
+
+## How to get started?
+
+The experience is available for Defender for Cloud customers with at least one paid plan. In the first phase, the journey for new customer still start in the Azure portal.
+
+To [enable the preview](enable-preview-features.md)
+
+Read the [known limitations](known-limitations.md)
+
+## What are the key values and benefits for security personas?
+
+**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multi-cloud organizations seeking comprehensive exposure management too.
+
+**[Cloud security dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)** - This new cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and includes tools to track security progress over time out of the box. New unified dashboard consolidates Security Posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments.
+
+**[Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)** – A new centralized inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, device actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats.
+
+**[Unified cloud security posture capabilities](../concept-attack-path.md?pivots=defender-portal)** – We are unifying all the cloud security posture management (CSPM) capabilities into Microsoft Security Exposure Management (MSEM). Security personas can now view secure scores, prioritized recommendations, attack paths and vulnerabilities —all in a single pane of glass, empowering them to reduce risk and get an holistic view of all their posture end-to-end including devices, identities, SaaS apps and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
+
+**[Granular access management](../cloud-scopes-unified-rbac.md?pivots=defender-portal)** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows.
 
 The combined value of Defender workloads—like Defender for Endpoint, Defender for Identity, and others—comes from delivering comprehensive, integrated security across endpoints, identities, email, and cloud resources. This unified approach streamlines threat detection, correlates insights, and strengthens an organization's security posture. Powered by advanced AI and Microsoft's global threat intelligence, Defender solutions identify emerging risks faster and enable proactive defense against sophisticated attacks.
 
 Cloud security insights are now included as part of Exposure Management, providing you with enhanced tools to identify and mitigate security risks more effectively. Key functionalities include:
 
-- **Explore Initiatives** to track and manage your organization's cloud security goals and compliance requirements.
-- **Vulnerability Management** to identify, assess, and remediate weaknesses in your cloud workloads.
-- **Recommendations** for actionable guidance on improving your cloud security posture.
-- **Attack maps** for a visual overview of your cloud assets and their security status, helping you understand relationships and exposure points.
-- **Attack path analysis** to identify potential routes attackers could exploit and prioritize remediation efforts.
-- **Cloud threat detection** within Incidents and Alerts workflows for real-time insights into suspicious activities.
-- **Pre- and post-breach insights** to support comprehensive investigation and response.
-- **Advanced hunting tools** for in-depth investigation of cloud threats and incidents.
-- **Cloud Infrastructure Inventory** for full visibility into your multi-cloud and multi-pipeline estates, delivering resource-level insights across your environment.
-- **Unified RBAC and Cloud Scoping** to streamline permission management, allowing you to efficiently manage access and assign roles within the Defender portal.
+**Explore Initiatives** to track and manage your organization's cloud security goals and compliance requirements.
 
-## Overview Dashboard - Your Central Hub
+**[Vulnerability Management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)** to identify, assess, and remediate weaknesses in your cloud workloads.
 
-The Cloud overview dashboard is the new landing page for Microsoft Defender for Cloud in the Defender portal. It serves as the central hub for cloud security visibility, insights, and action, built with Cloud-Native Application Protection Platform (CNAPP) principles at its core. This dashboard gives security teams and workload owners a clear, actionable view of their cloud security status both pre- and post-breach, empowering them to understand their security posture, track progress over time, and take meaningful, immediate action, all from a single, unified experience. The overview dashboard also provides an at-scale view at the tenant-level or scope-based, helping users understand where to focus and how to drive effective security outcomes.
+**Recommendations** for actionable guidance on improving your cloud security posture.
 
-### Why the dashboard matters
+**Attack maps** for a visual overview of your cloud assets and their security status, helping you understand relationships and exposure points.
 
-As organizations scale their cloud environments, the need for a clear, actionable view of security status becomes critical. Customers have told us they want to know:
+**[Attack path analysis](../concept-attack-path.md?pivots=defender-portal)** to identify potential routes attackers could exploit and prioritize remediation efforts.
 
-- "Am I more secure than yesterday?"
-- "What should I focus on first?"
-- "How do I show the value of Defender for Cloud to stakeholders?"
+**Cloud threat detection** within Incidents and Alerts workflows for real-time insights into suspicious activities.
 
-The overview dashboard answers these questions by providing a comprehensive, role-aware experience that supports both strategic oversight and tactical response.
+**Pre- and post-breach insights** to support comprehensive investigation and response.
 
-### Who is the overview dashboard for?
+**Advanced hunting tools** for in-depth investigation of cloud threats and incidents.
 
-The Overview Dashboard in Microsoft Defender for Cloud is designed with two core personas in mind. Each brings a unique perspective and set of responsibilities to cloud security—and the dashboard adapts to meet their needs.
+**[Cloud Infrastructure Inventory](../asset-inventory.md?pivots=defender-portal)** for full visibility into your multi-cloud and multi-pipeline estates, delivering resource-level insights across your environment.
 
-#### Cloud Security Admins, Architects, and Engineers
-
-These users are responsible for the big picture. They need to understand the security posture of the entire cloud environment, identify risks, and make informed decisions that protect the organization.
-
-They use the dashboard to:
-
-- Assess the overall cloud security status across environments
-- Monitor critical security metrics and trends
-- Identify and prioritize risks
-- Serve as a central hub for visibility and decision-making
-
-This persona benefits from the dashboard's high-level summaries, overtime tracking, and direct links to deeper insights like Exposure Management and Cloud Asset Inventory.
-
-#### Workload Owners (Developers, DevOps, DevSecOps)
-
-These users are closer to the code and infrastructure. They're responsible for specific workloads and need scoped, actionable insights to keep their areas secure.
-
-They use the dashboard to:
-
-- View security status based on their permissions and scope
-- Identify and fix security issues in their workloads
-- Track the progress of remediation efforts
-- Use the dashboard as a landing page for daily operations
-
-This persona benefits from workload-centric tiles, scoped filters, and actionable recommendations tailored to their domain.
-
-### Dashboard controls
-
-At the top of the dashboard, you'll find two key filters:
-
-- **Scope Filter**: Choose the environment you want to view—tenant, subscription, or project. The dashboard adjusts based on your permissions.
-- **Time Range**: Select 30 days, 3 months, or 6 months to view trends over time. This applies to all historical graphs and trend indicators.
-
-### Dashboard components
-
-#### Security at a glance
-
-This section gives you a quick snapshot of your current security status:
-
-- **Cloud Secure Score**: Your overall cloud security risk score with a trend indicator.
-- **Threat Protection**: Number of alerts by severity.
-- **Resource Coverage**: Number of protected resources by Defender for Cloud plans and their coverage status (Full, Partial, None).
-- All cloud and code environments that are currently connected to Defender for Cloud are presented.
-
-:::image type="content" source="../media/defender-portal-dashboard/overview-highlights.png" alt-text="Screenshot of dashboard highlights" lightbox="../media/defender-portal-dashboard/overview-highlights.png":::
-
-#### Top actions
-
-This section provides prioritized, actionable recommendations to help you reduce risk quickly. It helps you understand where to start and is designed to guide your next steps and reduce the attack surface efficiently. It highlights:
-
-- **Critical Recommendations**: Focus on the most critical recommendations found in your environment.
-- **High-Severity Incidents**: Investigate active alerts.
-- **Attack Paths**: Understand potential lateral movement.
-- **Connectivity Issues**: Identify connectivity issues preventing your connected cloud environments from being fully protected.
-
-:::image type="content" source="../media/defender-portal-dashboard/top-actions.png" alt-text="Screenshot of top actions" lightbox="../media/defender-portal-dashboard/top-actions.png":::
-
-#### Trends over time
-
-Track how your security posture and threat detection evolve over time:
-
-- **Security Posture**: View over time of the new cloud secure score in addition to recommendations by severity.
-
-:::image type="content" source="../media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of security posture" lightbox="../media/defender-portal-dashboard/security-posture.png":::
-
-- **Threat Detection**: View trends in the number of alerts over time, categorized by severity.
-
-:::image type="content" source="../media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of threat detection" lightbox="../media/defender-portal-dashboard/threat-detection.png":::
-
-Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
-
-#### Workload insights (powered by CNAPP)
-
-Dive into security insights by workload type. Each tile in this section surfaces insights from Microsoft's CNAPP.
-
-Workloads include:
-
-- VMs
-- Containers
-- APIs
-- Data
-- DevOps
-- AI
-
-Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views—no sensitive or secret information is displayed. This helps teams focus on what matters most for each workload.
-
-:::image type="content" source="../media/defender-portal-dashboard/api.png" alt-text="Screenshot of API widgits" lightbox="../media/defender-portal-dashboard/api.png":::
-
-## Defender for Cloud in the Defender portal features
-
-The enhanced Defender portal experience introduces several advanced capabilities:
-
-### Cloud Infrastructure Overview Dashboard
-
-Access comprehensive cloud security insights through the [Cloud Infrastructure Overview Dashboard](../cloud-infrastructure-dashboard.md), which provides:
-
-- Unified visibility across Azure, AWS, and GCP environments
-- Security posture trends and threat protection alerts
-- Workload-specific insights with enhanced filtering capabilities
-- Integration with Exposure Management for risk-based prioritization
-
-### Cloud Scopes and Unified RBAC
-
-Manage granular access control with [Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md):
-
-- Organize cloud resources by business value or operational structure
-- Set specific access permissions for each group
-- Apply persistent filtering across dashboards and experiences
-- Streamline permission management across multi-cloud environments
-
-### Enhanced Asset Management
-
-The [Assets → Cloud Infrastructure](../asset-inventory.md?pivots=defender-portal) experience provides:
-
-- Workload-specific views (VMs, Data, Containers, AI, API, DevOps, Identity, Serverless)
-- Contextual health data and device actions integration
-- Risk factor analysis and scoping filters
-- Seamless integration with Exposure Management workflows
-
-### Advanced Attack Path Analysis
-
-Enhanced [attack path capabilities](../concept-attack-path.md?pivots=defender-portal) include:
-
-- Choke points identification for focused mitigation efforts
-- Advanced filtering by risk level, asset type, and remediation status
-- Historical tracking and cross-solution correlation
-- Integration with Microsoft Defender XDR incident workflows
-
-### Comprehensive Vulnerability Management
-
-Access vulnerability insights through [enhanced vulnerability management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal):
-
-- Centralized vulnerability dashboard (Vulnerability Management → Overview → Cloud tab)
-- Risk-based prioritization and enhanced filtering
-- Integration with cloud asset inventory and attack path analysis
+**[Unified RBAC and Cloud Scoping](../cloud-scopes-unified-rbac.md?pivots=defender-portal)** to streamline permission management, allowing you to efficiently manage access and assign roles within the Defender portal.
 
 ## Microsoft Defender portal ecosystem
 
