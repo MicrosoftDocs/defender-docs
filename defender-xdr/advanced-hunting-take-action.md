@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/28/2025
+ms.date: 11/10/2025
 ---
 
 # Take action on advanced hunting query results
@@ -106,17 +106,17 @@ Apart from device-focused remediation steps, you can also take some actions on e
    | project NetworkMessageId,RecipientEmailAddress, EmailDirection, SenderFromAddress, LatestDeliveryAction,LatestDeliveryLocation
    ```
 
-- `Submit to Microsoft` - select this action to submit False positives or False negative emails to Microsoft. As part of the submission, you can also add URLs, Senders and their domains to Tenant block/allow lists (TABL) to immediatley resolve the issue while Microsoft works on the submission.
+- `Submit to Microsoft` - select this action to submit False positives or False negative emails to Microsoft. As part of the submission, you can also add URLs and senders and their domains to the Tenant Allow/Block List to immediatley resolve the issue while Microsoft works on the submission.
 
-  TABL for URLs is only supported if the query result has `Url` column by joining with `EmailUrlInfo` table on `NetworkMessageId`.
+  URL entries in the Tenant Aloow/Block List are supported only if the query result has the `Url` column by joining with `EmailUrlInfo` table on `NetworkMessageId`.
 
-   Submit to Microsoft checkbox can be disabled in cases where mandatory columns are missing. To resolve this, click on Show Empty columns and Take actions. 
+   The **Submit to Microsoft** check box might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** and **Take actions**.
 
    :::image type="content" source="media/submit-to-microsoft.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/submit-to-microsoft.png":::
-  
+
 - `Initiate automated investigation` - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient or contact recipients.
 
-   Initiate automated investigation checkbox can be disabled in cases where mandatory columns are missing. To resolve this, click on Show Empty columns and Take actions. 
+   The **Initiate automated investigation** check box might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** and **Take actions**.
 
    :::image type="content" source="media/initiate-automated-investigation.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/submit-to-microsoft.png":::
 
