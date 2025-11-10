@@ -1194,7 +1194,7 @@ May 2, 2024
 
 Security policy management across clouds (Azure, AWS, GCP) is now generally available. This enables security teams to manage their security policies in a consistent way and with new features
 
-Learn more about [security policies in Microsoft Defender for Cloud](security-policy-concept.md#work-with-security-standards).
+Learn more about [security policies in Microsoft Defender for Cloud](security-policy-concept.md).
 
 ### Preview: Defender for open-source databases available in AWS
 

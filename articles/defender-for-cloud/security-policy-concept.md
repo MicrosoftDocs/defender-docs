@@ -43,7 +43,7 @@ The Defender for Cloud risk model prioritizes recommendations based on exposure,
 
 ### Custom recommendations
 
-You can create custom recommendations to define your own assessment logic by using [Kusto Query Language (KQL)](https://learn.microsoft.com/azure/data-explorer/kusto/query/). This capability is available for all clouds when the [Defender CSPM plan](concept-cloud-security-posture-management.md) is enabled.
+You can create custom recommendations to define your own assessment logic by using [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query). This capability is available for all clouds when the [Defender CSPM plan](concept-cloud-security-posture-management.md) is enabled.
 
 Custom recommendations are created within a custom standard and can also be linked to additional standards if needed.  
 Each recommendation includes query logic, remediation steps, severity, and applicable resource types.  

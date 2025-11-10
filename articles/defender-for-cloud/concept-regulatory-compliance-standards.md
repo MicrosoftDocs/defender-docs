@@ -57,7 +57,7 @@ In addition to MCSB, Defender for Cloud applies default benchmarks that extend c
 - AWS: [AWS Foundational Security Best Practices Standard](https://docs.aws.amazon.com/securityhub/latest/userguide/fsbp-standard.html)  
 - GCP: GCP Default benchmark  
 
-## Regulatory and industry standards
+## Available compliance standards
 
 Defender for Cloud includes predefined mappings to widely recognized security and compliance frameworks. These standards help organizations monitor adherence to external regulations and certification programs.
 
