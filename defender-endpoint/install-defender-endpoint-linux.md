@@ -43,7 +43,7 @@ The table in this section lists supported distributions. When running Defender f
 |---------|---------|---------|
 |Alma     |8.4 and higher         |         |
 |Amazon Linux     |2</br>2023         |2</br>2023         |
-|CentOS     |7.2 and higher, excluding CentOS Stream         |         |
+|CentOS     |7.2 and higher, excluding CentOS Stream</br>CentOS Stream 9 and higher         |         |
 |Debian     |9 - 12         |11</br>12         |
 |Fedora     |33 - 42         |         |
 |Mariner     |2         |         |
