@@ -1,6 +1,8 @@
 ---
 title: Discover and detect threats on your AI agents (Preview)
-description: Learn how see all of the AI Agents in your organization using Microsoft Defender.
+ms.author: abbyweisberg
+author: abbyweisberg_microsoft
+description: Learn how to view all of the AI Agents in your organization using Microsoft Defender.
 ms.date: 11/02/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
@@ -10,16 +12,17 @@ ms.reviewer: gayasalomon
 
 # Discover and protect your AI agents (Preview)
 
-Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio. Once you've enabled detection of your AI agents, Microsoft Defender for Cloud Apps automatically:
+Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio. Once you enable detection of your AI agents, Microsoft Defender for Cloud Apps automatically:
 - Runs detections on your AI Agents created using Copilot Studio
 - Creates alerts and incidents for suspicious activity
-- Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](/defender-xdr/advanced-hunting-overview.md).
+- Includes [AI agent data](/defender-xdr/advanced-hunting-aiagentsinfo-table) in [advanced hunting](/defender-xdr/advanced-hunting-overview).
  
 
-## Enable AI agent deteection for Microsoft Copilot Studio agents
+## Enable AI agent detection for Microsoft Copilot Studio agents
 
 > [!NOTE]
 > The onboarding process for AI Agent protection requires collaboration with Power Platform administrators.
+To enable AI agent detection for your Microsoft Copilot Studio agents, follow these steps:
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Go to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
@@ -37,7 +40,7 @@ When Copilot Studio AI Agents are connected, a green indicator appears in the **
 
 ## Detect threats on your Microsoft Copilot Studio AI agents 
 
-Once you've enabled AI agent protection on your AI agents created using Copilot Studio, enable the Microsoft 365 App Connector to:
+Once you enable AI agent protection on your AI agents created using Copilot Studio, enable the Microsoft 365 App Connector to:
 - Run detections on your AI Agents created using Copilot Studio
 - Create alerts and incidents for suspicious activity
 - Include AI agent data in advanced hunting
@@ -45,7 +48,7 @@ Once you've enabled AI agent protection on your AI agents created using Copilot 
 ### Connect Microsoft Defender for Cloud Apps to Microsoft 365 
 
 1. Complete the steps in Microsoft 365 to [Connect Defender for Cloud Apps with Microsoft 365](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
-1. When you have completed the Microsoft 365 connector setup, sign in to the **[Microsoft Defender portal](https://security.microsoft.com)**, and go to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
+1. When you complete the Microsoft 365 connector setup, sign in to the **[Microsoft Defender portal](https://security.microsoft.com)**, and go to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
 1. In the **Microsoft 365 connector** section, select **Connect** or **Edit**.
 1. Select **Microsoft Entra ID Management events** and **Microsoft 365 activities**. 
 1. Select **Connect Microsoft 365**.
