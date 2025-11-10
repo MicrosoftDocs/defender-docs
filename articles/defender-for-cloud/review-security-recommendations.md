@@ -12,7 +12,7 @@ zone_pivot_groups: defender-portal-experience
 
 # Review security recommendations
 
-In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security standards, which are applied in your Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects. Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
+In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security policies and regulatory compliance frameworks, which are applied in your cloud environments (Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP) and more). Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
 
 Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors. 
 
