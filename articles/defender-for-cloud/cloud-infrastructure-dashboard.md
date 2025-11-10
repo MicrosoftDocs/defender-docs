@@ -11,6 +11,10 @@ zone_pivot_groups: defender-portal-experience
 
 ::: zone pivot="defender-portal"
 
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
 # Cloud Infrastructure Overview Dashboard
 
 > [!NOTE]

@@ -34,6 +34,10 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 
 ::: zone pivot="defender-portal"
 
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
 ## Access cloud infrastructure assets in the Defender portal
 
 In the Microsoft Defender portal, navigate to **Assets** > **Cloud Infrastructure** to access the enhanced cloud infrastructure asset experience.

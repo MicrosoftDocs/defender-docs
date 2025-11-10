@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Review cloud security posture
 
-> [!NOTE]
+> [!Important]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:
@@ -19,7 +19,7 @@ ms.topic: conceptual
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
 > 
-> Review the known limitations article to understand current gaps during the preview phase.
+> Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 Microsoft Defender for Cloud gives a unified view of the security posture of hybrid cloud workloads with the interactive **Overview** dashboard. Select any element on the dashboard to get more information.
 

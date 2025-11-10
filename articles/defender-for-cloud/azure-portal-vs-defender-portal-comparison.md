@@ -10,7 +10,7 @@ ms.service: defender-for-cloud
 
 # Azure portal vs Defender portal feature comparison
 
-> [!NOTE]
+> [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:
@@ -22,7 +22,7 @@ ms.service: defender-for-cloud
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
 > 
-> Review the known limitations article to understand current gaps during the preview phase.
+> Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 This article provides a comprehensive comparison of Microsoft Defender for Cloud features and capabilities between the Azure portal and Defender portal experiences. Understanding these differences helps you choose the right experience for your security operations and take advantage of enhanced capabilities available in the Defender portal.
 

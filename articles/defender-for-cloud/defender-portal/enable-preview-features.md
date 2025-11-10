@@ -10,14 +10,10 @@ ms.service: defender-for-cloud
 
 # Enable preview features in the Defender portal
 
-> [!NOTE] 
-> This capability is currently in preview.   
-> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
-
 Defender for Cloud expansion to the Defender portal is in preview phase and aligns to the general preview feature guidelines and support: [Microsoft Defender XDR preview features](/defender-xdr/preview)
 
 > [!NOTE]
-> Enabling preview features in Defender portal does not impact Defender for Cloud in the Azure portal, they both live side by side.
+> Enabling preview features in Defender portal does not impact Defender for Cloud in the Azure portal, they live side by side.
 
 ## Prerequisites
 

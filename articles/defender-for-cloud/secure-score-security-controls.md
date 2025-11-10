@@ -246,6 +246,10 @@ The dashboard contains the following two reports to help you analyze your securi
 
 ::: zone pivot="defender-portal"
 
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
 ## Cloud secure score in the Defender portal
 
 The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allow you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
@@ -335,5 +339,3 @@ Navigate to **Exposure Management** > **Initiatives** for a consolidated cloud s
 - [Learn about the different elements of a recommendation](review-security-recommendations.md)
 
 ::: zone-end
-
-

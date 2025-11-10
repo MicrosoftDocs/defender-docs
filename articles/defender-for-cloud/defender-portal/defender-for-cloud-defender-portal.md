@@ -28,6 +28,8 @@ ms.service: defender-for-cloud
 > 
 > Review the [known limitations](known-limitations.md) article to understand current gaps during the preview phase.
 
+This article provides a comprehensive overview of Microsoft Defender for Cloud's integration with the Defender portal, covering key features, benefits, and capabilities available in this unified security experience.
+
 ## Overview
 
 Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud security solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid and code environments - all from one place.
