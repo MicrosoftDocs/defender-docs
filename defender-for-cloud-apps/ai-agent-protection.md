@@ -15,19 +15,20 @@ As no code/low code platforms become increasingly accessible, organizations face
 - triggering unintended tool executions
 - exploiting data sources to escalate privileges or exfiltrate data.
 
-Microsoft Defender protection for AI agents helps you by identifying the AI agents in your environment, providing monitoring capabilities, threat protection, and real-time protection during agent runtime to block suspicious tool invocations before they can execute.
+## AI agent threat protection features
+
+Microsoft Defender addresses critical security gaps with comprehensive AI agent protection that includes proactive exposure and threat hunting:
+
+- Detects all of your AI agents created with Microsoft Copilot Studio. See [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory) to learn how to set up AI agent inventory.
+- Continuously monitors your AI agents for suspicious activity, enabling detections and alerts on your AI agents created with Copilot Studio.
+- Integrates AI Agent data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats.
+ See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) and [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) to learn how to use queries to proactively hunt for threats.
+- Provides real-time protection to block suspicious or harmful actions initiated by your AI agents. See [Enable real-time protection for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-real-time-protection) to learn how to set up real-time protection.
+
 
 > [!NOTE]
 > - Microsoft Defender protection for AI agents supports AI agents created with Microsoft Copilot Studio.
 > - This feature is currently in public preview and included with your Microsoft Defender for Cloud Apps license at no extra cost. When the feature becomes generally available, licensing requirements might change.
-
-## Prerequisites
-
-Before enabling AI agent protection, make sure:
-
-- You have a valid Microsoft E5 Security license and a Microsoft Defender for Cloud Apps license.
-- You have Security Administrator privileges in the Microsoft Defender portal.
- 
 
 ## Related articles
 
