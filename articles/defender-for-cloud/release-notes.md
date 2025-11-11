@@ -31,7 +31,35 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
+| November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+
+### Updates to container image continuous vulnerability re-scan policy
+
+November 10, 2025
+
+Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability re-scan policy.
+
+Images stored in container registries are scanned when pushed and periodically re-scanned to maintain up-to-date vulnerability assessments. With this temporary update, images are now re-scanned daily if they were pushed to or pulled from the registry within the last 30 days.
+
+This change shortens the previous 90-day re-scan period to 30 days, ensuring more current vulnerability data for actively used images. Vulnerability information for images older than 30 days remains available from previous scans but is no longer updated.
+
+Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md). 
+
+### General Availability of Jfrog Artifactory and Docker Hub container registry support
+
+November 3, 2025
+
+We’re announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
+
+This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
+
+Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md).
+
+> [!NOTE]
+> Billing for Jfrog Artifactory (Cloud) & container registry support by Defender for Containers & Defender CSPM will begin on **December 2, 2025**.
+> For more information, see the [Microsoft Defender for Cloud Pricing Page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
 
 ### General availability of compliance frameworks
 
@@ -650,7 +678,7 @@ With this release, an in-product experience will be released to allow you to mig
 For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md). For information on how to disable previous versions and use the migration tool, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
 
 > [!IMPORTANT]
-> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
+> The availability of File Integrity Monitoring in Azure operated by 21Vianet and in GCCM clouds isn't currently planned to be supported.
 
 ## Next steps
 
