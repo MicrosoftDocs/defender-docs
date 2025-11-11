@@ -17,8 +17,8 @@ Microsoft Defender detects all Copilot Studio custom AI Agents in your tenant an
 When you give Microsoft Defender access to your custom agents, Microsoft Defender for Cloud Apps collects data from your Copilot Studio custom AI Agents for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ## Prerequisites
-To enable AI agent inventory and detection you must opt-in to public preview features of:
-- Microsoft Defender for Cloud Aps
+To enable AI agent inventory and detection you must opt in to public preview features of:
+- Microsoft Defender for Cloud Apps
 - Microsoft Defender for Cloud
 - Microsoft Defender XDR
 
@@ -32,7 +32,7 @@ To enable AI agent detection for your Microsoft Copilot Studio agents, follow th
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)** as the System Administrator.
 1. Go to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
-1. Turn on **Copilot Studio AI Agents**. Enabling Copilot Studio AI Agents confirms that you have read the disclaimer and that agree to use the Microsoft Defender AI agent protection features. 
+1. Turn on **Copilot Studio AI Agents**. Enabling Copilot Studio AI Agents confirms that you read the disclaimer and that agree to use the Microsoft Defender AI agent protection features. 
 
     :::image type="content" source="media/protect-ai-agents/copilot-studio-ai-agents-button.png" alt-text="Screenshot of the Copilot Studio AI Agent configuration toggle.":::
 
@@ -45,15 +45,15 @@ When Copilot Studio AI Agents are connected, a green indicator appears in the **
 
 ## Use Advanced Hunting on your AI agents
 
-After you've given Microsoft Defender access to your custom agents, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats.
+After you give Microsoft Defender access to your custom agents, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats.
 
 1. Sign in to the Defender portal, and go to **Advanced hunting**.
 1. In the **Apps & identities** section, the [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) contains data for all your custom AI agents created using Copilot Studio. You can use this data to create custom queries.
-1. In the **Queries** tab, see the **MCS AI Agents** section for pre-defined KQL queries to help identify misconfigured or risky agents.
+1. In the **Queries** tab, see the **MCS AI Agents** section for predefined KQL queries to help identify misconfigured or risky agents.
 
     For example, you can use queries to: :
     - locate agents that use maker authentication mechanisms, which might allow access to data users shouldn't have
-    - locate agents that haven't been used for over 30 days, as these may create unnecessary exposure without contributing to productivity. 
+    - locate agents that haven't been used for over 30 days, as they might create unnecessary exposure without contributing to productivity. 
 
 We recommend deleting risky agents or reaching out to their owners for further information.
  
