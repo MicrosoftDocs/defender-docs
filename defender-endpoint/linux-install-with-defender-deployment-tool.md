@@ -122,6 +122,7 @@ Additionally, the following requirements also need to be met:
       ```bash
       mdatp health --field real_time_protection_enabled
       ```
+      
       If it isn't enabled, execute the following command:
 
       ```bash
@@ -145,8 +146,8 @@ Additionally, the following requirements also need to be met:
 
       ```bash
       mdatp threat list
-    ```
- 
+      ```
+
 1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
     1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
@@ -163,18 +164,16 @@ Additionally, the following requirements also need to be met:
       ./mde_linux_edr_diy.sh
       ```
 
-    4.  After a few minutes, a detection should be raised in the Microsoft Defender XDR.
+    1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
 
-    5.  Check the alert details, machine timeline, and perform your typical investigation steps.
+    1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
 ## How to switch between channels
 
 Defender - Linux can be deployed from one of the following channels (denoted as \[channel\]):
 
 - insiders-fast
-
 - insiders-slow
-
 - prod
 
 Each of these channels corresponds to a Linux software repository. The instructions in this document describe configuring your device to use one of these repositories.
@@ -185,23 +184,31 @@ To preview new features and provide early feedback, it's recommended that you co
 
 For example, to change channel from insiders-fast to production, do the following:
 
-1.  Remove the insiders-fast channel version of Defender - Linux.
+1. Remove the insiders-fast channel version of Defender - Linux.
 
-- sudo ./defender-deployment-tool.sh \--remove \--channel insiders-fast
+   ```bash
+   sudo ./defender-deployment-tool.sh --remove --channel insiders-fast
+   ```
 
-2.  Delete the Defender for Endpoint on the Linux insiders-fast repo.
+2. Delete the Defender for Endpoint on the Linux insiders-fast repo.
 
-- sudo ./defender-deployment-tool.sh \--clean \--channel insiders-fast
+   ```bash
+   sudo ./defender-deployment-tool.sh --clean --channel insiders-fast
+   ```
 
-3.  Microsoft Defender - Linux using the production channel.
+3. Install Microsoft Defender - Linux using the production channel.
 
-- sudo ./defender-deployment-tool.sh \--install \--channel insiders-fast
+   ```bash
+   sudo ./defender-deployment-tool.sh --install --channel prod
+   ```
 
 ## Check connectivity issues
 
 If you're experiencing any connectivity issues, run this command to perform a connectivity test:
 
-sudo ./defender-deployment-tool.sh \--connectivity-test
+```bash
+sudo ./defender-deployment-tool.sh --connectivity-test
+```
 
 This test might take some time to run as it performs checks for every URL needed by mdatp and find any issues if present. If the issue persists, refer to the troubleshooting guide.
 
@@ -211,15 +218,15 @@ This test might take some time to run as it performs checks for every URL needed
 
 If you experience any installation issues, try following these steps:
 
-1.  For information on how to find the log that's generated automatically when an installation error occurs, see Log installation issues.
+1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](./linux-resources.md#log-installation-issues).
 
-2.  For information about common installation issues, see Installation issues.
+1. For information about common installation issues, see [Installation issues](./linux-support-install.md).
 
-3.  If health of the device is false, see Defender for Endpoint agent health issues.
+1. If health of the device is false, see [Defender for Endpoint agent health issues](https://learn.microsoft.com/en-us/defender-endpoint/health-status.md).
 
-4.  For product performance issues, see Troubleshoot performance issues.
+1. For product performance issues, see [Troubleshoot performance issues](./linux-support-perf.md).
 
-5.  For proxy and connectivity issues, see Troubleshoot cloud connectivity issues.
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](./linux-support-connectivity.md).
 
 ## Related content
 
