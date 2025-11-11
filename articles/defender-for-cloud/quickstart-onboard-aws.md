@@ -39,6 +39,9 @@ Before you connect your AWS account, make sure you have:
 
 Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review [native connector plan requirements](#native-connector-plan-requirements)
 
+> [!NOTE]
+> The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
+
 ## Native connector plan requirements
 
 Each Defender plan has specific setup requirements.
@@ -100,8 +103,6 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 ---
 
-> [!NOTE]
-> The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
 ## Connect your AWS account
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
