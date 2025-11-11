@@ -90,9 +90,9 @@ This dynamic understanding allows Defender XDR to move beyond reactive responses
 
 Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license. 
 
-- [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
+- Safeboot hardening - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
-- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
+- GPO hardening - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
 - [Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity. Proactively restricts the activity of the users associated with those credentials.
 
