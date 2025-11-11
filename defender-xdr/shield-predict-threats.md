@@ -114,7 +114,7 @@ This example illustrates how predictive shielding works in conjunction with auto
 
 ### Stages and defenses
 
-This table summarizes the steps of an attack and how predictive shielding and attack disruption defend against it, providing clarity and context.
+This table summarizes the steps of the attack, the protective measures that predictive shielding and attack disruption use to defend the organization, and the available analysis options.
 
 | Stage | Description | Method/feature used | Analyze with Predictive Shielding |
 |-----------|-----------------|--------------------------|-----------------------------------|
