@@ -61,7 +61,7 @@ Additionally, the following requirements also need to be met:
       >[!NOTE]
       >Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
 
-      :::image type="content" source="media/image1.png" alt-text="Screenshot showing the download package button.":::
+      :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button.":::
 
 1.From a command prompt, extract the contents of the archive:
 
@@ -84,8 +84,7 @@ Additionally, the following requirements also need to be met:
 
    `./defender-deployment-tool.sh --help`
 
-   ![](media/image2.png){width="6.5in" height="3.3645833333333335in"}
-
+   :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output.":::
 
 | **Scenario** | **Command** |
 |:-------------|:------------|
