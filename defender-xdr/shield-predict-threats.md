@@ -37,15 +37,23 @@ This article provides an overview of predictive shielding so that you can unders
 > [!TIP]
 > This article describes how predictive shielding works. To enrich these capabilities and view the predictive shielding details and results, see [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md).
 
-## How predictive shielding works
-
-Predictive shielding represents a proactive defense strategy designed to anticipate and mitigate threats as part of an ongoing attack. 
-
-Predictive shielding integrates posture, activity, and scenario context to identify potential attack paths and targets, selectively hardening critical assets or constraining attack paths just in time. This approach minimizes operational overhead and provides security teams with more time to respond.
+## How predictive shielding expands on automatic attack disruption
 
 The evolving threat landscape creates an imbalance: defenders must secure every asset, while attackers need only one opening. Traditional defenses are reactive, responding after malicious activity begins. This approach leaves defenders chasing attackers, who often act too quickly or subtly to detect in real time. While some attacker behaviors must be blocked outright, static prevention disrupts productivity and adds operational overhead.
 
-Predictive Shielding addresses these challenges by anticipating risks and applying targeted protections only where needed. This proactive approach reduces the reactive chase, minimizes operational burden, maintains usability, and protects the environment before attackers can advance.
+To address these challenges, predictive shielding enhances Defender XDR's autonomous protection stack, expanding [attack disruption](automatic-attack-disruption.md) to include proactive measures during an attack, anticipating risks and applying targeted protections only where needed. 
+
+This proactive approach reduces the reactive chase, minimizes operational burden, maintains usability, and protects the environment before attackers can advance.
+
+While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths. For example, while automatic attack disruption isolates a compromised device, predictive shielding might proactively restrict access to sensitive data for at-risk devices.
+
+## How predictive shielding works
+
+Predictive shielding uses predictive analytics and real-time insights to dynamically identify emerging risks, and applies targeted protections.
+
+Predictive shielding integrates posture, activity, and scenario context to identify potential attack paths and targets, selectively hardening critical assets or constraining attack paths just in time. 
+
+This approach minimizes operational overhead and provides security teams with more time to respond. For example, predictive shielding can dynamically restrict access to sensitive data for devices identified as at-risk, reducing the need for broad, environment-wide restrictions.
 
 Predictive shielding relies on two pillars:  
 
@@ -56,15 +64,9 @@ Predictive shielding relies on two pillars:
 
 This dual approach ensures that protection is both precise and timely.
 
-## How predictive shielding expands on automatic attack disruption
-
-Predictive shielding enhances Defender XDR's autonomous protection stack, expanding [attack disruption](automatic-attack-disruption.md) to include proactive measures during an attack. While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths.
-
-Predictive shielding uses predictive analytics and real-time insights to dynamically identify emerging risks, and applies targeted protections. This approach minimizes the operational overhead associated with broad, environment-wide restrictions while ensuring critical assets remain secure. The integration of predictive capabilities with automatic attack disruption creates a comprehensive defense strategy that addresses both immediate and future threats.
-
 ## Prediction logic
 
-Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed.
+Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed. For instance, if a specific attacker tool is detected, predictive shielding can infer the next likely target based on past attack patterns.
 
 Defender XDR uses multiple layers of insight to make accurate predictions:
 
@@ -76,7 +78,9 @@ Together, these insights create a dynamic understanding of the environment and i
 
 ## Graph-based logic
 
-Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment. This logic enables Defender XDR to forecast attacker movements in real time, prioritize defenses effectively, and stop attackers before they reach critical assets.
+Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment. 
+
+This integration allows Defender XDR to dynamically adjust protections based on the most critical vulnerabilities, enabling real-time prioritization of defenses and stopping attackers before they reach critical assets.
 
 The process involves three key stages: 
 
@@ -84,11 +88,11 @@ The process involves three key stages:
 1. Defender XDR identifies the "blast radius"—the assets and configurations that could be impacted next. 
 1. Reasoning models predict paths attackers are most likely to take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
-This dynamic understanding allows Defender XDR to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets. Organizations can use these three perspectives to gain a proactive edge in mitigating threats and safeguarding their environments.
+This dynamic understanding allows Defender XDR to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets.
 
 ## Predictive shielding actions
 
-Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license. 
+Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license.
 
 - Safeboot hardening - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
