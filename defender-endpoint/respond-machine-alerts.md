@@ -364,6 +364,8 @@ When an identity in your network might be compromised, you must prevent that ide
 
 > [!IMPORTANT]
 > As part of the active protection provided by Microsoft Defender for Endpoint, a distributed mechanism can apply LSA Policy to prevent compromised users from accessing machines in your organization. Currently, when this policy is applied on domain controllers, it may cause Group Policy synchronization activity across domain controllers.
+>
+> We are gradually rolling out a new solution by integrating with new OS APIs. This deployment will be phased and thoroughly tested to ensure stability and security. During this rollout, LSA Policy enforcement on your servers will be temporarily removed to prevent potential GPO sync. This change will remain in effect until the rollout is complete.
 
 ### How to contain a user
 
