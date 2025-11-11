@@ -89,7 +89,7 @@ After you enable specific Defender plans, their findings and data are integrated
 Agentless scanning results for vulnerabilities and data exposure can take up to 24 hours to initially populate. Findings appear in the **Recommendations** and **Asset inventory** pages. For details on the scanning cadence, see [Agentless data collection](concept-agentless-data-collection.md).
 
 ### Server resources (Defender for Servers)
-Arc-enabled EC2 instances appear in the **Asset inventory** as Azure Arc resources. For details on how Arc-enabled servers are managed, see the [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/servers/overview).
+Arc-enabled EC2 instances appear in the **Asset inventory** as Azure Arc resources. Learn more about [how Arc-enabled servers are managed](/azure/azure-arc/servers/overview).
 
 ### Kubernetes signals (Defender for Containers)
 Alerts, recommendations, and inventory data for your EKS clusters are surfaced in the **Alerts** page, **Recommendations** page, and **Asset inventory**. For a full guide on where to find this data, see [Protect Amazon Elastic Kubernetes Service clusters](defender-for-containers-enable.md).

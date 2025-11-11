@@ -30,7 +30,7 @@ To complete the procedures in this article, you need:
 
 The CloudFormation template provided by Defender for Cloud is needed to grant permission to Defender for Cloud to access you AWS account and resolve the conflict between the Defender for Cloud and Microsoft Sentinel.
 
-1. Follow the steps in the [Connect AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md) until step 5b in the [Connect Defender Plans](quickstart-onboard-aws.md#select-defender-plans) section.
+1. Follow the steps in the [Connect AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md) until step 8 in the [Connect your AWS Account](quickstart-onboard-aws.md#connect-your-aws-account) section.
 
 1. Select **Copy**.
 

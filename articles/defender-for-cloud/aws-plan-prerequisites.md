@@ -4,7 +4,7 @@ description: Review requirements and dependencies for enabling Microsoft Defende
 ms.author: elkrieger
 author: Elazark
 ms.topic: reference
-ms.date: 30/10/2025
+ms.date: 11/11/2025
 ---
 
 # Prerequisites for Defender for Cloud plans on AWS
@@ -47,7 +47,7 @@ Removing or blocking the SSM Agent prevents Defender for Cloud from automaticall
 
 Learn more:
 - [Enable enhanced security features](enable-enhanced-security.md)
-- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/servers/overview)
+- [Azure Arc overview](/azure/azure-arc/servers/overview)
 
 ## Defender for Containers (Amazon EKS)
 
@@ -104,8 +104,7 @@ Region availability: All public AWS regions except:
 - Spain
 - Bahrain
 
-Learn more:
-- [Supported platforms and availability](supported-machines-endpoint-solutions-clouds-containers.md)
+Learn more about [supported platforms and availability](supported-machines-endpoint-solutions-clouds-containers.md)
 
 ## Role-based access control (RBAC) considerations
 
@@ -120,8 +119,7 @@ Depending on your scenario, you may need:
 - Application Administrator (for CIEM)
 - Cloud Application Administrator (for CIEM)
 
-For roles and definitions, see:
-https://learn.microsoft.com/azure/role-based-access-control/built-in-roles
+Learn more about [roles and definitions](/azure/role-based-access-control/built-in-roles)
 
 ## Network requirements
 
@@ -130,8 +128,7 @@ Some plan components require outbound access to:
 - Container registry endpoints
 - AWS Systems Manager endpoints
 
-For detailed guidance, see:
-- [Azure Arc network requirements](https://learn.microsoft.com/azure/azure-arc/servers/network-requirements)
+Learn more about [Azure Arc network requirements](/azure/azure-arc/servers/network-requirements)
 
 ## AWS resource dependencies
 

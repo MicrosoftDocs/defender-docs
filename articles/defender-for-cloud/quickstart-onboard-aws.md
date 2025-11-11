@@ -38,7 +38,7 @@ Before you connect your AWS account, make sure you have:
 - Permission to create resources in Azure (Contributor or above).
 
 Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review:
-- [Prerequisites for Defender plans on AWS](aws-plans-prerequisites.md)
+- [Prerequisites for Defender plans on AWS](aws-plan-prerequisites.md)
 
 
 > [!NOTE]
