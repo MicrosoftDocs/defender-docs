@@ -64,20 +64,23 @@ Additionally, the following requirements also need to be met:
       :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button.":::
 
 1. From a command prompt, extract the contents of the archive:
-
-   - unzip WindowsDefenderATPOnboardingPackage.zip
-
-   - Archive: WindowsDefenderATPOnboardingPackage.zip\
+   ```bash
+   unzip WindowsDefenderATPOnboardingPackage.zip
+   ```
+   ```console
+   Archive: WindowsDefenderATPOnboardingPackage.zip
    inflating: defender-deployment-tool.sh
+   ```
 
 1. Grant executable permissions to the script.
-
-   `chmod +x defender-deployment-tool.sh`
+   ```bash
+   chmod +x defender-deployment-tool.sh
+   ```
 
 1. Run the script using the following command to install and onboard Microsoft Defender for Endpoint on your endpoint.
-
-   `sudo bash defender-deployment-tool.sh`
-
+   ```bash
+   sudo bash defender-deployment-tool.sh
+   ```
    This command installs the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
 
 1. You can further modify or control onboarding by passing parameters based on your requirements. Use the option `--help` to see all the available options:
