@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 10/19/2025
+ms.date: 11/11/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,9 +31,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+| November 23, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+
+### General availability of AI security posture management in GCP Vertex
+
+November 23, 2025
+
+Defender for Cloud is announcing the general availability of AI security posture management for GCP Vertex AI. This new capability helps secure AI workloads on GCP by providing continuous monitoring, risk assessments, and actionable recommendations.
+
+Learn more about [AI security posture management](ai-security-posture.md).
+
 
 ### Updates to container image continuous vulnerability re-scan policy
 

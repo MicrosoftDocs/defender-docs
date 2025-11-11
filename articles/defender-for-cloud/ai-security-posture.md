@@ -1,7 +1,7 @@
 ---
 title: Overview - AI security posture management
 description: Learn about AI security posture management in Microsoft Defender for Cloud and how it protects resources from AI threats.
-ms.date: 11/05/2025
+ms.date: 11/11/2025
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
@@ -10,7 +10,7 @@ author: Elazark
 
 # Overview - AI security posture management
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI (Preview). The Defender CSPM plan secures generative AI applications and AI agents (Preview) throughout their entire lifecycle.
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI. The Defender CSPM plan secures generative AI applications and AI agents (Preview) throughout their entire lifecycle.
 
 Defender for Cloud reduces risks to cross-cloud AI workloads by:
 
