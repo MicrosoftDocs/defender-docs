@@ -9,9 +9,9 @@ ms.date: 11/15/2025
 
 # Monitor connected AWS resources in Microsoft Defender for Cloud
 
-After you connect your AWS account to Microsoft Defender for Cloud, the service begins assessing your resources for security posture, configuration drift, and threat signals. This article describes where to monitor results, validate connector health, and view coverage.
+After you connect your AWS account to Microsoft Defender for Cloud, the service continuously assesses your resources for security posture, configuration drift, and threat signals. This article describes where to monitor results, validate connector health, and view coverage.
 
-## Where to view AWS recommendations
+## View AWS recommendations
 
 Open the **Recommendations** page in Defender for Cloud to review findings generated for your AWS resources. Use the **Environment** filter to scope results to AWS.
 
@@ -21,8 +21,7 @@ Recommendations improve security posture by identifying misconfigurations, missi
 - Severity and remediation steps
 - Relevant security standards
 
-Learn more:
-- [Work with recommendations](recommendations-reference.md)
+Learn more about [working with recommendations](recommendations-reference.md).
 
 ## View AWS resources in asset inventory
 
@@ -32,8 +31,7 @@ To view AWS resources by type, open the **Asset inventory** page in Defender for
 
 You can group resources by environment, subscription, region, or recommendation state.
 
-Learn more:
-- [Work with asset inventory](asset-inventory.md)
+Learn more about [working with asset inventory](asset-inventory.md).
 
 ## Validate connector health
 
@@ -53,10 +51,9 @@ Connector health reports:
 
 If the connector encounters permission or configuration issues, Defender for Cloud generates recommendations.
 
-Learn more:
-- [Troubleshoot multicloud connectors](troubleshoot-connectors.md)
+Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
-## Understand coverage with workbooks
+## Review coverage with workbooks
 
 Microsoft Defender for Cloud provides **coverage workbooks** that summarize:
 - Enabled plans
@@ -65,8 +62,7 @@ Microsoft Defender for Cloud provides **coverage workbooks** that summarize:
 
 Coverage reports help you ensure that workloads receive the expected protections.
 
-Learn more:
-- [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook)
+Learn more about [Coverage workbooks](custom-dashboards-azure-workbooks.md#coverage-workbook).
 
 ## View alerts in Microsoft Defender XDR
 
@@ -78,21 +74,22 @@ You can:
 - Assign incidents to analysts
 - Trigger automated response workflows
 
-Learn more:
-- [Alerts in Microsoft Defender XDR](concept-integration-365.md)
+Learn more about [alerts in Microsoft Defender XDR](concept-integration-365.md).
 
 ## View plan-specific insights
 
 After you enable specific Defender plans, their findings and data are integrated into Defender for Cloud.
 
 ### Agentless scanning (CSPM and Servers)
-Agentless scanning results for vulnerabilities and data exposure can take up to 24 hours to initially populate. Findings appear in the **Recommendations** and **Asset inventory** pages. For details on the scanning cadence, see [Agentless data collection](concept-agentless-data-collection.md).
+Agentless scanning results for vulnerabilities and data exposure can take up to 24 hours to initially populate. Findings appear in the **Recommendations** and **Asset inventory** pages. 
+
+Learn more about [agentless data collection and scanning cadence](concept-agentless-data-collection.md).
 
 ### Server resources (Defender for Servers)
 Arc-enabled EC2 instances appear in the **Asset inventory** as Azure Arc resources. Learn more about [how Arc-enabled servers are managed](/azure/azure-arc/servers/overview).
 
 ### Kubernetes signals (Defender for Containers)
-Alerts, recommendations, and inventory data for your EKS clusters are surfaced in the **Alerts** page, **Recommendations** page, and **Asset inventory**. For a full guide on where to find this data, see [Protect Amazon Elastic Kubernetes Service clusters](defender-for-containers-enable.md).
+Alerts, recommendations, and inventory data for your EKS clusters are surfaced in the **Alerts** page, **Recommendations** page, and **Asset inventory**. Learn more about [protecting Amazon Elastic Kubernetes Service clusters](defender-for-containers-enable.md).
 
 ## Next steps
 
