@@ -37,7 +37,7 @@ You can access threat analytics from the Microsoft Defender portal. By default, 
 - Analyst report
 - Indicators
 
-:::image type="content" source="media/threat-analytics/threat-analytics-sentinel-overview.png" alt-text="Screenshot of the overview section of a threat analytics report in Microsoft Defender portal." lightbox="media/sentinel-mcp/threat-analytics-sentinel-overview.png":::
+:::image type="content" source="media/threat-analytics/threat-analytics-sentinel-overview.png" alt-text="Screenshot of the overview section of a threat analytics report in Microsoft Defender portal." lightbox="media/threat-analytics/threat-analytics-sentinel-overview.png":::
 
 If you only have a Microsoft Sentinel license, you can't access the following sections in threat analytics because they're integrated with Microsoft Defender capabilities and data:
 - Related incidents
@@ -45,7 +45,7 @@ If you only have a Microsoft Sentinel license, you can't access the following se
 - Endpoints exposure
 - Recommended actions
  
-:::image type="content" source="media/threat-analytics/threat-analytics-sentinel-restricted.png" alt-text="Screenshot of the restricted Impacted assets section of a threat analytics report in Microsoft Defender portal." lightbox="media/sentinel-mcp/threat-analytics-sentinel-restricted.png":::
+:::image type="content" source="media/threat-analytics/threat-analytics-sentinel-restricted.png" alt-text="Screenshot of the restricted Impacted assets section of a threat analytics report in Microsoft Defender portal." lightbox="media/threat-analytics/threat-analytics-sentinel-restricted.png":::
 
 ## Unlock restricted sections in threat analytics
 To access these other threat analytics sections, you need to have a license for at least one Microsoft Defender product and appropriate role-based access control (RBAC) permissions. For more information about Microsoft Defender license requirements, see [Microsoft Defender XDR prerequisites](/defender-xdr/prerequisites).
