@@ -84,9 +84,9 @@ Additionally, the following requirements also need to be met:
    This command installs the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
 
 1. You can further modify or control onboarding by passing parameters based on your requirements. Use the option `--help` to see all the available options:
-
-   `./defender-deployment-tool.sh --help`
-
+   ```bash
+   > ./defender-deployment-tool.sh --help
+   ```
    :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output.":::
 
 | **Scenario** | **Command** |
@@ -112,7 +112,9 @@ Additionally, the following requirements also need to be met:
 
     1.  Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
-    - mdatp health \--field real_time_protection_enabled
+      ```bash
+      mdatp health --field real_time_protection_enabled
+      ```
 
     - If it isn't enabled, execute the following command:
 
