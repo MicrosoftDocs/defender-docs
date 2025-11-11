@@ -33,7 +33,7 @@ If Microsoft Defender determines that a prompt is suspicious:
       - Under **Microsoft 365 connector**, select **Connect** or **Edit**.
       - Select **Microsoft Entra ID Management events** and **Microsoft 365 activities**. 
       - Select **Connect Microsoft 365**.
-1. Enter the App ID provided by your Power Platform administrator and select **Save**.
+1. Work together with a Power Platform administrator to and enter the App ID provided by your Power Platform administrator and select **Save**.
       
     :::image type="content" source="media/protect-ai-agents/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-ai-agents/turn-on-real-time-agent-protection.png":::
 

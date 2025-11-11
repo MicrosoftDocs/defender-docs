@@ -12,23 +12,23 @@ ms.reviewer: gayasalomon
 
 # Discover and protect your Copilot Studio custom AI Agents (Preview)
 
-Microsoft Defender detects all Copilot Studio custom AI Agents in your tenant and provides tools to identify misconfigured or potentially risky agents.
-
-When you give Microsoft Defender access to your custom agents, Microsoft Defender for Cloud Apps collects data from your Copilot Studio custom AI Agents for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
+Microsoft Defender identifies all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects
+data from Copilot Studio for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ## Prerequisites
-To enable AI agent inventory and detection you must opt in to public preview features of:
+To enable AI agent threat protection inventory and detection you must opt in to public preview features of:
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Cloud
 - Microsoft Defender XDR
 
 For more information, see [Microsoft Defender preview features](https://security.microsoft.com/securitysettings/defender/preview_features).
 
-## Enable AI agent detection for Microsoft Copilot Studio custom agents
+## Enable Copilot Studio AI agent threat protection inventory
 
 > [!NOTE]
-> The onboarding process for AI Agent protection requires collaboration with Power Platform administrators.
-To enable AI agent detection for your Microsoft Copilot Studio agents, follow these steps:
+> The onboarding process for AI Agent threat protection inventory requires collaboration with Power Platform administrators.
+
+To enable Copilot Studio AI agent threat protection inventory, follow these steps:
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)** as the System Administrator.
 1. Go to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
@@ -40,10 +40,10 @@ To enable AI agent detection for your Microsoft Copilot Studio agents, follow th
     1. Select **Microsoft Defender - Copilot Studio AI Agents**.
     1. Turn on **Enable Microsoft Defender - Copilot Studio AI Agents**.
 
-When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory.
+When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section in the Microsoft Defender portal. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory.
 
 
-## Use Advanced Hunting on your AI agents
+## Identify misconfigured or risky AI agents
 
 After you give Microsoft Defender access to your custom agents, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats.
 

@@ -10,7 +10,7 @@ ms.reviewer: gayasalomon
 
 # Protect your Microsoft Copilot Studio AI agents (Preview)
 
-As no code/low code platforms become increasingly accessible, organizations face new types of security risks. These platforms empower people to build and deploy custom agents without centralized security review or controls in place. Attackers can attempt to manipulate these agents by:
+As no code/low code platforms become increasingly accessible, organizations face new types of security risks. These platforms empower non-technical users to build and deploy custom agents without centralized security review or controls in place. Attackers can attempt to manipulate these agents by:
 - injecting malicious prompts
 - triggering unintended tool executions
 - exploiting data sources to escalate privileges or exfiltrate data.
@@ -19,9 +19,11 @@ As no code/low code platforms become increasingly accessible, organizations face
 
 Microsoft Defender addresses critical security gaps with comprehensive AI agent protection that includes proactive exposure, threat hunting, real time protection, and alerts. With AI agent protection, Microsoft Defender:
 
-- Detects all of your custom AI agents created with Microsoft Copilot Studio, and integrates AI Agent data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. See [Discover and protect your AI agents (Preview)](ai-agent-inventory.md) to learn how to set up and make use of the AI agent inventory.
-- After you give Microsoft Defender access to your custom agents and [enable the Microsoft 365 app connector](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps), Microsoft Defender continuously monitors and collects audit logs for your AI agents for suspicious activity, enabling detections and alerts on your custom AI agents created with Copilot Studio.
-- Provides real-time protection to block suspicious or harmful actions initiated by your AI agents. See [Enable real-time protection for Microsoft Copilot Studio Agents](/real-time-agent-protection-during-runtime.md) to learn how to set up real-time protection.
+- Detects all of your custom AI agents created with Microsoft Copilot Studio, and integrates their data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. See [Discover and protect your AI agents (Preview)](ai-agent-inventory.md) to learn how to set up and make use of the AI agent inventory.
+- Collects audit logs for your custom AI agents created with Copilot Studio, continuously monitors the agents for suspicious acitivity, and enables detections and alerts. To enable this monitoring, make sure that you:
+    - Give Microsoft Defender access to your custom agents by [Enabling AI agent detection for Microsoft Copilot Studio custom agents](ai-agent-inventory.md#enable-ai-agent-detection-for-microsoft-copilot-studio-custom-agents).
+    - [Enable the Microsoft 365 app connector](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps)
+- Provides real-time protection to block suspicious or harmful actions initiated by your AI agents, and triggers an informative alert integrated into the XDR incidents and alerts environment. See [Enable real-time protection for Microsoft Copilot Studio Agents](/real-time-agent-protection-during-runtime.md) to learn how to set up real-time protection.
 
 ## Related articles
 
