@@ -303,6 +303,10 @@
             href: advanced-hunting-emailpostdeliveryevents-table.md
           - name: EmailUrlInfo
             href: advanced-hunting-emailurlinfo-table.md
+          - name: EntraIdSignInEvents
+            href: advanced-hunting-entraidsigninevents-table.md
+          - name: EntraIdSpnSignInEvents
+            href: advanced-hunting-entraidspnsigninevents-table.md
           - name: ExposureGraphEdges
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
