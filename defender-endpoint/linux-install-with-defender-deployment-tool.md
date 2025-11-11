@@ -48,7 +48,7 @@ Additionally, the following requirements also need to be met:
 
 - The endpoint should have either **wget** or **curl** installed.
 
-## Deploy Defender for Endpoint: Step-by-step guide
+## Deployment: Step-by-step guide
 
 1. Download the Defender deployment tool from the Defender portal using the following steps.
 
@@ -121,11 +121,8 @@ Additionally, the following requirements also need to be met:
       <https://secure.eicar.org/eicar.com.txt>
 
     3.  You can run more detection tests on zip files using either of the following commands:
-
-    - curl -o /tmp/eicar_com.zip\
-      [https://secure.eicar.org/eicar_com.zip\
-      ](https://secure.eicar.org/eicar_com.zip) curl -o /tmp/eicarcom2.zip\
-      <https://secure.eicar.org/eicarcom2.zip>
+      - `curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip`
+      - `curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip`
 
     4.  The files should be quarantined by Defender - Linux. Use the following command to list all the detected threats:
 

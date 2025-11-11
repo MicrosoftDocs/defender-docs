@@ -265,8 +265,8 @@
               items:
               - name: Enabling deployment to a custom location
                 href: linux-custom-location-installation.md
-              - name: Activator based deployment
-                href: linux-install-with-activator.md
+              - name: Deployment tool based deployment
+                href: linux-install-with-defender-deployment-tool.md
               - name: Installer script based deployment
                 href: linux-installer-script.md
               - name: Ansible based deployment
