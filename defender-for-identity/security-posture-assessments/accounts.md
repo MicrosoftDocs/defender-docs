@@ -165,11 +165,11 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. It's recommended to use the [Microsoft-provided script.](https://github.com/microsoft/New-KrbtgtKeys.ps1)  
 > When resetting the password twice, wait at least 10 hours between resets to avoid Kerberos authentication issues. This wait time is enforced by the script and aligns with best practices.
 
-## Change password for on-prem account with potentially leaked credentials 
+## Change password for on-prem account with potentially leaked credentials (Preview)
 
 **Description**
 
-This report lists users whose valid credentials have been leaked. When cybercriminals compromise valid passwords of legitimate users, the criminals often share those credentials. This is usually done by posting them publicly on the dark web or paste sites or by trading or selling the credentials on the black market. The Microsoft leaked credentials service acquires username/password pairs by monitoring public and dark web sites and by working with: Researchers Law enforcement Security teams at Microsoft Other trusted sources.
+This report lists users whose valid credentials have been leaked. When cybercriminals compromise valid passwords of legitimate users, the criminals often share those credentials. This is usually done by posting them publicly on the dark web or paste sites or by trading or selling the credentials on the black market. The Microsoft leaked credentials service acquires username/password pairs by monitoring public and dark web sites and by working with  Researchers Law enforcement Security teams at Microsoft Other trusted sources.
 
 **User impact**
 
