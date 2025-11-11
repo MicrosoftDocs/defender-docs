@@ -30,7 +30,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Predictive shielding (Preview) is a proactive defense strategy designed to anticipate and mitigate threats as part of an ongoing attack. Predictive [expands the Microsoft Defender XDR autonomous protection stack](#how-predictive-shielding-expands-on-automatic-attack-disruption), enhancing automatic attack disruption capabilities with proactive measures.
+Predictive shielding (Preview) is a proactive defense strategy designed to anticipate and mitigate threats as part of an ongoing attack. Predictive shielding [expands the Microsoft Defender XDR autonomous protection stack](#how-predictive-shielding-expands-on-automatic-attack-disruption), enhancing automatic attack disruption capabilities with proactive measures.
 
 This article provides an overview of predictive shielding so that you can understand its capabilities and how it enhances your security posture.
 
@@ -63,7 +63,7 @@ Predictive shielding relies on two pillars:
 
 This dual approach ensures that protection is both precise and timely.
 
-## Prediction logic
+### Prediction logic
 
 Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed. For instance, if a specific attacker tool is detected, predictive shielding can infer the next likely target based on past attack patterns.
 
@@ -75,7 +75,7 @@ Defender XDR uses multiple layers of insight to make accurate predictions:
 
 Together, these insights create a dynamic understanding of the environment and its risks.
 
-## Graph-based logic
+### Graph-based logic
 
 Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment. 
 
