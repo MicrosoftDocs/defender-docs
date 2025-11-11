@@ -48,7 +48,7 @@ Additionally, the following requirements also need to be met:
 
 - The endpoint should have either **wget** or **curl** installed.
 
-## Download and install Defender for Endpoint: step-by-step guide
+## Deploy Defender for Endpoint: Step-by-step guide
 
 1. Download the Defender deployment tool from the Defender portal using the following steps.
 
