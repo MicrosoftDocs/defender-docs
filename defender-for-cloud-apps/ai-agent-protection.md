@@ -19,7 +19,7 @@ As no code/low code platforms become increasingly accessible, organizations face
 
 Microsoft Defender addresses critical security gaps with comprehensive AI agent protection that includes proactive exposure, threat hunting, real time protection, and alerts. With AI agent protection, Microsoft Defender:
 
-- Detects all of your custom AI agents created with Microsoft Copilot Studio, and integrates their data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. See [Discover and protect your AI agents (Preview)](ai-agent-inventory.md) to learn how to set up and make use of the AI agent inventory.
+- Detects all of your custom AI agents created with Microsoft Copilot Studio, and integrates their data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. See [Copilot Studio AI agent threat protection inventory (Preview)](ai-agent-inventory.md) to learn how to set up and make use of the AI agent inventory.
 - Collects audit logs for your custom AI agents created with Copilot Studio, continuously monitors the agents for suspicious acitivity, and enables detections and alerts. To enable this monitoring, make sure that you:
     - [Enable the AI agent threat protection inventory](ai-agent-inventory.md#enable-copilot-studio-ai-agent-threat-protection-inventory).
     - [Enable the Microsoft 365 app connector](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).

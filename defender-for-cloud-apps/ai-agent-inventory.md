@@ -12,8 +12,7 @@ ms.reviewer: gayasalomon
 
 # Discover and protect your Copilot Studio custom AI Agents (Preview)
 
-Microsoft Defender identifies all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects
-data from Copilot Studio for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
+Microsoft Defender detects all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects data from Copilot Studio for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ## Prerequisites
 To enable AI agent threat protection inventory and detection you must opt in to public preview features of:
@@ -40,7 +39,7 @@ To enable Copilot Studio AI agent threat protection inventory, follow these step
     1. Select **Microsoft Defender - Copilot Studio AI Agents**.
     1. Turn on **Enable Microsoft Defender - Copilot Studio AI Agents**.
 
-When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section in the Microsoft Defender portal. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory.
+When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section in the Microsoft Defender system settings. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory.
 
 
 ## Identify misconfigured or risky AI agents
@@ -52,10 +51,10 @@ After you give Microsoft Defender access to your custom agents, you can use adva
 1. In the **Queries** tab, see the **MCS AI Agents** section for predefined KQL queries to help identify misconfigured or risky agents.
 
     For example, you can use queries to: :
-    - locate agents that use maker authentication mechanisms, which might allow access to data users shouldn't have
-    - locate agents that haven't been used for over 30 days, as they might create unnecessary exposure without contributing to productivity. 
+    - locate published agents that use maker authentication mechanisms, which might allow access to data users shouldn't have
+    - locate published agents that haven't been used for over 30 days, as they might create unnecessary exposure without contributing to productivity. 
 
-We recommend deleting risky agents or reaching out to their owners for further information.
+We recommend that you reach out to the owners of the risky agents for more information, and that you consider quarantining or deleting the risky agents.
  
 See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) to learn how to use queries to proactively hunt for threats.
 
