@@ -432,7 +432,7 @@ items:
   items:
   - name: Overview
     href: ai-agent-protection.md
-  - name: Protect your Copilot Studio custom AI agents 
+  - name: Enable AI agent threat protection inventory
     href: ai-agent-inventory.md
   - name: Enable real-time protection for AI agents
     href: real-time-agent-protection-during-runtime.md
