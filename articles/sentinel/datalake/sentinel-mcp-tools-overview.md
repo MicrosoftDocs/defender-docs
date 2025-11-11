@@ -3,7 +3,7 @@ title: What is Microsoft Sentinel MCP server's tool collection?
 titleSuffix: Microsoft Security  
 description: Learn about the different MCP collection of tools in Microsoft Sentinel 
 author: poliveria
-ms.topic: how-to
+ms.topic: conceptual
 ms.date: 09/30/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
@@ -25,7 +25,7 @@ Our collections are scenario-focused and have security-optimized descriptions th
 - Identify devices that showed an outstanding number of outgoing network connections.
 - Help me understand if the user <user object ID\> is compromised.
 - Investigate users with a password spray alert in the last seven days and tell me if any of them are compromised.
-- Find all the URL IOCs from <TI article\> and analyze them to tell me everything Microsoft knows about them.
+- Find all the URL IOCs from <threat analytics report\> and analyze them to tell me everything Microsoft knows about them.
 
 ## Available collections
 

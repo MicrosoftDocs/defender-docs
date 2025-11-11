@@ -33,7 +33,9 @@ To add the data exploration collection, you must first set up add Microsoft Sent
 - Microsoft Security Copilot
 
 The data exploration collection is hosted at the following URL:
-- `https://sentinel.microsoft.com/mcp/data-exploration`
+```
+    https://sentinel.microsoft.com/mcp/data-exploration
+```
 
 ## Tools in the data exploration collection
 
@@ -61,12 +63,15 @@ This tool runs a single KQL query against a specified Microsoft Sentinel data la
 This tool lists all Microsoft Sentinel data lake workspace name and ID pairs available to you. Including the workspace name provides you with helpful context to understand which workspace is being used. Run this tool before using any other Microsoft Sentinel tools because those tools need a workspace ID argument to function properly.
 
 
-### Entity analysis (`analyze_user_entity` and `url_entity_analysis`)
+### Entity analysis 
 
-This tool uses AI to analyze your organization's data in the Microsoft Sentinel data lake. It provides a verdict and detailed insights on URLs, domains, and user entities. It helps eliminate the need for manual data collection and complex integrations typically required for enriching and investigating entities.
+These tools use AI to analyze your organization's data in the Microsoft Sentinel data lake. They provide a verdict and detailed insights on URLs, domains, and user entities. They help eliminate the need for manual data collection and complex integrations typically required for enriching and investigating entities.
 
-For example, `analyze_user_entity` reasons over the user's authentication patterns, behavioral anomalies, activity within your organization, and more to provide a verdict and analysis. Meanwhile, `url_entity_analysis` reasons over threat intelligence from Microsoft, your custom threat intelligence in Sentinel TIP, click, email, or connection activity on the URL within your organization, and presence in Sentinel watchlists, among others to similarly provide a verdict and analysis.
+For example, `analyze_user_entity` reasons over the user's authentication patterns, behavioral anomalies, activity within your organization, and more to provide a verdict and analysis. Meanwhile, `url_entity_analysis` reasons over threat intelligence from Microsoft, your custom threat intelligence in Sentinel threat intelligence platform (TIP), click, email, or connection activity on the URL within your organization, and presence in Sentinel watchlists, among others to similarly provide a verdict and analysis.
 
+Entity analysis tools might require a few minutes to generate results, so there are tools to start analysis for each entity and another one that polls for the analysis results.
+
+#### Start analysis (`analyze_user_entity` and `url_entity_analysis`)
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
@@ -74,8 +79,18 @@ For example, `analyze_user_entity` reasons over the user's authentication patter
 | Lookback time| No |This parameter takes in the lookback time. Default is seven days. |
 | workspaceId| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
 
+These tools return an identifier value that you can provide to the retrieve analysis tool as input.
+
+#### Retrieve analysis (`get_entity_analysis`)
+
+| Parameters | Required? | Description | 
+|----------|----------|----------|
+| analysisId| Yes |This parameter takes in the job identifier received from the start analysis tools. |
+
+While this tool automatically polls for a few minutes until results are ready, its internal timeout might not be sufficient for long analysis operations. You might need to run it multiple times to get results.
+
 >[!NOTE]
->This tool might require a few minutes to generate results. It can also be beneficial to include a prompt such as `render the results as returned exactly from the tool`, which helps ensure that the response from the analyzer is provided without additional processing by the MCP client.
+> It might be beneficial to include a prompt such as `render the results as returned exactly from the tool`, which helps ensure that the response from the analyzer is provided without additional processing by the MCP client.
 
 #### Additional information
 - `analyze_user_entity` requires the following tables to be present in the data lake to ensure accuracy of the analysis:
@@ -85,7 +100,7 @@ For example, `analyze_user_entity` reasons over the user's authentication patter
     - [CloudAppEvents](../connect-microsoft-365-defender.md)
     - [IdentityInfo](/defender-xdr/advanced-hunting-identityinfo-table) (Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, or Microsoft Defender for Endpoint P2 licensing)
 
-    If you don't have any of these required tables, `analyze_user_entity` generates the following response: [Screenshot]
+    If you don't have any of these required tables, `analyze_user_entity` generates an error message that lists the tables you didn't onboard, along with links to their corresponding onboarding documentation: 
 
 - `analyze_user_entity` works best when the following table is also present in the data lake, but continues to work and assess risk, even if the said table is unavailable:
     - [AADNonInteractiveUserSignInLogs](../connect-azure-active-directory.md)
@@ -97,7 +112,7 @@ For example, `analyze_user_entity` reasons over the user's authentication patter
     - [Watchlist](../watchlists-create.md)
     - [DeviceNetworkEvents](../connect-microsoft-365-defender.md)
 
-    If you don't have any of these tables, `url_entity_analysis` generates the following response:
+    If you don't have any of these tables, `url_entity_analysis` generates a response with a disclaimer that lists the tables you didn't onboard, along with links to their corresponding onboarding documentation:
 
 ## Sample prompts
 
@@ -107,7 +122,7 @@ The following sample prompts demonstrate what you can do with the data explorati
 - Identify devices that showed an outstanding number of outgoing network connections.
 - Help me understand if the user <user object ID\> is compromised.
 - Investigate users with a password spray alert in the last seven days and tell me if any of them are compromised.
-- Find all the URL IOCs from <TI article\> and analyze them to tell me everything Microsoft knows about them.
+- Find all the URL IOCs from <threat analytics report\> and analyze them to tell me everything Microsoft knows about them.
 
 
 ## How Microsoft Sentinel MCP tools work alongside your agent
