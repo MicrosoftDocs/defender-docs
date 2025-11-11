@@ -63,33 +63,6 @@ Predictive shielding relies on two pillars:
 
 This dual approach ensures that protection is both precise and timely.
 
-## Example scenario
-
-This example illustrates how predictive shielding works in conjunction with automatic attack disruption to defend against an ongoing attack:
-
-1. A hands-on-keyboard attacker gains access to the environment and begins operating.
-2. Attack disruption automatically contains the compromised user, preventing further lateral movement.
-3. Predictive shielding anticipates the attacker's next steps and proactively hardens the environment.
-4. By the time security teams engage, the attack has already been halted, minimizing impact.
-5. Security teams investigate the incident, leveraging the attack story to understand the progression and complete the response.
-
-### Stages and defenses
-
-This table summarizes the steps of an attack and how predictive shielding and attack disruption defend against it, providing clarity and context.
-
-| Stage | Description | Method/feature used | Analyze with Predictive Shielding |
-|-----------|-----------------|--------------------------|-----------------------------------|
-| Initial Detection | An anomalous remote connection from an external IP into a domain controller using a privileged account is flagged as the first indication of compromise. | Threat intelligence and anomaly detection | Exposure graph and activity chain analysis |
-| Behavioral Analysis | A new privileged local account is created, signaling hands-on-keyboard activity. This triggers automatic containment of the user involved. | Automatic attack disruption | Incident graph to trace lateral movement |
-| Threat Actor Correlation | The account creation pattern matches the Cactus ransomware playbook. Defender correlates this activity with the Cactus threat actor profile. | Threat intelligence and pattern recognition | Pivot from the incident into Threat Analytics |
-| Threat Intelligence Integration | Bread Analytics provides insights into the attacker’s campaign methods, tooling, and typical progression patterns. | Bread Analytics | Threat Analytics dashboard for campaign insights |
-| Predictive Shielding Activation | Based on the exposure graph and activity chain, predictive shielding identifies devices at risk of being rebooted into Safe Mode. Hardening policies are automatically applied to prevent this. | Predictive shielding and hardening policies | Exposure graph to identify at-risk devices |
-| Disruption Summary | The Disruption Summary card aggregates all actions taken, showing their impact and enforcement status. | Disruption Summary card | Action center for detailed enforcement logs |
-| Live Activity Monitoring | The Activity tab provides a detailed view of every disruption action, including the alerts that triggered them and the devices protected. | Activity tab | Live view of disruption actions in the Activity tab |
-| Outcome | The attacker’s attempt to reboot devices into Safe Mode is blocked. When the attacker pivots to disabling Defender AV via Group Policy, GPO hardening prevents the propagation of malicious changes. Ultimately, the encryption attempt is blocked, and the environment remains secure. | Predictive shielding, GPO hardening, and Safeboot hardening | Incident timeline to review blocked actions |
-
-This table summarizes the steps of an attack and how predictive shielding and attack disruption defend against it, providing clarity and context.
-
 ## Prediction logic
 
 Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed. For instance, if a specific attacker tool is detected, predictive shielding can infer the next likely target based on past attack patterns.
@@ -129,9 +102,30 @@ Predictive shielding uses Defender for Endpoint-based actions. To use these acti
     > [!NOTE]
     > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
 
-## Identify when predictive shielding happens in your environment
+## Example scenario
 
-The Defender XDR incident page reflects the automatic predictive shielding actions through the attack story. The incident shows a dedicated predictive tag, highlights the status of the assets contained in the incident graph, and adds an action to the Action center. For more information, see [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md).
+This example illustrates how predictive shielding works in conjunction with automatic attack disruption to defend against an ongoing attack:
+
+1. A hands-on-keyboard attacker gains access to the environment and begins operating.
+2. Attack disruption automatically contains the compromised user, preventing further lateral movement.
+3. Predictive shielding anticipates the attacker's next steps and proactively hardens the environment.
+4. By the time security teams engage, the attack has already been halted, minimizing impact.
+5. Security teams investigate the incident, leveraging the attack story to understand the progression and complete the response.
+
+### Stages and defenses
+
+This table summarizes the steps of an attack and how predictive shielding and attack disruption defend against it, providing clarity and context.
+
+| Stage | Description | Method/feature used | Analyze with Predictive Shielding |
+|-----------|-----------------|--------------------------|-----------------------------------|
+| Initial Detection | An anomalous remote connection from an external IP into a domain controller using a privileged account is flagged as the first indication of compromise. | Threat intelligence and anomaly detection | Exposure graph and activity chain analysis |
+| Behavioral Analysis | A new privileged local account is created, signaling hands-on-keyboard activity. This triggers automatic containment of the user involved. | Automatic attack disruption | Incident graph to trace lateral movement |
+| Threat Actor Correlation | The account creation pattern matches the Cactus ransomware playbook. Defender correlates this activity with the Cactus threat actor profile. | Threat intelligence and pattern recognition | Pivot from the incident into Threat Analytics |
+| Threat Intelligence Integration | Bread Analytics provides insights into the attacker’s campaign methods, tooling, and typical progression patterns. | Bread Analytics | Threat Analytics dashboard for campaign insights |
+| Predictive Shielding Activation | Based on the exposure graph and activity chain, predictive shielding identifies devices at risk of being rebooted into Safe Mode. Hardening policies are automatically applied to prevent this. | Predictive shielding and hardening policies | Exposure graph to identify at-risk devices |
+| Disruption Summary | The Disruption Summary card aggregates all actions taken, showing their impact and enforcement status. | Disruption Summary card | Action center for detailed enforcement logs |
+| Live Activity Monitoring | The Activity tab provides a detailed view of every disruption action, including the alerts that triggered them and the devices protected. | Activity tab | Live view of disruption actions in the Activity tab |
+| Outcome | The attacker’s attempt to reboot devices into Safe Mode is blocked. When the attacker pivots to disabling Defender AV via Group Policy, GPO hardening prevents the propagation of malicious changes. Ultimately, the encryption attempt is blocked, and the environment remains secure. | Predictive shielding, GPO hardening, and Safeboot hardening | Incident timeline to review blocked actions |
 
 ## Next steps
 
