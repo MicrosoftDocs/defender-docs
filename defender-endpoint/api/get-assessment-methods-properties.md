@@ -22,12 +22,8 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Export assessment methods and properties per device
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
 
 ## API description
 

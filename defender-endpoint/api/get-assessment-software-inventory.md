@@ -22,11 +22,8 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Export software inventory assessment per device
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
 
 
 This API returns all the data for installed software that has a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis.
@@ -77,11 +74,9 @@ GET /api/machines/SoftwareInventoryByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+- Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
 </br>
 
@@ -240,11 +235,10 @@ GET /api/machines/SoftwareInventoryExport
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
-> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
 

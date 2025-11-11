@@ -22,11 +22,8 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Export software vulnerabilities assessment per device
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
 
 
 The ability to export software vulnerabilities per device returns all known software vulnerabilities and their details for all devices, on a per-device basis. Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
@@ -82,11 +79,9 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - Each record is 1 KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
-> - The properties defined in the following table are listed alphabetically, by property ID. While running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+- Each record is 1 KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. While running this API, the resulting output isn't necessarily returned in the same order listed in this table.
 
 <br>
 
@@ -289,13 +284,11 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
-> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
-> - Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some extra columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+- Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
+- Some extra columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
@@ -583,7 +576,6 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 - [Export secure configuration assessment per device](get-assessment-secure-config.md)
 - [Export software inventory assessment per device](get-assessment-software-inventory.md)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 
 

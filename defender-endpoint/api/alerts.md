@@ -15,26 +15,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 11/04/2025
+ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
 ---
-# Alert resource type
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+# Alert resource type
 
 
 > [!NOTE]
 > For the full available Alerts API experience across all Microsoft Defenders' products, visit: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
 
 ## Properties
 

@@ -24,10 +24,6 @@ appliesto:
 ---
 # Export non product code software inventory assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
 
 This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
@@ -80,11 +76,10 @@ GET /api/machines/SoftwareInventoryNoProductCodeByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+
+- Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
 </br>
 
@@ -234,5 +229,5 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCp
 Other related
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

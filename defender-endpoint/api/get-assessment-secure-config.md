@@ -22,11 +22,8 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Export secure configuration assessment per device
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
 
 
 Returns all of the configurations and their status, on a per-device basis.
@@ -80,10 +77,8 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
+- Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
 
 <br>
 
@@ -242,11 +237,9 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
 
 
 <br>
