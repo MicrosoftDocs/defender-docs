@@ -30,7 +30,7 @@ If you're new to using logic apps, see [Automate Threat Response with Playbooks 
 
 You have two options for adding the entity analysis tool to your logic app:
 - [Use an existing logic app template](#use-an-existing-logic-app-template)
-- [Add to a preexisting logic app](#add-to-a-preexisting-logic-app)
+- [Add to an existing logic app](#add-to-an-existing-logic-app)
 
 ### Use an existing logic app template 
 You can use the following logic app template for an easy and quick implementation of the entity analysis tool: [Insert link]
@@ -49,7 +49,7 @@ To add the entity analysis tool by using an existing logic app:
 1. Select **Add a new action** and then search for **New Action**. 
 1. Search for `entity analyzer` and choose the action listed under **Microsoft Sentinel MCP tools connector**.
 
-    ![Screenshot of entity analyzer as listed under Microsoft Sentinel MCP tools connector.](/media/sentinel-mcp/logic-app-existing.png)
+    ![Screenshot of entity analyzer as listed under Microsoft Sentinel MCP tools connector.](media/sentinel-mcp/logic-app-existing.png)
 
 1. Provide the following required information: 
     - **Analyze Entity Request Workspace ID** - Sentinel data lake workspace ID (GUID) 
