@@ -48,7 +48,7 @@ Each Defender plan has specific setup requirements.
 ### [Defender for Containers](#tab/Defender-for-Containers)
 
 - At least one Amazon EKS cluster with access to the Kubernetes API server. If you don't have one, [create a new EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html).  
-- Capacity to create an Amazon SQS queue, **Kinesis Data Firehose** delivery stream, and Amazon S3 bucket in the same region as the cluster.
+- Capacity to create an Amazon SQS queue, Kinesis Data Firehose delivery stream, and Amazon S3 bucket in the same region as the cluster.
 
 ### [Defender for SQL](#tab/Defender-for-SQL)
 
@@ -56,11 +56,10 @@ Each Defender plan has specific setup requirements.
 - An active AWS account with EC2 instances or RDS Custom for SQL Server.  
 - Azure Arc for servers installed on your EC2 instances or RDS Custom for SQL Server. Autoprovisioning is recommended. To enable it, you must have the **Owner** role on the Azure subscription.  
 - AWS SSM Agent installed with the [AmazonSSMManagedInstanceCore](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonSSMManagedInstanceCore.html) policy. If the SSM Agent isn’t preinstalled, follow the [AWS installation instructions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html).
-
-Enable the following extensions on your Arc-connected machines:
-- Microsoft Defender for Endpoint  
-- A vulnerability assessment solution (TVM or Qualys)  
-- [Defender for SQL extension](defender-for-sql-usage.md)
+- The following extensions enabled on your Arc-connected machines:
+    - Microsoft Defender for Endpoint  
+    - A vulnerability assessment solution (TVM or Qualys)  
+    - [Defender for SQL extension](defender-for-sql-usage.md)
 
 Learn more about [monitoring components](monitoring-components.md).
 
