@@ -18,13 +18,9 @@ Microsoft Defender for Cloud provides cloud security posture management (CSPM) a
 The Defender CSPM plan creates the onboarding connection and provides agentless security posture assessment across AWS resources.
 
 Requirements:
-- A Microsoft Azure subscription with Defender for Cloud enabled.
-- AWS account access with permission to deploy the connector.
 - Subscription Owner permissions to enable CSPM.
 - IAM permissions in AWS to assume the connector monitoring role.
-
-Optional capabilities:
-- Cloud Infrastructure Entitlement Management (CIEM), which requires the onboarding identity to have either the **Application Administrator** or **Cloud Application Administrator** Entra ID role.
+- To enable Cloud Infrastructure Entitlement Management (CIEM),the onboarding identity must have either the **Application Administrator** or **Cloud Application Administrator** Entra ID role.
 
 Learn more: [Enable Defender CSPM](tutorial-enable-cspm-plan.md)
 
