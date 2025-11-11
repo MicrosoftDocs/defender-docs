@@ -22,12 +22,9 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Get browser extensions permission information
 
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 

@@ -27,9 +27,6 @@ appliesto:
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
