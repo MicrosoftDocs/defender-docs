@@ -14,6 +14,7 @@ author: Elazark
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:
+>
 > - Unlock new cloud and posture management experiences.
 > - Provide deep integration with other Microsoft security services.
 > - Empower security teams with streamlined workflows by bringing all tools together in one portal.
@@ -32,7 +33,7 @@ Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform 
 
 - [Cloud Workload Protection Platform (CWPP)](#cloud-workload-protection-platform-cwpp) defends workloads such as virtual machines (VMs), containers, storage, databases, and serverless functions from threats.
 
-Defender for Cloud uses its broader Cloud Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early.
+Defender for Cloud uses its broader Cloud Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early. Defender for Cloud integrates with the Defender XDR portal and the Microsoft Security ecosystem, offering unified posture management and SOC experiences.
 
 In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI security and AI threat protection](#ai-security-and-threat-protection) to safeguard generative AI workloads throughout their lifecycle. These features help you discover AI applications, identify vulnerabilities, reduce risks, and detect threats targeting your generative AI workloads.
 
