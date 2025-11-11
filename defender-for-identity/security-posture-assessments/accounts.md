@@ -183,7 +183,7 @@ When the service acquires user credentials from the dark web, paste sites or the
     1. Open the Active Directory Users and Computers (ADUC) console and sign in with an administrator account.
     2. Navigate to the organizational unit (OU) where the user account is located.
     3. Find and select the user account that needs a password change.
-    4. Right-click on the user account, select **Reset Password**, enter the new password, and confirm it.“
+    4. Right-click on the user account, select **Reset Password**, enter the new password, and confirm it.
 
 
 ## Change password of built-in domain Administrator account
