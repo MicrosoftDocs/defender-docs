@@ -29,7 +29,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## November 2025
 
-| November 11, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)] |
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| November 11, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
@@ -251,7 +253,7 @@ Learn more about [internet exposure width](internet-exposure-analysis.md#interne
 
 September 11, 2025  
 
-Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/docs/latest/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
 
 **Where it applies:**  
 - [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
