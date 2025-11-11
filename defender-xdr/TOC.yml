@@ -141,7 +141,7 @@
         items:
         - name: Overview
           href: automatic-attack-disruption.md
-        - name: Configure capabilities
+        - name: Manage
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
@@ -151,7 +151,7 @@
         items:
         - name: Overview
           href: shield-predict-threats.md        
-        - name: View details and results
+        - name: Manage and view details
           href: shield-predict-threats-manage.md         
       - name: Search for threats with advanced hunting
         items:
