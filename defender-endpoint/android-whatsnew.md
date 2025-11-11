@@ -37,7 +37,9 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 **What's New**
 
 - An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
-  
+
+- Added Landscape mode UI support for the Defender app.
+
 - Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
 
 #### October 2025
