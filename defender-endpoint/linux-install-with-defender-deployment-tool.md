@@ -64,29 +64,36 @@ Additionally, the following requirements also need to be met:
       :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button.":::
 
 1. From a command prompt, extract the contents of the archive:
+
    ```bash
    unzip WindowsDefenderATPOnboardingPackage.zip
    ```
+
    ```console
    Archive: WindowsDefenderATPOnboardingPackage.zip
    inflating: defender-deployment-tool.sh
    ```
 
 1. Grant executable permissions to the script.
+
    ```bash
    chmod +x defender-deployment-tool.sh
    ```
 
 1. Run the script using the following command to install and onboard Microsoft Defender for Endpoint on your endpoint.
+
    ```bash
    sudo bash defender-deployment-tool.sh
    ```
+
    This command installs the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
 
 1. You can further modify or control onboarding by passing parameters based on your requirements. Use the option `--help` to see all the available options:
+
    ```bash
    > ./defender-deployment-tool.sh --help
    ```
+
    :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output.":::
 
 | **Scenario** | **Command** |
@@ -106,46 +113,55 @@ Additionally, the following requirements also need to be met:
 
 ## Verify deployment status
 
-1.  In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
+1. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
-2.  Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-    1.  Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
+    1. Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
       ```bash
       mdatp health --field real_time_protection_enabled
       ```
+      If it isn't enabled, execute the following command:
 
-    - If it isn't enabled, execute the following command:
+      ```bash
+      mdatp config real-time-protection --value enabled
+      ```
 
-    - mdatp config real-time-protection \--value enabled
+    1. Open a Terminal window and execute the following command to run a detection test:
 
-    2.  Open a Terminal window and execute the following command to run a detection test:
+      ```bash
+      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
+      ```
 
-    - curl -o /tmp/eicar.com.txt\
-      <https://secure.eicar.org/eicar.com.txt>
+    1. You can run more detection tests on zip files using either of the following commands:
 
-    3.  You can run more detection tests on zip files using either of the following commands:
-      - `curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip`
-      - `curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip`
+      ```bash
+      curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
+      curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
+      ```
 
-    4.  The files should be quarantined by Defender - Linux. Use the following command to list all the detected threats:
+    1. The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
 
-    - mdatp threat list
+      ```bash
+      mdatp threat list
+    ```
+ 
+1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-<!-- -->
+    1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
 
-3.  Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+    1. Grant executable permissions to the script:
 
-    1.  Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
+      ```bash
+      chmod +x mde_linux_edr_diy.sh
+      ```
 
-    2.  Grant executable permissions to the script:
+    1. Run the following command:
 
-    - chmod +x mde_linux_edr_diy.sh
-
-    3.  Run the following command:
-
-    - ./mde_linux_edr_diy.sh
+      ```bash
+      ./mde_linux_edr_diy.sh
+      ```
 
     4.  After a few minutes, a detection should be raised in the Microsoft Defender XDR.
 
