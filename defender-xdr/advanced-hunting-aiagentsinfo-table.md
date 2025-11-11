@@ -54,7 +54,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AgentActionTriggers` | `string` |List of triggers that makes an autonomous agent take action |
 | `RawAgentInfo` | `string` |Contents of the raw JSON that describes the agent and contains configuration details, as received from the provider |
 | `AuthenticationTrigger` | `string` |Indicates when authentication is triggered for the agent; possible values: As Needed, Always|
-| `AccessControlPolicy` | `string` |Ssers that can interact with the agent; possible values: Any, Copilot readers, Group membership, Any (multitenant) |
+| `AccessControlPolicy` | `string` |Users that can interact with the agent; possible values: Any, Copilot readers, Group membership, Any (multitenant) |
 | `AuthorizedSecurityGroupIds` |`dynamic` |List of Azure Active Directory Group IDs that are allowed to interact with the agent |
 | `AgentTopicsDetails` | `dynamic` |Specifications of the topics that the agent can perform |
 | `AgentToolsDetails` | `dynamic` |Specifications of the tools that the agent can access and perform actions on |
@@ -70,7 +70,7 @@ It is critical to identify agents that lack authentication mechanisms, as these 
 
 **Recommendations:**
 - Confirm the agent's use case with the owner to determine if it is intended for public access.
-- Review the Topics, Actions, and Knowledge sources to ensure there is no internal or sensitive information included.
+- Review the Topics, Actions, and Knowledge sources to ensure there's no internal or sensitive information included.
  
 ```kusto
  AIAgentsInfo
@@ -81,11 +81,11 @@ It is critical to identify agents that lack authentication mechanisms, as these 
 ```
 
 ### No authentication is required
-It is critical to identify agents that lack authentication requirements mechanisms, as these may pose significant risks to the organization due to their public availability. Organizations should know about these agents so they can acknowledge any issues. 
+It's critical to identify agents that lack authentication requirements mechanisms, as these may pose significant risks to the organization due to their public availability. Organizations should know about these agents so they can acknowledge any issues. 
 
 **Recommendations:**
 - Confirm the agent's use case with the owner to determine if it is intended for public access.
-- Review the Topics, Actions, and Knowledge sources to ensure there is no internal or sensitive information included.
+- Review the Topics, Actions, and Knowledge sources to ensure there's no internal or sensitive information included.
  
 ```kusto
 AIAgentsInfo 
@@ -123,9 +123,9 @@ directActions
 | sort by AIAgentId, Timestamp desc
 ```
 
-### Agent shared with entire organization or multi-tenant
+### Agent shared with entire organization or multitenant
  
-Identify agents that are shared with the entire organization or configured for multi-tenant access. Broad sharing increases the risk of unauthorized access by unintended users.
+Identify agents that are shared with the entire organization or configured for multitenant access. Broad sharing increases the risk of unauthorized access by unintended users.
 
 **Recommendations:**
 - Confirm with the owner whether wide sharing is intentional and justified.
@@ -169,12 +169,12 @@ AIAgentsInfo
 | where not(OwnerAccountUpns in (EnabledAccountUpns))
 ```
 
-### Suspicious HTTP request to non-standard port 
+### Suspicious HTTP request to nonstandard port 
 
 Identify agents that use HTTP actions on ports other than 443 or 80.
 
 **Recommendations:**
-- Confirm with the agent owner whether it is necessary and inquire about the specific business use case.
+- Confirm with the agent owner whether it's necessary and inquire about the specific business use case.
 
 ```kusto
 AIAgentsInfo
@@ -194,12 +194,12 @@ AIAgentsInfo
 ```
 
 
-### Suspicious HTTP request to non-standard schema 
+### Suspicious HTTP request to nonstandard schema 
 
 Identify agents that use HTTP actions to non https endpoints. 
 
 **Recommendations:**
-- Confirm with the agent owner whether it is necessary and inquire about the specific business use case.
+- Confirm with the agent owner whether it's necessary and inquire about the specific business use case.
 
 ```kusto
 AIAgentsInfo
@@ -246,7 +246,7 @@ AIAgentsInfo
 Identify agents that are using generative orchestration that involves sending email tools via outlook, and the input values of the actions are populated by the generative orchestrator. This setup is risky, since with successful XPIA attack, the agent can be used to leak data to arbitrary recipients.  
  
 **Recommendations:** 
-- Confirm with the agent owner whether it is required and inquire about the business use case. If feasible, hard code the recipient of the email into the action.
+- Confirm with the agent owner whether it's required and inquire about the business use case. If feasible, hard code the recipient of the email into the action.
  
 ```kusto 
 AIAgentsInfo
@@ -267,7 +267,7 @@ AIAgentsInfo
 Identify agents where a topic or action is configured to send emails to external mailboxes (outside the organization’s domains). This can potentially lead to sensitive or internal data being exfiltrated or leaving the organization's boundaries.
 
 **Recommendations:**
-- Verify with the agent owner whether sending external emails is necessary for the business scenario, what data will be sent, and if the external domain is authorized to receive that data.
+- Verify with the agent owner whether sending external emails is necessary for the business scenario, what data is sent, and if the external domain is authorized to receive that data.
 
 ```kusto  
 // Identify agents where a topic or action is configured to send emails to external mailboxes (outside the organization's domains)
@@ -343,9 +343,9 @@ AIAgentsInfo
 | project-reorder AgentCreationTime, AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns
 ```
 
-### Unpublished Agents which have not been modified for 30 Days
+### Unpublished Agents that haven't been modified for 30 Days
  
-Identify agents that are not published and have not been modified in the last 30 days.
+Identify agents that aren't published and haven't been modified in the last 30 days.
 
 **Recommendations:** 
 - Confirm with the agent owner if the agent is still needed. Otherwise, consider removing the agent to mitigate any potential risks.
@@ -363,7 +363,7 @@ AIAgentsInfo
 Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities.
 
 **Recommendations:**
-- Consider keeping the credentials in Azure Key Vault and retrieve in in runtime using Environment Variables (Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn) 
+- Consider keeping the credentials in Azure Key Vault and retrieve in runtime using Environment Variables (Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn) 
 - If not possible, make sure secured input option are enabled (Manage sensitive input like passwords in Power Automate - Power Automate | Microsoft Learn).
 
 ```kusto  
@@ -381,10 +381,10 @@ AIAgentsInfo
 ```
 
 ### Dormant Author Authentication connection in Agent (Runtime rule)
-Identify published agents that contain an action that runs with Author Authentication and not been used/invoked in the last 30 days. 
+Identify published agents that contain an action that runs with author authentication, and has not been used/invoked in the last 30 days. 
 
 **Recommendations:**:
- - Confirm with the agent owner if the action is needed and it is expected behavior. Otherwise, consider removi
+ - Confirm with the agent owner if the action is needed and the behavior is expected. Otherwise, consider removing the action to minimize potential risks.
  
 ```kusto
 //Find published agents that contain an action that runs with Author Authentication and not been used/invoked in the last 30 days.   
@@ -420,11 +420,11 @@ FirstFetch
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, MatchType, ConnectionReference
 ```
 
-### Agents with un-used Action
-Identify published agents with classic orchestration, that includes an Action which are not used in any Topic. 
+### Agents with unused Action
+Identify published agents with classic orchestration that include an action not used in any topic. 
 
 **Recommendations:**
- - Confirm with the agent owner if the Action is needed and if it is expected behavior. Otherwise, consider removing the Action to minimize potential risks.
+ - Confirm with the agent owner if the action is needed, and the behavior is expected. Otherwise, consider removing the action to minimize potential risks.
 
 ```kusto
 //Identify published agents with classic orchestration, that includes an Action which are not used in any Topic.  
@@ -449,8 +449,8 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, tool, ToolConnectionReference
 ```
 
-### Agents with MCP tool configured
-Find agents with MCP tool configured
+### Agents with a configured MCP tool 
+Find agents with a configured MCP tool.
 
 **Recommendations:** 
 - Confirm with the agent owner if the MCP tool is still needed. Otherwise, consider removing it to mitigate any potential risks.
