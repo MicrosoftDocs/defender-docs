@@ -48,7 +48,7 @@ Additionally, the following requirements also need to be met:
 
 - The endpoint should have either **wget** or **curl** installed.
 
-## Step-by-step guide
+## Download and install Defender for Endpoint: step-by-step guide
 
 1. Download the Defender deployment tool from the Defender portal using the following steps.
 
@@ -63,7 +63,7 @@ Additionally, the following requirements also need to be met:
 
       :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button.":::
 
-1.From a command prompt, extract the contents of the archive:
+1. From a command prompt, extract the contents of the archive:
 
    - unzip WindowsDefenderATPOnboardingPackage.zip
 
@@ -101,7 +101,7 @@ Additionally, the following requirements also need to be met:
 | Only onboard in case agent is already installed | sudo ./defender-deployment-tool.sh --only-onboard |
 | Offboard the agent | sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
 
-## Verify Deployment Status
+## Verify deployment status
 
 1.  In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
@@ -179,7 +179,7 @@ For example, to change channel from insiders-fast to production, do the followin
 
 - sudo ./defender-deployment-tool.sh \--install \--channel insiders-fast
 
-## Check Connectivity Issues
+## Check connectivity issues
 
 If you're experiencing any connectivity issues, run this command to perform a connectivity test:
 
@@ -187,7 +187,7 @@ sudo ./defender-deployment-tool.sh \--connectivity-test
 
 This test might take some time to run as it performs checks for every URL needed by mdatp and find any issues if present. If the issue persists, refer to the troubleshooting guide.
 
-## Troubleshooting installation issues
+## Troubleshoot the installation
 
 \[add how the errors will get logged in the local log file. If pre-req fails then what will happen.\]
 
