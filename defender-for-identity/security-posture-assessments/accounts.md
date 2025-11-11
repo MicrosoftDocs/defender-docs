@@ -168,12 +168,15 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 ## Change password for on-prem account with potentially leaked credentials 
 
 **Description**
+
 This report lists users whose valid credentials have been leaked. When cybercriminals compromise valid passwords of legitimate users, the criminals often share those credentials. This is usually done by posting them publicly on the dark web or paste sites or by trading or selling the credentials on the black market. The Microsoft leaked credentials service acquires username/password pairs by monitoring public and dark web sites and by working with: Researchers Law enforcement Security teams at Microsoft Other trusted sources.
 
 **User impact**
+
 When the service acquires user credentials from the dark web, paste sites or the above sources,an account with compromised credentials can be exploited by malicious actors to gain unauthorized access.
 
 **Implementation**
+
 1.	Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Change password for accounts with potentially leaked credentials**. 
 1.	Review the list of exposed entities to discover which of your account passwords were leaked.
 1.	Take appropriate actions on those entities by removing the service account:
