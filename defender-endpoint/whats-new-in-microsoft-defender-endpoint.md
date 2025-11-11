@@ -30,6 +30,12 @@ Learn more:
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services)
 - [Preview features](/defender-xdr/preview)
 
+## November 2025
+
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|New predictive shielding response actions. |Preview |Defender for Endpoint now includes the [GPO hardening](respond-machine-alerts.md#gpo-hardening) and [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening) response actions. These actions are part of the [predictive shielding](/defender-xdr/shield-predict-threats) feature, which anticipates and mitigates potential threats before they materialize.|
+
 ## October 2025
 
 |Feature  |Preview/GA  |Description  |
