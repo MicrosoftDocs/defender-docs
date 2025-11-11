@@ -22,8 +22,7 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 
 Defender for Cloud and AWS use federated authentication. During onboarding, the CloudFormation template automatically creates the required identity provider and IAM roles in AWS. These resources establish trust between Microsoft Entra ID and AWS so that Defender for Cloud can assume short-lived AWS credentials for posture assessment.
 
-To learn more, see
-[Authentication architecture for AWS connectors](concept-authentication-architecture-aws.md).
+Learn more about [the authentication architecture for AWS connectors](concept-authentication-architecture-aws.md).
 
 ## Prerequisites
 
@@ -48,7 +47,7 @@ Each Defender plan has specific setup requirements.
 
 ### [Defender for Containers](#tab/Defender-for-Containers)
 
-- At least one Amazon EKS cluster with access to the Kubernetes API server. If you need to create a new EKS cluster, see [Getting started with Amazon EKS – eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html).  
+- At least one Amazon EKS cluster with access to the Kubernetes API server. If you don't have one, [create a new EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html).  
 - Capacity to create an Amazon SQS queue, **Kinesis Data Firehose** delivery stream, and Amazon S3 bucket in the same region as the cluster.
 
 ### [Defender for SQL](#tab/Defender-for-SQL)
@@ -129,13 +128,13 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
    | 12 hours | EcsClusterArn, EcsService, EcsServiceArn, EcsTaskDefinition, EcsTaskDefinitionArn, EcsTaskDefinitionTags, AwsPolicyVersion, LocalPolicyVersion, AwsEntitiesForPolicy, LocalEntitiesForPolicy, BucketEncryption, BucketPolicy, S3PublicAccessBlockConfiguration, BucketVersioning, S3LifecycleConfiguration, BucketPolicyStatus, S3ReplicationConfiguration, S3AccessControlList, S3BucketLoggingConfig, PublicAccessBlockConfiguration |
 
    > [!IMPORTANT]
-   > Each plan may incur charges. For details, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+   > Each plan may incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
-   Each plan incurs charges. See [pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
+   Each plan incurs charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
 
    > [!IMPORTANT]
    > To present up-to-date recommendations, Defender CSPM queries AWS resource APIs several times a day. These read-only API calls incur no AWS charges. However, CloudTrail may record them if you enable read-event logging. Exporting this data to external SIEM systems may increase ingestion costs. If required, filter read-only calls from:
@@ -163,7 +162,7 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 1. Select **Create**.
 
-Defender for Cloud begins scanning your AWS resources. Security recommendations appear within a few hours. You can monitor AWS posture, alerts, and resource inventory in Defender for Cloud after onboarding. To learn more, see [Monitor connected AWS resources](monitor-connected-aws-resources.md).
+Defender for Cloud begins scanning your AWS resources. Security recommendations appear within a few hours. You can monitor AWS posture, alerts, and resource inventory in Defender for Cloud after onboarding. Learn more about [monitoring connected AWS resources](monitor-connected-aws-resources.md).
 
 ## Deploy a CloudFormation template to your AWS account
 
