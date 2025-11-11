@@ -67,4 +67,7 @@ We recommend deleting risky agents or reaching out to their owners for further i
  
 See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) to learn how to use queries to proactively hunt for threats.
 
+ ## Related articles
  
+ - [Protect your Copilot Studio custom AI Agents (Preview)](ai-agent-protection.md)
+ - [Enable real-time protection for Microsoft Copilot Studio Agents](real-time-agent-protection-during-runtime.md)  
