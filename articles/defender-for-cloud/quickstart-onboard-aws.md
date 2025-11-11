@@ -98,98 +98,10 @@ Defender for Servers assigns resource tags (`AccountId`, `Cloud`, `InstanceId`, 
 
 Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
-Each plan has its own requirements for the native connector.
-
-### [Defender for Containers](#tab/Defender-for-Containers)
-
-If you choose the Microsoft Defender for Containers plan, you need:
-
-- At least one Amazon EKS cluster with permission to access to the EKS Kubernetes API server. If you need to create a new EKS cluster, follow the instructions in [Getting started with Amazon EKS – eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html).
-- The resource capacity to create a new Amazon SQS queue, ```Kinesis Data Firehose``` delivery stream, and Amazon S3 bucket in the cluster's region.
-
-### [Defender for SQL](#tab/Defender-for-SQL)
-
-If you choose the Microsoft Defender for SQL plan, you need:
-
-- Microsoft Defender for SQL enabled on your subscription. [Learn how to protect your databases](tutorial-enable-databases-plan.md).
-- An active AWS account, with EC2 instances running SQL Server or RDS Custom for SQL Server.
-- Azure Arc for servers installed on your EC2 instances or RDS Custom for SQL Server.
-
-We recommend that you use the autoprovisioning process to install Azure Arc on all of your existing and future EC2 instances. To enable the Azure Arc autoprovisioning, you need **Owner** permission on the relevant Azure subscription.
-
-AWS Systems Manager (SSM) uses the SSM Agent to handle automatic provisioning. Some Amazon Machine Images already have the [SSM Agent preinstalled](https://docs.aws.amazon.com/systems-manager/latest/userguide/ami-preinstalled-agent.html). If your EC2 instances don't have the SSM Agent, install it by using these instructions from Amazon: [Install SSM Agent for a hybrid and multicloud environment (Windows)](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html).
-
-Ensure that your SSM Agent has the managed policy [AmazonSSMManagedInstanceCore](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonSSMManagedInstanceCore.html). It enables core functionality for the AWS Systems Manager service.
-
-Enable these other extensions on the Azure Arc-connected machines:
-
-- Microsoft Defender for Endpoint
-- A vulnerability assessment solution (TVM or Qualys)
-- The Defender for SQL extension. For more information, see [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md).
-
-[Learn more about monitoring components](monitoring-components.md) for Defender for Cloud.
-
-### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-Preview)
-
-If you choose the Defender for open-source relational databases plan, you need:
-
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
-
-- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
-
-- Connect your [Azure account](connect-azure-subscription.md) or AWS account.
-
-Region availability: All public AWS regions (excluding Tel Aviv, Milan, Jakarta, Spain, and Bahrain).
-
-### [Defender for Servers](#tab/Defender-for-Servers)
-
-If you choose the Microsoft Defender for Servers plan, you need:
-
-- Microsoft Defender for Servers enabled on your subscription. Learn how to enable plans in [Enable enhanced security features](enable-enhanced-security.md).
-- An active AWS account, with EC2 instances.
-- Azure Arc for servers installed on your EC2 instances.
-
-We recommend that you use the autoprovisioning process to install Azure Arc on all of your existing and future EC2 instances. To enable the Azure Arc autoprovisioning, you need **Owner** permission on the relevant Azure subscription.
-
-AWS Systems Manager automatically provisions using the SSM Agent. Some Amazon Machine Images already have the [SSM Agent preinstalled](https://docs.aws.amazon.com/systems-manager/latest/userguide/ami-preinstalled-agent.html). If your EC2 instances don't have the SSM Agent, install it by using either of the following instructions from Amazon:
-
-- [Install SSM Agent for a hybrid and multicloud environment (Windows)](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html)
-- [Install SSM Agent for a hybrid and multicloud environment (Linux)](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html)
-
-Ensure that your SSM Agent has the managed policy [AmazonSSMManagedInstanceCore](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonSSMManagedInstanceCore.html), which enables core functionality for the AWS Systems Manager service.
-
-**You must have the SSM Agent for auto provisioning Arc agent on EC2 machines. If the SSM doesn't exist, or is removed from the EC2, the Arc provisioning won't be able to proceed.**
-
-> [!NOTE]
-> As part of the CloudFormation template that is run during the onboarding process, an automation process is created and triggered every 30 days, over all the EC2s that existed during the initial run of the CloudFormation. The goal of this scheduled scan is to ensure that all the relevant EC2s have an IAM profile with the required IAM policy that allows Defender for Cloud to access, manage, and provide the relevant security features (including the Arc agent provisioning). The scan doesn't apply to EC2s that were created after the run of the CloudFormation.
-
-If you want to manually install Azure Arc on your existing and future EC2 instances, use the [EC2 instances should be connected to Azure Arc](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/231dee23-84db-44d2-bd9d-c32fbcfb42a3) recommendation to identify instances that don't have Azure Arc installed.
-
-Enable these other extensions on the Azure Arc-connected machines:
-
-- Microsoft Defender for Endpoint
-- A vulnerability assessment solution (TVM or Qualys)
-
-> [!NOTE]
-> As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
-
-Defender for Servers assigns tags to your Azure ARC resources on top of your EC2 instances to manage the autoprovisioning process. You must have these tags properly assigned to your resources so that Defender for Cloud can manage them: `AccountId`, `Cloud`, `InstanceId`, and `MDFCSecurityConnector`.
-
-### [Defender CSPM](#tab/Defender-for-CSPM)
-
-If you choose the Microsoft Defender CSPM plan, you need:
-
-- Subscription Owner permissions to enable CSPM.
-- IAM permissions in AWS to assume the connector monitoring role.
-- To enable Cloud Infrastructure Entitlement Management (CIEM),the onboarding identity must have either the **Application Administrator** or **Cloud Application Administrator** Entra ID role.
-
-Learn more about how to [enable Defender CSPM](tutorial-enable-cspm-plan.md).
-
 ---
 
 > [!NOTE]
 > The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
-
 ## Connect your AWS account
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
