@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 |------|---------|-------|
 | November 23, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
@@ -54,6 +55,18 @@ This integration brings new values and benefits for security personas:
 **Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
 
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
+
+### Updates to container image continuous vulnerability re-scan policy
+
+November 10, 2025
+
+Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability re-scan policy.
+
+Images stored in container registries are scanned when pushed and periodically re-scanned to maintain up-to-date vulnerability assessments. With this temporary update, images are now re-scanned daily if they were pushed to or pulled from the registry within the last 30 days.
+
+This change shortens the previous 90-day re-scan period to 30 days, ensuring more current vulnerability data for actively used images. Vulnerability information for images older than 30 days remains available from previous scans but is no longer updated.
+
+Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md). 
 
 ### General Availability of Jfrog Artifactory and Docker Hub container registry support
 
@@ -686,7 +699,7 @@ With this release, an in-product experience will be released to allow you to mig
 For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md). For information on how to disable previous versions and use the migration tool, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
 
 > [!IMPORTANT]
-> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
+> The availability of File Integrity Monitoring in Azure operated by 21Vianet and in GCCM clouds isn't currently planned to be supported.
 
 ## Next steps
 
