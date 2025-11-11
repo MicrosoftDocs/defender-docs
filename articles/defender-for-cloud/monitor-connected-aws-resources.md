@@ -7,9 +7,9 @@ ms.topic: how-to
 ms.date: 11/15/2025
 ---
 
-# Monitor connected AWS resources in Microsoft Defender for Cloud
+# Monitor AWS resources connected to Microsoft Defender for Cloud
 
-After you connect your AWS account to Microsoft Defender for Cloud, the service continuously assesses your resources for security posture, configuration drift, and threat signals. This article describes where to monitor results, validate connector health, and view coverage.
+After you [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md), the service continuously assesses your resources for security posture, configuration drift, and threat signals. This article describes where to monitor results, validate connector health, and view coverage.
 
 ## View AWS recommendations
 
@@ -78,7 +78,7 @@ Learn more about [alerts in Microsoft Defender XDR](concept-integration-365.md).
 
 ## View plan-specific insights
 
-After you enable specific Defender plans, their findings and data are integrated into Defender for Cloud.
+After you enable specific Defender plans, their findings and data are integrated into Defender for Cloud. The insights and data available depend on which Defender plans are enabled for your AWS environment.
 
 ### Agentless scanning (CSPM and Servers)
 Agentless scanning results for vulnerabilities and data exposure can take up to 24 hours to initially populate. Findings appear in the **Recommendations** and **Asset inventory** pages. 
