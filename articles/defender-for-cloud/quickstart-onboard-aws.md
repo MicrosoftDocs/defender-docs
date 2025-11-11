@@ -36,7 +36,7 @@ Before you connect your AWS account, make sure you have:
 
 - Permission to create resources in Azure (Contributor or above).
 
-Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review [native connector plan requirements](#native-connector-plan-requirements)
+Additional prerequisites apply when enabling specific Defender plans (such as Servers, Containers, or SQL). Review the [native connector plan requirements](#native-connector-plan-requirements).
 
 > [!NOTE]
 > The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
