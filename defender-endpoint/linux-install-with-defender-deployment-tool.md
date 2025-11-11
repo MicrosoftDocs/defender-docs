@@ -30,7 +30,7 @@ The defender-deployment tool package supports both manual and bulk onboarding th
 
 ## Prerequisites and system requirements
 
-Before you get started, see Prerequisites for Defender - Linux for a description of prerequisites and system requirements. The Defender Deployment Tool enforces the following set of blocking pre-requisites checks:
+Before you get started, see Prerequisites for Defender - Linux for a description of prerequisites and system requirements. The Defender Deployment Tool enforces the following set of blocking prerequisites checks:
 
 - Memory \> 1 GB
 
@@ -38,7 +38,7 @@ Before you get started, see Prerequisites for Defender - Linux for a description
 
 - Glibc library version newer than 2.17
 
-- The requested mdatp version should be one of the latest 9 versions.
+- The requested mdatp version should be one of the latest nine versions.
 
 There is also an option to run the connectivity test, which checks if the URLs Defender for Endpoint uses are accessible or not.
 
@@ -98,8 +98,8 @@ Additionally, the following requirements also need to be met:
 
 | **Scenario** | **Command** |
 |:-------------|:------------|
-| [pre-req blocking] | [No special command. Enabled by default for install scenario] sudo ./defender-deployment-tool.sh |
-| [pre-req non-blocking] | sudo ./defender-deployment-tool.sh --pre-req-non-blocking |
+| [prereq blocking] | [No special command. Enabled by default for install scenario] sudo ./defender-deployment-tool.sh |
+| [prereq nonblocking] | sudo ./defender-deployment-tool.sh --pre-req-non-blocking |
 | [connectivity-test] | sudo ./defender-deployment-tool.sh --connectivity-test |
 | [custom install] | sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/ |
 | [one example for insider-slow channel] | sudo ./defender-deployment-tool.sh --channel insiders-slow |
@@ -119,34 +119,34 @@ Additionally, the following requirements also need to be met:
 
     1. Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
-      ```bash
-      mdatp health --field real_time_protection_enabled
-      ```
+         ```bash
+         mdatp health --field real_time_protection_enabled
+         ```
       
-      If it isn't enabled, execute the following command:
+         If it isn't enabled, execute the following command:
 
-      ```bash
-      mdatp config real-time-protection --value enabled
-      ```
+         ```bash
+         mdatp config real-time-protection --value enabled
+         ```
 
     1. Open a Terminal window and execute the following command to run a detection test:
 
-      ```bash
-      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
-      ```
+         ```bash
+         curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
+         ```
 
     1. You can run more detection tests on zip files using either of the following commands:
 
-      ```bash
-      curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
-      curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
-      ```
+         ```bash
+         curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
+         curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
+         ```
 
     1. The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
-
-      ```bash
-      mdatp threat list
-      ```
+   
+         ```bash
+         mdatp threat list
+         ```
 
 1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
@@ -154,15 +154,15 @@ Additionally, the following requirements also need to be met:
 
     1. Grant executable permissions to the script:
 
-      ```bash
-      chmod +x mde_linux_edr_diy.sh
-      ```
+         ```bash
+         chmod +x mde_linux_edr_diy.sh
+         ```
 
     1. Run the following command:
 
-      ```bash
-      ./mde_linux_edr_diy.sh
-      ```
+         ```bash
+         ./mde_linux_edr_diy.sh
+         ```
 
     1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
 
@@ -214,7 +214,7 @@ This test might take some time to run as it performs checks for every URL needed
 
 ## Troubleshoot the installation
 
-\[add how the errors will get logged in the local log file. If pre-req fails then what will happen.\]
+\[add how the errors will get logged in the local log file. If prereq fails then what will happen.\]
 
 If you experience any installation issues, try following these steps:
 
