@@ -41,34 +41,130 @@ Defender for Cloud's integration with Endor Labs enhances vulnerability analysis
 
 Learn more about the [Endor Labs integration](integration-endor-labs.md).
 
+## November 2025
+
+| Date | Category | Update |
+|------|---------|-------|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
+| November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
+| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+
+### Updates to container image continuous vulnerability re-scan policy
+
+November 10, 2025
+
+Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability re-scan policy.
+
+Images stored in container registries are scanned when pushed and periodically re-scanned to maintain up-to-date vulnerability assessments. With this temporary update, images are now re-scanned daily if they were pushed to or pulled from the registry within the last 30 days.
+
+This change shortens the previous 90-day re-scan period to 30 days, ensuring more current vulnerability data for actively used images. Vulnerability information for images older than 30 days remains available from previous scans but is no longer updated.
+
+Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md). 
+
+### General Availability of Jfrog Artifactory and Docker Hub container registry support
+
+November 3, 2025
+
+We’re announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
+
+This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
+
+Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md).
+
+> [!NOTE]
+> Billing for Jfrog Artifactory (Cloud) & container registry support by Defender for Containers & Defender CSPM will begin on **December 2, 2025**.
+> For more information, see the [Microsoft Defender for Cloud Pricing Page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
+
+### General availability of compliance frameworks
+
+November 3, 2025
+
+The following regulatory compliance standards, previously available in preview, are now generally available in Microsoft Defender for Cloud.
+
+|Standard|Cloud|
+|------------|--------|
+| APRA CPS 234 2019 | Azure, AWS |
+| Australian Government ISM PROTECTED | Azure |
+| Australian Government Information Security Manual 12.2023 | AWS, GCP |
+| AWS Foundational Security Best Practices | AWS |
+| AWS Well-Architected Framework 2024 | AWS |
+| Brazil General Data Protection Law (LGPD) 2018 | Azure, AWS, GCP |
+| California Consumer Privacy Act (CCPA) | AWS, GCP |
+| Canada Federal PBMM 3.2020 | Azure, AWS, GCP |
+| CIS Amazon Elastic Kubernetes Service (EKS) Benchmark | AWS |
+| CIS AWS Foundations v3.0.0 | AWS |
+| CIS Azure Foundations v2.1.0 | Azure |
+| CIS Azure Kubernetes Service (AKS) Benchmark | Azure |
+| CIS Controls v8.1 | Azure, AWS, GCP |
+| CIS GCP Foundations v3.0 | GCP |
+| CIS Google Cloud Platform Foundation Benchmark | GCP |
+| CIS Google Kubernetes Engine (GKE) Benchmark | GCP |
+| CRI Profile | AWS, GCP |
+| Criminal Justice Information Services Security Policy v5.9.5 | Azure, AWS, GCP |
+| CSA Cloud Controls Matrix v4.0.12 | Azure, AWS, GCP |
+| Cyber Essentials v3.1 | Azure, AWS, GCP |
+| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
+| EU 2022/2555 (NIS2) 2022 | Azure, AWS, GCP |
+| EU General Data Protection Regulation (GDPR) 2016/679 | Azure, AWS, GCP |
+| FedRAMP ‘H’ & ‘M’ | Azure |
+| FedRAMP High Baseline Rev5 | AWS, GCP |
+| FedRAMP Moderate Baseline Rev5 | AWS, GCP |
+| FFIEC CAT 2017 | Azure, AWS, GCP |
+| HIPAA | Azure |
+| HITRUST CSF v11.3.0 | Azure, AWS, GCP |
+| ISO/IEC 27001:2022 | Azure, AWS, GCP |
+| ISO/IEC 27002:2022 | Azure, AWS, GCP |
+| ISO/IEC 27017:2015 | Azure, AWS, GCP |
+| NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
+| NIST 800-171 Rev 3 | Azure, AWS, GCP |
+| NIST CSF v2.0 | Azure, AWS, GCP |
+| NIST SP 800-53 R5 | AWS |
+| NIST SP 800-53 R5.1.1 | Azure, AWS, GCP |
+| NIST SP 800-172 2021 | AWS, GCP |
+| NZISM v3.7 | Azure, AWS, GCP |
+| PCI DSS 3.2.1 | GCP |
+| PCI DSS v4.0.1 | Azure, AWS, GCP |
+| RMIT Malaysia | Azure |
+| Sarbanes–Oxley Act 2022 (SOX) | Azure, AWS, GCP |
+| SOC 2023 | Azure, AWS, GCP |
+| SOC 2 | Azure, GCP |
+| Spanish ENS | Azure |
+| SWIFT Customer Security Controls Framework 2024 | Azure, AWS, GCP |
+| SWIFT CSP-CSCF v2020 | Azure |
+| UK OFFICIAL and UK NHS | Azure |
+| Reserve Bank of India – IT Framework for NBFC | Azure |
+| Cybersecurity Maturity Model Certification (CMMC) Level 3 | Azure, AWS, GCP |
+| ISO/IEC 27018:2019 | Azure, AWS, GCP |
+| ISO/IEC 27019:2020 | Azure, AWS, GCP |
+| NIST SP 800-53 R6 | Azure, AWS, GCP |
+| NIST SP 800-82 R3 | Azure, AWS, GCP |
+| NIST AI Risk Management Framework (AI RMF 1.0) | Azure, AWS, GCP |
+| US Executive Order 14028 | Azure, AWS, GCP |
+| Singapore MTCS SS 584:2015 | Azure, AWS, GCP |
+| Thailand PDPA 2019 | Azure, AWS, GCP |
+| Japan ISMAP | Azure, AWS, GCP |
+
+Learn more about [regulatory compliance standards in Microsoft Defender for Cloud](concept-regulatory-compliance-standards.md).
+
 ## October 2025
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)](#gcp-cloud-logging-ingestion-support-preview)|
+|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
-### GCP Cloud Logging Ingestion Support (Preview)
+### GCP Cloud Logging ingestion (preview)
 
 October 31, 2025
 
-Microsoft Defender for Cloud now supports **GCP Cloud Logging ingestion** in Public Preview, further strengthening multi-cloud identity posture and permissions management across GCP environments. 
+GCP Cloud Logging ingestion is now available in preview, improving CIEM insights and permission-usage visibility across Google Cloud environments.
 
-This new capability enables enhanced cloud identity activity insights, permission-usage visibility, and least-privilege recommendations and ensures uninterrupted CIEM recommendations for your GCP environments. To maintain continuous CIEM insights and recommendations for your connected GCP environments, you must enable GCP Cloud Logging ingestion going forward.
+To maintain continuous CIEM recommendations for connected GCP environments, enable Cloud Logging ingestion using a new or existing Pub/Sub subscription.
 
-#### Recommended Action
+Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
 
-Turn on **GCP Cloud Logging ingestion (Preview)** by following the steps in our [documentation ](https://aka.ms/multicloudconnectors) and choosing one of the following options:
-
-1. Create a new Pub/Sub subscription within the wizard, or
-
-1. Provide details for an existing Pub/Sub subscription to ingest logs
-
-> [!NOTE]
-> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform.
-
-### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
+### Deprecation notice: update outbound rules for Microsoft Defender for Containers 
 
 Microsoft Defender for Containers updated the outbound network requirements for the Defender sensor. You must update your outbound rules to maintain proper functionality. 
 
@@ -78,7 +174,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 `*.cloud.defender.microsoft.com` (HTTPS: port 443) 
 
-#### Recommended Actions 
+#### Recommended actions 
 
 1. Add the new FQDN and port to your allowed traffic in your outbound restriction method, such as a proxy or firewall. 
 
@@ -90,7 +186,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 To avoid service disruption, complete any necessary updates of GKE and EKS by September 30, 2026. If no action is taken where required, the Defender for Containers sensor won't function as expected.
 
-### GitHub Application Permissions Update
+### GitHub application permissions update
 
 October 23, 2025
 
@@ -596,7 +692,7 @@ With this release, an in-product experience will be released to allow you to mig
 For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md). For information on how to disable previous versions and use the migration tool, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
 
 > [!IMPORTANT]
-> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
+> The availability of File Integrity Monitoring in Azure operated by 21Vianet and in GCCM clouds isn't currently planned to be supported.
 
 ## Next steps
 

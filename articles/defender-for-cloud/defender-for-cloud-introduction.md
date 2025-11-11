@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender for Cloud Overview
-description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud, a cloud-native application protection platform (CNAPP) that utilizes both cloud security posture management (CSPM), and Cloud workload protection platform (CWPP) to protect your Azure, AWS, GCP and on premises environments. 
+description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud. This cloud-native application protection platform (CNAPP) includes two key capabilities, cloud security posture management (CSPM) and cloud workload protection platform (CWPP). It helps protect your environments across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises systems.
 ms.topic: overview
-ms.date: 10/15/2025
+ms.date: 11/05/2025
 ms.author: elkrieger
 author: Elazark
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
@@ -10,15 +10,17 @@ author: Elazark
 
 # What is Microsoft Defender for Cloud?
 
-Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp), which is a unified solution that combines multiple cloud security tools to protect applications across their entire lifecycle. The solution provides a comprehensive view of your security posture across your cloud and on-premises resources. It also helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. There are three core components:
-
-- [Development Security Operations (DevSecOps)](#development-security-operations-devsecops) manages code-level security across multicloud and multi-pipeline environments.
+Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp), which is a unified solution that combines multiple cloud security tools to protect applications across their entire lifecycle. The solution provides a comprehensive view of your security posture across your cloud and on-premises resources. It also helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. It has three core components:
 
 - [Cloud Security Posture Management (CSPM)](#cloud-security-posture-management-cspm) checks and improves the security posture of cloud resources.
+
+- [Development Security Operations (DevSecOps)](#development-security-operations-devsecops) manages code-level security across multicloud and multi-pipeline environments.
 
 - [Cloud Workload Protection Platform (CWPP)](#cloud-workload-protection-platform-cwpp) defends workloads such as virtual machines (VMs), containers, storage, databases, and serverless functions from threats.
 
 Defender for Cloud uses its broader Cloud Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early.
+
+In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI security and AI threat protection](#ai-security-and-threat-protection) to safeguard generative AI workloads throughout their lifecycle. These features help you discover AI applications, identify vulnerabilities, reduce risks, and detect threats targeting your generative AI workloads.
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
@@ -44,18 +46,9 @@ Defender for Cloud's available plans and their CNAPP benefits include:
 | **Defender for Databases** |  Protects your entire database estate with attack detection and threat response for the various database types in Azure. | [Overview of Microsoft Defender for Azure SQL](defender-for-sql-introduction.md) <br><br>  [Protect your databases with Defender for Databases](tutorial-enable-databases-plan.md) <br><br> [What is Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md) <br><br> [Overview of Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) |
 | **Defender for Key Vault** | Detects unusual and potentially harmful attempts to access or exploit Key Vault accounts. | [Overview of Microsoft Defender for Key Vault](defender-for-key-vault-introduction.md) <br><br> [Protect your key vaults with Defender for Key Vault](tutorial-enable-key-vault-plan.md) | 
 | **Defender for APIs**| Provides visibility into business critical APIs, improves API security posture, prioritization of vulnerability fixes, and quickly detect active real-time threats. | [About Microsoft Defender for APIs](defender-for-apis-introduction.md) <br><br> [Protect your APIs with Defender for APIs](defender-for-apis-deploy.md) |
+| **AI Services** | Identifies threats to generative AI applications in real time and helps respond to security issues. | [AI threat protection](ai-threat-protection.md) <br><br> [Enable threat protection for AI services](ai-onboarding.md) |
 
 You can also check out the E-book ["From plan to deployment: Implementing a Cloud Native Application Protection Platform (CNAPP) strategy"](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Implementing-A-Cloud-Native-Application-Protection-Strategy-Ebook.pdf), to learn more about implementing CNAPP in Defender for Cloud.
-
-## Development security operations (DevSecOps)
-
-Defender for Cloud adds security to the start of development. It lets you secure code pipelines and environments, and monitor your security posture from one place. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
-
-Applications require security awareness at the code, infrastructure, and runtime levels to ensure that deployed applications are hardened against attacks.
-
-| Capability | What problem does it solve? | Get started | Defender plan |
-|--|--|--|--|
-| [Code pipeline insights](defender-for-devops-introduction.md) | Empowers security teams with the ability to protect applications and resources from code to cloud across multi-pipeline environments, including GitHub, Azure DevOps, and GitLab. DevOps security findings, such as Infrastructure as Code (IaC) misconfigurations and exposed secrets, can then be correlated with other contextual cloud security insights to prioritize remediation in code. | Connect [Azure DevOps](quickstart-onboard-devops.md), [GitHub](quickstart-onboard-github.md), and [GitLab](quickstart-onboard-gitlab.md) repositories to Defender for Cloud | Foundational CSPM (Free) and Defender CSPM |
 
 ## Cloud security posture management (CSPM)
 
@@ -74,7 +67,18 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 | [Attack path analysis](concept-attack-path.md#what-is-an-attack-path) | Model traffic on your network to identify potential risks before you implement changes to your environment. | [Build queries to analyze paths](how-to-manage-attack-path.md) | Defender CSPM                         |
 | [Cloud Security Explorer](concept-attack-path.md#what-is-cloud-security-explorer) | A map of your cloud environment that lets you build queries to find security risks. | [Build queries to find security risks](how-to-manage-cloud-security-explorer.md) | Defender CSPM                         |
 | [Security governance](governance-rules.md)                   | Drive security improvements through your organization by assigning tasks to resource owners and tracking progress in aligning your security state with your security policy. | [Define governance rules](governance-rules.md)               | Defender CSPM                         |
-| [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/) | Provide comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP. | [Review your Permission Creep Index (PCI)](other-threat-protections.md#entra-permission-management-formerly-cloudknox) | Defender CSPM                         |
+| [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/) | Provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP. | [Review your Permission Creep Index (PCI)](other-threat-protections.md#entra-permission-management-formerly-cloudknox) | Defender CSPM                         |
+| [AI SPM](identify-ai-workload-model.md) | Provides a comprehensive view of your organization's AI Bill of Materials (AI BOM) which assesses the security posture of the scanned AI workloads. | [Discover generative AI workloads](identify-ai-workload-model.md) | Defender CSPM |
+
+## Development security operations (DevSecOps)
+
+Defender for Cloud adds security to the start of development. It lets you secure code pipelines and environments, and monitor your security posture from one place. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
+
+Applications require security awareness at the code, infrastructure, and runtime levels to ensure that deployed applications are hardened against attacks.
+
+| Capability | What problem does it solve? | Get started | Defender plan |
+|--|--|--|--|
+| [Code pipeline insights](defender-for-devops-introduction.md) | Empowers security teams with the ability to protect applications and resources from code to cloud across multi-pipeline environments, including GitHub, Azure DevOps, and GitLab. DevOps security findings, such as Infrastructure as Code (IaC) misconfigurations and exposed secrets, can then be correlated with other contextual cloud security insights to prioritize remediation in code. | Connect [Azure DevOps](quickstart-onboard-devops.md), [GitHub](quickstart-onboard-github.md), and [GitLab](quickstart-onboard-gitlab.md) repositories to Defender for Cloud | Foundational CSPM (Free) and Defender CSPM |
 
 ## Cloud workload protection platform (CWPP)
 
@@ -90,9 +94,20 @@ When your environment is threatened, security alerts immediately indicate the na
 | Protect containers | Secure your containers so you can improve, monitor, and maintain the security of your clusters, containers, and their applications with environment hardening, vulnerability assessments, and run-time protection. | [Find security risks in your containers](defender-for-containers-introduction.md) | Defender for Containers |
 | [Infrastructure service insights](asset-inventory.md) | Diagnose weaknesses in your application infrastructure that can leave your environment susceptible to attack. | - [Identify attacks targeting applications running over App Service](defender-for-app-service-introduction.md)</br>- [Detect attempts to exploit Key Vault accounts](defender-for-key-vault-introduction.md)</br>- [Get alerted on suspicious Resource Manager operations](defender-for-resource-manager-introduction.md)</br>- [Expose anomalous Domain Name System (DNS) activities](defender-for-dns-introduction.md) | - Defender for App Service</br>- Defender for Key Vault</br>- Defender for Resource Manager</br>- Defender for DNS |
 | [Security alerts](alerts-overview.md) | Get informed of real-time events that threaten the security of your environment. Alerts are categorized and assigned severity levels to indicate proper responses. | [Manage security alerts]( manage-respond-alerts.md) | Any workload protection Defender plan |
-| [Security incidents](alerts-overview.md#what-are-security-incidents) | Identify attack patterns by correlating alerts and integrate with Security Information and Event Management (SIEM), Security Orchestration, Automation, and Response (SOAR), and IT classic deployment model solutions to respond to threats and reduce risk to your resources. | [Export alerts to SIEM, SOAR, or ITSM systems](export-to-siem.md) | Any workload protection Defender plan |
+| [Security incidents](alerts-overview.md#what-are-security-incidents) | Identify attack patterns by correlating alerts. Integrate with Security Information and Event Management (SIEM), Security Orchestration, Automation, and Response (SOAR), and traditional IT deployment solutions that respond to threats and reduce risk. | [Export alerts to SIEM, SOAR, or ITSM systems](export-to-siem.md) | Any workload protection Defender plan |
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
+
+## AI security and threat protection
+
+Microsoft Defender for Cloud provides AI security posture management and AI threat protection to help you secure your generative AI workloads across their entire lifecycle.
+
+| Type of AI security | Description | Relevant links |
+|--|--|--|
+| AI security posture management (SPM) | Helps you discover generative AI applications, identify vulnerabilities, and reduce risks using built-in recommendations and attack path analysis. | Learn more about [AI security posture management](ai-security-posture.md) |
+| AI threat protection | Uses advanced threat detection techniques to identify and respond to threats targeting your generative AI workloads. | [AI threat protection](ai-threat-protection.md) |
+
+Defender for Cloud also includes a Data and AI security dashboard. This dashboard gives you a central place to monitor and manage your data and AI resources, track risks, and check protection status.
 
 ## Learn More
 
