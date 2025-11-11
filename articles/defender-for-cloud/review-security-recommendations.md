@@ -252,7 +252,7 @@ For each view you will view the **Cloud secure score**, **Score history**, **Rec
 
 > [!NOTE]
 > In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
-
+>
 > - You may notice a longer list of recommendations compared to before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) are now shown individually rather than nested under a parent recommendation.
 > - The old grouped recommendations still appear side by side with the new format for now, but they will eventually be deprecated.
 > - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and does not affect Secure Score yet.
