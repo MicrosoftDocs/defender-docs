@@ -10,7 +10,7 @@ ms.date: 02/09/2025
 
 Security policies in Microsoft Defender for Cloud define how your cloud resources are evaluated for security across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP). A policy specifies the standards, controls, and conditions Defender for Cloud uses to assess resource configurations and identify potential security risks.
 
-Each policy includes [security standards](concept-regulatory-compliance-standards.md), which define the controls and assessment logic applied to your environment. Defender for Cloud continuously evaluates your resources against these standards. When a resource doesn’t meet a defined control, Defender for Cloud generates a [security recommendation](review-security-recommendations.md) that describes the issue and the actions required to remediate it.
+Each policy includes [security standards](concept-regulatory-compliance-standards.md), which define the controls and assessment logic applied to your environment. Defender for Cloud continuously evaluates your resources against these standards. When a resource doesn’t meet a defined control, Defender for Cloud generates a security recommendation that describes the issue and the actions required to remediate it.
 
 This enables Defender for Cloud to continuously assess resources and improve your organization’s security posture.
 
