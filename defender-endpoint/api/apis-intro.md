@@ -26,13 +26,9 @@ appliesto:
 ---
 # Access the Microsoft Defender for Endpoint APIs
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business. 
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
@@ -85,5 +81,5 @@ You can access Defender for Endpoint API with **Application Context** or **User 
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 - [Access Microsoft Defender for Endpoint with user context](exposed-apis-create-app-nativeapp.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

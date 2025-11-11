@@ -22,6 +22,7 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Export non product code software inventory assessment per device
 
 
@@ -179,11 +180,10 @@ GET /api/machines/SoftwareInventoryNonCpeExport
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
-> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
 
@@ -229,5 +229,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCp
 Other related
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-
-

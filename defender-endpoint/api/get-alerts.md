@@ -52,6 +52,14 @@ OData supported operators:
 
 ## Permissions
 
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md) for more information)
+
+- The response includes only alerts that are associated with devices that the user can access, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
+
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type | Permission | Permission display name|
@@ -61,12 +69,6 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account) | Alert.Read | `Read alerts`|
 |Delegated (work or school account) | Alert.ReadWrite | `Read and write alerts`|
 
-
-When obtaining a token using user credentials:
-
-- The user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md) for more information)
-
-- The response includes only alerts that are associated with devices that the user can access, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
 
 
 ## HTTP request

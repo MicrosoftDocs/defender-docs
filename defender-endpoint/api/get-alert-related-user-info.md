@@ -36,6 +36,11 @@ Retrieves the User related to a specific alert.
 
 ## Permissions
 
+ When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
+- The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
@@ -43,13 +48,7 @@ Permission type|Permission|Permission display name
 Application|User.Read.All|'Read user profiles'
 Delegated (work or school account)|User.Read.All|'Read user profiles'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
 
 ## HTTP request
 
