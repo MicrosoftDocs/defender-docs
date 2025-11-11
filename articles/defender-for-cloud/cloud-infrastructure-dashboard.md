@@ -3,8 +3,8 @@ title: Cloud overview dashboard in Microsoft Defender for Cloud
 description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multi-cloud environment.
 ms.topic: how-to
 ms.date: 11/10/2025
-ms.author: dacurwin
-author: dcurwin
+ms.author: dlanger
+author: dlanger
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to use the Cloud overview dashboard to get unified visibility into my cloud security posture across Azure, AWS, and GCP.
 ---
@@ -83,11 +83,11 @@ Track how your security posture and threat detection evolve.
 
 **Security Posture**: View over time of the new cloud secure score in addition to recommendations by severity.
 
-:::image type="content" source="media/defender-portal-dashboard/security-posture-trends.png" alt-text="Screenshot of cloud overview dashboard security posture trends":::
+:::image type="content" source="media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of cloud overview dashboard security posture trends":::
 
 **Threat Detection**: View alert trends by severity.
 
-:::image type="content" source="media/defender-portal-dashboard/threat-detection-trends.png" alt-text="Screenshot of cloud overview dashboard threat detection trends":::
+:::image type="content" source="media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of cloud overview dashboard threat detection trends":::
 
 Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
 
@@ -106,7 +106,7 @@ Workloads include:
 
 Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views. This helps teams focus on what matters most for each workload.
 
-:::image type="content" source="media/defender-portal-dashboard/workload-insights.png" alt-text="Screenshot of cloud overview dashboard workload insights":::
+:::image type="content" source="media/defender-portal-dashboard/overview-dashboard.png" alt-text="Screenshot of cloud overview dashboard workload insights":::
 
 ::: zone-end
 

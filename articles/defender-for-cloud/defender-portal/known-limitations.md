@@ -17,17 +17,12 @@ These are the known limitations during the preview release of Defender for Cloud
 
 ## General
 
-Over time data available from the moment the the tenant was selected to public preview enablement.
-
-Deleted resources may still appear in the Azure portal because it currently reflects the last known state. We're actively working to align the Azure portal with the Defender portal and a fix is in progress to ensure deleted resources are no longer displayed.
-
-Resources tied to subscriptions with Foundational CSPM (free tier) are currently not displayed.
-
-Some resources sourced from Azure Policy may not appear in the new portal (including Defenders, Advanced Hunting, and XSPM) because they don't have Defender for Cloud security context. During the preview period, we only surface resources that contribute to the security insights.
-
-Some navigation paths may differ slightly from Azure Portal equivalents.
-
-Event timeline widget is no longer in the navigation bar accessible via dashboard widgets.
+- Over time data available from the moment the the tenant was selected to public preview enablement.
+- Deleted resources may still appear in the Azure portal because it currently reflects the last known state. We're actively working to align the Azure portal with the Defender portal and a fix is in progress to ensure deleted resources are no longer displayed.
+- Resources tied to subscriptions with Foundational CSPM (free tier) are currently not displayed.
+- Some resources sourced from Azure Policy may not appear in the new portal (including Defenders, Advanced Hunting, and XSPM) because they don't have Defender for Cloud security context. During the preview period, we only surface resources that contribute to the security insights.
+- Some navigation paths may differ slightly from Azure Portal equivalents.
+- Event timeline widget is no longer in the navigation bar accessible via dashboard widgets.
 
 ## Cloud secure score and recommendations
 

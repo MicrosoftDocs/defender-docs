@@ -50,7 +50,7 @@ Cloud security data and signals can be accessed through several experiences. Som
       - [Cloud secure score](../secure-score-access-and-track.md?pivots=defender-portal)
       - [Recommendations](../review-security-recommendations.md?pivots=defender-portal)
       - [Attack paths](../how-to-manage-attack-path.md?pivots=defender-portal)
-      - [Vulnerabilities](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)
+      - [Cloud vulnerabilities](/security-exposure-management/vulnerability-management-integration?branch=pr-en-us-4621)
    :::column-end:::
    :::column span="":::
       #### Threat Detection & Response
@@ -72,7 +72,7 @@ Cloud security data and signals can be accessed through several experiences. Som
 
 **[Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)** – A complete inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, asset actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. 
 
-**Unified cloud security posture capabilities** – All the cloud security posture management (CSPM) capabilities unified into Microsoft Security Exposure Management (MSEM). Security personas can view secure scores, prioritized recommendations, attack paths and vulnerabilities, all in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
+**[Unified cloud security posture capabilities](/security-exposure-management/microsoft-security-exposure-management)** – All the cloud security posture management (CSPM) capabilities unified into Microsoft Security Exposure Management (MSEM). Security personas can view secure scores, prioritized recommendations, attack paths and vulnerabilities, all in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
 
 **[Granular access management](../cloud-scopes-unified-rbac.md?pivots=defender-portal)** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. 
 

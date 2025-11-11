@@ -64,4 +64,3 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 - [Explore the Cloud overview dashboard](cloud-infrastructure-dashboard.md)
 - [Configure Cloud scopes and Unified RBAC](cloud-scopes-unified-rbac.md)
 - [Review cloud assets](asset-inventory.md?pivots=defender-portal)
-#
