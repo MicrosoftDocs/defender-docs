@@ -66,7 +66,7 @@ Learn more about [monitoring components](monitoring-components.md).
 ### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-Preview)
 
 - An active Azure subscription with [Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription).  
-- A connected Azure or AWS account.  
+- A connected account in Azure or AWS.  
 
 Region availability: All public AWS regions except Tel Aviv, Milan, Jakarta, Spain, and Bahrain.
 
@@ -77,13 +77,13 @@ Region availability: All public AWS regions except Tel Aviv, Milan, Jakarta, Spa
 - Azure Arc for servers installed on your EC2 instances. Autoprovisioning is recommended and requires the **Owner** role on the Azure subscription.  
 - AWS SSM Agent installed with the [AmazonSSMManagedInstanceCore](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonSSMManagedInstanceCore.html) policy. If it isn’t preinstalled, install it for [Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html) or [Linux](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html).
 
-> [!NOTE]
-> If the SSM Agent is missing or removed, Arc autoprovisioning can’t proceed.  
-> The onboarding CloudFormation template also creates a 30-day automation scan that verifies each EC2 instance has the required IAM profile.
+    > [!NOTE]
+    > If the SSM Agent is missing or removed, Arc autoprovisioning can’t proceed.  
+    > The onboarding CloudFormation template also creates a 30-day automation scan that verifies each EC2 instance has the required IAM profile.
 
-Enable the following extensions on your Arc-connected machines:
-- Microsoft Defender for Endpoint  
-- A vulnerability assessment solution (TVM or Qualys)
+- The following extensions enabled on your Arc-connected machines:
+    - Microsoft Defender for Endpoint  
+    - A vulnerability assessment solution (TVM or Qualys)
 
 > [!NOTE]
 > The Log Analytics agent retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/). Features that depend on it are transitioning to [Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md).  
