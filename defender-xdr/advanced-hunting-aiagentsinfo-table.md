@@ -69,8 +69,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 It is critical to identify agents that lack authentication mechanisms, as these may pose significant risks to the organization due to their public availability. Organizations should know about these agents so they can acknowledge any issues.
 
 **Recommendations:**
-1.	Confirm the agent's use case with the owner to determine if it is intended for public access.
-2.	Review the Topics, Actions, and Knowledge sources to ensure there is no internal or sensitive information included.
+- Confirm the agent's use case with the owner to determine if it is intended for public access.
+- Review the Topics, Actions, and Knowledge sources to ensure there is no internal or sensitive information included.
  
 ```kusto
  AIAgentsInfo
@@ -84,8 +84,8 @@ It is critical to identify agents that lack authentication mechanisms, as these 
 It is critical to identify agents that lack authentication requirements mechanisms, as these may pose significant risks to the organization due to their public availability. Organizations should know about these agents so they can acknowledge any issues. 
 
 **Recommendations:**
-1.	Confirm the agent's use case with the owner to determine if it is intended for public access.
-2.	Review the Topics, Actions, and Knowledge sources to ensure there is no internal or sensitive information included.
+- Confirm the agent's use case with the owner to determine if it is intended for public access.
+- Review the Topics, Actions, and Knowledge sources to ensure there is no internal or sensitive information included.
  
 ```kusto
 AIAgentsInfo 
@@ -99,8 +99,8 @@ AIAgentsInfo
 
 Identify agents that are published and are using the maker’s personal credentials in their authentication or integration flows. This practice increases the risk of credential exposure, privilege misuse, and weakens the separation of duties, potentially leading to compromised access.
 
-**Recommendations:**
-1.	Verify with the agent's owner if Author Authentication is necessary.
+**Recommendations:** 
+- Verify with the agent's owner if Author Authentication is necessary.
  
 ```kusto
 let base = AIAgentsInfo 
@@ -126,9 +126,10 @@ directActions
 ### Agent shared with entire organization or multi-tenant
  
 Identify agents that are shared with the entire organization or configured for multi-tenant access. Broad sharing increases the risk of unauthorized access by unintended users.
+
 **Recommendations:**
-1.	Confirm with the owner whether wide sharing is intentional and justified.
-2.	Consider sharing to specific users or security groups, to avoid “organization-wide” sharing. 
+- Confirm with the owner whether wide sharing is intentional and justified.
+- Consider sharing to specific users or security groups, to avoid “organization-wide” sharing. 
   
 ```kusto
 AIAgentsInfo  
@@ -141,10 +142,10 @@ AIAgentsInfo
 ### Orphaned Agents   
  
 Identify agents whose owners are either disabled or removed from the organization. Having an owner for each agent is essential for governance and maintaining the agent.
+
 **Recommendations:**
-1.	Assign a new owner to the agent (Reassign an agent to a new owner - Microsoft Copilot Studio | Microsoft Learn).  
- ```
- 
+- Assign a new owner to the agent (Reassign an agent to a new owner - Microsoft Copilot Studio | Microsoft Learn).  
+
 **Option 1:**
 ```kusto
 AIAgentsInfo 
@@ -155,7 +156,6 @@ AIAgentsInfo
     | where IsAccountEnabled == 1 
 ) on $left.OwnerAccountUpns == $right.AccountUpn
 ```
-
 
 **Option 2:**
 ```kusto
@@ -172,6 +172,7 @@ AIAgentsInfo
 ### Suspicious HTTP request to non-standard port 
 
 Identify agents that use HTTP actions on ports other than 443 or 80.
+
 **Recommendations:**
 - Confirm with the agent owner whether it is necessary and inquire about the specific business use case.
 
@@ -196,9 +197,9 @@ AIAgentsInfo
 ### Suspicious HTTP request to non-standard schema 
 
 Identify agents that use HTTP actions to non https endpoints. 
+
 **Recommendations:**
 - Confirm with the agent owner whether it is necessary and inquire about the specific business use case.
- 
 
 ```kusto
 AIAgentsInfo
@@ -215,13 +216,12 @@ AIAgentsInfo
 | extend Scheme = tostring(ParsedUrl["Scheme"])
 | where isnotempty(Scheme) and Scheme != "https"
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, ParsedUrl ,Url, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, Topic
-
+```
 ### Suspicious HTTP request to connector endpoint 
 
 Identify agents that use HTTP actions to an endpoint with available Power Platform connector.
 
 **Recommendations:**
-
 - Verify with the agent owner if it's necessary and ask about the business use case. Consider using a connector instead.
  
 ```kusto
@@ -265,11 +265,11 @@ AIAgentsInfo
 ### Sending email to external mailbox 
  
 Identify agents where a topic or action is configured to send emails to external mailboxes (outside the organization’s domains). This can potentially lead to sensitive or internal data being exfiltrated or leaving the organization's boundaries.
+
 **Recommendations:**
-1.	Verify with the agent owner whether sending external emails is necessary for the business scenario, what data will be sent, and if the external domain is authorized to receive that data.
+- Verify with the agent owner whether sending external emails is necessary for the business scenario, what data will be sent, and if the external domain is authorized to receive that data.
 
 ```kusto  
-
 // Identify agents where a topic or action is configured to send emails to external mailboxes (outside the organization's domains)
 let OrgDomains =
     IdentityInfo
@@ -316,14 +316,12 @@ FromActions
 
 ### Published dormant agent (30d)   (Runtime Rule)
 
- 
 Identify published agents that have not being used by any user in the organization for the last X days. 
 
 **Recommendations:** 
 - Confirm with the agent owner if this behavior is expected. Otherwise, consider removing the agent to mitigate any potential risks.
 
 ```kusto  
-
 //Identify published agents that have not being used by any user in the organization for the last X days.  
 let ActiveAgents =   
     CloudAppEvents   
@@ -350,10 +348,9 @@ AIAgentsInfo
 Identify agents that are not published and have not been modified in the last 30 days.
 
 **Recommendations:** 
-1.	Confirm with the agent owner if the agent is still needed. Otherwise, consider removing the agent to mitigate any potential risks.
+- Confirm with the agent owner if the agent is still needed. Otherwise, consider removing the agent to mitigate any potential risks.
 
 ```kusto  
-
 //Identify agents that are not published and have not been modified in the last 30 days.
 AIAgentsInfo 
 | summarize arg_max(Timestamp, *) by AIAgentId 
@@ -364,12 +361,12 @@ AIAgentsInfo
 ### Hard-coded credentials in Topics or Actions
  
 Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities.
+
 **Recommendations:**
 - Consider keeping the credentials in Azure Key Vault and retrieve in in runtime using Environment Variables (Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn) 
 - If not possible, make sure secured input option are enabled (Manage sensitive input like passwords in Power Automate - Power Automate | Microsoft Learn).
 
 ```kusto  
-
 //Find Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities. 
 let suspicious_patterns = @"(AKIA[0-9A-Z]{16})|(AIza[0-9A-Za-z_\-]{35})|(xox[baprs]-[0-9a-zA-Z]{10,48})|(ghp_[A-Za-z0-9]{36,59})|(sk_(live|test)_[A-Za-z0-9]{24})|(SG\.[A-Za-z0-9]{22}\.[A-Za-z0-9]{43})|(\d{8}:[\w\-]{35})|(eyJ[A-Za-z0-9_\-]+\.[A-Za-z0-9_\-]+\.[A-Za-z0-9_\-]+)|(Authorization\s*:\s*Basic\s+[A-Za-z0-9=:+]+)|([A-Za-z]+:\/\/[^\/\s]+:[^\/\s]+@[^\/\s]+)";
 AIAgentsInfo
@@ -382,7 +379,6 @@ AIAgentsInfo
 | extend SuspiciousMatchTool = tool, SuspiciousMatchTopic = topic
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, SuspiciousMatchTool, SuspiciousMatchTopic
 ```
-
 
 ### Dormant Author Authentication connection in Agent (Runtime rule)
 Identify published agents that contain an action that runs with Author Authentication and not been used/invoked in the last 30 days. 
@@ -455,8 +451,9 @@ AIAgentsInfo
 
 ### Agents with MCP tool configured
 Find agents with MCP tool configured
+
 **Recommendations:** 
-1.	Confirm with the agent owner if the MCP tool is still needed. Otherwise, consider removing it to mitigate any potential risks.
+- Confirm with the agent owner if the MCP tool is still needed. Otherwise, consider removing it to mitigate any potential risks.
 
 ```kusto  
 //Find agents with MCP tool configured
