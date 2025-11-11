@@ -81,8 +81,6 @@
         - name: Connect AWS accounts
           displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
           items:
-            - name: Prerequisites for AWS connectors
-              href: aws-plan-prerequisites.md
             - name: Connect your AWS account
               href: quickstart-onboard-aws.md
             - name: Authentication architecture for AWS connectors
@@ -301,7 +299,7 @@
         displayName: risk, prioritization, security, posture, management, prioritization
         href: risk-prioritization.md
       - name: Secure score
-        displayName: security, posture, sec``ure, score, calculate, control, improve, 
+        displayName: security, posture, secure, score, calculate, control, improve, 
         href: secure-score-security-controls.md
       - name: Security standards
         href: concept-regulatory-compliance-standards.md

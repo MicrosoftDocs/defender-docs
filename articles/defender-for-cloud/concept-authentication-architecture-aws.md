@@ -55,6 +55,5 @@ The IAM role defined by the CloudFormation template includes a trust policy that
 ## Related articles
 
 - [Connect your AWS account](quickstart-onboard-aws.md)
-- [Prerequisites for Defender plans on AWS](aws-plan-prerequisites.md)
 - [Troubleshoot multicloud connectors](troubleshoot-connectors.md)
 - [Agentless data collection](concept-agentless-data-collection.md)
