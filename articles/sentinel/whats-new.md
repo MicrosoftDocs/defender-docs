@@ -22,6 +22,8 @@ The listed features were released in the last six months. For information about 
 
 - [Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts](#call-to-action-update-queries-and-automation-by-december-13-2025---standardized-account-entity-naming-in-incidents-and-alerts)
 
+- Deprecation: Containerized SAP data connector will be out of support by September 30th 2026. [Migrate to our Agentless SAP data connector](/sap/sap-agent-migrate.md) today.
+
 ### Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts
 
 Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
