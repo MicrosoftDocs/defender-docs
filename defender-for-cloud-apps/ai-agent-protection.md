@@ -17,18 +17,12 @@ As no code/low code platforms become increasingly accessible, organizations face
 
 ## AI agent threat protection features
 
-Microsoft Defender addresses critical security gaps with comprehensive AI agent protection that includes proactive exposure and threat hunting. With AI agent protection, Microsoft Defender:
+Microsoft Defender addresses critical security gaps with comprehensive AI agent protection that includes proactive exposure, threat hunting, real time protection, and alerts. With AI agent protection, Microsoft Defender:
 
-- Detects all of your AI agents created with Microsoft Copilot Studio. See [Discover and protect your AI agents (Preview)](ai-agent-inventory.md) to learn how to set up AI agent inventory.
-- Continuously monitors your AI agents for suspicious activity, enabling detections and alerts on your AI agents created with Copilot Studio.
-- Integrates AI Agent data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats.
- See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) and [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) to learn how to use queries to proactively hunt for threats.
+- Detects all of your custom AI agents created with Microsoft Copilot Studio, and integrates AI Agent data into advanced hunting for proactive threat detection. You can use this data to create custom queries and hunt for potential threats.  See [Discover and protect your AI agents (Preview)](ai-agent-inventory.md) to learn how to set up AI agent detection.
+- Continuously monitors your AI agents for suspicious activity, enabling detections and alerts on your custom AI agents created with Copilot Studio. See [Detect threats on your Microsoft Copilot Studio AI agents](ai-agent-inventory.md#detect-threats-on-your-microsoft-copilot-studio-ai-agents)
 - Provides real-time protection to block suspicious or harmful actions initiated by your AI agents. See [Enable real-time protection for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-real-time-protection) to learn how to set up real-time protection.
 
-
-> [!NOTE]
-> - Microsoft Defender protection for AI agents supports AI agents created with Microsoft Copilot Studio.
-> - This feature is currently in public preview and included with your Microsoft Defender for Cloud Apps license at no extra cost. When the feature becomes generally available, licensing requirements might change.
 
 ## Related articles
 

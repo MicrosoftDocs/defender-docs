@@ -10,15 +10,13 @@ ms.reviewer: gayasalomon
 #customer-intent: As a security administrator, I want view all of the AI Agents in my organization, and detect threats on my AI agents using advanced hunting.
 ---
 
-# Discover and protect your AI agents (Preview)
+# Discover and protect your Copilot Studio custom AI Agents (Preview)
 
-Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio. Once you enable detection of your AI agents, Microsoft Defender for Cloud Apps automatically:
-- Runs detections on your AI Agents created using Copilot Studio
-- Creates alerts and incidents for suspicious activity
-- Includes [AI agent data](/defender-xdr/advanced-hunting-aiagentsinfo-table) in [advanced hunting](/defender-xdr/advanced-hunting-overview).
- 
+Microsoft Defender detects all Copilot Studio custom AI Agents in your tenant and identify misconfigured or potentially risky agents.
 
-## Enable AI agent detection for Microsoft Copilot Studio agents
+When you enable detection of your AI agents, Microsoft Defender for Cloud Apps populates the [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) which can be used in [advanced hunting](/defender-xdr/advanced-hunting-overview).
+
+## Enable AI agent detection for Microsoft Copilot Studio custom agents
 
 > [!NOTE]
 > The onboarding process for AI Agent protection requires collaboration with Power Platform administrators.
@@ -41,9 +39,8 @@ When Copilot Studio AI Agents are connected, a green indicator appears in the **
 Once you enable AI agent protection on your AI agents created using Copilot Studio, enable the Microsoft 365 App Connector to:
 - Run detections on your AI Agents created using Copilot Studio
 - Create alerts and incidents for suspicious activity
-- Include AI agent data in advanced hunting
 
-### Connect Microsoft Defender for Cloud Apps to Microsoft 365 
+To enable threat detection and alerts, connect Microsoft Defender for Cloud Apps to Microsoft 365:
 
 1. Complete the steps in Microsoft 365 to [Connect Defender for Cloud Apps with Microsoft 365](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 1. When you complete the Microsoft 365 connector setup, sign in to the **[Microsoft Defender portal](https://security.microsoft.com)**, and go to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
@@ -56,8 +53,18 @@ Once you enable AI agent protection on your AI agents created using Copilot Stud
 
 ## Use Advanced Hunting on your AI agents
 
-When the Microsoft 365 app connector is enabled, Microsoft Defender populates the `AIAgentsInfo` table in advanced hunting with information about your AI agents created using Copilot Studio. 
+When the Microsoft 365 app connector is enabled, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats.
 
-You can use this data to create custom queries and hunt for potential threats.
+1. Sign in to the Defender portal, ang go to **Advanced hunting**.
+1. In the **Apps & identities** section, the [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) contains data for all your custom AI agents created using Copilot Studio. You can use this data to create custom queries.
+1. In the **Queries** tab, see the **MCS AI Agents** section for pre-defined KQL queries to help identify misconfigured or risky agents.
 
-See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) and [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) to learn how to use queries to proactively hunt for threats.
+    For example, you can use queries to: :
+    - locate agents that use maker authentication mechanisms, which might allow access to data users shouldn't have
+    - locate agents that haven't been used for over 30 days, as these may create unnecessary exposure without contributing to productivity. 
+
+We recommend deleting risky agents or reaching out to their owners for further information.
+ 
+See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) to learn how to use queries to proactively hunt for threats.
+
+ 
