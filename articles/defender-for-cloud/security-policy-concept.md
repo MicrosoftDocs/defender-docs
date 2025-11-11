@@ -60,6 +60,6 @@ Defender for Cloud continuously assesses resources. If it finds any that don’t
 ## Next steps
 
 - Learn more about [security standards](concept-regulatory-compliance-standards.md) and [MCSB](concept-regulatory-compliance.md).
-- Learn more about [security recommendations](review-security-recommendations.md).
+- Learn how to [review security recommendations](review-security-recommendations.md).
 - Learn how to [assign and manage standards](assign-regulatory-compliance-standards.md) for your cloud environments.  
 - Monitor and improve your compliance posture in the [Regulatory compliance dashboard](regulatory-compliance-dashboard.md).
