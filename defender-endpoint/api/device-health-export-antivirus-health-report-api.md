@@ -2,10 +2,10 @@
 title: Microsoft Defender Antivirus Device Health export device antivirus health reporting
 description: Presents methods to retrieve Microsoft Defender Antivirus device health details.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 11/11/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -23,16 +23,6 @@ appliesto:
 ---
 # Export device antivirus health report
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
 
 This API has two methods to retrieve Microsoft Defender Antivirus device antivirus health details:
 
@@ -305,5 +295,5 @@ Here's an example response:
 [Export device health methods and properties](device-health-api-methods-properties.md)
 
 [Device health and compliance reporting](../device-health-reports.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

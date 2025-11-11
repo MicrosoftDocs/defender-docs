@@ -2,8 +2,8 @@
 title: Start Investigation API
 description: Use this API to start investigation on a device.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,20 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 11/11/2025
 appliesto:
-  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1 and Plan 2
   - Microsoft Defender for Business
+
 ---
 
 # Start Investigation API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -55,6 +49,12 @@ Your organization must have Defender for Endpoint, see [Minimum requirements for
 
 ## Permissions
 
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information).
+
+- The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
@@ -62,13 +62,6 @@ Permission type|Permission|Permission display name
 Application|Alert.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information).
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
 
 ## HTTP request
 
@@ -110,5 +103,5 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Test investigation"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

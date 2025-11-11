@@ -1255,7 +1255,7 @@
 
           - name: Automated investigation
             items:
-            - name: Investigation methods and properties
+            - name: Investigation properties
               href: api/investigation.md
             - name: List Investigation
               href: api/get-investigation-collection.md

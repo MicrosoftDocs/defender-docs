@@ -2,10 +2,10 @@
 title: Microsoft Defender Antivirus export device antivirus health details API methods and properties
 description: "Learn how to export a list of Microsoft Defender Antivirus device health details." 
 ms.service: defender-endpoint
-ms.author: bagol 
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium 
-ms.date: 03/21/2025
+ms.date: 11/11/2025
 manager: bagol 
 ms.reviewr: mkaminska
 audience: ITPro 
@@ -22,14 +22,9 @@ appliesto:
   - Microsoft Defender for Business
 
 ---
+
 # Export device antivirus health details API methods and properties
 
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -126,5 +121,5 @@ Data that is collected using either `JSON response` or by using files is a snaps
 
 [Device health and compliance reporting](../device-health-reports.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

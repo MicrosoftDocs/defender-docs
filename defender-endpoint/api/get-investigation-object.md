@@ -2,8 +2,8 @@
 title: Get Investigation object API
 description: Use this API to create calls related to get Investigation object
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,24 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
 ---
+
 # Get Investigation API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
 
 ## API description
 Retrieves specific [Investigation](investigation.md) by its ID.
@@ -45,6 +36,10 @@ Retrieves specific [Investigation](investigation.md) by its ID.
 
 ## Permissions
 
+ When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
@@ -54,10 +49,7 @@ Application|Alert.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account) | Alert.Read | 'Read alerts'
 Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
+
 
 ## HTTP request
 
@@ -79,5 +71,4 @@ Empty
 
 If successful, this method returns 200, Ok response code with an [Investigations](investigation.md) entity.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 

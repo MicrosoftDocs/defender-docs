@@ -2,8 +2,8 @@
 title: List Investigations API
 description: Use this API to create calls related to get Investigations collection.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,23 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
 ---
+
 # List Investigations API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -52,6 +45,9 @@ See examples at [OData queries with Microsoft Defender for Endpoint](exposed-api
 
 ## Permissions
 
+When obtaining a token using user credentials:
+ - The user needs to have at least the following role permission: `View Data`. For more information, see [Create and manage roles](../user-roles.md) for more information.
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type|Permission|Permission display name|
@@ -61,10 +57,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account)|Alert.Read|`Read alerts` |
 |Delegated (work or school account)|Alert.ReadWrite|`Read and write alerts` |
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: `View Data`. For more information, see [Create and manage roles](../user-roles.md) for more information.
+ 
 
 ## HTTP request
 
@@ -119,5 +112,5 @@ Here's an example of the response:
     ]
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 
