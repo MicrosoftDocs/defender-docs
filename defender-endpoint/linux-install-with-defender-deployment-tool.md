@@ -86,35 +86,21 @@ Additionally, the following requirements also need to be met:
 
    ![](media/image2.png){width="6.5in" height="3.3645833333333335in"}
 
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| **Scenario**                                    | **Command**                                                                                         |
-+=================================================+=====================================================================================================+
-| \[pre-req blocking\]                            | \[No special command. Enabled by default for install scenario\] sudo ./defender-deployment-tool.sh  |
-|                                                 |                                                                                                     |
-| \[pre-req non-blocking\]                        | sudo ./defender-deployment-tool.sh \--pre-req-non-blocking                                          |
-|                                                 |                                                                                                     |
-| \[connectivity-test\]                           | sudo ./defender-deployment-tool.sh \--connectivity-test                                             |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| \[custom install\]                              | sudo ./defender-deployment-tool.sh \--install-path /usr/microsoft/                                  |
-|                                                 |                                                                                                     |
-| \[one example for insider-slow channel\]        | sudo ./defender-deployment-tool.sh \--channel insiders-slow                                         |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Install using proxy                             | sudo ./defender-deployment-tool.sh \--http-proxy \<http://username:password@proxy_host:proxy_port\> |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Install a specific agent version                | sudo ./defender-deployment-tool.sh \--mdatp 101.25042.0003 \--channel prod                          |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Upgrade to a specific agent version             | sudo ./defender-deployment-tool.sh \--upgrade \--mdatp 101.24082.0004                               |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Downgrade to a specific agent version           | sudo ./defender-deployment-tool.sh \--downgrade \--mdatp 101.24082.0004                             |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Uninstall agent                                 | sudo ./defender-deployment-tool.sh \--remove                                                        |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Only onboard in case agent is already installed | sudo ./defender-deployment-tool.sh \--only-onboard                                                  |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Offboard the agent                              | sudo ./defender-deployment-tool.sh \--offboard MicrosoftDefenderATPOffboardingLinuxServer.py        |
-|                                                 |                                                                                                     |
-|                                                 | *(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)*          |
-+-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+| **Scenario** | **Command** |
+|:-------------|:------------|
+| [pre-req blocking] | [No special command. Enabled by default for install scenario] sudo ./defender-deployment-tool.sh |
+| [pre-req non-blocking] | sudo ./defender-deployment-tool.sh --pre-req-non-blocking |
+| [connectivity-test] | sudo ./defender-deployment-tool.sh --connectivity-test |
+| [custom install] | sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/ |
+| [one example for insider-slow channel] | sudo ./defender-deployment-tool.sh --channel insiders-slow |
+| Install using proxy | sudo ./defender-deployment-tool.sh --http-proxy \<http://username:password@proxy_host:proxy_port\> |
+| Install a specific agent version | sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod |
+| Upgrade to a specific agent version | sudo ./defender-deployment-tool.sh --upgrade --mdatp 101.24082.0004 |
+| Downgrade to a specific agent version | sudo ./defender-deployment-tool.sh --downgrade --mdatp 101.24082.0004 |
+| Uninstall agent | sudo ./defender-deployment-tool.sh --remove |
+| Only onboard in case agent is already installed | sudo ./defender-deployment-tool.sh --only-onboard |
+| Offboard the agent | sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
 
 ## Verify Deployment Status
 
