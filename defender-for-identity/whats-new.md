@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials(Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
 
-### Expansion of identity scoping - support for Organizational units (preview) 
+### Expansion of identity scoping - support for Organizational units (Preview) 
 
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
