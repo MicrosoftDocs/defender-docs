@@ -166,14 +166,9 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-endpoint/microsoft-defender-endpoint-linux.md",
-      "redirect_url": "/defender-endpoint/install-defender-endpoint-linux",
+      "source_path": "defender-endpoint/install-defender-endpoint-linux.md",
+      "redirect_url": "/defender-endpoint/mde-linux-prerequisites",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "defender-endpoint/mde-linux-prerequisites.md",
-      "redirect_url": "/defender-endpoint/install-defender-endpoint-linux#prerequisites",
-      "redirect_document_id": false
-    }         
+    }       
   ]
 }
