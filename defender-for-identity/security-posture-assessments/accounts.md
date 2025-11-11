@@ -2,7 +2,7 @@
 title: 'Accounts security posture assessment'
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date: 09/15/2025
+ms.date: 11/11/2025
 ms.reviewer: LiorShapiraa
 description: Lists all Microsoft Defender for Identity security posture assessments for Active Directory accounts, with detailed impacts and remediation steps to help improve your Secure Score.
 ---
@@ -164,6 +164,23 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > [!NOTE]
 > The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. It's recommended to use the [Microsoft-provided script.](https://github.com/microsoft/New-KrbtgtKeys.ps1)  
 > When resetting the password twice, wait at least 10 hours between resets to avoid Kerberos authentication issues. This wait time is enforced by the script and aligns with best practices.
+
+## Change password for on-prem account with potentially leaked credentials 
+
+**Description**
+This report lists users whose valid credentials have been leaked. When cybercriminals compromise valid passwords of legitimate users, the criminals often share those credentials. This is usually done by posting them publicly on the dark web or paste sites or by trading or selling the credentials on the black market. The Microsoft leaked credentials service acquires username/password pairs by monitoring public and dark web sites and by working with: Researchers Law enforcement Security teams at Microsoft Other trusted sources.
+
+**User impact**
+When the service acquires user credentials from the dark web, paste sites or the above sources,an account with compromised credentials can be exploited by malicious actors to gain unauthorized access.
+
+**Implementation**
+1.	Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Change password for accounts with potentially leaked credentials**. 
+1.	Review the list of exposed entities to discover which of your account passwords were leaked.
+1.	Take appropriate actions on those entities by removing the service account:
+    1. Open the Active Directory Users and Computers (ADUC) console and sign in with an administrator account.
+    2. Navigate to the organizational unit (OU) where the user account is located.
+    3. Find and select the user account that needs a password change.
+    4. Right-click on the user account, select **Reset Password**, enter the new password, and confirm it.“
 
 
 ## Change password of built-in domain Administrator account
