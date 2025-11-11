@@ -129,6 +129,9 @@ ZAP doesn't quarantine messages that are in the process of [Dynamic Delivery](sa
 > [!TIP]
 > ZAP for Microsoft Teams is available only to customers with Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 subscriptions. To configure ZAP for Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
 
+> [!NOTE]
+> Currently, ZAP for Microsoft Teams isn't available in Microsoft 365 GCC, GCC High, or DoD.
+
 ### ZAP in Teams chats
 
 ZAP is available for internal messages in Teams chats that are identified as malware or high confidence phishing. Currently, external messages aren't supported.
