@@ -26,11 +26,12 @@ appliesto:
 
 The Defender deployment tool provides an efficient, user-friendly onboarding process for Microsoft Defender for Endpoint on Linux devices. It allows users to install and onboard Microsoft Defender for Endpoint using a single package that can be downloaded from the Microsoft Defender portal. This eliminates the need to install Defender using installer script/cli commands and then, separately, to onboard the device using the onboarding package from the portal.
 
-The defender-deployment tool package supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack, and consolidates all necessary onboarding related packages and documentation in one location.
+The defender-deployment tool package supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack, and consolidates all necessary onboarding related packages and documentation in one location. The tool supports parameters you can use to customize large scale deployments, making it possible to have tailored installations across diverse environments. 
+
 
 ## Prerequisites and system requirements
 
-Before you get started, see Prerequisites for Defender - Linux for a description of prerequisites and system requirements. The Defender Deployment Tool enforces the following set of blocking prerequisites checks:
+Before you get started, see [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. The Defender deployment tool enforces the following set of blocking prerequisites checks:
 
 - Memory > 1 GB
 - Available disk space > 2GB
@@ -166,7 +167,7 @@ Additionally, the following requirements also need to be met:
 
 ## How to switch between channels
 
-Defender - Linux can be deployed from one of the following channels (denoted as \[channel\]):
+Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as \[channel\]):
 
 - insiders-fast
 - insiders-slow
@@ -180,7 +181,7 @@ To preview new features and provide early feedback, it's recommended that you co
 
 For example, to change channel from insiders-fast to production, do the following:
 
-1. Remove the insiders-fast channel version of Defender - Linux.
+1. Remove the insiders-fast channel version of Defender for Endpoint on Linux..
 
    ```bash
    sudo ./defender-deployment-tool.sh --remove --channel insiders-fast
@@ -192,7 +193,7 @@ For example, to change channel from insiders-fast to production, do the followin
    sudo ./defender-deployment-tool.sh --clean --channel insiders-fast
    ```
 
-3. Install Microsoft Defender - Linux using the production channel.
+3. Install Microsoft Defender for Endpoint on Linux using the production channel.
 
    ```bash
    sudo ./defender-deployment-tool.sh --install --channel prod
