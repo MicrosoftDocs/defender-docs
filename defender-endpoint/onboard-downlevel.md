@@ -92,7 +92,7 @@ The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports th
 
 - Preview features must be enabled.
 
-- Devices should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it -- unlike for other Defender cloud services. Regardless, for proper operation of services please refer to [Configure your network environment to ensure connectivity with Defender for Endpoint service - Microsoft Defender for Endpoint \| Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/configure-environment) as additional connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com* apply to (additional) functionality you may wish to use with the product.
+- Devices should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it -- unlike for other Defender cloud services. Regardless, for proper operation of services please refer to [Configure your network environment to ensure connectivity with Defender for Endpoint service - Microsoft Defender for Endpoint \| Microsoft Learn](./configure-environment.md) as additional connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com* apply to (additional) functionality you may wish to use with the product.
 
 - The Defender deployment tool requires access to the *definitionupdates.microsoft.com* domain. This is the same domain that is required for product updates.
 
@@ -382,5 +382,6 @@ You can use either of the following methods:
     # Reload the configuration and apply changes
     $AgentCfg.ReloadConfiguration()
     ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)
+
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
