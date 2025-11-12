@@ -33,11 +33,13 @@ Start looking for machine powered insights about one week after enabling UEBA.
 
 In the Defender portal, a **UEBA Anomalies** tag identifies users with anomalies, making it easier to prioritize investigations.
 
-The **Top UEBA anomalies** section - which appears on the User side panel and the **Overview** tab of the User entity page - displays the user's top three anomalies from the last 30 days. Select the links in the at the bottom of this section to hunt for all of the user's anomalies and view the Sentinel events timeline.
+The **Top UEBA anomalies** section - which appears on the User side panel and the **Overview** tab of the User entity page - displays the user's top three anomalies from the last 30 days. Select the links the at the bottom of this section to hunt for all of the user's anomalies and view the Sentinel events timeline.
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the last 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
 
-When investigating a user involved in an incident, select **Go Hunt > All user anomalies** from the user entity in the incident graph to retrieve all anomalies related to the user.
+### Investigate user anomalies from an incident
+
+To investigate a user in an incident, select **Go Hunt > All user anomalies** from the user entity in the incident graph to retrieve all anomalies related to the user from the past 30 days.
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png":::
 
