@@ -8,7 +8,7 @@ ms.reviewer: gayasalomon
 #customer-intent: As a security administrator, I want my Copilot Studio AI agents to be protected against suspicious or harmful actions so that I can reduce security risks to my organization.
 ---
 
-# Protect your Microsoft Copilot Studio custom AI agents (Preview)
+# Protect your Microsoft Copilot Studio AI agents (Preview)
 
 As No code/Low code platforms become increasingly accessible, organizations face new types of security risks. These platforms empower non-technical users to build and deploy custom agents without centralized security review or controls in place. Attackers can attempt to manipulate these agents by:
 - Injecting malicious prompts

@@ -10,7 +10,7 @@ ms.reviewer: gayasalomon
 #customer-intent: As a security administrator, I want view all of the AI Agents in my organization, and detect threats on my AI agents using advanced hunting.
 ---
 
-# Discover and protect your custom AI Agents (Preview)
+# Discover and protect your AI Agents (Preview)
 
 Microsoft Defender detects all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects data from Copilot Studio for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
 
