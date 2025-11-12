@@ -30,7 +30,7 @@ To complete this quick start, you need:
 | Required permissions: | **Account Administrator** with permissions to sign in to the Azure portal. <br> **Contributor** to create the connector on the Azure subscription.  <br> **Organization Owner** in GitHub. |
 | GitHub supported plans and user models | GitHub Free, Pro, Team, and Enterprise Cloud (with personal accounts and Enterprise Managed Users) |
 | Regions and availability: | Refer to the [support and prerequisites](devops-support.md) section for region support and feature availability.|
-| Clouds: | :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/x-no.png" border="false"::: National (Azure Government, Microsoft Azure operated by 21Vianet) |
+| Clouds: | :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/x-no.png" border="false"::: National (Azure Government, Microsoft Azure operated by 21Vianet) |
 
 > [!NOTE]
 > **Security Reader** role can be applied on the Resource Group/GitHub connector scope to avoid setting highly privileged permissions on a Subscription level for read access of DevOps security posture assessments.
