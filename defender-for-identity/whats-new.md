@@ -601,13 +601,13 @@ Changes include:
 
 - The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
-The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
-
-|Sensitivity level (previous name) |Threshold level (new name) |
-|---------|---------|
-|**Normal**     |  **High**       |
-|**Medium**      |  **Medium**       |
-|**High**      |  **Low**       |
+  The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+  
+  |Sensitivity level (previous name) |Threshold level (new name) |
+  |---------|---------|
+  |**Normal**     |  **High**       |
+  |**Medium**      |  **Medium**       |
+  |**High**      |  **Low**       |
 
 If you had specific values defined on the **Advanced Settings** page, we transferred them to the new **Adjust alert thresholds** page as follows:
 
