@@ -218,7 +218,7 @@ If you experience any installation issues, try following these steps:
 
 1. For information about common installation issues, see [Installation issues](./linux-support-install.md).
 
-1. If health of the device is false, see [Defender for Endpoint agent health issues](https://learn.microsoft.com/en-us/defender-endpoint/health-status.md).
+1. If health of the device is false, see [Defender for Endpoint agent health issues](./health-status.md).
 
 1. For product performance issues, see [Troubleshoot performance issues](./linux-support-perf.md).
 

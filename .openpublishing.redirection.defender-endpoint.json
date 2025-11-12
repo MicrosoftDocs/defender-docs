@@ -151,6 +151,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-endpoint/linux-install-with-activator.md",
+      "redirect_url": "/defender-endpoint/linux-install-with-defender-deployment-tool",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/mde-linux-arm.md",
       "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-linux",
       "redirect_document_id": false
