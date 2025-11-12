@@ -44,7 +44,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 
 | **Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**<br/>**21Vianet** |
 |--- | --- | --- | --- |
-| [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA | GA |
+| [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA <sup>[1](#footnote1)</sup>| GA |
 | [Compliance standards](./regulatory-compliance-dashboard.md)<br/>Compliance standards might differ depending on the cloud type.| GA | GA | GA |
 | [Machine OS misconfiguration](apply-security-baseline.md) | GA | GA | GA |
 | [VM vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | GA | GA |
@@ -57,6 +57,8 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | GA | GA |
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
 | [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | GA | GA |
+
+<sup>1</sup>: In GCC-M environments on Azure public cloud, the following Microsoft Defender for Endpoint integration are currently not supported: Direct onboarding, Vulnerability Assessment recommendations and File Integrity Monitoring (FIM).
 
 ## Windows machine support
 
