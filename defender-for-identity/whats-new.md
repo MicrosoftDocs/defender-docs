@@ -25,22 +25,22 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
-### New identity accounts view and unified remediation workflow
+### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
-The following new feature is now available in Microsoft Defender for Identity:
+The following new features are now available in Microsoft Defender for Identity:
 
 **Accounts tab in Identity Inventory**
 
-A new Accounts tab has been added to the Identity Inventory experience. This tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers.
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
 
 **Manual link and unlink of accounts**
 
-You can now manually link or unlink accounts from an identity directly in the Accounts tab. This feature helps correlate identity components from different directory sources and provides a complete identity context during investigations.
-For more information, see: [Link or Unlink an Account to an Identity](link-unlink-account-to-identity.md).
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
 
 **Identity-level remediation actions**
 
-Remediation actions, such as disabling accounts or resetting passwords, can now be applied to one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
+You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 
 ### Expansion of identity scoping - support for Organizational units (preview) 
 
