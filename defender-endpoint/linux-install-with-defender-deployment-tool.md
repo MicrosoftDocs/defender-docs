@@ -24,35 +24,31 @@ appliesto:
 
 # Onboard Microsoft Defender for Endpoint on Linux devices using the Defender deployment tool
 
-The Defender deployment tool provides an efficient, user-friendly onboarding process for Microsoft Defender - Linux. It allows users to install and onboard Microsoft Defender - Linux using a single package, available for download from the Microsoft Defender Portal. This eliminates the need to install Defender using installer script/cli commands and then, separately, to onboard the device using the onboarding package from the portal.
+The Defender deployment tool provides an efficient, user-friendly onboarding process for Microsoft Defender for Endpoint on Linux devices. It allows users to install and onboard Microsoft Defender for Endpoint using a single package that can be downloaded from the Microsoft Defender portal. This eliminates the need to install Defender using installer script/cli commands and then, separately, to onboard the device using the onboarding package from the portal.
 
-The defender-deployment tool package supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack, and consolidates all necessary onboarding related packages and documentations in one location.
+The defender-deployment tool package supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack, and consolidates all necessary onboarding related packages and documentation in one location.
 
 ## Prerequisites and system requirements
 
 Before you get started, see Prerequisites for Defender - Linux for a description of prerequisites and system requirements. The Defender Deployment Tool enforces the following set of blocking prerequisites checks:
 
-- Memory \> 1 GB
-
-- Available disk space \> 2GB
-
+- Memory > 1 GB
+- Available disk space > 2GB
 - Glibc library version newer than 2.17
-
 - The requested mdatp version should be one of the latest nine versions.
 
-There is also an option to run the connectivity test, which checks if the URLs Defender for Endpoint uses are accessible or not.
+There is also an option to run a connectivity test, which checks if the URLs Defender for Endpoint uses are accessible or not.
 
 Additionally, the following requirements also need to be met:
 
 - Allow the connection to the URL: msdefender.download.prss.microsoft.com
-
 - The endpoint should have either **wget** or **curl** installed.
 
 ## Deployment: Step-by-step guide
 
 1. Download the Defender deployment tool from the Defender portal using the following steps.
 
-    1. Go to **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
+    1. Go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
     1. In the Step 1 drop-down menu, select **Linux Server (Preview)** as the operating system.
 
@@ -98,8 +94,9 @@ Additionally, the following requirements also need to be met:
 
 | **Scenario** | **Command** |
 |:-------------|:------------|
-| [prereq blocking] | [No special command. Enabled by default for install scenario] sudo ./defender-deployment-tool.sh |
-| [prereq nonblocking] | sudo ./defender-deployment-tool.sh --pre-req-non-blocking |
+| Check for unmet blocking prerequisites | No special command required. Blocking prerequisite checks run by default as part of the install scenario<br>
+`sudo ./defender-deployment-tool.sh` |
+| [Check for unmet non-blocking prerequisites] | `sudo ./defender-deployment-tool.sh --pre-req-non-blocking` |
 | [connectivity-test] | sudo ./defender-deployment-tool.sh --connectivity-test |
 | [custom install] | sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/ |
 | [one example for insider-slow channel] | sudo ./defender-deployment-tool.sh --channel insiders-slow |
