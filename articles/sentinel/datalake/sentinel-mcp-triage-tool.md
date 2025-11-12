@@ -31,19 +31,19 @@ To access the triage tool collection, you must have the following prerequisites:
 - Visual Studio Code (latest version)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) Visual Studio Code extension
 
-## Add the data exploration collection
+## Add the triage collection
 
 To add the triage collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for the following [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools):
 - Visual Studio Code
 - Microsoft Security Copilot
 
-The Defender collection is hosted at the following URL:
+The triage collection is hosted at the following URL:
 
 ```
     https://sentinel.microsoft.com/mcp/triage
 ```
 
-## Tools in the Microsoft Defender collection
+## Tools in the triage collection
 
 ### List security incidents (`ListIncidents`)
 
