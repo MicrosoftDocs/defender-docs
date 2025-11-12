@@ -30,7 +30,6 @@ Cloud Secure Score history may show less than 6 months if tenant was recently on
 
 ## Cloud Inventory
 
-Software Inventory is not yet available.
 
 ## Cloud Scopes
 
