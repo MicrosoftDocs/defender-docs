@@ -23,7 +23,7 @@ This article outlines best practices to using Microsoft Sentinel's collection of
 
 - **Make sure your MCP client is compatible and up to date.** Microsoft Sentinel's MCP server implements the latest authorization specifications from MCP. Before connecting to the MCP server, make sure that your client is [compatible](sentinel-mcp-get-started.md#supported-code-editors-and-agent-platforms) and up to date to help prevent connectivity and common authentication issues.
 - **Be specific in your prompts.** Good prompts deliver good results. If your prompts take longer to generate results, or if the agent's responses lack in ground truth, try writing more specific prompts. For example, a prompt that says `For user <UPN>, baseline their network, file, sign-in, and device events over 90 days and compare with +/- 10 minutes to find anomalies or suspicious activities to help me triage the severity and priority of this alert.` is far better than a prompt that says `What is risky about <UPN>?`.
-- **Pick your workspace.** All Microsoft Sentinel and Microsoft Defender security data is associated with a workspace. Our tools optionally require a workspace ID. If you work with multiple workspaces, be specific on what workspace ID you want your tools to run. For example, for tools that use the data lake, use the [`list_sentinel_workspaces`](sentinel-mcp-data-exploration-tool.md#list-workspaces-list_sentinel_workspaces) tool to identify the workspace you want to run your tools against.
+- **Pick your workspace.** All Microsoft Sentinel security data is associated with a workspace. Our tools optionally require a workspace ID. If you work with multiple workspaces, be specific on what workspace ID you want your tools to run. For example, for tools that use the data lake, use the [`list_sentinel_workspaces`](sentinel-mcp-data-exploration-tool.md#list-workspaces-list_sentinel_workspaces) tool to identify the workspace you want to run your tools against.
 - **Troubleshoot common issues.** Familiarize yourself with common issues or error messages and respective troubleshooting steps provided in the next section of this article.
 
 ## Troubleshooting
@@ -52,6 +52,20 @@ To debug what your GitHub Copilot agent did and prepare your case for troublesho
 1. In the Copilot Chat Debug panel, select **Export All as JSON...** to export the entire folder of the conversation for the prompt you need support for.
 
     ![Screenshot of the Export All as JSON option.](media/sentinel-mcp/mcp-troubleshooting-02.png)
+
+### Exporting HAR file for troubleshooting custom tools
+
+To troubleshoot issues with your custom tool, collect an HTTP archive (HAR) file. This file records all network requests your browser makes. It's useful for debugging loading or API issues.
+
+To collect the HAR file, follow these steps:
+
+1. Open the page where the issue occurred. Open **Developer Tools** by pressing **F12** or right-clicking the page and selecting **Inspect**.
+    >[!NOTE]
+    >Don't perform any other action when you open Developer Tools.
+1. Go to the **Network** tab, then choose **Preserve log**.
+1. Keep Developer Tools open before you start the action. Any requests you make before Developer Tools is open aren't recorded.
+1. Reproduce the issue by performing the actions that caused it.
+1. Select **Export HAR** at the top of the Network tab to save the HAR file. Share it together with the information on what you did.
 
 ## Related content
 - [Troubleshoot KQL queries for the Microsoft Sentinel data lake](kql-troubleshoot.md)

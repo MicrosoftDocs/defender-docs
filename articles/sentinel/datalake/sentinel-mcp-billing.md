@@ -28,7 +28,7 @@ Pricing in Microsoft Sentinel is based on the tier that you ingest data into. Th
 
 ### Microsoft Defender tool
 
-You can use the Microsoft Defender tool collection at no extra cost, provided that you’re onboarded to the required products and services.
+You can use the [triage tool collection](sentinel-mcp-triage-tool.md) at no extra cost, provided that you’re onboarded to the required products and services.
 
 
 ## Quotas and limits
@@ -37,16 +37,18 @@ You can use the Microsoft Defender tool collection at no extra cost, provided th
 
 All [service parameters and limits for Microsoft Sentinel data lake](sentinel-lake-service-limits.md#service-parameters-and-limits-for-tables-data-management-and-ingestion) also apply when you use Microsoft Sentinel's MCP collection of tools. 
 
-The following limits are specific to this service:
+The following limits are specific to Sentinel data lake MCP tools:
 
 | Feature | Limits | 
 |----------|----------|
 | MCP streaming | 120 seconds | 
 | Query window for tools | 800 characters |
-| Running analyzer tools | 100 times a day |
 
-### Microsoft Defender tool
-Regular API throttling applies to the tools in the Defender collection. In addition, tools that call the advanced hunting API are bound by the existing advanced hunting quotas and service limits. [Learn more about advanced hunting quotas and usage parameters](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters)
+### Sentinel entity analyzer tool
+Each tenant can use the [entity analyzer](sentinel-mcp-data-exploration-tool.md#entity-analysis) MCP tool up to 100 times a day. 
+
+### Triage tool
+Regular API throttling applies to the tools in the triage tool collection. In addition, tools that call the advanced hunting API are bound by the existing advanced hunting quotas and service limits. [Learn more about advanced hunting quotas and usage parameters](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters)
 
 
 ## Language and region availability

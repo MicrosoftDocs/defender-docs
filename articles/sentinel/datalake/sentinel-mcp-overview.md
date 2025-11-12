@@ -17,7 +17,7 @@ ms.service: microsoft-sentinel
 > Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Microsoft Sentinel, our security platform, introduces support for Model Context Protocol (MCP). This support includes multiple scenario-focused collections of security tools through a unified server interface. With this support, you can interactively query security data in natural language and build effective security agents that can perform complex automation. Our collection of security tools helps security teams bring AI into their daily security operations to assist with common tasks like data exploration and building agentic automation.
+Microsoft Sentinel, our security platform, introduces support for Model Context Protocol (MCP). This support includes multiple scenario-focused collections of security tools through a unified server interface. With this support, you can interactively query security data in natural language and build effective security agents that can perform complex automation. Our collection of security tools helps security teams bring AI into their daily security operations to assist with common tasks like data exploration, building agentic automation, and incident triage and threat hunting.
 
 ## Key features of Microsoft Sentinel’s support for MCP
 
@@ -62,9 +62,9 @@ When you connect a [compatible client](sentinel-mcp-get-started.md#supported-cod
 
   [Get started with building agents](sentinel-mcp-agent-creation-tool.md)
 
--	**Triage incidents and hunt for threats using Defender APIs:** SOC engineers need to prioritize incidents rapidly and hunt over your organization’s own data easily without having to worry about security workflow issues and interoperability among platforms and tools that they use. Our Microsoft Defender collection of tools integrates your AI models with Defender APIs that support incident triage and hunting. This integration reduces mean time to resolution, risk exposure, and dwell time and empowers your team to leverage AI for smarter and faster decision-making. 
+-	**Triage incidents and hunt for threats:** SOC engineers need to prioritize incidents rapidly and hunt over your organization’s own data easily without having to worry about security workflow issues and interoperability among platforms and tools that they use. Our triage collection of tools integrates your AI models with APIs that support incident triage and hunting. This integration reduces mean time to resolution, risk exposure, and dwell time and empowers your team to leverage AI for smarter and faster decision-making. 
  
-    [Get started with incident triage and threat hunting](sentinel-mcp-defender-tool.md)
+    [Get started with incident triage and threat hunting](sentinel-mcp-triage-tool.md)
 
 ## Related content
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)

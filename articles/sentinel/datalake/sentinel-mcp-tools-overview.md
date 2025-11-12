@@ -35,7 +35,13 @@ The following table lists the available collections you can use:
 |----------|----------|----------|
 | [Data exploration](sentinel-mcp-data-exploration-tool.md) | Explore security data in Microsoft Sentinel data lake by searching for relevant tables, querying the lake, and analyzing entities | `https://sentinel.microsoft.com/mcp/data-exploration`|
 | [Security Copilot agent creation](sentinel-mcp-agent-creation-tool.md) | Create Microsoft Security Copilot agents for complex workflows |`https://sentinel.microsoft.com/mcp/security-copilot-agent-creation`|
-| [Microsoft Defender](sentinel-mcp-defender-tool.md) | Triage incidents rapidly and hunt over your own data easily using Defender APIs | `https://sentinel.microsoft.com/mcp/defender`|
+| [Triage](sentinel-mcp-triage-tool.md) | Triage incidents rapidly and hunt over your own data easily | `https://sentinel.microsoft.com/mcp/triage`|
+
+## Create your own custom MCP tool
+You can enable agents to retrieve and reason over knowledge from your library of saved Kusto Query Language (KQL) queries in [advanced hunting](/defender-xdr/advanced-hunting-microsoft-defender?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json) by using custom MCP tools. Creating your own Sentinel MCP tools lets you have granular control over the data accessible to your security agents and create deterministic agentic workflows. 
+
+For more information, see [Create and use custom Microsoft Sentinel MCP tools](sentinel-mcp-create-custom-tool.md).
+
 
 ## Related content
 - [What is Microsoft Sentinel’s support for Model Context Protocol (MCP)?](sentinel-mcp-overview.md) 
