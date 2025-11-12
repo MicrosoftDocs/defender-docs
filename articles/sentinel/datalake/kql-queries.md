@@ -42,7 +42,7 @@ Select **New query** to create a new query tab. The portal saves the last query 
 
 The **Query history** tab shows a list of your previously run queries, query processing time, and completion state. You can open a previous query in a new tab by selecting it from the list. The portal saves the query history for 30 days. Select a query to edit or run it again.
 
-:::image type="content" source="media/kql-queries/query-editor.png" alt-text="Screenshot of the Kql queries page in the Defender portal." lightbox="media/kql-queries/query-editor.png":::
+:::image type="content" source="media/kql-queries/query-editor.png" alt-text="Screenshot of the KQL queries page in the Defender portal." lightbox="media/kql-queries/query-editor.png":::
 
 
 ### Select workspaces
@@ -74,21 +74,11 @@ The schema browser provides a list of available tables and their columns for the
 
 ## Out-of-the-box queries
 
-The **Queries** tab provides a collection of out-of-the-box KQL queries grouped by scenarios. Initial scenarios include the following scenarios, each containing several queries:
-+ Sudden expansion of sign-in locations for users and apps 
-+ Rare or sensitive Azure subscription-level operations 
-+ SharePoint downloads from previously unseen IPs (data exfiltration) 
-+ Suspected beaconing C2 from an internal host 
-+ Windows logons outside normal hours 
-+ New process executions on endpoints 
-+ Rare or risky tenant audit actions by apps or users 
-+ Unusual user agents at signin or service access 
-+ Daily summarization for anomaly detection
-+ Threat intelligence matching
+The **Queries** tab provides a collection of out-of-the-box KQL queries. These queries cover common scenarios and use cases, such as security incident investigation, threat hunting, and compliance reporting. You can use these queries as-is or modify them to suit your specific needs.
 
 More scenarios and queries will be added over time. For community contributions, see the [Microsoft Sentinel GitHub repository](https://aka.ms/sentinel-github-outofthebox-queries).
 
-Select a query from the list to open it in a new query tab in the editor.
+Select a query from the list using the **...** icon. You can open it in a new query tab for editing or run it immediately. 
 
 :::image type="content" source="media/kql-queries/out-of-the-box-queries.png" alt-text="Screenshot of the Sample queries tab in the KQL query editor." lightbox="media/kql-queries/out-of-the-box-queries.png":::
 

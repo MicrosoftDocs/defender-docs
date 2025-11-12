@@ -18,7 +18,7 @@ ms.collection: ms-security
 
 #  Create KQL jobs in the Microsoft Sentinel data lake
 
-KQL jobs are one-time or scheduled asynchronous KQL queries on data in the Microsoft Sentinel data lake. Jobs are useful for investigative and analytical scenarios for example; 
+KQL jobs are one-time or scheduled asynchronous KQL queries on data in the Microsoft Sentinel data lake. Use jobs for investigative and analytical scenarios, such as: 
 + Long-running one-time queries for incident investigations and incident response (IR)
 + Data aggregation tasks that support enrichment workflows using low-fidelity logs
 + Historical threat intelligence (TI) matching scans for retrospective analysis
@@ -26,7 +26,7 @@ KQL jobs are one-time or scheduled asynchronous KQL queries on data in the Micro
 
 KQL jobs are especially effective when queries use joins or unions across different datasets. 
 
-Jobs are also used to promote the data from the data lake tier to the analytics tier. Once in the analytics tier, use the advanced hunting KQL editor to query the data. Promoting data to the analytics tier has the following benefits:
+Use jobs to promote data from the data lake tier to the analytics tier. Once in the analytics tier, use the advanced hunting KQL editor to query the data. Promoting data to the analytics tier has the following benefits:
 
 + Combine current and historical data in the analytics tier to run advanced analytics and machine learning models on your data.
 + Reduce query costs by running queries in the analytics tier.
@@ -40,7 +40,7 @@ You can promote data to a new table or append the results to an existing table i
 
 ## Prerequisites
 
-The following prerequisites are required to create and manage KQL jobs in the Microsoft Sentinel data lake.
+To create and manage KQL jobs in the Microsoft Sentinel data lake, you need the following prerequisites.
 
 ### Onboard to the data lake
 
@@ -50,16 +50,16 @@ To create and manage KQL jobs in the Microsoft Sentinel data lake, you must firs
 
 Microsoft Entra ID roles provide broad access across all workspaces in the data lake. To read tables across all workspaces, write to the analytics tier, and schedule jobs using KQL queries, you must have one of the supported Microsoft Entra ID roles. For more information on roles and permissions, see [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
-To create new custom tables in the analytics tier, the data lake managed identity must be assigned the **Log Analytics Contributor** role in the Log Analytics workspace.
+To create new custom tables in the analytics tier, assign the **Log Analytics Contributor** role in the Log Analytics workspace to the data lake managed identity.
 
-To assign the role, follow the steps below:
+To assign the role, follow these steps:
 
-1. In the Azure portal, navigate to the Log Analytics workspace that you want to assign the role to.
+1. In the Azure portal, go to the Log Analytics workspace that you want to assign the role to.
 1. Select **Access control (IAM)** in the left navigation pane.
 1. Select **Add role assignment**.
-1. In the **Role** table, select ***Log Analytics Contributor**, then select **Next**
+1. In the **Role** table, select ***Log Analytics Contributor**, then select **Next**.
 1. Select **Managed identity**, then select **Select members**.
-1. Your data lake managed identity is a system assigned managed identity named `msg-resources-<guid>` Select the managed identity, then select **Select**. 
+1. Your data lake managed identity is a system assigned managed identity named `msg-resources-<guid>`. Select the managed identity, then select **Select**. 
 1. Select **Review and assign**.
 
 For more information on assigning roles to managed identities, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
@@ -67,18 +67,20 @@ For more information on assigning roles to managed identities, see [Assign Azure
 
 ## Create a job
 
-You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. The results can be written to a new table or appended to an existing table in the analytics tier.
+You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics tier. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
+
 
 1. Start the job creation process from KQL query editor, or from the jobs management page.
     1. To create a job from the KQL query editor, select the **Create job** button in the upper right corner of the query editor. 
         :::image type="content" source="media/kql-jobs/kql-queries-create-job.png" alt-text="A screenshot showing the create job button in the KQL query editor." lightbox="media/kql-jobs/kql-queries-create-job.png":::
-    1. To create a job from the jobs management page, select **Microsoft Sentinel** > **Data lake exploration** > **Jobs**   then select the **Create a new KQL job** button.
-        
+    1. To create a job from the jobs management page, select **Microsoft Sentinel** > **Data lake exploration** > **Jobs**   then select the **Create job** button.
+        :::image type="content" source="media/kql-jobs/create-job.png" alt-text="A screenshot showing the create job button in the KQL query editor." lightbox="media/kql-jobs/create-job.png":::
+
 1. Enter a **Job name**. The job name must be unique for the tenant. Job names can contain up to 256 characters. You can't use a `#` or a `-` in a job name.      
 
 1. Enter a **Job Description** providing the context and purpose of the job. 
 
-1. From the **Select workspace** dropdown, select the destination workspace. This is the workspace in the analytics tier that you want to write the query results to.
+1. From the **Select workspace** dropdown, select the destination workspace. This workspace is in the analytics tier where you want to write the query results.
 
 1. Select the destination table:
     1. To create a new table, select **Create a new table** and enter a table name. Tables created by KQL jobs have the suffix *_KQL_CL* appended to the table name.
@@ -89,10 +91,11 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
     :::image type="content" source="media/kql-jobs/enter-job-details.png" alt-text="A screenshot showing the new job details page." lightbox="media/kql-jobs/enter-job-details.png":::
 
 1. Review or write your query in the **Prepare the query** panel. Check that the time picker is set to the required time range for the job if the date range isn't specified in the query.
-1. Select the workspaces to run the query against from the **Selected workspaces** drop-down. These are the source workspaces whose tables you want to query. The workspaces you select determine the tables available for querying. The selected workspaces apply to all query tabs in the query editor. When using multiple workspaces, the `union()` operator is applied by default to tables with the same name and schema from different workspaces. Use the `workspace()` operator to query a table from a specific workspace, for example `workspace("MyWorkspace").AuditLogs`. 
+
+1. Select the workspaces to run the query against from the **Selected workspaces** drop-down. These workspaces are the source workspaces whose tables you want to query. The workspaces you select determine the tables available for querying. The selected workspaces apply to all query tabs in the query editor. When using multiple workspaces, the `union()` operator is applied by default to tables with the same name and schema from different workspaces. Use the `workspace()` operator to query a table from a specific workspace, for example `workspace("MyWorkspace").AuditLogs`. 
 
     > [!NOTE]
-    > If you're writing to an existing table, the query must return results with a schema that matches the destination table schema. If the query doesn't return results with the correct schema, the job will fail when it runs.
+    > If you're writing to an existing table, the query must return results with a schema that matches the destination table schema. If the query doesn't return results with the correct schema, the job fails when it runs.
 
 1. Select **Next**.
 
@@ -102,7 +105,7 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 
 1. Select **One time** or **Scheduled job**.
     > [!NOTE]
-    > Editing a one-time job will immediately trigger its execution.
+    > Editing a one-time job immediately triggers its execution.
 
 1. If you selected **Schedule**, enter the following details:
     1. Select the **Repeat frequency** from the drop-down. You can select **By minute**, **Hourly**, **Daily**, **Weekly**, or **Monthly**. 
@@ -122,10 +125,56 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 1. The job is scheduled and the following page is displayed. You can view the job by selecting the link.
     :::image type="content" source="media/kql-jobs/job-successfully-scheduled.png" alt-text="A screenshot showing the job created page." lightbox="media/kql-jobs/job-successfully-scheduled.png":::
 
+## Create a job from a template
+
+You can create a KQL job from a predefined job template. Job templates contain the KQL query and job settings, such as the destination workspace and table, schedule, and description. You can create your own job templates or use built-in templates provided by Microsoft.
+
+To create a job from a template, follow these steps:
+
+1. From the **Jobs** page or the KQL query editor, select **Create job**, then select **Create from template**.
+
+1. On the **Job templates** page, select the template you want to use from the list of available templates. 
+
+1. Review the **Description** and **KQL query** from the template. 
+
+1. Select **Create job from template**.
+:::image type="content" source="media/kql-jobs/create-job-from-template.png" alt-text="A screenshot showing the job templates page." lightbox="media/kql-jobs/job-templates.png":::
+
+1. The job creation wizard opens with the **Create a new KQL job** page. The job details prepopulated from the template except for the destination workspace.
+
+1. Select the destination workspace from the **Select workspace** dropdown.
+
+1. Review and modify the job details as required, then select **Next** to proceed through the job creation wizard.
+
+1. The remaining steps are the same as creating a new job. The fields are prepopulated from the template and can be modified as needed. For more information, see [Create a job](#create-a-job).
+
+The following templates are available:
+
+| Template name | Category by | 
+|-----------|--------------|
+|<details><summary>**Anomalous sign-in behavior based on location changes** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify anomalous sign-in behavior based on location changes for Entra ID users and apps to detect sudden changes in behavior.</details> | Anomaly detection | 
+|<details><summary>**Anomalous sign-in locations increase** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Analyze trend analysis of Entra ID sign-in logs to detect unusual location changes for users across applications by computing trend lines of location diversity. It highlights the top three accounts with the steepest increase in location variability and lists their associated locations within 21-day windows.</details> | Hunting | 
+|<details><summary>**Audit rare activity by app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Find apps performing rare actions (for example, consent, grants) that can quietly create privilege. Compare the current day to last 14 days of audits to identify new audit activities. Useful for tracking malicious activity related to user/group additions or removals by Azure Apps and automated approvals.</details> | Hunting |  
+|<details><summary>**Azure rare subscription level operations** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify sensitive Azure subscription-level events based on Azure Activity Logs. For example, monitoring based on operation name "Create or Update Snapshot", which is used for creating backups but could be misused by attackers to dump hashes or extract sensitive information from the disk.</details> | Hunting |
+|<details><summary>**Daily activity trend by app in AuditLogs** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>From the last 14 days, identify any "Consent to application" operation occurs by a user or app. This could indicate that permissions to access the listed AzureApp was provided to a malicious actor. Consent to application, add service principal and add Auth2PermissionGrant events should be rare. If available, additional context is added from the AuditLogs based on CorrleationId from the same account that performed "Consent to application".</details> | Baseline |
+|<details><summary>**Daily location trend per user or app in SignInLogs** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Build daily trends for all user signins, locations count, and their app usage.</details> | Baseline |
+|<details><summary>**Daily network traffic trend per destination IP**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.</details> | Baseline |
+|<details><summary>**Daily network traffic trend per destination IP with data transfer stats**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify internal host that reached out outbound destination, including volume trends, estimating blast radius.</details> | Hunting |
+|<details><summary>**Daily network traffic trend per source IP** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.</details> | Baseline |
+|<details><summary>**Daily network traffic trend per source IP with data transfer stats** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Today's connections and bytes are evaluated against the host's day-over-day baseline to determine whether the observed behaviors deviate significantly from established pattern.</details> | Hunting |
+|<details><summary>**Daily process execution trend** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify new processes and prevalence, making "new rare process" detections easier.</details> | Baseline |
+|<details><summary>**Daily sign-in location trend per user and app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a signin baseline for each user or application with typical geographic and IP, enabling efficient and cost-effective anomaly detection at scale.</details> | Baseline |
+|<details><summary>**Entra ID rare user agent per app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Establish a baseline of the type of UserAgent (that is, browser, office application, etc.) that is typically used for a particular application by looking back for a number of days. It then searches the current day for any deviations from this pattern, that is, types of UserAgents not seen before in combination with this application.</details> | Anomaly detection |
+|<details><summary>**Network log IOC matching** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify any IP indicators of compromise (IOCs) from threat intelligence (TI), by searching for matches in CommonSecurityLog.</details> | Hunting |
+|<details><summary>**New processes observed in last 24 hours** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>New processes in stable environments may indicate malicious activity. Analyzing logon sessions where these binaries ran can help identify attacks.</details> | Hunting |
+|<details><summary>**Palo Alto potential network beaconing** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify beaconing patterns from Palo Alto Network traffic logs based on recurrent time delta patterns. The query leverages various KQL functions to calculate time deltas and then compares it with total events observed in a day to find percentage of beaconing.</details> | Hunting |
+|<details><summary>**SharePoint file operation via previously unseen IPs** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify anomalies using user behavior by setting a threshold for significant changes in file upload/download activities from new IP addresses. It establishes a baseline of typical behavior, compares it to recent activity, and flags deviations exceeding a default threshold of 25.</details> | Hunting |
+|<details><summary>**Windows suspicious login outside normal hours** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify unusual Windows logon events outside a user's normal hours by comparing with the last 14 days' logon activity, flagging anomalies based on historical patterns.</details> | Anomaly detection | 
+
 
 ## Considerations and limitations
 
-When creating jobs in the Microsoft Sentinel data lake, consider the following limitations and best practices:
+When you create jobs in the Microsoft Sentinel data lake, consider the following limitations and best practices:
 
 ## KQL
 
@@ -136,7 +185,7 @@ When creating jobs in the Microsoft Sentinel data lake, consider the following l
   + `ingestion_time()`
 
 
-+ User-defined functions not supported.
++ User-defined functions aren't supported.
 
 
 ## Jobs
@@ -147,7 +196,7 @@ When creating jobs in the Microsoft Sentinel data lake, consider the following l
 
 
 ### Column names
-The following standard columns aren't supported for export. These columns are overwritten in the destination tier during the ingestion:
+The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
 
 + TenantId
 + _TimeReceived
@@ -160,12 +209,12 @@ The following standard columns aren't supported for export. These columns are ov
 + _IsBillable
 + _WorkspaceId
 
-+ `TimeGenerated` is overwritten if it's older that 2 days. To preserve the original event time, we recommend writing the source timestamp to a separate column.
++ `TimeGenerated` is overwritten if it's older than two days. To preserve the original event time, write the source timestamp to a separate column.
 
 For service limits, see [Microsoft Sentinel data lake service limits](sentinel-lake-service-limits.md#service-parameters-and-limits-for-kql-jobs).
 
 > [!NOTE]
->  Partial results may be promoted if the job's query exceeds the one hour limit.
+>  Partial results might be promoted if the job's query exceeds the one hour limit.
 
 [!INCLUDE [limitations for KQL jobs](../includes/service-limits-kql-jobs.md)]
 
