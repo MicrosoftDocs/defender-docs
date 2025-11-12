@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 08/13/2025
+ms.date: 11/04/2025
 ---
 
 # Understand the advanced hunting schema
@@ -56,6 +56,7 @@ The following reference lists all the tables in the schema. Each table name link
 |------------|-------------|
 | **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |
+|**[AIAgentsInfo](advanced-hunting-aiagentsinfo-table.md)** | Information about AI agents created with Microsoft Copilot Studio, including agent configuration and ownership details |
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | Files, IP addresses, URLs, users, or devices associated with alerts |
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Behavior data types in Microsoft Defender for Cloud Apps (not available for GCC) |
@@ -96,6 +97,8 @@ The following reference lists all the tables in the schema. Each table name link
 | **[EmailEvents](advanced-hunting-emailevents-table.md)** | Microsoft 365 email events, including email delivery and blocking events |
 | **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | Security events that occur post-delivery, after Microsoft 365 delivers the emails to the recipient mailbox |
 | **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | Information about URLs on emails |
+| **[EntraIdSignInEvents](advanced-hunting-entraidsigninevents-table.md)** (Preview)| Microsoft Entra interactive and non-interactive sign-ins |
+| **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** (Preview)| Microsoft Entra service principal and managed identity sign-ins |
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |
 | **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)**  (Preview) | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |

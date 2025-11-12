@@ -1,4 +1,4 @@
----
+﻿---
 title: Review detected threats using the Microsoft Defender for Endpoint Antivirus and Intune integration
 description: Use the Microsoft Defender for Endpoint Antivirus and Intune integration to view and manage threat detections.
 ms.service: defender-endpoint
@@ -12,24 +12,20 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/21/2024
+ms.date: 10/20/2025
 ms.subservice: edr
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+## Prerequisites
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-**Platforms**
+### Supported operating systems
 
 - Windows
 - macOS
@@ -128,3 +124,4 @@ The device has not been [retired](/mem/intune/remote-actions/devices-wipe) from 
 
 - [Alerts in Microsoft Defender for Endpoint](investigate-alerts.md)
 - [Alerts queue in Microsoft Defender XDR](alerts-queue-endpoint-detection-response.md)
+

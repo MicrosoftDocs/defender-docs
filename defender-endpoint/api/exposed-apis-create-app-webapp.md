@@ -50,6 +50,8 @@ Having the [Microsoft Entra role](/entra/identity/role-based-access-control/mana
 
 ## Step 2: Add a secret to your app
 
+This section describes authenticating your app using an app secret. To authenticate your app using a certificate, see [Create a self-signed public certificate to authenticate your application](/entra/identity-platform/howto-create-self-signed-certificate).
+
 1. From the application page, select *Certificates & secrets* > *New client secret*.
 
 2. In the *Add a client secret* pane, add a description and expiration date.
@@ -163,11 +165,3 @@ var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter
 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
 ```
-
-## See also
-
-* [Get access with user context](exposed-apis-create-app-nativeapp.md)
-
-* [Supported Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
-
-* [Access Microsoft Defender for Endpoint on behalf of a user](exposed-apis-create-app-nativeapp.md)

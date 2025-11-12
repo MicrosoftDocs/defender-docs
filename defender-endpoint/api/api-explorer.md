@@ -1,4 +1,4 @@
----
+﻿---
 title: API Explorer in Microsoft Defender for Endpoint
 ms.reviewer:
 description: Use the API Explorer to construct and do API queries, test, and send requests for any available API
@@ -17,14 +17,14 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 12/18/2020
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # API Explorer
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 The Microsoft Defender for Endpoint API Explorer is a tool that helps you explore various Defender for Endpoint APIs interactively.
 
@@ -66,3 +66,4 @@ The logged-in user authentication credential is used to verify that the API Expl
 
 Specific API requests are limited based on your RBAC privileges. For example, a request to "Submit indicator" is limited to the security admin role.
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

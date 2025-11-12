@@ -31,7 +31,7 @@ In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defe
 - The Microsoft Teams desktop client.
 - The Microsoft Teams Web App.
 - The Microsoft Teams app for iOS/iPadOS: Version 7.15 or later.
-- The Microsoft Teams for Android: Version 1416/1.0.0.2025153104 or later. 
+- The Microsoft Teams for Android: Version 1416/1.0.0.2025153104 or later.
 
 Users can report messages as malicious or non-malicious in Teams from chats, standard, private and shared channels, and meeting conversations. Admins can also get visibility into Teams messages that users are reporting.
 
@@ -149,7 +149,7 @@ For more information, see [User reported settings](submissions-user-reported-mes
 
 **Notes**:
 
-- For shared channel user reports, the report goes to the organization that owns/created the channel. 
+- For shared channel user reports, the report goes to the organization that owns/created the channel.
 - If you select **Send the reported messages to** \> **My reporting mailbox only**, reported messages don't go to Microsoft for analysis unless an admin manually submits the message from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. Reporting messages to Microsoft is an important part of training the service to help improve the accuracy of filtering (reduce false positives and false negatives). That's why we use **Send the reported messages to** \> **Microsoft and my reporting mailbox** as the default.
 - Regardless of the **Send the reported messages to** setting, the following actions occur when a user reports a Teams message:
   - Metadata from the reported Teams message (for example, senders, recipients, reported by, and message details) is available on the **User reported** tab on the **Submissions** page.

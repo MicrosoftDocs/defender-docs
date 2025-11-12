@@ -1,4 +1,4 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
@@ -15,20 +15,56 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 09/05/2025
+ms.date: 11/06/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ### Releases for Defender for Endpoint on Android
+
+#### November 2025
+
+| Build| 1.0.8303.0101|
+| -------- | -------- |
+| Release Date |November 4, 2025|
+
+**What's New**
+
+- An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
+  
+- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+
+#### October 2025
+
+| Build| 1.0.8217.0101 |
+| -------- | -------- |
+| Release Date   | October 28   |
+
+**What's New**
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/android-whatsnew/image.png)
+  
+- #### October 2025
+
+| Build| 1.0.8201.0101|
+| -------- | -------- |
+| Release Date | October 2, 2025 |
+
+**What's New**
+
+- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux)
+
+- Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.
+
+- Performance Improvement and bug fixes.
 
 #### September 2025
 
@@ -286,3 +322,4 @@ Notify your users and help desk (as applicable) that end users must accept the n
 ## See also
 
 [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+

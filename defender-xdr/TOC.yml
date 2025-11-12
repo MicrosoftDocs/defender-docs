@@ -86,12 +86,16 @@
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
+      - name: Use tasks to handle incident workflow
+        href: split-incidents-into-tasks.md
       - name: Investigate and respond to incidents
         items:
         - name: Plan incident response
           href: /unified-secops-platform/plan-incident-response
         - name: Investigate incidents  
           href: investigate-incidents.md
+        - name: Understand graph icons and visualizations
+          href: understand-graph-icons.md
         - name: Move alerts to another incident
           href: move-alert-to-another-incident.md
         - name: Merge incidents manually
@@ -143,12 +147,6 @@
           href: autoad-results.md
         - name: Exclude assets from automated responses
           href: automatic-attack-disruption-exclusions.md           
-      - name: Manage the deception capability
-        items:
-        - name: Overview
-          href: deception-overview.md
-        - name: Configure capabilities
-          href: configure-deception.md
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
@@ -225,6 +223,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AIAgentsInfo
+            href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
             href: advanced-hunting-alertevidence-table.md
           - name: AlertInfo
@@ -305,6 +305,10 @@
             href: advanced-hunting-emailpostdeliveryevents-table.md
           - name: EmailUrlInfo
             href: advanced-hunting-emailurlinfo-table.md
+          - name: EntraIdSignInEvents
+            href: advanced-hunting-entraidsigninevents-table.md
+          - name: EntraIdSpnSignInEvents
+            href: advanced-hunting-entraidspnsigninevents-table.md
           - name: ExposureGraphEdges
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
@@ -347,13 +351,19 @@
           href: advanced-hunting-limits.md
         - name: Extend data coverage
           href: advanced-hunting-extend-data.md
+        - name: Hunt using hunting graph
+          href: advanced-hunting-graph.md
       - name: Track and respond to emerging threats
         items:
-        - name: Threat analytics overview
-          href: threat-analytics.md
-        - name: Understand the analyst report
-          href: threat-analytics-analyst-reports.md
-        - name: Defender Threat Intelligence in Microsoft Defender XDR
+        - name: Threat analytics
+          items:
+          - name: Overview
+            href: threat-analytics.md
+          - name: Understand the analyst report
+            href: threat-analytics-analyst-reports.md
+          - name: Get access to indicators
+            href: threat-analytics-indicators.md
+        - name: Microsoft Defender Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
       - name: Collaborate with Microsoft Defender Experts for Hunting
         items:
@@ -515,6 +525,8 @@
             href: m365d-threat-analytics-notifications.md
           - name: Configure alert notifications
             href: configure-email-notifications.md
+        - name: Contact Microsoft Defender support
+          href: contact-defender-support.md
         - name: Manage devices through dynamic rules
           href: configure-asset-rules.md
         - name: Provide managed service provider (MSSP) access

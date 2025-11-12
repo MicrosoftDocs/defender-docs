@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect
 
-Install Defender for Identity sensors on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers to help protect them from on-premises and hybrid attacks. This article describes the installation steps.
+Install Defender for Identity sensors on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers to help protect them from on-premise and cloud attacks. This article describes the installation steps.
 
 These considerations apply:
 

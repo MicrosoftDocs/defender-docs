@@ -1,4 +1,4 @@
----
+﻿---
 title: Manage automation file uploads
 description: Enable content analysis and configure the file extension and email attachment extensions that will be submitted for analysis
 ms.service: defender-endpoint
@@ -13,18 +13,13 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 06/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage automation file uploads
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Enable the content analysis capability so that certain files and email attachments can automatically be uploaded to the cloud for additional inspection in Automated investigation.
 
@@ -61,3 +56,4 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 - [Manage automation folder exclusions](manage-automation-folder-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

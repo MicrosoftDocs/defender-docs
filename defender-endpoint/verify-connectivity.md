@@ -1,4 +1,4 @@
----
+﻿---
 title: Verify client connectivity to Microsoft Defender for Endpoint service URLs
 description: Learn how to verify client connectivity to Defender for Endpoint service URLs
 search.appverid: met150
@@ -15,18 +15,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 ms.date: 09/21/2024
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
-
 # STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 
 Check that clients are able to connect to the Defender for Endpoint service URLs using the Defender for Endpoint Client Analyzer to ensure that endpoints are able to communicate telemetry to the service. 

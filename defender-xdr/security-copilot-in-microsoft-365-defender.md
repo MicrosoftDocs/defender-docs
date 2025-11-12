@@ -1,5 +1,5 @@
 ---
-title: Microsoft Copilot in Microsoft Defender
+title: Microsoft Security Copilot in Microsoft Defender
 description: Learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
@@ -26,14 +26,14 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
 ---
 
-# Microsoft Copilot in Microsoft Defender
+# Microsoft Security Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]
 > Microsoft Defender XDR provides a unified XDR experience for Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Vulnerability Management. Learn more about this pre- and post-breach defense suite in [What is Microsoft Defender XDR?](microsoft-365-defender.md)
 
-This article provides an overview for users of Microsoft Copilot in Microsoft Defender, including steps to access, key capabilities, and links to the details of these capabilities.
+This article provides an overview for users of Microsoft Security Copilot in Microsoft Defender, including steps to access, key capabilities, and links to the details of these capabilities.
 
 ## Know before you begin
 
@@ -46,7 +46,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 - [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
 - [Responsible AI FAQs](responsible-ai-copilot-defender.md)
 
-## Microsoft Copilot integration in Microsoft Defender
+## Microsoft Security Copilot integration in Microsoft Defender
 
 [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
 
@@ -118,7 +118,7 @@ Empower your security organization to make informed decisions with the latest th
 
 Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Security Copilot in threat intelligence](/defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr).
 
-:::image type="content" source="/defender/media/copilot-in-defender/TI/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="/defender/media/copilot-in-defender/TI/copilot-defender-threat-intel-full.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-full.png":::
 
 <a name='access-security-copilot-in-microsoft-365-defender'></a>
 
@@ -132,11 +132,11 @@ In the Microsoft Defender portal, you can find sample prompts to help you naviga
 
 Advanced hunting prompts:
 
-:::image type="content" source="/defender/media/copilot-in-defender/sample-prompt-adv-hunting-small.png" alt-text="Screenshot highlighting the Copilot prompts in the advanced hunting page." lightbox="/defender/media/copilot-in-defender/sample-prompt-adv-hunting.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/sample-prompt-adv-hunting-small.png" alt-text="Screenshot highlighting the Copilot prompts in the advanced hunting page." lightbox="./media/security-copilot-in-microsoft-365-defender/sample-prompt-adv-hunting.png":::
 
 Threat intelligence prompts:
 
-:::image type="content" source="/defender/media/copilot-in-defender/sample-prompt-threat-intel-small.png" alt-text="Screenshot highlighting the Copilot prompts in the threat intelligence page." lightbox="/defender/media/copilot-in-defender/sample-prompt-threat-intel.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/sample-prompt-threat-intel-small.png" alt-text="Screenshot highlighting the Copilot prompts in the threat intelligence page." lightbox="./media/security-copilot-in-microsoft-365-defender/sample-prompt-threat-intel.png":::
 
 You can extend your investigation in the Security Copilot standalone portal using natural language prompts. The following are sample prompts that you can type in the prompt bar to help you summarize an incident with recommendations:
 

@@ -25,7 +25,6 @@ adobe-target: true
 
 # Zero Trust with Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
