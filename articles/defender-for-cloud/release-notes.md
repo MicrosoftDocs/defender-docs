@@ -31,20 +31,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-|November 12, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
+|November, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### In-pipeline container vulnerability scanning (preview)
 
-November 12, 2025
+November, 2025
 
 In-pipeline container vulnerability scanning for Defender for DevOps is now available in preview through the Defender for Cloud CLI.
 
 The scanning process runs directly within CI/CD workflows, providing real-time feedback before container images are pushed to registries or deployed. Integrating scanning into pipelines helps detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
 
-Learn more about setting up [in-pipeline container vulnerability scanning]().
+Learn more about the [Defender for Cloud CLI](cli-cicd-integration.md).
 
 ### Updates to container image continuous vulnerability re-scan policy
 
