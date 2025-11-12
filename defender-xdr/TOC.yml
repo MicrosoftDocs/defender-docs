@@ -523,7 +523,7 @@
             href: m365d-threat-analytics-notifications.md
           - name: Configure alert notifications
             href: configure-email-notifications.md
-        - name: Contact Microsoft Defender XDR support
+        - name: Contact Microsoft Defender support
           href: contact-defender-support.md
         - name: Manage devices through dynamic rules
           href: configure-asset-rules.md
