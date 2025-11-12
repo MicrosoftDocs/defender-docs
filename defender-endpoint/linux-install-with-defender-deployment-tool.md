@@ -227,15 +227,13 @@ If you experience any installation issues, try following these steps:
 ## Related content
 
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md)
+- [Enable deployment of Microsoft Defender for Endpoint to a custom location](./linux-custom-location-installation.md)
 - [Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux](./linux-installer-script.md)
 - [Deploy Microsoft Defender for Endpoint on Linux with Ansible](./linux-install-with-ansible.md)
 - [Deploy Defender for Endpoint on Linux with Chef](./linux-deploy-defender-for-endpoint-with-chef.md)
 - [Deploy Microsoft Defender for Endpoint on Linux with Puppet](./linux-install-with-puppet.md)
+- [Deploy Microsoft Defender for Endpoint on Linux with Saltstack](./linux-install-with-saltack.md)
 - [Deploy Microsoft Defender for Endpoint on Linux manually](./linux-install-manually.md)
+- [Deploy Microsoft Defender for Endpoint on Linux using golden images](./linux-deploy-defender-for-endpoint-using-golden-images.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint (direct onboarding using Defender for Cloud)](../defender-for-cloud/onboard-machines-with-defender-for-endpoint.md?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)
 - [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](./mde-linux-deployment-on-sap.md)
-- [Enable deployment of Microsoft Defender for Endpoint to a custom location](./linux-custom-location-installation.md)
-- [Deploy Microsoft Defender for Endpoint on Linux with Saltstack](./linux-install-with-saltack.md)
-- [Deploy Microsoft Defender for Endpoint on Linux using golden images](./linux-deploy-defender-for-endpoint-using-golden-images.md)
-
-[!INCLUDE Microsoft Defender for Endpoint Tech Community]
