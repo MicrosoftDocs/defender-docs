@@ -94,13 +94,12 @@ Additionally, the following requirements also need to be met:
 
 | **Scenario** | **Command** |
 |:-------------|:------------|
-| Check for unmet blocking prerequisites | No special command required. Blocking prerequisite checks run by default as part of the install scenario<br>
-`sudo ./defender-deployment-tool.sh` |
-| [Check for unmet non-blocking prerequisites] | `sudo ./defender-deployment-tool.sh --pre-req-non-blocking` |
-| [connectivity-test] | sudo ./defender-deployment-tool.sh --connectivity-test |
-| [custom install] | sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/ |
-| [one example for insider-slow channel] | sudo ./defender-deployment-tool.sh --channel insiders-slow |
-| Install using proxy | sudo ./defender-deployment-tool.sh --http-proxy \<http://username:password@proxy_host:proxy_port\> |
+| Check for unmet blocking prerequisites | No special command required. Blocking prerequisite checks run by default as part of the install scenario<br>`sudo ./defender-deployment-tool.sh` |
+| Check for unmet non-blocking prerequisites | `sudo ./defender-deployment-tool.sh --pre-req-non-blocking` |
+| Run connectivity test | `sudo ./defender-deployment-tool.sh --connectivity-test` |
+| Custom install | `sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/` |
+| Example for insider-slow channel | `sudo ./defender-deployment-tool.sh --channel insiders-slow` |
+| Install using proxy | `sudo ./defender-deployment-tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
 | Install a specific agent version | sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod |
 | Upgrade to a specific agent version | sudo ./defender-deployment-tool.sh --upgrade --mdatp 101.24082.0004 |
 | Downgrade to a specific agent version | sudo ./defender-deployment-tool.sh --downgrade --mdatp 101.24082.0004 |
