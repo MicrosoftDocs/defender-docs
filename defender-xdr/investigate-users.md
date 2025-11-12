@@ -60,14 +60,16 @@ The user page shows the Microsoft Entra organization as well as groups, helping 
 The **Entity details** panel on the left side of the page provides information about the user, such as the Microsoft Entra identity risk level, the insider risk severity level (Preview), the number of devices the user is signed in to, when the user was first and last seen, the user's accounts, groups that the user belongs to, and contact information. This card includes all incidents and alerts associated with the user entity, grouped by severity.
 
 > [!NOTE]
-> **Investigation Priority Score** has been deprecated on December 3, 2024. As a result, both the Investigation Priority Score breakdown and the Scored activities cards have been removed from the UI. 
+> **Investigation Priority Score** was deprecated on December 3, 2024. As a result, both the Investigation Priority Score breakdown and the Scored activities cards have been removed from the UI. 
 
 You see other details depending on the services and features you enabled, including: 
 
 - (Preview) Microsoft Defender XDR users with access to [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can now see a user's insider risk severity and gain insights on a user's suspicious activities in the user page. Select the **insider risk severity** under Entity details to see the risk insights about the user.
-- (Preview) If you enable [Microsoft Sentinel UEBA (User and Entity Behavior Analytics)](/azure/sentinel/identify-threats-with-entity-behavior-analytics), you'll see:
+- (Preview) If you enable [Microsoft Sentinel User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics), you'll see:
     - The user's top three UEBA anomalies from the last 30 days.
     - Links to launch pre-built advanced hunting queries and view all anomalous behaviors related to the user on the [Sentinel events tab](#microsoft-sentinel-events). 
+  This is available only for customers who have UEBA enabled. 
+
    
 ### Active directory account controls
 
