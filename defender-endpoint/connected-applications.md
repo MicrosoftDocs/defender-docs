@@ -22,11 +22,6 @@ appliesto:
 ---
 # Connected applications in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 Connected applications integrates with the Defender for Endpoint platform using APIs.
 

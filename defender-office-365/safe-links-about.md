@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 09/16/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -79,7 +79,7 @@ The following table describes scenarios for Safe Links in Microsoft 365 and Offi
 |Chris's Microsoft 365 E5 organization has no Safe Links policies configured. Chris receives an email from an external sender that contains a URL to a malicious website that he ultimately clicks.|Chris is protected by Safe Links. <br><br> The **Built-in protection** preset security policy provides Safe Links protection to all recipients (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Links policies). For more information, see [Preset security policies](preset-security-policies.md).|
 |In Pat's organization, admins have created a Safe Links policy that applies Pat, but Safe Links protection for Office apps is turned off. Pat opens a Word document and clicks a URL in the file.|Pat isn't protected by Safe Links. <br><br> Although Pat is included in an active Safe Links policy, Safe Links protection for Office apps is turned off in that policy, so the protection can't be applied.|
 |Jamie and Julia both work for contoso.com. A long time ago, admins configured Safe Links policies that apply to both of Jamie and Julia. Jamie sends an email to Julia, not knowing that the email contains a malicious URL.|Julia is protected by Safe Links **if** the Safe Links policy that applies to her is configured to apply to messages between internal recipients. For more information, see the [Safe Links settings for email messages](#safe-links-settings-for-email-messages) section later in this article.|
-|Jim's IT department configured SafeLinks to not rewrite URLs, and to check via API only. Jim receives an email about an urgent crypto opportunity within BroMail - an 'aternative' email client that doesn't use 'woke' APIs, and clicks the link. The link was legitimate on delivery, but was later weaponized.|Jim is phished. BroMail doesn't support the SafeLinks API. Because the link wasn't malicious on delivery, SafeLinks didn't detect it.|
+|Jim's IT department configured SafeLinks to not rewrite URLs, and to check via API only. Jim clicks a link in an alternative email client that doesn't support the SafeLinks API. The link was legitimate on delivery, but was later weaponized.|Jim is phished. Because the link wasn't malicious on delivery, SafeLinks didn't detect it.|
 
 ## Recipient filters in Safe Links policies
 
@@ -88,7 +88,7 @@ Recipient filters use conditions and exceptions to identify the internal recipie
 - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-  - The specified Microsoft 365 Groups.
+  - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
 - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
 You can use a condition or exception only once, but the condition or exception can contain multiple values:

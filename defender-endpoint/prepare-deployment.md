@@ -24,10 +24,6 @@ appliesto:
 ---
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 The next step when deploying Defender for Endpoint is to assign roles and permissions for the Defender for Endpoint deployment.
 

@@ -24,8 +24,6 @@ appliesto:
 ---
 # macOS Device Control policies frequently asked questions (FAQ)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 This article provides answers to frequently asked questions about Device Control capabilities in Microsoft Defender for Endpoint.
 

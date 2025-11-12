@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 09/01/2025
+ms.date: 11/11/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -19,9 +19,8 @@ appliesto:
   - Microsoft Defender for Business
 
 ---
-# Take response actions on a device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Take response actions on a device
 
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
@@ -208,6 +207,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**: 
 
+- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices may not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings are not required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
@@ -363,7 +363,9 @@ When an identity in your network might be compromised, you must prevent that ide
 > Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
 
 > [!IMPORTANT]
-> Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
+> As part of the active protection provided by Microsoft Defender for Endpoint, a distributed mechanism can apply LSA Policy to prevent compromised users from accessing machines in your organization. Currently, when this policy is applied on domain controllers, it may cause Group Policy synchronization activity across domain controllers.
+>
+> We are gradually rolling out a new solution by integrating with new OS APIs. This deployment will be phased and thoroughly tested to ensure stability and security. During this rollout, LSA Policy enforcement on your servers will be temporarily removed to prevent potential GPO sync. This change will remain in effect until the rollout is complete.
 
 ### How to contain a user
 

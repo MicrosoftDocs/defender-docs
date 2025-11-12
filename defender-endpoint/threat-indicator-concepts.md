@@ -21,7 +21,7 @@ appliesto:
 ---
 # Understand threat intelligence concepts
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 
 > [!NOTE]

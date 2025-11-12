@@ -2,8 +2,8 @@
 title: Onboard previous versions of Windows on Microsoft Defender for Endpoint
 description: Onboard supported previous versions of Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint sensor
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: pahuijbr
@@ -14,26 +14,14 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 11/02/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Onboard previous versions of Windows
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-
-- Windows 7 SP1 Enterprise
-- Windows 7 SP1 Pro
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
-- Windows Server 2008 R2 SP1
-
-
 
 Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
@@ -49,6 +37,17 @@ For Windows Server 2008 R2 SP1, you have the option of [onboarding through Micro
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows 7 SP1 Enterprise
+- Windows 7 SP1 Pro
+- Windows 8.1 Pro
+- Windows 8.1 Enterprise
+- Windows Server 2008 R2 SP1
 
 ## Configure and update System Center Endpoint Protection clients
 
@@ -92,17 +91,17 @@ Review the following details to verify minimum system requirements:
    > Due to the [deprecation of SHA-1 support by the MMA agent](/azure/azure-monitor/agents/agent-windows#sha-2-code-signing-support-requirement), the MMA agent needs to be version 10.20.18029 or newer.
 
 2. Obtain the workspace ID:
-   - In the Defender for Endpoint navigation pane, select **Settings > Device management > Onboarding**
-   - Select the operating system
-   - Copy the workspace ID and workspace key
+   - In the Defender for Endpoint navigation pane, select **Settings > Device management > Onboarding**.
+   - Select the operating system.
+   - Copy the workspace ID and workspace key.
 
 3. Using the Workspace ID and Workspace key choose any of the following installation methods to install the agent:
-    - [Manually install the agent using setup](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard).
+    - [Manually install the agent using setup](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard#install-the-agent).
 
       On the **Agent Setup Options** page, select **Connect the agent to Azure Log Analytics (OMS)**
 
-    - [Install the agent using the command line](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line).
-    - [Configure the agent using a script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation).
+    - [Install the agent using the command line](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=command-line#install-the-agent).
+    - [Configure the agent using a script](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=azure-automation#install-the-agent).
 
    > [!NOTE]
    > If you're a [US Government customer](gov.md), under "Azure Cloud", you need to choose "Azure US Government" if using the setup wizard, or if using a command line or a script - set the "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parameter to 1.
@@ -115,7 +114,7 @@ Once completed, you should see onboarded endpoints in the portal within an hour.
 
 If your servers need to use a proxy to communicate with Defender for Endpoint, use one of the following methods to configure the MMA to use the proxy server:
 
-- [Configure the MMA to use a proxy server](/azure/azure-monitor/platform/agent-windows#install-agent-using-setup-wizard)
+- [Configure the MMA to use a proxy server](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard#install-the-agent)
 
 - [Configure Windows to use a proxy server for all connections](configure-proxy-internet.md)
 
@@ -146,10 +145,10 @@ After completing the onboarding steps, you'll need to [Configure and update Syst
 Verify that Microsoft Defender Antivirus and Microsoft Defender for Endpoint are running.
 
 > [!NOTE]
-> Running Microsoft Defender Antivirus is not required but it is recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Microsoft Defender for Endpoint sensor (SENSE) is running.
+> Running Microsoft Defender Antivirus isn't required but it's recommended. If another antivirus vendor product is the primary endpoint protection solution, you can run Defender Antivirus in Passive mode. You can only confirm that passive mode is on after verifying that Microsoft Defender for Endpoint sensor (SENSE) is running.
 
 > [!NOTE]
-> As Microsoft Defender Antivirus is only supported for Windows 10 and Windows 11, step 1 does not apply when running Windows Server 2008 R2 SP1.
+> As Microsoft Defender Antivirus is only supported for Windows 10 and Windows 11, step 1 doesn't apply when running Windows Server 2008 R2 SP1.
 
 1. Run the following command to verify that Microsoft Defender Antivirus is installed:
 
@@ -182,16 +181,16 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
 
     For Windows Server 2008 R2 SP1, following updates are also required:
 
-    February 2018 Monthly Roll up - KB4074598 (Windows Server 2008 R2)
+    - February 2018 Monthly Roll up - KB4074598 (Windows Server 2008 R2)
 
-    [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)<br>
-    Download updates for Windows Server 2008 R2 x64
+    - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)<br>
+    - Download updates for Windows Server 2008 R2 x64
 
-    .NET Framework 3.5.1 (KB315418)<br>
-    [For Windows Server 2008 R2 x64](/iis/install/installing-iis-7/install-windows-server-2008-and-windows-server-2008-r2)
+    - .NET Framework 3.5.1 (KB315418)<br>
+    - [For Windows Server 2008 R2 x64](/iis/install/installing-iis-7/install-windows-server-2008-and-windows-server-2008-r2)
 
     > [!NOTE]
-    > This article assumes you are using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
+    > This article assumes you're using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
 
 **Step 2: Create a file name DeployMMA.cmd (using notepad)**
 Add the following lines to the cmd file. Note that you'll need your WORKSPACE ID and KEY.
@@ -224,22 +223,22 @@ Create a new group policy specifically for onboarding devices such as "Microsoft
 
 - Create a Group Policy Folder named "c:\windows\MMA"
 
-     :::image type="content" source="media/grppolicyconfig1.png" alt-text="The folders location" lightbox="media/grppolicyconfig1.png":::
+     :::image type="content" source="media/grppolicyconfig1.png" alt-text="Screenshot of the folders location." lightbox="media/grppolicyconfig1.png":::
 
     **This will add a new folder on every server that gets the GPO applied, called MMA, and will be stored in c:\windows. This will contain the installation files for the MMA, prerequisites, and install script.**
 
 - Create a Group Policy Files preference for each of the files stored in Net logon.
 
-     :::image type="content" source="media/grppolicyconfig2.png" alt-text="The group policy - 1" lightbox="media/grppolicyconfig2.png":::
+     :::image type="content" source="media/grppolicyconfig2.png" alt-text="Screenshot of the group policy - 1." lightbox="media/grppolicyconfig2.png":::
 
 It copies the files from DOMAIN\NETLOGON\MMA\filename to
 C:\windows\MMA\filename - **so the installation files are local to the server**:
 
-:::image type="content" source="media/deploymma.png" alt-text="The deploy mma cmd properties" lightbox="media/deploymma.png":::
+:::image type="content" source="media/deploymma.png" alt-text="Screenshot of the deploy mma cmd properties." lightbox="media/deploymma.png":::
 
 Repeat the process but create item level targeting on the COMMON tab, so the file only gets copied to the appropriate platform/Operating system version in scope:
 
-:::image type="content" source="media/targeteditor.png" alt-text="The target editor" lightbox="media/targeteditor.png":::
+:::image type="content" source="media/targeteditor.png" alt-text="Screenshot of the target editor." lightbox="media/targeteditor.png":::
 
 For Windows Server 2008 R2 you'll need (and it will only copy down) the following:
 
@@ -249,9 +248,9 @@ For Windows Server 2008 R2 you'll need (and it will only copy down) the followin
 
 Once this is done, you'll need to create a start-up script policy:
 
-:::image type="content" source="media/startupprops.png" alt-text="The start up properties" lightbox="media/startupprops.png":::
+:::image type="content" source="media/startupprops.png" alt-text="Screenshot of the start up properties." lightbox="media/startupprops.png":::
 
-The name of the file to run here is c:\windows\MMA\DeployMMA.cmd.
+The name of the file to run here's c:\windows\MMA\DeployMMA.cmd.
 Once the server is restarted as part of the start-up process it will install the Update for customer experience and diagnostic telemetry KB, and then install the MMA Agent, while setting the Workspace ID and Key, and the server will be onboarded.
 
 You could also use an **immediate task** to run the deployMMA.cmd if you don't want to reboot all the servers.
@@ -260,13 +259,13 @@ This could be done in two phases. First create **the files and the folder in** G
 
 As the Script has an exit method and won't re-run if the MMA is installed, you could also use a daily scheduled task to achieve the same result. Similar to a Configuration Manager compliance policy it will check daily to ensure the MMA is present.
 
-:::image type="content" source="media/schtask.png" alt-text="schedule task" lightbox="media/schtask.png":::
+:::image type="content" source="media/schtask.png" alt-text="Screenshot of the schedule task." lightbox="media/schtask.png":::
 
-:::image type="content" source="media/newtaskprops.png" alt-text="The new task properties" lightbox="media/newtaskprops.png":::
+:::image type="content" source="media/newtaskprops.png" alt-text="Screenshot of the new task properties." lightbox="media/newtaskprops.png":::
 
-:::image type="content" source="media/deploymmadowmload.png" alt-text="The deploy mma download properties" lightbox="media/deploymmadowmload.png":::
+:::image type="content" source="media/deploymmadowmload.png" alt-text="Screenshot of the deploy mma download properties." lightbox="media/deploymmadowmload.png":::
 
-:::image type="content" source="media/tasksch.png" alt-text="The task scheduler" lightbox="media/tasksch.png":::
+:::image type="content" source="media/tasksch.png" alt-text="Screenshot of the task scheduler." lightbox="media/tasksch.png":::
 
 As mentioned in the onboarding documentation for Server specifically around Server 2008 R2 please see below:
 For Windows Server 2008 R2 SP1, ensure that you fulfill the following requirements:
@@ -274,7 +273,7 @@ For Windows Server 2008 R2 SP1, ensure that you fulfill the following requiremen
 - Install the [February 2018 monthly update rollup](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598)
 - Install either [.NET framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) (or later) or [KB3154518](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the-net-framework)
 
-Please check the KBs are present before onboarding Windows Server 2008 R2. This process allows you to onboard all the servers if you don't have Configuration Manager managing Servers.
+Check the KBs are present before onboarding Windows Server 2008 R2. This process allows you to onboard all the servers if you don't have Configuration Manager managing Servers.
 
 ## Offboard endpoints
 
@@ -304,7 +303,7 @@ You can use either of the following methods:
 
 2. Select the Defender for Endpoint workspace, and click **Remove**.
 
-    :::image type="content" source="media/atp-mma.png" alt-text="The Workspaces pane" lightbox="media/atp-mma.png":::
+    :::image type="content" source="media/atp-mma.png" alt-text="Screenshot of the Workspaces pane." lightbox="media/atp-mma.png":::
 
 #### Run a PowerShell command to remove the configuration
 

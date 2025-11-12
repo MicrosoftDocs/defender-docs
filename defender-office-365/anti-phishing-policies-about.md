@@ -22,6 +22,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Baseline Email Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent:As a security administrator, I need clear, step‑by‑step guidance for configuring anti‑phishing policies—especially spoofing and impersonation protections—so I can protect users and minimize false positives.
 ---
 
 # Anti-phishing policies in cloud organizations
@@ -81,7 +82,7 @@ The following policy settings are available in anti-phishing policies for all cl
   - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
   - **Groups**:
     - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-    - The specified Microsoft 365 Groups.
+    - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
   - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
   You can use a condition or exception only once, but the condition or exception can contain multiple values:

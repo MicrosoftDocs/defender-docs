@@ -22,11 +22,6 @@ appliesto:
 ---
 # Investigate a user account in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 ## Investigate user account entities
 

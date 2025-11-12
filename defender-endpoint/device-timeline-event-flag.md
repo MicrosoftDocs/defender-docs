@@ -22,14 +22,7 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint device timeline
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-> [!NOTE]
-
-
-The Defender for Endpoint device timeline helps you research and investigate anomalous behavior on your devices more quickly. You can explore specific events and endpoints to review potential attacks in your organization. You can review specific times of each event, set flags to follow up for potentially connected events, and filter to specific date ranges. 
+The Defender for Endpoint device timeline helps you research and investigate anomalous behavior on your devices more quickly. You can explore specific events and endpoints to review potential attacks in your organization. You can review specific times of each event, set flags to follow up for potentially connected events, and filter to specific date ranges.
 
 - Custom time range picker:
 

@@ -41,7 +41,7 @@ Before you start:
 1. Copy the command displayed and modify it as needed based on the container service you're using. For example:
 
     ```bash
-    (echo <key>) | podman run --privileged --name PodmanRun -p 601:601/tcp -p 21:21 -p 20000-20099:20000-20099 -e "PUBLICIP='10.0.2.15'" -e "PROXY=" -e "SYSLOG=true" -e "CONSOLE= <tenant>.us3.portal.cloudappsecurity.com" -e "COLLECTOR=PodmanTest" --security-opt apparmor:unconfined --cap-add=SYS_ADMIN --restart unless-stopped -a stdin -i mcr.microsoft.com/mcas/logcollector starter 
+    (echo <key>) | podman run --privileged --name PodmanTest -p 601:601/tcp -p 21:21 -p 20000-20099:20000-20099 -e "PUBLICIP='10.0.2.15'" -e "PROXY=" -e "SYSLOG=true" -e "CONSOLE= <tenant>.us3.portal.cloudappsecurity.com" -e "COLLECTOR=PodmanTest" --security-opt apparmor:unconfined --cap-add=SYS_ADMIN --restart unless-stopped -a stdin -i mcr.microsoft.com/mcas/logcollector starter
     ```
 
 1. Run the modified command on your machine to deploy the container. When successful, the logs show pulling an image from mcr.microsoft.com and continuing to create blobs for the container.
