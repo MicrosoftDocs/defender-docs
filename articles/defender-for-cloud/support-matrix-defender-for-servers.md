@@ -58,7 +58,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
 | [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | GA | GA |
 
-<sup>1</sup>: In GCC-M environments on Azure public cloud, the following Microsoft Defender for Endpoint integration are currently not supported: Direct onboarding, Vulnerability Assessment recommendations and File Integrity Monitoring (FIM).
+<sup>1</sup>: In GCC-M environments on Azure public cloud, the following Microsoft Defender for Endpoint integrations are currently not supported: Direct onboarding, Vulnerability Assessment recommendations and File Integrity Monitoring (FIM).
 
 ## Windows machine support
 
