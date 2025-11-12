@@ -179,7 +179,7 @@ Note: if you downloaded "activateMDE.exe" instead of "DefenderDT.exe", replace t
 
       `DefenderDT.exe`
 
-### Using Group Policy for deployment
+## Using Group Policy for deployment
 
 The following steps specify how to create a scheduled task to run the tool using group policy:
 
