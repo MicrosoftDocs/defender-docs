@@ -253,7 +253,7 @@ Learn more about [internet exposure width](internet-exposure-analysis.md#interne
 
 September 11, 2025  
 
-Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/docs/latest/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
 
 **Where it applies:**  
 - [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
