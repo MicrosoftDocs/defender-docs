@@ -31,17 +31,17 @@ Find [Machines](machine.md) seen with the requested internal IP in the time rang
 ## Limitations
 
 1. The given timestamp must be in the past 30 days.
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- Response will include only devices that the user have access to based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- Responses include only devices that the user have access to based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
 
 - The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
 
-- Response will include only devices that the user have access to based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- Responses include only devices that the user have access to based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
