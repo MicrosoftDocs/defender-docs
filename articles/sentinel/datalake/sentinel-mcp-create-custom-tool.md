@@ -37,7 +37,7 @@ To save a KQL  query as an MCP tool, follow these steps:
 
     - View details flyout panel of a saved query
 
-        :::image type="content" source="media/sentinel-mcp/custom-tool-save-panel.png" alt-text="Screenshot of the Save as tool option in the flyout panel of a KQL query." lightbox="media/sentinel-mcp/custom-tool-save-panel.png":::
+        :::image type="content" source="media/sentinel-mcp/custom-tool-save-query-details.png" alt-text="Screenshot of the Save as tool option in the flyout panel of a KQL query." lightbox="media/sentinel-mcp/custom-tool-save-query-details.png":::
 
     - KQL query box menu of a query
         
@@ -150,7 +150,7 @@ To add your custom tool collection in Copilot Studio, follow these steps:
 
 1.	Choose **SentinelPlatform.DelegatedAccess**, then select **Add permissions**.
  
-     :::image type="content" source="media/sentinel-mcp/custom-azure-permissions.png" alt-text="Screenshot of the Request API permissions panel in Azure portal with permissions selected." lightbox="media/sentinel-mcp/custom-azure-permissions.png":::
+     :::image type="content" source="media/sentinel-mcp/custom-azure-api-delegate.png" alt-text="Screenshot of the Request API permissions panel in Azure portal with permissions selected." lightbox="media/sentinel-mcp/custom-azure-api-delegate.png":::
 
 1. Back on your app's page, go to **Manage** > **Certificates & secrets**, then select the **Client secrets** tab. 
 
@@ -246,7 +246,7 @@ To add your custom tool collection in Azure AI Foundry, follow these steps:
 
 1.	Choose **SentinelPlatform.DelegatedAccess**, then select **Add permissions**.
  
-     :::image type="content" source="media/sentinel-mcp/custom-azure-permissions.png" alt-text="Screenshot of the Request API permissions panel in Azure portal with permissions selected." lightbox="media/sentinel-mcp/custom-azure-permissions.png":::
+     :::image type="content" source="media/sentinel-mcp/custom-azure-api-delegate.png" alt-text="Screenshot of the Request API permissions panel in Azure portal with permissions selected." lightbox="media/sentinel-mcp/custom-azure-api-delegate.png":::
 
 1. Back on your app's page, go to **Manage** > **Certificates & secrets**, then select the **Client secrets** tab. 
 
