@@ -1,8 +1,8 @@
 ---
 title: What's new in Microsoft Sentinel
 description: Learn about the latest new features and announcement in Microsoft Sentinel from the past few months.
-author: batamig
-ms.author: bagol
+author: guywi-ms
+ms.author: guywild
 ms.topic: concept-article
 ms.date: 09/28/2025
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
@@ -47,9 +47,34 @@ All features require UEBA to be enabled and are workspace-scoped to the currentl
 
 For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows).
 
+
+### Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts
+
+Microsoft Sentinel is updating how it identifies account entities in incidents and alerts. This change introduces a standardized naming logic to improve consistency and reliability across your analytics and automation workflows.
+
+> [!IMPORTANT]
+> This change might affect your analytic rules, automation rules, playbooks, workbooks, hunting queries, and custom integrations.
+
+Sentinel will now select the most reliable account identifier using the following priority:
+
+1. **UPN prefix** – the part before “@” in a User Principal Name
+   - Example: `john.doe@contoso.com` → `john.doe`
+
+1. **Name** – used if UPN prefix is unavailable
+1. **Display Name** – fallback if both above are missing
+
+Update your KQL queries and automation logic to follow the new precedence-aware pattern. Use the [`coalesce()`(/kusto/query/coalesce-function)](/kusto/query/coalesce-function) function to ensure compatibility:
+
+```kql
+coalesce(Account.UPNprefix, Account.Name, Account.DisplayName)
+```
+Test all changes in a nonproduction workspace before rolling out to production.
+
+
 ## October 2025
 
-
+- [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
+- [Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts](#call-to-action-update-queries-and-automation-by-december-13-2025---standardized-account-entity-naming-in-incidents-and-alerts)
 
 ### Export STIX threat intelligence objects (Preview)
 
