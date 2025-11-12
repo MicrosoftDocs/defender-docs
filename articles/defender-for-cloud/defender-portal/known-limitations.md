@@ -38,6 +38,8 @@ Unified RBAC operates in the Defender portal and uses a different RBAC model fro
 
 Cloud scopes management and role assignment on cloud scopes are both available in the portal; API support is coming soon.
 
+To begin using cloud scopes, you must activate them through a one-time wizard. This release does not affect access permissions to VMs, but it will influence future changes related to unifying server primitives.
+
 Currently, cloud scopes primitive's configuration is not dynamic and cannot be selected based on conditions; however, support for this feature will be available in the future.
 
 The following list shows the currently supported native environment primitives; support will be expanded to include other primitives like management groups and container resources:
