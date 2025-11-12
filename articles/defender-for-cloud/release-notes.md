@@ -44,7 +44,7 @@ Defender for Containers now includes a new Restrict Pod Access response action, 
 
 The action blocks sensitive interfaces within Kubernetes pods that could enable lateral movement or privilege escalation. Using this control helps contain potential breaches and reduce exposure within your cluster environments.  
 
-Learn more about [Restrict Pod Access](/defender-xdr/investigate-respond-container-threats).
+Learn more about [Restrict Pod Access in Defender XDR](/defender-xdr/investigate-respond-container-threats).
 
 ### Updates to container image continuous vulnerability re-scan policy
 
