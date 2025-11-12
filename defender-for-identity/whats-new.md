@@ -27,7 +27,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
-The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials(Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
