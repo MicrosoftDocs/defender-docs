@@ -33,7 +33,8 @@ To enable the Copilot Studio AI agent inventory, follow these steps:
 
     :::image type="content" source="media/protect-ai-agents/copilot-studio-ai-agents-button.png" alt-text="Screenshot of the Copilot Studio AI Agent configuration toggle.":::
 
-1. Work together with the Power Platform administrator to complete these steps in the [Power Platform Portal](https://admin.preview.powerplatform.microsoft.com/security/threatdetection):  
+1. Work together with the Power Platform administrator to complete these steps in the [Power Platform Portal](https://admin.preview.powerplatform.microsoft.com/security/threatdetection):
+    1. Go to **Security** -> **Threat Protection**. 
     1. Select **Microsoft Defender - Copilot Studio AI Agents**.
     1. Turn on **Enable Microsoft Defender - Copilot Studio AI Agents**.
 
