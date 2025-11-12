@@ -59,7 +59,26 @@ The following steps are required to enable this integration:
 - Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
 - Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
 
-## Install the Defender for Endpoint agent for Windows 7 SP1 andWindows Server 2008 R2 SP1 devices
+## Install the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
+
+
+
+### Supported functionality
+
+The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports the functionality listed in the following table.
+
+| Feature | Functionality |
+|---------|---------------|
+| Advanced Hunting | Hunt across events with Kusto Query Language |
+| Antivirus in Passive Mode | Allows for coexistence with non-Microsoft antimalware solutions. |
+| Custom file indicators | Allow, block, quarantine files based on hash or certificate information |
+| Device and file response capabilities | Isolate device, block and get files, collect investigation packages, run antivirus scan<br><br>Note: other response capabilities are not supported |
+| Next-generation protection | Defender Antivirus with real-time behavior monitoring, cloud-delivered, and definition-based malware blocking and remediation. Scheduled and manually triggered scans.<br><br>Note: Network Protection, Attack Surface Reduction Rules, Controlled Folder Access and related functionality including IP and URL indicators are not supported. |
+| Operating system and software vulnerability assessments | Defender Vulnerability Management provides insights into vulnerabilities for Windows and installed software.<br><br>Note: The following functionality isn't available for Windows 7 SP1 and Windows Server 2008 R2:<br>- Security configuration assessment<br>- "Pending reboot" experience<br>- Premium capabilities: security baseline assessment, browser extensions, certificate and application blocking |
+| Security Settings Management | Policy enforcement for Defender Antivirus capabilities. Note that only settings for available features will take effect. |
+| Sense detection sensor | Rich detection events for use in device timeline, hunting, and to generate alerts based on indicators of compromise and attack. |
+| Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
+| (Automatic) updates | Regular updates for antimalware and detection components. |
 
 ### Known issues and limitations
 
@@ -345,5 +364,5 @@ You can use either of the following methods:
     # Reload the configuration and apply changes
     $AgentCfg.ReloadConfiguration()
     ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)
 
