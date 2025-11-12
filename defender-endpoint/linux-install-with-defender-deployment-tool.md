@@ -226,22 +226,16 @@ If you experience any installation issues, try following these steps:
 
 ## Related content
 
-- [SALT Project documentation](https://docs.saltproject.io/en/latest/topics/about_salt_project.html)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux](./linux-installer-script.md)
+- [Deploy Microsoft Defender for Endpoint on Linux with Ansible](./linux-install-with-ansible.md)
+- [Deploy Defender for Endpoint on Linux with Chef](./linux-deploy-defender-for-endpoint-with-chef.md)
+- [Deploy Microsoft Defender for Endpoint on Linux with Puppet](./linux-install-with-puppet.md)
+- [Deploy Microsoft Defender for Endpoint on Linux manually](./linux-install-manually.md)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint (direct onboarding using Defender for Cloud)](../defender-for-cloud/onboard-machines-with-defender-for-endpoint.md?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)
+- [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](./mde-linux-deployment-on-sap.md)
+- [Enable deployment of Microsoft Defender for Endpoint to a custom location](./linux-custom-location-installation.md)
+- [Deploy Microsoft Defender for Endpoint on Linux with Saltstack](./linux-install-with-saltack.md)
+- [Deploy Microsoft Defender for Endpoint on Linux using golden images](./linux-deploy-defender-for-endpoint-using-golden-images.md)
 
-- Prerequisites for Microsoft Defender - Linux
-
-- Use installer script based deployment to deploy Defender - Linux
-
-- Deploy Defender - Linux with Ansible
-
-- Deploy Defender - Linux with Chef
-
-- Deploy Defender - Linux with Puppet
-
-- Deploy Defender - Linux manually
-
-- Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint (direct onboarding using Defender for Cloud)
-
-- Deployment guidance for Defender - Linux for SAP
-
-\[!INCLUDE Microsoft Defender for Endpoint Tech Community\]
+[!INCLUDE Microsoft Defender for Endpoint Tech Community]
