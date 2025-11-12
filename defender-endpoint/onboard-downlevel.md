@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/010/2025
+ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -61,7 +61,7 @@ The following steps are required to enable this integration:
 
 ## Install the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
 
-
+Into/Overview
 
 ### Supported functionality
 
@@ -79,6 +79,24 @@ The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports th
 | Sense detection sensor | Rich detection events for use in device timeline, hunting, and to generate alerts based on indicators of compromise and attack. |
 | Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
 | (Automatic) updates | Regular updates for antimalware and detection components. |
+
+### Prerequisites
+
+- Administrative privileges are required for most operations.
+
+- Ensure your device is running an x64 version of Windows 7 SP1 or Windows Server 2008 R2 SP1, with the latest updates installed.
+
+- For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum the update KB4474419 for SHA2 code signing must be installed. See [2019 SHA-2 Code Signing Support requirement for Windows and WSUS](https://support.microsoft.com/en-us/topic/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus-64d1c82d-31ee-c273-3930-69a4cde8e64f) for more information.
+
+- On Server 2008 R2 SP1, ensure the .NET 3.5 feature or a higher version of the .NET framework is installed.
+
+- Preview features must be enabled.
+
+- Devices should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it -- unlike for other Defender cloud services. Regardless, for proper operation of services please refer to [Configure your network environment to ensure connectivity with Defender for Endpoint service - Microsoft Defender for Endpoint \| Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/configure-environment) as additional connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com* apply to (additional) functionality you may wish to use with the product.
+
+- The Defender deployment tool requires access to the *definitionupdates.microsoft.com* domain. This is the same domain that is required for product updates.
+
+### How to install
 
 ### Known issues and limitations
 

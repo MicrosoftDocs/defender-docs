@@ -46,7 +46,7 @@ The deployment tool offers the following functionality:
 - To download the tool, you need an account that has the manage portal settings permission.
 - A Defender for Endpoint tenant with public preview features enabled.
 - To run the tool, you need to be an administrator (add here the least privileged admin role).
-- [Network connectivity to Microsoft Defender cloud services](/configure-environment) including the definitionupdates.microsoft.com URL.
+- [Network connectivity to Microsoft Defender cloud services](./configure-environment.md), including the definitionupdates.microsoft.com URL.
 
 ### Operating systems
 
