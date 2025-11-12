@@ -2,8 +2,8 @@
 title: Delete Indicator API.
 description: Learn how to use the Delete Indicator API to delete an Indicator entity by ID in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,23 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
 
 ---
+
 # Delete Indicator API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
 
 ## API description
 
@@ -47,7 +38,6 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type | Permission | Permission display name |
 | :---|:---|:---|
-| Application | Ti.ReadWrite | 'Read and write TI Indicators' |
 | Application | Ti.ReadWrite.All | 'Read and write Indicators' |
 
 ## HTTP request
@@ -55,8 +45,6 @@ One of the following permissions is required to call this API. To learn more, in
 ```http
 Delete https://api.securitycenter.microsoft.com/api/indicators/{id}
 ```
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## Request headers
 
@@ -84,6 +72,4 @@ Here's an example of the request.
 DELETE https://api.securitycenter.microsoft.com/api/indicators/995
 ```
 
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
