@@ -4,278 +4,114 @@ description: Frequently asked questions about integrating and using Microsoft De
 author: dlanger
 ms.author: dlanger
 ms.topic: faq
-ms.date: 11/10/2025
+ms.date: 11/12/2025
 ms.service: defender-for-cloud
 ---
 
 # Integration FAQ for Defender portal
 
-> [!NOTE] 
-> This capability is currently in preview.   
+> [!NOTE]
+> This is currently in preview.
 > For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
 
 This article answers frequently asked questions about using Microsoft Defender for Cloud in the Defender portal, including integration, migration, and compatibility topics.
 
-## General integration questions
+## Overview
 
-### What is the difference between Defender for Cloud in Azure portal vs Defender portal?
+### Who is eligible to test the new MDC capabilities in the Defender portal?
 
-**Content to be added**: Detailed comparison including:
+The expansion of MDC into the Defender portal is available for billed MDC customers with at least one Defender for Cloud plan enabled. 
+Note: Once the opt-in is selected, it takes up to 24 hours for the data to populate. 
 
-- Key architectural differences
-- Feature availability variations
-- User experience distinctions
-- Integration capabilities
+### What environments are supported with this expansion in the Defender portal?  
 
-For detailed information, see [Azure portal vs Defender portal feature comparison](../azure-portal-vs-defender-portal-comparison.md).
+Yes, Azure, AWS, GCP, and on-premises environments are supported.
 
-### Can I use both Azure portal and Defender portal simultaneously?
+### What are the risks associated with this move?
 
-**Content to be added**: Information about concurrent usage:
+There is no operational risk in transitioning to the Defender portal. The experience is designed with parallel functionalities in both the Azure and Defender portal. Customers can choose to enable the new experience without disrupting their experience in the Azure portal. However, there are known limitations that customers should be aware of while testing new capabilities. Read more in the official documentation here, [Known limitations](known-limitations.md).
 
-- Data synchronization between portals
-- Configuration consistency
-- User permission requirements
-- Best practices for hybrid usage
+### What happens to MDC in the Azure portal? Is MDC being deprecated from the Azure portal?
 
-### How do I migrate from Azure portal to Defender portal?
+We recognize that MDC serves multiple personas including security admins, cloud security architects, workload owners, DevOps teams, and more. With this release, MDC in the Azure portal remains as is, and we have no plans to deprecate it. Hence, adding security for new resources continues to remain in the Azure portal.  
+Defender portal focuses on security teams overseeing cloud security across cloud and code environments. The Azure portal continues to serve Azure-focused personas such as workload owners and DevOps engineers. Our goal is to provide tailored experiences in each portal, ensuring every persona has the most relevant tools and insights for their needs. 
 
-**Content to be added**: Migration guidance including:
+### Is there a feature parity list for all the features expanding into the Defender portal?
 
-- Pre-migration planning steps
-- Data migration process
-- User training requirements
-- Rollback procedures if needed
+Yes, a feature parity list is available in the official Defender for Cloud documentation on Microsoft Learn here: [Azure portal vs Defender portal feature comparison](azure-portal-vs-defender-portal-comparison.md).
 
-## Feature compatibility
+### What if I only use the Azure portal and not the Defender portal?
 
-### Are all Azure portal features available in Defender portal?
+The expansion to the Defender portal runs in addition to and in parallel with the Azure portal. Customers who use the Azure portal exclusively can continue to do so without any changes or impact.
 
-**Content to be added**: Feature parity information:
+## Billing implications
 
-- Currently available features
-- Missing features and timeline
-- Alternative workflows
-- Planned feature additions
+### Is there any billing impact with this expansion?
 
-See [Known limitations](known-limitations.md) for current gaps.
+As of now, there is no billing impact. Existing customers will be able to turn on preview features and experience the new capabilities with no extra charge.  
 
-### Do my existing configurations transfer to Defender portal?
+## Customer impact & experience
 
-**Content to be added**: Configuration migration details:
+### What specific customer workflows are being affected by this move? (e.g., threat detection, incident response, reporting or all) 
 
-- Automatic configuration sync
-- Manual migration requirements
-- Settings that don't transfer
-- Verification procedures
+The expansion of Defender for Cloud into the Defender portal enhances and unifies existing workflows. For example, SOC teams can now access all the cloud information they need to investigate cloud-related incidents, end to end. Vulnerability management admins can view vulnerabilities from cloud resources such as virtual machines and containers in parallel with the endpoint data. Information security architects now have a comprehensive view of their cloud security posture, alongside devices, SaaS apps, and data, enabling faster remediation of security recommendations and a complete picture of their organization's overall posture.
 
-### Can I integrate third-party tools with Defender portal?
+### Are there any known limitations to this expansion? 
 
-**Content to be added**: Integration capabilities:
+Yes, while Defender for Cloud is expanding in the Defender portal for an improved security experience, there are known limitations during the public preview phase. These are covered in a dedicated article on the Microsoft Learn platform, here: [Known limitations](known-limitations.md).
 
-- Supported integration methods
-- API compatibility
-- SIEM connector availability
-- Custom integration development
+## Technical integration & operations
 
-## User access and permissions
+### Access & permissions
 
-### How do permissions work in Defender portal?
+#### Will existing Azure MDC RBAC permissions carry over to the new experience in the Defender portal, or do we need to reassign access?  
 
-**Content to be added**: Permission model explanation:
+Defender for Cloud in Azure and Defender portals operate with different RBAC models: Defender for Cloud in Azure utilizes Azure RBAC, while the Defender portal employs a combination of Entra ID global roles and Unified RBAC. Here is the difference between the two: 
 
-- Azure RBAC integration
-- Defender portal specific roles
-- Multi-tenant considerations
-- Service principal support
+- Azure RBAC manages access controls at the Azure resource level, including subscriptions and resource groups. 
 
-### Can I use existing Azure AD groups?
+- Unified RBAC enables more granular permissions within the Defender portal, allowing assignment of roles specific to security tasks and cloud scopes across Defender solutions. 
 
-**Content to be added**: Identity integration:
+With the enhanced experience in the Defender portal, security teams can now access critical security data without requiring extensive permissions to underlying cloud resources. This eliminates a long-standing challenge in the Azure portal, where broad Azure access was necessary just to view security information—often causing friction with cloud operations teams. In addition, we can now group together cloud accounts into scopes and use them to grant access to relevant security teams so your relevant teams can review and act on security findings without requiring full platform access. This also enables non-Azure users—such as AWS or GCP admins—to manage their security content in Defender without needing Azure subscription rights, making multi-cloud operations easier and more secure. 
 
-- Azure AD group support
-- Permission inheritance
-- Conditional access policies
-- Single sign-on configuration
+Defender uses its own permission model called Unified RBAC, designed specifically for security tasks. It does not rely on Azure RBAC roles. If users need access to both the Azure portal and the Defender portal, they will require two permissions: their existing Azure RBAC role and a new Unified RBAC role for Defender. For organizations that want to align permissions across systems, public APIs are available to automate role assignments. This approach ensures least-privilege access, improves governance, and streamlines security operations across multi-cloud environments. 
 
-### What about guest user access?
+### Multi-Tenant & environment handling
 
-**Content to be added**: Guest user support:
+#### If I have an MDC Multi-tenant environment with Azure Lighthouse, how will this environment surface in the new Defender portal?
 
-- B2B collaboration scenarios
-- External user limitations
-- Permission assignment
-- Security considerations
+Microsoft Defender for Cloud expands within the Defender portal to provide incident detection and response for multi-tenant environments through the existing Multi-Tenant Organizations (MTO) experience. At this stage, posture management features—such as recommendations, attack paths, and cloud inventory—are not yet available for multi-tenant scenarios in the Defender portal.
 
-## Data and compliance
+**Customers can continue to use Azure Lighthouse for multi-tenant posture management and operations, in parallel with the Defender portal.** This approach ensures that organizations retain full posture management capabilities while benefiting from the unified incident management and response features available in the Defender portal.
 
-### Where is my data stored in Defender portal?
+As we build and enhance MTO capabilities in future releases, customers will see expanded support for multi-tenant posture management and additional experiences directly within the Defender portal. 
 
-**Content to be added**: Data residency information:
+### Synchronization & data consistency
 
-- Regional data storage
-- Cross-border data transfers
-- Compliance certifications
-- Data retention policies
+#### After enabling the preview, how quickly can customers start seeing their data?  
 
-### How is data synchronized between portals?
+The initial synchronization can take up to 24-hours.
 
-**Content to be added**: Data sync explanation:
+#### If I remediate recommendations in the Defender portal, will those changes immediately reflect in the Azure portal or is there a delay? If there is, how long will it take to show up in Azure portal?
 
-- Real-time vs batch synchronization
-- Data consistency guarantees
-- Sync delays and impacts
-- Troubleshooting sync issues
+In the short term, security recommendations resolved in the Azure portal will be reflected as resolved in the Defender portal within 2 hours. We are working to improve this time so that users don't experience any delay  
 
-### Are there compliance differences?
+#### Will the count of healthy and unhealthy resources be consistent across the Azure and the Defender portal? If not, what explains the difference?
 
-**Content to be added**: Compliance considerations:
+Customers may notice differences when using Defender for Cloud in the Defender portal. With this expansion, we are exposing customers with the discovery of their complete environment and hence, the count can be different. This applies to the Secure Score, security recommendations, and the number of discovered resources in the environment.  
 
-- Regulatory compliance support
-- Certification differences
-- Audit requirements
-- Documentation needs
+## Feature availability & roadmap
 
-## Performance and scalability
+### If I only use Foundational CSPM and have other Defender Plans enabled, such as Defender for Storage, will I be able to see Foundational CSPM data in the new portal? 
 
-### How does performance compare between portals?
+Yes, security recommendations provided by the Foundational CSPM plan will appear for any subscription with at least one paid plan.
 
-**Content to be added**: Performance comparison:
+### I can see recommendation ownership via Governance feature. Will Governance feature be available in the Defender portal?
 
-- Response time differences
-- Scalability limitations
-- Resource consumption
-- Optimization recommendations
+Governance assignments created manually or automatic will continue to work, and the assignment status including the relevant owner and due date will appear in the Defender portal. However, editing operations such as owner and due date changes will still be done via the Azure portal. In the future, we plan to introduce improved mobilization capabilities to allow security teams to operate and delegate the remediation effort directly to the Defender portal.
 
-### Are there limitations on organization size?
+## Operations
 
-**Content to be added**: Scalability information:
+### How will the transition impact ongoing investigation, alerts or integrations?
 
-- Tenant size limitations
-- Resource count limits
-- Performance impact factors
-- Enterprise scale considerations
-
-### How do I optimize performance?
-
-**Content to be added**: Performance optimization:
-
-- Best configuration practices
-- Resource management tips
-- Monitoring recommendations
-- Troubleshooting guidance
-
-## Troubleshooting
-
-### Common integration issues
-
-**Content to be added**: Troubleshooting guidance for:
-
-- Authentication failures
-- Permission errors
-- Data sync problems
-- Feature access issues
-
-### How do I get support?
-
-**Content to be added**: Support information:
-
-- Available support channels
-- Preview vs GA support differences
-- Documentation resources
-- Community support options
-
-### Where can I provide feedback?
-
-**Content to be added**: Feedback mechanisms:
-
-- Built-in feedback tools
-- Preview feedback programs
-- Feature request processes
-- Bug reporting procedures
-
-## Migration planning
-
-### What should I consider before migrating?
-
-**Content to be added**: Pre-migration considerations:
-
-- Current workflow assessment
-- User training needs
-- Timeline planning
-- Risk mitigation strategies
-
-### How long does migration take?
-
-**Content to be added**: Migration timeline:
-
-- Typical migration duration
-- Factors affecting timeline
-- Parallel operation period
-- Go-live considerations
-
-### Can I test before full migration?
-
-**Content to be added**: Testing approaches:
-
-- Pilot program options
-- Test environment setup
-- User acceptance testing
-- Rollback procedures
-
-## Cost considerations
-
-### Are there cost differences?
-
-**Content to be added**: Cost comparison:
-
-- Pricing model differences
-- Feature-based cost variations
-- Migration cost considerations
-- Long-term cost implications
-
-### How do I monitor costs?
-
-**Content to be added**: Cost monitoring:
-
-- Available cost tracking tools
-- Usage monitoring
-- Optimization recommendations
-- Budget planning guidance
-
-## Roadmap and updates
-
-### What new features are planned?
-
-**Content to be added**: Roadmap information:
-
-- Planned feature releases
-- Timeline expectations
-- Preview feature access
-- Feedback influence on roadmap
-
-### How often are updates released?
-
-**Content to be added**: Update schedule:
-
-- Regular update frequency
-- Preview vs GA update cycles
-- Communication channels
-- Change management
-
-### How do I stay informed about changes?
-
-**Content to be added**: Communication channels:
-
-- Official announcement channels
-- Documentation update notifications
-- Community resources
-- Beta program participation
-
-## Next steps
-
-- [Overview of Defender for Cloud in Defender portal](defender-for-cloud-defender-portal.md)
-- [Enable preview features](enable-preview-features.md)
-- [Known limitations](known-limitations.md)
-- [Azure portal vs Defender portal feature comparison](../azure-portal-vs-defender-portal-comparison.md)
-- [Getting started in the Defender portal](getting-started-defender-portal.md)
+With cloud security posture data now integrated into the Defender portal, SOC teams gain a unified experience for investigating and responding to cloud-related alerts and incidents. Previously, investigations required switching to the Azure portal to gather resource details, creating inefficiencies, and gaps in visibility. Now, all posture signals and metadata are available directly within Defender, eliminating tool-hopping and enabling faster, more informed decisions. The new cloud asset inventory provides complete visibility into resources and their posture, while exposure insights—such as the exposure graph—deliver a 360-degree view of each asset. This integration empowers SOC teams to correlate alerts with posture data instantly, streamline workflows, and strengthen incident response.

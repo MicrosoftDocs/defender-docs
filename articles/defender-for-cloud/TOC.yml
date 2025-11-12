@@ -13,7 +13,7 @@
       displayName: changelog, news, release notes
       href: release-notes.md
 
-- name: Defender portal experience
+- name: Experience in the Defender portal
   expanded: true
   items:
     - name: Overview of Defender for Cloud in Defender portal
