@@ -55,7 +55,7 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 | Action                        | Permission required                                                                                           |
 |:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
 | View agent results |To view agent results, you need the same permissions as the agent, or higher permissions:<br>**Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**,  **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal|
-| View agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
+| View agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br>Or **Security Administrator** in Microsoft Entra ID          |
 | View feedback page   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal <br>Or **Security Administrator** in Microsoft Entra ID|
 | Manage agent settings (set up, pause, or remove the agent, and manage agent identity)             | **Security Administrator** in Microsoft Entra ID                                                            |
 |Reject feedback|**Security Administrator** in Microsoft Entra ID|

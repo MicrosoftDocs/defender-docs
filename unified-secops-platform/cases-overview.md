@@ -130,7 +130,7 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
-#### Link indicators
+#### Link indicators (preview)
 
 Linking a case to relevant indicators of compromise (IOCs) helps your SecOps teams understand the broader context of a threat.
 
@@ -162,7 +162,7 @@ You can attach up to 10 files per comment.
 
 To add attachments to your case, go to the **Case details** page, select the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. Once uploaded, the file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If the file you want to upload is actually a malware sample, you can wrap it in a password-protected ZIP file.
 
-#### Add attachment to a comment
+#### Add attachment to a comment (preview)
 
 To add an attachment to a comment:
 
@@ -171,16 +171,16 @@ To add an attachment to a comment:
 1. Select the file you want to attach from your computer.
 1. Select **Send** to save the comment.
 
-  :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
+   :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
 
-- To attach a screenshot to your comment, paste it into the text editor.
-- To delete an attached file from the comment, select the bin icon while hovering over it.
-
-### Delete Case
+   - To attach a screenshot to your comment, paste it into the text editor.
+   - To delete an attached file from the comment, select the bin icon while hovering over it.
+    
+### Delete Case (preview)
 
 To delete a case:
 
-1. Open the Cases screen, select the case you want to remove, and select **Remove**.
+1. Open the Cases screen, select the case you want to remove, and select **Delete**.
 
     :::image type="content" source="media/cases-overview/delete-case.png" alt-text="Screenshot showing the Remove option in the case details pane.":::
 

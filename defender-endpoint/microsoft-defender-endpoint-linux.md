@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Microsoft Defender for Endpoint on Linux
 
 
