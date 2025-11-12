@@ -118,7 +118,7 @@ You must connect your Microsoft Sentinel primary workspace to the Defender porta
 
 ## Offboard from Microsoft Sentinel data lake and graph
 
-To disable Microsoft Sentinel data lake and graph, [submit a support request](https://learn.microsoft.com/en-us/defender-xdr/contact-defender-support).
+To disable Microsoft Sentinel data lake and graph, [submit a support request](/defender-xdr/contact-defender-support).
 
 ## Ready to get started?
 
