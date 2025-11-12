@@ -48,8 +48,6 @@ To establish a connection with Qualys in Exposure Management, follow these steps
 
 Qualys connector retrieves data on compute devices, including machines and virtual machines, and vulnerability findings from Qualys on those assets. It also retrieves some networking data to identify those devices.
 
-Only devices that were modified in the last 90 days are retrieved, based on assessing the "modified" field in the Qualys asset.
-
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
 | **Assets/devices**      | - Gateway address<br>- FQDN<br>- IP address<br>- MAC address<br>- OS information<br>- Qualys criticality data |
@@ -72,4 +70,14 @@ Here are some common issues that might arise when configuring the Qualys Connect
 
 ## Next steps
 
-[Getting value from your data connectors](value-data-connectors.md).
+After configuring the Qualys data connector:
+
+- [Review your attack surface map](enterprise-exposure-map.md) to see Qualys data
+- [Explore security recommendations](security-recommendations.md)
+- [Set up security initiatives](initiatives.md) to track remediation progress
+
+## Related articles
+
+- [Data connectors overview](overview-data-connectors.md)
+- [Configure data connectors](configure-data-connectors.md)
+- [Getting value from your data connectors](value-data-connectors.md)

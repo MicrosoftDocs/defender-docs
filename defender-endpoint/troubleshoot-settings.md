@@ -1,13 +1,13 @@
----
+﻿---
 title: Troubleshoot Microsoft Defender Antivirus settings
 description: Find out where settings for Microsoft Defender Antivirus are coming from.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
-ms.date: 04/01/2025
+ms.date: 11/06/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
@@ -15,17 +15,15 @@ ms.custom: partner-contribution
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
+appliesto:
+- Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
+
 ---
 
 # Troubleshoot Microsoft Defender Antivirus settings
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-- Microsoft Defender Antivirus
 
 Microsoft Defender Antivirus provides numerous ways to manage the product, which provides small and medium-sized businesses and enterprise organizations with flexibility by working with the management tools that they already have.
 
@@ -54,6 +52,9 @@ To remove policy conflicts, here's our current, recommended process:
 4. Work with your security team to remove or revise conflicting policies.
 
 ## Step 1: Understand the order of precedence
+
+> [!NOTE]
+> Microsoft Defender for Endpoint attach configurations can be overridden by other configuration tools that write to the same registry location.
 
 When policies and settings are configured in multiple tools, in general, here's the order of precedence:
 
@@ -91,3 +92,4 @@ The following table describes how to identify policies and settings.
 ## Step 4: Remove or revise conflicting policies
 
 Once you have identified the conflicting policy, work with your security administrators to change device targeting so that devices receive the correct Microsoft Defender Antivirus settings.
+

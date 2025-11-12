@@ -2,11 +2,11 @@
 title: Microsoft Defender for Office 365 trial user guide
 f1.keywords:
 - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
-ms.topic: conceptual
+ms.topic: article
 ms.collection: 
 - m365-security
 - tier1
@@ -31,7 +31,7 @@ Welcome to the Microsoft Defender for Office 365 trial user guide! This user gui
 
 ## What is Defender for Office 365?
 
-Defender for Office 365 helps organizations secure their enterprise by offering a comprehensive slate of capabilities, including threat protection policies, reports, threat investigation and response capabilities, and automated investigation and response capabilities.
+Defender for Office 365 helps organizations secure their enterprise by offering a comprehensive slate of capabilities, including threat policies, reports, threat investigation and response capabilities, and automated investigation and response capabilities.
 
 :::image type="content" source="media/microsoft-defender-for-office-365.png" alt-text="Microsoft Defender for Office 365 conceptual diagram." lightbox="media/microsoft-defender-for-office-365.png":::
 
@@ -49,7 +49,7 @@ Do you want your Defender for Office 365 experience to be active or passive? The
 
 - **Blocking mode**: The Standard template for [preset security policies](preset-security-policies.md#profiles-in-preset-security-policies) is turned on and used for the trial, and the users you specify to include in the trial are added to the Standard preset security policy. Defender for Office 365 *detects* and *takes action on* harmful messages (for example, detected messages are quarantined).
 
-  The default and recommended selection is to scope these Defender for Office 365 policies to all users in the organization. But, during or after the setup of your trial, you can change the policy assignment to specific users, groups, or email domains in the Microsoft Defender portal or in PowerShell.
+  The default and recommended selection is to scope these Defender for Office 365 policies to all users in the organization. But, during or after the setup of your trial, you can change the policy assignment to specific users, groups, or email domains in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
   Blocking mode doesn't provide customized reports for threats detected by Defender for Office 365. Instead, the information is available in the regular reports and investigation features of Defender for Office 365 Plan 2. For more information, see [Reports for blocking mode](try-microsoft-defender-for-office-365.md#reports-for-blocking-mode).
 
@@ -58,15 +58,15 @@ The key factors that determine which modes are available to you are:
 - Whether or not you currently have Defender for Office 365 (Plan 1 or Plan 2) as described in [Evaluation vs. trial for Defender for Office 365](try-microsoft-defender-for-office-365.md#evaluation-vs-trial-for-defender-for-office-365).
 - How email is delivered to your Microsoft 365 organization as described in the following scenarios:
 
-  - Mail from the internet flows directly Microsoft 365, but your current subscription has only [Exchange Online Protection (EOP)](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
+  - Mail from the internet flows directly into Microsoft 365, but your current subscription has only [the default email protections for cloud mailboxes](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
 
-    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with protection from EOP and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
+    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with default email protections and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
     In these environments, **audit mode** or **blocking mode** are available, [depending on your licensing](try-microsoft-defender-for-office-365.md#evaluation-vs-trial-for-defender-for-office-365).
 
-  - You're currently using a third-party service or device for email protection of your Microsoft 365 mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
+  - You're currently using a non-Microsoft service or device for email protection of your cloud mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
 
-    :::image type="content" source="media/mdo-migration-before.png" alt-text="Mail flows from the internet through the third-party protection service or device before delivery into Microsoft 365." lightbox="media/mdo-migration-before.png":::
+    :::image type="content" source="media/mdo-migration-before.png" alt-text="Mail flows from the internet through the non-Microsoft protection service or device before delivery into Microsoft 365." lightbox="media/mdo-migration-before.png":::
 
     In these environments, only **audit mode** is available. You don't need to change your mail flow (MX records) to evaluate Defender for Office 365 Plan 2.
 
@@ -225,11 +225,13 @@ Defender for Office 365 enables you to investigate activities that put people in
 
 When you're ready to turn on Defender for Office 365 policies in production, you can use [Convert to Standard Protection](try-microsoft-defender-for-office-365.md#convert-to-standard-protection) to easily move from audit mode to blocking mode by turning on the [Standard preset security policy](preset-security-policies.md#profiles-in-preset-security-policies), which contains any/all recipients from audit mode.
 
-#### Migrate from a third-party protection service or device to Defender for Office 365
+<a name='migrate-from-a-third-party-protection-service-or-device-to-defender-for-office-365'></a>
 
-If you already have an existing third-party protection service or device that sits in front of Microsoft 365, you can migrate your protection to Microsoft Defender for Office 365 to get the benefits of a consolidated management experience, potentially reduced cost (using products that you already pay for), and a mature product with integrated security protection.
+#### Migrate from a non-Microsoft protection service or device to Defender for Office 365
 
-For more information, see [Migrate from a third-party protection service or device to Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md).
+If you already have an existing non-Microsoft protection service or device that sits in front of Microsoft 365, you can migrate your protection to Microsoft Defender for Office 365 to get the benefits of a consolidated management experience, potentially reduced cost (using products that you already pay for), and a mature product with integrated security protection.
+
+For more information, see [Migrate from a non-Microsoft protection service or device to Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md).
 
 ### Step 3: Advanced content in auditing mode
 

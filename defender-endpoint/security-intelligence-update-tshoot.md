@@ -1,10 +1,10 @@
----
+﻿---
 title: Security Intelligence update troubleshooting from Microsoft Update source
 description: Learn how to troubleshoot security intelligence updates from your Microsoft Update source.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb 
-ms.date: 04/10/2024
+author: batamig
+ms.author: bagol
+manager: bagol 
+ms.date: 05/08/2025
 ms.topic: troubleshooting
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -16,17 +16,14 @@ ms.reviewer: yongrhee
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Troubleshooting Security Intelligence Updates from Microsoft Update source
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-- Microsoft Defender Antivirus
 
 Use this article to learn how to troubleshoot security intelligence updates for Microsoft Defender Antivirus when the first source is from Microsoft Update (formerly known as Windows Update). Follow these steps to troubleshoot issues with getting your security intelligence updates:
 
@@ -89,3 +86,4 @@ Use this article to learn how to troubleshoot security intelligence updates for 
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
+

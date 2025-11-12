@@ -1,13 +1,13 @@
 ---
 title: Getting started with defense in-depth configuration for email security
-description: Step-by-step configuration guidance on how to get security value from Microsoft Defender for Office 365 when you have third party email filtering.
+description: Step-by-step configuration guidance on how to get security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering.
 ms.service: defender-office-365
 f1.keywords:
   - NOCSH
-ms.author: benharri
 author: MSFTBen
+ms.author: benharri
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -18,12 +18,12 @@ search.appverid: met150
 ms.date: 02/24/2025
 ---
 
-# Getting the best security value from Microsoft Defender for Office 365 when you have third party email filtering
+# Getting the best security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering
 
 This guide is for you if:
 
 - You're licensed for Microsoft Defender for Office 365 and host your mailboxes in Office 365
-- You're also using a third party for your email security
+- You're also using a non-Microsoft for your email security
 
 The following information details how to get the most out of your investment, broken down into easy to follow steps.
 
@@ -40,7 +40,7 @@ The following information details how to get the most out of your investment, br
 
 ### Built-in protection features
 
-- Built-in protection offers a base level of unobtrusive protection, and includes malware, zero day (Safe Attachments), and URL protection (Safe Links) in email (including internal email), SharePoint, OneDrive, and Microsoft Teams. URL protection provided in this state is via API call only. It doesn't wrap or rewrite URLs but does require a supported Outlook client. You can create your own custom policies to expand your protection.
+- Built-in protection offers a base level of unobtrusive protection, and includes malware, zero day (Safe Attachments), and URL protection (Safe Links) in email (including internal email), SharePoint, OneDrive, and Microsoft Teams. URL protection provided in this state is via API call only. It doesn't wrap or rewrite URLs but does require a supported Outlook client. You can create your own custom Safe Links policies and Safe Attachments policies to expand your protection.
 
   **Read more & watch an overview video of Safe Links here:** [Complete Safe Links overview](../safe-links-about.md)
 
@@ -68,15 +68,15 @@ The following information details how to get the most out of your investment, br
 
 ### Additional protection features
 
-- Consider enabling policies beyond the built-in Protection. Enabling time-of-click protection, or impersonation protection, for example, to add extra layers or fill gaps missing from your third party protection. If you have a mail flow rule (also known as a transport rule) or connection filter that overrides verdicts (also known as an SCL=-1 rule) you need to address this configuration before turning on other protection features.
+- Consider enabling policies beyond the built-in Protection. Enabling time-of-click protection, or impersonation protection, for example, to add extra layers or fill gaps missing from your non-Microsoft protection. If you have a mail flow rule (also known as a transport rule) or connection filter that overrides verdicts (also known as an SCL=-1 rule) you need to address this configuration before turning on other protection features.
 
   **Read more here:** [Anti-phishing policies](../anti-phishing-policies-about.md)
 
-- If your current security provider is configured to modify messages *in any way*, it's important to note that authentication signals can affect the ability for Defender for Office 365 to protect you against attacks such as spoofing. If your third party supports Authenticated Received Chain (ARC), we highly recommend enabling ARC in your journey to advanced dual filtering. Moving any message modification configuration to Defender for Office 365 is also an alternative.
+- If your current security provider is configured to modify messages *in any way*, it's important to note that authentication signals can affect the ability for Defender for Office 365 to protect you against attacks such as spoofing. If your non-Microsoft service supports Authenticated Received Chain (ARC), we highly recommend enabling ARC in your journey to advanced dual filtering. Moving any message modification configuration to Defender for Office 365 is also an alternative.
 
   **Read more here:** [Configure trusted ARC sealers](../email-authentication-arc-configure.md)
 
-- Enhanced Filtering for connectors allows IP address and sender information to be preserved through the third party. This feature improves accuracy for the filtering (protection) stack, post breach capabilities & authentication improvements.
+- Enhanced Filtering for connectors allows IP address and sender information to be preserved through the non-Microsoft service. This feature improves accuracy for the filtering (protection) stack, post breach capabilities & authentication improvements.
 
   **Read more here:** [Enhanced filtering for connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)
 
@@ -84,11 +84,11 @@ The following information details how to get the most out of your investment, br
 
   **Read more here:** [Priority account protection](protect-your-c-suite-with-priority-account-protection.md)
 
-- Advanced Delivery should be configured to deliver any third party phish simulations correctly, and if you have a Security Operations mailbox, consider defining it as a SecOps mailbox to ensure emails *don't* get removed from the mailbox due to threats.
+- Advanced Delivery should be configured to deliver any non-Microsoft phish simulations correctly, and if you have a Security Operations mailbox, consider defining it as a SecOps mailbox to ensure emails *don't* get removed from the mailbox due to threats.
 
   **Read more here:** [Advanced delivery](../advanced-delivery-policy-configure.md)
 
-- You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported third-party solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-third-party-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages.
+- You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages.
 
   **Read more here:** [User reported settings](../submissions-user-reported-messages-custom-mailbox.md) and [Report phishing and suspicious emails in Outlook for admins](../submissions-outlook-report-messages.md)
 
@@ -106,17 +106,17 @@ The following information details how to get the most out of your investment, br
 
   **Read More:** [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md)
 
-- Consider user experiences such as accessing multiple quarantines, or the submission / reporting of false positives and false negatives. You can mark messages detected by the third party service with a custom *X* header. For example, you can use mail flow rules to detect and quarantine email that contains the *X* header. This result also gives users a single place to access quarantined mail.
+- Consider user experiences such as accessing multiple quarantines, or the submission / reporting of false positives and false negatives. You can mark messages detected by the non-Microsoft service with a custom *X* header. For example, you can use mail flow rules to detect and quarantine email that contains the *X* header. This result also gives users a single place to access quarantined mail.
 
   **Read More:** [How to configure quarantine permissions and policies](how-to-configure-quarantine-permissions-with-quarantine-policies.md)
 
 - The Migration guide contains lots of useful guidance on preparing and tuning your environment to ready it for a migration. But many of the steps are *also* applicable to a dual-use scenario. Ignore the MX switch guidance in the final steps.
 
-  **Read it here:** [Migrate from a third-party protection service to Microsoft Defender for Office 365 - Office 365 | Microsoft Docs.](../migrate-to-defender-for-office-365.md)
+  **Read it here:** [Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md)
 
 ## More information
 
-[Migrate from a third-party protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md)
+[Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md)
 
 [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md)
 

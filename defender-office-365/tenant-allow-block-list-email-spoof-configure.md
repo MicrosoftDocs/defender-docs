@@ -2,9 +2,9 @@
 title: Allow or block email using the Tenant Allow/Block List
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -15,18 +15,19 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 03/27/2025
+ms.date: 08/13/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As a security administrator, I need step‑by‑step procedures to create, modify, and troubleshoot Tenant Allow/Block List entries (including spoofed senders) using the Microsoft Defender portal and Exchange Online PowerShell so I can control delivery overrides, prevent spoofing, and reduce false positives without increasing security risk.
 ---
 
 # Allow or block email using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for domains and email addresses (including spoofed senders) in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In all organizations with cloud mailboxes, admins can create and manage entries for domains and email addresses (including spoofed senders) in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 This article describes how admins can manage entries for email senders in the Microsoft Defender portal and in Exchange Online PowerShell.
 
@@ -34,12 +35,18 @@ This article describes how admins can manage entries for email senders in the Mi
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Entry limits for domains and email addresses:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 domain and email address entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 domain and email address entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 domain and email address entries in total).
+  - **Microsoft 365 organizations without Defender for Office 365**: A maximum of 1000 domain and email address entries in total:
+    - Allow entries: 500 maximum.
+    - Block entries: 500 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 1 (included or in an add-on subscription)**: A maximum of 2000 domain and email address entries in total:
+    - Allow entries: 1000 maximum.
+    - Block entries: 1000 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 2 (included or in an add-on subscription)**: A maximum of 15000 domain and email address entries in total:
+    - Allow entries: 5000 maximum.
+    - Block entries: 10000 maximum.
 
 - For spoofed senders, the maximum number of allow entries and block entries is 1024 (1024 allow entries and no block entries, 512 allow entries and 512 block entries, etc.).
 
@@ -47,14 +54,19 @@ This article describes how admins can manage entries for email senders in the Mi
 
 - For blocking inbound and outbound email from a domain, any subdomains in that domain, and any email addresses in that domain, create the block entry using the syntax: `*.TLD`, where `TLD` can be any top-level domain, internal domain, or email address domain.
 
-- For blocking inbound and outbound email from a sudomain in a domain and any email addresses in that subdomain, create the block entry using the syntax: `*.SD1.TLD`, `*.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, etc. for internal domains and email address domains.
+- For blocking inbound and outbound email from a subdomain in a domain and any email addresses in that subdomain, create the block entry using the syntax: `*.SD1.TLD`, `*.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, etc. for internal domains and email address domains.
 
 - For details about the syntax for spoofed sender entries, see the [Domain pair syntax for spoofed sender entries](#domain-pair-syntax-for-spoofed-sender-entries) section later in this article.
 
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+    - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
+      - **Authorization and settings/Security settings/Detection tuning (manage)**
+    - *Read-only access to the Tenant Allow/Block List*:
+      - **Authorization and settings/Security settings/Read-only**.
+      - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
@@ -67,13 +79,22 @@ This article describes how admins can manage entries for email senders in the Mi
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Domains and email addresses in the Tenant Allow/Block List
 
+> [!NOTE]
+> Entries for email addresses with special characters (for example, spaces, quotes, or symbols) must use UTF-8 hexadecimal URL encoding for the special characters. Otherwise, you might receive errors when you try to add the entries.
+>
+> For example, to block the email address `"bad+ attacker"@fourthcoffee.com`, use the value `%22bad%2B%20attacker%22@fourthcoffee.com`:
+>
+> - `%22` represents the double quotation marks (").
+> - `%2B` represents the plus sign (+).
+> - `%20` represents the space ( ).
+
 ### Create allow entries for domains and email addresses
 
-Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
+Unnecessary allow entries expose your organization to malicious email that the system would otherwise filter, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
 To create allow entries for domains and email addresses, use either of the following methods:
 
@@ -130,7 +151,7 @@ This example adds an allow entry for the specified email addresses. Because we d
 New-TenantAllowBlockListItems -ListType Sender -Allow -Entries "test@gooddomain.com","test2@gooddomain.com"
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ### Create block entries for domains and email addresses
 
@@ -145,7 +166,7 @@ To create block entries for *spoofed senders*, see [this section](#create-block-
 Email from these blocked senders is marked as *high confidence phishing* and quarantined.
 
 > [!NOTE]
-> Currently, if the block entry doesn't use the syntax \*.TLD, subdomains of the specified domain aren't blocked. For example, if you create a block entry for contoso.com, mail from marketing.contoso.com isn't also blocked. You need to create a separate block entry for marketing.contoso.com or use the \*.TLD syntax, where TLD can be any top-level domain, internal domain, or email address domain.
+> Currently, if the block entry doesn't use the syntax `*.TLD`, subdomains of the specified domain aren't blocked. For example, if you create a block entry for contoso.com, mail from marketing.contoso.com isn't also blocked. You need to create a separate block entry for marketing.contoso.com or use the `*.TLD` syntax, where TLD can be any top-level domain, internal domain, or email address domain.
 >
 > Users in the organization also can't *send* email to these blocked domains and addresses. The message is returned in the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
@@ -188,7 +209,7 @@ This example adds a block entry for the specified email address that expires on 
 New-TenantAllowBlockListItems -ListType Sender -Block -Entries "test@badattackerdomain.com","test2@anotherattackerdomain.com" -ExpirationDate 8/20/2022
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ### Use the Microsoft Defender portal to view entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -217,7 +238,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
-- **Modified by**: Provide an incomplete or complete email address to search by it. 
+- **Modified by**: Provide an incomplete or complete email address to search by it.
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
@@ -245,7 +266,7 @@ This example filters the results for block entries for domains and email address
 Get-TenantAllowBlockListItems -ListType Sender -Block
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ### Use the Microsoft Defender portal to modify entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -294,7 +315,7 @@ This example changes the expiration date of the specified block entry for the se
 Set-TenantAllowBlockListItems -ListType Sender -Entries "julia@fabrikam.com" -ExpirationDate "9/1/2022"
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ### Use the Microsoft Defender portal to remove entries for domains and email addresses from the Tenant Allow/Block List
 
@@ -329,7 +350,7 @@ This example removes the specified entry for domains and email addresses from th
 Remove-TenantAllowBlockListItems -ListType Sender -Entries "adatum.com"
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).
 
 ## Spoofed senders in the Tenant Allow/Block List
 
@@ -341,7 +362,7 @@ To create allow entries for *spoofed senders*, use any of the following methods:
 
 - From the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. For instructions, see [Submit good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
   - When you submit a message that was detected and blocked by [spoof intelligence](anti-spoofing-spoof-intelligence.md), an allow entry for the spoofed sender is added to the **Spoofed senders** tab in the Tenant Allow/Block List.
-  - If the sender wasn't detected and blocked by spoof intelligence, submitting the message to Microsoft doesn't create an allow entry for the sender in the Tenant Allow/Block List.
+  - If spoof intelligence didn't detect and block the sender, submitting the message to Microsoft doesn't create an allow entry for the sender in the Tenant Allow/Block List.
 - From the **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence> *if* the sender was detected and blocked by spoof intelligence. For instructions, see [Override the spoof intelligence verdict](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict).
   - When you override the verdict in the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md), the spoofed sender becomes a manual entry that appears only on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 - From the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
@@ -355,7 +376,7 @@ To create allow entries for *spoofed senders*, use any of the following methods:
 
 #### Use the Microsoft Defender portal to create allow entries for spoofed senders in the Tenant Allow/Block List
 
-In the Tenant Allow/Block List, you can create allow entries for spoofed senders before they're detected and blocked by [spoof intelligence](anti-spoofing-spoof-intelligence.md).
+In the Tenant Allow/Block List, you can create allow entries for spoofed senders before [spoof intelligence](anti-spoofing-spoof-intelligence.md) detects and blocks them.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
@@ -391,7 +412,7 @@ This example creates an allow entry for the sender bob@contoso.com from the sour
 New-TenantAllowBlockListSpoofItems -Identity Default -Action Allow -SendingInfrastructure contoso.com -SpoofedUser bob@contoso.com -SpoofType External
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchange/new-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/new-tenantallowblocklistspoofitems).
 
 ### Create block entries for spoofed senders
 
@@ -406,7 +427,7 @@ To create block entries for *spoofed senders*, use any of the following methods:
 >
 > Only the combination of the spoofed user *and* the sending infrastructure defined in the [domain pair](#domain-pair-syntax-for-spoofed-sender-entries) is blocked from spoofing.
 >
-> Email from these senders is marked as *phishing*. What happens to the messages is determined by the [anti-spam policy](anti-spam-policies-configure.md) that detected the message for the recipient. For more information, see the **Phishing** detection action in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+> Email from these senders is marked as *phishing*. The [anti-spam policy](anti-spam-policies-configure.md) that detected the message for the recipient determines what happens to the messages. For more information, see the **Phishing** detection action in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 >
 > When you configure a block entry for a domain pair, the spoofed sender becomes a manual block entry that appears only on the **Spoofed senders** tab in the Tenant Allow/Block List.
 >
@@ -432,7 +453,7 @@ This example creates a block entry for the sender laura@adatum.com from the sour
 New-TenantAllowBlockListSpoofItems -Identity Default -Action Block -SendingInfrastructure 172.17.17.17/24 -SpoofedUser laura@adatum.com -SpoofType External
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchange/new-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/new-tenantallowblocklistspoofitems).
 
 ### Use the Microsoft Defender portal to view entries for spoofed senders in the Tenant Allow/Block List
 
@@ -489,7 +510,7 @@ This example returns all blocked spoofed sender entries that are external.
 Get-TenantAllowBlockListSpoofItems -Action Block -SpoofType External
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListSpoofItems](/powershell/module/exchange/get-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/get-tenantallowblocklistspoofitems).
 
 ### Use the Microsoft Defender portal to modify entries for spoofed senders in the Tenant Allow/Block List
 
@@ -517,7 +538,7 @@ This example changes the specified spoofed sender entry from an allow entry to a
 Set-TenantAllowBlockListItems -Identity Default -Ids 3429424b-781a-53c3-17f9-c0b5faa02847 -Action Block
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchange/set-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/set-tenantallowblocklistspoofitems).
 
 ### Use the Microsoft Defender portal to remove entries for spoofed senders from the Tenant Allow/Block List
 
@@ -546,13 +567,13 @@ Remove-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Ids d86b3b4b
 
 This example removes the specified spoofed sender. You get the Ids parameter value from the Identity property in the output of Get-TenantAllowBlockListSpoofItems command.
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchange/remove-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistspoofitems).
 
 ### Domain pair syntax for spoofed sender entries
 
 A domain pair for a spoofed sender in the Tenant Allow/Block List uses the following syntax: `<Spoofed user>, <Sending infrastructure>`.
 
-- **Spoofed user**: This value involves the email address of the spoofed user that's displayed in the **From** box in email clients. This address is also known as the `5322.From` or P2 sender address. Valid values include:
+- **Spoofed user**: This value involves the email address of the spoofed user displayed in the **From** box in email clients. This address is also known as the `5322.From` or P2 sender address. Valid values include:
   - An individual email address (for example, chris@contoso.com).
   - An email domain (for example, contoso.com).
   - The wildcard character (\*).
@@ -572,14 +593,14 @@ Here are some examples of valid domain pairs to identify spoofed senders:
 > [!NOTE]
 > You can specify wildcards in the sending infrastructure or in the spoofed user, but not in both at the same time. For example, `*, *` isn't permitted.
 >
-> If you're using a domain instead of the IP address or IP address range in the sending infrastructure, the domain needs to match the PTR record for the connecting IP in the **Authentication-Results** header. You can determine the PTR by running the command: `ping -a <IP address>`. We also recommend using the PTR Organization Domain as the domain value. For example, if the PTR resolves to "smtp.inbound.contoso.com", you should use "contoso.com" as the sending infrastructure.
+> If you're using a domain instead of the IP address or IP address range in the sending infrastructure, the domain needs to match the PTR record for the connecting IP in the **Authentication-Results** header. You can determine the PTR by running the command: `ping -a <IP address>`. We also recommend using the PTR Organization Domain as the domain value. For example, if the PTR resolves to `smtp.inbound.contoso.com`, you should use `contoso.com` as the sending infrastructure.
 
 Adding a domain pair allows or blocks the *combination* of the spoofed user *and* the sending infrastructure *only*. For example, you add an allow entry for the following domain pair:
 
 - **Domain**: gmail.com
 - **Sending infrastructure**: tms.mx.com
 
-Only messages from that domain *and* sending infrastructure pair are allowed to spoof. Other senders attempting to spoof gmail.com aren't allowed. Messages from senders in other domains originating from tms.mx.com are checked by spoof intelligence.
+Only messages from that domain *and* sending infrastructure pair are allowed to spoof. Other senders attempting to spoof gmail.com aren't allowed. Spoof intelligence checks messages from senders in other domains originating from tms.mx.com.
 
 ## About impersonated domains or senders
 

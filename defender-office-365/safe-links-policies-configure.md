@@ -2,9 +2,9 @@
 title: Set up Safe Links policies in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete Safe Links policies in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 03/21/2025
+ms.date: 05/09/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -29,16 +29,16 @@ appliesto:
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 > [!IMPORTANT]
-> This article is intended for business customers who have [Microsoft Defender for Office 365](mdo-about.md). If you are a home user looking for information about Safelinks in Outlook, see [Advanced Outlook.com security](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> This article is intended for business customers who have [Microsoft Defender for Office 365](mdo-about.md). If you're a home user looking for information about Safelinks in Outlook, see [Advanced Outlook.com security](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
 In organizations with Microsoft Defender for Office 365, Safe Links provides URL scanning of links in messages, Microsoft Teams, and supported Office 365 apps. For more information, see [Safe Links in Microsoft Defender for Office 365](safe-links-about.md).
 
-Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Links policies aren't affected. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Links policies aren't affected. For more information, see [Preset security policies](preset-security-policies.md).
 
 For greater granularity, you can also use the procedures in this article to create Safe Links policies that apply to specific users, group, or domains.
 
 > [!TIP]
-> Instead of creating and managing custom Safe Links policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+> Instead of creating and managing custom Safe Links policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 >
 > To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 
@@ -60,12 +60,17 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For our recommended settings for Safe Links policies, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
   > [!TIP]
-  > If a recipient is included in the [Standard or Strict preset security policies](preset-security-policies.md), exceptions to Built-in protection for Safe Links or exceptions in custom Safe Links policies don't apply due to the order of precedence (preset security policies are always applied first). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
+  > The following settings don't affect recipients included in the [Standard or Strict preset security policies](preset-security-policies.md):
+  >
+  > - Membership in or exclusion from the Built-in protection preset security policy (which includes Safe Links protection).
+  > - Membership in or exclusion from custom Safe Links policies.
+  >
+  > Preset security policies are always applied first. For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
 
 - Allow up to 6 hours for a new or updated policy to be applied.
 
@@ -88,11 +93,13 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
    - **Users**: The specified mailboxes, mail users, or mail contacts.
    - **Groups**:
      - Members of the specified distribution groups (including non-mail-enabled security groups within distribution groups) or mail-enabled security groups (dynamic distribution groups aren't supported).
-     - The specified Microsoft 365 Groups.
+     - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
-     > [!TIP]
-     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
+   > [!TIP]
+   > Leave **Users**, **Groups**, and **Domains** blank to create a policy that applies to all recipients.
+   >
+   > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png"::: next to the value.
 
@@ -126,14 +133,14 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
        - **Apply Safe Links to email messages sent within the organization**: Select this option to apply the Safe Links policy to messages between internal senders and internal recipients. Turning on this setting enables link wrapping for all intra-organization messages.
        - **Apply real-time URL scanning for suspicious links and links that point to files**: Select this option to turn on real-time scanning of links in email messages from external senders. If you select this option, the following setting is available:
          - **Wait for URL scanning to complete before delivering the message**: Select this option to wait for real-time URL scanning to complete before delivering the message from external senders. The recommended setting is **On**.
-       - **Do not rewrite URLs, do checks via SafeLinks API only**: Select this option to prevent URL wrapping but continue the scanning of URLs prior to message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called exclusively via APIs at the time of URL click.
+       - **Do not rewrite URLs, do checks via SafeLinks API only**: Select this option to prevent URL wrapping but continue the scanning of URLs before message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called exclusively via APIs at the time of URL click.
      - **Do not rewrite the following URLs in email** section: Select the **Manage (nn) URLs** link to allow access to specific URLs that would otherwise be blocked by Safe Links.
 
        > [!NOTE]
-       > Entries in the "Do not rewrite the following URLs" list aren't scanned or wrapped by Safe Links during mail flow, but might still be blocked at time of click. Report the URL as **I've confirmed it's clean** and then select **Alow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+       > Safe Links doesn't scan or wrap URLs in the "Do not rewrite the following URLs" list during mail flow, but might still block the URLs at time of click. Report the URL as **I've confirmed it's clean** and then select **Allow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
 
        1. In the **Manage URLs to not rewrite** flyout that opens, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add URLs**.
-       2. In the **Add URLs** flyout that opens, click in the **URL** box, enter a value, and then press the ENTER key or select the complete value that's displayed below the box. Repeat this step as many times as necessary.
+       2. In the **Add URLs** flyout that opens, click in the **URL** box, enter a value, and then press the ENTER key or select the complete value displayed below the box. Repeat this step as many times as necessary.
 
           For URL syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](safe-links-about.md#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
@@ -268,15 +275,15 @@ On the **Safe Links** page, the **Status** value of the policy is now **On** or 
 
 ### Use the Microsoft Defender portal to set the priority of custom Safe Links policies
 
-Safe Links policies are processed in the order that they're displayed on the **Safe Links** page:
+Safe Links policies are processed in the order they're displayed on the **Safe Links** page:
 
-- The Safe Links policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
-- The Safe Links policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
+- The Safe Links policy named **Strict Preset Security Policy** associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
+- The Safe Links policy named **Standard Preset Security Policy** associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
 - Custom Safe Links policies are applied next in priority order (if they're enabled):
   - A lower priority value indicates a higher priority (0 is the highest).
   - By default, a new policy is created with a priority that's lower than the lowest existing custom policy (the first is 0, the next is 1, etc.).
   - No two policies can have the same priority value.
-- The Safe Links policy named **Built-in protection (Microsoft)** that's associated with Built-in protection always has the priority value **Lowest**, and you can't change it.
+- The Safe Links policy named **Built-in protection (Microsoft)** associated with Built-in protection always has the priority value **Lowest**, and you can't change it.
 
 Safe Links protection stops for a recipient after the first policy is applied (the highest priority policy for that recipient). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
 
@@ -307,7 +314,7 @@ Back on the **Safe Links** page, the removed policy is no longer listed.
 
 In PowerShell, the basic elements of a Safe Links policy are:
 
-- **The safe links policy**: Turns on Safe Links protection, turns on real-time URL scanning, specifies whether to wait for real-time scanning to complete before delivering the message, turns on scanning for internal messages, specifies whether to track user clicks on URLs, and specifies whether to allow users to click through to the original URL.
+- **The safe links policy**: Turns on Safe Links protection and configures settings.
 - **The safe links rule**: Specifies the priority and recipient filters (who the policy applies to).
 
 The difference between these two elements isn't obvious when you manage Safe Links policies in the Microsoft Defender portal:
@@ -351,7 +358,7 @@ New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-Enab
 >
 > - For details about the entry syntax to use for the _DoNotRewriteUrls_ parameter, see [Entry syntax for the "Do not rewrite the following URLs" list](safe-links-about.md#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 >
-> - For additional syntax that you can use for the _DoNotRewriteUrls_ parameter when you modify existing safe links policies by using the **Set-SafeLinksPolicy** cmdlet, see the [Use PowerShell to modify safe links policies](#use-powershell-to-modify-safe-links-policies) section later in this article.
+> - For more syntax that you can use for the _DoNotRewriteUrls_ parameter when you modify existing safe links policies by using the **Set-SafeLinksPolicy** cmdlet, see the [Use PowerShell to modify safe links policies](#use-powershell-to-modify-safe-links-policies) section later in this article.
 
 This example creates a safe links policy named Contoso All with the following values:
 
@@ -368,7 +375,7 @@ This example creates a safe links policy named Contoso All with the following va
 New-SafeLinksPolicy -Name "Contoso All" -EnableSafeLinksForEmail $true -EnableSafeLinksForOffice $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -AllowClickThrough $false
 ```
 
-For detailed syntax and parameter information, see [New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy).
+For detailed syntax and parameter information, see [New-SafeLinksPolicy](/powershell/module/exchangepowershell/new-safelinkspolicy).
 
 #### Step 2: Use PowerShell to create a safe links rule
 
@@ -389,13 +396,13 @@ This example creates a safe links rule named Contoso All with the following cond
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs contoso.com
 ```
 
-This example creates a safe links rule that's similar to the previous example, but in this example, the rule applies to recipients in all accepted domains in the organization.
+This example creates a safe links rule similar to the previous example, but the rule applies to recipients in all accepted domains in the organization.
 
 ```powershell
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
 ```
 
-This example creates a safe links rule that's similar to the previous examples, but in this example, the rule applies to recipients in the domains specified in a .csv file.
+This example creates a safe links rule to the previous examples, but the rule applies to recipients in the domains specified in a .csv file.
 
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
@@ -403,7 +410,7 @@ $SLDomains = $Data.Domains
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
 ```
 
-For detailed syntax and parameter information, see [New-SafeLinksRule](/powershell/module/exchange/new-safelinksrule).
+For detailed syntax and parameter information, see [New-SafeLinksRule](/powershell/module/exchangepowershell/new-safelinksrule).
 
 ### Use PowerShell to view safe links policies
 
@@ -425,7 +432,7 @@ This example returns detailed information for the safe links policy named Contos
 Get-SafeLinksPolicy -Identity "Contoso Executives"
 ```
 
-For detailed syntax and parameter information, see [Get-SafeLinksPolicy](/powershell/module/exchange/get-safelinkspolicy).
+For detailed syntax and parameter information, see [Get-SafeLinksPolicy](/powershell/module/exchangepowershell/get-safelinkspolicy).
 
 ### Use PowerShell to view safe links rules
 
@@ -457,15 +464,15 @@ This example returns detailed information for the safe links rule named Contoso 
 Get-SafeLinksRule -Identity "Contoso Executives"
 ```
 
-For detailed syntax and parameter information, see [Get-SafeLinksRule](/powershell/module/exchange/get-safelinksrule).
+For detailed syntax and parameter information, see [Get-SafeLinksRule](/powershell/module/exchangepowershell/get-safelinksrule).
 
 ### Use PowerShell to modify safe links policies
 
 You can't rename a safe links policy in PowerShell (the **Set-SafeLinksPolicy** cmdlet has no _Name_ parameter). When you rename a Safe Links policy in the Microsoft Defender portal, you're only renaming the safe links _rule_.
 
-The only additional consideration for modifying safe links policies in PowerShell is the available syntax for the _DoNotRewriteUrls_ parameter (the ["Do not rewrite the following URLs" list](safe-links-about.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies)):
+The only other consideration for modifying safe links policies in PowerShell is the available syntax for the _DoNotRewriteUrls_ parameter (the ["Do not rewrite the following URLs" list](safe-links-about.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies)):
 
-- To add values that will replace any existing entries, use the following syntax: `"Entry1","Entry2,..."EntryN"`.
+- To add values that replace any existing entries, use the following syntax: `"Entry1","Entry2,..."EntryN"`.
 - To add or remove values without affecting other existing entries, use the following syntax: `@{Add="Entry1","Entry2"...; Remove="Entry3","Entry4"...}`
 
 Otherwise, the same settings are available when you create a safe links policy as described in the [Step 1: Use PowerShell to create a safe links policy](#step-1-use-powershell-to-create-a-safe-links-policy) section earlier in this article.
@@ -476,7 +483,7 @@ To modify a safe links policy, use this syntax:
 Set-SafeLinksPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-SafeLinksPolicy](/powershell/module/exchange/set-safelinkspolicy).
+For detailed syntax and parameter information, see [Set-SafeLinksPolicy](/powershell/module/exchangepowershell/set-safelinkspolicy).
 
 ### Use PowerShell to modify safe links rules
 
@@ -504,7 +511,7 @@ $SLDomains = $Data.Domains
 Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
 ```
 
-For detailed syntax and parameter information, see [Set-SafeLinksRule](/powershell/module/exchange/set-safelinksrule).
+For detailed syntax and parameter information, see [Set-SafeLinksRule](/powershell/module/exchangepowershell/set-safelinksrule).
 
 ### Use PowerShell to enable or disable safe links rules
 
@@ -528,11 +535,11 @@ This example enables same rule.
 Enable-SafeLinksRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Enable-SafeLinksRule](/powershell/module/exchange/enable-safelinksrule) and [Disable-SafeLinksRule](/powershell/module/exchange/disable-safelinksrule).
+For detailed syntax and parameter information, see [Enable-SafeLinksRule](/powershell/module/exchangepowershell/enable-safelinksrule) and [Disable-SafeLinksRule](/powershell/module/exchangepowershell/disable-safelinksrule).
 
 ### Use PowerShell to set the priority of safe links rules
 
-The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, if you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2, the existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
+The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2. The existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
 
 To set the priority of a safe links rule in PowerShell, use the following syntax:
 
@@ -540,7 +547,7 @@ To set the priority of a safe links rule in PowerShell, use the following syntax
 Set-SafeLinksRule -Identity "<RuleName>" -Priority <Number>
 ```
 
-This example sets the priority of the rule named Marketing Department to 2. All existing rules that have a priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
+This example sets the priority of the rule named Marketing Department to 2. All existing rules with priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
 
 ```powershell
 Set-SafeLinksRule -Identity "Marketing Department" -Priority 2
@@ -549,7 +556,7 @@ Set-SafeLinksRule -Identity "Marketing Department" -Priority 2
 > [!NOTE]
 > To set the priority of a new rule when you create it, use the _Priority_ parameter on the **New-SafeLinksRule** cmdlet instead.
 
-For detailed syntax and parameter information, see [Set-SafeLinksRule](/powershell/module/exchange/set-safelinksrule).
+For detailed syntax and parameter information, see [Set-SafeLinksRule](/powershell/module/exchangepowershell/set-safelinksrule).
 
 ### Use PowerShell to remove safe links policies
 
@@ -567,7 +574,7 @@ This example removes the safe links policy named Marketing Department.
 Remove-SafeLinksPolicy -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-SafeLinksPolicy](/powershell/module/exchange/remove-safelinkspolicy).
+For detailed syntax and parameter information, see [Remove-SafeLinksPolicy](/powershell/module/exchangepowershell/remove-safelinkspolicy).
 
 ### Use PowerShell to remove safe links rules
 
@@ -585,17 +592,17 @@ This example removes the safe links rule named Marketing Department.
 Remove-SafeLinksRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-SafeLinksRule](/powershell/module/exchange/remove-safelinksrule).
+For detailed syntax and parameter information, see [Remove-SafeLinksRule](/powershell/module/exchangepowershell/remove-safelinksrule).
 
 To verify that Safe Links is scanning messages, check the available Microsoft Defender for Office 365 reports. For more information, see [View reports for Defender for Office 365](reports-defender-for-office-365.md) and [Use Explorer in the Microsoft Defender portal](threat-explorer-real-time-detections-about.md).
 
 ## How do you know these procedures worked?
 
-To verify that you've successfully created, modified, or removed Safe Links policies, do any of the following steps:
+To verify you successfully created, modified, or removed Safe Links policies, do any of the following steps:
 
 - On the **Safe Links** page in the Microsoft Defender portal at <https://security.microsoft.com/safelinksv2>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list, and view the details in the fly out.
 
-- In Exchange Online PowerShell or Exchange Online Protection PowerShell, replace \<Name\> with the name of the policy or rule, run the following commands, and verify the settings:
+- In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), replace \<Name\> with the name of the policy or rule, run the following commands, and verify the settings:
 
   ```powershell
   Get-SafeLinksPolicy -Identity "<Name>"; Get-SafeLinksRule -Identity "<Name>"

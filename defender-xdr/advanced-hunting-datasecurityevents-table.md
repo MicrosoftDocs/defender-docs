@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -16,18 +16,17 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/11/2025
+ms.date: 03/28/2025
 ---
 
 # DataSecurityEvents (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Purview
 
 
 
@@ -36,9 +35,9 @@ ms.date: 02/11/2025
 
 The `DataSecurityEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. Each log represents a single user activity enriched with proprietary Microsoft detections (like sensitive info types) and user-defined enrichment labels like domain categories, sensitivity labels, and others.
 
-Use this reference to construct queries that return information from this table.
+This advanced hunting table is populated by records from Microsoft Purview Insider Risk Management. If your organization hasn’t opted in to share insider risk alerts with Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information, read [Investigate insider risk threats](irm-investigate-alerts-defender.md).
 
-For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
+Use this reference to construct queries that return information from this table. For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|

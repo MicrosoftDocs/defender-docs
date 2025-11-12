@@ -3,8 +3,8 @@ title: Automatic user notifications for user reported phishing results in AIR
 description: Admins can learn about the automatic feedback response feature that sends the results of automated investigation and response (AIR) to user reported phishing messages.
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.reviewer: kellycrider
-manager: deniseb
 ms.topic: overview
 ms.date: 07/10/2024
 ms.service: defender-office-365
@@ -94,6 +94,6 @@ Whether the message was automatically or manually sent to Microsoft for review, 
 To learn more about submissions and investigations in Defender for Microsoft 365, see the following articles:
 
 - [Automated investigation and response in Microsoft Defender for Office 365](air-about.md)
-- [View the results of an automated investigation in Microsoft 365](air-view-investigation-results.md)
+- [View the results of an automated investigation in Microsoft Defender for 365](air-view-investigation-results.md)
 - [Admin review for reported messages](submissions-admin-review-user-reported-messages.md)
 - [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md)

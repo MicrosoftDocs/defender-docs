@@ -2,34 +2,34 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/17/2025
+ms.date: 11/03/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
 - Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=&country=us)
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [See also](#see-also) section. 
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Manual deployment steps
 
@@ -41,6 +41,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
+- [Preinstall setup for custom location installation](#preinstall-setup-for-custom-location-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -93,6 +94,9 @@ In order to preview new features and provide early feedback, it's recommended th
    
    > [!NOTE]
    > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
+
+   > [!TIP]
+   > Online Kernel patching tools, such as Ksplice or similar, can lead to unpredictable OS stability if Defender for Endpoint is running. It's recommended to temporarily stop the Defender for Endpoint daemon before performing online Kernel patching. After the Kernel is updated, Defender for Endpoint on Linux can be safely restarted. This action is especially important for systems running Oracle Linux.
 
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
@@ -205,13 +209,13 @@ In order to preview new features and provide early feedback, it's recommended th
 
 6. Install the Microsoft GPG public key:
 
-   - For Debian 11 and earlier, run the following command.
+   - For Debian 11/Ubuntu 22.04 and earlier, run the following command.
  
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
       ```
 
-   - For Debian 12 and later, run the following command.
+   - For Debian 12/Ubuntu 24.04 and later, run the following command.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
@@ -255,6 +259,13 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf install mariner-repos-extras-preview
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
+
+## Preinstall setup for custom location installation
+
+These steps are applicable only if Defender is to be installed in a custom location.
+For detailed instructions on installing Microsoft Defender for Endpoint to a custom location, see [Manual installation: preinstallation setup](linux-custom-location-installation.md#manual-installation-preinstallation-setup).
+
+For details on installing to a custom location, refer: [Enabling deployment of Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md).
 
 ## Application installation
 
@@ -482,28 +493,9 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
    1. Look at the alert details, machine timeline, and perform your typical investigation steps.
       
-## Defender for Endpoint package external package dependencies
+## External package dependencies
 
-The following external package dependencies exist for the `mdatp` package:
-
-- The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, `mde-netfilter`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `mde-netfilter`
-- For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`, `mde-netfilter`
-
-> [!NOTE]
-> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following other dependencies on the auditd package exist for mdatp:
-> - The mdatp RPM package requires `audit`, `semanage`.
-> - For DEBIAN, the mdatp package requires `auditd`.
-> - For Mariner, the mdatp package requires `audit`.
-
-The `mde-netfilter` package also has the following package dependencies:
-
-- For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1`, `libglib2.0-0`
-- For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
-- For Mariner, the `mde-netfilter` package requires `libnfnetlink`, `libnetfilter_queue`
-
-If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
+For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
 
 ## Troubleshoot installation issues
 
@@ -555,15 +547,18 @@ For manual uninstallation, execute the following command for your Linux distribu
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
 
-## See also
+## Related content
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
-- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
-- [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
-- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
-- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
-- [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+
+- Other deployment methods:
+   - [Installer script based deployment](linux-installer-script.md) 
+   - [Ansible based deployment](linux-install-with-ansible.md)
+   - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Puppet based deployment](linux-install-with-puppet.md)
+   - [Saltstack based deployment](linux-install-with-saltack.md)
+   - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+   - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

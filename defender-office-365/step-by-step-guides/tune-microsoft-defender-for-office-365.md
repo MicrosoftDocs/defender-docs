@@ -4,10 +4,10 @@ description: Tune settings and protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: MSFTBen
+ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -38,7 +38,7 @@ The easiest and safest way to configure security controls is by onboarding to [p
 
 Are you worried about attacks targeting your CEO, CIO, or CFO? You can [Protect your c-suite with Priority account protection in Microsoft Defender for Office 365 Plan 2](protect-your-c-suite-with-priority-account-protection.md).
 
-If you use custom security policies, configuration analyzer gives recommendations to make sure you follow Microsoft's best practices. You can [Optimize and correct security policies with configuration analyzer](optimize-and-correct-security-policies-with-configuration-analyzer.md).
+If you use custom security policies, configuration analyzer gives recommendations to make sure you follow Microsoft's best practices. You can [Optimize and correct threat policies with configuration analyzer](optimize-and-correct-security-policies-with-configuration-analyzer.md).
 
 ## Complex routing and dual filtering scenarios
 
@@ -46,7 +46,7 @@ Using a non-Microsoft email filtering solution with Defender for Office 365 requ
 
 ## Security control thresholds
 
-The bulk email slider and the advanced phishing slider allow you to determine how aggressively each of those filters is applied. To optimize the threshold where bulk mail is treated as spam, you can [Assess and tune your filtering for bulk mail in Defender for Office 365](tune-bulk-mail-filtering-walkthrough.md). [Microsoft recommendations for EOP and Defender for Office 365 security settings](../recommended-settings-for-eop-and-office365.md) contains best practices for choosing the right [Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365](../anti-phishing-policies-about.md) for your organization.
+The bulk email slider and the phishing email threshold slider allow you to determine how aggressively each of those filters is applied. To optimize the threshold where bulk mail is treated as spam, you can [Assess and tune your filtering for bulk mail in Defender for Office 365](tune-bulk-mail-filtering-walkthrough.md). [Recommended email and collaboration threat policy settings for cloud organizations](../recommended-settings-for-eop-and-office365.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) contains best practices for choosing the right [Phishing email threshold](../anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) for your organization.
 
 ## Customer configured allows and blocks
 

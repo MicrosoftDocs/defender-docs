@@ -5,12 +5,12 @@ metadata:
   search.appverid: MET150
   author: chrisda
   ms.author: chrisda
-  manager: deniseb
+  manager: orspodek
   audience: Admin
   ms.topic: faq
   ms.service: defender-business
   ms.localizationpriority: medium
-  ms.date: 03/19/2024
+  ms.date: 05/20/2025
   ms.reviewer: efratka, nehabha
   f1.keywords: NOCSH
   ms.collection:
@@ -61,10 +61,10 @@ sections:
         answer: |
           The following table compares server options for Defender for Business customers:
 
-          | Server license | Description |
-          |--|--|
-          | Microsoft Defender for Business servers | [Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers) is an add-on to Defender for Business and Microsoft 365 Business Premium. This offering enables small and medium sized businesses (up to 300 users) to onboard and protect servers and client devices in the [Microsoft Defender portal](https://security.microsoft.com). |
-          | Microsoft Defender for Servers Plan 1 / Plan 2| [Microsoft Defender for Servers Plan 1/Plan 2](/azure/defender-for-cloud/plan-defender-for-servers) is an enterprise-focused offering that can be purchased with any other Microsoft cloud plan. This offering is part of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), and includes advanced threat hunting with six months of data retention and the Microsoft Threat Experts service.<br/><br/>The admin experience for Defender for Cloud resides within the Azure portal ([https://portal.azure.com](https://portal.azure.com)).|
+          |Server license|Description|
+          |---|---|
+          |Microsoft Defender for Business servers|[Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers) is an add-on to Defender for Business and Microsoft 365 Business Premium. This offering enables small and medium sized businesses (up to 300 users) to onboard and protect servers and client devices in the [Microsoft Defender portal](https://security.microsoft.com).|
+          |Microsoft Defender for Servers Plan 1 / Plan 2|[Microsoft Defender for Servers Plan 1/Plan 2](/azure/defender-for-cloud/plan-defender-for-servers) is an enterprise-focused offering that can be purchased with any other Microsoft cloud plan. This offering is part of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), and includes advanced threat hunting with six months of data retention and the Microsoft Threat Experts service.<br/><br/>The admin experience for Defender for Cloud resides within the Azure portal ([https://portal.azure.com](https://portal.azure.com)).|
 
           Adding Defender for Cloud to a tenant that has Defender for Business doesn't change the simplified configuration experience that Defender for Business offers. The functionality in Microsoft Defender for Servers Plan 1 or Plan 2 work with Defender for Business. 
 
@@ -90,7 +90,7 @@ sections:
 
           |OS|Method|Notes|
           |---|---|---|
-          |Windows |[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment)|On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md)|
+          |Windows|[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment)|On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md)|
           |Mac|Jamf or Intune|You can use Jamf or Intune to set up device control on Mac. See [Device Control for macOS](/defender-endpoint/mac-device-control-overview).|
 
       - question: How do I run custom reports with Defender for Business?
@@ -122,7 +122,7 @@ sections:
           For more information, see the following articles:
 
           - [Set up, review, and edit your security policies and settings in Microsoft Defender for Business](/defender-business/mdb-configure-security-settings)
-          - [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy)
+          - [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy)
 
       - question: If I'm already using Microsoft 365 Business Premium, why do I need Defender for Business?
         answer: |
@@ -141,31 +141,31 @@ sections:
           
           The following table summarizes some differences between Defender for Business and Defender for Endpoint:
 
-          | Capabilities | Defender for Business | Defender for Endpoint Plan 1 | Defender for Endpoint Plan 2 |
-          |---|---|---|---|
-          | Centralized management | ✔ | ✔ | ✔ |
-          | Simplified firewall and antivirus configuration for Windows | ✔ | | |
-          | Vulnerability management (core capabilities) | ✔ | | ✔ |
-          | Attack surface reduction | ✔ | ✔ | ✔ |
-          | Next-generation protection | ✔ | ✔ | ✔ |
-          | Endpoint detection & response (EDR) | ✔ <br/>(optimized) | | ✔ |
-          | Automatic attack disruption | ✔ | | ✔ |
-          | Automated investigation & remediation | ✔ | | ✔ |
-          | Monthly security summary reporting | ✔ | | ✔ |
-          | 30 days advanced hunting and six months of data retention in the device timeline | | | ✔ |
-          | Threat analytics | ✔<br/>(optimized) | | ✔ |
-          | Cross-platform support <br/>(Mac, iOS, Android)| ✔ | ✔ | ✔ |
-          | Windows Server and Linux Server <br/>(requires server licenses) | ✔  | ✔ | ✔ |
-          | Microsoft Threat Experts | | | ✔ |
-          | Microsoft 365 Lighthouse <br/>(optimized; for CSPs only) | ✔ | ✔ | ✔ |
-          | Microsoft Defender multi-tenant management | ✔ | ✔ | ✔ |
-          | APIs | ✔  | ✔ | ✔ |
+          |Capabilities|Defender for</br>Business|Defender for</br>Endpoint Plan 1|Defender for</br>Endpoint Plan 2|
+          |---|:---:|:---:|:---:|
+          |Centralized management|✔|✔|✔|
+          |Simplified firewall and antivirus configuration for Windows|✔|||
+          |Vulnerability management (core capabilities)|✔||✔|
+          |Attack surface reduction|✔|✔|✔|
+          |Next-generation protection|✔|✔|✔|
+          |Endpoint detection & response (EDR)|✔ <br/> (optimized)||✔|
+          |Automatic attack disruption|✔||✔|
+          |Automated investigation & remediation|✔||✔|
+          |Monthly security summary reporting|✔||✔|
+          |30 days advanced hunting <br/> and six months of data retention <br/> in the device timeline|||✔|
+          |Threat analytics|✔ <br/> (optimized)||✔|
+          |Cross-platform support <br/> (Mac, iOS/iPadOS, Android)|✔|✔|✔|
+          |Windows Server and Linux Server <br/> (requires server licenses)|✔|✔|✔|
+          |Microsoft Threat Experts|||✔|
+          |Microsoft 365 Lighthouse <br/> (optimized; for CSPs only)|✔|✔|✔|
+          |Microsoft Defender multi-tenant management|✔|✔|✔|
+          |APIs|✔|✔|✔|
 
       - question: Can I have a mix of Microsoft endpoint security subscriptions?
         answer: |
-          Microsoft Defender for Business does not support mixed licensing, so a tenant with Defender for Business (which is included in Microsoft 365 Business Premium) along with Defender for Endpoint Plan 2 (which is included in Microsoft 365 E5 Security) defaults to the Defender for Business experience. 
+          Microsoft Defender for Business does not support mixed licensing, so a tenant with Defender for Business (which is included in Microsoft 365 Business Premium) along with Defender for Endpoint Plan 2 (which is included in the Microsoft Defender Suite) defaults to the Defender for Business experience. 
 
-          For example, if you have 80 users licensed for Defender for Business (as part of a Microsoft 365 Business Premium subscription), and you add Microsoft 365 E5 Security for 30 of those users, the experience for all users defaults to Defender for Business. If you want to change that to the Defender for Endpoint Plan 2 experience, you should license all users for Defender for Endpoint Plan 2 (either through the standalone version of Defender for Endpoint Plan 2 or Microsoft 365 E5 Security), and then contact Microsoft Support to request the switch for your tenant.
+          For example, if you have 80 users licensed for Defender for Business (as part of a Microsoft 365 Business Premium subscription), and you add the Microsoft Defender Suite for 30 of those users, the experience for all users defaults to Defender for Business. If you want to change that to the Defender for Endpoint Plan 2 experience, you should license all users for Defender for Endpoint Plan 2 (either through the standalone version of Defender for Endpoint Plan 2 or the Microsoft Defender Suite), and then contact Microsoft Support to request the switch for your tenant.
                     
           For more information, see [Manage your subscription settings](mdb-manage-subscription.md).
 

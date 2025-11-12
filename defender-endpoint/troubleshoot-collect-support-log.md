@@ -1,11 +1,11 @@
----
+﻿---
 title: Collect support logs in Microsoft Defender for Endpoint using live response
 description: Learn how to collect logs using live response to troubleshoot Microsoft Defender for Endpoint issues
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -14,16 +14,15 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 03/04/2025
----
+ms.date: 07/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Collect support logs in Microsoft Defender for Endpoint using live response
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 When contacting support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
@@ -55,7 +54,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
    Repeat this step for the `MDEClientAnalyzerPreview.zip` file.
 
-6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
+1. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
    ```console
    Putfile MDEClientAnalyzerPreview.zip
@@ -65,7 +64,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
-
+   
 ### Additional information
 
 - The latest *preview* version of MDE Client Analyzer can be downloaded at [https://aka.ms/MDEClientAnalyzerPreview](https://aka.ms/MDEClientAnalyzerPreview).
@@ -108,24 +107,24 @@ The following script performs the first six steps of the [Running the Binary ver
 
    ```bash
    #! /usr/bin/bash
-
+   
    echo "Starting Client Analyzer Script. Running As:"
    whoami
-
+   
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
-   echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
-
+   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
-
+   
    echo "Unzipping SupportToolLinuxBinary.zip"
-   unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
-
+   unzip -q /tmp/XMDEClientAnalyzerBinary/XMDEClientAnalyzer/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   
    echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-
+   
    ```
-
+   
 #### Python Client Analyzer Install Script
 
 The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
@@ -140,7 +139,7 @@ The following script performs the first six steps of the [Running the Python ver
   
    echo "Getting XMDEClientAnalyzer.zip"
    wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
-   echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
+   echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c  
 
    echo "Unzipping XMDEClientAnalyzer.zip"
    unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
@@ -238,3 +237,4 @@ The Python Client Analyzer accepts command line parameters to perform different 
 - [Understand the analyzer HTML report](analyzer-report.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

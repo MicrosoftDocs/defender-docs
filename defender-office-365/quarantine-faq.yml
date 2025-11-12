@@ -3,10 +3,10 @@ metadata:
   title: Quarantined messages FAQ
   f1.keywords:
     - NOCSH
-  ms.author: chrisda
   author: chrisda
-  manager: deniseb
-  ms.date: 03/02/2025
+  ms.author: chrisda
+  manager: bagol
+  ms.date: 10/22/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -16,27 +16,27 @@ metadata:
   ms.collection:
     - m365-security
     - tier2
-  description: Admins can view frequently asked questions and answers about quarantined messages in Exchange Online Protection (EOP).
+  description: Admins can view frequently asked questions and answers about quarantined messages in Microsoft 365.
   ms.custom: seo-marvel-apr2020
   ms.service: defender-office-365
 
-title: Quarantined messages FAQ
+title: Frequently asked questions - Quarantined messages
 summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
   **Applies to**
-  - [Exchange Online Protection](eop-about.md)
+  - [Default email protections for cloud mailboxes](eop-about.md)
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
-  This article provides frequently asked questions and answers about quarantined email messages for Microsoft 365 organizations with mailboxes in Exchange Online, or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes.
+  This article provides frequently asked questions (FAQ) and answers about quarantined email messages for Microsoft 365 organizations with cloud mailboxes.
 
   > [!NOTE]
   > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 
-  For questions and answers about anti-spam protection, see [Anti-spam protection FAQ](anti-spam-protection-faq.yml).
+  For questions and answers about anti-spam protection, see [Frequently asked questions: Anti-spam protection](anti-spam-protection-faq.yml).
 
-  For questions and answers about anti-malware protection, see [Anti-malware protection FAQ](anti-malware-protection-faq.yml).
+  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection](anti-malware-protection-faq.yml).
 
   For questions and answers about anti-spoofing protection, see [Anti-spoofing protection FAQ](anti-phishing-protection-spoofing-faq.yml).
 
@@ -50,7 +50,7 @@ sections:
 
           But, admins can create and apply _quarantine policies_ to anti-malware policies that define more capabilities for users. For more information, see [Create quarantine policies](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
-          Users can't release their own messages that were quarantined as malware by anti-malware policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
+          Users can't release their own messages quarantined as malware by anti-malware policies, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
       - question: |
           How do I quarantine spam?
@@ -61,19 +61,19 @@ sections:
           - Custom anti-spam policies.
           - The Standard preset security policy.
 
-          Admins can configure the default anti-spam or custom policies to quarantine spam or bulk email messages instead. For more information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+          Admins can configure the default anti-spam policy or custom anti-spam policies to quarantine spam or bulk email messages instead. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
           The Strict preset security policy quarantines messages that are classified as spam or bulk.
 
           For more information, see the following articles:
 
-          - [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)
+          - [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings)
           - [Profiles in preset security policies](preset-security-policies.md#profiles-in-preset-security-policies)
 
       - question: |
           How do I give users access to the quarantine?
         answer: |
-          A user must have a valid account to access their own messages in quarantine. Standalone EOP requires that users are represented as mail users in EOP (manually created or created via directory synchronization). For more information about managing users in standalone EOP environments, see [Manage mail users in standalone EOP](/exchange/standalone-eop/manage-mail-users-in-eop).
+          A user must have a valid account to access their own messages in quarantine.
 
           Quarantine policies determine whether users can access their quarantined messages, and what they're allowed to do to them. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
@@ -87,15 +87,21 @@ sections:
         answer: |
           Quarantine policies define whether users can access quarantined messages based on why the message was quarantined.
 
-          For the default access to quarantined messages, see the table in [Find and release quarantined messages as a user in EOP](quarantine-end-user.md)
+          For the default access to quarantined messages, see the table in [Find and release quarantined messages as a user](quarantine-end-user.md)
 
-          Users can't release their own messages that were quarantined as **malware** by anti-malware or Safe Attachments policies, or as **high confidence phishing** by anti-spam policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
+          Users can't release their own quarantined messages in the following scenarios, regardless of how the quarantine policy is configured:
+
+          - Messages quarantined as malware by anti-malware policies.
+          - Messages quarantined as malware or phishing by Safe Attachments policies.
+          - Messages quarantined as high confidence phishing by anti-spam policies.
+
+          If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
       - question: |
           How can I prevent users from accessing quarantined messages?
         answer: |
-          The default quarantine policy named AdminOnlyAccessPolicy prevents any user interaction with their quarantined messages. By default, this quarantine policy is used for messages that were quarantined as malware or high confidence phishing. In custom policies or the default policy for [protection features that support quarantining messages](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), admins can specify the AdminOnlyAccessPolicy as the quarantine policy to use.
-          
+          The default quarantine policy named AdminOnlyAccessPolicy prevents any user interaction with their quarantined messages. By default, this quarantine policy is used for messages that were quarantined as malware or high confidence phishing. In custom threat policies or the default threat policy for [protection features that support quarantining messages](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), admins can specify the AdminOnlyAccessPolicy as the quarantine policy to use.
+
           You can't prevent end users from seeing or accessing the **Quarantine** page at <https://security.microsoft.com/quarantine>.
 
       - question: |
@@ -116,24 +122,26 @@ sections:
 
           By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and then select **Show all senders**.
 
+          If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue.
+
           > [!TIP]
           > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
 
       - question: |
           A message was released from quarantine, but the original recipient can't find it. How can I determine what happened to the message?
         answer: |
-          - Third party anti-virus solutions, security services, or outbound connectors can cause the following issues for messages that are released from quarantine:
+          - Non-Microsoft anti-virus solutions, security services, or outbound connectors can cause the following issues for messages that are released from quarantine:
             - The message is quarantined after being released.
             - Content is removed from the released message before it reaches the recipient's Inbox.
             - The released message never arrives in the recipient's Inbox.
 
-            Verify that you aren't using third party filtering before you open a support ticket about these issues.
+            Verify that you aren't using non-Microsoft filtering before you open a support ticket about these issues.
 
-            If a third party filter isn't preventing the message from reaching the user's Inbox and the first release attempt didn't work, admins can try using the [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) with the _Force_ switch to release the message.
+            If a non-Microsoft filter isn't preventing the message from reaching the user's Inbox and the first release attempt didn't work, admins can try using the [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) with the _Force_ switch to release the message.
 
-            If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the third party service is turned off. Forced release might cause messages to be released multiple times.
+            If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the non-Microsoft service is turned off. Forced release might cause messages to be released multiple times.
 
-            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine has not occurred.
+            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine hasn't occurred.
 
           - Inbox rules ([created by users in Outlook](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) or by admins using the **\*-InboxRule** cmdlets in Exchange Online PowerShell) can move or delete messages from the Inbox.
 
@@ -146,11 +154,11 @@ sections:
       - question: |
           Messages are released unexpectedly from Quarantine. Why is this happening?
         answer: |
-          Third party anti-virus solutions or security services can randomly select action buttons in [quarantine notifications](quarantine-quarantine-notifications.md).
+          Non-Microsoft anti-virus solutions or security services can randomly select action buttons in [quarantine notifications](quarantine-quarantine-notifications.md).
 
-          Verify that you aren't using third party filtering before you open a support ticket about this issue.
+          Verify that you aren't using non-Microsoft filtering before you open a support ticket about this issue.
 
-          Quarantined messages that have been released have the **Status** value **Released** and the **Released by** property available on the **Quarantine** page. 
+          Quarantined messages that have been released have the **Status** value **Released** and the **Released by** property available on the **Quarantine** page.
 
           Admins can also use the audit log to see who released a message from Quarantine. Use the value **Released Quarantine message** in **Activities - friendly names**. For related instructions, see [Find who deleted a quarantined message](quarantine-admin-manage-messages-files.md#find-who-deleted-a-quarantined-message).
 
@@ -159,7 +167,7 @@ sections:
         answer: |
           In the Microsoft Defender portal, you can select and release up to 100 messages at a time.
 
-          Admins can use the [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) and [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlets in Exchange Online PowerShell or standalone EOP PowerShell to find and release quarantined messages in bulk, and to report false positives in bulk.
+          Admins can use the [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage) and [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage) cmdlets in Exchange Online PowerShell to find and release quarantined messages in bulk, and to report false positives in bulk.
 
           For bulk actions that are available on the **Quarantine** page, see [Take action on multiple quarantined email messages](quarantine-admin-manage-messages-files.md#take-action-on-multiple-quarantined-email-messages).
 
@@ -168,11 +176,11 @@ sections:
       - question: |
           Are wildcards supported when searching for quarantined messages? Can I search for quarantined messages for a specific domain?
         answer: |
-          Wildcards aren't supported in the Microsoft Defender portal. For example, when searching for a sender, you need to specify the full email address. But, you can use wildcards in Exchange Online PowerShell or standalone EOP PowerShell.
+          Wildcards are supported in both the Microsoft Defender portal and Exchange Online PowerShell. For example, you can use `*@contoso.com` as a sender address or recipient address filter to search for quarantined messages.
 
-          For example, copy the following PowerShell code into NotePad and save the file as .ps1 in a location that's easy for you to find (for example, C:\Data\QuarantineRelease.ps1).
+          For bulk search and release, copy the following PowerShell code into NotePad and save the file as .ps1 in a location that's easy for you to find (for example, C:\Data\QuarantineRelease.ps1).
 
-          Then, after you connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) or [Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell), run the following command to run the script:
+          Then, after you connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following command to run the script:
 
           ```powershell
           & C:\Data\QuarantineRelease.ps1
@@ -233,9 +241,9 @@ sections:
 
           If the quarantine policy that's defined for the [supported quarantine action](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) doesn't have notifications turned on, the quarantine notifications aren't sent.
 
-          For more information, see the last table in [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy) and the individual feature tables in [Recommended settings for EOP and Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md) to see which default quarantine policies have quarantine notifications turned on.
+          For more information, see the last table in [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy) and the individual feature tables in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md) to see which default quarantine policies have quarantine notifications turned on.
 
-          Also, the protection policies in [preset security policies](preset-security-policies.md) are always applied _before_ custom protection policies. A user who's defined in the Standard or Strict preset security policy will never get a customized protection policy where the quarantine policy is customized to turn on quarantine notifications. For more information, see [Policy settings in preset security policies](preset-security-policies.md#policy-settings-in-preset-security-policies)
+          Also, the individual threat policies in [preset security policies](preset-security-policies.md) are always applied _before_ custom threat policies. A user defined in the Standard or Strict preset security policy never gets a customized threat policy where the quarantine policy is customized to turn on quarantine notifications. For more information, see [Policy settings in preset security policies](preset-security-policies.md#policy-settings-in-preset-security-policies).
 
           Quarantine notifications aren't enabled for messages quarantined by Exchange mail flow rules (transport rules) or data loss prevention (DLP). These messages have the AdminOnly quarantine policy. Quarantine notifications are also not generated for messages with DefaultFullAccess quarantine policy.
 
@@ -249,7 +257,9 @@ sections:
         answer: |
           See the permissions entry [here](quarantine-admin-manage-messages-files.md#what-do-you-need-to-know-before-you-begin).
 
-          > [!TIP]
+          > [!NOTE]
+          > Currently, roles assigned through Azure Privileged Identity Management aren't supported in quarantine. For more information about PIM, see [Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365](/defender-office-365/pim-in-mdo-configure).
+          >
           > The ability to manage quarantined messages using [Exchange Online permissions](/exchange/permissions-exo/permissions-exo) ended in February 2023 per MC447339.
           >
           > Guest admins from other organizations can't manage quarantined messages. The admin needs to be in the same organization as the recipients.
@@ -268,7 +278,7 @@ sections:
           I don't see the **Block sender** button in quarantine notifications or on the **Quarantine page**. I also don't see the **Approve release** button on the **Quarantine page**. What's going on?
         answer: |
           **Block sender** is disabled by default for quarantined messages.
-          
+
           For end users, admins can create and assign a custom quarantine policy that includes the **Block sender** action. For more information, see [Quarantine policies](quarantine-policies.md).
 
           Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
@@ -281,7 +291,7 @@ sections:
           The **Block sender** action isn't possible for public folders.
 
           Public folders in Exchange don't have junk email configuration settings like individual mailboxes. The `Set-MailboxJunkEmailConfiguration` cmdlet configures junk email settings for mailboxes, not public folders.
-          
+
       - question: |
           **Filter** and **Search** aren't working. What's going on?
         answer: |
@@ -293,7 +303,7 @@ sections:
           Released quarantine messages are still showing up in Quarantine. What's going on?
         answer: |
           Released messages remain visible in quarantine with the **Status** value **Released**, until:
-          
+
           - The [quarantine retention period](quarantine-about.md#quarantine-retention) expires and the message is automatically deleted.
 
             or
@@ -308,7 +318,7 @@ sections:
       - question: |
           Duplicate or multiple quarantine notifications are sent to the same user.
         answer: |
-          Multiple or duplicate quarantine notifications are sent to the same user if the [SendFromAliasEnabled parameter](/powershell/module/exchange/set-organizationconfig#-sendfromaliasenabled) on the **Set-OrganizationConfig** cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) is set to the value $true.
+          Multiple or duplicate quarantine notifications are sent to the same user if the [SendFromAliasEnabled parameter](/powershell/module/exchangepowershell/set-organizationconfig#-sendfromaliasenabled) on the **Set-OrganizationConfig** cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) is set to the value $true.
 
       - question: |
           I can't see all recipients of a quarantined message. What's going on?

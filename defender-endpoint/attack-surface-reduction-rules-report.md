@@ -1,37 +1,28 @@
----
+﻿---
 title: Attack surface reduction rules reporting
 description: Provides information about attack surface reduction rules detections, configuration, block threats, and methods to enable three standard rules and exclusions.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: sugamar,
-manager: deniseb
+manager: bagol
 ms.custom: asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.date: 02/19/2025
+ms.date: 10/20/2025
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Attack surface reduction rules report
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-**Platforms:**
-
-- Windows
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 The Attack Surface Reduction Rules report provides detailed insights into the rules enforced on devices within your organization. Moreover, this report offers information about:
 
@@ -50,9 +41,16 @@ For more information about individual attack surface reduction rules, see [Attac
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> To access the attack surface reduction rules report, read permissions are required for the Microsoft Defender portal. 
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in the attack surface reduction rules report, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+- To access the attack surface reduction rules report, read permissions are required for the Microsoft Defender portal. 
+- For Windows Server 2012 R2 and Windows Server 2016 to appear in the attack surface reduction rules report, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+
+### Supported operating systems
+
+- Windows
+
+### Supported operating systems
+
+- Windows
 
 ## Report access permissions
 
@@ -90,7 +88,7 @@ To navigate to the summary cards for the attack surface reduction rules report
 
 3. Scroll down to **Devices** to find the **Attack surface reduction rules** summary cards. The summary report cards for ASR rules resemble the following image:
 
-  :::image type="content" source="media/attack-surface-reduction-rules-report-summary.png" alt-text="Shows the ASR rules report summary cards" lightbox="media/attack-surface-reduction-rules-report-summary.png":::
+    :::image type="content" source="media/attack-surface-reduction-rules-report-summary.png" alt-text="Shows the ASR rules report summary cards" lightbox="media/attack-surface-reduction-rules-report-summary.png":::
 
 ## ASR rules report summary cards
 
@@ -186,7 +184,7 @@ Filtering provides a way for you to specify what results are returned:
 - **Blocked Detections**: Shows how many threat detections are blocked by rules set in _Block_ mode.
 - **Large, consolidated graph**: Shows blocked and audited detections.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-tab.png" alt-text="Shows the ASR rules report main detections tab, with _Audit detections_ and _Blocked detections_ outlined." lightbox="media/attack-surface-reduction-rules-report-main-detections-tab.png":::
+   :::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-tab.png" alt-text="Shows the ASR rules report main detections tab, with _Audit detections_ and _Blocked detections_ outlined." lightbox="media/attack-surface-reduction-rules-report-main-detections-tab.png":::
 
 The graphs provide detection data over the displayed date range, with the capability to hover over a specific location to gather date-specific information.
 
@@ -210,17 +208,17 @@ For more information about ASR rule audit and block modes, see [Attack surface r
 
 The "Detection" main page has a list of all detections (files/processes) in the last 30 days. Select on any of the detections to open with drill-down capabilities.
 
->:::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-flyout.png" alt-text="Shows the ASR rules report main detections tab flyout" lightbox="media/attack-surface-reduction-rules-report-main-detections-flyout.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-flyout.png" alt-text="Shows the ASR rules report main detections tab flyout" lightbox="media/attack-surface-reduction-rules-report-main-detections-flyout.png":::
 
 The **Possible exclusion and impact** section provides the effect of the selected file or process. You can:
 
-- Select **Go hunt** which opens the Advanced Hunting query page
-- **Open file page** opens Microsoft Defender for Endpoint detection
+- Select **Go hunt** which opens the Advanced Hunting query page.
+- **Open file page** opens Microsoft Defender for Endpoint detection.
 - The **Add exclusion** button is linked with the add exclusion main page.
 
 The following image illustrates how the Advanced Hunting query page opens from the link on the actionable flyout:
 
->:::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-flyout-hunting.png" alt-text="Shows the attack surface reduction rules report main detections tab flyout link opening Advanced Hunting" lightbox="media/attack-surface-reduction-rules-report-main-detections-flyout-hunting.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-flyout-hunting.png" alt-text="Shows the attack surface reduction rules report main detections tab flyout link opening Advanced Hunting" lightbox="media/attack-surface-reduction-rules-report-main-detections-flyout-hunting.png":::
 
 For more information about Advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview)
 
@@ -248,7 +246,7 @@ The ASR rules main **Configuration** tab provides summary and per-device ASR rul
 
 These elements are shown in the following figure.
 
->:::image type="content" source="media/attack-surface-reduction-rules-report-main-configuration-tab.png" alt-text="Shows the ASR rules report main configuration tab" lightbox="media/attack-surface-reduction-rules-report-main-configuration-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-configuration-tab.png" alt-text="Shows the ASR rules report main configuration tab" lightbox="media/attack-surface-reduction-rules-report-main-configuration-tab.png":::
 
 To enable ASR rules:
 
@@ -286,7 +284,7 @@ The Add exclusion page has two buttons for actions that can be used on any detec
 - **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see [Intune](enable-attack-surface-reduction.md) in "Enable ASR rules alternate configuration methods."
 - **Get exclusion paths** which downloads file paths in a csv format.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png" alt-text="Shows the ASR rules report add exclusions tab flyout impact summary." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png":::
+  :::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png" alt-text="Shows the ASR rules report add exclusions tab flyout impact summary." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png":::
 
 ## See also
 
@@ -299,3 +297,4 @@ The Add exclusion page has two buttons for actions that can be used on any detec
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

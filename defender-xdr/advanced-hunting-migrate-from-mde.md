@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -18,16 +18,16 @@ ms.custom:
 - cx-ti
 - cx-ah
 - seo-marvel-apr2020
+appliesto: Microsoft Defender XDR
 ms.topic: how-to
-ms.date: 04/22/2024
+ms.date: 03/28/2025
 ---
 
 # Migrate advanced hunting queries from Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 Move your advanced hunting workflows from Microsoft Defender for Endpoint to proactively hunt for threats using a broader set of data. In Microsoft Defender XDR, you get access to data from other Microsoft 365 security solutions, including:
 

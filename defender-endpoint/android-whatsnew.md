@@ -1,11 +1,11 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: denishdonga
 audience: ITPro
 ms.collection:
@@ -15,18 +15,99 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 04/18/2025
+ms.date: 11/06/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+### Releases for Defender for Endpoint on Android
+
+#### November 2025
+
+| Build| 1.0.8303.0101|
+| -------- | -------- |
+| Release Date |November 4, 2025|
+
+**What's New**
+
+- An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
+  
+- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+
+#### October 2025
+
+| Build| 1.0.8217.0101 |
+| -------- | -------- |
+| Release Date   | October 28   |
+
+**What's New**
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/android-whatsnew/image.png)
+  
+- #### October 2025
+
+| Build| 1.0.8201.0101|
+| -------- | -------- |
+| Release Date | October 2, 2025 |
+
+**What's New**
+
+- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux)
+
+- Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.
+
+- Performance Improvement and bug fixes.
+
+#### September 2025
+
+| Build|1.0.8102.0101|
+| -------- | -------- |
+| Release Date| September 4, 2025 |
+
+**What's New**
+
+- Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device, which isn't supported by MDE Mobile, user will be redirected back to the sign-in page.
+
+- Other accessibility bug fixes and performance improvements.
+
+#### August 2025
+
+| Build|1.0.8018.0103|
+| -------- | -------- |
+| Release Date| August 19, 2025 |
+
+**What's New**
+
+- Performance improvements and bug fixes
+
+#### July 2025
+
+|Build|1.0.7901.0101|
+| -------- | -------- |
+|Release Date|July 10, 2025|
+
+**What's New**
+
+UX Improvement for home page and tiles screens, for more details please visit this link - [Android UX Enhancement](/defender-endpoint/android-new-ux)
+
+#### Alerts for activities related to open wireless connection and certificates are now detected as events
+
+May 2025
+
+Starting May 19, 2025, security operations center (SOC) analysts can now view the following as events instead of alerts:
+
+- Connecting or disconnecting to open wireless networks
+- Download/installation/removal of self-signed certificates
+
+These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
 
 #### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
@@ -35,7 +116,7 @@ April 2025
 **Setup a secure environment to test prerelease builds of Defender for Endpoint on Android**. Learn the steps on how to set up your environment for prerelease testing of Defender for Endpoint on Android. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
 - Android Enterprise scenarios
-- Mobile Application Mangement (MAM) enrollment scenarios
+- Mobile Application Management (MAM) enrollment scenarios
 
 For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
 
@@ -199,7 +280,7 @@ If you encounter any issues, [submit in-app feedback](android-support-signin.md#
 
 ## The Microsoft Defender for Endpoint app is now Microsoft Defender in the Play store
 
-Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview).
 
 ## Vulnerability management
 
@@ -227,9 +308,9 @@ Notify your users and help desk (as applicable) that end users must accept the n
 
 1. Tap on the Defender for Endpoint in-app notification or open the Defender for Endpoint app. Users see a screen that lists the permissions needed. A green check mark is missing next to **Storage permission**.
 
-2. Tap **Begin**.
+1. Tap **Begin**.
 
-3. Tap the toggle for **Allow access to manage all files**.
+1. Tap the toggle for **Allow access to manage all files**.
 
    The device is now protected.
 
@@ -241,3 +322,4 @@ Notify your users and help desk (as applicable) that end users must accept the n
 ## See also
 
 [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+

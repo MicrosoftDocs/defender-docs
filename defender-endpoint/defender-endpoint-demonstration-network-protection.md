@@ -1,48 +1,46 @@
----
+﻿---
 title: Microsoft Defender for Endpoint Network protection demonstrations
-description: Shows how Network protection prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.
+description: Shows how Network protection prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - demo
-ms.topic: article
+ms.topic: how-to
 ms.subservice: asr
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Network protection demonstrations
 
-**Applies to:**
+Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-
-Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.
-
-## Scenario requirements and setup
+## Prerequisites
 
 - Client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, or macOS
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 (with the new unified client), or Linux.
+- Server devices must be running Windows Server 2012 R2 (with the new unified client) and later, Linux, or Azure Stack HCI OS, version 23H2 and later.
 - Microsoft Defender Antivirus
 
 ## Windows
 
-PowerShell command
+Run the following PowerShell command:
 
 ```powershell
 Set-MpPreference -EnableNetworkProtection Enabled
 ```
 
-Rule states
+Following are the Rule states:
 
 |State | Mode| Numeric value |
 |:---|:---|:---|
@@ -50,15 +48,15 @@ Rule states
 | Enabled | = Block mode | 1 |
 | Audit | = Audit mode | 2 |
 
-Verify configuration
+Verify the configuration using the following PowerShell command:
 
 ```powershell
 Get-MpPreference
 ```
 
-Scenario
+**Consider the following scenario**:
 
-1. Turn on Network Protection using powershell command:
+1. Turn on Network Protection using PowerShell command:
 
    ```powershell
    Set-MpPreference -EnableNetworkProtection Enabled
@@ -66,11 +64,11 @@ Scenario
 
 2. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
 
-Expected results
+Following are the expected results:
 
 Navigation to the website should be blocked and you should see a **Connection blocked** notification.
 
-Clean-up
+Run the following command to Clean-up:
 
 ```powershell
 Set-MpPreference -EnableNetworkProtection Disabled
@@ -92,28 +90,27 @@ For example, to configure network protection to run in blocking mode, execute th
 mdatp config network-protection enforcement-level --value block
 ```
 
-To confirm that network protection has been started successfully, run the following command from the Terminal, and verify that it prints "started":
+To confirm that network protection has started successfully, run the following command from the Terminal, and verify that it prints "started":
 
 
 ```bash
 mdatp health --field network_protection_status
 ```
 
-To test Network Protection on macOS/Linux
+To test Network Protection on macOS/Linux:
 
-1. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
-1. or from terminal 
+1. Using the browser of your choice (not Microsoft Edge), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
+1. Or run the following command from the terminal: 
 
-```bash
-curl -o ~/Downloads/smartscreentestratings2.net https://smartscreentestratings2.net/ 
-```
+    ```bash
+    curl -o ~/Downloads/smartscreentestratings2.net https://smartscreentestratings2.net/ 
+    ```
 
-Expected results
+Following are the expected results:
 
 Navigation to the website should be blocked and you should see a **Connection blocked** notification.
 
-Clean-up
-
+Run the following command to Clean-up:
 
 ```bash
 mdatp config network-protection enforcement-level --value audit
@@ -125,3 +122,4 @@ mdatp config network-protection enforcement-level --value audit
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

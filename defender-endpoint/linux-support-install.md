@@ -1,33 +1,28 @@
----
+﻿---
 title: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr
 description: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
 ms.date: 10/11/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Verify that the installation succeeded
 
@@ -77,13 +72,15 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 The following external package dependencies exist for the mdatp package:
 
-- The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage`, `selinux-policy-targeted`, `mde-netfilter` 
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter` 
-
-The mde-netfilter package also has the following package dependencies:
-
-- For DEBIAN the mde-netfilter package requires `libnetfilter-queue1`, `libglib2.0-0`  
-- For RPM the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2` 
+- The mdatp RPM package requires `glibc >= 2.17`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`
+> For version older than `101.25032.0000`:
+> - RPM package needs: `mde-netfilter`, `pcre`
+> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
+> - The `mde-netfilter` package also has the following package dependencies:
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 ## Installation failed
 
@@ -196,3 +193,4 @@ service mdatp status
     Path to a zip file that contains the logs are displayed as an output. Reach out to our customer support with these logs.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

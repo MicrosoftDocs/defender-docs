@@ -79,22 +79,31 @@
     - name: Investigate and respond to threats
       items:
       - name: Overview
-        href: incidents-overview.md
+        href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
-      - name: Investigate incidents
+      - name: Use tasks to handle incident workflow
+        href: split-incidents-into-tasks.md
+      - name: Investigate and respond to incidents
         items:
-        - name: Incidents
+        - name: Plan incident response
+          href: /unified-secops-platform/plan-incident-response
+        - name: Investigate incidents  
           href: investigate-incidents.md
+        - name: Understand graph icons and visualizations
+          href: understand-graph-icons.md
         - name: Move alerts to another incident
           href: move-alert-to-another-incident.md
+        - name: Merge incidents manually
+          href: merge-incidents-manually.md
         - name: Alerts
+        - name: Investigate alerts
           href: investigate-alerts.md
-        - name: Entity pages
+        - name: Investigate entity pages
           items:
           - name: User
             href: investigate-users.md
@@ -109,7 +118,9 @@
         - name: Investigate and respond to container threats
           href: investigate-respond-container-threats.md
         - name: Investigate insider risk threats
-          href: irm-investigate-alerts-defender.md                         
+          href: irm-investigate-alerts-defender.md
+        - name: Create data security investigations
+          href: create-dsi-in-defender.md                                    
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
@@ -136,12 +147,6 @@
           href: autoad-results.md
         - name: Exclude assets from automated responses
           href: automatic-attack-disruption-exclusions.md           
-      - name: Manage the deception capability
-        items:
-        - name: Overview
-          href: deception-overview.md
-        - name: Configure capabilities
-          href: configure-deception.md
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
@@ -218,6 +223,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AIAgentsInfo
+            href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
             href: advanced-hunting-alertevidence-table.md
           - name: AlertInfo
@@ -232,6 +239,8 @@
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
+          - name: CloudStorageAggregatedEvents
+            href: advanced-hunting-cloudstorageaggregatedevents-table.md
           - name: DataSecurityBehaviors
             href: advanced-hunting-datasecuritybehaviors-table.md  
           - name: DataSecurityEvents
@@ -286,6 +295,8 @@
             href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
           - name: DeviceTvmSoftwareVulnerabilitiesKB
             href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
+          - name: DisruptionAndResponseEvents
+            href: advanced-hunting-disruptionandresponseevents-table.md            
           - name: EmailAttachmentInfo
             href: advanced-hunting-emailattachmentinfo-table.md
           - name: EmailEvents
@@ -294,12 +305,20 @@
             href: advanced-hunting-emailpostdeliveryevents-table.md
           - name: EmailUrlInfo
             href: advanced-hunting-emailurlinfo-table.md
+          - name: EntraIdSignInEvents
+            href: advanced-hunting-entraidsigninevents-table.md
+          - name: EntraIdSpnSignInEvents
+            href: advanced-hunting-entraidspnsigninevents-table.md
           - name: ExposureGraphEdges
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
+          - name: GraphApiAuditEvents
+            href: advanced-hunting-graphapiauditevents-table.md            
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
+          - name: IdentityEvents
+            href: advanced-hunting-identityevents-table.md
           - name: IdentityInfo
             href: advanced-hunting-identityinfo-table.md
           - name: IdentityLogonEvents
@@ -320,8 +339,10 @@
           items:
           - name: Custom detections overview
             href: custom-detections-overview.md
-          - name: Create & manage detection rules
+          - name: Create detection rules
             href: custom-detection-rules.md
+          - name: Manage detection rules
+            href: custom-detection-manage.md            
         - name: Take action on query results
           href: advanced-hunting-take-action.md
         - name: Link query results to an incident
@@ -330,13 +351,19 @@
           href: advanced-hunting-limits.md
         - name: Extend data coverage
           href: advanced-hunting-extend-data.md
+        - name: Hunt using hunting graph
+          href: advanced-hunting-graph.md
       - name: Track and respond to emerging threats
         items:
-        - name: Threat analytics overview
-          href: threat-analytics.md
-        - name: Understand the analyst report
-          href: threat-analytics-analyst-reports.md
-        - name: Defender Threat Intelligence in Microsoft Defender XDR
+        - name: Threat analytics
+          items:
+          - name: Overview
+            href: threat-analytics.md
+          - name: Understand the analyst report
+            href: threat-analytics-analyst-reports.md
+          - name: Get access to indicators
+            href: threat-analytics-indicators.md
+        - name: Microsoft Defender Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
       - name: Collaborate with Microsoft Defender Experts for Hunting
         items:
@@ -352,10 +379,14 @@
             href: access-den-graph-api.md
           - name: Ask Defender Experts
             href: experts-on-demand.md
+          - name: Understand Defender Experts for Hunting reports
+            href: defender-experts-report.md
         - name: Frequently asked questions
-          href: faq-defender-experts-hunting.md    
-        - name: Understand Defender Experts for Hunting reports
-          href: defender-experts-report.md
+          items: 
+          - name: General information
+            href: faq-defender-experts-hunting.md
+          - name: Server and cloud workload coverage
+            href: faq-cloud-coverage-defender-experts.md
       - name: Collaborate with Microsoft Defender Experts for XDR
         items:
         - name: Overview
@@ -370,10 +401,12 @@
             href: managed-detection-and-response-xdr.md
           - name: Scoped coverage
             href: defender-experts-scoped-coverage.md  
-          - name: Communicate with Defender Experts for XDR
+          - name: Communicate with Defender Experts
             href: communicate-defender-experts-xdr.md
           - name: Reports
             href: reports-xdr.md
+          - name: Third-party enrichment
+            href: third-party-enrichment-defender-experts.md
           - name: Defender Experts for Hunting
             href: defender-experts-for-hunting.md
           - name: Auditing
@@ -386,6 +419,8 @@
             href: faq-incident-notifications-xdr.md
           - name: Managed response
             href: faq-managed-response.md
+          - name: Server and cloud workload coverage
+            href: faq-cloud-coverage-defender-experts.md
         - name: Additional information on Defender Experts for XDR
           items:
           - name: Important considerations
@@ -414,6 +449,14 @@
           href: advanced-hunting-security-copilot.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
+        - name: Responsible AI FAQs
+          href: responsible-ai-copilot-defender.md        
+        - name: Security Copilot agents in Microsoft Defender
+          items:
+          - name: Overview
+            href: security-copilot-agents-defender.md          
+          - name: Phishing Triage Agent
+            href: phishing-triage-agent.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -482,6 +525,8 @@
             href: m365d-threat-analytics-notifications.md
           - name: Configure alert notifications
             href: configure-email-notifications.md
+        - name: Contact Microsoft Defender support
+          href: contact-defender-support.md
         - name: Manage devices through dynamic rules
           href: configure-asset-rules.md
         - name: Provide managed service provider (MSSP) access
@@ -489,7 +534,9 @@
         - name: Troubleshoot service issues
           href: troubleshoot.md
         - name: Create Custom Defender XDR reports
-          href: defender-xdr-custom-reports.md                        
+          href: defender-xdr-custom-reports.md
+        - name: Visualize impact with the unified security summary
+          href: security-summary-report.md                                   
         - name: Microsoft Defender XDR APIs
           items:
             - name: Overview

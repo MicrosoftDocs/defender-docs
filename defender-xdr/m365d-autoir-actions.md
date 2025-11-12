@@ -1,14 +1,14 @@
 ---
 title: View and manage actions in the Action center
-description: Use the Action center to view and manage remediation actions
+description: Use the Action center in the Microsoft Defender portal to view and manage remediation actions for affected assets.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 11/25/2024
+ms.date: 04/28/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -68,6 +68,9 @@ If you've determined that a device or a file is not a threat, you can undo remed
 | Action source | Supported Actions |
 |:---|:---|
 | - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Contain device <br/>- Contain user <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
+
+> [!NOTE]
+> Only Security Administrators and Global Administrators are allowed access to undo operations such as File Quarantine.
 
 ### Undo one remediation action
 

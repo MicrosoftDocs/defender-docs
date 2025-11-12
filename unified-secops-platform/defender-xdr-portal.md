@@ -1,12 +1,13 @@
 ---
-title: Microsoft Defender XDR in the Defender portal 
+title: Microsoft Defender XDR in the Microsoft Defender Portal
 description: Learn about the services and features available with Microsoft Defender XDR in the Microsoft Defender portal.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 11/18/2024
+ms.date: 10/31/2025
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -17,9 +18,9 @@ ms.topic: concept-article
 # customer intent: As a security operations center leader, I want to learn about the services and features available with Defender XDR to help me determine whether it meets my organization's requirements.
 ---
 
-# Microsoft Defender XDR in the Defender portal
+# Microsoft Defender XDR in the Microsoft Defender portal
 
-Microsoft Defender XDR in the Microsoft unified SecOps platform unifies and coordinates threat protection across a broad range of assets, including devices and endpoints, identities, email, Microsoft 365 services, and SaaS apps.
+Microsoft Defender XDR unifies and coordinates threat protection across a broad range of assets, including devices and endpoints, identities, email, Microsoft 365 services, and SaaS apps.
 
 Defender XDR consolidates threat signals and data across assets, so that you can monitor and manage security threats from a single location in the [Microsoft Defender portal](https://security.microsoft.com). 
 
@@ -44,13 +45,6 @@ Incidents define a complete picture of an attack. Incidents help SOC teams to un
 A [single incident queue](/defender-xdr/incident-queue) in the Defender portal provides full visibility into the latest alerts and incidents, and historical data. You can search and query the incident queue, and prioritize responses based on severity.
 
 :::image type="content" source="media/defender-xdr-portal/incidents-page.png" alt-text="Screenshot of the Incidents page in the Microsoft Defender portal" lightbox="media/defender-xdr-portal/incidents-page.png":::
-
-
-### Detecting lateral movement attacks
-
-Defender for XDR includes [deception capability](/defender-xdr/deception-overview) to detect human-operated lateral movement, which is often used in common attacks such as ransomware and email compromise.
-
-Deception capability generates decoy assets. When attackers interact with these assets, deception capability raises high-confidence alerts that can be viewed on the Alerts page in the portal.
 
 ## Automatically disrupting threats
 

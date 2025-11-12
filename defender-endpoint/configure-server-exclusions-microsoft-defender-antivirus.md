@@ -1,55 +1,52 @@
----
+﻿---
 title: Microsoft Defender Antivirus exclusions on Windows Server
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 description: Windows Server includes automatic exclusions, based on server role. You can also add custom exclusions.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 03/28/2025
-author: emmwalshh
-ms.author: ewalsh
-ms.topic: conceptual
+ms.date: 10/20/2025
+author: batamig
+ms.author: bagol
+ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus exclusions on Windows Server
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows Server
 
 
-> [!IMPORTANT]
-> ## Important notes about automatic exclusions on Windows Server
->
-> - [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
-> - Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
-> - Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
-> - Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
-> - Microsoft Defender Antivirus uses the Deployment Image Servicing and Management (DISM) tools to determine which roles are installed on your computer.
-> - Appropriate exclusions must be set for software that isn't included with the operating system.
-> - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in and automatic exclusions. 
+## Important notes about automatic exclusions on Windows Server
 
-## Overview
+- [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
+- Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
+- Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
+- Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
+- Microsoft Defender Antivirus uses the Deployment Image Servicing and Management (DISM) tools to determine which roles are installed on your computer.
+- Appropriate exclusions must be set for software that isn't included with the operating system.
+- The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. 
 
-This article describes types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
+This article describes the two main types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
 
 - [Automatic exclusions](#automatic-server-role-exclusions) for roles on Windows Server 2016 and later. 
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
 
 For a more detailed overview of exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows Server
 
 ## Automatic server role exclusions
 
@@ -240,10 +237,9 @@ This section lists the folder exclusions that are delivered automatically when y
 
 ## Built-in exclusions
 
-> [!NOTE]
-> - Please see [Important Notes](#important-notes-about-automatic-exclusions-on-windows-server)
-> - Default locations could be different than the locations that are described in this article.
-> - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
+Make sure to review [Important notes about automatic exclusions](#important-notes-about-automatic-exclusions-on-windows-server) (in this article). Keep in mind that default locations could be different than the locations that are described in this article.
+
+The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
 
 Because Microsoft Defender Antivirus is built into Windows, it doesn't require exclusions for operating system files on any version of Windows. 
 
@@ -265,7 +261,7 @@ Because Microsoft Defender Antivirus is built into Windows, it doesn't require e
 
 ### Windows Update files or Automatic Update files
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb`
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb`
 - `%windir%\SoftwareDistribution\Datastore\*\edb.chk`
 - `%windir%\SoftwareDistribution\Datastore\*\edb\*.log`
 - `%windir%\SoftwareDistribution\Datastore\*\Edb\*.jrs`
@@ -341,7 +337,7 @@ Because Microsoft Defender Antivirus is built into Windows, it doesn't require e
 In Windows Server 2016 and later, the predefined exclusions delivered by [Security intelligence updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates) only exclude the default paths for a role or feature. If you installed a role or feature in a custom path, or you want to manually control the set of exclusions, make sure to opt out of the automatic exclusions delivered in Security intelligence updates. But keep in mind that the exclusions that are delivered automatically are optimized for Windows Server 2016 and later. See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) before defining your exclusion lists.
 
 > [!WARNING]
-> Opting out of automatic exclusions might adversely impact performance, or result in data corruption. Automatic server role exclusions are optimized for Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025. 
+> Opting out of automatic exclusions might adversely impact performance, or result in data corruption. Automatic server role exclusions are optimized for Windows Server 2016 and later and Azure Stack HCI OS, version 23H2 and later.
 
 
 Because predefined exclusions only exclude **default paths**, if you move NTDS and SYSVOL folders to another drive or path that is *different from the original path*, you must add exclusions manually. See [Configure the list of exclusions based on folder name or file extension](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).
@@ -396,9 +392,8 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Configure Defender for Endpoint on Android features](android-configure.md)
-- [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+- [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

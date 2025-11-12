@@ -46,6 +46,12 @@
          items:
            - name: ServiceNow
              href: ServiceNow-data-connector.md
+       - name: Cloud Security data connectors
+         items:
+           - name: Wiz
+             href: wiz-data-connector.md
+           - name: Palo Alto Prisma
+             href: palo-alto-prisma-data-connector.md
        - name: Vulnerability Management data connectors
          items:
            - name: Qualys
@@ -70,6 +76,9 @@
           href: initiatives.md
         - name: Security initiatives catalog
           href: initiatives-list.md
+          items:
+           - name: External attack surface management initiative
+             href: external-attack-surface-management-initiative.md
         - name: Investigate security initiative metrics
           href: security-metrics.md
         - name: Review security recommendations

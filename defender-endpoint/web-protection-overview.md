@@ -1,35 +1,29 @@
----
+﻿---
 title: Web protection
 description: Learn about the web protection in Microsoft Defender for Endpoint and how it can protect your organization.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
 ms.date: 04/02/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 ms.custom: partner-contribution
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Web protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## About web protection
 
@@ -192,3 +186,4 @@ For more information on how to submit false positives/negatives, see [Address fa
 |[Web content filtering](web-content-filtering.md) | Track and regulate access to websites based on their content categories.|
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

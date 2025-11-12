@@ -2,26 +2,23 @@
 title: Onboard Windows devices using Configuration Manager
 description: Use Configuration Manager to deploy the configuration package on devices so that they are onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
-ms.date: 12/13/2024
+ms.topic: install-set-up-deploy
+ms.date: 10/27/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
 
 # Onboard Windows devices using Configuration Manager
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can use Configuration Manager to onboard endpoints to the Microsoft Defender for Endpoint service. 
 
@@ -80,7 +77,7 @@ Within the Microsoft Configuration Manager console, the onboarding process will 
 
 Any system that receives this required configuration maintains that configuration for as long as the Configuration Manager client continues to receive this policy from the management point.
 
-Follow these steps to onboard endpoints using Microsoft Configuration Manager:
+Follow these steps to create a device collection that can be used to onboard endpoints in Microsoft Defender for Endpoint:
 
 1. In the Microsoft Configuration Manager console, navigate to **Assets and Compliance \> Overview \> Device Collections**.
 
@@ -189,9 +186,9 @@ Follow the steps to complete installation of endpoint protection client from the
      > [!NOTE]
      > After the Endpoint Protection client install completes, the client automatically performs a definition update check. If this update check succeeds, you don't have to manually install the latest definition update package.
 
-**Example: install the client with an antimalware policy**
+    **Example: install the client with an antimalware policy**
 
-`scepinstall.exe /policy <full path>\<policy file>`
+    `scepinstall.exe /policy <full path>\<policy file>`
 
 
 ### Verify the Endpoint Protection client installation

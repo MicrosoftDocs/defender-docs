@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/10/2025
 ms.localizationpriority: medium
 search.appverid:
@@ -45,7 +45,7 @@ AIR in Defender for Office 365 Plan 2 requires that [audit logging is turned on]
 
 An alert is triggered, and a security playbook starts an automated investigation, which results in findings and recommended actions. Here's the overall flow of AIR, step by step:
 
-1. An automated investigation is started initiated in one of the following ways:
+1. An automated investigation is initiated in one of the following ways:
    - Specific alerts that are designed to initiate AIR. These alerts include:
      - Something suspicious is identified in email (for example, the message itself, an attachment, a URL, or a compromised user account).
      - [Zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
@@ -54,7 +54,7 @@ An alert is triggered, and a security playbook starts an automated investigation
      - Suspicious mailbox behavior.
 
        > [!TIP]
-       > Be sure to regularly review the alerts your organization. For more information about alert policies that trigger automated investigations, see the [default alert policies in the Threat management category](/purview/alert-policies#threat-management-alert-policies). The entries that contain the value **Yes** for **Automated investigation** can trigger automated investigations. If these alerts are disabled or replaced by custom alerts, AIR isn't triggered.
+       > Be sure to regularly review the alerts your organization. For more information about alert policies that trigger automated investigations, see the [default alert policies in the Threat management category](/defender-xdr/alert-policies#threat-management-alert-policies). The entries that contain the value **Yes** for **Automated investigation** can trigger automated investigations. If these alerts are disabled or replaced by custom alerts, AIR isn't triggered.
 
    - A security analyst manually triggers the investigation by selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, or the Email summary panel. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation). For examples, see For examples, see [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md).
 

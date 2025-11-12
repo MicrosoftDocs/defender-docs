@@ -59,6 +59,11 @@
       "source_path": "defender-office-365/step-by-step-guides/deploy-and-configure-the-report-message-add-in.md",
       "redirect_url": "/defender-office-365/submissions-outlook-report-messages",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/tenant-wide-setup-for-increased-security.md",
+      "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-overview",
+      "redirect_document_id": false
     }
   ]
 }

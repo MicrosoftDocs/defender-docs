@@ -4,9 +4,9 @@ description: Your security center in Defender for Business is the Microsoft Defe
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
-ms.topic: conceptual
+ms.topic: get-started
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 07/03/2024
@@ -19,6 +19,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.custom: intro-get-started
+#customer intent: As a Defender for Business admin, I need quick guidance to navigate the Microsoft Defender portal and find first steps so I can get started securing devices and email.
 ---
 
 # Visit the Microsoft Defender portal
@@ -40,7 +41,7 @@ Use the navigation bar on the left side of the screen to access your incidents, 
 |**Learning hub**|Security training and other resources are available online at [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). You can filter by product, skill level, role, and more. The Learning hub can help your security team ramp up on security features and capabilities in Defender for Business and more Microsoft offerings, such as [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about).|
 |**Trials**|Try additional security and compliance capabilities by adding on a trial subscription. If you do not see **Trials** in your navigation bar, and you want to add on another trial, you can take one of the following steps: <br/>- Visit the [Small Business Solutions page](https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore), and choose **Questions? Talk to an expert** to get some help adding on a trial subscription. <br/>- Go to the [Microsoft 365 admin center](https://admin.microsoft.com/?auth_upn=admin%40M365B614031.onmicrosoft.com&source=applauncher#/catalog), and choose **Billing** > **Purchase services**. If you need help, choose **Help & support**.|
 |**Partner catalog**|Lists Microsoft partners who provide technical and professional services.|
-|**Assets** > **Devices**|Takes you to the device inventory view, where you can view devices, such as computers and mobile devices that are enrolled in [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). If no devices are onboarded yet, you can select **Onboard devices** to get started. For more information, see [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md).|
+|**Assets** > **Devices**|Takes you to the device inventory view, where you can view devices, such as computers and mobile devices that are enrolled in [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune). If no devices are onboarded yet, you can select **Onboard devices** to get started. For more information, see [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md).|
 |**Endpoints** > **Vulnerability management**|Enables you to access your [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Provides a dashboard, recommendations, remediation activities, a software inventory, and a list of potential weaknesses within your company.|
 |**Endpoints** > **Configuration management** > **Device configuration**|Lists your security policies by operating system and by type. To learn more about your security policies, see [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md).|
 |**Email & collaboration** > **Policies & rules**|If your subscription includes Exchange Online Protection or Microsoft Defender for Office 365, this section is where you'll manage your security policies and settings for email and collaboration services. [Learn more about Office 365 security](/defender-office-365/mdo-about). *The standalone version of Defender for Business does not include email & collaboration policies, but Microsoft 365 Business Premium does include Exchange Online Protection and Defender for Office 365 Plan 1*.|

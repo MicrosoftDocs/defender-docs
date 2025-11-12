@@ -4,8 +4,8 @@ description: Learn how to manage access to Microsoft Defender XDR capabilities w
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -17,7 +17,7 @@ ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 03/04/2024
+ms.date: 05/08/2024
 appliesto:
   - Microsoft Defender XDR
 ---
@@ -36,8 +36,8 @@ There are two ways to manage access to Microsoft Defender XDR:
 
 Accounts assigned the following **Global Microsoft Entra roles** can access Microsoft Defender XDR functionality and data:
 
-- Global administrator
-- Security administrator
+- Global Administrator
+- Security Administrator
 - Security Operator
 - Global Reader
 - Security Reader
@@ -54,7 +54,7 @@ To review accounts with these roles, [view Permissions in the Microsoft Defender
 
 ## Access to functionality
 
-Access to specific functionality is determined by your [Microsoft Entra role](/azure/active-directory/roles/permissions-reference). Contact a global administrator if you need access to specific functionality that requires you or your user group be assigned a new role.
+Access to specific functionality is determined by your [Microsoft Entra role](/azure/active-directory/roles/permissions-reference). Contact a Global Administrator if you need access to specific functionality that requires you or your user group be assigned a new role.
 
 ### Approve pending automated tasks
 

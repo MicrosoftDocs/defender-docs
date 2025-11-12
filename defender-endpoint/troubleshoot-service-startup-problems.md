@@ -1,9 +1,9 @@
----
+﻿---
 title: Troubleshoot Microsoft Defender Antivirus service startup problems
 description: Learn how to troubleshoot Microsoft Defender Antivirus service startup problems.
-author: denisebmsft
-ms.author: ewalsh
-manager: ewalsh
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
@@ -15,17 +15,14 @@ ms.custom: partner-contribution
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Troubleshoot Microsoft Defender Antivirus service startup problems
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-- Microsoft Defender Antivirus
 
 In the following screenshot, **Virus & threat protection** displays a red cross, where it says **Threat service has stopped. Restart it now**.
 
@@ -152,3 +149,4 @@ Follow these steps to resolve the issue:
     :::image type="content" source="media/tamper-protection.png" alt-text="Screenshot of Tamper Protection is enabled.":::
 
 1. Run **Microsoft Update**.
+

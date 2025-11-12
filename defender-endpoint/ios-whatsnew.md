@@ -1,13 +1,13 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on iOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/28/2025
-manager: deniseb
+ms.date: 11/06/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,18 +16,98 @@ ms.collection:
 ms.topic: reference
 ms.subservice: ios
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+## Releases for Defender for Endpoint on iOS
+
+#### November 2025
+
+| Build| 1.1.70290103|
+| -------- | -------- |
+| Release Date   |November 6, 2025|
+
+**What's New**
+
+- An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details.
+
+- Added Landscape mode UI support for the Defender app.
+
+- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+
+#### October 2025
+
+| Build| 1.1.70230101|
+| -------- | -------- |
+| Release Date   |October 26, 2025|
+
+**What's New**
+
+- Simplified return to compliance experience in iOS/iPadOS - please refer to this [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more details.
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/ios-whatsnew/image.png)
+  
+#### October 2025
+
+| Build | 1.1.69250104|
+| -------- | -------- |
+| Release Date | October 7, 2025  |
+
+**What's New**
+
+- Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile, refer - [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).
+
+- Performance Improvement and Bug fixes.
+
+#### September 2025
+
+| Build| 1.1.68200103 |
+| -------- | -------- |
+| Release Date | September 4, 2025   |
+
+**What's New**
+
+- [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads.
+
+#### August 2025
+
+| Build| 1.1.68140102|
+| -------- | -------- |
+| Release Date| August 19, 2025|
+
+**What's New**
+
+- Fixed push notification bug to ensure heartbeat signals are sent reliably
+
+- Performance improvements and bug fixes
+
+### July-2025 
+
+| Build| 1.1.67040101|
+| -------- | -------- |
+| Release Date| July 8, 2025|
+
+**What's New**
+
+- UX Improvement, please visit the attached link for more details - [iOS UX Experience](/defender-endpoint/ios-new-ux)
+
+#### Alerts for activities related to open wireless connections are now detected as events
+
+**May 2025**
+
+Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline.
+
+For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection).
 
 #### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
@@ -105,7 +185,7 @@ Defender for Endpoint is ending support for iOS/iPadOS 15 on January 31, 2025. M
 
 **How does this affect you or your users?**
 
-New users won't be able to install the Microsoft Defender app on devices running iOS/iPadOS 15 and earlier versions. Similarly, existing users won't be to upgrade to the latest version of the app.
+New users won't be able to install the Microsoft Defender app on devices running iOS/iPadOS 15 and earlier versions. Similarly, existing users will be able to upgrade till April-Mid Release version (1.1.64030101) of the app and not beyond it. 
 
 To check which devices support iOS 16 or iPadOS 16 (if applicable), see the following Apple documentation:
 
@@ -152,7 +232,7 @@ Microsoft Defender for Endpoint on iOS now has specialized ability on supervised
 
 ## Microsoft Defender for Endpoint is now Microsoft Defender in the App store
 
-Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the app store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you'll have access to features for Microsoft Defender for Endpoint or to features for Microsoft Defender for individuals. For more information, see [Microsoft Defender](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the app store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you'll have access to features for Microsoft Defender for Endpoint or to features for Microsoft Defender for individuals. For more information, see [Microsoft Defender](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview).
 
 ## Vulnerability Management
 
@@ -212,3 +292,4 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 - Bug fixes.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

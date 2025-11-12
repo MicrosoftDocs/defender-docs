@@ -5,9 +5,9 @@ f1.keywords:
   - Hijacked account
   - Hacked account
   - Compromised account
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.collection:
@@ -26,12 +26,12 @@ description: Learn how to recognize and respond to a compromised email account u
 ms.service: defender-office-365
 ms.date: 03/31/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Respond to a compromised email account
+# Respond to a compromised cloud email account
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -239,7 +239,7 @@ Remove any suspicious mailbox forwarding that the attacker added.
      Get-InboxRule -Identity "jason\10210541742734704641" -IncludeHidden | Format-List
      ```
 
-For more information, see [Configuring and controlling external email forwarding in Microsoft 365](/defender-office-365/outbound-spam-policies-external-email-forwarding).
+For more information, see [Control automatic external email forwarding](/defender-office-365/outbound-spam-policies-external-email-forwarding).
 
 ## Perform an Investigation
 
@@ -276,7 +276,7 @@ By analyzing the provided logs, you can pinpoint the specific time frame that re
 
 ## More resources
 
-[Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Microsoft 365](detect-and-remediate-outlook-rules-forms-attack.md)
+[Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
 
 [Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
 

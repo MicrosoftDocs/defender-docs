@@ -2,7 +2,7 @@
 title: Move alerts from one incident to another in the Microsoft Defender portal
 description: Learn how to detach an alert from an incident in the Microsoft Defender portal, to correct false and/or missed correlations, and attach the alert to another (new or existing) incident, so you can investigate and remediate security threats more effectively.
 ms.service: defender-xdr
-ms.author: yelevin
+ms.author: raynew
 author: yelevin
 ms.localizationpriority: medium
 manager: raynew
@@ -87,3 +87,4 @@ When an alert is correlated with an incident, a message is written to the incide
 ## See also
 
 - [Alert correlation and incident merging in the Microsoft Defender portal](alerts-incidents-correlation.md)
+- [Merge incidents manually in the Microsoft Defender portal](merge-incidents-manually.md)

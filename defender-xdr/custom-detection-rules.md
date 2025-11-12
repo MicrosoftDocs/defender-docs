@@ -1,15 +1,15 @@
 ---
-title: Create and manage custom detection rules in Microsoft Defender XDR
-description: Learn how to create and manage custom detections rules based on advanced hunting queries.
+title: Create custom detection rules in Microsoft Defender XDR
+description: Learn how to create custom detections rules based on advanced hunting queries.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -22,14 +22,14 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 02/10/2025
+ms.date: 08/04/2025
 ---
 
-# Create and manage custom detections rules
+# Create custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 Custom detection rules are rules you can design and tweak using [advanced hunting](advanced-hunting-overview.md) queries. These rules let you proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
@@ -69,25 +69,27 @@ To manage required permissions, a Global Administrator can:
 In the Microsoft Defender portal, go to **Advanced hunting** and select an existing query or create a new query. When using a new query, run the query to identify errors and understand possible results.
 
 > [!IMPORTANT]
-> To prevent the service from returning too many alerts, each rule is limited to generating only 100 alerts whenever it runs. Before creating a rule, tweak your query to avoid alerting for normal, day-to-day activity.
+> To prevent the service from returning too many alerts, each rule is limited to generating only 150 alerts whenever it runs. Before creating a rule, tweak your query to avoid alerting for normal, day-to-day activity.
 
 #### Required columns in the query results
 
 
-To create a custom detection rule, the query must return the following columns:
-1. `Timestamp` - Used to set the timestamp for generated alerts
-2. A column or combination of columns that uniquely identify the event in Defender XDR tables:
+To create a custom detection rule using Defender XDR data, the query must return the following columns:
+1. `Timestamp` - This column is used to set the timestamp for generated alerts. The `Timestamp` that is returned from the query shouldn't have been manipulated in the query and should be returned exactly as it appears in the raw event.
+   
+3. A column or combination of columns that uniquely identify the event in Defender XDR tables:
       - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
       - For Alert* tables, `Timestamp` must appear in the event
       - For Observation* tables, `Timestamp`and `ObservationId` must appear in the same event
       - For all others, `Timestamp` and `ReportId` must appear in the same event
-3. One of the following columns that contain a strong identifier for an impacted asset:
+4. One of the following columns that contain a strong identifier for an impacted asset:
       - `DeviceId`
       - `DeviceName`
       - `RemoteDeviceName`
       - `RecipientEmailAddress`
       - `SenderFromAddress` (envelope sender or Return-Path address)
       - `SenderMailFromAddress` (sender address displayed by email client)
+      - `SenderObjectId`
       - `RecipientObjectId`
       - `AccountObjectId`
       - `AccountSid`
@@ -99,6 +101,8 @@ To create a custom detection rule, the query must return the following columns:
 > [!NOTE]
 > Support for more entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
 
+
+
 Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these common columns.
 
 There are various ways to ensure more complex queries return these columns. For example, if you prefer to aggregate and count by entity under a column such as `DeviceId`, you can still return `Timestamp` and `ReportId` by getting it from the most recent event involving each unique `DeviceId`.
@@ -106,7 +110,7 @@ There are various ways to ensure more complex queries return these columns. For 
 > [!IMPORTANT]
 > Avoid filtering custom detections using the `Timestamp` column. The data used for custom detections is prefiltered based on the detection frequency.
 
-The sample query below counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
+The following sample query counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
 
 ```kusto
 DeviceEvents
@@ -123,14 +127,16 @@ DeviceEvents
 
 With the query in the query editor, select **Create detection rule** and specify the following alert details:
 
-- **Detection name** - Name of the detection rule; should be unique
-- **Frequency** -Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
-- **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
+- **Detection name** - Name of the detection rule; should be unique.
+- **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
+- **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
-- **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
+- **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics.
+- **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
+
 
 #### Rule frequency
 
@@ -141,11 +147,13 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 - **Every 3 hours** - Runs every 3 hours, checking data from the past 12 hours.
 - **Every hour** - Runs hourly, checking data from the past 4 hours.
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT), see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
+- **Custom** - Runs according to the frequency you selected. This option is available if the rule is based only on data that is ingested to Microsoft Sentinel, see [Custom frequency for Microsoft Sentinel data (Preview)](#custom-frequency-for-microsoft-sentinel-data-preview).
 
 > [!TIP]
 > Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
 
-When you edit a rule, it will run with the applied changes in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time.
+When you edit a rule, the changes are applied in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time. There might also be small delays in specific runs, whereby the configured frequency isn't 100% accurate.
+
 
 ##### Continuous (NRT) frequency
 
@@ -153,21 +161,21 @@ Setting a custom detection to run in Continuous (NRT) frequency allows you to in
 
 From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency with a single button, **Migrate now**:
 
-:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
+:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
 
 
 Selecting **Migrate now** gives you a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only according to your preferences:
 
 :::image type="content" source="media/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-compatible-queries.png":::
 
-Once you click **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
+Once you select **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
 
 ###### Queries you can run continuously
 
 You can run a query continuously as long as:
 
 - The query references one table only.
-- The query uses an operator from the list of supported KQL operators. **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**
+- The query uses an operator from the list of **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**. (For `matches regex`, regular expressions must be encoded as string literals and follow the string quoting rules. For example, the regular expression `\A` is represented in KQL as `"\\A"`. The extra backslash indicates that the other backslash is part of the regular expression `\A`.)
 - The query doesn't use joins, unions, or the `externaldata` operator.
 - The query doesn't include any comments line/information.
 
@@ -199,15 +207,109 @@ Near real-time detections are supported for the following tables:
 > [!NOTE]
 > Only columns that are generally available can support **Continuous (NRT)** frequency.
 
-### 3. Choose the impacted entities
+###### Custom frequency for Microsoft Sentinel data (Preview)
+
+Microsoft Sentinel customers that are onboarded to Microsoft Defender can select **Custom** frequency when the rule is based only on data that is ingested to Microsoft Sentinel. 
+
+When you select this frequency option, the **Run query every input** component is displayed, where you type the desired frequency for the rule and use a dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When you select a frequency, the lookback period is determined automatically with the following logic: 
+1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback will be 20*4 = 80 minutes.  
+2.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every three days, the lookback is 30 days  
+
+:::image type="content" source="/defender/media/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-frequency.png":::
+
+> [!IMPORTANT]
+>When selecting a custom frequency, we fetch your data from Microsoft Sentinel. This means that: 
+>1.	You must have data available in Microsoft Sentinel
+>2.	Defender XDR data we won't support scoping, since Microsoft Sentinel doesn't support scoping
+
+### 3. Define alert enrichment details 
+You can enrich alerts by providing and defining more details, allowing you to:
+-	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description-preview)
+-	[Add custom details](#add-custom-details-preview) to display in the alert side panel 
+-	[Link entities](#link-entities)
+
+#### Create a dynamic alert title and description (Preview)
+You can dynamically craft your alert’s title and description using the results of your query to make them accurate and indicative. This feature can boost SOC analysts’ efficiency when triaging alerts and incidents, and when trying to quickly understand the essence of an alert.  
+
+To dynamically configure the alert’s title or description, integrate them into the **Alert details** section by using the free text names of columns that are available in your query results and surrounding them with double curly brackets. 
+
+For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
+
+>[!NOTE]
+>The number of columns you can reference in each field is limited to three.
+
+:::image type="content" source="/defender/media/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections wizard." lightbox="/defender/media/ah-dynamic-alert.png":::
+
+To help you decide on the exact column names you want to reference, you can select **Explore query and results**, which opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
+
+#### Add custom details (Preview)
+
+You can further enhance your SOC analysts’ productivity by showing important details in the alert side panel. You can surface events’ data in alerts that are constructed from those events. This gives your SOC analysts immediate event content visibility of their incidents, enabling them to triage, investigate, and draw conclusions faster. 
+
+In the **Custom details** section, add key-value pairs corresponding to the details you want to surface: 
+- In the **Key** field, enter a name of your choosing that will appear as the field name in alerts. 
+- In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list will be populated by values corresponding to the columns names that your KQL query outputs. 
+  
+:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections wizard." lightbox="/defender/media/ah-custom-details.png":::
+
+The following screenshot shows how the custom details are surfaced in the alert side panel: 
+
+:::image type="content" source="/defender/media/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="/defender/media/ah-custom-details-panel.png":::
+
+>[!IMPORTANT]
+>Custom details have the following limitations: 
+>1.	Each rule is limited to up to 20 key/values pairs of custom details 
+>2.	The combined size limit for all custom details and their values in a single alert is 4 KB. If the custom details array exceeds this limit, the whole custom details array is dropped from the alert.  
+
+#### Link entities
 
 Identify the columns in your query results where you expect to find the main affected or impacted entity. For example, a query might return sender (`SenderFromAddress` or `SenderMailFromAddress`) and recipient (`RecipientEmailAddress`) addresses. Identifying which of these columns represent the main impacted entity helps the service aggregate relevant alerts, correlate incidents, and target response actions.
 
 You can select only one column for each entity type (mailbox, user, or device). Columns that aren't returned by your query can't be selected.
 
+##### Expanded entity mapping (Preview)
+
+You can link a wide range of entity types to your alerts. Linking more entities helps our correlation engine group alerts to the same incidents and to correlate incidents together. If you're a Microsoft Sentinel customer, this also means that you can map any entity from your third-party data sources that are ingested into Microsoft Sentinel.
+
+For Microsoft Defender XDR data, the entities are automatically selected. If the data is from Microsoft Sentinel, you need to select the entities manually. 
+
+>[!NOTE]
+>Entities impact how alerts are grouped into incidents so make sure to carefully review the entities to ensure high incidents’ quality. Learn more about incidents correlation and alerts grouping. 
+
+There are two sections under the expanded **Entity mapping** section for which you can select entities: 
+-	**Impacted assets** – Impacted assets that appear in the selected events should be added here. The following types of assets can be added: 
+    - Account 
+    - Device 
+    - Mailbox 
+    - Cloud application 
+    - Azure resource 
+    - Amazon Web Services resource 
+    - Google Cloud Platform resource 
+- **Related evidence** – Nonassets that appear in the selected events can be added in this section. The supported entity types are: 
+    - Process 
+    - File 
+    - Registry value 
+    - IP 
+    - OAuth application 
+    - DNS 
+    - Security group 
+    - URL 
+    - Mail cluster 
+    - Mail message
+
+>[!NOTE] 
+>Currently, only assets can be mapped as impacted entities.
+
+:::image type="content" source="/defender/media/ah-link-entities.png" alt-text="Screenshot that shows the entity mapping options in the Custom detections wizard." lightbox="/defender/media/ah-link-entities.png":::
+
+After an entity type is selected, select an identifier type that exists in the selected query results so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as can be seen in the relevant dropdown menu. Read the description displayed when hovering on each identifier to better understand it. 
+
+After selecting the identifier, select a column from the query results that contain the selected identifier. You can select **Explore query and results** to open the advanced hunting context panel. This allows you to explore your query and results to make sure you choose the right column for the selected identifier.
+
+
 ### 4. Specify actions
 
-Your custom detection rule can automatically take actions on devices, files, users, or emails that are returned by the query.
+If your custom detection rule uses Defender XDR data, it can automatically take actions on devices, files, users, or emails that are returned by the query.
 
 :::image type="content" source="/defender/media/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="/defender/media/ah-custom-actions.png":::
 
@@ -267,61 +369,18 @@ Only data from devices in the scope will be queried. Also, actions are taken onl
 After reviewing the rule, select **Create** to save it. The custom detection rule immediately runs. It runs again based on configured frequency to check for matches, generate alerts, and take response actions.
 
 > [!IMPORTANT]
-> Custom detections should be regularly reviewed for efficiency and effectiveness. For guidance on how to optimize your queries, follow the **[Advanced hunting query best practices](advanced-hunting-best-practices.md)**. To make sure you're creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in **[Manage existing custom detection rules](#manage-existing-custom-detection-rules)**.
+> Custom detections should be regularly reviewed for efficiency and effectiveness. For guidance on how to optimize your queries, follow the **[Advanced hunting query best practices](advanced-hunting-best-practices.md)**. To make sure you're creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in **[Manage existing custom detection rules](custom-detection-manage.md)**.
 >
 > You maintain control over the broadness or specificity of your custom detections so any false alerts generated by custom detections might indicate a need to modify certain parameters of the rules.
 
-## Manage existing custom detection rules
+#### How custom detections handle duplicate alerts
 
-You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand and modify it.
-
-> [!TIP]
-> Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
-
-### View existing rules
-
-To view all existing custom detection rules, navigate to **Hunting** > **Custom detection rules**. The page lists all the rules with the following run information:
-
-- **Last run** - When a rule was last run to check for query matches and generate alerts
-- **Last run status** - Whether a rule ran successfully
-- **Next run** - The next scheduled run
-- **Status** - Whether a rule has been turned on or off
-
-### View rule details, modify rule, and run rule
-
-To view comprehensive information about a custom detection rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
-
-:::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="/defender/media/custom-detect-rules-view.png":::
-
-You can also take the following actions on the rule from this page:
-
-- **Run** - Run the rule immediately. This also resets the interval for the next run.
-- **Edit** - Modify the rule without changing the query.
-- **Modify query** - Edit the query in advanced hunting.
-- **Turn on** / **Turn off** - Enable the rule or stop it from running.
-- **Delete** - Turn off the rule and remove it.
-
-### View and manage triggered alerts
-
-In the rule details screen (**Hunting** \> **Custom detections** \> **[Rule name]**), go to  **Triggered alerts**, which lists the alerts generated by matches to the rule. Select an alert to view detailed information about it and take the following actions:
-
-- Manage the alert by setting its status and classification (true or false alert)
-- Link the alert to an incident
-- Run the query that triggered the alert on advanced hunting
-
-### Review actions
-
-In the rule details screen (**Hunting** \> **Custom detections** \> **[Rule name]**), go to **Triggered actions**, which lists the actions taken based on matches to the rule.
-
-> [!TIP]
-> To quickly view information and take action on an item in a table, use the selection column [&#10003;] at the left of the table.
-
-> [!NOTE]
-> Some columns in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection fires twice on an event that contains the same entities, custom details, and dynamic details, only one alert is created for both of these events. If the detection recognizes that the events are identical, it logs only one of the events on the created alert and then takes care of the duplicates, which could occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 
 - [Custom detections overview](custom-detections-overview.md)
+- [Manage custom detections](custom-detection-manage.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the advanced hunting query language](advanced-hunting-query-language.md)
 - [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md)

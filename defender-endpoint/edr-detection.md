@@ -2,43 +2,40 @@
 title: EDR detection test for verifying device's onboarding and reporting service
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
-ms.date: 03/04/2025
+ms.date: 04/30/2025
+appliesto: 
+    - Microsoft Defender for Endpoint Plan 2
+    - Microsoft Defender for Business
+
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
 
-#### Applies to:
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
-## Scenario requirements and setup
+## Prerequisites
 
 - Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2 SP1.
+- Windows server devices must be running Windows Server 2008 R2 SP1, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 - Linux servers must be running a supported version (see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md))
 - Devices must be onboarded to Defender for Endpoint
 
-Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
-
-Run an EDR detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. You can run an EDR detection test to verify that the device is properly onboarded and reporting to the service. This article describes how to run an EDR detection test on a newly onboarded device.
 
 ### Windows
 
-1. Open a Command Prompt window
+1. Open a Command Prompt window.
 
 2. At the prompt, copy and run the following command. The Command Prompt window closes automatically.
 
@@ -50,55 +47,55 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 ### Linux
 
-1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server 
+1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server. 
 
+   ```bash
+   curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
+   ```
 
-```bash
-curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
-```
+2. Extract the zipped folder. 
 
-2. Extract the zip 
+   ```bash
+   unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
+   ```
 
-```bash
-unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
-```
+3. Run the following command to give the script executable permission: 
 
-3. And run the following command to give the script executable permission: 
-
-```bash
-chmod +x ./mde_linux_edr_diy.sh
-```
+   ```bash
+   chmod +x ./mde_linux_edr_diy.sh
+   ```
 
 4. Run the following command to execute the script:
-```bash
- ./mde_linux_edr_diy.sh
-```
 
-5. After a few minutes, a detection should be raised in Microsoft Defender XDR. Look at the alert details, machine timeline, and perform your typical investigation steps.
+   ```bash
+   ./mde_linux_edr_diy.sh
+   ```
+
+   After a few minutes, a detection should be raised in the [Microsoft Defender portal](https://security.microsoft.com). Look at the alert details, machine timeline, and perform your typical investigation steps.
  
 ### macOS
 
-1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
+1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP macOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract the zipped folder.
 
       The following prompt appears:
 
       > Do you want to allow downloads on "mdatpclientanalyzer.blob.core.windows.net"?<br/>
       > You can change which websites can download files in **Websites Preferences**.
 
-4. Click **Allow**.
+4. Select **Allow**.
 
 5. Open **Downloads**.
 
 6. You must be able to see **MDATP MacOS DIY**.
 
    > [!TIP]
-   > If you double-click **MDATP MacOS DIY**, you will get the following message:
+   > If you double-click **MDATP MacOS DIY**, you'll get the following message:
    >
-   > > **"MDATP MacOS DIY" cannot be opened because the developer cannot be verifier.**<br/>
+   > > **"MDATP MacOS DIY" cannot be opened because the developer cannot be verified.**<br/>
    > > macOS cannot verify that this app is free from malware.<br/>
-   > > **[Move to Trash]** **[Cancel]**
+   > > **[Move to Trash]** **[Done]**
 
-7. Click **Cancel**.
+7. Click **Done**.
 
 8. Right-click **MDATP MacOS DIY**, and then click **Open**.
 
@@ -109,7 +106,7 @@ chmod +x ./mde_linux_edr_diy.sh
 
 9. Click **Open**.
 
-    The system will display the following message:
+    The system displays the following message:
 
     > Microsoft Defender for Endpoint - macOS EDR DIY test file<br/>
     > Corresponding alert will be available in the MDATP portal.
@@ -124,9 +121,7 @@ chmod +x ./mde_linux_edr_diy.sh
 
     :::image type="content" source="media/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="Screenshot that shows a macOS EDR test alert that shows severity, category, detection source, and a collapsed menu of actions":::
 
-    The macOS EDR test alert shows severity, category, detection source, and a collapsed menu of actions.
-
-    Look at the alert details and the device timeline, and perform the regular investigation steps.
+    The macOS EDR test alert shows severity, category, detection source, and a collapsed menu of actions. Look at the alert details and the device timeline, and perform the regular investigation steps.
 
 
 ## Next steps

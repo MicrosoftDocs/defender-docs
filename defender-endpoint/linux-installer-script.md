@@ -1,37 +1,36 @@
----
+﻿---
 title: Installer script based deployment for Microsoft Defender for Endpoint on Linux 
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using an installer script.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr; meghapriya
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/10/2025
----
+ms.date: 08/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Introduction
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to automate the deployment of Defender for Endpoint on Linux by using an installer script. This script identifies the distribution and version, selects the right repository, sets up the device to pull the latest agent version, and onboards the device to Defender for Endpoint using the onboarding package. This method is highly recommended for simplifying the deployment process.
 
-To use another method, refer to the [See also](#see-also) section. 
+To use another method, refer to the [Related content section](#related-content).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Prerequisites and system requirements
 
@@ -81,7 +80,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    ```bash
    sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
    ```
-   
+
    This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
 
    Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
@@ -114,19 +113,26 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    --https-proxy <URL>  set https proxy
    --ftp-proxy <URL>    set ftp proxy
    --mdatp              specific version of mde to be installed. will use the latest if not provided
+   -b|--install-path    specify the installation and configuration path for MDE. Default: /
    -h|--help            display help
    ```
 
    | Scenario | Command |
    |---|---|
+   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
    |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --min_req –-mdatp 101.24082.0004 ` |
    |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
    |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
    |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
    |Uninstall agent | `sudo ./mde_installer.sh --remove` |
-   
+
+   For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md).
+
    > [!NOTE]
-   > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
+   >
+      > 1. Upgrading your operating system to a new major version after product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
+      >
+      > 2. The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
 
 ## Verify deployment status
 
@@ -190,27 +196,20 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 The following external package dependencies exist for the `mdatp` package:
 
-- The `mdatp RPM` package requires - `glibc >= 2.17`,`policycoreutils`,`selinux-policy-targeted`, `mde-netfilter`.
-- For DEBIAN the `mdatp` package requires `libc6 >= 2.23`,`uuid-runtime`, `mde-netfilter`
-- For Mariner the `mdatp` package requires `attr`,`diffutils`, `libacl`, `libattr`,`libselinux-utils`, `selinux-policy`, `policycoreutils`,`mde-netfilter`
+- The `mdatp RPM` package requires - `glibc >= 2.17`
+- For DEBIAN the `mdatp` package requires `libc6 >= 2.23`
+- For Mariner the `mdatp` package requires `attr`,`diffutils`, `libacl`, `libattr`,`libselinux-utils`, `selinux-policy`, `policycoreutils`
 
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. 
 > If `eBPF` isn't supported on your machines, or if there are specific requirements to remain on `Auditd`, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or earlier, other dependencies on the auditd package exist for `mdatp`.
-
-## `mdatp` package dependencies
-
-- The `mdatp RPM` package requires `audit`, `semanage`.
-- For DEBIAN, the `mdatp` package requires `auditd`.
-- For Mariner, the `mdatp` package requires `audit`.
-
-### `mde-netfilter` dependencies
-
-The `mde-netfilter` package also has the following package dependencies:
-
-- For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1`, `libglib2.0-0`.
-- For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`,`libnetfilter_queue`,`glib2`.
-- For Mariner,  the `mde-netfilter` package requires `libnfnetlink`, `libnetfilter_queue`.
+> For version older than `101.25032.0000`:
+> - RPM package needs: `mde-netfilter`, `pcre`
+> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
+> - The `mde-netfilter` package also has the following package dependencies:
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 ## Troubleshoot installation issues
 
@@ -275,7 +274,7 @@ To configure antivirus and EDR settings, see the following articles:
 - [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
 - [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
-## See also
+## Related content
 
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
@@ -285,6 +284,8 @@ To configure antivirus and EDR settings, see the following articles:
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 > [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
+

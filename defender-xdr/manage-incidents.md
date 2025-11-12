@@ -4,7 +4,7 @@ description: Learn how to assign, update the status,
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: yelevin
+ms.author: deniseb
 author: yelevin
 ms.localizationpriority: medium
 manager: deniseb
@@ -341,6 +341,16 @@ To generate the PDF, perform the following steps:
    :::image type="content" source="media/manage-incidents/export-download-small.png" alt-text="Screenshot highlighting export message and status when download is available." lightbox="media/manage-incidents/export-download.png":::
 
 The report is cached for a couple of minutes. The system provides the previously generated PDF if you try to export the same incident again within a short time frame. To generate a newer version of the PDF, wait for a few minutes for the cache to expire.
+
+## Set up email notifications for incidents
+	
+You can set up the Microsoft Defender portal to notify your staff with an email about new incidents or updates to existing incidents. You can choose to get notifications based on:
+
+- Alert severity
+- Alert sources
+- Device group
+
+To set up email notifications for incidents, see [get email notifications on incidents](m365d-notifications-incidents.md).
 
 ## Next steps
 

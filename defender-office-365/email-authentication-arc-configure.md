@@ -2,11 +2,11 @@
 title: Configure trusted ARC sealers
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: high
 search.appverid:
   - MET150
@@ -17,9 +17,9 @@ ms.custom:
   - seo-marvel-apr2020
 description: Authenticated Received Chain (ARC) is an email authentication method that tries to preserve authentication results across devices and any message modification that occurs between the sender and recipient.
 ms.service: defender-office-365
-ms.date: 1/29/2024
+ms.date: 04/30/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -52,7 +52,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
@@ -60,7 +60,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the Microsoft Defender portal to add trusted ARC sealers
 
@@ -112,7 +112,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
 
   To preserve existing values, be sure to include the ARC sealers that you want to keep along with the new ARC sealers that you want to add.
 
-  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchange/set-arcconfig).
+  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchangepowershell/set-arcconfig).
 
 ## Validate a trusted ARC sealer
 
@@ -146,17 +146,20 @@ header.d=contoso.com;dmarc=fail action=none
 header.from=contoso.com;compauth=pass reason=130
 ```
 
+> [!NOTE]
+> The ARC result **pass** from a **trusted ARC sealer** can potentially override failures in SPF, DKIM, or DMARC caused by message modification during transit. However, the final spoofing determination is based on the [composite authentication](email-authentication-about.md#composite-authentication) (CompAuth) outcome. Messages that fail ARC might still be delivered if they pass SPF, DKIM, DMARC, and composite authentication evaluations.
+
 ## Trusted ARC sealer mail flow diagrams
 
 The diagrams in this section contrast mail flow and the affect on email authentication results with and without a trusted ARC sealer. In both diagrams, the Microsoft 365 organization uses a legitimate email service that modifies inbound mail before delivered into Microsoft 365. This modification interrupts mail flow, which can cause email authentication failures by changing the source IP and updating the email message header.
 
 This diagram demonstrates the result _without_ a trusted ARC sealer:
 
-:::image type="content" source="media/m365d-indirect-traffic-flow-without-trusted-arc-sealer.PNG" alt-text="Contoso publishes SPF, DKIM, and DMARC. A sender using SPF sends email from inside contoso.com to fabrikam.com, and this message passes through a legitimate third party service that modifies the sending IP address in the email header. During the DNS check at Microsoft 365, the message fails SPF due to the altered IP, and fails DKIM because the content was modified. DMARC fails because of the SPF and DKIM failures. The message is delivered to the Junk Email folder, quarantined, or rejected.":::
+:::image type="content" source="media/m365d-indirect-traffic-flow-without-trusted-arc-sealer.PNG" alt-text="Contoso publishes SPF, DKIM, and DMARC. A sender using SPF sends email from inside contoso.com to fabrikam.com, and this message passes through a legitimate non-Microsoft service that modifies the sending IP address in the email header. During the DNS check at Microsoft 365, the message fails SPF due to the altered IP, and fails DKIM because the content was modified. DMARC fails because of the SPF and DKIM failures. The message is delivered to the Junk Email folder, quarantined, or rejected.":::
 
 This diagram demonstrates the result _with_ a trusted ARC sealer:
 
-:::image type="content" source="media/m365d-indirect-traffic-flow-with-trusted-arc-sealer.PNG" alt-text="Contoso publishes SPF, DKIM, and DMARC, but also configures the required trusted ARC sealers. A sender using SPF sends email from inside contoso.com to fabrikam.com, and this message passes through a legitimate third party service that modifies the sending IP address in the email header. The service uses ARC sealing, and because the service is defined as a trusted ARC sealer in Microsoft 365, the modification is accepted. SPF fails for the new IP address. DKIM fails because of the content modification. DMARC fails because of the earlier failures. But ARC recognizes the modifications, issues a Pass, and accepts the changes. Spoof also receives a pass. The message is delivered to the Inbox.":::
+:::image type="content" source="media/m365d-indirect-traffic-flow-with-trusted-arc-sealer.PNG" alt-text="Contoso publishes SPF, DKIM, and DMARC, but also configures the required trusted ARC sealers. A sender using SPF sends email from inside contoso.com to fabrikam.com, and this message passes through a legitimate non-Microsoft service that modifies the sending IP address in the email header. The service uses ARC sealing, and because the service is defined as a trusted ARC sealer in Microsoft 365, the modification is accepted. SPF fails for the new IP address. DKIM fails because of the content modification. DMARC fails because of the earlier failures. But ARC recognizes the modifications, issues a Pass, and accepts the changes. Spoof also receives a pass. The message is delivered to the Inbox.":::
 
 ## Next steps
 

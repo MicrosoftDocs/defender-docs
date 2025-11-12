@@ -1,9 +1,9 @@
----
+﻿---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 description: Learn how to set up and use the Defender for Endpoint plug-in for Windows Subsystem for Linux.
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: bagol
 ms.reviewer: gokulgiju, priyankagill, kvitta, pahuijbr
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -15,20 +15,29 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 11/11/2024
+ms.date: 10/27/2025
 search.appverid: MET150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Overview
 
 Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows, yet is isolated using virtualization technology. The Defender for Endpoint for WSL plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
+
+## Prerequisites
+
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
+
+- The Windows client device must be onboarded to Defender for Endpoint.
+
+### Supported operating systems
+
+- Windows 10, version 2004 and later (build 19044 and later)
+- Windows 11 to support the WSL versions that can work with the plug-in.
 
 ## Known issues and limitations
 
@@ -42,15 +51,10 @@ Be aware of the following considerations before you start:
 
 - The plug-in is not supported on machines with an ARM64 processor.
 
+- The plug-in is not supported on multi-session variants of Windows 10 and 11.
+
 - The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
 
-## Software prerequisites
-
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
-
-- The Windows client device must be onboarded to Defender for Endpoint.
-
-- The Windows client device must be running Windows 10, version 2004 and later (build 19044 and later), or Windows 11 to support the WSL versions that can work with the plug-in.
 
 ## Software components and installer file names
 
@@ -134,7 +138,7 @@ If your host machine contains multiple proxy settings, the plug-in selects the p
 
 3. Network & Internet proxy settings.
 
-For example, if your host machine has both `Winhttp proxy` and `Network & Internet proxy`, the plug-in selects `Winhttp proxy` as the proxy configuration.
+   For example, if your host machine has both `Winhttp proxy` and `Network & Internet proxy`, the plug-in selects `Winhttp proxy` as the proxy configuration.
 
 > [!NOTE]
 > The `DefenderProxyServer` registry key is no longer supported. Follow the steps described earlier in this article to configure proxy in plug-in.
@@ -294,7 +298,7 @@ Check the following things:
 - If your machine has a proxy setup, run the command `healthCheck --extendedProxy`. This will provide information on which proxy(s) is set on your machine and whether these configurations are invalid for WSL defender.
 
    ![Extend HealthCheck Proxy doc](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
-            
+  
 - If the steps mentioned above do not fix the problem, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
    **In Windows 11**
@@ -397,5 +401,6 @@ Microsoft Defender Endpoint plug-in for WSL supports Linux distributions running
    - **Type**: `REG_SZ`
    - **Value**: `Dogfood or External or InsiderFast or Production`
    - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
+
 
 

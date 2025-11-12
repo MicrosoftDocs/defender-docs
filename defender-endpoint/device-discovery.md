@@ -1,14 +1,14 @@
----
+﻿---
 title: Device discovery overview
 description: Learn how to use endpoint discovery in Microsoft Defender XDR to find unmanaged devices in your network.
 ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,19 +16,15 @@ ms.collection:
 - m365-initiative-defender-endpoint
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: met150
-ms.date: 04/03/2024
----
+ms.date: 05/08/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Device discovery overview
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Protecting your environment requires taking inventory of the devices that are in your network. However, mapping devices in a network can often be expensive, challenging, and time-consuming.
 
@@ -95,7 +91,7 @@ For more information, see [Network devices](network-devices.md).
 
 To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint now supports the following integration:
 
-- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal (Preview) to secure:
+- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal to secure:
 
     - OT devices, such as servers or packaging systems. For more information, see [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started).
     - Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs). For more information, see [Get started with Enterprise IoT security](/defender-for-iot/enterprise-iot-get-started).
@@ -161,3 +157,4 @@ DeviceNetworkEvents
 - [Device discovery FAQs](device-discovery-faq.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

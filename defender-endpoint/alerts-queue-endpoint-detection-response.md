@@ -4,30 +4,26 @@ ms.reviewer:
 description: View and manage the alerts surfaced in Microsoft Defender XDR
 keywords:
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/26/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ms.subservice: edr
 search.appverid: met150
 ---
 
 # Alerts queue in Microsoft Defender XDR
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Learn how you can view and manage the queue so that you can effectively investigate threats seen on entities such as devices, files, or user accounts.
 
@@ -43,4 +39,5 @@ Topic|Description
 [Investigate an IP address](investigate-ip.md)|Examine possible communication between devices in your network and external internet protocol (IP) addresses.
 [Investigate a domain](investigate-domain.md)|Investigate a domain to see if devices and servers in your network have been communicating with a known malicious domain.
 [Investigate a user account](investigate-user.md)|Identify user accounts with the most active alerts and investigate cases of potential compromised credentials.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

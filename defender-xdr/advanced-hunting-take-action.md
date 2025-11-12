@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -17,16 +17,16 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 07/18/2024
+ms.date: 11/10/2025
 ---
 
 # Take action on advanced hunting query results
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -44,7 +44,7 @@ To take action on devices through advanced hunting, you need a role in Microsoft
 
 If you can't take action, contact a Global Administrator about getting the following permission:
 
-*Active remediation actions > Threat and vulnerability management - Remediation handling*
+*Active remediation actions \> Threat and vulnerability management - Remediation handling*.
 
 To take action on emails through advanced hunting, you need a role in Microsoft Defender for Office 365 to [search and purge emails](/defender-office-365/scc-permissions).
 
@@ -85,7 +85,7 @@ Apart from device-focused remediation steps, you can also take some actions on e
 - `Move to mailbox folder` - select this action to move the email messages to Junk, Inbox, or Deleted items folder
 
      Note that you can move email results consisting of quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
-   
+
    :::image type="content" source="media/advanced-hunting-quarantine-results.png" alt-text="Screenshot of the Inbox option under take actions pane in the Microsoft Defender portal." lightbox="media/advanced-hunting-quarantine-results.png":::
 
 - `Delete email` - select this action to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
@@ -103,6 +103,20 @@ Apart from device-focused remediation steps, you can also take some actions on e
    | where ThreatTypes contains "spam"
    | project NetworkMessageId,RecipientEmailAddress, EmailDirection, SenderFromAddress, LatestDeliveryAction,LatestDeliveryLocation
    ```
+
+- `Submit to Microsoft` - select this action to submit false positives or false negative emails to Microsoft. As part of the submission, you can also add URLs, senders, and their domains to the Tenant Allow/Block List to immediately resolve the issue while Microsoft evaluates the submission.
+
+  URL entries in the Tenant Allow/Block List are supported only if the query result has the `Url` column by joining with `EmailUrlInfo` table on `NetworkMessageId`.
+
+  **Submit to Microsoft** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
+
+  :::image type="content" source="media/advanced-hunting-take-actions-submit-to-microsoft.png" alt-text="Screenshot of Choose actions page of the Take actions wizard with Submit to Microsoft selected and the Selected entities to block details flyout." lightbox="media/advanced-hunting-take-actions-submit-to-microsoft.png":::
+
+- `Initiate automated investigation` - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient or contact recipients.
+
+  **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
+
+  :::image type="content" source="media/advanced-hunting-take-actions-choose-actions.png" alt-text="Screenshot of the Choose actions page of the Take actions wizard with Initiate automated investigation selected." lightbox="media/advanced-hunting-take-actions-choose-actions.png":::
 
 You can also provide a remediation name and a short description of the action taken to easily track it in the action center history. You can also use the Approval ID to filter for these actions in the action center. This ID is provided at the end of the wizard:
 

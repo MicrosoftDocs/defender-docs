@@ -3,34 +3,35 @@ title: Get started with Microsoft Defender Experts for XDR
 ms.reviewer:
 description: Defender Experts for XDR let you determine the individuals or groups within your organization that need to be notified if there's a critical incident
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-get-started
-ms.topic: conceptual
+ms.topic: get-started
 ms.custom: 
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 04/10/2025
+ms.date: 08/01/2025
 ---
 
 # Get started with Microsoft Defender Experts for XDR
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsoft Defender Experts for Servers
 
-For onboarding instructions, check out this short video.
+For onboarding instructions, check out this short video:
 
 > [!VIDEO https://www.youtube.com/embed/eLEXPZ1mUwQ]
 
-Once the Defender Experts for XDR team is ready to onboard your organization, you'll receive a welcome email to continue the setup and get you started.
+Once the Defender Experts team is ready to onboard your organization, you'll receive a welcome email to continue the setup and get you started.
 
 Select the link in the welcome email to directly launch the Defender Experts settings setup in the Microsoft Defender portal. You can also open this setup by going to **Settings** > **Defender Experts** and selecting **Get started**.
 
@@ -53,11 +54,11 @@ You also need to grant our experts one or both of the following permissions:
 > [!IMPORTANT]
 > If you skip providing additional permissions, our experts won't be able to take certain response actions to secure your organization.  
 >
-> Even though our experts are granted these relatively powerful permissions, they will only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](dex-xdr-permissions.md)
+> Even though our experts are granted these relatively powerful permissions, they'll only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](dex-xdr-permissions.md)
 
 **To grant our experts permissions:**
 
-1. In the same Defender Experts settings setup, under **Permissions**, choose the access level(s) you want to grant our experts.
+1. In the same Defender Experts settings setup, under **Permissions**, choose one or more access levels you want to grant our experts.
 
 1. If you wish to [exclude device and user groups](#exclude-devices-and-users-from-remediation) in your organization from remediation actions, select **Manage exclusions**.
 
@@ -73,7 +74,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 
 1. In the same Defender Experts settings setup, under **Exclusions**, go to the **Device groups** tab.
 
-2. Select **+ Add device groups**, then search for and choose the device group(s) that you wish to exclude.
+2. Select **+ Add device groups**, then search for and choose one or more device groups that you wish to exclude.
    > [!NOTE]
    > This page only lists existing device groups. If you wish to create a new device group, you first need to go to the Defender for Endpoint settings in your Microsoft Defender portal. Then, refresh this page to search for and choose the newly created group. [Learn more about creating device groups](/defender-endpoint/machine-groups)
 
@@ -88,7 +89,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 **To exclude user groups:**
 
 1. In the same Defender Experts settings setup, under **Exclusions**, go to the **User groups** tab.
-2. Select **+ Add user groups**, then search for and choose the user group(s) that you wish to exclude.
+2. Select **+ Add user groups**, then search for and choose one or more user groups that you wish to exclude.
    > [!NOTE]
    > This page only lists existing user groups. If you wish to create a new user group, you first need to sign into the Microsoft Entra ID admin center as a Global Administrator. Then, refresh this page to search for and choose the newly created group. [Learn more about creating user groups](/entra/fundamentals/groups-view-azure-portal)
 
@@ -99,7 +100,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 :::image type="content" source="media/exclude-user-groups.png" alt-text="Screenshot to exclude user groups in Defender Experts for XDR." lightbox="media/exclude-user-groups.png":::
 
 > [!NOTE]
-> You can only exclude users by adding them to a Microsoft Entra ID security group. On-prem Entra ID users cannot be excluded at this time.
+> You can only exclude users by adding them to a Microsoft Entra ID security group. On-premises Microsoft Entra ID users can't be excluded at this time.
 
 To edit or update exclusions after the initial setup, go to **Settings** > **Defender Experts** > **Exclusions**, then go to the **Device groups** or **User groups** tab.
 
@@ -158,7 +159,7 @@ To edit or update your notification contacts after the initial setup, go to **Se
 Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-portal-chat), you also have to option to use Microsoft Teams to receive updates about managed responses and communicate with our experts in real time. When this setting is turned on, a new team named **Defender Experts team** is created, where managed response notifications related to ongoing incidents are sent as new posts in the **Managed response** channel. [Learn more about using Teams chat](communicate-defender-experts-xdr.md#teams-chat)
 
 > [!IMPORTANT]
-> Defender Experts will have access to all messages posted on any channel in the created **Defender Experts team**. To prevent Defender Experts from accessing messages in this team, go to **Apps** in Teams then navigate to **Manage your apps** > **Defender Experts** > **Remove**. This removal action cannot be reversed.
+> Defender Experts will have access to all messages posted on any channel in the created **Defender Experts team**. To prevent Defender Experts from accessing messages in this team, go to **Apps** in Teams then navigate to **Manage your apps** > **Defender Experts** > **Remove**. This removal action can't be reversed.
 
 **To turn on Teams notifications and chat:**
 

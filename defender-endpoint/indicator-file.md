@@ -1,33 +1,29 @@
----
+﻿---
 title: Create indicators for files
 ms.reviewer: yongrhee
 description: Create indicators for a file hash that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-ms.date: 03/04/2025
-manager: deniseb
+ms.date: 10/20/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Create indicators for files
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > [!IMPORTANT]
 > In Defender for Endpoint Plan 1 and Defender for Business, you can create an indicator to block or allow a file. In Defender for Business, your indicator is applied across your environment and cannot be scoped to specific devices.
@@ -44,21 +40,28 @@ There are three ways you can create indicators for files:
 - By creating a contextual indicator using the add indicator button from the file details page
 - By creating an indicator through the [Indicator API](api/ti-indicator.md)
 
-## Before you begin
+## Prerequisites
 
 Understand the following prerequisites before you create indicators for files:
 
 - [Behavior Monitoring is enabled](behavior-monitor.md)
 - [Cloud-based protection is turned on](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus).
 - [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
-- To start blocking files, [turn on the "block or allow" feature](advanced-features.md) in Settings (in the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **General** > **Advanced features** > **Allow or block file**).
+
+
+### Supported operating systems 
+
+- Windows 10, version 1703 or later
+- Windows 11
+-  Windows Server 2012 R2
+-  Windows Server 2016 or later
+-  Azure Stack HCI OS, version 23H2 and later.
 
 ### Windows prerequisites
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
 - The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
-- This feature is supported on devices running Windows 10, version 1703 or later, Windows 11, Windows Server 2012 R2, Windows Server 2016 or later, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
-- File hash computation is enabled, by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\` to **Enabled**
+- File hash computation is enabled by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**. Or, you can run the following PowerShell command: `Set-MpPreference -EnableFileHashComputation $true`
 
 > [!NOTE]
 > File indicators support portable executable (PE) files, including `.exe` and `.dll` files only.
@@ -69,7 +72,7 @@ Understand the following prerequisites before you create indicators for files:
 - [File hash computation must be enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line). Run the following command: `mdatp config enable-file-hash-computation --value enabled`
 
 > [!NOTE]
-> On Mac, file indicators support Mach-O files (akin to `.exe` and `.dll` in Windows) scripts, such as sh/bash and AppleScript File (`.scpt`) files only.
+> On macOS, file indicators support three types of files: Mach-O executables, POSIX shell scripts (e.g., those run by sh or bash), and AppleScript files (.scpt). (Mach-O is macOS's native executable format, comparable to .exe and .dll on Windows.)
 
 ### Linux prerequisites
 
@@ -79,7 +82,8 @@ Understand the following prerequisites before you create indicators for files:
 
 ## Create an indicator for files from the settings page
 
-1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
+
+1. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
 2. Select the **File hashes** tab.
 
@@ -91,9 +95,6 @@ Understand the following prerequisites before you create indicators for files:
    - Action: Specify the action to be taken and provide a description.
    - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
 
-   > [!NOTE]
-   > Device Group creation is supported in both Defender for Endpoint Plan 1 and Plan 2
-
 5. Review the details in the Summary tab, then select **Save**.
 
 ## Create a contextual indicator from the file details page
@@ -101,6 +102,11 @@ Understand the following prerequisites before you create indicators for files:
 One of the options when taking [response actions on a file](respond-file-alerts.md) is adding an indicator for the file. When you add an indicator hash for a file, you can choose to raise an alert and block the file whenever a device in your organization attempts to run it.
 
 Files automatically blocked by an indicator won't show up in the file's Action center, but the alerts will still be visible in the Alerts queue.
+
+## Block files
+
+1. To start blocking files, [turn on the "block or allow" feature](advanced-features.md) in Settings (in the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **General** > **Advanced features** > **Allow or block file**).
+
 
 ## Alerting on file blocking actions (preview)
 
@@ -124,7 +130,7 @@ The current supported actions for file IOC are allow, audit and block, and remed
    :::image type="content" source="media/indicators-generate-alert.png" alt-text="The Alert settings for file indicators" lightbox="media/indicators-generate-alert.png":::
 
    > [!IMPORTANT]
-   > - Typically, file blocks are enforced and removed within15 minutes, average 30 minutes but can take upwards of 2 hours.
+   > - Typically, file blocks are enforced and removed within 15 minutes, average 30 minutes but can take upwards of 2 hours.
    > - If there are conflicting file IoC policies with the same enforcement type and target, the policy of the more secure hash will be applied. An SHA-256 file hash IoC policy will win over an SHA-1 file hash 
    IoC policy, which will win over an MD5 file hash IoC policy if the hash types define the same file. This is always true regardless of the device group.
    > - In all other cases, if conflicting file IoC policies with the same enforcement target are applied to all devices and to the device's group, then for a device, the policy in the device group will win.
@@ -147,7 +153,7 @@ Timestamp > ago(30d)
 
 For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-Here are other thread names that can be used in the sample query:
+Here are other threat names that can be used in the sample query:
 
 Files:
 
@@ -201,9 +207,14 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 ## See also
 
 - [Create indicators](indicators-overview.md)
+
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
+
 - [Create indicators based on certificates](indicator-certificates.md)
+
 - [Manage indicators](indicator-manage.md)
+
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

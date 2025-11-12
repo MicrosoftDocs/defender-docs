@@ -4,7 +4,7 @@ description: See how to set up your Defender for Business cybersecurity solution
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -96,7 +96,7 @@ When you're ready to set up and configure Defender for Business, you can choose 
 6. **Set up and review your security policies and settings**. Some security policies and settings are preconfigured with default settings in Defender for Business. Other policies, such as web content filtering and attack surface reduction rules, must be set up. See [Configure your security settings and policies](mdb-configure-security-settings.md).
 
 > [!IMPORTANT]
-> If you have Microsoft 365 Business Premium, you have additional capabilities to set up and configure. See [Microsoft 365 Business Premium – productivity and cybersecurity for small business](/Microsoft-365/business-premium/m365bp-overview).
+> If you have Microsoft 365 Business Premium, you have additional capabilities to set up and configure. See [What is Microsoft Defender for Business?](/Microsoft-365/business-premium/m365bp-overview).
 
 ---
 

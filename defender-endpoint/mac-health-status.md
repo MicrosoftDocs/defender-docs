@@ -1,16 +1,16 @@
 ---
 title: Troubleshoot agent health issues with Defender for Endpoint on macOS 
 description: Investigate macOS Defender agent health issues
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: lianx; joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.topic: troubleshooting-general
-ms.date: 04/16/2025
+ms.date: 06/06/2025
 ms.collection: 
 - m365-security
 - tier3
@@ -77,6 +77,8 @@ mdatp health --details system_extensions
 mdatp health --details edr
 
 mdatp health --details definitions
+
+mdatp health --details features
 
 mdatp health --details help
 

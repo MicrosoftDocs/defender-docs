@@ -8,17 +8,17 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: ewalsh
-author: emmwalshh
-manager: deniseb
+ms.author: bagol
+author: batamig
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: get-started
 search.appverid: met150
 ms.date: 04/04/2025
-
+#customer intent: As an IT or security operations engineer responsible for endpoint recovery, I want a simple, trusted tool I can download and run to detect and removemalware so I can quickly restore infected devices and validate remediation.
 ---
 
 # Microsoft Safety Scanner Download

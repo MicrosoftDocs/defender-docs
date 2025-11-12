@@ -1,32 +1,32 @@
----
+﻿---
 title: View the details and results of an automated investigation
 description: During and after an automated investigation, you can view the results and key findings
 search.appverid: met150
 f1.keywords:
 - NOCSH
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 ms.date: 04/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # View the details and results of an automated investigation
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 With Microsoft Defender for Endpoint, when an [automated investigation](automated-investigations.md) runs, details about that investigation are available both during and after the automated investigation process. If you have the necessary permissions, you can view those details in an investigation details view. The investigation details view provides you with up-to-date status and the ability to approve any pending actions.
 
@@ -147,3 +147,4 @@ To provide more context about how investigation states show up, the following ta
 - [Review remediation actions following an automated investigation](manage-auto-investigation.md)
 - [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

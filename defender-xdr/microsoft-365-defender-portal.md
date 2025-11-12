@@ -5,10 +5,10 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: dansimp
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -18,8 +18,8 @@ ms.collection:
 ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
-ms.topic: conceptual
-ms.date: 01/10/2025
+ms.topic: article
+ms.date: 10/31/2025
 ---
 
 # Microsoft Defender XDR in the Microsoft Defender portal
@@ -88,7 +88,6 @@ Automated actions are capabilities within Microsoft Defender XDR that help you a
 
 - [Automated investigation and response](m365d-autoir.md)
 - [Attack disruption](automatic-attack-disruption.md)
-- [Deception](deception-overview.md)
 
 These actions can be reviewed and managed in the [**Action Center**](m365d-action-center.md) page in the Microsoft Defender portal.
 
@@ -121,7 +120,7 @@ You can manage settings for Microsoft Defender XDR in the **Settings > Microsoft
 
 The Microsoft Defender portal's search function is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
 
-:::image type="content" source="/defender/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/search-panel.png":::
+:::image type="content" source="/defender-xdr/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender-xdr/media/microsoft-365-defender-portal/search-panel.png":::
 
 Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
 
@@ -138,7 +137,7 @@ Search also provides results from relevant links in the Microsoft Tech Community
 
 Notifications are messages that inform you about important events or updates in the Defender portal. They help you stay on top of your security tasks and alerts.
 
-:::image type="content" source="/defender/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/notifications-panel.png":::
+:::image type="content" source="/defender-xdr/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender-xdr/media/microsoft-365-defender-portal/notifications-panel.png":::
 
 Notifications are in the top bar of the portal's user interface. You can access them by clicking on the notification icon, which looks like a bell. A number on the icon indicates that you have that number of unread notifications.
 

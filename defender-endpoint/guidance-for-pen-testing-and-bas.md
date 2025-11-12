@@ -3,11 +3,11 @@ title: Guidance for pen testing and breach-and-attack-simulation (BAS) scenarios
 description: This article provides guidance for conducting penetration testing and breach-and-attack simulation (BAS) scenarios using Microsoft Defender for Endpoint and Microsoft Defender Antivirus. 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
-author: emmwalshh
-ms.author: ewalsh
+ms.topic: how-to
+author: batamig
+ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.date: 02/19/2025
 ms.subservice: ngp

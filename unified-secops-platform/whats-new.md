@@ -1,12 +1,13 @@
 ---
-title: "What's new in the Microsoft's unified SecOps platform"
-description: Lists the new features and functionality in the Microsoft unified security operations platform
+title: "What's new for Microsoft's unified security operations?"
+description: Lists the new features and functionality available for Microsoft unified security operations.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 03/31/2025
+ms.date: 08/20/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -16,16 +17,170 @@ ms.collection:
 ms.topic: concept-article
 ---
 
-# What's new in Microsoft's unified security operations platform
+# What's new for Microsoft unified security operations
 
-This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
+This article lists recent features added for unified security operations in the Microsoft Defender portal.
+
+
+## September 2025
+
+
+### Manage Incident Workflows with Tasks in Microsoft Defender (Preview)
+
+You can now use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](/defender-xdr/split-incidents-into-tasks?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json).
+
+## August 2025
+
+
+- [Viewing unified RBAC in multitenant management to GA](#viewing-unified-rbac-in-multitenant-management-to-ga)
+- [Tenant groups in multitenant management renamed to distribution profiles](#tenant-groups-in-multitenant-management-renamed-to-distribution-profiles)
+- [Distribute Microsoft Defender for Endpoint security policies with multitenant management](#distribute-microsoft-defender-for-endpoint-security-policies-with-multitenant-management)
+
+### Edit workbooks directly in the Microsoft Defender portal
+
+Now you can create and edit Microsoft Sentinel workbooks directly in the Microsoft Defender portal. This enhancement streamlines your workflow and allows you to manage your workbooks more efficiently and brings the workbook experience more closely aligned with the experience in the Azure portal.
+
+Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
+
+Workbooks are available in the Defender portal under **Microsoft Sentinel > Threat management > Workbooks**. For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data).
+
+### Viewing unified RBAC in multitenant management to GA
+
+Viewing unified role-based access control (RBAC) in the Microsoft Defender multitenant management portal is now generally available. This feature allows you to view a comprehensive view of permissions and access for your tenants.
+
+Creating and editing custom roles remains in preview. For more information, see [Manage unified role-based access control in multitenant management](mto-urbac.md).
+
+### Tenant groups in multitenant management renamed to distribution profiles
+
+In the multitenant portal, tenant groups are now renamed to **content distribution profiles**. 
+
+Functionality remains the same: Content distribution profiles enable you to distribute security content, including custom detection rules and endpoint security policies, at scale across all of your tenants, based on categories like business groups or location. For example:
+
+:::image type="content" source="media/whats-new/distribution-profiles.png" alt-text="Screenshot of the renamed Content distribution page." lightbox="media/whats-new/distribution-profiles.png":::
+
+For more information, see [Content distribution using distribution profiles in multitenant management](mto-distribution-profiles.md).
+
+### Distribute Microsoft Defender for Endpoint security policies with multitenant management
+
+Microsoft Defender for Endpoint security policies can now be distributed as content across multiple tenants using the Defender multitenant portal, empowering security teams to manage endpoint security policies at scale. Distributed policies are shown in the **Configuration management > Endpoint security policies** page in a hierarchical view so that you can identify parent policies and their distributed copies across tenants.
+
+:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of an expanded, distributed policy." lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+
+The original policy’s page also shows the overall distribution status and lists recipient tenants and distribution profiles.
+
+For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md) and [Content distribution in multitenant management](mto-distribution-profiles.md).
+
+## July 2025
+
+- [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
+- [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
+- [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
+
+### For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal
+
+For this update, new Microsoft Sentinel customers are customers who are [onboarding the first workspace in their tenant to Microsoft Sentinel](/azure/sentinel/quickstart-onboard) after **July 1, 2025**.
+
+Starting on **July 1 2025**, such new customers who are also:
+
+- not Azure Lighthouse-delegated users and
+- who have the permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)
+
+Have their workspaces automatically onboarded to the Defender portal together with onboarding to Microsoft Sentinel. Users of such workspaces, who also aren't Azure Lighthouse-delegated users, see links in Microsoft Sentinel in the Azure portal that redirect them to the Defender portal.
+
+For example:
+
+:::image type="content" source="media/whats-new/redirect-no-defender.png" alt-text="Screenshot of a redirect link in the Azure portal.":::
+
+Such users use Microsoft Sentinel in the Defender portal only.
+
+New customers who don't have relevant permissions aren't automatically onboarded to the Defender portal, but they do still see redirection links in the Azure portal, together with prompts to have a user with relevant permissions manually onboard the workspace to the Defender portal.
+
+This change streamlines the onboarding process and ensures that new customers can immediately take advantage of unified security operations capabilities without the extra step of manually onboarding their workspaces.
+
+For more information, see:
+
+- [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard)
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Changes for new customers](https://aka.ms/changes-for-sentinel-customers-july-25)
+
+### No limit on the number of workspaces you can onboard to the Defender portal
+
+There is no longer any limit to the number of workspaces you can onboard to the Defender portal.
+
+Limitations still apply to the number of workspaces you can include in a Log Analytics query, and in the number of workspaces you can or should include in a scheduled analytics rule. 
+
+For more information, see:
+
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
+- [Extend Microsoft Sentinel across workspaces and tenants](/azure/sentinel/extend-sentinel-across-workspaces-tenants)
+
+### Microsoft Sentinel in the Azure portal to be retired July 2026
+
+Microsoft Sentinel is [generally available in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
+
+Starting in **July 2026**, Microsoft Sentinel will be supported in the Defender portal only, and any remaining customers using the Azure portal will be automatically redirected.
+
+If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
+
+For more information, see:
+
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender)
+- [Planning your move to Microsoft Defender portal for all Microsoft Sentinel customers](https://techcommunity.microsoft.com/blog/microsoft-security-blog/planning-your-move-to-microsoft-defender-portal-for-all-microsoft-sentinel-custo/4428613) (blog)
+
+## June 2025
+
+### Case management now generally available in the Defender multitenant portal
+
+The Microsoft Defender portal's case management feature is now generally available in the Defender multitenant portal. For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
+
+## May 2025
+
+- [Unified role-based access control in multitenant portal (Preview)](#unified-role-based-access-control-in-multitenant-management-preview)
+- [All Microsoft Sentinel use cases generally available in the Defender portal](#all-microsoft-sentinel-use-cases-generally-available-in-the-defender-portal)
+- [Case management now available for the Defender multitenant portal (Preview)](#case-management-now-available-for-the-defender-multitenant-portal-preview)
+
+### Unified role-based access control in multitenant management (Preview)
+
+Unified role-based access control (URBAC) is now available in the Microsoft Defender multitenant management portal. You can create, delete, import, and edit roles in the multitenant management portal. This capability provides a comprehensive view of permissions and access for your tenants, and a centralized administration to manage these permissions.
+
+For more information, see [Manage unified role-based access control in multitenant management](mto-urbac.md).
+
+### All Microsoft Sentinel use cases generally available in the Defender portal
+
+All Microsoft Sentinel use cases that are in general availability, including [multi-tenant](mto-overview.md) and [multi-workspace](/azure/sentinel/workspaces-defender-portal) capabilities and support for all government and commercial clouds, are now also supported for general availability in the Defender portal.
+
+We recommend that you [onboard your workspaces to the Defender portal](microsoft-sentinel-onboard.md) to take advantage of a single location for all your security operations. For more information, see:
+
+- [The Best of Microsoft Sentinel - now in Microsoft Defender](https://techcommunity.microsoft.com/blog/MicrosoftThreatProtectionBlog/the-best-of-microsoft-sentinel-%E2%80%94-now-in-microsoft-defender/4415822) (blog)
+- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json)
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+
+### Case management now available for the Defender multitenant portal (Preview)
+
+SecOps teams for large organizations and managed security service providers (MSSPs) must manage cases across multiple tenants. This can now be done without leaving the Defender multitenant portal.
+
+For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
 
 ## April 2025
 
-- [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
+- [Merge incidents manually (Preview)](#merge-incidents-manually-preview)
+- [Multi workspace and multi tenant support for Microsoft Sentinel (Preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
 - [Case management now generally available](#case-management-now-generally-available)
 
-### Multi workspace and multi tenant support for Microsoft Sentinel (preview)
+### Merge incidents manually (Preview)
+
+If two incidents should be merged because they describe the same attack story, but aren't merged for any of the reasons listed in ["When incidents aren't merged"](/defender-xdr/alerts-incidents-correlation#when-incidents-arent-merged), you can now merge the incidents manually after you fix the underlying reasons.
+
+For example, if the incidents weren't merged because they were assigned to two different people, you can remove the assignment of one of the incidents and then merge the incidents manually.
+
+To understand more about merging incidents, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
+
+For instructions on merging incidents manually, see [Merge incidents manually in the Microsoft Defender portal](/defender-xdr/merge-incidents-manually).
+
+
+### Multi workspace and multi tenant support for Microsoft Sentinel (Preview)
 
 Microsoft Sentinel now supports multiple workspaces in the Defender portal, using one primary workspace per tenant and multiple secondary workspaces.
 
@@ -35,7 +190,7 @@ If you're working with multiple tenants and multiple workspaces per tenant, you 
 
 For more information, see:
 
-- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
 - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
 - [Microsoft Defender multitenant management](mto-overview.md)
 - [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
@@ -47,7 +202,7 @@ Multitenant management in Microsoft Defender now supports managing tenants in ot
 
 ### Case management now generally available
 
-The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
+The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md).
 
 ## January 2025
 
@@ -71,7 +226,7 @@ Along with the new location, the management interface streamlines the creation a
 
 For more information, see the following articles:
 
-- [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md)
+- [Uncover adversaries with threat intelligence across the Defender portal](threat-intelligence-overview.md)
 - [New STIX objects in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/announcing-public-preview-new-stix-objects-in-microsoft-sentinel/4369164)
 - [Understand threat intelligence](/azure/sentinel/understand-threat-intelligence#create-and-manage-threat-intelligence)
 
@@ -88,7 +243,7 @@ This is just the start. Stay tuned for additional capabilities as we evolve this
 
 For more information, see the following articles:
 
-- [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md)
+- [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md)
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 
 ### Unified device timeline in Microsoft Defender portal (Preview)
@@ -126,29 +281,11 @@ For more information, see [SOC optimization reference of recommendations](/azure
 
 ### Microsoft Sentinel workbooks now available to view directly in the Microsoft Defender portal
 
-Microsoft Sentinel workbooks are now available for viewing directly in the Microsoft Defender portal with Microsoft's unified security operations (SecOps) platform. Now, in the Defender portal, when you select **Microsoft Sentinel > Threat management > Workbooks**, you remain in the Defender portal instead of a new tab being opened for workbooks in the Azure portal. Continue tabbing out to the Azure portal only when you need to edit your workbooks.
+Microsoft Sentinel workbooks are now available for viewing directly in the Microsoft Defender portal. Now, in the Defender portal, when you select **Microsoft Sentinel > Threat management > Workbooks**, you remain in the Defender portal instead of a new tab being opened for workbooks in the Azure portal. Continue tabbing out to the Azure portal only when you need to edit your workbooks.
 
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
 
 For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data) and [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).
-
-## November 2024
-
-- [Microsoft Sentinel availability in Microsoft Defender portal](#microsoft-sentinel-availability-in-microsoft-defender-portal)
-- [Feature availability for Government clouds](#feature-availability-for-government-clouds)
-
-### Microsoft Sentinel availability in Microsoft Defender portal
-
-We previously announced Microsoft Sentinel is generally available within Microsoft's unified security operations platform in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
-
- - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
- - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
-
-### Feature availability for Government clouds
-
-In the Defender portal, all Microsoft Sentinel features for unified SecOps that are in general availability are now available in both commercial and GCC High and DoD clouds. Features still in preview are available only in the commercial cloud.
-
-For more information, see [Microsoft Sentinel feature support for Azure commercial/other clouds](/azure/sentinel/feature-availability#experience-in-the-defender-portal) and [Microsoft Defender XDR for US Government customers](/defender-xdr/usgov).
 
 ## Related content
 

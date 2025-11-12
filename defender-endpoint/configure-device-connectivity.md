@@ -1,9 +1,10 @@
----
+﻿---
 title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
-author: denisebmsft
-ms.author: deniseb 
-manager: deniseb 
+author: limwainstein
+ms.author: lwainstein
+manager: bagol
+ms.date: 09/29/2025
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -14,24 +15,26 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 04/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Vulnerability Management
+
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
-To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
+To simplify network configuration and management, you can now onboard new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
 
-The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` consolidates connectivity to the following core Defender for Endpoint services:
+## Defender for Endpoint-recognized simplified domain
+
+The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for US government devices - Preview) consolidates connectivity to the following core Defender for Endpoint services:
 
 - Cloud-delivered protection
 - Malware sample submission storage
@@ -43,23 +46,15 @@ For more information on preparing your environment and the updated list of desti
 
 To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
 
-> [!NOTE] 
-> - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
-> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.com` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
-> - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
+> [!NOTE]
+>
+> - The streamlined connectivity method **doesn't change Defender for Endpoint functionality or end-user experience**. Only the URLs or IPs used for service connectivity have changed.
+> - There are no plans to deprecate old service URLs. Devices onboarded with standard connectivity continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us` (for US government devices - Preview) for future services.
+> - Service connections use certificate pinning and TLS. Traffic inspection is not supported. Connections are device-initiated, not user-initiated. Enforcing proxy (user) authentication breaks connectivity.
 
-## Before you begin 
+## Prerequisites
 
 Devices must meet specific prerequisites to use the streamlined connectivity method for Defender for Endpoint. Ensure the prerequisites are met before proceeding with onboarding.
- 
-### Prerequisites
-
-**License:**
-
-- Microsoft Defender for Endpoint Plan 1
-- Microsoft Defender for Endpoint Plan 2
-- Microsoft Defender for Business
-- Microsoft Defender Vulnerability Management
 
 **Minimum KB update (Windows)**
 
@@ -71,23 +66,19 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 - **Engine:** `1.1.19900.2` 
 - **Antivirus (Security Intelligence):** `1.391.345.0`
 
-**Defender Antivirus versions (macOS/Linux)**
+### Supported operating systems
 
-- [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
-- [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
-
-**Supported Operating Systems**
-
-- Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
+- Windows 10 version 1809 or later. 
+- Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
 - Windows 11
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2019 and later
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
+- Azure Stack HCI OS, version 23H2 and later.
 
 > [!IMPORTANT]
+>
 > - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
 > - Windows Server 2012 R2 and Server 2016 will need to upgrade to unified agent to leverage the new method. <br/>
 > - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
@@ -120,12 +111,17 @@ Streamlined connectivity allows you to use the following option to configure clo
 
 - [Option 1: Use the simplified domain](#option-1-configure-connectivity-using-the-simplified-domain)
 - [Option 2: Use static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges)
- 
+
 #### Option 1: Configure connectivity using the simplified domain
 
-Configure your environment to allow connections to the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+Configure your environment to allow connections to the simplified Defender for Endpoint domain:
 
-You must maintain connectivity with remaining required services listed under the [updated list](https://aka.ms/MDE-streamlined-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+- For commercial devices: `*.endpoint.security.microsoft.com`
+- For US government devices (Preview): `*.endpoint.security.microsoft.us`
+
+For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+
+You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL list (Preview)](streamlined-device-connectivity-urls-gov.md). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
 
 #### Option 2: Configure connectivity using static IP ranges 
 
@@ -143,17 +139,10 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 
 | Service tag name    |    Defender for Endpoint services included   |
 |:---|:---|
-| MicrosoftDefenderForEndpoint | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
-| OneDsCollector | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
+| `MicrosoftDefenderForEndpoint` | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
+| `OneDsCollector` | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
-The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
-
-|Geo|IP Ranges|
-|------|-------|
-|US|`20.15.141.0/24` <br/> `20.242.181.0/24` <br/>`20.10.127.0/24`<br/>`13.83.125.0/24`|
-|EU|`4.208.13.0/24` <br/>`20.8.195.0/24`|
-|UK|`20.26.63.224/28` <br/>`20.254.173.48/28`|
-|AU|`68.218.120.64/28` <br/>`20.211.228.80/28`|
+For latest service tags list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
 > [!IMPORTANT]
 > In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md).  
@@ -162,11 +151,11 @@ The following table lists the current static IP ranges covered by the MicrosoftD
 
 Configure devices to communicate through your connectivity infrastructure. Ensure devices meet prerequisites and have updated sensor and Microsoft Defender Antivirus versions.  For more information, see [Configure device proxy and Internet connection settings ](configure-proxy-internet.md).
 
-### Stage 3. Verify client connectivity preonboarding
+### Stage 3. Verify client connectivity pre-onboarding
 
 For more information, see [Verify client connectivity](verify-connectivity.md).
 
-The following preonboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
+The following pre-onboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
 
 To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
 
@@ -198,9 +187,6 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
    - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
    - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
 
-
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
-For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
-
-
+For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.

@@ -2,11 +2,11 @@
 title: Security Operations Guide for Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -45,7 +45,7 @@ For a video about this information, see <https://youtu.be/eQanpq9N1Ps>.
 
 The **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents> (also known as the _Incidents_ queue) allows you to manage and monitor events from the following sources in Defender for Office 365:
 
-- [Alerts](/purview/alert-policies#default-alert-policies).
+- [Alert policies](/defender-xdr/alert-policies#default-alert-policies).
 - [Automated investigation and response (AIR)](air-about.md).
 
 For more information about the Incidents queue, see [Prioritize incidents in Microsoft Defender XDR](/defender-xdr/incident-queue).
@@ -292,9 +292,11 @@ For the short-term mitigation of false positives, security teams can't directly 
 
 [Quarantine](quarantine-admin-manage-messages-files.md) in Defender for Office 365 holds potentially dangerous or unwanted messages and files. Security teams can view, release, and delete all types of quarantined messages for all users. This capability enables security teams to respond effectively when a false positive message or file is quarantined.
 
-## Integrate third-party reporting tools with Defender for Office 365 user reported messages
+<a name='integrate-third-party-reporting-tools-with-defender-for-office-365-user-reported-messages'></a>
 
-If your organization uses a third-party reporting tool that allows users to internally report suspicious email, you can integrate the tool with the user reported message capabilities of Defender for Office 365. This integration provides the following benefits to security teams:
+## Integrate non-Microsoft reporting tools with Defender for Office 365 user reported messages
+
+If your organization uses a non-Microsoft reporting tool that allows users to internally report suspicious email, you can integrate the tool with the user reported message capabilities of Defender for Office 365. This integration provides the following benefits to security teams:
 
 - Integration with the AIR capabilities of Defender for Office 365.
 - Simplified triage.
@@ -305,7 +307,7 @@ Designate the reporting mailbox where user reported messages are sent on the **U
 > [!NOTE]
 >
 > - The reporting mailbox must be an Exchange Online mailbox.
-> - The third-party reporting tool must include the original reported message as an uncompressed .EML or .MSG attachment in the message that's sent to the reporting mailbox (don't just forward the original message to the reporting mailbox). For more information, see [Message submission format for third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools).
+> - The non-Microsoft reporting tool must include the original reported message as an uncompressed .EML or .MSG attachment in the message that's sent to the reporting mailbox (don't just forward the original message to the reporting mailbox). For more information, see [Message submission format for non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
 > - The reporting mailbox requires specific prerequisites to allow potentially bad messages to be delivered without being filtered or altered. For more information, see [Configuration requirements for the reporting mailbox](submissions-user-reported-messages-custom-mailbox.md#configuration-requirements-for-the-reporting-mailbox).
 
 When a user reported message arrives in the reporting mailbox, Defender for Office 365 automatically generates the alert named **Email reported by user as malware or phish**. This alert launches an [AIR playbook](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook). The playbook performs a series of automated investigations steps:

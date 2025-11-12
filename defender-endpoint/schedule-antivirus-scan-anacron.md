@@ -1,12 +1,12 @@
----
+﻿---
 title: Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux for better protection of your organization's assets.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-ms.date: 03/24/2025
-manager: deniseb
+ms.date: 05/15/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,15 +15,14 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
 
 To run a scan of Microsoft Defender Antivirus for Linux, see [Supported commands](linux-resources.md#supported-commands).
 
@@ -141,7 +140,7 @@ Use the following steps to schedule scans:
    #!/bin/sh
    set -e
    echo $(date) "Time Scan Begins" >>/logs/mdav_avacron_full_scan.log
-   /bin/mdatp scan full >> /logs/mdav_avacron_full_scan.log
+   /usr/bin/mdatp scan full >> /logs/mdav_avacron_full_scan.log
    echo $(date) "Time Scan Finished" >>/logs/mdav_avacron_full_scan.log
    exit    0
    ~
@@ -205,3 +204,4 @@ Use the following steps to schedule scans:
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

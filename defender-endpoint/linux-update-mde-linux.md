@@ -1,29 +1,28 @@
----
+﻿---
 title: How to schedule an update for Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an update for Microsoft Defender for Endpoint on Linux to better protect your organization's assets.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/24/2025
----
+ms.date: 05/12/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Schedule an update for Microsoft Defender for Endpoint on Linux
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
@@ -92,19 +91,19 @@ CRON_TZ=America/Los_Angeles
 > #!RHEL and variants (CentOS and Oracle Linux)
 >
 > ```bash
-> 0 6 * * sun [ $(date +%d) -le 15 ] && sudo yum update mdatp -y >> ~/mdatp_cron_job.log
+> 0 6 * * sun [ $(date +\%d) -le 15 ] && sudo yum update mdatp -y >> ~/mdatp_cron_job.log
 > ```
 
 > #!SLES and variants
 >
 > ```bash
-> 0 6 * * sun [ $(date +%d) -le 15 ] && sudo zypper update mdatp >> ~/mdatp_cron_job.log
+> 0 6 * * sun [ $(date +\%d) -le 15 ] && sudo zypper update mdatp >> ~/mdatp_cron_job.log
 > ```
 
 > #!Ubuntu and Debian systems
 >
 > ```bash
-> 0 6 * * sun [ $(date +%d) -le 15 ] && sudo apt-get install --only-upgrade mdatp >> ~/mdatp_cron_job.log
+> 0 6 * * sun [ $(date +\%d) -le 15 ] && sudo apt-get install --only-upgrade mdatp >> ~/mdatp_cron_job.log
 > ```
 
 > [!NOTE]
@@ -241,3 +240,4 @@ crontab -u username -r
 | | | | |*****command to be executed
 </pre>
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

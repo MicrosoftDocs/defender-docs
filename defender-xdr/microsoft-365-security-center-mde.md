@@ -10,7 +10,7 @@ author: diannegali
 manager: deniseb
 ms.date: 10/16/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 search.appverid: 
 - MOE150
 - MET150
@@ -67,7 +67,7 @@ The [Action center](m365d-action-center.md) shows you the investigations created
 
 :::image type="content" source="/defender/media/portal/mde-in-portal/action-center-mde-small.png" alt-text="Screenshot of the Action center in the Microsoft Defender portal." lightbox="/defender/media/portal/mde-in-portal/action-center-mde.png":::
 
-You can submit files, email attachments, and URLs to Microsoft Defender for analysis in the [Submission portal](/defender-endpoint/admin-submissions-mde). You can also view the status of the submissions and the results of the analysis. Navigate to the submssions page under **Investigation & response > Actions & submissions > Submissions**.
+You can submit files, email attachments, and URLs to Microsoft Defender for analysis in the [Submission portal](/defender-endpoint/admin-submissions-mde). You can also view the status of the submissions and the results of the analysis. Navigate to the submissions page under **Investigation & response > Actions & submissions > Submissions**.
 
 ### Threat intelligence
 

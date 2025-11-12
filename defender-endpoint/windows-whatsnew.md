@@ -1,29 +1,24 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Windows
 description: Learn about the latest feature releases of Microsoft Defender for Endpoint on Windows Client and Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: lwainstein
 ms.localizationpriority: medium
-ms.date: 03/04/2025
-manager: deniseb
+ms.date: 06/11/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: reference
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
 # What's new in Microsoft Defender for Endpoint on Windows
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
@@ -32,9 +27,9 @@ This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions.
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
 - [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
-- Windows Server 2025
 - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
+- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
 
 For the latest updates to Microsoft Defender for Endpoint all up, see [What's new in Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
@@ -46,7 +41,39 @@ All updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
 
-## July-2024 (Release version: 10.8760)
+## May-2025 (Release version: 10.8797.25857.1000)
+
+| OS | KB |
+|--|--|
+| Windows 11 24H2 | [KB5058499](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058499-os-build-26100-4202-preview-d4c2f1ee-8138-4038-b705-546945076f92) |
+| Windows 11 23H2 | [KB5058502](https://support.microsoft.com/en-us/topic/may-27-2025-kb5058502-os-22621-5413-and-22631-5413-preview-6291789c-1eea-4227-9740-a701af6de688)  |
+| Windows 10 22/H2 | [KB5058481](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058481-os-build-19045-5917-preview-7698d6e7-dd65-494d-b523-aa4c6aa913a2) |
+
+### What's new
+
+#### Data Loss Prevention (DLP)
+
+- On-Demand Scan: Improved the functionality, performance, and reliability of the Cold Data Scan feature. This enhancement enables deeper, more consistent scanning of archived or infrequently accessed data, helping organizations uncover potential data risks hidden in long-term storage. 
+- General Stability and Performance Improvements: Additional under-the-hood optimizations to improve overall system performance, reliability, and stability.
+
+#### Identity 
+
+- Entity sync enrichment: Expanded the capabilities of the SenseIdentity client to enhance Active Directory (AD) entity synchronization. This update introduces support for syncing new entity types including Group Policy Objects, Authentication Silos, and Domain Controller computer accounts for all Domain Controllers within trusted domains. Additionally, the update enriches existing synced entities (Domain, Account, and Group) with a broader set of attributes, enabling more comprehensive visibility and detection capabilities. 
+
+#### Threat protection
+
+- User contaminant improvements 
+
+#### Network Detection and Response (NDR) 
+
+- Improved data telemetry providing better visibility and insights 
+
+#### SOC experience 
+
+- Improved Data Completeness and Detection: Enhancements have been made to improve the completeness of data collected and reduce the time it takes to detect potential data loss incidents. These improvements enable faster and more accurate identification of data exfiltration attempts across monitored endpoints. 
+- Improved Handling for Offline Network Environments: Refined the handling of scenarios where devices operate in offline or restricted network environments. Specifically addresses cases where result uploads to blob storage fail due to offline Certificate Revocation List (CRL) checks, ensuring better reliability and continuity in data collection. 
+
+## July-2024 (Release version: 10.8760.27617.1006)
 
 |OS  |KB |
 | -------- | -------- |
@@ -60,24 +87,24 @@ All updates contain:
 
 ### What's new
 
-**Data Loss Prevention (DLP)**
+#### Data Loss Prevention (DLP)
 
 - Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
 - Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
 - OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
-## May-2024 (Release version: 10.8750)
+## May-2024 (Release version: 10.8750.27558.1004)
 
 |OS  |KB |Release version |
 | -------- | -------- | -------- |
-|Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8750|
+|Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8750.27558.1004|
 
 ### What's new
 
-**Configuration Management**
+#### Configuration Management
 
 - Fixed an issue that caused empty policies to appear in the UI. 
-- Configured Windows Defender Application Control(WDAC) policies to block undesired applications from running on the device. 
+- Configured Windows Defender Application Control (WDAC) policies to block undesired applications from running on the device. 
 
 ## Feb-2024 (Release version: 10.8735.26020.1009)
 
@@ -87,23 +114,28 @@ All updates contain:
 
 ### What's new
 
-- **Endpoint Detection and Response**
-  - Enabled support for IPV6 connections in Live Response connection commands.
-  - Fixed an issue in Downlevel Unified Agent that caused ServerRoles not to be populated.
+#### Endpoint Detection and Response
+
+- Enabled support for IPV6 connections in Live Response connection commands.
+- Fixed an issue in Downlevel Unified Agent that caused ServerRoles not to be populated.
     
-- **Threat Vulnerability Management**
-  - An issue related to the agent's monitoring of deleted registry keys no longer occurs.
-  - Added a new capability to enable/disable registry monitoring through configuration settings.
-   
-- **Network Detection and Response (NDR) Performance Enhancements** 
-  - Introduced performance enhancements to minimize the CPU and memory footprint of the agent.
-  - Enhanced the accuracy of network detections.
+#### Threat Vulnerability Management
+
+- An issue related to the agent's monitoring of deleted registry keys no longer occurs.
+- Added a new capability to enable/disable registry monitoring through configuration settings.
+
+#### Network Detection and Response (NDR) Performance Enhancements
+
+- Introduced performance enhancements to minimize the CPU and memory footprint of the agent.
+- Enhanced the accuracy of network detections.
     
-- **Data Loss Prevention (DLP)**
-   - Introduced multiple performance and stability fixes.
+#### Data Loss Prevention (DLP)
+
+- Introduced multiple performance and stability fixes.
      
-- **Security Configuration Management**
-   - Policies that include special characters are now supported.   
+#### Security Configuration Management
+
+- Policies that include special characters are now supported.   
 
 ## Dec-2023 (Release version: 10.8672.25926.1019)
 
@@ -111,7 +143,7 @@ All updates contain:
 |---------|---------|---------|
 |Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8672.25926.1019|
 
-**What's new**
+### What's new
 
 - Supports Expanded User Contain capabilities
 
@@ -121,7 +153,7 @@ All updates contain:
 |---------|---------|---------|
 |Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8560.25364.1036|
 
-**What's new**
+### What's new
 
 - Supports User Contain availability
 
@@ -131,7 +163,7 @@ All updates contain:
 |---------|---------|---------|
 |Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8295.22621.1023|
 
-**What's new**
+### What's new
 
 - Supports new security settings management capabilities
 
@@ -141,7 +173,7 @@ All updates contain:
 |---------|---------|---------|
 |Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8295.22621.1019|
 
-**What's new**
+### What's new
 
 - Improved command and control security, quality fixes
 
@@ -165,7 +197,7 @@ All updates contain:
 |Windows 10 20H2/21H1/21H2<br> Windows Server 20H2  (Vibranium)     | [KB5016688](https://support.microsoft.com/topic/august-26-2022-kb5016688-os-builds-19042-1949-19043-1949-and-19044-1949-preview-ec31ebdc-067d-44dd-beb0-eabcc984d843)       | 10.8210.19041.1949        |
 |Windows Server 2019 (RS5)   |[KB5016690](https://support.microsoft.com/topic/august-23-2022-kb5016690-os-build-17763-3346-preview-b81d1ac5-75c7-42c1-b638-f13aa4242f42)       |10.8210.17763.3346 |
 
-**What's new**
+### What's new
 
 - Added a fix to resolve a missing intermediate certificate issue with the use of "TelemetryProxyServer" on Windows Server 2012 R2 running the unified agent.
 - Enhanced [Endpoint DLP](/purview/endpoint-dlp-learn-about) with ability to protect password protected and encrypted files and not label files.
@@ -181,10 +213,12 @@ All updates contain:
  > Update package KB5005292 is on a gradual rollout schedule through Windows Update. Towards the end of this schedule, the package will be published completely, including to the update catalog for manual download. For the current release, this will be in the second half of October. If you want to test the package sooner, you can use [gradual rollout controls for platform updates](configure-updates.md) to select the Preview channel.
 
 
-See also: 
+## See also
+
 - [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
