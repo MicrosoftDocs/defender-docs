@@ -30,13 +30,14 @@ Cloud Secure Score history may show less than 6 months if tenant was recently on
 
 ## Cloud Inventory
 
-Software Inventory is not yet available.
 
 ## Cloud Scopes
 
 Unified RBAC operates in the Defender portal and uses a different RBAC model from Azure. Permissions are not transferred between portals; instead, security administrators must create separate Unified RBAC permissions for their teams, independent of their Azure permissions.
 
 Cloud scopes management and role assignment on cloud scopes are both available in the portal; API support is coming soon.
+
+To begin using cloud scopes, you must activate them through a one-time wizard. This release does not affect access permissions to VMs, but it will influence future changes related to unifying server primitives.
 
 Currently, cloud scopes primitive's configuration is not dynamic and cannot be selected based on conditions; however, support for this feature will be available in the future.
 
