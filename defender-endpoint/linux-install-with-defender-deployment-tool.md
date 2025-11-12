@@ -28,7 +28,6 @@ The Defender deployment tool provides an efficient, user-friendly onboarding pro
 
 The defender-deployment tool package supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack, and consolidates all necessary onboarding related packages and documentation in one location. The tool supports parameters you can use to customize large scale deployments, making it possible to have tailored installations across diverse environments. 
 
-
 ## Prerequisites and system requirements
 
 Before you get started, see [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. The Defender deployment tool enforces the following set of blocking prerequisites checks:
@@ -236,5 +235,5 @@ If you experience any installation issues, try following these steps:
 - [Deploy Microsoft Defender for Endpoint on Linux with Saltstack](./linux-install-with-saltack.md)
 - [Deploy Microsoft Defender for Endpoint on Linux manually](./linux-install-manually.md)
 - [Deploy Microsoft Defender for Endpoint on Linux using golden images](./linux-deploy-defender-for-endpoint-using-golden-images.md)
-- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint (direct onboarding using Defender for Cloud)](../defender-for-cloud/onboard-machines-with-defender-for-endpoint.md?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint (direct onboarding using Defender for Cloud)](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)
 - [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](./mde-linux-deployment-on-sap.md)
