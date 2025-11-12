@@ -100,12 +100,12 @@ Additionally, the following requirements also need to be met:
 | Custom install | `sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/` |
 | Example for insider-slow channel | `sudo ./defender-deployment-tool.sh --channel insiders-slow` |
 | Install using proxy | `sudo ./defender-deployment-tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
-| Install a specific agent version | sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod |
-| Upgrade to a specific agent version | sudo ./defender-deployment-tool.sh --upgrade --mdatp 101.24082.0004 |
-| Downgrade to a specific agent version | sudo ./defender-deployment-tool.sh --downgrade --mdatp 101.24082.0004 |
-| Uninstall agent | sudo ./defender-deployment-tool.sh --remove |
-| Only onboard in case agent is already installed | sudo ./defender-deployment-tool.sh --only-onboard |
-| Offboard the agent | sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
+| Install a specific agent version | `sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod` |
+| Upgrade to a specific agent version | `sudo ./defender-deployment-tool.sh --upgrade --mdatp 101.24082.0004` |
+| Downgrade to a specific agent version | `sudo ./defender-deployment-tool.sh --downgrade --mdatp 101.24082.0004` |
+| Uninstall agent | `sudo ./defender-deployment-tool.sh --remove` |
+| Only onboard in case agent is already installed | `sudo ./defender-deployment-tool.sh --only-onboard` |
+| Offboard the agent | `sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
 
 ## Verify deployment status
 
