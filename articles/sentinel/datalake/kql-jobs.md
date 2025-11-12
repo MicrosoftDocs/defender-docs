@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel  
 ms.topic: conceptual
 ms.subservice: sentinel-graph
-ms.date: 08/27/2025
+ms.date: 11/12/2025
 ms.author: edbaynash  
 
 ms.collection: ms-security  
@@ -73,8 +73,9 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 1. Start the job creation process from KQL query editor, or from the jobs management page.
     1. To create a job from the KQL query editor, select the **Create job** button in the upper right corner of the query editor. 
         :::image type="content" source="media/kql-jobs/kql-queries-create-job.png" alt-text="A screenshot showing the create job button in the KQL query editor." lightbox="media/kql-jobs/kql-queries-create-job.png":::
+
     1. To create a job from the jobs management page, select **Microsoft Sentinel** > **Data lake exploration** > **Jobs**   then select the **Create job** button.
-        :::image type="content" source="media/kql-jobs/create-job.png" alt-text="A screenshot showing the create job button in the KQL query editor." lightbox="media/kql-jobs/create-job.png":::
+        :::image type="content" source="media/kql-jobs/create-job.png" alt-text="A screenshot showing the create job button pn the jobs management page." lightbox="media/kql-jobs/create-job.png":::
 
 1. Enter a **Job name**. The job name must be unique for the tenant. Job names can contain up to 256 characters. You can't use a `#` or a `-` in a job name.      
 
@@ -138,7 +139,8 @@ To create a job from a template, follow these steps:
 1. Review the **Description** and **KQL query** from the template. 
 
 1. Select **Create job from template**.
-:::image type="content" source="media/kql-jobs/create-job-from-template.png" alt-text="A screenshot showing the job templates page." lightbox="media/kql-jobs/job-templates.png":::
+
+    :::image type="content" source="media/kql-jobs/create-job-from-template.png" alt-text="A screenshot showing the job templates page." lightbox="media/kql-jobs/create-job-from-template.png":::
 
 1. The job creation wizard opens with the **Create a new KQL job** page. The job details prepopulated from the template except for the destination workspace.
 
@@ -149,7 +151,6 @@ To create a job from a template, follow these steps:
 1. The remaining steps are the same as creating a new job. The fields are prepopulated from the template and can be modified as needed. For more information, see [Create a job](#create-a-job).
 
 The following templates are available:
-
 | Template name | Category by | 
 |-----------|--------------|
 |<details><summary>**Anomalous sign-in behavior based on location changes** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify anomalous sign-in behavior based on location changes for Entra ID users and apps to detect sudden changes in behavior.</details> | Anomaly detection | 
@@ -160,12 +161,12 @@ The following templates are available:
 |<details><summary>**Daily location trend per user or app in SignInLogs** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Build daily trends for all user signins, locations count, and their app usage.</details> | Baseline |
 |<details><summary>**Daily network traffic trend per destination IP**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.</details> | Baseline |
 |<details><summary>**Daily network traffic trend per destination IP with data transfer stats**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify internal host that reached out outbound destination, including volume trends, estimating blast radius.</details> | Hunting |
-|<details><summary>**Daily network traffic trend per source IP** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.</details> | Baseline |
-|<details><summary>**Daily network traffic trend per source IP with data transfer stats** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Today's connections and bytes are evaluated against the host's day-over-day baseline to determine whether the observed behaviors deviate significantly from established pattern.</details> | Hunting |
-|<details><summary>**Daily process execution trend** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify new processes and prevalence, making "new rare process" detections easier.</details> | Baseline |
-|<details><summary>**Daily sign-in location trend per user and app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a signin baseline for each user or application with typical geographic and IP, enabling efficient and cost-effective anomaly detection at scale.</details> | Baseline |
-|<details><summary>**Entra ID rare user agent per app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Establish a baseline of the type of UserAgent (that is, browser, office application, etc.) that is typically used for a particular application by looking back for a number of days. It then searches the current day for any deviations from this pattern, that is, types of UserAgents not seen before in combination with this application.</details> | Anomaly detection |
-|<details><summary>**Network log IOC matching** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify any IP indicators of compromise (IOCs) from threat intelligence (TI), by searching for matches in CommonSecurityLog.</details> | Hunting |
+|<details><summary>**Daily network traffic trend per source IP** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.</details> | Baseline |
+|<details><summary>**Daily network traffic trend per source IP with data transfer stats** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Today's connections and bytes are evaluated against the host's day-over-day baseline to determine whether the observed behaviors deviate significantly from established pattern.</details> | Hunting |
+|<details><summary>**Daily process execution trend** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify new processes and prevalence, making "new rare process" detections easier.</details> | Baseline |
+|<details><summary>**Daily sign-in location trend per user and app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Create a signin baseline for each user or application with typical geographic and IP, enabling efficient and cost-effective anomaly detection at scale.</details> | Baseline |
+|<details><summary>**Entra ID rare user agent per app** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Establish a baseline of the type of UserAgent (that is, browser, office application, etc.) that is typically used for a particular application by looking back for a number of days. It then searches the current day for any deviations from this pattern, that is, types of UserAgents not seen before in combination with this application.</details> | Anomaly detection |
+|<details><summary>**Network log IOC matching** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify any IP indicators of compromise (IOCs) from threat intelligence (TI), by searching for matches in CommonSecurityLog.</details> | Hunting |
 |<details><summary>**New processes observed in last 24 hours** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>New processes in stable environments may indicate malicious activity. Analyzing logon sessions where these binaries ran can help identify attacks.</details> | Hunting |
 |<details><summary>**Palo Alto potential network beaconing** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify beaconing patterns from Palo Alto Network traffic logs based on recurrent time delta patterns. The query leverages various KQL functions to calculate time deltas and then compares it with total events observed in a day to find percentage of beaconing.</details> | Hunting |
 |<details><summary>**SharePoint file operation via previously unseen IPs** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify anomalies using user behavior by setting a threshold for significant changes in file upload/download activities from new IP addresses. It establishes a baseline of typical behavior, compares it to recent activity, and flags deviations exceeding a default threshold of 25.</details> | Hunting |
