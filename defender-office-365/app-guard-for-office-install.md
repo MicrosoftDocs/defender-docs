@@ -2,7 +2,7 @@
 title: Application Guard for Office for admins
 f1.keywords:
   - NOCSH
-ms.author: maccruz
+ms.author: deniseb
 author: schmurky
 manager: deniseb
 audience: ITPro

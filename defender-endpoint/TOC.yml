@@ -263,7 +263,7 @@
             items:
             - name: Prerequisites
               href: mde-linux-prerequisites.md
-            - name: Choose a deployment method
+            - name: Choose a deployment method                       
               items:
               - name: Enabling deployment to a custom location
                 href: linux-custom-location-installation.md
