@@ -70,15 +70,15 @@ The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports th
 | Feature | Functionality |
 |---------|---------------|
 | Advanced Hunting | Hunt across events with Kusto Query Language |
-| Antivirus in Passive Mode | Allows for coexistence with non-Microsoft antimalware solutions. |
+| Antivirus in Passive Mode | Allows for coexistence with non-Microsoft anti-malware solutions. |
 | Custom file indicators | Allow, block, quarantine files based on hash or certificate information |
-| Device and file response capabilities | Isolate device, block and get files, collect investigation packages, run antivirus scan<br><br>Note: other response capabilities are not supported |
-| Next-generation protection | Defender Antivirus with real-time behavior monitoring, cloud-delivered, and definition-based malware blocking and remediation. Scheduled and manually triggered scans.<br><br>Note: Network Protection, Attack Surface Reduction Rules, Controlled Folder Access and related functionality including IP and URL indicators are not supported. |
+| Device and file response capabilities | Isolate device, block and get files, collect investigation packages, run antivirus scan<br><br>Note: other response capabilities aren't supported |
+| Next-generation protection | Defender Antivirus with real-time behavior monitoring, cloud-delivered, and definition-based malware blocking and remediation. Scheduled and manually triggered scans.<br><br>Note: Network Protection, Attack Surface Reduction Rules, Controlled Folder Access, and related functionality including IP and URL indicators aren't supported. |
 | Operating system and software vulnerability assessments | Defender Vulnerability Management provides insights into vulnerabilities for Windows and installed software.<br><br>Note: The following functionality isn't available for Windows 7 SP1 and Windows Server 2008 R2:<br>- Security configuration assessment<br>- "Pending reboot" experience<br>- Premium capabilities: security baseline assessment, browser extensions, certificate and application blocking |
 | Security Settings Management | Policy enforcement for Defender Antivirus capabilities. Note that only settings for available features will take effect. |
 | Sense detection sensor | Rich detection events for use in device timeline, hunting, and to generate alerts based on indicators of compromise and attack. |
 | Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
-| (Automatic) updates | Regular updates for antimalware and detection components. |
+| (Automatic) updates | Regular updates for anti-malware and detection components. |
 
 ### Prerequisites
 
@@ -92,7 +92,7 @@ The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports th
 
 - Preview features must be enabled.
 
-- Devices should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it -- unlike for other Defender cloud services. Regardless, for proper operation of services please refer to [Configure your network environment to ensure connectivity with Defender for Endpoint service - Microsoft Defender for Endpoint \| Microsoft Learn](./configure-environment.md) as additional connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com* apply to (additional) functionality you may wish to use with the product.
+- Devices should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform, there will be no static or predictable IP ranges associated with it, unlike for other Defender cloud services. Regardless, for proper operation of services, refer to [Configure your network environment to ensure connectivity with Defender for Endpoint service - Microsoft Defender for Endpoint \| Microsoft Learn](./configure-environment.md) as additional connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com* apply to (additional) functionality you might wish to use with the product.
 
 - The Defender deployment tool requires access to the *definitionupdates.microsoft.com* domain. This is the same domain that is required for product updates.
 
@@ -102,13 +102,13 @@ The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports th
 
 - You may get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
 
-- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you may see a notification from Action Center "Windows did not find antivirus software on this computer". This is not indicative of a problem.
+- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you might see a notification from Action Center "Windows did not find antivirus software on this computer". This is not indicative of a problem.
 
 - In Vulnerability Management – software inventory, you may see a duplicate entry for the Defender for Endpoint software.
 
 - The preview ("beta") version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can be used to collect logs and perform connectivity troubleshooting on Windows 7 & 2008 R2. It requires PowerShell 5.1 or later to be installed.
 
-- There is no local user interface for Antivirus. If you wish to manage Antivirus settings locally using PowerShell, version 5.1 or later is required.
+- There's no local user interface for Antivirus. If you wish to manage Antivirus settings locally using PowerShell, version 5.1 or later is required.
 
 - Configuration via Group Policy is supported using a central store with updated group policy templates on a domain controller. For local group policy configuration, templates (WindowsDefender.admx/WindowsDefender.adml) will need to be manually updated to a newer version (Windows 11) if you wish to use the local group policy editor to apply settings.
 
@@ -135,7 +135,7 @@ Review the following details to verify minimum system requirements:
 
 - Install the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
 
-- Install [Microsoft .Net Framework 4.5.2 or later](https://www.microsoft.com/en-US/download/details.aspx?id=42642)
+- Install [Microsoft .NET Framework 4.5.2 or later](https://www.microsoft.com/en-US/download/details.aspx?id=42642)
 
     > [!NOTE]
     > Installation of .NET 4.5 might require you to restart your computer after installation.
@@ -187,7 +187,7 @@ Once completed, you should see onboarded Windows servers in the portal within an
 
 2. Select **Windows Server 2008 R2 SP1** as the operating system.
 
-3. Click **Onboard Servers in Microsoft Defender for Cloud**.
+3. Select **Onboard Servers in Microsoft Defender for Cloud**.
 
 4. Follow the onboarding instructions in [Microsoft Defender for Endpoint with Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) and If you're using Azure ARC, follow the onboarding instructions in [Enabling the Microsoft Defender for Endpoint integration](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
 
@@ -307,7 +307,7 @@ For Windows Server 2008 R2 you'll need (and it will only copy down) the followin
 
 Once this is done, you'll need to create a start-up script policy:
 
-:::image type="content" source="media/startupprops.png" alt-text="Screenshot of the start up properties." lightbox="media/startupprops.png":::
+:::image type="content" source="media/startupprops.png" alt-text="Screenshot of the startup properties." lightbox="media/startupprops.png":::
 
 The name of the file to run here's c:\windows\MMA\DeployMMA.cmd.
 Once the server is restarted as part of the start-up process it will install the Update for customer experience and diagnostic telemetry KB, and then install the MMA Agent, while setting the Workspace ID and Key, and the server will be onboarded.
@@ -316,13 +316,13 @@ You could also use an **immediate task** to run the deployMMA.cmd if you don't w
 
 This could be done in two phases. First create **the files and the folder in** GPO - Give the system time to ensure the GPO has been applied, and all the servers have the install files. Then, add the immediate task. This will achieve the same result without requiring a reboot.
 
-As the Script has an exit method and won't re-run if the MMA is installed, you could also use a daily scheduled task to achieve the same result. Similar to a Configuration Manager compliance policy it will check daily to ensure the MMA is present.
+As the Script has an exit method and won't rerun if the MMA is installed, you could also use a daily scheduled task to achieve the same result. Similar to a Configuration Manager compliance policy, it will check daily to ensure the MMA is present.
 
 :::image type="content" source="media/schtask.png" alt-text="Screenshot of the schedule task." lightbox="media/schtask.png":::
 
 :::image type="content" source="media/newtaskprops.png" alt-text="Screenshot of the new task properties." lightbox="media/newtaskprops.png":::
 
-:::image type="content" source="media/deploymmadowmload.png" alt-text="Screenshot of the deploy mma download properties." lightbox="media/deploymmadowmload.png":::
+:::image type="content" source="media/deploymmadowmload.png" alt-text="Screenshot of the deployed mma download properties." lightbox="media/deploymmadowmload.png":::
 
 :::image type="content" source="media/tasksch.png" alt-text="Screenshot of the task scheduler." lightbox="media/tasksch.png":::
 
@@ -342,7 +342,7 @@ You have two options to offboard Windows endpoints from the service:
 - Remove the Defender for Endpoint workspace configuration
 
 > [!NOTE]
-> Offboarding causes the Windows endpoint to stop sending sensor data to the portal but data from the endpoint, including reference to any alerts it has had will be retained for up to 6 months.
+> Offboarding causes the Windows endpoint to stop sending sensor data to the portal but data from the endpoint, including reference to any alerts it has had will be retained for up to six months.
 
 ### Uninstall the MMA agent
 
@@ -360,7 +360,7 @@ You can use either of the following methods:
 
 1. In the **Microsoft Monitoring Agent Properties**, select the **Azure Log Analytics (OMS)** tab.
 
-2. Select the Defender for Endpoint workspace, and click **Remove**.
+2. Select the Defender for Endpoint workspace, and select **Remove**.
 
     :::image type="content" source="media/atp-mma.png" alt-text="Screenshot of the Workspaces pane." lightbox="media/atp-mma.png":::
 
