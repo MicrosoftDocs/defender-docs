@@ -84,7 +84,7 @@ The support policy here applies to all Helm-based and multicloud installations. 
 |Version|Preview Date|GA Date|End of support|
 | -------- | -------- | -------- | -------- |
 |0.8| |Feb 2025|Feb 2027|
-|0.9|July 2025|Feb 2026|Feb 2027|
+|0.9|July 2025|Apr 2026|Apr 2027|
 |0.10|Jan 2026|Apr 2026|Apr 2027|
 |0.11|Apr 2026|Jul  2026|Jul 2027|
 
