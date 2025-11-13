@@ -330,26 +330,26 @@
           href: concept-agentless-data-collection.md
     - name: Assess your security posture
       items:
-        - name: Security policies and standards
-          displayName: policies, security, initiative, Microsoft cloud security benchmark, mcsb, recommendation
-          href: security-policy-concept.md
-        - name: Microsoft Cloud Security Benchmark (MCSB)
-          displayName: mcsb, azure, security, benchmark 
-          href: concept-regulatory-compliance.md
-        - name: Regulatory compliance standards
-          href: concept-regulatory-compliance-standards.md
         - name: Cloud overview dashboard
           displayName: dashboard, overview, cloud infrastructure, multi-cloud, visibility
           href: cloud-infrastructure-dashboard.md
-        - name: Cloud scopes and unified RBAC
-          displayName: rbac, permissions, scopes, access control, unified
-          href: cloud-scopes-unified-rbac.md
-        - name: Cloud secure score
-          displayName: security, posture, secure, score, calculate, control, improve
-          href: secure-score-security-controls.md
         - name: Cloud asset inventory
           displayName: asset, inventory, resources, cloud
           href: asset-inventory.md
+        - name: Cloud secure score
+          displayName: security, posture, secure, score, calculate, control, improve
+          href: secure-score-security-controls.md
+        - name: Regulatory compliance standards
+          href: concept-regulatory-compliance-standards.md
+        - name: Microsoft Cloud Security Benchmark (MCSB)
+          displayName: mcsb, azure, security, benchmark 
+          href: concept-regulatory-compliance.md
+        - name: Security policies and standards
+          displayName: policies, security, initiative, Microsoft cloud security benchmark, mcsb, recommendation
+          href: security-policy-concept.md
+        - name: Cloud scopes and unified RBAC
+          displayName: rbac, permissions, scopes, access control, unified
+          href: cloud-scopes-unified-rbac.md
         - name: Internet exposure analysis
           displayName: internet, exposure, analysis
           href: internet-exposure-analysis.md

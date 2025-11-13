@@ -30,28 +30,118 @@ The Inventory page provides information about:
 
 The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
 
+## Review the inventory
+
+1. In Defender for Cloud in the Azure portal, select **Inventory**. By default the resources are sorted by the number of active security recommendations.
+1. Review the available settings:
+    - In **Search**, you can use a free text search to find resources.
+    - **Total resources** displays the number of resources connected to Defender for Cloud.
+    - **Unhealthy resources** displays the number of resources with active security recommendations and alerts.
+    - **Resource count by environment**: Total of Azure, AWS, and GCP resources.
+1. Select a resource to drill down for details.
+1. On the **Resource Health** page for the resource, review information about the resource.
+    - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
+    - The **Alerts** tab shows any relevant security alerts.
+
+## Review software inventory
+
+:::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
+
+1. Select **Installed application**
+1. In **Value**, select the apps to filter on.
+
+- **Total resources**: The total number of resources connected to Defender for Cloud.
+- **Unhealthy resources**: Resources with active security recommendations that you can implement. [Learn more about implementing security recommendations](review-security-recommendations.md).
+- **Resource count by environment**: The number of resources in each environment.
+- **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
+
+1. Resources connected to Defender for Cloud and running those apps are displayed. Blank options show machines where Defender for Servers/Defender for Endpoint isn't available.
+
+## Filter the inventory
+
+As soon as you apply filters, the summary values are updated to relate to the query results.
+
+### Export tools
+
+**Download CSV report** - Export the results of your selected filter options to a CSV file.
+
+**Open query** - Export the query itself to [Azure Resource Graph (ARG)](/azure/governance/resource-graph/) to further refine, save, or modify the Kusto Query Language (KQL) query.
+
+## How does asset inventory work?
+
+In addition to the predefined filters, you can explore the software inventory data from Resource Graph Explorer.
+
+ARG is designed to provide efficient resource exploration with the ability to query at scale.
+
+You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in the asset inventory to quickly produce deep insights by cross-referencing Defender for Cloud data with other resource properties.
+
+## How to use asset inventory
+
+1. From Defender for Cloud's sidebar, select **Inventory**.
+
+1. Use the **Filter by name** box to display a specific resource, or use the filters to focus on specific resources.
+
+    By default, the resources are sorted by the number of active security recommendations.
+
+    > [!IMPORTANT]
+    > The options in each filter are specific to the resources in the currently selected subscriptions **and** your selections in the other filters.
+    >
+    > For example, if you've selected only one subscription, and the subscription has no resources with outstanding security recommendations to remediate (0 unhealthy resources), the **Recommendations** filter will have no options.
+
+1. To use the **Security findings** filter, enter free text from the ID, security check, or CVE name of a vulnerability finding to filter to the affected resources:
+
+    :::image type="content" source="media/asset-inventory/security-findings-has-hardware.png" alt-text="Screenshot showing how to set the security findings filter." lightbox="media/asset-inventory/security-findings-has-hardware.png":::
+
+    > [!TIP]
+    > The **Security findings** and **Tags** filters only accept a single value. To filter by more than one, use **Add filters**.
+
+1. To view the current selected filter options as a query in Resource Graph Explorer, select **Open query**.
+
+    ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
+
+1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
+
+## Export the inventory
+
+1. To save filtered inventory in CSV form, select **Download CSV report**.
+1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specific a query name and description, and whether the query is private or shared.
+
+    ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
+
+Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
+
+## Next steps
+
+- [Review security recommendations](review-security-recommendations.md)
+- [Manage and respond to security alerts](managing-and-responding-alerts.md)
+- [Continuous export](continuous-export.md) - Export security data to SIEM, SOAR, or other tools
+- [Create custom security dashboards with Azure Workbooks](custom-dashboards-azure-workbooks.md)
+- [Enable Defender for Cloud plans](enable-enhanced-security.md)
+- [Connect AWS accounts](quickstart-onboard-aws.md)
+- [Connect GCP projects](quickstart-onboard-gcp.md)
+
 ::: zone-end
 
 ::: zone pivot="defender-portal"
 
-This article describes how to use the unified cloud asset inventory in Microsoft Defender for Cloud within the Microsoft Defender XDR portal to manage and monitor your multi-cloud infrastructure.
+This article describes how to use the unified cloud asset inventory in Microsoft Defender for Cloud within the Microsoft Defender XDR portal to manage and monitor your multicloud infrastructure.
 
-> [!NOTE] 
-> This capability is currently in preview.   
+> [!NOTE]
+> This capability is currently in preview.
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
 ## Overview
 
 The cloud asset inventory provides a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP environments. It categorizes assets by workload, criticality, and coverage status while integrating health data, device actions, and risk signals into a single interface.
 
-:::image type="content" source="./media/defender-portal-dashboard/overview-dashboard.png" alt-text="Screenshot of the cloud asset inventory interface." lightbox="./media/defender-portal-dashboard/overview-dashboard.png":::
+:::image type="content" source="media/asset-inventory/cloud-infrastructure.png" alt-text="Screenshot of cloud asset inventory in the Defender portal" lightbox="media/asset-inventory/cloud-infrastructure.png":::
 
 ## Key capabilities
 
-### Unified multi-cloud visibility
+### Unified multicloud visibility
 
 - **Comprehensive coverage**: View all cloud assets across Azure, AWS, GCP, and other supported platforms
-- **Consistent interface**: Single pane of glass for multi-cloud asset management
+- **Consistent interface**: Single pane of glass for multicloud asset management
 - **Real-time synchronization**: Up-to-date asset information across all connected cloud environments
 - **Cross-platform relationships**: Understand dependencies and connections between assets across different cloud providers
 
@@ -249,26 +339,7 @@ Some assets may appear outside defined cloud scopes:
 - **Integration workflows**: Leverage inventory data in incident response and vulnerability management processes
 - **Automation opportunities**: Identify repetitive tasks that can be automated using inventory APIs
 
-::: zone-end
-
 ## Review the inventory
-
-::: zone pivot="azure-portal"
-
-1. In Defender for Cloud in the Azure portal, select **Inventory**. By default the resources are sorted by the number of active security recommendations.
-1. Review the available settings:
-    - In **Search**, you can use a free text search to find resources.
-    - **Total resources** displays the number of resources connected to Defender for Cloud.
-    - **Unhealthy resources** displays the number of resources with active security recommendations and alerts.
-    - **Resource count by environment**: Total of Azure, AWS, and GCP resources.
-1. Select a resource to drill down for details.
-1. On the **Resource Health** page for the resource, review information about the resource.
-    - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
-    - The **Alerts** tab shows any relevant security alerts.
-
-::: zone-end
-
-::: zone pivot="defender-portal"
 
 1. In the Microsoft Defender portal, navigate to **Assets** > **Cloud Infrastructure**.
 1. Review the unified cloud infrastructure assets overview:
@@ -296,63 +367,12 @@ Some assets may appear outside defined cloud scopes:
     - **Compliance status** against security standards
     - **Risk factors** including internet exposure and lateral movement potential
 
-## Review software inventory
+## Next steps
 
-:::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
+- [Cloud overview dashboard](defender-portal/cloud-infrastructure-dashboard.md?pivots=defender-portal)
+- [Manage security recommendations](defender-portal/review-security-recommendations.md?pivots=defender-portal)
 
-1. Select **Installed application**
-1. In **Value**, select the apps to filter on.
-
-- **Total resources**: The total number of resources connected to Defender for Cloud.
-- **Unhealthy resources**: Resources with active security recommendations that you can implement. [Learn more about implementing security recommendations](review-security-recommendations.md).
-- **Resource count by environment**: The number of resources in each environment.
-- **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
-
-1. Resources connected to Defender for Cloud and running those apps are displayed. Blank options show machines where Defender for Servers/Defender for Endpoint isn't available.
-
-## Filter the inventory
-
-As soon as you apply filters, the summary values are updated to relate to the query results.
-
-### 3 - Export tools
-
-**Download CSV report** - Export the results of your selected filter options to a CSV file.
-
-**Open query** - Export the query itself to [Azure Resource Graph (ARG)](/azure/governance/resource-graph/) to further refine, save, or modify the Kusto Query Language (KQL) query.
-
-## How does asset inventory work?
-
-In addition to the predefined filters, you can explore the software inventory data from  Resource Graph Explorer.
-
-ARG is designed to provide efficient resource exploration with the ability to query at scale.
-
-You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in the asset inventory to quickly produce deep insights by cross-referencing Defender for Cloud data with other resource properties.
-
-## How to use asset inventory
-
-1. From Defender for Cloud's sidebar, select **Inventory**.
-
-1. Use the **Filter by name** box to display a specific resource, or use the filters to focus on specific resources.
-
-    By default, the resources are sorted by the number of active security recommendations.
-
-    > [!IMPORTANT]
-    > The options in each filter are specific to the resources in the currently selected subscriptions **and** your selections in the other filters.
-    >
-    > For example, if you've selected only one subscription, and the subscription has no resources with outstanding security recommendations to remediate (0 unhealthy resources), the **Recommendations** filter will have no options.
-
-1. To use the **Security findings** filter, enter free text from the ID, security check, or CVE name of a vulnerability finding to filter to the affected resources:
-
-    :::image type="content" source="media/asset-inventory/security-findings-has-hardware.png" alt-text="Screenshot showing how to set the security findings filter." lightbox="media/asset-inventory/security-findings-has-hardware.png":::
-
-    > [!TIP]
-    > The **Security findings** and **Tags** filters only accept a single value. To filter by more than one, use **Add filters**.
-
-1. To view the current selected filter options as a query in Resource Graph Explorer, select **Open query**.
-
-    ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
-
-1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
+::: zone-end
 
 ## Access a software inventory
 
@@ -417,15 +437,3 @@ securityresources
 | where properties.displayName == "Management ports should be closed on your virtual machines" and properties.status.code == "Unhealthy"
 | extend vmId = tolower(properties.resourceDetails.Id)
 ) on vmId
-```
-
-## Export the inventory
-
-1. To save filtered inventory in CSV form, select **Download CSV report**.
-1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specific a query name and description, and whether the query is private or shared.
-
-    ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
-
-Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
-
-::: zone-end

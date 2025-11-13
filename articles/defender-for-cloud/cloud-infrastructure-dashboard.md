@@ -9,7 +9,7 @@ zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to use the Cloud overview dashboard to get unified visibility into my cloud security posture across Azure, AWS, and GCP.
 ---
 
-# Cloud overview dashboard (preview)
+# Cloud overview dashboard 
 
 ::: zone pivot="defender-portal"
 
@@ -19,6 +19,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:
+> 
 > - Unlock new cloud and posture management experiences.
 > - Provide deep integration with other Microsoft security services.
 > - Empower security teams with streamlined workflows by bringing all tools together in one portal.
@@ -27,7 +28,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
 > 
-> Review the known limitations article to understand current gaps during the preview phase.
+> Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 ## Who is this for?
 
