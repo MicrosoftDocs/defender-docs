@@ -31,16 +31,14 @@ Restrict execution of all applications on the device except a predefined set.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-
-[!include[Device actions note](../../includes/machineactionsnote.md)]
+Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 
-> [!IMPORTANT]
->
-> - This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
-> - This feature is available if your organization uses Microsoft Defender Antivirus.
-> - This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/device-security/device-guard/requirements-and-deployment-planning-guidelines-for-device-guard#code-integrity-policy-formats-and-signing).
+## Prerequisites
+
+- This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
+- This feature is available if your organization uses Microsoft Defender Antivirus.
+- This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/device-security/device-guard/requirements-and-deployment-planning-guidelines-for-device-guard#code-integrity-policy-formats-and-signing).
 
 ## Permissions
 
@@ -100,5 +98,9 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
 }
 ```
 
-- To remove code execution restriction from a device, see [Remove app restriction](unrestrict-code-execution.md).
+## Related articles
+
+- [Take response actions on a device](../respond-machine-alerts.md)
+
+- [Remove app restriction](unrestrict-code-execution.md).
 

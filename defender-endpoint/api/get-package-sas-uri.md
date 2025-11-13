@@ -28,9 +28,16 @@ appliesto:
 ## API description
 Get a URI that allows downloading of an [Investigation package](collect-investigation-package.md).
 
-> [!IMPORTANT]
->
-> - These actions are only available for devices on Windows 10, version  1703 or later, and on Windows 11.
+## Prerequisites
+
+Devices must be running one of the following versions of Windows:
+
+### Supported operating systems
+
+- Windows 11
+  
+- Windows 10, version 1703 or later. 
+
 
 ## Limitations
 

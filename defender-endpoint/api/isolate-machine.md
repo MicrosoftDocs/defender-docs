@@ -31,14 +31,19 @@ Isolates a device from accessing external network.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
-[!include[Device actions note](../../includes/machineactionsnote.md)]
+## Prerequisites
+
+### Supported operating systems
+
+
+- Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
+- Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
+- Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
 
 > [!IMPORTANT]
-> - Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
-> - Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
-> - Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
+>
 > - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 > - Calling this API on unmanaged devices triggers the [contain device from the network](../respond-machine-alerts.md#contain-devices-from-the-network) action. The IsolationType value should be set to 'UnManagedDevice.'
 
@@ -105,6 +110,8 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
 }
 ```
 
-- To release a device from isolation, see [Release device from isolation](unisolate-machine.md).
+## Related articles
+
+- [Release device from isolation](unisolate-machine.md).
 
 

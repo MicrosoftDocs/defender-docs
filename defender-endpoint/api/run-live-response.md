@@ -19,7 +19,7 @@ ms.subservice: reference
 ms.custom: api
 ms.date: 11/13/2025
 appliesto:
-  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Endpoint Plan 1 and Plan 2
 ---
 
 # Run live response commands on a device
@@ -76,8 +76,6 @@ Runs a sequence of live response commands on a device
 5. Live response commands can't be queued up and can only be executed one at a time.
 
 6. If the machine that you're trying to run this API call is in an RBAC device group that doesn't have an automated remediation level assigned to it, you need to at least enable the minimum Remediation Level for a given Device Group.
-    > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
 7. Multiple live response commands can be run on a single API call. However, when a live response command fails all the subsequent actions won't be executed.
 
@@ -85,7 +83,6 @@ Runs a sequence of live response commands on a device
 
     > [!NOTE]
     > Live response actions initiated from the Device page aren't available in the `machineactions` API.
-
 
 
 ## Permissions

@@ -37,8 +37,8 @@ Collect investigation package from a device.
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Alerts Investigation' (See [Create and manage roles](../user-roles.md) for more information)
-- The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+- The user needs to have at least the following role permission: 'Alerts Investigation'. For more information, see: [Create and manage roles](../user-roles.md)
+- The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md)
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md)
 

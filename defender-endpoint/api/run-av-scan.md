@@ -31,17 +31,18 @@ Initiate Microsoft Defender Antivirus scan on a device.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
-[!include[Device actions note](../../includes/machineactionsnote.md)]
+## Prerequisites
+
+### Supported operating systems
+
+- This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
 
 > [!IMPORTANT]
->
-> - This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
 > - A Microsoft Defender Antivirus scan can run alongside other antivirus solutions, whether Microsoft Defender Antivirus is the active antivirus solution or not. Microsoft Defender Antivirus can be in Passive mode. For more information, see [Microsoft Defender Antivirus compatibility](../microsoft-defender-antivirus-compatibility.md).
 
 ## Permissions
-
 
 When obtaining a token using user credentials:
 
@@ -106,3 +107,6 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
 }
 ```
 
+## Related articles
+
+- [Take response actions on a device](../respond-machine-alerts.md)

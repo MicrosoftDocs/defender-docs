@@ -34,14 +34,18 @@ Undo isolation of a device.
 
 1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
-[!include[Device actions note](../../includes/machineactionsnote.md)]
+## Prerequisites
+
+### Supported operating systems
+
+- Full isolation is available for devices on Windows 10, version 1703.
+- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
+- Selective isolation is available for devices on Windows 10, version 1709 or later.
+
 
 > [!IMPORTANT]
 >
-> - Full isolation is available for devices on Windows 10, version 1703.
-> - Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
-> - Selective isolation is available for devices on Windows 10, version 1709 or later.
-> - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
+> - When isolating a device, only certain processes and destinations are allowed. Devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 
 ## Permissions
 
@@ -102,6 +106,10 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
 }
 ```
 
-To isolate a device, see [Isolate device](isolate-machine.md).
+## Related articles
+
+- [Take response actions on a device](../respond-machine-alerts.md)
+
+- [Isolate device](isolate-machine.md).
 
 
