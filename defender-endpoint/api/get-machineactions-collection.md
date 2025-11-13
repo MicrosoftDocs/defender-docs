@@ -42,13 +42,13 @@ See examples at [OData queries with Microsoft Defender for Endpoint](exposed-api
 ## Limitations
 
 1. Maximum page size is 10,000.
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'View Data'. For mor information, see: [Create and manage roles](../user-roles.md). 
+- The user needs to have at least the following role permission: 'View Data'. For more information, see: [Create and manage roles](../user-roles.md). 
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
@@ -82,7 +82,7 @@ If successful, this method returns 200, Ok response code with a collection of [m
 
 ### Example 1 request
 
-Here is an example of the request on an organization that has three MachineActions.
+Here's an example of the request on an organization that has three MachineActions.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machineactions
@@ -90,7 +90,7 @@ GET https://api.securitycenter.microsoft.com/api/machineactions
 
 ### Example 1 response
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 HTTP/1.1 200 Ok
@@ -148,7 +148,7 @@ Content-type: application/json
 
 ### Example 2 request
 
-Here is an example of a request that filters the MachineActions by machine ID and shows the latest two MachineActions.
+Here's an example of a request that filters the MachineActions by machine ID and shows the latest two MachineActions.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machineactions?$filter=machineId eq 'f46b9bb259ed4a7fb9981b73510e3cc7aa81ec1f'&$top=2
@@ -156,7 +156,7 @@ GET https://api.securitycenter.microsoft.com/api/machineactions?$filter=machineI
 
 ### Example 2 response
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 HTTP/1.1 200 Ok
@@ -194,7 +194,7 @@ Content-type: application/json
 }
 ```
 
-## Related topics
+## Related articles
 
 - [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
 
