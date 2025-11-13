@@ -242,8 +242,6 @@
           href: use-matching-analytics-to-detect-threats.md
         - name: Work with STIX objects and indicators
           href: work-with-stix-objects-indicators.md
-        - name: Use threat analytics in Microsoft Defender
-          href: threat-analytics-sentinel.md
     - name: Detect threats and analyze data
       items:
         - name: Monitor and visualize data
@@ -399,6 +397,8 @@
               href: notebooks-msticpy-advanced.md
         - name: Bring your own machine learning
           href: bring-your-own-ml.md
+    - name: Track and respond to threats with threat analytics
+      href: threat-analytics-sentinel.md
     - name: Investigate incidents
       items:
         - name: Azure portal
