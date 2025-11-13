@@ -53,9 +53,7 @@ To see the version of the sensor run:
 
   - Bug fixes and security enhancements
     
-  - Added support for new defender endpoints (when network outbound access to *.cloud-defender.microsoft.com is enabled, see more at [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-…)](/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-%E2%80%A6))
-    
-     
+  - Added support for new defender endpoints (when network outbound access to *.cloud-defender.microsoft.com is enabled, see more at [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-…](/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-%E2%80%A6))
     
 - **Sensor v0.9.17-Preview**
 
