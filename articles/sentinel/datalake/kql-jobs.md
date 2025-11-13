@@ -151,6 +151,7 @@ To create a job from a template, follow these steps:
 1. The remaining steps are the same as creating a new job. The fields are prepopulated from the template and can be modified as needed. For more information, see [Create a job](#create-a-job).
 
 The following templates are available:
+
 | Template name | Category by | 
 |-----------|--------------|
 |<details><summary>**Anomalous sign-in behavior based on location changes** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>Identify anomalous sign-in behavior based on location changes for Entra ID users and apps to detect sudden changes in behavior.</details> | Anomaly detection | 
