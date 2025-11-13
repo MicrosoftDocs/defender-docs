@@ -22,6 +22,7 @@ The cloud security graph is a graph-based context engine within Defender for Clo
 
 Defender for Cloud uses the generated graph to perform an attack path analysis and find the highest-risk issues in your environment. You can also query the graph using the cloud security explorer.
 
+Learn more about how [Defender for Cloud collects and protects your data](data-security.md).
 
 :::image type="content" source="media/concept-cloud-map/security-map.png" alt-text="Screenshot of a conceptualized graph that shows the complexity of security graphing." lightbox="media/concept-cloud-map/security-map.png":::
 
