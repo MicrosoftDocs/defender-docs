@@ -2,8 +2,8 @@
 title: List all remediation activities
 description: Returns information about all remediation activities.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,20 +23,11 @@ appliesto:
   - Microsoft Defender for Business
 
 ---
+
 # List all remediation activities
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-.
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
-
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -145,7 +136,7 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/
 }
 ```
 
-## See also
+## Related articles
 
 - [Remediation methods and properties](get-remediation-methods-properties.md)
 - [Get one remediation activity by ID](get-remediation-one-activity.md)
@@ -153,5 +144,4 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 

@@ -2,8 +2,8 @@
 title: Remediation activity methods and properties
 description: The API response contains Microsoft Defender Vulnerability Management remediation activities created in your tenant. You can request all the remediation activities, only one remediation activity, or information about exposed devices for a selected remediation task.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,39 +15,21 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/24/2021
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Remediation activity methods and properties
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
-
-The API response contains [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) remediation activities that have been created in your tenant.
-
-## Methods
-
-Method|Data type|Description
-:---|:---|:---
-[List all remediation activities](get-remediation-all-activities.md)|Investigation collection|Returns information about all remediation activities.
-[List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)|Investigation entity|Returns information about exposed devices for the specified remediation activity.
-[Get one remediation activity by ID](get-remediation-one-activity.md)|Investigation entity|Returns information for the specified remediation activity.
-
-Learn more about [remediation activities](/defender-vulnerability-management/tvm-remediation).
+The API response contains [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) remediation activities that have been created in your tenant. For more information,see: [remediation activities](/defender-vulnerability-management/tvm-remediation).
 
 ## Properties
 
@@ -82,7 +64,7 @@ Title|String|Title of this remediation activity
 Type|String|Remediation type
 vendorId|String|Related vendor name
 
-## See also
+## Related articles
 
 - [Get one remediation activity by ID](get-remediation-one-activity.md)
 
@@ -93,5 +75,4 @@ vendorId|String|Related vendor name
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
