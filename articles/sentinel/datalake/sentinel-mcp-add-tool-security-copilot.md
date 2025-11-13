@@ -67,7 +67,7 @@ For more information about all the parameters you can add and configure in your 
 
 1. In the **Manage sources** pop-up window that appears, under **Plugins**, scroll down to the **Custom** section and select **Add plugin**.
 
-    :::image type="content" source="media/sentinel-mcp/custom-copilot-manage-sources" alt-text="Screenshot of the Manage sources window in Security Copilot with the Add plugin option highlighted." lightbox="media/sentinel-mcp/custom-copilot-manage-sources.png":::
+    :::image type="content" source="media/sentinel-mcp/custom-copilot-manage-sources.png" alt-text="Screenshot of the Manage sources window in Security Copilot with the Add plugin option highlighted." lightbox="media/sentinel-mcp/custom-copilot-manage-sources.png":::
 
 1. From the drop-down options, specify if you want to make the plugin available to just yourself or anyone in the organization. 
 1. Select **Security Copilot plugin**, choose the YAML file you created previously, then select **Add**.
