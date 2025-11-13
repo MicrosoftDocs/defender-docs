@@ -31,11 +31,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+| November 23, 2025 | Preview | [Discover Azure AI Foundry agents in your environment (Preview)](#discover-azure-ai-foundry-agents-in-your-environment-preview) |
 | November 23, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
 |November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+### Discover Azure AI Foundry agents in your environment (Preview)
+
+November 23, 2025
+
+You can now discover Azure AI Foundry agents in your environment using Defender for Cloud. This new preview feature helps you identify and monitor AI Foundry agents deployed across your resources, providing insights into their security posture and risks.
+
+Learn more about [AI security posture management](ai-security-posture.md).
 
 ### General availability of AI security posture management in GCP Vertex
 
