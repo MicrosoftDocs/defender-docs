@@ -3481,8 +3481,6 @@ Defender for Cloud has integrated with [Microsoft Entra Permissions Management](
 
 Each Azure subscription, AWS account, and GCP project that you onboard, will now show you a view of your [Permission Creep Index (PCI)](/azure/active-directory/cloud-infrastructure-entitlement-management/ui-dashboard).
 
-Learn more about [Microsoft Entra Permission Management (formerly Cloudknox)](other-threat-protections.md#entra-permission-management-formerly-cloudknox)
-
 ### Key Vault recommendations changed to "audit"
 
 The effect for the Key Vault recommendations listed here was changed to "audit":
