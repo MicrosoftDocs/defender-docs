@@ -45,6 +45,7 @@ Add-ons streamline detection and response by translating SAP-specific risks into
 | Name | Description | Azure Marketplace link |
 |------|-------------|-------------------|
 | Onapsis | Onapsis provides comprehensive SAP security and compliance solutions with native integration into Microsoft Sentinel Solution for SAP. Onapsis supports ABAP code scanning, vulnerability management, and real-time monitoring across SAP environments. | [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/onapsis.azure-sentinel-solution-onapsis-defend?tab=Overview) |
+| Pathlock | Pathlock provides native SAP Threat Detection and Response for Microsoft Sentinel Solution for SAP, forwarding only security-relevant, context-enriched events from 70+ SAP log sources to enhance detection accuracy and streamline SOC operations. | [Azure Marketplace](https://marketplace.microsoft.com/product/azure-applications/pathlockinc1631410274035.pathlock_tdnr?tab=Overview) |
 | SecurityBridge | SecurityBridge provides advanced SAP security monitoring, threat detection, and compliance solutions with native integration into Microsoft Sentinel Solution for SAP and Microsoft Entra ID. Specialized in SAP vulnerability management, ABAP code scanning, and real-time security monitoring across SAP landscapes | [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/securitybridge1647511278080.securitybridge-sentinel-app-1?tab=Overview) |
 
 ### Solutions provided by the community
