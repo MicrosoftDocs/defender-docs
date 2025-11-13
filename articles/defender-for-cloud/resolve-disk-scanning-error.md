@@ -24,7 +24,7 @@ This article explains how to identify and resolve this issue so Defender for Clo
 
 - Contributor level permission for the relevant Azure subscription.
 
-## Manage your organizations policies
+## Manage your organization's policies
 
 By configuring your organization policies, you can control the resources that Defender for Cloud can access in your GCP project.
 

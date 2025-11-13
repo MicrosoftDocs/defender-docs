@@ -109,4 +109,4 @@ This capability helps your organization manage and monitor AI-generated data i
 
 - [Add user and application context to AI alerts](gain-end-user-context-ai.md)
 - [Explore AI alerts](alerts-ai-workloads.md)
-- [Manage and respond to the security alerts](managing-and-responding-alerts.yml)
+- [Manage and respond to the security alerts](manage-respond-alerts.md)

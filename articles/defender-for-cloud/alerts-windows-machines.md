@@ -3,7 +3,7 @@ title: Alerts for Windows machines
 description: This article lists the security alerts visible for Windows machines in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 10/21/2024
+ms.date: 10/29/2025
 ai-usage: ai-assisted
 ---
 
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 This article lists the security alerts you might get for Windows machines in Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration.  
 
-[Learn how to respond to these alerts](managing-and-responding-alerts.yml).
+[Learn how to respond to these alerts](manage-respond-alerts.md).
 
 [Learn how to export alerts](continuous-export.md).
 
@@ -700,14 +700,6 @@ This resembles a burst attack, in which an attacker performs numerous authentica
 
 **Severity**: Medium
 
-### **Suspicious process name detected**
-
-**Description**: Analysis of host data on %{Compromised Host} detected a process whose name is suspicious, for example corresponding to a known attacker tool or named in a way that is suggestive of attacker tools that try to hide in plain sight. This process could be legitimate activity, or an indication that one of your machines has been compromised.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: -
-
-**Severity**: Medium
-
 ### **Suspicious SQL activity**
 
 **Description**: Machine logs indicate that '%{process name}' was executed by account: %{user name}. This activity is uncommon with this account.
@@ -829,5 +821,5 @@ While this action might be legitimate, attackers can try utilizing VM Access ext
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)

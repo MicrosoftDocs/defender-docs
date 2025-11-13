@@ -14,9 +14,9 @@ In this quickstart, you'll learn how to use an Azure Resource Manager template (
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
-For a list of the roles and permissions required to work with Microsoft Defender for Cloud's workflow automation feature, see [workflow automation](workflow-automation.yml).
+For a list of the roles and permissions required to work with Microsoft Defender for Cloud's workflow automation feature, see [workflow automation](workflow-automations.md).
 
-The examples in this quickstart assume you have an existing Logic App. To deploy the example, you pass in parameters that contain the logic app name and resource group. For information about deploying a logic app, see [Quickstart: Create and deploy a Consumption logic app workflow in multi-tenant Azure Logic Apps with Bicep](/azure/logic-apps/quickstart-create-deploy-bicep) or [Quickstart: Create and deploy a Consumption logic app workflow in multi-tenant Azure Logic Apps with an ARM template](/azure/logic-apps/quickstart-create-deploy-azure-resource-manager-template).
+The examples in this quickstart assume you have an existing Logic App. To deploy the example, you pass in parameters that contain the logic app name and resource group. For information about deploying a logic app, see [Quickstart: Create and deploy a Consumption logic app workflow in multitenant Azure Logic Apps with Bicep](/azure/logic-apps/quickstart-create-deploy-bicep) or [Quickstart: Create and deploy a Consumption logic app workflow in multitenant Azure Logic Apps with an ARM template](/azure/logic-apps/quickstart-create-deploy-azure-resource-manager-template).
 
 ## ARM template tutorial
 

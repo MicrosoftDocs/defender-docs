@@ -20,11 +20,11 @@ In the support table, **NA** indicates that the feature isn't available.
 |**Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**<sup>[3](#footnote3)</sup>|
 |--- | --- | --- | --- |
 |**GENERAL FEATURES** | | ||
-|[Continuous data export](continuous-export.md) | GA | GA | GA |
-|[Response automation with Azure Logic Apps](./workflow-automation.yml) | GA | GA | GA |
-|[Security alerts](alerts-overview.md)<br/> Generated when one or more Defender for Cloud plans is enabled. | GA | GA | GA |
-|[Alert email notifications](configure-email-notifications.md) | GA | GA | GA |
-|[Alert suppression rules](alerts-suppression-rules.md) | GA | GA | GA |
+|[Continuous data export](continuous-export.md) | GA | GA | NA |
+|[Response automation with Azure Logic Apps](./workflow-automations.md) | GA | GA | NA |
+|[Security alerts](alerts-overview.md)<br/> Generated when one or more Defender for Cloud plans is enabled. | GA | GA | NA |
+|[Alert email notifications](configure-email-notifications.md) | GA | GA | NA |
+|[Alert suppression rules](alerts-suppression-rules.md) | GA | GA | NA |
 |[Alert bi-directional synchronization with Microsoft Sentinel](/azure/sentinel/connect-azure-security-center) | GA | GA | NA |
 |[Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA |
 |[Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA |
