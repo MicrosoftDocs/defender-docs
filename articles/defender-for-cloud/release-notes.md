@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/11/2025
+ms.date: 11/13/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -32,9 +32,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 |------|---------|-------|
 | November 23, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
+|November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
-| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
 ### General availability of AI security posture management in GCP Vertex
 
@@ -44,6 +45,15 @@ Defender for Cloud is announcing the general availability of AI security posture
 
 Learn more about [AI security posture management](ai-security-posture.md).
 
+### Restrict Pod Access response action (preview)
+
+November 12, 2025
+
+Defender for Containers now includes a new Restrict Pod Access response action, available in preview in Microsoft Defender XDR.
+
+The action blocks sensitive interfaces within Kubernetes pods that could enable lateral movement or privilege escalation. Using this control helps contain potential breaches and reduce exposure within your cluster environments.  
+
+Learn more about [Restrict Pod Access in Defender XDR](/defender-xdr/investigate-respond-container-threats).
 
 ### Updates to container image continuous vulnerability re-scan policy
 
@@ -252,7 +262,7 @@ Learn more about [internet exposure width](internet-exposure-analysis.md#interne
 
 September 11, 2025  
 
-Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/docs/latest/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
 
 **Where it applies:**  
 - [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
