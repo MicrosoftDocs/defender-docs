@@ -53,11 +53,12 @@ SkillGroups:
     Endpoint: <Enter custom tool URL>
     TokenScope: 4500ebfb-89b6-4b14-a480-7f749797bfcd/.default
     UseStreamableHttp: true
+    UsePluginAuth: false
     AllowedTools: <Comma-separated list of tool names to add>
-    TimeoutInSeconds: 120
+    TimeoutInSeconds: 480
 ```
 
-For more information about all the parameters you can add and configure in your YAML file, see [here].
+For more information about all the parameters you can add and configure in your YAML file, see [Model Context Protocol (MCP) plugins in Microsoft Security Copilot](/copilot/security/plugin-mcp).
 
 ### Step 2: Add the YAML file as a custom plugin
 1. Go to the [Security Copilot standalone portal](https://securitycopilot.microsoft.com/) and select the **Security Copilot sources** icon.
