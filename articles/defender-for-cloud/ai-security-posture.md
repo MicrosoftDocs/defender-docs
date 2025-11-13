@@ -57,7 +57,7 @@ Defender for Cloud discovers AI agent workloads and identifies details of your o
 Defender for Cloud automatically and continuously discovers deployed AI agents across the following services:
 
 - Azure Foundry AI Agents (requires access to Defender for Cloud with the [Defender CSPM plan enabled](tutorial-enable-cspm-plan.md))
-- Copilot Studio AI Agents (requires a [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps?branch=main) license) 
+- Copilot Studio AI Agents (requires a [Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-protection) license) 
 
 When you enable the Defender CSPM plan on your Azure subscription, the portal automatically discovers and inventories AI agents deployed with Azure AI Foundry.
 
