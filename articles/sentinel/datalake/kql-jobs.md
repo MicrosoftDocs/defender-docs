@@ -149,6 +149,8 @@ To create a job from a template, follow these steps:
 1. Review and modify the job details as required, then select **Next** to proceed through the job creation wizard.
 
 1. The remaining steps are the same as creating a new job. The fields are prepopulated from the template and can be modified as needed. For more information, see [Create a job](#create-a-job).
+  
+    
 
 The following templates are available:
 
