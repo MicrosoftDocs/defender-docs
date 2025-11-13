@@ -39,7 +39,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 
 You can access the Cloud Overview dashboard from the left navigation bar in the Microsoft Defender portal:
 
-1. Navigate to **Cloud** > **Overview**
+1. Navigate to **Cloud security** > **Overview**
 
 ## Top controls
 
@@ -107,7 +107,13 @@ Workloads include:
 
 Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views. This helps teams focus on what matters most for each workload.
 
-:::image type="content" source="media/defender-portal-dashboard/overview-dashboard.png" alt-text="Screenshot of cloud overview dashboard workload insights":::
+:::image type="content" source="media/defender-portal-dashboard/workloads.png" alt-text="Screenshot of cloud overview dashboard workload insights" lightbox="media/defender-portal-dashboard/workloads.png":::
+
+## Next steps
+
+- [Identify and remediate attack paths](how-to-manage-attack-path.md?pivots=defender-portal)
+- [Review cloud infrastructure assets](asset-inventory.md?pivots=defender-portal)
+- [Configure cloud scopes for filtering](cloud-scopes-unified-rbac.md?pivots=defender-portal)
 
 ::: zone-end
 
@@ -145,12 +151,12 @@ The Insights pane offers customized items for your environment including:
 - **Recommendations on how to upgrade your service to enhance your environment's protections.**
 - **Recent blog posts by Microsoft Defender for Cloud experts.**
 
-::: zone-end
-
 ## Next steps
 
 - [Explore attack paths and security insights](concept-attack-path.md)
-- [Review cloud infrastructure assets](asset-inventory.md)
-- [Configure cloud scopes for filtering](cloud-scopes-unified-rbac.md)
-- [Set up vulnerability management](auto-deploy-vulnerability-assessment.md)
+- [Review cloud infrastructure assets](asset-inventory.md?pivots=azure-portal)
+- [Configure cloud scopes for filtering](cloud-scopes-unified-rbac.md?pivots=azure-portal)
+- [Set up vulnerability management](auto-deploy-vulnerability-assessment.md?pivots=azure-portal)
 - [Configure email notifications](configure-email-notifications.md)
+
+::: zone-end

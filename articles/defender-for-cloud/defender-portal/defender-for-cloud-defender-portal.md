@@ -28,7 +28,7 @@ This article provides a comprehensive overview of Microsoft Defender for Cloud's
 
 ## Overview
 
-Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal at security.microsoft.com and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud-native application protection platform (CNAPP) solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid and code environments - all from one place and eliminates the need to switch between tools and portals. 
+Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal at security.microsoft.com and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud-native application protection platform (CNAPP) solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid and code environments - all from one place and eliminates the need to switch between tools and portals.
 
 :::image type="content" source="../media/defender-portal-dashboard/overview-dashboard.png" alt-text="<Screenshot of the Defender for Cloud overview dashboard in the Defender portal>" lightbox="../media/defender-portal-dashboard/overview-dashboard.png":::Screenshot of the Defender for Cloud overview dashboard in the Defender portal
 ":::
@@ -94,7 +94,7 @@ Once enabled, open Defender for Cloud by choosing **Cloud security** in the left
 
 ## Next steps
 
-- [Explore the Cloud Overview dashboard](../cloud-infrastructure-dashboard.md)
-- [Configure Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md)
+- [Explore the Cloud Overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)
+- [Configure Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md?pivots=defender-portal)
 - [Review cloud assets](../asset-inventory.md?pivots=defender-portal)
 - [Compare Azure portal vs Defender portal features](../azure-portal-vs-defender-portal-comparison.md)
