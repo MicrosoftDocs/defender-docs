@@ -6,8 +6,8 @@ ms.service: defender-endpoint
 ms.subservice: reference
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -17,25 +17,19 @@ ms.collection:
 - must-keep
 ms.topic: reference
 ms.custom: api
-ms.date: 03/21/2025
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Cancel machine action API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+# Cancel machine action API
 
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -98,5 +92,4 @@ https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-a
 ## Related article
 
 - [Get machine action API](get-machineaction-object.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 

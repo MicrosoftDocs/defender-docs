@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 10/20/2025
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
@@ -25,14 +25,7 @@ appliesto:
 # Run live response commands on a device
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 
 ## Prerequisites
@@ -246,5 +239,4 @@ Content-type: application/json
 - [Get live response result](get-live-response-result.md)
 - [Cancel machine action](cancel-machine-action.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
