@@ -63,7 +63,8 @@ It's important that rules are scoped to cover all key data columns that are pull
 Entities need to be mapped to the rule output where applicable. Mapping rule output to standardized entities ensures that the rule output can be correlated with other data points in Microsoft Sentinel. Some common examples of entities are user accounts, hosts, mailboxes, IP addresses, files, cloud applications, processes, and URLs. To know more about entities in Microsoft Sentinel, see [Entities in Microsoft Sentinel](/azure/sentinel/entities). 
 
 > [!CAUTION]
-> Partners must create at least one analytic rule as part of their Sentinel solution.  
+> Partners must create at least one analytic rule as part of their Sentinel solution.
+> 
 > Analytic rules are at the core of the value a Microsoft Sentinel SIEM solution can offer to customers. Getting the data into Microsoft Sentinel is only the first step. However, it's important for customers to monitor their security infrastructure and get notified of any issues. Getting data into Microsoft Sentinel without any detections written on the data wouldn't add any value for customers. To ensure that customers can deploy a Microsoft Sentinel SIEM solution and get started with monitoring their security infrastructure, it's important to have prebuilt analytic rules as part of the solution. This ensures that customers get value out-of-the-box as soon as they install and configure the Microsoft Sentinel SIEM solution, without any extra development effort by the customers.
 
 ## Playbooks
