@@ -61,8 +61,14 @@ SkillGroups:
 For more information about all the parameters you can add and configure in your YAML file, see [Model Context Protocol (MCP) plugins in Microsoft Security Copilot](/copilot/security/plugin-mcp).
 
 ### Step 2: Add the YAML file as a custom plugin
-1. Go to the [Security Copilot standalone portal](https://securitycopilot.microsoft.com/) and select the **Security Copilot sources** icon.
-1. In **Manage plugins**, scroll down to the **Custom** section then select **Add plugin**.
+1. Go to the [Security Copilot portal](https://securitycopilot.microsoft.com/) and select the **Sources** icon in the prompt bar.
+
+    ![Screenshot of the prompt bar in Security Copilot with the Sources icon highlighted.](media/sentinel-mcp/custom-copilot-source.png)
+
+1. In the **Manage sources** pop-up window that appears, under **Plugins**, scroll down to the **Custom** section and select **Add plugin**.
+
+    :::image type="content" source="media/sentinel-mcp/custom-copilot-manage-sources" alt-text="Screenshot of the Manage sources window in Security Copilot with the Add plugin option highlighted." lightbox="media/sentinel-mcp/custom-copilot-manage-sources.png":::
+
 1. From the drop-down options, specify if you want to make the plugin available to just yourself or anyone in the organization. 
 1. Select **Security Copilot plugin**, choose the YAML file you created previously, then select **Add**.
 
@@ -73,7 +79,7 @@ For more information about all the parameters you can add and configure in your 
     :::image type="content" source="media/sentinel-mcp/custom-copilot-toggle-plugin.png" alt-text="Screenshot of Custom plugin option in Security Copilot with the added plugin visible." lightbox="media/sentinel-mcp/custom-copilot-toggle-plugin.png":::
 
 ### Step 3: Build an agent using the saved plugin
-1. Go to https://securitycopilot.microsoft.com/builder and select **Start from Scratch** or open an existing custom agent.
+1. In the Security Copilot portal, go to **Build** and select **Start from Scratch** or open an existing custom agent.
 1. In your agent skill, select **Add a tool** and find the custom plugin you saved previously.
 
     :::image type="content" source="media/sentinel-mcp/custom-copilot-add-tool.png" alt-text="Screenshot of Add a tool option in Security Copilot." lightbox="media/sentinel-mcp/custom-copilot-add-tool.png":::
