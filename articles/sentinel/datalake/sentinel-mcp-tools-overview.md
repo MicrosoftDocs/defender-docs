@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different MCP collection of tools in Microsoft Sentinel 
 author: poliveria
 ms.topic: conceptual
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 

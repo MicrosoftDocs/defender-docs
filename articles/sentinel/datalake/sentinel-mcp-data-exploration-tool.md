@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -34,7 +34,7 @@ To add the data exploration collection, you must first set up add Microsoft Sent
 
 The data exploration collection is hosted at the following URL:
 ```
-    https://sentinel.microsoft.com/mcp/data-exploration
+https://sentinel.microsoft.com/mcp/data-exploration
 ```
 
 ## Tools in the data exploration collection

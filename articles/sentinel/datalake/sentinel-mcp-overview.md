@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how Model Context Protocol (MCP) 
 author: mberdugo
 ms.topic: overview
-ms.date: 09/2/2025
+ms.date: 11/18/2025
 ms.author: monaberdugo
 ms.service: microsoft-sentinel
 

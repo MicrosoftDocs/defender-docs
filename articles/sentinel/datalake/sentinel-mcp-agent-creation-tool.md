@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Agent creation collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -33,7 +33,10 @@ To add the agent creation collection, you must first set up add Microsoft Sentin
 - Visual Studio Code
 
 The agent creation collection is hosted in the following URL:
-- `https://sentinel.microsoft.com/mcp/security-copilot-agent-creation`
+
+```
+https://sentinel.microsoft.com/mcp/security-copilot-agent-creation
+```
 
 After adding the agent creation tool, you can use the following sample prompt to create complex, agentic workflows in Security Copilot:
 

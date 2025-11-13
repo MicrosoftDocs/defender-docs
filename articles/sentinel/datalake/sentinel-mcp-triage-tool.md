@@ -40,7 +40,7 @@ To add the triage collection, you must first set up add Microsoft Sentinel's uni
 The triage collection is hosted at the following URL:
 
 ```
-    https://sentinel.microsoft.com/mcp/triage
+https://sentinel.microsoft.com/mcp/triage
 ```
 
 ## Tools in the triage collection

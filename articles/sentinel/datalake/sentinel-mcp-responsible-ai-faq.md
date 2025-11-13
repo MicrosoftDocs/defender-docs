@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about how Microsoft Responsible AI Standard guides the development and use of Microsoft Sentinel's collection of Model Context Protocol (MCP) tools 
 author: poliveria
 ms.topic: concept-article
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
