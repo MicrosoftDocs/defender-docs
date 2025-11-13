@@ -40,9 +40,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November, 2025
 
-In-pipeline container vulnerability scanning for Defender for DevOps is now available in preview through the Defender for Cloud CLI.
+In-pipeline container vulnerability scanning for Defender for DevOps Security is now available in preview through the Defender for Cloud CLI.
 
-The scanning process runs directly within CI/CD workflows, providing real-time feedback before container images are pushed to registries or deployed. Integrating scanning into pipelines helps detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
+Scanning built container images directly within CI/CD workflows, provides real-time feedback before they're pushed to registries or deployed. This helps detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
 
 Learn more about the [Defender for Cloud CLI](cli-cicd-integration.md).
 
