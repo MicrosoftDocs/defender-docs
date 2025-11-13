@@ -4,12 +4,12 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
-ms.date: 06/24/2025
+ms.date: 08/12/2025
 ---
 
 # File integrity monitoring
 
-The file integrity monitoring feature in Microsoft Defender for Cloud's [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md), scans and analyzes operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
+The file integrity monitoring feature in Microsoft Defender for Cloud's [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md), scans operating system files, Windows registries, application software, and Linux system files. It analyzes these files for changes that might indicate an attack.
 
 File integrity monitoring helps you to:
 
@@ -51,7 +51,11 @@ Defender for Cloud recommends entities to monitor with file integrity monitoring
 
 - Consider the files that are critical for your system and applications.
 - Monitor files that you don’t expect to change without planning.
-- Choose files that are frequently changed by applications or operating system (such as log files and text files) creates noise, making it difficult to identify an attack.
+- Select files that applications or the operating system frequently change (such as log files and text files) creates noise and makes it hard to identify an attack.
+- Monitor any file located in a folder `/folder/path/*`.
+
+> [!NOTE]
+> The maximum number of rules that can be applied is 500.
 
 ### Recommended items to monitor
 
@@ -76,6 +80,39 @@ When using file integrity monitoring with the Defender for Endpoint agent, we re
 | /usr/local/sbin   |                                  |                                                              |
 | /usr/sbin         |                                  |                                                              |
 | /opt/bin          |                                  |                                                              |
+
+## Custom rules
+
+You can create custom rules to monitor specific files or folders as long as they meet the following validation criteria:
+
+- A maximum of three asterisks `*` are allowed in the path (maximum depth). Wildcards (`*`) are allowed only at the start or end of a path segment.
+
+- Paths with three asterisks must not end with `/` or `\`.
+
+- Windows registry paths must start with `HKLM` or `hklm` and may only contain letters, numbers, spaces, `_`, `.`, `\`, `:`. Wildcards (`*`) are allowed only at the start or end of a path segment.
+
+- Windows file paths may only contain letters, numbers, spaces, `_`, `.`, `\`, `*`, `?`, `:` and must not contain `/`. Wildcards (`*`) are allowed only at the start or end of a path segment.
+
+- Linux file paths must be absolute (start with `/`) and may only contain letters, numbers, spaces, `_`, `.`, `/`, `*`, `:`. Wildcards (`*`) are allowed only at the start or end of a path segment.
+
+- All paths must meet the system’s maximum path length (260 characters) and maximum depth (three asterisks) rules.
+
+### Rule definition validations
+
+- A rule name is required.
+
+- A rule name must contain only letters (a–z, A–Z), digits (0–9), and underscores (_), and can be up to 128 characters.
+
+- Rule name and rule ID must be unique.
+
+- Rule description is optional. If provided:
+
+    - Maximum length is 260 characters.
+    - Allowed characters: `letters`, `digits`, and `? ! ) ( . ,`.
+
+- At least one change type (from change management and documentation rRequest (CMDR)) must be selected.
+
+- Between 1 and 500 custom rules are supported per subscription.
 
 ## Next steps
 

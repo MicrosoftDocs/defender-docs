@@ -2,7 +2,7 @@
 title: Microsoft Defender for Servers
 description: Learn all about Microsoft Defender for Servers.
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 10/05/2025
 ---
 
 # Microsoft Defender for Servers

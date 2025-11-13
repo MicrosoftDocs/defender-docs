@@ -2,19 +2,19 @@
 title: Secure your AI applications from code to runtime
 description: Learn about Microsoft's Defender for Cloud ability to secure your AI applications from code to runtime.
 ms.topic: reference
-ms.date: 08/18/2024
+ms.date: 10/05/2025
 ---
 
 # Secure your AI applications from code to runtime
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Shiran Horev joins Yuri Diogenes to talk about how Defender for Cloud can be used to secure your AI applications from code to runtime. Shiran talks about common attacks against Gen AI, the important of AI security posture management and how Defender for Cloud is playing a role to enhance AI security with better security posture and thread protection. Shiran also demonstrates how to Defender for Cloud to gain visibility of Gen AI apps and how threats are discovered. 
+**Episode description**: In this episode of Defender for Cloud in the Field, Shiran Horev joins Yuri Diogenes to talk about how you can use Defender for Cloud to secure your AI applications from code to runtime. Shiran discusses common attacks against generative AI, the importance of AI security posture management, and how Defender for Cloud enhances AI security with better security posture and threat protection. Shiran also demonstrates how to use Defender for Cloud to gain visibility of generative AI apps and how it discovers threats. 
 
 
 > [!VIDEO https://aka.ms/docs/player?id=91c48435-1ef1-452e-bc4a-41ae82091387]
 
 - [02:13](/shows/mdc-in-the-field/secure-ai-applications#time=02m13s) - What is security for AI?
 - [07:13](/shows/mdc-in-the-field/secure-ai-applications#time=07m13s) - Top concerns for decision makers regarding AI security.
-- [08:54](/shows/mdc-in-the-field/secure-ai-applications#time=08m54s) - How Defender for Cloud helps to secure Gen AI apps?
+- [08:54](/shows/mdc-in-the-field/secure-ai-applications#time=08m54s) - How Defender for Cloud helps to secure generative AI apps?
 - [15:42](/shows/mdc-in-the-field/secure-ai-applications#time=15m42s) - Demonstration
 
 ## Recommended resources

@@ -12,7 +12,7 @@ When a vulnerability is identified in a container image, whether it’s stored i
 
 ## Prerequisites
 
-- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - For Azure DevOps:
 
   - [Microsoft Security DevOps (MSDO) Extension](azure-devops-extension.yml) must be installed on the Azure DevOps organization. 

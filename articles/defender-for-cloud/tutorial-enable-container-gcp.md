@@ -60,7 +60,17 @@ You can learn more about Defender for Container's pricing on the [pricing page](
       - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud recommendations page. [Learn how to deploy the solution to specific clusters](defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
       - Manually install [Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
-    - [**K8S API access**](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+   - **[K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work)** sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+   
+   
+     > [!NOTE]
+     > Kubernetes API access requires inbound connectivity from Microsoft Defender for Cloud to the cluster’s API server over the internet.
+     > For clusters that expose a public API endpoint with an access allowlist, Microsoft Defender for Cloud will automatically attempt to add the following IP ranges to the allowlist:
+     > `172.212.245.192/28`
+     > 
+     > `48.209.1.192/28`
+     
+     
     - [**Registry access**](agentless-vulnerability-assessment-gcp.md) sets permissions to allow vulnerability assessment of images stored in Google Registries (GAR and GCR). To enable, set the **Registry access** toggle to **On**.
 
 1. Select the **Copy** button.

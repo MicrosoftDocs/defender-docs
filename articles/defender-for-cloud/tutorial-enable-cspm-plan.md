@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable Defender CSPM on your Azure subscription for Microsoft Defender for Cloud and enhance your security posture.
 ms.topic: install-set-up-deploy
-ms.date: 07/14/2025
+ms.date: 09/28/2025
 ---
 
 # Protect your resources with Defender CSPM
@@ -85,6 +85,12 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 1. Select **Continue**.
 
 For code to cloud contextualization capabilities and automated developer remediation workflows that come with your Defender CSPM plan at no additional cost, [connect your DevOps environments](defender-for-devops-introduction.md) to Defender for Cloud.
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 

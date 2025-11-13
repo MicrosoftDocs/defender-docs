@@ -2,7 +2,7 @@
 title: Protect your on-premises Kubernetes clusters with Defender for Containers
 description: Learn how to enable the Defender for Containers plan on your on-premises devices for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 05/13/2025
+ms.date: 09/07/2025
 ---
 
 # Protect your on-premises Kubernetes clusters with Defender for Containers
@@ -28,6 +28,7 @@ You can learn more about Defender for Container's pricing on the [pricing page](
     | *.ods.opinsights.azure.com | 443  |
     | *.oms.opinsights.azure.com | 443  |
     | login.microsoftonline.com  | 443  |
+    | *.cloud.defender.microsoft.com | 443 |
 
 - [Connect the Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster)
 

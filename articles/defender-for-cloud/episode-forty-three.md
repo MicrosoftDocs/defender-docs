@@ -2,7 +2,7 @@
 title: Unified insights from Microsoft Entra permissions management | Defender for Cloud in the field
 description: Learn about unified insights from Microsoft Entra permissions management
 ms.topic: reference
-ms.date: 01/24/2024
+ms.date: 10/05/2025
 ---
 
 # Unified insights from Microsoft Entra permissions management

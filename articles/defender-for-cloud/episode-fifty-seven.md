@@ -2,7 +2,7 @@
 title: Onboarding Docker Hub and JFrog Artifactory
 description: Learn how to onboard Docker Hub and JFrog Artifactory.
 ms.topic: reference
-ms.date: 02/19/2025
+ms.date: 10/05/2025
 ---
 
 # Onboarding Docker Hub and JFrog Artifactory

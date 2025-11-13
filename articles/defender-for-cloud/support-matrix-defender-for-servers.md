@@ -5,10 +5,12 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 08/03/2025
+ms.date: 10/29/2025
 ---
 
 # Defender for Servers support
+
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 This article summarizes support information for the Defender for Servers plan in Microsoft Defender for Cloud.
 
@@ -60,7 +62,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 
 The following table shows feature support for Windows machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[VM Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2025, 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ | Yes |
@@ -68,7 +70,6 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
-| [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | - | - | Yes |
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
@@ -85,7 +86,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 
 The following table shows feature support for Linux machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[VM Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled machines** | **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled machines** | **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ <br> ([supported versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux)) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](./azure-defender.md) | ✔</br> Supported versions | ✔ | Yes |
@@ -93,7 +94,6 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
-| [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | ✔ | ✔ | Yes |
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
@@ -116,9 +116,8 @@ The following table shows feature support for AWS and GCP machines.
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
-| [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
+| [Just-in-time VM access](enable-just-in-time-access.md) | ✔ | - |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
-| [Network map](protect-network-resources.md#network-map) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
 | [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |

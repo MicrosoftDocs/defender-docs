@@ -34,7 +34,7 @@ Agentless scanning is available in the following Defender for Cloud plans:
 
 Here's how agentless scanning works:
 
-1. Defender for Cloud takes snapshots of VM disks and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot.
+1. Defender for Cloud takes snapshots of VM disks (root + data disk) and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot.
 
     - The copied snapshot remains in the same region as the VM.
     - The scan doesn't affect the VM.
