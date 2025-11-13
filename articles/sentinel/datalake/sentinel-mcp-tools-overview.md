@@ -17,7 +17,7 @@ ms.service: microsoft-sentinel
 > Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Microsoft Sentinel’s Model Context Protocol (MCP) Server collections are logical groupings of related security-focused MCP tools that you can use in any [compatible client](sentinel-mcp-get-started.md#supported-code-editors-and-agent-platforms) to search and retrieve data from tables and create agents.
+Microsoft Sentinel’s Model Context Protocol (MCP) Server collections are logical groupings of related security-focused MCP tools that you can use in any [compatible client](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools) to search and retrieve data from tables and create agents.
 
 Our collections are scenario-focused and have security-optimized descriptions that help AI models pick the right tools and deliver those outcomes. For example, you can use the following sample prompts to get the appropriate tool:
 - Find the top three users that are at risk and explain why they're at risk.

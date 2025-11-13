@@ -48,7 +48,7 @@ For example, Visual Studio Code acts as an MCP host. When Visual Studio Code est
 
 ## Scenarios for using Microsoft Sentinel’s MCP collections
 
-When you connect a [compatible client](sentinel-mcp-get-started.md#supported-code-editors-and-agent-platforms) with Microsoft Sentinel’s MCP collections, you can use tools to:
+When you connect a [compatible client](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools) with Microsoft Sentinel’s MCP collections, you can use tools to:
 
 - **Interactively explore long term security data**: Security analysts and threat hunters, like those focusing on identity-based attacks, need to quickly query and correlate data across various security tables. Today, they must have knowledge of all tables and what data each table contains. With our data exploration collection, analysts can now use natural language prompts to search and retrieve relevant data from tables in Microsoft Sentinel data lake without needing to remember tables and their schema or writing well-formed Kusto Query Language (KQL) queries.  
 
