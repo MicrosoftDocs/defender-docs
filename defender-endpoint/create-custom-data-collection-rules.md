@@ -1,6 +1,6 @@
 ---
-title: Custom data collection in Microsoft Defender for Endpoint
-description: Custom data collection allows organizations to tailor telemetry collection to their specific threat hunting needs with customizable filters and enhanced visibility.
+title: Create custom data collection rules in Microsoft Defender for Endpoint
+description: Learn how to create and manage custom data collection rules in Microsoft Defender for Endpoint to enhance your threat hunting capabilities.
 ms.service: defender-endpoint
 f1.keywords: 
   - NOCSH
@@ -13,7 +13,7 @@ ms.collection:
   - m365-security
   - tier1
   - usx-security
-ms.topic: concept-article
+ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
@@ -22,13 +22,15 @@ appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-# Custom data collection in Microsoft Defender for Endpoint (Preview)
+# Create custom data collection rules in Microsoft Defender for Endpoint (Preview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Custom data collection (Preview) enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs. This feature allows security teams to define specific collection rules with tailored filters for event properties such as folder paths, process names, and network connections.
+[Custom data collection (Preview)](custom-data-collection.md) enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs.
 
-This article provides an overview of custom data collection so that you can understand its capabilities and how it enhances your security visibility and threat hunting operations.
+Custom data collection rules allow you to define specific events to capture and analyze. Custom data collection rules are based on tailored filters for event properties such as folder paths, process names, and network connections.
+
+This article shows you how to create and manage custom data collection rules in the Microsoft Defender portal.
 
 ## Collection rules and filtering
 
