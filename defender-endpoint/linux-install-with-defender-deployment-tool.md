@@ -32,15 +32,16 @@ The defender-deployment tool supports both manual and bulk onboarding through th
 
 Before you get started, see [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. Additionally, the following requirements also need to be met:
 
-- Allow the connection to the URL: msdefender.download.prss.microsoft.com. Before you begin deployment, make sure to run the connectivity test, which checks if the URLs Defender for Endpoint uses are accessible or not.
-- The endpoint should have either **wget** or **curl** installed.
+- Allow connection to the URL: `msdefender.download.prss.microsoft.com`. Before you begin deployment, make sure to run the [connectivity test](#check-connectivity-issues), which checks if the URLs Defender for Endpoint uses are accessible or not.
+- The endpoint must have either **wget** or **curl** installed.
 
 
 The Defender deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
-- Memory > 1 GB
-- Available disk space > 2GB
-- Glibc library version newer than 2.17
-- The requested mdatp version should be a supported version and not expired. You can run command - mdatp health to check product expiration date. 
+
+- Device memory: Greater than 1 GB
+- Available disk space on the device: Greater than 2GB
+- Glibc library version on the device: Newer than 2.17
+- mdatp version on the device: Must be a supported version and not expired. To check product expiration date,, run the command `-mdatp health`.
 
 
 ## Deployment: Step-by-step guide
@@ -56,7 +57,7 @@ The Defender deployment tool enforces the following set of prerequisites checks,
       >[!NOTE]
       >Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
 
-      :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button.":::
+      :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button." lightbox="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png":::
 
 1. From a command prompt, extract the contents of the archive:
 
@@ -89,21 +90,23 @@ The Defender deployment tool enforces the following set of prerequisites checks,
     ./defender-deployment-tool.sh --help
    ```
 
-   :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output.":::
+   :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output." lightbox="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png":::
 
-| **Scenarios** | **Command** |
+The following table provides examples of commands for useful scenarios.
+
+| **Scenario** | **Command** |
 |:-------------|:------------|
 | Check for unmet non-blocking prerequisites | `sudo ./defender-deployment-tool.sh --pre-req-non-blocking` |
-| Run connectivity test | `sudo ./defender-deployment-tool.sh --connectivity-test` |
+| Run the connectivity test | `sudo ./defender-deployment-tool.sh --connectivity-test` |
 | Deploy to a custom location | `sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/` |
-| Deploy from insider-slow channel | `sudo ./defender-deployment-tool.sh --channel insiders-slow` |
-| Deploy using proxy | `sudo ./defender-deployment-tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
+| Deploy from the insider-slow channel | `sudo ./defender-deployment-tool.sh --channel insiders-slow` |
+| Deploy using a proxy | `sudo ./defender-deployment-tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
 | Deploy a specific agent version | `sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod` |
 | Upgrade to a specific agent version | `sudo ./defender-deployment-tool.sh --upgrade --mdatp 101.24082.0004` |
 | Downgrade to a specific agent version | `sudo ./defender-deployment-tool.sh --downgrade --mdatp 101.24082.0004` |
 | Uninstall Defender | `sudo ./defender-deployment-tool.sh --remove` |
-| Only onboard in case Defender is already installed | `sudo ./defender-deployment-tool.sh --only-onboard` |
-| Offboard Defender | `sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
+| Only onboard if Defender is already installed | `sudo ./defender-deployment-tool.sh --only-onboard` |
+| Offboard Defender | `sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender portal)* |
 
 ## Verify deployment status
 
@@ -163,21 +166,18 @@ The Defender deployment tool enforces the following set of prerequisites checks,
     1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
 ## How to switch between channels after you have deployed from a channel
-[DESCRIPTION]
 
 Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as \[channel\]):
 
 - insiders-fast
 - insiders-slow
-- prod
+- prod (production)
 
-Each of these channels corresponds to a Linux software repository. The instructions in this document describe configuring your device to use one of these repositories.
+Each of these channels corresponds to a Linux software repository. The channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
 
-The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
+By default, the deployment tool configures your device to use the prod channel. You can use the configuration options described in this document to deploy from a different channel.
 
-To preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either insiders-fast or insiders-slow.
-
-For example, to change channel from insiders-fast to production, do the following:
+To preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either insiders-fast or insiders-slow. If you've already deployed Defender for Endpoint on Linux from a channel and want to switch to a different channel (from prod to insiders-fast, for example), you must first remove the current channel, then delete the current channel repo, and then finally install Defender from the new channel, as illustrated in the following example, where the channel is changed from insiders-fast to prod:
 
 1. Remove the insiders-fast channel version of Defender for Endpoint on Linux..
 
@@ -185,13 +185,13 @@ For example, to change channel from insiders-fast to production, do the followin
    sudo ./defender-deployment-tool.sh --remove --channel insiders-fast
    ```
 
-2. Delete the Defender for Endpoint on the Linux insiders-fast repo.
+1. Delete the Defender for Endpoint on the Linux insiders-fast repo.
 
    ```bash
    sudo ./defender-deployment-tool.sh --clean --channel insiders-fast
    ```
 
-3. Install Microsoft Defender for Endpoint on Linux using the production channel.
+1. Install Microsoft Defender for Endpoint on Linux using the production channel.
 
    ```bash
    sudo ./defender-deployment-tool.sh --install --channel prod
