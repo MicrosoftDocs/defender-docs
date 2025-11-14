@@ -24,7 +24,9 @@ appliesto:
 
 # Onboard Windows devices using the Defender deployment tool
 
-TBD
+The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for all Windows versions supported by Defender for Endpoint. The tool takes care of prerequisites, automates migrations from older solutions, and can remove the need for complex onboarding scripts, separate downloads, and manual installations.
+
+Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. The tool also provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools that include the use of group policies.
 
 ## Supported operating systems
 
@@ -70,9 +72,13 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
    :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
 
    > [!NOTE] 
-   > For offboarding, select **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Offboarding** button in the **Deploy by downloading and applying packages or files** section. The Offboarding button downloads the offboarding file package only - it does not download the Defender executable, as the executable is the same for both onboarding and offboarding.
+   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it does not download the Defender executable, as the executable is the same for both onboarding and offboarding.
 
 ## Install Defender for Endpoint on the device
+
+The Defender deployment tool can be used interactively or non-interactively.
+
+Interactive installation 
 
 - Downloading the tool and the onboarding/offboarding file package.
 
