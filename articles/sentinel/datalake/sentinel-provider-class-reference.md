@@ -74,7 +74,7 @@ data_provider.list_tables()
 List all tables in a specific database. Specify the `database_id` of the database if your workspace names aren't unique:
 
 ```python
-data_provider.list_tables("workspace1", id="ab1111112222ab333333")
+data_provider.list_tables("workspace1", database_id="ab1111112222ab333333")
 ```
 
 
@@ -127,7 +127,7 @@ Returns:
 
 Examples:
 
-Create new custom table in the data lake tier in the `lakeworkspace` workspace.
+Create new custom table in the data lake tier in the `System tables` workspace.
 
 ```python
 data_provider.save_as_table(dataframe, "CustomTable1_SPRK", "System tables")
@@ -178,7 +178,7 @@ Returns:
 
 Example:
 ```python
-data_provider.delete_table("customtable_SPRK", "lakeworkspace")
+data_provider.delete_table("customtable_SPRK", "System tables")
 ``` 
 
 
