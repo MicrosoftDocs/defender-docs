@@ -50,13 +50,15 @@ Custom data collection supports three event tables. Each event table uses the sa
 
 This is the typical data flow for custom data collection:
 
-1. **Rule creation**: Define collection rules in the Microsoft Defender portal with specific filters and device targets.
-2. **Rule deployment**: Rules are transmitted to targeted endpoints, typically within 20 minutes to 1 hour.
-3. **Event collection**: Endpoints collect events matching your rule criteria alongside default telemetry.
-4. **Data routing**: Custom event data flows to your connected Microsoft Sentinel workspace.
-5. **Analysis**: Query custom data using DeviceCustom* tables (DeviceCustomFileEvents, DeviceCustomScriptEvents).
+1. Define collection rules in the Microsoft Defender portal with specific filters and device targets.
+2. Rules are transmitted to targeted endpoints, typically within 20 minutes to one hour.
+3. Endpoints collect events matching your rule criteria alongside default telemetry.
+4. Custom event data flows to your connected Microsoft Sentinel workspace.
+5. Query custom data using the supported event tables to learn about specific activities on your endpoints.
 
 ## Example scenarios
+
+This section describes some example scenarios where custom data collection can enhance your threat hunting capabilities. For specific queries in advanced hunting, see [Analyze event data](create-custom-data-collection-rules.md#analyze-event-data).
 
 ### Enhanced file monitoring
 
