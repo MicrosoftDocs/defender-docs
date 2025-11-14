@@ -59,9 +59,19 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 > [!NOTE]
 > *For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender release that will be installed is currently in public preview. For more information about the Defender agent for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
 
-## Installation
+## Download the tool
 
-Download and installation instructions
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
+
+1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This will download the Defender executable and the onboarding file package.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
+
+   > [!NOTE] 
+   > For offboarding, select **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Offboarding** button in the **Deploy by downloading and applying packages or files** section. The Offboarding button downloads the offboarding file package only - it does not download the Defender executable, as the executable is the same for both onboarding and offboarding.
+
 Using the tool to onboard devices involves
 
 - Downloading the tool and the onboarding/offboarding file package.
