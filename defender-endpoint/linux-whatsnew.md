@@ -55,7 +55,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 What's new
 
-- Added support for CentOS Stream 9, CentOS Stream 10 and RHEL 10.
+- Added support for RHEL 10.
 
 - Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability.
 
