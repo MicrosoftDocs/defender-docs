@@ -44,7 +44,7 @@ Custom data collection supports three event tables. Each event table uses the sa
 
 - **DeviceCustomFileEvents**: Stores data on file creation, modification, deletion, and access activities. For the list of columns, review the [DeviceFileEvents](/defender-xdr/advanced-hunting-devicefileevents-table) table reference.
 - **DeviceCustomNetworkEvents**: Stores data on network connection events, including IP addresses, ports, and protocols. For the list of columns, review the [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table) table reference.
-- **DeviceCustomScriptEvents**: Stores data on script execution activities through Antimalware Scan Interface (AMSI). For the list of columns, review the [DeviceEvents](/defender-xdr/advanced-hunting-devicescriptevents-table) table reference.
+- **DeviceCustomScriptEvents**: Stores data on script execution activities through Antimalware Scan Interface (AMSI). For the list of columns, review the [DeviceEvents](/defender-xdr/advanced-hunting-deviceevents-table) table reference.
 
 ## Data flow and integration
 
