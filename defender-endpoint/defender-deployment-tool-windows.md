@@ -32,7 +32,7 @@ The Defender deployment tool supports the following operating systems: Windows 7
 
 While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s devices, note the following considerations:
 
-- The Defender for Endpoint agent that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is different than the agent that is installed on newer versions of Windows and Windows Server. For more information about the agent, see [./onboard-downlevel.md](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
+- The Defender for Endpoint agent that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is different than the agent that is installed on newer versions of Windows and Windows Server. For more information about the agent, see [Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
 
 - When using the deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices there are a number of additional prerequisites, known issues, and considerations and limitation to be aware of. See the relevant sections in this article. 
 
@@ -46,7 +46,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 - Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. It is the same domain that is required for product updates.
 
-- Devices to be onboarded should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services. Regardless, for proper operation of services, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](./configure-environment.md), as there may be additional connectivity requirements.
+- Devices to be onboarded should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services. Regardless, for proper operation of services, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](./configure-environment.md), as other connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com*, apply to (additional) functionality you might want to use with the product.
 
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
