@@ -74,11 +74,11 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 1. Select the action for which you want to collect data.
 1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
 
-  > [!NOTE] If you use the **Not equals** operator, this selects all events. To avoid collecting all events, combine it with other conditions.
+> [!NOTE] If you use the **Not equals** operator, this selects all events. To avoid collecting all events, combine it with other conditions.
 
 1. Select whether you want to collect data from all applicable client devices or from specific devices that include tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
 
-   > [!TIP] To view devices where the tag is applied, select **Devices** > **Device inventory**, and filter by the tag name. You can also see the tag in the device details page.
+> [!TIP] To view devices where the tag is applied, select **Devices** > **Device inventory**, and filter by the tag name. You can also see the tag in the device details page.
 
 It can take up to an hour for the rule to be deployed to the targeted devices.
 

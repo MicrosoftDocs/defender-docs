@@ -81,6 +81,6 @@ Expand visibility into script-based attacks:
 
 ## Next steps
 
-- Learn how to [create and manage custom data collection rules](configure-custom-data-collection.md)
+- Learn how to [create and manage custom data collection rules](create-custom-data-collection-rules.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
