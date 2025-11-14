@@ -41,7 +41,7 @@ The Defender deployment tool enforces the following set of prerequisites checks,
 - Device memory: Greater than 1 GB
 - Available disk space on the device: Greater than 2GB
 - Glibc library version on the device: Newer than 2.17
-- mdatp version on the device: Must be a supported version and not expired. To check product expiration date,, run the command `-mdatp health`.
+- mdatp version on the device: Must be a supported version and not expired. To check product expiration date, run the command `-mdatp health`.
 
 
 ## Deployment: Step-by-step guide
