@@ -42,8 +42,9 @@ To create custom data collection rules, see [Create custom data collection rules
 
 Custom data collection currently supports three primary event tables:
 
-- **DeviceCustomFileEvents**: Handles file creation, modification, deletion, and access activities.
-- **DeviceCustomScriptEvents**: Handles script execution activities through Antimalware Scan Interface (AMSI).
+- **DeviceCustomFileEvents**: Stores data on file creation, modification, deletion, and access activities.
+- **DeviceCustomNetworkEvents**: Stores data on network connection events, including IP addresses, ports, and protocols.
+- **DeviceCustomScriptEvents**: Stores data on script execution activities through Antimalware Scan Interface (AMSI).
 
 ## Data flow and integration
 
