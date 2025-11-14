@@ -28,7 +28,7 @@ appliesto:
 
 [Custom data collection (Preview)](custom-data-collection.md) enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs.
 
-Custom data collection rules allow you to define specific events to capture and analyze, to enhance your security visibility and threat hunting operations. Custom data collection rules are based on tailored filters for event properties such as folder paths, process names, and network connections.
+Custom data collection rules allow you to define specific events and analyze the data to enhance your security visibility and threat hunting operations. Custom data collection rules are based on tailored filters for event properties such as folder paths, process names, and network connections.
 
 This article shows you how to create and manage custom data collection rules in the Microsoft Defender portal.
 
@@ -38,8 +38,8 @@ This article shows you how to create and manage custom data collection rules in 
 
 To use custom data collection, you need:
 
-- Microsoft Defender for Endpoint P2 license.
-- Connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying.
+- A Microsoft Defender for Endpoint P2 license.
+- A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying.
 - Minimum client version: 10.8797 (Windows only).
 - Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
 
@@ -47,12 +47,11 @@ To use custom data collection, you need:
 
 - **Windows**: Minimum client version 10.8797
 - **Windows 10**: Requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
-- **Linux and macOS**: Planned for future releases
 
 ### Performance and limits
 
 - Collection rules are limited to 25,000 events each for performance protection.
-- Rule deployment typically takes 20 minutes to 1 hour.
+- Rule deployment typically takes 20 minutes to one hour.
 - Custom collection operates alongside default Defender for Endpoint configuration without interference.
 
 ### Data costs
@@ -63,7 +62,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**.
 
-1. Select the **Enhance event collection** note to connect you Microsoft Sentinel workspace.    
+1. If your Microsoft Sentinel workspace isn't connected, select the **Enhance event collection** note to connect your Microsoft Sentinel workspace.
 
     > [!NOTE]
     > You can currently only connect one Microsoft Sentinel workspace.
@@ -75,7 +74,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
 
     > [!NOTE]
-    > If you use the **Not equals** operator, this selects all events. To avoid collecting all events, combine it with other conditions.
+    > If you use the **Not equals** operator, this selects all events. To avoid using large data volumes, combine it with other conditions.
 
 1. Select whether you want to collect data from all applicable client devices or from specific devices that include tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
 
@@ -95,7 +94,7 @@ If rules aren't working as expected:
 Review these considerations when monitoring and troubleshooting custom data collection rules:
 
 - [Endpoint detection and response (EDR) exclusions](navigate-defender-endpoint-antivirus-exclusions.md) may override custom collection rules.
-- Dynamic tags update approximately every hour. Check the **Custom collection** > **Last run time** column for status.
+- Dynamic tags update approximately every hour. Check the **Custom collection** > **Last run time** column for the status.
 
 ## Query custom data in advanced hunting
 
