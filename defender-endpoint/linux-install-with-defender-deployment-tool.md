@@ -1,6 +1,6 @@
 ---
-title: Onboard Microsoft Defender for Endpoint on Linux devices using the Defender deployment tool
-description: Describes how to deploy Microsoft Defender for Endpoint on Linux using the Defender deployment tool.
+title: Deploy Microsoft Defender on Linux devices using the Defender deployment tool
+description: Describes how to deploy Microsoft Defender on Linux using the Defender deployment tool.
 ms.reviewer: meghapriya
 ms.service: defender-endpoint
 ms.author: painbar
@@ -22,27 +22,26 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Onboard Microsoft Defender for Endpoint on Linux devices using the Defender deployment tool
+# Deploy Microsoft Defender on Linux devices using the Defender deployment tool
 
 The Defender deployment tool provides an efficient, user-friendly onboarding process for Microsoft Defender for Endpoint on Linux devices. It allows users to install and onboard Microsoft Defender for Endpoint using a single package that can be downloaded from the Microsoft Defender portal. This eliminates the need to install Defender using installer script/cli commands and then, separately, to onboard the device using the onboarding package from the portal.
 
-The defender-deployment tool package supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack, and consolidates all necessary onboarding related packages and documentation in one location. The tool supports parameters you can use to customize large scale deployments, making it possible to have tailored installations across diverse environments. 
+The defender-deployment tool supports both manual and bulk onboarding through third-party tools such as Chef, Ansible, Puppet, and SaltStack. The tool supports several parameters you can use to customize large scale deployments, making it possible to have tailored installations across diverse environments. 
 
 ## Prerequisites and system requirements
 
-Before you get started, see [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. The Defender deployment tool enforces the following set of blocking prerequisites checks:
+Before you get started, see [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. Additionally, the following requirements also need to be met:
 
+- Allow the connection to the URL: msdefender.download.prss.microsoft.com. Before you begin deployment, make sure to run the connectivity test, which checks if the URLs Defender for Endpoint uses are accessible or not.
+- The endpoint should have either **wget** or **curl** installed.
+
+
+The Defender deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
 - Memory > 1 GB
 - Available disk space > 2GB
 - Glibc library version newer than 2.17
-- The requested mdatp version should be one of the latest nine versions.
+- The requested mdatp version should be a supported version and not expired. You can run command - mdatp health to check product expiration date. 
 
-There is also an option to run a connectivity test, which checks if the URLs Defender for Endpoint uses are accessible or not.
-
-Additionally, the following requirements also need to be met:
-
-- Allow the connection to the URL: msdefender.download.prss.microsoft.com
-- The endpoint should have either **wget** or **curl** installed.
 
 ## Deployment: Step-by-step guide
 
@@ -82,30 +81,29 @@ Additionally, the following requirements also need to be met:
    sudo bash defender-deployment-tool.sh
    ```
 
-   This command installs the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
+   This command installs the latest agent version from the production channel and onboard the device to Defender portal. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
 
-1. You can further modify or control onboarding by passing parameters based on your requirements. Use the option `--help` to see all the available options:
+1. You can further customize deployment by passing parameters to the tool based on your requirements. Use the option `--help` to see all the available options:
 
    ```bash
-   > ./defender-deployment-tool.sh --help
+    ./defender-deployment-tool.sh --help
    ```
 
    :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output.":::
 
-| **Scenario** | **Command** |
+| **Scenarios** | **Command** |
 |:-------------|:------------|
-| Check for unmet blocking prerequisites | No special command required. Blocking prerequisite checks run by default as part of the install scenario<br>`sudo ./defender-deployment-tool.sh` |
 | Check for unmet non-blocking prerequisites | `sudo ./defender-deployment-tool.sh --pre-req-non-blocking` |
 | Run connectivity test | `sudo ./defender-deployment-tool.sh --connectivity-test` |
-| Custom install | `sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/` |
-| Example for insider-slow channel | `sudo ./defender-deployment-tool.sh --channel insiders-slow` |
-| Install using proxy | `sudo ./defender-deployment-tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
-| Install a specific agent version | `sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod` |
+| Deploy to a custom location | `sudo ./defender-deployment-tool.sh --install-path /usr/microsoft/` |
+| Deploy from insider-slow channel | `sudo ./defender-deployment-tool.sh --channel insiders-slow` |
+| Deploy using proxy | `sudo ./defender-deployment-tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
+| Deploy a specific agent version | `sudo ./defender-deployment-tool.sh --mdatp 101.25042.0003 --channel prod` |
 | Upgrade to a specific agent version | `sudo ./defender-deployment-tool.sh --upgrade --mdatp 101.24082.0004` |
 | Downgrade to a specific agent version | `sudo ./defender-deployment-tool.sh --downgrade --mdatp 101.24082.0004` |
-| Uninstall agent | `sudo ./defender-deployment-tool.sh --remove` |
-| Only onboard in case agent is already installed | `sudo ./defender-deployment-tool.sh --only-onboard` |
-| Offboard the agent | `sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
+| Uninstall Defender | `sudo ./defender-deployment-tool.sh --remove` |
+| Only onboard in case Defender is already installed | `sudo ./defender-deployment-tool.sh --only-onboard` |
+| Offboard Defender | `sudo ./defender-deployment-tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender Portal)* |
 
 ## Verify deployment status
 
@@ -164,7 +162,8 @@ Additionally, the following requirements also need to be met:
 
     1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
-## How to switch between channels
+## How to switch between channels after you have deployed from a channel
+[DESCRIPTION]
 
 Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as \[channel\]):
 
