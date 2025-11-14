@@ -34,7 +34,7 @@ This article shows you how to create and manage custom data collection rules in 
 
 ## Create custom data collection rules
 
-## Prerequisites
+### Prerequisites
 
 To use custom data collection, you need:
 
@@ -58,7 +58,7 @@ To use custom data collection, you need:
 
 Custom data collection is included with Microsoft Defender for Endpoint P2 licensing. However, data ingestion into Microsoft Sentinel workspaces incurs charges based on your Sentinel billing arrangement.
 
-## Create rules
+### Create rules
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**.
 
@@ -83,7 +83,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
 It can take up to an hour for the rule to be deployed to the targeted devices.
 
-## Monitor and Troubleshoot
+## Monitor and troubleshoot
 
 If rules aren't working as expected:
 
@@ -98,7 +98,7 @@ Review these considerations when monitoring and troubleshooting custom data coll
 
 ## Query custom data in advanced hunting
 
-You can query the data collected by custom data collection rules in advanced hunting to analyze and investigate specific events.
+You can use advanced hunting queries to analyze the data collected by custom data collection rules and investigate specific events.
 
 ### Analyze event data
 
