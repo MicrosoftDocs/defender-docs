@@ -72,7 +72,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
    > [!NOTE] 
    > For offboarding, select **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Offboarding** button in the **Deploy by downloading and applying packages or files** section. The Offboarding button downloads the offboarding file package only - it does not download the Defender executable, as the executable is the same for both onboarding and offboarding.
 
-Using the tool to onboard devices involves
+## Install Defender for Endpoint on the device
 
 - Downloading the tool and the onboarding/offboarding file package.
 
