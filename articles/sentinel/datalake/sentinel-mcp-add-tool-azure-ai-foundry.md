@@ -53,9 +53,12 @@ To add a Microsoft Sentinel tool collection in Azure AI Foundry, follow these st
 1. Go to **Tools**.
 1. Search for Sentinel tools and select the one you want to use.
 1. Select **Connect** to authenticate and authorize the tool.
+
+    :::image type="content" source="media/sentinel-mcp/get-started-foundry-use-agent.png" alt-text="Screenshot of a tool's page in Azure AI Foundry page with Connect button highlighted." lightbox="media/sentinel-mcp/get-started-foundry-use-agent.png":::   
+
 1. Select **Use in agent** then select the agent you want to use tool with.
 
-:::image type="content" source="media/sentinel-mcp/get-started-foundry-use-agent.png" alt-text="Screenshot of a tool's page in Azure AI Foundry page with Use in agent button highlighted." lightbox="media/sentinel-mcp/get-started-foundry-use-agent.png":::   
+
 
 ## Add a custom tool collection
 
