@@ -42,7 +42,7 @@ To add a Microsoft Sentinel tool collection in Copilot Studio, follow these step
 
 1. Make sure that the **Authentication type** is set to **Microsoft Entra ID Integrated**, then select **Create**.
 
-     :::image type="content" source="media/sentinel-mcp/get-started-studio-select-tool.png" alt-text="Screenshot of the Add tool pop-up window in Copilot Studio showing the authentication type step." lightbox="media/sentinel-mcp/get-started-studio-select-tool.png":::   
+     :::image type="content" source="media/sentinel-mcp/get-started-studio-authenticate.png" alt-text="Screenshot of the Add tool pop-up window in Copilot Studio showing the authentication type step." lightbox="media/sentinel-mcp/get-started-studio-authenticate.png":::   
 
 1. Select **Add and configure**.
 
