@@ -97,19 +97,34 @@ Review these considerations when monitoring and troubleshooting custom data coll
 
 ## Query custom data in advanced hunting
 
-You can query the data collected by custom data collection rules in advanced hunting.
+You can query the data collected by custom data collection rules in advanced hunting to analyze and investigate specific events.
 
-Consider these example queries.
+### Analyze event data
 
-Query the **CustomCollectionFiles** table to see the collection files created by the background task scheduler. This scheduler creates and deletes files every five minutes.
+Query the **DeviceCustomFileEvents** table to see the collection files created by the background task scheduler. This scheduler creates and deletes files every five minutes.
 
 TBD - query
 
-Hunt for the content of the script that created and deleted the files:
+The events use a similar schema and properties as the default events in the [DeviceFileEvents table](/defender-xdr/advanced-hunting-devicefileevents-table), including existing enrichments.
 
-You can then inspect the record and the rule name, which indicates that custom data collection ran as part of this process.
+In the query results, review the following data:
 
-## Edit custom data collection rules
+- The **fileExtension** column is set to **defenderforendpoint** and the **ActionType** is set to **FileDeleted** or **FileCreate**. This indicates that the file was created or deleted by the custom data collection rule.
+- The **RuleName** and **RuleLastModificationTime** columns allow you to identify which rules are applied to a specific endpoint.
+- When you inspect a record, the remote session information in the **InitiatingProcessRemoteSessionDeviceName** and the **InitiatingProcessRemoteSessionIP** shows the remote device name and IP address of the machine that initiated the file creation or deletion.
+
+### Analyze script execution data
+
+Query the **DeviceCustomScriptEvents** table to see the scripts that created and deleted the collection files. 
+
+TBD - query
+
+In the query results, review the following data:
+
+- The **ActionType** shows the action used by the script. In this example, the script uses the **AMSIScriptContent** action, which reflects the AMSI script filter that was initially configured in the rule settings. 
+- When you inspect a record, the **InitiatingProcessCommandLine** field includes the **CustomDataCollection** string, which indicates that custom data collection is used to run the script.
+
+## Edit, delete, and turn custom data collection rules on or off
 
 - To edit a rule, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**, select the rule you want to edit, and select **Edit**.
 - To delete a rule, select the rule you want to delete, and select **Delete**.
