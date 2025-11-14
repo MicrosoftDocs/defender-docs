@@ -600,13 +600,13 @@
           items:
           - name: Overview      
             href: datalake/sentinel-mcp-get-started.md
-          - name: Add MCP tools in Security Copilot   
+          - name: Use Sentinel MCP tools in Security Copilot   
             href: datalake/sentinel-mcp-add-tool-security-copilot.md
-          - name: Add MCP tools in Copilot Studio
+          - name: Use Sentinel MCP tools in Copilot Studio
             href: datalake/sentinel-mcp-add-tool-copilot-studio.md
-          - name: Add MCP tools in Azure AI Foundry
+          - name: Use Sentinel MCP tools in Azure AI Foundry
             href: datalake/sentinel-mcp-add-tool-azure-ai-foundry.md
-          - name: Add MCP tools in Visual Studio Code
+          - name: Use Sentinel MCP tools in Visual Studio Code
             href: datalake/sentinel-mcp-add-tool-visual-studio-code.md
         - name: Tool collection in Microsoft Sentinel MCP
           items:

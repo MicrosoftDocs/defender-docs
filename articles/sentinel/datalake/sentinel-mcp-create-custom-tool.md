@@ -39,11 +39,11 @@ To save a KQL query as an MCP tool, follow these steps:
         
         :::image type="content" source="media/sentinel-mcp/custom-tool-save-kql-box.png" alt-text="Screenshot of the Save as tool option in a KQL query box." lightbox="media/sentinel-mcp/custom-tool-save-kql-box.png":::
 
-1. In the MCP Custom Tool flyout panel that appears, enter the following details:
-    - **Tool name:** A discoverable name for your tool that helps AI models correctly identify and select the tool for specific tasks.
+1. In the **Save tool** flyout panel that appears, enter the following details:
+    - **Name:** A discoverable name for your tool that helps AI models correctly identify and select the tool for specific tasks.
    - **Description:** The description of the tool. Consider providing detailed examples that clearly illustrate the tool's purpose and intended use.
    - **Collection:** Choose whether you want to add the tool an existing tool collection or create a new one by selecting **Create new collection**. 
-    - **Workspace:** The default workspace you want your agent to use as a hint whenever a prompt doesn't specify any workspaces. 
+    - **Default workspace:** The default workspace you want your agent to use as a hint whenever a prompt doesn't specify any workspaces. 
     - **Parameters (optional):** The customizable inputs the tool supports. You can convert some of the values in your KQL query into parameters following the `{ParamaterName}` format, then add their **Parameter name** and **Description** so that the agent has a good understanding on how to populate them based on available conversation context.
 
     :::image type="content" source="media/sentinel-mcp/custom-tool-save-panel.png" alt-text="Screenshot of the MCP custom tool flyout panel in advanced hunting." lightbox="media/sentinel-mcp/custom-tool-save-panel.png":::

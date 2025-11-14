@@ -210,7 +210,7 @@ Get statistics for a given IP address, including the number of distinct devices 
 |---|---|---|
 | ipAddress |Yes | IP address to retrieve statistics for|
 
-### Get all devices that communicated wtih an IP address (`GetDefenderIpMachines`)   
+### Get all devices that communicated with an IP address (`GetDefenderIpMachines`)   
 
 List all devices that communicate with a specific IP address for network mapping and lateral movement analysis.
 
