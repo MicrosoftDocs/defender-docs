@@ -24,187 +24,47 @@ appliesto:
 
 # Onboard Windows devices using the Defender deployment tool
 
-The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for all Windows versions supported by Defender for Endpoint. The tool takes care of prerequisites, automates migrations from older solutions, and can remove the need for complex onboarding scripts, separate downloads, and manual installations.
+TBD
 
-Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. The tool also provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools that include the use of group policies.
+## Supported operating systems
 
-The deployment tool offers the following functionality:
+The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
 
-- Prerequisite handling: The tool checks for required updates and remediates blocking issues, ensuring that devices are ready for onboarding to Defender.
-- Log: All operations are logged locally in a detailed log.
-- Avoidance of redundant installations: If Defender for Endpoint is already present, the tool skips redundant installations.
-- UI feedback: Provides UI feedback with error descriptions instead of exit codes.
-- Passive mode support: On server operating systems and Windows 7, Defender Antivirus can be set to passive mode. This can be helpful when migrating from non-Microsoft antimalware solutions.
-- Automation: The tool supports a wide range of command-line options.
-- Device handling: Virtual Desktop Infrastructure (VDI) device support ensures that devices deleted and recreated under the same hostname can appear as a single device in the Defender portal.
-- Help: Built-in help function.
-- Configuration files: You can generate reusable configuration files which make bulk deployments more efficient and less error-prone.
-- The ability to work without connectivity: When connectivity is temporarily unavailable, offline onboarding and offboarding is possible.
+While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s devices, note the following considerations:
 
-## Prerequisites and system requirements
+- The Defender for Endpoint agent that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is different than the agent that is installed on newer versions of Windows and Windows Server. For more information about the agent, see [./onboard-downlevel.md](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
 
-- To download the tool, you need an account that has the manage portal settings permission.
-- A Defender for Endpoint tenant with public preview features enabled.
-- To run the tool, you need to be an administrator (add here the least privileged admin role).
-- [Network connectivity to Microsoft Defender cloud services](./configure-environment.md), including the definitionupdates.microsoft.com URL.
+- When using the deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices there are a number of additional prerequisites, known issues, and considerations and limitation to be aware of. See the relevant sections in this article. 
 
-### Operating systems
+## Prerequisites
 
-- Windows 11
-- Windows 10, version 1607 and newer
-- Windows Server 2019 and newer
-- Windows Server 2012*, 2012 R2 and 2016 (with minimum November 2018 monthly update rollup installed)
-- Windows 7 SP1* and Windows Server 2008 R2* with the KB4474419 update for SHA2 code signing [2019 SHA-2 Code Signing Support requirement for Windows and WSUS - Microsoft Support](https://support.microsoft.com/en-us/topic/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus-64d1c82d-31ee-c273-3930-69a4cde8e64f) and .NET framework 3.5 or later installed
+### General
+
+- Administrative privileges are required for most operations.
+
+- Preview features must be enabled on the tenant.
+
+- Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. It is the same domain that is required for product updates.
+
+- Devices to be onboarded should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services. Regardless, for proper operation of services, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](./configure-environment.md), as there may be additional connectivity requirements.
+
+### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
+
+- Devices to be onboarded must be running an x64 version of Windows 7 SP1 or Windows Server 2008 R2 SP1 with the latest updates installed.
+
+- For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum, the update KB4474419 for [SHA2 code signing](https://support.microsoft.com/topic/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus-64d1c82d-31ee-c273-3930-69a4cde8e64f) must be installed.
+
+- On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must be installed.
 
 > [!NOTE]
-> *For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender release that will be installed is currently in public preview. For more information, please reference [New Defender on legacy Windows operating systems]
+> *For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender release that will be installed is currently in public preview. For more information about the Defender agent for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
 
-## Using the deployment tool to onboard and offboard devices
+## Installation
 
-### Scenario 1: Standard deployment for single devices
+Download and installation instructions
+Using the tool to onboard devices involves
 
-#### Onboarding
+- Downloading the tool and the onboarding/offboarding file package.
 
-#### Offboarding
+- Running the tool to onboard the devices or devices.
 
-### Scenario 2: Customized or large-scale deployment
-
-## Options
-
-The DDT is a lightweight, self-updating application designed to streamline onboarding for all Windows versions supported by Defender for Endpoint. Whether you're managing Windows 7, Windows Server 2008 R2 or Windows 11, the tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, or manual installations.
-
-With a basic yet powerful user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. For larger deployments, the tool provides robust automation options with advanced command-line parameters, making it easy to integrate with orchestration platforms or custom deployment tools, inclusive of Group Policy, while leaving in place seamless experiences that are provided through other Microsoft solution integrations such as Intune and Defender for Cloud.
-
-A double-click experience is provided for simple, interactive, single-device onboarding -- but enterprise deployment scenarios are facilitated with advanced options through command line parameters and configuration files, to provide flexibility needed for adaptation to any deployment tool or method.
-
-## Features
-
-The following features are provided by the tool in release 0.0.1.9:
-
-### Standard functionality
-
-The following capabilities support most situations where the tool can be run without any specific configuration apart from providing the relevant onboarding file:
-
-- Basic user interface for a double-click interactive installation/onboarding sequence.
-
-- Automatic tool update on launch.
-
-- Prerequisite checks, automatic remediation of (potentially) blocking issues.
-
-- Automatic download of prerequisite updates and installation files as needed.
-
-- Automatic installation of updates and installation packages and the ability to resume after a (manual or if allowed, automatic) reboot if this is required
-
-- Automatic logging of events to a locally created verbose log (Defender deployment tool.log) and the Windows event log.
-
->[!NOTE]
-> The tool expects to be able to connect to Microsoft Defender for Endpoint cloud services to perform the functions mentioned above, and by default, will not proceed with operations if the connectivity check fails. There are, however, advanced command line features that provide solutions for scenarios where connectivity is (temporarily) unavailable; Note, however, that for proper Microsoft Defender for Endpoint operation, the connectivity to Microsoft Defender for Endpoint cloud servicesis needed regardless.
-
-### Advanced functionality
-
-These capabilities, provided through command line parameters, support automation/orchestration through software deployment tools and other methods that can execute scripts or executables with administrative permissions on devices:
-
-- Ability to perform a prerequisite check, logging results without proceeding with installation or onboarding steps.
-
-- Ability to install any required updates but not proceed with further installation or onboarding steps
-
-- Ability to download all installation files and updates to support staging (central storage and distribution scenarios)
-
-- Ability to point to a specific (staging) location to use previously downloaded installation files and updates for installation
-
-- Option to use onboarding/offboarding files stored in a different folder or network location
-
-- Controls to allow automatic reboots and disallow resuming after a required reboot
-
-- The ability to force an offline offboarding operation
-
-- Support for placing Defender Antivirus in passive mode on server operating systems, to support migration scenarios where a non-Microsoft antimalware solution is still in use.
-
-- "VDI" option to ensure devices that are deleted and created again with the same hostname, show as a single device in the portal.
-
-- Ability to configure a proxy for use during installation
-
-- Ability to generate a configuration file to allow definition of multiple parameters for reuse in tool runs ("answer file"). Check to ensure the configuration file is properly formatted before proceeding.
-
-- Option to remove a workspace connection in the Microsoft Monitoring Agent (MMA) if this was previously in use as the agent for legacy versions of MDE.
-
-- Verbose console output, and suppression of console windows.
-
-A full command line reference can be found by running:
-
-`activateMDE.exe -?` (version 1.9)
-
-`DefenderDT.exe -?` (version 1.10 and later)
-
-![A screenshot of a computer AI-generated content may be incorrect.](media/image7.png){width="6.5in" height="5.479861111111111in"}
-
-## Usage examples
-
-Note: if you downloaded "activateMDE.exe" instead of "DefenderDT.exe", replace the commands accordingly.
-
-- Run the Defender deployment tool without changing settings and without interacting with it:
-
-   `DefenderDT.exe -Quiet`
-
-- Use a *.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect via a proxy, and, if there is a required reboot, initiate it without asking. Do not show the console window.
-
-   `DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet`
-
-- Use a *.onboarding* file stored in a network location to perform the onboarding sequence. Do not show the console window.
-
-   `DefenderDT.exe -File:\\server\share\MDE.onboarding -Quiet`
-
-- Perform an offboarding operation. Do not ask for approval. Do not show console window.
-
-   `DefenderDT.exe -Offboard -File:c:\\Defender deployment tooltest\\WindowsDefenderATPOffboardingScript_valid_until_2025-04-02.offboarding -YES -Quiet`
-
-- Perform a prerequisite check and display verbose output without displaying a dialog box.
-
-   `DefenderDT.exe -PreCheck -Verbose -Quiet`
-
-- Download updates and installation files to be used for staging, to the current directory.
-
-   `DefenderDT.exe -Stage`
-
-- Create a configuration file, edit it and then use it to pass multiple parameters to the tool to perform an installation using staged installation files.
-
-   - Step 1: Generate a configuration file
-
-      `DefenderDT.exe -MakeConfig`
-
-   - Step 2: Use a text editor like Notepad to open the MdeConfig.txt file that was created in the directory and specify parameters you wish to use. Sample:
-
-
-   - Step 3: Run the tool with the configuration file (in our example, stored in the same directory as the tool). NOTE: since the file is in the same directory, there's no need to specify it.
-
-      `DefenderDT.exe`
-
-## Using Group Policy for deployment
-
-The following steps specify how to create a scheduled task to run the tool using group policy:
-
-1.  Place DefenderDT.exe and WindowsDefenderATP.onboarding on a shared location that can be accessed by the device. If you've previously created an MDEConfig.txt configuration file, place it in the same location.
-
-2.  To create a new GPO, open the [Group Policy Management Console](https://review.learn.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select New. Enter the name of the new GPO in the dialogue box that is displayed and click OK.
-
-3.  Open the [Group Policy Management Console](https://review.learn.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select Edit.
-
-4.  In the Group Policy Management Editor, go to Computer configuration \> Preferences \> Control panel settings.
-
-5.  Right-click Scheduled tasks, point to New, and then select **Immediate Task (At least Windows 7)**.
-
-6.  In the Task window that opens, go to the General tab.
-
-7.  Under Security options select *Change User or Group*, type **SYSTEM** and then select **Check Names** and select **OK**. NT AUTHORITY\\SYSTEM appears as the user account the task will run as.
-
-8.  Select *Run whether user is logged on or not* and check the *Run with highest privileges* check box.
-
-9.  In the Name field, type an appropriate name for the scheduled task.
-
-10. Go to the *Actions* tab and select New. Ensure that *Start a program* is selected in the *Action* field. Enter the full UNC path, using the file server\'s fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
-
-11. In the *Add arguments (optional)* field, enter the \[parameters\](# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file not in the working directory of the tool, specify the -file: parameter with the full UNC path to the onboarding file, for example -file: \\\\server\\share\\WindowsDefenderATP.onboarding.
-
-12. Select **OK** and close any open GPMC windows.
-
-13. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select *OK*.

@@ -135,6 +135,8 @@
               href: streamlined-device-connectivity-urls-gov.md                       
         - name: Onboard client devices
           items:
+          - name: Onboard Windows devices using the Defender deployment tool
+            href: defender-deployment-tool-windows.md
           - name: Onboard client devices running Windows or macOS
             href: onboard-client.md
           - name: Defender for Endpoint plug-in for WSL
@@ -174,9 +176,6 @@
             href: mde-linux-deployment-on-sap.md
           - name: Use custom detection rules to protect SAPXPG
             href: mde-sap-custom-detection-rules.md
-
-        - name: Onboard devices using the Defender deployment tool
-          href: defender-deployment-tool-windows.md
 
         - name: Defender for Endpoint on macOS
           items:

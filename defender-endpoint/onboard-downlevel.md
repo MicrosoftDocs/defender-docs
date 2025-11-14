@@ -59,7 +59,7 @@ The following steps are required to enable this integration:
 - Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
 - Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
 
-## Install the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
+## Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
 
 A Microsoft Defender for Endpoint agent for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md). The agent provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The deployment tool is a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations.
 
