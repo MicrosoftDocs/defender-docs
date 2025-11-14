@@ -110,18 +110,11 @@ To test if the installation succeeded successfully, you can perform the followin
 
 1. Check if services are running
 
-   `Sc.exe query sense`
-   `Sc.exe query windefend`
+   `Sc.exe query sense`<br>`Sc.exe query windefend`
 
    You should see something similar to the following for both services:
 
-   :::image type="content" source="{source}" alt-text="{alt-text}":::
-
-1. Check the Defender deployment tool log, or the following Windows event logs, for more information, including connectivity failures:
-
-   - Onboarding: Windows Logs > Application > Source: WDATPOnboarding
-
-   - Offboarding: Windows Logs > Application > Source: WDATPOffboarding
+   :::image type="content" source="{source}" alt-text="{alt-text}:::
 
 1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
 
