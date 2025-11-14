@@ -28,7 +28,7 @@ appliesto:
 
 Custom data collection (Preview) enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs. This feature allows security teams to define specific collection rules with tailored filters for event properties such as folder paths, process names, and network connections.
 
-This article provides an overview of custom data collection so that you can understand its capabilities and how it enhances your security visibility and threat hunting operations.
+This article provides an overview of custom data collection so that you can understand the feature's capabilities and how it enhances your security visibility and threat hunting operations.
 
 ## How custom data collection works
 
@@ -40,7 +40,7 @@ To create custom data collection rules, see [Create custom data collection rules
 
 ## Supported event tables
 
-Custom data collection currently supports three primary event tables. Each event table uses the same schema as the default event table.
+Custom data collection supports three event tables. Each event table uses the same schema as the default event table.
 
 - **DeviceCustomFileEvents**: Stores data on file creation, modification, deletion, and access activities. For the list of columns, review the [DeviceFileEvents](/defender-xdr/advanced-hunting-devicefileevents-table) table reference.
 - **DeviceCustomNetworkEvents**: Stores data on network connection events, including IP addresses, ports, and protocols. For the list of columns, review the [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table) table reference.
