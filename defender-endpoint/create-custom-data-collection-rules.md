@@ -65,7 +65,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 1. If your Microsoft Sentinel workspace isn't connected, select the **Enhance event collection** note to connect your Microsoft Sentinel workspace.
 
     > [!NOTE]
-    > You can currently only connect one Microsoft Sentinel workspace.
+    > You can currently connect only one Microsoft Sentinel workspace.
 
 1. To select the workspace scope, select the workspace name on the top right, and select the workspace you want to use. 
 1. Select **Create rule**, type a rule name and description, and select **Next**.
