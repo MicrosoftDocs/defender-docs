@@ -1,49 +1,49 @@
 ---
-title: Build Azure Logic Apps with Microsoft Sentinel MCP server
+title: Build Azure Logic Apps with Microsoft Sentinel MCP tools
 titleSuffix: Microsoft Security  
-description: Learn how to set up an Azure Logic App using Microsoft Sentinel's Model Context Protocol (MCP) server  
+description: Learn how to set up an Azure Logic App using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools  
 author: poliveria
 ms.topic: how-to
 ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
-#customer intent: As a security analyst, I want to build Azure Logic Apps using Microsoft Sentinel MCP server.
+#customer intent: As a security analyst, I want to build Azure Logic Apps using Microsoft Sentinel MCP tools.
 ---
 
-# Build Azure Logic Apps with Microsoft Sentinel MCP server (preview)
+# Build logic apps with Microsoft Sentinel MCP tools (preview)
 
 > [!IMPORTANT]
 > Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-You can access the value of Microsoft Sentinel Model Context Protocol (MCP) server in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analysis tool](sentinel-mcp-data-exploration-tool.md#entity-analysis). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
+You can access the value of Microsoft Sentinel's collection of Model Context Protocol (MCP) tools in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md#entity-analyzer). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
 
-The entity analysis tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into preexisting playbooks.
+The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into preexisting playbooks.
 
 ## Prerequisites to building a logic app
 
-If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analysis tool.
+If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analyzer tool.
 
 
-## Add entity analysis tool to a logic app
+## Add entity analyzer tool to a logic app
 
-You have two options for adding the entity analysis tool to your logic app:
+You have two options for adding the entity analyzer tool to your logic app:
 - [Use an existing logic app template](#use-an-existing-logic-app-template)
 - [Add to an existing logic app](#add-to-an-existing-logic-app)
 
 ### Use an existing logic app template 
-You can use the following logic app template for an easy and quick implementation of the entity analysis tool: [Insert link]
+You can use the following logic app template for an easy and quick implementation of the entity analyzer tool: [Insert link]
 
-This logic app template takes all users and URLs in an incident, enriches them by using the entity analysis tool, and sends that analysis as a comment to the original incident.
+This logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident.
 
-:::image type="content" source="media/sentinel-mcp/logic-app-template.png" alt-text="Screenshot of the entity analysis tool added to logic app template." lightbox="media/sentinel-mcp/logic-app-template.png":::
+:::image type="content" source="media/sentinel-mcp/logic-app-template.png" alt-text="Screenshot of the entity analyzer tool added to logic app template." lightbox="media/sentinel-mcp/logic-app-template.png":::
 
-The following sample output from the Incident logic app shows entity analysis tool insights within incident comments:
+The following sample output from the Incident logic app shows entity analyzer tool insights within incident comments:
 
 ### Add to an existing logic app
 
-To add the entity analysis tool by using an existing logic app:
+To add the entity analyzer tool by using an existing logic app:
 
 1. Access your logic app.
 1. Select **Add a new action** and then search for **New Action**. 

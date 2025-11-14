@@ -30,26 +30,19 @@ For information about how to get started with MCP tools, see the following artic
 
 To add a Microsoft Sentinel tool collection in Copilot Studio, follow these steps:
 
-1. Go to [Copilot Studio](https://copilotstudio.microsoft.com/).
-1. Create a new agent by entering a prompt in the prompt bar, or by going to **Agents** and selecting **+ New agent**.
-    >[!NOTE]
-    >If you want to add a tool to an existing agent, go directly to step 4.
+1. Go to [Copilot Studio](https://copilotstudio.microsoft.com/) and create a new agent or select an existing agent.
 
-     :::image type="content" source="media/sentinel-mcp/get-started-studio-new-agent.png" alt-text="Screenshot Copilot Studio Agents page with New agent button highlighted." lightbox="media/sentinel-mcp/get-started-studio-new-agent.png":::   
-
-1. Enter a name, description, and instructions for your agent, then select **Create**.
-
-     :::image type="content" source="media/sentinel-mcp/get-started-studio-create-agent.png" alt-text="Screenshot of the build agent page in Copilot Studio." lightbox="media/sentinel-mcp/get-started-studio-create-agent.png":::   
-
-1. On your agent's **Overview** page, go to **Tools** and select **Add tool** to ground your agent instructions with relevant security data.
+1. After provisioning your agent, on your agent's **Overview** page, go to **Tools** and select **Add tool**.
 
      :::image type="content" source="media/sentinel-mcp/get-started-studio-add-tool.png" alt-text="Screenshot of an agent's Overview page in Copilot Studio with Add tool button highlighted." lightbox="media/sentinel-mcp/get-started-studio-add-tool.png":::   
 
-1. On the **Add tool** pop-up window, search for `Sentinel` and choose any [available collection](sentinel-mcp-tools-overview.md) (for example, `Microsoft Sentinel – Data exploration`).
+1. On the **Add tool** pop-up window, search for `Sentinel` then choose one of the [available Sentinel MCP tool collection](sentinel-mcp-tools-overview.md#available-collections) that suits your needs.
 
      :::image type="content" source="media/sentinel-mcp/get-started-studio-select-tool.png" alt-text="Screenshot of the Add tool pop-up window in Copilot Studio with a Microsoft Sentinel tool collection highlighted." lightbox="media/sentinel-mcp/get-started-studio-select-tool.png":::   
 
-1. Use your Microsoft Entra credentials as the **Connection** to authenticate and authorize the tool, then select **Add to agent**.
+1. Make sure that the **Authentication type** is set to **Microsoft Entra ID Integrated**, then select **Connect**.
+
+1. Select **Add and configure**.
 
      :::image type="content" source="media/sentinel-mcp/get-started-studio-add-connection.png" alt-text="Screenshot of the Add tool pop-up window in Copilot Studio showing the authentication step and with Add and configure button highlighted." lightbox="media/sentinel-mcp/get-started-studio-add-connection.png":::   
 
