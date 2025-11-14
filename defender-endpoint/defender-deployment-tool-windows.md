@@ -94,6 +94,41 @@ Interactive installation
 
 ## Troubleshooting
 
+You can reference the Defender deployment tool log to understand if there were any issues during installation and onboarding. The deployment tool log is located at:
+
+`C:\ProgramData\Microsoft\DefenderDeploymentTool\DefenderDeploymentTool-<COMPUTERNAME>.log`
+
+Events will also be written to the following Windows event logs:
+
+- Onboarding: Windows Logs > Application > Source: WDATPOnboarding
+
+- Offboarding: Windows Logs > Application > Source: WDATPOffboarding
+
+If you cannot resolve the issue based on the information provided, please send us the log and your feedback.
+
+To test if the installation succeeded successfully, you can perform the following checks:
+
+1. Check if services are running
+
+   `Sc.exe query sense`
+   `Sc.exe query windefend`
+
+   You should see something similar to the following for both services:
+
+   :::image type="content" source="{source}" alt-text="{alt-text}":::
+
+1. Check the Defender deployment tool log, or the following Windows event logs, for more information, including connectivity failures:
+
+   - Onboarding: Windows Logs > Application > Source: WDATPOnboarding
+
+   - Offboarding: Windows Logs > Application > Source: WDATPOffboarding
+
+1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
+
+   `C:\Program Files\Microsoft Defender for Endpoint\MpCmdRun.exe” -GetFiles -SupportLogLocation <FOLDEROFCHOICE>`
+
+   The latest preview version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can also be used to collect logs and perform connectivity troubleshooting on Windows 7 and 2008 R2. It requires PowerShell 5.1 or later to be installed.
+
 ## Related content
 
 
