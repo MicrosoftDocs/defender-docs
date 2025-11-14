@@ -81,8 +81,6 @@ Expand visibility into script-based attacks:
 
 ## Next steps
 
-- Learn how to [configure custom data collection rules](configure-custom-data-collection.md)
-- Explore [advanced hunting with custom telemetry](advanced-hunting-custom-data.md)
-- Review [best practices for custom collection rules](custom-collection-best-practices.md)
+- Learn how to [create and manage custom data collection rules](configure-custom-data-collection.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
