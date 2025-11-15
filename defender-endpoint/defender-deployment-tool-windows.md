@@ -156,13 +156,19 @@ Note: if you downloaded "activateMDE.exe" instead of "DefenderDT.exe", replace t
 - Use a *.onboarding* file stored in a network location to perform the onboarding sequence. Do not show the console window.
 
    ```
+   DefenderDT.exe -File:\\server\share\MDE.onboarding -Quiet
+   ```
 
 - Perform an offboarding operation. Do not ask for approval. Do not show console window.
 
    ```
+   DefenderDT.exe -Offboard -File:c:\Defender deployment tooltest\WindowsDefenderATPOffboardingScript_valid_until_2025-04-02.offboarding -YES -Quiet
+   ```
 
 - Perform a prerequisite check and display verbose output without displaying a dialog box.
 
+   ```
+   DefenderDT.exe -PreCheck -Verbose -Quiet
    ```
 
 - Download updates and installation files to be used for staging, to the current directory.
