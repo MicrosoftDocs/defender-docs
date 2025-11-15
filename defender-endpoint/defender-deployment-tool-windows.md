@@ -86,6 +86,19 @@ Interactive installation
 
 ## Usage examples
 
+BRIEF INTRO TO SECTION
+
+### Run the Defender deployment tool without changing settings and without interacting with it
+
+```
+DefenderDT.exe -Quiet
+```
+### Use a .onboarding file in the same directory as the tool to run the default onboarding sequence, connect via a proxy and if there is a required reboot, initiate it without asking. Do not show console window.
+
+```
+DefenderDT.exe -Proxy: DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet
+```
+
 ## Using Group Policy for deployment
 
 ## Considerations and limitations
