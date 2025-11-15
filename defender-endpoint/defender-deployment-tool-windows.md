@@ -136,7 +136,7 @@ A full command line reference can be found by running:
 
 `DefenderDT.exe -?` (version 1.10 and later)
 
-![A screenshot of a computer AI-generated content may be incorrect.](media/image7.png){width="6.5in" height="5.479861111111111in"}
+:::image type="content" source="./media/defender-deployment-tool-windows/help.png" alt-text="Screenshot of the tool help output.":::
 
 ## Usage examples
 
