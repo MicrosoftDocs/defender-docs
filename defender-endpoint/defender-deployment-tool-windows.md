@@ -127,7 +127,7 @@ To test if the installation succeeded successfully, you can perform the followin
 
    You should see something similar to the following for both services:
 
-   :::image type="content" source="{source}" alt-text="{alt-text}:::
+   :::image type="content" source="{source}" alt-text="{alt-text}":::
 
 1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
 
