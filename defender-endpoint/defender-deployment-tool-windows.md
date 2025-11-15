@@ -36,7 +36,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 - The Defender for Endpoint agent that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is different than the agent that is installed on newer versions of Windows and Windows Server. For more information about the agent, see [Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
 
-- When using the deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices there are a number of additional prerequisites, known issues, and considerations and limitation to be aware of. See the relevant sections in this article. 
+- When using the deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices, there are a number of additional prerequisites, known issues, and considerations and limitation to be aware of. See the relevant sections in this article. 
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 - Preview features must be enabled on the tenant.
 
-- Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. It is the same domain that is required for product updates.
+- Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. It's the same domain that is required for product updates.
 
 - Devices to be onboarded should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services. Regardless, for proper operation of services, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](./configure-environment.md), as other connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com*, apply to (additional) functionality you might want to use with the product.
 
@@ -67,12 +67,12 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 1. In the Step 1 dropdown menu, choose **Windows (preview)**.
 
-1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This will download the Defender executable and the onboarding file package.
+1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
 
    > [!NOTE] 
-   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it does not download the Defender executable, as the executable is the same for both onboarding and offboarding.
+   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender executable, as the executable is the same for both onboarding and offboarding.
 
 ## Install Defender for Endpoint on the device
 
@@ -93,7 +93,7 @@ BRIEF INTRO TO SECTION
 ```
 DefenderDT.exe -Quiet
 ```
-### Use a .onboarding file in the same directory as the tool to run the default onboarding sequence, connect via a proxy and if there is a required reboot, initiate it without asking. Do not show console window.
+### Use a .onboarding file in the same directory as the tool to run the default onboarding sequence, connect via a proxy and if there's a required reboot, initiate it without asking. Do not show console window.
 
 ```
 DefenderDT.exe -Proxy: DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet
@@ -117,7 +117,7 @@ Events will also be written to the following Windows event logs:
 
 - Offboarding: Windows Logs > Application > Source: WDATPOffboarding
 
-If you cannot resolve the issue based on the information provided, please send us the log and your feedback.
+If you can't resolve the issue based on the information provided, please send us the log and your feedback.
 
 To test if the installation succeeded successfully, you can perform the following checks:
 
@@ -127,7 +127,7 @@ To test if the installation succeeded successfully, you can perform the followin
 
    You should see something similar to the following for both services:
 
-   :::image type="content" source="{source}" alt-text="{alt-text}":::
+   :::image type="content" source="./media/defender-deployment-tool-windows/services-check.png" alt-text="Screenshot showing the results of a services check.":::
 
 1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
 
