@@ -248,28 +248,28 @@ Note: if you downloaded "activateMDE.exe" instead of "DefenderDT.exe", replace t
 
 The following steps specify how to create a scheduled task to run the tool using group policy:
 
-1.  Place DefenderDT.exe and WindowsDefenderATP.onboarding on a shared location that can be accessed by the device. If you've previously created an MDEConfig.txt configuration file, place it in the same location.
+1. Place DefenderDT.exe and WindowsDefenderATP.onboarding on a shared location that can be accessed by the device. If you've previously created an MDEConfig.txt configuration file, place it in the same location.
 
-2.  To create a new GPO, open the [Group Policy Management Console](https://review.learn.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select New. Enter the name of the new GPO in the dialogue box that is displayed and click OK.
+1. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select New. Enter the name of the new GPO in the dialogue box that is displayed and click OK.
 
-3.  Open the [Group Policy Management Console](https://review.learn.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select Edit.
+1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select Edit.
 
-4.  In the Group Policy Management Editor, go to Computer configuration \> Preferences \> Control panel settings.
+1. In the Group Policy Management Editor, go to Computer configuration > Preferences > Control panel settings.
 
-5.  Right-click Scheduled tasks, point to New, and then select **Immediate Task (At least Windows 7)**.
+1. Right-click Scheduled tasks, point to New, and then select **Immediate Task (At least Windows 7)**.
 
-6.  In the Task window that opens, go to the General tab.
+1. In the Task window that opens, go to the General tab.
 
-7.  Under Security options select *Change User or Group*, type **SYSTEM** and then select **Check Names** and select **OK**. NT AUTHORITY\\SYSTEM appears as the user account the task will run as.
+1. Under Security options select *Change User or Group*, type **SYSTEM** and then select **Check Names** and select **OK**. NT AUTHORITY\\SYSTEM appears as the user account the task will run as.
 
-8.  Select *Run whether user is logged on or not* and check the *Run with highest privileges* check box.
+1. Select *Run whether user is logged on or not* and check the *Run with highest privileges* check box.
 
-9.  In the Name field, type an appropriate name for the scheduled task.
+1. In the Name field, type an appropriate name for the scheduled task.
 
-10. Go to the *Actions* tab and select New. Ensure that *Start a program* is selected in the *Action* field. Enter the full UNC path, using the file server\'s fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
+1. Go to the *Actions* tab and select New. Ensure that *Start a program* is selected in the *Action* field. Enter the full UNC path, using the file server\'s fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
 
-11. In the *Add arguments (optional)* field, enter the \[parameters\](# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file not in the working directory of the tool, specify the -file: parameter with the full UNC path to the onboarding file, for example -file: \\\\server\\share\\WindowsDefenderATP.onboarding.
+1. In the *Add arguments (optional)* field, enter the \[parameters\](# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file not in the working directory of the tool, specify the -file: parameter with the full UNC path to the onboarding file, for example -file: \\\\server\\share\\WindowsDefenderATP.onboarding.
 
-12. Select **OK** and close any open GPMC windows.
+1. Select **OK** and close any open GPMC windows.
 
-13. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select *OK*.
+1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select *OK*.
