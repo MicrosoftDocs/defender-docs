@@ -35,9 +35,11 @@ Retrieves a list of all scan definitions.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
+
+When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` . For more information, see: [Create and manage roles](../user-roles.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
@@ -46,7 +48,6 @@ Permission type|Permission|Permission display name
 Application|Machine.Read.All| Read all scan information.
 Delegated (work or school account)|Machine.Read.All|Read all scan information.
 
-When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 

@@ -116,11 +116,4 @@ Here's an example of the response.
     ]
 ```
 
-## See also
-
-- [Get browser extensions permission info](get-assessment-browser-extensions.md)
-- [Browser extensions assessment](/defender-vulnerability-management/tvm-browser-extensions)
-- [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-
 

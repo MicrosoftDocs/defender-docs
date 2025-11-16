@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Add, update, or delete a scan definition
 
 
@@ -39,6 +40,12 @@ You can post on machines last seen according to your configured retention period
 
 ## Permissions
 
+When obtaining a token using user credentials:
+
+- To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` . For more information, see: [Create and manage roles](../user-roles.md)
+- To edit data, the user needs to have at least the following role permission: `ManageSecurity` . For more information, see: [Create and manage roles](../user-roles.md)
+
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 
 Permission type|Permission|Permission display name
@@ -46,10 +53,6 @@ Permission type|Permission|Permission display name
 Application|Machine.ReadWrite.All| Read and write all scan information.
 Delegated (work or school account)|Machine.Read.Write|Read and write all scan information.
 
-When obtaining a token using user credentials:
-
-- To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
-- To edit data, the user needs to have at least the following role permission: `ManageSecurity` (See [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 

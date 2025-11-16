@@ -38,6 +38,11 @@ Retrieves the details for a specified agent by its ID.
 
 ## Permissions
 
+
+When obtaining a token using user credentials:
+
+- To view data the user needs to have at least the following role permission: 'ViewData' or 'TvmViewData' . For more information, see: [Create and manage roles](../user-roles.md)
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 Permission type|Permission|Permission display name
@@ -45,10 +50,6 @@ Permission type|Permission|Permission display name
 Application|Machine.Read.All| Read all scan information.
 Delegated (work or school account)|Machine.Read.All|Read all scan information.
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - To view data the user needs to have at least the following role permission: 'ViewData' or 'TvmViewData' (See [Create and manage roles](../user-roles.md) for more information)
 
 ## HTTP request
 
@@ -79,7 +80,7 @@ GET https://api.security.microsoft.com/api/DeviceAuthenticatedScanAgents/7f3d76a
 ```
 
 ## Response example
-
+ 
 ```json
 {
 "@odata.context": "https://api.security.microsoft.com/api/$metadata#DeviceAuthenticatedScanAgents/$entity",

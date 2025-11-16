@@ -25,6 +25,7 @@ appliesto:
 
 
 Returns all known installed browser extensions and their details for all devices, on a per-device basis.
+Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
 Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
@@ -36,8 +37,7 @@ Different API calls get different types of data. Because the amount of data can 
 
 Data that is collected (using either _Json response_ or _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export browser extensions assessment (JSON response)
 
@@ -212,10 +212,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/browserextensionsinven
     "generatedTime": "2021-01-11T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Get browser extensions permission info](get-browser-extensions-permission-info.md)
-- [Browser extensions assessment](/defender-vulnerability-management/tvm-browser-extensions)
-- [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
