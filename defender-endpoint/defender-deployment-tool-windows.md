@@ -92,7 +92,7 @@ Or
 
 `activateMDE.exe -?` (version 1.9)
 
-:::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-command-reference.png" alt-text="Screenshot showing the command reference for the Defender deployment tool." lightbox="./media/defender-deployment-tool-windows/help.png":::
+:::image type="content" source="./media/defender-deployment-tool-windows/help.png" alt-text="Screenshot showing the command reference for the Defender deployment tool." lightbox="./media/defender-deployment-tool-windows/help.png":::
 
 ## Usage examples
 
