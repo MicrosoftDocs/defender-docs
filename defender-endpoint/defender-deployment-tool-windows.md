@@ -253,3 +253,37 @@ The following steps show how to create a scheduled task to run the tool using Gr
 1. Select **OK** and close any open GPMC windows.
 
 1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select **OK**.
+
+## Considerations and limitations
+
+## Known issues
+
+## Troubleshooting
+
+You can reference the Defender deployment tool log to understand if there were any issues during installation and onboarding. The deployment tool log is located at:
+
+`C:\ProgramData\Microsoft\DefenderDeploymentTool\DefenderDeploymentTool-<COMPUTERNAME>.log`
+
+Events will also be written to the following Windows event logs:
+
+- Onboarding: Windows Logs > Application > Source: WDATPOnboarding
+
+- Offboarding: Windows Logs > Application > Source: WDATPOffboarding
+
+To test if the installation succeeded successfully, perform the following checks:
+
+1. Check if services are running
+
+   `Sc.exe query sense`<br>`Sc.exe query windefend`
+
+   You should see something similar to the following for both services:
+
+   :::image type="content" source="./media/deployment-tool-windows/services-check.png" alt-text="Screenshot of service status check.":::
+
+1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
+
+   `C:\Program Files\Microsoft Defender for Endpoint\MpCmdRun.exe” -GetFiles -SupportLogLocation <FOLDEROFCHOICE>`
+
+   The latest preview version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can also be used to collect logs and perform connectivity troubleshooting on Windows 7 SP1 and Windows Server 2008 R2 SP1. It requires PowerShell 5.1 or later to be installed.
+
+## Related content
