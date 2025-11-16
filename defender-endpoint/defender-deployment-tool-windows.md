@@ -155,7 +155,7 @@ The following examples illustrate how to use the tool.
    - Step 1: Generate a configuration file
 
       ```
-      DefenderDT.exe -GenerateConfig
+      DefenderDT.exe -makeconfig
       ```
 
    - Step 2: Use a text editor such as Notepad to open the *MdeConfig.txt* file that was created in the directory and specify parameters you wish to use. Sample:
