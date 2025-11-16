@@ -92,7 +92,7 @@ To use the quick "one-click" default installation:
 
    The tool will look for the *WindowsDefenderATP.onboarding* file in the directory the tool is being run from and perform default installation and onboarding operations.
 
-You can perform all the installation and onboardingoperations manually through the command-line interface as well. The command-line interface also supports a variety of other operations, such as running prerequisite checks:
+You can also perform all the installation and onboarding operations manually through the command-line interface. In addition, the command-line interface supports a variety of other operations, such as running prerequisite checks:
 
 :::image type="content" source="./media/defender-deployment-tool-windows/command-line.png" alt-text="Screenshot illustrating running the Defender deployment tool in command-line mode.":::
 
@@ -223,11 +223,11 @@ The following examples illustrate how to use the tool.
 
 ## Using Group Policy for deployment
 
-The following steps specify how to create a scheduled task to run the tool using group policy:
+The following steps show how to create a scheduled task to run the tool using Group Policy:
 
-1. Place DefenderDT.exe and WindowsDefenderATP.onboarding on a shared location that can be accessed by the device. If you've previously created an MDEConfig.txt configuration file, place it in the same location.
+1. Place the files *DefenderDT.exe* and *WindowsDefenderATP.onboarding* on a shared location that can be accessed by the device. If you've previously created an *MDEConfig.txt* configuration file, place it in the same location.
 
-1. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select New. Enter the name of the new GPO in the dialogue box that is displayed and select OK.
+1. To create a new Group Policy Object (GPO), open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select **New**. Enter the name of the new GPO in the dialogue box that is displayed and select **OK**.
 
 1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select Edit.
 
