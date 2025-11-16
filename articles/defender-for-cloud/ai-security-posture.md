@@ -55,7 +55,11 @@ With these features, Defender for Cloud provides full visibility of AI workloads
 Defender for Cloud discovers AI agent workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI agent applications from potential threats.
 
 > [!NOTE]
-> 
+> To view preview features in the Defender portal, you need to enable Defender for Cloud's preview features.
+>
+> :::image type="content" source="media/ai-security-posture/enable-preview-features.png" alt-text="Screenshot that shows Defender for Cloud's preview features set to enabled in the Defender portal.":::
+>
+> Learn how to [enable preview features in the Defender portal.](/defender-xdr/preview)
 
 Defender for Cloud automatically and continuously discovers deployed AI agents across the following services:
 
