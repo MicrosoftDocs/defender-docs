@@ -96,15 +96,15 @@ You can also perform all the installation and onboarding operations manually thr
 
 :::image type="content" source="./media/defender-deployment-tool-windows/command-line.png" alt-text="Screenshot illustrating running the Defender deployment tool in command-line mode.":::
 
-### Non-interactive use
-
-The Defender deployment tool can be used non-interactively as part of an orchestrated sequence run by a management tool, such as Group Policy, Microsoft Configuration Manager, or other tool that your organization uses for software deployments. For this purpose, the tool provides optional command-line parameters that allow you to customize onboarding operations to support a large variety of scenarios.
-
-## Command reference
-
 To view the complete command reference, run: `DefenderDT.exe -?` (tool version 1.10 and later. If your tool version is 1.9, use `activateMDE.exe -?`).
 
 :::image type="content" source="./media/defender-deployment-tool-windows/help.png" alt-text="Screenshot showing the command reference for the Defender deployment tool." lightbox="./media/defender-deployment-tool-windows/help.png":::
+
+For repetitive deployment scenarios in your environment, you can use a configuration file instead of the command line to pass parameters. To generate the configuration file, run the tool with the `-makeconfig` parameter. After the file is created, open it in a text editor to configure the options to suit your deployment scenario. See the example in the [Usage examples](#usage-examples) section.
+
+### Non-interactive use
+
+The Defender deployment tool can be used non-interactively as part of an orchestrated sequence run by a management tool, such as Group Policy, Microsoft Configuration Manager, or other tool that your organization uses for software deployments. For this purpose, the tool provides optional command-line parameters that allow you to customize onboarding operations to support a large variety of scenarios.
 
 ## Usage examples
 
@@ -156,7 +156,7 @@ The following examples illustrate how to use the tool.
       DefenderDT.exe -GenerateConfig
       ```
 
-   - Step 2: Use a text editor like Notepad to open the MdeConfig.txt file that was created in the directory and specify parameters you wish to use. Sample:
+   - Step 2: Use a text editor such as Notepad to open the *MdeConfig.txt* file that was created in the directory and specify parameters you wish to use. Sample:
 
       ```
       # Only absolute paths can be used for the parameters accepting paths
@@ -214,12 +214,13 @@ The following examples illustrate how to use the tool.
       Offline: False
       ```
 
-
-   - Step 3: Run the tool with the configuration file (in our example, stored in the same directory as the tool). NOTE: since the file is in the same directory, there's no need to specify it.
+   - Step 3: Run the tool with the configuration file.
 
       ```
       DefenderDT.exe
       ```
+      
+      Our example assumes that the config file is stored in the same directory as the tool, so there's no need to specify it. If the config file were located somewhere else, it could be necessary to specify the path to the file.
 
 ## Using Group Policy for deployment
 
@@ -229,24 +230,24 @@ The following steps show how to create a scheduled task to run the tool using Gr
 
 1. To create a new Group Policy Object (GPO), open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select **New**. Enter the name of the new GPO in the dialogue box that is displayed and select **OK**.
 
-1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select Edit.
+1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
 
-1. In the Group Policy Management Editor, go to Computer configuration > Preferences > Control panel settings.
+1. In the Group Policy Management Editor, go to **Computer configuration** > **Preferences** > **Control panel settings**.
 
-1. Right-click Scheduled tasks, point to New, and then select **Immediate Task (At least Windows 7)**.
+1. Right-click **Scheduled tasks**, point to **New**, and then select **Immediate Task (At least Windows 7)**.
 
-1. In the Task window that opens, go to the General tab.
+1. In the **Task** window that opens, go to the **General** tab.
 
-1. Under Security options select *Change User or Group*, type **SYSTEM** and then select **Check Names** and select **OK**. NT AUTHORITY\\SYSTEM appears as the user account the task will run as.
+1. Under **Security options** select **Change User or Group**, type *SYSTEM*, and then select **Check Names** and select **OK**. *NT AUTHORITY\\SYSTEM* appears as the user account the task will run as.
 
-1. Select *Run whether user is logged on or not* and check the *Run with highest privileges* check box.
+1. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
 
-1. In the Name field, type an appropriate name for the scheduled task.
+1. In the **Name** field, type an appropriate name for the scheduled task.
 
-1. Go to the *Actions* tab and select New. Ensure that *Start a program* is selected in the *Action* field. Enter the full UNC path, using the file server\'s fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
+1. Go to the **Actions** tab and select **New**. Ensure that **Start a program** is selected in the Action field. Enter the full UNC path, using the file server's fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
 
-1. In the *Add arguments (optional)* field, enter the \[parameters\](# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file not in the working directory of the tool, specify the -file: parameter with the full UNC path to the onboarding file, for example -file: \\\\server\\share\\WindowsDefenderATP.onboarding.
+1. In the **Add arguments (optional)** field, enter the [parameters] (# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file that is not in the working directory of the tool, specify the *-file:* parameter with the full UNC path to the onboarding file, for example `-file: \\server\share\WindowsDefenderATP.onboarding`.
 
 1. Select **OK** and close any open GPMC windows.
 
-1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select *OK*.
+1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select **OK**.
