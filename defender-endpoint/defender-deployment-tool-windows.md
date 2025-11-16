@@ -84,6 +84,16 @@ Interactive installation
 
 - Running the tool to onboard the devices or devices.
 
+To view the complete command reference, run:
+
+`DefenderDT.exe -?` (version 1.10 and later)
+
+or 
+
+`activateMDE.exe -?` (version 1.9)
+
+:::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-command-reference.png" alt-text="Screenshot showing the command reference for the Defender deployment tool." lightbox="./media/defender-deployment-tool-windows/help.png":::
+
 ## Usage examples
 
 BRIEF INTRO TO SECTION
