@@ -16,7 +16,9 @@ Defender for Identity generates health issues for each of these scenarios if the
 
 ## Prerequisites
 
-- Before you run Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+- Before you run Defender for Identity PowerShell commands, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+> [!NOTE]
+> The Active Directory PowerShell module is required when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
 
 ## Generate a report of current configurations via PowerShell
 
@@ -113,9 +115,6 @@ For more information, see the [auditpol reference documentation](/windows-server
 ### Configure Advanced Audit Policy settings by using PowerShell
 
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
-
-> [!NOTE]
-> The Active Directory PowerShell module is required when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
 
 **Related health issue:** [Directory Services Advanced Auditing isn't enabled as required](../health-alerts.md)
 

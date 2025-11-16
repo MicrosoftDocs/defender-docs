@@ -35,9 +35,9 @@ The new security posture assessment lists users whose valid credentials have bee
 |---------|---------|
 |2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
 
-Microsoft Defender for Identity Sensor (v3.x) includes support for automatic:
-    - Network Name Resolution (NNR)
-    - Windows event configuration
+Microsoft Defender for Identity Sensor (v3.x) now includes support for automatic:
+- Network Name Resolution (NNR)
+- Windows event configuration
 You do not need to perform any manual configuration to enable these features when you activate the Defender for Identity sensor v3.x.
 
 ### Expansion of identity scoping: Support for Organizational units (Preview) 
