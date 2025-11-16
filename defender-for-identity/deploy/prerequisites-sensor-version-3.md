@@ -12,7 +12,7 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 ## Sensor version limitations 
 
-Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
+Before activating the Defender for Identity sensor v3.x, keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
 - Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
  - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
@@ -62,7 +62,7 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure Unified Sensor to support advanced identity detections
+## Configure RPC on V3.x sensors to support advanced identity detections
 
 Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
 

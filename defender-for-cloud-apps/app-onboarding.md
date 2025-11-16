@@ -12,7 +12,7 @@ ms.reviewer: adipavekatz
 search.appverid: MET150  
 ---  
 
-# Automatically onboard Microsoft Entra ID apps to conditional access app control
+# Automatically onboard Microsoft Entra ID apps to conditional access app control (preview)
 
 All SaaS applications that exist in the Microsoft Entra ID catalog will be available automatically in the policy app filter. The following image shows the high-level process for configuring and implementing Conditional Access app control:
 

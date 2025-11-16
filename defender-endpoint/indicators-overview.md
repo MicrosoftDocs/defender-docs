@@ -50,11 +50,11 @@ A false positive (FP) refers to a false positive in Microsoft's threat intellige
 
 You can use IP and URL/Domain indicators to manage site access.
 
-To block connections to an IP address, type the IPv4 address in dotted-quad form (e.g. `8.8.8.8`). For IPv6 addresses, specify all 8 segments (e.g. `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges are not supported.
+To block connections to an IP address, type the IPv4 address in dotted-quad form (for example, `8.8.8.8`). For IPv6 addresses, specify all eight segments (for example, `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges aren't supported.
 
-To block connections to a domain and any of its subdomains, specify the domain (e.g. `example.com`). This indicator will match `example.com` as well as `sub.example.com` and `anything.sub.example.com`.
+To block connections to a domain and any of its subdomains, specify the domain (for example, `example.com`). This indicator matches `example.com` as well as `sub.example.com` and `anything.sub.example.com`.
 
-To block a specific URL path, specify the URL path (e.g. `https://example.com/block`). This indicator will match resources under the `/block` path on `example.com`. Note that HTTPS URL paths will only be matched in Microsoft Edge; HTTP URL paths can be matched in any browser.
+To block a specific URL path, specify the URL path (for example, `https://example.com/block`). This indicator matches resources under the `/block` path on `example.com`. Note that HTTPS URL paths will only be matched in Microsoft Edge; HTTP URL paths can be matched in any browser.
 
 You can also create IP and URL indicators to unblock users from a SmartScreen block or selectively bypass web content filtering blocks of sites that you'd like to allow to load. For example, consider a case where you have web content filtering set to block all social media websites. However, the marketing team has a requirement to use a specific social media site to monitor their ad placements. In this case, you can unblock the specific social media site by creating a domain Allow indicator and assigning it to the marketing team's device group.
 
@@ -119,6 +119,11 @@ When your security team creates a new indicator (IoC), the following actions are
 > [!NOTE]
 > Using Warn mode prompts users with a warning if they open a risky app or website. The prompt doesn't block them from allowing the application or website to run, but you can provide a custom message and links to a company page that describes appropriate usage of the app. Users can still bypass the warning and continue to use the app if necessary. For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/defender-cloud-apps/mde-govern).
 
+> [!NOTE]
+> For Warn action, To receive the toast notification to be able to bypass the IoC, make sure the **“Files or activities are blocked”** option is enabled under **Virus & Threat Protection notifications**. The corresponding registry key should be set as follows: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender Security Center\Virus and threat protection\FilesBlockedNotificationDisabled = 0.  
+>   
+>  More details see **[Windows Security app settings](https://support.microsoft.com/windows/windows-security-app-settings-1ec98620-4e41-4b6b-b055-3c4bb115d4ee#bkmk_notifications)**.
+
 You can create an indicator for:
 
 - [Files](indicator-file.md)
@@ -143,17 +148,17 @@ The functionality of preexisting IoCs doesn't change. However, the indicators ar
 The IoC API schema and the threat IDs in Advanced Hunting are updated to align with the renaming of the IoC response actions. The API scheme changes apply to all IoC Types.
 
 > [!NOTE]
-> There is a limit of 15,000 indicators per tenant. Increases to this limit are not supported.
+> There's a limit of 15,000 indicators per tenant. Increases to this limit aren't supported.
 > 
-> File and certificate indicators do not block [exclusions defined for Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus). Indicators are not supported in Microsoft Defender Antivirus when it is in passive mode.
+> File and certificate indicators don't block [exclusions defined for Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus). Indicators aren't supported in Microsoft Defender Antivirus when it is in passive mode.
 > 
 > The format for importing new indicators (IoCs) has changed according to the new updated actions and alerts settings. We recommend downloading the new CSV format that can be found at the bottom of the import panel.
 >
-> If indicators are synced to the Microsoft Defender portal from Microsoft Defender for Cloud Apps for sanctioned or unsanctioned applications, the `Generate Alert` option is enabled by default in the Microsoft Defender portal. If you try to clear the `Generate Alert` option for Defender for Endpoint, it is re-enabled after some time because the Defender for Cloud Apps policy overrides it.
+If indicators are synced to the Defender portal from Microsoft Defender for Cloud Apps for sanctioned or unsanctioned applications, the settings are overwritten when synced to Microsoft Defender portal. The `Generate Alert` option is enabled by default in the Microsoft Defender portal for unsanctioned applications. If you try to clear the `Generate Alert` option for Defender for Endpoint, it's re-enabled after some time because the Defender for Cloud Apps policy overrides it. Sanctioned or allowed applications the value is set to not `Generate Alert` .
 
 ## Known issues and limitations
 
-Microsoft Store apps cannot be blocked by Microsoft Defender because they're signed by Microsoft.
+Microsoft apps can't be blocked by Microsoft Defender because they're signed by Microsoft.
 
 Customers might experience issues with alerts for IoCs. The following scenarios are situations where alerts aren't created or are created with inaccurate information. 
 
