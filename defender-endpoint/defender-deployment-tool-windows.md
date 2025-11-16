@@ -86,31 +86,23 @@ To use the quick "one-click" default installation:
 
 1. Double-click the executable to launch it.
 
-1. In the dialog that appears, select **Continue**. The tool will look for the *WindowsDefenderATP.onboarding* file in the directory the tool is being run from and perform default installation and onboarding operations.
+1. In the dialog that appears, select **Continue**.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
 
    The tool will look for the *WindowsDefenderATP.onboarding* file in the directory the tool is being run from and perform default installation and onboarding operations.
 
-You can perform these operations manually through the command-line interface as well. The command-line interface also supports a variety of other operations, such as running prerequisite checks:
+You can perform all the installation and onboardingoperations manually through the command-line interface as well. The command-line interface also supports a variety of other operations, such as running prerequisite checks:
 
 :::image type="content" source="./media/defender-deployment-tool-windows/command-line.png" alt-text="Screenshot illustrating running the Defender deployment tool in command-line mode.":::
 
+### Non-interactive use
 
+The Defender deployment tool can be used non-interactively as part of an orchestrated sequence run by a management tool, such as Group Policy, Microsoft Configuration Manager, or other tool that your organization uses for software deployments. For this purpose, the tool provides optional command-line parameters that allow you to customize onboarding operations to support a large variety of scenarios.
 
-### Non-interactive deployment
+## Command reference
 
-In a non-interactive way, the Defender deployment tool can be used as part of an orchestrated sequence run by a management tool (such as group policy, SCCM or other tool that your organization uses for software deployments). For this purpose, the tool provides optional command line parameters that allow you customize the onboarding operations.a large variety of scenarios by provides optional command line parameters that allow you customize the onboarding operations.
-
-
-
-To view the complete command reference, run:
-
-`DefenderDT.exe -?` (version 1.10 and later)
-
-Or 
-
-`activateMDE.exe -?` (version 1.9)
+To view the complete command reference, run: `DefenderDT.exe -?` (tool version 1.10 and later. If your tool version is 1.9, use `activateMDE.exe -?`).
 
 :::image type="content" source="./media/defender-deployment-tool-windows/help.png" alt-text="Screenshot showing the command reference for the Defender deployment tool." lightbox="./media/defender-deployment-tool-windows/help.png":::
 
