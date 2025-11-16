@@ -1,7 +1,7 @@
 ---
 title: Overview - AI security posture management
 description: Learn about AI security posture management in Microsoft Defender for Cloud and how it protects resources from AI threats.
-ms.date: 11/13/2025
+ms.date: 11/16/2025
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
@@ -53,6 +53,9 @@ With these features, Defender for Cloud provides full visibility of AI workloads
 ## Discover AI agents (Preview)
 
 Defender for Cloud discovers AI agent workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI agent applications from potential threats.
+
+> [!NOTE]
+> 
 
 Defender for Cloud automatically and continuously discovers deployed AI agents across the following services:
 
