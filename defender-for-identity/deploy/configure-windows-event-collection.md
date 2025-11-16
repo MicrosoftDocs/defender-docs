@@ -114,7 +114,16 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
 
+> [!NOTE]
+> The Active Directory PowerShell module is required when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
+
 **Related health issue:** [Directory Services Advanced Auditing isn't enabled as required](../health-alerts.md)
+
+The following command defines all settings for the domain, creates group policy objects, and links them.
+
+```powershell
+Set-MDIConfiguration -Mode Domain -Configuration All
+```
 
 To configure your settings, run:
 

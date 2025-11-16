@@ -110,17 +110,7 @@ The following table describes memory requirements on the server used for the Def
 
 Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
-
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
-
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
- 
+Configure [Windows event collection]((event-collection-overview.md)) on your domain controller to support Defender for Identity detections. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
 ## Test your prerequisites
 

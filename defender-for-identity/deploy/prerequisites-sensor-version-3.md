@@ -101,16 +101,15 @@ Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rule
 
 Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
+To turn on automatic windows auditing:
+1. Sign in the Defender portal. 
+1. To to **Settings**, and then **Identities**. 
+1. In the **General** section, select **Advanced features**.
+1. Turn on **Automatic Windows auditing configuration**.
 
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+If you do not select automatic Windows auditing configuration, you must manually configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
  
 
 ## Test your prerequisites
