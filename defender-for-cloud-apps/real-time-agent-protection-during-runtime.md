@@ -33,13 +33,13 @@ If Microsoft Defender determines that a prompt is suspicious:
       - Under **Microsoft 365 connector**, select **Connect** or **Edit**.
       - Select **Microsoft Entra ID Management events** and **Microsoft 365 activities**. 
       - Select **Connect Microsoft 365**.
-1. Work together with a Power Platform administrator to and Enter the App ID provided by your Power Platform administrator and select **Save**.
-      
-    :::image type="content" source="media/protect-ai-agents/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-ai-agents/turn-on-real-time-agent-protection.png":::
 
 1. Work together with a Power Platform administrator to complete these onboarding steps: [Enable external threat detection and protection for Copilot Studio custom agents](/microsoft-copilot-studio/external-security-provider#step-2-configure-the-threat-detection-system).
-    - The Power Platform administrator must use the same App ID as the App ID used in [Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application).
-    - Share the URL provided in the Defender portal with the Power Platform administrator to help them complete the onboarding steps.
+    - Share the URL provided in the Defender portal with the Power Platform administrator to help them complete their onboarding steps.
+    - Note that the Power Platform administrator must use the same App ID as the App ID used in [Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application).
+    - Get the AppID from the Power Platform administrator, and enter it in the **App ID** field in the Defender portal, then select **Save**.
+
+        :::image type="content" source="media/protect-ai-agents/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-ai-agents/turn-on-real-time-agent-protection.png":::
 
     Once the Power Platform administrator completes the onboarding steps, a green **Connected** status appears in the **Microsoft 365 connector** section.
 
