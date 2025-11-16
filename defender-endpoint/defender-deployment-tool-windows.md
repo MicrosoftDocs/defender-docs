@@ -78,7 +78,13 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 The Defender deployment tool can be used interactively or non-interactively.
 
-Interactive installation 
+In an interactive way, the tool supports a qucik 
+
+:::image type="content" source="./media/deployment-tool-windows/services-check.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
+
+In a non-interactive way, as part of an orchestrated sequence run by a management tool (such as group policy, SCCM or other tool that your organization uses for software deployments). In this case, the tool supports a large variety of scenarios by provides optional command line parameters that allow you customize the onboarding operations.
+
+Interactive
 
 - Downloading the tool and the onboarding/offboarding file package.
 
@@ -96,9 +102,10 @@ Or
 
 ## Usage examples
 
-BRIEF INTRO TO SECTION
+The following examples illustrate how to use the tool.
 
-Note: if you downloaded "activateMDE.exe" instead of "DefenderDT.exe", replace the commands accordingly.
+> [!NOTE]
+> If you downloaded *activateMDE.exe* instead of *DefenderDT.exe*, besure to replace the commands accordingly.
 
 - Run the Defender deployment tool without changing settings and without interacting with it:
 
