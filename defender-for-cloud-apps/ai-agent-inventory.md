@@ -52,7 +52,7 @@ We recommend that you reach out to the owners of the risky agents for more infor
 1. Sign in to the Defender portal, and go **Investigation & response** -> **Hunting** -> **Advanced hunting**.
 1. In the **Apps & identities** section, the [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) contains data for all your custom AI agents created using Copilot Studio. You can use this data to create custom queries.
 1. You can use the collection of community queries to identify misconfigured or risky agents.
-    1. 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**
+    1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**.
     1. Go to **Investigation & response** -> **Hunting** -> **Advanced hunting**.
     1. In the **Queries** tab, select **Community queries**. The **AI Agents** folder contains queries related to AI agents. For more information, see [Sample queries](../defender-xdr/advanced-hunting-aiagentsinfo-table.md#sample-queries).
 
