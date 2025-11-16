@@ -2,8 +2,8 @@
 title: Get missing KBs by software ID
 description: Retrieves missing security updates by software ID
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,22 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Get missing KBs by software ID
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 Retrieves missing KBs (security updates) by software ID
 
@@ -67,7 +60,7 @@ If successful, this method returns 200 OK, with the specified software missing k
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/getmissingkbs
@@ -75,7 +68,7 @@ GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/getmi
 
 ### Response
 
-Here is an example of the response.
+Here's an example of the response.
 
 
 ```json
@@ -101,5 +94,5 @@ Here is an example of the response.
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 
