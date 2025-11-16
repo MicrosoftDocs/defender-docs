@@ -27,6 +27,7 @@ appliesto:
 
 
 This API returns all the data for installed software that has a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis.
+Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
@@ -38,14 +39,14 @@ Different API calls get different types of data. Because the amount of data can 
 
 Data that is collected (using either _Json response_ or _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 ## 1. Export software inventory assessment (JSON response)
 
 ### 1.1 API method description
 
 This API response contains all the data of installed software that has a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
+
+The information returned by this API, along with the information returned by the [Export non product code software inventory assessment](get-assessment-non-cpe-software-inventory.md) API for software that doesn't have a CPE, gives you full visibility into the software installed across your organization and the devices it's installed on.
 
 #### 1.1.1 Limitations
 
@@ -201,8 +202,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryByMac
 }
 ```
 
-> [!NOTE]
-> The information returned by this API, along with the information returned by the [Export non product code software inventory assessment](get-assessment-non-cpe-software-inventory.md) API for software that doesn't have a CPE, gives you full visibility into the software installed across your organization and the devices it's installed on.
+
+
 
 ## 2. Export software inventory assessment (via files)
 
@@ -271,17 +272,5 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryExpor
     "generatedTime": "2021-01-11T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Export assessment methods and properties per device](get-assessment-methods-properties.md)
-- [Export secure configuration assessment per device](get-assessment-secure-config.md)
-- [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
-- [Export non product code software inventory assessment](get-assessment-non-cpe-software-inventory.md)
-
-Other related
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 
 

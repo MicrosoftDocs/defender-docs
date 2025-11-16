@@ -27,7 +27,7 @@ appliesto:
 
 ## API description
 
-Provides methods and property details about the APIs that pull vulnerability management data on a per-device basis. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
+Provides methods and property details about the APIs that pull vulnerability management data on a per-device basis. There are different API calls to get different types of data.Each API call contains the requisite data for devices in your organization.
 
 > [!NOTE]
 > Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
@@ -43,9 +43,9 @@ The APIs that correspond to the export information types are described in sectio
 
 Each method has different API calls to get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
-- **JSON response**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+- **JSON**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- **via files** This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
+- **Files** This API solution enables pulling larger amounts of data faster and more reliably. It's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
   - Call the API to get a list of download URLs with all your organization data.
   - Download all the files using the download URLs and process the data as you like.
 
@@ -230,16 +230,5 @@ Property (ID)|Data type|Description
 Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization.
 GeneratedTime|String|The time that the export was generated.
 
-## See also
-
-- [Export secure configuration assessment per device](get-assessment-secure-config.md)
-- [Export software inventory assessment per device](get-assessment-software-inventory.md)
-- [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
-- [Export non cpe software inventory assessment per device](get-assessment-non-cpe-software-inventory.md)
-
-Other related
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 
 

@@ -29,7 +29,7 @@ appliesto:
 This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
 > [!NOTE]
-> Vulnerability management doesn't support software products without a CPE. While these products are shown in the software inventory page, but because CPEs are used by vulnerability management to identify the software and any vulnerabilities, information like exploits, number of exposed devices, and weaknesses aren't available. For more information, see [Software inventory](/defender-vulnerability-management/tvm-software-inventory).
+> Vulnerability management doesn't support software products without a CPE. While these products are shown in the software inventory page, because CPEs are used by vulnerability management to identify the software and any vulnerabilities, information like exploits, number of exposed devices, and weaknesses aren't available. For more information, see [Software inventory](/defender-vulnerability-management/tvm-software-inventory).
 
 Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
@@ -39,10 +39,11 @@ Different API calls get different types of data. Because the amount of data can 
   - Call the API to get a list of download URLs with all your organization data.
   - Download all the files using the download URLs and process the data as you like.
 
+All export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**) unless specified otherwise.
+
 Data that is collected (using either _Json response_ or _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export non product code software inventory assessment (JSON response)
 
@@ -218,14 +219,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCp
     "generatedTime": "2022-05-30T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Export software assessment per device](get-assessment-software-inventory.md)
-- [Export assessment methods and properties per device](get-assessment-methods-properties.md)
-- [Export secure configuration assessment per device](get-assessment-secure-config.md)
-- [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
-
-Other related
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)

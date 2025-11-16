@@ -26,7 +26,7 @@ appliesto:
 # Export secure configuration assessment per device
 
 
-Returns all of the configurations and their status, on a per-device basis.
+Returns all of the configurations and their status, on a per-device basis. Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
 There are different API calls to get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
@@ -40,8 +40,6 @@ There are different API calls to get different types of data. Because the amount
 
 Data that is collected (using either _JSON response_ or _via files_) is the current snapshot of the current state, and does not contain historic data. In order to collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 ## 1. Export secure configuration assessment (JSON response)
 
@@ -273,15 +271,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
     "generatedTime": "2021-01-11T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Export assessment methods and properties per device](get-assessment-methods-properties.md)
-- [Export software inventory assessment per device](get-assessment-software-inventory.md)
-- [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
-
-Other related
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-

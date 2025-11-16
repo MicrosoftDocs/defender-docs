@@ -64,9 +64,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type | Permission | Permission display name|
 |:---|:---|:---|
-|Application | Alert.Read.All | `Read all alerts`|
 |Application | Alert.ReadWrite.All | `Read and write all alerts`|
-|Delegated (work or school account) | Alert.Read | `Read alerts`|
 |Delegated (work or school account) | Alert.ReadWrite | `Read and write alerts`|
 
 
@@ -103,10 +101,7 @@ GET https://api.securitycenter.microsoft.com/api/alerts
 
 ### Response
 
-Here's an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity. All alerts will be returned from an actual call.
+The response list shown here has been shortened. The call returns the full set of alerts.
 
 ```json
 {
@@ -172,10 +167,7 @@ GET https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=evidence
 
 ### Response
 
-Here's an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity. All alerts will be returned from an actual call.
+The response list shown here has been shortened. The call returns the full set of alerts.
 
 ```json
 {
@@ -312,9 +304,6 @@ Here's an example of the response.
 }
 ```
 
-## See also
-
-[OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
 
 
 

@@ -35,19 +35,18 @@ Retrieves all domains related to a specific alert.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
+
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
+One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
 :---|:---|:---
 Application|URL.Read.All|'Read URLs'
 Delegated (work or school account)|URL.Read.All|'Read URLs'
-
-
-When obtaining a token using user credentials:
-
-- The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](../user-roles.md))
-
-- The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md))
 
 
 ## HTTP request

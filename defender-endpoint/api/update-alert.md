@@ -39,19 +39,19 @@ Updatable properties are: `status`, `determination`, `classification`, and `assi
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'Alerts investigation'. For more information, see [Create and manage roles](../user-roles.md).
+
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
+One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
 :---|:---|:---
 Application|Alerts.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
-
-
-When obtaining a token using user credentials:
-
-- The user needs to have at least the following role permission: 'Alerts investigation' (For more information, see [Create and manage roles](../user-roles.md))
-
-- The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md))
 
 
 ## HTTP request

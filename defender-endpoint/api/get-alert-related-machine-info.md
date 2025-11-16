@@ -37,6 +37,12 @@ Retrieves [Device](machine.md) related to a specific alert.
 
 ## Permissions
 
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
+
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
@@ -46,13 +52,8 @@ Application|Machine.ReadWrite.All|'Read and write all machine information'
 Delegated (work or school account)|Machine.Read|'Read machine information'
 Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
+
 
 ## HTTP request
 
@@ -124,5 +125,3 @@ Here is an example of the response.
     ]
 }
 ```
-
-
