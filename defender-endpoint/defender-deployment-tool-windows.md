@@ -74,21 +74,35 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
    > [!NOTE] 
    > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 11 and 12** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender executable, as the executable is the same for both onboarding and offboarding.
 
-## Install Defender for Endpoint on the device
+## Deploy Defender for Endpoint on devices
 
 The Defender deployment tool can be used interactively or non-interactively.
 
-In an interactive way, the tool supports a qucik 
+### Interactive use
 
-:::image type="content" source="./media/defender-deployment-tool-windows/services-check.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
+The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "one-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility.
 
-In a non-interactive way, as part of an orchestrated sequence run by a management tool (such as group policy, SCCM or other tool that your organization uses for software deployments). In this case, the tool supports a large variety of scenarios by provides optional command line parameters that allow you customize the onboarding operations.
+To use the quick "one-click" default installation:
 
-Interactive
+1. Double-click the executable to launch it.
 
-- Downloading the tool and the onboarding/offboarding file package.
+1. In the dialog that appears, select **Continue**. The tool will look for the *WindowsDefenderATP.onboarding* file in the directory the tool is being run from and perform default installation and onboarding operations.
 
-- Running the tool to onboard the devices or devices.
+   :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
+
+   The tool will look for the *WindowsDefenderATP.onboarding* file in the directory the tool is being run from and perform default installation and onboarding operations.
+
+You can perform these operations manually through the command-line interface as well. The command-line interface also supports a variety of other operations, such as running prerequisite checks:
+
+:::image type="content" source="./media/defender-deployment-tool-windows/command-line.png" alt-text="Screenshot illustrating running the Defender deployment tool in command-line mode.":::
+
+
+
+### Non-interactive deployment
+
+In a non-interactive way, the Defender deployment tool can be used as part of an orchestrated sequence run by a management tool (such as group policy, SCCM or other tool that your organization uses for software deployments). For this purpose, the tool provides optional command line parameters that allow you customize the onboarding operations.a large variety of scenarios by provides optional command line parameters that allow you customize the onboarding operations.
+
+
 
 To view the complete command reference, run:
 
