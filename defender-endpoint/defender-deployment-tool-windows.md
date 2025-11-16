@@ -80,7 +80,7 @@ The Defender deployment tool can be used interactively or non-interactively.
 
 In an interactive way, the tool supports a qucik 
 
-:::image type="content" source="./media/deployment-tool-windows/services-check.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
+:::image type="content" source="./media/defender-deployment-tool-windows/services-check.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
 
 In a non-interactive way, as part of an orchestrated sequence run by a management tool (such as group policy, SCCM or other tool that your organization uses for software deployments). In this case, the tool supports a large variety of scenarios by provides optional command line parameters that allow you customize the onboarding operations.
 
