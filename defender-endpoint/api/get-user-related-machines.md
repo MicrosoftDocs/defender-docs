@@ -30,7 +30,7 @@ Retrieves a collection of devices related to a given user ID.
 
 ## Limitations
 
-Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -66,13 +66,13 @@ Empty
 
 ## Response
 
-If successful and user exists - 200 OK with list of [machine](machine.md) entities in the body. If user does not exist - 200 OK with an empty set.
+If successful and user exists - 200 OK with list of [machine](machine.md) entities in the body. If user doesn't exist - 200 OK with an empty set.
 
 ## Example
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/users/user1/machines
