@@ -33,7 +33,7 @@ appliesto:
 
 In the Microsoft Defender portal, you can view and manage threat detections using the following steps:
 
-1. Visit [Microsoft XDR portal](https://security.microsoft.com/) and sign-in.
+1. Visit the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com) and sign-in.
 
     On the landing page, you see the **Devices with active malware** card with the following information:
 
@@ -68,7 +68,7 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 ## FAQs
 
-#### In the Microsoft XDR portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
+#### In the Microsoft Defender portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
 
 To see when the malware was detected, you can take the following steps:
 

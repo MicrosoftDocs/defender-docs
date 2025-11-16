@@ -174,8 +174,8 @@ For more information, see:
  
  ### Enhanced alert source accuracy
  
- Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
- Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Microsoft Defender portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Microsoft Defender portal, Advanced hunting, and Graph API.
  The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
  
  To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
@@ -378,7 +378,7 @@ See [Microsoft Edge releases](/deployedge/microsoft-edge-release-schedule#micros
 
 ### Automatic redirection for the classic Defender for Cloud Apps portal - General Availability
 
-The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender XDR Portal. As of June 2024, all customers using the classic Defender for Cloud Apps portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
+The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender portal. As of June 2024, all customers using the classic Defender for Cloud Apps portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
 
 For more information, see [Microsoft Defender for Cloud Apps in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-defender-cloud-apps).
 
@@ -596,7 +596,7 @@ For more information, see [Protect apps with Microsoft Defender for Cloud Apps C
 
 ### Automatic redirection for the classic Defender for Cloud Apps portal (Preview)
 
-The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender XDR Portal. As of January 9, 2024, customers using the classic Defender for Cloud Apps portal with Preview features are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
+The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender portal. As of January 9, 2024, customers using the classic Defender for Cloud Apps portal with Preview features are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
 
 For more information, see:
 
