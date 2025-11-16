@@ -102,7 +102,7 @@ To view the complete command reference, run: `DefenderDT.exe -?` (tool version 1
 
 :::image type="content" source="./media/defender-deployment-tool-windows/help.png" alt-text="Screenshot showing the command reference for the Defender deployment tool." lightbox="./media/defender-deployment-tool-windows/help.png":::
 
-For repetitive deployment scenarios in your environment, you can use a configuration file instead of the command line to pass parameters. To generate the configuration file, run the tool with the `-makeconfig` parameter. After the file is created, open it in a text editor to configure the options to suit your deployment scenario. See the example in the [Usage examples](#usage-examples) section.
+For repetitive deployment scenarios in your environment, you can use a configuration file instead of the command line to pass parameters. To generate the configuration file, run the tool with the `-makeconfig` parameter. After the file is created, open it in a text editor to configure the options to suit your deployment scenario. See the [usage example](#create-config-example).
 
 ### Non-interactive use
 
@@ -149,7 +149,7 @@ The following examples illustrate how to use the tool.
    ```
    DefenderDT.exe -Stage
    ```
-
+<a name="create-config-example"></a>
 - Create a configuration file, edit it and then use it to pass multiple parameters to the tool to perform an installation using staged installation files.
 
    - Step 1: Generate a configuration file
