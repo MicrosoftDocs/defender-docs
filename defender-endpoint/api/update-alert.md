@@ -35,7 +35,7 @@ Updatable properties are: `status`, `determination`, `classification`, and `assi
 ## Limitations
 
 1. You can update alerts that available in the API. For more information, see [List Alerts](get-alerts.md).
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -80,7 +80,7 @@ Property|Type|Description|
 Status|String|Specifies the current status of the alert. The property values are: 'New', 'InProgress' and 'Resolved'.|
 assignedTo|String|Owner of the alert|
 Classification|String|Specifies the specification of the alert. The property values are: `TruePositive`, `InformationalExpectedActivity`, and `FalsePositive`.|
-Determination|String|Specifies the determination of the alert. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public api accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedActivity) - consider changing the enum name in public api accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (NotMalicious) - consider changing the enum name in public api accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other).|
+Determination|String|Specifies the determination of the alert. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public API accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedActivity) - consider changing the enum name in public API accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (NotMalicious) - consider changing the enum name in public API accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other).|
 Comment|String|Comment to be added to the alert.|
 
 > [!NOTE]
