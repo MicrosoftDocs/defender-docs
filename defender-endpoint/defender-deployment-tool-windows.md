@@ -48,7 +48,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 - Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. It's the same domain that is required for product updates.
 
-- Devices to be onboarded should be able to access Defender service URLs to allow the tool to run successfully. The tool will check for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services. Regardless, for proper operation of services, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](./configure-environment.md), as other connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com*, apply to (additional) functionality you might want to use with the product.
+- Devices to be onboarded should be able to access Defender service URLs to allow the tool to run successfully. The tool checks for connectivity against your specific tenant before proceeding as well. Note that since files are hosted on a content distribution platform there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services. Regardless, for proper operation of services, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](./configure-environment.md), as other connectivity requirements, such as access to the consolidated **.endpoint.security,microsoft.com*, apply to (additional) functionality you might want to use with the product.
 
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
@@ -88,7 +88,7 @@ To view the complete command reference, run:
 
 `DefenderDT.exe -?` (version 1.10 and later)
 
-or 
+Or 
 
 `activateMDE.exe -?` (version 1.9)
 
@@ -105,19 +105,19 @@ Note: if you downloaded "activateMDE.exe" instead of "DefenderDT.exe", replace t
    ```
    DefenderDT.exe -Quiet`
    ```
-- Use a *.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect via a proxy, and, if there is a required reboot, initiate it without asking. Do not show the console window.
+- Use a *.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect via a proxy, and, if a reboot is required, initiate it without asking. Don't show the console window.
 
    ```
    DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet
    ```
 
-- Use a *.onboarding* file stored in a network location to perform the onboarding sequence. Do not show the console window.
+- Use a *.onboarding* file stored in a network location to perform the onboarding sequence. Don't show the console window.
 
    ```
    DefenderDT.exe -File:\\server\share\MDE.onboarding -Quiet
    ```
 
-- Perform an offboarding operation. Do not ask for approval. Do not show console window.
+- Perform an offboarding operation. Don't ask for approval. Don't show console window.
 
    ```
    DefenderDT.exe -Offboard -File:c:\Defender deployment tooltest\WindowsDefenderATPOffboardingScript_valid_until_2025-04-02.offboarding -YES -Quiet
@@ -214,7 +214,7 @@ The following steps specify how to create a scheduled task to run the tool using
 
 1. Place DefenderDT.exe and WindowsDefenderATP.onboarding on a shared location that can be accessed by the device. If you've previously created an MDEConfig.txt configuration file, place it in the same location.
 
-1. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select New. Enter the name of the new GPO in the dialogue box that is displayed and click OK.
+1. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select New. Enter the name of the new GPO in the dialogue box that is displayed and select OK.
 
 1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and select Edit.
 
