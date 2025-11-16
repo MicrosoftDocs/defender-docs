@@ -40,6 +40,8 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 ## Prerequisites
 
+There are prerequisites that pertain to all supported Windows and Windows Server devices, as well as prerequisites that are specific to Windows 7 SP1 and Windows Server 2008 R2 SP1 devices.
+
 ### General
 
 - Administrative privileges are required for most operations.
