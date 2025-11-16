@@ -158,7 +158,7 @@ If indicators are synced to the Defender portal from Microsoft Defender for Clou
 
 ## Known issues and limitations
 
-Microsoft Store apps can't be blocked by Microsoft Defender because they're signed by Microsoft.
+Microsoft apps can't be blocked by Microsoft Defender because they're signed by Microsoft.
 
 Customers might experience issues with alerts for IoCs. The following scenarios are situations where alerts aren't created or are created with inaccurate information. 
 
