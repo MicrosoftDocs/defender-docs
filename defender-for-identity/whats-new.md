@@ -33,6 +33,24 @@ For updates about versions and features released six months ago or earlier, see 
 
 Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
 
+### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
+
+The following new features are now available in Microsoft Defender for Identity:
+
+**Accounts tab in Identity Inventory**
+
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+
+**Manual link and unlink of accounts**
+
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+
+**Identity-level remediation actions**
+
+You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
+Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
 The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
@@ -43,7 +61,7 @@ The new security posture assessment lists users whose valid credentials have bee
 |---------|---------|
 |2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
 
-### Expansion of identity scoping: upport for Organizational units (Preview) 
+### Expansion of identity scoping: Support for Organizational units (Preview) 
 
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
@@ -67,7 +85,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 | Classic Alert Title | External ID| XDR Alert Name |Detector ID|
 |--------------------|------------|----------------|-----------|
-|Active Directory attributes Reconnnaissance using LDAP|2210|[Active Directory attributes Reconnnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
 |User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
 |Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
 |    |    |[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
