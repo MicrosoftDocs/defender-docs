@@ -39,7 +39,7 @@ This article shows you how to create and manage custom data collection rules in 
 To use custom data collection, you need:
 
 - A Microsoft Defender for Endpoint P2 license.
-- A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying.
+- A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying. You can currently only connect one Sentinel workspace per Defender for Endpoint tenant for custom data collection.
 - Use the [supported operating systems](#supported-operating-systems).
 - Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
 
@@ -63,19 +63,19 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 ### Create rules
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**.
-1. To select the workspace scope, select the workspace name on the top right, and select the workspace you want to use. 
+1. To select the workspace, select the workspace name on the top right, and select the workspace you want to use.
 1. Select **Create rule**, type a rule name and description, and select **Next**.
 1. Select which table you want to collect data from. For more information, see [Supported event tables](custom-data-collection.md#supported-event-tables). 
 1. Select the action for which you want to collect data.
 1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
 
     > [!NOTE]
-    > If you use the **Not equals** operator, this selects all events. To avoid using large data volumes, combine it with other conditions.
+    > If you use the **Not equals** operator with an unexpected value, this might select all events. To avoid using large data volumes, combine this operator with other conditions.
 
-1. Select whether you want to collect data from all applicable client devices or from specific devices that include tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
+1. Select whether you want to collect data from all applicable client devices or from specific devices that include dynamic tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
 
-    > [!TIP]
-    > To view devices where the tag is applied, select **Devices** > **Device inventory**, and filter by the tag name. You can also see the tag in the device details page.
+    > [!NOTE]
+    > Custom data collection only supports dynamic tags.
 
 It can take up to an hour for the rule to be deployed to the targeted devices.
 
@@ -83,7 +83,7 @@ It can take up to an hour for the rule to be deployed to the targeted devices.
 
 If rules aren't working as expected:
 
-- Create a general collect-all rule for the organization.
+- Create a rule to collect network events in an unexpected use case. For example, create a rule that collects all network events where `port not equals 0`.
 - Apply individual filters and tags to isolate issues.
 - If a device isn't responding after you enable the feature, reboot the device.
 
