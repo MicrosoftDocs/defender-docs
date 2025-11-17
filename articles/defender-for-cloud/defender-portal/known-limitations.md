@@ -35,12 +35,10 @@ Unified RBAC operates in the Defender portal and uses a different RBAC model fro
 
 Cloud scopes management and role assignment on cloud scopes are both available in the portal; API support is coming soon.
 
-### Opt-In
-
+**Opt-In**:
 Access and permissions will be managed using cloud scopes instead of device groups.
 
-### Opt-Out
-
+**Opt-Out**:
 Restores your previous setup and permissions.
 
 - Users with sub-tenant access may lose access to MDC alerts on VMs.
