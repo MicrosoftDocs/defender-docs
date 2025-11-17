@@ -28,7 +28,7 @@ To create custom Microsoft Sentinel MCP tools, you need the following prerequisi
 
 ## Create custom tools with KQL queries
 
-You can use advanced hunting queries in Microsoft Defender portal and KQL queries in Microsoft Sentinel data lake to find and discover security data that you can use in agentic workflows. This approach lets you control the type and amount of information your agents can reason over. When you verify that a query retrieves the data you want your agent to reason with, save it as a custom MCP tool.
+Use advanced hunting queries in Microsoft Defender portal and KQL queries in Microsoft Sentinel data lake to find and discover security data that you can use in agentic workflows. This approach lets you control the type and amount of information your agents can reason over. When you verify that a query retrieves the data you want your agent to reason with, save it as a custom MCP tool.
 
 To save a KQL query as an MCP tool, follow these steps:
 
@@ -44,8 +44,9 @@ To save a KQL query as an MCP tool, follow these steps:
 
 1. In the **Save tool** flyout panel that appears, enter the following details:
     - **Name:** A discoverable name for your tool that helps AI models correctly identify and select the tool for specific tasks.
-   - **Description:** The description of the tool. Consider providing detailed examples that clearly illustrate the tool's purpose and intended use.
+   - **Description:** The description of the tool. For more information, see [Best practices for creating tool descriptions](#best-practices-for-creating-tool-descriptions).
    - **Collection:** Choose whether you want to add the tool an existing tool collection or create a new one by selecting **Create new collection**. 
+
     - **Default workspace:** The default workspace you want your agent to use as a hint whenever a prompt doesn't specify any workspaces. 
     - **Parameters (optional):** The customizable inputs the tool supports. You can convert some of the values in your KQL query into parameters following the `{ParamaterName}` format, then add their **Parameter name** and **Description** so that the agent has a good understanding on how to populate them based on available conversation context.
 
@@ -58,6 +59,19 @@ To save a KQL query as an MCP tool, follow these steps:
 ### View saved custom MCP tools
 
 To view the custom MCP tools you saved from advanced hunting queries, go to the **Tools** tab in the **Advanced hunting** page.
+
+### Best practices for creating tool descriptions
+
+When saving your custom tool, its name and, more importantly, its description are crucial for identifying and selecting it for specific tasks. The following best practices and considerations can help when describing your tool:
+
+- **Keep it short and action-oriented.** Use one to two sentences that start with a clear verb and resource (for example, "Retrieves audit log data for a specific user"). Avoid jargon or overly technical phrasing.
+
+- **Focus on purpose, not parameters.** Describe what the tool does and its primary use case. Leave parameter details to the schema, not the description.
+
+- **Include workflow hints only if critical.** If a tool requires a prerequisite step (for example, "Call `risky_users_tool` first"), mention it briefly to prevent misuse.
+
+- **Optimize for discoverability and clarity.**
+Use consistent naming, avoid ambiguous terms, and ensure descriptions help AI models and users quickly select the right tool.
 
 ## Add custom tools to your security agents
 

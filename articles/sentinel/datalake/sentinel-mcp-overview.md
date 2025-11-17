@@ -22,11 +22,11 @@ The following features and benefits are part of Microsoft Sentinel’s MCP serve
 
 - **Unified, hosted interface for AI-driven security operations**: Microsoft Sentinel’s unified MCP server interface is fully hosted, requires no infrastructure deployment, and uses Microsoft Entra for identity. Security teams can connect compatible clients to streamline daily AI operations.
 
-- **Scenario-focused and natural language security tools**: Microsoft Sentinel’s MCP support comes through scenario-focused collections of ready-to-use security tools. These collections help security teams interact and reason over security data in Microsoft Sentinel data lake and Microsoft Defender using natural language, removing the need for code-first integration, understanding data schema, or writing well-formed data queries.
+- **Scenario-focused and natural language security tools**: Microsoft Sentinel’s MCP support comes through scenario-focused collections of ready-to-use security tools. These collections help security teams interact and reason over security data in Microsoft Sentinel data lake using natural language, removing the need for code-first integration, understanding data schema, or writing well-formed data queries.
 
 - **Accelerated development of effective security agents**: Microsoft Sentinel’s collection of security tools automates discovery and retrieval of security data and delivers predictable, actionable responses to customize agents. This support speeds up efficient security agent creation and delivers better and highly effective security agents.
 
-- **Cost-effective, context-rich security data integration**: The data lake lets you bring all your security data into Microsoft Sentinel cost-effectively, so you don't need to choose between coverage and cost. Microsoft Sentinel’s collection of tools natively integrates with the security data lake and Microsoft Defender, letting you build comprehensive security context engineering.
+- **Cost-effective, context-rich security data integration**: The data lake lets you bring all your security data into Microsoft Sentinel cost-effectively, so you don't need to choose between coverage and cost. Microsoft Sentinel’s collection of tools natively integrates with the security data lake, letting you build comprehensive security context engineering.
 
 
 ## Introduction to MCP 
@@ -61,9 +61,6 @@ When you connect a [compatible client](sentinel-mcp-get-started.md#add-microsoft
 
   [Get started with building agents](sentinel-mcp-agent-creation-tool.md)
 
--	**Triage incidents and hunt for threats:** SOC engineers need to prioritize incidents rapidly and hunt over your organization’s own data easily without having to worry about security workflow issues and interoperability among platforms and tools that they use. Our triage collection of tools integrates your AI models with APIs that support incident triage and hunting. This integration reduces mean time to resolution, risk exposure, and dwell time and empowers your team to leverage AI for smarter and faster decision-making. 
- 
-    [Get started with incident triage and threat hunting](sentinel-mcp-triage-tool.md)
 
 ## Related content
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)
