@@ -105,9 +105,11 @@ In the alert, you can review:
 - The triggering malicious activity from the **Alert chain**.
 - The exposure data used to calculate this risk.
 
-## Track policy modifications
+## Track policy modifications in advanced hunting
 
 You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track policy modifications in your environment.
+
+### Track enabled predictive shielding hardening policies
 
 This sample query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
@@ -121,6 +123,33 @@ DisruptionAndResponseEvents
 | where DomainName == domainName
 | summarize arg_max(Timestamp, IsPolicyOn) by DeviceId
 | where IsPolicyOn
+```
+
+### Track policy modification events in the environment
+
+This sample query retrieves policy modification events in the environments, including application and removal of hardening policies from devices onboarded to Defender for Endpoint.
+
+```kusto
+  DisruptionAndResponseEvents
+let hardeningPolicyType = dynamic(["GpoPrevention", "SafebootPrevention"]);
+let lookBackTime = datetime("");
+DisruptionAndResponseEvents
+| where PolicyName in (hardeningPolicyType)
+| where Timestamp > lookBackTime
+| where ReportType == 'PolicyUpdated' and IsPolicyOn == '1'
+| summarize arg_max(Timestamp, DeviceName) , PoliciesApplied = make_set(PolicyName)  by DeviceId
+```
+
+### Track blocked events related to predictive shielding hardening policies
+
+This sample query retrieves blocked events related to predictive shielding hardening policies, and allows you to monitor when specific actions were blocked on devices.
+
+```kusto
+  DisruptionAndResponseEvents
+let hardeningPolicyType = dynamic(["GpoPrevention", "SafebootPrevention"]);
+DisruptionAndResponseEvents
+| where PolicyName in (hardeningPolicyType)
+| where ReportType == 'Prevented'
 ```
 
 ## Undo actions triggered by predictive shielding
