@@ -110,10 +110,10 @@ Review these considerations when monitoring and troubleshooting custom data coll
 - [Endpoint detection and response (EDR) exclusions](navigate-defender-endpoint-antivirus-exclusions.md) may override custom collection rules.
 - Dynamic tags update approximately every hour. Check the **Custom collection** > **Last run time** column for the status.
 
-## Edit, delete, and turn custom data collection rules on or off
+## Edit, delete, and enable or disable custom data collection rules
 
 - To edit a rule, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**, select the rule you want to edit, and select **Edit**.
 - To delete a rule, select the rule you want to delete, and select **Delete**.
-- To disable or enable a rule, select the rule you want to modify, select the rule and select the **Enable** or **Disable** check box.
+- To disable or enable a rule, select the rule you want to modify, and select **Enable** or **Disable** under the rule description.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
