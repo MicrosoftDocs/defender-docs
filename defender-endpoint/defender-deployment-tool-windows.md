@@ -1,5 +1,5 @@
 ---
-title: Onboard Windows devices using the Defender deployment tool
+title: Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -15,14 +15,14 @@ ms.collection:
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/06/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 
-# Onboard Windows devices using the Defender deployment tool
+# Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)
 
 The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for all Windows versions supported by Defender for Endpoint. The tool takes care of prerequisites, automates migrations from older solutions, and can remove the need for complex onboarding scripts, separate downloads, and manual installations.
 
@@ -42,7 +42,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 There are prerequisites that pertain to all supported Windows and Windows Server devices, as well as prerequisites that are specific to Windows 7 SP1 and Windows Server 2008 R2 SP1 devices.
 
-### General
+### General prerequisites
 
 - Administrative privileges are required for most operations.
 
@@ -256,7 +256,33 @@ The following steps show how to create a scheduled task to run the tool using Gr
 
 ## Considerations and limitations
 
-## Known issues
+General considerations and limitations, and additional considerations and limitations specific to Windows 7 SP1 and Windows Server 2008 R2 SP1 devices, are outlined below.
+
+### General considerations and limitations
+
+- When using the *-proxy* parameter, it only apply to Defender deployment tool operations. Despite the parameter description in the command-line help reference, it doesn't set proxy configuration in registry for Defender for Endpoint to use after installation. Note that both the tool and Defender will use whatever proxy has been configured on a system-wide (Windows) level regardless. If you wish to specifically configure a proxy to use for the Defender for Endpoint services on the machine (static proxy), and not system-wide, see [Configure your devices to connect to the Defender for Endpoint service using a proxy](./configure-proxy-internet.md).
+
+- On Windows Server 2016 and later, when the Defender Antivirus feature has been uninstalled or removed, you may encounter an error during the Enabling Feature 'Windows-Defender' step. This can be observed in the user interface, in the local log, under *Sequence completion* with exit code *710* and the error description *EnableFeatureFailed*. In the local log you'll also be able to find error 14081 with the description *0x3701 The referenced assembly could not be found*. This error is not indicative of an issue with the Defender Antivirus feature or source files, as those would typically be resolved by the onboarding tool. Open a support case for Windows Servers if you encounter this issue.
+
+### Additional considerations and limitations for Windows 7 SP1 and Windows Server 2008 R2 SP1
+
+- You may get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
+
+- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you might see a notification from Action Center *Windows did not find antivirus software on this computer*"*. This is not indicative of a problem.
+
+- In Vulnerability Management – software inventory, you may see a duplicate entry for the Defender for Endpoint software.
+
+- The preview ("beta") version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can be used to collect logs and perform connectivity troubleshooting on Windows 7 SP1 and Windows Server 2008 R2 SP1. It requires PowerShell 5.1 or later to be installed.
+
+- There's no local user interface for Antivirus. If you wish to manage Antivirus settings locally using PowerShell, version 5.1 or later is required.
+
+- Configuration via Group Policy is supported using a central store with updated group policy templates on a domain controller. For local group policy configuration, templates (*WindowsDefender.admx*/*WindowsDefender.adml*) will need to be manually updated to a newer version (Windows 11) if you wish to use the local group policy editor to apply settings.
+
+- The agent will be installed to `C:\Program Files\Microsoft Defender for Endpoint`
+
+- Windows 7 devices may show up as *Server* in the portal until you update to the latest Sense version by applying KB5005292.
+
+- You can put Defender Antivirus into passive mode on Windows 7 by passing the -passive parameter to the Defender deployment tool. However, it's currently not possible to switch to active mode afterwards by leveraging the ForceDefenderPassiveMode registry key like on Windows server. To switch to active mode, it's necessary to offboard and uninstall, and then to run the Defender deployment tool again without the passive mode parameter.
 
 ## Troubleshooting
 

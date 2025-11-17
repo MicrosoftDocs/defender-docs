@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/12/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -61,11 +61,7 @@ The following steps are required to enable this integration:
 
 ## Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
 
-A Microsoft Defender for Endpoint agent for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md). The agent provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The deployment tool is a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations.
-
-### Supported functionality
-
-The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports the functionality listed in the following table.
+A Microsoft Defender for Endpoint agent is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The agent provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the agent's currently supported functionality.
 
 | Feature | Functionality |
 |---------|---------------|
@@ -80,26 +76,7 @@ The agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 currently supports th
 | Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
 | (Automatic) updates | Regular updates for anti-malware and detection components. |
 
-
-### Known issues and limitations
-
-- You may get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
-
-- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you might see a notification from Action Center "Windows did not find antivirus software on this computer". This is not indicative of a problem.
-
-- In Vulnerability Management – software inventory, you may see a duplicate entry for the Defender for Endpoint software.
-
-- The preview ("beta") version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can be used to collect logs and perform connectivity troubleshooting on Windows 7 & 2008 R2. It requires PowerShell 5.1 or later to be installed.
-
-- There's no local user interface for Antivirus. If you wish to manage Antivirus settings locally using PowerShell, version 5.1 or later is required.
-
-- Configuration via Group Policy is supported using a central store with updated group policy templates on a domain controller. For local group policy configuration, templates (WindowsDefender.admx/WindowsDefender.adml) will need to be manually updated to a newer version (Windows 11) if you wish to use the local group policy editor to apply settings.
-
-- The agent will be installed to *C:\Program Files\Microsoft Defender for Endpoint*.
-
-- Windows 7 devices may show up as "Server" in the portal until you update to the latest Sense version by applying KB5005292.
-
-- Passive mode is currently not supported on Windows 7.
+The agent can be downloaded and installed using the Defender deployment tool, a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it to deploy Defender for Endpoing on Windows devices, see [Deploy Microsoft Defender for Endpoint on Windows devices](./defender-deployment-tool-windows.md).
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 
