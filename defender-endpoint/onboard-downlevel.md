@@ -76,7 +76,7 @@ A Microsoft Defender for Endpoint agent (preview) is available for legacy Window
 | Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
 | (Automatic) updates | Regular updates for anti-malware and detection components. |
 
-The agent can be downloaded and installed using the Defender deployment tool, a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it to deploy Defender for Endpoing on Windows devices, see [Deploy Microsoft Defender for Endpoint on Windows devices](./defender-deployment-tool-windows.md).
+The agent can be downloaded and installed using the Defender deployment tool, a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender for Endpoint on Windows devices](./defender-deployment-tool-windows.md).
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 
