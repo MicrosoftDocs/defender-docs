@@ -66,13 +66,13 @@ You can also review the alert, and disruption information for predictive shieldi
 
 ### Review the activity information
 
-Select the incident's **Activity** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied:
+Select the incident's **Activities** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied:
 
 - Review the **Type** column to see the actions triggered by predictive shielding.
     
     In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions are applied as part of predictive shielding.
 
-    TBD - screenshot
+    :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-view-activities.png" alt-text="Screenshot of the Activities tab filtered by Response category, showing predictive shielding actions." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-view-activities.png":::
 
 - Review the **Triggering alert** column to see the alert that led to the predictive shielding action. For more information, see [Review the triggering alert information](#review-the-triggering-alert-information).
 - Review the **Policy status** column to see which hardening policies are currently applied.
