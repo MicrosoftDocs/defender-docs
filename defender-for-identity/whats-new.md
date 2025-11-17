@@ -29,9 +29,14 @@ For updates about versions and features released six months ago or earlier, see 
 |---------|---------|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
 
+### Upcoming new health alert for RPC configuration
+
+New upcoming [health alert](health-alerts.md) for cases where RPC configuration (Unified Sensor RPC Audit tag) is not enabled for the sensor (v3.x). The health alert will roll out globally starting early December 2025.
+Learn more [here](/deploy/prerequisites-sensor-version-3?#configure-unified-sensor-to-support-advanced-identity-detections)
+
 ### Automatic Windows event auditing configuration for Identity sensors v3.x
 
-Defender for Identity now offers an opt-in automatic Windows event-auditing configuration for sensors v3.x. This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+Defender for Identity now offers an opt-in automatic Windows event-auditing configuration for sensors v3.x. This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the portal or via Graph API. The capability and its related health alerts will roll out globally starting early December 2025.
 
 **Releated Health alerts:**
 - NTLM Auditing is not enabled 
