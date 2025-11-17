@@ -14,13 +14,7 @@ Using NNR, Defender for Identity can correlate between raw activities (containin
 
 ## NNR with the Defender for Identity sensor v3.x
 
-The Defender for Identity sensor v3.x automatically performs Name Resolution using the Defender Device Inventory and events collected by the sensor​, without the need to open additional ports in your environment.​ The Defender for Identity sensor v3.x uses the following methods to resolve IP addresses to computer names:​
- 
-  - Checks if the IP is NAT device​
-  - Checks if there are any cached entries ​
-  - Checks the NetBIOS data via Kerberos activities 
-  - Checks the MDE Device Inventory ​
-  - Checks Kerberos service tickets for machine accounts ​
+The Defender for Identity sensor v3.x automatically performs Name Resolution using the Defender device inventory and events collected by the sensor​, without the need to open additional ports in your environment.​
 
 ## NNR with the Defender for Identity sensor v2.x
 

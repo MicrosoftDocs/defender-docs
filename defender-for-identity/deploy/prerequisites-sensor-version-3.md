@@ -99,17 +99,9 @@ Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rule
 
 ## Configure Windows auditing
 
-Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. Defender for Identity sensor v3.x can automatically configure Windows auditing on your domain controllers, applying the required Windows auditing settings to new sensors, and fixing misconfigurations on existing ones. See [Configure auditing with the Defender for Identity sensor v3.x](configure-windows-event-collection.md#configure-auditing-with-the-defender-for-identity-sensor-v3x)
 
-Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
-
-To turn on automatic windows auditing:
-1. Sign in the Defender portal. 
-1. To to **Settings**, and then **Identities**. 
-1. In the **General** section, select **Advanced features**.
-1. Turn on **Automatic Windows auditing configuration**.
-
-If you do not select automatic Windows auditing configuration, you must manually configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+If you do not select automatic Windows auditing configuration, you must manually configure Windows event collection on your domain controller. You can also use powershell to [configure audit policies for Windows event logs](configure-windows-event-collection.md#configure-advanced-audit-policy-settings-by-using-powershell).
  
 
 ## Test your prerequisites
