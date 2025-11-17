@@ -90,13 +90,13 @@ Analysts can quickly assess user risk using UEBA context displayed in side panel
 
 Each user page includes a **Top UEBA anomalies** section, showing the top three anomalies from the past 30 days, along with direct links to pre-built anomaly queries and the Sentinel events timeline for deeper analysis.
 
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-user-investigations.png":::
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-user-investigations.png":::
 
 ### Built-in user anomaly queries in incident investigations
 
 During incident investigations, analysts can launch built-in queries directly from incident graphs to retrieve all user anomalies related to the case.
 
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-incident-investigations.png":::
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png":::
 
 For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
 
@@ -104,7 +104,7 @@ For more information, see [Investigate incidents in the Microsoft Defender porta
 
 When analysts write Advanced Hunting or custom detection queries using UEBA-related tables, the Defender portal displays a banner that prompts them to join the **Anomalies** table. This helps enrich investigations with behavioral insights and strengthens the overall analysis.
 
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/ueba-advanced-hunting.png":::
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png":::
 
 For more information, see: 
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
