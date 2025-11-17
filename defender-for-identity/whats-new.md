@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/12/2025
+ms.date: 11/16/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -44,7 +44,7 @@ For more information, see: [Link or Unlink an Account to an Identity (Preview)](
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
 
-**Related Health alerts:**
+Releated Health alerts:
 - NTLM Auditing is not enabled 
 - Directory Services Advanced Auditing is not enabled as required 
 - Directory Services Object Auditing is not enabled as required 
@@ -68,8 +68,8 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 ## October 2025
 
-We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
-The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+We’re excited to announce that the Microsoft Defender for Identity Sensor (v3.x) is now generally available (GA). 
+[Version 3.x of the sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
