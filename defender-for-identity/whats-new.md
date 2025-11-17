@@ -524,7 +524,7 @@ To help customers better identify and detect attempts to bypass security protoco
 
 With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
-Access Defender XDR portal -> Hunting -> Advanced Hunting.
+Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
 
 Now, you can copy our recommended query as provided below, and select on “Create detection rule”. Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
