@@ -75,8 +75,5 @@ You have the opportunity to provide feedback on the effectiveness of the guided 
 
 For examples of Microsoft's own incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
 
-When creating your organization's guidebooks, consider the following best practices:
+When creating your organization's guidebooks, keep in mind that the guidebook can only read text. Avoid using images, graphs, or complex formatting that may hinder text extraction.
 
-- **Clarity and Conciseness**: Ensure that the guidelines are clear and concise to facilitate quick understanding and action.
-- **Text only**: The guidebook can only read text. Avoid using images, graphs, or complex formatting that may hinder text extraction.
-- **Regular Updates**: Periodically review and update the guidebooks to reflect any changes in your organization's policies or procedures.
