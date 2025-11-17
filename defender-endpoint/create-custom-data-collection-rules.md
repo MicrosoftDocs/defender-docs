@@ -50,7 +50,9 @@ To use custom data collection, you need:
 
 ### Performance and limits
 
-- Each collection rule can capture up to 25,000 events per device within a 24-hour rolling window. Once this limit is reached, telemetry for that specific rule on that device stops until the window resets. If the threshold is reached early in the cycle, the wait can be up to 24 hours; if it’s near the end, the delay is shorter
+- Each collection rule can capture up to 25,000 events per device within a 24-hour rolling window. Once the device reaches the limit, telemetry for the specific rule on the specific device stops until the window resets.
+    - If the device reaches the threshold early in the cycle, it can take up to 24 hours for telemetry to resume. If the device reaches the limit one hour after the window resets, telemetry resumes after 23 hours.
+    - If the device reaches the threshold near the end of the window, the delay is shorter. For example, if the device reaches the limit two hours before the window resets, telemetry resumes after two hours.
 - Rule deployment typically takes 20 minutes to one hour.
 - Custom collection operates alongside default Defender for Endpoint configuration without interference.
 
@@ -61,12 +63,6 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 ### Create rules
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**.
-
-1. If your Microsoft Sentinel workspace isn't connected, select the **Enhance event collection** note to connect your Microsoft Sentinel workspace.
-
-    > [!NOTE]
-    > You can currently connect only one Microsoft Sentinel workspace.
-
 1. To select the workspace scope, select the workspace name on the top right, and select the workspace you want to use. 
 1. Select **Create rule**, type a rule name and description, and select **Next**.
 1. Select which table you want to collect data from. For more information, see [Supported event tables](custom-data-collection.md#supported-event-tables). 
