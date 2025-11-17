@@ -295,7 +295,7 @@
       - name: Secure score
         displayName: security, posture, secure, score, calculate, control, improve, 
         href: secure-score-security-controls.md
-      - name: Regulatory compliance standards
+      - name: Security standards
         href: concept-regulatory-compliance-standards.md
       - name: Microsoft Cloud Security Benchmark (MCSB)
         displayName: mcsb, azure, security, benchmark 
