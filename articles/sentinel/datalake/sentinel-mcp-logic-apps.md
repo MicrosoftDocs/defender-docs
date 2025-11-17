@@ -70,7 +70,7 @@ To add the entity analyzer tool by using an existing logic app:
             ```
         You can enter these properties either manually or as dynamic values from previous actions.
 
-The following screenshot is an example output you receive from the action in the logic app. For more information about the specific input and output in the Connector, see [link].
+The following screenshot is an example output you receive from the action in the logic app. For more information about the specific input and output in the Connector, see [Microsoft Sentinel MCP](/connectors/sentinelmcp/).
 
 
 
