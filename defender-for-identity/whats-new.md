@@ -77,7 +77,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 ### Additional security value in the Defender for Identity sensor v3.x
 
-Get enhanced protection by applying the **Unified sensor RPC audit** tag to your sensors v3.x through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor v3.x.  in the asset rule management page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
