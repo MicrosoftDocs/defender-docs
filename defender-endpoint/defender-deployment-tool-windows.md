@@ -34,13 +34,13 @@ The functionality provided by the tool is outlined in the following sections.
 
 ### Standard functionality
 
-The following capabilities are intended to support most situations where the tool can be run without any specific configuration apart from providing the relevant onboarding file.
+The following capabilities support most situations where the tool can be run without any specific configuration apart from providing the relevant onboarding file.
 
 - A simple, basic user interface for a quick, interactive installation and onboarding sequence.
 
 - Automatic tool update upon launch.
 
-- Prerequisite checks and automatic remediation of (potentially) blocking issues
+- Prerequisite checks and automatic remediation of (potentially) blocking issues.
 
 - Automatic download of prerequisite updates and installation files as needed.
 
@@ -49,12 +49,11 @@ The following capabilities are intended to support most situations where the too
 - Automatic logging of events to a locally-created verbose log (the Defender deployment tool log) and the Windows event log.
 
 > [!NOTE]
-
-The tool expects to be able to connect to Defender for Endpoint cloud services in order to perform the functions mentioned above, and by default, it will not proceed with operations if the connectivity check fails. There are advanced command-line features that provide solutions for scenarios where connectivity is temporarily unavailable, but it is important to keep in mind that connectivity to Defender for Endpoint cloud services is required for proper Defender for Endpoint operation in any case.
+> The tool expects to be able to connect to Defender for Endpoint cloud services in order to perform the functions mentioned above, and by default, it will not proceed with operations if the connectivity check fails. There are advanced command-line features that provide solutions for scenarios where connectivity is temporarily unavailable, but it is important to keep in mind that connectivity to Defender for Endpoint cloud services is required for proper Defender for Endpoint operation in any case.
 
 ### Advanced functionality
 
-The following capabilities, provided through command-line parameters, are intended to support automation and orchestration through software deployment tools and other methods that can execute scripts or executables with administrative permissions on devices.
+The following capabilities, provided through command-line parameters, support automation and orchestration through software deployment tools and other methods that can execute scripts or executables with administrative permissions on devices.
 
 - The ability to perform a prerequisite check, logging results without proceeding with installation or onboarding steps.
 
