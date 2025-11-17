@@ -99,7 +99,7 @@ This API allows customers to:
 * Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing sensor v3.x actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
