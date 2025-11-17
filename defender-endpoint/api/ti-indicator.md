@@ -90,8 +90,4 @@ For more information on the description of the response action types, see [Creat
 }
 ```
 
-## See also
-
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](../defender-endpoint-antivirus-exclusions.md)
-
 

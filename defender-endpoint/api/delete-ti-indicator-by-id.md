@@ -19,7 +19,6 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Delete Indicator API

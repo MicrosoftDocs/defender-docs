@@ -19,13 +19,13 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get IP statistics API
 
 ## API description
 Retrieves the statistics for the given IP.
+This statistic information is based on data from the past 30 days.
 
 ## Limitations
 1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
@@ -102,7 +102,6 @@ Here's an example of the response.
 |Org first seen|The first connection for this IP in the organization.|
 |Org last seen|The last connection for this IP in the organization.|
 
-> [!NOTE]
-> This statistic information is based on data from the past 30 days.
+
 
 

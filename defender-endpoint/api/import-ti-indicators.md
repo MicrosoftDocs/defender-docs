@@ -137,7 +137,4 @@ Here's an example of the response.
 }
 ```
 
-## Related article
-
-- [Manage indicators](../indicators-overview.md)
 

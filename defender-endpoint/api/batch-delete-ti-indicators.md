@@ -19,7 +19,6 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Batch Delete Indicators
@@ -31,9 +30,9 @@ Deletes [Indicator](ti-indicator.md) entities by ID.
 
 ## Limitations
 
-Rate limitations for this API are 30 calls per minute and 1,500 calls per hour.
+- Rate limitations for this API are 30 calls per minute and 1,500 calls per hour.
 
-Batch size limit of up to 500 [Indicator](ti-indicator.md) IDs.
+- Batch size limit of up to 500 [Indicator](ti-indicator.md) IDs.
 
 ## Permissions
 

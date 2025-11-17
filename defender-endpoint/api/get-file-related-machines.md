@@ -19,7 +19,6 @@ ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get file-related machines API
@@ -45,13 +44,8 @@ One of the following permissions is required to call this API. To learn more, in
 
 Permission type|Permission|Permission display name
 :---|:---|:---
-Application|Machine.Read.All|'Read all machine profiles'
 Application|Machine.ReadWrite.All|'Read and write all machine information'
-Delegated (work or school account)|Machine.Read|'Read machine information'
 Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
-
-
-
 
 ## HTTP request
 

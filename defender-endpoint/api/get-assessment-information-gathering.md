@@ -25,9 +25,10 @@ appliesto:
 
 # Information gathering assessment per device
 
-Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 This API response returns all information gathering assessments for all devices, on a per-device basis. It returns a table with a separate entry for every DeviceId.
+
+Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 It pulls all relevant data in your organization as a download file. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
 
@@ -36,8 +37,7 @@ It pulls all relevant data in your organization as a download file. The response
 
 Data that is collected (using _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export information gathering assessment (via files)
 
@@ -104,10 +104,4 @@ GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$s
 }
 ```
 
-## See also
-
-- [DeviceTvmInfoGathering](/defender-xdr/advanced-hunting-devicetvminfogathering-table)
-- [DeviceTvmInfoGatheringKB](/defender-xdr/advanced-hunting-devicetvminfogatheringkb-table)
-- [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 
