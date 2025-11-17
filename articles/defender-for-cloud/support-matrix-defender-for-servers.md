@@ -3,9 +3,9 @@ title: Support for the Defender for Servers plan
 description: Review support requirements, network configurations, and feature support for the "Defender for Servers" plan in Microsoft Defender for Cloud.
 ms.topic: limits-and-quotas
 ms.custom: linux-related-content
-author: dcurwin
-ms.author: dacurwin
-ms.date: 09/11/2025
+author: elazark
+ms.author: elkrieger
+ms.date: 11/17/2025
 ---
 
 # Defender for Servers support
@@ -15,7 +15,7 @@ ms.date: 09/11/2025
 This article summarizes support information for the Defender for Servers plan in Microsoft Defender for Cloud.
 
 > [!NOTE]
-> This article references CentOS, a Linux distribution that is end of life (EOL) as of June 30, 2024. See [EOL guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+> This article references CentOS, a Linux distribution that reaches end of support on June 30, 2024. See [End of support guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 ## Network requirements
 
@@ -23,7 +23,7 @@ Validate the following endpoints are configured for outbound access so that Azur
 
 - For Defender for Server multicloud deployments, make sure that the [addresses and ports required by Azure Arc](/azure/azure-arc/data/connectivity#details-on-internet-addresses-ports-encryption-and-proxy-server-support) are open.
 
-- For deployments with GCP connectors, open port 443 to these URLs:
+- For deployments with Google Cloud Platform (GCP) connectors, open port 443 to these URLs:
 
   - `osconfig.googleapis.com`
   - `compute.googleapis.com`
@@ -31,7 +31,7 @@ Validate the following endpoints are configured for outbound access so that Azur
   - `agentonboarding.defenderforservers.security.azure.com`
   - `gbl.his.arc.azure.com`
 
-- For deployments with AWS connectors, open port 443 to these URLs:
+- For deployments with Amazon Web Services (AWS) connectors, open port 443 to these URLs:
 
   - `ssm.<region>.amazonaws.com`
   - `ssmmessages.<region>.amazonaws.com`
@@ -44,10 +44,10 @@ This table summarizes Azure cloud support for Defender for Servers features.
 
 | **Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**<br/>**21Vianet** |
 |--- | --- | --- | --- |
-| [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA <sup>[1](#footnote1)</sup>| GA |
+| [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA <sup>[1](#azure-footnote1)</sup>| GA |
 | [Compliance standards](./regulatory-compliance-dashboard.md)<br/>Compliance standards might differ depending on the cloud type.| GA | GA | GA |
 | [Machine OS misconfiguration](apply-security-baseline.md) | GA | GA | GA |
-| [VM vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | GA | GA |
+| [Virtual Machines (VM) vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | GA | GA |
 | [VM vulnerability scanning - Microsoft Defender for Endpoint sensor](deploy-vulnerability-assessment-defender-vulnerability-management.md) | GA | GA | GA |
 | [Just-in-time VM access](./just-in-time-access-usage.yml) | GA | GA | GA |
 | [File integrity monitoring](./file-integrity-monitoring-overview.md)  | GA | GA | GA |
@@ -58,13 +58,13 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
 | [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | GA | GA |
 
-<sup>1</sup>: In GCC-M environments on Azure public cloud, the following Microsoft Defender for Endpoint integrations are currently not supported: Direct onboarding, Vulnerability Assessment recommendations and File Integrity Monitoring (FIM).
+<a name="azure-footnote1"></a>1: In Government Community Cloud – Moderate (GCC-M) environments on Azure public cloud, the following Microsoft Defender for Endpoint integrations aren't supported: Direct onboarding, Vulnerability Assessment recommendations, and File Integrity Monitoring (FIM).
 
 ## Windows machine support
 
 The following table shows feature support for Windows machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#windows-footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2025, 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ | Yes |
@@ -79,17 +79,17 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Disk encryption assessment | ✔</br>[supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
-| Third-party vulnerability assessment (BYOL) | ✔ | - | No |
+| Non-Microsoft vulnerability assessment Bring Your Own License (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
-<sup><a name="footnote1"></a>1</sup> Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts.
+<a name="windows-footnote1"></a>1: Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, Domain Name System (DNS) alerts, and control plane alerts.
 
 ## Linux machine support
 
 The following table shows feature support for Linux machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled machines** | **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#linux-footnote1)</sup> | **Azure Arc-enabled machines** | **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ <br> ([supported versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux)) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](./azure-defender.md) | ✔</br> Supported versions | ✔ | Yes |
@@ -104,11 +104,11 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | - | - | No |
 | Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
-| Third-party vulnerability assessment (BYOL) | ✔ | - | No |
+| Non-Microsoft vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 | [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
-<sup><a name="footnote1"></a>1</sup> Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts.
+<a name="linux-footnote1"></a>1: Currently, VM [Scale Sets with Uniform Orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-uniform-orchestration) have partial feature coverage. The main supported capabilities include agentless detections, such as Network Layer Alerts, DNS alerts, and control plane alerts.
 
 ## Multicloud machines
 
