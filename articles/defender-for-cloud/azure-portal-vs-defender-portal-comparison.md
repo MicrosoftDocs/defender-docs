@@ -30,7 +30,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 
 | Feature name | Azure portal | Defender portal |
 |-------------|--------------|-----------------|
-| **Security recommendations** | Yes | Yes - Integrated into Exposure Management |
+| **Security recommendations** | Yes | Yes - Integrated into Exposure Management<br><br>**Note**: In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. |
 | **Asset inventory** | Yes | Yes |
 | **Secure score** | Yes | Yes - New risk-based secure score |
 | **Data visualization and reporting with Azure Workbooks** | Yes | No |
