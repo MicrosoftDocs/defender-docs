@@ -167,7 +167,7 @@ If you own the sender domain, the undelivered simulation report is returned in a
 > [!TIP]
 > Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
 >
-> After December 2025 as described in Message Center post [MC1166864](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1166864), user interaction signals (for example, Compromise, Report, Read, Delete, Reply, Forward, Out-of-office, and Attachment opened) are captured consistently until the simulation ends. Training-related events (for example, Training completed or In progress) are reflected in simulation reporting up to the training due date, even after the simulation ends.
+> After December 2025 as described in Message Center post [MC1166864](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1166864), user interaction signals (for example, Compromise, Report, Read, Delete, Reply, Forward, Out-of-office (only when it is set at the time of receiving the attack simulation email) , and Attachment opened) are captured consistently until the simulation ends. Training-related events (for example, Training completed or In progress) are reflected in simulation reporting up to the training due date, even after the simulation ends.
 
 ### Differences in user activity data from Attack simulation training reports and other reports
 
