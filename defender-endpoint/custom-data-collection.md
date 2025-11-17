@@ -81,6 +81,46 @@ Expand visibility into script-based attacks:
 - Track script files from untrusted locations
 - Collect AMSI events for malicious script detection
 
+## Frequently asked questions
+
+### Does custom data collection affect the default Defender for Endpoint configuration?
+
+No, custom data collection rules live side-by-side with the Defender for Endpoint out-of-the-box configuration.
+
+### Is a Microsoft Sentinel workspace required?
+
+Yes, you need a connected Microsoft Sentinel workspace to create custom data collection rules. For more information, see the [prerequisites](create-custom-data-collection-rules.md#prerequisites).
+
+### How can I know if a rule has reached the endpoint?
+
+Currently, you can query for events collected by the relevant rule, for the specific endpoint. For example, the following query returns all effective rules on the endpoint (now and in the past), counting the rules' collected events.
+
+```kusto
+search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents) "your_device_id"
+| where DeviceId == "your_device_id"
+| summarize count() by RuleName, RuleLastModificationTime, $table
+```
+
+### Does custom data collection incur additional costs?
+
+Custom Data Collection is provided to you as part of MDE P2 license free of charge. You are billed for the ingestion of data into your Microsoft Sentinel workspaces in accordance with your deal with Sentinel. The extra cost is based on the volume of data ingested.
+
+### What client versions and OSs are currently supported?
+
+See [supported operating systems](create-custom-data-collection-rules.md#supported-operating-systems). To query your client version, in [advanced hunting](/defender-xdr/advanced-hunting-overview), use the **ClientVersion** column in the **DeviceInfo** table.
+
+### Are manual (static) tags supported?
+
+No, we currently only support dynamic tags. However, you can create dynamic tags out of manual tags in **Settings > Microsoft Defender XDR > Asset rule management**. For more information, see [Configure dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
+
+### I want to collect all events for a given event type. How can I do it?
+
+We are working on an explicit and determined experience to define rules as filter-less. In the meantime, you can simply generate a catch-all rule. Something like that: FolderPath Not equals "veryrarestringwhichisnotexpected".
+
+### What Operating Systems are currently supported?
+
+Windows, with minimum client version of 10.8797. Expansion into Linux and MacOS is also planned without concrete ETA to share.
+
 ## Next steps
 
 - Learn how to [create and manage custom data collection rules](create-custom-data-collection-rules.md)
