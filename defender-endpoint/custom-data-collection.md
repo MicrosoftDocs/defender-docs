@@ -94,7 +94,7 @@ No, we currently only support dynamic tags. However, you can create dynamic tags
 
 ### How can I collect all events for a specific event type?
 
-You can currently generate a broad rule, like: `FolderPath Not equals "veryrarestringwhichisnotexpected"`.
+See [Monitor and troubleshoot](create-custom-data-collection-rules.md#monitor-and-troubleshoot).
 
 ## Next steps
 
