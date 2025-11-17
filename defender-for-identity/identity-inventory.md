@@ -60,7 +60,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Object ID__ – A unique identifier for the identity in Microsoft Entra ID.
 
-- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Entra ID).
+- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID).
 
 - __Type__ – Specifies if the identity is a user account or service account.
 
@@ -76,7 +76,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Last updated__ – The timestamp of the most recent update to the identity's attributes in Active Directory.
 
-Nondefault columns: Email, Microsoft Entra ID risk level and Cloud ID. 
+Nondefault columns: Email, Microsoft Entra ID risk level, and Cloud ID. 
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
