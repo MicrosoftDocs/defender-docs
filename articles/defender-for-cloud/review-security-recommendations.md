@@ -96,21 +96,55 @@ The **Recommendations** page within Exposure Management provides a prioritized l
    - **Workload**: Filter by specific workload types
    - **Recommendation maturity**: Filter by recommendation readiness level
 
-1. In the left-hand side of the page, you can choose to view:
+1. In the left-hand side of the page, you can choose to view recommendations by security category:
    - **All recommendations**: Complete list of security recommendations
    - **Misconfigurations**: Configuration-related security issues
    - **Vulnerabilities**: Software vulnerabilities requiring patches
    - **Exposed Secrets**: Credentials and secrets that may be compromised
-
-1. For each view, you'll see:
-   - **Cloud secure score**: Current security posture score
-   - **Score history**: Trends over time
-   - **Recommendation by risk level**: Breakdown by High, Medium, Low severity
-   - **Risk calculation details**: How the risk level is determined
-
-1. Select a recommendation to review detailed information including remediation steps, attack surface map, related initiatives, and associated CVEs.
    
-   :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
+   > [!NOTE]
+   > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
+
+### Recommendations summary cards
+
+For each view, the page displays summary cards that provide an at-a-glance overview of your cloud security posture:
+
+- **Cloud secure score**: Shows your overall cloud security health based on the security recommendations in your environment
+- **Score history**: Tracks your Secure Score changes over the last 7 days, helping you identify trends and measure improvement
+- **Recommendations by risk level**: Summarizes the number of active security recommendations, categorized by severity (Critical, High, Medium, Low)
+- **How risk level is calculated**: Explains how severity ratings and asset-specific risk factors are combined to determine the overall risk level for each recommendation
+
+### Recommendation views
+
+The Defender portal provides two distinct ways to view and interact with recommendations:
+
+#### Recommendation per asset view
+
+This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
+
+When you select a recommendation row, a side panel opens displaying:
+
+- **Overview**: General information about the recommendation, including its description, details of the exposed asset, and other relevant recommendation specifics
+- **Remediation steps**: Actionable guidance to resolve the security issue
+- **Map preview**: Displays all related attack paths passing through the asset, aggregated by target node type. You can:
+  - Click on an aggregated path to reveal all associated attack and additional paths
+  - Select a specific path to view its detailed visualization
+- **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
+- Additional tabs may appear for specific recommendations with relevant contextual information
+
+#### Recommendation title view
+
+This view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
+
+When you select an aggregated recommendation row, a side panel opens displaying:
+
+- **Overview**: General information including the recommendation description, risk level distribution across affected resources, governance status, and other relevant details
+- **Remediation steps**: Actionable guidance to resolve the security issue
+- **Exposed assets**: A list of all resources affected by this recommendation
+- **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
+- Additional tabs may appear for specific recommendations with relevant contextual information
+
+:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 
 Alternative access paths to recommendations:
