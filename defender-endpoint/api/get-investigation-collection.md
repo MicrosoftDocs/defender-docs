@@ -52,12 +52,10 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permission|Permission display name|
 |:---|:---|:---|
-|Application|Alert.Read.All|`Read all alerts` |
 |Application|Alert.ReadWrite.All|`Read and write all alerts` |
-|Delegated (work or school account)|Alert.Read|`Read alerts` |
 |Delegated (work or school account)|Alert.ReadWrite|`Read and write alerts` |
 
- 
+
 
 ## HTTP request
 

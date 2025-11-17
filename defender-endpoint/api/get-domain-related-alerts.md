@@ -19,7 +19,6 @@ ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get domain-related alerts API
@@ -35,20 +34,16 @@ Retrieves a collection of [Alerts](alerts.md) related to a given domain address.
 
 ## Permissions
 
+When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data`. For more information,see [Create and manage roles](../user-roles.md).
+
+A response includes only alerts, associated with devices, that the user has access to, based on device group settings. For more information,see [Create and manage device groups](../machine-groups.md).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
 :---|:---|:---
-Application|Alert.Read.All|'Read all alerts'
 Application|Alert.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account)|Alert.Read|'Read alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
-
-When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md)).
-
-A response includes only alerts, associated with devices, that the user has access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
-
-Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 
