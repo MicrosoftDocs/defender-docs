@@ -81,7 +81,6 @@ sections:
 
           You can't customize quarantine policies in [preset security policies](preset-security-policies.md).
 
-
       - question: |
           What messages can end users access in quarantine?
         answer: |
