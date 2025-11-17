@@ -89,7 +89,7 @@ Defender for Identity data centers are now also deployed in the United Arab Emir
 
 
 ### New API support for the Defender for Identity sensor v3.x (Preview)
-We are excited to announce the availability of a new Graph-based API for managing sensor v3.x server actions in Microsoft Defender for Identity.
+We are excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
