@@ -25,6 +25,23 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
+
+### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
+
+The following new features are now available in Microsoft Defender for Identity:
+
+**Accounts tab in Identity Inventory**
+
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+
+**Manual link and unlink of accounts**
+
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+
+**Identity-level remediation actions**
+
+You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
 
 Releated Health alerts:
@@ -68,7 +85,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 | Classic Alert Title | External ID| XDR Alert Name |Detector ID|
 |--------------------|------------|----------------|-----------|
-|Active Directory attributes Reconnnaissance using LDAP|2210|[Active Directory attributes Reconnnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
 |User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
 |Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
 |    |    |[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
