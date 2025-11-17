@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: how-to
 search.appverid:
 - MET150
-ms.date: 10/31/2025
+ms.date: 11/18/2025
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a security analyst, I want to learn about the Threat Intelligence Briefing Agent in Microsoft Defender so that I can generate threat intelligence briefings efficiently.
