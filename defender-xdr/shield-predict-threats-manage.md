@@ -48,8 +48,8 @@ TBD - screenshot
 
 The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
 
-> [!NOTE]
-> After you review data on how predictive shielding actions are applied in your environment, you might choose to undo an incident where an action applies, for example, if you've taken remediation steps. For more information, see [Undo incidents where actions are applied](#undo-incidents-where-actions-are-applied).
+> [!TIP]
+> To undo an action, see [Undo actions triggered by predictive shielding](#undo-actions-triggered-by-predictive-shielding).
 
 ### Review the incident information
 
@@ -125,7 +125,9 @@ DisruptionAndResponseEvents
 
 ## Undo actions triggered by predictive shielding
 
-You can undo an action that was applied as part of predictive shielding. To undo an action:
+You can undo an action that was applied as part of predictive shielding. 
+
+To undo an action, do one of the following:
 
 - In the **Activity** tab of the incident, select the specific action you want to undo.
 - [Undo an action from the Action center](m365d-autoir-actions.md#undo-completed-actions).
