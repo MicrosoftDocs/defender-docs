@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
-Defender for Identity now offers an automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors, and fixing misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
+Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
 
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
