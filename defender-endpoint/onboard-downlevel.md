@@ -61,7 +61,7 @@ The following steps are required to enable this integration:
 
 ## Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
 
-A Microsoft Defender for Endpoint agent is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The agent provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the agent's currently supported functionality.
+A Microsoft Defender for Endpoint agent (preview) is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The agent provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the agent's currently supported functionality.
 
 | Feature | Functionality |
 |---------|---------------|
