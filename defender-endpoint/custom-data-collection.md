@@ -34,6 +34,8 @@ This article provides an overview of custom data collection so that you can unde
 
 Custom data collection uses rule-based filtering to capture specific events from endpoint devices and route them to your Microsoft Sentinel workspace for analysis and threat hunting.
 
+:::image type="content" source="media/custom-data-collection/custom-data-collection-main-view.png" alt-text="Screenshot of the main Custom Data Collection page." lightbox="media/custom-data-collection/custom-data-collection-main-view.png":::
+
 Custom collection rules allow you to define the specific events you want to capture and the conditions under which they should be collected.
 
 To create custom data collection rules, see [Create custom data collection rules](create-custom-data-collection-rules.md).
