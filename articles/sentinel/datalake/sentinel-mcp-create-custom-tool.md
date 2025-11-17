@@ -73,9 +73,9 @@ When saving your custom tool, its name and, more importantly, its description ar
 - **Optimize for discoverability and clarity.**
 Use consistent naming, avoid ambiguous terms, and ensure descriptions help AI models and users quickly select the right tool.
 
-## Add custom tools to your security agents
+## Use custom tools in custom agents and coding platforms
 
-For more information on how to add your custom tool collection to your security agents, see the articles for the following AI-powered code editors and agent-building platforms:
+For more information on how to use your custom tool collection in your security agents, see the articles for the following AI-powered code editors and agent-building platforms:
 - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-custom-tool-collection)
 - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-custom-tool-collection)
 - [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-custom-tool-collection)

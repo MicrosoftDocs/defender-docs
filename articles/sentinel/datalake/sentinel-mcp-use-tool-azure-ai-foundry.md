@@ -147,7 +147,7 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
 
 Once you give consent, your agent can reason over data returned by your custom MCP tool.
 
-:::image type="content" source="media/sentinel-mcp/custom-foundry-prompt-result" alt-text="Screenshot of chat details in Azure AI Foundry that uses a custom tool." lightbox="media/sentinel-mcp/custom-foundry-prompt-result":::
+:::image type="content" source="media/sentinel-mcp/custom-foundry-prompt-result.png" alt-text="Screenshot of chat details in Azure AI Foundry that uses a custom tool." lightbox="media/sentinel-mcp/custom-foundry-prompt-result.png":::
 
 ## Related content
 - [Tool collection in Microsoft Sentinel MCP server](sentinel-mcp-tools-overview.md)

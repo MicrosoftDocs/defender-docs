@@ -20,9 +20,6 @@ The agent creation tool collection in the Microsoft Sentinel Model Context Proto
 To access the agent creation tool collection, you must have the following prerequisites:
 - [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
 - Any of the supported AI-powered code editors and agent-building platforms:
-    - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
-    - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
-    - [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
     - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the agent creation collection
