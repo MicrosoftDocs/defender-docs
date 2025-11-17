@@ -180,7 +180,11 @@ This test might take some time to run as it performs checks for every URL needed
 
 ## Troubleshoot the installation
 
-Whenever you run the Defender deployment tool, the activity gets logged in this file `/tmp/defender_deployment_tool.log`. If you experience any installation issues, first check the log file. If that doesn't help you resolve the issue, try following these steps:
+Whenever you run the Defender deployment tool, the activity gets logged in this file:
+
+`/tmp/defender_deployment_tool.log`
+
+If you experience any installation issues, first check the log file. If that doesn't help you resolve the issue, try following these steps:
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](./linux-resources.md#log-installation-issues).
 
