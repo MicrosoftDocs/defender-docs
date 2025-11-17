@@ -113,13 +113,9 @@ See [supported operating systems](create-custom-data-collection-rules.md#support
 
 No, we currently only support dynamic tags. However, you can create dynamic tags out of manual tags in **Settings > Microsoft Defender XDR > Asset rule management**. For more information, see [Configure dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
 
-### I want to collect all events for a given event type. How can I do it?
+### How can I collect all events for a specific event type?
 
-We are working on an explicit and determined experience to define rules as filter-less. In the meantime, you can simply generate a catch-all rule. Something like that: FolderPath Not equals "veryrarestringwhichisnotexpected".
-
-### What Operating Systems are currently supported?
-
-Windows, with minimum client version of 10.8797. Expansion into Linux and MacOS is also planned without concrete ETA to share.
+You can currently generate a broad rule, like: `FolderPath Not equals "veryrarestringwhichisnotexpected"`.
 
 ## Next steps
 
