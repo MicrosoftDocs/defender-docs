@@ -25,7 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
-Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+### Automatic Windows event auditing configuration for V3.x sensors
+
+Defender for Identity now offers an opt-in automatic Windows event-auditing configuration for V3.x sensors. This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+
 **Releated Health alerts:**
 - NTLM Auditing is not enabled 
 - Directory Services Advanced Auditing is not enabled as required 
@@ -75,7 +78,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 |Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
-### Unlock additional security value in the unified agent (Preview)
+### Unlock additional security value in v3.x sensor
 
 Get enhanced protection by applying the **Unified sensor RPC audit** tag to your v3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
