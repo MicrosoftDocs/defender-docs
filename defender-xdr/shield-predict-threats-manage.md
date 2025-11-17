@@ -47,18 +47,24 @@ Review the incident graph to get the entire [attack story](investigate-incidents
 
 :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-attack-story.png" alt-text="Screenshot of predictive shielding data shown in the incident graph, attack story, and disruption summary card." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-attack-story.png":::
 
-Review the incident page for predictive shielding details and results:
+Review the incident, alert, and disruption information for predictive shielding details and results:
 
-- Filter by the **Predictive Shielding** label to find incidents where predictive shielding is applied.
+- In the **Incidents** page, filter by the **Predictive Shielding** label to find incidents where predictive shielding is applied.
+
+    :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding label." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
+
 - Review the incident summary pane, which shows how predictive shielding is applied across your environment:
 
-    - The **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
-    - The number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
+    - In the alert details, view the **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
+    
+    :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-alert-details.png" alt-text="Screenshot of the alert details with the Predictive Shielding label." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png"::: 
+
+    - In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
+    
+    :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png":::
 
     > [!NOTE]
-    > The incident shows historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
-
-    TBD - screenshot
+    > While the incident and alert details show historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
 
 ### Review the activity information
 
