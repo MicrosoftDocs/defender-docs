@@ -30,6 +30,16 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 #### November 2025
 
+| Build| 1.0.8315.0101|
+| -------- | -------- |
+| Release Date 	| November 17, 2025 |
+
+**What's New**
+
+- Performance Improvement and accessibility bug fixes
+
+#### November 2025
+
 | Build| 1.0.8303.0101|
 | -------- | -------- |
 | Release Date |November 4, 2025|
