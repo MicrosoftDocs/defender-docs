@@ -304,7 +304,7 @@ To test if the installation succeeded successfully, perform the following checks
 
    You should see something similar to the following for both services:
 
-   :::image type="content" source="./media/deployment-tool-windows/services-check.png" alt-text="Screenshot of service status check.":::
+   :::image type="content" source="./media/defender-deployment-tool-windows/services-check.png" alt-text="Screenshot of service status check.":::
 
 1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
 
