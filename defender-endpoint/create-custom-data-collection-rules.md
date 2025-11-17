@@ -40,17 +40,17 @@ To use custom data collection, you need:
 
 - A Microsoft Defender for Endpoint P2 license.
 - A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying.
-- Minimum client version: 10.8797 (Windows only).
+- Use the [supported operating systems](#supported-operating-systems).
 - Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
 
 ### Supported operating systems
 
-- **Windows**: Minimum client version 10.8797, up to Windows 11.
+- **Windows**: Minimum Defender for Endpoint client version 10.8805, up to Windows 11.
 - **Windows 10**: Requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
 
 ### Performance and limits
 
-- Collection rules are limited to 25,000 events each for performance protection.
+- Each collection rule can capture up to 25,000 events per device within a 24-hour rolling window. Once this limit is reached, telemetry for that specific rule on that device stops until the window resets. If the threshold is reached early in the cycle, the wait can be up to 24 hours; if it’s near the end, the delay is shorter
 - Rule deployment typically takes 20 minutes to one hour.
 - Custom collection operates alongside default Defender for Endpoint configuration without interference.
 
@@ -129,6 +129,6 @@ In the query results, review the following data:
 
 - To edit a rule, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**, select the rule you want to edit, and select **Edit**.
 - To delete a rule, select the rule you want to delete, and select **Delete**.
-- To turn a rule off or on, select the rule you want to modify, and **Turn off** or **Turn on**.
+- To disable or enable a rule, select the rule you want to modify, select the rule and select the **Enable** or **Disable** check box.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

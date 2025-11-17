@@ -40,15 +40,15 @@ To create custom data collection rules, see [Create custom data collection rules
 
 ## Supported event tables
 
-Custom data collection supports these event tables. Each event table uses the same schema as the default event table.
+Custom data collection supports these event tables. While most of the tables are based to the default schema, the DeviceCustomScriptEvents table is a new addition and does not have a reference in the default event tables.
 
-- **DeviceCustomProcessEvents**: Stores data on process creation, termination, and other process-related activities. For the list of columns, review the [DeviceProcessEvents](/defender-xdr/advanced-hunting-deviceprocessevents-table) table reference.
-- **DeviceCustomImageLoadEvents**: Stores data on image loading events, including details about the loaded images and their origins. For the list of columns, review the [DeviceImageLoadEvents](/defender-xdr/advanced-hunting-deviceimageloadevents-table) table reference.
-- **DeviceCustomFileEvents**: Stores data on file creation, modification, deletion, and access activities. For the list of columns, review the [DeviceFileEvents](/defender-xdr/advanced-hunting-devicefileevents-table) table reference.
-   - The **DeviceCustomFileEvents** includes these two additional unique columns: **RuleName** - the custom data collection rule name, and the **RuleLastModificationTime**, the last modification time of the rule.
-- **DeviceCustomNetworkEvents**: Stores data on network connection events, including IP addresses, ports, and protocols. For the list of columns, review the [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table) table reference.
-- **DeviceCustomScriptEvents**: Stores data on script execution activities through Antimalware Scan Interface (AMSI).
-
+| Table name | Description | Learn more |
+|------------|-------------|------------|
+| **DeviceCustomProcessEvents** | Stores data on process creation, termination, and other process-related activities. | [In-portal schema reference](/defender-xdr/advanced-hunting-schema-tables?#get-schema-information-in-the-security-center) or [DeviceProcessEvents](/defender-xdr/advanced-hunting-deviceprocessevents-table) table reference |
+| **DeviceCustomImageLoadEvents** | Stores data on image loading events, including details about the loaded images and their origins. | [In-portal schema reference](/defender-xdr/advanced-hunting-schema-tables?#get-schema-information-in-the-security-center) or [DeviceImageLoadEvents](/defender-xdr/advanced-hunting-deviceimageloadevents-table) table reference |
+| **DeviceCustomFileEvents** | Stores data on file creation, modification, deletion, and access activities. | [In-portal schema reference](/defender-xdr/advanced-hunting-schema-tables?#get-schema-information-in-the-security-center) or [DeviceFileEvents](/defender-xdr/advanced-hunting-devicefileevents-table) table reference |
+| **DeviceCustomNetworkEvents** | Stores data on network connection events, including IP addresses, ports, and protocols. | [In-portal schema reference](/defender-xdr/advanced-hunting-schema-tables?#get-schema-information-in-the-security-center) or [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table) table reference |
+| **DeviceCustomScriptEvents** | Stores data on script execution activities through Antimalware Scan Interface (AMSI). This table is a new addition and does not have a reference in the default event tables. | [In-portal schema reference](/defender-xdr/advanced-hunting-schema-tables?#get-schema-information-in-the-security-center) |
 
 ## Data flow and integration
 
