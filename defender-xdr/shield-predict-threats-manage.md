@@ -91,7 +91,7 @@ Select the incident's **Activity** tab and filter by the **Response** category t
 TBD - screenshot
 
 > [!TIP]
-> While the **Activity** tab displays actions that are specific to the current incident, the Action Center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
+> While the **Activity** tab displays actions that are specific to the current incident, the Action center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
 
 ### Review the triggering alert information
 
@@ -127,7 +127,7 @@ DisruptionAndResponseEvents
 
 ### Track policy modification events in the environment
 
-This sample query retrieves policy modification events in the environments, including application and removal of hardening policies from devices onboarded to Defender for Endpoint.
+This sample query retrieves policy modification events in the environment, including application and removal of hardening policies from devices onboarded to Defender for Endpoint.
 
 ```kusto
   DisruptionAndResponseEvents
