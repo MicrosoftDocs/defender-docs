@@ -16,7 +16,7 @@ ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 09/21/2025
+ms.date: 10/26/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -34,18 +34,14 @@ Within an incident, you analyze the alerts, understand what they mean, and colla
 
 Before diving into the details, take a look at the properties and the entire attack story of the incident.
 
-You can start by selecting the incident from the check mark column. Here's an example.
+You can start by selecting the incident row, but not selecting the incident name. A summary pane opens with key information about the incident, including the priority assessment, the factors influencing the priority score, the incident's details, recommended actions, and related threats. Use the up and down arrows at the top of the pane to navigate to the previous or next incident in the incident queue.
 
-:::image type="content" source="./media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incidents-ss-incident-select.png":::
-
-When you do, a summary pane opens with key information about the incident, like the incident's details, recommended actions, and related threats. Here's an example.
-
-:::image type="content" source="./media/investigate-incidents/incident-pane-small.png" alt-text="The pane that displays the summary details for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-pane.png":::
+:::image type="content" source="./media/investigate-incidents/incident-side-panel.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-side-panel.png":::
 
 From here, you can select **Open incident page**. This opens the main page for the incident where you'll find the full attack story information and tabs for alerts, devices, users, investigations, and evidence. You can also open the main page for an incident by selecting the incident name from the incident queue.
 
 > [!NOTE]
-> Users with provisioned access to Microsoft Security Copilot will see the Copilot pane on the right side of the screen when they open an incident. Copilot provides real-time insights and recommendations to help you investigate and respond to incidents. For more information, see [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md).
+> Users with provisioned access to Microsoft Security Copilot see the Copilot pane on the right side of the screen when they open an incident. Copilot provides real-time insights and recommendations to help you investigate and respond to incidents. For more information, see [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md).
 
 ## Attack story
 
@@ -66,7 +62,7 @@ The incident alert page has these sections:
 
 - Alert properties in the right pane (state, details, description, and others)
 
-Note that not every alert will have all of the listed subsections in the **Alert story** section.
+Not every alert has all of the listed subsections in the **Alert story** section.
 
 The graph shows the full scope of the attack, how the attack spread through your network over time, where it started, and how far the attacker went. It connects the different suspicious entities that are part of the attack with their related assets such as users, devices, and mailboxes.
 
@@ -80,7 +76,7 @@ From the graph, you can:
 
   :::image type="content" source="./media/investigate-incidents/review-entity-details-attack-story.gif" alt-text="Screenshot that shows the review of the entity details on the attack story graph page.":::
 
-- Highlight the alerts based on the entity to which they are related.
+- Highlight the alerts based on the entity to which they're related.
 
 - Hunt for entity information of a device, file, IP address, URL, user, email, mailbox, or cloud resource.
 
@@ -95,7 +91,7 @@ The ***go hunt*** action takes advantage of the [advanced hunting](advanced-hunt
 
 :::image type="content" source="./media/investigate-incidents/gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="./media/investigate-incidents/gohunt-attackstory.png":::
 
-The resulting logs or alerts can be linked to an incident by selecting a results and then selecting *Link to incident*.
+The resulting logs or alerts can be linked to an incident by selecting a result and then selecting *Link to incident*.
 
 :::image type="content" source="./media/investigate-incidents/fig2-gohunt-attackstory.png" alt-text="Highlighting the link to incident option in go hunt query results" lightbox="./media/investigate-incidents/fig2-gohunt-attackstory.png":::
 
@@ -117,7 +113,7 @@ The following prerequisites are required to use the blast radius graph:
 +	You must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
 +	Exposure management (read) permission or higher. For more information, see [Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)](/security-exposure-management/prerequisites#manage-permissions-with-microsoft-defender-xdr-unified-role-based-access-control-rbac).
 > [!IMPORTANT]
-> Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If no further workloads are enabled or critical assets aren't fully defined,blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
+> Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If no further workloads are enabled or critical assets aren't fully defined, blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
 
 The following table summarizes the blast radius analysis use cases for different user roles:
 
