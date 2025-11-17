@@ -55,7 +55,7 @@ You can also review the alert, and disruption information for predictive shieldi
 
 - In the alert details, view the **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
     
-    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-alert-details.png" alt-text="Screenshot of the alert details with the Predictive Shielding label." lightbox="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png"::: 
+    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-alert-details.png" alt-text="Screenshot of the alert details with the Predictive Shielding label."::: 
 
 - In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
     
