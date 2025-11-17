@@ -1,6 +1,6 @@
 ---
-title: Regulatory compliance in Defender for Cloud
-description: Learn about regulatory compliance in Microsoft Defender for Cloud, and how it helps ensure compliance with industry, regional, and global standards.
+title: Security standards in Defender for Cloud
+description: Learn about security standards in Microsoft Defender for Cloud, and how it helps ensure compliance with industry, regional, and global standards.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
@@ -8,63 +8,58 @@ ms.date: 11/04/2025
 #customer intent: As a cloud security professional, I want to understand how Defender for Cloud helps me meet regulatory compliance standards, so that I can ensure my organization is compliant with industry standards and regulations.
 ---
 
-# Regulatory compliance standards in Microsoft Defender for Cloud
+# Security standards in Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud streamlines the regulatory compliance process by helping you to identify issues that are preventing you from meeting a particular compliance standard, or achieving compliance certification.
+Microsoft Defender for Cloud helps you assess and monitor compliance with security, regulatory, and organizational requirements across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
-Industry standards, regulatory standards, and benchmarks are represented in Defender for Cloud as [security standards](security-policy-concept.md), and appear in the **Regulatory compliance** dashboard.
+Defender for Cloud represents all frameworks, regulations, and benchmarks as security standards. Each standard defines a set of rules and assessment logic that Defender for Cloud continuously evaluates across your connected environments. The results of these evaluations appear in the Regulatory compliance dashboard, where you can track compliance state and investigate noncompliant resources.
 
-## Compliance controls
+## Compliance assessments
 
-Each security standard consists of multiple compliance controls, which are logical groups of related security recommendations.
+Each standard contains multiple controls that represent specific security requirements. Defender for Cloud automatically evaluates your resources against these controls and marks them as compliant, noncompliant, or unavailable for automated assessment.
 
-Defender for Cloud continually assesses the environment-in-scope against any compliance controls that can be automatically assessed. Based on assessments, it shows resources as being compliant or non-compliant with controls.
+Failed controls generate security recommendations that describe the issue and provide remediation steps.
 
-> [!NOTE]
-> It's important to note that if standards have compliance controls that can't be automatically assessed, Defender for Cloud isn't able to decide whether a resource complies with the control. In this case, the control will show as greyed out. In addition, if a subscription has no relevant resources to a specific standard, the standard won't be shown in the regulatory compliance dashboard at all, even if it assigned.
+If no relevant resources exist for a particular standard, it doesn’t appear in the dashboard, even if it’s assigned to the scope.
 
-## View compliance standards
+## View standards in the Regulatory compliance dashboard
 
-The **Regulatory compliance** dashboard provides an interactive overview of compliance state.
+The Regulatory compliance dashboard provides an overview of compliance posture across all connected clouds.
 
-:::image type="content" source="media/concepts-regulatory-compliance-standards/compliance-standards.png" alt-text="Screenshot showing the regulatory compliance dashboard." lightbox="media/concepts-regulatory-compliance-standards/compliance-standards.png":::
+:::image type="content" source="media/concepts-regulatory-compliance-standards/compliance-standards.png" alt-text="Screenshot showing the regulatory compliance dashboard in Defender for Cloud." lightbox="media/concepts-regulatory-compliance-standards/compliance-standards.png":::
 
-In the dashboard you can:
+From the dashboard, you can:
 
-- Get a summary of standards controls that have been passed.
-- Get of summary of standards that have the lowest pass rate for resources.
-- Review standards that are applied within the selected scope.
-- Review assessments for compliance controls within each applied standard.
-- Get a summary report for a specific standard.
-- Manage compliance policies to see the standards assigned to a specific scope.
-- Run a query to create a custom compliance report
-- [Create a "compliance over time workbook"](custom-dashboards-azure-workbooks.md) to track compliance status over time.
-- Download audit reports.
-- Review compliance offerings for Microsoft and third-party audits.
+- View all standards assigned to a selected scope.  
+- Review the percentage of controls passed per standard.  
+- Identify frameworks with the lowest compliance rate.  
+- Drill down into failed controls and view affected resources.  
+- Generate summary and audit reports.  
+- Track compliance trends using [Azure Workbooks](custom-dashboards-azure-workbooks.md).
 
-## Compliance standard details
+To learn more about using the Regulatory compliance dashboard, see [Improve regulatory compliance](regulatory-compliance-dashboard.md).
 
-For each compliance standard you can view:
+## Security Benchmarks in Microsoft Defender for Cloud
 
-- Scope for the standard.
-- Each standard broken down into groups of controls and subcontrols.
-- When you apply a standard to a scope, you can see a summary of compliance assessment for resources within the scope, for each standard control.
-- The status of the assessments reflects compliance with the standard. There are three states:
-  - A green circle indicates that resources in scope are compliant with the control.
-  - A red circle indicates that resources are not compliant with the control.
-  - Unavailable controls are those that can't be automatically assessed and thus Defender for Cloud is unable to access whether resources are compliant.
+### Microsoft Cloud Security Benchmark (MCSB)
 
-You can drill down into controls to get information about resources that have passed/failed assessments, and for remediation steps.
+The Microsoft Cloud Security Benchmark (MCSB) is applied by default to all connected environments.  
+It defines cloud-agnostic security principles and provides implementation guidance for Azure, AWS, and GCP.  
 
-## Default compliance standards
+The latest version, **MCSB v2 (preview)**, introduces expanded guidance with risk-based controls and updated mappings for new workloads such as AI. 
+ 
+Learn more about the [Microsoft Cloud Security Benchmark in Defender for Cloud](concept-regulatory-compliance.md).
 
-By default, when you enable Defender for Cloud, the following standards are enabled:
+### Cloud-specific default benchmarks
 
-- For **Azure**: [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md).
-- For **AWS**: [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) and [AWS Foundational Security Best Practices standard](https://docs.aws.amazon.com/securityhub/latest/userguide/fsbp-standard.html).
-- For **GCP**: [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) and **GCP Default**.
+In addition to MCSB, Defender for Cloud applies default benchmarks that extend coverage for specific cloud providers:
+
+- AWS: [AWS Foundational Security Best Practices Standard](https://docs.aws.amazon.com/securityhub/latest/userguide/fsbp-standard.html)  
+- GCP: GCP Default benchmark  
 
 ## Available compliance standards
+
+Defender for Cloud includes predefined mappings to widely recognized security and compliance frameworks. These standards help organizations monitor adherence to external regulations and certification programs.
 
 The following standards are available in Defender for Cloud:
 
@@ -125,6 +120,12 @@ The following standards are available in Defender for Cloud:
 | SWIFT CSP-CSCF v2020 | Azure, AWS, GCP |
 | UK OFFICIAL and UK NHS | Azure |
 | Reserve Bank of India - IT Framework for NBFC | Azure, AWS, GCP |
+
+## Custom standards
+
+You can create custom standards that include built-in or custom recommendations to meet organizational compliance needs. Custom standards appear alongside built-in ones in the Regulatory compliance dashboard. 
+
+Learn more about [creating custom standards and recommendations](create-custom-recommendations.md).
 
 ## Related content
 
