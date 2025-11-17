@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 |---------|---------|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
 
-### Automatic Windows event auditing configuration for Identity sensors v3.x
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
 Defender for Identity now offers an opt-in automatic Windows event-auditing configuration for sensors v3.x. This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the portal or via Graph API. The capability and its related health alerts will roll out globally starting early December 2025.
 
