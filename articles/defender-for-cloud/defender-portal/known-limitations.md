@@ -26,16 +26,26 @@ These are the known limitations during the preview release of Defender for Cloud
 
 ## Cloud secure score and recommendations
 
-Cloud Secure Score history may show less than 6 months if tenant was recently onboarded.
-
-## Cloud Inventory
-
+- Cloud Secure Score history may show less than 6 months if tenant was recently onboarded.
+- The new Cloud secure score is only avaiable in the Defender portal. The Azure portal continues to show the previous secure score model.
 
 ## Cloud Scopes
 
 Unified RBAC operates in the Defender portal and uses a different RBAC model from Azure. Permissions are not transferred between portals; instead, security administrators must create separate Unified RBAC permissions for their teams, independent of their Azure permissions.
 
 Cloud scopes management and role assignment on cloud scopes are both available in the portal; API support is coming soon.
+
+### Opt-In
+
+Access and permissions will be managed using cloud scopes instead of device groups.
+
+### Opt-Out
+
+Restores your previous setup and permissions.
+
+- Users with sub-tenant access may lose access to MDC alerts on VMs.
+- New alerts will use device groups for access.
+- Old alerts will only be visible to users with tenant-level access.
 
 To begin using cloud scopes, you must activate them through a one-time wizard. This release does not affect access permissions to VMs, but it will influence future changes related to unifying server primitives.
 
