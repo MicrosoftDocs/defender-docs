@@ -59,7 +59,7 @@ You can also review the alert, and disruption information for predictive shieldi
 
 - In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
     
-    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details." lightbox="media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png":::
+    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details.":::
 
 > [!NOTE]
 > While the incident and alert details show historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
