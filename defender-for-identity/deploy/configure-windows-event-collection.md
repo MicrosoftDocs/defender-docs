@@ -1,7 +1,7 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 06/04/2025
+ms.date: 11/05/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -23,8 +23,12 @@ Defender for Identity generates health issues for each of these scenarios if the
 Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
 ```powershell
-New-MDIConfigurationReport [-Path] <String> [-Mode] <String> [-OpenHtmlReport]
+New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -Identity "DOMAIN\ServiceAccountName" -OpenHtmlReport
 ```
+
+> [!NOTE]
+> When using `-Mode Domain`, include the `-Identity` parameter to avoid an interactive prompt.
+> For more information, see: [New-MDIConfigurationReport](/powershell/module/defenderforidentity/new-mdiconfigurationreport?view=defenderforidentity-latest&preserve-view=true).
 
 In the preceding command:
 
