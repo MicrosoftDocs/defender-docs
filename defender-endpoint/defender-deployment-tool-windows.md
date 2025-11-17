@@ -26,7 +26,63 @@ appliesto:
 
 The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for all Windows versions supported by Defender for Endpoint. The tool takes care of prerequisites, automates migrations from older solutions, and can remove the need for complex onboarding scripts, separate downloads, and manual installations.
 
-Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. The tool also provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools that include the use of group policies.
+Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. For larger deployments, the tool provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools, such as Group Policy, while leaving in place the experiences that are provided through other Microsoft solution integrations such as Intune and Defender for Cloud.
+
+## Supported functionality
+
+The functionality provided by the tool is outlined in the following sections.
+
+### Standard functionality
+
+The following capabilities are intended to support most situations where the tool can be run without any specific configuration apart from providing the relevant onboarding file.
+
+- A simple, basic user interface for a quick, interactive installation and onboarding sequence.
+
+- Automatic tool update upon launch.
+
+- Prerequisite checks and automatic remediation of (potentially) blocking issues
+
+- Automatic download of prerequisite updates and installation files as needed.
+
+- Automatic installation of updates and installation packages, and the ability to resume after a (manual or, if allowed, automatic) reboot, if one is required.
+
+- Automatic logging of events to a locally-created verbose log (the Defender deployment tool log) and the Windows event log.
+
+> [!NOTE]
+
+The tool expects to be able to connect to Defender for Endpoint cloud services in order to perform the functions mentioned above, and by default, it will not proceed with operations if the connectivity check fails. There are advanced command-line features that provide solutions for scenarios where connectivity is temporarily unavailable, but it is important to keep in mind that connectivity to Defender for Endpoint cloud services is required for proper Defender for Endpoint operation in any case.
+
+### Advanced functionality
+
+The following capabilities, provided through command-line parameters, are intended to support automation and orchestration through software deployment tools and other methods that can execute scripts or executables with administrative permissions on devices.
+
+- The ability to perform a prerequisite check, logging results without proceeding with installation or onboarding steps.
+
+- The ability to install any required updates but not proceed with further installation or onboarding steps.
+
+- The ability to download all installation files and updates to support staging (central storage and distribution scenarios).
+
+- The ability to point to a specific (staging) location to use previously downloaded installation files and updates for installation.
+
+- The ability to use onboarding/offboarding files stored in a different folder or network location.
+
+- The ability to allow automatic reboots and disallow resuming after a required reboot.
+
+- The ability to force an offline offboarding operation.
+
+- Support for placing Defender Antivirus in passive mode on server operating systems, to support migration scenarios where a non-Microsoft antimalware solution is still in use.
+
+- A "VDI" option to ensure that devices that are deleted and created again with the same hostname, show as a single device in the portal.
+
+- The ability to configure a proxy for use during installation.
+
+- The ability to generate a configuration file to allow the definition of multiple parameters for reuse in tool runs ("answer file"). A check to ensure that the configuration file is properly formatted before proceeding.
+
+- The option to remove a workspace connection in the Microsoft Monitoring Agent (MMA) if this was previously in use as the agent for legacy versions of Defender for Endpoint.
+
+- Verbose console output, and suppression of console windows.
+
+To view the complete command reference after [downloading](#download-the-tool) the tool, run: `DefenderDT.exe -?` (tool version 1.10 and later. If your tool version is 1.9, use `activateMDE.exe -?`).
 
 ## Supported operating systems
 
