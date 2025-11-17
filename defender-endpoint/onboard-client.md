@@ -22,9 +22,9 @@ appliesto:
 ---
 # Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint
 
-
-
 ## Overview of onboarding client devices
+
+[!INCLUDE [Banner for top of topics](includes/defender-deployment-tool-preview.md)]
 
 To onboard client devices running Windows or macOS, follow this general process:
 
