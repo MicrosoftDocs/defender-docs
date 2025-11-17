@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/29/2024
+ms.date: 11/12/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -25,7 +25,17 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
-### Expansion of identity scoping - support for Organizational units (preview) 
+### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
+
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
+
+### Expansion of identity scoping: upport for Organizational units (Preview) 
 
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
@@ -43,8 +53,23 @@ The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enh
 
 ## September 2025
 
-### Unlock additional security value in the unified sensor (v3.x)
-Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+### MDI alerts transitioned to the unified Defender alerting experience
+
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. 
+
+| Classic Alert Title | External ID| XDR Alert Name |Detector ID|
+|--------------------|------------|----------------|-----------|
+|Active Directory attributes Reconnnaissance using LDAP|2210|[Active Directory attributes Reconnnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
+|    |    |[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
+|    |    |[Account enumeration reconnaissance in NTLM](alerts-xdr.md#account-enumeration-reconnaissance-in-ntlm)|xdr_AccountEnumerationHintSecurityAlertNtlm|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
+|Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
+
+### Unlock additional security value in the unified agent (Preview)
+
+Get enhanced protection by applying the **Unified sensor RPC audit** tag to your v3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
@@ -490,7 +515,7 @@ To help customers better identify and detect attempts to bypass security protoco
 
 With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
-Access Defender XDR portal -> Hunting -> Advanced Hunting.
+Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
 
 Now, you can copy our recommended query as provided below, and select on “Create detection rule”. Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
@@ -576,13 +601,13 @@ Changes include:
 
 - The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
-The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
-
-|Sensitivity level (previous name) |Threshold level (new name) |
-|---------|---------|
-|**Normal**     |  **High**       |
-|**Medium**      |  **Medium**       |
-|**High**      |  **Low**       |
+  The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+  
+  |Sensitivity level (previous name) |Threshold level (new name) |
+  |---------|---------|
+  |**Normal**     |  **High**       |
+  |**Medium**      |  **Medium**       |
+  |**High**      |  **Low**       |
 
 If you had specific values defined on the **Advanced Settings** page, we transferred them to the new **Adjust alert thresholds** page as follows:
 
