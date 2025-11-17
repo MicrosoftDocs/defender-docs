@@ -40,11 +40,15 @@ To create custom data collection rules, see [Create custom data collection rules
 
 ## Supported event tables
 
-Custom data collection supports three event tables. Each event table uses the same schema as the default event table.
+Custom data collection supports these event tables. Each event table uses the same schema as the default event table.
 
+- **DeviceCustomProcessEvents**: Stores data on process creation, termination, and other process-related activities. For the list of columns, review the [DeviceProcessEvents](/defender-xdr/advanced-hunting-deviceprocessevents-table) table reference.
+- **DeviceCustomImageLoadEvents**: Stores data on image loading events, including details about the loaded images and their origins. For the list of columns, review the [DeviceImageLoadEvents](/defender-xdr/advanced-hunting-deviceimageloadevents-table) table reference.
 - **DeviceCustomFileEvents**: Stores data on file creation, modification, deletion, and access activities. For the list of columns, review the [DeviceFileEvents](/defender-xdr/advanced-hunting-devicefileevents-table) table reference.
+   - The **DeviceCustomFileEvents** includes these two additional unique columns: **RuleName** - the custom data collection rule name, and the **RuleLastModificationTime**, the last modification time of the rule.
 - **DeviceCustomNetworkEvents**: Stores data on network connection events, including IP addresses, ports, and protocols. For the list of columns, review the [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table) table reference.
-- **DeviceCustomScriptEvents**: Stores data on script execution activities through Antimalware Scan Interface (AMSI). For the list of columns, review the [DeviceEvents](/defender-xdr/advanced-hunting-deviceevents-table) table reference.
+- **DeviceCustomScriptEvents**: Stores data on script execution activities through Antimalware Scan Interface (AMSI).
+
 
 ## Data flow and integration
 
@@ -55,31 +59,6 @@ This is the typical data flow for custom data collection:
 3. Endpoints collect events matching your rule criteria alongside default telemetry.
 4. Custom event data flows to your connected Microsoft Sentinel workspace.
 5. Query custom data using the supported event tables to learn about specific activities on your endpoints.
-
-## Example scenarios
-
-This section describes some example scenarios where custom data collection can enhance your threat hunting capabilities. For specific queries in advanced hunting, see [Analyze event data](create-custom-data-collection-rules.md#analyze-event-data).
-
-### Enhanced file monitoring
-
-Create targeted collection rules to monitor specific file types or locations:
-- Monitor document files (*.docx, *.pdf) in sensitive directories
-- Track executable files in temporary folders
-- Collect file access events for compliance auditing
-
-### Network activity analysis
-
-Focus on specific network patterns relevant to your threat landscape:
-- Monitor connections to specific IP ranges or domains
-- Track unusual port usage or protocol patterns
-- Collect data for network-based threat hunting
-
-### Script execution visibility
-
-Expand visibility into script-based attacks:
-- Monitor PowerShell execution with specific parameters
-- Track script files from untrusted locations
-- Collect AMSI events for malicious script detection
 
 ## Frequently asked questions
 

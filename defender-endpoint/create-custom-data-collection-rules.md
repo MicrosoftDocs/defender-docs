@@ -45,7 +45,7 @@ To use custom data collection, you need:
 
 ### Supported operating systems
 
-- **Windows**: Minimum client version 10.8797
+- **Windows**: Minimum client version 10.8797, up to Windows 11.
 - **Windows 10**: Requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
 
 ### Performance and limits
