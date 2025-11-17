@@ -88,7 +88,7 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for sensor v3.x (preview)
+### New API support for the Defender for Identity sensor v3.x (Preview)
 We are excited to announce the availability of a new Graph-based API for managing sensor v3.x server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
 
