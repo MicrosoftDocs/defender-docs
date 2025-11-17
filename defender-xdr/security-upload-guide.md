@@ -20,7 +20,7 @@ appliesto:
 - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
 ---
 
-# Customize Copilot for your organization
+# Customize incident responses for your organization
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -76,4 +76,3 @@ You have the opportunity to provide feedback on the effectiveness of the guided 
 For examples of Microsoft's own incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
 
 When creating your organization's guidebooks, keep in mind that the guidebook can only read text. Avoid using images, graphs, or complex formatting that may hinder text extraction.
-
