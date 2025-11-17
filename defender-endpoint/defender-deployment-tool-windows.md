@@ -36,7 +36,7 @@ While the tool supports onboarding Windows 7 SP1 and Windows Server 2008 R2 SP1s
 
 - The Defender for Endpoint agent that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is in preview and is different than the agent that is installed on newer versions of Windows and Windows Server. For more information about the agent, see [Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
 
-- When using the deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices, there are a number of additional prerequisites, known issues, and considerations and limitation to be aware of. See the relevant sections in this article. 
+- When using the deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices, there are a number of additional prerequisites and considerations and limitation to be aware of. See the relevant sections in this article. 
 
 ## Prerequisites
 
