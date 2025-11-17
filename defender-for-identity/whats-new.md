@@ -25,6 +25,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
+|Version number |Updates |
+|---------|---------|
+|2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
+
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
+
+Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
 
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
@@ -44,13 +51,6 @@ For more information, see: [Link or Unlink an Account to an Identity (Preview)](
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
 
-Releated Health alerts:
-- NTLM Auditing is not enabled 
-- Directory Services Advanced Auditing is not enabled as required 
-- Directory Services Object Auditing is not enabled as required 
-- Auditing on the Configuration container is not enabled as required 
-- Auditing on the ADFS container is not enabled as required
-
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
 The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
@@ -68,8 +68,8 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 ## October 2025
 
-We’re excited to announce that the Microsoft Defender for Identity Sensor (v3.x) is now generally available (GA). 
-[Version 3.x of the sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+We’re excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA). 
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -93,9 +93,9 @@ As part of the ongoing transition to a unified alerting experience across Micros
 |Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
-### Unlock additional security value in the unified agent (Preview)
+### Additional security value in the Defender for Identity sensor v3.x
 
-Get enhanced protection by applying the **Unified sensor RPC audit** tag to your v3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor v3.x in the **Asset rule management** page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
@@ -106,18 +106,18 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified sensor (preview)
-We are excited to announce the availability of a new Graph-based API for managing unified sensor server actions in Microsoft Defender for Identity.
+### New API support for the Defender for Identity sensor v3.x (Preview)
+We are excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of unified sensor servers
+* Monitor the status of servers deployed with the Defender for Identity sensor v3.x
 * Enable or disable the automatic activation of eligible servers
 * Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing unified sensor actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
