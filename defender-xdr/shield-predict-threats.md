@@ -102,29 +102,6 @@ Predictive shielding uses Defender for Endpoint-based actions. To use these acti
     > [!NOTE]
     > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
 
-## Example scenario
-
-This example illustrates how predictive shielding works in conjunction with automatic attack disruption to defend against an ongoing attack:
-
-1. A hands-on-keyboard attacker gains access to the environment and begins operating.
-2. Attack disruption automatically contains the compromised user, preventing further lateral movement.
-3. Predictive shielding anticipates the attacker's next steps and proactively hardens the environment.
-4. Security teams prepare to engage, but at this stage, the attack is already prevented, minimizing impact.
-5. Security teams investigate the incident, and use the attack story to understand the progression and complete the response.
-
-### Stages and defenses
-
-This table summarizes the steps of the attack, the protective measures that predictive shielding and attack disruption use to defend the organization, and the available analysis options.
-
-| Stage | Description | Method/feature used | Where to analyze |
-|-----------|-----------------|--------------------------|-----------------------------------|
-| Initial detection | Defender XDR flags an anomalous remote connection from an external IP into a domain controller using a privileged account as the first indication of compromise. | Threat intelligence and anomaly detection | [Exposure graph and activity chain analysis](shield-predict-threats-manage.md#review-the-incident-information) |
-| Behavioral analysis | A new privileged local account is created, signaling hands-on-keyboard activity. This triggers [automatic containment](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) of the user involved. | Automatic attack disruption | Incident graph to trace lateral movement |
-| Threat actor correlation | The account creation pattern matches the Cactus ransomware playbook. Defender correlates this activity with the Cactus threat actor profile. | Threat intelligence and pattern recognition | Disruption summary > **View all related threats** > **View report** |
-| Threat intelligence analysis | Threat Analytics provides insights into the attacker’s campaign methods, tooling, and typical progression patterns. | Threat analytics | Review the threat analytics data in the activity profile. |
-| Predictive shielding activation | Based on the incident graph and activity chain, predictive shielding identifies devices at risk of being rebooted into Safe Mode. Hardening policies are automatically applied to prevent this. | Predictive shielding and hardening policies | - [Review the incident graph](shield-predict-threats-manage.md#review-the-incident-information) to identify at-risk devices. <br>- Review the disruption summary to see all actions taken, impact, and enforcement status.<br>- Review the [Activity tab](shield-predict-threats-manage.md#review-the-activity-information) for a detailed view of every disruption action, including the alerts that triggered the action and the devices currently protected. |
-| Additional attack attempts | The attacker’s attempt to reboot devices into Safe Mode is blocked. When the attacker pivots to disabling Defender Antivirus via Group Policy, GPO hardening prevents the propagation of malicious changes. The encryption attempt is blocked, and the environment remains secure. | Predictive shielding, GPO hardening, and Safeboot hardening | - Review the disruption summary for the number of hardened devices.<br>-   Review the **Activity** tab for the current activity status, including the applied profiles and affected devices. |
-
 ## Next steps
 
 - [Manage predictive shielding in Microsoft Defender XDR](shield-predict-threats-manage.md) - Learn how to manage predictive shielding actions and investigate their impact in your environment.
