@@ -29,25 +29,25 @@ Using the tool's user interface, administrators can double-click the tool and fo
 
 The features the tool supports include:
 
-- Prerequisite handling: The tool checks for required updates and remediates blocking issues, ensuring devices are ready for Defender onboarding.
+- **Prerequisite handling**: The tool checks for required updates and remediates blocking issues, ensuring devices are ready for Defender onboarding.
 
-- Logging: All operations are logged locally in a detailed log.
+- **Logging**: All operations are logged locally in a detailed log.
 
-- Redundant installation avoidance: If Defender is already present, the tool skips redundant installations.
+- **Redundant installation avoidance**: If Defender is already present, the tool skips redundant installations.
 
-- UI feedback: The tool provides UI feedback with error descriptions instead of exit codes.
+- **UI feedback**: The tool provides UI feedback with error descriptions instead of exit codes.
 
-- Passive mode support: On server operating systems and Windows 7, Defender Antivirus can be set to passive mode. This can be helpful when migrating from non-Microsoft antimalware solutions.
+- **Passive mode support**: On server operating systems and Windows 7, Defender Antivirus can be set to passive mode. This can be helpful when migrating from non-Microsoft antimalware solutions.
 
-- Automation: The tool supports a wide range of command-line options.
+- **Automation**: The tool supports a wide range of command-line options.
 
-- Device handling: Virtual Desktop Infrastructure (VDI) device support ensures that devices deleted and recreated under the same hostname can appear as a single device in the Defender portal.
+- **Device handling**: Virtual Desktop Infrastructure (VDI) device support ensures that devices deleted and recreated under the same hostname can appear as a single device in the Defender portal.
 
-- Help: A built-in help function displays all available command-line options.
+- **Help**: A built-in help function displays all available command-line options.
 
-- Configuration files: You can generate reusable configuration files that make bulk deployments more efficient and less error-prone.
+- **Configuration files**: You can generate reusable configuration files that make bulk deployments more efficient and less error-prone.
 
-- Working without connectivity: When connectivity is temporarily unavailable, offline onboarding and offboarding is possible.
+- **Working without connectivity**: When connectivity is temporarily unavailable, offline onboarding and offboarding is possible.
 
 When the [interactive](#interactive-use), double-click experience is used, the tool automatically leverages the *WindowsDefenderATP.onboarding* file in the same directory. It will handle the installation of most prerequisite updates and the latest Defender components, and connect the device to the Defender services. If needed, the tool will ask you to reboot the device to finish installation after you sign in again.
 
