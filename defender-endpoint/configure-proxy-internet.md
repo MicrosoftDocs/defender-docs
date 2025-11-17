@@ -3,8 +3,8 @@ title: Configure your devices to connect to the Defender for Endpoint service us
 description: Learn how to configure your devices to enable communication with the cloud service using a proxy.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -13,12 +13,12 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 07/01/2024
+ms.date: 11/09/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
 
 
@@ -126,7 +126,9 @@ Configure the static proxy using the Group Policy available in Administrative Te
 >
 > For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection, as that breaks the secure cloud connection.
 >
-> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md). If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses to bypass proxy server** and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
+> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md).
+>
+> If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses to bypass proxy server** and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
 > 
 > You can use PowerShell with the `Set-MpPreference` cmdlet to configure these options: 
 >    - `ProxyBypass`
