@@ -30,16 +30,10 @@ To onboard down-level Windows client endpoints to Defender for Endpoint, you nee
 - [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients)
 - [Install and configure Microsoft Monitoring Agent (MMA) to report sensor data](#install-and-configure-microsoft-monitoring-agent-mma)
 
-For Windows Server 2008 R2 SP1, you have the option of [onboarding through Microsoft Defender for Cloud](#onboard-windows-servers-through-microsoft-defender-for-cloud).
-
-> [!NOTE]
-> Defender for Endpoint standalone server license is required, per node, in order to onboard a Windows server through Microsoft Monitoring Agent (Option 1). Alternatively, a Microsoft Defender for servers license is required, per node, in order to onboard a Windows server through Microsoft Defender for Cloud (Option 2), see [Supported features available in Microsoft Defender for Cloud](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
-
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
 
 ## Prerequisites
-
 
 ### Supported operating systems
 
@@ -49,19 +43,9 @@ For Windows Server 2008 R2 SP1, you have the option of [onboarding through Micro
 - Windows 8.1 Enterprise
 - Windows Server 2008 R2 SP1
 
-## Configure and update System Center Endpoint Protection clients
+## Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
 
-Defender for Endpoint integrates with System Center Endpoint Protection to provide visibility to malware detections and to stop propagation of an attack in your organization by banning potentially malicious files or suspected malware.
-
-The following steps are required to enable this integration:
-
-- Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
-- Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
-- Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
-
-## Deploy the Defender for Endpoint agent for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
-
-A Microsoft Defender for Endpoint agent (preview) is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The agent provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the agent's currently supported functionality.
+A Microsoft Defender for endpoint security solution (preview) is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the solution's currently supported functionality.
 
 | Feature | Functionality |
 |---------|---------------|
@@ -76,7 +60,7 @@ A Microsoft Defender for Endpoint agent (preview) is available for legacy Window
 | Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
 | (Automatic) updates | Regular updates for anti-malware and detection components. |
 
-The agent can be downloaded and installed using the Defender deployment tool, a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender for Endpoint on Windows devices](./defender-deployment-tool-windows.md).
+The solution can be downloaded and installed using the Defender deployment tool, a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)](./defender-deployment-tool-windows.md).
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 
@@ -128,6 +112,16 @@ Review the following details to verify minimum system requirements:
 4. If you're using a proxy to connect to the Internet see the Configure proxy and Internet connectivity settings section.
 
 Once completed, you should see onboarded endpoints in the portal within an hour.
+
+## Configure and update System Center Endpoint Protection clients
+
+Defender for Endpoint integrates with System Center Endpoint Protection to provide visibility to malware detections and to stop propagation of an attack in your organization by banning potentially malicious files or suspected malware.
+
+The following steps are required to enable this integration:
+
+- Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
+- Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
+- Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md) 
 
 ## Configure proxy and Internet connectivity settings
 

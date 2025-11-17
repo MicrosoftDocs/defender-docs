@@ -61,7 +61,7 @@ The following table gives information about the supported Microsoft Defender for
 > - On Linux, network protection, web protection, and custom network indicators are currently in preview.
 >   - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and Windows 11.
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use [MMA](/defender-endpoint/onboard-downlevel#install-and-configure-microsoft-monitoring-agent-mma) for the EDR sensor and [System Center Endpoint Protection](/defender-endpoint/onboard-downlevel#configure-and-update-system-center-endpoint-protection-clients) (SCEP) for antivirus protection.
-> - For Windows 7 SP1 and Windows Server 2008 R2 SP1, you can also use the [Defender for Endpoint agent (preview)](./onboard-downlevel.md#deploy-the-defender-for-endpoint-agent-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices) that is supplied by the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md). 
+> - For Windows 7 SP1 and Windows Server 2008 R2 SP1, you can also use the [Defender endpoint security solution (preview)](./onboard-downlevel.md#deploy-the-defender-endpoint-security-solution-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices) that is supplied by the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md). 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
