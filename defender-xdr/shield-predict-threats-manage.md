@@ -43,28 +43,26 @@ The incident view in Microsoft Defender XDR includes built-in predictive shieldi
 
 ### Review the incident information
 
-Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
+In the **Incidents** page, filter by the **Predictive Shielding** label to find incidents where predictive shielding is applied.
+
+:::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding label." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
+
+You can then select the relevant incident, and review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
 :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-attack-story.png" alt-text="Screenshot of predictive shielding data shown in the incident graph, attack story, and disruption summary card." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-attack-story.png":::
 
-Review the incident, alert, and disruption information for predictive shielding details and results:
+You can also review the alert, and disruption information for predictive shielding details and results:
 
-- In the **Incidents** page, filter by the **Predictive Shielding** label to find incidents where predictive shielding is applied.
-
-    :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding label." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
-
-- Review the incident summary pane, which shows how predictive shielding is applied across your environment:
-
-    - In the alert details, view the **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
+- In the alert details, view the **Predictive shielding** label and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
     
     :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-alert-details.png" alt-text="Screenshot of the alert details with the Predictive Shielding label." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png"::: 
 
-    - In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
+- In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
     
     :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png":::
 
-    > [!NOTE]
-    > While the incident and alert details show historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
+> [!NOTE]
+> While the incident and alert details show historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
 
 ### Review the activity information
 
