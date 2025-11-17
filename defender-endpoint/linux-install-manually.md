@@ -95,6 +95,9 @@ In order to preview new features and provide early feedback, it's recommended th
    > [!NOTE]
    > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
 
+   > [!TIP]
+   > Online Kernel patching tools, such as Ksplice or similar, can lead to unpredictable OS stability if Defender for Endpoint is running. It's recommended to temporarily stop the Defender for Endpoint daemon before performing online Kernel patching. After the Kernel is updated, Defender for Endpoint on Linux can be safely restarted. This action is especially important for systems running Oracle Linux.
+
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
    ```bash
