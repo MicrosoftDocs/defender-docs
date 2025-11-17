@@ -42,7 +42,7 @@ To create custom data collection rules, see [Create custom data collection rules
 
 ## Supported event tables
 
-Custom data collection supports these event tables. While most of the tables are based to the default schema, the DeviceCustomScriptEvents table is a new addition and does not have a reference in the default event tables.
+Custom data collection supports the following event tables.
 
 | Table name | Description | Learn more |
 |------------|-------------|------------|
@@ -84,7 +84,7 @@ search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetwork
 
 ### Does custom data collection incur additional costs?
 
-Custom Data Collection is provided to you as part of MDE P2 license free of charge. You are billed for the ingestion of data into your Microsoft Sentinel workspaces in accordance with your deal with Sentinel. The extra cost is based on the volume of data ingested.
+See [data costs](create-custom-data-collection-rules.md#data-costs).
 
 ### What client versions and operating systems are currently supported?
 

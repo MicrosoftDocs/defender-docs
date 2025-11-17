@@ -62,20 +62,38 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
 ### Create rules
 
-1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**.
-1. To select the workspace, select the workspace name on the top right, and select the workspace you want to use.
-1. Select **Create rule**, type a rule name and description, and select **Next**.
-1. Select which table you want to collect data from. For more information, see [Supported event tables](custom-data-collection.md#supported-event-tables). 
-1. Select the action for which you want to collect data.
-1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
+1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Data Collection**.
+
+    :::image type="content" source="media/custom-data-collection/custom-data-collection-main-view.png" alt-text="Screenshot of the main Custom Data Collection page." lightbox="media/custom-data-collection/custom-data-collection-main-view.png":::
+
+1. On the top right, select the workspace name to change your workspace.
+1. Select **Create rule**, and in the **General Information** section, type a rule name and description, and select **Next**.
+
+    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule-general.png" alt-text="Screenshot of creating a rule: General Information page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule-general.png":::
+
+1. In the **Create rule** section:
+
+    1. Select which table you want to collect data from. For more information, see [Supported event tables](custom-data-collection.md#supported-event-tables).
+    1. Select the action for which you want to collect data.
+    1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
+
+    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule.png" alt-text="Screenshot of creating a rule: Create rule page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule.png":::
 
     > [!NOTE]
     > If you use the **Not equals** operator with an unexpected value, this might select all events. To avoid using large data volumes, combine this operator with other conditions.
 
-1. Select whether you want to collect data from all applicable client devices or from specific devices that include dynamic tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
+    1. Select **Next**.
+
+1. In the **Define rule scope** section, select whether you want to collect data from all applicable client devices or from specific devices that include dynamic tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
+
+    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-rule-define-scope.png" alt-text="Screenshot of creating a rule: Define scope page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-rule-define-scope.png":::
 
     > [!NOTE]
     > Custom data collection only supports dynamic tags.
+
+1. In the **Review and finish** section, review your rule settings, and select **Submit**.
+
+    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-rule-review.png" alt-text="Screenshot of creating a rule: Review and finish page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-rule-review.png":::
 
 It can take up to an hour for the rule to be deployed to the targeted devices.
 
