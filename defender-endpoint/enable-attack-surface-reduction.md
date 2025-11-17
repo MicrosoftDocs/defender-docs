@@ -168,6 +168,12 @@ The following procedures for enabling attack surface reduction rules include ins
    
 1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
 
+> [!NOTE]
+> In the latest Intune interface, **Configuration profiles** is located under  **Devices > Configuration profiles**.  
+> Earlier versions of Intune showed this under **Device configuration > Profiles**.  
+> If you don't see "Configuration Profile" as written in older instructions, look for **Configuration profiles** under the Devices menu.
+
+
 #### Device Configuration Profiles (Alternative 1)
 
 1. Select **Device configuration** > **Profiles**. Choose an existing endpoint protection profile or create a new one. To create a new one, select **Create profile** and enter information for this profile. For **Profile type**, select **Endpoint protection**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
