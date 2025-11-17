@@ -39,7 +39,7 @@ This article describes how to manage predictive shielding so that you can enrich
 The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
 
 > [!TIP]
-> To undo an action, see [Undo actions triggered by predictive shielding](#undo-actions-triggered-by-predictive-shielding).
+> To enrich your predictive shielding data, we recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. For more information, see [Enrich predictive shielding data](#enrich-predictive-shielding-data).
 
 ### Review the incident information
 
