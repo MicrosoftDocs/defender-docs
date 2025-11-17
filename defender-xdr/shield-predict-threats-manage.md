@@ -82,7 +82,7 @@ Select the incident's **Activities** tab and filter by the **Response** category
 
 - Select a specific action to open the activity details pane, which shows the number of devices where the relevant policy is currently applied.
 
-    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-activity-details.png" alt-text="Screenshot of the activity details pane showing the number of devices hardened by a predictive shielding action." lightbox="media/shield-predict-threats-manage/shield-predict-threats-activity-details.png":::
+    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-activity-details.png" alt-text="Screenshot of the activity details pane showing the number of devices hardened by a predictive shielding action." lightbox="media/shield-predict-threats-manage/shield-predict-threats-view-activity-details.png":::
 
 > [!TIP]
 > While the **Activity** tab displays actions that are specific to the current incident, the Action center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
@@ -91,7 +91,7 @@ Select the incident's **Activities** tab and filter by the **Response** category
 
 To investigate the alert that led to the predictive shielding action, select the triggering alert either from the incident details pane or from the activity page.
 
-:::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-triggering-alert.png" alt-text="Screenshot of the alert details pane showing relevant alert data." lightbox="media/shield-predict-threats-manage/shield-predict-threats-triggering-alert.png":::
+:::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-triggering-alert.png" alt-text="Screenshot of the alert details pane showing relevant alert data." lightbox="media/shield-predict-threats-manage/shield-predict-threats-view-triggering-alert.png":::
 
 In the alert, you can review:
 
