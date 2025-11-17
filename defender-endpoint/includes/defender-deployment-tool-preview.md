@@ -7,4 +7,4 @@ ms.service: defender-endpoint
 ---
 
 > [!NOTE]
-> The Defender deployment tool (preview), a lightweight, self-updating application that streamlines deployment of Microsoft Defender for Endpoint, is available. It currently supports deployment on Windows and Linux devices. For more information, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](/defender-endpoint/defender-deployment-tool-windows).
+> The Defender deployment tool (now in public preview) can be used to deploy Defender for Endpoint on Windows and Linux devices. The tool is a lightweight, self-updating application that streamlines the deployment process. For more information, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](/defender-endpoint/defender-deployment-tool-windows).
