@@ -34,16 +34,6 @@ Microsoft Defender XDR uses predictive shielding (Preview) as a proactive defens
 
 This article describes how to manage predictive shielding so that you can enrich your prediction data and understand how predictive shielding actions are applied in your environment.
 
-## Enrich predictive shielding data
-
-We recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
-
-To add the unified sensor, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
-
-For example, this screenshot shows how enriched data appears in an incident, in an environment with both Microsoft Defender for Endpoint and Microsoft Defender for Identity enabled:
-
-TBD - screenshot
-
 ## Review predictive shielding details and results
 
 The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
@@ -104,6 +94,16 @@ In the alert, you can review:
 - Which assets are at risk.
 - The triggering malicious activity from the **Alert chain**.
 - The exposure data used to calculate this risk.
+
+## Enrich predictive shielding data
+
+We recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
+
+To add the unified sensor, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
+
+For example, this screenshot shows how enriched data appears in an incident, in an environment with both Microsoft Defender for Endpoint and Microsoft Defender for Identity enabled:
+
+:::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-enriched-data.png" alt-text="Screenshot of enriched predictive shielding data in an incident, showing user and Active Directory details." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-enriched-data.png":::
 
 ## Track policy modifications in advanced hunting
 
