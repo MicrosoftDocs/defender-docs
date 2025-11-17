@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 09/01/2025
+ms.date: 11/17/2025
 ---
 
 # IdentityAccountInfo (Preview)
