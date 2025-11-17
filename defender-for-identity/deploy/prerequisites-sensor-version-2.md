@@ -106,11 +106,11 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure Windows auditing
+## Configure Windows event auditing
 
-Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-Configure [Windows event collection](event-collection-overview.md) on your domain controller to support Defender for Identity detections. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+[Configure Windows event auditing](configure-windows-event-collection.md) on your domain controller to support Defender for Identity detections in the Defender portal or using PowerShell.
 
 ## Test your prerequisites
 
