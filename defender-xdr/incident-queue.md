@@ -40,7 +40,7 @@ Select **Most recent incidents and alerts** to toggle a timeline chart of the nu
 
 :::image type="content" source="./media/incidents-queue/most-recent-incidents.png" alt-text="Screenshot of 24-hour incident graph." lightbox="./media/incidents-queue/most-recent-incidents.png":::
 
-The incident queue includes Defender Queue Assistant that helps security teams cut through the large number of incidents and focus on the incidents that matter most. Using a machine learning prioritization algorithm, the Queue Assistant surfaces the highest-priority incidents, explains the reasoning behind the prioritization, and provides intuitive tools for sorting and filtering the incident queue. The algorithm is runs for all alerts,  Microsoft native alerts, custom detections, or third-party signals. The algorithm is trained on real-world anonymized data and considers, among other things, the following data points when calculating the priority score:
+The incident queue includes Defender Queue Assistant that helps security teams cut through the large number of incidents and focus on the incidents that matter most. Using a machine learning prioritization algorithm, the Queue Assistant surfaces the highest-priority incidents, explains the reasoning behind the prioritization, and provides intuitive tools for sorting and filtering the incident queue. The algorithm runs for all alerts,  Microsoft native alerts, custom detections, or third-party signals. The algorithm is trained on real-world anonymized data and considers, among other things, the following data points when calculating the priority score:
 + Attack disruption signals
 + Threat analytics
 + Severity
