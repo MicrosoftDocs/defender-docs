@@ -82,6 +82,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
     > [!NOTE]
     > If you use the **Not equals** operator with an unexpected value, this might select all events. To avoid using large data volumes, combine this operator with other conditions.
 
+    
     1. Select **Next**.
 
 1. In the **Define rule scope** section, select whether you want to collect data from all applicable client devices or from specific devices that include dynamic tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
@@ -101,7 +102,7 @@ It can take up to an hour for the rule to be deployed to the targeted devices.
 
 If rules aren't working as expected:
 
-- Create a rule to collect network events in an unexpected use case. For example, create a rule that collects all network events where `port not equals 0`.
+- Create a broad rule to collect events in an unexpected use case. For example, create a rule that collects all network events where `port not equals 0`.
 - Apply individual filters and tags to isolate issues.
 - If a device isn't responding after you enable the feature, reboot the device.
 
