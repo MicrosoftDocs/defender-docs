@@ -122,9 +122,11 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
         4500ebfb-89b6-4b14-a480-7f749797bfcd/.default
         ```
        
-       :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp-details.png" alt-text="Screenshot of the MCP details in add tool setup in Azure AI Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp-details.png":::
+    :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp-details.png" alt-text="Screenshot of the MCP details in add tool setup in Azure AI Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp-details.png":::
  
 1. Select **Connect**. Your tool is created successfully and a redirect URL is generated. Copy and save this URL.
+
+    :::image type="content" source="media/sentinel-mcp/custom-foundry-redirect.png" alt-text="Screenshot of the credential provider or redirect URL details in add tool setup in Azure AI Foundry." lightbox="media/sentinel-mcp/custom-foundry-redirect.png":::
 
 ### Step 3: Authenticate Azure AI Foundry to use your custom tool
  
@@ -139,10 +141,13 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
 
 1. Go back to Azure AI Foundry and use a prompt that matches the tool you created. On your first attempt, select **Open consent** to give consent to your signed in user account.
 
+     :::image type="content" source="media/sentinel-mcp/custom-foundry-open-consent.png" alt-text="Screenshot of chat details in Azure AI Foundry with Open consent window highlighted." lightbox="media/sentinel-mcp/custom-foundry-open-consent.png":::
 
-1. Select **Allow access**. 
+1. On the pop-up window that appears, select **Allow access**. 
 
 Once you give consent, your agent can reason over data returned by your custom MCP tool.
+
+:::image type="content" source="media/sentinel-mcp/custom-foundry-prompt-result" alt-text="Screenshot of chat details in Azure AI Foundry that uses a custom tool." lightbox="media/sentinel-mcp/custom-foundry-prompt-result":::
 
 ## Related content
 - [Tool collection in Microsoft Sentinel MCP server](sentinel-mcp-tools-overview.md)
