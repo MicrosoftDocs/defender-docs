@@ -4,10 +4,10 @@ description: Understand errors displayed when using advanced hunting
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: pauloliveria
-author: poliveria
+ms.author: dansimp
+author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

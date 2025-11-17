@@ -5,8 +5,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: pauloliveria
-author: poliveria
+ms.author: dansimp
+author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

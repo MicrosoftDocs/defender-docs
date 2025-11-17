@@ -4,8 +4,8 @@ description: Learn about advanced hunting in Microsoft Defender multitenant mana
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: pauloliveria
-author: poliveria
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro

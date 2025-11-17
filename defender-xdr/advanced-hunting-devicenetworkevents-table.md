@@ -4,10 +4,10 @@ description: Learn about network connection events you can query from the Device
 search.appverid: met150
 ms.service: defender-xdr
 ms.pagetype: security
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: pauloliveria
-author: poliveria
+ms.author: dansimp
+author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

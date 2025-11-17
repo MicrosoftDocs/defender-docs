@@ -4,10 +4,10 @@ description: Learn how to hunt for phishing campaigns and suspicious clicks usin
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: pauloliveria
-author: poliveria
+ms.author: dansimp
+author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
