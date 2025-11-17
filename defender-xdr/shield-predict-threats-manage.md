@@ -55,7 +55,7 @@ The incident view in Microsoft Defender XDR includes built-in predictive shieldi
 
 Review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
-TBD - image
+:::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-attack-story.png" alt-text="Screenshot of predictive shielding data shown in the incident graph, attack story, and disruption summary card." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-attack-story.png":::
 
 Review the incident page for predictive shielding details and results:
 
