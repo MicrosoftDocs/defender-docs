@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 10/23/2025
+ms.date: 11/12/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -25,7 +25,43 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
-### Expansion of identity scoping - support for Organizational units (preview) 
+
+### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
+
+The following new features are now available in Microsoft Defender for Identity:
+
+**Accounts tab in Identity Inventory**
+
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+
+**Manual link and unlink of accounts**
+
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+
+**Identity-level remediation actions**
+
+You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
+Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+
+**Related Health alerts:**
+- NTLM Auditing is not enabled 
+- Directory Services Advanced Auditing is not enabled as required 
+- Directory Services Object Auditing is not enabled as required 
+- Auditing on the Configuration container is not enabled as required 
+- Auditing on the ADFS container is not enabled as required
+
+### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
+
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
+
+### Expansion of identity scoping: Support for Organizational units (Preview) 
 
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
@@ -49,7 +85,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 | Classic Alert Title | External ID| XDR Alert Name |Detector ID|
 |--------------------|------------|----------------|-----------|
-|Active Directory attributes Reconnnaissance using LDAP|2210|[Active Directory attributes Reconnnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
 |User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
 |Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
 |    |    |[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
@@ -505,7 +541,7 @@ To help customers better identify and detect attempts to bypass security protoco
 
 With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
-Access Defender XDR portal -> Hunting -> Advanced Hunting.
+Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
 
 Now, you can copy our recommended query as provided below, and select on “Create detection rule”. Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
@@ -591,13 +627,13 @@ Changes include:
 
 - The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
-The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
-
-|Sensitivity level (previous name) |Threshold level (new name) |
-|---------|---------|
-|**Normal**     |  **High**       |
-|**Medium**      |  **Medium**       |
-|**High**      |  **Low**       |
+  The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+  
+  |Sensitivity level (previous name) |Threshold level (new name) |
+  |---------|---------|
+  |**Normal**     |  **High**       |
+  |**Medium**      |  **Medium**       |
+  |**High**      |  **Low**       |
 
 If you had specific values defined on the **Advanced Settings** page, we transferred them to the new **Adjust alert thresholds** page as follows:
 

@@ -223,6 +223,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AIAgentsInfo
+            href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
             href: advanced-hunting-alertevidence-table.md
           - name: AlertInfo
@@ -313,6 +315,8 @@
             href: advanced-hunting-exposuregraphnodes-table.md
           - name: GraphApiAuditEvents
             href: advanced-hunting-graphapiauditevents-table.md            
+          - name: IdentityAccountInfo
+            href: advanced-hunting-identityaccountinfo-table.md
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
           - name: IdentityEvents
@@ -523,7 +527,7 @@
             href: m365d-threat-analytics-notifications.md
           - name: Configure alert notifications
             href: configure-email-notifications.md
-        - name: Contact Microsoft Defender XDR support
+        - name: Contact Microsoft Defender support
           href: contact-defender-support.md
         - name: Manage devices through dynamic rules
           href: configure-asset-rules.md
