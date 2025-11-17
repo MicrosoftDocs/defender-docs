@@ -97,6 +97,8 @@ items:
       href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
+  - name: Link or Unlink an Account to an Identity
+    href: link-unlink-account-to-identity.md
   - name: View the ITDR dashboard
     href: dashboard.md
   - name: View and manage health issues
