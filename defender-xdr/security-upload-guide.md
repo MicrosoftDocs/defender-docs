@@ -73,7 +73,7 @@ You have the opportunity to provide feedback on the effectiveness of the guided 
 
 ## Best practices for creating effective guidebooks
 
-For examples of Microsoft's own  incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
+For examples of Microsoft's own incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
 
 When creating your organization's guidebooks, consider the following best practices:
 
