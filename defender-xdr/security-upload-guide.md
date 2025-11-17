@@ -14,7 +14,7 @@ ms.topic: install-set-up-deploy
 search.appverid:
   - MOE150
   - MET150
-ms.date: 11/18/2024
+ms.date: 11/18/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
@@ -59,4 +59,24 @@ Then follow these steps:
 
     :::image type="content" source="./media/security-upload-guide/approve-guidebook.png" alt-text="Screenshot of the approve and activate button for uploaded guidebooks.":::
 
-Copilot uses the most relevant guidance it has for each incident. A banner shows which guidebook is being used for the current recommendation.
+1. Make sure the guidebook appears as active in the **Guidebooks** tab. To deactivate it later, select the guidebook and choose **Deactivate**.
+
+    :::image type="content" source="./media/security-upload-guide/active-guidebooks.png" alt-text="Screenshot of the active guidebooks tab.":::
+
+Copilot will prioritize your organization's custom guidebooks over the default ones provided by Microsoft. If multiple guidebooks are relevant, Copilot will use the one that best matches the incident context.
+
+:::image type="content" source="./media/security-upload-guide/custom-responses.png" alt-text="Screenshot of suggested responses based on the custom guidebooks.":::
+
+You have the opportunity to provide feedback on the effectiveness of the guided responses generated from your organization's guidebooks. This feedback helps improve future recommendations.
+
+:::image type="content" source="./media/security-upload-guide/feedback.png" alt-text="Screenshot of the feedback window for guided responses.":::
+
+## Best practices for creating effective guidebooks
+
+For examples of Microsoft's own  incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
+
+When creating your organization's guidebooks, consider the following best practices:
+
+- **Clarity and Conciseness**: Ensure that the guidelines are clear and concise to facilitate quick understanding and action.
+- **Text only**: The guidebook can only read text. Avoid using images, graphs, or complex formatting that may hinder text extraction.
+- **Regular Updates**: Periodically review and update the guidebooks to reflect any changes in your organization's policies or procedures.
