@@ -113,7 +113,7 @@ The Defender deployment tool can be used non-interactively as part of an orchest
 The following examples illustrate how to use the tool.
 
 > [!NOTE]
-> If you downloaded *activateMDE.exe* instead of *DefenderDT.exe*, besure to replace the commands accordingly.
+> If you downloaded *activateMDE.exe* instead of *DefenderDT.exe*, be sure to replace the commands accordingly.
 
 - Run the Defender deployment tool without changing settings and without interacting with it:
 
@@ -248,7 +248,7 @@ The following steps show how to create a scheduled task to run the tool using Gr
 
 1. Go to the **Actions** tab and select **New**. Ensure that **Start a program** is selected in the Action field. Enter the full UNC path, using the file server's fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
 
-1. In the **Add arguments (optional)** field, enter the [parameters] (# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file that is not in the working directory of the tool, specify the *-file:* parameter with the full UNC path to the onboarding file, for example `-file: \\server\share\WindowsDefenderATP.onboarding`.
+1. In the **Add arguments (optional)** field, enter the [parameters] (# Onboarding many devices as part of a deployment at scale or for specific operations using advanced functionality) you wish to use. For example, to use an onboarding file that isn't in the working directory of the tool, specify the *-file:* parameter with the full UNC path to the onboarding file, for example `-file: \\server\share\WindowsDefenderATP.onboarding`.
 
 1. Select **OK** and close any open GPMC windows.
 
@@ -260,7 +260,7 @@ General considerations and limitations, and additional considerations and limita
 
 ### General considerations and limitations
 
-- When using the *-proxy* parameter, it only apply to Defender deployment tool operations. Despite the parameter description in the command-line help reference, it doesn't set proxy configuration in registry for Defender for Endpoint to use after installation. Note that both the tool and Defender will use whatever proxy has been configured on a system-wide (Windows) level regardless. If you wish to specifically configure a proxy to use for the Defender for Endpoint services on the machine (static proxy), and not system-wide, see [Configure your devices to connect to the Defender for Endpoint service using a proxy](./configure-proxy-internet.md).
+- When using the *-proxy* parameter, it only applies to Defender deployment tool operations. Despite the parameter description in the command-line help reference, it doesn't set proxy configuration in registry for Defender for Endpoint to use after installation. Note that both the tool and Defender will use whatever proxy has been configured on a system-wide (Windows) level regardless. If you wish to specifically configure a proxy to use for the Defender for Endpoint services on the machine (static proxy), and not system-wide, see [Configure your devices to connect to the Defender for Endpoint service using a proxy](./configure-proxy-internet.md).
 
 - On Windows Server 2016 and later, when the Defender Antivirus feature has been uninstalled or removed, you may encounter an error during the Enabling Feature 'Windows-Defender' step. This can be observed in the user interface, in the local log, under *Sequence completion* with exit code *710* and the error description *EnableFeatureFailed*. In the local log you'll also be able to find error 14081 with the description *0x3701 The referenced assembly could not be found*. This error is not indicative of an issue with the Defender Antivirus feature or source files, as those would typically be resolved by the onboarding tool. Open a support case for Windows Servers if you encounter this issue.
 
@@ -282,7 +282,7 @@ General considerations and limitations, and additional considerations and limita
 
 - Windows 7 devices may show up as *Server* in the portal until you update to the latest Sense version by applying KB5005292.
 
-- You can put Defender Antivirus into passive mode on Windows 7 by passing the -passive parameter to the Defender deployment tool. However, it's currently not possible to switch to active mode afterwards by leveraging the ForceDefenderPassiveMode registry key like on Windows server. To switch to active mode, it's necessary to offboard and uninstall, and then to run the Defender deployment tool again without the passive mode parameter.
+- You can put Defender Antivirus into passive mode on Windows 7 by passing the -passive parameter to the Defender deployment tool. However, it's currently not possible to switch to active mode afterwards by using the ForceDefenderPassiveMode registry key like on Windows server. To switch to active mode, it's necessary to offboard and uninstall, and then to run the Defender deployment tool again without the passive mode parameter.
 
 ## Troubleshooting
 
