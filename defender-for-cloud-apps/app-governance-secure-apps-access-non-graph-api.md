@@ -15,7 +15,7 @@ App governance provides visibility over OAuth apps registered on Microsoft Entra
 You can better protect your organization with the new functionalities and enhancements in the following ways:
 
 - Get improved coverage of OAuth apps with powerful app governance insights and monitoring capabilities.
-- Automatically get alerted for threats or anomalies from apps using other APIs.
+- Automatically get alerted for any threats or anomalies from apps using non-Graph or legacy APIs.
 - Get an enhanced experience for investigation of apps with more filters, columns, and properties.
 
 ## Identify apps that use non-Graph APIs
@@ -48,7 +48,7 @@ The Permissions tab lists all permissions granted to the app, including Graph AP
 
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png" alt-text="Screenshot that shows the list of APIs and their assigned permissions." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png":::
 
-## Create policies for apps accessing other APIs
+## Create policies for apps accessing non-graph APIs
 
 Create app governance policies to monitor and take action on apps that access non-Graph APIs.
 
@@ -56,7 +56,9 @@ You can decide to create a custom policy or use an existing template.
 
 1. In the App governance page, select the **Policies** tab.
 1. Select **+ Create policy**.
-1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed.
+1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed. Select the the **Non-Graph API permissions** policy condition to identify and monitor apps that access non-Graph APIs.
+
+
 
     :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/choose-policy-template.png" alt-text="Screenshot that shows the option to create a custom policy.":::
 
