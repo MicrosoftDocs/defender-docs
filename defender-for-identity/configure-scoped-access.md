@@ -27,7 +27,7 @@ To enable identity scoping, follow these steps:​
 
 1. Navigate to **Permissions > Microsoft Defender XDR > Roles​**.
 
-    :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal.":::
+    :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Microsoft Defender portal.":::
 
 1. Select **+ Create custom role** and follow the instructions in [Create custom roles with Microsoft Defender XDR Unified RBAC.](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
 
