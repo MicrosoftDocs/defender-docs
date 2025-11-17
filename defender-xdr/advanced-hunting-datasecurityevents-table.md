@@ -3,10 +3,10 @@ title: DataSecurityEvents table in the advanced hunting schema
 description: Learn about the DataSecurityEvents table of the advanced hunting schema, which contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. 
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
+f1.keywords:
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

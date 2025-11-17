@@ -4,10 +4,10 @@ description: Learn about the baseline profiles used for monitoring device baseli
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
+f1.keywords:
   - NOCSH
-ms.author: dansimp
-author: samanthagy
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
