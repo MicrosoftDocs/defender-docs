@@ -69,7 +69,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 1. On the top right, select the workspace name to change your workspace.
 1. Select **Create rule**, and in the **General Information** section, type a rule name and description, and select **Next**.
 
-    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule-general.png" alt-text="Screenshot of creating a rule: General Information page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule-general.png":::
+    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-rule-general.png" alt-text="Screenshot of creating a rule: General Information page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-rule-general.png":::
 
 1. In the **Create rule** section:
 
@@ -77,7 +77,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
     1. Select the action for which you want to collect data.
     1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
 
-    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule.png" alt-text="Screenshot of creating a rule: Create rule page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-create-rule.png":::
+    :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-rule.png" alt-text="Screenshot of creating a rule: Create rule page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-rule.png":::
 
     > [!NOTE]
     > If you use the **Not equals** operator with an unexpected value, this might select all events. To avoid using large data volumes, combine this operator with other conditions.
