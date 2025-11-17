@@ -25,9 +25,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
-### Automatic Windows event auditing configuration for V3.x sensors
+|Version number |Updates |
+|---------|---------|
+|2.251||
 
-Defender for Identity now offers an opt-in automatic Windows event-auditing configuration for V3.x sensors. This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+### Automatic Windows event auditing configuration for Identity sensors v3.x
+
+Defender for Identity now offers an opt-in automatic Windows event-auditing configuration for sensors v3.x. This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
 
 **Releated Health alerts:**
 - NTLM Auditing is not enabled 
@@ -53,8 +57,8 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 ## October 2025
 
-We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
-The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+We’re excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA). 
+The [sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -78,9 +82,9 @@ As part of the ongoing transition to a unified alerting experience across Micros
 |Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
-### Unlock additional security value in v3.x sensor
+### Unlock additional security value in sensor v3.x
 
-Get enhanced protection by applying the **Unified sensor RPC audit** tag to your v3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+Get enhanced protection by applying the **Unified sensor RPC audit** tag to your sensors v3.x through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
@@ -91,18 +95,18 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified sensor (preview)
-We are excited to announce the availability of a new Graph-based API for managing unified sensor server actions in Microsoft Defender for Identity.
+### New API support for sensor v3.x (preview)
+We are excited to announce the availability of a new Graph-based API for managing sensor v3.x server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of unified sensor servers
+* Monitor the status of servers deployed with sensor v3.x
 * Enable or disable the automatic activation of eligible servers
 * Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing unified sensor actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing sensor v3.x actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
