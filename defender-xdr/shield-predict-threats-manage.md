@@ -80,9 +80,9 @@ Select the incident's **Activities** tab and filter by the **Response** category
 > [!NOTE]
 > The **Performed by** column indicates **Attack Disruption** both for attack disruption and predictive shielding actions. To understand which specific actions apply to predictive shielding, see the [Predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions).
 
-- Select a specific action to open the activity details pane, which shows the number of devices where the relevant policy is currently applied.
+- Select a specific action to open the activity details pane, which describes the activity, and shows the number of devices where the relevant policy is currently applied.
 
-    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-activity-details.png" alt-text="Screenshot of the activity details pane showing the number of devices hardened by a predictive shielding action." lightbox="media/shield-predict-threats-manage/shield-predict-threats-view-activity-details.png":::
+    :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-activity-details.png" alt-text="Screenshot of the activity details pane showing the number of devices hardened by a predictive shielding action.":::
 
 > [!TIP]
 > While the **Activity** tab displays actions that are specific to the current incident, the Action center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
