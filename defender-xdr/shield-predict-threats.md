@@ -50,7 +50,7 @@ While attack disruption identifies and contains compromised assets, predictive s
 
 Predictive shielding uses predictive analytics and real-time insights to dynamically identify emerging risks, and applies targeted protections.
 
-Predictive shielding integrates posture, activity, and scenario context to identify potential attack paths and targets, selectively hardening critical assets or constraining attack paths just in time. 
+Predictive shielding integrates posture, activity, and scenario context to identify potential attack paths and targets, selectively hardening critical assets, or constraining attack paths just in time. 
 
 This approach minimizes operational overhead and provides security teams with more time to respond. For example, predictive shielding can dynamically restrict access to sensitive data for devices identified as at-risk, reducing the need for broad, environment-wide restrictions.
 
@@ -58,7 +58,7 @@ Predictive shielding relies on two pillars:
 
 - **Prediction** 
     - Involves analyzing threat intelligence, attacker behavior, past incidents, and organizational exposure. 
-    - Defender XDR uses this prediction data to identify emerging risks, to understand likely attack progression, and to infer risk on non-compromised assets.
+    - Defender XDR uses this prediction data to identify emerging risks, to understand likely attack progression, and to infer risk on noncompromised assets.
 - **Enforcement** applies preventative protective controls to disrupt potential attack paths in real time.
 
 This dual approach ensures that protection is both precise and timely.
@@ -77,14 +77,14 @@ Together, these insights create a dynamic understanding of the environment and i
 
 ### Graph-based logic
 
-Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity across the organizational topology, including the organization's assets, connections, and vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment.
+Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity across the organizational topology. This unified view includes the organization's assets, connections, and vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment.
 
 This integration allows Defender XDR to dynamically adjust protections based on the most critical vulnerabilities, enabling real-time prioritization of defenses and stopping attackers before they reach critical assets.
 
 The process involves three key stages: 
 
 1. Defender XDR overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. 
-1. Defender XDR identifies the blast radius—the related assets that could be affected by the identified activity.
+1. Defender XDR identifies the blast radius—the related assets that the identified activity might affect.
 1. Reasoning models predict paths attackers are most likely to take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
 This dynamic understanding allows Defender XDR to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets.
@@ -109,8 +109,8 @@ This example illustrates how predictive shielding works in conjunction with auto
 1. A hands-on-keyboard attacker gains access to the environment and begins operating.
 2. Attack disruption automatically contains the compromised user, preventing further lateral movement.
 3. Predictive shielding anticipates the attacker's next steps and proactively hardens the environment.
-4. By the time security teams engage, the attack has already been halted, minimizing impact.
-5. Security teams investigate the incident, leveraging the attack story to understand the progression and complete the response.
+4. Security teams prepare to engage, but at this stage, the attack is already prevented, minimizing impact.
+5. Security teams investigate the incident, and use the attack story to understand the progression and complete the response.
 
 ### Stages and defenses
 
@@ -122,8 +122,8 @@ This table summarizes the steps of the attack, the protective measures that pred
 | Behavioral analysis | A new privileged local account is created, signaling hands-on-keyboard activity. This triggers [automatic containment](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) of the user involved. | Automatic attack disruption | Incident graph to trace lateral movement |
 | Threat actor correlation | The account creation pattern matches the Cactus ransomware playbook. Defender correlates this activity with the Cactus threat actor profile. | Threat intelligence and pattern recognition | Disruption summary > **View all related threats** > **View report** |
 | Threat intelligence analysis | Threat Analytics provides insights into the attacker’s campaign methods, tooling, and typical progression patterns. | Threat analytics | Review the threat analytics data in the activity profile. |
-| Predictive shielding activation | Based on the incident graph and activity chain, predictive shielding identifies devices at risk of being rebooted into Safe Mode. Hardening policies are automatically applied to prevent this. | Predictive shielding and hardening policies | - [Review the incident graph](shield-predict-threats-manage.md#review-the-incident-information) to identify at-risk devices. <br>- Review the disruption summary to see all actions taken, impact and enforcement status.<br>- Review the [Activity tab](shield-predict-threats-manage.md#review-the-activity-information) for a detailed view of every disruption action, including the alerts that triggered the action and the devices currently protected. |
-| Additional attack attempts | The attacker’s attempt to reboot devices into Safe Mode is blocked. When the attacker pivots to disabling Defender AV via Group Policy, GPO hardening prevents the propagation of malicious changes. The encryption attempt is blocked, and the environment remains secure. | Predictive shielding, GPO hardening, and Safeboot hardening | - Review the disruption summary for the number of hardened devices.<br>-   Review the **Activity** tab for the current activity status, including the applied profiles and affected devices. |
+| Predictive shielding activation | Based on the incident graph and activity chain, predictive shielding identifies devices at risk of being rebooted into Safe Mode. Hardening policies are automatically applied to prevent this. | Predictive shielding and hardening policies | - [Review the incident graph](shield-predict-threats-manage.md#review-the-incident-information) to identify at-risk devices. <br>- Review the disruption summary to see all actions taken, impact, and enforcement status.<br>- Review the [Activity tab](shield-predict-threats-manage.md#review-the-activity-information) for a detailed view of every disruption action, including the alerts that triggered the action and the devices currently protected. |
+| Additional attack attempts | The attacker’s attempt to reboot devices into Safe Mode is blocked. When the attacker pivots to disabling Defender Antivirus via Group Policy, GPO hardening prevents the propagation of malicious changes. The encryption attempt is blocked, and the environment remains secure. | Predictive shielding, GPO hardening, and Safeboot hardening | - Review the disruption summary for the number of hardened devices.<br>-   Review the **Activity** tab for the current activity status, including the applied profiles and affected devices. |
 
 ## Next steps
 
