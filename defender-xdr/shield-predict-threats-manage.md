@@ -72,20 +72,26 @@ Review the incident page for predictive shielding details and results:
 
 ### Review the activity information
 
-Select the incident's **Activity** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied. Each action is specified under the **Type** column.
-    
-In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions are applied as part of predictive shielding.
+Select the incident's **Activity** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied:
 
-TBD - screenshot
+- Review the **Type** column to see the actions triggered by predictive shielding.
+    
+    In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions are applied as part of predictive shielding.
+
+    TBD - screenshot
+
+- Review the **Triggering alert** column to see the alert that led to the predictive shielding action.
+- Review the **Policy status** column to see which hardening policies are currently applied.
 
 > [!NOTE]
 > The **Performed by** column indicates **Attack Disruption** both for attack disruption and predictive shielding actions. To understand which specific actions apply to predictive shielding, see the [Predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions).
 
-Select a specific action to open the activity details pane, which shows the number of devices where the relevant policy is currently applied.
+- Select a specific action to open the activity details pane, which shows the number of devices where the relevant policy is currently applied.
 
 TBD - screenshot
 
-While the **Activity** tab displays actions that are specific to the current incident, the Action Center displays all activites. To track predictive shielding actions in the Action center, see Track the actions in the Action center.
+> [!TIP]
+> While the **Activity** tab displays actions that are specific to the current incident, the Action Center displays all activites. To track predictive shielding actions in the Action center, see Track the actions in the Action center.
 
 ### Review the triggering alert information
 

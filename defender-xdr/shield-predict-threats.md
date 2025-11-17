@@ -44,7 +44,7 @@ To address these challenges, predictive shielding enhances Defender XDR's autono
 
 This proactive approach reduces the reactive chase, minimizes operational burden, maintains usability, and protects the environment before attackers can advance.
 
-While attack disruption identifies and contains compromised assets using high-fidelity signals, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths. For example, while automatic attack disruption isolates a compromised device, predictive shielding might proactively restrict access to sensitive data for at-risk devices.
+While attack disruption identifies and contains compromised assets, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths. For example, while automatic attack disruption isolates a compromised device, predictive shielding might proactively restrict access to sensitive data for at-risk devices.
 
 ## How predictive shielding works
 
@@ -77,14 +77,14 @@ Together, these insights create a dynamic understanding of the environment and i
 
 ### Graph-based logic
 
-Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity and organizational vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment. 
+Graph-based prediction logic bridges the gap between pre-breach and post-breach systems, providing a unified view of attacker activity across the organizational topology, including the organization's assets, connections, and vulnerabilities. Graph-based logic combines live activity data with the structural map of the environment.
 
 This integration allows Defender XDR to dynamically adjust protections based on the most critical vulnerabilities, enabling real-time prioritization of defenses and stopping attackers before they reach critical assets.
 
 The process involves three key stages: 
 
 1. Defender XDR overlays post-breach activity onto the organization’s exposure graph, creating a comprehensive view of potential attack paths. 
-1. Defender XDR identifies the "blast radius"—the assets and configurations that could be impacted next. 
+1. Defender XDR identifies the blast radius—the related assets that could be affected by the identified activity.
 1. Reasoning models predict paths attackers are most likely to take, factoring in past behaviors, asset characteristics, and environmental vulnerabilities.
 
 This dynamic understanding allows Defender XDR to move beyond reactive responses, enabling just-in-time protection that stops attackers before they reach critical assets.
