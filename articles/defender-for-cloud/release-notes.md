@@ -34,6 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | November 23, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 | November 23, 2025 | Update | [Documentation updates](#documentation-updates) |
 | November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
+| November 17, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]|
 | November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
@@ -67,6 +68,16 @@ We’ve begun a major revamp of the Microsoft Defender for Cloud documentation t
 - **Simplified navigation**: A unified table of contents based on customer feedback.  
 - **Mixed-mode experience**: Articles that cover both Azure and Defender portals with entry points at the top of the article.  
 - **New Defender portal section**: Features recent enhancements, opt-in guidance, and known limitations.  
+
+### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
+
+November 17, 2025  
+
+Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) compliance standard v2 in preview. 
+
+The MCSB provides a collection of high-impact security controls and recommendations to help secure cloud services across single and multicloud environments. MCSB v2 adds expanded risk and threat-based guidance, expanded Azure Policy measurements, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
+
+Learn more about the [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
 
 ### Restrict Pod Access response action (preview)
 
