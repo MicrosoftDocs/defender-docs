@@ -26,7 +26,8 @@ For updates about versions and features released six months ago or earlier, see 
 ## November 2025
 
 Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
-**Releated Health alerts:**
+
+Releated Health alerts:
 - NTLM Auditing is not enabled 
 - Directory Services Advanced Auditing is not enabled as required 
 - Directory Services Object Auditing is not enabled as required 
