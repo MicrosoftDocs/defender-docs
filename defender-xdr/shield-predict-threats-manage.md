@@ -80,7 +80,7 @@ Select the incident's **Activity** tab and filter by the **Response** category t
 
     TBD - screenshot
 
-- Review the **Triggering alert** column to see the alert that led to the predictive shielding action.
+- Review the **Triggering alert** column to see the alert that led to the predictive shielding action. For more information, see [Review the triggering alert information](#review-the-triggering-alert-information).
 - Review the **Policy status** column to see which hardening policies are currently applied.
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Select the incident's **Activity** tab and filter by the **Response** category t
 TBD - screenshot
 
 > [!TIP]
-> While the **Activity** tab displays actions that are specific to the current incident, the Action Center displays all activites. To track predictive shielding actions in the Action center, see Track the actions in the Action center.
+> While the **Activity** tab displays actions that are specific to the current incident, the Action Center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
 
 ### Review the triggering alert information
 
@@ -123,17 +123,9 @@ DisruptionAndResponseEvents
 | where IsPolicyOn
 ```
 
-## Undo incidents where actions are applied
+## Undo actions triggered by predictive shielding
 
-With Defender XDR, you get full visibility into the actions taken, the reason for the actions, the current status, and the impact of the action in your environment. If needed, you might choose to undo the incident where the action applies, such as in the following scenarios:
+You can undo an action that was applied as part of predictive shielding. To undo an action:
 
-- You review the data and take necessary remediation or follow-up actions. 
-- You assess that the threat is mitigated.
-- You assess that the impact in your environment outweighs the protection value.
-
-To undo an incident: 
-
-1. Select the incident from the incident page. 
-1. In the incident details pane, select **Undo** under the incident name. 
-
-    Predictive shielding actions are no longer applied to the selected incident.
+- In the **Activity** tab of the incident, select the specific action you want to undo.
+- [Undo an action from the Action center](m365d-autoir-actions.md#undo-completed-actions).
