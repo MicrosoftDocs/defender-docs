@@ -117,6 +117,9 @@ You might want to use the Defender for Identity PowerShell module to configure t
 ```powershell
 Set-MDIConfiguration -Mode Domain -Configuration All
 ```
+> [!NOTE]
+> The Active Directory PowerShell module is required only when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
+
 For more information, see:
 - [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
 - [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)

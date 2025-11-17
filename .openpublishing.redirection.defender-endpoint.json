@@ -165,5 +165,10 @@
       "redirect_url": "/defender-xdr/contact-defender-support",
       "redirect_document_id": false
     },
+    {
+      "source_path": "defender-endpoint/install-defender-endpoint-linux.md",
+      "redirect_url": "/defender-endpoint/mde-linux-prerequisites",
+      "redirect_document_id": false
+    }       
   ]
 }
