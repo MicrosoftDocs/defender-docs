@@ -75,7 +75,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 |Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
-### Unlock additional security value in sensor v3.x
+### Additional security value in the Defender for Identity sensor v3.x
 
 Get enhanced protection by applying the **Unified sensor RPC audit** tag to your sensors v3.x through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
