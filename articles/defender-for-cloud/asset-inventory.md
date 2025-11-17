@@ -110,6 +110,71 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
 Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
 
+## Access a software inventory
+
+To access the software inventory, you need one of the following plans:
+
+- [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
+- [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender for Servers P2](plan-defender-for-servers-select-plan.md).
+- [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) from [Defender for Servers](defender-for-servers-introduction.md).
+
+### Examples using Azure Resource Graph Explorer to access and explore software inventory data
+
+1. Open **Azure Resource Graph Explorer**.
+
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot shows how to launch Azure Resource Graph Explorer** recommendation page." :::
+
+1. Select the following subscription scope: **securityresources/softwareinventories**
+
+1. Enter any of the following queries (or customize them or write your own!) and select **Run query**.
+
+### Query examples
+
+To generate a basic list of installed software:
+
+```kusto
+securityresources
+| where type == "microsoft.security/softwareinventories"
+| project id, Vendor=properties.vendor, Software=properties.softwareName, Version=properties.version
+```
+
+To filter by version numbers:
+
+```kusto
+securityresources
+| where type == "microsoft.security/softwareinventories"
+| project id, Vendor=properties.vendor, Software=properties.softwareName, Version=tostring(properties.    version)
+| where Software=="windows_server_2019" and parse_version(Version)<=parse_version("10.0.17763.1999")
+```
+
+To find machines with a combination of software products:
+
+```kusto
+securityresources
+| where type == "microsoft.security/softwareinventories"
+| extend vmId = properties.azureVmId
+| where properties.softwareName == "apache_http_server" or properties.softwareName == "mysql"
+| summarize count() by tostring(vmId)
+| where count_ > 1
+```
+
+To combine a software product with another security recommendation:
+
+(In this example – machines having MySQL installed and exposed management ports)
+
+```kusto
+securityresources
+| where type == "microsoft.security/softwareinventories"
+| extend vmId = tolower(properties.azureVmId)
+| where properties.softwareName == "mysql"
+| join (
+    securityresources
+| where type == "microsoft.security/assessments"
+| where properties.displayName == "Management ports should be closed on your virtual machines" and properties.status.code == "Unhealthy"
+| extend vmId = tolower(properties.resourceDetails.Id)
+) on vmId
+```
+
 ## Next steps
 
 - [Review security recommendations](review-security-recommendations.md)
@@ -373,68 +438,3 @@ Some assets may appear outside defined cloud scopes:
 - [Manage security recommendations](review-security-recommendations.md?pivots=defender-portal)
 
 ::: zone-end
-
-## Access a software inventory
-
-To access the software inventory, you need one of the following plans:
-
-- [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
-- [Agentless machine scanning](concept-agentless-data-collection.md) from [Defender for Servers P2](plan-defender-for-servers-select-plan.md).
-- [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) from [Defender for Servers](defender-for-servers-introduction.md).
-
-### Examples using Azure Resource Graph Explorer to access and explore software inventory data
-
-1. Open **Azure Resource Graph Explorer**.
-
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot shows how to launch Azure Resource Graph Explorer** recommendation page." :::
-
-1. Select the following subscription scope: **securityresources/softwareinventories**
-
-1. Enter any of the following queries (or customize them or write your own!) and select **Run query**.
-
-### Query examples
-
-To generate a basic list of installed software:
-
-```kusto
-securityresources
-| where type == "microsoft.security/softwareinventories"
-| project id, Vendor=properties.vendor, Software=properties.softwareName, Version=properties.version
-```
-
-To filter by version numbers:
-
-```kusto
-securityresources
-| where type == "microsoft.security/softwareinventories"
-| project id, Vendor=properties.vendor, Software=properties.softwareName, Version=tostring(properties.    version)
-| where Software=="windows_server_2019" and parse_version(Version)<=parse_version("10.0.17763.1999")
-```
-
-To find machines with a combination of software products:
-
-```kusto
-securityresources
-| where type == "microsoft.security/softwareinventories"
-| extend vmId = properties.azureVmId
-| where properties.softwareName == "apache_http_server" or properties.softwareName == "mysql"
-| summarize count() by tostring(vmId)
-| where count_ > 1
-```
-
-To combine a software product with another security recommendation:
-
-(In this example – machines having MySQL installed and exposed management ports)
-
-```kusto
-securityresources
-| where type == "microsoft.security/softwareinventories"
-| extend vmId = tolower(properties.azureVmId)
-| where properties.softwareName == "mysql"
-| join (
-    securityresources
-| where type == "microsoft.security/assessments"
-| where properties.displayName == "Management ports should be closed on your virtual machines" and properties.status.code == "Unhealthy"
-| extend vmId = tolower(properties.resourceDetails.Id)
-) on vmId
-```
