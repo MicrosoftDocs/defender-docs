@@ -9,7 +9,7 @@ ms.reviewer: rlitinsky
 # Configure audit policies for Windows event logs
 
 Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. 
-This article dewscribes how to optimally configure the Advanced Audit Policy settings on your domain controllers to avoid gaps in the event logs and incomplete Defender for Identity coverage.
+This article describes how to optimally configure the Advanced Audit Policy settings on your domain controllers to avoid gaps in the event logs and incomplete Defender for Identity coverage.
 
 ## Configure Windows event auditing with the Defender for Identity sensor v3.x
 
