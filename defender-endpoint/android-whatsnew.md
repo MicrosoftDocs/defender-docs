@@ -15,14 +15,13 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/06/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
-
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -36,7 +35,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- Performance Improvement and accessibility bug fixes
+- Performance improvement and accessibility bug fixes
 
 #### November 2025
 
@@ -48,7 +47,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
 
-- Added Landscape mode UI support for the Defender app.
+- Added landscape mode UI support for the Defender app.
 
 - Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
 
