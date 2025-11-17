@@ -63,19 +63,21 @@ You can exclude an analytics rule from correlation using a toggle in the analyti
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. Navigate to **Investigation & response** > **Hunting** > **Custom detection rules**.
+1. Navigate to the [Analytics rule wizard](./advanced-hunting-defender-use-custom-rules.md#analytics-rules).
+1. In the **General** tab of the rule wizard, enter and name and description.
+1. In the **Set rule logic** tab, configure the rule logic as needed.
 
-3. Select an existing analytics rule or create a new one.
+1. In the **Incident settings** tab, make sure the Enable correlation toggle is set to **Disabled**.
 
-4. In the rule wizard, locate the **Exclude from correlation** toggle.
+    :::image type="content" source="./media/exclude-analytics-rules-correlation/analytics-rules-wizard-incident-settings.png" alt-text="Screenshot of Incidents settings UI with the Enable correlation toggle set to Disabled.":::
 
-5. Set the toggle to **On** to exclude the rule from correlation.
+1. Set the toggle to **On** to exclude the rule from correlation.
 
-6. Complete the rule configuration and select **Save** or **Create**.
+When you exclude a rule using the UI toggle, the `#DONT_CORR#` tag is automatically added to the beginning of the rule's description. The analytics rules view now includes a column for correlation state so you can easily see which rules are excluded as well as filter the list to see rules in a specific state.
 
-When you exclude a rule using the UI toggle, the `#DONT_CORR#` tag is automatically added to the beginning of the rule's description.
+:::image type="content" source="./media/exclude-analytics-rules-correlation/detections-rules.png" alt-text="Screenshot of analytics rules view with Correlation state column.":::
 
-## Exclude a rule from correlation using the tag
+## Exclude a rule from correlation manually
 
 You can manually add or remove the `#DONT_CORR#` tag to control the correlation state of an analytics rule.
 
@@ -83,37 +85,9 @@ You can manually add or remove the `#DONT_CORR#` tag to control the correlation 
 
 1. Open the analytics rule in edit mode.
 
-2. In the rule's **Description** field, add `#DONT_CORR#` at the very beginning of the text.
+1. In the rule's **Description** field, add `#DONT_CORR#` at the very beginning of the text.
 
-3. Save the rule.
-
-### Tag format and rules
-
-The `#DONT_CORR#` tag follows these rules:
-
-- **Not case sensitive** - You can use any combination of uppercase and lowercase letters (for example, `#dont_corr#` or `#DONT_CORR#`).
-- **Spacing is flexible** - You can add any number of spaces between the tag and the rest of the description, or no spaces at all.
-- **Must be at the beginning** - The tag must appear at the start of the description field.
-
-**Example descriptions:**
-
-```
-#DONT_CORR# This rule detects suspicious login attempts
-#dont_corr#    This rule monitors file modifications
-#DONT_CORR#This rule has no space after the tag
-```
-
-## View correlation state
-
-The analytics rules view includes a **Correlation state** column that shows whether each rule is included in or excluded from correlation.
-
-1. Go to **Investigation & response** > **Hunting** > **Custom detection rules**.
-
-2. The **Correlation state** column displays one of the following values:
-   - **Correlation enabled** - The rule participates in correlation (default)
-   - **Excluded from correlation** - The rule bypasses correlation
-
-3. Use the filter options to view rules in a specific correlation state.
+1. Save the rule.
 
 ## Control correlation exclusion via API
 
@@ -133,20 +107,27 @@ For more information about using the Microsoft Defender XDR API, see [Microsoft 
 
 Keep the following points in mind when using correlation exclusion:
 
-- The `#DONT_CORR#` tag is added to the *rule's* description field. Alert descriptions are not affected.
+- The `#DONT_CORR#` tag is added to the *rule's* description field. Alert *descriptions* are not affected.
 
-- The `#DONT_CORR#` correlation tag:
-    - Isn't case sensitive
-    - Has no space requirements between it and the rest of the description. You can have as many spaces as you want, or none at all.
-    - 
-    - 
-    - The correlation state always matches the tag. If you exclude a rule using the UI toggle and then manually remove the `#DONT_CORR#` tag from the description, the rule's correlation state reverts to "Correlation enabled."
+- The correlation state always matches the tag. If you exclude a rule using the UI toggle and then manually remove the `#DONT_CORR#` tag from the description, the rule's correlation state reverts to *Correlation enabled*.
 
-- **Default state** - All analytics rules have correlation enabled by default unless explicitly excluded.
+- All analytics rules have correlation enabled by default unless explicitly excluded.
 
-- **Existing alerts not affected** - Changing a rule's correlation state doesn't affect alerts that were created before the change. Alerts receive their correlation state when they're created, and this state remains static.
+- Changing a rule's correlation state doesn't affect alerts that were created before the change. Alerts receive their correlation state when they're created, and this state remains static.
 
-- **Use sparingly** - The correlation engine is designed to build complete attack stories and significantly helps SOC analysts understand attacks and respond efficiently. Only exclude rules from correlation when necessary for specific business or operational requirements.
+- The correlation engine is designed to build complete attack stories and significantly helps SOC analysts understand attacks and respond efficiently. Only exclude rules from correlation when necessary for specific business or operational requirements.
+
+- Tag formatting rules
+
+  - **Not case sensitive** - You can use any combination of uppercase and lowercase letters (for example, `#dont_corr#` or `#DONT_CORR#`).
+  - **Spacing is flexible** - You can add any number of spaces between the tag and the rest of the description, or no spaces at all.
+  - **Must be at the beginning** - The tag must appear at the start of the description field.  
+
+For examples, these are all valid descriptions:
+
+- #DONT_CORR# This rule detects suspicious login attempts
+- #dont_corr#    This rule monitors file modifications
+- #DONT_CORR#This rule has no space after the tag
 
 ## Next steps
 
