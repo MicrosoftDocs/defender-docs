@@ -8,15 +8,30 @@ ms.reviewer: rlitinsky
 
 # Configure audit policies for Windows event logs
 
-To enhance detections and gather more information on user actions like NTLM logons and security group changes, Microsoft Defender for Identity relies on specific entries in Windows event logs. Proper configuration of Advanced Audit Policy settings on your domain controllers is crucial to avoid gaps in the event logs and incomplete Defender for Identity coverage.
+Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. 
+This article describes how to optimally configure the Advanced Audit Policy settings on your domain controllers to avoid gaps in the event logs and incomplete Defender for Identity coverage.
 
-This article describes how to configure your Advanced Audit Policy settings as needed for a Defender for Identity sensor. It also describes other configurations for specific event types.
+## Configure Windows event auditing with the Defender for Identity sensor v3.x
 
+Defender for Identity sensor v3.x can automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones.
+
+To turn on automatic windows auditing:
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**. 
+1. In the **General** section, select **Advanced features**.
+1. Turn on **Automatic Windows auditing configuration**.​
+ 
+If you do not select automatic Windows event auditing, you must manually configure Windows event collection on your domain controller.
+
+## Configure Windows event auditing with the Defender for Identity sensor v2.x
+
+Configure Windows event auditing on your domain controllers to support Defender for Identity detections. 
 Defender for Identity generates health issues for each of these scenarios if they're detected. For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md).
 
 ## Prerequisites
 
-- Before you run Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+- Before you run Defender for Identity PowerShell commands, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+> [!NOTE]
+> The Active Directory PowerShell module is required when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
 
 ## Generate a report of current configurations via PowerShell
 
@@ -47,7 +62,7 @@ For more information, see the [DefenderforIdentity PowerShell reference](/powers
 > [!TIP]
 > The `Domain` mode report includes only configurations set as group policies on the domain. If you have settings defined locally on your domain controllers, we recommend that you also run the [Test-MdiReadiness.ps1](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
 
-## Configure auditing for domain controllers
+## Configure Windows event auditing for domain controllers
 
 Update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
 
@@ -119,6 +134,12 @@ For more information, see the [auditpol reference documentation](/windows-server
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
 
 **Related health issue:** [Directory Services Advanced Auditing isn't enabled as required](../health-alerts.md)
+
+The following command defines all settings for the domain, creates group policy objects, and links them.
+
+```powershell
+Set-MDIConfiguration -Mode Domain -Configuration All
+```
 
 To configure your settings, run:
 
