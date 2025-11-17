@@ -11,7 +11,7 @@ This article lists weekly operational activities that we recommend you perform w
 
 ## Review SaaS security posture management
 
-**Where**: In the Microsoft Defender XDR Portal, select **Secure Score**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Secure Score**.
 
 **Persona**: Security and Compliance administrators, SOC analysts
 
@@ -23,7 +23,7 @@ To view Secure Score recommendations per product, in Microsoft Defender XDR, sel
 
 ## Check app connectors, log collectors, and SIEM agent health
 
-**Where**: In the Microsoft Defender XDR Portal, select **Settings > Cloud apps**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Cloud apps**.
 
 **Persona**: Security and Compliance administrators, SOC analysts
 
@@ -59,7 +59,7 @@ For more information, see [Track new and changed features in the Microsoft 365 M
 
 ## Review the governance log
 
-**Where**: In the Microsoft Defender XDR Portal, under **Cloud apps**, select **Governance log**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), under **Cloud apps**, select **Governance log**.
 
 **Persona**: Security and Compliance administrators
 
