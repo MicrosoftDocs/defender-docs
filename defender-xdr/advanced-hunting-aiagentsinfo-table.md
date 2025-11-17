@@ -48,7 +48,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `LastPublishedByUpn` | `string` | User principal name (UPN) of the account that last published the agent |
 | `AgentDescription` | `string` | Description of the agent as displayed in the agent's source |
 | `AgentStatus` | `string` |Status of the agent; possible values: Created, Published, Deleted |
-| `UserAuthenticationType` | `string` |The agent’s configured authentication type for users interacting with the agent; possible values: None, Microsoft, Custom.|
+| `UserAuthenticationType` | `string` |The agent’s configured authentication type for users interacting with the agent; possible values: None, Microsoft, Custom|
 | `AgentUsers` | `string` |List of user principal names (UPNs) or group IDs that can use the agent |
 | `KnowledgeDetails` | `string` |Details about the knowledge sources added to the agent |
 | `AgentActionTriggers` | `string` |List of triggers that makes an autonomous agent take action |
@@ -60,6 +60,10 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AgentToolsDetails` | `dynamic` |Specifications of the tools that the agent can access and perform actions on |
 | `EnvironmentId` | `string` |The identifier of the Microsoft Power Platform environment the agent resides in |
 | `Platform` | `string` |The platform that provided the information about the agents; possible values: Copilot Studio |
+| `IsGenerativeOrchestrationEnabled` | `boolean` |ndicates whether the agent uses generative orchestration (that is, dynamically chooses tools, knowledge, and actions based on context) to operate|
+| `AgentAppId` | `string` |The unique app identifier registered for the agent in Microsoft Entra |
+| `ConnectedAgentsSchemaNames` | `dynamic` |Lists the schema names of connected agents, which are independently managed agents that are linked to the main one for orchestration |
+| `ChildAgentsSchemaNames` | `dynamic` |Lists the schema names of the child agents that exist within the main agent |
 
 ## Sample queries
 
