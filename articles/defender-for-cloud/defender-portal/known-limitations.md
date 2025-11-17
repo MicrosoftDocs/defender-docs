@@ -27,7 +27,7 @@ These are the known limitations during the preview release of Defender for Cloud
 ## Cloud secure score and recommendations
 
 - Cloud Secure Score history may show less than 6 months if tenant was recently onboarded.
-- The new Cloud secure score is only avaiable in the Defender portal. The Azure portal continues to show the previous secure score model.
+- The new Cloud Secure Score is only avaiable in the Defender portal. The Azure portal continues to show the previous secure score model.
 
 ## Cloud Scopes
 

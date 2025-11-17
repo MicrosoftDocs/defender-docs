@@ -82,7 +82,7 @@ This section helps you understand where to start and is designed to guide your n
 
 Track how your security posture and threat detection evolve.
 
-**Security Posture**: View over time of the new cloud secure score in addition to recommendations by severity.
+**Security Posture**: View over time of the new Cloud Secure Score in addition to recommendations by severity.
 
 :::image type="content" source="media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of cloud overview dashboard security posture trends":::
 

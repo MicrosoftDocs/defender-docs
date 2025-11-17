@@ -329,7 +329,7 @@ Microsoft secure score is a broader, unified concept spanning multiple security 
 | Score type | Scope / domain | Primary source products & data |
 | --- | --- | --- |
 | Microsoft Secure Score | Identity posture | Microsoft Entra (Azure AD) recommendations |
-| Exposure secure score | Device / endpoint posture | Microsoft Defender for Endpoint (device configuration, threat protection) |
+| Exposure Secure Score | Device / endpoint posture | Microsoft Defender for Endpoint (device configuration, threat protection) |
 | Cloud Secure Score | Cloud posture (multicloud) | Microsoft Defender for Cloud (Azure, AWS, GCP) |
 
 > [!NOTE]
