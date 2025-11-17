@@ -43,11 +43,6 @@ The new security posture assessment lists users whose valid credentials have bee
 |---------|---------|
 |2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
 
-Microsoft Defender for Identity Sensor (v3.x) now includes support for automatic:
-- Network Name Resolution (NNR)
-- Windows event configuration
-You do not need to perform any manual configuration to enable these features when you activate the Defender for Identity sensor v3.x.
-
 ### Expansion of identity scoping: Support for Organizational units (Preview) 
 
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
@@ -56,7 +51,7 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 ## October 2025
 
 We’re excited to announce that the Microsoft Defender for Identity Sensor (v3.x) is now generally available (GA). 
-The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+[Version 3.x of the sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
