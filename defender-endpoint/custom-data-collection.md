@@ -93,7 +93,7 @@ Yes, you need a connected Microsoft Sentinel workspace to create custom data col
 
 ### How can I know if a rule has reached the endpoint?
 
-Currently, you can query for events collected by the relevant rule, for the specific endpoint. For example, the following query returns all effective rules on the endpoint (now and in the past), counting the rules' collected events.
+You can query for events collected by the relevant rule, for the specific endpoint. For example, the following query returns all effective rules on the endpoint (now and in the past), counting the rules' collected events.
 
 ```kusto
 search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents) "your_device_id"
@@ -105,7 +105,7 @@ search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetwork
 
 Custom Data Collection is provided to you as part of MDE P2 license free of charge. You are billed for the ingestion of data into your Microsoft Sentinel workspaces in accordance with your deal with Sentinel. The extra cost is based on the volume of data ingested.
 
-### What client versions and OSs are currently supported?
+### What client versions and operating systems are currently supported?
 
 See [supported operating systems](create-custom-data-collection-rules.md#supported-operating-systems). To query your client version, in [advanced hunting](/defender-xdr/advanced-hunting-overview), use the **ClientVersion** column in the **DeviceInfo** table.
 

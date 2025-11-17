@@ -43,7 +43,7 @@ To use custom data collection, you need:
 - Minimum client version: 10.8797 (Windows only).
 - Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
 
-### Supported platforms
+### Supported operating systems
 
 - **Windows**: Minimum client version 10.8797
 - **Windows 10**: Requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
