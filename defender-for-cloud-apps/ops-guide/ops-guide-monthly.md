@@ -13,7 +13,7 @@ Monthly activities can be performed more frequently or as needed, depending on y
 
 ## Review policy assessments
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > Policies > Policy management**
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > Policies > Policy management**
 
 **Persona**: Security and Compliance administrators
 
@@ -33,7 +33,7 @@ For more information, see [Control cloud apps with policies](../control-cloud-ap
 
 ## Review activity logs
 
-**Where**: In the Microsoft Defender XDR Portal, under **Cloud apps**, select **Activity log**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), under **Cloud apps**, select **Activity log**.
 
 **Persona**: Security and Compliance administrators
 
