@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 08/01/2025
+ms.date: 09/18/2025
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -55,6 +55,7 @@ The following products are also eligible to get Defender Experts for Hunting cov
 - Microsoft Defender for Office 365 P2
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps
+- Microsoft Entra ID P2
 
 The following product is **not** covered by this service:
 
@@ -63,13 +64,13 @@ The following product is **not** covered by this service:
 
 **Microsoft Defender Experts for Hunting - Servers**
 
-Customers who wish to have Defender Experts hunting coverage for Microsoft Defender for Cloud servers must have the following:
+Customers who wish to have Defender Experts for Hunting coverage for Microsoft Defender for Cloud servers must have the following:
 
 -	Defender Experts for Hunting - XDR service enrollment
 -	Defender for Servers Plan 1 or Plan 2 in Microsoft Defender for Cloud
 
 > [!NOTE]
-> Defender Experts for Hunting coverage is applied at the tenant level and all identities and devices will be included.
+> You can't purchase Defender Experts for Hunting for partial coverage. You must apply it at the tenant level. All identities and devices are automatically included.
 
 ### Defender Experts for Hunting coverage
 
@@ -101,7 +102,7 @@ You might need certain roles and permissions to fully access the service capabil
 
 ## Service availability and data protection
 
-Defender Experts for Hunting - XDR and Defender Experts for Hunting - Servers are managed threat hunting services that proactively hunts for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Enrolling in this service means you're granting permission to Microsoft experts to access the said data.
+Defender Experts for Hunting - XDR and Defender Experts for Hunting - Servers are managed threat hunting services that proactively hunt for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Enrolling in this service means you're granting permission to Microsoft experts to access the said data.
 
 The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > **Microsoft Defender Experts**.
 

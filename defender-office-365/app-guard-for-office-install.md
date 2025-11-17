@@ -2,7 +2,7 @@
 title: Application Guard for Office for admins
 f1.keywords:
   - NOCSH
-ms.author: maccruz
+ms.author: deniseb
 author: schmurky
 manager: deniseb
 audience: ITPro
@@ -32,7 +32,7 @@ Microsoft Defender Application Guard for Office (Application Guard for Office) h
 
 ### Licensing requirements
 
-- Microsoft 365 E5 or Microsoft 365 E5 Security
+- Microsoft 365 E5 or the Microsoft Defender Suite
 - [Safe Documents in Microsoft 365](safe-documents-in-e5-plus-security-about.md)
 
 ### Minimum hardware requirements

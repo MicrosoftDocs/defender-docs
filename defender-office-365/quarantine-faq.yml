@@ -5,8 +5,8 @@ metadata:
     - NOCSH
   author: chrisda
   ms.author: chrisda
-  manager: orspodek
-  ms.date: 05/21/2025
+  manager: bagol
+  ms.date: 10/22/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -101,7 +101,7 @@ sections:
           How can I prevent users from accessing quarantined messages?
         answer: |
           The default quarantine policy named AdminOnlyAccessPolicy prevents any user interaction with their quarantined messages. By default, this quarantine policy is used for messages that were quarantined as malware or high confidence phishing. In custom threat policies or the default threat policy for [protection features that support quarantining messages](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), admins can specify the AdminOnlyAccessPolicy as the quarantine policy to use.
-          
+
           You can't prevent end users from seeing or accessing the **Quarantine** page at <https://security.microsoft.com/quarantine>.
 
       - question: |
@@ -122,7 +122,7 @@ sections:
 
           By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and then select **Show all senders**.
 
-          If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue. 
+          If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue.
 
           > [!TIP]
           > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
@@ -158,7 +158,7 @@ sections:
 
           Verify that you aren't using non-Microsoft filtering before you open a support ticket about this issue.
 
-          Quarantined messages that have been released have the **Status** value **Released** and the **Released by** property available on the **Quarantine** page. 
+          Quarantined messages that have been released have the **Status** value **Released** and the **Released by** property available on the **Quarantine** page.
 
           Admins can also use the audit log to see who released a message from Quarantine. Use the value **Released Quarantine message** in **Activities - friendly names**. For related instructions, see [Find who deleted a quarantined message](quarantine-admin-manage-messages-files.md#find-who-deleted-a-quarantined-message).
 
@@ -176,9 +176,9 @@ sections:
       - question: |
           Are wildcards supported when searching for quarantined messages? Can I search for quarantined messages for a specific domain?
         answer: |
-          Wildcards aren't supported in the Microsoft Defender portal. For example, when searching for a sender, you need to specify the full email address. But, you can use wildcards in Exchange Online PowerShell PowerShell.
+          Wildcards are supported in both the Microsoft Defender portal and Exchange Online PowerShell. For example, you can use `*@contoso.com` as a sender address or recipient address filter to search for quarantined messages.
 
-          For example, copy the following PowerShell code into NotePad and save the file as .ps1 in a location that's easy for you to find (for example, C:\Data\QuarantineRelease.ps1).
+          For bulk search and release, copy the following PowerShell code into NotePad and save the file as .ps1 in a location that's easy for you to find (for example, C:\Data\QuarantineRelease.ps1).
 
           Then, after you connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following command to run the script:
 
@@ -278,7 +278,7 @@ sections:
           I don't see the **Block sender** button in quarantine notifications or on the **Quarantine page**. I also don't see the **Approve release** button on the **Quarantine page**. What's going on?
         answer: |
           **Block sender** is disabled by default for quarantined messages.
-          
+
           For end users, admins can create and assign a custom quarantine policy that includes the **Block sender** action. For more information, see [Quarantine policies](quarantine-policies.md).
 
           Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
@@ -291,7 +291,7 @@ sections:
           The **Block sender** action isn't possible for public folders.
 
           Public folders in Exchange don't have junk email configuration settings like individual mailboxes. The `Set-MailboxJunkEmailConfiguration` cmdlet configures junk email settings for mailboxes, not public folders.
-          
+
       - question: |
           **Filter** and **Search** aren't working. What's going on?
         answer: |
@@ -303,7 +303,7 @@ sections:
           Released quarantine messages are still showing up in Quarantine. What's going on?
         answer: |
           Released messages remain visible in quarantine with the **Status** value **Released**, until:
-          
+
           - The [quarantine retention period](quarantine-about.md#quarantine-retention) expires and the message is automatically deleted.
 
             or

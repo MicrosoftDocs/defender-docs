@@ -1,12 +1,15 @@
 ---
 title: Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions Antivirus protection without Defender for Endpoint
 description: Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions Antivirus protection without Defender for Endpoint
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: article
 ms.date: 04/09/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Individuals
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
@@ -15,12 +18,6 @@ ms.custom:
 ---
 
 # Microsoft Defender Antivirus and non-Microsoft antivirus solutions without Defender for Endpoint
-
-**Applies to**:
-
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-- Microsoft Defender Antivirus
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint Plan 2.
 
@@ -32,8 +29,8 @@ The following table summarizes what to expect:
 | -------- | -------- | -------- |
 |Windows 11 and Windows 10   |Microsoft Defender Antivirus|Active mode|
 |Windows 11 and Windows 10|A non-Microsoft antivirus solution|Disabled mode (happens automatically).|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|Microsoft Defender Antivirus|Active mode|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|A non-Microsoft antivirus solution|Disabled (set manually; see the note that follows this table)|
+|Windows server 2016 and later. <br/>  Windows Server version 1803 or newer. <br/>  Azure Stack HCI OS, version 23H2 and later.|Microsoft Defender Antivirus|Active mode|
+|Windows server 2016 and later. <br/>  Windows Server version 1803 or newer. <br/>  Azure Stack HCI OS, version 23H2 and later.|A non-Microsoft antivirus solution|Disabled (set manually; see the note that follows this table)|
 
 > [!NOTE]
 > Defender for Endpoint support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.

@@ -3,8 +3,8 @@ title: Content distribution using distribution profiles in multitenant managemen
 description: Learn about content distribution across tenants in the Microsoft Defender multitenant portal.
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
@@ -28,7 +28,7 @@ Content distribution in the Microsoft Defender multitenant portal helps you orga
 Create distribution profiles to distribute the following types of content across multiple tenants:
 
 - Custom detection rules
-- Endpoint security policies, supported for Microsoft Defender for Endpoint customers only (Preview)
+- Endpoint security policies, supported for Microsoft Defender for Endpoint customers only
 
 ## Requirements
 

@@ -4,7 +4,7 @@ description: Configuration which can be used to reduce the attack surface in Mic
 ms.service: defender-office-365
 author: MSFTBen
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

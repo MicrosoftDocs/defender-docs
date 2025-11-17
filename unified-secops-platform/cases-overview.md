@@ -116,7 +116,11 @@ Add tasks to manage granular components of your cases. Each task comes with its 
 
 *Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
 
-### Link incidents
+### Link objects
+
+Linking a case to other objects in your environment helps your SecOps teams understand the broader context of a threat. You can link cases to incidents or [indicators of compromise (IoCs)](/defender-endpoint/indicators-overview).
+
+#### Link incidents
 
 Linking a case and an incident helps your SecOps teams collaborate in the method that works best for them. For example, a threat hunter who finds malicious activity creates an incident for the incident response (IR) team. That threat hunter links the incident to a case so it's clear they're related. Now the IR team understands the context of the hunt that found the activity.
 
@@ -125,6 +129,18 @@ Linking a case and an incident helps your SecOps teams collaborate in the method
 Alternatively, if the IR team needs to escalate one or more incidents to the hunting team, they can create a case and link the incidents from the **Investigation & response** incident details page.
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
+
+#### Link indicators (preview)
+
+Linking a case to relevant indicators of compromise (IOCs) helps your SecOps teams understand the broader context of a threat.
+
+To link the case to IOCs, go to the **Linked Objects** tab in the Case page and select **Indicators**. Then, select the **Add** button and the workspace the TI Indicator is in. Select the wanted TI Indicator and click on **Link**.
+
+:::image type="content" source="media/cases-overview/link-indicators.png" alt-text="Screenshot showing the linked indicators for the hypothetical burrowing attack case.":::
+
+Alternatively, you can create a case and link the indicators from the Intel management indicators details page. Select your TI Indicator and then on **Link Cases**.
+
+:::image type="content" source="media/cases-overview/link-indicator-from-intel-management.png" alt-text="Screenshot showing the link indicator option from the TI Indicator view.":::
 
 ### Activity log
 
@@ -140,7 +156,37 @@ Share reports, emails, screenshots, log files, and more, all centralized in the 
 
 :::image type="content" source="media/cases-overview/case-attachments.png" alt-text="Screenshot of the details of the Attachments tab of a case.":::
 
+You can attach up to 10 files per comment.
+
+#### Add attachment to a case
+
 To add attachments to your case, go to the **Case details** page, select the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. Once uploaded, the file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If the file you want to upload is actually a malware sample, you can wrap it in a password-protected ZIP file.
+
+#### Add attachment to a comment (preview)
+
+To add an attachment to a comment:
+
+1. Go to the comment area of the *Case* page.
+1. Go to the text editor at the bottom of the screen, and select the paperclip icon to attach a file.
+1. Select the file you want to attach from your computer.
+1. Select **Send** to save the comment.
+
+   :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
+
+   - To attach a screenshot to your comment, paste it into the text editor.
+   - To delete an attached file from the comment, select the bin icon while hovering over it.
+    
+### Delete Case (preview)
+
+To delete a case:
+
+1. Open the Cases screen, select the case you want to remove, and select **Delete**.
+
+    :::image type="content" source="media/cases-overview/delete-case.png" alt-text="Screenshot showing the Remove option in the case details pane.":::
+
+1. In the pop-up window, type *delete* and then select **Confirm**.
+
+    :::image type="content" source="media/cases-overview/delete-case-confirm.png" alt-text="Screenshot showing the confirmation dialog for deleting a case.":::
 
 ## Limitations
 

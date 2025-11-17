@@ -2,7 +2,7 @@
 title: Address compromised user accounts with automated investigation and response
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium

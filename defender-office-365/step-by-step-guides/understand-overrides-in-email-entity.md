@@ -3,7 +3,7 @@ title: Understanding overrides within the email entity page in Microsoft Defende
 description: Shows the different overrides in the email entity page in Microsoft Defender for Office 365 to help admins troubleshoot configurations.
 author: MSFTBen
 ms.author: benharri
-manager: orspodek
+manager: bagol
 ms.service: defender-office-365
 ms.topic: how-to
 audience: ITPro
