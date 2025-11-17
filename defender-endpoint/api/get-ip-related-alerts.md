@@ -1,4 +1,4 @@
-﻿  ---
+﻿---
 title: Get IP related alerts API
 description: Retrieve a collection of alerts related to a given IP address using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -19,7 +19,6 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get IP related alerts API
