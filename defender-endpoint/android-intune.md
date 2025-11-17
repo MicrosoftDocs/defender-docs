@@ -2,10 +2,10 @@
 title: Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 description: Describes how to deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,18 +16,13 @@ ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/24/2025
+appliesto: 
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll your device](/mem/intune/user-help/enroll-device-android-company-portal).
 

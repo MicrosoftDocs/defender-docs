@@ -7,7 +7,7 @@ ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/31/2025
+ms.date: 08/20/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -21,11 +21,28 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
+
+## September 2025
+
+
+### Manage Incident Workflows with Tasks in Microsoft Defender (Preview)
+
+You can now use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](/defender-xdr/split-incidents-into-tasks?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json).
+
 ## August 2025
+
 
 - [Viewing unified RBAC in multitenant management to GA](#viewing-unified-rbac-in-multitenant-management-to-ga)
 - [Tenant groups in multitenant management renamed to distribution profiles](#tenant-groups-in-multitenant-management-renamed-to-distribution-profiles)
 - [Distribute Microsoft Defender for Endpoint security policies with multitenant management](#distribute-microsoft-defender-for-endpoint-security-policies-with-multitenant-management)
+
+### Edit workbooks directly in the Microsoft Defender portal
+
+Now you can create and edit Microsoft Sentinel workbooks directly in the Microsoft Defender portal. This enhancement streamlines your workflow and allows you to manage your workbooks more efficiently and brings the workbook experience more closely aligned with the experience in the Azure portal.
+
+Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
+
+Workbooks are available in the Defender portal under **Microsoft Sentinel > Threat management > Workbooks**. For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data).
 
 ### Viewing unified RBAC in multitenant management to GA
 

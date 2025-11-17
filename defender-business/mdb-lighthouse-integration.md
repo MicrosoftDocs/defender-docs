@@ -4,7 +4,7 @@ description: See how Microsoft Defender for Business integrates with Microsoft 3
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business

@@ -2,7 +2,7 @@
 title: Manage quarantined messages and files as an admin
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -18,11 +18,12 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 10/07/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As a Microsoft 365 admin, I need guidance to view, release, and manage quarantined messages and files so I can respond to threats and false positives.
 ---
 
 # Manage quarantined messages and files as an admin
@@ -60,11 +61,11 @@ Watch this short video to learn how to manage quarantined messages as an admin.
       - _Submit messages from quarantine to Microsoft_: Membership in the **Security Administrator** role groups.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
     - _Read-only access to quarantined messages for all users_: Membership in the **Security Reader** or **Global Reader** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
     - _Take action on quarantined messages for all users_: Membership in the **Security Administrator** or **Global Administrator**<sup>\*</sup> roles.
-  
+
       > [!IMPORTANT]
-      > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+      > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
       - _Submit messages from quarantine to Microsoft_:  Membership in the **Security Administrator** role.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
@@ -236,7 +237,9 @@ In the details flyout that opens, the following information is available:
       - System released: "System released."
       - Other: The default behavior is admin released.
 
-The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
+  - **Sender address override reason**
+
+The rest of the details flyout contains the **Delivery details**, **Email details**, **Authentication**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 :::image type="content" source="media/quarantine-message-details-flyout-released-by.png" alt-text="Screenshot of the details flyout that opens after you select a quarantined email message from the Email tab of the Quarantine page." lightbox="media/quarantine-message-details-flyout-released-by.png":::
 

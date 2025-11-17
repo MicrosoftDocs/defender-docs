@@ -4,7 +4,7 @@ f1.keywords:
   - CSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -220,44 +220,44 @@ Organizations with Defender for Office 365 Plan 2 can use the following query in
 > The numbers might differ slightly due to the different refresh and expiry rates for advanced hunting vs. reporting data.
 
 ```kusto
-let _startTime = ago(30d); 
-let _endTime = now(); 
+let _startTime = ago(30d);
+let _endTime = now();
 let PreDelivery = toscalar(
-    EmailEvents 
-    | where Timestamp between (_startTime .. _endTime) 
-        and EmailDirection == "Inbound" 
+    EmailEvents
+    | where Timestamp between (_startTime .. _endTime)
+        and EmailDirection == "Inbound"
         and (ThreatTypes contains "Phish" or ThreatTypes contains "Malware")
     | where not(DeliveryAction == "Blocked" and DeliveryLocation in ("Dropped","Failed"))
-    | extend MDO_detection = parse_json(DetectionMethods) 
-    | extend FirstDetection = iif(isempty(MDO_detection), "Clean", tostring(bag_keys(MDO_detection)[0])) 
-    | extend FirstSubcategory = iif(FirstDetection != "Clean" and array_length(MDO_detection[FirstDetection]) > 0, strcat(FirstDetection, ": ", tostring(MDO_detection[FirstDetection][0])), "No Detection (clean)") 
+    | extend MDO_detection = parse_json(DetectionMethods)
+    | extend FirstDetection = iif(isempty(MDO_detection), "Clean", tostring(bag_keys(MDO_detection)[0]))
+    | extend FirstSubcategory = iif(FirstDetection != "Clean" and array_length(MDO_detection[FirstDetection]) > 0, strcat(FirstDetection, ": ", tostring(MDO_detection[FirstDetection][0])), "No Detection (clean)")
     | summarize PreDelivery = count()
-); 
+);
 let PostDelivery = toscalar(
-    EmailPostDeliveryEvents 
+    EmailPostDeliveryEvents
     | where Timestamp between (_startTime .. _endTime)
-        and ActionType in ("Malware ZAP","Phish ZAP") 
+        and ActionType in ("Malware ZAP","Phish ZAP")
         and ActionResult in ("Success","UserTriaged")
     | summarize PostDelivery = count()
-); 
+);
 let Uncaught = toscalar(
-    EmailPostDeliveryEvents 
+    EmailPostDeliveryEvents
     | where Timestamp between (_startTime .. _endTime)
-        and ActionType in ("Malware ZAP","Phish ZAP") 
+        and ActionType in ("Malware ZAP","Phish ZAP")
         and ActionResult !in ("Success", "UserTriaged")
     | summarize Uncaught = count()
-); 
+);
 let PreDeliveryReal = toreal(PreDelivery);
 let PostDeliveryReal = toreal(PostDelivery);
 let UncaughtReal = toreal(Uncaught);
 let Effectiveness = round(
     iif(
-        (PreDeliveryReal + PostDeliveryReal + UncaughtReal) == 0, 
-        0.0, 
+        (PreDeliveryReal + PostDeliveryReal + UncaughtReal) == 0,
+        0.0,
         ((PreDeliveryReal + PostDeliveryReal) / (PreDeliveryReal + PostDeliveryReal + UncaughtReal)) * 100.0
     ), 2
 );
-union 
+union
     (print StatisticName = "Pre-Delivery Catch", Value = PreDeliveryReal),
     (print StatisticName = "Post-Delivery Catch", Value = PostDeliveryReal),
     (print StatisticName = "Failed ZAP / Miss or Uncaught", Value = UncaughtReal),

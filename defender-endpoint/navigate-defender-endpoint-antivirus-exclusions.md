@@ -5,12 +5,12 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 01/09/2025
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
@@ -20,7 +20,7 @@ search.appverid: met150
 
 # Exclusions overview 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Defender for Business](/defender-business/mdb-overview) includes a wide range of capabilities to prevent, detect, investigate, and respond to advanced cyberthreats. Microsoft preconfigures the product to perform well on the operating system that it's installed. No other changes should be needed. Despite preconfigured settings, sometimes unexpected behaviors occur. Here are some examples:
 
@@ -161,7 +161,7 @@ For more information, see [Automatic server role exclusions](configure-server-ex
 
 Examples include:
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb` 
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb` 
 - `%allusersprofile%\NTUser.pol`
 - Windows Update files
 - Windows Security files 

@@ -4,8 +4,8 @@ description: Learn how to use the unified security summary in the Microsoft Defe
 ms.service: defender-xdr
 ms.localizationpriority: medium
 audience: ITPro
-author: diannegali
-ms.author: diannegali
+author: guywi-ms
+ms.author: guywild
 ms.date: 05/07/2025
 manager: deniseb
 ms.topic: how-to

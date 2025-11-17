@@ -1,11 +1,11 @@
----
+﻿---
 title: Configure Microsoft Defender for Endpoint on iOS features
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS features.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,17 +15,13 @@ ms.topic: how-to
 ms.subservice: ios
 search.appverid: met150
 ms.date: 05/19/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure Microsoft Defender for Endpoint on iOS features
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -434,7 +430,7 @@ Defender for Endpoint on iOS enables bulk tagging the mobile devices during onbo
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
 > [!NOTE]
-> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the XDR portal.
+> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the Microsoft Defender portal.
 
 ### Configure device tags using MDM
 
@@ -541,3 +537,4 @@ Use the following steps to configure the option to send feedback data to Microso
 Phishing websites impersonate trustworthy websites by obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

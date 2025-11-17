@@ -1,0 +1,229 @@
+{
+  "redirections": [
+    {
+      "source_path": "ATADocs/DeployUse/ata-configuration-file.md",
+      "redirect_url": "/advanced-threat-analytics/ata-configuration-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-database-management.md",
+      "redirect_url": "/advanced-threat-analytics/ata-database-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-health-center.md",
+      "redirect_url": "/advanced-threat-analytics/ata-health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-role-groups.md",
+      "redirect_url": "/advanced-threat-analytics/ata-role-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/ata-silent-installation.md",
+      "redirect_url": "/advanced-threat-analytics/ata-silent-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/configure-event-collection.md",
+      "redirect_url": "/advanced-threat-analytics/configure-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/configure-port-mirroring.md",
+      "redirect_url": "/advanced-threat-analytics/configure-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step1.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step2.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step3.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step4.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step5.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/install-ata-step6.md",
+      "redirect_url": "/advanced-threat-analytics/install-ata-step6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/manage-telemetry-settings.md",
+      "redirect_url": "/advanced-threat-analytics/manage-telemetry-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-centercert.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-centercert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-centerip.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-centerip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-consoleurl.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-consoleurl",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/setting-ata-alerts.md",
+      "redirect_url": "/advanced-threat-analytics/setting-ata-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-configuration.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/modifying-ata-config-dcpassword.md",
+      "redirect_url": "/advanced-threat-analytics/modifying-ata-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/setting-syslog-email-server-settings.md",
+      "redirect_url": "/advanced-threat-analytics/setting-syslog-email-server-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/use-case-forged-pac.md",
+      "redirect_url": "/advanced-threat-analytics/use-case-forged-pac",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/validate-port-mirroring.md",
+      "redirect_url": "/advanced-threat-analytics/validate-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/working-with-ata-console.md",
+      "redirect_url": "/advanced-threat-analytics/working-with-ata-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/working-with-detection-settings.md",
+      "redirect_url": "/advanced-threat-analytics/working-with-detection-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/DeployUse/working-with-suspicious-activities.md",
+      "redirect_url": "/advanced-threat-analytics/working-with-suspicious-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/PlanDesign/ata-architecture.md",
+      "redirect_url": "/advanced-threat-analytics/ata-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/PlanDesign/ata-prerequisites.md",
+      "redirect_url": "/advanced-threat-analytics/ata-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/PlanDesign/ata-capacity-planning.md",
+      "redirect_url": "/advanced-threat-analytics/ata-capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/disaster-recovery.md",
+      "redirect_url": "/advanced-threat-analytics/disaster-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-known-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-ata-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-logs.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Troubleshoot/troubleshooting-ata-using-perf-counters.md",
+      "redirect_url": "/advanced-threat-analytics/troubleshooting-ata-using-perf-counters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-technical-faq.md",
+      "redirect_url": "/advanced-threat-analytics/ata-technical-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-threats.md",
+      "redirect_url": "/advanced-threat-analytics/ata-threats",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-update-1.5-migration-guide.md",
+      "redirect_url": "/advanced-threat-analytics/ata-update-1.5-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-update-1.6-migration-guide.md",
+      "redirect_url": "/advanced-threat-analytics/ata-update-1.6-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ata-update-1.7-migration-guide.md",
+      "redirect_url": "/advanced-threat-analytics/ata-update-1.7-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/ATA-versions.md",
+      "redirect_url": "/advanced-threat-analytics/ATA-versions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/what-is-ata.md",
+      "redirect_url": "/advanced-threat-analytics/what-is-ata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.4.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.5.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.6.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATADocs/Understand/whats-new-version-1.7.md",
+      "redirect_url": "/advanced-threat-analytics/whats-new-version-1.7",
+      "redirect_document_id": false
+    }
+  ]
+}

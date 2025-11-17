@@ -1,12 +1,12 @@
----
+﻿---
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-ms.date: 07/01/2025
-manager: deniseb
+ms.date: 11/11/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,16 +15,13 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Business
+
 ---
 
 # Take response actions on a device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -103,19 +100,19 @@ Or, use this alternate procedure:
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
    
-2. Add comments and then select **Confirm**.
+1. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
    
-3. Select **Action center** from the response actions section of the device page.
+1. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
    
-4. Select **Package collection package available** to download the collection package.
+1. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
-
-   > [!NOTE]
+   
+      > [!NOTE]
    > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
    
 ### Investigation package contents for Windows devices
@@ -210,14 +207,16 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**: 
 
+- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices may not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings are not required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
-- Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012 R2.
+- Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
 - You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](mde-linux-prerequisites.md). Ensure that the following prerequisites are enabled:
    - `iptables`
    - `ip6tables`
-   - Linux kernel with `CONFIG_NETFILTER`, `CONFID_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER`
-- Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
+   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+    
+- Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
 - You must have at least the `Active remediation actions` role assigned. For more information, see [Create and manage roles](user-roles.md).
@@ -330,7 +329,7 @@ You're be able to stop containing a device at any time.
 Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other non-compromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
 
 > [!NOTE]
-> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 2012 R2, Windows 2016, and Windows Server 2019+ devices.
+> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 11, Windows 2012 R2, and Windows 2016 devices.
 
 Containing an IP address associated with undiscovered devices or devices not onboarded to Defender for Endpoint is done automatically through [automatic attack disruption](/defender-xdr/automatic-attack-disruption). The Contain IP policy automatically blocks a malicious IP address when Defender for Endpoint detects the IP address to be associated with an undiscovered device or a device not onboarded.
 
@@ -364,7 +363,9 @@ When an identity in your network might be compromised, you must prevent that ide
 > Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
 
 > [!IMPORTANT]
-> Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
+> As part of the active protection provided by Microsoft Defender for Endpoint, a distributed mechanism can apply LSA Policy to prevent compromised users from accessing machines in your organization. Currently, when this policy is applied on domain controllers, it may cause Group Policy synchronization activity across domain controllers.
+>
+> We are gradually rolling out a new solution by integrating with new OS APIs. This deployment will be phased and thoroughly tested to ensure stability and security. During this rollout, LSA Policy enforcement on your servers will be temporarily removed to prevent potential GPO sync. This change will remain in effect until the rollout is complete.
 
 ### How to contain a user
 
@@ -427,3 +428,4 @@ All other related details are also shown, for example, submission date/time, sub
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 - [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

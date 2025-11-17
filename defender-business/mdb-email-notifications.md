@@ -4,7 +4,7 @@ description: Set up email notifications to tell your security team about alerts 
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
