@@ -4,7 +4,7 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: Identity inventory
-description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in Defender XDR portal.
+description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in the Microsoft Defender portal.
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
@@ -124,7 +124,7 @@ You can use this information to help you prioritize identities for security post
 
 ### Navigate to the Identity inventory page
 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Assets** > **Identities** or navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
+In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Assets** > **Identities**. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
 
 ### Related Articles
 

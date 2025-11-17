@@ -42,6 +42,13 @@ For more information, see: [Link or Unlink an Account to an Identity (Preview)](
 **Identity-level remediation actions**
 
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
+Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+**Releated Health alerts:**
+- NTLM Auditing is not enabled 
+- Directory Services Advanced Auditing is not enabled as required 
+- Directory Services Object Auditing is not enabled as required 
+- Auditing on the Configuration container is not enabled as required 
+- Auditing on the ADFS container is not enabled as required
 
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
@@ -533,7 +540,7 @@ To help customers better identify and detect attempts to bypass security protoco
 
 With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
-Access Defender XDR portal -> Hunting -> Advanced Hunting.
+Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
 
 Now, you can copy our recommended query as provided below, and select on “Create detection rule”. Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
