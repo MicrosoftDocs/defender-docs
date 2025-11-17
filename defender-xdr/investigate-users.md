@@ -120,33 +120,33 @@ When an incident or alert is selected, a fly-out appears. You can manage the inc
 
 To see a full page view of an incident or alert, select its title.
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-alertstab.png" alt-text="Screenshot of the user account's related alerts seen in the Alerts tab in the Microsoft Defender portal" lightbox="/defender/media/investigate-users/user-incident-alertstab.png":::
+:::image type="content" source="/defender/media/investigate-users/user-incident-alertstab.png" alt-text="Screenshot of the user account's related alerts seen in the Alerts tab in the Microsoft Defender portal." lightbox="/defender/media/investigate-users/user-incident-alertstab.png":::
 
 ## Observed in organization
 
-- **Devices**: this section shows all the devices the user entity signed into in the prior 180 days, indicating the most and least used.
+- **Devices**: This section shows all the devices the user entity signed into in the prior 180 days, indicating the most and least used.
 
-- **Locations**: this section shows all the observed locations for the user entity in the last 30 days.
+- **Locations**: This section shows all the observed locations for the user entity in the last 30 days.
 
-- **Groups**: this section shows all observed on-premises groups for the user entity, as reported by Microsoft Defender for Identity.
+- **Groups**: This section shows all observed on-premises groups for the user entity, as reported by Microsoft Defender for Identity.
 
-- **Accounts**: this section shows all observed accounts for the identity entity, as reported by Microsoft Defender for Identity.
+- **Accounts**: This section shows all observed accounts for the identity entity, as reported by Microsoft Defender for Identity.
 
-- **Lateral movement paths**: this section shows all profiled lateral movement paths from the on-premises environment, as detected by Defender for Identity.
+- **Lateral movement paths**: This section shows all profiled lateral movement paths from the on-premises environment, as detected by Defender for Identity.
 
 The **Accounts** tab displays all accounts linked to a specific identity across connected systems. It consolidates manual and automatic correlations into a single table, giving you a centralized view of the identity’s footprint.
 
 The table shows the following fields:
 
-- ****Linkage type**:**shows how the account was linked to the identity (manual, StrongIDs, API, or rule). 
+- **Linkage type**: Shows how the account was linked to the identity (manual, StrongIDs, API, or rule). 
 
-- **Date of last linkage:** records the most recent date an account was linked to the identity.
+- **Date of last linkage:** Records the most recent date an account was linked to the identity.
 
--**Linked by:** identifies who created the link (StrongIDs, user ID, or rule name).
+- **Linked by:** Identifies who created the link (StrongIDs, user ID, or rule name).
 
-- **Linkage comment:** provides a short description that explains why the accounts were linked. The comment is limited to 25 characters.
+- **Linkage comment:** Provides a short description that explains why the accounts were linked. The comment is limited to 25 characters.
 
-- **Primary account:** indicates whether the system designates this account as the primary one for the identity.
+- **Primary account:** Indicates whether the system designates this account as the primary one for the identity.
 
 
 > [!NOTE]
@@ -271,7 +271,7 @@ The insights are based on the following data sources:
 
 If you want to further explore any of the insights in this panel, select the link accompanying the insight. The link takes you to the **Advanced hunting** page, where it displays the query underlying the insight, along with its raw results. You can modify the query or drill down into the results to expand your investigation or just satisfy your curiosity.
 
-:::image type="content" source="/defender/media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of Advanced hunting screen with insight query.":::
+:::image type="content" source="/defender/media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query.":::
 
 ## Remediation actions
 
@@ -282,8 +282,6 @@ From the Overview page, you can perform these actions:
 - View Microsoft Entra account settings, related governance, the user's owned files, or the user's shared files
 
 ![Screenshot of the actions for remediation for a user in the Microsoft Defender portal.](media/investigate-users/picture1111.png)
-
-
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
 
