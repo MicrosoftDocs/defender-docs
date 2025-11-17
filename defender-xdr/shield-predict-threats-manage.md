@@ -70,11 +70,11 @@ Select the incident's **Activities** tab and filter by the **Response** category
 
 - Review the **Type** column to see the actions triggered by predictive shielding.
     
-    In this example, the **GPO Hardening**, **Safeboot Hardening**, and **Contain User from the Network** actions are applied as part of predictive shielding.
+    In this example, the **Contain User**, **GPO Hardening**, and **SafeBoot Hardening** actions are applied as part of predictive shielding. Learn more about [predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions).
 
     :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-view-activities.png" alt-text="Screenshot of the Activities tab filtered by Response category, showing predictive shielding actions." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-view-activities.png":::
 
-- Review the **Triggering alert** column to see the alert that led to the predictive shielding action. For more information, see [Review the triggering alert information](#review-the-triggering-alert-information).
+- Select the **Triggering alert** column to open the alert details pane, and review the alert that led to the predictive shielding action. For more information, see [Review the triggering alert information](#review-the-triggering-alert-information).
 - Review the **Policy status** column to see which hardening policies are currently applied.
 
 > [!NOTE]
@@ -82,7 +82,7 @@ Select the incident's **Activities** tab and filter by the **Response** category
 
 - Select a specific action to open the activity details pane, which shows the number of devices where the relevant policy is currently applied.
 
-TBD - screenshot
+    :::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-activity-details.png" alt-text="Screenshot of the activity details pane showing the number of devices hardened by a predictive shielding action." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-activity-details.png":::
 
 > [!TIP]
 > While the **Activity** tab displays actions that are specific to the current incident, the Action center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
@@ -91,7 +91,7 @@ TBD - screenshot
 
 To investigate the alert that led to the predictive shielding action, select the triggering alert either from the incident details pane or from the activity page.
 
-TBD - screenshot
+:::image type="content" source="/media/shield-predict-threats-manage/shield-predict-threats-triggering-alert.png" alt-text="Screenshot of the alert details pane showing relevant alert data." lightbox="/media/shield-predict-threats-manage/shield-predict-threats-triggering-alert.png":::
 
 In the alert, you can review:
 
