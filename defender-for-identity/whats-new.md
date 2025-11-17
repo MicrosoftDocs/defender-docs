@@ -27,7 +27,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 |Version number |Updates |
 |---------|---------|
-|2.251||
+|2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
 
 ### Automatic Windows event auditing configuration for Identity sensors v3.x
 
