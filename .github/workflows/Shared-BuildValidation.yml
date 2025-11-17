@@ -1,0 +1,175 @@
+name: Build validation (shared)
+
+permissions:
+  pull-requests: write
+  statuses: write
+      
+on: 
+    workflow_call:
+        inputs:
+            PayloadJson:
+                required: true
+                type: string
+        secrets:
+            AccessToken:
+                required: true
+
+jobs:
+    build:
+      name: Run Script
+      if: github.repository_owner == 'MicrosoftDocs'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Script
+          shell: pwsh
+          env: 
+            PayloadJson: ${{ inputs.PayloadJson }}
+            AccessToken: ${{ secrets.AccessToken }}
+            BuildUser: "learn-build-service-prod[bot]"
+
+          run: |
+
+            # Get GitHub data and event
+            $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+            $GitRequestEvent = $GitHubData.event_name
+            $BuildUser = $env:BuildUser
+            
+            $AccessToken = $env:AccessToken
+
+            $DefaultBranch = $GitHubData.event.repository.default_branch
+            $GitHubState = $GitHubData.event.issue.state
+            $GitHubAction = $GitHubData.event.action
+            $GitHubSender = $GitHubData.event.sender.login
+            $GitHubRepoName = $GitHubData.event.repository.name
+            $CommentUser = $GitHubData.event.comment.user.login
+            $PrIssueNumber = $GitHubData.event.issue.number
+            $PrUrl = $GitHubData.event.issue.pull_request.url
+
+            $GitHubHeaders = @{}
+            $GitHubHeaders.Add("Authorization","token $($AccessToken)")
+            $GitHubHeaders.Add("User-Agent", "OfficeDocs")
+
+            $StatusUrl = "https://review.learn.microsoft.com/en-us/office-authoring-guide/pr-criteria?branch=main"
+            $StatusCheckName = "PR has no warnings or errors"
+            $Status = @{}
+            $Status.Add("context", $StatusCheckName)
+            $Status.Add("target_url", $StatusUrl)
+
+            $ValidationRegex = "(?m)\s*(Validation status: )([Pp]assed|[Ss]uggestion[s]?|[Ww]arning[s]?|[Ee]rror[s]?)\s*$"
+
+            Write-Host "Repo: $GitHubRepoName"
+            Write-Host "Sender: $GitHubSender"
+            Write-Host "Request event: $GitRequestEvent"
+            Write-Host "GitHub action: $GitHubAction"
+            Write-Host "GitHub state: $GitHubState"
+            Write-Host "Default branch: $DefaultBranch"
+            Write-Host "PR number: $PrIssueNumber"
+
+            # Make the job summary section show up so the job always looks consistent.
+            echo "" >> $env:GITHUB_STEP_SUMMARY
+
+            If (($GitRequestEvent -eq "issue_comment") -and (($GitHubAction -eq "created"))) {
+
+                Write-Host "Comment added on PR."
+
+                If ($CommentUser -eq $BuildUser) {
+
+                    Write-Host "Comment from $BuildUser. Processing."
+
+                    # Get the contents of the comment that was added to the PR
+                    $CommentBody = $GitHubData.event.comment.body
+
+                    # Check to see if comment contains validation status
+                    $StatusFound = $CommentBody -match $ValidationRegex
+
+                    If ($StatusFound) {
+
+                        Write-Host "Regex result: $StatusFound."
+
+                        $ValidationResult = $Matches[2]
+
+                        Write-Host "Validation status: $ValidationResult"
+
+                        $PrData = Invoke-RestMethod -Method GET -ContentType "application/json" -Headers $GitHubHeaders -Uri $PrUrl -ErrorAction Stop
+                        $StatusUrl = $PrData.statuses_url
+                        $PrHtmlUrl = $PrData.html_url
+
+                        Write-Host "PR status url: $StatusUrl"
+
+                        If (($ValidationResult -like "*error*") -or ($ValidationResult -like "*warning*")) {
+                        
+                            # Populates the job summary if an PR validation has an error or warning.
+                            echo "# Pull request validation error" >> $env:GITHUB_STEP_SUMMARY
+                            echo "" >> $env:GITHUB_STEP_SUMMARY
+                            echo "Build validation completed with a status of `"$ValidationResult`" in PR: $PrHtmlUrl. Builds must be free of errors and warnings before PRs can be merged." >> $env:GITHUB_STEP_SUMMARY
+
+                            # Capitalize first letter of result.
+                            $CapValidationResult = $ValidationResult.Substring(0,1).ToUpper() + $ValidationResult.Substring(1)
+
+                            $Status.state = "failure"
+                            $Status.description = "Blocking merge. $CapValidationResult must be resolved before merge."
+                        
+                        } ElseIf ($ValidationResult -like "*suggestion*") {
+                        
+                            write-host "Build validation completed with a status of `"$ValidationResult`". Allowing merge."
+
+                            $Status.state = "success"
+                            $Status.description = "Allowing merge. Please resolve $ValidationResult."
+
+                        } Else {
+                        
+                            write-host "Build validation completed with a status of `"$ValidationResult`". Allowing merge."
+
+                            $Status.state = "success"
+                            $Status.description = "Allowing merge."
+                        
+                        }
+
+                        $StatusJson = $Status | ConvertTo-Json
+                        $SuccessfulPost = $False
+                        $RetryCount = 0
+                
+                        Do {
+                
+                            Try {
+                
+                                # Send POST request to GitHub 
+                                Invoke-RestMethod -Headers $GitHubHeaders -Uri $StatusUrl -Method POST -Body $StatusJson -ErrorAction Stop 
+                                $SuccessfulPost = $True
+                
+                            } Catch {
+                
+                                # If the request fails for any reason, retry it after a delay, up to six times.
+                                $RetryCount++
+                                Start-Sleep 1
+                
+                            }
+                
+                        } Until (($SuccessfulPost) -or ($RetryCount -gt 5)) 
+
+                        
+                        If (($ValidationResult -like "*error*") -or ($ValidationResult -like "*warning*")) {
+
+                            # Force the workflow to fail so the validation failure can be tracked in Actions.
+
+                            Throw "Build validation completed with a status of `"$ValidationResult`" in PR: $PrHtmlUrl. Builds must be free of errors and warnings before PRs can be merged."
+
+                        }
+
+                    } Else {
+                    
+                        Write-Host "Comment was from $BuildUser but no status was found."
+                    
+                    }
+
+                } Else {
+                
+                    Write-Host "Comment not from $BuildUser. Exiting."
+
+                }
+
+            } Else {
+            
+                Write-Host "Not an added comment on PR."
+            
+            } # PR event and action check

@@ -1,0 +1,1568 @@
+name: Auto label and assign pull requests
+
+permissions:
+  pull-requests: write
+  contents: read
+      
+on: 
+    workflow_call:
+        inputs:
+            PayloadJson:
+                required: true
+                type: string
+            ExcludedUserList:
+                required: true
+                type: string   
+            ExcludedBranchList:
+                required: true
+                type: string
+            AutoAssignUsers:
+                required: true
+                type: string 
+            AutoAssignReviewers:
+                required: true
+                type: string
+            AutoLabel:
+                required: true
+                type: string 
+        secrets:
+            AccessToken:
+                required: true
+            PrivateKey:
+                required: true
+            ClientId:
+                required: true
+
+jobs:
+    build:
+      name: Run Script
+      if: github.repository_owner == 'MicrosoftDocs' && contains(github.event.repository.topics, 'build')
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out repo
+          id: checkout-repo
+          uses: actions/checkout@v4
+          with:
+            ref: ${{ fromJson(inputs.PayloadJson).event.pull_request.head.sha }}
+        
+        - name: Create App Token
+          id: app-token
+          uses: actions/create-github-app-token@v1
+          with:
+              app-id:      ${{ secrets.ClientId }}
+              private-key: ${{ secrets.PrivateKey }}
+              owner: ${{ github.repository_owner }}
+
+        - name: Script
+          shell: pwsh
+          env: 
+            GlobalExcludedReviewerList:  '[
+                    "dstrome",
+                    "sc-dstrome",
+                    "garycentric",
+                    "garymoore-sc",
+                    "serdarsoysal",
+                    "cx-ktsuji",
+                    "dawntanner",
+                    "pamgreen-msft",
+                    "pebaum",
+                    "SerdarSoysal",
+                    "vinaypamnani-msft"
+                ]'
+
+            PayloadJson: ${{ inputs.PayloadJson }}
+            AccessToken: ${{ secrets.AccessToken }}
+            AppGitHubAccessToken: ${{ steps.app-token.outputs.token }}
+            AutoAssignUsers: ${{ inputs.AutoAssignUsers }}
+            AutoAssignReviewers: ${{ inputs.AutoAssignReviewers }}
+            AutoLabel: ${{ inputs.AutoLabel }}
+            ExcludedUserList: ${{ inputs.ExcludedUserList }}
+            ExcludedBranchList: ${{ inputs.ExcludedBranchList }}
+
+          run: |
+            # Get runspace info
+            $RepoRoot = $env:GITHUB_WORKSPACE
+            $RepoName = $env:GITHUB_REPOSITORY
+            $WorkflowName = $env:GITHUB_WORKFLOW -replace '[\\/:*?"<>|\s]', '_'
+            $WorkflowRunId = $env:GITHUB_RUN_ID
+            $WorkflowRunAttempt = $env:GITHUB_RUN_ATTEMPT
+            $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+            $AccessToken = $env:AccessToken
+            $GlobalExcludedReviewerList = $env:GlobalExcludedReviewerList | ConvertFrom-Json
+            $GitHubApiUrl = "https://api.github.com/repos/MicrosoftDocs/"
+
+            $GitRequestEvent = $GitHubData.event_name
+            $DefaultBranch = $GitHubData.event.repository.default_branch
+            $PrCreator = $GitHubData.event.pull_request.user.login
+            $TargetBranch = $GitHubData.event.pull_request.base.ref
+            $GitHubState = $GitHubData.event.pull_request.state
+            $GitHubAction = $GitHubData.event.action
+            $PrNumber = $GitHubData.event.pull_request.number
+            $IsPrDraft = $GitHubData.event.pull_request.draft
+            $GitHubSender = $GitHubData.event.sender.login
+            $GitHubRepoName = $GitHubData.event.repository.name
+            $RepoLabelUrl = $GitHubData.event.repository.labels_url
+            $PrFileListUrl = "$($GitHubData.event.pull_request.url)/files"
+            $IssueUrl = $GitHubData.event.pull_request.issue_url
+            $PrUrl = $GitHubData.event.pull_request.url
+            $PrHtmlUrl = $GitHubData.event.pull_request.html_url
+            $CommentsUrl = $GitHubData.event.pull_request.comments_url
+            $UserPermissionUrl = $GitHubData.event.repository.collaborators_url.Replace("{/collaborator}", "/$PrCreator/permission" )
+
+            $AutoAssignUsers = [bool][int]$env:AutoAssignUsers  # If it works, it works!
+            $AutoAssignReviewers = [bool][int]$env:AutoAssignReviewers  # Ditto
+            $AutoLabel = [bool][int]$env:AutoLabel              # Ditto ditto
+            $ExcludedUserList = $env:ExcludedUserList | ConvertFrom-Json
+            $ExcludedBranchList = $env:ExcludedBranchList | ConvertFrom-Json
+            $AppGitHubAccessToken = $env:AppGitHubAccessToken
+
+            # Set GitHub REST API headers
+            $GitHubHeaders = @{}
+            $GitHubHeaders.Add("Authorization","token $AccessToken")
+            $GitHubHeaders.Add("User-Agent", "OfficeDocs")
+
+            # Create github HTTP authentication header using GitHub app installation token
+            $AppGitHubAccessHeaders = @{}
+            $AppGitHubAccessHeaders.Add("Authorization","token $($AppGitHubAccessToken)")
+            $AppGitHubAccessHeaders.Add("User-Agent", "OfficeDocs")
+
+            # Regex for string matches
+            $AuthorRegex = "(?m)^(author:\s{0,3})([\w|\-]{1,39})"
+            $ServiceRegex = "(ms\.service:\s{0,3})([\w|\-|\.]{1,60})"
+            $SubServiceRegex = "(ms\.subservice:\s{0,3})([\w|\-|\.]{1,60})"
+            $TechnologyRegex = "(ms\.technology:\s{0,3})([\w|\-|\.]{1,60})"
+            $ProdRegex = "(ms\.prod:\s{0,3})([\w|\-|\.]{1,60})"
+            $TierRegex = "(\s*-\s*)(tier\d|Selfserve)"
+
+            $LabelColor = "BFDADC"
+            $LabelDescription = ""
+
+            # Central workflow logging parameters
+            $LoggingRepoName = "officedocs-pr"
+            $LoggingBranch = "logging"
+            $LoggingRootDir = ".github/workflow-logs"
+            $Year = Get-Date -Format yyyy
+            $Month = Get-Date -Format MM
+            $LoggingFilePath = "$LoggingRootDir/$RepoName/$Year/$Month/PR$PrNumber/workflow-runs/$WorkflowName/${WorkflowRunId}_${WorkflowRunAttempt}.csv"
+            
+            $LoggingData = [pscustomobject][ordered]@{
+                RepoName                = $RepoName
+                PrNumber                = $PrNumber
+                PrUrl                   = $PrHtmlUrl
+                PrCreator               = $PrCreator
+                WorkflowSender          = $GitHubSender
+                PrIsDraft               = $IsPrDraft
+                InitialReviewerList     = $Null
+                ValidatedReviewerList   = $Null
+                ReviewStatus            = $Null
+                ReviewDetails           = $Null
+                ServiceSubService       = $Null
+                PrEvent                 = $GitRequestEvent
+                PrAction                = $GitHubAction
+                PrState                 = $GitHubState
+                WorkflowName            = $WorkflowName
+                WorkflowRunId           = $WorkflowRunId
+                TimeStamp               = (Get-Date).ToString("o")
+            }
+
+            # Path to GE Taxonomy service/subservice to Content Lead GitHub team mapping file.
+            $ServiceToGitHubTeamMapRepo = "officedocs-pr"
+            $ServiceToGitHubTeamMapFilePath = "/contents/.github/workflows/resources/service-subservice-to-github-team-map.csv"
+            $ServiceToGitHubTeamMapRef = "main"
+            $ServiceToGitHubTeamMapUrl = $GitHubApiUrl + $ServiceToGitHubTeamMapRepo + $ServiceToGitHubTeamMapFilePath + "?ref=$ServiceToGitHubTeamMapRef"
+
+            # Path to central workflow resources location.
+            $WorkflowsResourcePath = "https://api.github.com/repos/MicrosoftDocs/microsoft-365-docs/contents/.github/workflows/resources"
+            $WorkflowsRef = "workflows-prod"
+
+            # Set repo variables
+            $RepoUrl = $GitHubData.event.repository.url
+
+            Write-Host "Repository URL: $RepoUrl"
+
+            #####################
+            #####################
+            # Convert-DocFxMetadataPatternToRegex
+
+            Function Convert-DocFxMetadataPatternToRegex {
+                Param (
+                    [string]$Pattern
+                )
+
+                $Clean = ($Pattern -replace '\\', '/') -replace '^\./', ''
+                $Regex = [Regex]::Escape($Clean) -replace '/\\\*\\\*/', '/(?:[^/]+/)*' `
+                                                 -replace '/\\\*\\\*$', '/.*' `
+                                                 -replace '\\\*\\\*', '.*' `
+                                                 -replace '\\\*', '[^/]*' `
+                                                 -replace '\\\?', '[^/]'
+
+                # Both absolute (starts with /) and relative patterns should anchor to repo root
+                Return $Clean.StartsWith('/') ? "^$($Regex.TrimStart('/'))$" : "^$Regex$"
+
+            }
+
+            #####################
+            #####################
+            # Get-DocFxFileMetadataFromPattern
+
+                Function Get-DocFxFileMetadataFromPattern {
+
+                    [CmdletBinding()]
+                    Param (
+                        [object]$PatternTable,
+
+                        [Parameter(Mandatory = $true)]
+                        [string]$FilePath
+                    )
+
+                    If ($PatternTable -ne $Null) {
+                    
+                        If ($PatternTable -isnot [hashtable]) {
+
+                            $Ordered = [ordered]@{}
+                            $PatternTable.PSObject.Properties | ForEach-Object { $Ordered[$_.Name] = $_.Value }
+                            $PatternTable = $Ordered
+
+                        }
+
+                        $NormPath = ($FilePath -replace '\\', '/') -replace '^\./', ''
+
+                        Foreach ($Pattern in $PatternTable.Keys) {
+
+                            If ($NormPath -match (Convert-DocFxMetadataPatternToRegex -Pattern $Pattern)) {
+
+                                Return $PatternTable[$Pattern]
+
+                            }
+
+                        }
+
+                    } Else {
+
+                        Write-Host "No data for specified attribute found in DocFx fileMetadata config."
+
+                    }
+
+                    Return $null
+
+                }
+
+            #####################
+            #####################
+            # Get-DocFxConfig
+            
+            Function Get-DocFxConfig {
+    
+                [CmdletBinding()]
+                Param (
+                    [Parameter(Mandatory = $true)]
+                    [string]$FilePath
+                )
+
+                If (-not $RepoRoot) {
+
+                    Throw 'Repository root could not be determined.'
+
+                }
+
+                $FullPath = (Resolve-Path -LiteralPath $FilePath -ErrorAction Stop).Path
+                $RepoRoot = (Resolve-Path -LiteralPath $RepoRoot -ErrorAction Stop).Path.TrimEnd([IO.Path]::DirectorySeparatorChar, [IO.Path]::AltDirectorySeparatorChar)
+
+                # Confirm the file is inside the repo
+                If (-not $FullPath.StartsWith($RepoRoot, [StringComparison]::OrdinalIgnoreCase)) {
+
+                    Throw 'FilePath is not located underneath the repository root.'
+
+                }
+
+                # Walk up the tree 
+                $CurrentDir = Split-Path -Path $FullPath -Parent
+
+                While ($CurrentDir) {
+
+                    $Candidate = Join-Path -Path $CurrentDir -ChildPath 'docfx.json'
+
+                    If (Test-Path -LiteralPath $Candidate -PathType Leaf) {
+                        
+                        Write-Host "Getting DocFx config from $Candidate"
+
+                        Return (Get-Content -LiteralPath $Candidate -Raw) | ConvertFrom-Json -AsHashtable
+                    }
+
+                    If ($CurrentDir.TrimEnd([IO.Path]::DirectorySeparatorChar, [IO.Path]::AltDirectorySeparatorChar) -eq $RepoRoot) {
+
+                        Break
+
+                    }
+
+                    # Get the parent of the current folder
+                    $CurrentDir = Split-Path -Path $CurrentDir -Parent
+
+                }
+
+                Return $null
+            }
+
+            #####################
+            #####################
+            # Get-FileMetadata
+
+            Function Get-FileMetadata {
+
+              [cmdletbinding()]
+              Param (
+                  $PrFileList
+                    ) 
+
+              # Initialize output $FileArray.
+              $FileArray = @()
+
+              # Iterate through each file in the PR.
+              ForEach ($File in $PrFileList) {
+
+                  # Initialize variables.
+                  $FileData = @{}
+                  $FileName = $File.filename
+                  $MetadataFound = $False
+
+                  # Check to see whether current file is markdown or YAML. Those are the only files we care about. Ignore the rest.
+                  $IsContentFile = ($FileName.EndsWith(".md") -or $FileName.EndsWith(".yml")) -and !$FileName.ToLower().Contains("/toc.")
+
+                  # Only process content files.
+                  If ($IsContentFile) {
+
+                    Write-Host "Processing file $FileName."
+
+                    # Retrieve file contents from GitHub. File contents is returned in Base 64 so after contents is retrieved, convert from Base 64 to plain text.
+                    $FileContentsBase64 =  Invoke-RestMethod -Method GET -Uri $File.contents_url -Headers $GitHubHeaders 
+                    $FileContents = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($FileContentsBase64.content))
+
+                    # Retrieve DocFx configuration that applies to current file. Retrieving for each file is inefficient but most PRs only have a few files in them. 
+                    # Pre-processing to be more efficient could actually use more cycles.
+                    $DocFxConfig = Get-DocFxConfig -FilePath $FileName
+
+                    # Check to see if the file contents contains a string that matches the $AuthorRegex regex pattern. If yes, add value to $Author, check
+                    # fileMetadata and globalMetadata in that order in DocFx. If there's a match in either of those, return value. If not, return null.
+                    If ($FileContents -match $AuthorRegex) {    
+
+                        $Author = $Matches[2]
+                        $MetadataFound = $True 
+
+                        Write-Host "Found author $Author."
+
+                    } Else { 
+
+                        Write-Host "Author not found in article. Checking DocFx fileMetadata for $FileName."
+
+                        $Author = Get-DocFxFileMetadataFromPattern -PatternTable $DocFxConfig.build.fileMetadata.author -FilePath $FileName
+
+                        If ($Author -ne $Null) {
+
+                            Write-Host "Author $Author found in DocFx fileMetadata."
+                            $MetadataFound = $True 
+
+                        } Else {
+                                                 
+                            $Author = $DocFxConfig.build.globalMetadata.author
+
+                            If ($Author -ne $Null) {
+                            
+                                Write-Host "Author $Author found in DocFx globalMetadata."
+                                $MetadataFound = $True 
+                            
+                            } Else {
+                         
+                                Write-Host "Author not found in DocFx globalMetadata. Returning null."
+                                $Author = $Null
+
+                            }
+                        
+                        }
+
+                    }
+
+                    # Check to see if file contents contains a string that matches the $ServiceRegex regex pattern. If yes, add value to $Service, check
+                    # fileMetadata and globalMetadata in that order in DocFx. If there's a match in either of those, return value. If not, return null. 
+                    
+                    If ($FileContents -match $ServiceRegex) { 
+
+                          $Service = $Matches[2] 
+                          $MetadataFound = $True
+
+                          Write-Host "Found service $Service."
+                          
+                    } Else { 
+
+                        Write-Host "Service not found in article. Checking DocFx fileMetadata for $FileName."
+
+                        $Service = Get-DocFxFileMetadataFromPattern -PatternTable $DocFxConfig.build.fileMetadata.'ms.service' -FilePath $FileName
+
+                        If ($Service -ne $Null) {
+
+                            Write-Host "Service $Service found in DocFx fileMetadata."
+                            $MetadataFound = $True 
+
+
+                        } Else {
+                                                 
+                            $Service = $DocFxConfig.build.globalMetadata.'ms.service'
+
+                            If ($Service -ne $Null) {
+                            
+                                Write-Host "Service $Service found in DocFx globalMetadata."
+                                $MetadataFound = $True
+                            
+                            } Else {
+                         
+                                Write-Host "Service not found in DocFx globalMetadata. Returning null."
+                                $Service = $Null
+
+                            }
+                        
+                        }
+
+                    }
+
+                    # Check to see if file contents contains a string that matches the $SubServiceRegex regex pattern. If yes, add value to $SubService, check
+                    # fileMetadata and globalMetadata in that order in DocFx. If there's a match in either of those, return value. If not, return null. 
+                    If ($FileContents -match $SubServiceRegex) { 
+
+                        $SubService = $Matches[2] 
+                        $MetadataFound = $True
+
+                        Write-Host "Found sub service $SubService."
+
+                    } Else { 
+
+                        Write-Host "SubService not found in article. Checking DocFx fileMetadata for $FileName."
+
+                        $SubService = Get-DocFxFileMetadataFromPattern -PatternTable $DocFxConfig.build.fileMetadata.'ms.subservice' -FilePath $FileName
+
+                        If ($SubService -ne $Null) {
+
+                            Write-Host "SubService $SubService found in DocFx fileMetadata."
+
+                        } Else {
+                                                 
+                            $SubService = $DocFxConfig.build.globalMetadata.'ms.subservice'
+
+                            If ($SubService -ne $Null) {
+                            
+                                Write-Host "SubService $SubService found in DocFx globalMetadata."
+                            
+                            } Else {
+                         
+                                Write-Host "SubService not found in DocFx globalMetadata. Returning null."
+                                $SubService = $Null
+
+                            }
+                        
+                        }
+
+                    }     
+
+                    # Check to see if file contents contains a string that matches the $ProdRegex regex pattern. If yes, add value to $Product. Then check TechnologyRegex regex pattern. 
+                    # If value isn't matched, assign $Null and don't check Technology.
+                    If ($FileContents -match $ProdRegex) { 
+                        $Product = $Matches[2]
+                        $MetadataFound = $True
+                        Write-Host "Found product $Product."
+                        If ($FileContents -match $TechnologyRegex) {
+                              $Technology = $Matches[2]
+                              $MetadataFound = $True
+                              Write-Host "Found technology $Technology."
+                          } Else {
+                              $Technology = $Null
+                          }
+                        } Else {
+                        $Product = $Null
+                    }
+                    # Check to see if the file contents contains a string that matches the $TierRegex regex pattern. If yes, add value to $Tier, if not assign $Null.
+                    If ($FileContents -match $TierRegex) {    
+                        $Tier = $Matches[2]
+                        $MetadataFound = $True 
+                        Write-Host "Found tier $Tier."
+                    } Else { 
+                        $Tier = $Null 
+                    }         
+
+                    # Add results of above tests to an output object. Each property contains the results of the associated tests from above.
+                    $FileData = @{
+                        Service     = $Service
+                        SubService  = $SubService
+                        Product     = $Product
+                        Technology  = $Technology
+                        Tier        = $Tier
+                        Author      = $Author
+                        FileName    = $FileName
+                    }
+
+                    # If any metadata or author data was found, add it to the $FileArray output array.
+                    If ($MetadataFound) {
+                        Write-Host "Metadata or author data found on $FileName. Adding to output array."
+                        $FileArray += $FileData
+                    }
+                  }
+              }
+
+              # Return $FileArray output array to calling statement.
+              Return $FileArray
+
+            }
+
+            Function Format-FileMetadata {
+
+              [cmdletbinding()]
+              Param (
+                  $FileMetadata
+                    ) 
+
+              # Initialize arrays
+              $MetadataArray = @()
+              $AuthorArray = @()
+
+              # Iterate through each file in the $FileMetaData array. Each element is an individual file found in the PR with six properties containing metadata field values.
+              Foreach ($File in $FileMetadata) {
+
+                  # Check whether each property contains data and, if so, add it to the $MetaDataArray and AuthorArray arrays with the format <field value/field type> or <author>.
+                  If ($File.Service -ne $Null)     {$MetadataArray += "$($File.Service)/svc"}
+                  If ($File.SubService -ne $Null)  {$MetadataArray += "$($File.SubService)/subsvc"}
+                  If ($File.Product -ne $Null)     {$MetadataArray += "$($File.Product)/prod"}
+                  If ($File.Technology -ne $Null)  {$MetadataArray += "$($File.Technology)/tech"}
+                  If ($File.Tier -ne $Null)        {$MetadataArray += $File.Tier.SubString(0,1).ToUpper() + $File.Tier.SubString(1).ToLower()}
+                  If ($File.Author -ne $Null)      {$AuthorArray += $File.Author}
+
+
+              }
+
+              # Because there might be multiple files in the $MetaDataArray and $AuthorArrays with the same metadata and author data, duplicate values might have been added to the output arrays.
+              # We only need one instance of each metadata field or author value so the following removes any duplicate values.
+              $MetadataArray = $MetadataArray | Select-Object -Unique
+              $AuthorArray = $AuthorArray | Select-Object -Unique
+
+              # Added the output arrays to an output hash table.
+              $OutputHashTable = @{
+
+                  FileMetadata = $MetadataArray
+                  AuthorMetadata = $AuthorArray
+
+              }
+
+              # Output the output hash table to the calling statement.
+              Return $OutputHashTable
+
+            }
+
+            #####################
+            #####################
+            # Test-RepoLabel
+
+            Function Test-RepoLabel {
+
+              [CmdletBinding()]
+              param(
+
+                  $Name,
+                  $RepoUri      
+              )
+
+              # Replace placeholder text in the URL retrieved from the GitHub API with the name of the label we're looking for
+              $LabelUri = $RepoUri.Replace("{/name}","/$Name")
+
+              # Check to see if the label we want exists in the repo
+              Try {
+
+                  Write-Host "Checking to see if label $Name exists in repo URL $LabelUri."
+
+                  $LabelResults = Invoke-WebRequest -UseBasicParsing -Uri $LabelUri -Headers $GitHubHeaders  -ErrorAction Stop
+                  $LabelFound = $True
+                  
+              } Catch {
+
+                  # OK if label doesn't exist. Just means we need to create it.
+                  $LabelFound = $False
+
+              }
+
+              # Return boolean to calling statement
+              $LabelFound
+
+            }
+
+            #####################
+            #####################
+            # New-RepoLabel
+
+            Function New-RepoLabel {
+
+            [CmdletBinding()]
+              param(
+
+                  $Name,
+                  $Color,
+                  $Description,
+                  $RepoUri
+              )
+
+              # Remove placeholder text from repo URL
+              $RepoUri = $RepoUri.Replace("{/name}","")
+              $Result = $Null
+
+              # Construct the JSON statement that will be sent to GitHub as the body of the web request. Include the name of the label, its color, and description. 
+              # Convert hash table to JSON
+              $Body = @{}
+              $Body.Add("name", $Name)
+              $Body.Add("color", $Color)
+              $Body.Add("description", $description)
+              $Body = $Body | ConvertTo-Json
+
+              # Try to submit the request to GitHub API to create the label
+              Try {
+
+                  Write-Host "Creating label $Name with color $Color on repo $RepoUri."
+                  
+                  $Result = Invoke-RestMethod -Uri $RepoUri -Headers $GitHubHeaders  -Body $Body -Method POST
+
+              } Catch {
+
+                  Write-Error "ERROR: Failed to create new label $Name on repo $RepoUri. Error: $($Error[0].Exception.Message)."
+
+              }
+
+            }
+
+            #####################
+            #####################
+            # Test-PrLabel
+            Function Test-Prlabel {
+
+              [CmdletBinding()]
+              param(
+
+                  $LabelArray,
+                  $IssueUrl      
+              )
+
+              # Replace placeholder text in the URL retrieved from the GitHub API with the name of the label we're looking for
+              $IssueLabelUrl = "$IssueUrl/labels"
+              $LabelHashTable = @{}
+              $LabelResults = $Null
+
+              # Get list of labels on issue/PR
+              Try {
+
+                  Write-Host "Getting labels on issue $IssueLabelUrl."
+
+                  $LabelResults = Invoke-RestMethod -Uri $IssueLabelUrl -Headers $GitHubHeaders  -ErrorAction Stop
+
+              } Catch {
+
+                  Write-Error "ERROR: Failed to get list of labels on $IssueLabelUrl. Error: $($Error[0].Exception.Message)."
+
+
+              }
+
+              ForEach ($Label in $LabelArray) {
+
+                  If ($LabelResults -ne $Null) {
+
+                    If ($LabelResults.name.Contains($Label)) {
+
+                        $LabelHashTable.Add($Label, $True)
+
+                    } Else {
+
+                        $LabelHashTable.Add($Label, $False)
+
+                    }
+
+                  } Else {
+
+                    $LabelHashTable.Add($Label, $False)
+
+                  }
+
+              }
+
+
+              # Return array of labels on Issue/PR
+              Return $LabelHashTable
+
+
+            }
+
+            #####################
+            #####################
+            # Set-PrLabel
+
+            Function Set-PrLabel {
+
+              param(
+
+                  $IssueUrl,
+                  $LabelName
+                
+              )
+
+              # Construct label URL based on issue or pull request URL
+              $IssueLabelUrl = "$IssueUrl/labels"
+
+              # Construct JSON statement that will be sent to GitHub as the body of the web request. Includes only the label name. GitHub expects an array even thought it's a single value
+              # Convert array to JSON
+              $Body = @()
+              $Body += $LabelName
+              $Body = ConvertTo-Json -InputObject $Body
+
+              # Try to submit the request to GitHub API to apply they label to the issue or pull request
+              Try {
+
+                  Write-Host "Setting label $LabelName on URL $IssueLabelUrl."
+
+                  $Result = Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $GitHubHeaders  -Method POST
+
+
+              } Catch {
+
+                  Write-Error "ERROR: Failed to set label on URL $IssueLabelUrl. Error: $($Error[0].Exception.Message)."
+
+              }
+
+            }
+
+            #####################
+            #####################
+            # Set-PrAssignee
+
+            Function Set-PrAssignee {
+
+              param(
+
+                  $IssueUrl,
+                  $GitHubAssignees
+                
+              )
+
+                $UsersToAssign = @()
+
+                # $ExcludedUserList is a list of users from $DataTableData that shouldn't be assigned to PRs for some reason. If it's $Null, no users need to be excluded.
+                If ($ExcludedUserList -ne $Null) {
+
+                    # Loop through each of the eligible assignees found in the PR.
+                    ForEach ($User in $GitHubAssignees) {
+
+                        # Check if an assignee is found in the exclusion list. If yes, exclude the user by not adding to users to assign list. If no, add the user to the users to assign list.
+                        If ($ExcludedUserList.Contains($User)) {
+
+                            Write-Host "Excluding $User from assignment list."
+
+                        } Else {
+
+                            $UsersToAssign += $User
+
+                        }
+
+                    }
+
+                } Else {
+
+                    $UsersToAssign = $GitHubAssignees
+
+                }
+
+              # Construct JSON statement that will be sent to GitHub as the body of the web request. GitHub expects an array regardless of whether it's a single value or multiple.
+              # Convert array to JSON
+              $Body = @{}
+              $Body.Add("assignees", $UsersToAssign)
+              $Body = $Body | ConvertTo-Json
+
+              $AssigneeUrl = "$IssueUrl/assignees"
+
+              # Try to submit the request to GitHub API to apply they label to the issue or pull request
+              Try {
+                  
+                  Write-Host "Setting accounts $UsersToAssign on URL $AssigneeUrl."
+
+                  $Result = Invoke-RestMethod -Uri $AssigneeUrl -Body $Body -Headers $GitHubHeaders  -Method POST
+
+              } Catch {
+
+                  Write-Error "ERROR: Failed assign GitHub accounts on URL $AssigneeUrl. Error: $($Error[0].Exception.Message)."
+
+              }
+
+            }
+
+            #####################
+            #####################
+            # Set-PrReviewer
+
+            Function Set-PrReviewer {
+
+              param(
+
+                  $PrUrl,
+                  $GitHubReviewers
+
+              )
+
+              # Ensure ExcludedUserList is always an array (handles $null and single string)
+              $ExcludedUserList = @($ExcludedUserList)
+
+              $UsersToReview = @()
+
+              ForEach ($User in $GitHubReviewers) {
+                  If ($User -eq $PrCreator) {
+                      Write-Host "Excluding $User — PR creator."
+                      Continue
+                  }
+
+                  If ($ExcludedUserList -and ($ExcludedUserList -contains $User)) {
+                      Write-Host "Excluding $User — in exclusion list."
+                      Continue
+                  }
+
+                  If (-not ($UsersToReview -contains $User)) {
+                      Write-Host "Adding $User to reviewer list."
+                      $UsersToReview += $User
+                  }
+              }
+
+              # Construct JSON statement that will be sent to GitHub as the body of the web request. GitHub expects an array regardless of whether it's a single value or multiple.
+              # Convert array to JSON
+              $Body = @{}
+              $Body.Add("reviewers", @($UsersToReview))
+              $Body = $Body | ConvertTo-Json 
+
+              $ReviewerUrl = "$PrUrl/requested_reviewers"
+              
+              # Try to submit the request to GitHub API to apply they label to the issue or pull request
+              Try {
+
+                  Write-Host "Setting accounts $UsersToReview on URL $ReviewerUrl."
+
+                  $Result = Invoke-RestMethod -Uri $ReviewerUrl -Body $Body -Headers $GitHubHeaders  -Method POST
+
+              } Catch {
+
+                  Write-Host "ERROR: Failed assign GitHub accounts on URL $ReviewerUrl. Error: $_."
+                  
+
+              }
+
+            }
+
+            #####################
+            #####################
+            # Get-ServiceGitHubTeamMappingTable
+
+            Function Get-ServiceGitHubTeamMappingTable {
+            
+                Try {
+
+                    Write-Host "Getting service/subservice to GitHub team mapping from $ServiceToGitHubTeamMapUrl"
+
+                    $GitHubMappingTableData = Invoke-RestMethod -Uri $ServiceToGitHubTeamMapUrl -Headers $AppGitHubAccessHeaders
+                    $GitHubMappingTable = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($GitHubMappingTableData.content));
+
+                } Catch {
+
+                    Write-Host "Failed to get service/subservice to GitHub user mapping from $ServiceToGitHubTeamMapUrl"
+
+                    $GitHubMappingTable = $Null
+
+                }
+
+                Return $GitHubMappingTable
+
+            
+            }
+
+            #####################
+            #####################
+            # Expand-ServiceSubServiceRows
+
+            Function Expand-ServiceSubServiceRows {
+                [CmdletBinding()]
+                Param(
+                    [Parameter(Mandatory = $true)]
+                    [String]$CsvContent
+                )
+                
+                # Parse the CSV content
+                $CsvData = $CsvContent | ConvertFrom-Csv
+                
+                # Initialize array to hold expanded rows
+                $ExpandedRows = @()
+                
+                ForEach ($Row in $CsvData) {
+                    # Get the services and subservices, handling null/empty values
+                    $Services = If ([String]::IsNullOrWhiteSpace($Row.Service)) { @('') } 
+                            Else { $Row.Service -split ';' | ForEach-Object { $_.Trim() } }
+                    
+                    $SubServices = If ([String]::IsNullOrWhiteSpace($Row.SubService)) { @('') } 
+                                Else { $Row.SubService -split ';' | ForEach-Object { $_.Trim() } }
+                    
+                    # Create a new row for each combination of service and subservice
+                    ForEach ($Service in $Services) {
+                        ForEach ($SubService in $SubServices) {
+                            $NewRow = [PSCustomObject]@{
+                                Product = $Row.Product
+                                Service = $Service
+                                SubService = $SubService
+                                GitHubTeam = $Row.GitHubTeam
+                            }
+                            $ExpandedRows += $NewRow
+                        }
+                    }
+                }
+                
+                Return $ExpandedRows
+            }
+
+            #####################
+            #####################
+            # Get-GitHubReviewerTeams
+
+            Function Get-GitHubReviewerTeams {
+                [CmdletBinding()]
+                Param(
+                    [Parameter(Mandatory = $true)]
+                    [string]$Service,
+                    
+                    [Parameter(Mandatory = $false)]
+                    [string]$SubService,
+                    
+                    [Parameter(Mandatory = $true)]
+                    [array]$DataArray
+                )
+                
+                    
+                $GitHubTeam = @()
+
+                Write-Host "Article service: $Service"
+                Write-Host "Article subservice: $SubService"
+                
+                # Filter data based on Service match
+                $ServiceMatches = $DataArray | Where-Object { $_.service -eq $Service }
+
+                Write-Host "Service matches:"
+                $ServiceMatches | ForEach-Object { Write-Host $_ }
+                
+                If ($ServiceMatches) {
+
+                    Write-Host "Service found"
+
+                    # Check for exact match scenarios
+                    If ($SubService) {
+
+                        Write-Host "Subservice provided"
+
+                        # SubService provided - look for exact match
+                        $ExactMatch = $ServiceMatches | Where-Object { $_.subservice -eq $SubService }
+                        
+                        If ($ExactMatch) {
+
+                            Write-Host "SubService found"
+
+                            # Found exact match with SubService
+                            $GitHubTeam += $ExactMatch.GitHubTeam
+                        }
+                        Else {
+
+                            Write-Host "Subservice not found"
+
+                            # No exact SubService match found
+                            # Check if there are any subservices defined for this service
+                            $HasSubServices = $ServiceMatches | Where-Object { 
+                                ![string]::IsNullOrWhiteSpace($_.subservice) 
+                            }
+                            
+                            If ($HasSubServices) {
+
+                                Write-Host "Service has subservices. Returning all teams for all subservices."
+
+                                # Multiple subservices exist, return all teams for this service's subservices
+                                $GitHubTeam += $HasSubServices.GitHubTeam
+                            }
+                        }
+                    }
+                    Else {
+                        # No SubService provided - look for exact match with empty/null SubService
+                        $ExactMatch = $ServiceMatches | Where-Object { 
+                            [string]::IsNullOrWhiteSpace($_.subservice) 
+                        }
+                        
+                        If ($ExactMatch) {
+
+                            Write-Host "Service with no subservice row found"
+
+                            # Found exact match without SubService
+                            $GitHubTeam += $ExactMatch.GitHubTeam
+                        }
+                        Else {
+
+                            Write-Host "Service with no subservice row not found"
+
+                            # No exact match without SubService
+                            # Check if there are multiple subservices for this service
+                            $HasSubServices = $ServiceMatches | Where-Object { 
+                                ![string]::IsNullOrWhiteSpace($_.subservice) 
+                            }
+                            
+                            If ($HasSubServices.Count -gt 1) {
+
+                                Write-Host "Service has subservices. Returning all teams for all subservices."
+
+                                # Multiple subservices exist, return all teams
+                                $GitHubTeam += $HasSubServices.GitHubTeam
+                            }
+                        }
+                    }
+                }
+
+                Write-Host "Found teams"
+                $GitHubTeam | ForEach-Object { Write-Host $_ }
+    
+                # Process the teams list
+                $AllTeams = @()
+                
+                ForEach ($TeamString In $GitHubTeam) {
+                    If (![string]::IsNullOrWhiteSpace($TeamString)) {
+                        # Remove leading semicolon if present
+                        $CleanedString = $TeamString.TrimStart(';')
+                        
+                        # Split by semicolon and add to array
+                        $Teams = $CleanedString -split ';' | Where-Object { 
+                            ![string]::IsNullOrWhiteSpace($_) 
+                        }
+                        
+                        $AllTeams += $Teams
+                    }
+                }
+                
+                # Return deduplicated array
+                Return $AllTeams | Select-Object -Unique
+                
+            }
+
+            #####################
+            #####################
+            # Get-PrMessage
+
+            Function Get-PrMessage {
+
+                [cmdletbinding()]
+                Param(
+                    [Parameter(Mandatory=$True)]
+                    $PrMessageName
+                )
+
+                $PrMessageFile = "$WorkflowsResourcePath/$PrMessageName.md?ref=$WorkflowsRef"
+
+                Try {
+
+                    Write-Host "Getting PR message from $PrMessageFile"
+
+                    $PrMessageData = Invoke-RestMethod -Uri $PrMessageFile -Headers $GitHubHeaders
+                    $PrMessage = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($PrMessageData.content));
+
+                } Catch {
+
+                    Write-Host "Failed to get PR message $PrMessageName"
+
+                    $PrMessage = $Null
+
+                }
+
+                Return $PrMessage
+
+            }
+
+            #####################
+            #####################
+            # Set-PrConversationMessage
+
+            Function Set-PrConversationMessage {
+
+                [cmdletbinding()]
+                Param(
+                    [Parameter(Mandatory=$True)]
+                    $Message
+                )
+
+                $BodyHash = @{}
+                $BodyHash.body = $Message
+                $BodyJson = $BodyHash | ConvertTo-Json
+
+                If (($Message -ne $Null) -and ($Message -ne "")) {
+
+                    Try {
+
+                        Write-Host "Posting message to PR conversation to $CommentsUrl."
+                        $Result = Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop
+                    
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to post message to PR conversation. $($Error[0])"
+
+                    }
+
+                } Else {
+
+                    Write-Host "Message is null or empty. Not posting to PR conversation."
+
+                }
+
+            }
+
+            #####################
+            #####################
+            # Add-AtPrefix
+
+            Function Add-AtPrefix {
+                [CmdletBinding()]
+                Param(
+                    [Parameter(Mandatory = $true)]
+                    [string[]]$GitHubReviewers,
+                    
+                    [Parameter(Mandatory = $false)]
+                    [string]$Separator = " "
+                )
+                
+                $PrefixedStrings = @()
+
+                ForEach ($Reviewer In $GitHubReviewers) {
+                    $PrefixedStrings += "@$Reviewer"
+                }
+
+                Return ($PrefixedStrings -join $Separator)
+
+            }
+
+            #####################
+            #####################
+            # Get-TeamMembership
+
+            Function Get-TeamMembership {
+            
+                [CmdletBinding()]
+                Param(
+                    [Parameter(Mandatory = $true)]
+                    [string[]]$ReviewerTeams
+                )
+
+                $ReviewerList = @()
+
+                ForEach ($Team in $ReviewerTeams) {
+                
+                    $ReviewerTeamUrl = "https://api.github.com/orgs/MicrosoftDocs/teams/$Team/members?per_page=100"
+
+                    Try {
+
+                        Write-Host "Getting membership information for $Team."
+
+                        $TeamResult = Invoke-RestMethod -Uri $ReviewerTeamUrl -Headers $AppGitHubAccessHeaders -FollowRelLink -ErrorAction Stop
+
+                        ForEach ($Page in $TeamResult) {
+                        
+                            ForEach ($Member in $Page) {
+                            
+                                If ($GlobalExcludedReviewerList -notcontains $Member.login) {
+                                
+                                    $ReviewerList += $Member.login
+                                
+                                }
+                            
+                            }
+                        
+                        }
+                    
+                    } Catch {
+                     
+                        Write-Host "ERROR: Failed to look up membership info for $Team. Error: $_"
+                    
+                    }
+                
+                }
+                
+                Write-Host "Reviewers found: $($ReviewerList | Sort-Object -Unique)"
+
+                Return $ReviewerList | Sort-Object -Unique
+            
+            }
+
+            #####################
+            #####################
+            # Compare-PRIndividualReviewers
+
+            Function Compare-PRIndividualReviewers {
+
+                [CmdletBinding()]
+                [OutputType([bool])]
+                Param(
+                    [Parameter(Mandatory = $true)]
+                    [string[]]$GitHubReviewers
+
+                )
+
+                Try {
+
+                    # Get PR details from GitHub API
+                    $PrData = Invoke-RestMethod -Uri $PrUrl -Headers $GitHubHeaders -Method Get
+
+                    # Extract individual reviewer usernames (user objects in requested_reviewers)
+                    $CurrentReviewers = @()
+
+                    If ($PrData.requested_reviewers) {
+
+                        $CurrentReviewers = $PrData.requested_reviewers | ForEach-Object { $_.login }
+
+                    }
+
+                    # Compare arrays - check if any expected accounts are missing from individual reviewers
+                    $MissingAccounts = $GitHubReviewers | Where-Object { $_ -notin $CurrentReviewers }
+
+                    Return ($MissingAccounts.Count -gt 0)
+
+                } Catch {
+
+                    Write-Error "Failed to retrieve or compare PR reviewers: $_"
+                    Return $false
+
+                }
+
+            }
+
+            #####################
+            #####################
+            # Send-WorkflowLog
+
+            Function Send-WorkflowLog {
+                [CmdletBinding()]
+                Param(
+
+                    [Parameter(Mandatory=$true)]
+                    [PSCustomObject[]]$LogData
+
+                )
+                
+                
+                # Convert to CSV
+                $CsvContent = $LogData | ConvertTo-Csv -NoTypeInformation | Out-String
+                $Base64Content = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($CsvContent))
+                
+                $FileUrl = "https://api.github.com/repos/MicrosoftDocs/$LoggingRepoName/contents/$LoggingFilePath"
+                
+                Try {
+                    $ExistingFile = Invoke-RestMethod -Uri $FileUrl -Headers $AppGitHubAccessHeaders -Method Get -StatusCodeVariable StatusCode
+                    $Sha = $ExistingFile.sha
+                } Catch {
+                    $Sha = $null
+                }
+                
+                # Create or update file
+                $Body = @{
+                    message = "Log from $RepoName workflow $WorkflowName (run $WorkflowRunId)"
+                    content = $Base64Content
+                    branch = $LoggingBranch
+                }
+                
+                If ($Sha) {
+                    $Body.sha = $Sha
+                }
+                
+                Try {
+                
+                    $Response = Invoke-RestMethod -Uri $FileUrl -Headers $AppGitHubAccessHeaders -Method Put -Body ($Body | ConvertTo-Json)
+
+                } Catch {
+                 
+                    Write-Host "ERROR: Failed to post workflow log."
+                
+                }
+                
+                Write-Host "Log pushed to $LoggingFilePath"
+                Return $Response
+            }
+
+
+
+            #####################
+            #####################
+            # Main
+
+            Write-Host "Repo: $GitHubRepoName"
+            Write-Host "Sender: $GitHubSender"
+            Write-Host "Request event: $GitRequestEvent"
+            Write-Host "GitHub action: $GitHubAction"
+            Write-Host "GitHub state: $GitHubState"
+            Write-Host "Default branch: $DefaultBranch"
+            Write-Host "Target branch: $TargetBranch"
+            Write-Host "PR files URL: $PrFileListUrl"
+
+            Write-Host "Auto assign users on $GitHubRepoName`: $AutoAssignUsers"
+            Write-Host "Auto label on $GitHubRepoName`: $AutoLabel"
+            Write-Host "Excluded branch list: $ExcludedBranchList"
+
+            If ((($GitRequestEvent -eq "pull_request") -or ($GitRequestEvent -eq "pull_request_target")) -and (($GitHubAction -eq "opened") -or ($GitHubAction -eq "ready_for_review") -or ($GitHubAction -eq "reopened") -or ($GitHubAction -eq "synchronize"))) {
+
+                Try {
+
+                    Write-Host "Getting file list for PR $PrFileListUrl."
+
+                    # Intentionally only getting the first 30 files. More than that is just overkill. Keep in mind that this can include non-yml/md files so the resulting
+                    # number of processed files may be less than 30.
+                    $FileList = Invoke-RestMethod -Method GET -Uri $PrFileListUrl -Headers $GitHubHeaders  
+
+                } Catch {
+
+                    Write-Error "ERROR: Failed to retrieve file list on PR $PrFileListUrl. Error: $($Error[0].Exception.Message)."
+
+                }
+
+                If ($FileList.Count -ge 1) {
+
+                    # Get file metadata (metadata = service, subservice, tech, prod, etc and author metadata)
+                    $FileMetadataArray = Get-FileMetadata -PrFileList $FileList
+
+                    If ($FileMetadataArray -ne $Null) {
+
+                        # Split metadata into .FileMetadata and .AuthorMetadata. .FileMetadata is a one-dimentional array that includes service, subservice, tech, prod, entries.
+                        $FormattedMetadata = Format-FileMetadata -FileMetadata $FileMetadataArray
+
+                        Write-Host "File metadata list: $($FormattedMetadata.FileMetadata)."
+                        Write-Host "Author metadata list: $($FormattedMetadata.AuthorMetadata)."
+
+                        # Auto labelling can be disabled on repos using the $DataTableName table.
+                        If ($AutoLabel -eq $True) {
+
+                            # Loop through each element in the .FileMetadata array to check if value exists as a label on the repo. If not, create the label on the repo.
+                            # Don't confuse with the next ForEach which is PR-level check.
+                            ForEach ($Item in $FormattedMetadata.FileMetadata) {
+
+                                # Check if label exists on the repo.
+                                $LabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $Item
+
+                                If (!$LabelExists) {
+
+                                # Create label on the repo if it doesn't exist.
+                                New-RepoLabel -RepoUri $RepoLabelUrl -Name $Item -Color $LabelColor -Description $LabelDescription
+
+                                }
+
+                            }
+
+                            # Get a list of all labels that exist on the PR in a hash table. Hash table includes the name of the item in the .FileMetadata array and a boolean
+                            # that indicates whether the item exists as a label on the PR.
+                            # The reason this isn't part of the above repo-level check is because the all the PR-level labels can be retrieved with a single call to GitHub.
+                            # If we included the PR-level checks in the same block as the repo-level checks, we'd be requesting the PR-level repos <number of labels to add> times.
+                            # Don't confuse with the previous ForEach which is a repo-level check.
+                            $LabelResultsArray = Test-Prlabel -LabelArray $FormattedMetadata.FileMetadata -IssueUrl $IssueUrl
+                            
+                            Write-Host "Number of items in LabelResultsArray: $($LabelResultsArray.Count)."
+
+                            # Loop through all the keys on the label results array. The keys are the items/label names 
+                            ForEach ($Label in $LabelResultsArray.Keys) {
+
+                                If (!$LabelResultsArray.$Label) {
+
+                                Write-Host "Label $Label doesn't exist on $IssueUrl. Adding label."
+
+                                Set-PrLabel -IssueUrl $IssueUrl -LabelName $Label
+
+                                }
+
+                            }
+
+                        } Else {
+
+                            Write-Host "Auto labelling for the repo $GitHubRepoName is disabled. Skipping labelling."
+
+                        }
+
+                        # Auto user assignment can be disabled on repos in the calling workflow.
+                        If ($AutoAssignUsers -eq $True) {
+
+                            ###################################### Auto reviewer assignment ######################################
+
+                            If (($AutoAssignReviewers -eq $True) -and ($PrCreator -notlike "*\[bot\]*")) {
+                            
+                                # There's a short window between PR open and when Draft is set by the TierManagement workflow where PR reviewers could be added.
+                                # This If statement prevents that from happening.
+                                If (($GitHubAction -ne "opened") -and ($IsPrDraft -eq $False)) {
+
+                                    # Get permission level of user who created the comment. Need to use .role_name instead of .permission because .permission provides only legacy values. 
+                                    # .role_name provides legacy plus triage, maintain, and custom roles like write-elevated.
+                                    $UserPermission = $(Invoke-RestMethod -Method GET -Headers $GitHubHeaders -Uri $UserPermissionUrl).role_name
+
+                                    # Only add reviewers if the submitter can't sign off on their own PR.
+                                    If (($UserPermission -eq "read") -or ($UserPermission -eq "") -or ($UserPermission -eq $Null)) {
+
+                                        # Get the service/subservice to GitHub account map
+                                        $ServiceToTeamMap = Get-ServiceGitHubTeamMappingTable
+                                        $ExpandedServiceSubServiceRows = Expand-ServiceSubServiceRows -CsvContent $ServiceToTeamMap
+
+                                        $ReviewerTeamArray = @()
+                                        $ServiceSubServiceArray = @() # Used in logging
+
+                                        ForEach ($File in $FileMetadataArray) {
+
+                                            If ($File.Service -ne $Null) {
+
+                                                $ReviewerTeams = $Null
+
+                                                $ReviewerTeams = Get-GitHubReviewerTeams -DataArray $ExpandedServiceSubServiceRows -Service $File.Service -SubService $File.SubService
+
+                                                $ServiceSubServiceArray += "$($File.Service)\$($File.Subservice)"
+
+                                                If ($ReviewerTeams -ne $Null) {
+                                                
+                                                    $ReviewerTeamArray += $ReviewerTeams
+                                                
+                                                }
+
+                                            } Else {
+                                            
+                                                Write-Host "No service found for file $($File.FileName)."
+                                            
+                                            }
+                                        
+                                        }
+
+                                        $ReviewerTeamArray = $ReviewerTeamArray | Select-Object -Unique
+
+                                        If ($ReviewerTeamArray.Count -gt 0) {
+
+                                            $ReviewerAccounts = Get-TeamMembership -ReviewerTeams $ReviewerTeamArray
+
+                                            $AtMentionedGitHubAccounts = Add-AtPrefix -GitHubReviewers $ReviewerAccounts
+
+                                            If ($ReviewerAccounts.Length -gt 0) {
+
+                                                $MissingReviewers = Compare-PRIndividualReviewers -GitHubReviewers $ReviewerAccounts
+
+                                                If ($MissingReviewers) {
+                                                
+                                                    Write-Host "Additional reviewers found. Setting reviewers and posting PR comment."
+
+                                                    $ReviewerMessage = $AtMentionedGitHubAccounts + $(Get-PrMessage "AutoLabelAssign-ContentLeadReviewNotice")
+
+                                                    Try {
+
+                                                        Set-PrReviewer -PrUrl $PrUrl -GitHubReviewers $ReviewerAccounts
+                                                        Set-PrConversationMessage -Message $ReviewerMessage
+
+                                                        $LoggingData.ReviewStatus = "ReviewerAddSuccess"
+                                                    
+                                                    } Catch {
+                                                     
+                                                        $LoggingData.ReviewStatus = "ReviewerAddFailed"
+                                                        $LoggingData.ReviewDetails = $_
+                                                    
+                                                    }
+
+                                                } Else {
+                                            
+                                                    Write-Host "No additional reviewers to add. Not setting reviewers or posting PR comment."
+
+                                                    $LoggingData.ReviewStatus = "NoAdditionalReviewers"
+                                                    $LoggingData.ReviewDetails = "No additional reviewers to add."
+
+                                                }
+
+                                            } Else {
+                                                                                    
+                                                Write-Host "No valid reviewers to assign."
+                                                Write-Host $TestedReviewerAccounts
+
+                                                $LoggingData.ReviewStatus = "NoValidReviewers"
+                                                $LoggingData.ReviewDetails = "No valid reviewers to assign."
+                                            
+                                            }
+
+                                        } Else {
+                                        
+                                            Write-Host "No reviewers matched any services or subservices in PR articles."
+
+                                            $LoggingData.ReviewStatus = "NoMatchedSvcSubSvc"
+                                            $LoggingData.ReviewDetails = "No reviewers matched any services or subservices."
+                                        
+    
+                                        }
+
+
+                                    } Else {
+                                    
+                                        Write-Host "Not adding reviewer because submitter can sign off PR. User permission: $UserPermission."
+
+                                        $LoggingData.ReviewStatus = "NotReadOnly"
+                                        $LoggingData.ReviewDetails = "Not adding reviewer because submitter can sign off PR. User permission: $UserPermission."                             
+                                    
+                                    }
+
+                                } Else {
+                                
+                                    Write-Host "Not adding PR reviewers. PR action: $GitHubAction. Draft state: $IsPrDraft."
+
+                                    $LoggingData.ReviewStatus = "PrDraftOrOpened"
+                                    $LoggingData.ReviewDetails = "Not adding reviewers because PR is draft or just opened."       
+                                
+                                }
+
+                                $LoggingData.ServiceSubService = $($ServiceSubServiceArray | Select-Object -Unique) -Join ";"
+                                $LoggingData.InitialReviewerList = $ReviewerTeamArray -Join ";"
+                                $Loggingdata.ValidatedReviewerList = $ReviewerAccounts -Join ";"
+
+                                Send-WorkflowLog -LogData $LoggingData
+
+                            } Else {
+                             
+                                Write-Host "Auto reviewer assignment disabled or PR creator is bot account. Assignment enabled: $AutoAssignReviewers. PR creator: $PrCreator."
+                            
+                            }
+
+                            ###################################### Auto user assignment ######################################
+
+                            # Don't add assignments to PRs in excluded branches listed in $ExcludedBranchList
+                            If (!$ExcludedBranchList.Contains($TargetBranch)) {
+
+                                Try {
+
+                                    Set-PrAssignee -IssueUrl $IssueUrl -GitHubAssignees $FormattedMetadata.AuthorMetadata 
+
+                                } Catch {
+                                 
+                                    Write-Host "Error setting PR assignee. GitHub may return an `"Unprocessable entity (422)`" error periodically. This can be ignored. Error: $($Error[0])"
+                                
+                                }
+
+                            } Else {
+
+                                Write-Host "Target branch $TargetBranch is an excluded branch. Not adding author assignments."
+                                
+                            }
+
+                        } Else {
+
+                            Write-Host "Auto assignment of users for the label $GitHubRepoName is disabled. Skipping auto assignment."
+
+                        }
+
+                    } Else {
+
+                        Write-Host "No file metadata found in PR $PrFileListUrl."
+
+                    } # Metadata found on files check
+
+                } Else {
+
+                    Write-Host "No files found in PR $PrFileListUrl."
+
+                } # Number of files in PR check
+                
+            } Else {
+             
+                Write-Host "Event action not ready_for_review, opened, reopened, or synchronize."
+            
+            } # PR event and action check
+

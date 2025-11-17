@@ -1,0 +1,189 @@
+name: Live Merge Check
+
+permissions:
+  pull-requests: write
+  statuses: write
+  contents: read
+      
+on: 
+    workflow_call:
+        inputs:
+            PayloadJson:
+                required: true
+                type: string
+        secrets:
+            AccessToken:
+                required: true
+
+jobs:
+    build:
+      name: Run Script
+      if: github.repository_owner == 'MicrosoftDocs'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Script
+          shell: pwsh
+          env: 
+            PayloadJson: ${{ inputs.PayloadJson }}
+            AccessToken: ${{ secrets.AccessToken }}
+            
+          run: |
+
+            # This script outputs nothing if all checks pass. If a check fails, an exception is thrown which results in an
+            # exit code of 1 being returned to GitHub. An exit code of 1 fails the status check.
+
+            # Get payload data and event from GitHub
+            $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+            $GitRequestEvent = $GitHubData.event_name
+
+            $PublishBranch = "live"
+
+            # Retrieve GitHub token, create github HTTP authentication header 
+            $AccessToken = $env:AccessToken
+            $GitHubHeaders = @{}
+            $GitHubHeaders.Add("Authorization","token $($AccessToken)")
+            $GitHubHeaders.Add("User-Agent", "officedocs")
+
+            $WorkflowsResourcePath = "https://api.github.com/repos/MicrosoftDocs/microsoft-365-docs/contents/.github/workflows/resources"
+            $WorkflowsRef = "workflows-prod"
+
+            $StatusUrl      = $GitHubData.event.pull_request.statuses_url
+            $RequiredRepo   = $GitHubData.event.repository.full_name
+            $PrUrl          = $GitHubData.event.pull_request.html_url
+            $TargetBranch   = $GitHubData.event.pull_request.base.ref
+            $OriginBranch   = $GitHubData.event.pull_request.head.ref
+            $OriginRepo     = $GitHubData.event.pull_request.head.repo.full_name
+            $DefaultBranch  = $GitHubData.event.repository.default_branch
+
+            $StatusCheckPendingText = "Checking base and compare branches."
+            $StatusCheckUnmonitoredBranchText = "OK to merge into $TargetBranch."
+            $AllowedBranchMergeText = "Compare branch $OriginBranch can merge into $PublishBranch."
+            $DisallowedBranchMergeText = "Only $RequiredRepo/$DefaultBranch can merge into $PublishBranch."
+
+            ##################
+            Function Get-PrMessage {
+
+                [cmdletbinding()]
+                Param(
+                    [Parameter(Mandatory=$True)]
+                    $PrMessageName
+                )
+
+                $PrMessageFile = "$WorkflowsResourcePath/$PrMessageName.md?ref=$WorkflowsRef"
+
+                Try {
+
+                    Write-Host "Getting PR message from $PrMessageFile"
+
+                    $PrMessageData = Invoke-RestMethod -Uri $PrMessageFile -Headers $GitHubHeaders
+                    $PrMessage = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($PrMessageData.content));
+
+                } Catch {
+
+                    Write-Host "Failed to get PR message $PrMessageName"
+
+                    $PrMessage = $Null
+
+                }
+
+                Return $PrMessage
+
+            }
+
+            ###################
+
+            Function Set-PrConversationMessage {
+
+                [cmdletbinding()]
+                Param(
+                    [Parameter(Mandatory=$True)]
+                    $Message
+                )
+
+                $CommentsUrl = $GitHubData.event.pull_request.comments_url
+
+                $BodyHash = @{}
+                $BodyHash.body = $Message
+                $BodyJson = $BodyHash | ConvertTo-Json
+
+                Try {
+
+                    $Result = Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop
+                
+                    $PostCommentSuccess = $True
+
+                } Catch {
+
+                    $PostCommentSuccess = $False
+
+                    Write-Host "ERROR: Failed to submit message to PR conversation. Error: $($error[0].Exception.Message)."
+
+                    
+
+                }
+
+                Return $PostCommentSuccess
+
+            }
+
+            ###################
+            ###################
+            # Main
+
+            $RuntimeInfo = "Repo: $($GitHubData.event.repository.name)"
+            $RuntimeInfo = $RuntimeInfo + " PR origin repo: $OriginRepo"
+            $RuntimeInfo = $RuntimeInfo + " Sender: $($GitHubData.event.sender.login)"
+            $RuntimeInfo = $RuntimeInfo + " Request type: $GitRequestEvent"
+            $RuntimeInfo = $RuntimeInfo + " GitHub action: $($GitHubData.event.action)"
+
+            Write-Host $RuntimeInfo
+
+            # Only process event types of 'pull_request'
+            If ($GitRequestEvent -eq "pull_request_target") {
+
+                Write-Host "Request type is pull_request. Processing request."
+                Write-Host "Target branch is $TargetBranch."
+
+                # Make the job summary section show up so the job always looks consistent.
+                echo "" >> $env:GITHUB_STEP_SUMMARY
+
+                If (($GitHubData.event.action -eq "opened") -or ($GitHubData.event.action -eq "synchronize") -or ($GitHubData.event.action -eq "reopened") -or ($GitHubData.event.action -eq "edited")) {
+
+                    # Only run checks if the base branch matches the branch defined in $PublishBranch. 
+                    If ($TargetBranch -eq $PublishBranch) {
+
+                        Write-Host "Target branch $TargetBranch matches publish branch $PublishBranch."
+
+                        If (($OriginBranch -eq $DefaultBranch) -and ($OriginRepo -eq $RequiredRepo)) {
+
+                            Write-Host "Origin branch $OriginBranch is allowed to merge to $PublishBranch."
+
+                        } Else {
+
+                            $LiveMergeMessage = Get-PrMessage -PrMessageName "LiveMergeCheck-LiveMergeMessage"
+
+                            Set-PrConversationMessage -Message $($LiveMergeMessage -F $TargetBranch, $DefaultBranch)
+
+                            # Populates the job summary if an invalid target branch is found.
+                            echo "# Pull request validation error" >> $env:GITHUB_STEP_SUMMARY
+                            echo "" >> $env:GITHUB_STEP_SUMMARY
+                            echo "The branch **$OriginRepo/$OriginBranch** isn't allowed to merge into **$PublishBranch** in PR: $PrUrl." >> $env:GITHUB_STEP_SUMMARY
+
+                            Write-Host "The branch $OriginRepo/$OriginBranch isn't allowed to merge into $PublishBranch. Click Summary in the left pane for more information."
+                            
+                            Throw "The branch $OriginRepo/$OriginBranch isn't allowed to merge into $PublishBranch. Click Summary in the left pane for more information."
+
+                        } # OriginBranch
+
+                    } Else {
+
+                        Write-Host "Target branch is not $PublishBranch."                                 
+
+                    } # Target banch
+
+                } # PR state
+
+            } # Is PR check
+
+
+

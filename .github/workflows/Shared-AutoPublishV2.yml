@@ -1,0 +1,918 @@
+name: (Scheduled) Publish to live V2
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+on:
+    workflow_call:
+        inputs:
+            PayloadJson:
+                required: true
+                type: string
+            EnableAutoPublish:
+                required: true
+                type: boolean
+            EnableAutoMerge:            # Calling repo enabled or disabled - true | false. EnableAutoPublish on the repo also needs to be enabled. GlobalEnableAutoMerge also needs be enabled.
+                required: false
+                type: boolean
+        secrets:
+            AccessToken:
+                required: true
+            PrivateKey:
+                required: true
+            ClientId:
+                required: true
+
+jobs:
+
+    auto-publish:
+        name: Publish to live V2
+        if: github.repository_owner == 'MicrosoftDocs' && contains(github.event.repository.topics, 'build')
+        runs-on: ubuntu-latest
+        steps:  
+
+          - name: Create App Token
+            id: app-token
+            uses: actions/create-github-app-token@v1
+            with:
+                app-id:      ${{ secrets.ClientId }}
+                private-key: ${{ secrets.PrivateKey }}
+                owner: ${{ github.repository_owner }}
+
+          - name: Process branches
+            shell: pwsh
+            env: 
+                GlobalEnableAutoMerge: true     # Enables or disable merges for all repos - true | false. EnableAutoPublish on the repo also needs to be enabled.
+                MaxAllowedChangedFiles: 30    # The maximum allowed number of files that can be auto-merged without human review.
+
+                AccessToken: ${{ secrets.AccessToken }}
+                AppGitHubAccessToken: ${{ steps.app-token.outputs.token }}
+                PayloadJson: ${{ inputs.PayloadJson }}
+                EnableAutoPublish: ${{ inputs.EnableAutoPublish }}
+                EnableAutoMerge: ${{ inputs.EnableAutoMerge }}
+                IsPubOpsRepo:  ${{ contains(github.event.repository.topics, 'pubops') }}
+
+            run: |
+
+                $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+                $EnableAutoPublish = [System.Convert]::ToBoolean($env:EnableAutoPublish)
+                $EnableAutoMerge = [System.Convert]::ToBoolean($env:EnableAutoMerge)
+                $GlobalEnableAutoMerge = [System.Convert]::ToBoolean($env:GlobalEnableAutoMerge)
+                $MaxAllowedChangedFiles = $env:MaxAllowedChangedFiles
+                $AccessToken = $env:AccessToken
+                $AppGitHubAccessToken = $env:AppGitHubAccessToken
+                $IsPubOpsRepo = [System.Convert]::ToBoolean($env:IsPubOpsRepo)
+                
+                # Date/Time calculations
+                $UtcNow = Get-Date -AsUTC                
+                $PacificTz = [System.TimeZoneInfo]::FindSystemTimeZoneById("Pacific Standard Time")
+                $IndiaTz = [System.TimeZoneInfo]::FindSystemTimeZoneById("India Standard Time")
+                # Convert UTC to local times
+                $PacificNow = [System.TimeZoneInfo]::ConvertTimeFromUtc($UtcNow, $PacificTz)
+                $IndiaNow = [System.TimeZoneInfo]::ConvertTimeFromUtc($UtcNow, $IndiaTz)
+                # Format as MM/DD HH:mm (24 hour clock)
+                $PacificStamp = $PacificNow.ToString('MM/dd HH:mm')
+                $IndiaStamp = $IndiaNow.ToString('MM/dd HH:mm')
+
+                # Create github HTTP authentication header 
+                $StandardGitHubHeaders = @{}
+                $StandardGitHubHeaders.Add("Authorization","token $($AccessToken)")
+                $StandardGitHubHeaders.Add("User-Agent", "OfficeDocs")
+
+                # Create github HTTP authentication header using GitHub app installation token
+                $AppGitHubAccessHeaders = @{}
+                $AppGitHubAccessHeaders.Add("Authorization","token $($AppGitHubAccessToken)")
+                $AppGitHubAccessHeaders.Add("User-Agent", "OfficeDocs")
+
+                # Repo variables
+                $TargetBranch = "live"
+                $Repository = $GitHubdata.event.repository.name
+                $Organization = $GitHubData.event.organization.login
+                $DefaultBranch = $GitHubData.event.repository.default_branch
+                $RepoLabelUrl = $GitHubData.event.repository.labels_url
+
+                # PR variables
+                $PrTitle = "[AutoPublish] $DefaultBranch to $TargetBranch"
+                $AutoMergeDisabledPrDescriptionPubOps = "@MicrosoftDocs/marveldocs-pubops`n`nThis is an automated pull request to publish changes from the $DefaultBranch branch to the $TargetBranch branch. Merging this PR will publish the changes to the live learn.microsoft.com site.`n`n**Auto-merge is disabled.** This PR must be merged manually.`n`nBefore merging this PR, complete the following checks before merging this PR:`n`n- If there are more than $MaxAllowedChangedFiles files, the repo will not automatically merge the PR. Review the changes for any obvious mistakes such as mass-deleted files. If the changes appear normal (bulk changes, general updates to many files, etc), merge the PR. If you're not sure, do not merge the PR and investigate further.`n- If there are warnings or failing checks, resolve them before merging the PR.`n- View the changes on https://review.learn.microsoft.com to confirm the changes look correct on the site.`n`nAfter you've completed these steps, manually merge the PR.`n`nIf you have questions, post a message to https://aka.ms/askanadmin."
+                $AutoMergeDisabledPrDescriptionNonPubOps = "This is an automated pull request to publish changes from the $DefaultBranch branch to the $TargetBranch branch. Merging this PR will publish the changes to the live learn.microsoft.com site.`n`n**Auto-merge is disabled.** This PR must be merged manually.`n`nBefore you merge this PR, complete the following checks before merging this PR:`n`n- If there are more than $MaxAllowedChangedFiles files, the repo will not automatically merge the PR. Review the changes for any obvious mistakes such as mass-deleted files. If the changes appear normal (bulk changes, general updates to many files, etc), merge the PR. If you're not sure, do not merge the PR and investigate further.`n- If there are warnings or failing checks, resolve them before merging the PR.`n- View the changes on https://review.learn.microsoft.com to confirm the changes look correct on the site.`n`nAfter you've completed these steps, manually merge the PR.`n`n**Note**: This is repo isn't managed by PubOps. **A contributor with write access to this repo will need to merge this PR for changes in it to go live.`n`nIf you have questions, post a message to https://aka.ms/askanadmin."
+                $AutoMergeEnabledPrDescriptionPubOps = "@MicrosoftDocs/marveldocs-pubops`n`nThis is an automated pull request to publish changes from the $DefaultBranch branch to the $TargetBranch branch. Merging this PR will publish the changes to the live learn.microsoft.com site.`n`n**Auto-merge is enabled.** The repo will attempt to automatically merge this PR when all required checks pass. If the PR is automatically merged, no further action is required to publish the contents of this PR.`n`nIn the event the repo can't automatically merge this PR, the **Manual merge required** label will be added to the PR. If this happens, complete the following checks before merging this PR:`n`n- If there are more than $MaxAllowedChangedFiles files, the repo will not automatically merge the PR. Review the changes for any obvious mistakes such as mass-deleted files. If the changes appear normal (bulk changes, general updates to many files, etc), merge the PR. If you're not sure, do not merge the PR and investigate further.`n- If there are warnings or failing checks, resolve them before merging the PR.`n- View the changes on https://review.learn.microsoft.com to confirm the changes look correct on the site.`n`nAfter you've completed these steps, manually merge the PR.`n`nIf you have questions, post a message to https://aka.ms/askanadmin."
+                $AutoMergeEnabledPrDescriptionNonPubOps = "This is an automated pull request to publish changes from the $DefaultBranch branch to the $TargetBranch branch. Merging this PR will publish the changes to the live learn.microsoft.com site.`n`n**Auto-merge is enabled.** The repo will attempt to automatically merge this PR when all required checks pass. If the PR is automatically merged, no further action is required to publish the contents of this PR.`n`nIn the event the repo can't automatically merge this PR, the **Manual merge required** label will be added to the PR. If this happens, complete the following checks before merging this PR:`n`n- If there are more than $MaxAllowedChangedFiles files, the repo will not automatically merge the PR. Review the changes for any obvious mistakes such as mass-deleted files. If the changes appear normal (bulk changes, general updates to many files, etc), merge the PR. If you're not sure, do not merge the PR and investigate further.`n- If there are warnings or failing checks, resolve them before merging the PR.`n- View the changes on https://review.learn.microsoft.com to confirm the changes look correct on the site.`n`nAfter you've completed these steps, manually merge the PR.`n`n**Note**: This is repo isn't managed by PubOps. **If a manual merge is required, a contributor with write access to this repo will need to merge this PR for changes in it to go live.**`n`nIf you have questions, post a message to https://aka.ms/askanadmin."
+
+                # Label variables
+                $AutoPublishLabelColor = "5319E7"
+                $AutoPublishLabelDescription = "PR was automatically created for publishing from $DefaultBranch to $TargetBranch."
+                $AutoPublishLabel = "AutoPublish"
+                $AutoMergeLabelColor = "5319E7"
+                $AutoMergeLabelDescription = "PR was automatically merged by AutoPublish process."
+                $AutoMergeLabel = "AutoMerge"
+                $SignOffLabelColor = "46ce1c"
+                $SignOffLabelDescription = "The pull request is ready to be reviewed and merged by PubOps."
+                $SignOffLabel = "Sign off"
+                $ManualMergeLabelColor = "f79d43"
+                $ManualMergeLabelDescription = "An AutoPublish pull request requires a human to merge it."
+                $ManualMergeLabel = "Manual merge required"
+
+                $PrLabelList = @($AutoPublishLabel, $SignOffLabel, $ManualMergeLabel, $AutoMergeLabel)
+
+                #####################
+                #####################
+                # Test-RepoLabel
+
+                Function Test-RepoLabel {
+
+                    [CmdletBinding()]
+                    param(
+
+                        $Name,
+                        $RepoUri      
+                    )
+
+                    # Replace placeholder text in the URL retrieved from the GitHub API with the name of the label we're looking for
+                    $LabelUri = $RepoUri.Replace("{/name}","/$Name")
+
+                    # Check to see if the label we want exists in the repo
+                    Try {
+
+                        Write-Host "Checking to see if label $Name exists in repo URL $LabelUri."
+
+                        $LabelResults = Invoke-WebRequest -UseBasicParsing -Uri $LabelUri -Headers $StandardGitHubHeaders  -ErrorAction Stop
+                        $LabelFound = $True
+                        
+                    } Catch {
+
+                        # OK if label doesn't exist. Just means we need to create it.
+                        $LabelFound = $False
+
+                    }
+
+                    # Return boolean to calling statement
+                    $LabelFound
+
+                }
+
+                #####################
+                #####################
+                # New-RepoLabel
+
+                Function New-RepoLabel {
+
+                    [CmdletBinding()]
+                    param(
+
+                        $Name,
+                        $Color,
+                        $Description,
+                        $RepoUri
+                    )
+
+                    # Remove placeholder text from repo URL
+                    $RepoUri = $RepoUri.Replace("{/name}","")
+                    $Result = $Null
+
+                    # Construct the JSON statement that will be sent to GitHub as the body of the web request. Include the name of the label, its color, and description. 
+                    # Convert hash table to JSON
+                    $Body = @{}
+                    $Body.Add("name", $Name)
+                    $Body.Add("color", $Color)
+                    $Body.Add("description", $description)
+                    $Body = $Body | ConvertTo-Json
+
+                    # Try to submit the request to GitHub API to create the label
+                    Try {
+
+                        Write-Host "Creating label $Name with color $Color on repo $RepoUri."
+                        
+                        $Result = Invoke-RestMethod -Uri $RepoUri -Headers $StandardGitHubHeaders  -Body $Body -Method POST
+
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to create new label $Name on repo $RepoUri. Error: $($Error[0].Exception.Message)."
+
+                    }
+
+                }
+
+                #####################
+                #####################
+                # Test-PrLabel
+
+                Function Test-Prlabel {
+
+                    [CmdletBinding()]
+                    param(
+
+                        $LabelArray,
+                        $IssueUrl      
+                    )
+
+                    # Replace placeholder text in the URL retrieved from the GitHub API with the name of the label we're looking for
+                    $IssueLabelUrl = "$IssueUrl/labels"
+                    $LabelHashTable = @{}
+                    $LabelResults = $Null
+
+                    # Get list of labels on issue/PR
+                    Try {
+
+                        Write-Host "Getting labels on issue $IssueLabelUrl."
+
+                        $LabelResults = Invoke-RestMethod -Uri $IssueLabelUrl -Headers $StandardGitHubHeaders  -ErrorAction Stop
+
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to get list of labels on $IssueLabelUrl. Error: $($Error[0].Exception.Message)."
+
+                    }
+
+                    ForEach ($Label in $LabelArray) {
+
+                        If ($LabelResults -ne $Null) {
+
+                            If ($LabelResults.name.Contains($Label)) {
+
+                                $LabelHashTable.Add($Label, $True)
+
+                            } Else {
+
+                                $LabelHashTable.Add($Label, $False)
+
+                            }
+
+                        } Else {
+
+                            $LabelHashTable.Add($Label, $False)
+
+                        }
+
+                    }
+
+                    # Return array of labels on Issue/PR
+                    Return $LabelHashTable
+
+                }
+
+                #####################
+                #####################
+                # Set-PrLabel
+
+                Function Set-PrLabel {
+
+                    param(
+
+                        $IssueUrl,
+                        $LabelName
+                        
+                    )
+
+                    # Construct label URL based on issue or pull request URL
+                    $IssueLabelUrl = "$IssueUrl/labels"
+
+                    # Construct JSON statement that will be sent to GitHub as the body of the web request. Includes only the label name. GitHub expects an array even thought it's a single value
+                    # Convert array to JSON
+                    $Body = @()
+                    $Body += $LabelName
+                    $Body = ConvertTo-Json -InputObject $Body
+
+                    # Try to submit the request to GitHub API to apply they label to the issue or pull request
+                    Try {
+
+                        Write-Host "Setting label $LabelName on URL $IssueLabelUrl."
+
+                        $Result = Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $StandardGitHubHeaders  -Method POST
+
+
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to set label on URL $IssueLabelUrl. Error: $($Error[0].Exception.Message)."
+
+                    }
+
+                }
+
+                ####################
+                ####################
+                # Remove-PrLabel
+
+                Function Remove-PrLabel {
+
+                    param(
+
+                        $IssueUrl,
+                        $LabelName
+                        
+                    )
+
+                    Write-Host "Remove `"$LabelName`" label from PR."
+
+                    Try {
+
+                        $LabelUrl = "$IssueUrl/labels/$LabelName"
+
+                        $Result = Invoke-RestMethod -Uri $LabelUrl -Headers $StandardGitHubHeaders -Method Delete -ErrorAction Stop
+
+                        Write-Host "Successfully removed `"$LabelName`" label."
+                                        
+                    } Catch {
+                
+                        Write-Host "ERROR: Failed to remove `"$LabelName`" label. Url: $LabelUrl. Error: $_"
+
+                    }
+
+                }
+
+                #####################
+                #####################
+                # Get-TzAbbrev
+
+                # Derive a 2- or 3-letter abbreviation from the zone's name
+                Function Get-TzAbbrev {
+                    param(
+                        [System.TimeZoneInfo]$Tz,
+                        [DateTime]$LocalTime
+                    )
+                    # Choose the right long name (standard vs. daylight)
+                    $FullName = If ($Tz.IsDaylightSavingTime($LocalTime)) {
+                        $Tz.DaylightName     # e.g. “Pacific Daylight Time”
+                    } Else {
+                        $Tz.StandardName     # e.g. “Pacific Standard Time”
+                    }
+
+                    # Collapse it to initials: “Pacific Daylight Time” to “PDT”
+                    -Join (($fullName -split '\s+') | ForEach-Object { $_[0] })
+                }
+
+                #####################
+                #####################
+                # Test-TargetBranchExists
+                
+                Function Test-TargetBranchExists {
+                
+                    $BranchResponse = $Null
+                    $BranchExists = $Null
+
+                    Write-Host "Checking if $TargetBranch exists"
+
+                    Try {
+
+                        $BranchResponse = Invoke-RestMethod -uri "https://api.github.com/repos/$Organization/$Repository/git/ref/heads/$TargetBranch" -Headers $StandardGitHubHeaders -Method Get -ErrorAction Stop
+                        $BranchExists = $True
+
+                    } Catch {
+                    
+                        Write-Host "Branch doesn't exist or an error occurred. Error: $_."
+
+                        $BranchExists = $False
+
+                    }
+                
+                    Return $BranchExists
+
+                }
+
+                #####################
+                #####################
+                # Get-BranchDiff
+
+                Function Get-BranchDiff {
+
+                    $CompareResponse = $Null
+                
+                    Write-Host "Checking if $DefaultBranch is ahead of $TargetBranch"
+
+                    Try {
+
+                        $CompareResponse = Invoke-RestMethod -Uri "https://api.github.com/repos/$Organization/$Repository/compare/$TargetBranch...$DefaultBranch" -Method GET -Headers $StandardGitHubHeaders -ErrorAction Stop
+
+                    } Catch {
+                    
+                        $CompareResponse = $Null
+                        
+                    }
+
+                    Return $CompareResponse
+                
+                }
+
+                #####################
+                #####################
+                # Get-PrState
+
+                Function Get-PrState {
+                
+                    param(
+
+                        [Parameter(Mandatory = $True)]
+                        [string]$NodeId
+                        
+                    )
+
+                    $Query = @'
+                        query ($Id: ID!) {
+                            node(id: $Id) {
+                                ... on PullRequest {
+                                id
+                                mergeable
+                                    commits(last: 1) {
+                                        nodes {
+                                            commit {
+                                                statusCheckRollup { state }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                '@
+
+                    $Body = @{ query = $query; variables = @{ Id = $NodeId } } | ConvertTo-Json -Depth 3
+
+
+                    $Result = Invoke-RestMethod -Uri https://api.github.com/graphql -Method POST -Headers $StandardGitHubHeaders -Body $Body
+
+                    Return $Result
+                
+                }
+
+                #####################
+                #####################
+                # Get-PublishPullRequest
+                               
+                Function Get-PublishPullRequest {
+
+                    $PrResponse = $Null
+                
+                    Write-Host "Checking if a pull request exists between $DefaultBranch and $TargetBranch"
+
+                    Try {
+
+                        $PrResponse = Invoke-RestMethod -Uri "https://api.github.com/repos/$Organization/$Repository/pulls?head=$($Organization):$DefaultBranch&base=$TargetBranch&state=open" -Method GET -Headers $StandardGitHubHeaders -ErrorAction Stop
+
+                    } Catch {
+                    
+                        Write-Host "Error: $_"
+                        $PrResponse = $Null
+                                            
+                    }
+
+                    Return $PrResponse
+                
+                }
+
+                #####################
+                #####################
+                # Set-Labels  
+
+                Function Set-Labels {
+                
+                    param(
+
+                        [Parameter(Mandatory = $True)]
+                        [string]$IssueUrl,
+                        [Parameter(Mandatory = $True)]
+                        [boolean]$ManualMerge
+                        
+                    )
+
+                    # Check if labels exist on the repo. Test for $SignOffLabel is lower in "IsPubOpsRepo" statement.
+                    $AutoLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $AutoPublishLabel
+                    $AutoMergeLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $AutoMergeLabel
+                    $ManualMergeLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $ManualMergeLabel
+
+                    If (!$AutoLabelExists) {
+
+                        # Create AutoPublishLabel label on the repo if it doesn't exist.
+                        New-RepoLabel -RepoUri $RepoLabelUrl -Name $AutoPublishLabel -Color $AutoPublishLabelColor -Description $AutoPublishLabelDescription
+
+                    }
+
+                    If (!$AutoMergeLabelExists) {
+
+                        # Create AutoMergeLabel label on the repo if it doesn't exist.
+                        New-RepoLabel -RepoUri $RepoLabelUrl -Name $AutoMergeLabel -Color $AutoMergeLabelColor -Description $AutoMergeLabelDescription
+
+                    }
+
+                    If (!$ManualMergeLabelExists) {
+
+                        # Create ManualMergeLabel label on the repo if it doesn't exist.
+                        New-RepoLabel -RepoUri $RepoLabelUrl -Name $ManualMergeLabel -Color $ManualMergeLabelColor -Description $ManualMergeLabelDescription
+
+                    }
+
+
+                    $LabelResultsArray = Test-Prlabel -LabelArray $PrLabelList -IssueUrl $IssueUrl
+
+                    # Only add the AutoPublishLabel label if it doesn't already exist on the PR
+                    If (!$LabelResultsArray.$AutoPublishLabel) {
+
+                        Write-Host "Label $AutoPublishLabel doesn't exist on $IssueUrl. Adding label."
+
+                        # Add the label to the PR
+                        Set-PrLabel -IssueUrl $IssueUrl -LabelName $AutoPublishLabel
+
+                    }
+
+                    If ($IsPubOpsRepo) {
+
+                        Write-Host "PubOps repo. Checking and setting $SignOffLabel label."
+
+                        $SignOffLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $SignOffLabel
+
+                        If (!$SignOffLabelExists) {
+
+                            # Create label on the repo if it doesn't exist.
+                            New-RepoLabel -RepoUri $RepoLabelUrl -Name $SignOffLabel -Color $SignOffLabelColor -Description $SignOffLabelDescription
+
+                        }
+
+                        # Only add the SignOffLabel label if it doesn't already exist on the PR
+                        If (!$LabelResultsArray.$SignOffLabel) {
+
+                            Write-Host "Label $SignOffLabel doesn't exist on $IssueUrl. Adding label."
+
+                            # Add the label to the PR
+                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $SignOffLabel
+
+                        }
+
+                    } 
+
+                    # Add either ManualMergeLabel or AutoMergeLabel depending on $ManualMerge true or false.
+                    If ($ManualMerge) {
+
+                        Write-Host "Checking and setting $ManualMergeLabel label. GlobalEnableAutoMerge: $GlobalEnableAutoMerge. EnableAutoMerge: $EnableAutoMerge. ManualMerge: $ManualMerge."
+
+                        # Only add the ManualMergeLabel label if it doesn't already exist on the PR
+                        If (!$LabelResultsArray.$ManualMergeLabel) {
+
+                            Write-Host "Label $ManualMergeLabel doesn't exist on $IssueUrl. Adding label."
+
+                            # Add the label to the PR
+                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $ManualMergeLabel
+
+                        }
+
+                    } Else {
+                     
+                        Write-Host "Checking and setting $AutoMergeLabel label. GlobalEnableAutoMerge: $GlobalEnableAutoMerge. EnableAutoMerge: $EnableAutoMerge. ManualMerge: $ManualMerge."
+
+                        # Only add the AutoMergeLabel label if it doesn't already exist on the PR
+                        If (!$LabelResultsArray.$AutoMergeLabel) {
+
+                            Write-Host "Label $AutoMergeLabel doesn't exist on $IssueUrl. Adding label."
+
+                            # Add the label to the PR
+                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $AutoMergeLabel
+
+                        }
+                    
+                    }
+            
+                }
+
+                #####################
+                #####################
+                # Enable-GitHubPRAutoMerge 
+
+                Function Enable-GitHubPRAutoMerge {
+                    param(
+                        [Parameter(Mandatory)]
+                        [int]    $PullNumber,
+                        [int] $MaxRetries = 3
+                        
+                    )
+                
+                    # Get the GraphQL node_id for the pull request
+                    $Pr   = Invoke-RestMethod "https://api.github.com/repos/$Organization/$Repository/pulls/$PullNumber" -Headers $AppGitHubAccessHeaders
+                    $Node = $Pr.node_id
+                
+                    # GraphQL to submit automerge request to GitHub
+                    $Mutation = @"
+                        mutation (`$id`: ID!, `$method`: PullRequestMergeMethod!) {
+                            enablePullRequestAutoMerge(
+                                input: {pullRequestId`: `$id, mergeMethod`: `$method}
+                            ) { pullRequest { autoMergeRequest { enabledAt mergeMethod } } }
+                        }
+                "@
+                
+                    # Create a custom object that'll be returned to the calling function
+                    $Result = [PSCustomObject]@{
+                        PullNumber = $PullNumber
+                        QueryResponse = $null
+                        MutationResponse = $null
+                        TimedOut = $false
+                        ManualMergeRequired = $null
+                    }
+                    
+                    $MutationResponse = $null
+                
+                    # Exponential back-off: 1,2,4,8,16,32,etc seconds per $MaxRetries 
+                    For ($i = 0; $i -lt $MaxRetries -and $MutationResponse -eq $Null; $i++) {
+                                    
+                        # Check mergeable state
+                        $QueryResponse = Get-PrState -NodeId $Node
+                        $State = $QueryResponse.data.node.mergeable
+                    
+                        # Add QueryResponse to result object to return to calling statement
+                        $Result.QueryResponse = $QueryResponse
+                        
+                        Write-Host "PR #$PullNumber state: $State"
+                
+                        Switch ($State) {
+                            'MERGEABLE' {
+                
+                                $MutationBody = @{ query = $mutation; variables = @{ id = $Node; method = "MERGE" } } | ConvertTo-Json -Depth 3
+                
+                                Write-Host "Attempting to enable automerge for #$PullNumber"
+                
+                                $MutationResponse = Invoke-RestMethod "https://api.github.com/graphql" -Method Post -Headers $AppGitHubAccessHeaders -Body $MutationBody
+                
+                                # Add MutationResponse to result object to return to calling statement
+                                $Result.MutationResponse = $MutationResponse
+                
+                            }
+                            'CONFLICTING' {
+                
+                                Write-Host "PR #$PullNumber has conflicts. Auto-merge not enabled."
+                
+                            }
+                            default {
+                
+                                # Calculate exponential delay based on current attempt
+                                $Delay = [math]::Pow(2, $i)
+                
+                                Write-Host "mergeable is UNKNOWN. This is expected on the first attempt while GitHub evaluates PR. Retry in $Delay s..."
+                
+                                Start-Sleep -Seconds $Delay
+                            }
+                        }
+
+                        Write-Host "Query response attempt $i`:`n $($QueryResponse | ConvertTo-Json -Depth 50)"
+                        Write-Host "Mutation response attempt $i`:`n $($MutationResponse | ConvertTo-Json -Depth 50)"
+
+                    }
+                
+                    If ($i -eq $MaxRetries) {
+                      
+                        $TimedOut = $Result.TimedOut = $true
+
+                        Write-Host "Timed out waiting for PR #$PullNumber to become mergeable."
+                
+                    }
+
+                    # Check if auto-merge was enabled. If enabledAt is not null, it was enabled.
+                    $AutoMergeEnabledAt = $MutationResponse.data.enablePullRequestAutoMerge.pullRequest.autoMergeRequest.enabledAt
+
+                    If ($AutoMergeEnabledAt) {
+
+                        Write-Host "Auto-merge for PR #$PrNumber was enabled at $AutoMergeEnabledAt."
+
+                        $Result.ManualMergeRequired = $False
+
+                    } Else {
+
+                        Write-Host "Auto-merge for PR #$PrNumber was not enabled. Manual merge required."
+                        
+                            $Result.ManualMergeRequired = $True
+                        
+                        If ($TimedOut) {
+                        
+                            Write-Host "PR #$PrNumber timed out waiting for mergeable state."
+                            
+                        } Else {
+                        
+                            If ($QueryResponse.data.node.mergeable -eq "CONFLICTING") {
+                                
+                                Write-Host "PR #$PrNumber has conflicts. Auto-merge not enabled."
+                                
+                            } Else {
+                                
+                                Write-Host "PR #$PrNumber wasn't mergeable for an unknown reason. Below is the response:"
+                                Write-Host $($AutoMergeResult | ConvertTo-Json -Depth 20)
+                                
+                            } # QueryResponse.data.node.mergeable
+                            
+                        } # TimedOut
+
+                    } # If AutoMergeEnabledAt
+
+                    Return $Result
+                }
+
+                #####################
+                #####################
+                # New-PullRequest  
+
+                Function New-PullRequest {                   
+
+                    $PrResponse = $Null
+
+                    Write-Host "Creating a new PR from $DefaultBranch to $TargetBranch."
+
+                    $PrTitle = "$PrTitle - $PacificStamp $(Get-TzAbbrev $PacificTz $PacificNow) | $IndiaStamp $(Get-TzAbbrev $IndiaTz   $IndiaNow)"
+
+                    If ($IsPubOpsRepo) {
+
+                        If ($GlobalEnableAutoMerge -and $EnableAutoMerge) {
+
+                            $PrDescription = $AutoMergeEnabledPrDescriptionPubOps
+
+                        } Else {
+
+                            $PrDescription = $AutoMergeDisabledPrDescriptionPubOps
+
+                        }
+
+                    } Else {
+
+                        If ($GlobalEnableAutoMerge -and $EnableAutoMerge) {
+                     
+                            $PrDescription = $AutoMergeEnabledPrDescriptionNonPubOps
+
+                        } Else {
+                         
+                            $PrDescription = $AutoMergeDisabledPrDescriptionNonPubOps
+                        
+                        }
+                    
+                    }
+
+                    $PrBody = @{
+                        title = $PrTitle
+                        head  = $DefaultBranch
+                        base  = "$TargetBranch"
+                        body  = $PrDescription
+                    } | ConvertTo-Json
+
+                    Try {
+
+                        $PrResponse = Invoke-RestMethod -Uri "https://api.github.com/repos/$Organization/$Repository/pulls" -Method POST -Headers $AppGitHubAccessHeaders -Body $PrBody -ErrorAction Stop
+
+                        Write-Host "Created pull request $($PrResponse.html_url)"
+
+                        
+
+                    } Catch {
+                    
+                        $PrResponse = $Null
+
+                        Write-Host "ERROR occurred during PR creation. Error: $_"
+                        
+                    }
+
+                    Return $PrResponse
+
+                }
+
+                
+                #####################
+                #####################
+                # Main
+
+                If ($EnableAutoPublish) {
+
+                    If (Test-TargetBranchExists) {
+                
+                        $PrData = Get-PublishPullRequest
+
+                        # Check to see if $PrData contains data. If yes, there's a PR. If not, no PR.
+                        If ($PrData) {
+                        
+                            $Submitter = $PrData.user.login
+                            $PrNumber = $PrData.number
+                            $Node = $PrData.node_id
+                            $IssueUrl = $PrData.issue_url
+
+                            If ($Submitter -eq "m365-skilling-repo-management[bot]") {
+
+                                Write-Host "PR #$PrNumber was opened by m365-skilling-repo-management[bot]."
+                            
+                                $LabelResultsArray = Test-Prlabel -LabelArray @($AutoPublishLabel, $ManualMergeLabel, $AutoMergeLabel) -IssueUrl $IssueUrl
+
+                                If ($LabelResultsArray.$AutoPublishLabel) {
+
+                                    Write-Host "PR #$PrNumber created by AutoPublish."
+
+                                    # Check PR status check state
+                                    $QueryResponse = Get-PrState -NodeId $Node
+                                    $CheckState = $QueryResponse.data.node.commits.nodes.commit.statusCheckRollup.state
+
+                                    write-host $($QueryResponse | ConvertTo-json -depth 50)
+                                    Write-Host "Check state on PR #$PrNumber`: $CheckState."
+
+                                    If ($CheckState -eq "FAILURE") {
+
+                                        Write-Host "PR #$PrNumber status checks failed."
+                                    
+                                        If ($LabelResultsArray.$ManualMergeLabel) {
+
+                                            Write-Host "$ManualMergeLabel already exists on PR #$PrNumber."
+
+                                        } Else {
+
+                                            If ($LabelResultsArray.$AutoMergeLabel) {
+                                            
+                                                Remove-PrLabel -IssueUrl $IssueUrl -LabelName $AutoMergeLabel
+                                            
+                                            }
+
+                                            Write-Host "Adding $ManualMergeLabel to PR #$PrNumber."
+
+                                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $ManualMergeLabel
+                                        
+                                        }
+
+                                    }
+
+                                } Else {
+                                 
+                                    Write-Host "PR #$PrNumber not created by AutoPublish. Exiting."
+                                
+                                }
+
+                            } Else {
+                             
+                                Write-Host "PR #$PrNumber was not opened by m365-skilling-repo-management[bot]. Exiting."
+                            
+                            }
+                        
+                        } Else {
+                         
+                            Write-Host "No pull request found. Checking diff between $DefaultBranch and $TargetBranch."
+
+                            # Check to see if $DefaultBranch contains anything that isn't in $TargetBranch.
+                            $BranchDiff = Get-BranchDiff
+
+                            $AheadBy = $BranchDiff.ahead_by
+                            $ManualMergeRequired = $False
+
+                            write-host "$DefaultBranch is ahead of $TargetBranch by $AheadBy commits."
+
+                            # If there are changes in $DefaultBranch that aren't in $TargetBranch, create a PR.
+                            If ($AheadBy -gt 0) {
+                            
+                                Write-Host "$DefaultBranch has changes ahead of $TargetBranch"
+                                Write-Host "PubOps repo: $IsPubOpsRepo"
+
+                                $NewPrResponse = New-PullRequest
+
+                                If ($NewPrResponse) {
+
+                                    $PrNumber = $NewPrResponse.number
+                                    $ChangedFiles = $NewPrResponse.changed_files
+
+                                    Write-Host "PR #$PrNumber created with $ChangedFiles changed files."
+
+                                    If ($GlobalEnableAutoMerge -and $EnableAutoMerge) {
+
+                                        If ($ChangedFiles -le $MaxAllowedChangedFiles) {
+                                
+                                            $AutoMergeResult = Enable-GitHubPRAutoMerge -PullNumber $PrNumber -MaxRetries 6
+                                            $ManualMergeRequired = $AutoMergeResult.ManualMergeRequired
+                                            
+                                        } Else {
+                                         
+                                            Write-Host "PR #$PrNumber has $ChangedFiles changed files but the maximum number of files allowed to auto merge is $MaxAllowedChangedFiles. Manual merge required."
+
+                                            $ManualMergeRequired = $True
+                                        
+                                        } # If MaxAllowedChangedFiles
+
+                                    } Else {
+                                     
+                                        Write-Host "Auto merge disabled. GlobalEnableAutoMerge: $GlobalEnableAutoMerge. EnableAutoMerge: $EnableAutoMerge."
+
+                                        $ManualMergeRequired = $True
+                                    
+                                    } # If GlobalEnableAutoMerge/EnableAutoMerge
+                                
+                                     $IssueUrl = $NewPrResponse.issue_url
+
+                                    If ($IssueUrl) {
+
+                                        Set-Labels -IssueUrl $IssueUrl -ManualMerge $ManualMergeRequired
+
+                                    }
+
+                                } # If NewPrResponse
+                               
+                            } Else {
+                             
+                                Write-Host "$DefaultBranch has no changes ahead of $TargetBranch. Not creating PR."
+                            
+                            }
+                        
+                        }
+
+                    } Else {
+                    
+                        Write-Host "The branch $TargetBranch doesn't exist or an error occurred."
+                    
+                    }
+
+                } Else {
+                 
+                    Write-Host "Auto publishing is disabled. Exiting."
+                
+                }

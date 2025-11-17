@@ -1,0 +1,690 @@
+name: (Scheduled) Publish to live
+
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+    workflow_call:
+        inputs:
+            PayloadJson:
+                required: true
+                type: string
+            EnableAutoPublish:
+                required: true
+                type: boolean
+        secrets:
+            AccessToken:
+                required: true
+            PrivateKey:
+                required: true
+            ClientId:
+                required: true
+
+jobs:
+
+    auto-publish:
+        name: Publish to live
+        if: github.repository_owner == 'MicrosoftDocs' && contains(github.event.repository.topics, 'build')
+        runs-on: ubuntu-latest
+        steps:  
+          - name: Process branches
+            shell: pwsh
+            env: 
+                AccessToken: ${{ secrets.AccessToken }}
+                PayloadJson: ${{ inputs.PayloadJson }}
+                EnableAutoPublish: ${{ inputs.EnableAutoPublish }}
+                PrivateKey: ${{ secrets.PrivateKey }}
+                ClientId: ${{ secrets.ClientId }}
+                IsPubOpsRepo:  ${{ contains(github.event.repository.topics, 'pubops') }}
+
+            run: |
+
+                $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+                $EnableAutoPublish = [System.Convert]::ToBoolean($env:EnableAutoPublish)
+                $AccessToken = $env:AccessToken
+                $PrivateKey = $env:PrivateKey
+                $ClientId = $env:ClientId
+                $IsPubOpsRepo = [System.Convert]::ToBoolean($env:IsPubOpsRepo)
+                
+                # Date/Time calculations
+                $UtcNow = Get-Date -AsUTC                
+                $PacificTz = [System.TimeZoneInfo]::FindSystemTimeZoneById("Pacific Standard Time")
+                $IndiaTz = [System.TimeZoneInfo]::FindSystemTimeZoneById("India Standard Time")
+                # Convert UTC to local times
+                $PacificNow = [System.TimeZoneInfo]::ConvertTimeFromUtc($UtcNow, $PacificTz)
+                $IndiaNow = [System.TimeZoneInfo]::ConvertTimeFromUtc($UtcNow, $IndiaTz)
+                # Format as MM/DD HH:mm (24 hour clock)
+                $PacificStamp = $PacificNow.ToString('MM/dd HH:mm')
+                $IndiaStamp = $IndiaNow.ToString('MM/dd HH:mm')
+
+                # Create github HTTP authentication header 
+                $StandardGitHubHeaders = @{}
+                $StandardGitHubHeaders.Add("Authorization","token $($AccessToken)")
+                $StandardGitHubHeaders.Add("User-Agent", "OfficeDocs")
+
+                # Repo variables
+                $TargetBranch = "live"
+                $Repository = $GitHubdata.event.repository.name
+                $Organization = $GitHubData.event.organization.login
+                $DefaultBranch = $GitHubData.event.repository.default_branch
+                $RepoLabelUrl = $GitHubData.event.repository.labels_url
+
+                # PR variables
+                $PrTitle = "[AutoPublish] $DefaultBranch to $TargetBranch"
+                $PrDescriptionPubOps = "@MicrosoftDocs/marveldocs-pubops`n`nThis is an automated pull request to publish changes from the $DefaultBranch branch to the $TargetBranch branch. Merging this PR will publish the changes to the live learn.microsoft.com site.`n`nBefore merging this PR, complete the following checks:`n`n- There are no more than 100 files in the PR. If there are more than 100 files, review the changes for any obvious mistakes such as mass-deleted files. If the changes appear normal (bulk changes, general updates to many files, etc), merge the PR. If you're not sure, do not merge the PR and investigate further.`n- There are no build warnings. If there are warnings, resolve them before merging the PR.`n- Regular PR criteria checks pass.`n`nIf you have questions, email marveldocs-admins."
+                $PrDescriptionNonPubOps = "This is an automated pull request to publish changes from the $DefaultBranch branch to the $TargetBranch branch.`n`nThis is repo isn't managed by PubOps.`n`n**A contributor with write access to this repo needs to merge this PR for changes in it to go live.**`n`nBefore you merge this PR:`n`n- Check the **Files changed** tab to ensure only changes you intend to publish are included in the PR.`n- View the changes on https://review.learn.microsoft.com to confirm the changes look correct on the site`n`nIf you have questions, email marveldocs-admins."
+
+                # Label variables
+                $AutoPublishLabelColor = "5319E7"
+                $AutoPublishLabelDescription = "PR was automatically created for publishing from $DefaultBranch to $TargetBranch."
+                $AutoPublishLabel = "AutoPublish"
+                $SignOffLabelColor = "46ce1c"
+                $SignOffLabelDescription = "The pull request is ready to be reviewed and merged by PubOps."
+                $SignOffLabel = "Sign off"
+                $ManualMergeLabelColor = "f79d43"
+                $ManualMergeLabelDescription = "An AutoPublish pull request requires a human to merge it."
+                $ManualMergeLabel = "Manual merge required"
+
+                #####################
+                #####################
+                # ConvertTo-JwtBase64
+
+                Function ConvertTo-JwtBase64 {
+                    param(
+                        [Parameter(Mandatory = $True)]
+                        [string]$RawJson
+                    )
+                    
+                    # Convert UTF-8 bytes to Base64, then make it URL-safe for JWT
+                    $Encoded = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($RawJson))
+                    Return $Encoded.TrimEnd('=') -replace '\+','-' -replace '/','_'
+                }
+    
+                #####################
+                #####################
+                # New-GitHubAppJWT
+
+                Function New-GitHubAppJWT {
+                    param(
+                        [Parameter(Mandatory = $True)]
+                        [string]$ClientId,
+                        
+                        [Parameter(Mandatory = $True)]
+                        [string]$PrivateKey,
+    
+                        [int]$ExpiresInMinutes = 10
+                    )
+    
+                    Write-Host "Create JWT"
+    
+                    # Build the header
+                    $Header = @{
+                        alg = "RS256"
+                        typ = "JWT"
+                    } | ConvertTo-Json -Compress
+    
+                    $HeaderEncoded = ConvertTo-JwtBase64 -RawJson $Header
+    
+                    # Build the payload
+                    $Now = [System.DateTimeOffset]::UtcNow
+                    $Payload = @{
+                        iat = $now.AddSeconds(-10).ToUnixTimeSeconds()
+                        exp = $now.AddMinutes($ExpiresInMinutes).ToUnixTimeSeconds()
+                        iss = $ClientId
+                    } | ConvertTo-Json -Compress
+    
+                    $PayloadEncoded = ConvertTo-JwtBase64 -RawJson $Payload
+    
+                    # Combine and sign
+                    $Rsa = [System.Security.Cryptography.RSA]::Create()
+                    $Rsa.ImportFromPem($PrivateKey)
+    
+                    $Combined = "$HeaderEncoded.$PayloadEncoded"
+                    $SignatureBytes = $Rsa.SignData(
+                        [System.Text.Encoding]::UTF8.GetBytes($Combined),
+                        [System.Security.Cryptography.HashAlgorithmName]::SHA256,
+                        [System.Security.Cryptography.RSASignaturePadding]::Pkcs1
+                    )
+    
+                    $SignatureEncoded = [Convert]::ToBase64String($SignatureBytes).TrimEnd('=') -replace '\+','-' -replace '/','_'
+                    
+                    Return "$HeaderEncoded.$PayloadEncoded.$SignatureEncoded"
+                }
+    
+                #####################
+                #####################
+                # Get-GitHubAppInstallationToken
+
+                Function Get-GitHubAppInstallationToken {
+                    param(
+                        [Parameter(Mandatory = $true)]
+                        [string]$ClientId,
+                        
+                        [Parameter(Mandatory = $true)]
+                        [string]$PrivateKey,
+                        
+                        [Parameter(Mandatory = $true)]
+                        [string]$Organization,
+    
+                        [int]$TokenTTLMinutes = 10
+                    )
+    
+                    # Create the JWT
+                    $Jwt = New-GitHubAppJWT -ClientId $ClientId -PrivateKey $PrivateKey -ExpiresInMinutes $TokenTTLMinutes
+                    
+                    # Prepare headers
+                    $JwtHeaders = @{
+                        Authorization         = "Bearer $Jwt"
+                        Accept               = "application/vnd.github+json"
+                        "X-GitHub-Api-Version"= "2022-11-28"
+                    }
+    
+                    Write-Host "Request org installation ID"
+    
+                    # 1) Retrieve the installation ID for the org
+                    Try {
+                        $InstallationInfo = Invoke-RestMethod `
+                            -Uri "https://api.github.com/orgs/$Organization/installation" `
+                            -Headers $JwtHeaders `
+                            -ErrorAction Stop
+    
+                        $InstallationId = $InstallationInfo.id
+                    }
+                    Catch {
+                        Write-Host "Failed to get installation ID from GitHub. $_"
+                        Return $Null
+                    }
+    
+                    Write-Host "Get installation token"
+    
+                    # 2) Use the installation ID to request an installation token
+                    Try {
+                        $TokenResponse = Invoke-RestMethod `
+                            -Uri "https://api.github.com/app/installations/$InstallationId/access_tokens" `
+                            -Headers $JwtHeaders `
+                            -Method Post `
+                            -ErrorAction Stop
+    
+                        Return $TokenResponse.token
+                    }
+                    Catch {
+                        Write-Host "Failed to get access token from GitHub. $_"
+                        Return $Null
+                    }
+                }
+
+                #####################
+                #####################
+                # Test-RepoLabel
+
+                Function Test-RepoLabel {
+
+                    [CmdletBinding()]
+                    param(
+
+                        $Name,
+                        $RepoUri      
+                    )
+
+                    # Replace placeholder text in the URL retrieved from the GitHub API with the name of the label we're looking for
+                    $LabelUri = $RepoUri.Replace("{/name}","/$Name")
+
+                    # Check to see if the label we want exists in the repo
+                    Try {
+
+                        Write-Host "Checking to see if label $Name exists in repo URL $LabelUri."
+
+                        $LabelResults = Invoke-WebRequest -UseBasicParsing -Uri $LabelUri -Headers $StandardGitHubHeaders  -ErrorAction Stop
+                        $LabelFound = $True
+                        
+                    } Catch {
+
+                        # OK if label doesn't exist. Just means we need to create it.
+                        $LabelFound = $False
+
+                    }
+
+                    # Return boolean to calling statement
+                    $LabelFound
+
+                }
+
+                #####################
+                #####################
+                # New-RepoLabel
+
+                Function New-RepoLabel {
+
+                    [CmdletBinding()]
+                    param(
+
+                        $Name,
+                        $Color,
+                        $Description,
+                        $RepoUri
+                    )
+
+                    # Remove placeholder text from repo URL
+                    $RepoUri = $RepoUri.Replace("{/name}","")
+                    $Result = $Null
+
+                    # Construct the JSON statement that will be sent to GitHub as the body of the web request. Include the name of the label, its color, and description. 
+                    # Convert hash table to JSON
+                    $Body = @{}
+                    $Body.Add("name", $Name)
+                    $Body.Add("color", $Color)
+                    $Body.Add("description", $description)
+                    $Body = $Body | ConvertTo-Json
+
+                    # Try to submit the request to GitHub API to create the label
+                    Try {
+
+                        Write-Host "Creating label $Name with color $Color on repo $RepoUri."
+                        
+                        $Result = Invoke-RestMethod -Uri $RepoUri -Headers $StandardGitHubHeaders  -Body $Body -Method POST
+
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to create new label $Name on repo $RepoUri. Error: $($Error[0].Exception.Message)."
+
+                    }
+
+                }
+
+                #####################
+                #####################
+                # Test-PrLabel
+
+                Function Test-Prlabel {
+
+                    [CmdletBinding()]
+                    param(
+
+                        $LabelArray,
+                        $IssueUrl      
+                    )
+
+                    # Replace placeholder text in the URL retrieved from the GitHub API with the name of the label we're looking for
+                    $IssueLabelUrl = "$IssueUrl/labels"
+                    $LabelHashTable = @{}
+                    $LabelResults = $Null
+
+                    # Get list of labels on issue/PR
+                    Try {
+
+                        Write-Host "Getting labels on issue $IssueLabelUrl."
+
+                        $LabelResults = Invoke-RestMethod -Uri $IssueLabelUrl -Headers $StandardGitHubHeaders  -ErrorAction Stop
+
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to get list of labels on $IssueLabelUrl. Error: $($Error[0].Exception.Message)."
+
+                    }
+
+                    ForEach ($Label in $LabelArray) {
+
+                        If ($LabelResults -ne $Null) {
+
+                            If ($LabelResults.name.Contains($Label)) {
+
+                                $LabelHashTable.Add($Label, $True)
+
+                            } Else {
+
+                                $LabelHashTable.Add($Label, $False)
+
+                            }
+
+                        } Else {
+
+                            $LabelHashTable.Add($Label, $False)
+
+                        }
+
+                    }
+
+                    # Return array of labels on Issue/PR
+                    Return $LabelHashTable
+
+                }
+
+                #####################
+                #####################
+                # Set-PrLabel
+
+                Function Set-PrLabel {
+
+                    param(
+
+                        $IssueUrl,
+                        $LabelName
+                        
+                    )
+
+                    # Construct label URL based on issue or pull request URL
+                    $IssueLabelUrl = "$IssueUrl/labels"
+
+                    # Construct JSON statement that will be sent to GitHub as the body of the web request. Includes only the label name. GitHub expects an array even thought it's a single value
+                    # Convert array to JSON
+                    $Body = @()
+                    $Body += $LabelName
+                    $Body = ConvertTo-Json -InputObject $Body
+
+                    # Try to submit the request to GitHub API to apply they label to the issue or pull request
+                    Try {
+
+                        Write-Host "Setting label $LabelName on URL $IssueLabelUrl."
+
+                        $Result = Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $StandardGitHubHeaders  -Method POST
+
+
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to set label on URL $IssueLabelUrl. Error: $($Error[0].Exception.Message)."
+
+                    }
+
+                }
+
+                #####################
+                #####################
+                # Get-TzAbbrev
+
+                # Derive a 2- or 3-letter abbreviation from the zone's name
+                Function Get-TzAbbrev {
+                    param(
+                        [System.TimeZoneInfo]$Tz,
+                        [DateTime]$LocalTime
+                    )
+                    # Choose the right long name (standard vs. daylight)
+                    $FullName = If ($Tz.IsDaylightSavingTime($LocalTime)) {
+                        $Tz.DaylightName     # e.g. “Pacific Daylight Time”
+                    } Else {
+                        $Tz.StandardName     # e.g. “Pacific Standard Time”
+                    }
+
+                    # Collapse it to initials: “Pacific Daylight Time” to “PDT”
+                    -Join (($fullName -split '\s+') | ForEach-Object { $_[0] })
+                }
+
+                #####################
+                #####################
+                # Test-TargetBranchExists
+                
+                Function Test-TargetBranchExists {
+                
+                    $BranchResponse = $Null
+                    $BranchExists = $Null
+
+                    Write-Host "Checking if $TargetBranch exists"
+
+                    Try {
+
+                        $BranchResponse = Invoke-RestMethod -uri "https://api.github.com/repos/$Organization/$Repository/git/ref/heads/$TargetBranch" -Headers $StandardGitHubHeaders -Method Get -ErrorAction Stop
+                        $BranchExists = $True
+
+                    } Catch {
+                    
+                        Write-Host "Branch doesn't exist or an error occurred. Error: $_."
+
+                        $BranchExists = $False
+
+                    }
+                
+                    Return $BranchExists
+
+                }
+
+                #####################
+                #####################
+                # Get-BranchDiff
+
+                Function Get-BranchDiff {
+
+                    $CompareResponse = $Null
+                
+                    Write-Host "Checking if $DefaultBranch is ahead of $TargetBranch"
+
+                    Try {
+
+                        $CompareResponse = Invoke-RestMethod -Uri "https://api.github.com/repos/$Organization/$Repository/compare/$TargetBranch...$DefaultBranch" -Method GET -Headers $StandardGitHubHeaders -ErrorAction Stop
+
+                    } Catch {
+                    
+                        $CompareResponse = $Null
+                        
+                    }
+
+                    Return $CompareResponse
+                
+                }
+
+                #####################
+                #####################
+                # Get-PublishPullRequest
+                               
+                Function Get-PublishPullRequest {
+
+                    $PrResponse = $Null
+                
+                    Write-Host "Checking if a pull request exists between $DefaultBranch and $TargetBranch"
+
+                    Try {
+
+                        $PrResponse = Invoke-RestMethod -Uri "https://api.github.com/repos/$Organization/$Repository/pulls?head=$($Organization):$DefaultBranch&base=$TargetBranch&state=open" -Method GET -Headers $StandardGitHubHeaders -ErrorAction Stop
+
+                    } Catch {
+                    
+                        Write-Host "Error: $_"
+                        $PrResponse = $Null
+                                            
+                    }
+
+                    Return $PrResponse
+                
+                }
+
+                #####################
+                #####################
+                # Set-Labels  
+
+                Function Set-Labels {
+                
+                    param(
+
+                        [Parameter(Mandatory = $True)]
+                        [string]$IssueUrl
+                        
+                    )
+
+                    # Check if labels exist on the repo.
+                    $AutoLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $AutoPublishLabel
+
+                    If (!$AutoLabelExists) {
+
+                        # Create label on the repo if it doesn't exist.
+                        New-RepoLabel -RepoUri $RepoLabelUrl -Name $AutoPublishLabel -Color $AutoPublishLabelColor -Description $AutoPublishLabelDescription
+
+                    }
+
+                    # Only add the AutoPublishLabel label if it doesn't already exist on the PR
+                    If (!$LabelResultsArray.$AutoPublishLabel) {
+
+                        Write-Host "Label $AutoPublishLabel doesn't exist on $IssueUrl. Adding label."
+
+                        # Add the label to the PR
+                        Set-PrLabel -IssueUrl $IssueUrl -LabelName $AutoPublishLabel
+
+                    }
+
+                    If ($IsPubOpsRepo) {
+
+                        Write-Host "PubOps repo. Checking and setting $SignOffLabel label."
+
+                        $SignOffLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $SignOffLabel
+
+                        If (!$SignOffLabelExists) {
+
+                            # Create label on the repo if it doesn't exist.
+                            New-RepoLabel -RepoUri $RepoLabelUrl -Name $SignOffLabel -Color $SignOffLabelColor -Description $SignOffLabelDescription
+
+                        }
+
+
+                        # Only add the SignOffLabel label if it doesn't already exist on the PR
+
+                        If (!$LabelResultsArray.$SignOffLabel) {
+
+                            Write-Host "Label $SignOffLabel doesn't exist on $IssueUrl. Adding label."
+
+                            # Add the label to the PR
+                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $SignOffLabel
+
+                        }
+
+
+
+                    } Else {
+
+                        Write-Host "Non-PubOps repo. Checking and setting $ManualMergeLabel label."
+
+                        $ManualMergeLabelExists = Test-RepoLabel -RepoUri $RepoLabelUrl -Name $ManualMergeLabel
+
+                        If (!$ManualMergeLabelExists) {
+
+                            # Create label on the repo if it doesn't exist.
+                            New-RepoLabel -RepoUri $RepoLabelUrl -Name $ManualMergeLabel -Color $ManualMergeLabelColor -Description $ManualMergeLabelDescription
+
+                        }
+
+                        # Only add the ManualMergeLabel label if it doesn't already exist on the PR
+
+                        If (!$LabelResultsArray.$ManualMergeLabel) {
+
+                            Write-Host "Label $ManualMergeLabel doesn't exist on $IssueUrl. Adding label."
+
+                            # Add the label to the PR
+                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $ManualMergeLabel
+
+                        }
+
+                    }
+            
+                }
+
+                #####################
+                #####################
+                # New-PullRequest  
+
+                Function New-PullRequest {                   
+
+                    $PrResponse = $Null
+
+                    Write-Host "Creating a new PR from $DefaultBranch to $TargetBranch."
+
+                    # Create github HTTP authentication header using GitHub app installation token
+                    $AppGitHubAccessToken = Get-GitHubAppInstallationToken -ClientId $ClientId -PrivateKey $PrivateKey -Organization $Organization -TokenTTLMinutes 10
+                    $AppGitHubAccessHeaders = @{}
+                    $AppGitHubAccessHeaders.Add("Authorization","token $($AppGitHubAccessToken)")
+                    $AppGitHubAccessHeaders.Add("User-Agent", "OfficeDocs")
+
+                    $PrTitle = "$PrTitle - $PacificStamp $(Get-TzAbbrev $PacificTz $PacificNow) | $IndiaStamp $(Get-TzAbbrev $IndiaTz   $IndiaNow)"
+
+                    If ($IsPubOpsRepo) {
+
+                        $PrDescription = $PrDescriptionPubOps
+
+                    } Else {
+                     
+                        $PrDescription = $PrDescriptionNonPubOps
+                    
+                    }
+
+                    $PrBody = @{
+                        title = $PrTitle
+                        head  = $DefaultBranch
+                        base  = "$TargetBranch"
+                        body  = $PrDescription
+                    } | ConvertTo-Json
+
+                    Try {
+
+                        $PrResponse = Invoke-RestMethod -Uri "https://api.github.com/repos/$Organization/$Repository/pulls" -Method POST -Headers $AppGitHubAccessHeaders -Body $PrBody -ErrorAction Stop
+
+                        Write-Host "Created pull request $($PrResponse.html_url)"
+
+                    } Catch {
+                    
+                        $PrResponse = $Null
+
+                        Write-Host "ERROR occurred during PR creation. Error: $_"
+                        
+                    }
+
+                    Return $PrResponse
+
+                }
+
+
+                #####################
+                #####################
+                # Main
+
+                If ($EnableAutoPublish) {
+
+                    If (Test-TargetBranchExists) {
+                
+                        $PrData = Get-PublishPullRequest
+
+                        # Check to see if $PrData contains data. If yes, there's a PR. If not, no PR.
+                        If ($PrData) {
+                        
+                            # Will add PR processing in the future.
+
+                            Write-Host "Pull request found. Exiting."
+                        
+                        } Else {
+                         
+                            Write-Host "No pull request found. Checking diff between $DefaultBranch and $TargetBranch."
+
+                            # Check to see if $DefaultBranch contains anything that isn't in $TargetBranch.
+                            $BranchDiff = Get-BranchDiff
+
+                            write-host "$DefaultBranch is ahead of $TargetBranch by $($BranchDiff.ahead_by) commits."
+
+                            # If there are changes in $DefaultBranch that aren't in $TargetBranch, create a PR.
+                            If ($BranchDiff.ahead_by -gt 0) {
+                            
+                                Write-Host "$DefaultBranch has changes ahead of $TargetBranch"
+                                Write-Host "PubOps repo: $IsPubOpsRepo"
+
+                                $NewPrResponse = New-PullRequest
+                                $IssueUrl = $NewPrResponse.issue_url
+
+                                If ($IssueUrl) {
+
+                                    Set-Labels -IssueUrl $IssueUrl
+
+                                }
+
+                            } Else {
+                             
+                                Write-Host "$DefaultBranch has no changes ahead of $TargetBranch. Not creating PR."
+                            
+                            }
+                        
+                        }
+
+                    } Else {
+                    
+                        Write-Host "The branch $TargetBranch doesn't exist or an error occurred."
+                    
+                    }
+
+                } Else {
+                 
+                    Write-Host "Auto publishing is disabled. Exiting."
+                
+                }

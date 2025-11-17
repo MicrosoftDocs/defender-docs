@@ -1,0 +1,453 @@
+name: PR File Count
+
+permissions:
+  pull-requests: write
+  statuses: write
+  contents: read
+      
+on: 
+    workflow_call:
+        inputs:
+            PayloadJson:
+                required: true
+                type: string
+        secrets:
+            AccessToken:
+                required: true
+
+jobs:
+    build:
+      name: Run Script
+      if: github.repository_owner == 'MicrosoftDocs'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Script
+          shell: pwsh
+          env: 
+            PayloadJson: ${{ inputs.PayloadJson }}
+            AccessToken: ${{ secrets.AccessToken }}
+
+            PrWarnLimit: 30
+            PrBlockLimit: 100
+            
+          run: |
+
+            # Get payload data from GitHub. Azure puts data into a temp file in the file system and we get it by calling Get-Content. 
+            # Payload variable name is set in the Integrate setting page on the Function App in Azure.
+            # Also get the GitHub Event header value. This is stored in environemntal variables populated by Azure when the web request is received.
+            $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+            $GitRequestEvent = $GitHubData.event_name
+
+            $AccessToken = $env:AccessToken
+            $PrWarnLimit = $env:PrWarnLimit
+            $PrBlockLimit = $env:PrBlockLimit
+
+            # Create github HTTP authentication header 
+
+            $GitHubHeaders = @{}
+            $GitHubHeaders.Add("Authorization","token $($AccessToken)")
+            $GitHubHeaders.Add("User-Agent", "OfficeDocs")
+
+            $TargetBranch = $GitHubData.event.pull_request.base.ref
+            $DefaultBranch = $GitHubData.event.repository.default_branch
+            $PrivateRepo = $GitHubData.event.repository.private
+            $NumChangedFiles = $GitHubData.event.pull_request.changed_files
+            $CurrentLabelName = $GitHubData.event.label.name
+            $CommentsUrl = $GitHubData.event.pull_request.comments_url
+            $Labels = $GitHubData.event.pull_request.labels
+            $PrUrl = $GitHubData.event.pull_request.html_url
+
+            $WorkflowsResourcePath = "https://api.github.com/repos/MicrosoftDocs/microsoft-365-docs/contents/.github/workflows/resources"
+            $WorkflowsRef = "workflows-prod"
+
+            $WarningLabelName = "Merge large pull request"
+            $WarningLabelUrlName = $WarningLabelName.Replace(" ", "%20")
+            $WarningLabelColor = "46ce1c"  
+
+            $AdminLabelName = "Admin review"
+            $StatusCheckAllowedText = "Large PR allowed by {0}."
+            $StatusCheckBelowLimitText = "Number of changed files below limit."
+            $StatusCheckWarnFailureText = "Number of changed files exceeds warning limit: {0}."
+            $StatusCheckBlockFailureText = "Number of changed files exceeds blocking limit: {0}."
+            $StatusCheckPendingText = "Checking number of files in PR."
+            $StatusCheckErrorText   = "Error processing PR. Contact marveldocs-admins."
+            $StatusCheckUnmonitoredBranchText = "$TargetBranch isn't a monitored branch."
+
+            $RepoLabelsUrl = $GitHubData.event.repository.url + "/labels"
+            $MergeLabelUrl = $RepoLabelsUrl + "/" + $WarningLabelUrlName
+
+
+            ##################
+            Function Get-PrMessage {
+
+                [cmdletbinding()]
+                Param(
+                    [Parameter(Mandatory=$True)]
+                    $PrMessageName
+                )
+
+                $PrMessageFile = "$WorkflowsResourcePath/PrFileCountCheck-$PrMessageName.md?ref=$WorkflowsRef"
+
+                Try {
+
+                    Write-Host "Getting PR message from $PrMessageFile"
+
+                    $PrMessageData = Invoke-RestMethod -Uri $PrMessageFile -Headers $GitHubHeaders
+                    $PrMessage = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($PrMessageData.content));
+
+                } Catch {
+
+                    Write-Host "Failed to get PR message $PrMessageName"
+
+                    $PrMessage = $Null
+
+                }
+
+                Return $PrMessage
+
+            }
+
+            ##################
+
+            Function CheckLabel {
+
+                Try {
+
+                    # Check to see if the label exists. If this request fails, the label doesn't exist so the catch statement will try to create it.
+                    $LabelJson = Invoke-WebRequest -Headers $GitHubHeaders -Uri $MergeLabelUrl -UseBasicParsing -ErrorAction Stop
+                    $LabelData = $LabelJson.content | ConvertFrom-Json
+
+                    $CurrentLabelColor = $LabelData.color
+                    
+                    # If label exists, check to see if the color is a nice pretty shade of green. If not, make it pretty.
+                    If ($CurrentLabelColor -ne $WarningLabelColor) {
+
+                        $UpdateLabelBody = @{}
+                        $UpdateLabelBody.add("color", $WarningLabelColor)
+                        $UpdateLabelBodyJson = $UpdateLabelBody | ConvertTo-Json
+
+                        Try {
+
+                            Write-Host "Correcting label color from $CurrentLabelColor to $WarningLabelColor."
+                            $Result = Invoke-WebRequest -Headers $GitHubHeaders -Uri $MergeLabelUrl -Method POST -Body $UpdateLabelBodyJson -UseBasicParsing -ErrorAction Stop
+
+                        } Catch {
+
+                            Write-Host "Failed to change label color."
+
+                        }
+
+                    }
+                
+                } Catch {
+
+                    $NewLabelBody = @{}
+                    $NewLabelBody.add("name", $WarningLabelName)
+                    $NewLabelBody.add("color", $WarningLabelColor)
+                    $NewLabelBodyJson = $NewLabelBody | ConvertTo-Json
+
+                    Try {
+
+                        Write-Host "Adding warning label `"$WarningLabelName`" with color $WarningLabelColor."
+                        $Result = Invoke-WebRequest -Headers $GitHubHeaders -Uri $RepoLabelsUrl -Method POST -Body $NewLabelBodyJson -UseBasicParsing -ErrorAction Stop
+                        
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to create warning label."
+
+                    }
+
+                }
+
+
+            }
+
+            ##################
+
+            Function Remove-WarningLabel {
+
+                Write-Host "Remove `"$WarningLabelName`" label from PR."
+
+                If ($Labels.Length -gt 0) {
+
+                    ForEach ($Label in $Labels) {
+
+                        If ($Label.name -eq $WarningLabelName) {
+
+                            Try {
+
+                                $IssuesUrl = $GitHubData.event.pull_request.issue_url
+                                $LabelUrl = "$IssuesUrl/labels/$WarningLabelUrlName"
+
+                                $Result = Invoke-WebRequest -UseBasicParsing -Uri $LabelUrl -Headers $GitHubHeaders -Method Delete -ErrorAction Stop
+
+                                Write-Host "Successfully removed `"$WarningLabelName`" label."
+                                                
+                            } Catch {
+                        
+                                Write-Host "ERROR: Failed to remove `"$WarningLabelName`" label."
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            ##################
+
+            Function LabelAdded {
+
+                $Labels = $GitHubData.event.pull_request.labels
+                $LabelSubmitter = $GitHubData.event.sender.login
+
+                If ($NumChangedFiles -lt $PrBlockLimit) {
+
+                    If ($Labels.Length -gt 0) {
+
+                        ForEach ($Label in $Labels) {
+
+                            If ($Label.name -eq $WarningLabelName) {
+
+                                Write-Host "`"$WarningLabelName`" label added. Allowing merge."
+
+                            }
+
+                        }
+
+                    } 
+                
+                } Else {
+
+                    If ($CurrentLabelName -eq $WarningLabelName) {
+
+                        Write-Host "Number of changed files $NumChangedFiles is greater than BLOCK limit $PrBlockLimit. Removing `"$WarningLabelName`" label and posting message to PR conversation."
+
+                        Set-PrConversationMessage -Message "The number of files in this PR exceeds the block limit of $PrBlockLimit files. The **$WarningLabelName** label has been removed and can't be re-added while the total number of files exceeds the block limit. `n`nReduce the number of files in this PR to below $PrBlockLimit files or request an admin review to merge this PR."
+                        
+                        Remove-WarningLabel
+
+                        echo "The PR $PrUrl changes **$NumChangedFiles** files which exceeds the **BLOCK** limit of **$PrBlockLimit**. The **$WarningLabelName** label has been removed and can't be re-added while the total number of files exceeds the block limit." >> $env:GITHUB_STEP_SUMMARY
+                        echo "Reduce the number of files in this PR to below $PrBlockLimit files or request an admin review to merge this PR." >> $env:GITHUB_STEP_SUMMARY
+
+                        Throw "Number of changed files $NumChangedFiles is greater than BLOCK limit $PrBlockLimit. Click Summary in the left pane for more information."
+                    
+                    } 
+                }
+
+            }
+
+            ##################
+
+            Function LabelRemoved {
+
+                $NumChangedFiles = $GitHubData.event.pull_request.changed_files
+                $Labels = $GitHubData.event.pull_request.labels
+                $MergeLabelExists = $False
+
+                If ($Labels.Length -gt 0) {
+
+                    ForEach ($Label in $Labels) {
+
+                        If ($Label.name -eq $WarningLabelName) {
+
+                            $MergeLabelExists = $True
+                            Break    
+
+
+                        }
+
+                    }
+
+                } 
+
+                If (!$MergeLabelExists) {
+
+                    If ($NumChangedFiles -gt $PrBlockLimit) {
+
+                        echo "The PR $PrUrl changes **$NumChangedFiles** files which exceeds the **BLOCK** limit of **$PrBlockLimit**." >> $env:GITHUB_STEP_SUMMARY
+                        echo "Reduce the number of files in this PR to below $PrBlockLimit files or request an admin review to merge this PR." >> $env:GITHUB_STEP_SUMMARY
+
+                        Throw "PR file count $NumChangedFiles is greater than PR change limit $PrBlockLimit. Click Summary in the left pane for more information."
+
+
+                    } ElseIf ($NumChangedFiles -gt $PrWarnLimit) {
+
+                        echo "The PR $PrUrl changes **$NumChangedFiles** files which exceeds the **WARN** limit of **$PrWarnLimit**." >> $env:GITHUB_STEP_SUMMARY
+                        echo "Review the files changed in the PR and confirm the changes are expected. To attest the changes are expected and merge the PR, add the **$WarningLabelName** label to the PR." >> $env:GITHUB_STEP_SUMMARY
+
+                        Throw "PR file count $NumChangedFiles is greater than PR change limit $PrWarnLimit. Click Summary in the left pane for more information."
+
+                    } Else {
+
+                        Write-Host "PR file count $NumChangedFiles is less than PR change limit $PrWarnLimit."
+
+                    }
+
+                } 
+
+            }
+
+            ###################
+
+            Function Set-PrConversationMessage {
+
+                [cmdletbinding()]
+                Param(
+                    [Parameter(Mandatory=$True)]
+                    $Message
+                )
+
+                $BodyHash = @{}
+                $BodyHash.body = $Message
+                $BodyJson = $BodyHash | ConvertTo-Json
+
+                If (($Message -ne $Null) -and ($Message -ne "")) {
+
+                    Try {
+
+                        Write-Host "Posting message to PR conversation to $CommentsUrl."
+                        $Result = Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop
+                    
+                    } Catch {
+
+                        Write-Host "ERROR: Failed to post message to PR conversation. $($Error[0])"
+
+                    }
+
+                } Else {
+
+                    Write-Host "Message is null or empty. Not posting to PR conversation."
+
+                }
+
+
+
+
+            }
+
+            ###################
+
+            Function ProcessPr {
+
+                # Short delay so check doesn't finish before others start, which can cause GitHub UI to display confusing behavior.
+                Start-Sleep 3
+
+                Write-Host "Number of changed files in PR: $NumChangedFiles"
+
+                    If ($NumChangedFiles -gt $PrBlockLimit) {
+
+                        CheckLabel
+
+                        Remove-WarningLabel
+
+                        If ($PrivateRepo) {
+
+                            $PrPrivateBlockMessage = Get-PrMessage -PrMessageName "PrivateBlockMessage"
+                            Set-PrConversationMessage -Message $($PrPrivateBlockMessage -F $NumChangedFiles, $PrWarnLimit, $PrBlockLimit, $WarningLabelName, $AdminLabelName)            
+
+                        } Else {
+
+                            $PrPublicBlockMessage = Get-PrMessage -PrMessageName "PublicBlockMessage"
+                            Set-PrConversationMessage -Message $($PrPublicBlockMessage -F $NumChangedFiles, $PrWarnLimit, $PrBlockLimit, $WarningLabelName)
+
+                        }
+
+                        echo "The PR $PrUrl changes **$NumChangedFiles** files which exceeds the **BLOCK** limit of **$PrBlockLimit**." >> $env:GITHUB_STEP_SUMMARY
+                        echo "Reduce the number of files in this PR to below $PrBlockLimit files or request an admin review to merge this PR." >> $env:GITHUB_STEP_SUMMARY
+
+                        Throw "Number of files in PR, $NumChangedFiles, exceeds the BLOCK file limit of $PrBlockLimit. Click Summary in the left pane for more information."
+
+
+                    } ElseIf ($NumChangedFiles -gt $PrWarnLimit) {
+
+                        CheckLabel
+
+                        If ($PrivateRepo) {
+
+                            $PrPrivateWarningMessage = Get-PrMessage -PrMessageName "PrivateWarningMessage"
+                            Set-PrConversationMessage -Message $($PrPrivateWarningMessage -F $NumChangedFiles, $PrWarnLimit, $PrBlockLimit, $WarningLabelName)            
+
+                        } Else {
+
+                            $PrPublicWarningMessage = Get-PrMessage -PrMessageName "PublicWarningMessage"
+                            Set-PrConversationMessage -Message $($PrPublicWarningMessage -F $NumChangedFiles, $PrWarnLimit, $PrBlockLimit, $WarningLabelName)
+
+                        }
+
+                        If (($GitHubData.event.action -eq "synchronize") -or ($GitHubData.event.action -eq "reopened")) {
+
+                            Remove-WarningLabel
+
+                        }
+
+                        echo "The PR $PrUrl changes **$NumChangedFiles** files which exceeds the **WARN** limit of **$PrWarnLimit**." >> $env:GITHUB_STEP_SUMMARY
+                        echo "Review the files changed in the PR and confirm the changes are expected. To merge the PR and attest the changes are expected, add the **$WarningLabelName** label to the PR." >> $env:GITHUB_STEP_SUMMARY
+
+                        Throw "Number of files in PR, $NumChangedFiles, exceeds the WARN file limit of $PrWarnLimit. Click Summary in the left pane for more information."
+
+                    } 
+
+            }
+
+
+            ###################
+            ###################
+            # Main
+
+            $RuntimeInfo = "Repo: $($GitHubData.event.repository.name)"
+            $RuntimeInfo = $RuntimeInfo + " Sender: $($GitHubData.event.sender.login)"
+            $RuntimeInfo = $RuntimeInfo + " Request type: $GitRequestEvent"
+            $RuntimeInfo = $RuntimeInfo + " GitHub action: $($GitHubData.event.action)"
+
+            Write-Host $RuntimeInfo
+
+
+                # Only process event types of 'pull_request' in $DefaultBranch
+                If ($GitRequestEvent -eq "pull_request_target") {
+
+                    Write-Host "Pull request target branch: $TargetBranch. Default branch $DefaultBranch."
+
+                    
+                    # Setting job summary here just in case the number of files exceeds the warn or block limits. 
+                    # If the number files is below the limits, the job summary will be cleared and this won't be shown.
+                    echo "# Pull request validation error" >> $env:GITHUB_STEP_SUMMARY
+                    echo "" >> $env:GITHUB_STEP_SUMMARY
+
+                    If ($TargetBranch -eq $DefaultBranch) {
+
+                        Write-Host "Pull request in monitored branch"
+
+                        If (($GitHubData.event.action -eq "opened") -or ($GitHubData.event.action -eq "synchronize") -or ($GitHubData.event.action -eq "reopened") -or ($GitHubData.event.action -eq "edited")) {
+
+                            Write-Host "Opened, reopened, synchronized, or edited. Process PR."
+
+                            ProcessPr
+
+                        } ElseIf ($GitHubData.event.action -eq "labeled") {
+
+                            Write-Host "Labeled"
+
+                            LabelAdded
+
+                        } ElseIf ($GitHubData.event.action -eq "unlabeled") {
+
+                            Write-Host "Unlabeled"
+
+                            LabelRemoved
+
+                        } 
+
+                    } Else {
+
+                        Write-Host "Pull request in unmonitored branch"
+
+                    }
+
+                    # If we got here, the check passed. Clear the job summary.
+                    echo "" > $env:GITHUB_STEP_SUMMARY
+
+                } 
