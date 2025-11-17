@@ -1,21 +1,17 @@
 ---
-title: Add an MCP tool to AI agents in Visual Studio Code (preview)
+title: Use a Microsoft Sentinel MCP tool in Visual Studio Code
 titleSuffix: Microsoft Security  
-description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool to AI agents in Visual Studio Code
+description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Visual Studio Code
 author: poliveria
 ms.topic: how-to
 ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
-#customer intent: As a security analyst, I want to add MCP to my AI agents in Visual Studio Code.
+#customer intent: As a security analyst, I want to add Sentiel MCP tool in Visual Studio Code.
 ---
 
-# Add an MCP tool in Visual Studio Code (preview)
-
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Use an MCP tool in Visual Studio Code
 
 This article shows you how to add Microsoft Sentinel's Model Context Protocol (MCP) [collection of security tools](sentinel-mcp-tools-overview.md#available-collections) or your own custom tools to your AI agents in Visual Studio Code. 
 
@@ -36,7 +32,7 @@ To add a Microsoft Sentinel tool collection or your own custom tools in Visual S
 
         :::image type="content" source="media/sentinel-mcp/mcp-get-started-http.png" alt-text="Screenshot of Visual Studio Code with HTTP or Server-Sent Events highlighted." lightbox="media/sentinel-mcp/mcp-get-started-http.png":::
 
-    1. Enter the URL of the MCP server of the tool collection you want to access, then press **Enter**.
+    1. Enter the URL of the MCP server of the tool collection you want to access, which can be from the available Sentinel collection or your own custom one, then press **Enter**.
     
     1. Assign a friendly **Server ID** (for example, `Microsoft Sentinel MCP server`)
     1. Choose whether to make the server available in all Visual Studio Code workspaces or just the current one.

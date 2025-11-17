@@ -11,11 +11,7 @@ ms.service: microsoft-sentinel
 #customer intent: As a security analyst, I want to know the different tools available to create AI agents
 ---
 
-# Create AI agents with agent creation collection (preview)
-
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Create AI agents with agent creation collection
 
 The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. 
 
@@ -23,14 +19,15 @@ The agent creation tool collection in the Microsoft Sentinel Model Context Proto
 
 To access the agent creation tool collection, you must have the following prerequisites:
 - [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
-- [Security Copilot](/copilot/security/microsoft-security-copilot)
-- Visual Studio Code (latest version)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) Visual Studio Code extension
+- Any of the supported AI-powered code editors and agent-building platforms:
+    - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
+    - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
+    - [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
+    - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the agent creation collection
 
-To add the agent creation collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for the following [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools):
-- Visual Studio Code
+To add the agent creation collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
 
 The agent creation collection is hosted in the following URL:
 

@@ -1,20 +1,19 @@
 ---
-title: Add an MCP tool to AI agents in Microsoft Copilot Studio (preview)
+title: Use a Microsoft Sentinel MCP tool in Microsoft Copilot Studio
 titleSuffix: Microsoft Security  
-description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool to AI agents in Microsoft Copilot Studio
+description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Copilot Studio
 author: poliveria
 ms.topic: how-to
 ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
-#customer intent: As a security analyst, I want to add MCP to my AI agents in Microsoft Copilot Studio.
+#customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Copilot Studio.
 ---
 
-# Add an MCP tool in Microsoft Copilot Studio (preview)
+# Use an MCP tool in Microsoft Copilot Studio (preview)
 
 > [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article shows you how to add Microsoft Sentinel's Model Context Protocol (MCP) [collection of security tools](sentinel-mcp-tools-overview.md#available-collections) or your own custom tools to your AI agents in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) . 
@@ -48,9 +47,11 @@ To add a Microsoft Sentinel tool collection in Copilot Studio, follow these step
 
      :::image type="content" source="media/sentinel-mcp/get-started-studio-add-connection.png" alt-text="Screenshot of the Add tool pop-up window in Copilot Studio showing with Add and configure button highlighted." lightbox="media/sentinel-mcp/get-started-studio-add-connection.png":::   
 
+Your agent is now connected with Sentinel's available collection of tools. You can start prompting your agent and use the tools to deliver outcomes.
+
 ## Add a custom tool collection
 
-To add your custom tool collection in Copilot Studio, follow these steps:
+Custom MCP tools let you build deterministic workflows by prescribing exactly what data agents can reason over. To add your custom tool collection in Copilot Studio, follow these steps:
 
 >[!TIP]
 >Open two browser tabs or windows because you'll switch between your tenant's [Azure portal](https://portal.azure.com) and your Copilot Studio page.

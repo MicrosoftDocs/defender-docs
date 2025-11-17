@@ -601,13 +601,13 @@
           - name: Overview      
             href: datalake/sentinel-mcp-get-started.md
           - name: Use Sentinel MCP tools in Security Copilot   
-            href: datalake/sentinel-mcp-add-tool-security-copilot.md
+            href: datalake/sentinel-mcp-use-tool-security-copilot.md
           - name: Use Sentinel MCP tools in Copilot Studio
-            href: datalake/sentinel-mcp-add-tool-copilot-studio.md
+            href: datalake/sentinel-mcp-use-tool-copilot-studio.md
           - name: Use Sentinel MCP tools in Azure AI Foundry
-            href: datalake/sentinel-mcp-add-tool-azure-ai-foundry.md
+            href: datalake/sentinel-mcp-use-tool-azure-ai-foundry.md
           - name: Use Sentinel MCP tools in Visual Studio Code
-            href: datalake/sentinel-mcp-add-tool-visual-studio-code.md
+            href: datalake/sentinel-mcp-use-tool-visual-studio-code.md
           - name: Use Sentinel MCP connector in ChatGPT
             href: datalake/sentinel-mcp-chatgpt-connector.md
         - name: Tool collection in Microsoft Sentinel MCP

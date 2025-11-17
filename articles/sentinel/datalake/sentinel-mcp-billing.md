@@ -12,11 +12,8 @@ ms.custom: references_regions
 #customer intent: As a security analyst, I want to understand Microsoft Sentinel MCP server pricing, limits, and availability 
 ---
 
-# Understand Microsoft Sentinel MCP server pricing, limits, and availability (preview)
+# Understand Microsoft Sentinel MCP server pricing, limits, and availability
 
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article provides information on pricing, limits, and availability when setting up and using Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools.
 

@@ -14,7 +14,6 @@ ms.service: microsoft-sentinel
 # Prioritize incidents and hunt for threats with triage collection (preview)
 
 > [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents rapidly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time.
@@ -68,7 +67,7 @@ This tool retrieves a security incident by ID, including its properties, correla
 
 | Parameters | Required? | Description |
 |---|---|---|
-| incidentId |Yes |Identifier is associated with the incident |
+| incidentID|Yes |Identifier is associated with the incident |
 | includeAlertsData | No|Option to include data from the underlying alerts |
 
 ### List security alerts related to an incident (`ListAlerts`)
@@ -87,7 +86,7 @@ This tool retrieves a security alert by ID. It returns the complete alert detail
 
 | Parameters | Required? | Description |
 |---|---|---|
-| AlertID | Yes | Unique identifier of the alert |
+| AlertID| Yes | Unique identifier of the alert |
 
 ### List advanced hunting tables (`FetchAdvancedHuntingTablesOverview`) 
 This tool lists the names of available advanced hunting tables and their brief descriptions. It's essential for understanding data sources before writing Kusto Query Language (KQL) queries.
@@ -192,7 +191,7 @@ Get details of a specific automated investigation, including state, timestamps, 
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id | Yes|Unique identifier of the investigation |
+| ID| Yes|Unique identifier of the investigation |
 
 ### Get all security alerts for an IP address (`GetDefenderIpAlerts`)   
 
@@ -232,7 +231,7 @@ List all security alerts associated with a specific device for a device-centric 
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id |Yes | Unique identifier of the device|
+| ID|Yes | Unique identifier of the device|
 
 ### Get users that signed into a device (`GetDefenderMachineLoggedOnUsers`)   
 
@@ -240,7 +239,7 @@ List accounts that signed in to a device. For each user, the API provides contex
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id |Yes |Unique identifier of the device |
+| ID|Yes |Unique identifier of the device |
 
 ### Get device vulnerabilities (`GetDefenderMachineVulnerabilities`)   
 
@@ -248,11 +247,11 @@ List discovered security vulnerabilities on a device with Common Vulnerabilities
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id |Yes |Unique identifier of the device |
+| ID|Yes |Unique identifier of the device |
 
 ### Find device by internal IP address (`FindDefenderMachineByIp`)   
 
-Find a device by internal IP address at a specific point in time (within a 15-minute range, up to 30 days of history).
+List all devices that have communicated with a specific internal IP address in the time range of 15 minutes prior and after the given timestamp, for network mapping and lateral movement analysis.
 
 | Parameters | Required? | Description |
 |---|---|---|
@@ -265,7 +264,7 @@ List remediation tasks and their execution status across devices. Each remediati
 | Parameters | Required? | Description |
 |---|---|---|
 | Type | No|Type of remediation activity |
-| machineId |No | Identifier of the affected device |
+| machineID|No | Identifier of the affected device |
 | Status |No |Status of the remediation task (Pending or Completed) |
 | createdTimeFrom |No |Return tasks created after this timestamp |
 | createdTimeTo |No |Return tasks created before this timestamp |
@@ -276,7 +275,7 @@ Get detailed remediation task information including execution status, results, a
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id |Yes | Unique identifier of the remediation activity|
+| ID|Yes | Unique identifier of the remediation activity|
 
 ### List security alerts related to a user account (`ListUserRelatedAlerts`) 
 
@@ -284,7 +283,7 @@ List all security alerts associated with a specific user account. This informati
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id |Yes |Unique identifier of the user account |
+| ID|Yes |Unique identifier of the user account |
 
 ### List all devices active for a user (`ListUserRelatedMachines`) 
 
@@ -292,7 +291,7 @@ List all devices where a specific user has active or recent sign-in sessions. Us
 
 | Parameters | Required? | Description |
 |---|---|---|
-|Id  |Yes |Unique identifier of the user account |
+|ID |Yes |Unique identifier of the user account |
 
 ### List all devices affected by a vulnerability (`ListDefenderMachinesByVulnerability`) 
 
@@ -300,7 +299,7 @@ List all devices affected by a specific CVE vulnerability. This tool is critical
 
 | Parameters | Required? | Description |
 |---|---|---|
-| cveId | Yes| CVE identifier of the vulnerability|
+| cveID| Yes| CVE identifier of the vulnerability|
 
 ### List vulnerabilities affecting software (`ListDefenderVulnerabilitiesBySoftware`) 
 
@@ -308,8 +307,8 @@ List vulnerabilities affecting specific software on a specific device for target
 
 | Parameters | Required? | Description |
 |---|---|---|
-| machineId |Yes | Unique identifier of the device|
-| softwareId |Yes |Unique identifier of the software |
+| machineID|Yes | Unique identifier of the device|
+| softwareID|Yes |Unique identifier of the software |
 
 ### List Microsoft Defender for Identity sensors (`ListIdentitySensors`)
 
@@ -337,7 +336,7 @@ Get metadata and health status for a specific Defender for Identity sensor by it
 
 | Parameters | Required? | Description |
 |---|---|---|
-| id |Yes |Unique identifier of the sensor |
+| ID|Yes |Unique identifier of the sensor |
 
 ## Sample prompts
 
@@ -350,7 +349,7 @@ The following sample prompts demonstrate what you can do with the Defender colle
 ## Limitations
 
 - You can't use this collection as a guest in another tenant. You can only use the MCP server on your own home tenant.
-- Querying data in Microsoft Sentinel lake isn't supported yet. For the meantime, you can use the [data exploration tools](sentinel-mcp-data-exploration-tool.md) alongside this collection.
+- Querying data in Microsoft Sentinel lake isn't supported yet. For the meantime, you can use the [data exploration tools](sentinel-mcp-data-exploration-tool.md).
 
 
 ## Related content

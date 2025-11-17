@@ -11,11 +11,7 @@ ms.service: microsoft-sentinel
 #customer intent: As a security analyst, I want to understand how to troubleshoot issues when using Microsoft Sentinel's collection of MCP tools 
 ---
 
-# Microsoft Sentinel MCP tool collection best practices and troubleshooting (preview)
-
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Microsoft Sentinel MCP tool collection best practices and troubleshooting 
 
 This article outlines best practices to using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools. It also provides steps you can take to troubleshoot common issues you might experience while using them.
 

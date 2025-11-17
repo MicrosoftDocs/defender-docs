@@ -1,21 +1,18 @@
 ---
-title: Add an MCP tool to AI agents in Microsoft Security Copilot (preview)
+title: Use a Microsoft Sentinel MCP tool in Microsoft Security Copilot
 titleSuffix: Microsoft Security  
-description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool to AI agents in Microsoft Security Copilot
+description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Security Copilot
 author: poliveria
 ms.topic: how-to
 ms.date: 09/30/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
-#customer intent: As a security analyst, I want to add MCP to my AI agents in Microsoft Security Copilot.
+#customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Security Copilot.
 ---
 
-# Add an MCP tool in Microsoft Security Copilot (preview)
+# Use an MCP tool in Microsoft Security Copilot
 
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article shows you how to add Microsoft Sentinel's Model Context Protocol (MCP) [collection of security tools](sentinel-mcp-tools-overview.md#available-collections) or your own custom tools to your AI agents in [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot). 
 
@@ -34,9 +31,11 @@ To add a Microsoft Sentinel tool collection during custom agent building, follow
 1.	In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "data exploration" to find the data exploration tool.
 1.	Select **Add selected** to add the tools to your agent.
 
+Your agent is now connected with Sentinel's available collection of tools. You can start prompting your agent and use the tools to deliver outcomes.
+
 ## Add a custom tool collection
 
-To add your custom tool collection in Security Copilot, follow these steps:
+Custom MCP tools let you build deterministic workflows by prescribing exactly what data agents can reason over. To add your custom tool collection in Security Copilot, follow these steps:
 
 ### Step 1: Create a YAML file for your tool collection 
 Use the following YAML file template to create and save your plugin. Specify which tools from your custom tool collection you want to add.
@@ -55,7 +54,7 @@ SkillGroups:
     UseStreamableHttp: true
     UsePluginAuth: false
     AllowedTools: <Comma-separated list of tool names to add>
-    TimeoutInSeconds: 480
+    TimeoutInSeconds: 300
 ```
 
 For more information about all the parameters you can add and configure in your YAML file, see [Model Context Protocol (MCP) plugins in Microsoft Security Copilot](/copilot/security/plugin-mcp).

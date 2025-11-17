@@ -11,11 +11,7 @@ ms.service: microsoft-sentinel
 #customer intent: As a security analyst, I want to configure Microsoft Sentinel MCP server so that I can use natural language to query security data and accelerate investigations.
 ---
 
-# Get started with Microsoft Sentinel MCP server (preview)
-
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Get started with Microsoft Sentinel MCP server 
 
 This article shows you how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries against your security data. Sentinel's support for MCP enables security teams to bring AI into their security operations by allowing AI models to access security data in a standard way. 
 
@@ -42,10 +38,10 @@ You also need the **Security reader** role to list and invoke Sentinel's collect
 
 ## Add Microsoft Sentinel's collection of MCP tools
 For more information on how to add Microsoft Sentinel's collection of MCP tools, see the articles for the following AI-powered code editors and agent-building platforms:
-- [Microsoft Security Copilot](sentinel-mcp-add-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
-- [Microsoft Copilot Studio](sentinel-mcp-add-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
-- [Azure AI Foundry](sentinel-mcp-add-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
-- [Visual Studio Code](sentinel-mcp-add-tool-visual-studio-code.md)
+- [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
+- [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
+- [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
+- [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md)
 
 ## Test your added tools with sample prompts
 

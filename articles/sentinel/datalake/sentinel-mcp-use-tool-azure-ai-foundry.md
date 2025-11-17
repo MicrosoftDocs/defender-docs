@@ -1,20 +1,19 @@
 ---
-title: Add an MCP tool to AI agents in Azure AI Foundry (preview)
+title: Use a Microsoft Sentinel MCP tool in Azure AI Foundry 
 titleSuffix: Microsoft Security  
-description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool to AI agents in Azure AI Foundry 
+description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Azure AI Foundry 
 author: poliveria
 ms.topic: how-to
 ms.date: 11/18/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
-#customer intent: As a security analyst, I want to add MCP to my AI agents in Azure AI Foundry.
+#customer intent: As a security analyst, I want to add Sentinel MCP tools in Azure AI Foundry.
 ---
 
-# Add an MCP tool in Azure AI Foundry (preview)
+# Use an MCP tool in Azure AI Foundry (preview)
 
 > [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article shows you how to add Microsoft Sentinel's Model Context Protocol (MCP) [collection of security tools](sentinel-mcp-tools-overview.md#available-collections) or your own custom tools to your AI agents in [Azure AI Foundry](/azure/ai-foundry/what-is-azure-ai-foundry). 
@@ -31,7 +30,7 @@ To add a Microsoft Sentinel tool collection in Azure AI Foundry, follow these st
 
      :::image type="content" source="media/sentinel-mcp/get-started-foundry-build-agent.png" alt-text="Screenshot of Azure AI Foundry agent builder page with the build agent option highlighted." lightbox="media/sentinel-mcp/get-started-foundry-build-agent.png":::   
 
-1. Enter a name and a description for your agent.
+1. Enter a name for your agent.
 
      :::image type="content" source="media/sentinel-mcp/get-started-foundry-create-agent.png" alt-text="Screenshot of the Create new agent pop-up window in Azure AI Foundry agent builder page." lightbox="media/sentinel-mcp/get-started-foundry-create-agent.png":::   
 
@@ -43,26 +42,15 @@ To add a Microsoft Sentinel tool collection in Azure AI Foundry, follow these st
 
      :::image type="content" source="media/sentinel-mcp/get-started-foundry-select-tool.png" alt-text="Screenshot of the Select a tool pop-up window in Azure AI Foundry agent builder page with a Sentinel tool collection highlighted." lightbox="media/sentinel-mcp/get-started-foundry-select-tool.png":::   
 
-1. Use `OAuth Identity Passthrough` as your **Authentication** to let Azure AI Foundry use your Microsoft Entra credentials when authenticating and authorizing calls.
-
-     :::image type="content" source="media/sentinel-mcp/get-started-foundry-connect-tool.png" alt-text="Screenshot of the authentication step in the connect tool pop-up window." lightbox="media/sentinel-mcp/get-started-foundry-connect-tool.png":::   
 
 1. Select **Connect**.
 
-**(Optional)** To add a tool to one of your existing AI agents:
-1. Go to **Tools**.
-1. Search for Sentinel tools and select the one you want to use.
-1. Select **Connect** to authenticate and authorize the tool.
-
-    :::image type="content" source="media/sentinel-mcp/get-started-foundry-use-agent.png" alt-text="Screenshot of a tool's page in Azure AI Foundry page with Connect button highlighted." lightbox="media/sentinel-mcp/get-started-foundry-use-agent.png":::   
-
-1. Select **Use in agent** then select the agent you want to use tool with.
-
+Your agent is now connected with Sentinel's available collection of tools. You can start prompting your agent and use the tools to deliver outcomes.
 
 
 ## Add a custom tool collection
 
-To add your custom tool collection in Azure AI Foundry, follow these steps:
+Custom tools let you build deterministic workflows by prescribing exactly what data agents can reason over. To add your custom tool collection in Azure AI Foundry, follow these steps:
 
 ### Step 1: Register an app in Azure portal
 1.	Open your tenant's [Azure portal](https://portal.azure.com) then go to **App registrations** > **New registration**.
@@ -115,19 +103,19 @@ To add your custom tool collection in Azure AI Foundry, follow these steps:
  
        :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp.png" alt-text="Screenshot of the add tool setup in Azure AI Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp.png":::
 
-1. Add the following values then select **Connect**:
+1. Add the following values:
     - **Name:** Enter a friendly name for your tool
     - **Remote MCP server endpoint:** Paste the endpoint you copied from your custom tool collection
     - **Authentication:** OAuth Identity Passthrough
     - **Client ID:** Use the **Application (client) ID** value you saved previously
     - **Client secret:** Use the secret value you saved previously
-    - **Authorization URL:** Use the following format and replace `<tenant ID>` with the **Directory (tenant) ID** value you saved previously:
-        ```
-        https://login.microsoftonline.com/<tenant ID>/oauth2/v2.0/authorize
-        ```
     - **Token URL:** Use the following format and replace `<tenant ID>` with the **Directory (tenant) ID** value you saved previously:
         ```
         https://login.microsoftonline.com/<tenant ID>/oauth2/v2.0/token
+        ```
+    - **Authorization URL:** Use the following format and replace `<tenant ID>` with the **Directory (tenant) ID** value you saved previously:
+        ```
+        https://login.microsoftonline.com/<tenant ID>/oauth2/v2.0/authorize
         ```
     - **Scope:** Use the following:         
         ```
@@ -136,13 +124,25 @@ To add your custom tool collection in Azure AI Foundry, follow these steps:
        
        :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp-details.png" alt-text="Screenshot of the MCP details in add tool setup in Azure AI Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp-details.png":::
  
-1. Go back to your agent's page, select the three-dot menu next to your newly added tool, and select **Edit**.
- 
-    :::image type="content" source="media/sentinel-mcp/custom-foundry-edit-tool.png" alt-text="Screenshot of an agent's page in Azure AI Foundry with Edit option highlighted." lightbox="media/sentinel-mcp/custom-foundry-edit-tool.png":::
+1. Select **Connect**. Your tool is created successfully and a redirect URL is generated. Copy and save this URL.
 
-1. Add all the tools you want Azure AI Foundry to call, separated by commas.
+### Step 3: Authenticate Azure AI Foundry to use your custom tool
  
-    :::image type="content" source="media/sentinel-mcp/custom-foundry-configure.png" alt-text="Screenshot of the Configure custom tool window in Azure AI Foundry." lightbox="media/sentinel-mcp/custom-foundry-configure.png":::
+1. Go back to your tenant's Azure portal and into the app you just added then select **Add a redirect URI**.
+ 
+1. Select **+ Add a platform** > **Web**.
+
+     :::image type="content" source="media/sentinel-mcp/custom-azure-add-platform.png" alt-text="Screenshot of the Authentication page in Azure portal." lightbox="media/sentinel-mcp/custom-azure-add-platform.png":::
+
+
+1. In the **Redirect URIs** text box, add the redirect URL you copied then select **Configure**. 
+
+1. Go back to Azure AI Foundry and use a prompt that matches the tool you created. On your first attempt, select **Open consent** to give consent to your signed in user account.
+
+
+1. Select **Allow access**. 
+
+Once you give consent, your agent can reason over data returned by your custom MCP tool.
 
 ## Related content
 - [Tool collection in Microsoft Sentinel MCP server](sentinel-mcp-tools-overview.md)

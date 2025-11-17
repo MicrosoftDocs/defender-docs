@@ -11,11 +11,7 @@ ms.service: microsoft-sentinel
 #customer intent: As a security analyst, I want to know the different tools available to explore security data in Microsoft Sentinel data lake
 ---
 
-# Explore Microsoft Sentinel data lake with data exploration collection (preview)
-
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Explore Microsoft Sentinel data lake with data exploration collection
 
 The data exploration tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you search for relevant tables and retrieve data from Microsoft Sentinel's data lake by using natural language. 
 
@@ -23,14 +19,15 @@ The data exploration tool collection in the Microsoft Sentinel Model Context Pro
 
 To access the data exploration tool collection, you need the following prerequisites:
 - [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
-- Visual Studio Code (latest version)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) Visual Studio Code extension
+- Any of the supported AI-powered code editors and agent-building platforms:
+    - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
+    - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
+    - [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
+    - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the data exploration collection
 
-To add the data exploration collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for the following [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools):
-- Visual Studio Code
-- Microsoft Security Copilot
+To add the data exploration collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
 
 The data exploration collection is hosted at the following URL:
 ```

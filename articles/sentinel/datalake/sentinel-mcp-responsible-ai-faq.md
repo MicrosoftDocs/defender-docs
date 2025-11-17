@@ -11,11 +11,7 @@ ms.service: microsoft-sentinel
 #customer intent: As a security analyst, I want to know the frequently asked questions about responsible AI in relation to using Microsoft Sentinel's collection of MCP tools 
 ---
 
-# Responsible AI FAQs for Microsoft Sentinel MCP server (preview)
-
-> [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Responsible AI FAQs for Microsoft Sentinel MCP server
 
 At Microsoft, we recognize the importance of regulatory compliance as a cornerstone of trust and reliability in AI technologies. We're committed to creating responsible AI by design. Our goal is to develop and deploy AI that has a beneficial impact on and earns trust from society. 
 

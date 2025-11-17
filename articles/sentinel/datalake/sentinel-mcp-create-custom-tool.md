@@ -1,5 +1,5 @@
 ---
-title: Create and use custom Microsoft Sentinel MCP tools (preview)
+title: Create and use custom Microsoft Sentinel MCP tools
 titleSuffix: Microsoft Security  
 description: Learn how to set up and use custom Microsoft Sentinel Model Context Protocol (MCP) tools using saved KQL queries in advanced hunting 
 author: poliveria
@@ -12,6 +12,9 @@ ms.service: microsoft-sentinel
 ---
 
 # Create and use custom Microsoft Sentinel MCP tools (preview)
+
+> [!IMPORTANT]
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Security agents built with Microsoft Sentinel's collection of Model Context Protocol (MCP) tools can effectively reason over data in Microsoft Sentinel. You can create custom Sentinel MCP tools to have granular control over the data accessible to your security agents and create deterministic agentic workflows. 
 
@@ -59,10 +62,10 @@ To view the custom MCP tools you saved from advanced hunting queries, go to the 
 ## Add custom tools to your security agents
 
 For more information on how to add your custom tool collection to your security agents, see the articles for the following AI-powered code editors and agent-building platforms:
-- [Microsoft Security Copilot](sentinel-mcp-add-tool-security-copilot.md#add-a-custom-tool-collection)
-- [Microsoft Copilot Studio](sentinel-mcp-add-tool-copilot-studio.md#add-a-custom-tool-collection)
-- [Azure AI Foundry](sentinel-mcp-add-tool-azure-ai-foundry.md#add-a-custom-tool-collection)
-- [Visual Studio Code](sentinel-mcp-add-tool-visual-studio-code.md)
+- [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-custom-tool-collection)
+- [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-custom-tool-collection)
+- [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-custom-tool-collection)
+- [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md)
 
 
 

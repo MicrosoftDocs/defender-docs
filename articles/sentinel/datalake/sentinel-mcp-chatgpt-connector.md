@@ -1,5 +1,5 @@
 ---
-title: Use the Microsoft Sentinel MCP connector in ChatGPT (preview)
+title: Use the Microsoft Sentinel MCP connector in ChatGPT 
 titleSuffix: Microsoft Security  
 description: Learn how to turn on and use a custom Microsoft Sentinel's Model Context Protocol (MCP) connector in ChatGPT
 author: poliveria
@@ -14,7 +14,7 @@ ms.service: microsoft-sentinel
 # Use the Microsoft Sentinel MCP connector in ChatGPT (preview)
 
 > [!IMPORTANT]
-> Microsoft Sentinel MCP server is currently in preview.
+> Microsoft Sentinel MCP connector in ChatGPT is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article shows how you can enable and use a custom Microsoft Sentinel Model Context Protocol (MCP) connector in ChatGPT. This approach allows Security Operations Center (SOC) analysts to run security tasks by using Sentinel MCP. 
