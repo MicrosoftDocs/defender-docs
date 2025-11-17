@@ -51,7 +51,7 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 ## October 2025
 
 We’re excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA). 
-The [sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
