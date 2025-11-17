@@ -82,7 +82,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
     > [!NOTE]
     > If you use the **Not equals** operator with an unexpected value, this might select all events. To avoid using large data volumes, combine this operator with other conditions.
    
-    1. Select **Next**.
+1. Select **Next**.
 
 1. In the **Define rule scope** section, select whether you want to collect data from all applicable client devices or from specific devices that include dynamic tags. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
 
