@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/11/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Endpoint Plan 1
@@ -82,7 +82,10 @@ The Defender deployment tool enforces the following set of prerequisites checks,
    sudo bash defender-deployment-tool.sh
    ```
 
-   This command installs the latest agent version from the production channel and onboard the device to Defender portal. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
+   This command installs the latest agent version from the production channel and onboards the device to Defender portal. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
+
+   > [!NOTE]
+   > If you have set up a system-wide proxy to redirect Defender for Endpoint traffic, make sure you configure the proxy using the Defender deployment tool as well. Refer to the command-line help (--help) for available proxy options.
 
 1. You can further customize deployment by passing parameters to the tool based on your requirements. Use the option `--help` to see all the available options:
 
@@ -165,9 +168,33 @@ The following table provides examples of commands for useful scenarios.
 
     1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
+## Check connectivity issues
+
+If you're experiencing any connectivity issues, run this command to perform a connectivity test:
+
+```bash
+sudo ./defender-deployment-tool.sh --connectivity-test
+```
+
+This test might take some time to run as it performs checks for every URL needed by mdatp and find any issues if present. If the issue persists, refer to the troubleshooting guide.
+
+## Troubleshoot the installation
+
+Whenever you run the Defender deployment tool, the activity gets logged in this file `/tmp/defender_deployment_tool.log`. If you experience any installation issues, first check the log file. If that doesn't help you resolve the issue, try following these steps:
+
+1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](./linux-resources.md#log-installation-issues).
+
+1. For information about common installation issues, see [Installation issues](./linux-support-install.md).
+
+1. If health of the device is false, see [Defender for Endpoint agent health issues](./health-status.md).
+
+1. For product performance issues, see [Troubleshoot performance issues](./linux-support-perf.md).
+
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](./linux-support-connectivity.md).
+
 ## How to switch between channels after you have deployed from a channel
 
-Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as \[channel\]):
+Defender for Endpoint on Linux can be deployed from one of the following channels:
 
 - insiders-fast
 - insiders-slow
@@ -196,32 +223,6 @@ To preview new features and provide early feedback, it's recommended that you co
    ```bash
    sudo ./defender-deployment-tool.sh --install --channel prod
    ```
-
-## Check connectivity issues
-
-If you're experiencing any connectivity issues, run this command to perform a connectivity test:
-
-```bash
-sudo ./defender-deployment-tool.sh --connectivity-test
-```
-
-This test might take some time to run as it performs checks for every URL needed by mdatp and find any issues if present. If the issue persists, refer to the troubleshooting guide.
-
-## Troubleshoot the installation
-
-\[add how the errors will get logged in the local log file. If prereq fails then what will happen.\]
-
-If you experience any installation issues, try following these steps:
-
-1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](./linux-resources.md#log-installation-issues).
-
-1. For information about common installation issues, see [Installation issues](./linux-support-install.md).
-
-1. If health of the device is false, see [Defender for Endpoint agent health issues](./health-status.md).
-
-1. For product performance issues, see [Troubleshoot performance issues](./linux-support-perf.md).
-
-1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](./linux-support-connectivity.md).
 
 ## Related content
 
