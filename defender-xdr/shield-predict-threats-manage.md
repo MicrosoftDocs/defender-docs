@@ -43,9 +43,9 @@ The incident view in Microsoft Defender XDR includes built-in predictive shieldi
 
 ### Review the incident information
 
-In the **Incidents** page, filter by the **Predictive Shielding** label to find incidents where predictive shielding is applied.
+In the **Incidents** page, filter by the **Predictive Shielding** tag to find incidents where predictive shielding is applied.
 
-:::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding label." lightbox="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
+:::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding tag." lightbox="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
 
 You can then select the relevant incident, and review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
