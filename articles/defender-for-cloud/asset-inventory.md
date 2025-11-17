@@ -113,7 +113,7 @@ Changes made to resources won't affect the displayed results unless you manually
 ## Next steps
 
 - [Review security recommendations](review-security-recommendations.md)
-- [Manage and respond to security alerts](managing-and-responding-alerts.md)
+- [Manage and respond to security alerts](manage-respond-alerts.md)
 - [Continuous export](continuous-export.md) - Export security data to SIEM, SOAR, or other tools
 - [Create custom security dashboards with Azure Workbooks](custom-dashboards-azure-workbooks.md)
 - [Enable Defender for Cloud plans](enable-enhanced-security.md)
@@ -369,8 +369,8 @@ Some assets may appear outside defined cloud scopes:
 
 ## Next steps
 
-- [Cloud overview dashboard](defender-portal/cloud-infrastructure-dashboard.md?pivots=defender-portal)
-- [Manage security recommendations](defender-portal/review-security-recommendations.md?pivots=defender-portal)
+- [Cloud overview dashboard](cloud-infrastructure-dashboard.md?pivots=defender-portal)
+- [Manage security recommendations](review-security-recommendations.md?pivots=defender-portal)
 
 ::: zone-end
 
@@ -437,3 +437,4 @@ securityresources
 | where properties.displayName == "Management ports should be closed on your virtual machines" and properties.status.code == "Unhealthy"
 | extend vmId = tolower(properties.resourceDetails.Id)
 ) on vmId
+```

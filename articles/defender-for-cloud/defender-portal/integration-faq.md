@@ -38,7 +38,7 @@ Defender portal focuses on security teams overseeing cloud security across cloud
 
 ### Is there a feature parity list for all the features expanding into the Defender portal?
 
-Yes, a feature parity list is available in the official Defender for Cloud documentation on Microsoft Learn here: [Azure portal vs Defender portal feature comparison](azure-portal-vs-defender-portal-comparison.md).
+Yes, a feature parity list is available in the official Defender for Cloud documentation on Microsoft Learn here: [Azure portal vs Defender portal feature comparison](../azure-portal-vs-defender-portal-comparison.md).
 
 ### What if I only use the Azure portal and not the Defender portal?
 
