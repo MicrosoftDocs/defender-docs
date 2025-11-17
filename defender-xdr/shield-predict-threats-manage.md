@@ -105,9 +105,14 @@ We recommend that you use the Microsoft Defender for Identity sensor to improve 
 
 To add the Defender for Identity sensor, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
 
-This screenshot shows how enriched data appears in an incident, in an environment with both Microsoft Defender for Endpoint and Microsoft Defender for Identity enabled. In this scenario, an attacker gained a foothold on a jump box and conducted malicious activities that led to compromising a workstation (WSA). 
+### Enriched data example
 
-The enriched data reveals suspicious PowerShell activities on WSA, indicating the attacker's intent to perform remote credential harvesting on WSB. This additional data enriches the context around the incident, enabling security teams to make more informed decisions and respond effectively.
+In this example scenario:
+
+- Both Microsoft Defender for Endpoint and Microsoft Defender for Identity are enabled in the environment. 
+- An attacker gained a foothold on a jump box and conducted malicious activities that led to compromising a workstation (WSA).
+- The enriched data reveals suspicious PowerShell activities on WSA, **indicating the attacker's intent to perform remote credential harvesting on WSB**.
+- This enrichment adds predictive data on the incident, and indicates intent for further compromise.
 
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-enriched-data.png" alt-text="Screenshot of enriched predictive shielding data in an incident, showing user and Active Directory details.":::
 
