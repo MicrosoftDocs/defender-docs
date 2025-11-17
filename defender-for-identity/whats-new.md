@@ -94,7 +94,7 @@ This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of servers deployed with sensor v3.x
+* Monitor the status of servers deployed with the Defender for Identity sensor v3.x
 * Enable or disable the automatic activation of eligible servers
 * Activate or deactivate the sensor on eligible servers
  ​
