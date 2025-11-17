@@ -53,9 +53,7 @@ To see the version of the sensor run:
 
   - Bug fixes and security enhancements
     
-  - Added support for new defender endpoints (when network outbound access to *.cloud-defender.microsoft.com is enabled, see more at [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-…)](/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-%E2%80%A6))
-    
-     
+  - Added support for new defender endpoints (when network outbound access to *.cloud-defender.microsoft.com is enabled, see more at [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-…](/azure/defender-for-cloud/defender-for-containers-enable?tabs=k8s-%E2%80%A6))
     
 - **Sensor v0.9.17-Preview**
 
@@ -84,7 +82,7 @@ The support policy here applies to all Helm-based and multicloud installations. 
 |Version|Preview Date|GA Date|End of support|
 | -------- | -------- | -------- | -------- |
 |0.8| |Feb 2025|Feb 2027|
-|0.9|July 2025|Feb 2026|Feb 2027|
+|0.9|July 2025|Apr 2026|Apr 2027|
 |0.10|Jan 2026|Apr 2026|Apr 2027|
 |0.11|Apr 2026|Jul  2026|Jul 2027|
 

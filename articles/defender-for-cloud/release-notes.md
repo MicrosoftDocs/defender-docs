@@ -31,10 +31,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| November 11, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]|
+| November 17, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]|
+|November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
-| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
 ### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
 
@@ -45,6 +46,16 @@ Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) c
 The MCSB provides a collection of high-impact security controls and recommendations to help secure cloud services across single and multi-cloud environments. MCSB v2 adds expanded risk and threat-based guidance, expanded Azure Policy measurments, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
 
 Learn more about the [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
+
+### Restrict Pod Access response action (preview)
+
+November 12, 2025
+
+Defender for Containers now includes a new Restrict Pod Access response action, available in preview in Microsoft Defender XDR.
+
+The action blocks sensitive interfaces within Kubernetes pods that could enable lateral movement or privilege escalation. Using this control helps contain potential breaches and reduce exposure within your cluster environments.  
+
+Learn more about [Restrict Pod Access in Defender XDR](/defender-xdr/investigate-respond-container-threats).
 
 ### Updates to container image continuous vulnerability re-scan policy
 
