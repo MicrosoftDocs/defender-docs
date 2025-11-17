@@ -15,7 +15,7 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 To see the version of the sensor run:
 
-`kubectl get -n kube-system daemonsets/microsoft-defender-collector-ds -o jsonpath='{.metadata.labels.app\.kubernetes\.io/version}`
+`kubectl get -n kube-system daemonsets/microsoft-defender-collector-ds -o jsonpath='{.metadata.labels.app\.kubernetes\.io/version}'`
 
 ## Sensor versions available per release
 
