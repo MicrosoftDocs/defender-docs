@@ -67,7 +67,7 @@ Safe Links protection by Safe Links policies is available in the following locat
 
   For more information about Safe Links protection in Teams, see the [Safe Links settings for Microsoft Teams](#safe-links-settings-for-microsoft-teams) section later in this article.
 
-- **Office apps**: Safe Links protection for supported Office desktop, mobile, and web apps.
+- **Office apps**: Safe Links protection for supported Office desktop, mobile, and web apps. This includes Microsoft 365 Copilot Chat apps.
 
   For more information about Safe Links protection in Office apps, see the [Safe Links settings for Office apps](#safe-links-settings-for-office-apps) section later in this article.
 
@@ -193,7 +193,7 @@ At a high level, here's how Safe Links protection works for URLs in Microsoft Te
 
 ## Safe Links settings for Office apps
 
-Safe Links protection for Office apps checks links in Office documents, not links in email messages. But, it can check links in attached Office documents in email messages after the document is opened.
+Safe Links protection for Office apps checks links in Office documents, not links in email messages. But, it can check links in attached Office documents in email messages after the document is opened. This includes links clicked from Microsoft Copilot Chat responses as well.
 
 You turn on or turn off Safe Links protection for Office apps in Safe Links policies. Specifically, you use the **On: Safe Links checks a list of known, malicious links when users click links in Microsoft Office apps. URLs are not rewritten** setting in the **Office 365 apps** section. The recommended value is on (selected).
 
