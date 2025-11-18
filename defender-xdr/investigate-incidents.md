@@ -87,8 +87,9 @@ The ***go hunt*** action takes advantage of the [advanced hunting](advanced-hunt
   - See all available queries – the option returns all available queries for the entity type you're investigating.
   - All Activity – the query returns all activities associated with an entity, providing you with a comprehensive view of the incident's context.
   - Related Alerts – the query searches for and returns all security alerts involving a specific entity, ensuring you don't miss any information.
+  - All User anomalies (Preview) – the query returns all anomalies associated with the user from the past 30 days, helping you identify unusual behavior that might be relevant to the incident. Available only for user entities if you have enabled [Microsoft Sentinel User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
 
-:::image type="content" source="./media/investigate-incidents/fig1-gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="./media/investigate-incidents/fig1-gohunt-attackstory.png":::
+:::image type="content" source="./media/investigate-incidents/gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="./media/investigate-incidents/gohunt-attackstory.png":::
 
 The resulting logs or alerts can be linked to an incident by selecting a result and then selecting *Link to incident*.
 
