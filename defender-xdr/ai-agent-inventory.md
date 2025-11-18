@@ -27,8 +27,8 @@ Microsoft Defender protects you against security threats with comprehensive AI a
 - Detects all of your custom AI agents created with Microsoft Copilot Studio or Azure AI Foundry, and integrates their data into [advanced hunting](advanced-hunting-overview.md) for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. 
 - Collects audit logs for your custom AI agents, continuously monitors the agents for suspicious activity, and enables detections and alerts. To enable this monitoring, make sure that you:
     - [Enable the AI agent inventory](#discover-your-ai-agents-with-the-ai-agent-inventory-in-the-defender-portal-preview).
-    - [Enable the Microsoft 365 app connector](/defender-for-cloud-apps/protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
-- [Provides real-time protection for Microsoft Copilot Studio Agents]((/defender-for-cloud-apps/real-time-agent-protection-during-runtime.md)) to block suspicious or harmful actions initiated by your AI agents, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
+    - [Enable the Microsoft 365 connector](../defender-for-cloud-apps/protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+- [Provides real-time protection for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/real-time-agent-protection-during-runtime.md) to block suspicious or harmful actions initiated by your AI agents, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
 - 
 - ## Prerequisites
 To enable AI agent inventory and detection you must opt in to the [Microsoft Defender preview features](https://security.microsoft.com/securitysettings/defender/preview_features) of:
@@ -40,7 +40,7 @@ To enable AI agent inventory and detection you must opt in to the [Microsoft Def
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
- - To set up AI agent inventory for custom agents created in Coplot Studio, see [Enable AI agent inventory for Microsoft Copilot Studio Agents](/defender-for-cloud-apps/ai-agent-inventory).
+ - To set up AI agent inventory for custom agents created in Coplot Studio, see [Discover and protect your AI Agents (Preview)](../defender-for-cloud-apps/ai-agent-inventory.md).
  
     When you've enabled AI agent inventory for Copilot Studio agents, Microsoft Defender for Cloud Apps automatically:
 
@@ -54,7 +54,7 @@ Microsoft Defender detects all of the AI agents created with Microsoft Copilot S
 
     - Monitors your AI agents for misconfigurations and vulnerabilitie.
     - Provides security recommendations to improve the security posture of your AI agents.
-    - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](/defender-xdr/advanced-hunting-overview.md).
+    - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](advanced-hunting-overview.md).
 
 ## The AI agent inventory page
 The AI agent inventory page in Microsoft Defender provides a centralized view of all detected AI agents, along with their key attributes and security status. 
@@ -76,7 +76,7 @@ When you select an AI agent from the inventory, the **Agent** pane opens, provid
 
 -- Select **Open agent page** to open the [**AI Agent** page](/azure/defender-for-cloud/identify-ai-workload-model).
 
-    :::image type="content" source="media/ai-agent-inventory/foundry-agent-details.png" alt-text="Screenshot that shows the details for Foundry AI agents in the Defender portal."::: 
+:::image type="content" source="media/ai-agent-inventory/foundry-agent-details.png" alt-text="Screenshot that shows the details for Foundry AI agents in the Defender portal."::: 
 
 - Select **Go hunt** to perform [advanced hunting](advanced-hunting-overview.md).
 - Select **View on map** to see the agent's [location and related attack paths](/azure/defender-for-cloud/concept-attack-path).
