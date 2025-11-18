@@ -269,7 +269,7 @@ In Defender for Office 365 Plan 2, you also have access to create and apply cust
 
 ## Step 5: Review and configure user reported message settings
 
-**Summary**: Use the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or a [supported non-Microsoft tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User-reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
+**Summary**: Use the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or a [supported non-Microsoft tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
 
 **Details**:
 
@@ -277,7 +277,7 @@ The ability of users to report good messages marked as bad (false positives) or 
 
 The important parts of user message reporting are:
 
-- **How do users report messages?**: Make sure clients are using one of the following methods so reported messages appear on the **User-reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>:
+- **How do users report messages?**: Make sure clients are using one of the following methods so reported messages appear on the **User reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>:
 
 - The built-in **Report** button in Outlook on the web (formerly known as Outlook Web App or OWA).
 - Non-Microsoft reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
@@ -291,7 +291,7 @@ The important parts of user message reporting are:
 
   It's up to you whether you want user reported messages to also go to Microsoft for analysis (exclusively or along with delivery to your designated reporting mailbox).
 
-  If you want user reported messages to go only to your designated reporting mailbox, admins should [manually submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis) from the **User-reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>.
+  If you want user reported messages to go only to your designated reporting mailbox, admins should [manually submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis) from the **User reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
   Submitting user reported messages to Microsoft is important to allow our filters to learn and improve.
 
