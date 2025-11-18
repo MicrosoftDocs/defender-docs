@@ -74,6 +74,22 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### October-2025 (Platform: 4.18.25100.9008 | Engine: 1.1.25100.9002)
+
+- Security intelligence update version: **1.441.131.0**
+- Release date: **November 6, 2025 (Engine) / November 11, 2025 (Platform)**
+- Platform: **4.18.25100.9008**
+- Engine: **1.1.25100.9002**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Fixed Network Inspection Service stability issue**: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state. 
+- **Reduced startup delay for Antimalware Service**: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance.
+- **Fixed crash in Defender settings on x86 devices**: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines.
+- **Fixed Defender startup issue**: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions.
+- **Reduced system resource usage**: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability.
+
 ### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
 
 - Security intelligence update version: **1.439.345.0**
