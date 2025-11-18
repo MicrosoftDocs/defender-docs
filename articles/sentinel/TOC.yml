@@ -397,6 +397,8 @@
               href: notebooks-msticpy-advanced.md
         - name: Bring your own machine learning
           href: bring-your-own-ml.md
+    - name: Track and respond to threats with threat analytics
+      href: threat-analytics-sentinel.md
     - name: Investigate incidents
       items:
         - name: Azure portal
