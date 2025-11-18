@@ -62,7 +62,7 @@ If successful, this method returns 200 OK, with the list of vulnerabilities asso
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/vulnerabilities
@@ -95,9 +95,3 @@ Here is an example of the response.
      ]
 }
 ```
-
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management security recommendation](/defender-vulnerability-management/tvm-security-recommendation)
-

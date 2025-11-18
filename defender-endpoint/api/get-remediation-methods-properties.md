@@ -64,15 +64,4 @@ Title|String|Title of this remediation activity
 Type|String|Remediation type
 vendorId|String|Related vendor name
 
-## Related articles
-
-- [Get one remediation activity by ID](get-remediation-one-activity.md)
-
-- [List all remediation activities](get-remediation-all-activities.md)
-
-- [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 

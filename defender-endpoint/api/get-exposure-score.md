@@ -69,10 +69,8 @@ GET https://api.security.microsoft.com/api/exposureScore
 
 ### Response
 
-Here is an example of the response.
+Here's an example of a shortened response list.
 
-> [!NOTE]
-> The response list shown here may be truncated for brevity.
 
 ```json
 {
@@ -81,10 +79,5 @@ Here is an example of the response.
     "score": 33.491554051195706
 }
 ```
-
-## Related articles
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management exposure score](/defender-vulnerability-management/tvm-exposure-score)
 
 

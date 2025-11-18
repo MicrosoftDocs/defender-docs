@@ -90,8 +90,3 @@ Here is an example of the response.
     ]
 }
 ```
-
-## Related articles    
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management exposure score](/defender-vulnerability-management/tvm-exposure-score)

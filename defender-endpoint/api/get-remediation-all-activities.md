@@ -136,12 +136,4 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/
 }
 ```
 
-## Related articles
-
-- [Remediation methods and properties](get-remediation-methods-properties.md)
-- [Get one remediation activity by ID](get-remediation-one-activity.md)
-- [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-
 

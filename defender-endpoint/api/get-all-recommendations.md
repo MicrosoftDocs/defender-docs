@@ -122,9 +122,3 @@ Here is an example of the response.
      ]
 }
 ```
-
-## See also
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerability management security recommendations](/defender-vulnerability-management/tvm-security-recommendation)
-

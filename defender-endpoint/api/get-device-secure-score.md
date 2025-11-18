@@ -19,7 +19,6 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get device secure score
@@ -67,10 +66,7 @@ GET https://api.securitycenter.microsoft.com/api/configurationScore
 
 ### Response example
 
-Here is an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity.
+Here is an example of a shortened response list.
 
 ```json
 {
@@ -79,8 +75,3 @@ Here is an example of the response.
     "score": 340
 }
 ```
-
-## Related articles
-
-- [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
-
