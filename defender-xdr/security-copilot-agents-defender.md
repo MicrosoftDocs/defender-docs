@@ -90,7 +90,7 @@ The [Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md
 
 | Attribute | Description |
 |---|---|
-| Identity | Requires connection to an existing user account and creation of a new agent identity |
+| Identity | Requires connection to an existing user account or creation of a new agent identity |
 | License | [Defender EASM Standard](https://www.microsoft.com/security/pricing/microsoft-defender-external-attack-surface-management?msockid=2f55df1fd6fd61f12ba8ca23d7976094) |
 | Permissions | **Required permissions:**<ul><li>Vulnerability Management (read)<li>Security Reader</ul>**Optional permissions:**<ul><li>Exposure Management (read)</ul> |
 | Products | [Security Copilot](/copilot/security/get-started-security-copilot) | 

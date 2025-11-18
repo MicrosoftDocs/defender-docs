@@ -65,9 +65,9 @@ The following plugin is optional but can add more context to the output:
 ### User account permissions 
 
 >[!IMPORTANT]
-> **Identity and permissions requirement:** This agent requires connection to an existing user account. The agent can read data from Defender External Attack Surface Management and Defender Vulnerability Management. You must configure the user account with the appropriate permissions before setting up the agent.
+> **Identity and permissions requirement:** This agent requires connection to an existing user account or creation of a new agent identity. The agent can read data from Defender External Attack Surface Management and Defender Vulnerability Management. You must configure the user account with the appropriate permissions before setting up the agent.
 
-The user account connected to the agent must have these permissions:
+The user account connected to the agent or the created agent identity must have these permissions:
 
 **Required permissions:**
 - **Vulnerability Management (read):** Access to Defender Vulnerability Management data
@@ -100,11 +100,11 @@ To run the Threat Intelligence Briefing Agent for the first time, follow these s
 
    :::image type="content" source="media/ti-briefing-agent/review-details.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent setup page showing the agent details." lightbox="media/ti-briefing-agent/review-details.png":::
 
-3. Connect a user account to the agent by selecting **Continue** to open a new window where you can select the user account. 
+3. Create a new agent identity or connect a user account, then select **Continue** to open a new window where you can perform this step. 
 
    :::image type="content" source="media/ti-briefing-agent/connect-user.png" alt-text="Screenshots of the Threat Intelligence Briefing Agent setup page showing the steps to connect a user account." lightbox="media/ti-briefing-agent/connect-user.png":::
 
-3. Wait for the agent to finish connecting to the account then select **Continue**.
+3. Wait for the agent to finish creating the identity or connecting to the account, then select **Continue**.
 
    :::image type="content" source="media/ti-briefing-agent/review-user.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent setup page showing the user account details." lightbox="media/ti-briefing-agent/review-user.png":::
 
