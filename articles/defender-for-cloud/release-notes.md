@@ -31,15 +31,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
 | November 17, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]|
 |November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
+### Advanced security posture for API discovery (Preview)
+
+November 18, 2025
+
+Microsoft Defender for Cloud API security posture management now automatically identifies unauthenticated APIs and APIs exposed to the internet across your environment, including APIs discovered on Azure Functions and Logic Apps.
+
+With this release, you can uncover high-risk API endpoints earlier, prioritize API risks using new posture insights and risk factors, and view and analyze discovered API risks across your environment by using security explorer.
+
+Learn more about [API security posture management in Defender for Cloud](api-security-posture-overview.md).
+
 ### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
 
-November 11, 2025  
+November 17, 2025  
 
 Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) compliance standard v2 in preview. 
 
