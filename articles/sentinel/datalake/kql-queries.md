@@ -12,7 +12,7 @@ ms.author: edbaynash
 ms.collection: ms-security  
 ---  
  
-#  Run KQL queries against the Microsoft Sentinel data lake
+#  Run KQL queries on the Microsoft Sentinel data lake
  
 Data lake exploration in the Microsoft Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them.
 
@@ -72,11 +72,17 @@ The schema browser provides a list of available tables and their columns for the
 
 :::image type="content" source="media/kql-queries/schema-browser.png" lightbox="media/kql-queries/schema-browser.png" alt-text="A screenshot showing the schema browser panel in the KQL editor.":::
 
+### Result window
+
+The result window displays the results of your query. You can view the results in a table format, and you can export the results to a CSV file using the **Export** button in the upper left corner of the result window. Toggle the visibility of empty columns using the **Show empty columns** button. The **Customize columns** button allows you to select which columns to display in the result window.
+
+You can search the results using the search box in the upper right corner of the result window.
+
+:::image type="content" source="media/kql-queries/results-window.png" lightbox="media/kql-queries/results-window.png" alt-text="A screenshot showing the results window in a KQL query editor.":::
+
 ## Out-of-the-box queries
 
 The **Queries** tab provides a collection of out-of-the-box KQL queries. These queries cover common scenarios and use cases, such as security incident investigation, threat hunting, and compliance reporting. You can use these queries as-is or modify them to suit your specific needs.
-
-More scenarios and queries will be added over time. For community contributions, see the [Microsoft Sentinel GitHub repository](https://aka.ms/sentinel-github-outofthebox-queries).
 
 Select a query from the list using the **...** icon. You can open it in a new query tab for editing or run it immediately. 
 
@@ -86,23 +92,21 @@ Select a query from the list using the **...** icon. You can open it in a new qu
 
 You can run long-running queries asynchronously, so you can keep working while the query runs on the server. To run a query asynchronously, select the down arrow on the **Run query** button, then select **Run async query**. Enter a query name to identify your async query. After submitting the query, you can monitor its status in the **Async Queries** tab. When the query completes, you can view the results by selecting the query name from the list.
 
-
-Select the completed async query from the **Async Queries** tab to view its results in a new query tab. Results are stored for 24 hours and can be accessed multiple times. You can export the results to a CSV file by using the **Export** button in the upper left corner of the result window.
-
 :::image type="content" source="media/kql-queries/run-async-query.png" lightbox="media/kql-queries/run-async-query.png" alt-text="A screenshot showing the Async Queries tab in the KQL query editor.":::
 
 If a synchronous query takes longer than 2 minutes to run, a prompt appears asking if you want to run the query asynchronously. Select **Run async** to change the query to run asynchronously.
 
 :::image type="content" source="media/kql-queries/change-to-async-query.png" lightbox="media/kql-queries/change-to-async-query.png" alt-text="A screenshot showing the prompt to change a long-running query to an async query.":::
 
+### Fetch async query results
 
-### Result window
+To view the async query results, select the completed async query from the **Async Queries** tab and select **Fetch results**.  The query is displayed in comments in the query editor and results are displayed in the **Results tab**. 
 
-The result window displays the results of your query. You can view the results in a table format, and you can export the results to a CSV file using the **Export** button in the upper left corner of the result window. Toggle the visibility of empty columns using the **Show empty columns** button. The **Customize columns** button allows you to select which columns to display in the result window.
+Results are stored for 24 hours and can be accessed multiple times. You can export the results to a CSV file by using the **Export** button in the upper left corner of the result window.
 
-You can search the results using the search box in the upper right corner of the result window.
+:::image type="content" source="media/kql-queries/fetch-async-query-results.png" lightbox="media/kql-queries/fetch-async-query-results.png" alt-text="A screenshot showing the results of an async query in the KQL query editor.":::
 
-:::image type="content" source="media/kql-queries/results-window.png" lightbox="media/kql-queries/results-window.png" alt-text="A screenshot showing the results window in a KQL query editor.":::
+
 
 ## Jobs
 
