@@ -28,6 +28,11 @@ Defender for Endpoint extends support to include down-level operating systems, p
 To onboard down-level Windows client endpoints to Defender for Endpoint, you need to:
 
 - [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients)
+
+   And either
+
+- [Use the Defender deployment tool to deploy Defender endpoint security on the device](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security-on-the-device)
+   Or
 - [Install and configure Microsoft Monitoring Agent (MMA) to report sensor data](#install-and-configure-microsoft-monitoring-agent-mma)
 
 > [!TIP]
@@ -43,7 +48,7 @@ To onboard down-level Windows client endpoints to Defender for Endpoint, you nee
 - Windows 8.1 Enterprise
 - Windows Server 2008 R2 SP1
 
-## Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices
+## Use the Defender deployment tool to deploy Defender endpoint security on the device
 
 A Microsoft Defender for endpoint security solution (preview) is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the solution's currently supported functionality.
 
