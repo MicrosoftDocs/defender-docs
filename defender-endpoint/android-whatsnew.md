@@ -35,7 +35,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- Performance improvement and accessibility bug fixes
+- Performance improvement and bug fixes.
 
 #### November 2025
 
@@ -50,6 +50,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 - Added landscape mode UI support for the Defender app.
 
 - Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+
+- Fixed the bug where feedback sending wasn’t disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration.
 
 #### October 2025
 
@@ -324,8 +326,8 @@ Notify your users and help desk (as applicable) that end users must accept the n
 1. Tap the toggle for **Allow access to manage all files**.
 
    The device is now protected.
-
-   > [!NOTE]
+   
+      > [!NOTE]
    > This permission allows Microsoft Defender for Endpoint to access storage on user's device, which helps detect and remove malicious and unwanted apps. Microsoft Defender for Endpoint accesses/scans Android app package file (.apk) only. On devices with a Work Profile, Defender for Endpoint only scans work-related files.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
