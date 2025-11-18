@@ -933,9 +933,18 @@
           href: configure-azure-devops-extension.md
         - name: Configure the Microsoft Security DevOps GitHub action
           href: github-action.md
-        - name: Integrate Defender for Cloud CLI with CI/CD pipelines
-          href: cli-cicd-integration.md
-          displayName: CLI Jenkins Pipeline
+        - name: Defender for Cloud CLI
+          items:
+            - name: Overview
+              href: defender-cli-overview.md
+            - name: Authentication
+              href: defender-cli-authentication.md
+            - name: Syntax
+              href: defender-cli-syntax.md
+            - name: CI/CD in pipeline scanning
+              href: ci-cd-pipeline-scanning-with-defender-cli.md
+            - name: Reviewing results
+              href: defender-cli-reviewing-results.md
         - name: Configure pull request annotations
           href: enable-pull-request-annotations.md
         - name: Map IaC templates from code to cloud
