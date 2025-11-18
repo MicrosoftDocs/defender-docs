@@ -625,6 +625,12 @@
         href: exclude-devices.md
       - name: Identifying transient devices
         href: transient-device-tagging.md
+      - name: Collect custom device data
+        items:
+        - name: Overview
+          href: custom-data-collection.md
+        - name: Create custom data collection rules
+          href: create-custom-data-collection-rules.md
       - name: Internet facing devices
         href: internet-facing-devices.md
       - name: Device timeline
@@ -1098,10 +1104,7 @@
           href: live-response-command-examples.md
 
       - name: Use sensitivity labels to prioritize incident response
-        href: information-protection-investigation.md
-
-    - name: Advanced hunting
-      href: /defender-xdr/advanced-hunting-overview?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+        href: information-protection-investigation.md    
 
     - name: Threat analytics
       items:
