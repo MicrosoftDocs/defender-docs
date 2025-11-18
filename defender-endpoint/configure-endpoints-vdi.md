@@ -1,13 +1,13 @@
----
+﻿---
 title: Onboard non-persistent virtual desktop infrastructure (VDI) devices
 description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they're onboarded to Microsoft Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,27 +16,16 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.date: 03/11/2025
 ms.subservice: onboard
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Virtual desktop infrastructure (VDI) devices
-- Windows 11
-- Windows 10
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets end users access enterprise virtual desktops instances from almost any device (such as your personal computer, smartphone, or tablet), eliminating the need for organization to provide users with physical machines. Using VDI devices reduces costs, as IT departments are no longer responsible for managing, repairing, and replacing physical endpoints. Authorized users can access the same company servers, files, apps, and services from any approved device through a secure desktop client or browser. 
 
@@ -102,6 +91,10 @@ The following steps guide you through onboarding VDI devices and highlight steps
    |---|---|
    | Single entry for each device | 1. Select the **PowerShell Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to onboarding PowerShell script `Onboard-NonPersistentMachine.ps1`. There's no need to specify the other file, as it's triggered automatically. |
    | Multiple entries for each device | 1. Select the **Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to the onboarding bash script `WindowsDefenderATPOnboardingScript.cmd`. |
+
+   > [!NOTE]
+   > When using the 'Single entry for each device' onboarding method for non-persistent VDI environments, ensure that the Onboard-NonPersistentMachine.ps1 script is executed only after the virtual machine has received its final hostname and completed its final reboot.<br>
+   > For example, if your VDI provisioning process includes multiple reboots or configuration stages after the VM is cloned from a master image, delay the script execution until the last reboot is complete and final machine name is assigned.<br> Running the script too early may result in duplicate device entries or inconsistent onboarding to Microsoft Defender for Endpoint.
 
 5. Test your solution by following these steps:
 
@@ -201,3 +194,4 @@ The configuration settings in this link are recommended: [Configure Microsoft De
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

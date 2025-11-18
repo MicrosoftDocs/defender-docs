@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/28/2025
 manager: deniseb
@@ -68,6 +68,9 @@ If you've determined that a device or a file is not a threat, you can undo remed
 | Action source | Supported Actions |
 |:---|:---|
 | - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Contain device <br/>- Contain user <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
+
+> [!NOTE]
+> Only Security Administrators and Global Administrators are allowed access to undo operations such as File Quarantine.
 
 ### Undo one remediation action
 

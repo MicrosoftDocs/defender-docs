@@ -2,10 +2,10 @@
 title: Configure and review priority account protection in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 6/19/2023
+ms.author: chrisda
+manager: bagol
+ms.date: 07/07/2025
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -26,13 +26,13 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with Microsoft Defender for Office 365 Plan 2, _priority account protection_ is a differentiated level of protection that's applied to accounts that have the **Priority account** tag applied to them. For more information about the Priority account tag and how to apply it to users, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
+In Microsoft 365 organizations with Microsoft Defender for Office 365 Plan 2, _priority account protection_ is a differentiated level of protection applied to accounts that have the **Priority account** tag applied to them. For more information about the Priority account tag and how to apply it to users, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
-Priority account protection offers additional heuristics that are tailored to company executives that don't benefit regular employees. Priority account protection is better suited to the mail flow patterns of company executives based on extensive data from the Microsoft datacenters.
+Priority account protection offers extra heuristics tailored to company executives that don't benefit regular users. Priority account protection is better suited to the mail flow patterns of company executives based on extensive data from the Microsoft datacenters.
 
-By default, priority account protection is turned on in organizations with Defender for Office 365 Plan 2. This default behavior means an account that's tagged as a Priority account automatically receives priority account protection.
+By default, priority account protection is turned on in organizations with Defender for Office 365 Plan 2. This default behavior means an account tagged as a Priority account automatically receives priority account protection.
 
-This article describes how to confirm that priority account protection is turned on, how to turn it on, and identifies the reporting features that allow you to see the results of priority account protection.
+This article describes how to confirm that priority account protection is turned on, how to turn it on, and identifies the reporting features that show the results.
 
 ## What do you need to know before you begin?
 
@@ -44,7 +44,7 @@ This article describes how to confirm that priority account protection is turned
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - As previously described, priority account protection is applied to accounts that have the **Priority account** tag applied to them. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
@@ -77,7 +77,7 @@ To turn on priority account protection, run the following command:
 Set-EmailTenantSettings -EnablePriorityAccountProtection $true
 ```
 
-For detailed syntax and parameter information, see [Get-EmailTenantSettings](/powershell/module/exchange/get-emailtenantsettings) and [Set-EmailTenantSettings](/powershell/module/exchange/set-emailtenantsettings).
+For detailed syntax and parameter information, see [Get-EmailTenantSettings](/powershell/module/exchangepowershell/get-emailtenantsettings) and [Set-EmailTenantSettings](/powershell/module/exchangepowershell/set-emailtenantsettings).
 
 ## Review differentiated protection from priority account protection
 
@@ -96,7 +96,7 @@ For information about where the Priority account tag and other user tags are ava
 
 ### Threat protection status report
 
-The **Threat protection status** report brings together information about malicious content and malicious email detected and blocked by Exchange Online Protection and Defender for Office 365. For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
+The **Threat protection status** report brings together information about malicious content and malicious email detected and blocked by the built-in protections in Microsoft 365 and by Defender for Office 365. For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
 In the previously mentioned views in the report, the option **Priority account protection** and the value **Yes** is available when you select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. This option allows you to filter the data in the report by priority account protection detections.
 

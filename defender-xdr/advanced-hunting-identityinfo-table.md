@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -102,10 +102,9 @@ If you're using the Microsoft Defender portal but haven't onboarded a Microsoft 
 - `DeletedDateTime`
 - `EmployeeId`
 - `OtherMailAddresses`
-- `RiskLevel`
-- `RiskLevelDetails`
-- `State`
 - `Tags`
+- `State`
+
 
 For more information about UEBA, read [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, read [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
 

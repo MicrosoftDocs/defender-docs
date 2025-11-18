@@ -1,12 +1,12 @@
----
+﻿---
 title: Deploy Microsoft Defender for Endpoint on Linux with SaltStack
 ms.reviewer: dmcwee, gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Saltstack.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,19 +15,18 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/10/2025
----
+ms.date: 08/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploy Microsoft Defender for Endpoint on Linux with Saltstack
 
-**Applies to:**
 
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, refer to the [See also](#see-also) section.)
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, refer to the [Related content section](#related-content).)
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -99,8 +98,7 @@ There are two ways you can create the Saltstack state files:
    ```
   
 > [!NOTE]
-> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default)), real-time protection, version, etc. To select from the list of available options, check help through the following command:
->```./mde_installer.sh --help```
+> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default)), real-time protection, version, custom location installation etc. To select from the list of available options, check help through the following command: `./mde_installer.sh --help`
 
 ### Create Saltstack state files by manually configuring repositories
 
@@ -154,7 +152,7 @@ In this step, you create a SaltState state file in your configuration repository
    ```console
    install_mdatp_package:
      pkg.installed:
-       - name: matp
+       - name: mdatp
        - required: add_ms_repo
    ```
 
@@ -304,7 +302,7 @@ You can configure antivirus or EDR settings on your endpoints using any of the f
 
 When upgrading your operating system to a new major version, you must first uninstall Defender for Endpoint on Linux, install the upgrade, and finally reconfigure Defender for Endpoint on your Linux device.
 
-## See also
+## Related content
 
 - [SALT Project documentation](https://docs.saltproject.io/en/latest/topics/about_salt_project.html)
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
@@ -315,6 +313,8 @@ When upgrading your operating system to a new major version, you must first unin
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

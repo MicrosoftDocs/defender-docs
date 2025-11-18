@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -23,7 +23,7 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 03/28/2025
+ms.date: 07/28/2025
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
@@ -61,13 +61,16 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 > [!NOTE]
 > The `adx()` operator isn't supported for custom detections.
 
-
 ### Use arg() operator for Azure Resource Graph queries
-The `arg()` operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like. 
+
+The `arg()` operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like.
 
 This feature was previously only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). This allows users to make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
+
+>[!NOTE]
+> The `arg()` operator isn't supported for analytics rules.
 
 In the query editor, enter *arg("").* followed by the Azure Resource Graph table name. 
 
@@ -85,7 +88,6 @@ BehaviorAnalytics
 | where isnotempty(SourceDevice) and InvestigationPriority > 2 | extend SourceDevice = tolower(SourceDevice)
 ) on $left.name == $right.SourceDevice
 ```
-
 
 ## Use saved queries
 

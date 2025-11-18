@@ -3,7 +3,8 @@ title: Planning Guidance for Unified Security Operations in the Microsoft Defend
 description: Plan to deploy unified security operations in the Microsoft Defender portal, including Microsoft Sentinel and other Microsoft Defender services.
 author: batamig
 ms.author: bagol
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.topic: concept-article #Don't change.
 ms.date: 07/16/2025
 ms.collection:
@@ -63,7 +64,7 @@ Before you deploy Microsoft Defender services for unified security operations, r
 | Microsoft Sentinel                                       | [Prerequisites to deploy Microsoft Sentinel](/azure/sentinel/prerequisites)  |
 | **Optional Microsoft Defender XDR services**              |                                                 |
 | Microsoft Defender for Office | [Microsoft Defender XDR prerequisites](/defender-xdr/prerequisites) |
-| Microsoft Defender for Identity                          | [Microsoft Defender for Identity prerequisites](/defender-for-identity/deploy/prerequisites)  |
+| Microsoft Defender for Identity                          | Microsoft Defender for Identity prerequisites:<br>[Sensor v2.x](/defender-for-identity/deploy/prerequisites-sensor-version-2) / [Sensor v3.x (Preview)](/defender-for-identity/deploy/prerequisites-sensor-version-3)  |
 | Microsoft Defender for Endpoint                          | [Set up Microsoft Defender for Endpoint deployment](/defender-endpoint/production-deployment)   |
 | Enterprise monitoring with Microsoft Defender for IoT    | [Prerequisites for Defender for IoT in the Defender portal](/defender-for-iot/prerequisites)   |
 | Microsoft Defender Vulnerability Management              | [Prerequisites & Permissions for Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-prerequisites)   |

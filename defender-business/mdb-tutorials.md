@@ -4,7 +4,7 @@ description: Get an overview of learning resources to help you get started with 
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
 ms.topic: concept-article
 ms.service: defender-business
@@ -29,7 +29,7 @@ The following table summarizes several scenarios to try with Defender for Busine
 |Scenario|Description|
 |---|---|
 |Onboard devices using a local script|In Defender for Business, you can onboard Windows and Mac devices by using a script that you download and run on each device. The script creates a trust with Microsoft Entra ID, if that trust doesn't already exist; enrolls the device with Microsoft Intune, if you have Intune; and onboards the device to Defender for Business. To learn more, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).|
-|Onboard devices using Intune|If you were already using Intune before getting Defender for Business, you can continue to use Intune admin center to onboard devices. Try onboarding your Windows, Mac, iOS, and Android devices with Microsoft Intune. To learn more, see [Device enrollment in Microsoft Intune](/mem/intune/enrollment/device-enrollment).|
+|Onboard devices using Intune|If you were already using Intune before getting Defender for Business, you can continue to use Intune admin center to onboard devices. Try onboarding your Windows, Mac, iOS, and Android devices with Microsoft Intune. To learn more, see [Device enrollment in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment).|
 |Edit security policies|If you're managing your security policies in Defender for Business, use the **Device configuration** page to view and edit your policies. Defender for Business comes with default policies that use recommended settings to secure your company's devices as soon as they're onboarded. You can keep the default policies, edit them, and define your own policies to suit your business needs. To learn more, see [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md).|
 |View your security recommendations|Defender for Business includes a vulnerability management dashboard that provides an exposure score and relevant security recommendations. See [Use your vulnerability management dashboard in Microsoft Defender for Business](mdb-view-tvm-dashboard.md).|
 |View incidents in Microsoft 365 Lighthouse <br/>(for Microsoft partners)|If you're a [Microsoft Cloud Solution Provider](/partner-center/enrolling-in-the-csp-program) using Microsoft 365 Lighthouse, you can view incidents across your customers' tenants in your Microsoft 365 Lighthouse portal. To learn more, see [Microsoft 365 Lighthouse and Defender for Business](mdb-lighthouse-integration.md).|

@@ -2,10 +2,10 @@
 title: Configuring and controlling external email forwarding in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 02/05/2025
+ms.author: chrisda
+manager: bagol
+ms.date: 10/06/2025
 audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -20,16 +20,17 @@ description: This article covers external email forwarding, Automatic forwarding
 ms.service: defender-office-365
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I need concise guidance to configure and control automatic external email forwarding so I can prevent data exfiltration and reduce risk.
 ---
 
-# Control automatic external email forwarding in Microsoft 365
+# Control automatic external email forwarding from cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-As an admin in Microsoft 365, you might have company requirements to restrict or control automatically forwarded messages to external recipients (recipients outside of your organization). Email forwarding can be useful, but can also pose a security risk due to the potential disclosure of information. Attackers might use this information to attack your organization or partners.
+As an admin in a cloud email organization, you might have company requirements to restrict or control automatically forwarded messages to external recipients (recipients outside of your organization). Email forwarding can be useful, but can also pose a security risk due to the potential disclosure of information. Attackers might use this information to attack your organization or partners.
 
 The following types of automatic forwarding are available in Microsoft 365:
 
@@ -41,11 +42,13 @@ The following types of automatic forwarding are available in Microsoft 365:
 
 You can use outbound spam filter policies to control automatic forwarding to external recipients. Three settings are available:
 
-- **Automatic - System-controlled**: This is the default value. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
+- **Automatic - System-controlled**: This value is the default. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
 - **On - Forwarding is enabled**: Automatic external forwarding is allowed and not restricted.
 - **Off - Forwarding is disabled**: Automatic external forwarding is disabled and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
-For instructions on how to configure these settings, see [Configure outbound spam filtering in EOP](outbound-spam-policies-configure.md).
+:::image type="content" source="media/outbound-spam-protection-settings.png" alt-text="Screenshot of the Protection settings flyout in the properties of the default outbound spam filter policy with the Automatic forwarding rules options highlighted." lightbox="media/outbound-spam-protection-settings.png":::
+
+For instructions on how to configure these settings, see [Configure outbound spam filtering](outbound-spam-policies-configure.md).
 
 > [!NOTE]
 >
@@ -57,7 +60,12 @@ For instructions on how to configure these settings, see [Configure outbound spa
 As an admin, you might use other controls to allow or block automatic email forwarding. For example:
 
 - [Remote domains](/exchange/mail-flow-best-practices/remote-domains/remote-domains) to allow or block automatic email forwarding to some or all external domains.
-- Conditions and actions in Exchange [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to detect and block automatically forwarded messages to external recipients.
+
+  :::image type="content" source="media/outbound-spam-remote-domains-auto-forwarding.png" alt-text="Screenshot of the Email reply types flyout in the properties of a remote domain in the Exchange admin center with the Allow automatic forwarding option highlighted." lightbox="media/outbound-spam-remote-domains-auto-forwarding.png":::
+
+- Conditions and actions in Exchange [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to detect and block automatically forwarded messages to external recipients by Inbox rules.
+
+  :::image type="content" source="media/outbound-spam-mail-flow-rule-detect-block-forwarded.png" alt-text="Screenshot of a mail flow rule to detect and block messages automatically forwarded to external recipients by Inbox rules." lightbox="media/outbound-spam-mail-flow-rule-detect-block-forwarded.png":::
 
 When one setting allows external forwarding, but another setting blocks external forwarding, the block typically wins. Examples are described in the following table:
 

@@ -2,9 +2,9 @@
 title: View email security reports
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -15,13 +15,13 @@ ms.assetid: 3a137e28-1174-42d5-99af-f18868b43e86
 ms.collection:
   - m365-security
   - tier2
-description: "Admins can learn how to find and use the email security reports that are available in the Microsoft Defender portal. This article helps answer the question, 'What is the Threat protection status report in EOP and Microsoft Defender for Office 365?'"
+description: "Admins can learn how to find and use the email security reports that are available in the Microsoft Defender portal. This article helps answer the question, 'What is the Threat protection status report in Microsoft 365'"
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 06/19/2025
+ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -48,20 +48,20 @@ The rest of this article describes the reports that are exclusive to Defender fo
 
 ## Email security report changes in the Microsoft Defender portal
 
-The Exchange Online Protection (EOP) and Microsoft Defender for Office 365 reports in the Microsoft Defender portal that were replaced, moved, or deprecated are described in the following table.
+Reports replaced, moved, or deprecated are described in the following table.
 
 |Deprecated report and cmdlets|New report and cmdlets|Message Center ID|Date|
 |---|---|:---:|:---:|
-|**URL trace** <br><br> Get-URLTrace|[URL protection report](reports-defender-for-office-365.md#url-protection-report) <br><br> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|June 2021|
-|**Sent and received email report** <br><br> Get-MailTrafficReport <br> Get-MailDetailReport|[Threat protection status report](#threat-protection-status-report) <br> [Mailflow status report](#mailflow-status-report) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <br> [Get-MailFlowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|MC236025|June 2021|
+|**URL trace** <br><br> Get-URLTrace|[URL protection report](reports-defender-for-office-365.md#url-protection-report) <br><br> [Get-SafeLinksAggregateReport](/powershell/module/exchangepowershell/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchangepowershell/get-safelinksdetailreport)|MC239999|June 2021|
+|**Sent and received email report** <br><br> Get-MailTrafficReport <br> Get-MailDetailReport|[Threat protection status report](#threat-protection-status-report) <br> [Mailflow status report](#mailflow-status-report) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport) <br> [Get-MailFlowStatusReport](/powershell/module/exchangepowershell/get-mailflowstatusreport)|MC236025|June 2021|
 |**Forwarding report** <br><br> no cmdlets|[Auto-forwarded messages report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) <br><br> no cmdlets|MC250533|June 2021|
-|**Safe Attachments file types report** <br><br> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Threat protection status report: View data by Email \> Malware](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250532|June 2021|
-|**Safe Attachments message disposition report** <br><br> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Threat protection status report: View data by Email \> Malware](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|June 2021|
-|**Malware detected in email report** <br><br> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Threat protection status report: View data by Email \> Malware](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|June 2021|
-|**Spam detection report** <br><br> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Threat protection status report: View data by Email \> Spam](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|October 2021|
-|Get-AdvancedThreatProtectionDocumentReport <br><br> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <br><br> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|MC343433|May 2022|
-|**Exchange transport rule report** <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[Exchange transport rule report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|April 2022|
-|Get-MailTrafficTopReport|[Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report) <br><br> [Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport) <br><br> **Note**: There's no replacement for the encryption reporting capabilities in Get-MailTrafficTopReport.|MC315742|April 2022|
+|**Safe Attachments file types report** <br><br> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Threat protection status report: View data by Email \> Malware](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|MC250532|June 2021|
+|**Safe Attachments message disposition report** <br><br> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Threat protection status report: View data by Email \> Malware](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|MC250531|June 2021|
+|**Malware detected in email report** <br><br> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Threat protection status report: View data by Email \> Malware](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|MC250530|June 2021|
+|**Spam detection report** <br><br> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Threat protection status report: View data by Email \> Spam](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|MC250529|October 2021|
+|Get-AdvancedThreatProtectionDocumentReport <br><br> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchangepowershell/get-contentmalwaremdoaggregatereport) <br><br> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchangepowershell/get-contentmalwaremdodetailreport)|MC343433|May 2022|
+|**Exchange transport rule report** <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchangepowershell/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport)|[Exchange transport rule report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchangepowershell/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport)|MC316157|April 2022|
+|Get-MailTrafficTopReport|[Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report) <br><br> [Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport) <br><br> **Note**: There's no replacement for the encryption reporting capabilities in Get-MailTrafficTopReport.|MC315742|April 2022|
 
 ## Compromised users report
 
@@ -109,17 +109,18 @@ On the **Compromised users** page, the :::image type="icon" source="media/m365-c
 
 ## Mailflow status report
 
-The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Exchange Online Protection (EOP) or Defender for Microsoft 365.
+The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This report is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Microsoft 365.
 
 > [!TIP]
+>
 > - If a message is sent to five recipients, we count it as five different messages, not one message.
 >
-> - The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
+> - The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. Mismatch or counting the same item multiple times doesn't cause the increased message counts in these other reporting features. The increased message counts are the result of showing all detected threats involved at the same time.
 >
 > - The aggregate message count in the Mailflow status report could also be more than the message count in the following locations due to [zero-hour autopurge (ZAP)](zero-hour-auto-purge.md) activity:
 >   - Threat Explorer or Real-time detections.
 >   - The details table of the Threat protection status report.
->   - The output of the [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) or [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) cmdlets in Exchange Online PowerShell.
+>   - The output of the [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport) or [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) cmdlets in Exchange Online PowerShell.
 >
 >   ZAP removes messages from mailboxes after delivery, so ZAP activity doesn't affect message counts in the Mailflow status report. ZAP activity does affect message counts in Threat Explorer or Real-time detections. In Defender for Office 365, use the [Post-delivery activities report](reports-defender-for-office-365.md#post-delivery-activities-report) to understand the lifecycle of ZAP on messages in the organization.
 
@@ -140,7 +141,7 @@ On the **Mailflow status report** page, the **Type** tab is selected by default.
 - **Good mail**: Email determined not to be spam or allowed by user or organizational policies.
 - **Phishing email**: Email blocked as phishing by various filters.
 - **Spam**: Email blocked as spam by various filters.
-- **Edge protection**: Email rejected at the edge/perimeter before examination by EOP or Defender for Office 365.
+- **Edge protection**: Email rejected at the edge/perimeter before examination by Microsoft 365.
 - **Rule messages**: Email quarantined by mail flow rules (also known as transport rules).
 - **Data loss prevention**: Email quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
 
@@ -195,7 +196,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   > [!NOTE]
   > To see data for a specific date, use the day after. For example, to see January 10 data, use January 11 in the filter. Today's data is available for filtering tomorrow.
   >
-  > Report data for some days is updated continuously, so the longer you wait to run the report, the more stable the message counts and classifications will be. For example, to return comprehensive weekly data from Sunday the 10th to Saturday the 17th, run the report on Friday the 23rd. The same report run on Sunday the 18th or Tuesday the 20th might contain slightly different message counts and classifications.
+  > Report data for some days is updated continuously, so the longer you wait to run the report, the more stable the message counts and classifications are. For example, to return comprehensive weekly data from Sunday the 10th to Saturday the 17th, run the report on Friday the 23rd. The same report run on Sunday the 18th or Tuesday the 20th might contain slightly different message counts and classifications.
 
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
 - **Type**: Select one or more of the following values:
@@ -225,8 +226,6 @@ The **Mailflow** tab shows you how Microsoft's email threat protection features 
 :::image type="content" source="media/mail-flow-status-report-mailflow-view.png" alt-text="The Mailflow view in the Mailflow status report." lightbox="media/mail-flow-status-report-mailflow-view.png":::
 
 The aggregate view and details table view allow for 90 days of filtering.
-
-The information in the diagram is color-coded by **EOP** and **Defender for Office 365** technologies.
 
 The diagram is organized into the following horizontal bands:
 
@@ -304,7 +303,7 @@ The **Post-delivery activities** report is available only in organizations with 
 
 ## Spoof detections report
 
-The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection in EOP](anti-phishing-protection-spoofing-about.md).
+The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection](anti-phishing-protection-spoofing-about.md).
 
 The aggregate and detail views of the report allows for 90 days of filtering.
 
@@ -344,7 +343,7 @@ The details table below the graph shows the following information:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-For more information about composite authentication result codes, see [Anti-spam message headers in Microsoft 365](message-headers-eop-mdo.md).
+For more information about composite authentication result codes, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
 Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
@@ -415,7 +414,7 @@ On the **Submissions** page, the **[Export](#export-report-data)** action is ava
 
 ## Threat protection status report
 
-The **Threat protection status** report is available in both EOP and Defender for Office 365. However, the reports contain different data. For example, EOP customers can view information about malware detected in email, but not information about malicious files detected by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
+The **Threat protection status** report is available in all organizations with cloud mailboxes, and in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription). However, the reports contain different data. For example, Microsoft 365 organization without Defender for Office 365 can view information about malware detected in email, but not information about malicious files detected by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
 
 The report provides the count of email messages with malicious content. For example:
 
@@ -430,8 +429,8 @@ You can use the information in this report to identify trends or determine wheth
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Submissions**, and then select **View details**. Or, to go directly to the report, use one of the following URLS:
 
-- **Defender for Office 365**: <https://security.microsoft.com/reports/TPSAggregateReportATP>
-- **EOP**: <https://security.microsoft.com/reports/TPSAggregateReport>
+- **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TPSAggregateReport>
+- **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TPSAggregateReportATP>
 
 :::image type="content" source="media/threat-protection-status-report-widget.png" alt-text="The Threat protection status widget on the Email & collaboration reports page." lightbox="media/threat-protection-status-report-widget.png":::
 
@@ -561,6 +560,7 @@ In the **View data by Email \> Spam** and **Chart breakdown by Detection Technol
 - **Fingerprint matching**: The message closely resembles a previous detected malicious message.
 - **General filter**
 - **IP reputation**: The message was from a source that was previously identified as sending spam in other Microsoft 365 organizations.
+- **Mail bombing**: Messages detected as part of a mail bombing attack where attackers flood targeted email addresses with an overwhelming volume of messages.
 - **Mixed analysis detection**: Multiple filters contributed to the verdict for the message.
 - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
 
@@ -585,7 +585,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: The same values as in the chart.
-- **Bulk complaint level**: When the **Detection** value **Bulk** is selected, the slider is available to filter the report by the selected BCL range. You can use this information to confirm or adjust the BCL threshold in anti-spam policies to allow more or less bulk email into your organization.
+- **Bulk complaint level**: When the **Detection** value **Bulk** is selected (alone or with other values), the slider is available to filter the report by the selected BCL range. You can use this information to confirm or adjust the BCL threshold in anti-spam policies to allow more or less bulk email into your organization.
 
   If the **Detection** value **Bulk** isn't selected, the slider is grayed-out and bulk detections aren't included in the report.
 
@@ -788,7 +788,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
   - **Advanced filter**: Phishing signals based on machine learning.
   - **General filter**: Phishing signals based on analyst rules.
-  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization. 
+  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.
   - **Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.
   - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
   - **Impersonation brand**: Sender impersonation of well-known brands.
@@ -937,7 +937,7 @@ In the **View data by System override** and **Chart breakdown by Reason** view, 
 - **On-premises skip**
 - **Organization allowed domains**: The domain is specified in the [allowed domains list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
 - **Organization allowed senders**: The sender is specified in the [allowed senders list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
-- **Phishing simulation**: For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
+- **Phishing simulation**: For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 - **Sender Domain List**
 - **TABL - Both URL and file allowed**
 - **TABL - File allowed**
@@ -995,7 +995,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 In the **View data by System override** and **Chart breakdown by Delivery location** view, the following override reason information is shown in the chart:
 
 - **Junk Mail folder not enabled**
-- **SecOps mailbox**: For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
+- **SecOps mailbox**: For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 
 In the details table below the chart, the following information is available:
 
@@ -1031,7 +1031,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 
 ## Top malware report
 
-The **Top malware** report shows the various kinds of malware that was detected by [anti-malware protection in EOP](anti-malware-protection-about.md).
+The **Top malware** report shows the various kinds of malware that was detected by [Anti-malware protection](anti-malware-protection-about.md).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Top malware**.
 
@@ -1054,9 +1054,9 @@ On the **Top malware** page, the :::image type="icon" source="media/m365-cc-sc-c
 
 ## Top senders and recipients report
 
-The **Top senders and recipients** report is available in both EOP and Defender for Office 365; however, the reports contain different data. For example, EOP customers can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+The **Top senders and recipients** report is available in all organizations with cloud mailboxes and in Microsoft 365 organizations with Defender for Microsoft 365 (included or in an add-on subscription). However, the reports contain different data. For example, organizations without Defender for Office 365 can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-The **Top senders and recipients** report shows the top 20 message senders in the organization, as well as the top 20 recipients for messages detected by EOP and Defender for Office 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
+The **Top senders and recipients** report shows the top 20 message senders in the organization, and the top 20 recipients for messages detected by Microsoft 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Top senders and recipients**.
 
@@ -1066,15 +1066,15 @@ Hover over a wedge in the pie chart to see the number of messages for the sender
 
 Select **View details** to go to the **Top senders and recipients** page. Or, to go directly to the report, use one of the following URLs:
 
-- **Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
-- **EOP**: <https://security.microsoft.com/reports/TopSenderRecipient>
+- **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
+- **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
 
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 
 - **Show data for Top mail senders** (default view)
 - **Show data for Top mail recipients**
 - **Show data for Top spam recipients**
-- **Show data for Top malware recipients** (EOP)
+- **Show data for Top malware recipients**
 - **Show data for Top phishing recipients**
 - **Show data for Top malware recipients (MDO)**
 - **Show data for Top phish recipients (MDO)**
@@ -1159,14 +1159,14 @@ You need to be assigned permissions before you can view and use the reports that
 ¹ Membership in the **Organization Management** role group or in the **Global Administrator** role is required to use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** or :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)** actions in reports (where available).
 
 > [!IMPORTANT]
-> ² Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> ² Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## What if the reports aren't showing data?
 
-If you don't see data in the reports, check the report filters and double-check that your protection policies are configured to detect and take action on messages. For more information, see the following articles:
+If you don't see data in the reports, check the report filters and double-check that your threat policies are configured to detect and take action on messages. For more information, see the following articles:
 
-- [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
+- [Configuration analyzer](configuration-analyzer-for-security-policies.md)
+- [Preset security policies](preset-security-policies.md)
 - [How do I turn off spam filtering?](anti-spam-protection-faq.yml#how-do-i-turn-off-spam-filtering-)
 
 ## Download and export report information
@@ -1181,7 +1181,7 @@ Depending on the report and the specific view in the report, one or more of the 
 
 > [!TIP]
 >
-> - The exported data is affected by any filters that are configured in the report at the time of export.
+> - Configured filters at the time of export affect the exported data.
 > - If the exported data exceeds 150,000 entries, the data is split into multiple files.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
@@ -1189,7 +1189,7 @@ Depending on the report and the specific view in the report, one or more of the 
 2. In the **Export conditions** flyout that opens, review, and configure the following settings:
 
    - **Select a view to export**: Select one of the following values:
-     - **Summary**: Data from the last 90 days is available. This is the default value.
+     - **Summary**: Data from the last 90 days is available. The default value.
      - **Details**: Data from the last 30 days is available. A date range of one day is supported.
    - **Date (UTC)**:
      - **Start date**: The default value is three months ago.
@@ -1208,7 +1208,7 @@ Depending on the report and the specific view in the report, one or more of the 
 To create scheduled reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png"::: **Create schedule** to start the new scheduled report wizard.
 
@@ -1296,7 +1296,7 @@ Back on the **Manage schedules** page, the deleted scheduled report entry is no 
 To create on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Request report** to start the new on-demand report wizard.
 
@@ -1331,7 +1331,7 @@ The report creation task (and eventually the finished report) is available on th
 To download on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 After you request an on-demand report as described in the previous section, you check the status of the report and eventually download the report on the **Reports for download** page in the Defender portal.
 
@@ -1356,9 +1356,9 @@ In the **Save as** dialog that opens, you see the default name of the .csv file 
 
 ## Related articles
 
-[Anti-spam protection in EOP](anti-spam-protection-about.md)
+[Anti-spam protection](anti-spam-protection-about.md)
 
-[Anti-malware protection in EOP](anti-malware-protection-about.md)
+[Anti-malware protection](anti-malware-protection-about.md)
 
 [View mail flow reports in the EAC](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 

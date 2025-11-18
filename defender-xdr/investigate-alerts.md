@@ -4,8 +4,8 @@ description: Investigate alerts seen across devices, users, and mailboxes.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -18,7 +18,7 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - met150
-ms.date: 1/27/2025
+ms.date: 6/04/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -45,7 +45,7 @@ By default, the alerts queue in the Microsoft Defender portal displays the new a
 
 From the default alerts queue, you can select **Filter** to see all available filters from which you can specify a subset of the alerts. Here's an example.
 
-:::image type="content" source="/defender/media/investigate-alerts/alerts-all-filters.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal":::
+:::image type="content" source="/defender/media/investigate-alerts/alert-filters-small.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alert-filters.png":::
 
 You can filter alerts according to these criteria:
 
@@ -57,10 +57,12 @@ You can filter alerts according to these criteria:
 - Policy/Policy rule
 - Alert type
 - Product name
+- Alert subscription ID
 - Entities (the impacted assets)
 - Automated investigation state
 - Workspace
 - Data stream (workload or location)
+- Sensitivity label
 
 > [!NOTE]
 > Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).

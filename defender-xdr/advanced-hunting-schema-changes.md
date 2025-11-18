@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
+ms.author: dansimp
 author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 05/28/2025
+ms.date: 11/04/2025
 ---
 
 # Advanced hunting schema - Naming changes
@@ -37,42 +37,26 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 - Queries that are run using the API
 - Queries that are saved elsewhere outside Microsoft Defender XDR
 
+## November 2025
 
+The [`AADSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) and  [`AADSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) tables are being replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) and [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md), respectively. These changes are being made to remove the former tables' preview status and to align them with the existing product branding.
+
+The `EntraIdSignInEvents` and `EntraIdSpnSignInEvents` tables are now available. The legacy `AADSignInEventsBeta`and `AADSignInEventsBeta` tables will remain in the schema for 30 days to allow time for updating your queries. Your custom detections will be updated automatically and won't require any changes. On December 9, 2025, `AADSignInEventsBeta`and `AADSignInEventsBeta` will be removed from the schema.
+
+## September 2025
+
+In the [AADSignInEventsBeta](./advanced-hunting-aadspnsignineventsbeta-table.md) table, the `AadDeviceId` column is being replaced with a new column, called `EntraIdDeviceId`, to align with current product branding. The legacy `AadDeviceId` column will remain in the schema for 30 days to allow time for updating in your queries. After this period of 30 days, `AadDeviceId` will be removed from the schema.
 
 ## May 2025
 In the [`IdentityInfo`](advanced-hunting-identityinfo-table.md) table, the `SourceProvider` column was replaced by the `IdentityEnvironment` column. This change was made to streamline the unified `IdentityInfo` table with a similar table in Microsoft Sentinel log analytics. Note that a new column, `SourceProviders` (with an *s*) was added in the unified table. This column refers to the source providers of the accounts for the identity.
 
+## May 2021
 
-## December 2020
+The `AppFileEvents` table has been deprecated. The `CloudAppEvents` table includes information that used to be in the `AppFileEvents` table, along with other activities in cloud services.
 
-| Table name | Original column name | New column name | Reason for change
-|--|--|--|--|
-| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailAction` | `EmailAction` | Customer feedback |
-| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicy` | `EmailActionPolicy` | Customer feedback |
-| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicyGuid` | `EmailActionPolicyGuid` | Customer feedback |
+## March 2021
 
-## January 2021
-
-| Column name | Original value name | New value name | Reason for change
-|--|--|--|--|
-| `DetectionSource` | Defender for Cloud Apps | Microsoft Defender for Cloud Apps | Rebranding |
-| `DetectionSource` | WindowsDefenderAtp| EDR| Rebranding |
-| `DetectionSource` | WindowsDefenderAv | Antivirus | Rebranding |
-| `DetectionSource` | WindowsDefenderSmartScreen |  SmartScreen | Rebranding |
-| `DetectionSource` | CustomerTI | Custom TI | Rebranding |
-| `DetectionSource` | OfficeATP | Microsoft Defender for Office 365 | Rebranding |
-| `DetectionSource` | MTP | Microsoft Defender XDR | Rebranding |
-| `DetectionSource` | AzureATP | Microsoft Defender for Identity | Rebranding |
-| `DetectionSource` | CustomDetection | Custom detection | Rebranding |
-| `DetectionSource` | AutomatedInvestigation |Automated investigation | Rebranding |
-| `DetectionSource` | ThreatExperts | Microsoft Threat Experts | Rebranding |
-| `DetectionSource` | 3rd party TI | 3rd Party sensors | Rebranding |
-| `ServiceSource` | Microsoft Defender ATP| Microsoft Defender for Endpoint | Rebranding |
-|`ServiceSource` |Microsoft Threat Protection | Microsoft Defender XDR | Rebranding |
-| `ServiceSource` | Office 365 ATP |Microsoft Defender for Office 365 | Rebranding |
-| `ServiceSource` |Azure ATP |Microsoft Defender for Identity | Rebranding |
-
-`DetectionSource` is available in the [AlertInfo](advanced-hunting-alertinfo-table.md) table. `ServiceSource` is available in the [AlertEvidence](advanced-hunting-alertevidence-table.md) and [AlertInfo](advanced-hunting-alertinfo-table.md) tables. 
+The `DeviceTvmSoftwareInventoryVulnerabilities` table has been deprecated. Replacing it are the `DeviceTvmSoftwareInventory` and `DeviceTvmSoftwareVulnerabilities` tables.
 
 ## February 2021
 
@@ -98,13 +82,38 @@ In the [`IdentityInfo`](advanced-hunting-identityinfo-table.md) table, the `Sour
     | `DeviceEvents` | `UsbDriveUnmount` | `UsbDriveUnmounted` | Customer feedback |
     | `DeviceEvents` | `WriteProcessMemoryApiCall` | `WriteToLsassProcessMemory` | Customer feedback |
 
-## March 2021
+## January 2021
 
-The `DeviceTvmSoftwareInventoryVulnerabilities` table has been deprecated. Replacing it are the `DeviceTvmSoftwareInventory` and `DeviceTvmSoftwareVulnerabilities` tables.
+| Column name | Original value name | New value name | Reason for change
+|--|--|--|--|
+| `DetectionSource` | Defender for Cloud Apps | Microsoft Defender for Cloud Apps | Rebranding |
+| `DetectionSource` | WindowsDefenderAtp| EDR| Rebranding |
+| `DetectionSource` | WindowsDefenderAv | Antivirus | Rebranding |
+| `DetectionSource` | WindowsDefenderSmartScreen |  SmartScreen | Rebranding |
+| `DetectionSource` | CustomerTI | Custom TI | Rebranding |
+| `DetectionSource` | OfficeATP | Microsoft Defender for Office 365 | Rebranding |
+| `DetectionSource` | MTP | Microsoft Defender XDR | Rebranding |
+| `DetectionSource` | AzureATP | Microsoft Defender for Identity | Rebranding |
+| `DetectionSource` | CustomDetection | Custom detection | Rebranding |
+| `DetectionSource` | AutomatedInvestigation |Automated investigation | Rebranding |
+| `DetectionSource` | ThreatExperts | Microsoft Threat Experts | Rebranding |
+| `DetectionSource` | 3rd party TI | 3rd Party sensors | Rebranding |
+| `ServiceSource` | Microsoft Defender ATP| Microsoft Defender for Endpoint | Rebranding |
+|`ServiceSource` |Microsoft Threat Protection | Microsoft Defender XDR | Rebranding |
+| `ServiceSource` | Office 365 ATP |Microsoft Defender for Office 365 | Rebranding |
+| `ServiceSource` |Azure ATP |Microsoft Defender for Identity | Rebranding |
 
-## May 2021
+`DetectionSource` is available in the [AlertInfo](advanced-hunting-alertinfo-table.md) table. `ServiceSource` is available in the [AlertEvidence](advanced-hunting-alertevidence-table.md) and [AlertInfo](advanced-hunting-alertinfo-table.md) tables. 
 
-The `AppFileEvents` table has been deprecated. The `CloudAppEvents` table includes information that used to be in the `AppFileEvents` table, along with other activities in cloud services.
+
+## December 2020
+
+| Table name | Original column name | New column name | Reason for change
+|--|--|--|--|
+| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailAction` | `EmailAction` | Customer feedback |
+| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicy` | `EmailActionPolicy` | Customer feedback |
+| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicyGuid` | `EmailActionPolicyGuid` | Customer feedback |
+
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)

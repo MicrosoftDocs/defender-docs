@@ -2,8 +2,8 @@
 title: Manage tenants in other Microsoft cloud environments
 description: Overview of cross-cloud management for other Microsoft clouds in multitenant management in Microsoft Defender XDR.
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -122,7 +122,7 @@ To remove tenants from the list, select the tenant, then select **Remove tenants
 After successfully adding tenants from other clouds, you can view these tenants in other multitenant pages like the incidents and device inventory pages.
 
 > [!NOTE]
-> When a cross-cloud tenant is added to a tenant group and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won’t be available for content management. This is a recognized limitation of cross-cloud visibility and is currently under review. See [Troubleshooting issues](mto-troubleshoot.md#content-assignment-failure-in-cross-cloud-tenant-management) for more information.
+> When a cross-cloud tenant is added to a distribution profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won’t be available for content management. This is a recognized limitation of cross-cloud visibility and is currently under review. See [Troubleshooting issues](mto-troubleshoot.md#content-assignment-failure-in-cross-cloud-tenant-management) for more information.
 
 ## Next steps
 

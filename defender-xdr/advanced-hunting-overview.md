@@ -1,13 +1,13 @@
 ---
 title: Overview - Advanced hunting
-description: Learn about advanced hunting queries in Microsoft Defender and how to use them to proactively find threats and weaknesses in your network
+description: Learn about advanced hunting queries in Microsoft Defender and how to use them to proactively find threats and weaknesses in your network.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 search.appverid: met150
-ms.date: 06/03/2025
+ms.date: 09/09/2025
 
 ---
 
@@ -33,7 +33,7 @@ ms.date: 06/03/2025
 
 Advanced hunting is a query-based threat hunting tool that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. The flexible access to data enables unconstrained hunting for both known and potential threats.
 
-Advanced hunting supports two modes, guided and advanced. Use [guided mode](advanced-hunting-query-builder.md) if you are not yet familiar with Kusto Query Language (KQL) or prefer the convenience of a query builder. Use [advanced mode](advanced-hunting-query-language.md) if you are comfortable using KQL to create queries from scratch. 
+Advanced hunting supports two modes, guided and advanced. Use [guided mode](advanced-hunting-query-builder.md) if you aren't yet familiar with Kusto Query Language (KQL) or prefer the convenience of a query builder. Use [advanced mode](advanced-hunting-query-language.md) if you're comfortable using KQL to create queries from scratch. 
 
 **To start hunting, read [Choose between guided and advanced modes to hunt in the Microsoft Defender portal](advanced-hunting-modes.md).**
 
@@ -66,13 +66,13 @@ Advanced hunting data can be categorized into two distinct types, each consolida
 
 ### **Event or activity data**
 
-Event or activity data populates tables about alerts, security events, system events, and routine assessments. Advanced hunting receives this data almost immediately after the sensors that collect them successfully transmit them to the corresponding cloud services. For example, you can query event data from healthy sensors on workstations or domain controllers almost immediately after they are available on Microsoft Defender for Endpoint and Microsoft Defender for Identity. 
+Event or activity data populates tables about alerts, security events, system events, and routine assessments. Advanced hunting receives this data almost immediately after the sensors that collect them successfully transmit them to the corresponding cloud services. For example, you can query event data from healthy sensors on workstations or domain controllers almost immediately after they're available on Microsoft Defender for Endpoint and Microsoft Defender for Identity. 
 
 To collect even more event properties, you have the option of turning on [aggregated reporting](/defender-endpoint/aggregated-reporting).
 
 ### **Entity data**
 
-Entity data populates tables with information about users and devices. This data comes from both relatively static data sources and dynamic sources, such as Active Directory entries and event logs. To provide fresh data, tables are updated with any new information every 15 minutes, adding rows that might not be fully populated. Every 24 hours, data is consolidated to insert a record that contains the latest, most comprehensive data set about each entity.
+Entity data populates tables with information about users and devices. This data comes from both relatively static data sources and dynamic sources, such as Active Directory entries and event logs. To provide fresh data, tables are updated every hour to insert a record that contains the latest, most comprehensive data set about each entity, including other useful information such as health status and tags.
 
 
 ## Time zone
@@ -96,7 +96,7 @@ In order to extend the 30 days retention for Advanced Hunting, see the following
 - Microsoft Defender for Endpoint [Raw Data Streaming API](/defender-endpoint/api/raw-data-export)
 
 > [!NOTE]
-> The data retained is from the first (1st) day that you implement and enable the streaming api.
+> The data retained is from the first day that you implement and enable the streaming API.
 
 ## Related content
 

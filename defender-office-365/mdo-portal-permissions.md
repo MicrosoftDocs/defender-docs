@@ -2,9 +2,9 @@
 title: Microsoft Defender for Office 365 permissions in the Microsoft Defender portal
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.audience: Admin
 ms.topic: how-to
 audience: Admin
@@ -19,9 +19,9 @@ description: Admins can learn how to manage Microsoft Defender for Office 365 (E
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 02/20/2025
+ms.date: 09/29/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -38,14 +38,16 @@ You need to be member of the **Global Administrator**<sup>\*</sup> role in Micro
 
 - Some Defender for Office 365 features require additional permissions in Exchange Online. For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 - Microsoft Defender XDR has its own Unified role-based access control (RBAC). This model provides a single permissions management experience in one central location where admins can control permissions across different security solutions. These permissions are different from the permissions described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
-- **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.**
+
+  > [!IMPORTANT]
+  > If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.
 
   :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
 - For information about permissions in the Microsoft Purview portal, see [Permissions in the Microsoft Purview portal](/purview/purview-permissions).
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Relationship of members, roles, and role groups
 
@@ -86,7 +88,7 @@ For more information, see [Assign Microsoft Entra roles to users](/entra/identit
 |**Compliance Administrator**|Help your organization stay compliant with any regulatory requirements, manage eDiscovery cases, and maintain data governance policies across Microsoft 365 locations, identities, and apps. For more information, see [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator).|
 |**Security Operator**|View, investigate, and respond to active threats to your Microsoft 365 users, devices, and content. For more information, see [Security Operator](/entra/identity/role-based-access-control/permissions-reference#security-operator).|
 |**Security Reader**|View and investigate active threats to your Microsoft 365 users, devices, and content, but (unlike the Security operator) they don't have permissions to respond by taking action. For more information, see [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader).|
-|**Security Administrator**|Control your organization's overall security by managing security policies, reviewing security analytics and reports across Microsoft 365 products, and staying up-to-speed on the threat landscape. For more information, see [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator).|
+|**Security Administrator**|Control your organization's overall security by managing threat policies, reviewing security analytics and reports across Microsoft 365 products, and staying up-to-speed on the threat landscape. For more information, see [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator).|
 |**Global Reader**|The read-only version of the **Global administrator** role. View all settings and administrative information across Microsoft 365. For more information, see [Global Reader](/entra/identity/role-based-access-control/permissions-reference#global-reader).|
 |**Attack Simulation Administrator**|Create and manage all aspects of [attack simulation](attack-simulation-training-simulations.md) creation, launch/scheduling of a simulation, and the review of simulation results. For more information, see [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator).|
 |**Attack Payload Author**|Create attack payloads but not actually launch or schedule them. For more information, see [Attack Payload Author](/entra/identity/role-based-access-control/permissions-reference#attack-payload-author).|

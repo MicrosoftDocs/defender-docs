@@ -2,9 +2,9 @@
 title: Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.date: 2/27/2024
@@ -34,7 +34,7 @@ This article explains how to view and investigate detected malware and phishing 
 > For other email scenarios using Threat Explorer and Real-time detections, see the following articles:
 >
 > - [Threat hunting in Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-threat-hunting.md)
-> - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+> - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
 ## What do you need to know before you begin?
 
@@ -50,7 +50,7 @@ For more information about user and domain impersonation protection in anti-phis
 
 In the default or custom anti-phishing policies, you need to specify the users and domains to protect from impersonation, including domains you own ([accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)). In the Standard or Strict preset security policies, domains that you own automatically receive impersonation protection, but you need to specify any users or custom domains for impersonation protection. For instructions, see the following articles:
 
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
+- [Preset security policies](preset-security-policies.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 Use the following steps to review phishing messages and search for impersonated users or domains.

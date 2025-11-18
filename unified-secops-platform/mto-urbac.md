@@ -1,18 +1,19 @@
 ---
 title: Manage unified role-based access control in multitenant management
 description: Overview of how to manage the unified role-based access control multitenant management in the Microsoft Defender portal.
-ms.service: unified-secops-platform
-ms.author: diannegali
-author: diannegali
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
 - highpri
 - tier1
 ms.topic: how-to
-ms.date: 05/29/2025
+ms.date: 08/06/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -21,18 +22,17 @@ appliesto:
 
 # Manage unified role-based access control in multitenant management
 
-> [!IMPORTANT]
-> Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+Use the Microsoft Defender multimanagement portal to manage unified role-based access control (URBAC) across multiple tenants. This capability provides a comprehensive view of permissions and access for your tenants and a centralized administration to manage these permissions.
 
-You can now view and manage user permissions across multiple tenants in multitenant management. This capability provides a comprehensive view of permissions and access for your tenants. It also provides a centralized administration to manage these permissions.
+## View custom roles
 
-The multitenant management portal offers an aggregated view of all unified role-based access (URBAC) roles. Navigate to the page through **System > Permissions**.
+In the multitenant portal, navigate to the **Permissions & roles page** by selecting **System > Permissions**.
 
 :::image type="content" source="media/mto-urbac/urbac-main.png" alt-text="Screenshot of main Permissions and roles page":::
 
-You can create or edit a custom role, import and delete roles, and search for a specific role using the Search function from this page. You can also Filter the roles according to assigned data sources, permissions category, assignee type, and tenant name.
+Create or edit a custom role, import and delete roles, and search for a specific role using the **Search** function from this page. You can also filter the roles according to assigned data sources, permissions category, assignee type, and tenant name.
 
-## Create or edit a custom role
+## Create or edit a custom role (Preview)
 
 You can create a custom role to provide flexibility and control over access to specific data. To create a custom role, follow these steps:
 
@@ -72,7 +72,7 @@ To edit an existing role, select the three dots beside the role name in the Perm
 
 :::image type="content" source="media/mto-urbac/urbac-edit-role.png" alt-text="Screenshot of the Edit option in the Permissions page":::
 
-## Delete roles
+## Delete roles (Preview)
 
 You can delete roles by selecting a role from the list and then selecting **Delete roles**. You can select multiple roles from various tenants to delete.
 
@@ -86,7 +86,7 @@ The **Delete role** option is also available when editing a specific role.
 
 :::image type="content" source="media/mto-urbac/urbac-delete-edit-pane.png" alt-text="Screenshot highlighting the Delete option in the Edit role pane":::
 
-## Import roles
+## Import roles (Preview)
 
 You can import existing roles from a tenant’s workloads to migrate permissions and assignments. Imported roles become available in the Permissions and roles list.
 

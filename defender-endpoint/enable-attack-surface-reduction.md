@@ -4,9 +4,9 @@ description: Enable attack surface reduction rules to protect your devices from 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -14,30 +14,46 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
+appliesto:
+- Microsoft Defender for Endpoint Plan 1 and Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender Antivirus
 search.appverid: met150
-ms.date: 06/05/2025
+ms.date: 10/20/2025
 ---
 
 # Enable attack surface reduction rules
 
-**Applies to:**
+[Attack surface reduction rules](attack-surface-reduction.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules via:
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
+- [Microsoft Intune](#intune)
+- [Mobile Device Management (MDM)](#mdm)
+- [Microsoft Configuration Manager](#microsoft-configuration-manager)
+- [Group policy (GP)](#group-policy)
+- [PowerShell](#powershell)
 
-**Platforms**
-- Windows
 
-> [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+## Prerequisites
 
-[Attack surface reduction rules](attack-surface-reduction.md) help prevent actions that malware often abuses to compromise devices and networks.
+To use the entire feature-set of attack surface reduction rules, the following requirements must be met:
 
-## Requirements
+- Microsoft Defender Antivirus must be set as the primary antivirus. It must not be running in passive mode or be disabled.
 
-Attack surface reduction features across Windows versions
+- [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) must be on.
+
+- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) must be on (some rules require Cloud Protection).
+
+- You must have [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+
+- Recommended: Microsoft 365 E5
+
+   Although attack surface reduction rules don't require a [Microsoft 365 E5 license](/microsoft-365/commerce/licenses/e3-extra-features-licenses), it is recommended to use attack surface reduction rules with a Microsoft 365 E5 license  (or similar licensing SKU) to take advantage of advanced management capabilities, including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. While these advanced capabilities aren't available with an E3 license, with an E3 license you can still use Event Viewer to review attack surface reduction rule events.
+
+   If you have another license, such as Windows Professional or Microsoft 365 E3 that doesn't include advanced monitoring and reporting capabilities, you can develop your own monitoring and reporting tools on top of the events that are generated at each endpoint when attack surface reduction rules are triggered (for example, Event Forwarding).
+
+   To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=11091).
+
+### Supported operating systems
 
 You can set attack surface reduction rules for devices that are running any of the following editions and versions of Windows:
 
@@ -51,23 +67,16 @@ You can set attack surface reduction rules for devices that are running any of t
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
 - Windows Server 2025
+- Azure Stack HCI OS, version 23H2 and later
 
-To use the entire feature-set of attack surface reduction rules, you need:
+> [!NOTE]
+> Some attack surface reduction rules are only enforced if Office executables are installed under the system-defined %ProgramFiles% or %ProgramFiles(x86)% directories (on most systems, %ProgramFiles% points to C:\Program Files). If Office is installed in a custom path outside one of these system-defined directories, these rules won't apply. The affected rules are:
+>
+> - Block Office communication applications from creating child processes (26190899-1602-49e8-8b27-eb1d0a1ce869)
+> - Block all Office applications from creating child processes (D4F940AB-401B-4EFC-AADC-AD5F3C50688A)
+> - Block Office applications from injecting code into other processes (75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84)
 
-- Microsoft Defender Antivirus as primary antivirus. Microsoft Defender Antivirus can't be running in passive mode or be disabled.
-
-- [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) to be on
-
-- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) to be on (some rules require Cloud Protection)
-
-- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
-
-- Microsoft 365 E5 or E3 License
-
-> [!IMPORTANT]
-> The prerequisites listed in this article are necessary in order for Attack Surface Reduction rules to work properly.
-
-Although attack surface reduction rules don't require a [Microsoft 365 E5 license](/microsoft-365/commerce/licenses/e3-extra-features-licenses), with Microsoft 365 E5 license, you get advanced management capabilities including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. These advanced capabilities aren't available with an E3 license, but you can still use Event Viewer to review attack surface reduction rule events.
+## Enabling attack surface reduction rules
 
 Each attack surface reduction rule contains one of four settings:
 
@@ -76,12 +85,7 @@ Each attack surface reduction rule contains one of four settings:
 - **Audit**: Evaluate how the attack surface reduction rule would impact your organization if enabled
 - **Warn**: Enable the attack surface reduction rule but allow the end user to bypass the block
 
-We recommend using attack surface reduction rules with a Microsoft 365 E5 license (or similar licensing SKU) to take advantage of the advanced monitoring and reporting capabilities available in [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender for Endpoint). However, if you have another license, such as Windows Professional or Microsoft 365 E3 that doesn't include advanced monitoring and reporting capabilities, you can develop your own monitoring and reporting tools on top of the events that are generated at each endpoint when attack surface reduction rules are triggered (for example, Event Forwarding).
-
-> [!TIP]
-> To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=11091).
-
-You can enable attack surface reduction rules by using any of these methods:
+You can enable attack surface reduction rules by using any of the following methods:
 
 - [Microsoft Intune](#intune)
 - [Mobile Device Management (MDM)](#mdm)
@@ -91,7 +95,7 @@ You can enable attack surface reduction rules by using any of these methods:
 
 Enterprise-level management such as Intune or Microsoft Configuration Manager is recommended. Enterprise-level management overwrites any conflicting group policy or PowerShell settings on startup.
 
-## Exclude files and folders from attack surface reduction rules
+### Exclude files and folders from attack surface reduction rules
 
 You can exclude files and folders from being evaluated by most attack surface reduction rules. This means that even if an attack surface reduction rule determines the file or folder contains malicious behavior, it doesn't block the file from running.
 
@@ -106,11 +110,11 @@ When adding exclusions, keep these points in mind:
 - When deployed through group policy or PowerShell, exclusions apply to all attack surface reduction rules. Using Intune, it's possible to configure an exclusion for a specific attack surface reduction rule. See [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 - Exclusions can be added based on certificate and file hashes, by allowing specified Defender for Endpoint file and certificate indicators. See [Overview of indicators](indicators-overview.md).
 
-## Policy conflicts
+### How policy conflicts are handled
 
 If a conflicting policy is applied via MDM and GP, the setting applied from Group Policy takes precedence.
 
-Attack surface reduction rules for managed devices now support behavior for merging settings from different policies to create a policy superset for each device. Only the settings that aren't in conflict are merged, whereas policy conflicts aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile were deployed. 
+Attack surface reduction rules for managed devices support behavior for merging settings from different policies to create a policy superset for each device. Only the settings that aren't in conflict are merged, whereas policy conflicts aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile were deployed. 
 
 Attack surface reduction rule merge behavior works as follows:
 
@@ -163,6 +167,12 @@ The following procedures for enabling attack surface reduction rules include ins
    `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
    
 1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
+
+> [!NOTE]
+> In the latest Intune interface, **Configuration profiles** is located under  **Devices > Configuration profiles**.  
+> Earlier versions of Intune showed this under **Device configuration > Profiles**.  
+> If you don't see "Configuration Profile" as written in older instructions, look for **Configuration profiles** under the Devices menu.
+
 
 #### Device Configuration Profiles (Alternative 1)
 
@@ -219,7 +229,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
       - `2`: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
       - `6`: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
 
-   :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="The OMA URI configuration in the Microsoft Intune admin center portal" lightbox="media/mem05-add-row-oma-uri.png":::
+      :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="The OMA URI configuration in the Microsoft Intune admin center portal." lightbox="media/mem05-add-row-oma-uri.png":::
 
 7. Select **Save**. **Add Row** closes. In **Custom**, select **Next**. In step **3 Scope tags**, scope tags are optional. Do one of the following:
 
@@ -244,11 +254,11 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
    3. In **Value**, enter the applicable value or value range.
 
-   :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
+      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
 
 11. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
 
-   :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
+    :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
 
    Rules are active and live within minutes.
 

@@ -2,9 +2,9 @@
 title: Configure spam filter policies
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
@@ -14,29 +14,29 @@ ms.assetid: 316544cb-db1d-4c25-a5b9-c73bbcf53047
 ms.collection:
   - m365-security
 ms.custom:
-description: Admins can learn how to view, create, modify, and delete anti-spam policies in Exchange Online Protection (EOP).
+description: Admins can learn how to view, create, modify, and delete anti-spam policies in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 01/29/2025
+ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Configure anti-spam policies in EOP
+# Configure anti-spam policies for cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, inbound email messages are automatically protected against spam by EOP. EOP uses anti-spam policies (also known as spam filter policies or content filter policies) as part of your organization's overall defense against spam. For more information, see [Anti-spam protection](anti-spam-protection-about.md).
+In all organizations with cloud mailboxes, inbound email messages are automatically protected against spam. Microsoft 365 uses anti-spam policies (also known as spam filter policies or content filter policies) as part of your organization's overall defense against spam. For more information, see [Anti-spam protection](anti-spam-protection-about.md).
 
 The default anti-spam policy automatically applies to all recipients in the organization. For greater granularity, you can also create custom anti-spam policies that apply to specific users, groups, or domains.
 
 > [!TIP]
-> Instead of creating and managing custom anti-spam policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+> Instead of creating and managing custom anti-spam policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 >
 > To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 
-You can configure anti-spam policies in the Microsoft Defender portal or in PowerShell (Exchange Online PowerShell for Microsoft 365 organizations with mailboxes in Exchange Online; standalone EOP PowerShell for organizations without Exchange Online mailboxes).
+You can configure anti-spam policies in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 [!INCLUDE [Security Analyzer setup guide](../includes/security-analyzer-setup-guide.md)]
 
@@ -44,7 +44,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
@@ -54,18 +54,18 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- For our recommended settings for anti-spam policies, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+- For our recommended settings for anti-spam policies, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
   > [!TIP]
   > Settings in the default or custom anti-spam policies are ignored if a recipient is also included in the [Standard or Strict preset security policies](preset-security-policies.md). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
 
-- You can't completely turn off spam filtering, but you can use Exchange mail flow rules (also known as transport rules) to bypass most spam filtering on incoming messages (for example, if you route email through a third-party protection service or device before delivery to Microsoft 365). For more information, see [Use mail flow rules to set the spam confidence level (SCL) in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
-  - High confidence phishing messages are still filtered. Other features in EOP aren't affected (for example, messages are always scanned for malware).
-  - If you need to bypass spam filtering for SecOps mailboxes or phishing simulations, don't use mail flow rules. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
+- You can't completely turn off spam filtering, but you can use Exchange mail flow rules (also known as transport rules) to bypass most spam filtering on incoming messages. For example, if you route email through a non-Microsoft protection service or device before delivery to Microsoft 365). For more information, see [Use mail flow rules to set the spam confidence level (SCL) in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+  - High confidence phishing messages are still filtered. Other filters in Microsoft 365 aren't affected (for example, messages are always scanned for malware).
+  - If you need to bypass spam filtering for SecOps mailboxes or phishing simulations, don't use mail flow rules. For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 
-- End-user spam notifications in anti-spam policies are replaced by _quarantine notifications_ in quarantine policies. Quarantine notifications contain information about quarantined messages for all supported protection features (not just anti-spam policy and anti-phishing policy verdicts). For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+- _Quarantine notifications_ in quarantined policies replace end-user spam notifications that were configured in anti-spam policies. Quarantine notifications contain information about quarantined messages for all supported protection features (not just anti-spam policy and anti-phishing policy verdicts). For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 ## Use the Microsoft Defender portal to create anti-spam policies
 
@@ -80,10 +80,10 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
    When you're finished on the **Name your policy** page, select **Next**.
 
 4. On the **Users, groups, and domains** page, identify the internal recipients that the policy applies to (recipient conditions):
-   - **Users**: The specified mailboxes, mail users, mail contacts or mail enabled public folders.
+   - **Users**: The specified mailboxes, mail users, mail contacts, or mail enabled public folders.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-     - The specified Microsoft 365 Groups.
+     - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
      > [!TIP]
@@ -113,13 +113,13 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
 5. On the **Bulk email threshold & spam properties** page, configure the following settings:
 
-   - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+   - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
 
    - **Spam properties** section:
 
      - **Increase spam score**, **Mark as spam**<sup>\*</sup> and **Test mode**: Advanced Spam Filter (ASF) settings that are turned off by default.
 
-       For details about these settings, see [Advanced Spam Filter settings in EOP](anti-spam-policies-asf-settings-about.md).
+       For details about these settings, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md).
 
        <sup>\*</sup> The **Contains specific languages** and **From these countries** settings aren't part of ASF.
 
@@ -141,14 +141,14 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
      The available actions for spam filtering verdicts are described in [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies).
 
      > [!TIP]
-     > If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+     > If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
      >
      > For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
      >
-     > Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined high confidence phishing messages.
+     > Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
    - **Intra-Organizational messages to take action on**: Controls whether spam filtering and the corresponding verdict actions are applied to internal messages (messages sent between users within the organization). The available values are:
-     - **Default**: This is the default value. This value is the same as selecting **High confidence phishing messages**.
+     - **Default**: The default value. This value is the same as selecting **High confidence phishing messages**.
      - **None**
      - **High confidence phishing messages**
      - **Phishing and high confidence phishing messages**
@@ -162,11 +162,11 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
      >
      > This setting also controls how long messages that were quarantined by **anti-phishing** policies are retained. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).
 
-   - **Add this X-header text**: This box is required and available only if you selected **Add X-header** as the action for a spam filtering verdict. The value you specify is the header field _name_ that's added to the message header. The header field _value_ is always `This message appears to be spam`.
+   - **Add this X-header text**: This box is required and available only if you selected **Add X-header** as the action for a spam filtering verdict. The specified value is the _name_ of the new header field. The header field _value_ is always `This message appears to be spam`.
 
      The maximum length is 255 characters, and the value can't contain spaces or colons (:).
 
-     For example, if you enter the value `X-This-is-my-custom-header`, the X-header that's added to the message is `X-This-is-my-custom-header: This message appears to be spam.`
+     For example, if you enter the value `X-This-is-my-custom-header`, the new X-header is: `X-This-is-my-custom-header: This message appears to be spam.`
 
      If you enter a value that contains spaces or colons (:), the value you enter is ignored, and the default X-header is added to the message (`X-This-Is-Spam: This message appears to be spam.`).
 
@@ -178,7 +178,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    - **Zero-hour auto purge (ZAP)** section:
 
-     - **Enable zero-hour auto purge (ZAP)**: ZAP detects and takes action on messages that have already been delivered to Exchange Online mailboxes. ZAP is turned on by default. When ZAP is turned on, the following settings are available:
+     - **Enable zero-hour auto purge (ZAP)**: ZAP detects and takes action on messages delivered to cloud mailboxes. ZAP is on by default. When ZAP is on, the following settings are available:
        - **Enable ZAP for phishing messages**: By default, ZAP is enabled for phishing detections, but you can disable it by clearing the check box. For more information, see:
          - [Zero-hour auto purge (ZAP) for phishing](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-for-phishing)
          - [Zero-hour auto purge (ZAP) for high confidence phishing](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-for-high-confidence-phishing)
@@ -193,7 +193,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
    The maximum limit for these lists is approximately 1,000 entries, but you can enter only 30 entries in the Defender portal. Use Exchange Online PowerShell to add more than 30 entries.
 
    > [!IMPORTANT]
-   > The functionality of these lists has largely been replaced by the [Tenant Allow/Block List](tenant-allow-block-list-about.md). For important information, see [Allow and block list in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
+   > The [Tenant Allow/Block List](tenant-allow-block-list-about.md) mostly replaced these lists. For important information, see [Allow and block lists in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
 
    The steps to add entries to any of the lists are the same:
 
@@ -285,28 +285,15 @@ For the default policy, you can't modify the name of the policy, and there are n
 
 For the anti-spam policies named **Standard Preset Security Policy** and **Strict Preset Security Policy** that are associated with [preset security policies](preset-security-policies.md), you can't modify the policy settings in the details flyout. Instead, you select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **View preset security policies** in the details flyout to go to the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies> to modify the preset security policies.
 
-> [!TIP]
-> The bulk senders insight is currently in Preview, isn't available in all organizations, and is subject to change.
+If you select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section in the details flyout of the default anti-spam policy or a custom anti-spam policy, the **Bulk email threshold** section contains the bulk senders insight.
 
-If you select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section in the details flyout of the default anti-spam policy or a custom anti-spam policy, the **Bulk email threshold** section contains the bulk senders insight: information about the number of messages that were detected as bulk at all BCL levels by all anti-spam policies over the last 60 days.
+The bulk senders insight shows much mail was identified as bulk at the current BCL threshold in anti-spam policies, and simulates identified vs. allowed bulk email based on changes in the BCL threshold.
 
-- By default, the bulk senders insight shows the number of messages that were delivered and identified as bulk at the current BCL threshold of the anti-spam policy.
-
-  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-default.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk at the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-default.png":::
-
-- If you decrease the bulk email threshold value, the bulk senders insight changes to show how many fewer messages would be delivered and how many more messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false positives (good email identified as bad).
-
-  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you decrease the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png":::
-
-- If you increase the bulk email threshold value, the bulk senders insight changes to show how many more messages would be delivered and how many fewer messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false negatives (bad email delivered).
-
-  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you increase the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png":::
-
-Selecting **View bulk senders insight** takes you to the main **Bulk sender insights** page. For more information, see [Bulk senders insight in Exchange Online Protection](anti-spam-bulk-senders-insight.md).
+For more information, see [Bulk senders insight in the Microsoft Defender portal](anti-spam-bulk-senders-insight.md#open-the-bulk-senders-insight-in-the-microsoft-defender-portal).
 
 ### Use the Microsoft Defender portal to enable or disable anti-spam policies
 
-You can't disable the default anti-spam policy (it's always enabled).
+You can't disable the default anti-spam policy (always enabled).
 
 You can't enable or disable the anti-spam policies that are associated with Standard and Strict preset security policies. You enable or disable the Standard or Strict preset security policies on the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies>.
 
@@ -320,13 +307,13 @@ On the **Anti-spam policies** page, the **Status** value of the policy is now **
 
 ### Use the Microsoft Defender portal to set the priority of custom anti-spam policies
 
-Anti-spam policies are processed in the order that they're displayed on the **Anti-spam policies** page:
+Anti-spam policies are processed in the order they're displayed on the **Anti-spam policies** page:
 
-- The anti-spam policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
-- The anti-spam policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
+- The anti-spam policy named **Strict Preset Security Policy** associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
+- The anti-spam policy named **Standard Preset Security Policy** associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
 - Custom anti-spam policies are applied next in priority order (if they're enabled):
   - A lower priority value indicates a higher priority (0 is the highest).
-  - By default, a new anti-spam policy is created with a priority that's lower than the lowest existing custom anti-spam policy (the first is 0, the next is 1, etc.).
+  - By default, a new anti-spam policy is created with a priority lower than the lowest existing custom anti-spam policy (the first is 0, the next is 1, etc.).
   - No two anti-spam policies can have the same priority value.
 - The default anti-spam policy always has the priority value **Lowest**, and you can't change it.
 
@@ -350,9 +337,9 @@ After you select the custom anti-spam policy by clicking anywhere in the row oth
 
 On the **Anti-spam policies** page, the deleted policy is no longer listed.
 
-## Use Exchange Online PowerShell or standalone EOP PowerShell to configure anti-spam policies
+## Use PowerShell to configure anti-spam policies
 
-In PowerShell, the basic elements of an anti-spam policy are:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), the basic elements of an anti-spam policy are:
 
 - **The spam filter policy**: Specifies the spam protections to enable or disable, the actions to apply for those protections, and other options.
 - **The spam filter rule**: Specifies the priority and recipient filters (who the policy applies to) for the associated spam filter policy.
@@ -363,7 +350,7 @@ The difference between these two elements isn't obvious when you manage anti-spa
 - When you modify a policy in the Defender portal, settings related to the name, priority, enabled or disabled, and recipient filters modify the spam filter rule. All other settings modify the associated spam filter policy.
 - When you remove a policy in the Defender portal, the spam filter rule and the associated spam filter policy are removed at the same time.
 
-In Exchange Online PowerShell, the difference between spam filter policies and spam filter rules is apparent. You manage spam filter policies by using the **\*-HostedContentFilterPolicy** cmdlets, and you manage spam filter rules by using the **\*-HostedContentFilterRule** cmdlets.
+In PowerShell, the difference between spam filter policies and spam filter rules is apparent. You manage spam filter policies by using the **\*-HostedContentFilterPolicy** cmdlets, and you manage spam filter rules by using the **\*-HostedContentFilterRule** cmdlets.
 
 - In PowerShell, you create the spam filter policy first, then you create the spam filter rule, which identifies the associated policy that the rule applies to.
 - In PowerShell, you modify the settings in the spam filter policy and the spam filter rule separately.
@@ -403,7 +390,7 @@ This example creates a spam filter policy named Contoso Executives with the foll
 New-HostedContentFilterPolicy -Name "Contoso Executives" -HighConfidenceSpamAction Quarantine -SpamAction Quarantine -BulkThreshold 6
 ```
 
-For detailed syntax and parameter information, see [New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in a spam filter policy, see [Use PowerShell to specify the quarantine policy in anti-spam policies](quarantine-policies.md#anti-spam-policies-in-powershell).
@@ -425,7 +412,7 @@ This example creates a new spam filter rule named Contoso Executives with these 
 New-HostedContentFilterRule -Name "Contoso Executives" -HostedContentFilterPolicy "Contoso Executives" -SentToMemberOf "Contoso Executives Group"
 ```
 
-For detailed syntax and parameter information, see [New-HostedContentFilterRule](/powershell/module/exchange/new-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [New-HostedContentFilterRule](/powershell/module/exchangepowershell/new-hostedcontentfilterrule).
 
 ### Use PowerShell to view spam filter policies
 
@@ -447,7 +434,7 @@ This example returns all the property values for the spam filter policy named Ex
 Get-HostedContentFilterPolicy -Identity "Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Get-HostedContentFilterPolicy](/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy).
 
 ### Use PowerShell to view spam filter rules
 
@@ -485,7 +472,7 @@ This example returns all the property values for the spam filter rule named Cont
 Get-HostedContentFilterRule -Identity "Contoso Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-HostedContentFilterRule](/powershell/module/exchange/get-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Get-HostedContentFilterRule](/powershell/module/exchangepowershell/get-hostedcontentfilterrule).
 
 ### Use PowerShell to modify spam filter policies
 
@@ -500,7 +487,7 @@ To modify a spam filter policy, [connect to Exchange Online PowerShell](/powersh
 Set-HostedContentFilterPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in a spam filter policy, see [Use PowerShell to specify the quarantine policy in anti-spam policies](quarantine-policies.md#anti-spam-policies-in-powershell).
@@ -509,7 +496,7 @@ For detailed syntax and parameter information, see [Set-HostedContentFilterPolic
 
 The only setting that isn't available when you modify a spam filter rule in PowerShell is the _Enabled_ parameter that allows you to create a disabled rule. To enable or disable existing spam filter rules, see the next section.
 
-Otherwise, no additional settings are available when you modify a spam filter rule in PowerShell. The same settings are available when you create a rule as described in the [Step 2: Use PowerShell to create a spam filter rule](#step-2-use-powershell-to-create-a-spam-filter-rule) section earlier in this article.
+Otherwise, no extra settings are available when you modify a spam filter rule in PowerShell. The same settings are available when you create a rule as described in the [Step 2: Use PowerShell to create a spam filter rule](#step-2-use-powershell-to-create-a-spam-filter-rule) section earlier in this article.
 
 To modify a spam filter rule, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use this syntax:
 
@@ -523,11 +510,11 @@ This example renames the existing spam filter rule named `{Fabrikam Spam Filter}
 Set-HostedContentFilterRule -Identity "{Fabrikam Spam Filter}" -Name "Fabrikam Spam Filter"
 ```
 
-For detailed syntax and parameter information, see [Set-HostedContentFilterRule](/powershell/module/exchange/set-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Set-HostedContentFilterRule](/powershell/module/exchangepowershell/set-hostedcontentfilterrule).
 
 ### Use PowerShell to enable or disable spam filter rules
 
-Enabling or disabling a spam filter rule in PowerShell enables or disables the whole anti-spam policy (the spam filter rule and the assigned spam filter policy). You can't enable or disable the default anti-spam policy (it's always applied to all recipients).
+Enabling or disabling a spam filter rule in PowerShell enables or disables the whole anti-spam policy (the spam filter rule and the assigned spam filter policy). You can't enable or disable the default anti-spam policy (always applied to all recipients).
 
 To enable or disable a spam filter rule, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use this syntax:
 
@@ -547,11 +534,11 @@ This example enables same rule.
 Enable-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Enable-HostedContentFilterRule](/powershell/module/exchange/enable-hostedcontentfilterrule) and [Disable-HostedContentFilterRule](/powershell/module/exchange/disable-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Enable-HostedContentFilterRule](/powershell/module/exchangepowershell/enable-hostedcontentfilterrule) and [Disable-HostedContentFilterRule](/powershell/module/exchangepowershell/disable-hostedcontentfilterrule).
 
 ### Use PowerShell to set the priority of spam filter rules
 
-The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, if you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2, the existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
+The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2. The existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
 
 To set the priority of a spam filter rule, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use the following syntax:
 
@@ -559,7 +546,7 @@ To set the priority of a spam filter rule, [connect to Exchange Online PowerShel
 Set-HostedContentFilterRule -Identity "<RuleName>" -Priority <Number>
 ```
 
-This example sets the priority of the rule named Marketing Department to 2. All existing rules that have a priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
+This example sets the priority of the rule named Marketing Department to 2. All existing rules with priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
 
 ```PowerShell
 Set-HostedContentFilterRule -Identity "Marketing Department" -Priority 2
@@ -586,7 +573,7 @@ This example removes the spam filter policy named Marketing Department.
 Remove-HostedContentFilterPolicy -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-HostedContentFilterPolicy](/powershell/module/exchange/remove-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Remove-HostedContentFilterPolicy](/powershell/module/exchangepowershell/remove-hostedcontentfilterpolicy).
 
 ### Use PowerShell to remove spam filter rules
 
@@ -604,14 +591,14 @@ This example removes the spam filter rule named Marketing Department.
 Remove-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-HostedContentFilterRule](/powershell/module/exchange/remove-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Remove-HostedContentFilterRule](/powershell/module/exchangepowershell/remove-hostedcontentfilterrule).
 
 ## How do you know these procedures worked?
 
 ### Send a GTUBE message to test your spam policy settings
 
 > [!NOTE]
-> These steps will only work if the email organization that you're sending the GTUBE message from doesn't scan for outbound spam. If it does, you can't send the test message.
+> These steps work only if the source email organization doesn't scan for outbound spam. If it does, you can't send the test message.
 
 Generic Test for Unsolicited Bulk Email (GTUBE) is a text string that you include in a test message to verify your organization's anti-spam settings. A GTUBE message is similar to the European Institute for Computer Antivirus Research (EICAR) text file for testing malware settings.
 

@@ -2,9 +2,9 @@
 title: View Defender for Office 365 reports
 f1.keywords:
   - CSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -161,11 +161,11 @@ On the **Post delivery activities** page, the :::image type="icon" source="media
 
 ## Threat protection status report
 
-The **Threat protection status** report is a single view that brings together information about malicious content and malicious email detected and blocked by [Exchange Online Protection](eop-about.md) (EOP) and Defender for Office 365. For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
+The **Threat protection status** report is a single view that brings together information about malicious content and malicious email detected and blocked by the [default email protections for cloud mailboxes](eop-about.md) and [Defender for Office 365](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet). For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
 ## Top senders and recipients report
 
-The **Top senders and recipients** report show the top recipients for EOP and Defender for Office 365 protection features. For more information, see [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report).
+The **Top senders and recipients** report show the top recipients for email and collaboration protection features. For more information, see [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report).
 
 ## URL protection report
 
@@ -266,15 +266,15 @@ PowerShell reporting cmdlets:
 
 |Report|Article|
 |---|---|
-|Top senders and recipients|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
-|Top malware|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
-|Threat protection status|[Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|
-|Safe Links|[Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|
-|Compromised users|[Get-CompromisedUserAggregateReport](/powershell/module/exchange/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchange/get-compromiseduserdetailreport)|
-|Mail flow status|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
-|Spoofed users|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
-|Post delivery activity summary|[Get-AggregateZapReport](/powershell/module/exchange/get-aggregatezapreport)|
-|Post delivery activity details|[Get-DetailZapReport](/powershell/module/exchange/get-detailzapreport)|
+|Top senders and recipients|[Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport)|
+|Top malware|[Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport)|
+|Threat protection status|[Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|
+|Safe Links|[Get-SafeLinksAggregateReport](/powershell/module/exchangepowershell/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchangepowershell/get-safelinksdetailreport)|
+|Compromised users|[Get-CompromisedUserAggregateReport](/powershell/module/exchangepowershell/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchangepowershell/get-compromiseduserdetailreport)|
+|Mail flow status|[Get-MailflowStatusReport](/powershell/module/exchangepowershell/get-mailflowstatusreport)|
+|Spoofed users|[Get-SpoofMailReport](/powershell/module/exchangepowershell/get-spoofmailreport)|
+|Post delivery activity summary|[Get-AggregateZapReport](/powershell/module/exchangepowershell/get-aggregatezapreport)|
+|Post delivery activity details|[Get-DetailZapReport](/powershell/module/exchangepowershell/get-detailzapreport)|
 
 ## What permissions are needed to view the Defender for Office 365 reports?
 
@@ -282,9 +282,9 @@ See [What permissions are needed to view these reports?](reports-email-security.
 
 ## What if the reports aren't showing data?
 
-If you don't see data in the reports, check the report filters and double-check that your policies are set up correctly. Safe Links policies and Safe Attachments policies from Built-in protection, preset security policies, or custom policies need to be in effect and acting on messages. For more information, see the following articles:
+If you don't see data in the reports, check the report filters and double-check that your policies are set up correctly. Safe Links policies and Safe Attachments policies from Built-in protection, preset security policies, or custom threat policies need to be in effect and acting on messages. For more information, see the following articles:
 
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
-- [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)
+- [Preset security policies](preset-security-policies.md)
+- [Configuration analyzer](configuration-analyzer-for-security-policies.md)
 - [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md)
 - [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md)

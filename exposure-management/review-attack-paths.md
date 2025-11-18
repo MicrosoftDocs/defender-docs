@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 09/09/2025
 ---
 
 # Review attack paths
@@ -16,10 +16,11 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 ## Prerequisites
 
 - [Read about attack paths](work-attack-paths-overview.md) before you start.
--- [Review required permissions](prerequisites.md#permissions) for working with attack paths.
+- [Review required permissions](prerequisites.md#permissions) for working with attack paths.
 - The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative:
   - If you don't have licenses defined for workloads integrated and represented in the attack path.
   - If you don't fully define critical assets.
+- You may see an empty Cloud Attack Path page, as attack paths focus on real, externally-driven and exploitable threats rather than exploratory scenarios. This helps reduce noise and prioritize imminent risks.
 
 ### Attack path dashboard
 

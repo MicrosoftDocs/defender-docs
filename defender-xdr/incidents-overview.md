@@ -5,7 +5,7 @@ ms.service: defender-xdr
 f1.keywords:
   - NOCSH
 ms.author: guywild
-author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
@@ -68,6 +68,7 @@ The Microsoft Defender portal includes tools and methods to automate or otherwis
 | Tool/Method | Description |
 | ----------- | ----------- |
 | **[Manage](manage-incidents.md) and [investigate](investigate-incidents.md) incidents** | Make sure that you prioritize your incidents according to severity and then work through them to investigate. Use advanced hunting to search for threats, and get ahead of emerging threats with threat analytics. |
+| **[Split incidents into tasks](split-incidents-into-tasks.md)** | Use tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively across your operations teams. Managing incidents with tasks helps to improve efficiency in incident response and ensure accountability for investigation outcomes. |
 | **[Automatically investigate and resolve alerts](/defender-xdr/m365d-autoir)** | If enabled to do so, Microsoft Defender XDR can automatically investigate and resolve alerts from Microsoft 365 and Entra ID sources through automation and artificial intelligence. |
 | **[Configure automatic attack disruption actions](automatic-attack-disruption.md)** | Use high-confidence signals collected from Microsoft Defender XDR and Microsoft Sentinel to automatically disrupt active attacks at machine speed, containing the threat and limiting the impact. |
 | **[Configure Microsoft Sentinel automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules)** | Use automation rules to automate triage, assignment, and management of incidents, regardless of their source. Help your team's efficiency even more by configuring your rules to apply tags to incidents based on their content, suppress noisy (false positive) incidents, and close resolved incidents that meet the appropriate criteria, specifying a reason and adding comments. |
