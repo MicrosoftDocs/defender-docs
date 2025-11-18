@@ -56,6 +56,50 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 ## Get access
 
 To use advanced hunting or other [Microsoft Defender XDR](microsoft-365-defender.md) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
+## Permissions required for Advanced Hunting
+
+You need to be assigned permissions before you can run Advanced Hunting queries. You have the following options:
+
+### **Microsoft Defender XDR Unified role-based access control (URBAC)**
+
+**Read-only Advanced Hunting access (Email & Collaboration tables):**
+Membership assigned with the following Defender URBAC permission:
+
+* **Security operations → Security data → Security data basic (read)**
+
+This permission provides access to:
+
+* **EmailEvents**
+* **EmailUrlInfo**
+* **EmailAttachmentInfo**
+* **UrlClickEvents**
+* **Email entity metadata**
+
+### **Email & Collaboration (EOP / Defender for Office 365) permissions**
+
+Membership in one of the following Email & Collaboration role groups provides access to email data tables in Advanced Hunting:
+
+* **Security Administrator**
+* **Security Operator**
+* **Security Reader**
+
+### **Exchange Online RBAC permissions**
+
+To access EXO-related data surfaced in Advanced Hunting, users must be members of one of the following Exchange Online role groups:
+
+* **View-Only Organization Management**
+* **View-Only Configuration**
+* **Security Reader**
+* **Global Reader**
+
+### **Microsoft Entra permissions**
+
+Membership in one of the following Microsoft Entra roles grants full read access to all Advanced Hunting data:
+
+* **Global Administrator**
+* **Security Administrator**
+* **Security Reader**
+* **Global Reader**
 
 Also, your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. [Read about managing access to Microsoft Defender XDR](m365d-permissions.md).
 
