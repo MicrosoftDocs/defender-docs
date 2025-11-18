@@ -110,7 +110,7 @@ Review these considerations when monitoring and troubleshooting custom data coll
 ## Edit, delete, and enable or disable custom data collection rules
 
 - To edit a rule, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**, select the rule you want to edit, and select **Edit**.
-- To delete a rule, select the rule you want to delete, and select **Delete**.
-- To disable or enable a rule, select the rule you want to modify, and select or clear the **Enable** check-box under the rule description.
+- To disable or enable a rule, select the rule you want to modify, and select or clear the **Enable** check-box under the rule description. When you disable a rule,data collection for that rule stops on all targeted devices.
+- To delete a rule, select the rule you want to delete, and select **Delete**. When you delete a rule, the rule is permanently removed from the system.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
