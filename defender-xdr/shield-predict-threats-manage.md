@@ -47,6 +47,9 @@ In the **Incidents** page, filter by the **Predictive Shielding** tag to find in
 
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding tag." lightbox="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
 
+> [!NOTE]
+> While the incident and alert details show historical data from the inception of the incident, the **Activities** tab shows a snapshot of the current status. For more information, see [Review the activity information](#review-the-activity-information).
+
 You can then select the relevant incident, and review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-attack-story.png" alt-text="Screenshot of predictive shielding data shown in the incident graph, attack story, and disruption summary card." lightbox="media/shield-predict-threats-manage/shield-predict-threats-attack-story.png":::
@@ -60,9 +63,6 @@ You can also review the alert, and disruption information for predictive shieldi
 - In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
 
     :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details." loc-scope="other":::
-
-> [!NOTE]
-> While the incident and alert details show historical data from the inception of the incident, not a snapshot of current status. For the current status, select the **Activity** tab and [review the hardened devices in each activity's details](#review-the-activity-information).
 
 ### Review the activity information
 
@@ -85,7 +85,7 @@ Select the incident's **Activities** tab and filter by the **Response** category
     :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-activity-details.png" alt-text="Screenshot of the activity details pane showing the number of devices hardened by a predictive shielding action.":::
 
 > [!TIP]
-> While the **Activity** tab displays actions that are specific to the current incident, the Action center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
+> While the **Activities** tab displays actions that are specific to the current incident, the Action center displays all activites. To track predictive shielding actions in the Action center, see [Use the Action center](m365d-action-center.md).
 
 ### Review the triggering alert information
 
@@ -138,7 +138,7 @@ DisruptionAndResponseEvents
 
 ### Track policy modification events in the environment
 
-This sample query retrieves policy modification events in the environment, including application and removal of hardening policies from devices onboarded to Defender for Endpoint.
+This sample query retrieves policy modification events in the environment, including application and removal of hardening policies from devices onboarded to Defender for Endpoint. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
 ```kusto
   DisruptionAndResponseEvents
@@ -153,7 +153,7 @@ DisruptionAndResponseEvents
 
 ### Track blocked events related to predictive shielding hardening policies
 
-This sample query retrieves blocked events related to predictive shielding hardening policies, and allows you to monitor when specific actions were blocked on devices.
+This sample query retrieves blocked events related to predictive shielding hardening policies, and allows you to monitor when specific actions were blocked on devices. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
 ```kusto
   DisruptionAndResponseEvents

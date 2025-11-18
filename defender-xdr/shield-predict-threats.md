@@ -65,7 +65,7 @@ This dual approach ensures that protection is both precise and timely.
 
 ### Prediction logic
 
-Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed. For instance, if a specific attacker tool is detected, predictive shielding can infer the next likely target based on past attack patterns.
+Prediction allows organizations to identify assets at risk and apply tailored protections in real time. Prediction focuses on emerging risks rather than static prevention, which minimizes operational friction and ensures that security measures are applied precisely where needed. For example, if a specific attacker tool is detected, predictive shielding can infer the next likely target based on past attack patterns.
 
 Defender XDR uses multiple layers of insight to make accurate predictions:
 
