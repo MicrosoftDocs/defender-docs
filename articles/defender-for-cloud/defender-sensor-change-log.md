@@ -15,7 +15,7 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 To see the version of the sensor run:
 
-`kubectl get -n kube-system daemonsets/microsoft-defender-collector-ds -o jsonpath='{.metadata.labels.app\.kubernetes\.io/version}`
+`kubectl get -n kube-system daemonsets/microsoft-defender-collector-ds -o jsonpath='{.metadata.labels.app\.kubernetes\.io/version}'`
 
 
 ## Sensor versions available per release
@@ -86,8 +86,7 @@ The support policy here applies to all Helm-based and multicloud installations. 
 |0.10|Jan 2026|Apr 2026|Apr 2027|
 |0.11|Apr 2026|Jul  2026|Jul 2027|
 
-Each stable (GA) version is supported for 12 months from its GA release date.
-After the 12-month support window ends, the version is no longer supported.
-Customers are encouraged to upgrade to the latest stable or Public release prior to end of support to ensure continued support and access to new capabilities.
+Each stable (GA) version is supported for 12 months from its GA release date. After the 12-month window ends, the version is no longer supported. Customers should upgrade to the latest stable or Public release to maintain support and access new capabilities.
+
 
 
