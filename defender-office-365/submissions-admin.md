@@ -850,6 +850,9 @@ For more information about how Microsoft processes submissions, see [Learn more 
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
 > [!NOTE]
+>
+> In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+>
 > AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
 ### Dispute the result for submissions to Microsoft
