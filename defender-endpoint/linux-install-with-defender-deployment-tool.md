@@ -1,6 +1,6 @@
 ---
-title: Deploy Microsoft Defender on Linux devices using the Defender deployment tool
-description: Describes how to deploy Microsoft Defender on Linux using the Defender deployment tool.
+title: Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool
+description: Describes how to deploy Microsoft Defender endpoint security on Linux using the Defender deployment tool.
 ms.reviewer: meghapriya
 ms.service: defender-endpoint
 ms.author: painbar
@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Deploy Microsoft Defender on Linux devices using the Defender deployment tool
+# Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool
 
 The Defender deployment tool provides an efficient, user-friendly onboarding process for Microsoft Defender for Endpoint on Linux devices. It allows users to install and onboard Microsoft Defender for Endpoint using a single package that can be downloaded from the Microsoft Defender portal. This eliminates the need to install Defender using installer script/cli commands and then, separately, to onboard the device using the onboarding package from the portal.
 
