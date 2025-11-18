@@ -62,7 +62,11 @@ To discover and deploy agents in the Microsoft Defender portal:
 
         You can manage centralized purchases for partner-published agents through public offers, or through private offers, as described in [How to Purchase SaaS Solutions (Private Offers)](/security/store/how-to-purchase-saas-solutions-private-offers).
 
-1. After purchasing the agent, select **Security Copilot > Security Store**, find your agent in the **Ready for setup** section, and then select **Set up** to begin agent setup.
+1. After purchasing the agent, select **Security Copilot > Agents**, find your agent in the **Ready for setup** section, and then select **Set up** to begin agent setup.
+
+    For information on setting up, managing, and running partner-published agents, see [Manage Security Copilot agents](/copilot/security/agents-manage#set-up-for-partner-built-agents).
+
+    For information on setting up, managing, and running Microsoft Security Copilot agents, see [Microsoft Security Copilot agents in Microsoft Defender](#microsoft-security-copilot-agents-in-microsoft-defender).
 
     After setup, the agent appears in the **Agents in use** section.
 
