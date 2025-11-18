@@ -69,7 +69,7 @@ Agentless code scanning uses various open-source tools to find vulnerabilities a
 | **[Checkov](https://github.com/bridgecrewio/checkov)**           |Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE)  |
 | **[Bandit](https://github.com/PyCQA/bandit)**            |Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
 | **[ESLint](https://github.com/eslint/eslint)**            |JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
-| **[Trivy](https://trivy.dev/v0.59/docs/scanner/vulnerability/)**|Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) |[Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE)|
+| **[Trivy](https://www.github.com/aquasecurity/trivy/)**|Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) |[Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE)|
 
 
 These tools support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.
