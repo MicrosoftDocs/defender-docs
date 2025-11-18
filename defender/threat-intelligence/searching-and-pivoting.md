@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: how-to 
-ms.date: 01/15/2025
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -14,6 +14,9 @@ ms.custom:
 ---
 
 # Searching and pivoting
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 Microsoft Defender Threat Intelligence (Defender TI) offers a robust and flexible search engine to streamline the investigation process. Defender TI is designed to let you pivot across various indicators from different data sources, making it easier than ever to discover relationships between disparate infrastructure. 
 

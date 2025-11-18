@@ -1,11 +1,11 @@
----
+﻿---
 title: Microsoft Defender for Endpoint reports
 description: Access the various reports for devices, protection features, and more in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -13,17 +13,15 @@ ms.collection:
 ms.topic: article
 search.appverid: met150
 ms.date: 2/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint reports
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 This article provides an overview of the reports available to Microsoft Defender for Endpoint users. It offers information on various reports that can be used to collect data, summarize findings, and obtain recommended actions when applicable.
 
@@ -123,3 +121,4 @@ You can review all signals collected by Defender for Endpoint by turning on aggr
 To turn aggregated reporting on, go to **Settings > Endpoints > Advanced features**. Toggle on the **Aggregated reporting** feature. Learn more about [aggregated reporting in Defender for Endpoint](/defender-endpoint/aggregated-reporting).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

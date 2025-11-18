@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -19,11 +19,12 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the outbound spam controls in Microsoft 365, and what to do if you need to send mass mailings.
 ms.service: defender-office-365
-ms.date: 07/07/2025
+ms.date: 09/03/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an IT administrator responsible for email deliverability and security, I want to understand how outbound spam protection works and how to configure protections and policies so that my organization's email reputation and message delivery remain reliable.
 ---
 
 # Outbound spam protection for cloud mailboxes
@@ -34,7 +35,13 @@ In all organizations with cloud mailboxes, we take managing outbound spam seriou
 
 This article describes the controls and notifications that are designed to help prevent outbound spam, and what you can do if you need to send mass mailings.
 
+> [!TIP]
+> If you're an end-user and your email is blocked or fails to send due to outbound spam protection, you receive a non-delivery report (also known as an NDR or bounce message). This behavior is expected. Only admins can review and resolve these issues, so contact your email admin for assistance.
+
 ## What admins can do to control outbound spam
+
+> [!NOTE]
+> If messages are blocked or marked as spam, admins can review the issue in the **Exchange admin center (EAC)** using **Message trace** or delivery reports. For investigation and resolution guidance, see [Troubleshoot outbound email issues in Exchange Online](/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)
 
 - **Use built-in notifications**: When a user exceeds [sending limits of the service](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options) or [outbound spam policies](outbound-spam-policies-configure.md) and is restricted from sending email, the default alert policy named **User restricted from sending email** sends email notifications to members of the **TenantAdmins** group (**Global Administrator** members). To configure who else receives these notifications, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). Also, the default alert policies named **Email sending limit exceeded** and **Suspicious email sending patterns detected** send email notifications to members of the **TenantAdmins** group (**Global Administrator** members). For more information about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
 

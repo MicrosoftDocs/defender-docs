@@ -1,12 +1,12 @@
----
+﻿---
 title: Microsoft Defender for Endpoint Device Control frequently asked questions
 description: Answers frequently asked questions about device control in Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: asr
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,14 +17,14 @@ ms.topic: faq
 ms.date: 03/10/2025
 ms.reviewer: tewchen, joshbregman
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Microsoft Defender for Endpoint Device Control frequently asked questions
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 
 This article provides answers to frequently asked questions about device control removable storage capabilities in Microsoft Defender for Endpoint.
@@ -134,3 +134,4 @@ To set up device control on Windows, use [attack surface reduction rules in Defe
 
 To set up device control on Mac, use Intune or Jamf. See [Device Control for macOS](mac-device-control-overview.md).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

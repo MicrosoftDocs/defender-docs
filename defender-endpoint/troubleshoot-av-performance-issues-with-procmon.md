@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Microsoft Defender Antivirus performance issues with Process Monitor
 description: Troubleshoot Microsoft Defender Antivirus performance issues with Process Monitor
-author: emmwalshh
-ms.author: ewalsh 
+author: batamig
+ms.author: bagol 
 ms.reviewer: yonghree
-manager: deniseb
+manager: bagol
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
 ms.date: 03/20/2025

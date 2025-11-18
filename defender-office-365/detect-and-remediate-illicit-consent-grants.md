@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.collection:
@@ -108,7 +108,7 @@ The simplest way to verify the Illicit Consent Grant attack is to run [the Get-A
 > [!IMPORTANT]
 > We ***highly recommend*** that you require multifactor authentication on your admin account. This script supports MFA authentication.
 >
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. Sign in to the computer where you want to run the scripts with local administrator rights.
 

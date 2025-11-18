@@ -1,14 +1,14 @@
----
+﻿---
 title:  Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
 description: Troubleshoot sensor health on devices to identify potential configuration, environment, connectivity, or telemetry issue affecting sensor data or capability.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,13 +18,13 @@ ms.topic: troubleshooting-general
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 06/10/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 The [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/MDEClientAnalyzer) (MDECA) can be useful when diagnosing sensor health or reliability issues on [onboarded devices](onboard-configure.md) running either Windows, Linux, or macOS. For example, you might want to run the analyzer on a machine that appears to be unhealthy according to the displayed [sensor health status](fix-unhealthy-sensors.md) (Inactive, No Sensor Data or Impaired Communications) in the security portal.
 
@@ -68,3 +68,4 @@ For more information about our privacy statement, see [Microsoft Privacy Stateme
   > On Windows devices, if you use the attack surface reduction rule [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands), you might want to temporarily [configure an exclusion to the ASR rule](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules). Optionally, you can set the rule to **audit** or you can disable the rule. Making these configurations allow the analyzer to run connectivity checks to cloud without being blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 08/18/2025
+ms.date: 09/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -84,7 +84,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
 ### Report questionable email to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, verify that the **Emails** tab is selected.
 
@@ -147,7 +147,7 @@ After a few moments, the block entry is available on the **Domains & addresses**
 
 ### Report questionable email attachments to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **Email attachments** tab.
 
@@ -199,7 +199,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
 
 ### Report questionable URLs to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **URLs** tab.
 
@@ -239,7 +239,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
        - **30 days**
        - **Never expire**
        - **Specific date**: The maximum value is 30 days from today.
-     - **Block entry note (optional)**: Enter optional information about why you're blocking this itme.
+     - **Block entry note (optional)**: Enter optional information about why you're blocking this item.
 
      When you're finished in the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
@@ -251,7 +251,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
 ### Report good email to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, verify that the **Emails** tab is selected.
 
@@ -293,7 +293,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
        For spoofed senders, this value is meaningless, because entries for spoofed senders never expire.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry exipres on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry expires on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
@@ -318,7 +318,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 
 ### Report good email attachments to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **Email attachments** tab.
 
@@ -354,7 +354,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
        - **30 days**
        - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email attachment is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email attachment is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email attachment is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email attachment is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item.
 
@@ -368,7 +368,7 @@ After a few moments, the allow entry is available on the **Files** tab on the **
 
 > [!IMPORTANT]
 >
-> - By default, allow entries for files are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+> - By default, allow entries for files are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 > - When the file is encountered again during mail flow, [Safe Attachments](safe-attachments-about.md) detonation or file reputation checks and all other file-based filters are overridden. If the filtering system determines that all other entities in the email message are clean, the message are delivered.
 > - During selection, all file-based filters, including [Safe Attachments](safe-attachments-about.md) detonation or file reputation checks are overridden, allowing user access to the file.
 
@@ -376,7 +376,7 @@ After a few moments, the allow entry is available on the **Files** tab on the **
 
 For URLs reported as false positives, we allow subsequent messages that contain variations of the original URL. For example, you use the **Submissions** page to report the incorrectly blocked URL `www.contoso.com/abc`. If your organization later receives a message that contains the URL (for example but not limited to: `www.contoso.com/abc`, `www.contoso.com/abc?id=1`, `www.contoso.com/abc/def/gty/uyt?id=5`, or `www.contoso.com/abc/whatever`), the message won't be blocked based on the URL. In other words, you don't need to report multiple variations of the same URL as good to Microsoft.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **URLs** tab
 
@@ -412,7 +412,7 @@ For URLs reported as false positives, we allow subsequent messages that contain 
        - **30 days**
        - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious URL is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the URL is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious URL is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the URL is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item.
 
@@ -426,7 +426,7 @@ After a few moments, the allow entry is available on the **URL** tab on the **Te
 
 > [!NOTE]
 >
-> - By default, allow entries for URLs are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+> - By default, allow entries for URLs are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 > - When the URL is encountered again during mail flow, [Safe Links](safe-links-about.md) detonation or URL reputation checks and all other URL-based filters are overridden. If the filtering system determines that all other entities in the email message are clean, the message are delivered.
 > - During selection, all URL-based filters, including [Safe Links](safe-links-about.md) detonation or URL reputation checks are overridden, allowing user access to content at the URL.
 
@@ -441,7 +441,7 @@ The entries on the **Teams messages** tab are the result of submitting user repo
 
 ### View email admin submissions to Microsoft
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, verify that the **Emails** tab is selected.
 
@@ -471,6 +471,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Destination**
 - **Policy action**
 - **Phish simulation**
+- **Is dispute**: For more information, see [Dispute the result for submissions to Microsoft](#dispute-the-result-for-submissions-to-microsoft).
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
@@ -479,6 +480,7 @@ To group the entries, select :::image type="icon" source="media/m365-cc-sc-group
 - **Reason**
 - **Status**
 - **Result**
+- **Dispute status**
 - **Tags**
 
 To ungroup the entries, select **None**.
@@ -530,6 +532,12 @@ The next sections in the details flyout are related to email message submissions
     - **View Exchange mail flow rules (transport rules)**
     - **View this message in Explorer** (Threat Explorer or Real-time detections in Defender for Office 365 only)
     - **Search for similar messages in Explorer** (Threat Explorer or Real-time detections in Defender for Office 365 only)
+  - If you [disputed the verdict on the message](#dispute-the-result-for-submissions-to-microsoft), a box shows information about the dispute results:
+    - The date and email address of the admin who disputed the message.
+    - **View dispute details**: A read only copy of the **Dispute details** flyout that the admin filled out when they disputed the message.
+    - **View original submission**: The original details flyout of the email message submission.
+
+    :::image type="content" source="media/submissions-dispute-info-in-details-flyout.png" alt-text="Screenshot of the disputed results box for email messages." lightbox="media/submissions-dispute-info-in-details-flyout.png":::
 
 - **Submission details** section:
   - **Date submitted**
@@ -551,7 +559,7 @@ When you're finished in the details flyout, select **Close**.
 > [!TIP]
 > [Submission of Teams message to Microsoft](submissions-teams.md) is currently in Preview, isn't available in all organizations, and is subject to change.
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **Teams messages** tab.
 
@@ -640,7 +648,7 @@ When you're finished in the details flyout, select **Close**.
 
 ### View email attachment admin submissions to Microsoft
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **Email attachments** tab.
 
@@ -730,7 +738,7 @@ When you're finished in the details flyout, select **Close**.
 
 ### View URL admin submissions to Microsoft
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **URLs** tab.
 
@@ -754,6 +762,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Object ID**
 - **Policy action**
 - **Submitted by**
+- **Is dispute**: For more information, see [Dispute the result for submissions to Microsoft](#dispute-the-result-for-submissions-to-microsoft).
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
@@ -762,6 +771,7 @@ To group the entries, select :::image type="icon" source="media/m365-cc-sc-group
 - **Reason**
 - **Status**
 - **Result**
+- **Dispute status**
 - **Tags**
 
 To ungroup the entries, select **None**.
@@ -806,6 +816,12 @@ The remaining sections in the details flyout are related to URL submissions:
     - **Should not have been blocked**
   - **Recommended steps for email submissions**: Contains links to related actions. For example:
     - **Block URL/file in Tenant Allow/Block List**
+  - If you [disputed the verdict on the URL](#dispute-the-result-for-submissions-to-microsoft), a box shows information about the dispute results:
+    - The date and email address of the admin who disputed the message.
+    - **View dispute details**: A read only copy of the **Dispute details** flyout that the admin filled out when they disputed the message.
+    - **View original submission**: The original details flyout of the URL submission.
+
+    :::image type="content" source="media/submissions-dispute-info-in-details-flyout.png" alt-text="Screenshot of the disputed results box for URLs." lightbox="media/submissions-dispute-info-in-details-flyout.png":::
 
 - **Submission details** section:
   - **Date submitted**
@@ -834,7 +850,82 @@ For more information about how Microsoft processes submissions, see [Learn more 
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
 > [!NOTE]
+>
+> In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+>
 > AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
+
+### Dispute the result for submissions to Microsoft
+
+When you disagree with the verdict of an email or URL you submitted to Microsoft, you can dispute the verdict for eligible items. _Disputing_ the item is different from _resubmitting_ the item:
+
+- **Dispute**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** to dispute eligible items.
+  - The original verdict and history are retained.
+  - You can dispute an item only once.
+- **Resubmit**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit eligible items.
+  - The analysis starts over with no previous verdict or history.
+  - You can resubmit an item multiple times.
+
+You can use the procedures in this section to dispute admin submitted items that meet **all** of the following criteria:
+
+- The item was submitted from the **Emails** or **URLs** tabs of the **Submissions** page.
+- The **Status** property value is **Completed**.
+- The **Result** property is one of the following values:
+  - **Threats found**
+  - **No threats found**
+  - **Spam**
+  - **Bulk**
+- The item wasn't previously disputed (filter by **Is dispute** \> **No**).
+
+  > [!TIP]
+  > To dispute items on the **User submitted** tab, you first need to [convert the user submission to an admin submission](#submit-user-reported-messages-to-microsoft-for-analysis).
+
+1. On the **Submissions** page in the Defender portal, go to the **Emails**,  or **URLs** tabs:
+   - **Emails** tab: <https://security.microsoft.com/reportsubmission?viewid=email>
+   - **URLs** tab: <https://security.microsoft.com/reportsubmission?viewid=url>
+
+2. On the tab, do one of the following steps:
+   - Select one or more eligible items by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** action that appears.
+
+     :::image type="content" source="media/submissions-dispute-from-main-tab.png" alt-text="Screenshot of an entry select on the URLs tab of the Submissions page with Dispute submission result emphasized." lightbox="media/submissions-dispute-from-main-tab.png":::
+
+   - Select an eligible item by clicking anywhere in the row other than the check box next to the first column. In th details flyout that opens, select **Dispute submission result**.
+
+     :::image type="content" source="media/submissions-dispute-from-details.png" alt-text="Screenshot of the details flyout of an admin submissions entry where you can select Dispute submission result." lightbox="media/submissions-dispute-from-details.png":::
+
+3. In the **Dispute details** flyout that opens, configure the following settings:
+   - **Tell us what did not go well**: Select one or more of the following values:
+     - **Result**
+     - **Reason**
+     - **Recommended steps**
+   - **Additional information (optional)**: Enter an explanation that you think might be helpful.
+   - **Upload as screenshot**: Select this option to upload a JPG or PNG image less than one MB.
+
+   > [!IMPORTANT]
+   > If you don't select **Result**, the item isn't sent to Microsoft for reevaluation. Instead, an entry is created on the **Emails** or **URLs** tab without resubmitting the item. Values other than **Result** are taken as feedback.
+
+   When you're finished on the **Dispute details** flyout, select **Submit dispute**.
+
+   :::image type="content" source="media/submissions-dispute-options-flyout.png" alt-text="Screenshot of the Dispute details flyout." lightbox="media/submissions-dispute-options-flyout.png":::
+
+4. On the **Dispute submitted** flyout, select **Done**.
+
+   :::image type="content" source="media/submissions-dispute-submitted.png" alt-text="Screenshot of the Dispute submitted flyout." lightbox="media/submissions-dispute-submitted.png":::
+
+#### View disputed items
+
+On the **Emails** or **URLs** tabs of the **Submissions** page, the following controls are available for disputed items:
+
+- :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** \> **Dispute status** groups entries on the page into the following categories:
+  - **Not disputed**
+  - **Dispute submission**
+  - **Disputed**
+
+- :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** \> **Is dispute** adds the **Is dispute** column to the entries on the page.
+
+- :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Is dispute** \> **Yes** or **No** filters filters the entries on the page by whether the item was disputed.
+
+The details flyout for the [email message](#view-email-admin-submission-details) or [URL](#view-url-admin-submission-details) submission contains information and links about the disputed item.
 
 ### Actions for admin submissions in Defender for Office 365
 
@@ -997,9 +1088,6 @@ When you're finished in the details flyout, select **Close**.
 
 ### View user reported Teams message details in Defender for Office 365 Plan 2
 
-> [!TIP]
-> [User reporting of messages in Microsoft Teams](submissions-teams.md#how-users-report-messages-in-teams) is currently in Preview, isn't available in all organizations, and is subject to change.
-
 In Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), user reported Teams messages are available on the **User reported** tab of the **Submissions** page. It's easy to find them if you filter the results by the **Message type** value **Teams message**.
 
 If you select a Teams message entry on the **User reported** tab by clicking anywhere in the row other than the check box next to the first column, a details flyout opens.
@@ -1110,7 +1198,7 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
         - **30 days**
         - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
       - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 

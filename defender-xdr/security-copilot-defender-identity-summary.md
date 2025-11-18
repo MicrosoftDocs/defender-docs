@@ -4,8 +4,8 @@ description: Summarize an identity information with Microsoft Copilot in Microso
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -68,13 +68,13 @@ You can access the identity summary capability in the following ways:
 
 - From an incident page, choose an identity on the incident graph and then (1) select **User details**. In the user details pane, (2) select **Summarize**. The results are displayed in the Copilot side panel.
 
-  :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-summary-incident-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-summary-incident.png":::
+  :::image type="content" source="./media/security-copilot-defender-identity-summary/identity-summary-incident-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="./media/security-copilot-defender-identity-summary/identity-summary-incident.png":::
 
 - Alternatively, you can select **Go to user page** on the bottom of the user details pane to open the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
 - You can also access the identity summary capability by choosing a user in the **Assets** tab of an incident. Select **Summarize** in the user details pane to generate the identity summary.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-summary-assets-small.png" alt-text="Screenshot showing the Assets tab and a user account highlighted." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-summary-assets.png":::
+  :::image type="content" source="./media/security-copilot-defender-identity-summary/identity-summary-assets-small.png" alt-text="Screenshot showing the Assets tab and a user account highlighted." lightbox="./media/security-copilot-defender-identity-summary/identity-summary-assets.png":::
 
 - In an alert page, select a user then select **Summarize** in the user details pane to generate the identity summary.
 
@@ -82,7 +82,7 @@ You can access the identity summary capability in the following ways:
 
 - From the main menu, navigate to **Assets > Identities**. Select a username from the list, then select **View user page** to open the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-summary-viewuser-small.png" alt-text="Screenshot highlighting the view user page option in a username search within Identities." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-summary-viewuser.png":::
+  :::image type="content" source="./media/security-copilot-defender-identity-summary/identity-summary-viewuser-small.png" alt-text="Screenshot highlighting the view user page option in a username search within Identities." lightbox="./media/security-copilot-defender-identity-summary/identity-summary-viewuser.png":::
 
 - Type a username in the Microsoft Defender portal's **search box** then select the username from the search results. In the user details side panel, select **Summarize** to generate the identity summary.
 
@@ -101,7 +101,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 
 Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
 
-  :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/feedback-textbox.png" alt-text="Screenshot that shows the Feedback text box where you can share your feedback.":::
+  :::image type="content" source="./media/security-copilot-defender-identity-summary/feedback-textbox.png" alt-text="Screenshot that shows the Feedback text box where you can share your feedback.":::
 
 Fill in the dedicated text box to share your thoughts, experiences, and requests. Microsoft values your feedback and takes it seriously in our commitment to enhance Copilot's performance and user experience.
 

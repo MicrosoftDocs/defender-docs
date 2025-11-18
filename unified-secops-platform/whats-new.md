@@ -21,13 +21,22 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
-## September 2025
+## November 2025
+
 
 ### Microsoft Threat Intelligence alert enhancements for Microsoft Sentinel customers in the Defender portal
 
 For Microsoft Sentinel customers working in the Defender portal, Microsoft Threat Intelligence alerts now highlight activity from nation state actors, such as ransomware campaigns and fraudulent operations. These alerts are correlated with other alerts and events in the Defender portal, enhancing your ability to track multi-stage attacks, fully view ongoing events, understand threat activity, prioritize response, and coordinate remediation. 
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
+
+
+## September 2025
+
+
+### Manage Incident Workflows with Tasks in Microsoft Defender (Preview)
+
+You can now use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](/defender-xdr/split-incidents-into-tasks?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json).
 
 ## August 2025
 

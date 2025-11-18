@@ -40,8 +40,6 @@ To establish a connection with ServiceNow in Exposure Management, follow these s
 
 Exposure Management currently retrieves data on devices, their business application association, and business criticality. Additional data is also retrieved that helps identify the device, such as network adapter information and OS data.
 
-Only devices that were active in the last 90 days are retrieved, based on assessing the "sys_updated_on" field in the ServiceNow CI.
-
 The following fields are ingested via the connector:
 
 | **Category**          | **Properties**                                                                 |
@@ -69,4 +67,14 @@ Here are some common issues that might arise when configuring the ServiceNow Con
 
 ## Next steps
 
-[Getting value from your data connectors](value-data-connectors.md).
+After configuring the ServiceNow data connector:
+
+- [Review your attack surface map](enterprise-exposure-map.md) to see ServiceNow data
+- [Explore security recommendations](security-recommendations.md)
+- [Set up security initiatives](initiatives.md) to track remediation progress
+
+## Related articles
+
+- [Data connectors overview](overview-data-connectors.md)
+- [Configure data connectors](configure-data-connectors.md)
+- [Getting value from your data connectors](value-data-connectors.md)

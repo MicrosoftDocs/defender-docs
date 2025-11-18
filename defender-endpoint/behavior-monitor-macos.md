@@ -1,9 +1,9 @@
----
+﻿---
 title: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 description: Behavior Monitoring in Microsoft Defender Antivirus on macOS
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 06/27/2025
@@ -18,19 +18,15 @@ ms.custom:
 ms.reviewer: yongrhee
 search.appverid: MET150
 f1.keywords: NOCSH
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Behavior monitoring in Microsoft Defender Antivirus on macOS
 
-**Applies to:**
-
-- [Microsoft Defender for XDR](/defender-xdr/microsoft-365-defender)
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-- Microsoft Defender Antivirus
-- Supported [versions of macOS](/defender-endpoint/microsoft-defender-endpoint-mac)
 
 ## Overview of behavior monitoring
 
@@ -295,3 +291,4 @@ NRI should have a low impact on network performance. Instead of holding the conn
    > [!NOTE]
    > While this feature is in preview, and because the setting is set by using command line, network real-time inspection (NRI) doesn't persist following reboots. You must re-enable it.
    
+

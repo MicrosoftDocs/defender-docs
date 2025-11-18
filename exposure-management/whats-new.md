@@ -3,10 +3,10 @@ title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/26/2025
+ms.date: 09/16/2025
 
 ---
 
@@ -23,6 +23,72 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## September 2025
+
+### Critical assets classified based on interaction with sensitive documents (Purview eDLP)
+
+Microsoft Security Exposure Management now integrates with Microsoft Purview Endpoint Data Loss Prevention (eDLP) to automatically identify and classify critical assets based on their interaction with sensitive documents. This new capability introduces dynamic criticality reclassification where endpoints accessing high-sensitivity documents are automatically tagged as high criticality.
+
+Key features include:
+
+- **Dynamic reclassification**: Endpoints are automatically elevated to high criticality when accessing sensitive content
+- **Automatic reversion**: Asset classification reverts to baseline after 5 consecutive days of inactivity with sensitive content
+- **Out-of-the-box detection**: Built-in detection rules for three Purview Classifier Sensitive Information Types:
+  - Azure Document DB Auth Key
+  - Azure Redis Cache Connection String  
+  - Azure Storage Account Key
+- **Enhanced visibility**: Critical assets are surfaced across Microsoft Defender XDR experiences for improved security posture management
+
+This integration provides the first offering to combine the experience between Purview and Microsoft Defender Portal for classifying critical assets and gathering important pre-breach insights.
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+### Blast radius analysis
+
+Blast radius analysis is an advanced graph visualization integrated into incident investigation experience. Built on the Microsoft Sentinel data lake and graph infrastructure, it generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
+
+For more information, see [Blast radius analysis](/defender-xdr/investigate-incidents?branch=release-preview-sentinel-graph#blast-radius-analysis).
+
+### New data connectors
+
+We have added new data connectors for Wiz and Palo Alto Prisma. These connectors enable seamless integration of vulnerability and asset data from leading cloud security platforms into Microsoft Security Exposure Management, providing enhanced visibility and context for your environments.
+
+For more information, see:
+- [Wiz data connector](wiz-data-connector.md)
+- [Palo Alto Prisma data connector](palo-alto-prisma-data-connector.md)
+
+### New predefined classifications
+
+The following predefined **Device** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| SharePoint Server | The SharePoint server is responsible for secure content management, collaboration, and document sharing across teams. It hosts intranet portals and enterprise search within an organization. Compromise could lead to unauthorized access to sensitive information and disruption of content services. |
+| Microsoft Entra ID Cloud Sync | The Microsoft Entra ID Cloud Sync agent is responsible for syncing on-premises directory data to the Microsoft Entra ID tenant using lightweight infrastructure. Compromise could disrupt identity synchronization, leading to authentication issues and potential security breaches. |
+
+Microsoft Entra ID Cloud Sync has been introduced alongside Microsoft Entra ID Connect. While both support identity synchronization, Microsoft Entra ID Connect is designed for hybrid environments with on-premises Active Directory, whereas Microsoft Entra ID Cloud Sync offers a lightweight, cloud-native solution optimized for cloud-only setups.
+
+Additionally, SharePoint device role is now available, introduced in response to recent vulnerability events. This role enhances tracking and management of SharePoint-related assets.
+
+For more information, see [Predefined classification](predefined-classification-rules-and-levels.md).
+
+### Migration from AzureAdConnectServer to EntraConnectServer
+
+The legacy Azure AD Connect asset rule has been removed from Critical Assets. Its associated device role, AzureADConnectServer, will be deprecated in December 2025. Ensure all relevant custom rules are transitioned to use the new device role, EntraConnectServer, to maintain compliance and visibility.
+
+For more information, see [Predefined classification](predefined-classification-rules-and-levels.md).
+
+### Refined attack path experience
+
+Cloud Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
+
+On-premises Attack Path now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+
+The changes bring greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
+
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
+For more information, see [Overview of attack paths](work-attack-paths-overview.md) and [Review attack paths](review-attack-paths.md).
 
 ## May 2025
 

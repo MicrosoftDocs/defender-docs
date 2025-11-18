@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -560,6 +560,7 @@ In the **View data by Email \> Spam** and **Chart breakdown by Detection Technol
 - **Fingerprint matching**: The message closely resembles a previous detected malicious message.
 - **General filter**
 - **IP reputation**: The message was from a source that was previously identified as sending spam in other Microsoft 365 organizations.
+- **Mail bombing**: Messages detected as part of a mail bombing attack where attackers flood targeted email addresses with an overwhelming volume of messages.
 - **Mixed analysis detection**: Multiple filters contributed to the verdict for the message.
 - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
 
@@ -787,7 +788,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
   - **Advanced filter**: Phishing signals based on machine learning.
   - **General filter**: Phishing signals based on analyst rules.
-  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization. 
+  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.
   - **Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.
   - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
   - **Impersonation brand**: Sender impersonation of well-known brands.
@@ -1068,7 +1069,6 @@ Select **View details** to go to the **Top senders and recipients** page. Or, to
 - **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
 - **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
 
-
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 
 - **Show data for Top mail senders** (default view)
@@ -1159,7 +1159,7 @@ You need to be assigned permissions before you can view and use the reports that
 ¹ Membership in the **Organization Management** role group or in the **Global Administrator** role is required to use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** or :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)** actions in reports (where available).
 
 > [!IMPORTANT]
-> ² Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> ² Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## What if the reports aren't showing data?
 
@@ -1208,7 +1208,7 @@ Depending on the report and the specific view in the report, one or more of the 
 To create scheduled reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png"::: **Create schedule** to start the new scheduled report wizard.
 
@@ -1296,7 +1296,7 @@ Back on the **Manage schedules** page, the deleted scheduled report entry is no 
 To create on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Request report** to start the new on-demand report wizard.
 
@@ -1331,7 +1331,7 @@ The report creation task (and eventually the finished report) is available on th
 To download on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 After you request an on-demand report as described in the previous section, you check the status of the report and eventually download the report on the **Reports for download** page in the Defender portal.
 
