@@ -26,14 +26,14 @@ appliesto:
 
 Retrieves a list of all the vulnerabilities affecting the organization per [machine](machine.md) and [software](software.md).
 
+This API can be used for [Power BI integration](api-power-bi.md).
+
 - If the vulnerability has a fixing KB, it will appear in the response.
 - Supports [OData V4 queries](https://www.odata.org/documentation/).
 - The OData's `$filter` query is supported on: `id`, `cveId`, `machineId`, `fixingKbId`, `productName`, `productVersion`, `severity`, and `productVendor` properties.
 <br>```$stop``` with max value of 10,000 
 <br>```$skip```
 
-> [!TIP]
-> This is great API for [Power BI integration](api-power-bi.md).
 
 ## Permissions
 
@@ -68,7 +68,7 @@ If successful, this method returns 200 OK with the list of vulnerabilities in th
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/vulnerabilities/machinesVulnerabilities
@@ -76,7 +76,7 @@ GET https://api.securitycenter.microsoft.com/api/vulnerabilities/machinesVulnera
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
@@ -107,9 +107,4 @@ Here is an example of the response.
 
 }
 ```
-
-## See also
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 

@@ -20,7 +20,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # List devices by software
@@ -71,7 +70,7 @@ GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/machi
 
 ### Response example
 
-Here is an example of the response.
+Here`s an example of the response.
 
 ```json
 
@@ -94,8 +93,3 @@ Here is an example of the response.
     ]
 }
 ```
-
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)

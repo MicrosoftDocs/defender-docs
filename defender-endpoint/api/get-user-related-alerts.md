@@ -31,14 +31,14 @@ Retrieves a collection of alerts related to a given user ID.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'View Data.' For more information, see [Create and manage roles](../user-roles.md).
-- Response includes only alerts, associated with devices, that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
+- The user needs to have at least the following role permission: 'View Data.' For more information, see: [Create and manage roles](../user-roles.md).
+- Response includes only alerts, associated with devices, that the user have access to, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 

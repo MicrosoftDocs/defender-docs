@@ -20,7 +20,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # List all security baselines assessment profiles
@@ -107,9 +106,4 @@ GET https://api.securitycenter.microsoft.com/api/baselineProfiles
      ]
 }
 ```
-
-## See also
-
-- [Export security baselines assessment](export-security-baseline-assessment.md)
-- [Get security baselines assessment configurations](get-security-baselines-assessment-configurations.md)
 

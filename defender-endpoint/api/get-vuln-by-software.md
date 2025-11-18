@@ -19,7 +19,6 @@ ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # List vulnerabilities by software
@@ -70,7 +69,7 @@ GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/vulne
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {

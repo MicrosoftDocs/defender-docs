@@ -19,7 +19,6 @@ ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # List vulnerabilities
@@ -67,7 +66,7 @@ If successful, this method returns 200 OK with the list of vulnerabilities in th
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/Vulnerabilities
@@ -75,7 +74,7 @@ GET https://api.securitycenter.microsoft.com/api/Vulnerabilities
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
@@ -105,9 +104,4 @@ Here is an example of the response.
 
 }
 ```
-
-## See also
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 

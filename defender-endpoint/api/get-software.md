@@ -19,7 +19,6 @@ ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # List software inventory API
@@ -75,7 +74,7 @@ GET https://api.security.microsoft.com/api/Software
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
@@ -96,9 +95,5 @@ Here is an example of the response.
 }
 ```
 
-## Related articles
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)
 
 

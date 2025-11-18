@@ -19,7 +19,6 @@ ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Get software by ID
@@ -85,8 +84,3 @@ Here's an example of the response.
     "impactScore": 2.39947438
 }
 ```
-
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)

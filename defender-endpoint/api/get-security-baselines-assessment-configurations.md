@@ -20,7 +20,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # List configurations in active baseline profiles
@@ -114,9 +113,4 @@ GET https://api.securitycenter.microsoft.com/api/baselineConfigurations
     ] 
 } 
 ```
-
-## See also
-
-- [Export security baselines assessment](export-security-baseline-assessment.md)
-- [Get security baselines assessment profiles](get-security-baselines-assessment-profiles.md)
 
