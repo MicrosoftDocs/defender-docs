@@ -29,8 +29,8 @@ Microsoft Defender protects you against security threats with comprehensive AI a
     - [Enable the AI agent inventory](#discover-your-ai-agents-with-the-ai-agent-inventory-in-the-defender-portal-preview).
     - [Enable the Microsoft 365 connector](../defender-for-cloud-apps/protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 - [Protects your environment in real-time](../defender-for-cloud-apps/real-time-agent-protection-during-runtime.md) to block suspicious or harmful actions initiated by your AI agents during agent runtime, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
-- 
-- ## Prerequisites
+
+## Prerequisites
 To enable AI agent inventory and detection you must opt in to the [Microsoft Defender preview features](https://security.microsoft.com/securitysettings/defender/preview_features) of:
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Cloud
@@ -43,7 +43,6 @@ Microsoft Defender detects all of the AI agents created with Microsoft Copilot S
  - To set up AI agent inventory for custom agents created in Coplot Studio, see [Discover and protect your AI Agents (Preview)](../defender-for-cloud-apps/ai-agent-inventory.md).
  
     When you've enabled AI agent inventory for Copilot Studio agents, Microsoft Defender for Cloud Apps automatically:
-
     - Runs detections on your AI Agents created using Copilot Studio.
     - Creates alerts and incidents for suspicious activity.
     - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](advanced-hunting-overview.md).
@@ -51,7 +50,6 @@ Microsoft Defender detects all of the AI agents created with Microsoft Copilot S
  - To set up AI agent inventory for custom agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
 
      When you've enabled AI agent inventory for Azure AI Foundry agents, Microsoft Defender for Cloud automatically:
-
     - Monitors your AI agents for misconfigurations and vulnerabilitie.
     - Provides security recommendations to improve the security posture of your AI agents.
     - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](advanced-hunting-overview.md).
