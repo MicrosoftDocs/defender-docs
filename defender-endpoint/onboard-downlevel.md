@@ -27,14 +27,16 @@ Defender for Endpoint extends support to include down-level operating systems, p
 
 To onboard down-level Windows client endpoints to Defender for Endpoint, you can:
 
-- [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)<br/>   or<br/>  - [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients)
+- [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
+
+   or
+
+- [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection (SCEP) clients](#configure-and-update-system-center-endpoint-protection-clients)
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
 
-## Prerequisites
-
-### Supported operating systems
+## Supported operating systems
 
 **Defender endpoint security solution**
 
