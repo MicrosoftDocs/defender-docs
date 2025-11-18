@@ -64,7 +64,7 @@ To discover and deploy agents in the Microsoft Defender portal:
 
 1. After purchasing the agent, select **Security Copilot > Agents**, find your agent in the **Ready for setup** section, and then select **Set up** to begin agent setup.
 
-    For information on setting up, managing, and running partner-published agents, see [Manage Security Copilot agents](/copilot/security/agents-manage#set-up-for-partner-built-agents).
+    For more information on setting up, managing, and running partner-published agents, see [Manage Security Copilot agents](/copilot/security/agents-manage#set-up-for-partner-built-agents).
 
     For more information on Microsoft Security Copilot agents, see [Microsoft Security Copilot agents in Microsoft Defender](#microsoft-security-copilot-agents-in-microsoft-defender).
 
