@@ -217,7 +217,17 @@ The **Indicators** tab provides a list of all indicators of compromise (IOCs) as
 >Only verified customers can access the information in the **Indicators** tab. If you don't have access to this information, you need to verify your tenant. [Learn more about getting access to IOCs](threat-analytics-indicators.md)
 
 ## Stay updated with the latest reports and threat intelligence
-Threat analytics leverages and integrates various Microsoft Defender features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
+Threat analytics leverages and integrates various Microsoft Defender and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)	features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
+
+### Set up the Threat Intelligence Briefing Agent (preview)
+
+You can set up the Threat Intelligence Briefing Agent to get timely, relevant threat intelligence reports with detailed technical analysis based on the latest threat actor activity and both internal and external vulnerability exposure. The agent correlates Microsoft threat data and customer signals to add critical context to threat information in a matter of minutes, saving analyst teams hours or even days spent on intelligence gathering and correlation.
+
+Once deployed, the Threat Intelligence Briefing Agent appears as a banner at the top of the Threat analytics page. 
+
+:::image type="content" source="media/ti-briefing-agent/agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page." lightbox="media/ti-briefing-agent/agent.png":::
+
+[Learn more about the Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md)
 
 ### Set up custom detections and link them to Threat analytics reports
 
