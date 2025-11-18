@@ -78,7 +78,7 @@ AlertInfo
 | render columnchart
 ```
 
-:::image type="content" source="/defender/media/advanced-hunting-column-chart-new.png" alt-text="An example of a chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-column-chart-new.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-column-chart-new.png" alt-text="An example of a chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/advanced-hunting-column-chart-new.png":::
 
 #### Phishing emails across top ten sender domains
 
@@ -93,7 +93,7 @@ EmailEvents
 
 Use the pie chart view to effectively show distribution across the top domains:
 
-:::image type="content" source="/defender/media/advanced-hunting-pie-chart-new.png" alt-text="The pie chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-pie-chart-new.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-pie-chart-new.png" alt-text="The pie chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/advanced-hunting-pie-chart-new.png":::
 
 
 #### File activities over time
@@ -108,7 +108,7 @@ CloudAppEvents
 
 The line chart below clearly highlights time periods with more activity involving `invoice.doc`:
 
-:::image type="content" source="/defender/media/line-chart-a.png" alt-text="The line chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="/defender/media/line-chart-a.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/line-chart-a.png" alt-text="The line chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/line-chart-a.png":::
 
 ## Export tables and charts
 
@@ -121,23 +121,23 @@ After running a query, select **Export** to save the results to local file. Your
 
 After running a query, select **Filter** to narrow down the results. 
 
-:::image type="content" source="/defender/media/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="/defender/media/add-filter1.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter1.png":::
 
 To add a filter, select the data you want to filter for by selecting one or more of the check boxes. Then select **Add**.
 
-:::image type="content" source="/defender/media/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="/defender/media/add-filter2.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter2.png":::
 
 You can narrow the results down even further to specific data by selecting the newly added filter. 
 
-:::image type="content" source="/defender/media/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="/defender/media/add-filter3.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter3.png":::
 
 This opens a dropdown showing the possible filters you can use further. Select one or more of the check boxes, then select **Apply**.
 
-:::image type="content" source="/defender/media/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="/defender/media/add-filter4.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter4.png":::
 
 Confirm that you have added the filters that you wanted by checking the Filters section.
 
-:::image type="content" source="/defender/media/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="/defender/media/add-filter5.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter5.png":::
 
 ## Drill down from query results
 
@@ -147,22 +147,22 @@ You can also explore the results in-line with the following features:
 - Where applicable, expand details for results that are in JSON and array formats by selecting the dropdown arrow at the left of applicable column names for added readability
 - Open the side pane to see a record's details (concurrent with expanded rows)
 
-:::image type="content" source="/defender/media/advanced-hunting-query-results-expand.png" alt-text="Screenshot of expanding results to drill down" lightbox="/defender/media/advanced-hunting-query-results-expand.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-expand.png" alt-text="Screenshot of expanding results to drill down" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-expand.png":::
 
 You can also right-click on any result value in a row so that you can use it to add more filters to the existing query or copy the value for use in further investigation.
 
-:::image type="content" source="/defender/media/advanced-hunting-query-results-rightclick.png" alt-text="Screenshot of options upon right-clicking an option" lightbox="/defender/media/advanced-hunting-query-results-rightclick.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-rightclick.png" alt-text="Screenshot of options upon right-clicking an option" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-rightclick.png":::
 
 Furthermore, for JSON and array fields, you can right-click and update the existing query to include or exclude the field, or to extend the field to a new column.
 
-:::image type="content" source="/defender/media/advanced-hunting-query-results-json-right.png" alt-text="Screenshot of options upon right-clicking an option for JSON and array fields" lightbox="/defender/media/advanced-hunting-query-results-json-right.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-json-right.png" alt-text="Screenshot of options upon right-clicking an option for JSON and array fields" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-json-right.png":::
 
 To quickly inspect a record in your query results, select the corresponding row to open the **Inspect record** panel. The panel provides the following information based on the selected record:
 
 - **Assets**—Summarized view of the main assets (mailboxes, devices, and users) found in the record, enriched with available information, such as risk and exposure levels
 - **All details**—All the values from the columns in the record
 
-:::image type="content" source="/defender/media/results-inspect-record.png" alt-text="The selected record with panel for inspecting the record in the Microsoft Defender portal" lightbox="/defender/media/results-inspect-record.png":::
+:::image type="content" source="./media/advanced-hunting-query-results/results-inspect-record.png" alt-text="The selected record with panel for inspecting the record in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/results-inspect-record.png":::
 
 To view more information about a specific entity in your query results, such as a machine, file, user, IP address, or URL, select the entity identifier to open a detailed profile page for that entity.
 

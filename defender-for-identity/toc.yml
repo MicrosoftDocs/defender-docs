@@ -97,6 +97,8 @@ items:
       href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
+  - name: Link or Unlink an Account to an Identity
+    href: link-unlink-account-to-identity.md
   - name: View the ITDR dashboard
     href: dashboard.md
   - name: View and manage health issues
@@ -111,6 +113,8 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
+    - name: Configure scoped access
+      href: configure-scoped-access.md
     - name: VPN integration
       href: vpn-integration.md
     - name: Set entity tags
@@ -168,88 +172,18 @@ items:
        href: identity-security-initiative.md
      - name: Overview
        href: security-assessment.md
-     - name: Hybrid security
-       items:
-       - name: Change password for Microsoft Entra seamless SSO account
-         href: change-password-microsoft-entra-seamless-single-sign-on.md
-         displayName: Microsoft Entra connect
-       - name: Rotate password for Microsoft Entra Connect connector account
-         href: rotate-password-microsoft-entra-connect.md
-         displayName: Microsoft Entra Connect
-       - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
-         href: remove-replication-permissions-microsoft-entra-connect.md
-       - name: Remove unsafe permissions on sensitive Entra Connect accounts
-         href: remove-unsafe-permissions-sensitive-entra-connect.md
-         displayName: MDI
-       - name: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
-         href: replace-entra-connect-default-admin.md
-     - name: Identity infrastructure
-       items:
-       - name: Built-in Active Directory Guest account is enabled
-         href: built-in-active-directory-guest-account-is-enabled.md
-       - name: Change Domain Controller computer account old password
-         href: domain-controller-account-password-change.md
-       - name: Domain controllers with Print spooler service available assessment
-         href: security-assessment-print-spooler.md
-       - name: Remove local admins on identity assets
-         href: security-assessment-remove-local-admins.md   
-       - name: Unmonitored domain controllers
-         href: security-assessment-unmonitored-domain-controller.md
-       - name: Unmonitored ADCS servers
-         href: unmonitored-active-directory-certificate-services-server.md
-       - name: Unmonitored ADFS servers
-         href: unmonitored-active-directory-federation-services-servers.md
-       - name: Unmonitored Entra Connect servers
-         href: unmonitored-entra-connect-servers.md
-       - name: Unsecure domain configurations
-         href: security-assessment-unsecure-domain-configurations.md
-     - name: Certificates
-       items: 
-       - name: Enforce encryption for RPC certificate enrollment interface  (ESC11)
-         href: security-assessment-enforce-encryption-rpc.md
-       - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
-         href: security-assessment-insecure-adcs-certificate-enrollment.md
-       - name: Misconfigured certificate templates owner  (ESC4)
-         href: security-assessment-edit-misconfigured-owner.md
-       - name: Misconfigured Certificate Authority ACL  (ESC7)
-         href: security-assessment-edit-misconfigured-ca-acl.md
-       - name: Misconfigured certificate templates ACL (ESC4)
-         href: security-assessment-edit-misconfigured-acl.md
-       - name: Misconfigured enrollment agent certificate template  (ESC3)
-         href: security-assessment-edit-misconfigured-enrollment-agent.md    
-       - name: Overly permissive certificate template with privileged EKU (ESC2)
-         href: security-assessment-edit-overly-permissive-template.md
-       - name: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
-         href: prevent-certificate-enrollment-esc15.md
-       - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
-         href: security-assessment-prevent-users-request-certificate.md
-       - name: Vulnerable Certificate Authority setting (ESC6)
-         href: security-assessment-edit-vulnerable-ca-setting.md
-     - name: Group policy 
-       items: 
-        - name: GPO assigns unprivileged identities to local groups with elevated privileges
-          href: gpo-assigns-unprivileged-identities.md
-        - name: GPO can be modified by unprivileged accounts
-          href: modified-unprivileged-accounts-gpo.md
-        - name: Reversible passwords found in GPOs
-          href: reversible-passwords-group-policy.md
-     - name: Accounts
-       href: security-posture-assessments\accounts.md
-     - name: Cloud identities
-       items:
-       - name: Assign multi-factor authentication to Okta privileged user accounts
-         href: assign-multi-factor-authentication-okta-privileged-user-accounts.md
-       - name: Change password for Okta privileged user accounts
-         href: change-okta-password-privileged-user-accounts.md 
-       - name: High number of Okta accounts with privileged role assigned
-         href: high-number-of-okta-accounts-with-privileged-role-assigned.md
-       - name: Highly privileged Okta API token
-         href: highly-privileged-okta-api-token.md
-       - name: Limit the number of Okta Super Admin accounts
-         href: limit-number-okta-super-admin-accounts.md
-       - name: Remove dormant Okta privileged accounts
-         href: remove-dormant-okta-privileged-accounts.md
-   
+     - name: Hybrid security-posture assessments
+       href: security-posture-assessments/hybrid-security.md
+     - name: Identity infrastructure security posture assessments
+       href: security-posture-assessments/identity-infrastructure.md
+     - name: Certificates security posture assessments
+       href: security-posture-assessments/certificates.md
+     - name: Group policy security posture assessments
+       href: security-posture-assessments/group-policy.md
+     - name: Accounts security posture assessments
+       href: security-posture-assessments/accounts.md
+     - name: Cloud identities security posture assessments
+       href: security-posture-assessments/cloud-identities.md
 - name: Reference
   items:
   - name: Operations guide
@@ -271,8 +205,6 @@ items:
     href: cef-format-sa.md
   - name: PowerShell
     href: /powershell/defenderforidentity/overview-defenderforidentity
-  - name: Support
-    href: support.md
   - name: Defender for Identity data security and privacy
     href: privacy-compliance.md
   - name: Security baseline

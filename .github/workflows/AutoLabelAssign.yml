@@ -26,11 +26,11 @@ jobs:
         name: Run assign and label
         if: github.repository_owner == 'MicrosoftDocs'
         needs: [download-payload]
-        uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-AutoLabelAssign.yml@workflows-prod
+        uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-AutoLabelAssign.yml@workflows-test
         with:
             PayloadJson: ${{ needs.download-payload.outputs.WorkflowPayload }}
             AutoAssignUsers: 1
-            AutoAssignReviewers: 1
+            AutoAssignReviewers: 0
             AutoLabel: 1
             ExcludedUserList: '["user1", "user2"]'
             ExcludedBranchList: '["branch1", "branch2"]'

@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 09/05/2025
+ms.date: 11/06/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -29,6 +29,34 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## Releases for Defender for Endpoint on iOS
 
+#### November 2025
+
+| Build| 1.1.70290103|
+| -------- | -------- |
+| Release Date   |November 6, 2025|
+
+**What's New**
+
+- An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details.
+
+- Added Landscape mode UI support for the Defender app.
+
+- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+
+#### October 2025
+
+| Build| 1.1.70230101|
+| -------- | -------- |
+| Release Date   |October 26, 2025|
+
+**What's New**
+
+- Simplified return to compliance experience in iOS/iPadOS - please refer to this [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more details.
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/ios-whatsnew/image.png)
+  
 #### October 2025
 
 | Build | 1.1.69250104|

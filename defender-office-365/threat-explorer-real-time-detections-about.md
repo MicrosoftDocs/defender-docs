@@ -69,7 +69,7 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
     - _Move messages in and delete messages from mailboxes_: Requires the **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
   - _Read-only access_: Membership in the **Security Reader** role group.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles. More permissions are required to do all available actions:
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default.
   - _Search for Exchange mail flow rules (transport rules) by name in Threat Explorer_: Membership in the **Security Administrator** or **Security Reader** roles.
@@ -405,13 +405,13 @@ The following actions are available at the top of the Email summary panel for Th
 - Add the users to the **Data Investigator** or **eDiscovery Manager** role groups.
 - [Create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
+² You can preview or download email messages that are available in cloud mailboxes and quarantine. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
 - The message was _soft deleted_ (deleted from the Deleted items folder, which moves the message to the Recoverable Items\Deletions folder).
 - ZAP moved the message to quarantine.
 
-³ **Download email** isn't available for messages that were quarantined. Instead, [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
+³ **Download email** for quarantined messages is available with password protection. You can also [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
 
 ⁴ **Go hunt** is available only in Threat Explorer. It isn't available in Real-time detections.
 
