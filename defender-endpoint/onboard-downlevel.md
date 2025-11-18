@@ -27,7 +27,7 @@ Defender for Endpoint extends support to include down-level operating systems, p
 
 To onboard down-level Windows client endpoints to Defender for Endpoint, you can:
 
-- [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)<br/>   or<br/>   - [Install and configure Microsoft Monitoring Agent (MMA) to report sensor data](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients)
+- [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)<br/>   or<br/>  - [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients)
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
@@ -36,12 +36,17 @@ To onboard down-level Windows client endpoints to Defender for Endpoint, you can
 
 ### Supported operating systems
 
-Operating system | Defender endpoint security solution | MMA/SCEP |
-|:---------|:---------------:|:---------------|
-Windows 7 SP1 Pro |![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
-Windows 8.1 Pro |![Yes.](media/svg/check-no.svg)|![Yes.](media/svg/check-yes.svg)|
-Windows 8.1 |![Yes.](media/svg/check-no.svg)|![Yes.](media/svg/check-yes.svg)|
-Windows Server 2008 R2 SP1 |![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
+**Defender endpoint security solution**
+
+- Windows 7 SP1 Pro
+- Windows Server 2008 R2 SP1
+
+**MMA/SCEP**
+
+- Windows 7 SP1 Pro
+- Windows 8.1 Pro
+- Windows 8.1
+- Windows Server 2008 R2 SP1
 
 ## Use the Defender deployment tool to deploy Defender endpoint security
 
