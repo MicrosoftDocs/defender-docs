@@ -24,11 +24,11 @@ Without strong visibility and controls, misconfigured AI agents can expose sensi
 ## AI agent protection features
 Microsoft Defender protects you against security threats with comprehensive AI agent protection, offering proactive exposure management and advanced threat hunting with these features: 
 
-- Detects all of your custom AI agents created with Microsoft Copilot Studio or Azure AI Foundry, and integrates their data into [advanced hunting](/defender-xdr/advanced-hunting-overview.md) for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. 
+- Detects all of your custom AI agents created with Microsoft Copilot Studio or Azure AI Foundry, and integrates their data into [advanced hunting](advanced-hunting-overview.md) for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. 
 - Collects audit logs for your custom AI agents, continuously monitors the agents for suspicious activity, and enables detections and alerts. To enable this monitoring, make sure that you:
-    - [Enable the AI agent inventory](#discover-your-ai-agents-with-the-ai-agent-inventory-in-the-defender-portal-previewdiscover).
-    - [Enable the Microsoft 365 app connector](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
-- [Provides real-time protection for Microsoft Copilot Studio Agents]((real-time-agent-protection-during-runtime.md)) to block suspicious or harmful actions initiated by your AI agents, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
+    - [Enable the AI agent inventory](#discover-your-ai-agents-with-the-ai-agent-inventory-in-the-defender-portal-preview).
+    - [Enable the Microsoft 365 app connector](/defender-for-cloud-apps/protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+- [Provides real-time protection for Microsoft Copilot Studio Agents]((/defender-for-cloud-apps/real-time-agent-protection-during-runtime.md)) to block suspicious or harmful actions initiated by your AI agents, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
 - 
 - ## Prerequisites
 To enable AI agent inventory and detection you must opt in to the [Microsoft Defender preview features](https://security.microsoft.com/securitysettings/defender/preview_features) of:
@@ -46,7 +46,7 @@ Microsoft Defender detects all of the AI agents created with Microsoft Copilot S
 
     - Runs detections on your AI Agents created using Copilot Studio.
     - Creates alerts and incidents for suspicious activity.
-    - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](/defender-xdr/advanced-hunting-overview.md).
+    - Includes [AI agent data](advanced-hunting-aiagentsinfo-table.md) in [advanced hunting](advanced-hunting-overview.md).
 
  - To set up AI agent inventory for custom agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
 
@@ -74,12 +74,12 @@ When you select an AI agent from the inventory, the **Agent** pane opens, provid
 
 ### [Azure AI Foundry](#tab/azure-ai-foundry)
 
-- Select **Open agent page** to open the [**AI Agent** page](https://learn.microsoft.com/en-us/azure/defender-for-cloud/identify-ai-workload-model).
+-- Select **Open agent page** to open the [**AI Agent** page](/azure/defender-for-cloud/identify-ai-workload-model).
 
-        :::image type="content" source="media/ai-agent-inventory/foundry-agent-details.png" alt-text="Screenshot that shows the details for Foundry AI agents in the Defender portal."::: 
+    :::image type="content" source="media/ai-agent-inventory/foundry-agent-details.png" alt-text="Screenshot that shows the details for Foundry AI agents in the Defender portal."::: 
 
 - Select **Go hunt** to perform [advanced hunting](advanced-hunting-overview.md).
-- Select **View on map** to see the agent's [location and related attack paths](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-attack-path).
+- Select **View on map** to see the agent's [location and related attack paths](/azure/defender-for-cloud/concept-attack-path).
 
 These AI agent details are displayed:
 
@@ -99,13 +99,10 @@ These AI agent details are displayed:
 
 #### [Copilot Studio](#tab/copilot-studio)
 
-
 - Select **Open agent page** to open the Copilot Studio AI Agent page in the Defender portal.
 - Select **Go hunt** to perform [advanced hunting](advanced-hunting-overview.md).
 
-            :::image type="content" source="media/ai-agent-inventory/copilot-agent-details.png" alt-text="Screenshot that shows the details for Copilot Studio AI agents in the Defender portal.":::  
-
-
+:::image type="content" source="media/ai-agent-inventory/copilot-agent-details.png" alt-text="Screenshot that shows the details for Copilot Studio AI agents in the Defender portal.":::
 
 These AI agent details are displayed:
 
