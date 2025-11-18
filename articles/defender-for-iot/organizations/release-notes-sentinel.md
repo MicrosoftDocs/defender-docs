@@ -18,13 +18,16 @@ For more information, see:
 - [Tutorial: Integrate Microsoft Sentinel and Microsoft Defender for IoT](../../sentinel/iot-solution.md?bc=%2fazure%2fdefender-for-iot%2fbreadcrumb%2ftoc.json&toc=%2fazure%2fdefender-for-iot%2forganizations%2ftoc.json)
 - [Tutorial: Investigate and detect threats for IoT devices](../../sentinel/iot-advanced-threat-monitoring.md?bc=%2fazure%2fdefender-for-iot%2fbreadcrumb%2ftoc.json&toc=%2fazure%2fdefender-for-iot%2forganizations%2ftoc.json).
 
-## Version 3.0.2
+## Version 3.0.02
 
 **Released**: January 2025
 
-This version includes:
+Updates in this version include:
 
-- Updated Microsoft Defender for IoT analytic rule templates to use Microsoft Sentinel Entities for alert entity mapping instead of mapping only source and destination IP addresses.
+- Improved Microsoft Defender for IoT analytic rule templates to now use Microsoft Sentinel Entities for alert entity mapping. The mapping includes source and destination IP addresses, plus other device entities (for example, host) to attach devices to alerts.
+
+ - Attached device entities provide richer alert context for incidents in Microsoft Sentinel and the Microsoft Defender portal.
+
 
 ## Version 2.0.2
 
