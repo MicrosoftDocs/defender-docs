@@ -42,7 +42,7 @@ Users on AKS, EKS, and GKE platforms can take advantage of the cloud response ac
 
 |Required license|Actions|
 |---|---|
-|[Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)|View container-related alerts </br>View container-related data for investigation in advanced hunting </br>Isolate pod </br>Terminate pod|
+|[Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)|View container-related alerts </br>View container-related data for investigation in advanced hunting </br>Isolate pod </br>Terminate pod<br>Restrict pod access|
 |[Microsoft Defender for Cloud Security Posture Management](/azure/defender-for-cloud/concept-cloud-security-posture-management)|View attack paths in the incident graph|
 |[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)|View and apply guided responses to investigate and remediate container threats|
 
@@ -55,7 +55,7 @@ For more information about these components, see [Configure Microsoft Defender f
 
 ### Network policy requirement
 
-The **isolate pod** response action supports Kubernetes cluster version 1.27 and later. The following network plugins are also required:
+The **isolate pod** and **restrict pod access** response actions support Kubernetes cluster version 1.27 and later. The following network plugins are also required:
 
 |Network plugin|Minimum version required|
 |---|:---:|
@@ -64,7 +64,7 @@ The **isolate pod** response action supports Kubernetes cluster version 1.27 and
 |Cilium|1.13.1|
 |AWS-node|1.15.1|
 
-The **isolate pod** response action requires a network policy enforcer for your Kubernetes cluster. The following documentation provides specific steps on how to install and check network policies depending on your platform:
+The **isolate pod** and **restrict pod access** response actions require a network policy enforcer for your Kubernetes cluster. The following documentation provides specific steps on how to install and check network policies depending on your platform:
 
 - Azure Kubernetes Service: [Secure traffic between pods by using network policies in AKS](/azure/aks/use-network-policies)
 - Google Kubernetes Engine: [Control communication between Pods and Services using network policies](https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy)
@@ -106,7 +106,7 @@ Threat analytics reports also contain relevant mitigation, recovery, and prevent
 
 ## Respond to container threats
 
-You can **isolate** or **terminate** a pod once you determine that a pod is compromised or malicious. In the incident graph, select the pod then go to **Actions** to view the available response actions. You can also find these response actions on the entity side pane.
+You can **isolate**, **restrict access to**, or **terminate** a pod once you determine that a pod is compromised or malicious. In the incident graph, select the pod then go to **Actions** to view the available response actions. You can also find these response actions on the entity side pane.
 
 :::image type="content" source="/defender/media/defender-containers/container-actions-small.png" alt-text="Highlighting the cloud response actions in an incident." lightbox="/defender/media/defender-containers/container-actions.png":::
 
@@ -132,15 +132,15 @@ The [CloudAuditEvents](advanced-hunting-cloudauditevents-table.md) table contain
 
 The following section addresses issues that you might encounter when investigating and responding to container threats. 
 
-### The isolate pod action is not available
+### The isolate pod or restrict pod access response action is not available
 
-If the isolate pod action is grayed out, you need to verify that you have the necessary permissions to perform this action. Refer to the [Permissions](#permissions) section to check and validate that you have the correct permissions.
+If the isolate pod or restrict pod access action is grayed out, you need to verify that you have the necessary permissions to perform this action. Refer to the [Permissions](#permissions) section to check and validate that you have the correct permissions.
 
 See [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md) for more information.
 
-### The isolate pod action failed
+### The isolate pod or restrict pod access action failed
 
-1. Check the Kubernetes cluster version. The isolate pod action supports Kubernetes clusters from version 1.27 and later.
+1. Check the Kubernetes cluster version. The isolate pod and restrict pod access actions support Kubernetes clusters from version 1.27 and later.
 2. Check that you are using the required network plugins and that it matches the minimum versions supported. To check your plugins, access the Cloud Shell in your platform and run the command to check your network plugins.
 3. Ensure the target pod is in a valid or active state.
 
