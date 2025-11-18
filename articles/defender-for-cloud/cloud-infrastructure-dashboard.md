@@ -39,7 +39,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 
 You can access the Cloud Overview dashboard from the left navigation bar in the Microsoft Defender portal:
 
-1. Navigate to **Cloud security** > **Overview**
+1. Navigate to **Cloud infrastructure** > **Overview**
 
 ## Top controls
 
@@ -57,7 +57,7 @@ At the top of the dashboard, you’ll find key filters:
 
 This section gives you a quick snapshot of your current security status:
 
-- **Cloud Secure Score**: Your overall cloud security risk score with a trend indicator.
+- **Cloud Secure Score** (preview): Your overall cloud security risk score with a trend indicator.
 - **Threat Protection**: Number of alerts by severity.
 - **Assets Coverage**: Number of protected assets by Defender for Cloud plans and their coverage status.
   - **Full** - assets covered by posture and protection plans

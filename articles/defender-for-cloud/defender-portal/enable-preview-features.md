@@ -23,7 +23,6 @@ Accounts must have one of the following Entra ID roles:
 
 - Global Administrator
 - Security Administrator
-- Security Operator
 
 ## How to enable
 
@@ -33,9 +32,9 @@ Ensure both "Microsoft Defender XDR" and "Microsoft Defender for Cloud" options 
 
 ## What to expect
 
-- The enablement won't impact your experience in the Azure portal.
 - Preview features enablement may take up to 24 hours.
-- Once enabled, you can access Defender for Cloud from the left navigation menu under **Cloud security**.
+- The enablement introduces new security recommendations in preview in the Azure portal.
+- Once enabled, you can access Defender for Cloud from the left navigation menu under **Cloud infrastructure**.
 
 ## Next steps
 

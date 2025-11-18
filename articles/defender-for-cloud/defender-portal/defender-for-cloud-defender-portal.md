@@ -68,7 +68,7 @@ Cloud security data and signals can be accessed through several experiences. Som
 
 ## Key values and benefits
 
-**[Cloud security dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)** - The cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and track security progress over time out of the box. 
+**[Cloud overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)** - The Cloud overview dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and track security progress over time out of the box. 
 
 **[Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)** – A complete inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, asset actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. 
 
@@ -90,7 +90,7 @@ During the preview phase, Defender for Cloud customers with at any paid plan can
 
 - Read the [FAQ](integration-faq.md)  
 
-Once enabled, open Defender for Cloud by choosing **Cloud security** in the left menu or from within the Defender portal's cloud-integrated experiences. 
+Once enabled, open Defender for Cloud by choosing **Cloud infrastructure** in the left menu or from within the Defender portal's cloud-integrated experiences. 
 
 ## Next steps
 
