@@ -37,7 +37,7 @@ Retrieves specific [Machine Action](machineaction.md) by its ID.
 ## Permissions
 
 When obtaining a token using user credentials:
-- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
+- The user needs to have at least the following role permission: 'View Data'. For more information, see: [Create and manage roles](../user-roles.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 

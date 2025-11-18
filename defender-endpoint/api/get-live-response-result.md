@@ -58,7 +58,7 @@ Retrieves a specific live response command result by its index.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per
+Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
 
@@ -139,11 +139,5 @@ C:\\windows\\TEMP\\OfficeClickToRun.dmp.zip\n51 MB\n\u0000\u0000\u0000",
     "script_errors":""
 }
 ```
-
-## Related articles
-
-- [Get machine action API](get-machineaction-object.md)
-- [Cancel machine action](cancel-machine-action.md)
-- [Run live response](run-live-response.md) 
 
 

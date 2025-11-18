@@ -37,12 +37,11 @@ The OData's `$filter` query is supported on: `id`, `status`, `machineId`, `type`
 
 `$skip`
 
-See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
 
 ## Limitations
 
-1. Maximum page size is 10,000.
-2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- Maximum page size is 10,000.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -193,9 +192,3 @@ Content-type: application/json
     ]
 }
 ```
-
-## Related articles
-
-- [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
-
-

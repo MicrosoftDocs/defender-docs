@@ -30,9 +30,11 @@ appliesto:
 
 Undo isolation of a device.
 
+When isolating a device, only certain processes and destinations are allowed. Devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
+
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Prerequisites
 
@@ -42,18 +44,13 @@ Undo isolation of a device.
 - Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
 - Selective isolation is available for devices on Windows 10, version 1709 or later.
 
-
-> [!IMPORTANT]
->
-> - When isolating a device, only certain processes and destinations are allowed. Devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
-
 ## Permissions
 
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see [Create and manage roles](../user-roles.md).
-- The user needs to have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md).
+- The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
@@ -105,11 +102,5 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Unisolate machine since it was clean and validated"
 }
 ```
-
-## Related articles
-
-- [Take response actions on a device](../respond-machine-alerts.md)
-
-- [Isolate device](isolate-machine.md).
 
 

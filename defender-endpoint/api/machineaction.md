@@ -24,7 +24,6 @@ appliesto:
 # MachineAction resource type
 
 - For more information, see [Response Actions](../respond-machine-alerts.md).
-- If you're using Defender for Business, see [Review remediation actions](/defender-business/mdb-review-remediation-actions) for available actions.
 
 
 ## Properties

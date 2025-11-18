@@ -37,7 +37,7 @@ Cancel an already launched machine action that isn't yet in final state (complet
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
@@ -89,7 +89,4 @@ https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-a
 }
 ```
 
-## Related article
-
-- [Get machine action API](get-machineaction-object.md)
 

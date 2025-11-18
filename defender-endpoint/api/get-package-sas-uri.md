@@ -48,8 +48,8 @@ Rate limitations for this API are 2 calls per minute and 120 calls per hour.
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Alerts Investigation'. For more information, see [Create and manage roles](../user-roles.md).
-- The user needs to have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'Alerts Investigation'. For more information, see: [Create and manage roles](../user-roles.md).
+- The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access the Microsoft Defender for Endpoint APIs](apis-intro.md)
 

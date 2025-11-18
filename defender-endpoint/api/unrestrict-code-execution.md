@@ -29,6 +29,8 @@ appliesto:
 
 Enable execution of any application on the device.
 
+ When isolating a device, only certain processes and destinations are allowed. Devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
+
 ## Limitations
 
 Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
@@ -40,17 +42,13 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 - Full isolation is available for devices on Windows 10, version 1703.
 - Selective isolation is available for devices on Windows 10, version 1709 or later.
 
-
-> [!NOTE]
-> - When isolating a device, only certain processes and destinations are allowed. Devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
-
 ## Permissions
 
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information)
-- The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md)
+- The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md)
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
@@ -104,8 +102,3 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
 }
 
 ```
-
-## Related articles
-
-- [Take response actions on a device](../respond-machine-alerts.md)
-- [Restrict app execution](restrict-code-execution.md).

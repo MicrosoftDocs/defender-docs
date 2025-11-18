@@ -38,14 +38,14 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 - This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
 - This feature is available if your organization uses Microsoft Defender Antivirus.
-- This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/device-security/device-guard/requirements-and-deployment-planning-guidelines-for-device-guard#code-integrity-policy-formats-and-signing).
+- This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see: [Code integrity policy formats and signing](/windows/device-security/device-guard/requirements-and-deployment-planning-guidelines-for-device-guard#code-integrity-policy-formats-and-signing).
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see [Create and manage roles](../user-roles.md). 
-- The user needs to have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md). 
+- The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
@@ -97,10 +97,4 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
   "Comment": "Restrict code execution due to alert 1234"
 }
 ```
-
-## Related articles
-
-- [Take response actions on a device](../respond-machine-alerts.md)
-
-- [Remove app restriction](unrestrict-code-execution.md).
 
