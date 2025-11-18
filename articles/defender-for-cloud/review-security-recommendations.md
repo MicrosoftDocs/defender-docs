@@ -14,7 +14,7 @@ zone_pivot_groups: defender-portal-experience
 
 In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security policies and regulatory compliance frameworks, which are applied in your cloud environments (Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP) and more). Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
 
-Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors. 
+Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors.
 
 ## Prerequisites
 
@@ -77,8 +77,8 @@ On the recommendations page, you can review the following risk-prioritized detai
 
 ::: zone pivot="defender-portal"
 
-> [!NOTE] 
-> This capability is currently in preview.   
+> [!NOTE]
+> This capability is currently in preview.
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
 The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
@@ -86,7 +86,7 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
-   
+
    :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
 
 1. Apply filters such as:
@@ -101,7 +101,7 @@ The **Recommendations** page within Exposure Management provides a prioritized l
    - **Misconfigurations**: Configuration-related security issues
    - **Vulnerabilities**: Software vulnerabilities requiring patches
    - **Exposed Secrets**: Credentials and secrets that may be compromised
-   
+
    > [!NOTE]
    > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
 
@@ -145,7 +145,6 @@ When you select an aggregated recommendation row, a side panel opens displaying:
 - Additional tabs may appear for specific recommendations with relevant contextual information
 
 :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
-
 
 Alternative access paths to recommendations:
 
@@ -231,8 +230,6 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. Select a recommendation.
 
-
-
 1. In **Take action**:
 
    - **Remediate**: A description of the manual steps required to resolve the security issue on the affected resources. For recommendations with the **Fix** option, you can select **View remediation logic** before applying the suggested fix to your resources.
@@ -282,8 +279,6 @@ There are separate views for issue types:
 
 For each view you will view the **Cloud secure score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
 
-
-
 > [!NOTE]
 > In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 >
@@ -313,7 +308,7 @@ The recommendation details page provides comprehensive information including:
 1. **Map preview**: A visual representation of the resource's attack surface and its relation to potential attack scenarios.
 1. **Related initiatives**: The security initiatives and compliance frameworks associated with the recommendation.
 1. **Associated CVEs**: Links to relevant Common Vulnerabilities and Exposures when applicable.
-   
+
 The unified experience ensures that cloud security recommendations are contextualized within the broader security landscape, enabling more informed decision-making and efficient remediation workflows.
 
 ::: zone-end
@@ -408,7 +403,7 @@ Every security recommendation from Defender for Cloud is given one of three seve
 
 ### High severity
 
-We recommend that you address these recommendations immediately. They indicate that there's a critical security vulnerability that an attacker could exploit to gain unauthorized access to your systems or data. 
+We recommend that you address these recommendations immediately. They indicate that there's a critical security vulnerability that an attacker could exploit to gain unauthorized access to your systems or data.
 
 Examples of high severity recommendations include:
 
@@ -419,7 +414,7 @@ Examples of high severity recommendations include:
 
 ### Medium severity
 
-These recommendations indicate a potential security risk. We recommend that you address these recommendations in a timely manner, but they might not require immediate attention. 
+These recommendations indicate a potential security risk. We recommend that you address these recommendations in a timely manner, but they might not require immediate attention.
 
 Examples of medium severity recommendations include:
 

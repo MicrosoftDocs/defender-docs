@@ -9,7 +9,7 @@ zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to use the Cloud overview dashboard to get unified visibility into my cloud security posture across Azure, AWS, and GCP.
 ---
 
-# Cloud overview dashboard 
+# Cloud overview dashboard
 
 ::: zone pivot="defender-portal"
 
@@ -17,17 +17,17 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 
 > [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
-> 
+>
 > This change is designed to:
-> 
+>
 > - Unlock new cloud and posture management experiences.
 > - Provide deep integration with other Microsoft security services.
 > - Empower security teams with streamlined workflows by bringing all tools together in one portal.
-> 
+>
 > To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
-> 
+>
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
-> 
+>
 > Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 ## Who is this for?
@@ -60,9 +60,9 @@ This section gives you a quick snapshot of your current security status:
 - **Cloud Secure Score**: Your overall cloud security risk score with a trend indicator.
 - **Threat Protection**: Number of alerts by severity.
 - **Assets Coverage**: Number of protected assets by Defender for Cloud plans and their coverage status.
-    - **Full** - assets covered by posture and protection plans
-    - **Partial** - assets protected by posture or protection plans
-    - **None** - unprotected assets
+  - **Full** - assets covered by posture and protection plans
+  - **Partial** - assets protected by posture or protection plans
+  - **None** - unprotected assets
 
 In addition, all cloud and code environments that are currently connected to Defender for Cloud are presented.
 
