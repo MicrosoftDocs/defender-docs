@@ -289,11 +289,41 @@ Deploy the CloudFormation template by using Stack (or StackSet if you have a man
     >
     > To remediate this error message, your CloudFormation StackSets page has a prompt with a button that you can select to enable trusted access. After trusted access is enabled, the CloudFormation Stack must be run again.
 
-### Do you need to update your Cloudformation template?
+### Do you need to update your CloudFormation template?
 
-Depedning on the change you made to your connector configuration, you might need to update your CloudFormation template. You can use the following tree to determine if you need to update your template:
+Depending on the change you made to your connector configuration, you might need to update your CloudFormation template. You can use the following decision tree to determine if you need to update your template:
 
+```mermaid
+flowchart TD
+    Start([Do I need to update my CloudFormation Template?])
+    
+    Start --> Q1{Have you enabled a plan<br/>Defender plan e.g., CSPM, Data<br/>Security, Defender for<br/>Servers?}
+    
+    Q1 -->|YES| Update1[Update the CloudFormation<br/>Stack with the latest<br/>template]
+    
+    Q1 -->|NO| Q2{Are you modifying plan<br/>configuration e.g., enabling<br/>Agentless or Defender for<br/>Endpoint deployment in a specific<br/>region?}
+    
+    Q2 -->|NO| Q3{Has Microsoft released a new<br/>version of the template? e.g.,<br/>a new version released to reflect<br/>or update changes?}
+    
+    Q2 -->|YES| Update2[Update the CloudFormation<br/>Stack with the latest<br/>template]
+    
+    Q3 -->|YES| Q4{Are you experiencing<br/>functionality issues and a<br/>CloudFormation update could<br/>resolve Lambda<br/>function?}
+    
+    Q3 -->|NO| NoUpdate[No update of<br/>CloudFormation template<br/>needed]
+    
+    Q4 -->|YES| Update3[Update the CloudFormation<br/>Stack with the latest<br/>template]
+    
+    Q4 -->|NO| NoUpdate
+    
+    style Start fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Update1 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Update2 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Update3 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style NoUpdate fill:#fff3e0,stroke:#e65100,stroke-width:2px
+```
 
+> [!NOTE]
+> If you are experiencing specific errors or functionality issues, contact Microsoft Support with logs and details.
 
 ## Monitor your AWS resources
 
