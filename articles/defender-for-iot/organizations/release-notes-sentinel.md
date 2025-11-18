@@ -24,9 +24,9 @@ For more information, see:
 
 Updates in this version include:
 
-- Improved Microsoft Defender for IoT analytic rule templates to now use Microsoft Sentinel Entities for alert entity mapping. The mapping includes source and destination IP addresses, plus other device entities (for example, host) to attach devices to alerts.
+- Microsoft Defender for IoT analytic rule templates now use Microsoft Sentinel Entities for alert entity mapping. The mapping includes source and destination IP addresses, as well as other device entities such as host to attach devices to alerts.
 
- - Attached device entities provide richer alert context for incidents in Microsoft Sentinel and the Microsoft Defender portal.
+ - Device entities add richer alert context to incidents in Microsoft Sentinel and the Microsoft Defender portal.
 
 
 ## Version 2.0.2
