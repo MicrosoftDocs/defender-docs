@@ -28,15 +28,15 @@ appliesto:
 Retrieves a collection of logged on users on a specific device.
 
 ## Limitations
-1. You can query on alerts last updated according to your configured retention period.
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- You can query on alerts last updated according to your configured retention period.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
-- Response will include users only if the device is visible to the user, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'View Data'. For more information, see: [Create and manage roles](../user-roles.md).
+- Response will include users only if the device is visible to the user, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 

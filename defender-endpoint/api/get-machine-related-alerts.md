@@ -30,22 +30,20 @@ Retrieves all [Alerts](alerts.md) related to a specific device.
 
 ## Limitations
 
-1. You can query on devices last updated according to your configured retention period.
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- You can query on devices last updated according to your configured retention period.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'View Data'. For more information about permissions, see [Create and manage roles](../user-roles.md).
-- The user needs to have access to the device, based on device group settings. For more information about device group settings, see [Create and manage device groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'View Data'. For more information about permissions, see: [Create and manage roles](../user-roles.md).
+- The user needs to have access to the device, based on device group settings. For more information about device group settings, see: [Create and manage device groups](../machine-groups.md).
 
 Permission type|Permission|Permission display name
 :---|:---|:---
 |Application|Alert.ReadWrite.All|'Read and write all alerts'
 |Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
-
-
 
 
 ## HTTP request

@@ -34,9 +34,9 @@ Upload file to live response library.
 
 ## Limitations
 
-1. File max size limitation is 20MB.
+- File max size limitation is 20MB.
 
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per
+- Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
 ## Permissions
@@ -96,9 +96,3 @@ curl -X POST https://api.security.microsoft.com/api/libraryfiles -H
 -F "HasParameters=true" -F "OverrideIfExists=true" -F "Description=test
 description"
 ```
-
-## Related topic
-
-- [Run live response](run-live-response.md) 
-
-

@@ -32,7 +32,7 @@ Delete a file from live response library.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per
+Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
 ## Permissions
@@ -74,9 +74,5 @@ Here is an example of the request.
 ```HTTP
 DELETE https://api.security.microsoft.com/api/libraryfiles/script1.ps1
 ```
-
-## Related topic
-
-- [Run live response](run-live-response.md) 
 
 

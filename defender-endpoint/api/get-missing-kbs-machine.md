@@ -33,6 +33,7 @@ Retrieves missing KBs (security updates) by device ID
 ```http
 GET /api/machines/{machineId}/getmissingkbs
 ```
+
 ## Permissions
 
 The following permission is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
@@ -89,10 +90,4 @@ Here is an example of the response.
         ]
 }
 ```
-
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)
-
 

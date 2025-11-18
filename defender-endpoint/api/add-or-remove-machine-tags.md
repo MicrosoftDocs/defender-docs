@@ -27,21 +27,18 @@ appliesto:
 
 Adds or removes a tag for a specific [device](machine.md).
 
-> [!NOTE]
-> If you are looking for how to tag machines in bulk via API, see [Add or remove multiple machine tags](/defender-endpoint/api/add-or-remove-multiple-machine-tags).
-
 ## Limitations
 
-1. You can post on machines last seen according to your configured retention period.
+- You can post on machines last seen according to your configured retention period.
 
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Manage security setting'. For more information, see [Create and manage roles](../user-roles.md).
-- The user needs to have access to the machine, based on machine group settings. For more information, see [Create and manage machine groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'Manage security setting'. For more information, see: [Create and manage roles](../user-roles.md).
+- The user needs to have access to the machine, based on machine group settings. For more information, see: [Create and manage machine groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 
@@ -66,6 +63,8 @@ Authorization|String|Bearer {token}. **Required**.
 Content-Type|string|application/json. **Required**.
 
 ## Request body
+
+To remove machine tag, set the Action to 'Remove' instead of 'Add' in the request body.
 
 In the request body, supply a JSON object with the following parameters:
 
@@ -93,6 +92,6 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
 }
 ```
 
-To remove machine tag, set the Action to 'Remove' instead of 'Add' in the request body.
+
 
 

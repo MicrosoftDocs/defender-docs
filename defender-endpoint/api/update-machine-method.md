@@ -34,18 +34,18 @@ Updatable properties are: `machineTags` and `deviceValue`.
 
 ## Limitations
 
-1. You can update machines that are available in the API. 
-2. Update machine only appends tags to the tag collection. If tags exist, they must be included in the tags collection in the body.
-3. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- You can update machines that are available in the API. 
+- Update machine only appends tags to the tag collection. If tags exist, they must be included in the tags collection in the body.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Alerts investigation'. For more information, see [Create and manage roles](../user-roles.md).
-- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+- The user needs to have at least the following role permission: 'Alerts investigation'. For more information, see: [Create and manage roles](../user-roles.md).
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see: [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
 :---|:---|:---

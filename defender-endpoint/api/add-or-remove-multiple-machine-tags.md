@@ -31,9 +31,9 @@ Adds or removes a tag for the specified set of machines.
 
 ## Limitations
 
-1. You can post on machines last seen according to your configured retention period.
-2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
-3. We can add or remove a tag for up to 500 machines per API call.
+- You can post on machines last seen according to your configured retention period.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- We can add or remove a tag for up to 500 machines per API call.
 
 
 ## Permissions
@@ -80,6 +80,9 @@ If successful, this method returns 200 - Ok response code and the updated machin
 
 ## Example Request
 
+
+To remove machine tags, set the Action to 'Remove' instead of 'Add' in the request body.
+
 Here's an example of a request that adds a tag to multiple machines.
 
 ```http
@@ -96,5 +99,4 @@ POST https://api.securitycenter.microsoft.com/api/machines/AddOrRemoveTagForMult
 }
 ```
 
-To remove machine tags, set the Action to 'Remove' instead of 'Add' in the request body.
 

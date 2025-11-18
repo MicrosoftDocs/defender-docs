@@ -32,8 +32,8 @@ See [assign device values](/defender-vulnerability-management/tvm-assign-device-
 
 ## Limitations
 
-1. You can post on devices last seen according to your configured retention period.
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- You can post on devices last seen according to your configured retention period.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 

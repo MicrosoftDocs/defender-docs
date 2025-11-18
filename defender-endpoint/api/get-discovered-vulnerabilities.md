@@ -27,10 +27,12 @@ appliesto:
 
 
 ## API description
+
 Retrieves a collection of discovered vulnerabilities related to a given device ID.
 
 ## Limitations
-1. Rate limitations for this API are 50 calls per minute and 1500 calls per hour.
+
+Rate limitations for this API are 50 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
@@ -97,10 +99,4 @@ Here is an example of the response.
     ]
 }
 ```
-
-## See also
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-
 

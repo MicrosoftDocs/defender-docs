@@ -20,7 +20,6 @@ ms.custom: api
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
 
 #  List library files 
@@ -33,7 +32,7 @@ List live response library files.
 
 ## Limitations
 
-1.  Rate limitations for this API are 100 calls per minute and 1,500 calls per
+Rate limitations for this API are 100 calls per minute and 1,500 calls per
     hour.
 
 ## Permissions
@@ -119,8 +118,5 @@ Content-type: application/json
 }
 ```
 
-
-## Related article
-- [Run live response](run-live-response.md) 
 
 
