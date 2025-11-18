@@ -24,7 +24,6 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-
 # Security Operations guide for email authentication in Microsoft 365
 
 [Email authentication](email-authentication-about.md) is a critical component of securing communication in your organization. When an email is received in Microsoft 365, the service adds an **Authentication-Results** header. This header shows the results of various email authentication checks, including SPF, DKIM, DMARC, and composite authentication (compauth).

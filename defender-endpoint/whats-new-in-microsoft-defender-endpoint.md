@@ -22,7 +22,6 @@ appliesto:
 ---
 # What's new in Microsoft Defender for Endpoint
 
-
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 
 Learn more:
@@ -35,6 +34,7 @@ Learn more:
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
 |New predictive shielding response actions. |Preview |Defender for Endpoint now includes the [GPO hardening](respond-machine-alerts.md#gpo-hardening) and [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening) response actions. These actions are part of the [predictive shielding](/defender-xdr/shield-predict-threats) feature, which anticipates and mitigates potential threats before they materialize.|
+|[Custom data collection](custom-data-collection.md) |Preview |Custom data collection enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs. |
 
 ## October 2025
 

@@ -12,6 +12,8 @@
         href: microsoft-defender-endpoint.md
       - name: Defender for Endpoint on macOS
         href: microsoft-defender-endpoint-mac.md
+      - name: Defender for Endpoint on Linux
+        href: microsoft-defender-endpoint-linux.md
       - name: Defender for Endpoint on Android
         href: microsoft-defender-endpoint-android.md
       - name: Defender for Endpoint on iOS
@@ -259,8 +261,8 @@
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
-            - name: Install Defender for Endpoint on Linux            
-              href: install-defender-endpoint-linux.md
+            - name: Prerequisites
+              href: mde-linux-prerequisites.md
             - name: Choose a deployment method                       
               items:
               - name: Enabling deployment to a custom location
@@ -623,6 +625,12 @@
         href: exclude-devices.md
       - name: Identifying transient devices
         href: transient-device-tagging.md
+      - name: Collect custom device data
+        items:
+        - name: Overview
+          href: custom-data-collection.md
+        - name: Create custom data collection rules
+          href: create-custom-data-collection-rules.md
       - name: Internet facing devices
         href: internet-facing-devices.md
       - name: Device timeline
@@ -1100,10 +1108,7 @@
           href: live-response-command-examples.md
 
       - name: Use sensitivity labels to prioritize incident response
-        href: information-protection-investigation.md
-
-    - name: Advanced hunting
-      href: /defender-xdr/advanced-hunting-overview?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+        href: information-protection-investigation.md    
 
     - name: Threat analytics
       items:
