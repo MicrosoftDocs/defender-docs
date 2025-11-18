@@ -291,28 +291,110 @@ Deploy the CloudFormation template by using Stack (or StackSet if you have a man
 
 ### Do you need to update your CloudFormation template?
 
-Depending on the change you made to your connector configuration, you might need to update your CloudFormation template. Use the following decision tree to determine if you need to update your template:
+Depending on the change you made to your connector configuration, you might need to update your CloudFormation template. Use the following interactive decision tree to determine if you need to update your template:
 
-**Start: Do I need to update my CloudFormation Template?**
+<details>
+<summary><b>Question 1: Have you enabled a new Defender plan?</b> (e.g., CSPM, Data Security, Defender for Servers)</summary>
 
-**Question 1:** Have you enabled a new Defender plan (for example, CSPM, Data Security, Defender for Servers)?
-- **YES** → ✅ **Update the CloudFormation Stack with the latest template**
-- **NO** → Continue to Question 2
+<br/>
 
-**Question 2:** Are you modifying plan configuration (for example, enabling Agentless scanning or Defender for Endpoint deployment in a specific region)?
-- **YES** → ✅ **Update the CloudFormation Stack with the latest template**
-- **NO** → Continue to Question 3
+<details>
+<summary>✅ <b>YES</b> - I enabled a new Defender plan</summary>
 
-**Question 3:** Has Microsoft released a new version of the template (for example, a new version to reflect feature updates or changes)?
-- **YES** → Continue to Question 4
-- **NO** → ❌ **No update of CloudFormation template needed**
+<br/>
 
-**Question 4:** Are you experiencing functionality issues that a CloudFormation update could resolve (for example, Lambda function errors)?
-- **YES** → ✅ **Update the CloudFormation Stack with the latest template**
-- **NO** → ❌ **No update of CloudFormation template needed**
+**Action Required:** Update the CloudFormation Stack with the latest template.
+
+Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector) to apply the changes.
+
+</details>
+
+<details>
+<summary>❌ <b>NO</b> - I did not enable a new plan</summary>
+
+<br/>
+
+<details>
+<summary><b>Question 2: Are you modifying plan configuration?</b> (e.g., enabling Agentless scanning or Defender for Endpoint deployment in a specific region)</summary>
+
+<br/>
+
+<details>
+<summary>✅ <b>YES</b> - I modified plan configuration</summary>
+
+<br/>
+
+**Action Required:** Update the CloudFormation Stack with the latest template.
+
+Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector) to apply the changes.
+
+</details>
+
+<details>
+<summary>❌ <b>NO</b> - I did not modify configuration</summary>
+
+<br/>
+
+<details>
+<summary><b>Question 3: Has Microsoft released a new version of the template?</b></summary>
+
+<br/>
+
+<details>
+<summary>✅ <b>YES</b> - A new template version is available</summary>
+
+<br/>
+
+<details>
+<summary><b>Question 4: Are you experiencing functionality issues?</b> (e.g., Lambda function errors)</summary>
+
+<br/>
+
+<details>
+<summary>✅ <b>YES</b> - I'm experiencing issues</summary>
+
+<br/>
+
+**Action Required:** Update the CloudFormation Stack with the latest template.
+
+Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector) to apply the changes.
+
+</details>
+
+<details>
+<summary>❌ <b>NO</b> - No functionality issues</summary>
+
+<br/>
+
+**No Action Required:** No update of CloudFormation template needed at this time.
+
+You can update when convenient to stay current with the latest features and improvements.
+
+</details>
+
+</details>
+
+</details>
+
+<details>
+<summary>❌ <b>NO</b> - No new template version available</summary>
+
+<br/>
+
+**No Action Required:** No update of CloudFormation template needed.
+
+</details>
+
+</details>
+
+</details>
+
+</details>
+
+</details>
 
 > [!NOTE]
-> If you are experiencing specific errors or functionality issues, contact Microsoft Support with logs and details.
+> If you are experiencing specific errors or functionality issues not addressed by the decision tree, contact Microsoft Support with logs and details.
 
 ## Monitor your AWS resources
 
