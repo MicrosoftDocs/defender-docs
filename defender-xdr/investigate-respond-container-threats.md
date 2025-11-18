@@ -108,7 +108,7 @@ Threat analytics reports also contain relevant mitigation, recovery, and prevent
 
 You can **isolate**, **restrict access to**, or **terminate** a pod once you determine that a pod is compromised or malicious. In the incident graph, select the pod then go to **Actions** to view the available response actions. You can also find these response actions on the entity side pane.
 
-:::image type="content" source="/defender/media/defender-containers/container-actions.png.png" alt-text="Highlighting the cloud response actions in an incident." lightbox="/defender/media/defender-containers/container-actions.png":::
+:::image type="content" source="/defender/media/defender-containers/container-actions.png" alt-text="Highlighting the cloud response actions in an incident." lightbox="/defender/media/defender-containers/container-actions.png":::
 
 You can release a pod from isolation with the **release from isolation** action once your investigation is complete. This option appears on the side pane for isolated pods.
 
