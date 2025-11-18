@@ -40,13 +40,12 @@ To use custom data collection, check that you have the following prerequisites:
 
 - A Microsoft Defender for Endpoint P2 license.
 - A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying. You can currently only connect one Sentinel workspace per Defender for Endpoint tenant for custom data collection.
-- One of the [supported operating systems](#supported-operating-systems).
 - Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
 
 ### Supported operating systems
 
 - **Windows 10 and 11** with a minimum Defender for Endpoint client version of 10.8805.
-- **Windows 10**: Requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
+    - Windows 10 requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
 
 ### Performance and limits
 
@@ -66,8 +65,8 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
     :::image type="content" source="media/custom-data-collection/custom-data-collection-main-view.png" alt-text="Screenshot of the main Custom Data Collection page." lightbox="media/custom-data-collection/custom-data-collection-main-view.png":::
 
-1. On the top right, select the workspace name to change your workspace.
-1. Select **Create rule**, and in the **General Information** section, type a rule name and description, and select **Next**.
+1. To switch your Microsoft Sentinel workspace, select the workspace name on the top right, and select the workspace.
+1. Select **Create rule**. In the **General Information** section, type a rule name and description, and select **Next**.
 
     :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-rule-general.png" alt-text="Screenshot of creating a rule: General Information page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-rule-general.png":::
 
@@ -104,7 +103,7 @@ If rules aren't working as expected:
 
 Review these considerations when monitoring and troubleshooting custom data collection rules:
 
-- [Endpoint detection and response (EDR) exclusions may override custom collection rules.
+- Endpoint detection and response (EDR) exclusions may override custom collection rules.
 - Dynamic tags update approximately every hour. Check the **Custom collection** > **Last run time** column for the status.
 
 ## Edit, delete, and enable or disable custom data collection rules
