@@ -51,7 +51,7 @@ To use custom data collection, check that you have the following prerequisites:
 ### Performance and limits
 
 - Each collection rule can capture up to 25,000 events per device within a 24-hour rolling window. Once the device reaches the limit, telemetry for the specific rule on the specific device stops until the window resets.
-    - If the device reaches the threshold early in the cycle, it can take up to 24 hours for telemetry to resume. If the device reaches the limit one hour after the window resets, telemetry resumes after 23 hours.
+    - If the device reaches the threshold early in the cycle, it can take up to 24 hours for telemetry to resume. For example, if the device reaches the limit one hour after the window resets, telemetry resumes after 23 hours.
     - If the device reaches the threshold near the end of the window, the delay is shorter. For example, if the device reaches the limit two hours before the window resets, telemetry resumes after two hours.
 - Rule deployment typically takes 20 minutes to one hour.
 - Custom collection operates alongside default Defender for Endpoint configuration without interference.
@@ -78,9 +78,6 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
     1. Add rule conditions to filter the data even further. You can add multiple conditions to refine the data collection. Rule conditions are based on the selected table. For more information, see the respective table link under [Supported event tables](custom-data-collection.md#supported-event-tables).
 
     :::image type="content" source="media/create-custom-data-collection-rules/create-custom-data-collection-rule.png" alt-text="Screenshot of creating a rule: Create rule page." lightbox="media/create-custom-data-collection-rules/create-custom-data-collection-rule.png":::
-
-    > [!NOTE]
-    > If you use the **Not equals** operator with an unexpected value, this might select all events. To avoid using large data volumes, combine this operator with other conditions.
    
 1. Select **Next**.
 
@@ -107,13 +104,13 @@ If rules aren't working as expected:
 
 Review these considerations when monitoring and troubleshooting custom data collection rules:
 
-- [Endpoint detection and response (EDR) exclusions](navigate-defender-endpoint-antivirus-exclusions.md) may override custom collection rules.
+- [Endpoint detection and response (EDR) exclusions may override custom collection rules.
 - Dynamic tags update approximately every hour. Check the **Custom collection** > **Last run time** column for the status.
 
 ## Edit, delete, and enable or disable custom data collection rules
 
 - To edit a rule, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**, select the rule you want to edit, and select **Edit**.
 - To delete a rule, select the rule you want to delete, and select **Delete**.
-- To disable or enable a rule, select the rule you want to modify, and select **Enable** or **Disable** under the rule description.
+- To disable or enable a rule, select the rule you want to modify, and select or clear the **Enable** check-box under the rule description.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
