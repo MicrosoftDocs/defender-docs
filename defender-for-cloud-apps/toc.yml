@@ -420,7 +420,7 @@ items:
       href: app-governance-manage-alerts.md
   - name: Secure apps and other assets
     items:
-    - name: Secure apps accessing non-Graph APIs
+    - name: Secure apps accessing non-Graph APIs using app governance
       href: app-governance-secure-apps-access-non-graph-api.md
     - name: Secure apps with app hygiene features
       href: app-governance-secure-apps-app-hygiene-features.md
