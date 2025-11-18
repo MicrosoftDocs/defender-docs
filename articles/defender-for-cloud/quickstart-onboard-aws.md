@@ -2,7 +2,7 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 09/28/2025
+ms.date: 11/18/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -288,6 +288,12 @@ Deploy the CloudFormation template by using Stack (or StackSet if you have a man
     > This error indicates that you haven't enabled [the trusted access for AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html).
     >
     > To remediate this error message, your CloudFormation StackSets page has a prompt with a button that you can select to enable trusted access. After trusted access is enabled, the CloudFormation Stack must be run again.
+
+### Do you need to update your Cloudformation template?
+
+Depedning on the change you made to your connector configuration, you might need to update your CloudFormation template. You can use the following tree to determine if you need to update your template:
+
+
 
 ## Monitor your AWS resources
 
