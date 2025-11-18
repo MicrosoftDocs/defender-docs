@@ -25,7 +25,7 @@ Before configuring a Microsoft Sentinel MCP connector in ChatGPT, you must have 
 
 To add a Microsoft Entra application, follow these steps:
 1.	Open your tenant's [Microsoft Entra admin center](https://entra.microsoft.com/) then go to **App registrations** > **New registration**. 
-1.	On the **Register an application page**, enter a friendly user-facing Name for the app, then select **Register**.
+1.	On the **Register an application page**, enter a friendly user-facing **Name** for the app, then select **Register**.
 1.	On your newly registered app's page, go to **Manage** > **API permissions**, then select **Add a permission**.
 1.	On the flyout panel that appears, go to the **APIs my organization uses** tab and search for `Sentinel Platform Services`.
 1.	Choose **SentinelPlatform.DelegatedAccess**, then select **Add permissions**.
@@ -41,7 +41,7 @@ To create a custom Sentinel connector in ChatGPT, follow these steps:
 1.	Go back to **Apps & connectors** and select **Create Connector**.
 1.	Provide the following required details:
     - **Connector name:** For example, `Microsoft Sentinel MCP`
-    - **MCP Server URL:** [URL]
+    - **MCP Server URL:** `https://sentinel.microsoft.com/mcp/data-exploration`
     - **Client ID:** The **Application (client) ID** of the Microsoft Entra application you created previously.
 1. When prompted, complete the OAuth consent flow. Once the MCP connector authenticates successfully, it appears in your ChatGPT connector list.
 
