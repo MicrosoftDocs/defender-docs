@@ -1076,8 +1076,7 @@
           - name: Automatically apply GPO hardening (predictive shielding)
             href: respond-machine-alerts.md#gpo-hardening
           - name: Automatically apply Safeboot hardening (predictive shielding)
-            href: respond-machine-alerts.md#safeboot-hardening
-            href: respond-machine-alerts.md#contain-user-from-the-network          
+            href: respond-machine-alerts.md#safeboot-hardening                     
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
