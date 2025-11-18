@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 11/18/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
