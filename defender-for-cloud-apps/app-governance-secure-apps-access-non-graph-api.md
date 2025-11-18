@@ -75,5 +75,5 @@ You can decide to create a custom policy or use an existing template.
 
 ## Next steps
 
-[Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)
+[Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)<br>
 [View your app details with app governance](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
