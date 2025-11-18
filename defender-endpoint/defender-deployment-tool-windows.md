@@ -59,7 +59,7 @@ To view the complete command reference after [downloading the tool](#download-th
 The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
 
 > [!NOTE]
-> The Defender endpoint security solution that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is **in preview**, and is different than the one for newer versions of Windows and Windows Server. For more information, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-endpoint-security-solution-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
+> The Defender endpoint security solution that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is **in preview**, and is different than the one for newer versions of Windows and Windows Server. For more information, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security-on-the-device).
 
 ## Prerequisites
 
@@ -95,7 +95,7 @@ Servicing stack update (SSU) (KB4490628). If you use Windows Update, the requi
 SHA-2 update (KB4474419) released September 10, 2019. If you use Windows Update, the required SHA-2 update will be offered to you automatically. 
 
 > [!NOTE]
-> For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-endpoint-security-solution-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices).
+> For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security-on-the-device).
 
 ## Download the tool
 
@@ -349,4 +349,4 @@ To test if the installation succeeded successfully, perform the following checks
 
 ## Related content
 
-- [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#deploy-the-defender-endpoint-security-solution-for-windows-7-sp1-and-windows-server-2008-r2-sp1-devices)
+- [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security-on-the-device)
