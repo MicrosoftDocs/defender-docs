@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Microsoft Defender for Identity classic alerts
 
-Microsoft Defender for Identity alerts can appear in the Microsoft Defender XDR portal in two different formats depending on if the alert originates from Defender for Identity or Defender XDR. All alerts are based on detections from Defender for Identity sensors. The differences in layout and information are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
+Microsoft Defender for Identity alerts can appear in the Microsoft Defender portal in two different formats depending on if the alert originates from Defender for Identity or Defender XDR. All alerts are based on detections from Defender for Identity sensors. The differences in layout and information are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [View and manage alerts](understanding-security-alerts.md).
 
