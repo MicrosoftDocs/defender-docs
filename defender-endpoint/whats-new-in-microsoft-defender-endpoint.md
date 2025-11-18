@@ -22,13 +22,18 @@ appliesto:
 ---
 # What's new in Microsoft Defender for Endpoint
 
-
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 
 Learn more:
 
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services)
 - [Preview features](/defender-xdr/preview)
+
+## November 2025
+
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|[Custom data collection](custom-data-collection.md) |Preview |Custom data collection enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs. |
 
 ## October 2025
 
