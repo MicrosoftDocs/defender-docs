@@ -89,7 +89,7 @@ The Network Session information model is aligned with the [OSSEM Network entity 
 The Network Session schema serves several types of similar but distinct scenarios, which share the same fields. Those scenarios are identified by the EventType field:
 
 - `NetworkSession` - a network session reported by an intermediate device monitoring the network, such as a Firewall, a router, or a network tap.
-- `L2NetworkSession` - a network sessions for which only layer 2 information is available. Such events will include MAC addresses but not IP addresses. 
+- `L2NetworkSession` - a network session for which only layer 2 information is available. Such events will include MAC addresses but not IP addresses. 
 - `Flow` - an aggregated event that reports multiple similar network sessions, typically over a predefined time period, such as **Netflow** events.  
 - `EndpointNetworkSession` - a network session reported by one of the end points of the session, including clients and servers. For such events, the schema supports the `remote` and `local` alias fields.
 - `IDS` - a network session reported as suspicious. Such an event will have some of the inspection fields populated, and may have just one IP address field populated, either the source or the destination.
