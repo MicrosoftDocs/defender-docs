@@ -945,7 +945,7 @@
         - name: ASIM known issues
           href: normalization-known-issues.md
         - name: ASIM entities
-          Items:
+          items:
             - name: ASIM user entity
               href: normalization-entity-user.md
             - name: ASIM device entity
