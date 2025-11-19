@@ -61,25 +61,28 @@ You can activate your workloads in two ways from the Permissions and roles page:
 
 1. **Activate workloads**
 
-- Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
-- You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload.
+   - Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
+   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload.
 
-:::image type="content" source="/defender/media/defender/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
+     :::image type="content" source="/defender/media/defender/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
 
-   > [!NOTE]
-   > The **Activate workloads** button is only available when there's it at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
-   > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
-   > Defender XDR Unified RBAC is automatically active for Exposure Management access. Once a custom role with one of the Exposure Management permissions is created, it has an immediate impact on assigned users. There's no need to activate it.
-   > 
-   > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
+      > [!NOTE]
+      > The **Activate workloads** button is only available when there's at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
+      > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
+      > Defender XDR Unified RBAC is automatically active for Exposure Management access. Once a custom role with one of the Exposure Management permissions is created, it has an immediate impact on assigned users. There's no need to activate it.
+      > 
+      > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
 
 2. **Workload settings**
-    - Select **Workload settings**.
-    - This brings you to the Microsoft Defender XDR **Permission and roles** page.
-    - Select the toggle for the workload you want to activate.
-    - Select **Activate** on the confirmation message.
+
+- Select **Workload settings**.
+- This brings you to the Microsoft Defender XDR **Permission and roles** page.
+- Select the toggle for the workload you want to activate.
+- Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
+
+**Note**: For Microsoft Sentinel, unlike other workloads, each workspace must be activated individually. View the roles or role combinations to manage Sentinel workspaces in Unified RBAC. <!--insert link to table with worskpace permissions-->
 
 <a name='activate-in-microsoft-365-defender-settings'></a>
 
@@ -95,7 +98,7 @@ Follow these steps to activate your workloads directly in Microsoft Defender XDR
 
 4. Select **Permissions and roles**. This brings you to the **Activate workloads** page.
 
-5. Select the toggle for the workload you want to activate.
+5. Select the toggle for the workload you want to activate. **Note**: For Sentinel, each workspace must be activated individually.
 
 6. Select **Activate** on the confirmation message.
 
