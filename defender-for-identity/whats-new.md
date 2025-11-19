@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
-Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
+Defender for Identity offers automatic Windows event-auditing configuration for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones; admins can enable it in the Defender portal or via the Graph API, and the feature, along with its related health alerts, will roll out gradually over the next few weeks.
 
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
@@ -301,7 +301,7 @@ New [health issue](health-alerts.md) for cases where sensors running on VMware h
 Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
 Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
 
-Learn more about [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
+Learn more about [Privileged Identity Management.](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 
