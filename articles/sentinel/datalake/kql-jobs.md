@@ -201,21 +201,24 @@ When you create jobs in the Microsoft Sentinel data lake, consider the following
 + Job start time must be at least 30 minutes after job creation or editing.
 
 
-### Ingestion latency 
+## Data lake ingestion latency
 
-Data ingestion in the Microsoft Sentinel data lake takes 6 to 12 minutes before data is available for querying. This latency affects security analysts who need timely access for threat hunting and intelligence matching, especially when using short lookback windows of 15 minutes or less. As a result, KQL jobs can return no results for recent data, which leads to operational issues and reduces trust in the analysis results.
+The data lake tier stores data in cold storage. Unlike hot or near real-time analytics tiers, cold storage is optimized for long-term retention and cost efficiency and doesn't provide immediate access to newly ingested data. When new rows are added to existing tables in the data lake, there is a typical latency of up to 15 minutes before the data is available for querying. Account for the ingestion latency when you run queries and schedule KQL jobs by ensuring that lookback windows and job schedules are configured to avoid data that isn't available yet.
 
-To mitigate this challenge, consider including a delay in the query. For example, Add `delay` to your KQL queries as follows:
+To avoid querying data that might not yet be available, include a delay parameter in your KQL queries or jobs. For example, when you schedule automated jobs, set the query's end time to `now() - delay`, where `delay` matches the typical data readiness latency of 15 minutes. This approach ensures that queries only target data that's fully ingested and ready for analysis.
 
-```KQL 
+``` kql 
 let lookback = 15m;
 let delay = 15m;
 let endTime = now() - delay;
-let startTime = endTime - lookback
+let startTime = endTime - lookback;
 CommonSecurityLog
-| where TimeGenerated between (startTime, endTime)
+| where TimeGenerated between (startTime .. endTime)
 ```
-Consider an overlap in `lookback` vs job frequency. For example, `lookback`: 30 minutes, frequency: 15 minutes.
+
+This approach is effective for jobs with short lookback windows or frequent execution intervals. 
+  
+Consider overlapping the lookback period with job frequency to reduce the risk of missing late-arriving data.
 
 For more information, see [Handle ingestion delay in scheduled analytics rules](/azure/sentinel/ingestion-delay).
 
