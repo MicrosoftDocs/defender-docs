@@ -66,12 +66,13 @@ Follow these steps to manually link accounts to a selected identity.
 
     :::image type="content" source="media/link-unlink-account-to-identity/accounts-observed-in-organization.png" alt-text="Screenshot that shows the accounts observed in an organization." lightbox="media/link-unlink-account-to-identity/accounts-observed-in-organization.png":::
 
-1. Select one or more accounts from the table. You must select at least one account to continue.
+1. Select the **Link** button.
 1. You can search by:
     - Display name
     - User principal name (UPN)
     - Security identifier (SID)
     - Source provider account
+1. Select one account from the table.
 1. Select **Next**.
 1. Enter a short justification comment explaining why you're linking these accounts.
 1. Your justification must:
@@ -89,7 +90,7 @@ Follow these steps to manually unlink accounts from a selected identity.
 
 1. Go to **Identity Inventory > Observed in organization**
 1. Open the **Accounts** tab.
-1. Select one or more account groups.
+1. Select one account set from the table.
 1. Select **Unlink account**.
 1. A confirmation dialog appears with the identity name.
 1. Review the message and select **Unlink accounts** to confirm.

@@ -20,7 +20,7 @@ To turn on automatic windows auditing:
 1. In the **General** section, select **Advanced features**.
 1. Turn on **Automatic Windows auditing configuration**.​
  
-If you do not select automatic Windows event auditing, you must manually configure Windows event collection on your domain controller.
+If you do not select automatic Windows auditing configuration, you must manually configure Windows event auditing in the Defender portal or using PowerShell.
 
 ## Configure Windows event auditing with the Defender for Identity sensor v2.x
 
