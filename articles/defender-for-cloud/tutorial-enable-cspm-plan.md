@@ -15,10 +15,10 @@ Defender for Cloud continually assesses your resources, subscriptions, and organ
 
 When you enable Defender for Cloud, you automatically enable the **Foundational CSPM capabilities**. These capabilities are part of the free services offered by Defender for Cloud.
 
-You have the ability to enable the **Defender CSPM** plan, which offers extra protections for your environments such as governance, regulatory compliance, cloud security explorer, attack path analysis, and agentless scanning for machines.
+You can enable the **Defender CSPM** plan, which offers extra protections for your environments such as governance, regulatory compliance, cloud security explorer, attack path analysis, and agentless scanning for machines.
 
 > [!NOTE]
-> Agentless scanning requires the **Subscription Owner** to enable the Defender CSPM plan. Anyone with a lower level of authorization can enable the Defender CSPM plan, but the agentless scanner won't be enabled by default due to a lack of required permissions that are only available to the Subscription Owner. In addition, attack path analysis and security explorer won't populate with vulnerabilities because the agentless scanner is disabled.
+> Agentless scanning requires the **Subscription Owner** to enable the Defender CSPM plan. Anyone with a lower level of authorization can enable the Defender CSPM plan, but the agentless scanner isn't enabled by default due to a lack of required permissions that are only available to the Subscription Owner. In addition, attack path analysis and security explorer don't populate with vulnerabilities because the agentless scanner is disabled.
 
 For availability and to learn more about the features offered by each plan, see the [Defender CSPM plan options](concept-cloud-security-posture-management.md).
 
@@ -30,13 +30,13 @@ You can learn more about Defender CSPM's pricing on [the pricing page](https://a
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS accounts](quickstart-onboard-aws.md) or, [GCP projects](quickstart-onboard-gcp.md).
+- Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS accounts](quickstart-onboard-aws.md), or [GCP projects](quickstart-onboard-gcp.md).
 
-- In order to gain access to all of the features available from the CSPM plan, the plan must be enabled by the **Subscription Owner**.
+- To access all of the features available from the CSPM plan, the **Subscription Owner** must enable the plan.
 
 ## Enable the Defender CSPM plan
 
-When you enable Defender for Cloud, you automatically receive the protections offered by the Foundational CSPM capabilities. In order to gain access to the other features provided by Defender CSPM, you need to enable the Defender CSPM plan on your subscription.
+When you enable Microsoft Defender for Cloud, you automatically get the protections offered by the Foundational CSPM capabilities. To access the other features provided by Defender CSPM, you need to enable the Defender CSPM plan on your subscription.
 
 **To enable the Defender CSPM plan on your subscription**:
 
@@ -64,9 +64,9 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 - **Sensitive data discovery**: Sensitive data discovery automatically discovers managed cloud data resources containing sensitive data at scale. This feature accesses your data, it's agentless, uses smart sampling scanning, and integrates with Microsoft Purview sensitive information types and labels.
 
-- **Permissions management** - Insights into Cloud Infrastructure Entitlement Management (CIEM). CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
+- **Permissions management** - Insights into Cloud Infrastructure Entitlement Management (CIEM). CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps you understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
 
-- **Protect serverless workloads** - Secure serverless compute and applications platforms by providing visibility into environments such as Azure Functions, Azure Web Apps, and AWS Lambda. Insights are then viewable in attack path analysis, enabling teams to identify and visualize risks, monitor for misconfigurations, and detect vulnerable resources 
+- **Protect serverless workloads** - Secure serverless compute and applications platforms by providing visibility into environments such as Azure Functions, Azure Web Apps, and AWS Lambda. You can view insights in attack path analysis, enabling your team to identify and visualize risks, monitor for misconfigurations, and detect vulnerable resources. 
 
 **To enable the components of the Defender CSPM plan**:
 
@@ -86,7 +86,7 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 1. Select **Continue**.
 
-For code to cloud contextualization capabilities and automated developer remediation workflows that come with your Defender CSPM plan at no additional cost, [connect your DevOps environments](defender-for-devops-introduction.md) to Defender for Cloud.
+For code to cloud contextualization capabilities and automated developer remediation workflows that come with your Defender CSPM plan at no extra cost, [connect your DevOps environments](defender-for-devops-introduction.md) to Defender for Cloud.
 
 ## View your current coverage
 
