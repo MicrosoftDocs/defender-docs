@@ -35,11 +35,9 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- Native Root Detection to Microsoft Defender is now in Preview - please refer to this [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576)for more details.
+- Native Root Detection for Microsoft Defender is now in preview. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
 
 - Performance improvement and bug fixes.
-
-#### November 2025
 
 | Build| 1.0.8303.0101|
 | -------- | -------- |
