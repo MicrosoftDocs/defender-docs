@@ -34,9 +34,6 @@
 
 - name: Deploy and configure
   items:
-    - name: Getting started in the Defender portal
-      displayName: getting started, defender portal, onboarding, quick start, new users
-      href: defender-portal/getting-started-defender-portal.md
     - name: Support & requirements
       items:
         - name: User roles and permissions
