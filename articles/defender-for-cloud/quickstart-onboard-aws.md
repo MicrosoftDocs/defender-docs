@@ -305,7 +305,7 @@ Depending on the change you made to your connector configuration, you might need
 
 **Action Required:** Update the CloudFormation Stack with the latest template.
 
-Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector) to apply the changes.
+Follow the steps in [Deploy a CloudFormation template to your AWS account](#deploy-a-cloudformation-template-to-your-aws-account) to apply the changes.
 
 </details>
 
