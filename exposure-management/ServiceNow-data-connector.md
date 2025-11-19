@@ -11,12 +11,12 @@ ms.date: 10/23/2025
 
 # ServiceNow data connector
 
-To set up the ServiceNow CMDB integration, you need to provide the hostname of your ServiceNow instance and valid credentials. The connector authenticates with Basic Authentication using username and password for read only access.
+To set up the ServiceNow CMDB integration, you need to provide the hostname of your ServiceNow instance and valid credentials. The connector supports both Basic Authentication and OAuth 2.0 as authentication options for read only access. Basic Authentication requires username and password to connect, and OAuth 2.0 is based on granting client credentials.
 
 > [!Note]
-> We recommend creating a dedicated user for use with data connectors in Exposure Management.
+> The ServiceNow connector supports Basic Authentication and OAuth 2.0 (client credentials grant). We recommend creating a dedicated user for use with data connectors in Exposure Management with least-privilege (cmdb_read) role assignment.
 
-## ServiceNow configuration
+## Configure ServiceNow with Basic Authentication
 
 1. Find the hostname of your ServiceNow instance. For example, "contoso.service-now.com".  
 1. Create a New ServiceNow user:
@@ -26,16 +26,13 @@ To set up the ServiceNow CMDB integration, you need to provide the hostname of y
    1. As you create the user, check the **Web service access only** box such that the user will be of dedicated use only for this integration.
 1. Assign a **cmdb_read** role to the user you have created. Detailed instructions can be found [here](https://docs.servicenow.com/bundle/vancouver-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html).
 
-> [!Note]
-> The ServiceNow connector supports Basic Authentication and OAuth 2.0 (client credentials grant). Use a dedicated integration user with least-privilege (cmdb_read) role assignment.
-
 ## Configure OAuth 2.0 authentication (client credentials flow)
 
 Use OAuth 2.0 client credentials to avoid storing a long‑lived password and to align with modern authentication standards.
 
 ### Prerequisites
 
-1. Create (or identify) a ServiceNow user with at minimum the cmdb_read role. We recommend a dedicated integration user; admin is only required temporarily if needed to install plugins.
+1. Create (or identify) a ServiceNow user with at minimum the cmdb_read role. For detailed instructions on creating a ServiceNow user and assigning roles, see the [Configure ServiceNow with Basic Authentication](#configure-servicenow-with-basic-authentication) section. We recommend a dedicated integration user; admin is only required temporarily if needed to install plugins.
 1. Verify these plugins are installed (navigate to `sys_plugins.list`):
    - OAuth 2.0 (`com.snc.platform.security.oauth`)
    - REST API Provider (`com.glide.rest`)
@@ -66,18 +63,6 @@ Use OAuth 2.0 client credentials to avoid storing a long‑lived password and to
 - Scopes: Not typically required; access is determined by the roles of the OAuth Application User.
 - Required role on the integration user: `cmdb_read` (plus any additional roles needed for specific CI access, if applicable).
 
-### Connect using OAuth in Exposure Management
-
-In the ServiceNow CMDB connector panel:
-1. Choose the OAuth 2.0 authentication option (if both Basic and OAuth are shown).
-1. Enter:
-   - Instance hostname (for example: `contoso.service-now.com`)
-   - Client ID
-   - Client Secret
-1. Select Connect. The system requests an access token via the client credentials flow and then retrieves CMDB data.
-
-:::image type="content" source="media/service-now/oauth.png" alt-text="Screenshot of connecting ServiceNow connector" lightbox="media/service-now/oauth.png":::
-
 ### Differences vs Basic Authentication
 
 - Credentials rotate easily (regenerate client secret without changing the integration user password).
@@ -102,7 +87,12 @@ For more background on ServiceNow OAuth, see ServiceNow documentation.
 To establish a connection with ServiceNow in Exposure Management, follow these steps:
 
 1. Open the [Data Connectors](https://security.microsoft.com/exposure-data-connectors) from the Exposure Management navigation and select **Connect** in the ServiceNow CMDB tile.
-1. Enter your ServiceNow **instance details** and **credentials** (created in the ServiceNow configuration) and select **Connect**.
+1. Choose your authentication method and enter the required information:
+   - **For Basic Authentication**: Enter your ServiceNow instance hostname and the username and password created in the Basic Authentication configuration.
+   - **For OAuth 2.0**: Choose the OAuth 2.0 authentication option and enter your instance hostname, Client ID, and Client Secret created in the OAuth configuration.
+1. Select **Connect**. The system will authenticate using your chosen method and retrieve CMDB data.
+
+:::image type="content" source="media/service-now/oauth.png" alt-text="Screenshot of connecting ServiceNow connector" lightbox="media/service-now/oauth.png":::
 
 ## Retrieved data
 
@@ -123,8 +113,8 @@ Here are some common issues that might arise when configuring the ServiceNow Con
 | **Error Type**                                               | **Troubleshooting Action**                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 'The remote server name couldn't be resolved' error message | Verify ServiceNow Instance hostname. Learn more about authentication to ServiceNow here: [Authentication (servicenow.com)](https://docs.servicenow.com/bundle/vancouver-platform-security/page/integrate/single-sign-on/concept/c_Authentication.html) |
-| **Error code 401**: Authorization failure                    | An authorization failure indicates that credentials might not be correct, or there might not be sufficient permissions to access the ServiceNow data. Check your credentials and make sure they are correct and valid. Also check that your credentials have the required permissions. See the ServiceNow [configuration section](#servicenow-configuration)  for details on how to ensure the cmdb_read role is assigned. Another possible reason for this failure is the that your ServiceNow instance is configured to accept connections only from a limited range of IP addresses. In this case, see the guidance for adding the right set of IPs to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses) |
-| **Error code 403:** Access forbidden error                   | This error indicates that the provided credentials lack the necessary permissions to run the requested APIs. Update your credentials with the proper permissions as described in the [configuration section](#servicenow-configuration), and make sure they have at minimum cmdb_read role assigned. |
+| **Error code 401**: Authorization failure                    | An authorization failure indicates that credentials might not be correct, or there might not be sufficient permissions to access the ServiceNow data. Check your credentials and make sure they are correct and valid. Also check that your credentials have the required permissions. See the [Configure ServiceNow with Basic Authentication](#configure-servicenow-with-basic-authentication) section for details on how to ensure the cmdb_read role is assigned. Another possible reason for this failure is the that your ServiceNow instance is configured to accept connections only from a limited range of IP addresses. In this case, see the guidance for adding the right set of IPs to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses) |
+| **Error code 403:** Access forbidden error                   | This error indicates that the provided credentials lack the necessary permissions to run the requested APIs. Update your credentials with the proper permissions as described in the [Configure ServiceNow with Basic Authentication](#configure-servicenow-with-basic-authentication) section, and make sure they have at minimum cmdb_read role assigned. |
 | **Error code 404:** Not found error                          | This error indicates that the requested endpoint wasn't found to be reachable. Verify that your ServiceNow Instance hostname is correct. |
 | **Error code 429** 'Too many requests"                       | The system periodically pulls data from the configured external providers, which might have a limit on the number of concurrent requests. We recommend creating a dedicated user or account for the connector to avoid reaching this limit. |
 | Bad URL error message                                        | This error indicates that the requested endpoint wasn't found to be reachable. Verify that your ServiceNow Instance hostname is correct. |
