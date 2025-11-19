@@ -66,12 +66,13 @@ Follow these steps to manually link accounts to a selected identity.
 
     :::image type="content" source="media/link-unlink-account-to-identity/accounts-observed-in-organization.png" alt-text="Screenshot that shows the accounts observed in an organization." lightbox="media/link-unlink-account-to-identity/accounts-observed-in-organization.png":::
 
-1. Select one or more accounts from the table. You must select at least one account to continue.
+1. Select the **Link** button.
 1. You can search by:
     - Display name
     - User principal name (UPN)
     - Security identifier (SID)
     - Source provider account
+1. Select one account from the table.
 1. Select **Next**.
 1. Enter a short justification comment explaining why you're linking these accounts.
 1. Your justification must:
