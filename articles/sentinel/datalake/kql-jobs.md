@@ -204,11 +204,11 @@ When you create jobs in the Microsoft Sentinel data lake, consider the following
 + Job start time must be at least 30 minutes after job creation or editing.
 
 
-### Data readiness amd ingestion latency 
+### Ingestion latency 
 
 Data ingestion in the Microsoft Sentinel data lake takes 6 to 12 minutes before data is available for querying. This latency affects security analysts who need timely access for threat hunting and intelligence matching, especially when using short lookback windows of 15 minutes or less. As a result, KQL jobs can return no results for recent data, which leads to operational issues and reduces trust in the analysis results.
 
-To mitigate this challenge, consider include a delay in the query. For example, Add `delay` to your KQL queries as follows:
+To mitigate this challenge, consider including a delay in the query. For example, Add `delay` to your KQL queries as follows:
 
 ```KQL 
 let lookback = 15m;
@@ -220,7 +220,7 @@ CommonSecurityLog
 ```
 Consider an overlap in `lookback` vs job frequency. For example, `lookback`: 30 minutes, frequency: 15 minutes.
 
-
+For more information, see [Handle ingestion delay in scheduled analytics rules](/azure/sentinel/ingestion-delay).
 
 ### Column names
 The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
