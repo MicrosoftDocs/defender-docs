@@ -66,7 +66,7 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 - **Permissions management** - Insights into Cloud Infrastructure Entitlement Management (CIEM). CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
 
-- Protect serverless workloads - Secure serverless compute and applications platforms by providing visibility into environments such as Azure Functions, Azure Web Apps, and AWS Lambda. Insights are then viewable in attack path analysis, enabling teams to identify and visualize risks, monitor for misconfigurations, and detect vulnerable resources 
+- **Protect serverless workloads** - Secure serverless compute and applications platforms by providing visibility into environments such as Azure Functions, Azure Web Apps, and AWS Lambda. Insights are then viewable in attack path analysis, enabling teams to identify and visualize risks, monitor for misconfigurations, and detect vulnerable resources 
 
 **To enable the components of the Defender CSPM plan**:
 
