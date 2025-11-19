@@ -301,7 +301,7 @@ New [health issue](health-alerts.md) for cases where sensors running on VMware h
 Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
 Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
 
-Learn more about [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
+Learn more about [Privileged Identity Management.](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 
