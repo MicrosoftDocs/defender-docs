@@ -1050,11 +1050,11 @@ With DevOps security capabilities in Microsoft Defender Cloud Security Posture M
 
 June 27, 2024
 
-We're announcing the general availability of the Checkov integration for Infrastructure-as-Code (IaC) scanning through Microsoft Security DevOps ([MSDO](azure-devops-extension.yml)). As part of this release, Checkov will replace TerraScan as a default IaC analyzer that runs as part of the MSDO Command-Line Interface (CLI). TerraScan might still be configured manually through MSDO's [environment variables](https://github.com/microsoft/security-devops-azdevops/wiki) but won't run by default.
+We're announcing the general availability of the Checkov integration for Infrastructure-as-Code (IaC) scanning through Microsoft Security DevOps ([MSDO](configure-azure-devops-extension.md)). As part of this release, Checkov will replace TerraScan as a default IaC analyzer that runs as part of the MSDO Command-Line Interface (CLI). TerraScan might still be configured manually through MSDO's [environment variables](https://github.com/microsoft/security-devops-azdevops/wiki) but won't run by default.
 
 Security findings from Checkov present as recommendations for both Azure DevOps and GitHub repositories under the assessments *Azure DevOps repositories should have infrastructure as code findings resolved* and *GitHub repositories should have infrastructure as code findings resolved*.
 
-To learn more about DevOps security in Defender for Cloud, see the [DevOps Security Overview](defender-for-devops-introduction.md). To learn how to configure the MSDO CLI, see the [Azure DevOps](azure-devops-extension.yml) or [GitHub](github-action.md) documentation.
+To learn more about DevOps security in Defender for Cloud, see the [DevOps Security Overview](defender-for-devops-introduction.md). To learn how to configure the MSDO CLI, see the [Azure DevOps](configure-azure-devops-extension.md) or [GitHub](github-action.md) documentation.
 
 ### Update: Change in pricing for Defender for Containers in multicloud
 
@@ -1164,7 +1164,7 @@ Checkov integration for DevOps security in Defender for Cloud is now in preview.
 
 While in preview, Checkov must be explicitly invoked through the 'tools' input parameter for the MSDO CLI.
 
-Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md) and configuring the MSDO CLI for [Azure DevOps](azure-devops-extension.yml) and [GitHub](github-action.md).
+Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md) and configuring the MSDO CLI for [Azure DevOps](configure-azure-devops-extension.md) and [GitHub](github-action.md).
 
 ### GA: Permissions management in Defender for Cloud
 
@@ -1194,7 +1194,7 @@ May 2, 2024
 
 Security policy management across clouds (Azure, AWS, GCP) is now generally available. This enables security teams to manage their security policies in a consistent way and with new features
 
-Learn more about [security policies in Microsoft Defender for Cloud](security-policy-concept.md#work-with-security-standards).
+Learn more about [security policies in Microsoft Defender for Cloud](security-policy-concept.md).
 
 ### Preview: Defender for open-source databases available in AWS
 
@@ -1432,7 +1432,7 @@ February 28, 2024
 
 In February 2021, the deprecation of the MSCA task was communicated to all customers and has been past end of life support since [March 2022](https://devblogs.microsoft.com/premier-developer/microsoft-security-code-analysis/). As of February 26, 2024, MSCA is officially no longer operational.
 
-Customers can get the latest DevOps security tooling from Defender for Cloud through [Microsoft Security DevOps](azure-devops-extension.yml) and more security tooling through [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
+Customers can get the latest DevOps security tooling from Defender for Cloud through [Microsoft Security DevOps](configure-azure-devops-extension.md) and more security tooling through [GitHub Advanced Security for Azure DevOps](https://azure.microsoft.com/products/devops/github-advanced-security).
 
 ### Update: Security policy management expands support to AWS and GCP
 
@@ -2547,7 +2547,8 @@ The changes are listed as follows:
 |JIT firewall rule collection names | ASC-JIT | MDC-JIT |
 |JIT firewall rules names | ASC-JIT | MDC-JIT |
 
-Learn how to [secure your management ports with Just-In-Time access](just-in-time-access-usage.yml).
+Learn how to [secure your management ports with Just-In-Time access](enable-just-in-time-access.md
+).
 
 ### Onboard selected AWS regions
 
@@ -3434,7 +3435,7 @@ Updates in July include:
 - [General availability (GA) of the Cloud-native security agent for Kubernetes runtime protection](#general-availability-ga-of-the-cloud-native-security-agent-for-kubernetes-runtime-protection)
 - [Defender for Container's VA adds support for the detection of language specific packages (Preview)](#defender-for-containers-va-adds-support-for-the-detection-of-language-specific-packages-preview)
 - [Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149](#protect-against-the-operations-management-infrastructure-vulnerability-cve-2022-29149)
-- [Integration with Entra Permissions Management](#integration-with-entra-permissions-management)
+- [Integration with Microsoft Entra Permissions Management](#integration-with-microsoft-entra-permissions-management)
 - [Key Vault recommendations changed to "audit"](#key-vault-recommendations-changed-to-audit)
 - [Deprecate API App policies for App Service](#deprecate-api-app-policies-for-app-service)
 
@@ -3474,13 +3475,13 @@ Log Analytics integrated with Azure HDInsight running OMI version 13 requires a 
 
 If you have Defender for Servers enabled with Vulnerability Assessment, you can use [this workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/OMI%20Vulnerability%20Dashboard) to identify affected resources.
 
-### Integration with Entra Permissions Management
+### Integration with Microsoft Entra Permissions Management
 
 Defender for Cloud has integrated with [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/), a cloud infrastructure entitlement management (CIEM) solution that provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP.
 
 Each Azure subscription, AWS account, and GCP project that you onboard, will now show you a view of your [Permission Creep Index (PCI)](/azure/active-directory/cloud-infrastructure-entitlement-management/ui-dashboard).
 
-Learn more about [Entra Permission Management (formerly Cloudknox)](other-threat-protections.md#entra-permission-management-formerly-cloudknox)
+Learn more about [Microsoft Entra Permission Management (formerly Cloudknox)](other-threat-protections.md#entra-permission-management-formerly-cloudknox)
 
 ### Key Vault recommendations changed to "audit"
 
@@ -4493,7 +4494,7 @@ These alerts are generated based on a new machine learning model and Kubernetes 
 
 | Alert (alert type)                                                                 | Description                                                                                                                                                                                                                                                                                                                                                      | MITRE tactic | Severity |
 |------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------:|----------|
-| **Anomalous pod deployment (Preview)**<br>(K8S_AnomalousPodDeployment)             | Kubernetes audit log analysis detected pod deployment that is anomalous, based on previous pod deployment activity. This activity is considered an anomaly when taking into account how the different features seen in the deployment operation are in relations to one another. The features monitored by this analytics include the container image registry used, the account performing the deployment, day of the week, how often does this account performs pod deployments, user agent used in the operation, is this a namespace which is pod deployment occur to often, or other feature. Top contributing reasons for raising this alert as anomalous activity are detailed under the alert extended properties. | Execution | Medium |
+| **Anomalous pod deployment (Preview)**<br>(K8S_AnomalousPodDeployment)             | Kubernetes audit log analysis detected pod deployment that is anomalous, based on previous pod deployment activity. This activity is considered an anomaly when taking into account how the different features seen in the deployment operation are in relations to one another. The analytics monitors features such as the container image registry, the deploying account, the day of the week, the frequency of deployments from that account, the user agent, and whether pod deployments occur too often in the same namespace. Top contributing reasons for raising this alert as anomalous activity are detailed under the alert extended properties. | Execution | Medium |
 | **Excessive role permissions assigned in Kubernetes cluster (Preview)**<br>(K8S_ServiceAcountPermissionAnomaly) | Analysis of the Kubernetes audit logs detected an excessive permissions role assignment to your cluster. From examining role assignments, the listed permissions are uncommon to the specific service account. This detection considers previous role assignments to the same service account across clusters monitored by Azure, volume per permission, and the impact of the specific permission. The anomaly detection model used for this alert takes into account how this permission is used across all clusters monitored by Azure Defender. | Privilege Escalation | Low |
 
 For a full list of the Kubernetes alerts, see [Alerts for Kubernetes clusters](alerts-containers.md).
@@ -6549,7 +6550,8 @@ This update brings the following changes to this feature:
 
 - The recommendation is triggered only if there are open management ports.
 
-Learn more about [the JIT access feature](just-in-time-access-usage.yml).
+Learn more about [the JIT access feature](enable-just-in-time-access.md
+).
 
 ### Custom recommendations have been moved to a separate security control
 
@@ -6712,7 +6714,8 @@ The features, operation, and UI for Azure Security Center's just-in-time tools t
 - **Justification field** - When requesting access to a virtual machine (VM) through the just-in-time page of the Azure portal, a new optional field is available to enter a justification for the request. Information entered into this field can be tracked in the activity log.
 - **Automatic cleanup of redundant just-in-time (JIT) rules** - Whenever you update a JIT policy, a cleanup tool automatically runs to check the validity of your entire ruleset. The tool looks for mismatches between rules in your policy and rules in the NSG. If the cleanup tool finds a mismatch, it determines the cause and, when it's safe to do so, removes built-in rules that aren't needed anymore. The cleaner never deletes rules that you've created.
 
-Learn more about [the JIT access feature](just-in-time-access-usage.yml).
+Learn more about [the JIT access feature](enable-just-in-time-access.md
+).
 
 ### Two security recommendations for web applications deprecated
 

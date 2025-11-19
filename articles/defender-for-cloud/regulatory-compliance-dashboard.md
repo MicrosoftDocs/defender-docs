@@ -9,7 +9,7 @@ ms.date: 07/15/2025
 
 Microsoft Defender for Cloud helps you to meet regulatory compliance requirements by continuously assessing resources against compliance controls, and identifying issues that are blocking you from achieving a particular compliance certification.
 
-In the **Regulatory compliance** dashboard, you manage and interact with compliance standards. You can see which compliance standards are assigned, turn standards on and off for Azure, AWS, and GCP, review the status of assessments against standards, and more.
+In the Regulatory compliance dashboard, you manage and interact with compliance standards. You can see which compliance standards are assigned, turn standards on and off for Azure, AWS, and GCP, review the status of assessments against standards, and more.
 
 ## Integration with Purview
 
@@ -27,7 +27,7 @@ Compliance Manager thus provides improvement actions and status across your clou
 
 ## Assess regulatory compliance
 
-The **Regulatory compliance** dashboard shows which compliance standards are enabled. It shows the controls within each standard, and security assessments for those controls. The status of these assessments reflects your compliance with the standard.
+The Regulatory compliance dashboard shows which compliance standards are enabled. It shows the controls within each standard, and security assessments for those controls. The status of these assessments reflects your compliance with the standard.
 
 The dashboard helps you to focus on gaps in standards, and to monitor compliance over time.
 

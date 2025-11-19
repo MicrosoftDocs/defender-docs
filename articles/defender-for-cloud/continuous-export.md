@@ -85,6 +85,7 @@ In this article, you learned how to configure continuous exports of your recomme
 
 To see related content:
 
+- Learn how to [view exported data](continuous-export-view-data.md) in Azure Monitor.
 - Learn more about [workflow automation templates](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation).
 - See the [Azure Event Hubs documentation](/azure/event-hubs/).
 - Learn more about [Microsoft Sentinel](/azure/sentinel/).

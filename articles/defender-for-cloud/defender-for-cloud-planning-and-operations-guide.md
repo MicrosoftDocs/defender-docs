@@ -177,7 +177,8 @@ You should also regularly monitor existing resources for configuration changes t
 
 ### Harden access and applications
 
-As part of your security operations, you should also adopt preventative measures to restrict access to VMs, and control the applications that are running on VMs. By locking down inbound traffic to your Azure VMs, you're reducing the exposure to attacks, and at the same time providing easy access to connect to VMs when needed. Use [just-in-time VM access](just-in-time-access-usage.yml) access feature to hardening access to your VMs.
+As part of your security operations, you should also adopt preventative measures to restrict access to VMs, and control the applications that are running on VMs. By locking down inbound traffic to your Azure VMs, you're reducing the exposure to attacks, and at the same time providing easy access to connect to VMs when needed. Use [just-in-time VM access](enable-just-in-time-access.md
+) access feature to hardening access to your VMs.
 
 ## Incident response
 
