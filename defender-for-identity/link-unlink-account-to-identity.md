@@ -90,7 +90,7 @@ Follow these steps to manually unlink accounts from a selected identity.
 
 1. Go to **Identity Inventory > Observed in organization**
 1. Open the **Accounts** tab.
-1. Select one or more account groups.
+1. Select one or more account sets.
 1. Select **Unlink account**.
 1. A confirmation dialog appears with the identity name.
 1. Review the message and select **Unlink accounts** to confirm.
