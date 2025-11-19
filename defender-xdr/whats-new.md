@@ -32,6 +32,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## December 2025
+- (GA) The [hunting graph](advanced-hunting-graph.md) in advanced hunting is now generally available. It also now has two new predefined threat scenarios that you can use to render your hunts as interactive graphs.
+
 ## November 2025
 - (Preview) Defender XDR now includes the **predictive shielding** capability, which uses predictive analytics and real-time insights to dynamically infer risk, anticipate attacker progression, and harden your environment before threats materialize. [Learn more](shield-predict-threats.md)
 - (Preview) The [Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender](threat-intel-briefing-agent-defender.md) is now available for preview. It generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information in a matter of minutes, helping security teams save time by creating customized, relevant reports.
