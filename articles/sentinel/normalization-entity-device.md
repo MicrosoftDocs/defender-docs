@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) Device Enitity reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Device Entity reference | Microsoft Docs
 description: This article displays the Microsoft Sentinel Device Entity schema.
 author: oshezaf
 ms.topic: reference
@@ -52,7 +52,7 @@ When the value provided by the source is an FQDN the parser should calculate the
 
 | Field               | Class       | Type       |  Description        |
 |---------------------|-------------|------------|--------------------|
-| <a name ="dvcid"></a>**DvcId**               | Optional    | String     | The unique ID of the device . For example: `41502da5-21b7-48ec-81c9-baeea8d7d669`   |
+| <a name ="dvcid"></a>**DvcId**               | Optional    | String     | The unique ID of the device. For example: `41502da5-21b7-48ec-81c9-baeea8d7d669`   |
 | <a name="scopeid"></a>**ScopeId** | Optional | String | The cloud platform scope ID the device belongs to. **Scope** map to a subscription ID on Azure and to an account ID on AWS. | 
 | <a name="scope"></a>**Scope** | Optional | String | The cloud platform scope the device belongs to. **Scope** map to a subscription on Azure and to an account on AWS. | 
 | <a name="dvcidtype"></a>**DvcIdType** | Optional | Enumerated | The type of [DvcId](#dvcid). Typically this field also identifies the type of [Scope](#scope) and [ScopeId](#scopeid). This field is required if the [DvcId](#dvcid) field is used. |
