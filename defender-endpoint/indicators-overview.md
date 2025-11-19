@@ -119,6 +119,11 @@ When your security team creates a new indicator (IoC), the following actions are
 > [!NOTE]
 > Using Warn mode prompts users with a warning if they open a risky app or website. The prompt doesn't block them from allowing the application or website to run, but you can provide a custom message and links to a company page that describes appropriate usage of the app. Users can still bypass the warning and continue to use the app if necessary. For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/defender-cloud-apps/mde-govern).
 
+> [!NOTE]
+> For Warn action, To receive the toast notification to be able to bypass the IoC, make sure the **“Files or activities are blocked”** option is enabled under **Virus & Threat Protection notifications**. The corresponding registry key should be set as follows: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender Security Center\Virus and threat protection\FilesBlockedNotificationDisabled = 0.  
+>   
+>  More details see **[Windows Security app settings](https://support.microsoft.com/windows/windows-security-app-settings-1ec98620-4e41-4b6b-b055-3c4bb115d4ee#bkmk_notifications)**.
+
 You can create an indicator for:
 
 - [Files](indicator-file.md)
@@ -153,7 +158,7 @@ If indicators are synced to the Defender portal from Microsoft Defender for Clou
 
 ## Known issues and limitations
 
-Microsoft Store apps can't be blocked by Microsoft Defender because they're signed by Microsoft.
+Microsoft apps can't be blocked by Microsoft Defender because they're signed by Microsoft.
 
 Customers might experience issues with alerts for IoCs. The following scenarios are situations where alerts aren't created or are created with inaccurate information. 
 

@@ -12,13 +12,12 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
-ms.date: 10/27/2025
+ms.date: 11/17/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
 
 # Onboard Windows devices using Configuration Manager
-
 
 You can use Configuration Manager to onboard endpoints to the Microsoft Defender for Endpoint service. 
 
@@ -32,6 +31,7 @@ There are several options you can use to onboard devices using Configuration Man
 
 You can create a detection rule on a Configuration Manager application to continuously check if a device has been onboarded. An application is a different type of object than a package and program. If a device is not yet onboarded (due to pending OOBE completion or any other reason), Configuration Manager reattempts to onboard the device until the rule detects the status change. For more information, see [Configure Detection Methods in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682159\(v=technet.10\)#step-4-configure-detection-methods-to-indicate-the-presence-of-the-deployment-type).
 
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Prerequisites
 

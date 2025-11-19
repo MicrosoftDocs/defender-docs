@@ -93,7 +93,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
    - **Users**: The specified mailboxes, mail users, or mail contacts.
    - **Groups**:
      - Members of the specified distribution groups (including non-mail-enabled security groups within distribution groups) or mail-enabled security groups (dynamic distribution groups aren't supported).
-     - The specified Microsoft 365 Groups.
+     - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
    > [!TIP]
@@ -406,7 +406,9 @@ This example creates a safe links rule to the previous examples, but the rule ap
 
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+
 $SLDomains = $Data.Domains
+
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
 ```
 
@@ -507,7 +509,9 @@ This example adds the domains from the specified .csv as a condition to the safe
 
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+
 $SLDomains = $Data.Domains
+
 Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
 ```
 

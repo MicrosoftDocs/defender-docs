@@ -137,16 +137,22 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Manage attack disruption
+      - name: Attack disruption
         items:
         - name: Overview
           href: automatic-attack-disruption.md
-        - name: Configure capabilities
+        - name: Manage
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
         - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md           
+          href: automatic-attack-disruption-exclusions.md  
+      - name: Predictive shielding
+        items:
+        - name: Overview
+          href: shield-predict-threats.md        
+        - name: Manage and view details
+          href: shield-predict-threats-manage.md         
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
@@ -223,6 +229,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AIAgentsInfo
+            href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
             href: advanced-hunting-alertevidence-table.md
           - name: AlertInfo
@@ -303,12 +311,18 @@
             href: advanced-hunting-emailpostdeliveryevents-table.md
           - name: EmailUrlInfo
             href: advanced-hunting-emailurlinfo-table.md
+          - name: EntraIdSignInEvents
+            href: advanced-hunting-entraidsigninevents-table.md
+          - name: EntraIdSpnSignInEvents
+            href: advanced-hunting-entraidspnsigninevents-table.md
           - name: ExposureGraphEdges
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
           - name: GraphApiAuditEvents
             href: advanced-hunting-graphapiauditevents-table.md            
+          - name: IdentityAccountInfo
+            href: advanced-hunting-identityaccountinfo-table.md
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
           - name: IdentityEvents
@@ -451,6 +465,8 @@
             href: security-copilot-agents-defender.md          
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md
+          - name: Threat Intelligence Briefing Agent
+            href: threat-intel-briefing-agent-defender.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -519,7 +535,7 @@
             href: m365d-threat-analytics-notifications.md
           - name: Configure alert notifications
             href: configure-email-notifications.md
-        - name: Contact Microsoft Defender XDR support
+        - name: Contact Microsoft Defender support
           href: contact-defender-support.md
         - name: Manage devices through dynamic rules
           href: configure-asset-rules.md
