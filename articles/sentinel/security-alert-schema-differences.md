@@ -1,13 +1,11 @@
 ---
 title: Alert schema differences: Legacy vs. XDR connector
-description: Explains the schema differences between alerts from legacy connectors and the XDR connector in Microsoft Sentinel.
+description: Learn about schema differences between alerts from legacy connectors and the XDR connector in Microsoft Sentinel.
 author: guywi-ms
+ms.author: guywild
 ms.topic: reference
 ms.date: 09/04/2025
-ms.author: guywild
-
-#Customer intent: As a security analyst, I want to understand the schema differences between alerts from legacy connectors and the XDR connector in Microsoft Sentinel so that I can update my queries, analytic rules, and workbooks when migrating.
-
+# customer intent: As a security analyst, I want to understand the schema differences between alerts from legacy connectors and the XDR connector in Microsoft Sentinel so that I can update my queries, analytic rules, and workbooks when migrating.
 ---
 
 # Alert schema differences: Legacy vs. XDR connector
