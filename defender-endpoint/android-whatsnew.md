@@ -35,6 +35,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
+- Native Root Detection to Microsoft Defender is now in Preview - please refer to this [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576)for more details.
+
 - Performance improvement and bug fixes.
 
 #### November 2025
@@ -327,9 +329,10 @@ Notify your users and help desk (as applicable) that end users must accept the n
 
    The device is now protected.
    
-      > [!NOTE]
+   > [!NOTE]
+   > 
    > This permission allows Microsoft Defender for Endpoint to access storage on user's device, which helps detect and remove malicious and unwanted apps. Microsoft Defender for Endpoint accesses/scans Android app package file (.apk) only. On devices with a Work Profile, Defender for Endpoint only scans work-related files.
-
+   
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 ## See also
