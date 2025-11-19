@@ -114,7 +114,8 @@ The improved Action center includes an **Action source** column that tells you w
 
 ## Required permissions for Action center tasks
 
-To perform tasks, such as approving or rejecting pending actions in the Action center, you need specific permissions. You have the following options:
+To perform tasks, such as approving or rejecting pending actions in the Action center, you need specific permissions.
+You have the following options:
 
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Security Administrator** role.
@@ -133,12 +134,12 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
 
     - Membership in a role group in [Email & collaboration permissions](/defender-office-365/mdo-portal-permissions) with the **Search and Purge** role assigned. By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups in Email & collaboration permissions. You can add users to those role groups, or you can [create a new role group in Email & collaboration permissions](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac)
-   - _Microsoft Defender for Endpoint remediation_: **Security operations \ Security data \ Response (manage)**.
-   - _Microsoft Defender for Office 365 remediation_ (Office content and email, if **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="/defender-office-365/media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
-     - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
-     - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**. 
-    
+- [Microsoft Defender XDR Unified role based access control (RBAC)](manage-rbac.md)
+  - _Microsoft Defender for Endpoint remediation_: **Security operations \ Security data \ Response (manage)**.
+  - _Microsoft Defender for Office 365 remediation_ (Office content and email, if **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="/defender-office-365/media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+    - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
+    - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**. 
+
   > [!TIP]
   > Membership in the **Security Administrator** role group Email & collaboration permissions doesn't grant access to the Action center or Microsoft Defender XDR capabilities. For those, you need to be a member of the **Security Administrator** role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 
