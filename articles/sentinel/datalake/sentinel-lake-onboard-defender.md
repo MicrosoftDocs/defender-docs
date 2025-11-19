@@ -1,5 +1,5 @@
 ---
-title: Onboarding to Microsoft Sentinel data lake to Defender portal
+title: Onboarding to Microsoft Sentinel data lake from the Defender portal
 titleSuffix: Microsoft Security  
 description: This article describes how to onboard to the Microsoft Sentinel data lake for customers who are currently using Microsoft Defender.
 author: mberdugo
