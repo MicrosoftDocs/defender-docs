@@ -134,7 +134,7 @@ You have the following options:
 
     - Membership in a role group in [Email & collaboration permissions](/defender-office-365/mdo-portal-permissions) with the **Search and Purge** role assigned. By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups in Email & collaboration permissions. You can add users to those role groups, or you can [create a new role group in Email & collaboration permissions](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](manage-rbac.md)
+- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md)
   - _Microsoft Defender for Endpoint remediation_: **Security operations \ Security data \ Response (manage)**.
   - _Microsoft Defender for Office 365 remediation_ (Office content and email, if **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="/defender-office-365/media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
