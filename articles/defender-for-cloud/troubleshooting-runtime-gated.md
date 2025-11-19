@@ -23,20 +23,21 @@ Gated deployment enforces container image security policies at deploy time based
 
 - Required plan extensions are disabled
 - Defender Sensor is disabled or not provisioned to the cluster
-- AKS version is earlier than 1.31
-- Registry access or security findings are disabled
+- Kubernetes cluster version is earlier than 1.31
+- Defender for Containers plan or relevant extensions (Registry Access or Security Findings extensions) are disabled in the container registry scope
 
 **Resolution:**
 
 - Confirm the following toggles are enabled in the Defender for Containers plan:
 
   - Defender Sensor
+  - Security Gating
   - Registry Access
   - Security Findings
 
-- Make sure your AKS cluster runs version 1.31 or later.
+- Make sure your Kubernetes cluster runs version 1.31 or later.
 
-- Check that the cluster has access to the container registry (ACR) and that Microsoft Entra ID authentication is configured. For AKS clusters, make sure the cluster has a *kubelet* identity, and that the admission controller pod's service account is included in the *kubelet* identity's federated credentials.
+- For Azure: Check that the cluster has access to the container registry (ACR) and that Microsoft Entra ID authentication is configured. For AKS clusters, make sure the cluster has a *kubelet* identity, and that the admission controller pod's service account is included in the *kubelet* identity's federated credentials.
 
 ### Issue: Security rule doesn't trigger
 
@@ -84,10 +85,10 @@ Gated deployment enforces policies when you deploy. You might see specific messa
 
 | **Scenario** | **Message** |
 |----|----|
-| Image blocked due to CVE | @ENG to provide detail |
-| Image blocked because scan results are missing | @ENG to provide detail |
+| Image blocked due to CVE | Error from server: admission webhook "defender-admission-controller.kube-system.svc" denied the request: mcr.microsoft.com/mdc/dev/defender-admission-controller/test-images:one-high:Image contains 2 high or higher CVEs, which is more than the allowed count of: 0”  |
+| Image blocked because scan results are missing | No valid reports found on ratify response\nUnscanned images are not allowed by policy |
 | Image allowed but monitored (audit mode) | Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule |
-| Image allowed without scan results (audit mode) | @ENG to provide detail |
+| Image allowed without scan results (audit mode) |  Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule|
 
 **\[Insert screenshot: Admission Monitoring view showing developer-facing results\]**
 

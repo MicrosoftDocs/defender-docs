@@ -38,7 +38,7 @@ Start in Audit mode to assess impact, then move to Deny mode to enforce rules.
 - Security rules define conditions like CVE severity and actions such as audit or deny.
 - Admission controller evaluates container images against these rules.
 - When a rule matches, the system takes its defined action.
-- The admission controller uses vulnerability scan results from registries like ACR, ECR, and Google Artifact Registry.
+- The admission controller uses vulnerability scan results from registries that Defender for Cloud supports and is configured to scan, like ACR, ECR, and Google Artifact Registry.
 
 ## Key features
 

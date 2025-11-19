@@ -13,7 +13,7 @@ ms.topic: concept-article
 
 This article shows how to enable and configure gated deployment for Kubernetes clusters with Microsoft Defender for Containers.
 
-Gated deployment enforces container image security policies during deployment by using vulnerability scan results from supported registries—Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry. It works with the Kubernetes admission controller to evaluate images before the cluster admits them.
+Gated deployment enforces container image security policies during deployment by using vulnerability scan results from supported registries - Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry. It works with the Kubernetes admission controller to evaluate images before the cluster admits them.
 
 Supported Kubernetes platforms
 
@@ -25,9 +25,9 @@ Supported Kubernetes platforms
 
 | **Requirement** | **Details** |
 |-----------------|-------------|
-| Defender plan | Enable Defender for Containers. |
-| Plan extensions | Defender Sensor, Security Findings, and Registry Access.<br/>Turn these plan extensions on or off in the Defender for Containers plan setting. They're enabled by default in new Defender for Containers environments. |
-| Kubernetes version | Use AKS 1.31 or later. |
+| Defender plan | Enable Defender for Containers on both the container registry and Kubernetes cluster subscriptions/accounts.<br/>**Important**: If your container registry and Kubernetes cluster reside in different Azure subscriptions (or AWS accounts/GCP projects), you must enable the Defender for Containers plan and relevant extensions on both cloud accounts. |
+| Plan extensions | Defender Sensor, Security Gating, Security Findings, and Registry Access.<br/>Turn these plan extensions on or off in the Defender for Containers plan setting. They're enabled by default in new Defender for Containers environments. |
+| Kubernetes cluster support | AKS, EKS, GKE - version 1.31 or later. |
 | Registry support | Use Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), or Google Artifact Registry. |
 | Permissions | Create or change gated deployment policies with Security Admin or higher tenant permission. View them with Security Reader or higher tenant permission. |
 
@@ -39,9 +39,10 @@ Supported Kubernetes platforms
 1.  Select the relevant subscription, AWS account, or GCP project.
 1.  Under **Settings & Monitoring**, turn on these toggles:
 
-    - Defender Sensor
-    - Registry Access
-    - Security Findings
+    - **Defender Sensor**
+        - Security Gating
+    - **Registry Access**
+        - Security Findings
 
 **\[Insert screenshot: Environment Settings showing enabled toggles\]**
 
@@ -80,17 +81,17 @@ Supported Kubernetes platforms
 
 ### Step 4: Define conditions
 
-1.  Under **Scan Configurations**, specify:
+Under **Scan Configurations**, specify:
 
     - **Trigger Rule Conditions**: Choose vulnerability severity levels or specific CVE IDs
 
 **\[Insert screenshot: Rule configuration panel with condition types and exemptions\]**
 
-### Step 5: Define exclusions
+### Step 5: Define exemptions
 
-Exclusions let trusted resources bypass gating rules.
+Exemptions let trusted resources bypass gating rules.
 
-**Supported exclusion types**
+**Supported exemption types**
 
 | **Type**   | **Description**           |
 |------------|---------------------------|

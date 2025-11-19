@@ -31,12 +31,39 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| November 30, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
 | November 17, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview)|
 |November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 | November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 | November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+### Kubernetes gated deployment (GA)
+
+November 30, 2025
+
+Kubernetes gated deployment in Microsoft Defender for Containers is now generally available. This feature enforces container image security at deployment time by using Kubernetes admission control.
+
+**Key capabilities**
+
+- **Admission control for Kubernetes clusters**: Blocks or audits deployments of container images that violate organizational security rules.
+- **Security rules framework**: Define custom rules for AKS, EKS, and GKE clusters based on vulnerability assessment results.
+- **Audit and Deny modes**: 
+  - *Audit*: Generates recommendations when deployments violate security rules
+  - *Deny*: Prevents noncompliant images from being deployed
+- **Multicloud support**: Works with Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry.
+- **Integrated monitoring**: View admission monitoring and violation details in the Defender for Cloud portal.
+
+**GA improvements**
+
+- Streamlined setup experience in the Defender for Cloud portal
+- Default audit rule enabled for faster onboarding
+- Scoped exemption management for specific namespaces or workloads
+- Performance optimizations with reduced latency for admission decisions
+- Enhanced documentation for troubleshooting and developer experience
+
+Learn more about [gated deployment for Kubernetes container images](runtime-gated-overview.md), [how to enable gated deployment](enablement-guide-runtime-gated.md), and [gated deployment FAQ](faq-runtime-gated.md).
 
 ### Advanced security posture for API discovery (Preview)
 
