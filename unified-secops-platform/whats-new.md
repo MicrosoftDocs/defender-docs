@@ -30,9 +30,6 @@ Microsoft Sentinel customers using the Defender portal, or the Azure portal with
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-
-## November 2025
-
 ### New Entity Behavior Analytics (UEBA) experiences in the Defender portal (Preview)
 
 Microsoft Sentinel introduces new UEBA experiences in the Defender portal, bringing behavioral insights directly into key analyst workflows. These enhancements help analysts prioritize investigations and apply UEBA context more effectively.
