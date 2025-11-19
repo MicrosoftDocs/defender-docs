@@ -56,7 +56,7 @@ The following table lists the current limitations and supported scenarios for sc
 
 > [!NOTE]
 > - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
->
+> - The Exposure Management section in the Defender Portal is not visible to users with an MDI scope assignment.
 > - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
 |Defender for Identity experience |Scoping by OU's|Scoping by AD domain|
