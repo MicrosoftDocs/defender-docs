@@ -15,12 +15,6 @@ This article shows how to enable and configure gated deployment for Kubernetes c
 
 Gated deployment enforces container image security policies during deployment by using vulnerability scan results from supported registries - Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry. It works with the Kubernetes admission controller to evaluate images before the cluster admits them.
 
-Supported Kubernetes platforms
-
-- Azure Kubernetes Service (AKS)
-- Amazon Elastic Kubernetes Service (EKS)
-- Google Kubernetes Engine (GKE)
-
 ## Prerequisites
 
 | **Requirement** | **Details** |
@@ -130,7 +124,7 @@ Configure exemptions during rule creation. They apply to audit and deny rules.
 
 ## Deny mode configuration
 
-Deny mode can introduce a one- or two-second delay during deployments because of real-time policy enforcement. When you select **Deny** as the action, a proper note appears.
+Deny mode can introduce a one- or two-second delay during deployments because of real-time policy enforcement. When you select **Deny** as the action, a notification appears.
 
 **\[Insert screenshot: Tooltip shown when Deny mode is selected\]**
 
