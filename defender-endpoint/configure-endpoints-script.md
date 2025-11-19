@@ -3,8 +3,8 @@ title: Onboard Windows Servers using a local script
 description: Use a local script to deploy the configuration package on devices to enable onboarding of the devices to the service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 manager: bagol
@@ -15,7 +15,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-ms.date: 04/16/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,13 +23,14 @@ appliesto:
 ---
 # Onboard Windows devices using a local script
 
-
 You can also manually onboard individual devices to Defender for Endpoint. You might want to onboard some devices when you're testing the service before you commit to onboarding all devices in your network.
 
 > [!IMPORTANT]
 > The script described in this article is recommended for manually onboarding devices to Defender for Endpoint. It should only be used on a limited number of devices. If you're deploying to a production environment, see [other deployment options](onboard-client.md), such as Intune, Group Policy, or Configuration Manager.
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
+
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Onboard devices
 
