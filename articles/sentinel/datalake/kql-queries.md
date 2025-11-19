@@ -136,6 +136,8 @@ external_table("AADRiskyUsers")
     + `.show databases`
     + `.show databases entities`
     + `.show database`
+    
++ When you use the `stored_query_results` command, provide the time range in the KQL query. The time selector above the query editor doesn't work with this command.
 
 + Using out-of-the-box or custom functions isn't supported in KQL queries against the data lake.
 
