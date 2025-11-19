@@ -23,6 +23,7 @@ These are the known limitations during the preview release of Defender for Cloud
 - Some resources sourced from Azure Policy may not appear in the new portal (including Defenders, Advanced Hunting, and XSPM) because they don't have Defender for Cloud security context. During the preview period, we only surface resources that contribute to the security insights.
 - Some navigation paths may differ slightly from Azure Portal equivalents.
 - Event timeline widget is no longer in the navigation bar accessible via dashboard widgets.
+- Exposure Management experiences (recommendations, initiatives, attack path etc.) are not visible to users with MDI scoping. Until this issue is resolved, it is advisable, where feasible, to grant users full access to Exposure Management, including non-scoped MDI data.
 
 ## Opt-In
 
