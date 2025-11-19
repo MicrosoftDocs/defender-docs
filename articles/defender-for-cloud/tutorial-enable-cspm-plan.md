@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable Defender CSPM on your Azure subscription for Microsoft Defender for Cloud and enhance your security posture.
 ms.topic: install-set-up-deploy
-ms.date: 09/28/2025
+ms.date: 11/19/2025
 ---
 
 # Protect your resources with Defender CSPM
@@ -65,6 +65,8 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 - **Sensitive data discovery**: Sensitive data discovery automatically discovers managed cloud data resources containing sensitive data at scale. This feature accesses your data, it's agentless, uses smart sampling scanning, and integrates with Microsoft Purview sensitive information types and labels.
 
 - **Permissions management** - Insights into Cloud Infrastructure Entitlement Management (CIEM). CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
+
+- Protect serverless workloads - Secure serverless compute and applications platforms by providing visibility into environments such as Azure Functions, Azure Web Apps, and AWS Lambda. Insights are then viewable in attack path analysis, enabling teams to identify and visualize risks, monitor for misconfigurations, and detect vulnerable resources 
 
 **To enable the components of the Defender CSPM plan**:
 
