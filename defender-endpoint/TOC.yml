@@ -135,6 +135,8 @@
               href: streamlined-device-connectivity-urls-gov.md                       
         - name: Onboard client devices
           items:
+          - name: Onboard Windows devices using the Defender deployment tool
+            href: defender-deployment-tool-windows.md
           - name: Onboard client devices running Windows or macOS
             href: onboard-client.md
           - name: Defender for Endpoint plug-in for WSL
@@ -174,6 +176,7 @@
             href: mde-linux-deployment-on-sap.md
           - name: Use custom detection rules to protect SAPXPG
             href: mde-sap-custom-detection-rules.md
+
         - name: Defender for Endpoint on macOS
           items:
           - name: Deploy Defender for Endpoint on macOS
@@ -263,10 +266,12 @@
             items:
             - name: Prerequisites
               href: mde-linux-prerequisites.md
-            - name: Choose a deployment method
+            - name: Choose a deployment method                       
               items:
               - name: Enabling deployment to a custom location
                 href: linux-custom-location-installation.md
+              - name: Deployment tool based deployment
+                href: linux-install-with-defender-deployment-tool.md
               - name: Installer script based deployment
                 href: linux-installer-script.md
               - name: Ansible based deployment
@@ -625,6 +630,12 @@
         href: exclude-devices.md
       - name: Identifying transient devices
         href: transient-device-tagging.md
+      - name: Collect custom device data
+        items:
+        - name: Overview
+          href: custom-data-collection.md
+        - name: Create custom data collection rules
+          href: create-custom-data-collection-rules.md
       - name: Internet facing devices
         href: internet-facing-devices.md
       - name: Device timeline
@@ -1062,6 +1073,10 @@
             href: respond-machine-alerts.md#contain-devices-from-the-network
           - name: Contain user from the network
             href: respond-machine-alerts.md#contain-user-from-the-network
+          - name: Automatically apply GPO hardening (predictive shielding)
+            href: respond-machine-alerts.md#gpo-hardening
+          - name: Automatically apply Safeboot hardening (predictive shielding)
+            href: respond-machine-alerts.md#safeboot-hardening                     
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
@@ -1098,10 +1113,7 @@
           href: live-response-command-examples.md
 
       - name: Use sensitivity labels to prioritize incident response
-        href: information-protection-investigation.md
-
-    - name: Advanced hunting
-      href: /defender-xdr/advanced-hunting-overview?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+        href: information-protection-investigation.md    
 
     - name: Threat analytics
       items:

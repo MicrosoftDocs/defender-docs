@@ -110,6 +110,12 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 
 For more information, see [Microsoft Defender Vulnerability Management integration with Exposure Management](vulnerability-management-integration.md).
 
+### ServiceNow connector OAuth 2.0 authentication support
+
+The ServiceNow data connector now supports OAuth 2.0 authentication in addition to Basic Authentication. This enhancement allows organizations to use modern authentication standards with client credentials flow, providing improved security through easier credential rotation and scoped authentication based on OAuth Application User roles.
+
+For more information, see [ServiceNow data connector](ServiceNow-data-connector.md).
+
 ## September 2025
 
 ### Critical assets classified based on interaction with sensitive documents (Purview eDLP)

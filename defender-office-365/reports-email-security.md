@@ -1069,7 +1069,6 @@ Select **View details** to go to the **Top senders and recipients** page. Or, to
 - **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
 - **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
 
-
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 
 - **Show data for Top mail senders** (default view)
