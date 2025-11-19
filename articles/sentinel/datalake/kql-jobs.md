@@ -6,7 +6,11 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel  
 ms.topic: conceptual
 ms.subservice: sentinel-graph
+<<<<<<< Updated upstream
 ms.date: 11/12/2025
+=======
+ms.date: 11/19/2025
+>>>>>>> Stashed changes
 ms.author: edbaynash  
 
 ms.collection: ms-security  
@@ -188,6 +192,7 @@ When you create jobs in the Microsoft Sentinel data lake, consider the following
   + `externaldata()`
   + `ingestion_time()`
 
++ When you use the `stored_query_results` command, provide the time range in the KQL query. The time selector above the query editor doesn't work with this command.
 
 + User-defined functions aren't supported.
 
@@ -197,6 +202,24 @@ When you create jobs in the Microsoft Sentinel data lake, consider the following
 + Job names can be up to 256 characters. 
 + Job names can't contain a `#` or a `-`.
 + Job start time must be at least 30 minutes after job creation or editing.
+
+
+### Data readiness amd ingestion latency 
+
+Data ingestion in the Microsoft Sentinel data lake takes 6 to 12 minutes before data is available for querying. This latency affects security analysts who need timely access for threat hunting and intelligence matching, especially when using short lookback windows of 15 minutes or less. As a result, KQL jobs can return no results for recent data, which leads to operational issues and reduces trust in the analysis results.
+
+To mitigate this challenge, consider include a delay in the query. For example, Add `delay` to your KQL queries as follows:
+
+```KQL 
+let lookback = 15m;
+let delay = 15m;
+let endTime = now() - delay;
+let startTime = endTime - lookback
+CommonSecurityLog
+| where TimeGenerated between (startTime, endTime)
+```
+Consider an overlap in `lookback` vs job frequency. For example, `lookback`: 30 minutes, frequency: 15 minutes.
+
 
 
 ### Column names
@@ -214,6 +237,8 @@ The following standard columns aren't supported for export. The ingestion proces
 + _WorkspaceId
 
 + `TimeGenerated` is overwritten if it's older than two days. To preserve the original event time, write the source timestamp to a separate column.
+
+
 
 For service limits, see [Microsoft Sentinel data lake service limits](sentinel-lake-service-limits.md#service-parameters-and-limits-for-kql-jobs).
 
