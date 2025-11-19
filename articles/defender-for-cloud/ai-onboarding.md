@@ -114,8 +114,10 @@ Run the following commands in Azure PowerShell
     Install-Module -Name Az -AllowClobber
     Import-Module Az.Accounts
     ```
-1. Connect to Azure PowerShell as the tenant admin : 
+1. Connect to Azure PowerShell as a tenant admin : 
+        ```PowerShell
         Connect-AzAccount -Tenant $yourTenantIdHere
+        ```        
 1. Sign in using tenant admin credentials to the web page that pops up
 1. Verify if Purview's service principal is in your tenant
         Get-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
