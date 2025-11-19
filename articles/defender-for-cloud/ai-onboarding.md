@@ -119,10 +119,14 @@ Run the following commands in Azure PowerShell
         Connect-AzAccount -Tenant $yourTenantIdHere
         ```        
 1. Sign in using tenant admin credentials to the web page that pops up
-1. Verify if Purview's service principal is in your tenant
+1. Verify that the Microsoft Purview service principal is in your tenant:
+        ```PowerShell
         Get-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
-1. If the service principal doesn't exist, add the Purview app's service principal to the tenant
+        ```  
+1. If the service principal doesn't exist, add the Microsoft Purview app service principal to the tenant:
+        ```PowerShell
         New-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
+        ```  
    
 ## Related content
 
