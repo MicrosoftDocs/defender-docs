@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/29/2024
+ms.date: 11/16/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -23,10 +23,53 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## November 2025
+
+|Version number |Updates |
+|---------|---------|
+|2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
+
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
+
+Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
+
+### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
+
+The following new features are now available in Microsoft Defender for Identity:
+
+**Accounts tab in Identity Inventory**
+
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+
+**Manual link and unlink of accounts**
+
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+
+**Identity-level remediation actions**
+
+You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
+Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
+
+### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
+
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
+
+### Expansion of identity scoping: Support for Organizational units (Preview) 
+
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
 ## October 2025
 
-We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
-The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+We’re excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA). 
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -36,8 +79,23 @@ The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enh
 
 ## September 2025
 
-### Unlock additional security value in the unified agent
-Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+### MDI alerts transitioned to the unified Defender alerting experience
+
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. 
+
+| Classic Alert Title | External ID| XDR Alert Name |Detector ID|
+|--------------------|------------|----------------|-----------|
+|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
+|    |    |[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
+|    |    |[Account enumeration reconnaissance in NTLM](alerts-xdr.md#account-enumeration-reconnaissance-in-ntlm)|xdr_AccountEnumerationHintSecurityAlertNtlm|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
+|Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
+
+### Additional security value in the Defender for Identity sensor v3.x
+
+Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor v3.x in the **Asset rule management** page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
@@ -48,18 +106,18 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified agent (preview)
-We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
+### New API support for the Defender for Identity sensor v3.x (Preview)
+We are excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of unified agent servers
+* Monitor the status of servers deployed with the Defender for Identity sensor v3.x
 * Enable or disable the automatic activation of eligible servers
-* Activate or deactivate the agent on eligible servers
+* Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -133,7 +191,7 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
 
-For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/defender-for-identity/security-posture-assessments/accounts#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -171,11 +229,11 @@ Use these assessments to improve monitoring coverage and strengthen your hybrid 
 
 For more information, see:
 
-[Security Assessment: Unmonitored ADCS servers](unmonitored-active-directory-certificate-services-server.md)
+[Security Assessment: Unmonitored ADCS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure#unmonitored-adcs-servers)
 
-[Security Assessment: Unmonitored ADFS servers](unmonitored-active-directory-federation-services-servers.md)
+[Security Assessment: Unmonitored ADFS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure#unmonitored-adfs-servers)
 
-[Security Assessment: Unmonitored Microsoft Entra Connect servers](unmonitored-entra-connect-servers.md)
+[Security Assessment: Unmonitored Microsoft Entra Connect servers](/defender-for-identity/security-posture-assessments/identity-infrastructure#unmonitored-microsoft-entra-connect-servers)
 
 
 
@@ -393,11 +451,11 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 **New Microsoft Entra Connect Identity posture recommendations:**
 
 * **Rotate password for Microsoft Entra Connect connector account**
-   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment, we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, select [Rotate password for Microsoft Entra Connect connector account](rotate-password-microsoft-entra-connect.md).
+   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment, we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, select [Rotate password for Microsoft Entra Connect connector account](../defender-for-identity/security-posture-assessments/hybrid-security.md#rotate-password-for-microsoft-entra-connect-ad-ds-connector-account).
 * **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
-   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, see [Remove replication permissions for Microsoft Entra account](remove-replication-permissions-microsoft-entra-connect.md)
+   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, see [Remove replication permissions for Microsoft Entra account](/defender-for-identity/security-posture-assessments/hybrid-security#remove-unnecessary-replication-permissions-for-microsoft-entra-connect-ad-ds-connector-account).
 * **Change password for Microsoft Entra seamless SSO account configuration**
-   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, see: [Change password for Microsoft Entra seamless SSO account configuration](change-password-microsoft-entra-seamless-single-sign-on.md).    
+   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, see: [Change password for Microsoft Entra seamless SSO account configuration](/defender-for-identity/security-posture-assessments/hybrid-security#change-password-for-microsoft-entra-seamless-sso-account).
 
 **New Microsoft Entra Connect detections:**
 
@@ -483,7 +541,7 @@ To help customers better identify and detect attempts to bypass security protoco
 
 With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
-Access Defender XDR portal -> Hunting -> Advanced Hunting.
+Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
 
 Now, you can copy our recommended query as provided below, and select on “Create detection rule”. Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
@@ -549,7 +607,7 @@ The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recom
 
 For more information, see:
 
-- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](security-assessment-insecure-adcs-certificate-enrollment.md)
+- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](/defender-for-identity/security-posture-assessments/certificates#edit-insecure-adcs-certificate-enrollment-iis-endpoints-esc8)
 - [Security posture assessments for AD CS sensors](#security-posture-assessments-for-ad-cs-sensors-preview)
 - [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
 
@@ -569,13 +627,13 @@ Changes include:
 
 - The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
-The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
-
-|Sensitivity level (previous name) |Threshold level (new name) |
-|---------|---------|
-|**Normal**     |  **High**       |
-|**Medium**      |  **Medium**       |
-|**High**      |  **Low**       |
+  The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+  
+  |Sensitivity level (previous name) |Threshold level (new name) |
+  |---------|---------|
+  |**Normal**     |  **High**       |
+  |**Medium**      |  **Medium**       |
+  |**High**      |  **Low**       |
 
 If you had specific values defined on the **Advanced Settings** page, we transferred them to the new **Adjust alert thresholds** page as follows:
 
@@ -685,17 +743,17 @@ Recommended actions now include the following new security posture assessments, 
 
 - **Certificate templates recommended actions**:
 
-   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](security-assessment-prevent-users-request-certificate.md)
-   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](security-assessment-edit-overly-permissive-template.md)
-   - [Misconfigured enrollment agent certificate template (ESC3)](security-assessment-edit-misconfigured-enrollment-agent.md)
-   - [Edit misconfigured certificate templates ACL (ESC4)](security-assessment-edit-misconfigured-acl.md)
-   - [Edit misconfigured certificate templates owner (ESC4)](security-assessment-edit-misconfigured-owner.md)
+   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](/defender-for-identity/security-posture-assessments/certificates#prevent-users-to-request-a-certificate-valid-for-arbitrary-users-based-on-the-certificate-template-esc1--preview)
+   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](/defender-for-identity/security-posture-assessments/certificates#edit-overly-permissive-certificate-template-with-privileged-eku-any-purpose-eku-or-no-eku-esc2)
+   - [Misconfigured enrollment agent certificate template (ESC3)](/defender-for-identity/security-posture-assessments/certificates#edit-misconfigured-enrollment-agent-certificate-template-esc3)
+   - [Edit misconfigured certificate templates ACL (ESC4)](/defender-for-identity/security-posture-assessments/certificates#edit-misconfigured-certificate-templates-acl-esc4)
+   - [Edit misconfigured certificate templates owner (ESC4)](/defender-for-identity/security-posture-assessments/certificates#edit-misconfigured-certificate-templates-owner-esc4)
 
 - **Certificate authority recommended actions**:
 
-   - [Edit vulnerable Certificate Authority setting (ESC6)](security-assessment-edit-vulnerable-ca-setting.md)
-   - [Edit misconfigured Certificate Authority ACL (ESC7)](security-assessment-edit-misconfigured-ca-acl.md)
-   - [Enforce encryption for RPC certificate enrollment interface (ESC11)](security-assessment-enforce-encryption-rpc.md)
+   - [Edit vulnerable Certificate Authority setting (ESC6)](/defender-for-identity/security-posture-assessments/certificates#security-assessment-edit-vulnerable-ca-setting)
+   - [Edit misconfigured Certificate Authority ACL (ESC7)](/defender-for-identity/security-posture-assessments/certificates#security-assessment-edit-misconfigured-ca-acl)
+   - [Enforce encryption for RPC certificate enrollment interface (ESC11)](/defender-for-identity/security-posture-assessments/certificates#security-assessment-enforce-encryption-rpc)
 
 The new assessments are available in Microsoft Secure Score, surfacing security issues, and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
 

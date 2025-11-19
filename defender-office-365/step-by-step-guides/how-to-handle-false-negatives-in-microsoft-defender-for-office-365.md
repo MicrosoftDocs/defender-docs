@@ -21,6 +21,7 @@ ms.date: 01/31/2023
 # How to handle malicious emails that are delivered to recipients (False Negatives), using Microsoft Defender for Office 365
 
 Microsoft Defender for Office 365 helps deal with malicious emails (False Negative) that are delivered to recipients and that put your organizational productivity at risk.
+
 Defender for Office 365 can help you understand why emails are getting delivered, how to resolve the situation quickly, and how to prevent similar situations from happening in the future.
 
 ## What you'll need

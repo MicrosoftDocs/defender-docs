@@ -57,11 +57,11 @@ Safe Links protection by Safe Links policies is available in the following locat
   > [!NOTE]
   >
   > - Safe Links doesn't work on mail-enabled public folders.
-  > - Safe Links doesn't provide protection for URLs in Rich Text Format (RTF) email messages.
-  > - Safe Links supports only HTTP(S) and FTP formats.
+  > - Safe Links supports only HTTP, HTTPS and FTP link formats.
+  > - Safe Links doesn't provide protection for URLs in rich text format (RTF) email messages (also known as Transport Neutral Encapsulation Format or TNEF).
   > - Safe Links ignores S/MIME signed messages.
   > - Safe Links no longer wraps URLs pointing to SharePoint or OneDrive sites, but the URLs are still processed by the Safe Links service. This change doesn't degrade protection. Instead, it improves the performance of loading SharePoint or OneDrive URLs.
-  > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
+  > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from processing links. This processing includes wrapping, detonating, or otherwise validating the "maliciousness" of the link.
 
 - **Microsoft Teams**: Safe Links protection for links in Teams conversations, group chats, or from channels.
 
@@ -88,7 +88,7 @@ Recipient filters use conditions and exceptions to identify the internal recipie
 - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-  - The specified Microsoft 365 Groups.
+  - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
 - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
 You can use a condition or exception only once, but the condition or exception can contain multiple values:

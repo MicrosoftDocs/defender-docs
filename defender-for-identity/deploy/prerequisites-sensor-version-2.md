@@ -106,21 +106,11 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure Windows auditing
+## Configure Windows event auditing
 
-Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
-
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
-
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
- 
+[Configure Windows event auditing](configure-windows-event-collection.md) on your domain controller to support Defender for Identity detections in the Defender portal or using PowerShell.
 
 ## Test your prerequisites
 
