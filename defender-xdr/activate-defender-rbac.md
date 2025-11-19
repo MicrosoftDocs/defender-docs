@@ -77,12 +77,12 @@ You can activate your workloads in two ways from the Permissions and roles page:
 
 - Select **Workload settings**.
 - This brings you to the Microsoft Defender XDR **Permission and roles** page.
-- Select the toggle for the workload you want to activate.
+- Select the toggle for the workload you want to activate. **Note**: For Microsoft Sentinel, each workspace must be activated individually.
 - Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
 
-**Note**: For Microsoft Sentinel, unlike other workloads, each workspace must be activated individually. View the roles or role combinations to manage Sentinel workspaces in Unified RBAC. <!--insert link to table with worskpace permissions-->
+
 
 <a name='activate-in-microsoft-365-defender-settings'></a>
 
