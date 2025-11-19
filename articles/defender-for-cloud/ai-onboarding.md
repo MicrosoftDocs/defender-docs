@@ -109,9 +109,11 @@ This capability helps your organization manage and monitor AI-generated data i
 After enabling the above toggle, if you aren't seeing user interactions for Entra ID authenticated users captured in Purview activity explorer, follow the below steps for troubleshooting:
  
 Run the following commands in Azure PowerShell
-1. Install the following Az modules (if needed)
+1. Install the following Az modules (if needed):
+        ```PowerShell
         Install-Module -Name Az -AllowClobber
         Import-Module Az.Accounts
+        ```
 1. Connect to Azure PowerShell as the tenant admin : 
         Connect-AzAccount -Tenant $yourTenantIdHere
 1. Sign in using tenant admin credentials to the web page that pops up
