@@ -49,7 +49,6 @@ For more information, see: [Link or Unlink an Account to an Identity (Preview)](
 **Identity-level remediation actions**
 
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
-Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
 
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
