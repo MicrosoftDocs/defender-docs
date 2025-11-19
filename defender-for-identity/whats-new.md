@@ -29,10 +29,6 @@ For updates about versions and features released six months ago or earlier, see 
 |---------|---------|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
-
-Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
-
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
 The following new features are now available in Microsoft Defender for Identity:
