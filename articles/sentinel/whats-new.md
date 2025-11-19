@@ -78,7 +78,7 @@ Test all changes in a nonproduction workspace before rolling out to production.
 ## October 2025
 
 - [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
-- [Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts](#call-to-action-update-queries-and-automation-by-december-13-2025---standardized-account-entity-naming-in-incidents-and-alerts)
+- [Call to action: update queries and automation by December 13, 2025 - standardized account entity naming in incidents and alerts](#call-to-action-update-queries-and-automation-by-july-1-2026---standardized-account-entity-naming-in-incidents-and-alerts)
 
 ### Export STIX threat intelligence objects (Preview)
 
