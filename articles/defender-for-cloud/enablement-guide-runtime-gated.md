@@ -83,7 +83,7 @@ Supported Kubernetes platforms
 
 Under **Scan Configurations**, specify:
 
-    - **Trigger Rule Conditions**: Choose vulnerability severity levels or specific CVE IDs
+- **Trigger Rule Conditions**: Choose vulnerability severity levels or specific CVE IDs
 
 **\[Insert screenshot: Rule configuration panel with condition types and exemptions\]**
 
