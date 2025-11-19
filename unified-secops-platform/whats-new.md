@@ -26,7 +26,7 @@ This article lists recent features added for unified security operations in the 
 
 ### Microsoft Threat Intelligence alert enhancements for Microsoft Sentinel customers in the Defender portal
 
-For Microsoft Sentinel customers working in the Defender portal, Microsoft Threat Intelligence alerts now highlight activity from nation state actors, such as ransomware campaigns and fraudulent operations. These alerts are correlated with other alerts and events in the Defender portal, enhancing your ability to track multi-stage attacks, fully view ongoing events, understand threat activity, prioritize response, and coordinate remediation. 
+Microsoft Sentinel customers using the Defender portal, or the Azure portal with the Microsoft Sentinel Defender XDR data connector, now also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation-state actors, major ransomware campaigns, and fraudulent operations. 
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
