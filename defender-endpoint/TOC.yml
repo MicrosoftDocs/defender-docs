@@ -1473,8 +1473,6 @@
               href: api/get-missing-kbs-software.md
           - name: User
             items:
-            - name: User methods
-              href: api/user.md
             - name: Get user related alerts
               href: api/get-user-related-alerts.md
             - name: Get user related machines
