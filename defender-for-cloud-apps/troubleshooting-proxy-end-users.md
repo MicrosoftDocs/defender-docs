@@ -69,7 +69,7 @@ If an end user receives a general failure after signing into an app from a non-M
  
     ![Screenshot of the SAML information page.](media/proxy-deploy-add-idp-ext-conf.png).
    
-1. If you still can't access the app, open a [support ticket](support-and-ts.md).
+1. If you still can't access the app, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ## Something Went Wrong page appears
 
@@ -115,7 +115,7 @@ If the session is being proxied, use the following steps to verify the policy:
 
         1. Go to the [Microsoft 365 admin portal](https://admin.microsoft.com/AdminPortal/Home?#/servicehealth) and monitor notifications about system downtime.
 
-1. If you still not able to see blocked activity, open a [support ticket](support-and-ts.md).
+1. If you still not able to see blocked activity, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ## Downloads aren't being protected
 
@@ -155,7 +155,7 @@ If the end user can't successfully encrypt the document, use the following steps
 
     If the file type isn't supported, in the session policy, you can select **Block download of any file that in unsupported by native protection or where native protection is unsuccessful**.
 
-1. If you still not able to see blocked activity, open a [support ticket](support-and-ts.md).
+1. If you still not able to see blocked activity, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ## Navigating to a particular URL of a suffixed app and landing on a generic page
 
@@ -174,7 +174,7 @@ For example, if the original URL is:
 `https://www.github.com/organization/threads/threadnumber`, change it to
 `https://www.github.com.mcas.ms/organization/threads/threadnumber`
 
-Microsoft Edge users benefit from in-browser protection, aren't redirected to a reverse proxy, and shouldn't need the `.mcas.ms` suffix added. For apps experiencing context loss, open a [support ticket](support-and-ts.md).
+Microsoft Edge users benefit from in-browser protection, aren't redirected to a reverse proxy, and shouldn't need the `.mcas.ms` suffix added. For apps experiencing context loss, open a [support ticket](/defender-xdr/contact-defender-support).
 
 <a name="app-additional-considerations"></a>
 
@@ -216,6 +216,14 @@ This message only appears for Chrome users, as Microsoft Edge users benefit from
 :::image type="content" source="media/chrome-similar-site-warning.png" alt-text="Screenshot of a similar site warning in Chrome." lightbox="media/chrome-similar-site-warning.png" border="false":::
 
 If you receive a message like this, contact Microsoft’s support to address it with the relevant browser vendor.
+
+## Users encounter Entra ID Login after clicking mcas.ms links
+Attackers can craft URLs that appear to lead to trusted domains but actually redirect users to malicious sites. For users protected by the session/suffix-based solution, an attacker might attempt to bypass controls by appending the mcas.ms suffix to a malicious URL, exploiting the assumption that such URLs are safe.
+
+To mitigate this, Microsoft Defender for Cloud Apps redirects any mcas.ms URL lacking valid session context to Entra ID for authentication, effectively blocking such exploits.
+
+However, legitimate mcas.ms URLs without context can exist, for example, if a user clicks on an old browser bookmark. In such cases, the user will first be redirected to Entra ID. If their identity provider (IdP) is not Entra ID, they will need to manually remove the mcas.ms suffix to proceed.
+
 
 ## More considerations for troubleshooting apps
 

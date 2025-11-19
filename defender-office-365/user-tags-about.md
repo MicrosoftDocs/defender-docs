@@ -36,7 +36,7 @@ If your organization has Defender for Office 365 (included in your subscription 
 - You can assign the Priority account tag to a maximum of 250 users.
 - You can create a maximum of 500 custom user tags.
 - You can assign a custom tag to a maximum of 10000 individual users.
-- If you assign a custom user tag to a group, the tag is applied to the first 999 group members (users). 
+- If you assign a custom user tag to a group, the tag is applied to the first 999 group members (users).
 
 This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchangepowershell/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
 
@@ -81,7 +81,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
-     - Or, start typing a name to filter the list, and then select the value below the box. 
+     - Or, start typing a name to filter the list, and then select the value below the box.
 
      To add more members, click in an empty area in the box and repeat the previous step.
 
@@ -106,7 +106,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
    > [!NOTE]
    > It can take up to 8 hours to completely apply tags.
    >
-   > If you assign a group to a user tag, members of the group at the time of tag creation are assigned tag. Users later added to the group aren't automatically assigned the user tag. 
+   > If you assign a group to a user tag, members of the group at the time of tag creation are assigned tag. Users later added to the group aren't automatically assigned the user tag.
 
 ## Use the Microsoft Defender portal to view user tags
 

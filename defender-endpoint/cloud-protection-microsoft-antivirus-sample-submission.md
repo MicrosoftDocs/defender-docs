@@ -1,4 +1,4 @@
----
+﻿---
 title: Cloud protection and sample submission at Microsoft Defender Antivirus
 description: Learn about cloud-delivered protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
@@ -9,34 +9,33 @@ ms.reviewer: mkaminska, yongrhee
 manager: bagol
 ms.subservice: ngp
 ms.topic: concept-article
-ms.date: 04/16/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Cloud protection and sample submission at Microsoft Defender Antivirus
 
-**Applies to:**
+Microsoft Defender Antivirus uses many intelligent mechanisms for detecting malware. One of the most powerful capabilities is the ability to apply the power of the cloud to detect malware and perform rapid analysis. Cloud protection and automatic sample submission work together with Microsoft Defender Antivirus to help protect against new and emerging threats.
 
-- Microsoft Defender for Endpoint Plan 1 and Plan 2
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender Antivirus
+If a suspicious or malicious file is detected, a sample is sent to the cloud service for analysis while Microsoft Defender Antivirus blocks the file. As soon as a determination is made, which happens quickly, the file is either released or blocked by Microsoft Defender Antivirus. 
 
-**Platforms**
+This article provides an overview of cloud protection and automatic sample submission at Microsoft Defender Antivirus. To learn more about cloud protection, see [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
+
+## Prerequisites
+
+### Supported operating systems
 
 - Windows
 - macOS
 - Linux
 - Windows Server
-
-Microsoft Defender Antivirus uses many intelligent mechanisms for detecting malware. One of the most powerful capabilities is the ability to apply the power of the cloud to detect malware and perform rapid analysis. Cloud protection and automatic sample submission work together with Microsoft Defender Antivirus to help protect against new and emerging threats. 
-
-If a suspicious or malicious file is detected, a sample is sent to the cloud service for analysis while Microsoft Defender Antivirus blocks the file. As soon as a determination is made, which happens quickly, the file is either released or blocked by Microsoft Defender Antivirus. 
-
-This article provides an overview of cloud protection and automatic sample submission at Microsoft Defender Antivirus. To learn more about cloud protection, see [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
 ## How cloud protection and sample submission work together
 
@@ -141,3 +140,4 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 - [Configure remediation for Microsoft Defender Antivirus detections](configure-remediation-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

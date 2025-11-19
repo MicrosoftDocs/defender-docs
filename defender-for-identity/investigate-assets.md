@@ -8,7 +8,7 @@ ms.reviewer: LiorShapiraa
 
 # Investigate assets
 
-Microsoft Defender for Identity provides Microsoft Defender XDR users with evidence of when users, computers, and devices have performed suspicious activities or show signs of being compromised.
+Microsoft Defender for Identity gives Microsoft Defender XDR users evidence when users, computers, and devices show signs of suspicious activities or compromise.
 
 This article gives recommendations for how to determine risks to your organization, decide how to remediate, and determine the best way to prevent similar attacks in the future.
 
@@ -17,7 +17,7 @@ This article gives recommendations for how to determine risks to your organizati
 > [!NOTE]
 > For information on how to view user profiles in Microsoft Defender XDR, see [Microsoft Defender XDR documentation](/microsoft-365/security/defender/investigate-users).
 
-If an alert or incident indicates that a user may be suspicious or compromised, check and investigate the user profile for the following details and activities:
+If an alert or incident indicates that a user might be suspicious or compromised, check and investigate the user profile for the following details and activities:
 
 - **User identity**
     - Is the user a [sensitive user](entity-tags.md) (such as admin, or on a watchlist, etc.)?
@@ -56,16 +56,17 @@ When you investigate a specific identity, you'll see the following details on an
 
 |Identity details page area  |Description  |
 |---------|---------|
-|[Overview tab](/microsoft-365/security/defender/investigate-users#overview)       | General identity data, such as the Microsoft Entra identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts and more important information.  <br><br>Use the **Overview** tab to also view graphs for incidents and alerts, and an organizational tree, entity tags.       |
+|[Overview tab](/microsoft-365/security/defender/investigate-users#overview)       | Use the **Overview** tab to view graphs for incidents and alerts, an organizational tree, and entity tags. <br> General identity data includes: <br> - Microsoft Entra identity risk level <br> - The number of devices the identity is signed in to <br> - When the identity was first and last seen <br> - The identity's accounts and more important information.  <br><br>      |
 |[Incidents and alerts](/microsoft-365/security/defender/investigate-users#incidents-and-alerts)     | Lists active incidents and alerts involving the user from the last 180 days, including details like alert severity and the time the alert was generated. |
-|[Observed in organization](/microsoft-365/security/defender/investigate-users#observed-in-organization)     |   Includes the following sub-areas: <br>- **Devices**: The devices that the identity signed in to, including most and least used in the last 180 days. <br>- **Locations**: The identity's observed locations over the last 30 days. <br>- **Groups**: All observed on-premises groups for the identity. <br> - **Lateral movement paths** - all profiled lateral movement paths from the on-premises environment. |
-|[Identity timeline](/microsoft-365/security/defender/investigate-users#timeline)     |The timeline represents activities and alerts observed from a user's identity from the last 180 days, unifying identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint. <br><br>Use the timeline to focus on activities a user performed or were performed on them in specific timeframes. Select the default **30 days** to change the time range to another built-in value, or to a custom range.       |
+|[Observed in organization](/microsoft-365/security/defender/investigate-users#observed-in-organization)     |   Includes the following sub-areas: <br>- **Devices**: The devices that the identity signed in to, including most and least used in the last 180 days. <br>- **Locations**: The identity's observed locations over the last 30 days. <br>- **Groups**: All observed on-premises groups for the identity. <br> - **Lateral movement paths** - all profiled lateral movement paths from the on-premises environment. <br> - **Accounts** View all accounts linked to a specific identity. |
+|[Identity timeline](/microsoft-365/security/defender/investigate-users#timeline)     | The timeline represents activities and alerts observed from a user's identity within the last 180 days, to help unify identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint. <br><br> You can use the timeline to focus on activities a user performed or were performed on them in specific timeframes. Select the default **30 days** to change the time range to another built-in value, or to a custom range.       |
 |Security recommendations|This tab displays all active security posture assessments (ISPMs) associated with an identity account. It includes Defender for Identity recommendations across available identity providers such as Active Directory, Okta, and others. Selecting an ISPM pivots you to the recommendation page in Microsoft Secure Score for additional details.|
 |Attack paths|This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see Overview of attack path within Exposure Management.|
 |[Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)      |Respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the Microsoft Defender XDR **Action center.|
 
+
 > [!NOTE]
-> **Investigation Priority Score** has been deprecated on December 3, 2024. As a result, both the Investigation Priority Score breakdown and the scored activity timeline cards have been removed from the UI. 
+> **Investigation Priority Score** was deprecated on December 3, 2024. As a result, the Investigation Priority Score breakdown and the scored activity timeline cards are no longer available.
 
 
 

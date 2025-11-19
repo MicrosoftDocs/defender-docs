@@ -658,7 +658,7 @@ Admins can customize the email notification recipients or create a custom alert 
 For more information about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
 
 > [!NOTE]
-> Audit logging must be enabled in order to receive notifications for quarantine release requests (it's on by default). For instructions on how to turn auditing on or off, see [Turn auditing on or off](/purview/audit-log-enable-disable). 
+> Audit logging must be enabled in order to receive notifications for quarantine release requests (it's on by default). For instructions on how to turn auditing on or off, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
 ## Appendix
 

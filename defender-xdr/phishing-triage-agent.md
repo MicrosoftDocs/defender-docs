@@ -54,11 +54,11 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 
 | Action                        | Permission required                                                                                           |
 |:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| Set up, pause, or remove the agent, and manage agent identity              | **Security Administrator** in Microsoft Entra ID                                                            |
-| View and manage agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
-| View and manage feedback   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal|
+| View agent results |To view agent results, you need the same permissions as the agent, or higher permissions:<br>**Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**,  **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal|
+| View agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br>Or **Security Administrator** in Microsoft Entra ID          |
+| View feedback page   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal <br>Or **Security Administrator** in Microsoft Entra ID|
+| Manage agent settings (set up, pause, or remove the agent, and manage agent identity)             | **Security Administrator** in Microsoft Entra ID                                                            |
 |Reject feedback|**Security Administrator** in Microsoft Entra ID|
-| View agent results |**Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**,  **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal|
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
@@ -110,7 +110,7 @@ The Phishing Triage Agent currently only operates with existing user accounts. F
 When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
 
 > [!TIP]
-> Microsoft recommends creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+> We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
 
 The agent's specified user identity isn't compatible with PIM or TAP, as they don't support long-term background operations.
 
@@ -153,12 +153,12 @@ You can access the Phishing Triage Agent setup in two ways:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png":::
 
-- Alternatively, go to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview > Set up** to start the process.
+- Alternatively, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Set up** to start the process.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
 
    > [!NOTE]
-   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can't intiate setup from the **Settings** page, but you can still set up the agent from the incident queue if you have the **Security Administrator** role.
+   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can't initiate setup from the **Settings** page, but you can still set up the agent from the incident queue if you have the **Security Administrator** role.
 
 Follow the steps in the setup wizard, which includes:
 
@@ -171,7 +171,7 @@ Follow the steps in the setup wizard, which includes:
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG":::
 
    > [!NOTE]
-   > After setup, you can change the agent's identity and role at any time. To do this, navigate to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
+   > After setup, you can change the agent's identity and role at any time. To do this, select **Settings > Microsoft Defender XDR > Phishing Triage Agent > Identity and role**.
 
 1. Select **Deploy agent** to activate the agent.
 1. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
@@ -179,7 +179,7 @@ Follow the steps in the setup wizard, which includes:
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. Your incident queue now contains the Phishing Triage Agent card with the agent’s relevant metrics. This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
 
-The card currently contains the following data:
+The card shows:
 
 - **Incidents addressed:** Incidents containing user-reported phishing alerts that the agent classified as true phishing threats or false alarms.
 - **Incidents resolved:** Incidents that no longer require further handling, like false alarms.
@@ -190,10 +190,7 @@ Metrics are calculated based on the agent’s activity, beginning either from it
 
 ## Enhance incident response with the Phishing Triage Agent
 
-> [!TIP]
-> Only users with permissions equal to or higher than the agent’s can monitor its activity and view its output.
-
-The agent is designed to help security teams manage the overwhelming volume of suspicious emails organizations receive daily. Acting as a force multiplier for SOC teams, it offloads time-consuming triage tasks, reduces alert fatigue, and accelerates incident response by autonomously identifying true phishing threats. This enables analysts to cut through the noise and focus their attention on the threats that truly matter.
+The agent is designed to help security teams manage the overwhelming volume of suspicious emails organizations receive daily. Acting as a force multiplier for SOC teams, the agent offloads time-consuming triage tasks, reduces alert fatigue, and accelerates incident response by autonomously identifying true phishing threats. This enables analysts to cut through the noise and focus their attention on the threats that truly matter.
 
 ### Agent trigger and flow
 
@@ -205,7 +202,7 @@ For every alert it processes, the agent provides a detailed explanation of its v
 
 ### Collaborate with the agent
 
-To maintain transparency, the agent routinely updates incident fields during the triage process. When triaging starts, the agent assigns the alert to itself and adds an **Agent** tag to the corresponding incident. Analysts can filter the incident queue to see only those tagged by the agent, which simplifies oversight and prioritization.
+To maintain transparency, the agent routinely updates incident fields during the triage process. When triaging starts, the agent assigns the alert to itself and adds an **Agent** tag to the corresponding incident. Analysts can filter the incident queue to see only incidents tagged by the agent, which simplifies oversight and prioritization.
 
 > [!TIP]
 > You can also filter the incident queue using the name of the identity you assigned to the Phishing Triage Agent to see the incidents the agent is actively working on.
@@ -231,7 +228,7 @@ To review the agent’s findings, follow these steps:
 
 1. To view the steps the agent took prior to reaching its classification, select **View agent activity** in the Phishing Triage Agent card. This provides complete transparency into the data analyzed and the logic behind the agent’s final classification.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png"::: 
 
 ## Teach the agent your organization’s context through feedback
 
@@ -260,13 +257,13 @@ The agent utilizes stored feedback to triage and classify similar alerts in the 
 
 ### Best practices for writing feedback
 
-Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine phishing threat or a false alarm. To ensure the agent effectively incorporates your feedback, Microsoft recommends following these best practices when providing input to the Phishing Triage Agent:
+Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine phishing threat or a false alarm. To ensure the agent effectively incorporates your feedback, follow these best practices when providing input to the Phishing Triage Agent:
 
 1. **Ensure feedback is relevant and contextual.** Feedback should pertain only to the email currently under review. It must also align with the updated classification you’ve assigned.
 1. **Be descriptive and specific.** Clearly explain the characteristics of the email. Provide relevant details like the email subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
-1. **Ensure clarity and decisiveness.** Avoid vague or universal statements. Give feedback that is clear and actionable. Use decisive and clear identification terms.
+1. **Ensure clarity and decisiveness.** Avoid vague or universal statements. Give feedback that's clear and actionable. Use decisive and clear identification terms.
 1. **Be consistent with previous feedback.** Ensure that new feedback aligns with what was previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [Feedback](#view-and-manage-feedback-to-the-agent) management page.
-1. **Review the agent’s interpretation of your feedback.** After submitting it, always verify that the feedback is accurately translated into a lesson. Confirm that it reflects your intent and maintains consistency with your original input. Checking the validity of AI-generated responses ensures these are applicable to the scenario.
+1. **Review the agent’s interpretation of your feedback.** When you submit feedback, always verify that the feedback is accurately translated into a lesson. Confirm that the lesson reflects your intent and maintains consistency with your original input. Checking the validity of AI-generated responses to ensure they are applicable to the scenario.
 
 Here are examples of how you can write your feedback to the agent.
 
@@ -299,22 +296,16 @@ Once the agent is taught and equipped with organizational knowledge, it begins t
 
 ## Manage the Phishing Triage Agent
 
-> [!NOTE]
-> To view and manage Phishing Triage Agent settings, you need **Security Copilot (read)** and **Security data basics (read)** permissions.
-
-You can manage the Phishing Triage Agent’s settings, review its activity, and review user interaction with the agent. To do so, select **Manage agent** in the card above the incident queue. Alternatively, you can navigate to **Settings > Microsoft Defender XDR > Agents**.
+To manage the Phishing Triage Agent’s settings, review its activity, and review user interactions with the agent, select **Manage agent** in the card above the incident queue. Alternatively, select **Settings > Microsoft Defender XDR > Phishing Triage Agent > Feedback**.
 
 ### View agent’s previous activity
 
 To view all previous runs by the agent:
 
-1. Navigate to the **Overview** page under **Agents** in the Defender portal.
-1. Select **View agent activity**. Once selected, the Security Copilot portal opens in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
+1. Select **Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview**.
+1. Select **View agent activity**.<br>This opens the Security Copilot portal in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
 
 ### View and manage feedback to the agent
-
-> [!NOTE]
-> To manage feedback, you need **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** permissions.
 
 The Phishing Triage Agent uses feedback to improve its performance over time. It stores applicable feedback in its memory as lessons. You can view and manage user-submitted feedback for the Phishing Triage Agent by navigating to the Feedback management page.
 
@@ -353,35 +344,31 @@ To reject specific feedback, open the Review feedback pane and select **Reject f
 
 ### Change the agent’s identity and role
 
-> [!NOTE]
-> Changing the Phishing Triage Agent’s identity is only available to users with the **Security Administrator** role.
+To manage the agent’s identity and role at any time, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Identity and role**. 
 
-The agent’s identity and role can be managed at any time by navigating to the **Identity and role** page under **Agents**. On this page, users can view the agent's current identity, access details about the last update, and select a new identity type for the agent if necessary. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
+On this page, you can view the agent's current identity, access details about the last update, and select a new identity type for the agent if necessary. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png":::
 
 ### Pause or resume the agent
 
-> [!NOTE]
-> Pausing the Phishing Triage Agent is only available to users with the **Security Administrator** role.
-
 Pausing the agent temporarily stops all triage activity, including any in-progress triage tasks. The agent doesn’t process new incidents until it’s resumed. Resuming the agent resumes all its activities, allowing it to start triaging and classifying incoming alerts again.
 
 To pause or resume the agent:
 
-1. Navigate to the **Overview** page under **Agents** in Defender portal.
+1. Select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview** in Defender portal.
 1. Select **Pause** to temporarily stop the agent. Once paused, the button updates to **Resume**, which you can select when you’re ready to reactivate the agent’s activities.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png" alt-text="Screenshot of the Agents Overview page highlighting the pause agent option" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png":::
 
 ### Remove the agent
 
-> [!NOTE]
-> Removing the Phishing Triage Agent is only available to users with the **Security Administrator** role.
-
 Removing the agent permanently disables it. Once removed, triage and classification of new incidents stop, and all feedback is deleted. However, the history of previously triaged incidents is retained for your reference.
 
-To remove the agent, navigate to the **Overview** page under **Agents**, then select **Remove agent**.
+To remove the agent: 
+
+1. Select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview**.
+2. Select **Remove agent**.
 
 ## Frequently asked questions
 
@@ -397,7 +384,7 @@ Phishing remains one of the most common methods by which attackers gain initial 
 
 ### Can the Phishing Triage Agent be trusted?
 
-Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. Security Copilot’s Phishing Triage Agent is fully incorporated into these controls. During setup, the agent is assigned an identity and configured with the minimum required permissions for its operation, ensuring that it doesn’t have unnecessary permissions. All agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
+Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. Security Copilot’s Phishing Triage Agent is fully incorporated into these controls. During setup, you assign the agent an identity and configure it with the minimum permissions required for its operation, ensuring that it doesn’t have unnecessary permissions. All agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
 
 ### How does the agent differ from a standard SOAR solution?
 

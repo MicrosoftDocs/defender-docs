@@ -1,4 +1,4 @@
----
+﻿---
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
@@ -15,20 +15,16 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Take response actions on a file
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -314,14 +310,14 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
     - **Devices list** - select the file links from the **Description** or **Details** in the **Device in organization** section
     - **Search box** - select **File** from the drop-down menu and enter the file name
 
-2. In the **Deep analysis** tab of the file view, select **Submit**.
+1. In the **Deep analysis** tab of the file view, select **Submit**.
 
-   :::image type="content" source="media/submit-file.png" alt-text="The submit PE files button" lightbox="media/submit-file.png":::
+      :::image type="content" source="media/submit-file.png" alt-text="The submit PE files button" lightbox="media/submit-file.png":::
 
    > [!NOTE]
-   > Only PE files are supported, including _.exe_ and _.dll_ files.
-
-   A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
+   > Only PE files are supported, including _.exe_ and _.dll_ files. Additionally, Windows App Store Executables are unsupported.
+   
+      A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
 > [!NOTE]
 > Depending on device availability, sample collection time can vary. There is a 3-hour timeout for sample collection. The collection will fail and the operation will abort if there is no online Windows 10 device (or Windows 11 or Windows Server 2012 R2+) reporting at that time. You can re-submit files for deep analysis to get fresh data on the file.
@@ -374,3 +370,4 @@ If you come across a problem when trying to submit a file, try each of the follo
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

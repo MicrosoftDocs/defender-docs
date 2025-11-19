@@ -788,7 +788,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
   - **Advanced filter**: Phishing signals based on machine learning.
   - **General filter**: Phishing signals based on analyst rules.
-  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization. 
+  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.
   - **Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.
   - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
   - **Impersonation brand**: Sender impersonation of well-known brands.
@@ -1068,7 +1068,6 @@ Select **View details** to go to the **Top senders and recipients** page. Or, to
 
 - **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
 - **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
-
 
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 

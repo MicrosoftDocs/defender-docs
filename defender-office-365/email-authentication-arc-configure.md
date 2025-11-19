@@ -146,7 +146,7 @@ header.d=contoso.com;dmarc=fail action=none
 header.from=contoso.com;compauth=pass reason=130
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > The ARC result **pass** from a **trusted ARC sealer** can potentially override failures in SPF, DKIM, or DMARC caused by message modification during transit. However, the final spoofing determination is based on the [composite authentication](email-authentication-about.md#composite-authentication) (CompAuth) outcome. Messages that fail ARC might still be delivered if they pass SPF, DKIM, DMARC, and composite authentication evaluations.
 
 ## Trusted ARC sealer mail flow diagrams

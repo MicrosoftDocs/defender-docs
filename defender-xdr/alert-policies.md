@@ -44,7 +44,7 @@ Alert policies let you categorize the alerts that are triggered by a policy, app
 > - Microsoft 365 E5/G5
 > - Microsoft 365 E1/F1/G1 or Microsoft 365 E3/F3/G3 plus one of the following add-on subscriptions:
 >   - Microsoft Defender for Office 365 Plan 2
->   - Microsoft 365 E5 Security
+>   - Microsoft Defender Suite
 >   - Microsoft 365 E5 Compliance
 >   - E5 eDiscovery and Audit add-on
 >
@@ -56,7 +56,7 @@ Alert policies let you categorize the alerts that are triggered by a policy, app
 
 Here's a quick overview of how alert policies work and the alerts that are triggers when user or admin activity matches the conditions of an alert policy.
 
-![Overview of how alert policies work.](media/M365ComplianceDefender-AlertPolicies-Overview.png)
+![Overview of how alert policies work.](media/alert-policies/M365ComplianceDefender-AlertPolicies-Overview.png)
 
 1. An admin in your organization creates, configures, and turns on an alert policy by using the **Alert policies** page in the compliance portal or the Microsoft Defender portal. You can also create alert policies by using the [New-ProtectionAlert](/powershell/module/exchangepowershell/new-protectionalert) cmdlet in Security & Compliance PowerShell.
 
@@ -77,7 +77,7 @@ An alert policy consists of a set of rules and conditions that define the user o
 
 To view and create alert policies, in the [Microsoft Defender portal](https://security.microsoft.com), under **Email & collaboration** select **Policies & rules** \> **Alert policy**. Alternatively, you can go directly to <https://security.microsoft.com/alertpolicies>.
 
-  :::image type="content" source="/defender/media/alert-policies/policies-rules-page-small.png" alt-text="Highlighting Alert policy in the Policies and rules page":::
+  :::image type="content" source="media/alert-policies/policies-rules-page-small.png" alt-text="Highlighting Alert policy in the Policies and rules page":::
 
 > [!NOTE]
 > You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
@@ -95,7 +95,7 @@ You can also define user tags as a condition of an alert policy. This definition
 
 - **When the alert is triggered**. You can configure a setting that defines how often an activity can occur before an alert is triggered. This allows you to set up a policy to generate an alert every time an activity matches the policy conditions, when a certain threshold is exceeded, or when the occurrence of the activity the alert is tracking becomes unusual for your organization.
 
-    ![Configure how alerts are triggered, based on when the activity occurs, a threshold, or unusual activity for your organization.](media/howalertsaretriggered.png)
+    ![Configure how alerts are triggered, based on when the activity occurs, a threshold, or unusual activity for your organization.](media/alert-policies/howalertsaretriggered.png)
   
     If you select the setting based on unusual activity, Microsoft establishes a baseline value that defines the normal frequency for the selected activity. It takes up to seven days to establish this baseline, during which alerts aren't generated. After the baseline is established, an alert is triggered when the frequency of the activity tracked by the alert policy greatly exceeds the baseline value. For auditing-related activities (such as file and folder activities), you can establish a baseline based on a single user or based on all users in your organization; for malware-related activities, you can establish a baseline based on a single malware family, a single recipient, or all messages in your organization.
 
@@ -226,7 +226,7 @@ When an activity performed by users in your organization matches the settings of
 
 To view alerts, in the [Microsoft Defender portal](https://security.microsoft.com), select **Incidents & alerts** \> **Alerts**. Alternatively, you can go directly to <https://security.microsoft.com/alerts>.
 
-![In the Microsoft Defender portal, select Incidents & alerts and then select Alerts.](media/ViewAlertsDefenderPortal.png)
+![In the Microsoft Defender portal, select Incidents & alerts and then select Alerts.](media/alert-policies/ViewAlertsDefenderPortal.png)
 
 You can use the following filters to view a subset of all the alerts on the **Alerts** page:
 
@@ -262,7 +262,7 @@ When events that match the same alert policy occur within the aggregation interv
 
 The following screenshot shows an alert with four aggregated events. The activity list contains information about the four email messages relevant to the alert.
 
-![Example of alert aggregation.](media/AggregatedAlertExample.png)
+![Example of alert aggregation.](media/alert-policies/AggregatedAlertExample.png)
 
 Keep the following things in mind about alert aggregation:
 

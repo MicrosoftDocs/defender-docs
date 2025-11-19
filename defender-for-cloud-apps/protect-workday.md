@@ -37,7 +37,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-Currently, there are no governance controls available for Workday. If you are interested in having governance actions for this connector, you can [open a support ticket](support-and-ts.md) with details of the actions you want.
+Currently, there are no governance controls available for Workday. If you are interested in having governance actions for this connector, you can [open a support ticket](/defender-xdr/contact-defender-support) with details of the actions you want.
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
 

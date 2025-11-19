@@ -3,7 +3,7 @@ title: Device entity page in Microsoft Defender
 description: The device entity page in the Microsoft Defender portal helps you in your investigation of device entities. The page has all the important information about each entity. If an alert or incident indicates that a device might be compromised or is behaving suspiciously, check and investigate the device entity.
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.author: yelevin
+ms.author: dansimp
 author: yelevin
 manager: dansimp
 audience: ITPro

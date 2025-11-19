@@ -34,6 +34,29 @@ For more information, see [ServiceNow data connector](ServiceNow-data-connector.
 
 ## September 2025
 
+### Critical assets classified based on interaction with sensitive documents (Purview eDLP)
+
+Microsoft Security Exposure Management now integrates with Microsoft Purview Endpoint Data Loss Prevention (eDLP) to automatically identify and classify critical assets based on their interaction with sensitive documents. This new capability introduces dynamic criticality reclassification where endpoints accessing high-sensitivity documents are automatically tagged as high criticality.
+
+Key features include:
+
+- **Dynamic reclassification**: Endpoints are automatically elevated to high criticality when accessing sensitive content
+- **Automatic reversion**: Asset classification reverts to baseline after 5 consecutive days of inactivity with sensitive content
+- **Out-of-the-box detection**: Built-in detection rules for three Purview Classifier Sensitive Information Types:
+  - Azure Document DB Auth Key
+  - Azure Redis Cache Connection String  
+  - Azure Storage Account Key
+- **Enhanced visibility**: Critical assets are surfaced across Microsoft Defender XDR experiences for improved security posture management
+
+This integration provides the first offering to combine the experience between Purview and Microsoft Defender Portal for classifying critical assets and gathering important pre-breach insights.
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+### Blast radius analysis
+
+Blast radius analysis is an advanced graph visualization integrated into incident investigation experience. Built on the Microsoft Sentinel data lake and graph infrastructure, it generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
+
+For more information, see [Blast radius analysis](/defender-xdr/investigate-incidents?branch=release-preview-sentinel-graph#blast-radius-analysis).
+
 ### New data connectors
 
 We have added new data connectors for Wiz and Palo Alto Prisma. These connectors enable seamless integration of vulnerability and asset data from leading cloud security platforms into Microsoft Security Exposure Management, providing enhanced visibility and context for your environments.

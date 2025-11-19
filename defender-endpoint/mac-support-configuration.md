@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS 
 description: Troubleshoot configuration issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
@@ -16,21 +16,13 @@ ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot configuration issues for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Configuration isn't applied as expected
 
@@ -127,3 +119,4 @@ In other words, avoid having more than one configuration profile for the same id
 ### MDE Attach Configuration - where does it come from?
 
 It isn't delivered over MDM. Consult MDE Attach documentation for how to troubleshoot it.
+

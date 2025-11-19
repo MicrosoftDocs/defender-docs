@@ -46,7 +46,9 @@ The following are examples of file policies that can be created:
 
 ## Prerequisites
 
-To set up the first File Policy in a tenant, you need Microsoft Entra **Service Principal** permissions. **Service Principal** permissions are only automatically given if no file policy exists yet. After the first file policy is created, you can create more  without needing those permissions.
+To set up the first File Policy in a tenant, you need:
+-  Microsoft Entra **Service Principal** permissions. <br>
+**Service Principal** permissions are only automatically given if no file policy exists yet. After the first file policy is created, you can create more without needing those permissions.
 
 
 ## Create a new file policy
@@ -79,7 +81,7 @@ To create a new file policy, follow this procedure:
 
 1. Under the  **Select user groups** filter, select either **all file owners**, **file owners from selected user groups** or **all file owners excluding selected groups**. Then select the relevant user groups to determine which users and groups should be included in the policy.
 
-1. Select the **Content inspection method**.  We recommend using the [**Data Classification Services**](content-inspection.md).
+1. Select the **Content inspection method**. We recommend using the [**Data Classification Services**](content-inspection.md).
 
     Once content inspection is enabled, you can choose to use preset expressions or to search for other customized expressions.
 
@@ -94,16 +96,17 @@ To create a new file policy, follow this procedure:
 
     - **Create an alert for each matching event with the policy's severity**
     - **Send an alert as email**
-    - **Daily alert limit per policy**. Note that governance actions are not impacted by the daily alert limit.
+    - **Daily alert limit per policy**. Governance actions aren't impacted by the daily alert limit.
     - **Send alerts to Power Automate**
-    -
+    
 1. Choose the **Governance** actions you want Defender for Cloud Apps to take when a match is detected. Be careful when you set governance actions, they could lead to irreversible loss of access permissions to your files.
 
-1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately.  We recommended narrowing down the filters using multiple search fields to get the files that you want to work with, . The narrower the filters, the better. You can use the **Edit and preview results** button next to the filters.
+1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately. We recommended narrowing down the filters using multiple search fields to get the files that you want to work with. The narrower the filters, the better. You can use the **Edit and preview results** button next to the filters.
 
-:::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot that shows how you can see a preview of the filtered results for file policies.":::
+    :::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot that shows how you can see a preview of the filtered results for file policies.":::
 
-1. To view file policy matches, files that are suspected to violate the policy, go to **Policies** -> **Policy management**. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**.  This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
+
+1. To view file policy matches, go to **Policies** -> **Policy management**. Here you can see files that are suspected to violate the policy. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**. This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
 
 ## Limitations
 
@@ -193,6 +196,7 @@ Below is a list of the file filters that can be applied:
 > [!NOTE]
 > - This filter doesn't support files that were shared with a group, only with specific users.
 > - This filter doesn't support files shared with a specific user through a shared link for SharePoint and OneDrive.
+> - When files are uploaded to SharePoint, OneDrive, etc., the **Collaborator > Domains** field automatically includes the domain of the file owner. If you use the **Any from domain** filter with the **does not contain** condition to exclude your organization's domain, files owned by users in your domain may be ignored by the policy.
 
   - **Entire organization** – If the entire organization has access to the file.
 
@@ -216,7 +220,7 @@ Labels include:
   - **Microsoft Purview Information Protection** - Requires integration with Microsoft Purview Information Protection.
    - **Defender for Cloud Apps** - Provides more insight into the files it scans. For each file scanned by Defender for Cloud Apps DLP, you can know if inspection was blocked because the file is encrypted or corrupted. For example, you can set up policies to alert and quarantine password-protected files that are shared externally.
        - **Azure RMS encrypted** – Files whose content wasn't inspected because they have an Azure RMS encryption set.
-    - **Password encrypted** – Files whose content wasn't inspected because they're password protected by the user.
+    - **Password encrypted** – Files whose content wasn't inspected because they were password protected by the user.
     - **Corrupt file** – Files whose content wasn't inspected because their contents couldn't be read.
 
 - **File type** – Defender for Cloud Apps scans the file to determine whether the true file type matches the MIME type received (see table) from the service. This scan is for files that are relevant for data scan (documents, images, presentations, spreadsheets, text, and zip/archive files). The filter works per file/folder type. For example, *All folders that are ...* or *All spreadsheet files that are...*
