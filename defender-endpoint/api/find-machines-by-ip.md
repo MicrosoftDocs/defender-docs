@@ -30,8 +30,8 @@ Find [Machines](machine.md) seen with the requested internal IP in the time rang
 
 ## Limitations
 
-1. The given timestamp must be in the past 30 days.
-2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- The given timestamp must be in the past 30 days.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 

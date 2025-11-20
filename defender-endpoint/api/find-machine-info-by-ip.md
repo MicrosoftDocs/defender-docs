@@ -29,8 +29,7 @@ appliesto:
 
 Find a device by internal IP.
 
-> [!NOTE]
-> The timestamp must be within the last 30 days.
+The timestamp must be within the last 30 days.
 
 ## Permissions
 
