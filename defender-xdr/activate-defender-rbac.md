@@ -48,10 +48,10 @@ The following steps guide you on how to activate the Microsoft Defender XDR Unif
 2. [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> You must be at least a Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.
 >
-> > To activate Microsoft Sentinel workspaces, make sure you have the correct role or combination of roles.
+> To activate Microsoft Sentinel workspaces, make sure you have the correct role or combination of roles.
 
 ### Activate from the Permissions and roles page
 
@@ -64,7 +64,7 @@ You can activate your workloads in two ways from the Permissions and roles page:
 1. **Activate workloads**
 
    - Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
-   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload. **Note**: For Microsoft Sentinel, each workspace must be activated individually.
+   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
 
      :::image type="content" source="/defender/media/defender/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
 
@@ -72,18 +72,17 @@ You can activate your workloads in two ways from the Permissions and roles page:
       > The **Activate workloads** button is only available when there's at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
       > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
       > Defender XDR Unified RBAC is automatically active for Exposure Management access. Once a custom role with one of the Exposure Management permissions is created, it has an immediate impact on assigned users. There's no need to activate it.
-      > 
+      >
       > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
 
 2. **Workload settings**
 
 - Select **Workload settings**.
 - This brings you to the Microsoft Defender XDR **Permission and roles** page.
-- Select the toggle for the workload you want to activate. **Note**: For Microsoft Sentinel, each workspace must be activated individually.
+- Select the toggle for the workload you want to activate. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
 - Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
-
 
 
 <a name='activate-in-microsoft-365-defender-settings'></a>
@@ -100,7 +99,7 @@ Follow these steps to activate your workloads directly in Microsoft Defender XDR
 
 4. Select **Permissions and roles**. This brings you to the **Activate workloads** page.
 
-5. Select the toggle for the workload you want to activate.
+5. Select the toggle for the workload you want to activate. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
    
 6. If you would like to activate Sentinel's workload, select **Manage workspaces** and select which workspaces you'd like to activate.
    
