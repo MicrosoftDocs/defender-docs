@@ -15,7 +15,7 @@ Microsoft Sentinel provides two connectors that collect logs from Cisco Secure F
 
 ## Collect Syslog from a Cisco FTD or ASA device
 
-To collect syslog from FTD or ASA devices, use the [Cisco ASA/FTD via AMA connector](../sentinel/data-connectors-reference.md#cisco-asaftd-via-ama).  For information on syslog configuration guidance for Cisco FTD, see the Cisco documentation [External Logging Configuration](https://secure.cisco.com/secure-firewall/docs/external-logging-configuration).
+To collect syslog from FTD or ASA devices, use the [Cisco ASA/FTD via AMA connector](../sentinel/data-connectors-reference.md#cisco-asaftd-via-ama). For information on syslog configuration guidance for Cisco FTD, see the Cisco documentation [External Logging Configuration](https://secure.cisco.com/secure-firewall/docs/external-logging-configuration).
 
 ## Collect CEF logs from a Cisco FTD device
 
