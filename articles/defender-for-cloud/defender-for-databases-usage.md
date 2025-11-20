@@ -56,7 +56,7 @@ When Defender for Cloud is enabled on your database, it detects anomalous activi
 > [!TIP]
 > A live tile on [Defender for Cloud's overview dashboard](overview-page.md) tracks the status of active threats to your resources including databases. Select the security alerts tile to navigate to the Defender for Cloud security alerts page and get an overview of active threats detected on your databases.
 >
-> For detailed steps and the recommended method to respond to security alerts, see [Respond to a security alert](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+> For detailed steps and the recommended method to respond to security alerts, see [Respond to a security alert](manage-respond-alerts.md#respond-to-a-security-alert).
 
 ### Respond to email notifications of security alerts
 
@@ -79,6 +79,6 @@ Defender for Cloud sends email notifications when it detects anomalous database 
 
 ## Next step
 
-- [Automate responses to Defender for Cloud triggers](workflow-automation.yml)
+- [Automate responses to Defender for Cloud triggers](workflow-automations.md)
 - [Stream alerts to a SIEM, SOAR, or ITSM solution](export-to-siem.md)
 - [Suppress alerts from Defender for Cloud](alerts-suppression-rules.md)

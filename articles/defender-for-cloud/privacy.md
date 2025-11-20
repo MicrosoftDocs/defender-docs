@@ -17,41 +17,46 @@ A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Ac
 
 A Defender for Cloud user can view their personal data through the Azure portal. Defender for Cloud only stores security contact details such as email addresses and phone numbers. For more information, see [Provide security contact details in Microsoft Defender for Cloud](configure-email-notifications.md).
 
-In the Azure portal, a user can view allowed IP configurations using Defender for Cloud's just-in-time VM access feature. For more information, see [Manage virtual machine access using just-in-time](just-in-time-access-usage.yml).
+In the Azure portal, a user can view allowed IP configurations using Defender for Cloud's just-in-time VM access feature. For more information, see [Manage virtual machine access using just-in-time](enable-just-in-time-access.md
+).
 
-In the Azure portal, a user can view security alerts provided by Defender for Cloud including IP addresses and attacker details. For more information, see [Managing and responding to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml).
+In the Azure portal, a user can view security alerts provided by Defender for Cloud including IP addresses and attacker details. For more information, see [Managing and responding to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md).
 
 ## Classify personal data
 
 You don't need to classify personal data found in Defender for Cloud's security contact feature. The data saved is an email address (or multiple email addresses) and a phone number. [Contact data](configure-email-notifications.md) is validated by Defender for Cloud.
 
-You don't need to classify the IP addresses and port numbers saved by Defender for Cloud's [just-in-time](just-in-time-access-usage.yml) feature.
+You don't need to classify the IP addresses and port numbers saved by Defender for Cloud's [just-in-time](enable-just-in-time-access.md
+) feature.
 
-Only a user assigned the role of Administrator can classify personal data by [viewing alerts](managing-and-responding-alerts.yml) in Defender for Cloud.
+Only a user assigned the role of Administrator can classify personal data by [viewing alerts](manage-respond-alerts.md) in Defender for Cloud.
 
 ## Secure and control access to personal data
 
 A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access [security contact data](configure-email-notifications.md).
 
-A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access their [just-in-time](just-in-time-access-usage.yml) policies.
+A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access their [just-in-time](enable-just-in-time-access.md
+) policies.
 
-A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can view their [alerts](managing-and-responding-alerts.yml).
+A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can view their [alerts](manage-respond-alerts.md).
 
 ## Update personal data
 
 A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can update [security contact data](configure-email-notifications.md) via the Azure portal.
 
-A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can update their [just-in-time policies](just-in-time-access-usage.yml).
+A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can update their [just-in-time policies](enable-just-in-time-access.md
+).
 
-An Account Administrator can't edit alert incidents. An [alert incident](managing-and-responding-alerts.yml) is considered security data and is read only.
+An Account Administrator can't edit alert incidents. An [alert incident](manage-respond-alerts.md) is considered security data and is read only.
 
 ## Delete personal data
 
 A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can delete [security contact data](configure-email-notifications.md) via the Azure portal.
 
-A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can delete the [just-in-time policies](just-in-time-access-usage.yml) via the Azure portal.
+A Defender for Cloud user assigned the role of Owner, Contributor, or Account Administrator can delete the [just-in-time policies](enable-just-in-time-access.md
+) via the Azure portal.
 
-A Defender for Cloud user can't delete alert incidents. For security reasons, an [alert incident](managing-and-responding-alerts.yml) is considered read-only data.
+A Defender for Cloud user can't delete alert incidents. For security reasons, an [alert incident](manage-respond-alerts.md) is considered read-only data.
 
 ## Export personal data
 
@@ -64,7 +69,8 @@ A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Ac
   GET https://<endpoint>/subscriptions/{subscriptionId}/providers/Microsoft.Security/securityContacts?api-version={api-version}
   ```
 
-A Defender for Cloud user assigned the role of Account Administrator can export the [just-in-time policies](just-in-time-access-usage.yml) containing the IP addresses by:
+A Defender for Cloud user assigned the role of Account Administrator can export the [just-in-time policies](enable-just-in-time-access.md
+) containing the IP addresses by:
 
 - Copying from the Azure portal
 - Executing the Azure REST API call, GET HTTP:
@@ -88,9 +94,10 @@ For more information, see [Get Security Alerts (GET Collection)](/previous-versi
 
 A Defender for Cloud user can choose to opt out by deleting their [security contact data](configure-email-notifications.md).
 
-[Just-in-time data](just-in-time-access-usage.yml) is considered non-identifiable data and is retained for 30 days.
+[Just-in-time data](enable-just-in-time-access.md
+) is considered non-identifiable data and is retained for 30 days.
 
-[Alert data](managing-and-responding-alerts.yml) is considered security data and is retained for two years.
+[Alert data](manage-respond-alerts.md) is considered security data and is retained for two years.
 
 ## Auditing and reporting
 

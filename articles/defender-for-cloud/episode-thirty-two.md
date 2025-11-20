@@ -3,7 +3,7 @@ title: API Security with Defender for APIs | Defender for Cloud in the field
 
 description: Learn about API security with Defender for APIs
 ms.topic: reference
-ms.date: 06/08/2023
+ms.date: 10/05/2025
 ---
 
 # API Security with Defender for APIs

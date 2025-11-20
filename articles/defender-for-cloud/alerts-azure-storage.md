@@ -14,7 +14,7 @@ This article lists the security alerts you might get for Azure Storage from Micr
 > [!NOTE]
 > Some of the recently added alerts powered by Microsoft Defender Threat Intelligence and Microsoft Defender for Endpoint might be undocumented.
 
-[Learn how to respond to these alerts](managing-and-responding-alerts.yml).
+[Learn how to respond to these alerts](manage-respond-alerts.md).
 
 [Learn how to export alerts](continuous-export.md).
 
@@ -67,18 +67,6 @@ Learn more about [Microsoft's threat intelligence capabilities](https://www.micr
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
 
 **Severity**: High
-
-### **Storage account identified as source for distribution of malware**
-
-(Storage.Files_WidespreadeAm)
-
-**Description**: Antimalware alerts indicate that an infected file(s) is stored in an Azure file share that is mounted to multiple VMs. If attackers gain access to a VM with a mounted Azure file share, they can use it to spread malware to other VMs that mount the same share.
-
-**Applies to**: Azure Files
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
-
-**Severity**: Medium
 
 ### **The access level of a potentially sensitive storage blob container was changed to allow unauthenticated public access**
 
@@ -193,7 +181,7 @@ Storage.Files_AccessInspectionAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Discovery
 
-**Severity**: High/Medium
+**Severity**: Medium/Low
 
 ### **Unusual amount of data extracted from a storage account**
 
@@ -221,7 +209,7 @@ Storage.Files_ApplicationAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **Unusual data exploration in a storage account**
 
@@ -234,7 +222,7 @@ Storage.Files_DataExplorationAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
 
-**Severity**: Medium
+**Severity**: Medium/Low
 
 ### **Unusual deletion in a storage account**
 
@@ -247,7 +235,7 @@ Storage.Files_DeletionAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Exfiltration
 
-**Severity**: Medium
+**Severity**: Medium/Low
 
 ### **Unusual unauthenticated public access to a sensitive blob container**
 
@@ -424,5 +412,5 @@ Storage.Blob_MalwareDownload
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)

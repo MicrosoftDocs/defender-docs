@@ -25,7 +25,7 @@ It’s important to be able to prioritize secrets and identify which ones need i
 
 ## Prerequisites
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Defender for Cloud](get-started.md) must be available in your Azure subscription.
 - At least one of these plans [must be enabled](enable-enhanced-security.md#enable-defender-plans-to-get-the-enhanced-security-features):
   - [Defender for Servers Plan 2](defender-for-servers-overview.md)

@@ -29,9 +29,9 @@ Data security alerts in Defender for Cloud help you identify potential threats a
 
     :::image type="content" source="media/review-data-security-alerts/databases-storage-alerts.png" alt-text="Screenshot that shows where the view all managed databases alerts and view all storage alerts buttons are located." lightbox="media/review-data-security-alerts/databases-storage-alerts.png":::
 
-Once you navigate to the alerts page, you can then [investigate each security alert](managing-and-responding-alerts.yml#investigate-a-security-alert), and [respond to the alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert).
+Once you navigate to the alerts page, you can then [investigate each security alert](manage-respond-alerts.md#investigate-a-security-alert), and [respond to the alerts](manage-respond-alerts.md#respond-to-a-security-alert).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage and respond to security alerts](managing-and-responding-alerts.yml)
+> [Manage and respond to security alerts](manage-respond-alerts.md)

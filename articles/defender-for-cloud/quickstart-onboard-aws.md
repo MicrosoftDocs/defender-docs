@@ -2,7 +2,7 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 05/04/2025
+ms.date: 09/28/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -157,6 +157,8 @@ Learn more about how to [enable Defender CSPM](tutorial-enable-cspm-plan.md).
 
 > [!IMPORTANT]
 > If your AWS account is already connected to Microsoft Sentinel, you cannot connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+>
+> Use only the management account for onboarding. Delegated accounts aren't supported.
 
 To connect your AWS to Defender for Cloud by using a native connector:
 
@@ -296,6 +298,12 @@ The security recommendations page in Defender for Cloud displays your AWS resour
 To view all the active recommendations for your resources by resource type, use the asset inventory page in Defender for Cloud and filter to the AWS resource type that you're interested in.
 
 :::image type="content" source="./media/quickstart-onboard-aws/aws-resource-types-in-inventory.png" alt-text="Screenshot of AWS options in the asset inventory page's resource type filter." lightbox="media/quickstart-onboard-aws/aws-resource-types-in-inventory.png":::
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Integrate with Microsoft Defender XDR
 

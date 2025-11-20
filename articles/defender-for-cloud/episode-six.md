@@ -2,14 +2,14 @@
 title: Lessons learned from the field
 description: Learn how Microsoft Defender for Cloud is used to fill the gap between cloud security posture management and cloud workload protection.
 ms.topic: reference
-ms.date: 07/13/2025
+ms.date: 10/05/2025
 ---
 
 # Lessons learned from the field with Microsoft Defender for Cloud
 
-**Episode description**: In this episode Carlos Faria, Microsoft Cybersecurity Consultant joins Yuri to talk about lessons from the field and how customers are using Microsoft Defender for Cloud to improve their security posture and protect their workloads in a multicloud environment.
+**Episode description**: In this episode, Carlos Faria, Microsoft Cybersecurity Consultant, joins Yuri to talk about lessons from the field and how customers use Microsoft Defender for Cloud to improve their security posture and protect their workloads in a multicloud environment.
 
-Carlos also covers how Microsoft Defender for Cloud is used to fill the gap between cloud security posture management and cloud workload protection platform (CWPP), and demonstrates some features related to this scenario.
+Carlos also covers how Microsoft Defender for Cloud fills the gap between cloud security posture management and cloud workload protection platform (CWPP), and demonstrates some features related to this scenario.
 
 > [!VIDEO https://aka.ms/docs/player?id=3811455b-cc20-4ee0-b1bf-9d4df5ee4eaf]
 
@@ -25,7 +25,7 @@ Carlos also covers how Microsoft Defender for Cloud is used to fill the gap betw
 
 ## Recommended resources
   
-Learn more [What is Microsoft Defender for Cloud?](defender-for-cloud-introduction.md).
+Learn more about [What is Microsoft Defender for Cloud?](defender-for-cloud-introduction.md).
 
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS)
 
