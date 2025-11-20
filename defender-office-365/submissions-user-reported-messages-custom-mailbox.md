@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: "Admins can configure where user reported messages go for analysis: to an internal reporting mailbox, to Microsoft, or both. Other settings complete the reporting experience for users when they report good messages, spam, or phishing messages from Outlook."
 ms.service: defender-office-365
-ms.date: 02/24/2024
+ms.date: 10/06/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -37,7 +37,6 @@ User reported settings and the reporting mailbox work with the following message
 Delivering user reported messages to a reporting mailbox instead of directly to Microsoft allows admins to selectively and manually submit messages to Microsoft from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [Admin submission](submissions-admin.md).
 
 > [!NOTE]
->
 > For information about user reported message settings in Microsoft Teams in Defender for Office 365 Plan 2, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 
 ## Configuration requirements for the reporting mailbox
@@ -85,7 +84,7 @@ On the **User reported settings** page, the available settings for reporting mes
 
 - **Monitor reported messages in Outlook** is selected: The following configurations are supported:
 
-  - Use the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) on virtually all Outlook platforms to report email messages.
+  - **Use the built-in Report button in Outlook**: Use the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) on virtually all Outlook platforms to report email messages.
     - Configure user reported messages to go to the reporting mailbox, to Microsoft, or both.
     - Decide whether users receive default or customized pre-reporting and post-reporting pop-ups in supported version of Outlook.
     - Decide whether to customize the feedback email sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
@@ -93,12 +92,25 @@ On the **User reported settings** page, the available settings for reporting mes
 
     For details, see the [Options for Microsoft reporting tools](#options-for-microsoft-reporting-tools) section in this article.
 
-  - Use a non-Microsoft add-in to report email messages.
-    - Configure user reported messages from a non-Microsoft reporting mailbox to Microsoft.
+  - **Use a non-Microsoft add-in button**:
+    - Configure user reported messages to go to the reporting mailbox, or the reporting mailbox and Microsoft (Microsoft only isn't available).
     - Decide whether to customize the feedback email sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
     - Decide whether users can report email messages from quarantine as they release quarantined messages.
 
     For details, see the [Options for non-Microsoft reporting tools](#options-for-non-microsoft-reporting-tools) section in this article.
+
+  The available feature differences for the built-in **Report** button vs. a non-Microsoft add-in button are summarized in the following table:
+
+  |&nbsp;|Built-in Report button|Non-Microsoft add-in button|
+  |---|---|---|
+  |Ask the user to confirm before reporting|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+  |Show a success (pop-up) message after the message is reported|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+  |Customize (pop-up) messages for **Report phishing**, **Report junk**, **Report not junk**, **Phishing reported**, and **Junk reported** in up to seven languages|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+  |Reported message destination|<ul><li>Microsoft and reporting mailbox</li><li>Reporting mailbox only</li><li>Microsoft only</li></ul>|<ul><li>Microsoft and reporting mailbox</li><li>Reporting mailbox only</li></ul>|
+  |Email users the results of the investigation|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+  |Customize the body and footer of the results email for **Phishing**, **Junk**, and **No threats found**|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+  |Customize the logo in all reporting experiences|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+  |Allow reporting for quarantined messages|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 
 ### Options for Microsoft reporting tools
 
@@ -110,6 +122,10 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     - **Report phishing**
     - **Report junk**
     - **Report not junk**
+
+    > [!TIP]
+    > If you select **Ask the user to confirm before reporting**, Outlook displays a confirmation pop-up. The setting **When reporting phishing or junk, always ask me before sending a report** is also available in Outlook on the web under **Settings** \> **Mail** \> **Junk email** \> **Security options**. This setting allows users to opt out of the confirmation pop-up when reporting messages.
+
   - **Show a success message after the message is reported**: A post-reporting pop-up is shown when using the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) for the following user actions:
     - **Phishing reported**
     - **Junk reported**
@@ -156,7 +172,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     To specify a different mailbox, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to send reported messages to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
 
-  - **Microsoft only**: User reported messages go directly to Microsoft for analysis.
+    In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
 
   - **My reporting mailbox only**: User reported messages go only to the specified reporting mailbox for an admin or the security operations team to analyze.
 
@@ -164,9 +180,11 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     On the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, the **Result** value for these entries is **Not Submitted to Microsoft**. Messages don't go to Microsoft for analysis unless an admin manually submits the message. For instructions, see [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis).
 
+  - **Microsoft only**: User reported messages go directly to Microsoft for analysis.
+
   > [!NOTE]
   >
-  > - When you select **Use the built-in Report button in Outlook** and users report messages using the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), user reported messages are available to admins on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, regardless of the value you select for **Send the reported messages to**. For more information, see [Admin options for user reported messages](submissions-admin.md#admin-options-for-user-reported-messages).
+  > - When using the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), user reported messages are available to admins on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, regardless of the value you select for **Send the reported messages to**. For more information, see [Admin options for user reported messages](submissions-admin.md#admin-options-for-user-reported-messages).
   >
   > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the only available value for **Send the reported messages to** is **My reporting mailbox only**. The other two options are unavailable for compliance reasons (data isn't allowed to leave the organization boundary).
 
@@ -219,19 +237,26 @@ The message formatting requirements for integrating non-Microsoft reporting solu
 
 When **Monitor reported messages in Outlook** is selected and you also select **Use a non-Microsoft add-in button**, the following options are available on the **User reported settings** page:
 
-- **Reported message destinations** section:
+- **Reported message destinations** section \> **Send the reported messages to**: Select one of the following options:
 
   > [!TIP]
   > For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
   >
   > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions](submissions-result-definitions.md).
 
-  - **Send reported messages to**: Select one of the following options:
-    - **My reporting mailbox only** : Microsoft pulls metadata about user reported messages from the non-Microsoft reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user> with the **Result** value **Not Submitted to Microsoft**.
+  - **Microsoft and my reporting mailbox**: User reported messages go to Microsoft for analysis and to the specified reporting mailbox. Admins or security operations (SecOps) personnel can analyze the messages.
 
-    - **Microsoft and My reporting mailbox**: Microsoft pulls metadata and message content about user reported messages from the non-Microsoft reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+    The default user reporting mailbox is the Exchange Online mailbox of the global admin. Currently, the global admin isn't _shown_ as the user reported mailbox on the **User reported settings** page until _after_ the first user in the organization reports a message from Outlook.
 
-  - **Add an Exchange Online mailbox to send reported messages to**: Specify an existing internal reporting mailbox to hold user reported messages from non-Microsoft reporting tools. In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
+    To specify a different mailbox, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to send reported messages to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
+
+    In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
+
+  - **My reporting mailbox only**: User reported messages go only to the specified reporting mailbox for an admin or the security operations team to analyze.
+
+    Follow the previous instructions to select the mailbox in the **Add an Exchange Online mailbox to send reported messages to** box.
+
+    On the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, the **Result** value for these entries is **Not Submitted to Microsoft**. Messages don't go to Microsoft for analysis unless an admin manually submits the message. For instructions, see [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis).
 
 - **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
 
@@ -253,7 +278,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     For more information, see [Automatic user notifications for user reported phishing results in AIR](air-user-automatic-feedback-response.md).
 
   - **Customize sender and branding** section:
-    - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
+    - **Specify a Microsoft 365 mailbox to use as the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
 - **Report from quarantine** section \> **Allow reporting for quarantined messages**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
@@ -654,7 +679,7 @@ The following examples show how to change the user reporting experience without 
   Get-ReportSubmissionRule | Remove-ReportSubmissionRule
   ```
 
-- Turn on reporting in Outlook if necessary, select **Use a non-Microsoft add-in button**, and use thirdpartyreporting@wingtiptoys.com as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use a non-Microsoft add-in button**, and use `thirdpartyreporting@wingtiptoys.com` as the reporting mailbox:
 
   ```powershell
   $usersub = "thirdpartyreporting@wingtiptoys.com"

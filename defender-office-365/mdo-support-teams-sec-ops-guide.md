@@ -23,7 +23,7 @@ appliesto:
 
 # Security Operations Guide for Teams protection in Microsoft Defender for Office 365
 
-After you [configure Microsoft Teams protection in Microsoft Defender for Office 365](mdo-support-teams-quick-configure.md), you need to integrate Teams protection capabilities into your Security Operations (SecOps) response processes. This process is critical to ensure a high-quality, reliable approach to protect, detect, and respond to collaboration-related security threats.  
+After you [configure Microsoft Teams protection in Microsoft Defender for Office 365](mdo-support-teams-quick-configure.md), you need to integrate Teams protection capabilities into your Security Operations (SecOps) response processes. This process is critical to ensure a high-quality, reliable approach to protect, detect, and respond to collaboration-related security threats.
 
 Involving the SecOps team during the deployment/pilot phases ensures your organization is ready to deal with threats. Teams protection capabilities in Defender for Office 365 are natively integrated into the existing Defender for Office 365 and Defender XDR SecOps tools and work flows.
 
@@ -33,7 +33,7 @@ Another important step is to ensure SecOps team members have the appropriate per
 
 ## Integrate user reported Teams messages into SecOps incident response
 
-When users report Teams messages as potentially malicious or non malicious, the reported messages are sent to Microsoft and/or the reporting mailbox as defined by the [user reported settings in Defender for Office 365](submissions-user-reported-messages-custom-mailbox.md).  
+When users report Teams messages as potentially malicious or non malicious, the reported messages are sent to Microsoft and/or the reporting mailbox as defined by the [user reported settings in Defender for Office 365](submissions-user-reported-messages-custom-mailbox.md).
 
 The **Teams message reported by user as security risk** and **Teams message reported by user as not security risk** alerts are automatically generated and correlated to Defender XDR Incidents for malicious and non malicious user report respectively.
 
@@ -58,7 +58,7 @@ SecOps team members can also use block entries in the Tenant Allow/Block List to
 
 SecOps team members can use threat hunting or information from external threat intelligence feeds to proactively respond to false negative Teams messages (bad messages allowed). They can use the information to proactively block threats. For example:
 
-- [Create URL block entries](tenant-allow-block-list-urls-configure.md#create-block-entries-for-urls) in the Tenant Allow/Block List in Defender for Office 365. Block entries apply at time of click for URLs in Teams.  
+- [Create URL block entries](tenant-allow-block-list-urls-configure.md#create-block-entries-for-urls) in the Tenant Allow/Block List in Defender for Office 365. Block entries apply at time of click for URLs in Teams.
 - [Block domains in Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 - Submit undetected URLs to Microsoft using [admin submission](submissions-admin.md#report-questionable-urls-to-microsoft).
 
@@ -100,11 +100,11 @@ SecOps team members can proactively hunt for potentially malicious Teams message
   For example, you can use the following query to hunt for allowed clicks on URLs in Teams messages that were removed by ZAP:
 
   ```kusto
-  MessagePostDeliveryEvents 
-  | join MessageUrlInfo on TeamsMessageId 
-  | join UrlClickEvents on Url 
-  | join EmailUrlInfo on Url 
-  | where Workload == "Teams" and ActionType1 == "ClickAllowed" 
+  MessagePostDeliveryEvents
+  | join MessageUrlInfo on TeamsMessageId
+  | join UrlClickEvents on Url
+  | join EmailUrlInfo on Url
+  | where Workload == "Teams" and ActionType1 == "ClickAllowed"
   | project TimeGenerated, TeamsMessageId, ActionType, RecipientDetails, LatestDeliveryLocation, Url, ActionType1
   ```
 

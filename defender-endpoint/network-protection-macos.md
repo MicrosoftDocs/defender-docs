@@ -1,4 +1,4 @@
----
+﻿---
 title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
@@ -17,18 +17,11 @@ ms.collection:
 - tier2
 - mde-macos
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Business
+
 ---
-
 # Network protection for macOS
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender XDR for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Business
-- [Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 ### Prerequisites
 
@@ -409,3 +402,4 @@ Upon facing an unexpected behavior, users' confusion might be reduced by providi
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -239,7 +239,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
        - **30 days**
        - **Never expire**
        - **Specific date**: The maximum value is 30 days from today.
-     - **Block entry note (optional)**: Enter optional information about why you're blocking this itme.
+     - **Block entry note (optional)**: Enter optional information about why you're blocking this item.
 
      When you're finished in the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
@@ -293,7 +293,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
        For spoofed senders, this value is meaningless, because entries for spoofed senders never expire.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry exipres on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values, the allow entry expires on the defined date (**1 day**, **7 days**, **30 days**, or the **Specific date**).
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
@@ -850,6 +850,9 @@ For more information about how Microsoft processes submissions, see [Learn more 
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
 > [!NOTE]
+>
+> In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+>
 > AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
 ### Dispute the result for submissions to Microsoft

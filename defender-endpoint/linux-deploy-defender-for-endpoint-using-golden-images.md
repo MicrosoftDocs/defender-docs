@@ -1,4 +1,4 @@
----
+﻿---
 title: Deploy Microsoft Defender for Endpoint on Linux using golden images
 description: Learn how to use preconfigured virtual machine templates (golden images) for rapid, consistent Microsoft Defender for Endpoint deployment on Linux.
 ms.service: defender-endpoint
@@ -16,16 +16,13 @@ ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 09/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploy Microsoft Defender for Endpoint on Linux using golden images
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 Golden images are preconfigured virtual machine templates used to rapidly and consistently deploy multiple identical systems across an organization. Microsoft Defender for Endpoint on Linux supports golden image deployment across cloud and on-premises environments, with improved handling of machine identifiers and hostnames, ensuring reliable telemetry and device correlation.
 
@@ -115,3 +112,4 @@ If the hostname of a Linux server is changed after successful deployment of Defe
 ## Related content
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

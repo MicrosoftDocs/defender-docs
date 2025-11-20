@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity – privacy
 description: Learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
-ms.date: 06/06/2024
+ms.date: 09/28/2025
 ms.topic: article
 #customerIntent: To learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
 ms.reviewer: rlitinsky
@@ -17,7 +17,7 @@ This article describes how Microsoft Defender for Identity collects data in a ma
 
 Microsoft Defender for Identity monitors information generated from your organization's Active Directory, network activities, and event activities to detect suspicious activity. The monitored activity information enables Defender for Identity to help you determine the validity of each potential threat and correctly triage and respond.
 
-For more information see: [Microsoft Defender for Identity monitored activities](monitored-activities.md).
+For more information, see: [Microsoft Defender for Identity monitored activities](monitored-activities.md).
 
 ## Data location
 
@@ -29,18 +29,18 @@ Defender for Identity operates in the Microsoft Azure data centers in the follow
 - India (Central India, South India)
 - North America (East US, West US, West US2)
 - Switzerland (Switzerland North, Switzerland West)
+- United Arab Emirates (UAE North and UAE Central)
 - United Kingdom (UK South)
-
 
 Customer data collected by the service might be stored as follows:
 
-- Your workspace is automatically created in data center that's geographically closest to your Microsoft Entra ID. Once created, Defender for Identity workspaces can't be moved to another data center. Your workspace's data center is listed in the Microsoft Defender portal, under **Settings** > **Identity** > **About** > **Geolocation**.
+- Your workspace is automatically created in the data center that's geographically closest to your Microsoft Entra ID. Once created, Defender for Identity workspaces can't be moved to another data center. Your workspace's data center is listed in the Microsoft Defender portal, under **Settings** > **Identity** > **About** > **Geolocation**.
 
 - A geographic location as defined by the data storage rules of an online service, if the online service is used by Defender for Identity to process such data.
 
 ## Data retention
 
-Data from Microsoft Defender for Identity is retained for 180 days, visible across the portal.  
+Microsoft Defender for Identity retains data for 180 days, which is visible across the portal.
 
 Your data is kept and is available to you while the license is under grace period or suspended mode. At the end of this period, that data will be erased from Microsoft's systems to make it unrecoverable, no later than 180 days from contract termination or expiration. 
 

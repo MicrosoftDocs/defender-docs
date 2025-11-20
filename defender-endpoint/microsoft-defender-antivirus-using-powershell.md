@@ -1,4 +1,4 @@
----
+﻿---
 title: Evaluate Microsoft Defender Antivirus using PowerShell.
 description: Businesses of all sizes can use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus in Windows using PowerShell.
 ms.service: defender-endpoint
@@ -16,16 +16,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Evaluate Microsoft Defender Antivirus using PowerShell
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 
 In Windows 10 (or newer) and Windows Server 2016 (or newer), you can use next-generation protection features offered by Microsoft Defender Antivirus with exploit protection.
 
@@ -153,3 +151,4 @@ For more information, see [Microsoft Defender Offline](microsoft-defender-offlin
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md)
+

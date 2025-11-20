@@ -1,4 +1,4 @@
----
+﻿---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
 manager: bagol
@@ -19,15 +19,14 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint Security Operations Guide
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 This article gives an overview of the requirements and tasks for successfully operating Microsoft Defender for Endpoint in your organization. These tasks help your security operations center (SOC) effectively detect and respond to Microsoft Defender for Endpoint detected security threats.
 
@@ -196,3 +195,4 @@ The following articles provide guidance to troubleshoot and fix errors that you 
 - [Troubleshoot onboarding issues](troubleshoot-onboarding.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

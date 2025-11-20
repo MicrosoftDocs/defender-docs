@@ -54,9 +54,9 @@ Defender for Identity's identity security posture assessments proactively detect
 
 The following new security posture assessments are now available in Microsoft Secure Score:
 
-- [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
-- [Remove nonadmin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
-- [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
+- [Remove access rights on suspicious accounts with the Admin SDHolder permission](/defender-for-identity/security-posture-assessments/accounts#remove-access-rights-on-suspicious-accounts-with-the-admin-sdholder-permission)
+- [Remove nonadmin accounts with DCSync permissions](/defender-for-identity/security-posture-assessments/accounts#remove-non-admin-accounts-with-dcsync-permissions)
+- [Remove local admins on identity assets](/defender-for-identity/security-posture-assessments/identity-infrastructure/#security-assessment-remove-local-admins.md)
 - [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
@@ -302,7 +302,7 @@ Microsoft Defender for Identity offers the ability to define honeytoken accounts
 Released September 11, 2022
 
 - **Updated assessment: Unsecure domain configurations**  
-The unsecure domain configuration assessment available through Microsoft Secure Score now assesses the domain controller LDAP signing policy configuration and alerts if it finds an unsecure configuration. For more information, see [Security assessment: Unsecure domain configurations](security-assessment-unsecure-domain-configurations.md).
+The unsecure domain configuration assessment available through Microsoft Secure Score now assesses the domain controller LDAP signing policy configuration and alerts if it finds an unsecure configuration. For more information, see [Security assessment: Unsecure domain configurations](/defender-for-identity/security-posture-assessments/identity-infrastructure#security-assessment-unsecure-domain-configurations).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -361,7 +361,7 @@ Released July 10, 2022
 - **New security assessments**  
 Defender for Identity now includes the following new security assessment:
   - Unsecure domain configurations  
-Microsoft Defender for Identity continuously monitors your environment to identify domains with configuration values that expose a security risk, and reports on these domains to assist you in protecting your environment. For more information, see [Security assessment: Unsecure domain configurations](security-assessment-unsecure-domain-configurations.md).
+Microsoft Defender for Identity continuously monitors your environment to identify domains with configuration values that expose a security risk, and reports on these domains to assist you in protecting your environment. For more information, see [Security assessment: Unsecure domain configurations](/defender-for-identity//security-posture-assessments/identity-infrastructure#security-assessment-unsecure-domain-configurations).
 
 - The Defender for Identity installation package will now install the Npcap component instead of the WinPcap drivers. For more information, see [WinPcap and Npcap drivers](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers).
 

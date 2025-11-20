@@ -64,7 +64,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 ## Use the Microsoft Defender portal to add trusted ARC sealers
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
 
 2. On the **Email authentication settings** page, verify that the **ARC** tab is selected, and then select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
 
@@ -146,7 +146,7 @@ header.d=contoso.com;dmarc=fail action=none
 header.from=contoso.com;compauth=pass reason=130
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > The ARC result **pass** from a **trusted ARC sealer** can potentially override failures in SPF, DKIM, or DMARC caused by message modification during transit. However, the final spoofing determination is based on the [composite authentication](email-authentication-about.md#composite-authentication) (CompAuth) outcome. Messages that fail ARC might still be delivered if they pass SPF, DKIM, DMARC, and composite authentication evaluations.
 
 ## Trusted ARC sealer mail flow diagrams

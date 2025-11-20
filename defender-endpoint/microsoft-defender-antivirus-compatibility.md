@@ -1,10 +1,10 @@
----
+﻿---
 title: Microsoft Defender Antivirus compatibility with other security products
 description: Learn about Microsoft Defender Antivirus with other security products and the operating systems.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.topic: how-to
 author: batamig
 ms.author: bagol
@@ -18,27 +18,24 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus compatibility with other security products
 
-**Applies to:**
+## Prerequisites
 
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-**Platforms**
+### Supported operating systems
 
 - Windows
-
-Microsoft Defender Antivirus is available on endpoints running the following versions of Windows:
-
 - Windows 11
 - Windows 10 
 - Windows Server 2016 and later 
 - Windows Server, version 1803, or later
 - Azure Stack HCI OS, version 23H2 and later
+
 
 Microsoft Defender Antivirus is also available for older versions of Windows under certain conditions.
 
@@ -49,6 +46,8 @@ Microsoft Defender Antivirus is also available for older versions of Windows und
 - On [consumer devices on Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), Windows Defender is available (although it doesn't provide enterprise-level management).
 
 If you're using non-Microsoft antivirus/antimalware software, you might be able to run Microsoft Defender Antivirus alongside the other antivirus solution. This article describes what happens with Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware software, with and without [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+
+
 
 ## Antivirus protection without Defender for Endpoint
 
@@ -309,4 +308,5 @@ If you're looking for Antivirus related information for other platforms, see:
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

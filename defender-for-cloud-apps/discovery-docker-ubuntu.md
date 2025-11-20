@@ -15,7 +15,7 @@ You can configure automatic log upload for continuous reports in Defender for Cl
 
 |Specification  |Description  |
 |---------|---------|
-|**Operating system**     |  One of the following:  <li>Ubuntu 14.04, 16.04, 18.04 and 20.04 <li>CentOS 7.2 or higher       |
+|**Operating system**     |  One of the following:  <li>Ubuntu 20.04 and 22.04 <li>CentOS 7.2 or higher       |
 |**Disk space**     |  250 GB       |
 |**CPU cores**     |    2     |
 |**CPU Architecture**     |   Intel 64 and AMD 64      |

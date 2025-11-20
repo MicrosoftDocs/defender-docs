@@ -1,10 +1,10 @@
----
+﻿---
 title: Configure and validate exclusions based on extension, name, or location
 description: Exclude files from Microsoft Defender Antivirus scans based on their file extension, file name, or location.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 10/20/2025
 author: batamig
 ms.author: bagol
 ms.topic: how-to
@@ -16,21 +16,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure and validate exclusions based on file extension and folder location
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 You can define exclusions for Microsoft Defender Antivirus that apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [always-on, real-time protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md). **Generally, you don't need to apply exclusions**. If you do need to apply exclusions, then you can choose from the following types:
 
@@ -41,6 +34,12 @@ You can define exclusions for Microsoft Defender Antivirus that apply to [schedu
 > - Microsoft Defender Antivirus exclusions do apply to some Microsoft Defender for Endpoint capabilities, such as [attack surface reduction rules](attack-surface-reduction.md). Some Microsoft Defender Antivirus exclusions are applicable to some ASR rule exclusions. See [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and ASR rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
 > - Files that you exclude using the methods described in this article can still trigger Endpoint Detection and Response (EDR) alerts and other detections. To exclude files broadly, add them to the Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
 > - Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Before you begin
 
@@ -390,3 +389,4 @@ You can also copy the string into a blank text file and attempt to save it with 
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
