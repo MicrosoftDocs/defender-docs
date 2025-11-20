@@ -41,8 +41,8 @@ All Gated Deployment events appear in the **Admission Monitoring** view in Defen
 To access Admission Monitoring:
 
 1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
-1. Select the relevant subscription, AWS account, or GCP project.
-1. Navigate to the **Admission Monitoring** view.
+1. Select the **Security Rules** tile.
+1. Navigate to the **Admission Monitoring** view in the left navigation pane.
 
 Learn more about [monitoring gated deployment events](enablement-guide-runtime-gated.md#admission-monitoring).
 
