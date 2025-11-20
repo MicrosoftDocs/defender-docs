@@ -106,7 +106,7 @@ This capability helps your organization manage and monitor AI-generated data i
 1. Select **Continue**.
 
 ### **Troubleshooting**
-After enabling the above toggle, if you aren't seeing user interactions for Entra ID authenticated users captured in Purview activity explorer, follow the below steps for troubleshooting:
+If you don't see user interactions for Entra ID authenticated users in Microsoft Purview Activity Explorer after turning on the toggle, follow these steps to troubleshoot:
  
 Run the following commands in Azure PowerShell
 1. Install the following Az modules (if needed):
