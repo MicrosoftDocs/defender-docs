@@ -29,17 +29,50 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## November 2025
 
-|Date | Category | Update|
-| -------- | -------- | -------- |
-| November 17, 2025 | Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)]|
+| Date | Category | Update |
+|------|---------|-------|
+|November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
+|November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
+|November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
+|November 17, 2025| Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview)|
 |November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
-| November 3, 2025 | GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
-| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+|November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
+|November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+### In-pipeline container vulnerability scanning (preview)
+
+November 19, 2025
+
+In-pipeline container vulnerability scanning for Defender for DevOps Security is now available in preview through the Defender for Cloud CLI.
+
+Scanning built container images directly within CI/CD workflows, provides real-time feedback before they're pushed to registries or deployed. This helps detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
+
+Learn more about the [Defender for Cloud CLI](cli-cicd-integration.md).
+
+### General availability of agentless vulnerability assessment for AKS runtime containers
+
+November 19, 2025
+
+Defender for Containers and Defender for Cloud Security Posture Management (CSPM) plans now include agentless vulnerability assessment for AKS runtime containers. This update extends vulnerability assessment coverage to running containers that use images from any container registry, rather than only supported registries. It also continues to scan Kubernetes add-ons and third-party tooling running in your AKS clusters.
+
+To enable this feature, make sure that **Agentless machine scanning** is turned on for your subscription in Defender for Cloud environment settings.
+
+Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md).
+
+### Advanced security posture for API discovery (Preview)
+
+November 18, 2025
+
+Microsoft Defender for Cloud API security posture management now automatically identifies unauthenticated APIs and APIs exposed to the internet across your environment, including APIs discovered on Azure Functions and Logic Apps.
+
+With this release, you can uncover high-risk API endpoints earlier, prioritize API risks using new posture insights and risk factors, and view and analyze discovered API risks across your environment by using security explorer.
+
+Learn more about [API security posture management in Defender for Cloud](api-security-posture-overview.md).
 
 ### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
 
-November 11, 2025  
+November 17, 2025  
 
 Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) compliance standard v2 in preview. 
 
