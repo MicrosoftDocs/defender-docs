@@ -71,7 +71,7 @@ Messages identified by the advanced delivery policy aren't security threats, so 
 
 ## Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
@@ -99,7 +99,7 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 ## Use the Microsoft Defender portal to modify or remove SecOps mailboxes in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
@@ -148,7 +148,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 >
 > - Adding phishing simulation URLs to the **Do not rewrite the following URLs in email** section in Safe Links policies might result in unwanted alerts for URL clicks. Phishing simulation URLs in email messages are automatically allowed both during mail flow and at time of click.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
@@ -213,7 +213,7 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 
 ## Use the Microsoft Defender portal to modify or remove non-Microsoft phishing simulations in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
