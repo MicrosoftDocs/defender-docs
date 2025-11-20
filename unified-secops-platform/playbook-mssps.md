@@ -34,7 +34,7 @@ Here we can see the advantages to use the Defender Platform:
 
 - Unified hunting capability covering both Microsoft Sentinel and Defender data, eliminating the need to switch between portals and allowing analysts to easily locate the data they need.
 
-- Attack Disruption is a core differentiator of the Microsoft Defender platform, delivering proactive protection by stopping attacks in progress not just on your Defender native technologies, but across third-party environments such as SAP, AWS, Proofpoint and Okta where Sentinel is deployed on top of XDR. By automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds, Defender reduces dwell time and prevents lateral movement.
+- Attack Disruption is a core differentiator of the Microsoft Defender platform, delivering proactive protection by stopping attacks in progress, not just on your Defender native technologies, but across third-party environments such as SAP, AWS, Proofpoint and Okta where Sentinel is deployed on top of XDR. By automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds, Defender reduces dwell time and prevents lateral movement.
 
 - Analyze attack paths and reduce exposure by visualizing how a cyber attacker could exploit vulnerabilities to move laterally across exposed assets in your environment. This feature provides guided recommendations on reducing exposure and helps prioritize actions based on each exposure's potential impact.
 
@@ -88,7 +88,7 @@ To address the current GDAP challenges, engineering work has started which is br
 
 This update – *applicable to MSSPs who already are managing their customers over GDAP today* - will leverage an existing admin relationship with a customer, no new relationship or changes are required.
 
-For each Entra security group in the MSSP tenant that are part of the previously created relationship, a remote tenant group will be created in the customer tenant. These remote tenant groups will represent the Entra roles which were part of the admin relationship creation as depicted in the example picture below.
+For each Entra security group in the MSSP tenant that is part of the previously created relationship, a remote tenant group will be created in the customer tenant. These remote tenant groups will represent the Entra roles which were part of the admin relationship creation as depicted in the example picture below.
 
 :::image type="content" source="media/playbook-mssps/gdap-remote-tenant-groups.png" alt-text="Screenshot of remote tenant groups representing Entra roles in customer tenant.":::
 
@@ -98,7 +98,7 @@ The customer required update would be to delegate Azure role permissions to thos
 
 For non-CSP partners, including customers going forward, a new feature is being built in the Defender portal which allows the creation of an invitation which is similar to creating a GDAP relationship. This invitation contains a title, a description, justification and which Entra global roles are requested. After an internal approval process, the invitation is sent to the customer who can then approve or reject the request. After approval – the relationship is in place which allows the MSSP to manage their customer in the Defender portal.
 
-The screenshot below shows the assignment of the Microsoft Sentinel Responder role to a resource group (best practice) which contains the Sentinel workspace. This same process will be used to delegate Sentinel permissions to complete the GDAP relationship by the new addition of “Remote tenant group”
+The screenshot below shows the assignment of the Microsoft Sentinel Responder role to a resource group (best practice) which contains the Sentinel workspace. This same process will be used to delegate Sentinel permissions to complete the GDAP relationship by the new addition of “Remote tenant group.”
 
 :::image type="content" source="media/playbook-mssps/sentinel-responder-role-assignment.png" alt-text="Screenshot of Microsoft Sentinel Responder role assignment to resource group.":::
 
@@ -162,8 +162,8 @@ The typical entitlement management configurations that often are being considere
 
 **B2B Direct Connect**
 
-- Enables mutual trust between two Entra tenants.
-- Seamless collaboration via Teams shared channels without adding guests.
+- Enables mutual trust between two Entra tenants
+- Seamless collaboration via Teams shared channels without adding guests
 - Perfect for ongoing partnerships where users keep home credentials
 
 Most commonly a combination of B2B Collaboration and Cross-Tenant access settings are the most relevant choices for an MSSP. B2B Direct Connect is often considered too invasive due to the creation of a persistent trust relationship and synchronization of identities which causes a perceived loss of tenant boundary control.
@@ -188,15 +188,15 @@ Since there’s no or little management or governance available using this optio
 
 **Option 2 – leveraging entitlement access packages**
 
-A simple invitation and redemption process lets MSSP’s use their own credentials to access their customer’s resources. You can also enable self-service sign-up user flows to let MSSP analyst’s sign up for apps or resources themselves. Once the MSSP analyst redeems their invitation or completes sign-up, they're represented in the customer’s directory as a user object. The user type for these B2B collaboration users is typically set to "guest" and their user principal name contains the \#EXT# identifier. Developers can use Microsoft Entra business-to-business APIs to customize the invitation process or write applications like self-service sign-up portals.
+A simple invitation and redemption process lets MSSP’s use their own credentials to access their customer’s resources. You can also enable self-service sign-up user flows to let MSSP analyst’s sign-up for apps or resources themselves. Once the MSSP analyst redeems their invitation or completes sign-up, they're represented in the customer’s directory as a user object. The user type for these B2B collaboration users is typically set to "guest" and their user principal name contains the \#EXT# identifier. Developers can use Microsoft Entra business-to-business APIs to customize the invitation process or write applications like self-service sign-up portals.
 
 Together with Azure Lighthouse, this is the most common option used by MSSPs to manage their customers’ environment. Entra service limitations are described [here](/entra/identity/users/directory-service-limits-restrictions).
 
 The most notable limitations of this option are:
 
-- A single user can only belong to a maximum of 500 Microsoft Entra tenants as a member or a guest
+- A single user can only belong to a maximum of 500 Microsoft Entra tenants as a member or a guest.
 
-- Entra P2 licensing might be required for the customer tenant, please check [here](/entra/id-governance/licensing-fundamentals)
+- Entra P2 licensing might be required for the customer tenant, please check [here](/entra/id-governance/licensing-fundamentals).
 
 # Defender Portal Permissions
 
@@ -214,7 +214,7 @@ The minimal required permissions for an analyst to view Microsoft Sentinel data 
 
 Please refer to the permissions table mentioned here [Connect Microsoft Sentinel to the Microsoft Defender portal Prerequisites](/defender-xdr/microsoft-sentinel-onboard?view=o365-worldwide#prerequisites) for specific Microsoft Sentinel roles.
 
-A best practice is to have all Microsoft Sentinel-related resources in the same Azure resource group, then, delegate Microsoft Sentinel role permissions, such as the Sentinel Reader role, at the resource group level that contains the Microsoft Sentinel workspace. This approach ensures that the role assignment applies to all resources supporting Microsoft Sentinel.
+A best practice is to have all Microsoft Sentinel-related resources in the same Azure resource group, then delegate Microsoft Sentinel role permissions, such as the Sentinel Reader role, at the resource group level that contains the Microsoft Sentinel workspace. This approach ensures that the role assignment applies to all resources supporting Microsoft Sentinel.
 
 Specific Defender URBAC mappings can be found here: [Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions](/defender-xdr/compare-rbac-roles#map-microsoft-defender-xdr-unified-rbac-permissions-to-existing-rbac-permissions)
 
@@ -370,7 +370,7 @@ The goal for the Defender Platform is to provide all relevant information withou
 
 ### **Alert Correlation and Incident Merging in Defender**: When a new alert meets [correlation](/defender-xdr/alerts-incidents-correlation#incident-creation-and-alert-correlation) criteria, Defender aggregates and correlates it with other related alerts from all detection sources into a new incident. The unified incident queue reveals a more comprehensive attack, making analysts more efficient and providing a complete attack story. Defender’s correlation engine merges incidents when it recognizes common elements between alerts in separate incidents. However, there are scenarios where incidents cannot be merged. Please note that in [multi-workspace](/azure/sentinel/workspaces-defender-portal#primary-and-secondary-workspaces) scenarios, only alerts from a primary workspace are correlated with Microsoft Defender XDR data.
 
-### **[Multi-Tenant Organization (MTO):](/unified-secops-platform/mto-overview)** With the MTO, you can view and manage incidents, alerts, and cases across customer tenants in an unified queue. Each analyst can set up their multitenant view – with the tenants they’re triaging and manage across customer tenants from one place.
+### **[Multi-Tenant Organization (MTO):](/unified-secops-platform/mto-overview)** With the MTO, you can view and manage incidents, alerts, and cases across customer tenants in a unified queue. Each analyst can set up their multitenant view – with the tenants they’re triaging and manage across customer tenants from one place.
 
 ### **Integration with External Ticketing Systems**: If alerts and incidents you manage are fetched and synchronized with an external ticketing system, leverage the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0). This ensures seamless integration and efficient management of incidents and alerts across different systems. See more details on the APIs in the next section.
 
@@ -382,7 +382,7 @@ The goal for the Defender Platform is to provide all relevant information withou
 >
 > The [Microsoft Sentinel’s API](/rest/api/securityinsights/api-versions) continues to support actions against Microsoft Sentinel resources, like analytics rules, automation rules and more. To interact with the unified experience, for example with unified incidents and alerts, it is highly recommended to use the Microsoft Graph REST API.
 >
-> If you are interacting with Microsoft Sentinel incidents through the SecurityInsights API, the change in the response body most likely requires you to update your automation condition and/or trigger criteria. The snippets below, which focuses on specific response sections, are captured from a HTTP GET command for one specific Microsoft Sentinel incident prior to transitioning to the unified experience.
+> If you are interacting with Microsoft Sentinel incidents through the SecurityInsights API, the change in the response body most likely requires you to update your automation condition and/or trigger criteria. The snippets below, which focuses on specific response sections, are captured from an HTTP GET command for one specific Microsoft Sentinel incident prior to transitioning to the unified experience.
 >
 > [https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resour ceGroupName}}/providers/Microsoft.OperationalInsights/workspaces/{{workspaceName} }/providers/Microsoft.SecurityInsights/incidents/402dfa49-aaa3-4f42-8475 9b515228aeaf?api-version=2024-03-01](https://management.azure.com/subscriptions/%7b%7bsubscriptionId%7d%7d/resourceGroups/%7b%7bresour%20ceGroupName%7d%7d/providers/Microsoft.OperationalInsights/workspaces/%7b%7bworkspaceName%7d%20%7d/providers/Microsoft.SecurityInsights/incidents/402dfa49-aaa3-4f42-8475%209b515228aeaf?api-version=2024-03-01)
 >
@@ -404,7 +404,7 @@ The goal for the Defender Platform is to provide all relevant information withou
 >
 > A **providerIncidentUrl** field has been added, which provides the direct URL to the incident in the unified portal and the **providerName** has been changed to Microsoft XDR.
 >
-> When using a HTTP GET command for a specific unified incident, using the Microsoft Graph REST API, the body response is slightly different:
+> When using an HTTP GET command for a specific unified incident, using the Microsoft Graph REST API, the body response is slightly different:
 >
 > <https://graph.microsoft.com/v1.0/security/incidents/368>
 >
@@ -1081,7 +1081,7 @@ To further customize your CI/CD pipelines with any structure you use, you can ut
 
 Connections to **a GitHub repository can be initiated from different tenants, so all the approaches above can be used with GitHub repositories. When using Azure DevOps, the repository must be in the same tenant as the workspace, which limits deployment to option (3) above.**
 
-To learn more about how Azure DevOps can be used in a multitenant scenarios, you can check the following article: [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant/ba-p/4008109)
+To learn more about how Azure DevOps can be used in multitenant scenarios, check: [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant/ba-p/4008109).
 
 ### A Custom CI/CD workflow
 
@@ -1218,7 +1218,7 @@ Case management provides an introductory set of features that will be the founda
 
 - Tracking IoCs and threat actors
 
-- Tracking detection logic that needs tuning.
+- Tracking detection logic that needs tuning
 
 The specific capabilities include:
 
@@ -1226,9 +1226,9 @@ The specific capabilities include:
 
 - Define your own workflow by configuring custom status values
 
-- Improve collaboration, quality, and accountability by assigning tasks and due dates.
+- Improve collaboration, quality, and accountability by assigning tasks and due dates
 
-- Handle escalations and complex cases by linking multiple incidents to a case.
+- Handle escalations and complex cases by linking multiple incidents to a case
 
 - Link incidents or threat intelligence IOCs to your cases
 
@@ -1248,7 +1248,7 @@ To start using case management, select **Cases** in the Defender portal to acc
 
 > :::image type="content" source="media/playbook-mssps/case-management-queue.png" alt-text="Screenshot of case management queue in Defender portal.":::
 
-Click on name of the case to view the full details page. From here you can view case summary data, rich text comments, manage the case (with custom status values, add attachments, link incidents, and create and assign tasks.
+Click on name of the case to view the full details page. From here you can view case summary data, rich text comments, manage the case (with custom status values), add attachments, link incidents, and create and assign tasks.
 
 :::image type="content" source="media/playbook-mssps/case-details-page.png" alt-text="Screenshot of case details page showing summary and comments.":::
 
