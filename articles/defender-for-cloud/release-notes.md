@@ -60,6 +60,20 @@ This integration brings new value and benefits for security personas:
 
 **Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
 
+**New modeling for security recommendations**
+
+Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (e.g., **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
+
+With this change, you get:
+
+- **Smarter prioritization** based on individual impact  
+- **Granular governance** for remediation and exemptions  
+- **More accurate scoring** since each finding counts separately  
+
+In the **Defender portal**, only the new model is available. In the **Azure portal**, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
+
+**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal, the classic Microsoft Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
+
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
 ### Documentation updates
