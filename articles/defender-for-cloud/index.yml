@@ -21,7 +21,7 @@ landingContent:
           - text: What is Defender for Cloud?
             url: defender-for-cloud-introduction.md
           - text: Defender for Cloud in the Defender portal
-            url: defender-for-cloud-defender-portal.md
+            url: defender-portal/defender-for-cloud-defender-portal.md
           - text: What's new in Defender for Cloud?
             url: release-notes.md
           - text: Microsoft Defender for Cloud product page
