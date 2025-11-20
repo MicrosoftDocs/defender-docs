@@ -157,6 +157,8 @@ Learn more about how to [enable Defender CSPM](tutorial-enable-cspm-plan.md).
 
 > [!IMPORTANT]
 > If your AWS account is already connected to Microsoft Sentinel, you cannot connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+>
+> Use only the management account for onboarding. Delegated accounts aren't supported.
 
 To connect your AWS to Defender for Cloud by using a native connector:
 
