@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how Model Context Protocol (MCP) 
 author: mberdugo
 ms.topic: overview
-ms.date: 11/18/2025
+ms.date: 12/01/2025
 ms.author: monaberdugo
 ms.service: microsoft-sentinel
 
@@ -60,6 +60,11 @@ When you connect a [compatible client](sentinel-mcp-get-started.md#add-microsoft
 - **Build Security Copilot agents through natural language:** SOC engineers often spend weeks manually automating playbooks due to fragmented data sources and rigid schema requirements. With our agent creation tools, engineers can describe their intent in natural language to quickly build agents with the right AI model instructions and tools that reason over their security data, creating automations that are customized to their organization's workflows and processes.  
 
   [Get started with building agents](sentinel-mcp-agent-creation-tool.md)
+
+-	**Triage incidents and hunt for threats:** SOC engineers need to prioritize incidents rapidly and hunt over your organization’s own data easily without having to worry about security workflow issues and interoperability among platforms and tools that they use. Our triage collection of tools integrates your AI models with APIs that support incident triage and hunting. This integration reduces mean time to resolution, risk exposure, and dwell time and empowers your team to leverage AI for smarter and faster decision-making. 
+ 
+    [Get started with incident triage and threat hunting](sentinel-mcp-triage-tool.md)
+
 
 
 ## Related content
