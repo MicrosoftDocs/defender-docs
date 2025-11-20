@@ -33,9 +33,9 @@ CIDR notation for IPs isn't supported.
 
 ## Limitations
 
-1. Rate limitations for this API are 30 calls per minute.
-2. There's a limit of 15,000 active [Indicators](ti-indicator.md) per tenant.
-3. Maximum batch size for one API call is 500.
+- Rate limitations for this API are 30 calls per minute.
+- There's a limit of 15,000 active [Indicators](ti-indicator.md) per tenant.
+- Maximum batch size for one API call is 500.
 
 ## Permissions
 

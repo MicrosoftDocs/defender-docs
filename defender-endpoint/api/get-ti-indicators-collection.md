@@ -71,8 +71,7 @@ Empty
 
 If successful, this method returns 200, Ok response code with a collection of [Indicator](ti-indicator.md) entities.
 
-> [!NOTE]
-> If the Application has `Ti.ReadWrite.All` permission, it will be exposed to all Indicators. Otherwise, it will be exposed only to the Indicators it created.
+If the Application has `Ti.ReadWrite.All` permission, it will be exposed to all Indicators. Otherwise, it will be exposed only to the Indicators it created.
 
 ## Example 1
 

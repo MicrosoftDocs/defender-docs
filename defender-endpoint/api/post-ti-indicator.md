@@ -33,8 +33,8 @@ CIDR notation for IPs isn't supported.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
-2. There's a limit of 15,000 active indicators per tenant.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- There's a limit of 15,000 active indicators per tenant.
 
 ## Permissions
 
@@ -76,6 +76,7 @@ In the request body, supply a JSON object with the following parameters:
 |rbacGroupNames|String|Comma-separated list of RBAC group names the indicator would be applied to. **Optional**|
 |educateUrl|String|Custom notification/support URL. Supported for Block and Warn action types for URL indicators. **Optional**|
 |generateAlert|Enum|**True** if alert generation is required, **False** if this indicator shouldn't generate an alert.|
+
 ## Response
 
 - If successful, this method returns 200 - OK response code and the created / updated [Indicator](ti-indicator.md) entity in the response body.
@@ -105,7 +106,3 @@ POST https://api.securitycenter.microsoft.com/api/indicators
     "rbacGroupNames": ["group1", "group2"]
 }
 ```
-
-## Related article
-
-- [Manage indicators](../indicators-overview.md)

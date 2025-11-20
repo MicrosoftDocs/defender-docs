@@ -28,8 +28,9 @@ Retrieves the statistics for the given IP.
 This statistic information is based on data from the past 30 days.
 
 ## Limitations
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-2. Maximum Value for Lookbackhours is 720 Hours(30days).
+
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Maximum Value for Lookbackhours is 720 Hours(30days).
 
 ## Permissions
 

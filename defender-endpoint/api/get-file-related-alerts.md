@@ -30,8 +30,8 @@ Retrieves a collection of alerts related to a given file hash.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-2. Only SHA-1 Hash Function is supported (not MD5 or SHA-256).
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Only SHA-1 Hash Function is supported (not MD5 or SHA-256).
 
 ## Permissions
 

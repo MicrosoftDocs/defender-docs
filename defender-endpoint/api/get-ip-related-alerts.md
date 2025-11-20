@@ -28,7 +28,8 @@ Retrieves a collection of alerts related to a given IP address.
 
 
 ## Limitations
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 
 ## Permissions
