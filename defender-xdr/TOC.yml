@@ -139,16 +139,22 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Manage attack disruption
+      - name: Attack disruption
         items:
         - name: Overview
           href: automatic-attack-disruption.md
-        - name: Configure capabilities
+        - name: Manage
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
         - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md           
+          href: automatic-attack-disruption-exclusions.md  
+      - name: Predictive shielding
+        items:
+        - name: Overview
+          href: shield-predict-threats.md        
+        - name: Manage and view details
+          href: shield-predict-threats-manage.md         
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
@@ -461,6 +467,8 @@
             href: security-copilot-agents-defender.md          
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md
+          - name: Threat Intelligence Briefing Agent
+            href: threat-intel-briefing-agent-defender.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
