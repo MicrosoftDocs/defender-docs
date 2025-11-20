@@ -46,7 +46,7 @@ To enable AI agent inventory and detection you must opt in to the [Microsoft Def
 
 Microsoft Defender detects all of the AI agents created with Microsoft Copilot Studio and Azure AI Foundry. This inventory helps security teams discover, catalog, and continuously monitor AI agents across your organization.
 
- - To set up AI agent inventory for agents created in Coplot Studio, see [Discover and protect your AI Agents (Preview)](../defender-for-cloud-apps/ai-agent-inventory.md)
+ - To set up AI agent inventory for agents created in Coplot Studio, see [Discover and protect your AI Agents (Preview)](../defender-for-cloud-apps/ai-agent-inventory.md).
  - To set up AI agent inventory for agents created in Azure AI Foundry, see [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
 
 ## The AI agent inventory page
