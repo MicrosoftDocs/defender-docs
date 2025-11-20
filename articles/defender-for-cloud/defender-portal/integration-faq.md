@@ -131,43 +131,44 @@ You may need to extract the following types of identifiers from the Defender por
 ### How do I extract Asset IDs from recommendations?
 
 **Method 1: From Cloud Assets Recommendations**
-1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations** > **Cloud Assets** tab
-2. Locate the recommendation containing the asset you need to identify
-3. Select the **exposed asset** in the recommendation panel
-4. In the asset details, look for the **Asset ID** field
-5. Copy the identifier using the copy button
+
+1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
+1. Locate the recommendation containing the asset you need to identify.
+1. Select the **exposed asset** in the recommendation panel.
+1. In the asset details, look for the **Asset ID** field.
+1. Copy the identifier using the copy button.
 
 **Method 2: From Cloud Infrastructure Asset Inventory**
-1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud infrastructure**
-2. Use filters to locate the specific asset (environment, workload type, or search by name)
-3. Select the asset name to open detailed information
-4. In the asset details panel, locate and copy the **Asset ID**
+1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud infrastructure**.
+1. Use filters to locate the specific asset (environment, workload type, or search by name).
+1. Select the asset name to open detailed information.
+1. In the asset details panel, locate and copy the **Asset ID**.
 
 ### How do I extract Vulnerability IDs?
 
 1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations**
-2. In the Cloud Assets tab, filter by **Vulnerabilities** category on the left navigation
-3. Select a vulnerability-related recommendation
-4. In the recommendation side panel, look for:
+1. In the Cloud Assets tab, filter by **Vulnerabilities** category on the left navigation.
+1. Select a vulnerability-related recommendation.
+1. In the recommendation side panel, look for:
    - **Associated CVEs** tab or section
    - **Vulnerability details** with specific identifiers
    - **CVSS scores** and vulnerability classifications
-5. Select individual vulnerabilities to get detailed information including:
+1. Select individual vulnerabilities to get detailed information including:
    - Full CVE identifier (e.g., CVE-2023-1234)
    - Microsoft vulnerability ID (if applicable)
    - Package-specific vulnerability identifiers
 
 ### How do I extract Initiative IDs?
 
-1. Navigate to **Exposure Management** > **Recommendations**
-2. Select any recommendation
-3. In the recommendation side panel, go to **Related initiatives**
-4. This shows which initiatives the recommendation belongs to
-5. Each initiative will display its name and identifier
-6. Copy the initiative ID associated with the specific recommendation
+1. Navigate to **Exposure Management** > **Recommendations**.
+1. Select any recommendation.
+1. In the recommendation side panel, go to **Related initiatives**.
+1. This shows which initiatives the recommendation belongs to.
+1. Each initiative will display its name and identifier.
+1. Copy the initiative ID associated with the specific recommendation.
 
 ### How do I find Environment IDs for Cloud Scopes?
 
-1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud Infrastructure**
-2. Check the scope filter dropdown - the environment filter lists all environment identifiers
-3. Select a scope and then choose the environment filter to see detailed information including all environment IDs within that scope
+1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud Infrastructure**.
+1. Check the scope filter dropdown - the environment filter lists all environment identifiers.
+1. Select a scope and then choose the environment filter to see detailed information including all environment IDs within that scope.
