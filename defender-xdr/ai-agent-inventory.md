@@ -20,8 +20,7 @@ As organizations embrace AI agents to streamline operations and enhance producti
 
 Without strong visibility and controls, misconfigured AI agents can expose sensitive data, enable unauthorized access, escalate privileges, and trigger unintended actions that weaken your organization’s security posture.
 
-To provide comprehensive threat protection, we include both posture management to minimize the attack threat landscape, and we operate under the assumption that a breach can occur. Defender for Identity includes real-time protection for Copilot Studio AI Agents, along with near real-time alerts integrated into the XDR experiences to help you detect and respond to suspicious activity initiated by your AI agents.
-
+To provide comprehensive threat protection, we include both posture management to minimize the attack threat landscape, while at the same time we operate under the assumption that a breach can occur. 
 
 ## AI agent protection features
 Microsoft Defender protects you against security threats with comprehensive AI agent protection, offering proactive exposure management and advanced threat hunting with these features: 
