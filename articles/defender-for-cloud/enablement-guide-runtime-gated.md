@@ -42,7 +42,7 @@ Gated deployment enforces container image security policies during deployment by
 
 ### Step 2: Access security rules
 
-1.  In Environment Settings, go to the **Security Rules** tile.
+1.  In **Environment Settings**, go to the **Security Rules** tile.
 
     :::image type="content" source="media/enablement-guide-runtime-gating/security-rules.png" alt-text="Screenshot of Security Rules pane with Vulnerability Assessment tab in Microsoft Defender for Cloud." lightbox="media/enablement-guide-runtime-gating/security-rules.png":::
 
@@ -120,7 +120,7 @@ Configure exemptions during rule creation. They apply to audit and deny rules.
 
 Deny mode can introduce a one- or two-second delay during deployments because of real-time policy enforcement. When you select **Deny** as the action, a notification appears.
 
-**\[Insert screenshot: Tooltip shown when Deny mode is selected\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/deny-mode-selected.png" alt-text="Screenshot of tooltip shown when Deny mode is selected." lightbox="media/enablement-guide-runtime-gating/deny-mode-selected.png":::
 
 ## Admission monitoring
 
@@ -129,6 +129,17 @@ This view provides visibility into rule evaluations, triggered actions, and affe
 Use this view to track Audit and Deny decisions across your Kubernetes clusters.
 
 :::image type="content" source="media/enablement-guide-runtime-gating/admission-monitoring.png" alt-text="Screenshot of Admission Monitoring view showing rule evaluations and actions." lightbox="media/enablement-guide-runtime-gating/admission-monitoring.png":::
+
+### View event details
+
+To investigate a specific admission event, select it from the list. A details pane opens showing:
+
+- **Timestamp and admission action**: When the event occurred and whether it was allowed or denied
+- **Trigger details**: The container image digest, any violations detected, and the rule name that was triggered
+- **Policy description**: The vulnerability assessment policy and criteria used for evaluation
+- **Rule configuration snapshot**: The specific conditions and exemptions that were applied
+
+:::image type="content" source="media/enablement-guide-runtime-gating/admission-event-details.png" alt-text="Screenshot of admission event details pane showing trigger information, policy description, and rule configuration." lightbox="media/enablement-guide-runtime-gating/admission-event-details.png":::
 
 ## Best practices for rule design
 
