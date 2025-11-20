@@ -57,9 +57,6 @@ Gated deployment enforces container image security policies at deploy time based
   > [!NOTE]
   > Defender for Containers scans an image in a supported container registry within a few hours after the initial push event. For more information about scanning triggers, see [Vulnerability assessments for Defender for Container supported environments](/azure/defender-for-cloud/agentless-vulnerability-assessment-azure?tabs=azure-new%2Cazure-old#scanning-images-in-defender-for-containers-supported-registries).
 
-## Deny mode deployment failures
-
-## Exclusion issues
 
 ### Issue: Exclusion not applied
 
@@ -75,7 +72,7 @@ Gated deployment enforces container image security policies at deploy time based
 - Confirm the exclusion is still active.
 - Check that the resource (like image, pod, or namespace) matches the exclusion criteria.
 
-**\[Insert screenshot: Exclusion configuration panel with time-bound toggle\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/exemption-configuration-panel.png" alt-text="Screenshot of exemption configuration panel with time-bound toggle." lightbox="media/enablement-guide-runtime-gating/exemption-configuration-panel.png":::
 
 ## Developer experience and CI/CD integration
 

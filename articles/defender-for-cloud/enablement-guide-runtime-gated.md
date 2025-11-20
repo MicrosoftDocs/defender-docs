@@ -38,23 +38,19 @@ Gated deployment enforces container image security policies during deployment by
     - **Registry Access**
         - Security Findings
 
-**\[Insert screenshot: Environment Settings showing enabled toggles\]**
-
-:::image type="content" source="media/enablement-guide-runtime-gating/image1.png" alt-text="Screenshot of Environment Settings showing enabled toggles in Microsoft Defender for Cloud.":::
+:::image type="content" source="media/enablement-guide-runtime-gating/media/enablement-guide-runtime-gating/environment-settings-enabled-toggles.png" alt-text="Screenshot of Environment Settings showing enabled toggles in Microsoft Defender for Cloud." lightbox="media/enablement-guide-runtime-gating/environment-settings-enabled-toggles.png":::
 
 ### Step 2: Access security rules
 
 1.  In Environment Settings, go to the **Security Rules** tile.
+
+    :::image type="content" source="media/enablement-guide-runtime-gating/security-rules.png" alt-text="Screenshot of Security Rules pane with Vulnerability Assessment tab in Microsoft Defender for Cloud." lightbox="media/enablement-guide-runtime-gating/security-rules.png":::
+
 1.  Select the **Vulnerability Assessment** tab.
 
-**\[Insert screenshot: Security Rules pane with Vulnerability Assessment tab\]**
-
-:::image type="content" source="media/enablement-guide-runtime-gating/image2.png" alt-text="Screenshot of Security Rules pane with Vulnerability Assessment tab in Microsoft Defender for Cloud.":::
-
-:::image type="content" source="media/enablement-guide-runtime-gating/image3.png" alt-text="Screenshot of a generic computer interface.":::
+    :::image type="content" source="media/enablement-guide-runtime-gating/vulnerability-assessment.png" alt-text="Screenshot of Security Rules Vulnerability Assessment." lightbox="media/enablement-guide-runtime-gating/vulnerability-assessment.png":::
 
 ### Step 3: Create a new rule
-
 
 > [!NOTE]
 > By default, after you enable the Defender plans and required extensions, the portal creates an audit rule that flags images with high or critical vulnerabilities.
@@ -71,7 +67,7 @@ Gated deployment enforces container image security policies during deployment by
 | Resource Scope | Choose from Cluster, Namespace, Pod, Deployment, Image, Label Selector |
 | Matching Criteria | Select from Equals, Starts With, Ends With, Contains, Not Equals |
 
-**\[Insert screenshot: Rule creation wizard – basic configuration\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/rule-creation-wizard.png" alt-text="Screenshot of Rule creation wizard – basic configuration." lightbox="media/enablement-guide-runtime-gating/rule-creation-wizard.png":::
 
 ### Step 4: Define conditions
 
@@ -79,7 +75,7 @@ Under **Scan Configurations**, specify:
 
 - **Trigger Rule Conditions**: Choose vulnerability severity levels or specific CVE IDs
 
-**\[Insert screenshot: Rule configuration panel with condition types and exemptions\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/edit-vulnerability-assessment-rule.png" alt-text="Screenshot of Rule configuration panel with condition types and exemptions." lightbox="media/enablement-guide-runtime-gating/edit-vulnerability-assessment-rule.png":::
 
 ### Step 5: Define exemptions
 
@@ -113,14 +109,12 @@ Exemptions let trusted resources bypass gating rules.
 
 Configure exemptions during rule creation. They apply to audit and deny rules.
 
-**\[Insert screenshot: Exemption configuration panel with time-bound toggle\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/exemption-configuration-panel.png" alt-text="Screenshot of exemption configuration panel with time-bound toggle." lightbox="media/enablement-guide-runtime-gating/exemption-configuration-panel.png":::
 
 ### Step 6: Finalize and save
 
 1.  Review the rule configuration.
 1.  To save and activate the rule, select **Add Rule**.
-
-**\[Insert screenshot: Confirmation screen after rule creation\]**
 
 ## Deny mode configuration
 
@@ -134,7 +128,7 @@ Gated Deployment events appear in the **Admission Monitoring** view in Defender 
 This view provides visibility into rule evaluations, triggered actions, and affected resources.  
 Use this view to track Audit and Deny decisions across your Kubernetes clusters.
 
-**\[Insert screenshot: Admission Monitoring view showing rule evaluations and actions\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/admission-monitoring.png" alt-text="Screenshot of Admission Monitoring view showing rule evaluations and actions." lightbox="media/enablement-guide-runtime-gating/admission-monitoring.png":::
 
 ## Best practices for rule design
 
