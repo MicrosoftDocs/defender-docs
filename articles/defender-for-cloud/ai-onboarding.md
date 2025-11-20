@@ -120,13 +120,13 @@ Run the following commands in Azure PowerShell
      ```        
 1. On the web page that opens, sign in using your tenant admin credentials.
 1. Verify that the Microsoft Purview service principal is in your tenant:
-        ```PowerShell
-        Get-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
-        ```  
+     ```PowerShell
+     Get-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
+     ```  
 1. If the service principal doesn't exist, add the Microsoft Purview app service principal to the tenant:
-        ```PowerShell
-        New-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
-        ```  
+    ```PowerShell
+    New-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
+    ```  
    
 ## Related content
 
