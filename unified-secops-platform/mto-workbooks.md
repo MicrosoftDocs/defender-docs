@@ -52,7 +52,6 @@ To navigate to the multitenant Organization (MTO) portal in Microsoft Sentinel. 
 
     :::image type="content" source="./media/mto-workbooks/view-workbook.png" alt-text="Screenshot of View saved workbook option.":::
 
-<!---
 ## Open the situational awareness workbook
 
 Use the workbook to get insights across your tenants, including health status, trends, and metrics. This workbook is multi tenant supported, so you can select which tenants to include.
@@ -66,8 +65,6 @@ Optionally, select **Edit selection** to select specific workspaces. ​
 Ensure your home tenant is included in the scope and has threat intelligence data in the selected workspace, and select **Apply**.
 
     :::image type="content" source="./media/mto-workbooks/tenant-scope.png" alt-text="Screenshot of tenant selector.":::
-
---->
 
 ## Explore the Workbook ​
 
