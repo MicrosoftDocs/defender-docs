@@ -64,7 +64,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 ## Use the Microsoft Defender portal to add trusted ARC sealers
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
 
 2. On the **Email authentication settings** page, verify that the **ARC** tab is selected, and then select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
 
