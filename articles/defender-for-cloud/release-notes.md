@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
@@ -39,6 +40,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+### Attack Path now includes Entra OAuth application compromise
+
+November 20, 2025
+
+Attack Path now shows how attackers use compromised Entra OAuth applications to move across environments and reach critical resources. This release helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
+
+Learn more about [how to manage Attack Path](/azure/defender-for-cloud/how-to-manage-attack-path).
 
 ### In-pipeline container vulnerability scanning (preview)
 
