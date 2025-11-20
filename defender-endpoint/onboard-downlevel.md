@@ -41,11 +41,13 @@ To onboard down-level Windows client endpoints to Defender for Endpoint, you can
 **Defender endpoint security solution**
 
 - Windows 7 SP1 Pro
+- Windows 7 SP1 Enterprise
 - Windows Server 2008 R2 SP1
 
 **MMA/SCEP**
 
 - Windows 7 SP1 Pro
+- Windows 7 SP1 Enterprise
 - Windows 8.1 Pro
 - Windows 8.1
 - Windows Server 2008 R2 SP1
