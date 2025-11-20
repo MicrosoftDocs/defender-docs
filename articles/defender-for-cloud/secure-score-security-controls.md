@@ -253,7 +253,7 @@ The dashboard contains the following two reports to help you analyze your securi
 > [!NOTE]
 > **Two Secure Score models**: Microsoft Defender for Cloud now offers two different Secure Score models. The new **Cloud Secure Score (risk-based)** is available in the Microsoft Defender portal and incorporates asset risk factors and criticality for more accurate prioritization. The classic **Secure Score** remains available in the Azure portal. These are completely different models with different calculations and values. For more information about the classic model, see the [Azure portal experience](secure-score-security-controls.md?pivots=azure-portal) of this article.
 >
-This capability is currently in preview.
+> This capability is currently in preview.
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
 ## Cloud secure score in the Defender portal
