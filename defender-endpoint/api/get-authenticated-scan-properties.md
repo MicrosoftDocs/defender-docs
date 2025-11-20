@@ -27,8 +27,6 @@ appliesto:
 
 Learn more about [Windows authenticated scan](/defender-vulnerability-management/windows-authenticated-scan) and [Network authenticated scans](../network-devices.md).
 
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
-
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
 

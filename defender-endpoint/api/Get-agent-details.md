@@ -34,14 +34,14 @@ Retrieves the details for a specified agent by its ID.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
 
 When obtaining a token using user credentials:
 
-- To view data the user needs to have at least the following role permission: 'ViewData' or 'TvmViewData' . For more information, see: [Create and manage roles](../user-roles.md)
+- To view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData`. For more information, see: [Create and manage roles](../user-roles.md)
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 

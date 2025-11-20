@@ -34,9 +34,9 @@ API to add, update, or delete an authenticated scan.
 
 ## Limitations
 
-Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
-You can post on machines last seen according to your configured retention period.
+- You can post on machines last seen according to your configured retention period.
 
 ## Permissions
 
