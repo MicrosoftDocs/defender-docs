@@ -2,8 +2,8 @@
 title: Onboard client devices (Windows or Mac) to Microsoft Defender for Endpoint
 description: Find out how to onboard client devices, such as Windows and Mac PCs to Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: pahuijbr
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/07/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -22,9 +22,9 @@ appliesto:
 ---
 # Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint
 
-
-
 ## Overview of onboarding client devices
+
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 To onboard client devices running Windows or macOS, follow this general process:
 
