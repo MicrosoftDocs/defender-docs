@@ -50,6 +50,8 @@ The following steps guide you on how to activate the Microsoft Defender XDR Unif
 > [!IMPORTANT]
 > You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+>
+> > To activate Microsoft Sentinel workspaces, make sure you have the correct role or combination of roles.
 
 ### Activate from the Permissions and roles page
 
@@ -62,7 +64,7 @@ You can activate your workloads in two ways from the Permissions and roles page:
 1. **Activate workloads**
 
    - Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
-   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload.
+   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload. **Note**: For Microsoft Sentinel, each workspace must be activated individually.
 
      :::image type="content" source="/defender/media/defender/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
 
@@ -98,9 +100,11 @@ Follow these steps to activate your workloads directly in Microsoft Defender XDR
 
 4. Select **Permissions and roles**. This brings you to the **Activate workloads** page.
 
-5. Select the toggle for the workload you want to activate. **Note**: For Sentinel, each workspace must be activated individually.
-
-6. Select **Activate** on the confirmation message.
+5. Select the toggle for the workload you want to activate.
+   
+6. If you would like to activate Sentinel's workload, select **Manage workspaces** and select which workspaces you'd like to activate.
+   
+7. Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
 
