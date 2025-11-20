@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |------|---------|-------|
 |November 30, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 |November 30, 2025 | Update | [Documentation updates](#documentation-updates) |
+|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
@@ -87,6 +88,14 @@ We’ve begun a major revamp of the Microsoft Defender for Cloud documentation t
 - **Simplified navigation**: A unified table of contents based on customer feedback.  
 - **Mixed-mode experience**: Articles that cover both Azure and Defender portals with entry points at the top of the article.  
 - **New Defender portal section**: Features recent enhancements, opt-in guidance, and known limitations.  
+
+### Attack Path now includes Entra OAuth application compromise
+
+November 20, 2025
+
+Attack Path now shows how attackers use compromised Entra OAuth applications to move across environments and reach critical resources. This release helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
+
+Learn more about [how to manage Attack Path](/azure/defender-for-cloud/how-to-manage-attack-path).
 
 ### In-pipeline container vulnerability scanning (preview)
 
