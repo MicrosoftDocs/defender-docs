@@ -21,11 +21,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-endpoint/linux-install-with-activator.md",
-      "redirect_url": "/defender-endpoint/linux-custom-location-installation",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "defender-endpoint/preview.md",
       "redirect_url": "/defender-xdr/preview",
       "redirect_document_id": false
@@ -153,6 +148,11 @@
     {
       "source_path": "defender-endpoint/onboard-windows-server-2012r2-2016.md",
       "redirect_url": "/defender-endpoint/onboard-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/linux-install-with-activator.md",
+      "redirect_url": "/defender-endpoint/linux-install-with-defender-deployment-tool",
       "redirect_document_id": false
     },
     {
