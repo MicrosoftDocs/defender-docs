@@ -31,8 +31,8 @@ Retrieves all files related to a specific alert.
 
 ## Limitations
 
-1. You can query on alerts last updated according to your configured retention period.
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- You can query on alerts last updated according to your configured retention period.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
@@ -73,7 +73,7 @@ If successful and alert and files exist - 200 OK. If alert not found - 404 Not F
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/alerts/636688558380765161_2136280442/files

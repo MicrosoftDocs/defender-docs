@@ -43,11 +43,11 @@ OData supported operators:
 
 ## Limitations
 
-1. You can get alerts last updated according to your configured retention period.
+- You can get alerts last updated according to your configured retention period.
 
-2. Maximum page size is 10,000.
+- Maximum page size is 10,000.
 
-3. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
 
 
 ## Permissions
@@ -55,7 +55,7 @@ OData supported operators:
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md) for more information)
+- The user needs to have at least the following role permission: `View Data`. For more information,see: [Create and manage roles](../user-roles.md).
 
 - The response includes only alerts that are associated with devices that the user can access, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 

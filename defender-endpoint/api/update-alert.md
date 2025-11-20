@@ -34,8 +34,8 @@ Updatable properties are: `status`, `determination`, `classification`, and `assi
 
 ## Limitations
 
-1. You can update alerts that available in the API. For more information, see [List Alerts](get-alerts.md).
-2. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- You can update alerts that available in the API. For more information, see [List Alerts](get-alerts.md).
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 

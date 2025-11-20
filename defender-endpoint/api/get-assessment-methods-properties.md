@@ -29,8 +29,7 @@ appliesto:
 
 Provides methods and property details about the APIs that pull vulnerability management data on a per-device basis. There are different API calls to get different types of data.Each API call contains the requisite data for devices in your organization.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 You can use the export assessment APIs to retrieve (export) different types of information:
 
