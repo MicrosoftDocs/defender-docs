@@ -31,9 +31,9 @@ appliesto:
 
 Retrieves a list of Microsoft Defender Antivirus device health details. This API has different API calls (methods) to get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
-- **JSON response**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+- **JSON**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- **via files** This API solution enables pulling larger amounts of data faster and more reliably, and is recommended for large organizations who have more than 100,000 devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
+- **Files** This API solution enables pulling larger amounts of data faster and more reliably, and is recommended for large organizations who have more than 100,000 devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
 
    1. Call the API to get a list of download URLs with all your organization data.
 

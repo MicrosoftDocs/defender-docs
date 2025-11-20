@@ -34,14 +34,12 @@ This API has two methods to retrieve Microsoft Defender Antivirus device antivir
 
 Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages. See [Export device health details API methods and properties](device-health-api-methods-properties.md).
 
-> [!IMPORTANT]
->
-> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
 
-> [!NOTE]
->
-> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
->
+### Prerequisites
+
+For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+
 
 ## 1 Export health reporting (JSON response)
 
@@ -289,11 +287,5 @@ Here's an example response:
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
 > See: [Performance analyzer for Microsoft Defender Antivirus](../tune-performance-defender-antivirus.md).
 >
-
-## See also
-
-[Export device health methods and properties](device-health-api-methods-properties.md)
-
-[Device health and compliance reporting](../device-health-reports.md)
 
 
