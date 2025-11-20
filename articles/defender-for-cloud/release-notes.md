@@ -70,9 +70,9 @@ With this change, you get:
 - **Granular governance** for remediation and exemptions  
 - **More accurate scoring** since each finding counts separately  
 
-In the **Defender portal**, only the new model is available. In the **Azure portal**, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
+In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
 
-**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal, the classic Microsoft Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
+**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the **Defender portal, the classic Microsoft Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
 
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
