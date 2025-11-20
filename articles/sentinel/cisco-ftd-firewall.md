@@ -1,6 +1,6 @@
 ---
-title: Collect data from Cisco FTD firewall devices running ASA
-description: "Use Microsoft Sentinel connectors to collect logs from Cisco FTD firewall devices in Adaptive Security Appliance (ASA) and Common Event Format (CEF) formats."
+title: Collect data from Cisco firewall devices running ASA
+description: "Use Microsoft Sentinel connectors to collect logs from Cisco firewall devices in Adaptive Security Appliance (ASA) and Common Event Format (CEF) formats."
 author: guywi-ms
 ms.date: 03/24/2025
 ms.service: microsoft-sentinel
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.collection: sentinel-data-connector
 ---
 
-# Collect data from Cisco FTD firewall devices
+# Collect data from Cisco firewall devices
 
 Microsoft Sentinel provides two connectors that collect logs from Cisco Secure Firewall devices, depending on whether the devices run the Firewall Threat Defense (FTD) or Adaptive Security Appliance (ASA) software. This article explains when to use each connector and provides links to installation instructions.
 
