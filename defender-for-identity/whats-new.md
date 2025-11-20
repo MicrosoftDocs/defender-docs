@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/12/2025
+ms.date: 11/16/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -25,6 +25,31 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2025
 
+|Version number |Updates |
+|---------|---------|
+|2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
+
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
+
+Defender for Identity offers automatic Windows event-auditing configuration for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones; admins can enable it in the Defender portal or via the Graph API, and the feature, along with its related health alerts, will roll out gradually over the next few weeks.
+
+### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
+
+The following new features are now available in Microsoft Defender for Identity:
+
+**Accounts tab in Identity Inventory**
+
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+
+**Manual link and unlink of accounts**
+
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+
+**Identity-level remediation actions**
+
+You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
+
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
 The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
@@ -35,15 +60,15 @@ The new security posture assessment lists users whose valid credentials have bee
 |---------|---------|
 |2.250|The improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also includes security and performance improvements.|
 
-### Expansion of identity scoping: upport for Organizational units (Preview) 
+### Expansion of identity scoping: Support for Organizational units (Preview) 
 
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.  
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
 ## October 2025
 
-We’re excited to announce that the Microsoft Defender for Identity Unified Sensor (v3.x) is now generally available (GA). 
-The [unified sensor](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+We’re excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA). 
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -59,7 +84,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 | Classic Alert Title | External ID| XDR Alert Name |Detector ID|
 |--------------------|------------|----------------|-----------|
-|Active Directory attributes Reconnnaissance using LDAP|2210|[Active Directory attributes Reconnnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
 |User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
 |Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
 |    |    |[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
@@ -67,9 +92,9 @@ As part of the ongoing transition to a unified alerting experience across Micros
 |Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
-### Unlock additional security value in the unified agent (Preview)
+### Additional security value in the Defender for Identity sensor v3.x
 
-Get enhanced protection by applying the **Unified sensor RPC audit** tag to your v3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor v3.x in the **Asset rule management** page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
@@ -80,18 +105,18 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
 
 
-### New API support for unified sensor (preview)
-We are excited to announce the availability of a new Graph-based API for managing unified sensor server actions in Microsoft Defender for Identity.
+### New API support for the Defender for Identity sensor v3.x (Preview)
+We are excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
 This capability is currently in preview and available in API Beta version.
 
 This API allows customers to:
 
-* Monitor the status of unified sensor servers
+* Monitor the status of servers deployed with the Defender for Identity sensor v3.x
 * Enable or disable the automatic activation of eligible servers
 * Activate or deactivate the sensor on eligible servers
  ​
 
-For more information, see [Managing unified sensor actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -276,7 +301,7 @@ New [health issue](health-alerts.md) for cases where sensors running on VMware h
 Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
 Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
 
-Learn more about [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
+Learn more about [Privileged Identity Management.](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 
