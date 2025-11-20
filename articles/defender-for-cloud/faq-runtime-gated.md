@@ -38,6 +38,14 @@ By default, if scan results aren't yet available in the container registry, gate
 
 All Gated Deployment events appear in the **Admission Monitoring** view in Defender for Cloud. The view shows rule evaluations, triggered actions, and affected resources.
 
+To access Admission Monitoring:
+
+1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
+1. Select the relevant subscription, AWS account, or GCP project.
+1. Navigate to the **Admission Monitoring** view.
+
+Learn more about [monitoring gated deployment events](enablement-guide-runtime-gated.md#admission-monitoring).
+
 ## Can I exempt specific CVEs or resources?
 
 Yes, you can configure exemptions during rule creation. Supported exemption types include:
@@ -58,7 +66,7 @@ Yes, you can. When creating an exemption, enable the **Time-bound** toggle and s
 
 ## Does Deny mode affect deployment performance?
 
-Yes. Deny mode might introduce a 1–2 second delay during deployment due to real-time policy enforcement.
+Yes. Deny mode might introduce a 1-2 second delay during deployment due to real-time policy enforcement.
 
 ## Can I manage exemptions or rules through API or CLI?
 

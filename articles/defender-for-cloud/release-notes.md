@@ -32,7 +32,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 | -------- | -------- | -------- |
 | November 30, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
-|------|---------|-------|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|

@@ -87,7 +87,7 @@ Gated deployment enforces policies when you deploy. You might see specific messa
 | Image allowed but monitored (audit mode) | Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule |
 | Image allowed without scan results (audit mode) |  Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule|
 
-**\[Insert screenshot: Admission Monitoring view showing developer-facing results\]**
+:::image type="content" source="media/enablement-guide-runtime-gating/admission-monitoring.png" alt-text="Screenshot of Admission Monitoring view showing developer-facing results." lightbox="media/enablement-guide-runtime-gating/admission-monitoring.png":::
 
 ## Best practices for developers
 
@@ -103,7 +103,7 @@ For detailed guidance and support, see these articles:
 - [Overview: Gated Deployment of Container Images to a Kubernetes Cluster](runtime-gated-overview.md) 
   Introduction to the feature, its value, and how it works
 
-- [Enablement Guide: Configure Gated Deployment in Defender for Containers](enablement-guide-runtime-gated.md)
+- [Enablement Guide: Configure Gated Deployment for Kubernetes Clusters](enablement-guide-runtime-gated.md)
   Step-by-step instructions for onboarding, rule creation, Exclusions, and monitoring
 
 - [FAQ: Gated Deployment in Defender for Containers](faq-runtime-gated.md)
