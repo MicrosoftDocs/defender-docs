@@ -83,6 +83,37 @@ To summarize an incident:
 
    :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
 
+### Manage Copilot incident summaries settings (preview)
+
+By default, Copilot generates a summary for each incident the user opens, but you can change this setting to display incident summaries only in specific instances. You can choose to have summaries generated:
+
+- Always (for every incident opened)
+- Based on the severity level of the incident
+- On demand only
+
+To change the settings for Copilot incident summaries in Microsoft Sentinel, follow these steps:
+
+1. Go to **System** > **Settings** > **Copilot in Defender** in the Microsoft Sentinel navigation pane.
+
+    :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-settings.png" alt-text="Screenshot that shows the Copilot settings page in Microsoft Sentinel.":::
+
+1. Under **Preferences**, select **Incident Summary generation**.
+1. Select either **Auto-generate** or **Generate on demand**, depending on your preference.
+1. If you select **Auto-generate**, choose between **Always** or **Incident severity**. If you select **Incident severity**, choose the *minimum* severity level for which you want Copilot to generate incident summaries automatically.
+
+    :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-settings-preferences.png" alt-text="Screenshot that shows the Copilot settings preferences page in Microsoft Sentinel.":::
+
+1. Select **Save**.
+
+- When you select **Incident severity**, an estimate of the number of incidents of each severity level reviewed per day is displayed, along with the estimated SCU consumption.
+
+    :::image type="content" source="./media/security-copilot-m365d-incident-summary/incident-severity.png" alt-text="Screenshot that shows the approximate number of incidents of each severity level.":::
+
+- Copilot saves generated incident summaries for a week. If you select an incident whose summary is in the cache, and the incident hasn't changed significantly, the summary is automatically redisplayed at no cost regardless of the setting.
+- To generate a summary on demand for an incident that's not automatically generated, select the **Generate** button.
+
+    :::image type="content" source="media/security-copilot-m365d-incident-summary/generate-summary.png" alt-text="Screenshot that shows the Generate summary button on the incident page.":::
+
 ## Sample incident summary prompt
 
 In the Security Copilot standalone portal, you can use the following prompt to generate incident summaries:
