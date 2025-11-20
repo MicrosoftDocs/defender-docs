@@ -944,6 +944,12 @@
           href: normalization-functions.md
         - name: ASIM known issues
           href: normalization-known-issues.md
+        - name: ASIM entities
+          items:
+            - name: ASIM user entity
+              href: normalization-entity-user.md
+            - name: ASIM device entity
+              href: normalization-entity-device.md
         - name: ASIM schemas
           items:
             - name: ASIM alert event schema
