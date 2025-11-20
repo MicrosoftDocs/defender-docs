@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: raynew
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -19,7 +19,7 @@ ms.topic: concept-article
 search.appverid:
   - MOE150
   - MET150
-ms.date: 11/14/2024
+ms.date: 07/27/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -51,15 +51,15 @@ Incidents also provide you with a framework for managing and documenting your in
 
 ## Alert sources and threat detection
 
-Alerts in the Microsoft Defender portal come from many sources. These sources include the many services that are part of Microsoft Defender XDR, as well as other services with varying degrees of integration with the Microsoft Defender portal. 
+Alerts in the Microsoft Defender portal come from many sources. These sources include the many services that are part of Microsoft Defender XDR, as well as other services with varying degrees of integration with the Microsoft Defender portal.
 
 For example, when Microsoft Sentinel is [onboarded](/unified-secops-platform/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
 
-Microsoft Defender XDR itself also creates alerts. Defender XDR's unique correlation capabilities provide another layer of data analysis and threat detection for all the non-Microsoft solutions in your digital estate. These detections produce Defender XDR alerts, in addition to the alerts already provided by Microsoft Sentinel's analytics rules.
+- Microsoft Sentinel customers using the Defender portal, or who are using the Azure portal with the [Microsoft Sentinel Defender XDR data connector](/azure/sentinel/connect-microsoft-365-defender), also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation state actors, such as ransomware campaigns and fraudulent operations. For customers without E5 licenses or Microsoft Sentinel, these alerts are available only in the Microsoft 365 Admin Center (MAC).
 
-Within each of these sources, there are one or more threat detection mechanisms that produce alerts based on the rules defined in each mechanism.
+- Microsoft Defender XDR itself also creates alerts. Defender XDR's unique correlation capabilities provide another layer of data analysis and threat detection for all the non-Microsoft solutions in your digital estate. These detections produce Defender XDR alerts, in addition to the alerts already provided by Microsoft Sentinel's analytics rules.
 
-For example, Microsoft Sentinel has at least four different engines that produce different types of alerts, each with its own rules.
+Within each of these sources, there are one or more threat detection mechanisms that produce alerts based on the rules defined in each mechanism. For example, Microsoft Sentinel has at least four different engines that produce different types of alerts, each with its own rules.
 
 ## Tools and methods for investigation and response
 
