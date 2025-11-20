@@ -115,9 +115,9 @@ Run the following commands in Azure PowerShell
     Import-Module Az.Accounts
     ```
 1. Connect to Azure PowerShell as a tenant admin : 
-        ```PowerShell
-        Connect-AzAccount -Tenant $yourTenantIdHere
-        ```        
+     ```PowerShell
+     Connect-AzAccount -Tenant $yourTenantIdHere
+     ```        
 1. On the web page that opens, sign in using your tenant admin credentials.
 1. Verify that the Microsoft Purview service principal is in your tenant:
         ```PowerShell
