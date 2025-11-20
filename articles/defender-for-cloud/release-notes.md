@@ -67,7 +67,7 @@ Security recommendations now use a unified model where each finding appears as i
 With this change, you get:
 
 - **Smarter prioritization** based on individual impact  
-- **Granular governance** for remediation and exemptions  
+- **Governance** - more detailed usage of governance, recommendations and exemption capabilities
 - **More accurate scoring** since each finding counts separately  
 
 In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).

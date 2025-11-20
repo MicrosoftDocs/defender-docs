@@ -1200,9 +1200,6 @@
       href: alert-validation.md
     - name: Investigate resource health
       href: investigate-resource-health.md
-    - name: Extract resource identifiers for support cases
-      displayName: resource id, vulnerability id, initiative id, environment id, troubleshooting, support
-      href: extract-resource-identifiers-support.md
     - name: Queries - Azure Resource Graph
       href: ./resource-graph-samples.md
 

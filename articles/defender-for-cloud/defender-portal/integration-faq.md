@@ -115,3 +115,59 @@ Governance assignments created manually or automatic will continue to work, and 
 ### How will the transition impact ongoing investigation, alerts or integrations?
 
 With cloud security posture data now integrated into the Defender portal, SOC teams gain a unified experience for investigating and responding to cloud-related alerts and incidents. Previously, investigations required switching to the Azure portal to gather resource details, creating inefficiencies, and gaps in visibility. Now, all posture signals and metadata are available directly within Defender, eliminating tool-hopping and enabling faster, more informed decisions. The new cloud asset inventory provides complete visibility into resources and their posture, while exposure insights—such as the exposure graph—deliver a 360-degree view of each asset. This integration empowers SOC teams to correlate alerts with posture data instantly, streamline workflows, and strengthen incident response.
+
+## Extracting identifiers for support cases
+
+When working with Microsoft Defender for Cloud support cases, you often need to provide specific identifiers for assets, vulnerabilities, initiatives, and environments. Without proper resource identifiers, support teams cannot effectively troubleshoot or escalate customer issues.
+
+### What identifiers do I need for support cases?
+
+You may need to extract the following types of identifiers from the Defender portal:
+- **Asset IDs** - for specific cloud resources
+- **Vulnerability IDs** - for security vulnerabilities (CVEs, Microsoft vulnerability IDs)
+- **Initiative IDs** - for compliance initiatives and standards
+- **Environment IDs** - for cloud scope and environment identification
+
+### How do I extract Asset IDs from recommendations?
+
+**Method 1: From Cloud Assets Recommendations**
+1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations** > **Cloud Assets** tab
+2. Locate the recommendation containing the asset you need to identify
+3. Select the **exposed asset** in the recommendation panel
+4. In the asset details, look for the **Asset ID** field
+5. Copy the identifier using the copy button
+
+**Method 2: From Cloud Infrastructure Asset Inventory**
+1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud infrastructure**
+2. Use filters to locate the specific asset (environment, workload type, or search by name)
+3. Select the asset name to open detailed information
+4. In the asset details panel, locate and copy the **Asset ID**
+
+### How do I extract Vulnerability IDs?
+
+1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations**
+2. In the Cloud Assets tab, filter by **Vulnerabilities** category on the left navigation
+3. Select a vulnerability-related recommendation
+4. In the recommendation side panel, look for:
+   - **Associated CVEs** tab or section
+   - **Vulnerability details** with specific identifiers
+   - **CVSS scores** and vulnerability classifications
+5. Select individual vulnerabilities to get detailed information including:
+   - Full CVE identifier (e.g., CVE-2023-1234)
+   - Microsoft vulnerability ID (if applicable)
+   - Package-specific vulnerability identifiers
+
+### How do I extract Initiative IDs?
+
+1. Navigate to **Exposure Management** > **Recommendations**
+2. Select any recommendation
+3. In the recommendation side panel, go to **Related initiatives**
+4. This shows which initiatives the recommendation belongs to
+5. Each initiative will display its name and identifier
+6. Copy the initiative ID associated with the specific recommendation
+
+### How do I find Environment IDs for Cloud Scopes?
+
+1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud Infrastructure**
+2. Check the scope filter dropdown - the environment filter lists all environment identifiers
+3. Select a scope and then choose the environment filter to see detailed information including all environment IDs within that scope
