@@ -38,7 +38,7 @@ Gated deployment enforces container image security policies during deployment by
     - **Registry Access**
         - Security Findings
 
-:::image type="content" source="media/enablement-guide-runtime-gating/media/enablement-guide-runtime-gating/environment-settings-enabled-toggles.png" alt-text="Screenshot of Environment Settings showing enabled toggles in Microsoft Defender for Cloud." lightbox="media/enablement-guide-runtime-gating/environment-settings-enabled-toggles.png":::
+:::image type="content" source="media/enablement-guide-runtime-gating/environment-settings-enabled-toggles.png" alt-text="Screenshot of Environment Settings showing enabled toggles in Microsoft Defender for Cloud." lightbox="media/enablement-guide-runtime-gating/environment-settings-enabled-toggles.png":::
 
 ### Step 2: Access security rules
 
