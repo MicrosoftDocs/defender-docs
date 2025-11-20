@@ -4,8 +4,8 @@ description: Learn how alerts are correlated, and how and why incidents might be
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
