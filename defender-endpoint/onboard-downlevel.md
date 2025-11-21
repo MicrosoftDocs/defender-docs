@@ -93,7 +93,7 @@ Review the following details to verify minimum system requirements:
     > [!NOTE]
     > Installation of .NET 4.5 might require you to restart your computer after installation.
 
-- Meet the Azure Log Analytics agent minimum system requirements. For more information, see [Collect data from computers in you environment with Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)
+- Meet the Azure Log Analytics agent minimum system requirements. For more information, see [Collect data from computers in your environment with Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)
 
 ### Installation steps
 
@@ -214,7 +214,7 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
     > [!NOTE]
     > This article assumes you're using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
 
-**Step 2: Create a file name DeployMMA.cmd (using notepad)**
+**Step 2: Create a file named DeployMMA.cmd (using notepad)**
 Add the following lines to the cmd file. Note that you'll need your WORKSPACE ID and KEY.
 
 The following command is an example. Replace the following values:
