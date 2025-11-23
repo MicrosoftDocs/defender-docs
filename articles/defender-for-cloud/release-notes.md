@@ -58,7 +58,7 @@ Learn more about [Attack Path Analysis](concept-attack-path.md) and how to enabl
 November 23, 2025
 Estimated date for change: December 2025
 
-In December 2025, Defender for Cloud will be adding additional IP addresses to our multicloud discovery services in order to accommodate improvements and ensure a more efficient experience for all users.
+In December 2025, Defender for Cloud is adding IP addresses to its multicloud discovery services to accommodate improvements and ensure a more efficient experience for all users.
 
 To ensure uninterrupted access from our services, your IP allowlist should be [updated with the new ranges](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/Network%20requirements). 
 
