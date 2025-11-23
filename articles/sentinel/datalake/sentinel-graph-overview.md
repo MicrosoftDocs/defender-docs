@@ -70,23 +70,6 @@ To begin using Microsoft Sentinel graph in Microsoft Purview:
 ---
 
 
-# Custom graphs in Microsoft Sentinel
-
-Custom graphs in Microsoft Sentinel let security teams model complex attack patterns, visualize relationships across data sources, and use advanced analytics for proactive threat detection and investigation. Custom graphs combine security telemetry from the Sentinel data lake so you build customized security graphs that model new attack patterns and investigate emerging threats in your environment.
-
-With custom graphs you can:
-
-* Create ad-hoc temporary graphs to rapidly model adversary attack patterns, investigate emerging threats, or investigation hypotheses.
-* Materialize a custom graph to continuously update latest security telemetry from the Sentinel data lake and detect systemic threats overtime.
-* Query graphs using the power of Graph Query Language (GQL) and visualize subgraphs and attack paths.
-* Run advanced graph algorithms on your custom graph.
-
-For more information see [Custom graph overview](custom-graphs-overview.md).
-
-> [!IMPORTANT]
->
-> Custom graphs in Microsoft Sentinel are currently in preview. The information in this article relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
 ## Pricing
 
 All new Microsoft Sentinel graph-based experiences are included as part of the existing Defender and Microsoft Purview licenses. However, the Sentinel graph is built upon the Sentinel data lake and requires data sources to be enabled. Enabling data sources incurs ingestion, data processing, and data lake storage costs. For Sentinel SIEM customers, most required data sources are part of Sentinel's *Free data sources* and are available without charge in the lake after the data is ingested into the Analytics tier. Nonentitled sources such as Microsoft Entra ID logs incur ingestion, data processing, and data lake storage costs if loaded directly into the lake, or Analytics tier ingestion if loaded into the Analytics tier. For more information, see Sentinel [data lake billing](https://azure.microsoft.com/pricing/details/storage/data-lake/).
