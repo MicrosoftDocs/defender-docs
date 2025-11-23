@@ -1245,7 +1245,7 @@
 
           - name: Authenticated scan
             items:
-            - name: Authenticated scan methods and properties
+            - name: Authenticated scan properties
               href: api/get-authenticated-scan-properties.md
             - name: Get all scan definitions
               href: api/get-all-scan-definitions.md
