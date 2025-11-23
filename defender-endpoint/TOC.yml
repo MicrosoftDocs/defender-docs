@@ -1387,7 +1387,7 @@
 
           - name: Machine Action
             items:
-            - name: Machine Action methods and properties
+            - name: Machine Action properties
               href: api/machineaction.md
             - name: List Machine Actions
               href: api/get-machineactions-collection.md
