@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
-Defender for Identity offers automatic Windows event-auditing configuration for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones; admins can enable it in the Defender portal or via the Graph API, and the feature, along with its related health alerts, will roll out gradually over the next few weeks.
+Defender for Identity will introduce automatic Windows event-auditing configuration for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones; admins can enable it in the Defender portal or via the Graph API, and the feature, along with its related health alerts, will roll out gradually over the next few weeks.
 
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
