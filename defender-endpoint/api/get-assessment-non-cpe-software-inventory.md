@@ -15,13 +15,13 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 11/23/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
+
 # Export non product code software inventory assessment per device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
@@ -48,7 +48,7 @@ Data that is collected (using either _Json response_ or _via files_) is the curr
 
 ### 1.1 API method description
 
-This API response contains all the data of installed software that does not have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe) per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
+This API response contains all the data of installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe) per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
 
 #### Limitations
 
@@ -96,7 +96,7 @@ SoftwareLastSeenTimestamp|string|The last time this software was seen on the dev
 SoftwareName|string|Name of the software product.
 SoftwareVendor|string|Name of the software vendor.
 SoftwareVersion|string|Version number of the software product.
-RegistryPath|string| Registry evidence that the product is installed in the device.
+RegistryPath|string| Registry evidence that the product is installed on the device.
 
 ### 1.6 Examples
 
