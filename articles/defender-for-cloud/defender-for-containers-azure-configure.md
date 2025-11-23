@@ -41,7 +41,7 @@ Jump to the configuration you need:
 
 ## Add or remove components
 
-After initial deployment, you may need to add components that were skipped or remove unnecessary ones.
+After initial deployment, you might need to add components that you skipped or remove unnecessary ones.
 
 ### Check component deployment status
 
@@ -56,7 +56,7 @@ After initial deployment, you may need to add components that were skipped or re
 
 #### Deploy Defender sensor to existing clusters
 
-If the Defender sensor wasn't deployed initially:
+If the Defender sensor wasn't deployed initially, follow these steps:
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
@@ -76,7 +76,7 @@ az aks update \
     --enable-defender
 ```
 
-Or using Helm for more control:
+Or use Helm for more control:
 
 ```bash
 # Add Defender Helm repository
@@ -89,11 +89,11 @@ helm install defender-sensor mdc/azuredefender \
     --set cluster.name=<cluster-name>
 ```
 
-See [Deploy Defender sensor using Helm](deploy-helm.md) for detailed Helm configuration options.
+For detailed Helm configuration options, see [Deploy Defender sensor using Helm](deploy-helm.md).
 
 #### Add Azure Policy extension
 
-To add policy assessment to existing deployments:
+To add policy assessment to existing deployments, follow these steps:
 
 1. Go to **Azure Policy**.
 
@@ -155,9 +155,9 @@ To scan only specific ACR registries:
 
 1. Select **Security** > **Defender for Cloud**.
 
-1. Configure scanning settings per registry.
+1. Configure scanning settings for each registry.
 
-1. Use tags to include/exclude from scanning.
+1. Use tags to include or exclude registries from scanning.
 
 ### Deploy Azure Policy extension selectively
 
@@ -513,11 +513,11 @@ Configure log forwarding to external SIEM:
 
 For clusters missing the Defender sensor:
 
-1. Verify cluster is healthy.
+1. Verify the cluster is healthy.
 
 1. Check for conflicting policies or admission controllers.
 
-1. Deploy manually if needed using the recommendation remediation.
+1. Deploy the sensor manually if needed by using the recommendation remediation.
 
 ### Sensor pods not starting
 

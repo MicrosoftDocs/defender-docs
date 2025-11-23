@@ -76,7 +76,7 @@ Learn more about the [roles for provisioning Defender for Containers extensions]
 
 ## Monitor deployment progress
 
-After saving, Defender for Cloud automatically begins deploying the selected components to your AKS clusters:
+After you save your changes, Defender for Cloud automatically starts deploying the selected components to your AKS clusters:
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
@@ -100,7 +100,7 @@ When you enable the Defender sensor setting, it automatically deploys to all AKS
 
     :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Azure Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
 
-1. Select AKS clusters that need the sensor.
+1. Select the AKS clusters that need the sensor.
 
 1. Select **Fix**.
 

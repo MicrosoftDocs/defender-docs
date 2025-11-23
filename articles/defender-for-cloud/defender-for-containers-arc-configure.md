@@ -59,7 +59,7 @@ To see which components are currently deployed:
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
     > [!NOTE]
-    > - When you turn off Defender for Containers, the components are set to **Off****.** They're not deployed to any more containers, but they're not removed from containers where they're already installed.
+    > - When you turn off Defender for Containers, the components are set to **Off**. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
     > - To disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
 
 ### Deploy missing components

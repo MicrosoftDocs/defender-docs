@@ -21,7 +21,7 @@ The solution helps security and platform teams prevent vulnerabilities from reac
 
 ## How it works with Azure
 
-Defender for Containers leverages native Azure integrations to provide security without complexity. Once you enable it on your subscription, the solution:
+Defender for Containers leverages native Azure integrations to provide security without complexity. When you enable it on your subscription, the solution:
 
 - Automatically discovers all AKS clusters and container registries in your Azure subscriptions
 - Deploys a lightweight security sensor, natively integrated in AKS Resource Provider (RP), used for runtime threat protection and AKS deployment gating

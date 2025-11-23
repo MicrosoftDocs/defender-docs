@@ -86,7 +86,7 @@ If your Kubernetes cluster isn't already connected to Azure Arc, follow these st
    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
    > [!NOTE]
-   > If you want to disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
+   > To disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
 
    Available components:
    - **Agentless discovery for Kubernetes** - Discovers all Kubernetes clusters
@@ -115,7 +115,7 @@ Follow these steps to enable comprehensive protection for all your Arc-enabled c
 1. Select your Arc-enabled clusters.
 
     > [!IMPORTANT]
-    > Select the checkbox next to the cluster name, not the hyperlinked name itself.
+    > Select the check box next to the cluster name, not the hyperlinked name itself.
 
 1. Select **Fix** to automatically deploy the extensions.
 
@@ -239,7 +239,7 @@ If you need selective deployment or to fix issues with existing deployments:
 
 ### Deploy missing components
 
-If you disable automatic installation of any component, you can deploy it using these recommendations:
+If you disable automatic installation of any component, deploy it by using these recommendations:
 
 | Component | Recommendation |
 |--|--|
@@ -290,7 +290,7 @@ For Tanzu clusters:
 #### OpenShift
 
 - Ensure Security Context Constraints (SCCs) allow Defender components
-- Configure appropriate project/namespace permissions
+- Configure appropriate project or namespace permissions
 - Review OpenShift-specific network policies
 
 ### Deploy by environment type
@@ -452,7 +452,7 @@ resources:
     memory: 256Mi
 ```
 
-### Multi-cluster deployment
+### Multicluster deployment
 
 To deploy to multiple clusters, use the following approaches:
 

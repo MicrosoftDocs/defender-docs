@@ -83,7 +83,7 @@ az k8s-extension delete \
     --yes
 ```
 
-### Remove extensions using kubectl
+### Remove extensions by using kubectl
 
 If Azure CLI removal fails, manually remove components:
 
@@ -113,7 +113,7 @@ kubectl delete mutatingwebhookconfigurations azure-policy-mutating-webhook-confi
 
 ## Disconnect clusters from Azure Arc
 
-### Disconnect using Azure CLI
+### Disconnect by using Azure CLI
 
 ```azurecli
 # Disconnect cluster from Arc
@@ -123,7 +123,7 @@ az connectedk8s delete \
     --yes
 ```
 
-### Remove Arc agents using kubectl
+### Remove Arc agents by using kubectl
 
 If Azure CLI fails, manually remove Arc agents:
 

@@ -484,7 +484,7 @@ Typical resource usage per node includes:
 
 If you don't see security alerts:
 
-1. Ensure audit logging is enabled on EKS clusters.
+1. Make sure audit logging is enabled on EKS clusters.
 1. Verify Defender sensor pods are running.
 1. Check that runtime protection is enabled in connector settings.
 1. Wait 5-10 minutes after generating test events.

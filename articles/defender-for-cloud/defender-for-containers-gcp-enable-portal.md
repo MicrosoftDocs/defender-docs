@@ -189,15 +189,15 @@ If you need selective deployment or to fix issues with existing deployments:
 
 ### Deploy Defender sensor to specific clusters
 
-To deploy the sensor only to selected GKE clusters:
+To deploy the sensor to only selected GKE clusters:
 
-1. Connect only specific clusters to Azure Arc (not all).
+1. Connect only specific clusters to Azure Arc (not all clusters).
 
 1. Go to **Recommendations** and find "Arc-enabled Kubernetes clusters should have Defender extension installed".
 
 1. Select only the clusters where you want the sensor.
 
-1. Follow the remediation steps for selected clusters only.
+1. Follow the remediation steps for the selected clusters.
 
 ### Enable vulnerability scanning only
 
@@ -213,7 +213,7 @@ To enable only registry scanning without runtime protection:
 
 #### Standard GKE clusters
 
-No special configuration required. Follow the default deployment steps.
+No special configuration is required. Follow the default deployment steps.
 
 #### GKE Autopilot
 
@@ -221,7 +221,7 @@ For Autopilot clusters:
 
 1. The Defender sensor automatically adjusts resource requests.
 
-1. No manual configuration needed for resource limits.
+1. No manual configuration is needed for resource limits.
 
 #### Private GKE clusters
 
@@ -355,15 +355,15 @@ After setup, regularly:
 
 ## Clean up resources
 
-To disable Defender for Containers:
+To disable Defender for Containers, follow these steps:
 
 1. Go to **Environment settings**.
 
 1. Select your GCP connector.
 
-1. Choose either:
-   - Set **Containers** to **Off** to disable the plan
-   - Delete the entire connector to remove all configurations
+1. Choose one of the following options:
+   - Set **Containers** to **Off** to disable the plan.
+   - Delete the entire connector to remove all configurations.
 
 1. Clean up GCP resources:
 

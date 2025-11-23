@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Deploy Defender for Containers components on GCP (GKE) programmatically
 
-This article explains how to deploy Defender for Containers components on your Google Kubernetes Engine (GKE) clusters using command-line tools, APIs, and automation methods.
+This article explains how to deploy Defender for Containers components on your Google Kubernetes Engine (GKE) clusters by using command-line tools, APIs, and automation methods.
 
 ## Article contents
 
@@ -448,7 +448,7 @@ deploy_defender "dev-gke-cluster" "us-west1-b"
 ### Generate deployment script
 
 1. Defender for Cloud generates a script in the language of your choice:
-    - For Linux/macOS, select **Bash**
+    - For Linux or macOS, select **Bash**
     - For Windows, select **PowerShell**
 
 1. The script includes all necessary configurations for your environment.

@@ -122,7 +122,7 @@ kubectl describe validatingwebhookconfiguration microsoft-defender-webhook
 
 1. In Azure portal, go to **Microsoft Defender for Cloud** > **Inventory**.
 1. Set the filter for **Resource type** to **Kubernetes service**.
-1. Make sure your GKE clusters show up in the list.
+1. Make sure your GKE clusters appear in the list.
 
 ### Query security data
 
@@ -367,7 +367,7 @@ gcloud container binauthz attestors list
 
 ### Connector shows disconnected
 
-1. Verify service account permissions:
+1. Verify service account permissions.
 
    ```bash
    gcloud projects get-iam-policy PROJECT_ID \
@@ -375,7 +375,7 @@ gcloud container binauthz attestors list
        --filter="bindings.members:serviceAccount:microsoft-defender*"
    ```
 
-1. Check API enablement:
+1. Check API enablement.
 
    ```bash
    gcloud services list --enabled | grep -E "(container|asset|registry)"
@@ -385,10 +385,10 @@ gcloud container binauthz attestors list
 
 If you don't see security alerts:
 
-1. Ensure audit logging is enabled on GKE clusters
-1. Verify Defender sensor pods are running
-1. Check that runtime protection is enabled in connector settings
-1. Wait 5-10 minutes after generating test events
+1. Ensure audit logging is enabled on GKE clusters.
+1. Verify Defender sensor pods are running.
+1. Check that runtime protection is enabled in connector settings.
+1. Wait 5-10 minutes after generating test events.
 
 ### Missing vulnerability scans
 
@@ -401,10 +401,10 @@ For missing vulnerability scans:
 
 ### Clusters not appearing
 
-If GKE clusters aren't showing:
+If GKE clusters don't appear:
 
-1. Verify K8S API access is enabled in connector.
-1. Check service account has `container.viewer` role.
+1. Verify that K8S API access is enabled in the connector.
+1. Check that the service account has the `container.viewer` role.
 1. Ensure clusters are in the connected GCP project.
 1. Wait 15-30 minutes for discovery.
 

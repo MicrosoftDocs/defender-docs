@@ -242,7 +242,7 @@ If you decide to re-enable Defender for Containers in the future, the process is
 
 ## Re-enable Defender for Containers
 
-To re-enable Defender for Containers in the future:
+To re-enable Defender for Containers:
 
 1. Follow the deployment guide: [Enable all Defender for Containers components on Azure (AKS)](defender-for-containers-azure-enable-portal.md)
 1. All security features are restored.

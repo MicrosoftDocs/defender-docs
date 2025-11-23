@@ -43,11 +43,11 @@ Jump to the configuration you need:
 
 ## Add or remove components
 
-After initial deployment, you may need to add components that were skipped or remove unnecessary ones.
+After initial deployment, you might need to add components that you skipped or remove unnecessary ones.
 
 ### Check component deployment status
 
-1. Go to **Inventory** > filter by AWS resources.
+1. Go to **Inventory** and filter by AWS resources.
 
 1. Check each EKS cluster for:
    - Arc connectivity status
@@ -100,7 +100,7 @@ az k8s-extension create \
     --resource-group $RESOURCE_GROUP
 ```
 
-Or using Helm (for more control):
+Or use Helm (for more control):
 
 ```bash
 # Add Defender Helm repository
@@ -132,7 +132,7 @@ az k8s-extension create \
 
 ### Remove specific components
 
-To remove components while keeping others:
+To remove components but keep others:
 
 1. Go to your Arc-enabled Kubernetes cluster.
 
@@ -166,13 +166,13 @@ az k8s-extension delete \
 
 To deploy the sensor only to selected EKS clusters:
 
-1. First connect specific clusters to Azure Arc (not all clusters).
+1. Connect specific clusters to Azure Arc (not all clusters).
 
 1. Go to **Recommendations** and find "Arc-enabled Kubernetes clusters should have Defender extension installed".
 
 1. Select only the clusters where you want the sensor.
 
-1. Follow the remediation steps for selected clusters only.
+1. Follow the remediation steps for the selected clusters.
 
 ### Configure ECR scanning for specific registries
 
@@ -182,7 +182,7 @@ To scan only specific ECR registries:
 
 1. Use AWS IAM policies to limit scanner access to specific registries.
 
-1. Tag registries to include/exclude from scanning.
+1. Tag registries to include or exclude from scanning.
 
 ### Deploy Azure Policy extension selectively
 
@@ -296,7 +296,7 @@ To monitor security thoroughly, make sure audit logs are correctly set up:
    - **Controller manager**: State changes
    - **Scheduler**: Scheduling decisions
 
-Or enable audit logging selectively using CLI:
+Or enable audit logging selectively by using CLI:
 
 ```bash
 # For specific cluster
@@ -555,11 +555,11 @@ az monitor activity-log alert create \
 
 ### Fix Arc connectivity issues
 
-For clusters showing as disconnected:
+For clusters that show as disconnected:
 
-1. Re-run the Arc connection script.
+1. Rerun the Arc connection script.
 
-1. Verify network connectivity from cluster to Azure.
+1. Verify network connectivity from the cluster to Azure.
 
 1. Check Arc agent logs: `kubectl logs -n azure-arc -l app.kubernetes.io/component=cluster-agent`
 
@@ -588,7 +588,7 @@ kubectl describe pods -n kube-system -l app=microsoft-defender
 ## Best practices
 
 1. **Regular reviews**: Review configuration monthly.
-1. **Test changes**: Test configuration changes in non-production first.
+1. **Test changes**: Test configuration changes in non-production environments first.
 1. **Document settings**: Maintain documentation of custom configurations.
 1. **Monitor impact**: Watch for performance impact after changes.
 1. **Backup settings**: Export configurations before major changes.

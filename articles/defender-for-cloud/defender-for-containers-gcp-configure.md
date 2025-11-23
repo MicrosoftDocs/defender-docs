@@ -42,11 +42,11 @@ Jump to the configuration you need:
 
 ## Add or remove components
 
-After initial deployment, you may need to add components that were skipped or remove unnecessary ones.
+After initial deployment, you might need to add components that you skipped or remove unnecessary ones.
 
 ### Check component deployment status
 
-1. Go to **Inventory** > filter by GCP resources.
+1. Go to **Inventory** and filter by GCP resources.
 
 1. Check each GKE cluster for:
    - Arc connectivity status
@@ -99,7 +99,7 @@ az k8s-extension create \
     --resource-group $RESOURCE_GROUP
 ```
 
-Or using Helm (for more control):
+Or use Helm (for more control):
 
 ```bash
 # Add Defender Helm repository
@@ -165,7 +165,7 @@ az k8s-extension delete \
 
 To deploy the sensor only to selected GKE clusters:
 
-1. First connect specific clusters to Azure Arc (not all clusters).
+1. Connect specific clusters to Azure Arc (not all clusters).
 
 1. Go to **Recommendations** and find "Arc-enabled Kubernetes clusters should have Defender extension installed".
 
@@ -181,7 +181,7 @@ To scan only specific registries:
 
 1. Use GCP IAM policies to limit scanner access to specific registries.
 
-1. Tag registries to include/exclude from scanning.
+1. Tag registries to include or exclude from scanning.
 
 ### Deploy Azure Policy extension selectively
 
@@ -260,7 +260,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: microsoft-defender-config
-  namespace: kube-system
+  namespace: mdc
 data:
   excludedNamespaces: |
     - kube-system
@@ -273,7 +273,7 @@ Apply the configuration and restart the sensor:
 
 ```bash
 kubectl apply -f defender-config.yaml
-kubectl rollout restart daemonset/microsoft-defender-sensor -n kube-system
+kubectl rollout restart daemonset/microsoft-defender-collector-ds -n mdc
 ```
 
 ### Configure GKE-specific monitoring
@@ -285,7 +285,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: microsoft-defender-gke-config
-  namespace: kube-system
+  namespace: mdc
 data:
   gkeFeatures: |
     monitorWorkloadIdentity: true
@@ -321,7 +321,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: microsoft-defender-scan-config
-  namespace: kube-system
+  namespace: mdc
 data:
   excludedRegistries: |
     - gcr.io/PROJECT_ID/test-*
@@ -343,10 +343,10 @@ kubectl create secret docker-registry gcr-secret \
     --docker-server=gcr.io \
     --docker-username=_json_key \
     --docker-password="$(cat keyfile.json)" \
-    --namespace=kube-system
+    --namespace=mdc
 
 # Reference in Defender configuration
-kubectl patch configmap microsoft-defender-config -n kube-system --type merge -p '
+kubectl patch configmap microsoft-defender-config -n mdc --type merge -p '
 {
   "data": {
     "registryCredentials": "gcr-secret"
@@ -365,7 +365,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: defender-gke-policies
-  namespace: kube-system
+  namespace: mdc
 data:
   policies: |
     - name: "enforce-workload-identity"
@@ -483,7 +483,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: microsoft-defender-autopilot
-  namespace: kube-system
+  namespace: mdc
 data:
   autopilotConfig: |
     enableNodeAutoProvisioning: true
@@ -544,7 +544,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: microsoft-defender-alerts-config
-  namespace: kube-system
+  namespace: mdc
 data:
   suppressionRules: |
     - alertType: "K8S_PrivilegedContainer"
@@ -564,13 +564,13 @@ data:
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: microsoft-defender-sensor
-  namespace: kube-system
+  name: microsoft-defender-collector-ds
+  namespace: mdc
 spec:
   template:
     spec:
       containers:
-      - name: microsoft-defender-sensor
+      - name: microsoft-defender-collector
         resources:
           limits:
             memory: "400Mi"
@@ -663,7 +663,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: microsoft-defender-compliance-config
-  namespace: kube-system
+  namespace: mdc
 data:
   compliance: |
     standards:
@@ -682,7 +682,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: defender-custom-compliance
-  namespace: kube-system
+  namespace: mdc
 data:
   customRules: |
     - name: "gke-workload-identity-required"
@@ -699,9 +699,9 @@ data:
 
 ### Fix Arc connectivity issues
 
-For clusters showing as disconnected:
+For clusters that show as disconnected:
 
-1. Re-run the Arc connection script.
+1. Rerun the Arc connection script.
 
 1. Verify network connectivity from cluster to Azure.
 
@@ -721,7 +721,7 @@ For clusters missing the Defender sensor:
 
 ```bash
 # Check pod status
-kubectl describe pods -n kube-system -l app=microsoft-defender
+kubectl describe pods -n mdc -l app.kubernetes.io/name=microsoft-defender
 
 # Common issues:
 # - Image pull errors: Check network connectivity

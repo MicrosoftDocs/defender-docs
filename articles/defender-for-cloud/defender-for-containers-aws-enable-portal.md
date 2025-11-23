@@ -103,7 +103,7 @@ AWS-specific requirements:
 
    > [!TIP]
    > - For production environments, we recommend enabling all components.
-   > - For testing or gradual rollout, you can start with specific components and add more later.
+   > - For testing or gradual rollout, start with specific components and add more later.
    > - Azure Policy for Kubernetes is automatically deployed with the Defender sensor.
 
 1. Select **Continue** and **Next: Configure access**.
@@ -265,7 +265,7 @@ To deploy the sensor only to selected EKS clusters:
 
 ### Deploy components for existing clusters
 
-If you have clusters with missing or failed components:
+If you have clusters with missing or failed components, follow these steps:
 
 #### Check component status
 
@@ -278,11 +278,11 @@ If you have clusters with missing or failed components:
 
 #### Fix Arc connectivity issues
 
-For clusters showing as disconnected:
+For clusters that show as disconnected:
 
 1. Rerun the Arc connection script.
 
-1. Verify network connectivity from cluster to Azure.
+1. Verify network connectivity from the cluster to Azure.
 
 1. Check Arc agent logs: `kubectl logs -n azure-arc -l app.kubernetes.io/component=cluster-agent`
 
@@ -494,12 +494,12 @@ az k8s-extension delete \
 
 ## Clean up resources
 
-To disable Defender for Containers:
+To disable Defender for Containers, complete the following steps:
 
 1. Go to your AWS connector.
 
 1. Choose either:
-   - Turn **Containers** **Off** to disable the plan
+   - **Turn Containers Off** to disable the plan
    - Delete the entire connector to remove all configurations
 
 1. Remove AWS resources:

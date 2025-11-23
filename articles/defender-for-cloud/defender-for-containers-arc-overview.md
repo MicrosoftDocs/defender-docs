@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Defender for Containers on Arc-enabled Kubernetes - Overview
 
-Microsoft Defender for Containers extends enterprise-grade security to your Kubernetes clusters running anywhere—on-premises, in datacenters, at the edge, or in other clouds—through Azure Arc integration. This provides the same comprehensive protection you get in the cloud, including vulnerability assessment, runtime threat detection, and security posture management, for your hybrid and multi-cloud Kubernetes environments.
+Microsoft Defender for Containers extends enterprise-grade security to your Kubernetes clusters running anywhere—on-premises, in datacenters, at the edge, or in other clouds—through Azure Arc integration. This solution provides the same comprehensive protection you get in the cloud, including vulnerability assessment, runtime threat detection, and security posture management, for your hybrid and multicloud Kubernetes environments.
 
 ## What is Defender for Containers on Arc?
 
@@ -18,7 +18,7 @@ The solution addresses the unique challenges of securing distributed Kubernetes 
 
 ## How it works with Arc
 
-Defender for Containers seamlessly integrates with Azure Arc-enabled Kubernetes to provide security without disrupting your existing operations. Once your cluster is connected to Azure Arc, Defender for Containers:
+Defender for Containers seamlessly integrates with Azure Arc-enabled Kubernetes to provide security without disrupting your existing operations. Once you connect your cluster to Azure Arc, Defender for Containers:
 
 - Automatically discovers and inventories all workloads running in your Arc-enabled clusters
 - Deploys lightweight security sensors that monitor runtime behavior with minimal performance impact
@@ -37,7 +37,7 @@ Defender for Containers delivers comprehensive security across three critical ar
 |------------|-------------|--------------|
 | **Vulnerability assessment** | Scans container images in connected registries for known vulnerabilities | • Support for private registries<br>• Air-gapped deployment options<br>• CVSS scoring and prioritization<br>• Integration with existing CI/CD |
 | **Runtime threat protection** | Monitors clusters in real-time for malicious activities and anomalies | • Distribution-agnostic monitoring<br>• Behavioral analytics<br>• Kubernetes-aware detection<br>• Custom alert rules |
-| **Security posture management** | Evaluates configurations against security benchmarks and compliance standards | • CIS Kubernetes Benchmark<br>• Custom policy support<br>• Multi-cluster governance<br>• Automated remediation |
+| **Security posture management** | Evaluates configurations against security benchmarks and compliance standards | • CIS Kubernetes Benchmark<br>• Custom policy support<br>• Multicluster governance<br>• Automated remediation |
 
 ## Supported distributions
 
@@ -62,21 +62,21 @@ Defender for Containers works with any CNCF-certified Kubernetes distribution co
 - MicroK8s for IoT scenarios
 - Custom or vanilla Kubernetes
 
-Each distribution may require specific configuration adjustments, but the core security capabilities remain consistent across all platforms.
+Each distribution might require specific configuration adjustments, but the core security capabilities remain consistent across all platforms.
 
 ## Architecture overview
 
-The Defender for Containers architecture on Arc is designed for flexibility and security:
+The Defender for Containers architecture on Arc is flexible and secure:
 
-**Azure Arc agents**: Establish secure connectivity between your cluster and Azure, enabling remote management while maintaining local control.
+**Azure Arc agents**: Securely connect your cluster to Azure. You can manage your cluster remotely while keeping local control.
 
-**Defender extension**: Deployed through Arc's extension framework, includes the security sensor DaemonSet and configuration controllers.
+**Defender extension**: Deploys through Arc's extension framework. It includes the security sensor DaemonSet and configuration controllers.
 
 **Security sensor**: Lightweight pods that collect runtime telemetry, monitor system calls, and analyze network traffic without requiring privileged access.
 
-**Policy engine**: Evaluates cluster configurations and workload specifications against security policies, providing real-time compliance feedback.
+**Policy engine**: Evaluates cluster configurations and workload specifications against security policies. It provides real-time compliance feedback.
 
-**Log collection**: Flexible options for log forwarding, supporting both direct streaming and local aggregation scenarios.
+**Log collection**: Flexible options for log forwarding. It supports both direct streaming and local aggregation scenarios.
 
 These components work together to provide comprehensive security while respecting network boundaries and compliance requirements.
 
@@ -94,7 +94,7 @@ Choose the deployment method that aligns with your security requirements, networ
 
 ## Prerequisites
 
-Before deploying Defender for Containers on Arc-enabled Kubernetes:
+Before deploying Defender for Containers on Arc-enabled Kubernetes clusters, make sure you have the following prerequisites:
 
 - CNCF-certified Kubernetes cluster (version 1.19 or later)
 - Cluster already connected to Azure Arc and showing as "Connected"
@@ -112,11 +112,11 @@ Before deploying Defender for Containers on Arc-enabled Kubernetes:
 
 ### Hybrid cloud security
 
-Organizations running Kubernetes across multiple environments can standardize security operations using Defender for Containers on Arc. This enables consistent threat detection, vulnerability management, and compliance reporting whether clusters run in Azure, on-premises, or in other clouds.
+Organizations running Kubernetes across multiple environments can standardize security operations by using Defender for Containers on Arc. This approach provides consistent threat detection, vulnerability management, and compliance reporting whether clusters run in Azure, on-premises, or in other clouds.
 
 ### Edge computing protection
 
-Edge locations often have unique constraints including limited bandwidth, intermittent connectivity, and resource limitations. Defender for Containers adapts to these scenarios with configurable data collection, local processing options, and optimized resource usage.
+Edge locations often have unique constraints, including limited bandwidth, intermittent connectivity, and resource limitations. Defender for Containers adapts to these scenarios with configurable data collection, local processing options, and optimized resource usage.
 
 ### Air-gapped environments
 
@@ -124,7 +124,7 @@ For highly secure or disconnected environments, Defender for Containers supports
 
 ### Compliance and governance
 
-Multi-cluster environments require consistent policy enforcement and compliance validation. Defender for Containers enables centralized policy management while respecting local autonomy, supporting various compliance frameworks including CIS, PCI-DSS, and custom standards.
+Multi-cluster environments require consistent policy enforcement and compliance validation. Defender for Containers enables centralized policy management while respecting local autonomy. It supports various compliance frameworks including CIS, PCI-DSS, and custom standards.
 
 ## Integration benefits
 

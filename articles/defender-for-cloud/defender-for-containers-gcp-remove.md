@@ -310,11 +310,11 @@ gcloud logging delete "resource.type=k8s_cluster AND resource.labels.cluster_nam
 
 ### Security monitoring gaps
 
-When you remove Defender for Containers from your GKE environment, you lose several security capabilities. Runtime threat detection stops right away, leaving your clusters vulnerable to active attacks that would have been detected. Container image vulnerability scanning stops for images in GCR and Artifact Registry, so new vulnerabilities go unnoticed. Security recommendations based on CIS GKE Benchmark and Google's best practices no longer appear. Compliance reporting capabilities disappear, which might affect your ability to show adherence to regulatory requirements. The unified view of security posture across your multi-cloud environment is lost.
+When you remove Defender for Containers from your GKE environment, you lose several security capabilities. Runtime threat detection stops right away, leaving your clusters vulnerable to active threats that would have been detected. Container image vulnerability scanning stops for images in GCR and Artifact Registry, so new vulnerabilities go unnoticed. Security recommendations based on CIS GKE Benchmark and Google's best practices no longer appear. Compliance reporting capabilities disappear, which might affect your ability to show adherence to regulatory requirements. The unified view of security posture across your multicloud environment is lost.
 
 ### Alternative security solutions
 
-Consider implementing alternative security measures for your GKE clusters. Google Cloud native options include Binary Authorization for deployment controls, Google Cloud Security Command Center for centralized security management, and Container Analysis API for vulnerability scanning. Open source alternatives include Falco for runtime security monitoring, Open Policy Agent (OPA) for policy enforcement, and Trivy or Clair for vulnerability scanning. Commercial solutions from vendors like Prisma Cloud, Aqua Security, or Sysdig provide comprehensive container security. Evaluate these alternatives based on your specific requirements for GKE integration, multi-cloud support, and existing tool compatibility.
+Consider implementing alternative security measures for your GKE clusters. Google Cloud native options include Binary Authorization for deployment controls, Google Cloud Security Command Center for centralized security management, and Container Analysis API for vulnerability scanning. Open source alternatives include Falco for runtime security monitoring, Open Policy Agent (OPA) for policy enforcement, and Trivy or Clair for vulnerability scanning. Commercial solutions from vendors like Prisma Cloud, Aqua Security, or Sysdig provide comprehensive container security. Evaluate these alternatives based on your specific requirements for GKE integration, multicloud support, and existing tool compatibility.
 
 ### Maintaining security visibility
 
@@ -343,14 +343,14 @@ gcloud pubsub topics create vulnerability-notifications
 
 ## Re-enable Defender for Containers
 
-To re-enable Defender for Containers in the future:
+To re-enable Defender for Containers:
 
 1. Follow the deployment guide: [Enable all Defender for Containers components on GCP (GKE)](defender-for-containers-gcp-enable-portal.md)
 1. Recreate service accounts and permissions
 1. Reconnect clusters to Azure Arc
 1. Redeploy the Defender sensor
 
-All security features are restored, though historical data during the disabled period is missing.
+All security features are restored, but historical data during the disabled period is missing.
 
 ## Troubleshooting removal
 

@@ -8,19 +8,19 @@ ai-usage: ai-assisted
 
 # Defender for Containers on GCP (GKE) - Overview
 
-Microsoft Defender for Containers extends enterprise-grade security to your Google Kubernetes Engine (GKE) clusters, providing comprehensive protection through vulnerability scanning, runtime threat detection, and security posture management—all while maintaining the flexibility and scale that GCP customers expect.
+Microsoft Defender for Containers extends enterprise-grade security to your Google Kubernetes Engine (GKE) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, and security posture management—all while maintaining the flexibility and scale that GCP customers expect.
 
 ## What is Defender for Containers on GCP?
 
-Defender for Containers on GCP is a cloud-native security solution that protects your GKE clusters and containerized workloads running in Google Cloud Platform. By connecting your GCP projects to Microsoft Defender for Cloud, you gain visibility and protection across your entire container estate, whether running in Azure, GCP, AWS, or on-premises.
+Defender for Containers on GCP is a cloud-native security solution that protects your GKE clusters and containerized workloads running in Google Cloud Platform. When you connect your GCP projects to Microsoft Defender for Cloud, you gain visibility and protection across your entire container estate, whether running in Azure, GCP, AWS, or on-premises.
 
-The solution seamlessly integrates with GCP services like Google Container Registry (GCR), Artifact Registry, and GKE's native security features while providing Microsoft's advanced threat intelligence and security capabilities. This enables organizations to maintain consistent security policies and threat detection across their multi-cloud container deployments.
+The solution seamlessly integrates with GCP services like Google Container Registry (GCR), Artifact Registry, and GKE's native security features. It also provides Microsoft's advanced threat intelligence and security capabilities. This integration enables organizations to maintain consistent security policies and threat detection across their multicloud container deployments.
 
 ## How it works with GCP
 
-Defender for Containers uses a lightweight architecture that respects GCP's security model while providing comprehensive protection. Once you create a GCP connector in Defender for Cloud, the solution:
+Defender for Containers uses a lightweight architecture that respects GCP's security model while providing comprehensive protection. When you create a GCP connector in Defender for Cloud, the solution automatically:
 
-- Discovers all GKE clusters in your connected GCP projects automatically
+- Discovers all GKE clusters in your connected GCP projects
 - Connects clusters to Azure Arc for centralized management and monitoring
 - Deploys a lightweight sensor as a DaemonSet for runtime protection
 - Integrates with GCR and Artifact Registry for vulnerability scanning
@@ -43,7 +43,7 @@ Defender for Containers delivers comprehensive security across three critical ar
 
 The Defender for Containers architecture on GCP is designed for security and efficiency:
 
-**GCP Connector**: Establishes secure connectivity between your GCP projects and Microsoft Defender for Cloud using service account authentication or Workload Identity Federation.
+**GCP Connector**: Establishes secure connectivity between your GCP projects and Microsoft Defender for Cloud by using service account authentication or Workload Identity Federation.
 
 **Azure Arc for Kubernetes**: Provides a control plane for managing GKE clusters from Azure without requiring inbound connectivity.
 

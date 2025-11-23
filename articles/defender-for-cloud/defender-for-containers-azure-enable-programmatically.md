@@ -94,16 +94,16 @@ Set-AzSecurityWorkspaceSetting `
 ## Deploy the Defender sensor
 
 > [!NOTE]
-> When you enable the Defender for Containers plan, the Defender sensor is typically deployed automatically. Use the following methods for manual deployment only if the sensor isn't automatically deployed after plan enablement.
+> When you enable the Defender for Containers plan, the Defender sensor typically deploys automatically. Use the following methods for manual deployment only if the sensor doesn't deploy automatically after plan enablement.
 
 ### Choose your deployment method
 
 **AKS built-in addon:**
 
-- Automatically provisioned and updated by Azure
-- Managed through AKS security profile
+- Azure automatically provisions and updates the sensor
+- You manage it through the AKS security profile
 - Simplest deployment option
-- Updates handled automatically with AKS cluster updates
+- AKS cluster updates handle sensor updates automatically
 
 **Helm chart deployment:**
 
@@ -113,9 +113,9 @@ Set-AzSecurityWorkspaceSetting `
 - Supports both preview and GA versions
 - Requires manual updates but offers more customization
 
-### 1. AKS built-in addon
+### 1. AKS built-in add-on
 
-You can deploy the sensor through:
+You can deploy the sensor through the following methods:
 
 #### [Azure CLI](#tab/aks-cli)
 
@@ -266,7 +266,7 @@ resource "azurerm_kubernetes_cluster" "main" {
 
 ### 2. Helm chart deployment
 
-Unlike other options that are autoprovisioned and updated automatically, Helm lets you flexibly deploy the Defender sensor. This approach is especially useful in DevOps and infrastructure-as-code scenarios. With Helm, you can integrate deployment into CI/CD pipelines and control all sensor updates. You can also choose to receive preview and GA versions.
+Unlike other options that autoprovision and update automatically, Helm gives you the flexibility to deploy the Defender sensor. This approach is especially useful in DevOps and infrastructure-as-code scenarios. With Helm, you can integrate deployment into CI/CD pipelines and control all sensor updates. You can also choose to receive preview and GA versions.
 
 Use the following methods to deploy the sensor:
 
@@ -350,7 +350,7 @@ helm install microsoft-defender mdc/azuredefender \
 
 ### Batch deployment of Defender sensor to multiple clusters
 
-Use these scripts when you need to deploy the Defender sensor to multiple AKS clusters at once, such as during initial rollout or when onboarding multiple clusters to Defender for Containers.
+Use these scripts to deploy the Defender sensor to multiple AKS clusters at once, such as during initial rollout or when onboarding multiple clusters to Defender for Containers.
 
 #### [PowerShell](#tab/powershell-batch)
 

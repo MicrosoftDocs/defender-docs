@@ -422,7 +422,7 @@ If alerts don't appear:
    kubectl logs -n kube-system -l app=microsoft-defender | grep -i alert
    ```
 
-1. **Wait longer**: Some alerts may take up to 15 minutes
+1. **Wait longer**: Some alerts might take up to 15 minutes
 
 ## Common verification issues
 
@@ -465,7 +465,7 @@ If recommendations are missing:
 
 ### No vulnerability scan results
 
-For missing vulnerability scans:
+If vulnerability scans are missing:
 
 1. Check that you configured ACR integration.
 1. Verify you recently pushed images.
