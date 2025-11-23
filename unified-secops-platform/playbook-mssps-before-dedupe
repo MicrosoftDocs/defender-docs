@@ -20,9 +20,9 @@ The Defender Platform integrates Microsoft Sentinel and Microsoft Defender into 
 
 This document informs Microsoft partners researching how to integrate the Microsoft Defender Platform into their portfolio of services. It is written through the lens of Implementers & SOC architects who seek a distilled technical walkthrough of:
 
-- Microsoft Defender capabilities
-
-- Multi-tenant management
+> Microsoft Defender capabilities
+>
+> Multi-tenant management
 
 Beyond Managed Security Services Providers (MSSPs), this document aims to guide large organizations and institutions who operate security operations within environments requiring multitenant architectures.
 
@@ -370,86 +370,185 @@ Analysts can now view detection sources and product names, apply and share filte
 
 **Alert Correlation and Incident Merging in Defender**: When a new alert meets [correlation](/defender-xdr/alerts-incidents-correlation#incident-creation-and-alert-correlation) criteria, Defender aggregates and correlates it with other related alerts from all detection sources into a new incident. The unified incident queue reveals a more comprehensive attack, making analysts more efficient and providing a complete attack story. Defender’s correlation engine merges incidents when it recognizes common elements between alerts in separate incidents. However, there are scenarios where incidents cannot be merged. Please note that in [multi-workspace](/azure/sentinel/workspaces-defender-portal#primary-and-secondary-workspaces) scenarios, only alerts from a primary workspace are correlated with Microsoft Defender XDR data.
 
-**[Multi-Tenant Organization (MTO):](/unified-secops-platform/mto-overview)** With the MTO, you can view and manage incidents, alerts, and cases across customer tenants in a unified queue. Each analyst can set up their multitenant view with the tenants they're managing.
-
+**[Multi-Tenant Organization (MTO):](/unified-secops-platform/mto-overview)** With the MTO, you can view and manage incidents, alerts, and cases across customer tenants in a unified queue. Each analyst can set up their multitenant view – with the tenants they’re triaging and manage across customer tenants from one place.
 
 **Integration with External Ticketing Systems**: If alerts and incidents you manage are fetched and synchronized with an external ticketing system, leverage the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0). This ensures seamless integration and efficient management of incidents and alerts across different systems. See more details on the APIs in the next section.
 
 ## API
 
-This section covers the most notable changes related specifically to incidents and alerts for the unified experience.
-
-The unified experience supports API calls based on the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0) which can be used for automation use cases related to alerts, incidents, advanced hunting, and more.
-
-The [Microsoft Sentinel’s API](/rest/api/securityinsights/api-versions) continues to support actions against Microsoft Sentinel resources, like analytics rules, automation rules and more. To interact with the unified experience, for example with unified incidents and alerts, it is highly recommended to use the Microsoft Graph REST API.
-
-If you are interacting with Microsoft Sentinel incidents through the SecurityInsights API, the change in the response body most likely requires you to update your automation condition and/or trigger criteria. The snippets below, which focuses on specific response sections, are captured from an HTTP GET command for one specific Microsoft Sentinel incident prior to transitioning to the unified experience.
-
-[https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resour ceGroupName}}/providers/Microsoft.OperationalInsights/workspaces/{{workspaceName} }/providers/Microsoft.SecurityInsights/incidents/402dfa49-aaa3-4f42-8475 9b515228aeaf?api-version=2024-03-01](https://management.azure.com/subscriptions/%7b%7bsubscriptionId%7d%7d/resourceGroups/%7b%7bresour%20ceGroupName%7d%7d/providers/Microsoft.OperationalInsights/workspaces/%7b%7bworkspaceName%7d%20%7d/providers/Microsoft.SecurityInsights/incidents/402dfa49-aaa3-4f42-8475%209b515228aeaf?api-version=2024-03-01)
-
-Please note the following fields in the snippets below:
-
-• **alertProductNames** – the source that triggered the detection
-
-• **incidentUrl** – the direct URL to the incident in the Microsoft Sentinel portal
-
-• **providerName** – the name of the provider
-
-:::image type="content" source="media/playbook-mssps/api-response-alert-fields.png" alt-text="Screenshot of API response showing alertProductNames, incidentUrl, and providerName fields.":::
-
-:::image type="content" source="media/playbook-mssps/api-response-before-unified.png" alt-text="Screenshot of API response code before transitioning to unified experience.":::
-
-After transitioning to the unified experience, the following sections are added and changed:
-
-:::image type="content" source="media/playbook-mssps/api-response-after-unified.png" alt-text="Screenshot of API response after unified experience showing providerIncidentUrl field.":::
-
-A **providerIncidentUrl** field has been added, which provides the direct URL to the incident in the unified portal and the **providerName** has been changed to Microsoft XDR.
-
-When using an HTTP GET command for a specific unified incident, using the Microsoft Graph REST API, the body response is slightly different:
-
-<https://graph.microsoft.com/v1.0/security/incidents/368>
-
-:::image type="content" source="media/playbook-mssps/graph-api-incident-response.png" alt-text="Screenshot of Microsoft Graph REST API response showing incidentWebUrl field.":::
-
-The **incidentWebUrl** contains the direct link to the incident, which can be used to synchronize this information with a ticketing system like ServiceNow.
-
-As you may have noticed, the response does not contain the **alertProductNames** array.
-
-These can be retrieved by updating the initial HTTP GET command by adding **?\$expand=alerts** after the HTTP GET command like this:
-
-<https://graph.microsoft.com/v1.0/security/incidents/368?$expand=alerts>
-
-The response is shown below (the screenshot has been modified to fit the page)
-
-:::image type="content" source="media/playbook-mssps/api-service-detection-sources.png" alt-text="Screenshot of API response showing serviceSource, detectionSource, and productName fields.":::
-
-Important fields to notice are **serviceSource,** **detectionSource** and **productName** fields.
-
-**New field name**
-
-**serviceSource** - The service or product that created the alert
-
-**detectionSource** - Detection technology or sensor that identified the notable component or activity
-
-**productName** - The name of the product which published this alert.
-
-These new fields allow you to become more specific for your conditions and trigger automation use cases.
+> This section covers the most notable changes related specifically to incidents and alerts for the unified experience.
+>
+> The unified experience supports API calls based on the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0) which can be used for automation use cases related to alerts, incidents, advanced hunting, and more.
+>
+> The [Microsoft Sentinel’s API](/rest/api/securityinsights/api-versions) continues to support actions against Microsoft Sentinel resources, like analytics rules, automation rules and more. To interact with the unified experience, for example with unified incidents and alerts, it is highly recommended to use the Microsoft Graph REST API.
+>
+> If you are interacting with Microsoft Sentinel incidents through the SecurityInsights API, the change in the response body most likely requires you to update your automation condition and/or trigger criteria. The snippets below, which focuses on specific response sections, are captured from an HTTP GET command for one specific Microsoft Sentinel incident prior to transitioning to the unified experience.
+>
+> [https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resour ceGroupName}}/providers/Microsoft.OperationalInsights/workspaces/{{workspaceName} }/providers/Microsoft.SecurityInsights/incidents/402dfa49-aaa3-4f42-8475 9b515228aeaf?api-version=2024-03-01](https://management.azure.com/subscriptions/%7b%7bsubscriptionId%7d%7d/resourceGroups/%7b%7bresour%20ceGroupName%7d%7d/providers/Microsoft.OperationalInsights/workspaces/%7b%7bworkspaceName%7d%20%7d/providers/Microsoft.SecurityInsights/incidents/402dfa49-aaa3-4f42-8475%209b515228aeaf?api-version=2024-03-01)
+>
+> Please note the following fields in the snippets below:
+>
+> • **alertProductNames** – the source that triggered the detection
+>
+> • **incidentUrl** – the direct URL to the incident in the Microsoft Sentinel portal
+>
+> • **providerName** – the name of the provider
+>
+> :::image type="content" source="media/playbook-mssps/api-response-alert-fields.png" alt-text="Screenshot of API response showing alertProductNames, incidentUrl, and providerName fields.":::
+>
+> :::image type="content" source="media/playbook-mssps/api-response-before-unified.png" alt-text="Screenshot of API response code before transitioning to unified experience.":::
+>
+> After transitioning to the unified experience, the following sections are added and changed:
+>
+> :::image type="content" source="media/playbook-mssps/api-response-after-unified.png" alt-text="Screenshot of API response after unified experience showing providerIncidentUrl field.":::
+>
+> A **providerIncidentUrl** field has been added, which provides the direct URL to the incident in the unified portal and the **providerName** has been changed to Microsoft XDR.
+>
+> When using an HTTP GET command for a specific unified incident, using the Microsoft Graph REST API, the body response is slightly different:
+>
+> <https://graph.microsoft.com/v1.0/security/incidents/368>
+>
+> :::image type="content" source="media/playbook-mssps/graph-api-incident-response.png" alt-text="Screenshot of Microsoft Graph REST API response showing incidentWebUrl field.":::
+>
+> The **incidentWebUrl** contains the direct link to the incident, which can be used to synchronize this information with a ticketing system like ServiceNow.
+>
+> As you may have noticed, the response does not contain the **alertProductNames** array.
+>
+> These can be retrieved by updating the initial HTTP GET command by adding **?\$expand=alerts** after the HTTP GET command like this:
+>
+> <https://graph.microsoft.com/v1.0/security/incidents/368?$expand=alerts>
+>
+> The response is shown below (the screenshot has been modified to fit the page)
+>
+> :::image type="content" source="media/playbook-mssps/api-service-detection-sources.png" alt-text="Screenshot of API response showing serviceSource, detectionSource, and productName fields.":::
+>
+> Important fields to notice are **serviceSource,** **detectionSource** and **productName** fields.
+>
+> **New field name**
+>
+> **serviceSource** - The service or product that created the alert
+>
+> **detectionSource** - Detection technology or sensor that identified the notable component or activity
+>
+> **productName** - The name of the product which published this alert.
+>
+> These new fields allow you to become more specific for your conditions and trigger automation use cases.
 
 ## How advanced hunting works across different tenants
 
-Microsoft Defender multitenant management enables cross-tenant threat hunting across email, devices, identities, and cloud apps. 
+Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time, in a single place. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal (MTO), you'll be able to query Microsoft Sentinel with data from all your workspaces, running queries across multiple workspaces and tenants using the workspace operator in your query.
 
-For complete guidance on running cross-tenant queries, using the workspace() function, Azure Lighthouse scenarios, tenant identification, and custom detection rules, see [Advanced hunting in Microsoft Defender multitenant management](/unified-secops-platform/mto-advanced-hunting).
+### Run cross-tenant queries
 
-For query syntax, schema tables, and optimization techniques, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
+- Navigate to Advanced Hunting in MTO portal.
+
+- You can run any query that you already have access to the multitenant management Advanced hunting page. Queries listed on the **Queries** tab are filtered by tenants. Select a tenant to view the queries available for each one.
+
+- Load a query in the query editor and select the tenant selector to specify the tenants and workspaces you want to run the query against.
+
+:::image type="content" source="media/playbook-mssps/advanced-hunting-tenant-selector.png" alt-text="Screenshot of Advanced Hunting query editor with tenant selector.":::
+
+In the side pane that opens, select the tenants you want to include in the query. Each tenant supports a single workspace. If you have multiple workspaces onboarded to the Defender portal in your tenant, select Edit selection to select the workspace you want to use.
+
+:::image type="content" source="media/playbook-mssps/tenant-workspace-selection-pane.png" alt-text="Screenshot of tenant and workspace selection pane.":::
+
+When you're done, select Apply \> Run query.
+
+:::image type="content" source="media/playbook-mssps/advanced-hunting-query-scope.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column":::
+
+The query results contain a column named TenantId. If you're using multiple workspaces, the values in this column show the workspace ID instead of the tenant ID. In such cases, we recommend that you use your query to rename the column in your results from TenantId to WorkspaceId to make it simpler to read.
+
+For example:
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p>DeviceEvents</p>
+<p>| take 10</p>
+<p>| project TenantId = WorkspaceID</p>
+<p>Or, to query multiple workspaces in the same tenant, use a query similar to the following:</p>
+<p>```kusto</p>
+<p>Usage</p>
+<p>| union workspace("WorkpaceA").Usage</p>
+<p>| take 10</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+
+### **Run cross-workspace queries**
+
+> To run queries across multiple workspaces in the same tenant, use the [workspace( ) expression](/azure/azure-monitor/logs/cross-workspace-query#query-across-log-analytics-workspaces-using-workspace), with the workspace identifier as the argument in your query to refer to a table in a different workspace.
+>
+> If you're using [Azure Lighthouse](/azure/lighthouse/overview) to grant your tenant with permissions to other tenants workspaces, you can also query across both tenants and workspaces. To do so, select only one tenant in the **Tenant scope** selector. Then in the query, use the workspace() expression to call the names of any other workspaces you want to query in other tenants. For example, if you have tenants and workspaces named as follows:
+
+- **TenantA**: *WorkspaceA1*, *WorkspaceA2*
+
+- **TenantB**: *WorkspaceB1*, *WorkspaceB2*
+
+> And you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the workspace() operator to call *WorkspaceB2*. For example:
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;"><blockquote>
+<p>union workspace("WorkspaceB2").Usage, Usage</p>
+<p>| where TimeGenerated &gt; ago(1d)</p>
+<p>| summarize TotalRecords = count() by Workspace = TenantId</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+> Results show from both *WorkspaceA1* and *WorkspaceB2*.
+>
+> **Please note:** **This capability is available only for tenants that have permissions to other tenants’ workspaces using Azure Lighthouse.**
+>
+> For more information, see [Query multiple workspaces](/azure/sentinel/extend-sentinel-across-workspaces-tenants#query-multiple-workspaces) and [Manage workspaces across tenants using Azure Lighthouse](/azure/sentinel/extend-sentinel-across-workspaces-tenants#manage-workspaces-across-tenants-using-azure-lighthouse).
+>
+> :::image type="content" source="media/playbook-mssps/advanced-hunting-query-results.png" alt-text="Screenshot of Advanced Hunting cross-workspace query results.":::
 
 ### **Custom Detections & Analytics Rules**
 
-Manage custom detection rules and Sentinel analytics rules across multiple tenants from the unified MTO portal. 
+> You can also manage both custom detection and Analytics rules from multiple tenants in the custom detection rules page.
 
-For complete guidance on viewing rules by tenant, filtering, and bulk management operations (run, turn off, delete), see [View and manage custom detection rules](/unified-secops-platform/mto-advanced-hunting#view-and-manage-custom-detection-rules).
+#### View custom detection rules by tenant
 
-To deploy custom detection rules at scale across multiple tenants, use [MTO distribution profiles](/unified-secops-platform/mto-distribution-profiles) covered in the Content Management section below.
+1. To view custom detection rules, go to the Custom detection rules page in Microsoft Defender multitenant management.
+
+1. View the **Tenant name** column to see which tenant the detection rule comes from:
+
+> To view only a specific tenant's custom detection rules, select **Filter**, choose the tenant or tenants and select **Apply**.
+>
+> To read more about custom detection rules, read [Custom detections overview](/defender-xdr/custom-detections-overview).
+
+#### Manage custom detection and Sentinel Analytics rules
+
+> You can **Run**, **Turn off**, and **Delete** detection rules from Microsoft Defender multitenant management.
+>
+> To manage detection rules:
+>
+> :::image type="content" source="media/playbook-mssps/custom-detection-rules-management.png" alt-text="Screenshot of custom detection rules management options.":::
+
+1. Go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management.
+
+1. Choose the detection rule you want to manage.
+
+> When you select a single detection rule, a flyout panel opens with the detection rule details:
+> :::image type="content" source="media/playbook-mssps/detection-rule-details-panel.png" alt-text="Screenshot of detection rule details flyout panel.":::
+
+1. Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com/). To learn more, see [Custom detection rules](/defender-xdr/custom-detection-rules).
 
 # Workload management
 
@@ -457,31 +556,109 @@ This session is designed to explore in-depth the various actions you can take an
 
 ## How to manage endpoints across tenants
 
-Microsoft Defender multitenant management provides consolidated endpoint visibility and policy management across customer tenants.
+> The multi-tenant view in the Defender XDR portal ([Multi-tenant management in Microsoft Defender XDR - Microsoft Defender XDR \| Microsoft Learn](/defender-xdr/mto-overview)) provides security administrators a consolidated view of all security policies across their entire organization, including all tenants' policies, without needing to switch portals. To access this page, navigate to Endpoints \> Configuration Management \> [Endpoint Security Policies](https://mto.security.microsoft.com/policy-inventory).
+>
+> From the Endpoint Security Policies page, a security administrator can search for a specific policy for all their tenants, using the Search function.
+>
+> To manage security settings for multiple tenants in the multi-tenant view in Defender XDR portal, security administrators must follow all the prerequisites to configure security settings for a single tenant for each of their tenants (for more details please see: [Use Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune \| Microsoft Learn](/mem/intune/protect/mde-security-integration?toc=%2Fdefender-endpoint%2Ftoc.json&bc=%2Fdefender-endpoint%2Fbreadcrumb%2Ftoc.json&view=o365-worldwide)). This includes the following role-based access control requirements:
+>
+> For Microsoft Defender, use the security administrator role (or custom role with security configuration management permissions scoped to all devices)
+>
+> For Microsoft Intune, use the Endpoint security manager role
+>
+> Additionally, the devices in each Defender tenant must be affiliated with the corresponding Entra tenant
+>
+>
+>
+> This experience does not currently support Microsoft Defender for Business tenants.
+>
+> Once the tenants are onboarded to multi-tenant management in Defender XDR (MTO), endpoints across all onboarded tenants can be managed through the [Devices](https://mto.security.microsoft.com/machines) page.
 
-For complete guidance on managing devices, see [Devices in multitenant management](/unified-secops-platform/mto-tenant-devices). For endpoint security policy management, see [Endpoint security policies in multitenant management](/unified-secops-platform/mto-endpoint-security-policy).
+### **Tenant device list**
 
-**Note:** Requires Intune integration for each tenant. See [prerequisites](/unified-secops-platform/mto-endpoint-security-policy#prerequisites) for roles and configuration requirements.
+> The Tenants page in multitenant management lists each tenant you have access to. Each tenant page includes details such as the number of devices and device types, the number of high value and high exposure devices, and the number of devices available to onboard. Selecting a tenant here will take you to a dedicated device inventory page for that tenant.
+>
+> :::image type="content" source="media/playbook-mssps/mto-tenant-device-list.png" alt-text="Screenshot of tenant device list showing device counts and types.":::
+>
+> Top of the page will list the number of tenants and the number of devices that have been both onboarded or discovered across all onboarded tenants. You can also see the aggregate number of devices identified as:
+
+- High risk
+
+- High exposure
+
+- Internet facing
+
+- Can be onboarded
+
+- Newly discovered
+
+- High value
+
+> There is an option to export CSV list right from this section and selecting a tenant name will navigate to the device inventory for that tenant where you can see all the data.
+
+### Device inventory
+
+> The [Device inventory page](https://mto.security.microsoft.com/machines?category=endpoints) lists all the devices in each tenant that you have access to. The page is like the Defender for Endpoint device inventory with the addition of the Tenant name column. The total number of devices, critical assets, high risk devices, and internet-facing devices for all tenants are shown at the top of the page.
+>
+> To manage a device, select a specific device from the list. Device management tasks like managing tags, device exclusion, and reporting inaccuracy become available at the top of the device list.
+>
+> :::image type="content" source="media/playbook-mssps/mto-device-inventory-page.png" alt-text="Screenshot of device inventory page with device management options.":::
+>
+> From the Device Inventory page, multiple filters are available to sort and filter the device list according to your use cases. Filtering is available for the following fields:
+
+- Tenant name
+
+- Risk level
+
+- Criticality level
+
+- Mitigation status
+
+- Cloud platforms
+
+- Operating system (OS) platforms
+
+- Windows OS version
+
+- Sensor health state
+
+- Antivirus status
+
+- Tags
+
+- First seen
+
+- Internet facing
+
+- Group
+
+- Exclusion state
+
+- Managed by
+
+> Selecting a device by clicking on the device name opens the tenant device page in a new tab. You can further apply other actions on the device in the new tab, just like the standard XDR experience.
 
 ## How to manage email and collaboration tools across tenants
 
-When managing Email and Collaboration in the unified XDR portal as a partner, there are some important distinctions to note around capabilities as they relate to managing customers through B2B and GDAP.
-
-**Unified RBAC**
-
-When looking at using Unified RBAC in managing your MDO customers, it is important to understand that organizations must have Microsoft Defender for Office 365 Plan 2. The following tables outline how those permissions map to the Unified RBAC model and you will need to use Azure B2B.
+> When managing Email and Collaboration in the unified XDR portal as a partner, there are some important distinctions to note around capabilities as they relate to managing customers through B2B and GDAP.
+>
+> **Unified RBAC**
+>
+> When looking at using Unified RBAC in managing your MDO customers, it is important to understand that organizations must have Microsoft Defender for Office 365 Plan 2. The following tables outline how those permissions map to the Unified RBAC model and you will need to use Azure B2B.
 
 - [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles#email--collaboration-permissions-mapping)
 
 - [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping)
 
-**Granular Delegated Admin Privileges (GDAP)**
-
-GDAP is not currently supported for managing Microsoft Defender for Office 365.
-
- **Azure B2B important notes**
+> **Granular Delegated Admin Privileges (GDAP)**
+>
+> GDAP is not currently supported for managing Microsoft Defender for Office 365.
+>
+> **Azure B2B important notes**
 
 - Azure B2B invited guests aren't supported by experiences that were previously under Exchange Online RBAC. Since MDO URBAC leans on EXO Admin APIs, this creates limitations for actions performed in MDO. This can result in errors what B2B guest admins get errors when attempting to perform some actions,
+
+<!-- -->
 
 - Managing spam and phishing policies
 
@@ -493,81 +670,245 @@ GDAP is not currently supported for managing Microsoft Defender for Office 365.
 
 ## How to manage identities across tenants
 
-Microsoft Defender multitenant management provides consolidated identity visibility and investigation capabilities across customer tenants. For complete guidance, see [Multitenant identities inventory](/unified-secops-platform/multitenant-identities-inventory).
+> The multi-tenant view in the Defender XDR portal ([Multi-tenant management in Microsoft Defender XDR - Microsoft Defender XDR \| Microsoft Learn](/defender-xdr/mto-overview)) provides complex organizations with means to segregate regions and/or business units into individual tenants, without losing access to those tenant data.
+>
+>
+>
+> Once the tenants are onboarded to multi-tenant management in Defender XDR (MTO), Identities across all onboarded tenants can be managed through the [Identities inventory](https://mto.security.officeppe.com/identity-inventory) page. This phase is in the final phase of development and will be rolled out to private preview customers by the end of May 2025 with GA timeline by the end of June 2025.
 
-**Note:** Identity management features are continuously being enhanced. Check [What's new in the unified SecOps platform](/unified-secops-platform/whats-new) for the latest capabilities.
+### Identity inventory
+
+> The Identity inventory page lists all the identities of each tenant that you have access to. The page is like the Defender for Identity inventory with the addition of the Tenant name column. The total number of Identities, critical assets, disabled identities, and service accounts for all tenants are shown at the top of the page.
+>
+> To manage an identity, select a specific identity from the list. Identity remediation actions like disable an account or forcing password reset are available from the identity entity page.
+>
+> :::image type="content" source="media/playbook-mssps/mto-identity-inventory-page.png" alt-text="Screenshot of identity inventory page showing identities across tenants.":::
+>
+> The identity inventory page represents an insight that can help you understand what the highly privileged accounts are and further investigate them through Advanced hunting query.
+>
+> From the Identity Inventory page, multiple filters are available to sort and filter the identity list according to your use cases. Filtering is available for the following fields:
+
+- Tenant name
+
+- Active directory domain
+
+- Criticality level
+
+- Source (On-premises/Cloud/Hybrid)
+
+- Account Status
+
+- Tags
 
 ## Microsoft Defender for Cloud Apps
 
-Defender for Cloud Apps is a SaaS security solution.  This workload is included with relevant licenses and has a compliance boundary of the tenant where the license is provisioned.  Due to this architecture, 1st party connectors (M365 and Azure) will ingest activities and trigger alerts for users within those tenants.  However, customers may connect multiple 3rd party connectors (SalesForce, ServiceNow, etc..).
-
-However, Defender for Cloud Apps is natively integrated with Microsoft XDR and follows the same multi-tenancy capabilities that exist today.  While connectors are limited to a specific tenant, the data that’s ingested from each tenant in the CloudAppEvents table and incidents/alerts are available via MTO.  That means that customers can hunt for events across tenants and triage alerts/incidents that originate from Defender for Cloud Apps signals.
-
+> Defender for Cloud Apps is a SaaS security solution.  This workload is included with relevant licenses and has a compliance boundary of the tenant where the license is provisioned.  Due to this architecture, 1st party connectors (M365 and Azure) will ingest activities and trigger alerts for users within those tenants.  However, customers may connect multiple 3rd party connectors (SalesForce, ServiceNow, etc..).
+>
+>  However, Defender for Cloud Apps is natively integrated with Microsoft XDR and follows the same multi-tenancy capabilities that exist today.  While connectors are limited to a specific tenant, the data that’s ingested from each tenant in the CloudAppEvents table and incidents/alerts are available via MTO.  That means that customers can hunt for events across tenants and triage alerts/incidents that originate from Defender for Cloud Apps signals.
+>
+>
 
 ## Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud is integrated with Microsoft Defender Extended Detection and Response (XDR). This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. This integration provides richer context to investigations that span cloud resources, devices, and identities.
-
-The partnership with Microsoft Defender XDR allows security teams to get the complete picture of an attack, including suspicious and malicious events that happen in their cloud environment. Security teams can accomplish this goal through immediate correlations of alerts and incidents.
-
-Microsoft Defender XDR offers a comprehensive solution that combines protection, detection, investigation, and response capabilities. The solution protects against attacks on devices, email, collaboration, identity, and cloud apps. Our detection and investigation capabilities are now extended to cloud entities, offering security operations teams a single pane of glass to significantly improve their operational efficiency.
-
-Incidents and alerts are now part of [Microsoft Defender XDR's public API](/microsoft-365/security/defender/api-overview). This integration allows exporting security alerts data to any system using a single API. As Microsoft Defender for Cloud, we're committed to providing our users with the best possible security solutions, and this integration is a significant step towards achieving that goal.
+> Microsoft Defender for Cloud is integrated with Microsoft Defender Extended Detection and Response (XDR). This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. This integration provides richer context to investigations that span cloud resources, devices, and identities.
+>
+> The partnership with Microsoft Defender XDR allows security teams to get the complete picture of an attack, including suspicious and malicious events that happen in their cloud environment. Security teams can accomplish this goal through immediate correlations of alerts and incidents.
+>
+> Microsoft Defender XDR offers a comprehensive solution that combines protection, detection, investigation, and response capabilities. The solution protects against attacks on devices, email, collaboration, identity, and cloud apps. Our detection and investigation capabilities are now extended to cloud entities, offering security operations teams a single pane of glass to significantly improve their operational efficiency.
+>
+> Incidents and alerts are now part of [Microsoft Defender XDR's public API](/microsoft-365/security/defender/api-overview). This integration allows exporting security alerts data to any system using a single API. As Microsoft Defender for Cloud, we're committed to providing our users with the best possible security solutions, and this integration is a significant step towards achieving that goal.
 
 ## Microsoft Security Exposure Management
 
-Microsoft Security Exposure Management helps MSSPs gain visibility into customer attack surfaces, identify critical assets, and prioritize security efforts across managed tenants. The platform provides unified security posture views, enterprise exposure graphs for threat hunting, attack path analysis, and cross-workload data integration—enabling MSSPs to demonstrate value through measurable risk reduction.
+Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads. Security Exposure Management enriches asset information with security context that helps you to proactively manage attack surfaces, protect critical assets, and explore and mitigate exposure risk.
 
-For complete capabilities including attack surface visualization, critical asset management, exposure insights, attack path analysis, choke point identification, and data connector integration, see [What is Microsoft Security Exposure Management?](/security-exposure-management/microsoft-security-exposure-management).
+With Security Exposure Management you can:
 
-**MSSP integration note**: Exposure Management data is accessible through Microsoft Defender XDR advanced hunting and can be queried across multiple customer tenants using MTO capabilities. For device-scoped access in multi-tenant scenarios, users require appropriate Unified RBAC permissions to device groups.
+- **Get a unified view across the organization**: Security Exposure Management continuously discovers assets and workloads and gathers discovered data into a unified and up-to-date view of your inventory and attack surface.
+
+- **Manage and investigate attack surfaces**: Visualize, analyze, and manage cross-workload attack surfaces.
+
+  - The enterprise exposure graph gathers information to provide a comprehensive view of security posture and exposure across the business.
+
+  - Graph schemas provide contextual information about specific organizational entities such as devices, identities, machines, and storage.
+
+  - Query the enterprise exposure graph to explore assets, assess risk, and hunt for threats across on-premises, hybrid, and multi-cloud environments.
+
+  - Visualize your environment and graph queries with the attack surface map.
+
+- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets and assets you customize, as critical. This enables you to focus and prioritize on those critical assets to ensure security and business continuity.
+
+> You can review critical assets in the context of the Defender XDR device inventory and in Defender XDR [advanced hunting](/defender-xdr/advanced-hunting-overview).
+>
+> The device inventory provides quick links to devices sorted by:
+
+- Critical devices
+
+- Critical devices with high risk
+
+- Highly exposed critical devices
+
+- Internet-facing critical devices
+
+> In advanced hunting, you can quickly access queries for:
+
+- Critical identities
+
+- Critical cloud resources
+
+<!-- -->
+
+- **Manage exposure**: Security Exposure Management provides tools to manage security exposure and mitigate exposure risk.
+
+  - Exposure insights aggregate security posture data and provide rich context around the security posture state of your asset inventory.
+
+  - You leverage these insights to prioritize security efforts and investments.
+
+  - Insights include security events, recommendations, metrics, and security initiatives.
+
+  - As you manage exposure risk, attack paths show you how an attacker might breach your attack surface.
+
+    - Security Exposure Management generates attack paths based on data collected across assets and workloads. It simulates attack scenarios and identifies weaknesses that an attacker could exploit.
+
+    <!-- -->
+
+    - You can use the enterprise exposure graph and attack surface maps to visualize and understand potential threats.
+
+    <!-- -->
+
+    - You can also focus on choke points through which many attack paths flow.
+
+    <!-- -->
+
+    - Actionable recommendations help you to mitigate identified attack paths.
+
+- **Connect your data:** Security Exposure Management supports a variety of data connectors to integrate with different security solutions and data sources.
+
+  - Consolidate security data from multiple sources into a single, unified view.
+
+  - Gain deeper insights into your security posture by integrating data from various environments.
+
+  - Simplify the management of security data across different platforms and solutions.
+
+Microsoft Security Exposure Management (MSEM) is in active development and receives improvements on an ongoing basis. To stay up to date with the most recent developments, [this](/security-exposure-management/) page provides you with information about new features, bug fixes, and deprecated functionality.
 
 ## Microsoft Purview Data Security
 
-Microsoft Purview Data Security provides unified data discovery, classification, and protection across clouds, SaaS, and on‑premises data stores. For MSSPs operating the Unified SecOps Platform, Purview complements Defender XDR and Sentinel by turning data risk into actionable security signals—helping SOC teams understand what sensitive data exists, where it lives, and how it is being accessed or shared.
+Microsoft Purview Data Security provides unified data discovery, classification, and protection across clouds, SaaS, and on‑premises data stores. For MSSPs operating the Unified SecOps Platform, Purview complements Defender XDR and Sentinel by turning data risk into actionable security signals—helping SOC teams understand what sens**itive data exists, where it lives, and how it is being accessed or shared.**
 
 Key integrations with the Unified SecOps platform include:
 
-- **Alert and incidents (Defender XDR / Sentinel)**: Purview Data Loss Prevention, Insider Risk Management and sensitivity-label based detections can generate alerts that flow into Defender XDR and the unified incident queue. This enables correlation with device, identity, cloud app and network signals, surfacing cross-domain attack stories and reducing context switching for analysts. When Purview alerts are part of an incident, the unified portal displays the metadata and can be used in automation rules and playbooks via the Microsoft Graph security APIs, just like other Defender and Sentinel alerts.
+- Alert and incidents (Defender XDR / Sentinel): Purview **Data Loss Prevention, Insider Risk Management and sensitivity-label based detections can generate alerts that flow into Defender XDR and the unified incident queue. This enables correlation with device, identity, cloud app and network signals, surfacing cross-domain attack stories and reducing context switching for analysts. When Purview alerts are part of an incident, the unified portal displays the metadata and can be used in automation rules and playbooks via the Microsoft Graph security APIs, just like other Defender and Sentinel alerts.**
 
+- Hunting and investigations (Advanced Hunting): **Purview events, such as DLP hits, file access anomalies and label changes are available in Defender XDR’s advanced hunting schema. Analysts can run cross-tenant queries in the MTO portal to hunt for patterns that span data, identity, and endpoint signals. For example, a surge of high-sensitivity file downloads from a single user, followed by anomalous login behavior.**
 
-- **Hunting and investigations (Advanced Hunting)**: Purview events, such as DLP hits, file access anomalies and label changes are available in Defender XDR’s advanced hunting schema. Analysts can run cross-tenant queries in the MTO portal to hunt for patterns that span data, identity, and endpoint signals. For example, a surge of high-sensitivity file downloads from a single user, followed by anomalous login behavior.
-
-- **Context enrichment**: Purview’s data inventory and classification enrich the Security Exposure Management story by mapping critical data assets to exposure insights and attack paths. This helps prioritize mitigations based on the business impact of exposed data.
+- Context enrichment**: Purview’s data inventory and classification enrich the Security Exposure Management story by mapping critical data assets to exposure insights and attack paths. This helps prioritize mitigations based on the business impact of exposed data.**
 
 # Content and Configuration Management
 
 ## Content distribution in MTO
 
-Microsoft Defender multitenant management enables MSSPs to deploy security content at scale across customer tenants. For complete guidance on creating distribution profiles, requirements, and troubleshooting, see [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles). 
+> **What is content distribution?**
+>
+> Content distribution is a capability in multi-tenant management within the Defender portal that lets you manage security content at scale across multiple tenants—without repeatedly creating or switching between tenants.
+>
+> With content distribution in multi-tenant management, you can:
 
-**Currently supported content types:** 
+- **Create once, deploy everywhere**: Take content from one tenant and distribute it to a group of tenants.
 
-- Custom detection rules 
+- **Run seamlessly**: Distributed content executes on the target tenant’s scope (e.g. devices, workspaces).
 
-- Endpoint security policies (MDE customers only) 
+- **Save time and reduce errors**: Avoid manual duplication and track all content from a single place.
 
-**Preview content types** (availability varies by tenant/license): 
+> **What content can you distribute?**
+>
+> Currently supported (with more coming soon):
 
-- URBAC roles 
+- Custom detection rules
 
-- Microsoft Sentinel solutions 
+- MDE security policies
 
-- Automation rules 
+- URBAC roles (preview)
 
-- Analytics rules  
+- Solutions (preview)
 
-- Workbooks 
+- Automation rules (preview)
 
-**Key MSSP considerations:** 
+- Analytics rules (preview)
 
-- **Scope flexibility**: Define different device groups, workspace assignments, or role scopes per tenant 
+- Workbooks (preview)
 
-- **Ongoing management**: Update content and resync across all tenants without recreating profiles 
+> For content that gets distributed (e.g. custom detection rules), you’ll have to choose the relevant scope for the distributed tenants (e.g. device group for custom detection, or assignment for URBAC role). After choosing the scope, you can push this content to the selected tenants and track the sync status. Content can be updated and resynced at any time. You can also always add new content items, as well as tenants, to the distribution profile.
+>
+> :::image type="content" source="media/playbook-mssps/content-distribution-profile-interface.png" alt-text="Screenshot of content distribution interface showing distribution profile options.":::
+>
+> Read more – [Link](/unified-secops/mto-distribution-profiles)
+>
+> Please be aware of the following requirements:
 
-- **Sync visibility**: Track deployment status (success/partial/failure) and troubleshoot failed tenants individually 
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Requirement</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Defender XDR license</td>
+<td>To use content distribution, your organization must have a subscription to Microsoft 365 E5 or Office E5.</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Users must be assigned the correct roles and permission at the individual tenant level to view and manage the associated data in multitenant management.<br />
+Access to content distribution is granted through the Security settings (manage) or Security Data Basic (read) permission in <a href="/defender-xdr/manage-rbac">Microsoft 365 Defender Unified role-based access control (URBAC)</a>. Both of these roles are assigned to the Security Administrator and Security Reader Microsoft Entra built-in roles by default.</td>
+</tr>
+<tr>
+<td>Delegate access</td>
+<td>Delegated access via <a href="/entra/external-id/add-users-administrator">Azure B2B</a> or <a href="/microsoft-365/lighthouse/m365-lighthouse-setup-gdap">GDAP (CSP Partners only)</a> must be obtained for at least one other tenant.</td>
+</tr>
+</tbody>
+</table>
 
-For step-by-step setup instructions and detailed requirements, see the [complete distribution profiles guide](/unified-secops-platform/mto-distribution-profiles).
+> **How does it work?**
+>
+> Creating a new distribution profile can be done from [content distribution page](https://mto.security.microsoft.com/contentdistribution) in multitenant management in Defender XDR:
+
+1. Under multitenant management, select ‘Content distribution’
+
+1. Create a new distribution profile
+
+1. Add a distribution profile name and description about your distribution profile in the details page.
+
+1. In the tenants’ page, select ‘Add tenant’ to see a list of available tenants that you can add to your distribution profile. Choose the tenants you want to add to the distribution profile, then select ‘Add’.
+
+1. In the Content selection page, select the content types to be distributed across all tenants in your distribution profile, then select ‘Next’.
+
+1. For each content type, select content items you would like to add/remove.
+
+1. Some content types require scope. For example, custom detection rules will show a ‘Device group’s page, where you can select the devices or device groups that need to be applied to the target tenant. Another example is analytics rules, which need to be distributed to one or more Sentinel workspaces.
+
+1. Review the details of the distribution profile you created on the Summary page. Leave the ‘Sync all authorized tenants’ option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
+
+1. Select Submit to finish your distribution profile creation, and sync at any time.
+
+Created distribution profiles appear in the content distribution page after creation. You can then manage these distribution profiles to add or remove content, add or remove tenants, or sync the distribution profile.
+
+Distribution profiles also have a section for sync results, and it's displayed in **Last sync result** column. The result can be:
+
+- Success
+
+- Partially successful
+
+- Failure
+
+In case the result is either *partially successful* or *failure*, [troubleshoot](/unified-secops/mto-distribution-profiles#troubleshooting-and-error-handling) what is the reason.
+
+> :::image type="content" source="media/playbook-mssps/distribution-profile-sync-results.png" alt-text="Screenshot of distribution profile sync results.":::
 
 ## Content as a Code
 
@@ -591,17 +932,17 @@ In the following sections we discuss each option.
 
 ### Microsoft Sentinel Repositories
 
-[<u>Microsoft Sentinel Repositories</u>](/azure/sentinel/ci-cd-custom-content) allow you to create and manage your custom content from an external source control repository for continuous integration / continuous delivery (CI/CD). Currently Microsoft Sentinel supports Azure DevOps and GitHub. Repositories thus provide a way to automate Microsoft Sentinel deployment and operations of your custom content to your new and existing customers. Each Microsoft Sentinel workspace is currently limited to five repository connections. More information on how to connect your Repositories [<u>here</u>.](/azure/sentinel/ci-cd?tabs=github)
-
-**How it works**
-
-Updates made to the content in your external repositories are synced to your Microsoft Sentinel workspace and will overwrite any changes you make to that content through the Microsoft Sentinel portal. The repository that you connect to will now be your “single source of truth” for custom content in the connected workspaces. If you make changes outside of the repository, it is important to ensure that the content in your repository is updated accordingly and that your deployments are happening as you expect them to.
-
-Repositories can be especially useful for MSSPs serving multiple Sentinel customers and workspaces for content deployment. Repositories connections offer various ways for you to manage and customize the deployment experience across your customers. The first is choosing the content type(s) you’d like to deploy through a connection, which can be easily specified in the connection creation wizard. Upon creating your connection, you can easily modify the connection workflow (GitHub) or pipeline definition (Azure DevOps) to customize your trigger and deployment paths amongst other things. Learn more about customizing your connections in [<u>this</u>](https://aka.ms/CustomizeSentinelRepos) [<u>article</u>.](https://aka.ms/CustomizeSentinelRepos)
-
-**Supported content types**
-
-Repositories’ content needs to be stored as ARM or Bicep templates. The repository deployment pipeline doesn't validate the content except to confirm it's in the correct JSON format. The following Microsoft Sentinel content types are supported:
+> [<u>Microsoft Sentinel Repositories</u>](/azure/sentinel/ci-cd-custom-content) allow you to create and manage your custom content from an external source control repository for continuous integration / continuous delivery (CI/CD). Currently Microsoft Sentinel supports Azure DevOps and GitHub. Repositories thus provide a way to automate Microsoft Sentinel deployment and operations of your custom content to your new and existing customers. Each Microsoft Sentinel workspace is currently limited to five repository connections. More information on how to connect your Repositories [<u>here</u>.](/azure/sentinel/ci-cd?tabs=github)
+>
+> **How it works**
+>
+> Updates made to the content in your external repositories are synced to your Microsoft Sentinel workspace and will overwrite any changes you make to that content through the Microsoft Sentinel portal. The repository that you connect to will now be your “single source of truth” for custom content in the connected workspaces. If you make changes outside of the repository, it is important to ensure that the content in your repository is updated accordingly and that your deployments are happening as you expect them to.
+>
+> Repositories can be especially useful for MSSPs serving multiple Sentinel customers and workspaces for content deployment. Repositories connections offer various ways for you to manage and customize the deployment experience across your customers. The first is choosing the content type(s) you’d like to deploy through a connection, which can be easily specified in the connection creation wizard. Upon creating your connection, you can easily modify the connection workflow (GitHub) or pipeline definition (Azure DevOps) to customize your trigger and deployment paths amongst other things. Learn more about customizing your connections in [<u>this</u>](https://aka.ms/CustomizeSentinelRepos) [<u>article</u>.](https://aka.ms/CustomizeSentinelRepos)
+>
+> **Supported content types**
+>
+> Repositories’ content needs to be stored as ARM or Bicep templates. The repository deployment pipeline doesn't validate the content except to confirm it's in the correct JSON format. The following Microsoft Sentinel content types are supported:
 
 - Analytic rules
 
@@ -615,17 +956,17 @@ Repositories’ content needs to be stored as ARM or Bicep templates. The reposi
 
 - Workbooks
 
-We are planning to extend the list to additional content types such as custom detections, summary rules, and AI agents in the future. Note that all those can be managed today using the second approach, i.e. building your own CI/CD pipeline.
-
-:::image type="content" source="media/playbook-mssps/sentinel-repositories-content-types.png" alt-text="Screenshot of Microsoft Sentinel Repositories supported content types.":::
-
-**Repositories templates**
-
-Microsoft Sentinel Repositories use ARM or Bicep templates. Any such template, for the selected content types, placed in a connected repository, is deployed to the connected workspace.
-
-The templates for each content type has specific structure and parameter name which are documented in the [Sentinel resources template reference](/azure/templates/microsoft.securityinsights/allversions); visit [<u>RepositoriesSampleContent repository</u>](https://github.com/SentinelCICD/RepositoriesSampleContent) to find samples for each content type and useful script to convert from The Sentinel public GitHub YAML format to ARM format.
-
-While you can start building templates from scratch, it is often easier to start from either the Sentinel Public GitHub repository YAML files or from a content item developed within Sentinel. The following table outlines how to convert those to an ARM template for use with Microsoft Sentinel Repositories. To convert ARM to Bicep, refer to the [Bicep conversion notes](/azure/sentinel/ci-cd-custom-content#plan-your-repository-content).
+> We are planning to extend the list to additional content types such as custom detections, summary rules, and AI agents in the future. Note that all those can be managed today using the second approach, i.e. building your own CI/CD pipeline.
+>
+> :::image type="content" source="media/playbook-mssps/sentinel-repositories-content-types.png" alt-text="Screenshot of Microsoft Sentinel Repositories supported content types.":::
+>
+> **Repositories templates**
+>
+> Microsoft Sentinel Repositories use ARM or Bicep templates. Any such template, for the selected content types, placed in a connected repository, is deployed to the connected workspace.
+>
+> The templates for each content type has specific structure and parameter name which are documented in the [Sentinel resources template reference](/azure/templates/microsoft.securityinsights/allversions); visit [<u>RepositoriesSampleContent repository</u>](https://github.com/SentinelCICD/RepositoriesSampleContent) to find samples for each content type and useful script to convert from The Sentinel public GitHub YAML format to ARM format.
+>
+> While you can start building templates from scratch, it is often easier to start from either the Sentinel Public GitHub repository YAML files or from a content item developed within Sentinel. The following table outlines how to convert those to an ARM template for use with Microsoft Sentinel Repositories. To convert ARM to Bicep, refer to the [Bicep conversion notes](/azure/sentinel/ci-cd-custom-content#plan-your-repository-content).
 
 <table>
 <colgroup>
@@ -702,7 +1043,7 @@ While you can start building templates from scratch, it is often easier to start
 </tbody>
 </table>
 
-**Repositories architecture**
+> **Repositories architecture**
 
 One of the most interesting exercises MSSPs run into when working with CI/CD pipelines for multiple customers is how to best structure their set of pipelines to service all their customers. There’s certainly no one-size-fits-all structure, but below are three patterns to consider:
 
@@ -768,9 +1109,9 @@ If you prefer to start from scratch you can use [this](https://techcommunity.mic
 
 **Deploying templates in your workflow**
 
-The simplest way to deploy Sentinel content in your workflow is by deploying ARM, Bicep, or Terraform templates. This is most suitable when you would like to deploy templates as is. If you need to modify the templates prior to deploying you may be able to use template parameters, or consider scripting, described later.
-
-To deploy a template in your CI/CD workflow, use the following:
+> The simplest way to deploy Sentinel content in your workflow is by deploying ARM, Bicep, or Terraform templates. This is most suitable when you would like to deploy templates as is. If you need to modify the templates prior to deploying you may be able to use template parameters, or consider scripting, described later.
+>
+> To deploy a template in your CI/CD workflow, use the following:
 
 <table>
 <colgroup>
@@ -865,11 +1206,71 @@ Two common methods to avoid this situation are:
 
 # Case Management
 
-Beyond incident response and content distribution, MSSPs need a centralized way to track security work that spans multiple incidents, threat hunting campaigns, and detection tuning efforts across customer tenants. The unified security operations platform provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
+Many SecOps teams use Microsoft Sentinel or Microsoft Defender to do security work and yet rely on 3<sup>rd</sup> party tools to manage cases. The majority of these case management systems are not tuned to the unique needs of SecOps, resulting in generic views and data, lack of security context to efficiently resolve cases, increased time to respond, not to mention the incremental cost of implementing another system. Overreliance on 3<sup>rd</sup> party ticketing systems** **for communication and collaboration, inside and outside of the SOC, results in insufficient collaboration capabilities which are not fully integrated with SecOps workflows.
 
-For complete guidance on case features, workflows, linking incidents and IoCs, RBAC requirements, and customization options, see [Cases overview](/unified-secops-platform/cases-overview). For multi-tenant case management, see [Manage cases in MTO](/unified-secops-platform/mto-manage-cases).
+The unified security operations platform has introduced a new case management service that represents our first steps towards delivering a unified, security-focused case management experience that centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads, removing the reliance on external ticketing systems.
 
-**Note:** Case management supports custom workflows, task assignments, rich collaboration, and evidence linking. Future enhancements include automation, SLA tracking, and AI-powered insights.
+Case management provides an introductory set of features that will be the foundation for future capabilities. Even in its initial stages, SecOps teams are using case management for:
+
+- Responding to security events that span multiple incidents
+
+- Managing threat hunting
+
+- Tracking IoCs and threat actors
+
+- Tracking detection logic that needs tuning
+
+The specific capabilities include:
+
+- Creating and track your SecOps related cases in one place with the new cases page
+
+- Define your own workflow by configuring custom status values
+
+- Improve collaboration, quality, and accountability by assigning tasks and due dates
+
+- Handle escalations and complex cases by linking multiple incidents to a case
+
+- Link incidents or threat intelligence IOCs to your cases
+
+Capabilities include:
+
+- Rich text to provide links, tables, and formatting
+
+- Attachments to store files like documents, CSVs, and encrypted zip files containing malware samples, both on the case as well as on a comment (preview)
+
+- Multi-tenant support via the MTO portal
+
+This is just the first step! On the roadmap is automation, auditing, additional collaboration, customization, SLAs and more. We welcome your feedback as we add features and work towards a robust case management experience for SecOps.
+
+**Getting started**
+
+To start using case management, select **Cases** in the Defender portal to access the case queue. Filter, sort, or search your cases to find what you need to focus on.
+
+> :::image type="content" source="media/playbook-mssps/case-management-queue.png" alt-text="Screenshot of case management queue in Defender portal.":::
+
+Click on name of the case to view the full details page. From here you can view case summary data, rich text comments, manage the case (with custom status values), add attachments, link incidents, and create and assign tasks.
+
+:::image type="content" source="media/playbook-mssps/case-details-page.png" alt-text="Screenshot of case details page showing summary and comments.":::
+
+For a full tour, click [here](/unified-secops-platform/cases-overview) to learn more.
+
+**Multi-tenant support**
+
+The cases queue in the multitenant portal has a few extra features to enable you to view and manage cases from multiple tenants in one place:
+
+- The **Cases** queue contains columns for **Tenant** and **Tenant ID**, so you can see which tenant each case belongs to.
+
+- If you are managing many tenants, you can search, sort, or filter the case queue by tenant. The existing sort, filter, and search capabilities also work across multiple tenants in one combined view.
+
+- Role-based access control (RBAC) settings are applied at the tenant level, so you only see cases from the tenants you have access to. See RBAC requirements [here](/unified-secops-platform/cases-overview?branch=pr-en-us-3683#requirements).
+
+:::image type="content" source="media/playbook-mssps/multitenant-case-queue.png" alt-text="Screenshot of multitenant case queue with tenant columns.":::
+
+Additionally, when you create a case from the multitenant portal, you can select the tenant you want, then the rest of the experience proceeds as it would from the single tenant portal.
+
+:::image type="content" source="media/playbook-mssps/case-creation-tenant-selection.png" alt-text="Screenshot of case creation with tenant selection.":::
+
+This is just the beginning. In the future, look for additional automation, evidence types, collaboration tools, AI, and more!
 
 # Sentinel data lake
 
@@ -919,6 +1320,7 @@ To get started, partners must onboard their Microsoft Sentinel experience to the
 
       - **Threat Intelligence Briefing Agent in Security Copilot** automatically curates relevant and timely threat intelligence based on an organization’s unique attributes and cyberthreat exposure.
 
+    <!-- -->
 
     - **Partner Developed Security Copilot agents** - These are available for purchase and deployment through the [Microsoft Security Store](https://securitystore.microsoft.com/agents) where partners are able to integrate their own published Security Copilot agents or other partner agents into their customers’ Microsoft Defender environment.
 
