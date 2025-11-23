@@ -26,9 +26,6 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
-
-
 This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
 > [!NOTE]
@@ -99,6 +96,7 @@ SoftwareLastSeenTimestamp|string|The last time this software was seen on the dev
 SoftwareName|string|Name of the software product.
 SoftwareVendor|string|Name of the software vendor.
 SoftwareVersion|string|Version number of the software product.
+RegistryPath|string| Registry evidence that the product is installed in the device.
 
 ### 1.6 Examples
 
