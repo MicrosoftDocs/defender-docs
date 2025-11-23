@@ -1207,7 +1207,7 @@
 
           - name: Alert
             items:
-            - name: Alert methods and properties
+            - name: Alert properties
               href: api/alerts.md
             - name: List alerts
               href: api/get-alerts.md
