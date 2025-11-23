@@ -12,16 +12,13 @@ zone_pivot_groups: defender-portal-experience
 
 # Review security recommendations
 
-In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security standards, which are applied in your Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects. Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
+In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security policies and regulatory compliance frameworks, which are applied in your cloud environments (Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP) and more). Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
 
-Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors. This context includes the resource's configuration, network connections, and security posture.
+Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors.
 
 ## Prerequisites
 
-- You must [enable Defender Cloud Security Posture Management (Defender CSPM)](enable-enhanced-security.md) on your environment.
-
-  > [!NOTE]
-  > By default, recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
+- Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 
@@ -80,12 +77,16 @@ On the recommendations page, you can review the following risk-prioritized detai
 
 ::: zone pivot="defender-portal"
 
+> [!NOTE]
+> This capability is currently in preview.
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
 The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
-   
+
    :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
 
 1. Apply filters such as:
@@ -95,22 +96,55 @@ The **Recommendations** page within Exposure Management provides a prioritized l
    - **Workload**: Filter by specific workload types
    - **Recommendation maturity**: Filter by recommendation readiness level
 
-1. In the left-hand side of the page, you can choose to view:
+1. In the left-hand side of the page, you can choose to view recommendations by security category:
    - **All recommendations**: Complete list of security recommendations
    - **Misconfigurations**: Configuration-related security issues
    - **Vulnerabilities**: Software vulnerabilities requiring patches
    - **Exposed Secrets**: Credentials and secrets that may be compromised
 
-1. For each view, you'll see:
-   - **Cloud secure score**: Current security posture score
-   - **Score history**: Trends over time
-   - **Recommendation by risk level**: Breakdown by High, Medium, Low severity
-   - **Risk calculation details**: How the risk level is determined
+   > [!NOTE]
+   > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
 
-1. Select a recommendation to review detailed information including remediation steps, attack surface map, related initiatives, and associated CVEs.
-   
-   :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
+### Recommendations summary cards
 
+For each view, the page displays summary cards that provide an at-a-glance overview of your cloud security posture:
+
+- **Cloud secure score**: Shows your overall cloud security health based on the security recommendations in your environment
+- **Score history**: Tracks your Secure Score changes over the last 7 days, helping you identify trends and measure improvement
+- **Recommendations by risk level**: Summarizes the number of active security recommendations, categorized by severity (Critical, High, Medium, Low)
+- **How risk level is calculated**: Explains how severity ratings and asset-specific risk factors are combined to determine the overall risk level for each recommendation
+
+### Recommendation views
+
+The Defender portal provides two distinct ways to view and interact with recommendations:
+
+#### Recommendation per asset view
+
+This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
+
+When you select a recommendation row, a side panel opens displaying:
+
+- **Overview**: General information about the recommendation, including its description, details of the exposed asset, and other relevant recommendation specifics
+- **Remediation steps**: Actionable guidance to resolve the security issue
+- **Map preview**: Displays all related attack paths passing through the asset, aggregated by target node type. You can:
+  - Click on an aggregated path to reveal all associated attack and additional paths
+  - Select a specific path to view its detailed visualization
+- **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
+- Additional tabs may appear for specific recommendations with relevant contextual information
+
+#### Recommendation title view
+
+This view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
+
+When you select an aggregated recommendation row, a side panel opens displaying:
+
+- **Overview**: General information including the recommendation description, risk level distribution across affected resources, governance status, and other relevant details
+- **Remediation steps**: Actionable guidance to resolve the security issue
+- **Exposed assets**: A list of all resources affected by this recommendation
+- **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
+- Additional tabs may appear for specific recommendations with relevant contextual information
+
+:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 Alternative access paths to recommendations:
 
@@ -120,7 +154,6 @@ Alternative access paths to recommendations:
 > [!NOTE]
 > **Why you might see different resources between the Azure portal and Defender portal:**
 > - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
-> - **Free subscription resources**: Resources from free subscriptions don't appear in the Defender portal during the preview period. This is a temporary limitation that will be addressed.
 > - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
 
 ## Understanding risk prioritization in Defender portal
@@ -146,13 +179,13 @@ The unified Exposure Management experience calculates risk levels using a contex
 - **Exploitability factors**: How easily an attacker could exploit the vulnerability
 - **Business impact**: The potential consequences if the security issue were exploited
 - **Attack surface**: The resource's exposure to potential threats
-- **Choke point analysis**: Whether addressing the recommendation would disrupt multiple attack paths
+- **Choke point analysis**: Whether the resource serves as a critical junction in potential attack paths
 
 ### Risk levels in Defender portal
 
 Recommendations in the Defender portal are classified into five risk levels:
 
-- **Critical**: Security vulnerabilities with immediate exploitability and high business impact that require urgent attention
+- **Critical**: The most severe security issues with immediate exploitability and high business impact that require urgent attention
 - **High**: Significant security risks that should be addressed promptly but may not require immediate action
 - **Medium**: Moderate security issues that can be addressed as part of regular security maintenance
 - **Low**: Minor security issues that can be addressed at your convenience during routine operations
@@ -197,12 +230,6 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. Select a recommendation.
 
-1. In the recommendation, you can perform these actions:
-
-    - To view detailed information about the affected resources with an Azure Resource Graph Explorer query, select **Open query**.
-    - To view the Azure Policy entry for the underlying recommendation (if relevant), select **View policy definition**.
-    - To view all resources the recommendation applies to, select **View recommendation for all resources**.
-
 1. In **Take action**:
 
    - **Remediate**: A description of the manual steps required to resolve the security issue on the affected resources. For recommendations with the **Fix** option, you can select **View remediation logic** before applying the suggested fix to your resources.
@@ -240,43 +267,47 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud assets** tab, you can explore detailed information and take action.
 
+Apply filters and filter sets such as **Exposed asset**, **Asset risk factors**, **Environment**, **Workload**, **Recommendation maturity** and others.
+
+On the left navigation pane, you can choose to either view all recommendations or view by a specific category.
+
+There are separate views for issue types:
+
+- **Misconfigurations**
+- **Vulnerabilities**
+- **Exposed Secrets**.
+
+For each view you will view the **Cloud secure score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
+
+> [!NOTE]
+> In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
+>
+> - You may notice a longer list of recommendations compared to before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) are now shown individually rather than nested under a parent recommendation.
+> - The old grouped recommendations still appear side by side with the new format for now, but they will eventually be deprecated.
+> - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and does not affect Secure Score yet.
+> - Secure Score currently applies to the parent recommendation only, not to each individual item.
+>
+ **Tip**: If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
+
+With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
+
+Key improvements in the cloud recommendations experience include:
+
+- **Risk factors per asset**: Assess the broader exposure context of each recommendation for informed decisions
+- **Risk-based scoring**: New scoring that weighs recommendations based on severity, asset context, and potential impact
+- **Enhanced data**: Core recommendation data from Azure Recommendations enriched with additional fields and capabilities from Exposure Management
+- **Prioritized by criticality**: Greater emphasis on critical issues that pose the highest risk to your organization
+
 The recommendation details page provides comprehensive information including:
 
-1. **Risk Assessment**: View the risk level calculation based on environmental context, including:
-   - Resource exposure factors
-   - Potential business impact
-   - Exploitability assessment
-   - Network connectivity context
-
-1. **Resource context**: Review detailed information about affected resources with:
-   - Asset relationship mapping
-   - Security posture context
-   - Associated attack paths
-   - Risk factor analysis
-
-1. **Remediation options**: Access various remediation approaches:
-   - **Automated remediation**: When available, use built-in fix capabilities
-   - **Manual remediation**: Follow step-by-step guidance for manual fixes
-   - **Governance assignment**: Assign owners and due dates for tracking
-   - **Risk acceptance**: Document accepted risks with proper justification
-
-1. **Attack path integration**: If the recommendation is part of attack paths:
-   - View associated attack path scenarios
-   - Understand the role in potential attack sequences
-   - See choke point analysis where applicable
-   - Access MITRE ATT&CK technique mapping
-
-1. **Filtering and prioritization**: Use advanced filtering to focus on:
-   - Critical recommendations with high risk scores
-   - Recommendations affecting exposed assets
-   - Time-sensitive security issues
-   - Workload-specific recommendations
-
-1. **Tracking and reporting**: Monitor remediation progress through:
-   - Status tracking (unassigned, on time, overdue)
-   - Historical trend analysis
-   - Compliance impact assessment
-   - Security score improvement potential
+1. **Overview**: Summary of the recommendation with:
+   - - Description
+   - Recommendation details (risk level, attack paths, status, owner)
+   - Exposed asset details (Asset name, type, environment)
+1. **Remediation steps** where available.
+1. **Map preview**: A visual representation of the resource's attack surface and its relation to potential attack scenarios.
+1. **Related initiatives**: The security initiatives and compliance frameworks associated with the recommendation.
+1. **Associated CVEs**: Links to relevant Common Vulnerabilities and Exposures when applicable.
 
 The unified experience ensures that cloud security recommendations are contextualized within the broader security landscape, enabling more informed decision-making and efficient remediation workflows.
 
@@ -366,15 +397,13 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Review the results.
 
-::: zone-end
-
 ## How are recommendations classified?
 
 Every security recommendation from Defender for Cloud is given one of three severity ratings.
 
 ### High severity
 
-We recommend that you address these recommendations immediately. They indicate that there's a critical security vulnerability that an attacker could exploit to gain unauthorized access to your systems or data. 
+We recommend that you address these recommendations immediately. They indicate that there's a critical security vulnerability that an attacker could exploit to gain unauthorized access to your systems or data.
 
 Examples of high severity recommendations include:
 
@@ -385,7 +414,7 @@ Examples of high severity recommendations include:
 
 ### Medium severity
 
-These recommendations indicate a potential security risk. We recommend that you address these recommendations in a timely manner, but they might not require immediate attention. 
+These recommendations indicate a potential security risk. We recommend that you address these recommendations in a timely manner, but they might not require immediate attention.
 
 Examples of medium severity recommendations include:
 
@@ -409,8 +438,6 @@ An organization's internal policies might differ from Microsoft's classification
 
 > [!NOTE]
 > Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** determination that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md) and detailed guidance in the risk prioritization sections above.
-
-::: zone pivot="azure-portal"
 
 ### Example
 

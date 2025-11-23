@@ -6,32 +6,10 @@ ms.author: dacurwin
 author: dcurwin
 ms.date: 09/10/2025
 ms.custom: mode-other
-zone_pivot_groups: defender-portal-experience
 #customer intent: As a user, I want to learn how to customize email notifications for alerts and attack paths in Microsoft Defender for Cloud.
 ---
 
-::: zone pivot="defender-portal"
-
 # Configure email notifications for alerts and attack paths
-
-Microsoft Defender for Cloud allows you to configure email notifications for alerts and attack paths through the unified Defender portal experience. The NextGen portal enhances notification management by integrating with the centralized Cloud Infrastructure dashboard and Exposure Management insights, ensuring that security teams receive timely notifications for the most critical threats across their cloud environment.
-
-Configuring email notifications allows for the delivery of timely notifications to the appropriate recipients. When you modify the email notification settings, you can define preferences for the severity levels of alerts. You can also define preferences for the risk level of externally-driven attack paths that trigger notifications. Notifications focus on real, exploitable threats rather than broad scenarios. By default, subscription owners receive email notifications for high-severity alerts and attack paths.
-
-The email notification settings work seamlessly with the Cloud Scopes and Unified RBAC system, allowing you to configure scoped notifications based on your organizational structure and access controls.
-
-Defender for Cloud's **Email notifications** settings page allows you to define preferences for notification emails including:
-
-- ***who* should be notified** - Emails can be sent to select individuals or to anyone with a specified Azure role for a subscription, with enhanced integration to Cloud Scopes for granular notification control.
-- ***what* they should be notified about** - Modify the severity levels for which Defender for Cloud should send out notifications, with enhanced correlation to Exposure Management risk prioritization.
-
-:::image type="content" source="./media/configure-email-notifications/email-notification-settings.png" alt-text="Screenshot showing how to configure the details of the contact who is to receive emails about alerts and attack paths." lightbox="media/configure-email-notifications/email-notification-settings.png":::
-
-::: zone-end
-
-::: zone pivot="azure-portal"
-
-## Configure email notifications for alerts and attack paths
 
 Microsoft Defender for Cloud allows you to configure email notifications for alerts and attack paths. Configuring email notifications allows for the delivery of timely notifications to the appropriate recipients. When you modify the email notification settings, you can define preferences for the severity levels of alerts. You can also define preferences for the risk level of externally-driven attack paths that trigger notifications. Notifications focus on real, exploitable threats rather than broad scenarios. By default, subscription owners receive email notifications for high-severity alerts and attack paths.
 
@@ -41,8 +19,6 @@ Defender for Cloud's **Email notifications** settings page allows you to define 
 - ***what* they should be notified about** - Modify the severity levels for which Defender for Cloud should send out notifications.
 
 :::image type="content" source="./media/configure-email-notifications/email-notification-settings.png" alt-text="Screenshot showing how to configure the details of the contact who is to receive emails about alerts and attack paths." lightbox="media/configure-email-notifications/email-notification-settings.png":::
-
-::: zone-end
 
 ## Email frequency
 

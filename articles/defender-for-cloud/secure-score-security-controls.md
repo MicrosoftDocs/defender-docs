@@ -2,7 +2,9 @@
 title: Cloud secure score in Microsoft Defender for Cloud
 description: Learn about the Microsoft Defender for Cloud secure score, which is part of the Microsoft cloud security benchmark.
 ms.topic: concept-article
-ms.date: 03/12/2025
+author: dlanger
+ms.author: dlanger
+ms.date: 11/17/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 ---
@@ -18,6 +20,8 @@ When you turn on Defender for Cloud in a subscription, the [Microsoft cloud secu
 The MCSB issues recommendations based on assessment findings. Only built-in recommendations from the MCSB affect the secure score. Currently, [risk prioritization](risk-prioritization.md) doesn't affect the secure score.
 
 > [!NOTE]
+> **Two Secure Score models**: Microsoft Defender for Cloud now offers two different Secure Score models. The new **Cloud Secure Score (risk-based)** is available in the Microsoft Defender portal and incorporates asset risk factors and criticality for more accurate prioritization. The classic **Secure Score** remains available in the Azure portal. These are completely different models with different calculations and values. For more information about the new model, see the [Defender portal experience](secure-score-security-controls.md?pivots=defender-portal) of this article.
+>
 > Recommendations flagged as **Preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
 > Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
 
@@ -246,6 +250,12 @@ The dashboard contains the following two reports to help you analyze your securi
 
 ::: zone pivot="defender-portal"
 
+> [!NOTE]
+> **Two Secure Score models**: Microsoft Defender for Cloud now offers two different Secure Score models. The new **Cloud Secure Score (risk-based)** is available in the Microsoft Defender portal and incorporates asset risk factors and criticality for more accurate prioritization. The classic **Secure Score** remains available in the Azure portal. These are completely different models with different calculations and values. For more information about the classic model, see the [Azure portal experience](secure-score-security-controls.md?pivots=azure-portal) of this article.
+>
+> This capability is currently in preview.
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
 ## Cloud secure score in the Defender portal
 
 The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allow you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
@@ -274,22 +284,6 @@ To calculate the environmental score for a given organization at any scope, the 
 - Rec. Medium = Recommendations with medium risk level  
 - Rec. High = Recommendations with high risk level  
 - Rec. Critical = Recommendations with critical risk level  
-
-## Microsoft secure score context
-
-Microsoft secure score is a broader, unified concept spanning multiple security domains. This page focuses on the Cloud secure score (cloud security posture management in Defender for Cloud). Other Microsoft secure scores appear in the Microsoft security portals.
-
-**Secure score types**
-
-| Score type | Scope / domain | Primary source products & data |
-| --- | --- | --- |
-| Microsoft Secure Score | Identity posture | Microsoft Entra (Azure AD) recommendations |
-| Exposure secure score | Device / endpoint posture | Microsoft Defender for Endpoint (device configuration, threat protection) |
-| Cloud Secure Score | Cloud posture (multicloud) | Microsoft Defender for Cloud (Azure, AWS, GCP) |
-
-> [!NOTE]
-> Recommendations flagged as **preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
-> Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
 
 ### Access the Cloud secure score (Defender portal)
 
@@ -330,10 +324,24 @@ Navigate to **Exposure Management** > **Initiatives** for a consolidated cloud s
 > [!NOTE]
 > The previous (classic) secure score is still available in the Azure portal using the classic view of recommendations. Navigation: Azure portal → Microsoft Defender for Cloud → Recommendations → Switch to classic view.
 
+## Microsoft Secure Score context
+
+Microsoft secure score is a broader, unified concept spanning multiple security domains. This page focuses on the Cloud secure score (cloud security posture management in Defender for Cloud). Other Microsoft secure scores appear in the Microsoft security portals.
+
+**Secure score types**
+
+| Score type | Scope / domain | Primary source products & data |
+| --- | --- | --- |
+| Microsoft Secure Score | Identity posture | Microsoft Entra (Azure AD) recommendations |
+| Exposure Secure Score | Device / endpoint posture | Microsoft Defender for Endpoint (device configuration, threat protection) |
+| Cloud Secure Score | Cloud posture (multicloud) | Microsoft Defender for Cloud (Azure, AWS, GCP) |
+
+> [!NOTE]
+> Recommendations flagged as **preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
+> Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
+
 ## Next steps
 
 - [Learn about the different elements of a recommendation](review-security-recommendations.md)
 
 ::: zone-end
-
-

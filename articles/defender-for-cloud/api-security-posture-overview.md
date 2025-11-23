@@ -11,10 +11,10 @@ ms.date: 06/18/2025
 
 # Improve your API security posture
 
-APIs are entry points into cloud-native apps. They connect services, apps, and data, making them targets for attackers. API security posture management helps protect APIs by assessing risks from misconfigurations and vulnerabilities. The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud offers API posture and risk assessments for your Azure API Management APIs.
+APIs are entry points into cloud-native apps. They connect services, apps, and data, making them targets for attackers. API security posture management helps protect APIs by assessing risks from misconfigurations and vulnerabilities. The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud offers API discovery and posture across your Azure Function Apps and Logic Apps and your managed APIs across your Azure API Management Platform.
 
 > [!NOTE]
-> **API discovery and security posture for APIs hosted in Function Apps and Logic Apps is now available in Public Preview.** This includes visibility into APIs and identification of inactive or dormant APIs, as well as APIs that permit unencrypted traffic which may pose security risk.
+> **API discovery and security posture for APIs hosted in Function Apps and Logic Apps is now available in Public Preview.** This includes visibility into APIs, posture insights including internet facing APIs, inactive or dormant APIs, APIs missing authentication and APIs that permit unencrypted traffic which may pose security risk.
 
 ## Capabilities
 
@@ -22,10 +22,11 @@ API security posture management in Defender for Cloud offers the following capab
 
 - **Gain visibility into your APIs**:  
   Get a centralized view of managed APIs across Azure API Management and APIs hosted in Function Apps and Logic Apps, with automated onboarding into Defender for Cloud.
-- **Assess API security recommendations with risk factors** *(Azure API Management only)* to:  
+- **Assess API security recommendations with risk factors** to:  
   - Identify and remediate unauthenticated API risks.  
   - Detect APIs exposed to the internet.  
-  - Identify sensitive data exposure in API endpoints, including requests and responses, URL paths, and query parameters (integrated with Microsoft Purview), powered by analyzing sampled API traffic logs.
+  - Identify sensitive data exposure in API endpoints, including requests and responses, URL paths, and query parameters (integrated with Microsoft Purview), powered by analyzing sampled API traffic logs (*Azure API Management only)*
+    
 - **Identify inactive or dormant APIs**:  
   Surface APIs that are no longer in use across Azure API Management, Function Apps, and Logic Apps.
 - **Identify APIs allowing unencrypted traffic**:  

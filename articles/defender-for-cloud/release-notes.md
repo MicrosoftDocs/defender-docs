@@ -31,29 +31,147 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-| November 18, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
-| November 3, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+|November 30, 2025 | Public preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
+|November 30, 2025 | Update | [Documentation updates](#documentation-updates) |
+|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
+|November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
+|November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
+|November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
+|November 17, 2025| Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview)|
+|November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
+|November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
+|November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
 ### Defender for Cloud integration into the Defender portal (preview)
 
-November 18, 2025
+November 30, 2025
 
-Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal and part of the boarder Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud security solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid, and code environments - all from one place. 
+**Microsoft Defender for Cloud** (MDC) is now deeply integrated into the Defender portal and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management, bringing together a complete cloud security solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid, and code environments from one place.
 
-This integration brings new values and benefits for security personas:
+This integration brings new value and benefits for security personas:
 
-**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. For more information, see [Getting started in the Defender portal](defender-portal/getting-started-defender-portal.md).
+**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. For more information.
 
-**Cloud dashboard** - This new cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and includes tools to track security progress over time out of the box. New unified dashboard consolidates Security Posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments. For more information, see [Cloud Infrastructure Dashboard](cloud-infrastructure-dashboard.md).
+**Cloud dashboard** - The new cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and includes tools to track security progress over time out of the box. The unified dashboard consolidates security posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments. For more information, see [Cloud Overview dashboard](cloud-infrastructure-dashboard.md).
 
-**Cloud asset inventory** – A new centralized inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, device actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. For more information, see [Asset inventory](asset-inventory.md?pivots=defender-portal).
+**Cloud asset inventory** – A centralized inventory that offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, device actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. For more information, see [Asset inventory](asset-inventory.md?pivots=defender-portal).
 
-**Unified cloud security posture capabilities** – We're unifying all the cloud security posture management (CSPM) capabilities into Microsoft Security Exposure Management (MSEM). Security personas can now view secure scores, prioritized recommendations, attack paths and vulnerabilities—all in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps, and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
+**Unified cloud security posture capabilities** – We're unifying all the cloud security posture management (CSPM) capabilities into **Microsoft Security Exposure Management** (MSEM). Security personas can now view secure scores, prioritized recommendations, attack paths and vulnerabilities in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps, and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
 
 **Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
 
+**New modeling for security recommendations**
+
+Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (e.g., **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
+
+With this change, you get:
+
+- **Smarter prioritization** based on individual impact  
+- **Governance** - more detailed usage of governance, recommendations and exemption capabilities
+- **More accurate scoring** since each finding counts separately  
+
+In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
+
+**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the **Defender portal, the classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
+
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
+### Documentation updates
+
+November 30, 2025
+
+We’ve begun a major revamp of the Microsoft Defender for Cloud documentation to streamline structure, remove outdated content, and add new material for the integration into the Defender portal.
+
+**Highlights:**  
+
+- **Simplified navigation**: A unified table of contents based on customer feedback.  
+- **Mixed-mode experience**: Articles that cover both Azure and Defender portals with entry points at the top of the article.  
+- **New Defender portal section**: Features recent enhancements, opt-in guidance, and known limitations.  
+
+### Attack Path now includes Entra OAuth application compromise
+
+November 20, 2025
+
+Attack Path now shows how attackers use compromised Entra OAuth applications to move across environments and reach critical resources. This release helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
+
+Learn more about [how to manage Attack Path](/azure/defender-for-cloud/how-to-manage-attack-path).
+
+### In-pipeline container vulnerability scanning (preview)
+
+November 19, 2025
+
+In-pipeline container vulnerability scanning for Defender for DevOps Security is now available in preview through the Defender for Cloud CLI.
+
+Scanning built container images directly within CI/CD workflows, provides real-time feedback before they're pushed to registries or deployed. This helps detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
+
+Learn more about the [Defender for Cloud CLI](cli-cicd-integration.md).
+
+### General availability of agentless vulnerability assessment for AKS runtime containers
+
+November 19, 2025
+
+Defender for Containers and Defender for Cloud Security Posture Management (CSPM) plans now include agentless vulnerability assessment for AKS runtime containers. This update extends vulnerability assessment coverage to running containers that use images from any container registry, rather than only supported registries. It also continues to scan Kubernetes add-ons and third-party tooling running in your AKS clusters.
+
+To enable this feature, make sure that **Agentless machine scanning** is turned on for your subscription in Defender for Cloud environment settings.
+
+Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md).
+
+### Advanced security posture for API discovery (Preview)
+
+November 18, 2025
+
+Microsoft Defender for Cloud API security posture management now automatically identifies unauthenticated APIs and APIs exposed to the internet across your environment, including APIs discovered on Azure Functions and Logic Apps.
+
+With this release, you can uncover high-risk API endpoints earlier, prioritize API risks using new posture insights and risk factors, and view and analyze discovered API risks across your environment by using security explorer.
+
+Learn more about [API security posture management in Defender for Cloud](api-security-posture-overview.md).
+
+### Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)
+
+November 17, 2025  
+
+Defender for Cloud is announcing the Microsoft Cloud Security Benchmark (MCSB) compliance standard v2 in preview. 
+
+The MCSB provides a collection of high-impact security controls and recommendations to help secure cloud services across single and multicloud environments. MCSB v2 adds expanded risk and threat-based guidance, expanded Azure Policy measurements, and controls for securing AI workloads. The Regulatory compliance dashboard allows you to assess resources against MCSB v2 controls and track compliance posture across cloud environments. 
+
+Learn more about the [Microsoft cloud security benchmark in Defender for Cloud](concept-regulatory-compliance.md).
+
+### Restrict Pod Access response action (preview)
+
+November 12, 2025
+
+Defender for Containers now includes a new Restrict Pod Access response action, available in preview in Microsoft Defender XDR.
+
+The action blocks sensitive interfaces within Kubernetes pods that could enable lateral movement or privilege escalation. Using this control helps contain potential breaches and reduce exposure within your cluster environments.  
+
+Learn more about [Restrict Pod Access in Defender XDR](/defender-xdr/investigate-respond-container-threats).
+
+### Updates to container image continuous vulnerability re-scan policy
+
+November 10, 2025
+
+Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability re-scan policy.
+
+Images stored in container registries are scanned when pushed and periodically re-scanned to maintain up-to-date vulnerability assessments. With this temporary update, images are now re-scanned daily if they were pushed to or pulled from the registry within the last 30 days.
+
+This change shortens the previous 90-day re-scan period to 30 days, ensuring more current vulnerability data for actively used images. Vulnerability information for images older than 30 days remains available from previous scans but is no longer updated.
+
+Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md). 
+
+### General Availability of Jfrog Artifactory and Docker Hub container registry support
+
+November 3, 2025
+
+We’re announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
+
+This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
+
+Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md).
+
+> [!NOTE]
+> Billing for Jfrog Artifactory (Cloud) & container registry support by Defender for Containers & Defender CSPM will begin on **December 2, 2025**.
+> For more information, see the [Microsoft Defender for Cloud Pricing Page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
 
 ### General availability of compliance frameworks
 
@@ -130,30 +248,21 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion Support (Preview)](#gcp-cloud-logging-ingestion-support-preview)|
+|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
-### GCP Cloud Logging Ingestion Support (Preview)
+### GCP Cloud Logging ingestion (preview)
 
 October 31, 2025
 
-Microsoft Defender for Cloud now supports **GCP Cloud Logging ingestion** in Public Preview, further strengthening multicloud identity posture and permissions management across GCP environments. 
+GCP Cloud Logging ingestion is now available in preview, improving CIEM insights and permission-usage visibility across Google Cloud environments.
 
-This new capability enables enhanced cloud identity activity insights, permission-usage visibility, and least-privilege recommendations and ensures uninterrupted CIEM recommendations for your GCP environments. To maintain continuous CIEM insights and recommendations for your connected GCP environments, you must enable GCP Cloud Logging ingestion going forward.
+To maintain continuous CIEM recommendations for connected GCP environments, enable Cloud Logging ingestion using a new or existing Pub/Sub subscription.
 
-#### Recommended Action
+Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
 
-Turn on **GCP Cloud Logging ingestion (Preview)** by following the steps in our [documentation ](https://aka.ms/multicloudconnectors) and choosing one of the following options:
-
-1. Create a new Pub/Sub subscription within the wizard, or
-
-1. Provide details for an existing Pub/Sub subscription to ingest logs
-
-> [!NOTE]
-> Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform.
-
-### Deprecation Notice: Update Outbound Rules for Microsoft Defender for Containers 
+### Deprecation notice: update outbound rules for Microsoft Defender for Containers 
 
 Microsoft Defender for Containers updated the outbound network requirements for the Defender sensor. You must update your outbound rules to maintain proper functionality. 
 
@@ -163,7 +272,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 `*.cloud.defender.microsoft.com` (HTTPS: port 443) 
 
-#### Recommended Actions 
+#### Recommended actions 
 
 1. Add the new FQDN and port to your allowed traffic in your outbound restriction method, such as a proxy or firewall. 
 
@@ -175,7 +284,7 @@ Beginning now, the Defender for Containers sensor requires outbound traffic to t
 
 To avoid service disruption, complete any necessary updates of GKE and EKS by September 30, 2026. If no action is taken where required, the Defender for Containers sensor won't function as expected.
 
-### GitHub Application Permissions Update
+### GitHub application permissions update
 
 October 23, 2025
 
@@ -245,7 +354,7 @@ Learn more about [internet exposure width](internet-exposure-analysis.md#interne
 
 September 11, 2025  
 
-Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/docs/latest/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
 
 **Where it applies:**  
 - [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
@@ -289,7 +398,7 @@ August 12, 2025
 
 Microsoft [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) is generally available to government cloud customers. The service helps U.S. federal and government agencies, secure their storage accounts.
 All features of [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) are available in government clouds, aligning the feature coverage with commercial cloud services.
-Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-defender-for-cloud.md).
 
 ### General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud
 
@@ -299,7 +408,7 @@ Microsoft Defender for Cloud's [Cloud Security Posture Management (CSPM)](/azure
 
 All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
 
-Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-defender-for-cloud.md).
 
 ### AKS Security Dashboard
 
@@ -681,7 +790,7 @@ With this release, an in-product experience will be released to allow you to mig
 For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md). For information on how to disable previous versions and use the migration tool, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
 
 > [!IMPORTANT]
-> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
+> The availability of File Integrity Monitoring in Azure operated by 21Vianet and in GCCM clouds isn't currently planned to be supported.
 
 ## Next steps
 

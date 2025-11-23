@@ -13,6 +13,10 @@ zone_pivot_groups: defender-portal-experience
 
 ::: zone pivot="defender-portal"
 
+> [!NOTE] 
+> This capability is currently in preview.   
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
 Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP and connected DevOps / registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
 - Centralized, product-wide security permissions management
 - Granular scoping across heterogeneous cloud environments
@@ -336,5 +340,15 @@ Full lifecycle management (creation, membership, advanced filtering, multicloud 
 - Manage classic Azure access for platform resources
 
 For end-to-end cloud scopes and unified RBAC administration, use the Defender portal.
+
+> [!NOTE]
+> **Understanding Permissions in Defender vs. Azure**  
+> Defender uses **uRBAC (Unified Role-Based Access Control)**, which is separate from **Azure RBAC**.  
+> - **Azure RBAC** controls access at the Azure resource level (subscriptions, resource groups).  
+> - **uRBAC** provides finer-grained permissions within the Defender portal, letting you assign roles for specific security actions and cloud scopes across Defender solutions.  
+>
+> This means permissions in Defender are tailored for security tasks and do not depend on Azure RBAC roles.
+>
+> **Important:** Users will require two separate permissions: their existing Azure RBAC permissions as well as an additional uRBAC role. In addition to the existing Azure RBAC permissions, you must provide users with a new uRBAC role in order to grant them access to the new portal.
 
 ::: zone-end
