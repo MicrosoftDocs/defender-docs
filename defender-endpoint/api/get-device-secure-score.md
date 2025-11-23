@@ -23,6 +23,7 @@ appliesto:
 
 # Get device secure score
 
+
 Retrieves your [Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices). A higher Microsoft Secure Score for Devices means your endpoints are more resilient from cybersecurity threat attacks.
 
 ## Permissions
@@ -66,7 +67,7 @@ GET https://api.securitycenter.microsoft.com/api/configurationScore
 
 ### Response example
 
-Here is an example of a shortened response list.
+Here's an example of the shortned response list.
 
 ```json
 {
@@ -75,3 +76,4 @@ Here is an example of a shortened response list.
     "score": 340
 }
 ```
+

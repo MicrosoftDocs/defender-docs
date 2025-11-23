@@ -1466,7 +1466,7 @@
 
           - name: Software
             items:
-            - name: Software methods and properties
+            - name: Software properties
               href: api/software.md
             - name: List software
               href: api/get-software.md
@@ -1482,8 +1482,6 @@
               href: api/get-missing-kbs-software.md
           - name: User
             items:
-            - name: User methods
-              href: api/user.md
             - name: Get user related alerts
               href: api/get-user-related-alerts.md
             - name: Get user related machines
@@ -1491,7 +1489,7 @@
 
           - name: Vulnerability
             items:
-            - name: Vulnerability methods and properties
+            - name: Vulnerability properties
               href: api/vulnerability.md
             - name: List vulnerabilities
               href: api/get-all-vulnerabilities.md
