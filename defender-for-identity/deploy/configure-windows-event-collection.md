@@ -13,7 +13,7 @@ This article describes how to optimally configure the Advanced Audit Policy sett
 
 ## Configure Windows event auditing with the Defender for Identity sensor v3.x
 
-Defender for Identity sensor v3.x can automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones.
+Defender for Identity sensor v3.x offers previe feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones.
 
 To turn on automatic windows auditing:
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**. 
