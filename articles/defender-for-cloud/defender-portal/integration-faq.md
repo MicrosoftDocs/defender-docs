@@ -8,7 +8,7 @@ ms.date: 11/12/2025
 ms.service: defender-for-cloud
 ---
 
-# Integration FAQ for Defender portal
+# FAQ for Defender portal
 
 > [!NOTE]
 > This is currently in preview.
@@ -143,6 +143,9 @@ You may need to extract the following types of identifiers from the Defender por
 1. Use filters to locate the specific asset (environment, workload type, or search by name).
 1. Select the asset name to open detailed information.
 1. In the asset details panel, locate and copy the **Asset ID**.
+ 
+>[!NOTE]
+>If you are referring to an Azure resource be sure to include the listed **Native ID**
 
 ### How do I extract Vulnerability IDs?
 
