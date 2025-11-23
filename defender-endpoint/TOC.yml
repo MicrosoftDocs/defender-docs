@@ -1420,7 +1420,7 @@
 
           - name: Recommendation
             items:
-            - name: Recommendation methods and properties
+            - name: Recommendation properties
               href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
@@ -1435,7 +1435,7 @@
 
           - name: Remediation activity
             items:
-            - name: Remediation activity methods and properties
+            - name: Remediation activity properties
               href: api/get-remediation-methods-properties.md
             - name: Get one remediation activity by ID
               href: api/get-remediation-one-activity.md
@@ -1446,7 +1446,7 @@
 
           - name: Score
             items:
-            - name: Score methods and properties
+            - name: Score properties
               href: api/score.md
             - name: List exposure score by machine group
               href: api/get-machine-group-exposure-score.md
