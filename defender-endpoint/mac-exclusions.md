@@ -2,8 +2,8 @@
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on macOS 
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on macOS. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
-author: paulinbar
-ms.author: painbar
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
