@@ -2,8 +2,8 @@
 title: Get IP statistics API
 description: Get the latest stats for your IP using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,31 +15,29 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Get IP statistics API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 Retrieves the statistics for the given IP.
+This statistic information is based on data from the past 30 days.
 
 ## Limitations
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-2. Maximum Value for Lookbackhours is 720 Hours(30days).
+
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Maximum Value for Lookbackhours is 720 Hours(30days).
 
 ## Permissions
+
+
+When obtaining a token using user credentials:
+- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
+
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
@@ -48,9 +46,6 @@ Permission type|Permission|Permission display name
 Application|Ip.Read.All|'Read IP address profiles'
 Delegated (work or school account)|Ip.Read.All|'Read IP address profiles'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
-> - The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 
@@ -104,11 +99,10 @@ Here's an example of the response.
 
 |Name|Description|
 |---|---|
-|Organization prevalence|the distinct count of devices that opened network connection to this IP.|
-|Org first seen|the first connection for this IP in the organization.|
-|Org last seen|the last connection for this IP in the organization.|
+|Organization prevalence|The distinct count of devices that opened network connection to this IP.|
+|Org first seen|The first connection for this IP in the organization.|
+|Org last seen|The last connection for this IP in the organization.|
 
-> [!NOTE]
-> This statistic information is based on data from the past 30 days.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
+
 
