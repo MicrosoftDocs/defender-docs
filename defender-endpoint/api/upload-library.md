@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -17,23 +17,16 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/17/2024
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
 ---
-# Upload files to the live response library
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+# Upload files to the live response library
 
 
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -41,9 +34,9 @@ Upload file to live response library.
 
 ## Limitations
 
-1. File max size limitation is 20MB.
+- File max size limitation is 20MB.
 
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per
+- Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
 ## Permissions
@@ -103,9 +96,3 @@ curl -X POST https://api.security.microsoft.com/api/libraryfiles -H
 -F "HasParameters=true" -F "OverrideIfExists=true" -F "Description=test
 description"
 ```
-
-## Related topic
-
-- [Run live response](run-live-response.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-
