@@ -2,8 +2,8 @@
 title: Get alert related user information
 description: Learn how to use the Get alert-related user information API to retrieve the user related to a specific alert in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -24,14 +24,6 @@ appliesto:
 ---
 # Get alert related user information API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -44,6 +36,11 @@ Retrieves the User related to a specific alert.
 
 ## Permissions
 
+ When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
+- The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 Permission type|Permission|Permission display name
@@ -51,13 +48,7 @@ Permission type|Permission|Permission display name
 Application|User.Read.All|'Read user profiles'
 Delegated (work or school account)|User.Read.All|'Read user profiles'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
 
 ## HTTP request
 
@@ -110,5 +101,5 @@ Here is an example of the response.
     "isOnlyNetworkUser": false
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

@@ -3,8 +3,8 @@ title: Visit the Action center to see remediation actions
 description: Use the action center to view details and results following an automated investigation
 ms.service: defender-endpoint
 ms.subservice: edr
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

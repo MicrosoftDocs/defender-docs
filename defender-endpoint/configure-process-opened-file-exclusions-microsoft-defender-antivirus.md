@@ -4,8 +4,8 @@ description: You can exclude files from scans if they've been opened by a specif
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: yongrhee

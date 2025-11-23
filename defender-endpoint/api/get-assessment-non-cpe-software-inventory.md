@@ -2,8 +2,8 @@
 title: Export non product code software inventory assessment per device
 description: Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion for software that doesn't have a Common Platform Enumeration (CPE)
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,24 +15,21 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Export non product code software inventory assessment per device
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
 
 
 This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
 > [!NOTE]
-> Vulnerability management doesn't support software products without a CPE. While these products are shown in the software inventory page, but because CPEs are used by vulnerability management to identify the software and any vulnerabilities, information like exploits, number of exposed devices, and weaknesses aren't available. For more information, see [Software inventory](/defender-vulnerability-management/tvm-software-inventory).
+> Vulnerability management doesn't support software products without a CPE. While these products are shown in the software inventory page, because CPEs are used by vulnerability management to identify the software and any vulnerabilities, information like exploits, number of exposed devices, and weaknesses aren't available. For more information, see [Software inventory](/defender-vulnerability-management/tvm-software-inventory).
 
 Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
@@ -42,10 +39,11 @@ Different API calls get different types of data. Because the amount of data can 
   - Call the API to get a list of download URLs with all your organization data.
   - Download all the files using the download URLs and process the data as you like.
 
+All export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**) unless specified otherwise.
+
 Data that is collected (using either _Json response_ or _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export non product code software inventory assessment (JSON response)
 
@@ -80,11 +78,10 @@ GET /api/machines/SoftwareInventoryNoProductCodeByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+
+- Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
 </br>
 
@@ -184,11 +181,10 @@ GET /api/machines/SoftwareInventoryNonCpeExport
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
-> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
 
@@ -223,16 +219,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCp
     "generatedTime": "2022-05-30T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Export software assessment per device](get-assessment-software-inventory.md)
-- [Export assessment methods and properties per device](get-assessment-methods-properties.md)
-- [Export secure configuration assessment per device](get-assessment-secure-config.md)
-- [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
-
-Other related
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

@@ -2,8 +2,8 @@
 title: Investigate entities on devices using live response in Microsoft Defender for Endpoint
 description: Access a device using a secure remote shell connection to do investigative work and take immediate response actions on a device in real time.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

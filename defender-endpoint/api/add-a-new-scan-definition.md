@@ -2,8 +2,8 @@
 title: Add, update, or delete a scan definition
 description: Learn how to use the add, update, or delete scan definitions.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,26 +15,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender Vulnerability Management
 
 ---
+
 # Add, update, or delete a scan definition
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -42,11 +34,17 @@ API to add, update, or delete an authenticated scan.
 
 ## Limitations
 
-Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
-You can post on machines last seen according to your configured retention period.
+- You can post on machines last seen according to your configured retention period.
 
 ## Permissions
+
+When obtaining a token using user credentials:
+
+- To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` . For more information, see: [Create and manage roles](../user-roles.md)
+- To edit data, the user needs to have at least the following role permission: `ManageSecurity` . For more information, see: [Create and manage roles](../user-roles.md)
+
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 
@@ -55,10 +53,6 @@ Permission type|Permission|Permission display name
 Application|Machine.ReadWrite.All| Read and write all scan information.
 Delegated (work or school account)|Machine.Read.Write|Read and write all scan information.
 
-When obtaining a token using user credentials:
-
-- To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
-- To edit data, the user needs to have at least the following role permission: `ManageSecurity` (See [Create and manage roles](../user-roles.md))
 
 ## HTTP request
 
@@ -232,6 +226,4 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
   "ScanDefinitionIds": ["td32f17af-5cc2-4e4e-964a-4c4ef7d216e2", "ab32g20af-5dd2-4a5e-954a-4c4ef7d216e2"],
 }
 ```
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
