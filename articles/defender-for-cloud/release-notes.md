@@ -31,8 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-|November 23, 2025 | Upcoming Change | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
-|November 23, 2025 | Upcoming Change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
+|November 23, 2025 | Upcoming Change | [Update to Attack Path Analysis logic and CSPM multicloud network requirements](#update-to-attack-path-analysis-logic-and-cspm-multicloud-network-requirements)|
 |November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
@@ -43,17 +42,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-## Update to Attack Path Analysis logic
+## Update to Attack Path Analysis logic and CSPM multicloud network requirements
 
 November 23, 2025
 
-Starting today, the system generates attack paths that involve lateral movement with plain text keys only when both the source and target resources are protected by Defender CSPM. You might see fewer attack paths in your environment. To maintain comprehensive attack path analysis, ensure that all of your cloud environment is onboarded to Defender CSPM.
-
-### Update to CSPM multicloud network requirements 
-
-November 23, 2025
-
-Starting today, the system generates attack paths that involve lateral movement with plain text keys only when both the source and target resources are protected by Defender CSPM. You might see fewer attack paths in your environment. To maintain comprehensive attack path analysis, ensure that all of your cloud environment is onboarded to Defender CSPM.
+Attack paths that involve lateral movement with plain text keys are generated when both the source and target resources are protected by Defender CSPM, because of this, fewer attack paths may appear in your environment. To maintain comprehensive attack path analysis, ensure that all of your cloud environment have the Defender CSPM plan enabled.
 
 ### Attack Path now includes Entra OAuth application compromise
 
