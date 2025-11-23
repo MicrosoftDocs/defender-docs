@@ -46,7 +46,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November 23, 2025
 
-Attack paths that involve lateral movement with plain text keys are generated when both the source and target resources are protected by Defender CSPM, because of this, fewer attack paths may appear in your environment. To maintain comprehensive attack path analysis, ensure that all of your cloud environment have the Defender CSPM plan enabled.
+Attack paths that involve lateral movement with plain text keys are generated when both the source and target resources are protected by Defender CSPM, because of this, fewer attack paths may appear in your environment. 
+
+To maintain comprehensive attack path analysis, ensure that all of your cloud environment have the Defender CSPM plan enabled.
+
+Learn more about [Attack Path Analysis](concept-attack-path.md) and how to enable [Defender CSPM](tutorial-enable-cspm-plan.md)
 
 ### Attack Path now includes Entra OAuth application compromise
 
