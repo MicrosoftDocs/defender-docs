@@ -28,7 +28,7 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Aspect | Details |
 |--|--|
-| Release state: | General availability (GA)<br> Certain features are in preview. For a full list, see the the tables below|
+| Release state: | General availability (GA)<br> Certain features are in preview. For a full list, see the tables below|
 | Pricing: | **Microsoft Defender for Containers** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). |
 | Required roles and permissions: | *To deploy the required components, see the [permissions for each of the components](monitoring-components.md#defender-for-containers-extensions)<br>* **Security admin** can dismiss alerts<br> * **Security reader** can view vulnerability assessment findings<br> See also [Roles for remediation](permissions.md#roles-used-to-automatically-configure-agents-and-extensions) and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles) |
 
@@ -71,9 +71,9 @@ The following are the features provided by Defender for Containers, for the supp
 
 | Aspect | Details |
 |--|--|
-| Registries and images | **Supported**<br> *Container images in Docker V2 format  <br>* Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br>   *Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br>* Public repositories <br> * Manifest lists <br>|
-| Operating systems | **Supported** <br> *Alpine Linux 3.12-3.21<br>* Red Hat Enterprise Linux 6-9 <br> *CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br>* Oracle Linux 6-9 <br> *Amazon Linux 1, 2 <br>* openSUSE Leap, openSUSE Tumbleweed <br> *SUSE Enterprise Linux 11-15 <br>* Debian GNU/Linux 7-12 <br> *Google Distroless (based on Debian GNU/Linux 7-12)<br>* Ubuntu 12.04-24.04 <br>  *Fedora 31-37<br>* Azure Linux 1-3<br> *Windows server 2016, 2019, 2022<br>* Chainguard OS/Wolfi OS <br> *Alma Linux 8.4 or later <br>* Rocky Linux 8.7 or later |
-| Language specific packages <br><br>  | **Supported** <br> *Python <br>* Node.js <br> *PHP <br>* Ruby <br> *Rust <br>* .NET <br> *Java<br>* Go |
+| Registries and images | **Supported**<br> * Container images in Docker V2 format  <br>* Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br>* Public repositories <br> * Manifest lists <br>|
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br>* Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br>* Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br>* openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br>* Ubuntu 12.04-24.04 <br>  * Fedora 31-37<br>* Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br>* Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br>* Rocky Linux 8.7 or later |
+| Language specific packages <br><br>  | **Supported** <br> * Python <br>* Node.js <br> * PHP <br> * Ruby <br> * Rust <br>* .NET <br> * Java<br>* Go |
 
 ## Runtime protection features
 
