@@ -24,28 +24,8 @@ appliesto:
 ---
 # Software resource type
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-## Methods
-
-|Method|Return Type|Description|
-|---|---|---|
-|[List software](get-software.md)|Software collection|List the organizational software inventory|
-|[Get software by ID](get-software-by-id.md)|Software|Get a specific software by its software ID|
-|[List software version distribution](get-software-ver-distribution.md)|Distribution collection|List software version distribution by software ID|
-|[List machines by software](get-machines-by-software.md)|MachineRef collection|Retrieve a list of devices that are associated with the software ID|
-|[List vulnerabilities by software](get-vuln-by-software.md)|[Vulnerability](vulnerability.md) collection|Retrieve a list of vulnerabilities associated with the software ID|
-|[Get missing KBs](get-missing-kbs-software.md)|KB collection|Get a list of missing KBs associated with the software ID|
-
 
 ## Properties
 
@@ -60,5 +40,5 @@ appliesto:
 |exposedMachines|Long|Number of exposed devices|
 |impactScore|Double|Exposure score impact of this software|
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
 

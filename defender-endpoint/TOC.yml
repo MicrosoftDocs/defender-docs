@@ -1387,7 +1387,7 @@
 
           - name: Machine Action
             items:
-            - name: Machine Action methods and properties
+            - name: Machine Action properties
               href: api/machineaction.md
             - name: List Machine Actions
               href: api/get-machineactions-collection.md
@@ -1420,7 +1420,7 @@
 
           - name: Recommendation
             items:
-            - name: Recommendation methods and properties
+            - name: Recommendation properties
               href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
@@ -1435,7 +1435,7 @@
 
           - name: Remediation activity
             items:
-            - name: Remediation activity methods and properties
+            - name: Remediation activity properties
               href: api/get-remediation-methods-properties.md
             - name: Get one remediation activity by ID
               href: api/get-remediation-one-activity.md
@@ -1446,7 +1446,7 @@
 
           - name: Score
             items:
-            - name: Score methods and properties
+            - name: Score properties
               href: api/score.md
             - name: List exposure score by machine group
               href: api/get-machine-group-exposure-score.md
@@ -1466,7 +1466,7 @@
 
           - name: Software
             items:
-            - name: Software methods and properties
+            - name: Software properties
               href: api/software.md
             - name: List software
               href: api/get-software.md
@@ -1482,8 +1482,6 @@
               href: api/get-missing-kbs-software.md
           - name: User
             items:
-            - name: User methods
-              href: api/user.md
             - name: Get user related alerts
               href: api/get-user-related-alerts.md
             - name: Get user related machines
@@ -1491,7 +1489,7 @@
 
           - name: Vulnerability
             items:
-            - name: Vulnerability methods and properties
+            - name: Vulnerability properties
               href: api/vulnerability.md
             - name: List vulnerabilities
               href: api/get-all-vulnerabilities.md
