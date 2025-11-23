@@ -1,8 +1,8 @@
 ﻿---
 title: Security Intelligence update troubleshooting from Microsoft Update source
 description: Learn how to troubleshoot security intelligence updates from your Microsoft Update source.
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol 
 ms.date: 05/08/2025
 ms.topic: troubleshooting
