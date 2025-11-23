@@ -116,6 +116,9 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
     1. Select the **To** date and time to specify when the job schedule finishes. If you want the schedule to continue indefinitely, select **Set job to run indefinitely**.
 
     Job from and to times are set for the user's locale.
+
+    > [!NOTE]
+    > If you schedule a job to run at a high frequency, for example every 30 minutes, you must take into account the time it takes for data to become available in the data lake. There's typically a latency of up to 15 minutes before newly ingested data is available for querying. For more information, see [Data lake ingestion latency](#data-lake-ingestion-latency).
    
 1. Select **Next** to review the job details.
 
@@ -203,7 +206,7 @@ When you create jobs in the Microsoft Sentinel data lake, consider the following
 
 ## Data lake ingestion latency
 
-The data lake tier stores data in cold storage. Unlike hot or near real-time analytics tiers, cold storage is optimized for long-term retention and cost efficiency and doesn't provide immediate access to newly ingested data. When new rows are added to existing tables in the data lake, there is a typical latency of up to 15 minutes before the data is available for querying. Account for the ingestion latency when you run queries and schedule KQL jobs by ensuring that lookback windows and job schedules are configured to avoid data that isn't available yet.
+The data lake tier stores data in cold storage. Unlike hot or near real-time analytics tiers, cold storage is optimized for long-term retention and cost efficiency and doesn't provide immediate access to newly ingested data. When new rows are added to existing tables in the data lake, there's a typical latency of up to 15 minutes before the data is available for querying. Account for the ingestion latency when you run queries and schedule KQL jobs by ensuring that lookback windows and job schedules are configured to avoid data that isn't available yet.
 
 To avoid querying data that might not yet be available, include a delay parameter in your KQL queries or jobs. For example, when you schedule automated jobs, set the query's end time to `now() - delay`, where `delay` matches the typical data readiness latency of 15 minutes. This approach ensures that queries only target data that's fully ingested and ready for analysis.
 

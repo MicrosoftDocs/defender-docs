@@ -64,7 +64,7 @@ You can also specify a time range in the KQL query syntax, for example:
 
 
 > [!NOTE]
-> Queries are limited to 500,000 rows or 64 MB of data and timeout after 8 minutes. When selecting a broad time range, your query might exceed these limits.
+> Queries are limited to 500,000 rows or 64 MB of data and timeout after 8 minutes. When selecting a broad time range, your query might exceed these limits. Consider using asynchronous queries for long-running queries. For more information, see [Async queries](#async-queries).
 
 ### View schema information
 
