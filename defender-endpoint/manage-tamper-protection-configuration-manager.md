@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
