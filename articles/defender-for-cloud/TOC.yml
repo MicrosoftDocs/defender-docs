@@ -28,7 +28,7 @@
     - name: Known limitations
       displayName: limitations, known issues, defender portal, preview
       href: defender-portal/known-limitations.md
-    - name: Integration FAQ
+    - name: FAQ
       displayName: integration, faq, frequently asked questions, defender portal
       href: defender-portal/integration-faq.md
 
