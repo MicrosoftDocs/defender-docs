@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 |------|---------|-------|
 |November 23, 2025 | Upcoming Change | [Update to Attack Path Analysis logic and CSPM multicloud network requirements](#update-to-attack-path-analysis-logic-and-cspm-multicloud-network-requirements)|
-|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
+|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
