@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: paulinbar
-ms.author: painbar
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar, ericlaw
 manager: bagol
 ms.custom: asr
