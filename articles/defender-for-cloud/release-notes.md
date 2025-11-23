@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 10/19/2025
+ms.date: 11/23/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,6 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+|November 23, 2025 | Upcoming Change | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
+|November 23, 2025 | Upcoming Change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
 |November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
@@ -41,11 +43,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
+## Update to Attack Path Analysis logic
+
+November 23, 2025
+
+Starting today, the system generates attack paths that involve lateral movement with plain text keys only when both the source and target resources are protected by Defender CSPM. You might see fewer attack paths in your environment. To maintain comprehensive attack path analysis, ensure that all of your cloud environment is onboarded to Defender CSPM.
+
+### Update to CSPM multicloud network requirements 
+
+November 23, 2025
+
+Starting today, the system generates attack paths that involve lateral movement with plain text keys only when both the source and target resources are protected by Defender CSPM. You might see fewer attack paths in your environment. To maintain comprehensive attack path analysis, ensure that all of your cloud environment is onboarded to Defender CSPM.
+
 ### Attack Path now includes Entra OAuth application compromise
 
 November 20, 2025
 
-Attack Path now shows how attackers use compromised Entra OAuth applications to move across environments and reach critical resources. This release helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
+Attack Path now shows how bad actors use compromised Microsoft Entra OAuth applications to move across environments and reach critical resources. This release helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
 
 Learn more about [how to manage Attack Path](/azure/defender-for-cloud/how-to-manage-attack-path).
 
@@ -55,7 +69,7 @@ November 19, 2025
 
 In-pipeline container vulnerability scanning for Defender for DevOps Security is now available in preview through the Defender for Cloud CLI.
 
-Scanning built container images directly within CI/CD workflows, provides real-time feedback before they're pushed to registries or deployed. This helps detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
+Scanning built container images directly within CI/CD workflows provides real-time feedback before they're pushed to registries or deployed. This feature helps you detect vulnerabilities earlier, accelerate remediation, and align security gates with DevOps practices.  
 
 Learn more about the [Defender for Cloud CLI](cli-cicd-integration.md).
 
@@ -75,7 +89,7 @@ November 18, 2025
 
 Microsoft Defender for Cloud API security posture management now automatically identifies unauthenticated APIs and APIs exposed to the internet across your environment, including APIs discovered on Azure Functions and Logic Apps.
 
-With this release, you can uncover high-risk API endpoints earlier, prioritize API risks using new posture insights and risk factors, and view and analyze discovered API risks across your environment by using security explorer.
+With this release, you can uncover high-risk API endpoints earlier, prioritize API risks by using new posture insights and risk factors, and view and analyze discovered API risks across your environment by using security explorer.
 
 Learn more about [API security posture management in Defender for Cloud](api-security-posture-overview.md).
 
