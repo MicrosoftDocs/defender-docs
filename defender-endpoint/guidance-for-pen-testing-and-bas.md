@@ -4,8 +4,8 @@ description: This article provides guidance for conducting penetration testing a
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
