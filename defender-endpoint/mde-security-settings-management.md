@@ -1,8 +1,8 @@
 ﻿---
 title: Manage Microsoft Defender Antivirus by using Defender for Endpoint Security Settings Management
 description: Learn how to use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.service: defender-endpoint
