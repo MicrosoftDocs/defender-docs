@@ -4,8 +4,8 @@ description: Assign read and write or read only access to the Microsoft Defender
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

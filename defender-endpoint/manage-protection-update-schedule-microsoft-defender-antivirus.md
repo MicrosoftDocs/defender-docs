@@ -6,8 +6,8 @@ search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: bagol
