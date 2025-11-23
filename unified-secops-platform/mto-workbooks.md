@@ -26,7 +26,10 @@ appliesto:
 
 # Workbooks in multitenant management (preview)
 
-The Workbooks feature in Microsoft Sentinel enables users to manage and view workbooks across multiple tenants from a single page in the multitenant Organization (MTO) portal. ​ This feature includes the first out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. ​This document walks you through the steps to access and use this feature effectively. ​
+Defender multi-tenant management allows users to access an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. This document walks you through the steps to access and use this feature effectively.
+
+<!---
+The Workbooks feature in Microsoft Sentinel enables users to manage and view workbooks across multiple tenants from a single page in the multitenant Organization (MTO) portal. ​This feature includes access to an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. ​This document walks you through the steps to access and use this feature effectively. ​--->
 
 ## Prerequisites
 
@@ -34,10 +37,16 @@ Before using Workbooks in MTO, ensure you have the following prerequisites:
 
 * Access to Microsoft Sentinel. ​
 * Onboarded to the Defender portal. ​
+* Access to more than one tenant using B2B.
+* Your home tenant (primary workspace) must have threat intelligence data. ​
+
+<!---
+* Access to Microsoft Sentinel. ​
+* Onboarded to the Defender portal. ​
 * Access to more than one tenant using B2B/GDAP.
 * For the workbook aggregated view, at least one workbook must be available on one or more target tenants.
 * For the Situational Awareness workbook, your home tenant (primary workspace) must have threat intelligence data. ​
-
+--->
 <!---
 ## Access a workbook​
 
@@ -75,6 +84,6 @@ Ensure your home tenant is included in the scope and has threat intelligence dat
 
 ## Limitations
 
-* The Workbooks page doesn't currently support editing or creating workbooks. ​
-* The Situational Awareness workbook uses threat intelligence data exclusively from the home tenant, and this setting can't be changed.
-* Workbook templates are currently not supported in the aggregated view. ​
+The Situational Awareness workbook uses threat intelligence data exclusively from the home tenant, and this setting can't be changed.
+<!--- * The Workbooks page doesn't currently support editing or creating workbooks. ​
+* Workbook templates are currently not supported in the aggregated view. ​--->
