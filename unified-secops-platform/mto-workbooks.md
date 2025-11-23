@@ -33,7 +33,8 @@ The Workbooks feature in Microsoft Sentinel enables users to manage and view wor
 
 ## Prerequisites
 
-Before using Workbooks in MTO, ensure you have the following prerequisites:
+<!--- Before using Workbooks in MTO, ensure you have the following prerequisites: --->
+Before using the Situational Awareness workbook in MTO, ensure you have the following prerequisites:
 
 * Access to Microsoft Sentinel. ​
 * Onboarded to the Defender portal. ​
