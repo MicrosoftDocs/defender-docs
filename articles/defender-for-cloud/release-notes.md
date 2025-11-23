@@ -31,7 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-|November 23, 2025 | Upcoming Change | [Update to Attack Path Analysis logic and CSPM multicloud network requirements](#update-to-attack-path-analysis-logic-and-cspm-multicloud-network-requirements)|
+|November 23, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
+|November 23,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
 |November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
@@ -42,7 +43,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-## Update to Attack Path Analysis logic and CSPM multicloud network requirements
+## Update to Attack Path Analysis logic
 
 November 23, 2025
 
@@ -51,6 +52,19 @@ Attack paths that involve lateral movement with plain text keys are generated wh
 To maintain comprehensive attack path analysis, ensure that all of your cloud environments have the Defender CSPM plan enabled.
 
 Learn more about [Attack Path Analysis](concept-attack-path.md) and how to enable [Defender CSPM](tutorial-enable-cspm-plan.md)
+
+### Update to CSPM multicloud network requirements
+ 
+November 23, 2025
+Estimated date for change: December 2025
+
+In December 2025, Defender for Cloud will be adding additional IP addresses to our multicloud discovery services in order to accommodate improvements and ensure a more efficient experience for all users.
+
+To ensure uninterrupted access from our services, your IP allowlist should be [updated with the new ranges](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/Network%20requirements). 
+
+You should make the necessary adjustments in your firewall settings, security groups, or any other configurations that might be applicable to your environment. The list is sufficient for full capability of the CSPM foundational (free) offering.
+
+Learn more about [Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
 
 ### Attack Path now includes Microsoft Entra OAuth application compromise
 
