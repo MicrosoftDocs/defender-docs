@@ -25,7 +25,8 @@ Zero Trust infrastructure solutions assess, monitor, and prevent security threat
 
 1. [Assess compliance](assign-regulatory-compliance-standards.md) with chosen standards and policies.
 1. [Harden configuration](recommendations-reference.md) wherever gaps are found.
-1. Employ other hardening tools such as [just-in-time (JIT)](just-in-time-access-usage.yml) VM access.
+1. Employ other hardening tools such as [just-in-time (JIT)](enable-just-in-time-access.md
+) VM access.
 1. Set up [threat protection](/azure/azure-sql/database/threat-detection-configure).
 1. Automatically block and flag risky behavior and take protective actions.
 
@@ -56,7 +57,7 @@ When Defender for Cloud is available in an Azure subscription, and Defender for 
 
 Use [Azure Logic Apps](/azure/logic-apps/) to build automated scalable workflows, business processes, and enterprise orchestrations to integrate your apps and data across cloud services and on-premises systems.
 
-Defender for Cloud's [workflow automation](workflow-automation.yml) feature lets you automate responses to Defender for Cloud triggers.
+Defender for Cloud's [workflow automation](workflow-automations.md) feature lets you automate responses to Defender for Cloud triggers.
 
 This is great way to define and respond in an automated, consistent manner when threats are discovered. For example, to notify relevant stakeholders, launch a change management process, and apply specific remediation steps when a threat is detected.
 

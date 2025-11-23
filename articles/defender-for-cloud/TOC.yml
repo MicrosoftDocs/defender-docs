@@ -338,7 +338,7 @@
       - name: Secure score
         displayName: security, posture, secure, score, calculate, control, improve, 
         href: secure-score-security-controls.md
-      - name: Regulatory compliance standards
+      - name: Security standards
         href: concept-regulatory-compliance-standards.md
       - name: Microsoft Cloud Security Benchmark (MCSB)
         displayName: mcsb, azure, security, benchmark 
@@ -627,7 +627,7 @@
           href: governance-rules.md
         - name: Automate remediation responses
           displayName: workflow, triggers, logic app, automation, policies, breaking change
-          href: workflow-automation.yml
+          href: workflow-automations.md
       - name: Improve regulatory compliance
         href: regulatory-compliance-dashboard.md
       - name: Investigate with security explorer and attack path
@@ -653,7 +653,7 @@
           displayName: asset, inventory, resources
           href: asset-inventory.md
         - name: Protect network resources
-          displayName: map, network map
+          displayName: network, resources, protect
           href: protect-network-resources.md
         - name: Other threat protections
           displayName: network layer, display recommendations, stream, security, alerts,
@@ -677,7 +677,7 @@
       items:
         - name: Manage and respond to security alerts
           displayName: security alerts, alerts
-          href: managing-and-responding-alerts.yml
+          href: manage-respond-alerts.md
         - name: Create and manage alerts suppression rules
           displayName: alert suppression, alert suppression, create, suppressions rules,
             rules
@@ -725,7 +725,7 @@
           href: alert-validation.md
         - name: Automate responses to alerts
           displayName: workflow, alerts, response
-          href: workflow-automation.yml
+          href: workflow-automations.md
     - name: Resolve connector issues
       items:
       - name: Troubleshoot connectors guide
@@ -903,7 +903,7 @@
             href: deploy-vulnerability-assessment-byol-vm.md
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-            href: how-to-transition-to-built-in.yml
+            href: transition-to-built-in.md
       - name: Machine secrets scanning
         items:
           - name: Overview
@@ -942,7 +942,8 @@
             href: just-in-time-access-overview.md
           - name: Enable just-in-time access 
             displayName: jit, management, ports
-            href: just-in-time-access-usage.yml
+            href: enable-just-in-time-access.md
+
     - name: Investigate and remediate 
       items:
       - name: Remediate EDR solutions (agentless)
@@ -1138,44 +1139,40 @@
           href: defender-for-databases-enable-cosmos-protections.md
       - name: Common questions
         href: faq-defender-for-databases.yml     
-      - name: Manage vulnerability assessment
+      - name: Configure vulnerability findings in your Azure SQL databases
         items:
-        - name: Configure vulnerability findings in your Azure SQL databases
+        - name: Express configuration
+          displayName: vulnerability, assessment, findings, express
+          href: configure-vulnerability-findings-express.md
+        - name: Classic configuration
+          displayName: vulnerability, assessment, findings, classic
+          href: configure-vulnerability-findings-classic.md
+        - name: Troubleshoot express or classic configuration
+          href: troubleshoot-vulnerability-findings.md
+        - name: Scan your SQL servers for vulnerabilities
+          href: defender-for-sql-on-machines-vulnerability-assessment.md
+      - name: Manage vulnerability assessment
+        items:  
+        - name: Manage with PowerShell
           items:
-          - name: Express configuration
-            displayName: vulnerability, assessment, findings, express
-            href: configure-vulnerability-findings-express.md
-          - name: Classic configuration
-            displayName: vulnerability, assessment, findings, classic
-            href: configure-vulnerability-findings-classic.md
-          - name: Troubleshoot express or classic configuration
-            href: troubleshoot-vulnerability-findings.md
-          - name: Scan your SQL servers for vulnerabilities
-            href: defender-for-sql-on-machines-vulnerability-assessment.md
-          - name: Manage vulnerability assessments
-            items:
-            - name: PowerShell examples
-              items:
-              - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
-                href: powershell-sample-vulnerability-assessment-azure-sql.md
-              - name: Set up baselines for vulnerability assessments on Azure SQL databases
-                href: powershell-sample-vulnerability-assessment-baselines.md
-              - name: Express configuration PowerShell wrapper module
-                href: express-configuration-sql-commands.md
-              - name: Example - express configuration
-                href: express-configuration-powershell-commands.md
-              - name: Azure CLI examples
-                href: express-configuration-azure-commands.md
-              - name: Find and remediate vulnerabilities
-                href: sql-azure-vulnerability-assessment-find.md
-            - name: Vulnerability assessment rules
-              href: sql-azure-vulnerability-assessment-rules.md
-            - name: Vulnerability assessment rules changelog
-              href: sql-azure-vulnerability-assessment-rules-changelog.md
-            - name: Store vulnerability scans in storage
-              href: /azure/azure-sql/database/sql-database-vulnerability-assessment-storage?toc=/azure/defender-for-cloud/toc.json
-            - name: Consume and export scan results
-              href: defender-for-sql-scan-results.md
+          - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
+            href: powershell-sample-vulnerability-assessment-azure-sql.md
+          - name: Set up baselines for vulnerability assessments on Azure SQL databases
+            href: powershell-sample-vulnerability-assessment-baselines.md
+          - name: Express configuration PowerShell wrapper module
+            href: express-configuration-sql-commands.md
+          - name: Example - express configuration
+            href: express-configuration-powershell-commands.md
+        - name: Manage with Azure CLI
+          href: express-configuration-azure-commands.md
+        - name: Vulnerability assessment rules
+          href: sql-azure-vulnerability-assessment-rules.md
+        - name: Vulnerability assessment rules changelog
+          href: sql-azure-vulnerability-assessment-rules-changelog.md
+        - name: Store vulnerability scans in storage
+          href: /azure/azure-sql/database/sql-database-vulnerability-assessment-storage?toc=/azure/defender-for-cloud/toc.json
+        - name: Consume and export scan results
+          href: defender-for-sql-scan-results.md
       - name: Investigate and remediate
         items:
         - name: Investigate Defender for SQL security Alerts, reporting, and queries
@@ -1317,12 +1314,21 @@
           - name: Connect GitLab environments
             href: quickstart-onboard-gitlab.md
           - name: Configure the Microsoft Security DevOps Azure DevOps extension
-            href: azure-devops-extension.yml
+            href: configure-azure-devops-extension.md
           - name: Configure the Microsoft Security DevOps GitHub action
             href: github-action.md
-          - name: Integrate Defender for Cloud CLI with CI/CD pipelines
-            href: cli-cicd-integration.md
-            displayName: CLI Jenkins Pipeline
+          - name: Defender for Cloud CLI
+            items:
+              - name: Overview
+                href: defender-cli-overview.md
+              - name: Authentication
+                href: defender-cli-authentication.md
+              - name: Syntax
+                href: defender-cli-syntax.md
+              - name: CI/CD in pipeline scanning
+                href: ci-cd-pipeline-scanning-with-defender-cli.md
+              - name: Reviewing results
+                href: defender-cli-reviewing-results.md
           - name: Configure pull request annotations
             href: enable-pull-request-annotations.md
           - name: Map IaC templates from code to cloud
@@ -1468,8 +1474,6 @@
           href: episode-forty-one.md 
         - name: Agentless secrets scanning for virtual machines
           href: episode-forty-two.md
-        - name: Unified insights from Microsoft Entra permissions management
-          href: episode-forty-three.md
         - name: Agentless malware detection
           href: episode-forty-four.md
         - name: Risk prioritization
