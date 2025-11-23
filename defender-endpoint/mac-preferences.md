@@ -2,8 +2,8 @@
 title: Set preferences for Microsoft Defender for Endpoint on macOS
 description: Configure Microsoft Defender for Endpoint on macOS in enterprise organizations.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
