@@ -4,8 +4,8 @@ description: Run and configure on-demand scans using PowerShell, Windows Managem
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
