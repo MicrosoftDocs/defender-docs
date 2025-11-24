@@ -96,7 +96,7 @@ The [Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md
 |---|---|
 | Identity | Requires connection to an existing user account or creation of a new agent identity |
 | License | [Defender EASM Standard](https://www.microsoft.com/security/pricing/microsoft-defender-external-attack-surface-management?msockid=2f55df1fd6fd61f12ba8ca23d7976094) |
-| Permissions | **Required permissions:**<ul><li>Vulnerability Management (read)<li>Security Reader</ul>**Optional permissions:**<ul><li>Exposure Management (read)</ul> |
+| Permissions | **Required permissions:**<ul><li>Microsoft Defender for Endpoint<li>Security Reader</ul>**Optional permissions:**<ul><li>Exposure Management (read)</ul> |
 | Products | [Security Copilot](/copilot/security/get-started-security-copilot) | 
 | Plugins | The following plugins are required to run this agent:<ul><li>Microsoft Threat Intelligence<li>Microsoft Threat Intelligence agents</ul>The following plugin is optional but can add more context to the output:<ul><li>Microsoft Defender External Attack Surface Management</ul> |
 | Role-based access | The **Security Administrator** role is required to set up and manage the agent.<br><br>Users with the same permissions as the Threat Intelligence Briefing Agent can view the agent's activity and results. |
