@@ -1,7 +1,7 @@
 ---
 title: Protect your Amazon Web Services environment
 description: Learn how about connecting your Amazon Web Services (AWS) environment to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
