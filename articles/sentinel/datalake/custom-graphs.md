@@ -55,7 +55,7 @@ Custom graphs are created using Jupyter notebooks in the Microsoft Sentinel Visu
 
 ## Create a custom graph 
 
->>>>>>>>>> Important: All screenshots must be updated before our final release.
+**Important: All screenshots must be updated before our final release.**
 
 Creating and working with custom graphs involves the following steps
 1. Create an ephemeral graph
