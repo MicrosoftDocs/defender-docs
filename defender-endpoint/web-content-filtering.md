@@ -2,8 +2,8 @@
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
 ms.date: 08/18/2025

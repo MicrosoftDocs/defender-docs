@@ -4,8 +4,8 @@ description: Set your level of cloud protection for Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 ms.date: 10/20/2025
 manager: bagol

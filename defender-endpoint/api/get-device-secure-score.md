@@ -2,8 +2,8 @@
 title: Get the device secure score
 description: Retrieves the organizational device secure score.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,22 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Get device secure score
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 Retrieves your [Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices). A higher Microsoft Secure Score for Devices means your endpoints are more resilient from cybersecurity threat attacks.
 
@@ -75,10 +67,7 @@ GET https://api.securitycenter.microsoft.com/api/configurationScore
 
 ### Response example
 
-Here is an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity.
+Here's an example of the shortned response list.
 
 ```json
 {
@@ -87,9 +76,4 @@ Here is an example of the response.
     "score": 340
 }
 ```
-
-## See also
-
-- [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 

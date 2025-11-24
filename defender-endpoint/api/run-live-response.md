@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -17,22 +17,15 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 10/20/2025
+ms.date: 11/13/2025
 appliesto:
-  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Endpoint Plan 1 and Plan 2
 ---
 
 # Run live response commands on a device
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 
 ## Prerequisites
@@ -72,27 +65,23 @@ Runs a sequence of live response commands on a device
 
 ## Limitations
 
-1. Rate limitations for this API are 10 calls per minute (more requests are responded with HTTP 429).
+- Rate limitations for this API are 10 calls per minute (more requests are responded with HTTP 429).
 
-2. 25 concurrently running sessions (requests exceeding the throttling limit receives a "429 - Too many requests" response).
+- 25 concurrently running sessions (requests exceeding the throttling limit receives a "429 - Too many requests" response).
 
-3. If the machine isn't available, the session is queued for up to three days.
+- If the machine isn't available, the session is queued for up to three days.
 
-4. RunScript command time-outs after 10 minutes.
+- RunScript command time-outs after 10 minutes.
 
-5. Live response commands can't be queued up and can only be executed one at a time.
+- Live response commands can't be queued up and can only be executed one at a time.
 
-6. If the machine that you're trying to run this API call is in an RBAC device group that doesn't have an automated remediation level assigned to it, you need to at least enable the minimum Remediation Level for a given Device Group.
-    > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+- If the machine that you're trying to run this API call is in an RBAC device group that doesn't have an automated remediation level assigned to it, you need to at least enable the minimum Remediation Level for a given Device Group.
 
-7. Multiple live response commands can be run on a single API call. However, when a live response command fails all the subsequent actions won't be executed.
+- Multiple live response commands can be run on a single API call. However, when a live response command fails all the subsequent actions won't be executed.
 
-8. Multiple live response sessions can't be executed on the same machine (if live response action is already running, subsequent requests are responded to with HTTP 400 - ActiveRequestAlreadyExists).
+- Multiple live response sessions can't be executed on the same machine (if live response action is already running, subsequent requests are responded to with HTTP 400 - ActiveRequestAlreadyExists).
 
-    > [!NOTE]
-    > Live response actions initiated from the Device page aren't available in the `machineactions` API.
-
+- Live response actions initiated from the Device page aren't available in the `machineactions` API.
 
 
 ## Permissions
@@ -240,11 +229,4 @@ Content-type: application/json
 }
 ```
 
-## Related topics
-
-- [Get machine action API](get-machineaction-object.md)
-- [Get live response result](get-live-response-result.md)
-- [Cancel machine action](cancel-machine-action.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
