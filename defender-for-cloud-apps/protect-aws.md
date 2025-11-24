@@ -63,23 +63,18 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
 
 1. In your [Amazon Web Services console](https://aws.amazon.com/console/), under **Security, Identity & Compliance**, select **IAM**.
 
-    ![AWS identity and access.](media/aws-identity-and-access.png "AWS identity and access")
    
 1. Select **Users** and then select **Add user**.
 
-    ![AWS users.](media/aws-users.png "AWS users")
    
 1. In the **Details** step, provide a new user name for Defender for Cloud Apps. Make sure that under **Access type** you select **Programmatic access** and select **Next Permissions**.
 
-    ![Create user in AWS.](media/aws-create-user.png "Create user in AWS")
    
 1. Select **Attach existing policies directly**, and then **Create policy**.
 
-    ![Attach existing policies.](media/attach-existing-policies.png)
    
 1. Select the **JSON** tab:
 
-    ![AWS JSON tab.](media/aws-json.png "AWS JSON tab")
    
 1. Paste the following script into the provided area:
 
@@ -110,29 +105,23 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
 
 1. Select **Next: Tags**
 
-     ![AWS code.](media/aws-code.png "AWS code")
    
 1. Select **Next: Review**.
 
-    ![Add tags (optional).](media/aws-add-tags-optional.png)
    
 1. Provide a **Name** and select **Create policy**.
 
-    ![Provide AWS policy name.](media/aws-create-policy.png "Provide AWS policy name")
    
-1. Back in the **Add user** screen, refresh the list if necessary, and select the user you created, and select **Next: Tags**.
+1. Go back to the **Add user** screen, refresh the list if necessary, and select the user you created, and select **Next: Tags**.
 
-    ![Attach existing policy in AWS.](media/aws-attach-policy.png "Attach existing policy in AWS")
    
 1. Select **Next: Review**.
 
 1. If all the details are correct, select **Create user**.
 
-    ![User permissions in AWS.](media/aws-user-permissions.png "Review user permissions in AWS")
    
 1. When you get the success message, select **Download .csv** to save a copy of the new user's credentials. You'll need these later.
 
-    ![Download csv in AWS.](media/aws-download-csv.png "Download csv in AWS")
    
    > [!NOTE]
     > After connecting AWS, you'll receive events for seven days prior to connection. If you just enabled CloudTrail, you'll receive events from the time you enabled CloudTrail.
