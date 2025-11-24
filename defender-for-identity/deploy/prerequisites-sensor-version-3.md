@@ -62,7 +62,7 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure RPC on V3.x sensors to support advanced identity detections
+## Configure RPC auditing on sensors v3.x to support advanced identity detections
 
 Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
 
@@ -79,9 +79,9 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
    
    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
    
-   1. Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
+   1. Ensure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
     
-   1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
+   1. Matching should primarily target **domain controllers** with the sensor v3.x installed.
     
 1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
 
