@@ -127,18 +127,6 @@ To deploy the Defender sensor to specific AKS clusters:
 
 1. Select **Save**.
 
-### Configure custom workspace (optional)
-
-By default, Defender for Containers uses a default Log Analytics workspace. To use a custom workspace:
-
-1. Go to **Azure Policy**.
-
-1. Search for "Configure Microsoft Defender for Containers to use a custom workspace".
-
-1. Assign this policy to your subscription or resource group.
-
-1. Enter your custom workspace ID in the policy parameters.
-
 ### Exclude specific clusters (optional)
 
 You can exclude specific AKS clusters from automatic provisioning by applying tags:
@@ -170,5 +158,4 @@ To disable Defender for Containers and remove all deployed components from your 
 - [Configure advanced settings for Defender for Containers](defender-for-containers-azure-configure.md)
 - [Investigate and respond to runtime security alerts](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)
 - [Review and remediate vulnerability findings](defender-for-containers-vulnerability-assessment-azure.md)
-- [Deploy using programmatic methods](defender-for-containers-azure-enable-programmatically.md)
-- [Configure sensor deployed with Helm](deploy-helm.md)
+

@@ -33,6 +33,7 @@ For Azure Kubernetes Service clusters, Defender for Containers provides:
 - Vulnerability assessment (VA) features, including registry scanning for Azure Container Registry
 - Security posture management features, including containers software supply chain protection
 - Runtime protection features, including detection investigation and response, integrated into Microsoft XDR
+- Containers software supply chain protection features, including gated deployment of container images
 
 ### [AWS (EKS)](defender-for-containers-aws-overview.md)
 
@@ -43,6 +44,8 @@ For Amazon Elastic Kubernetes Service clusters, Defender for Containers provides
 - Vulnerability assessment (VA) features, including registry scanning for Elastic Container Registry (ECR)
 - Security posture management features
 - Runtime protection features, including detection investigation and response, integrated into Microsoft XDR
+- Containers software supply chain protection features, including gated deployment of container images
+
 
 ### [GCP (GKE)](defender-for-containers-gcp-overview.md)
 
@@ -54,6 +57,8 @@ For Google Kubernetes Engine clusters, Defender for Containers provides:
 - Vulnerability assessment (VA) features, including registry scanning for Google Container Registry (GCR) and Google Artifact Registry (GAR)
 - Security posture management features
 - Runtime protection features, including detection investigation and response, integrated into Microsoft XDR
+- Containers software supply chain protection features, including gated deployment of container images
+
 
 ### [Arc-enabled Kubernetes (Preview)](defender-for-containers-arc-overview.md)
 
@@ -62,6 +67,8 @@ For on-premises and IaaS Kubernetes clusters connected through Azure Arc, Defend
 - Hybrid cloud security management
 - Centralized security through Azure
 - Works with CNCF-certified Kubernetes distributions
+- Containers software supply chain protection features, including gated deployment of container images
+
 
 ## Prerequisites
 

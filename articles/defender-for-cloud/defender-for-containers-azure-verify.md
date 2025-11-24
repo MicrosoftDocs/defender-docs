@@ -17,10 +17,7 @@ Complete these verification steps in order:
 - [ ] [Defender plan shows as enabled](#verify-plan-enablement)
 - [ ] [Defender sensor pods are running](#verify-sensor-deployment) (kube-system namespace)
 - [ ] [Azure Policy add-on is enabled](#verify-azure-policy-add-on)
-- [ ] [Log Analytics data is flowing](#verify-data-collection)
-- [ ] [Container images are being scanned](#verify-container-image-scanning)
 - [ ] [Test security alert generated successfully](#test-security-detection)
-- [ ] [Security recommendations are appearing](#verify-recommendations)
 - [ ] [No error messages in component logs](#check-defender-sensor-logs)
 
 > [!TIP]
@@ -132,21 +129,6 @@ az aks show \
 # Expected output shows enabled:true
 ```
 
-## Verify data collection
-
-### Check Log Analytics connection
-
-1. In the Azure portal, go to your AKS cluster.
-1. Select **Logs** under **Monitoring**.
-1. Run this query to verify data flow:
-
-```kusto
-ContainerLog
-| where TimeGenerated > ago(1h)
-| summarize count() by Computer, ContainerID
-| take 10
-```
-
 ### Check security events
 
 ```kusto
@@ -155,24 +137,6 @@ SecurityEvent
 | where Computer contains "aks"
 | summarize count() by Activity
 | take 10
-```
-
-## Verify container image scanning
-
-### For Azure Container Registry
-
-1. Go to your Azure Container Registry.
-1. Select **Security** > **Defender for Cloud**.
-1. Make sure vulnerability scanning is enabled.
-1. Check recent scan results for your images.
-
-### Using Azure CLI for image scanning
-
-```azurecli
-# List vulnerability assessments
-az security assessment list \
-    --query "[?contains(name, 'container')]" \
-    --output table
 ```
 
 ## Test security detection
@@ -251,12 +215,6 @@ This alert type generates: "Digital currency mining behavior detected"
 
 > [!NOTE]
 > Test alerts can take 5-10 minutes to appear. Some alerts only trigger in production scenarios with real malicious behavior.
-
-## Verify recommendations
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Set the filter for **Resource type** to **Kubernetes services**.
-1. Check that you see recommendations for your AKS clusters.
 
 ## Advanced security alert simulations
 
@@ -445,15 +403,6 @@ Common causes:
 - **Network policies**: Ensure egress to Azure endpoints is allowed
 - **RBAC issues**: Verify cluster has proper permissions
 
-### No security alerts
-
-If you don't see security alerts:
-
-1. Make sure you enabled diagnostic logs.
-1. Check the Log Analytics workspace connection.
-1. Verify you enabled runtime protection in Defender settings.
-1. Wait 5-10 minutes after generating test events.
-
 ### Missing recommendations
 
 If recommendations are missing:
@@ -471,25 +420,6 @@ If vulnerability scans are missing:
 1. Verify you recently pushed images.
 1. Make sure you enabled vulnerability assessment.
 1. Wait up to 4 hours for the initial scans.
-
-## Performance validation
-
-### Check resource usage
-
-```bash
-# Check Defender sensor resource usage
-kubectl top pods -n kube-system -l app=microsoft-defender
-
-# Monitor over time
-watch kubectl top pods -n kube-system -l app=microsoft-defender
-```
-
-### Verify minimal impact
-
-Defender sensors use the following resources:
-
-- CPU: Less than 100m per node (typical)
-- Memory: Less than 200Mi per node (typical)
 
 ## Related content
 

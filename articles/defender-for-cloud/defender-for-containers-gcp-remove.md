@@ -276,36 +276,6 @@ gcloud container binauthz attestors list | grep defender
 1. Check that no GKE-related recommendations appear.
 1. Verify no GKE clusters in **Inventory**.
 
-## Data retention
-
-Historical security data is retained according to your policies:
-
-### Azure Log Analytics
-
-```kusto
-// Identify tables with GKE data
-search * 
-| where TimeGenerated > ago(1d)
-| where _ResourceId contains "gke"
-| distinct $table
-
-// View retention settings
-.show tables details
-| where TableName contains "Security"
-| project TableName, RetentionInDays
-```
-
-### GCP Cloud Logging
-
-```bash
-# Check log retention
-gcloud logging buckets list
-
-# Delete specific logs if needed
-gcloud logging delete "resource.type=k8s_cluster AND resource.labels.cluster_name=CLUSTER_NAME" \
-    --project=PROJECT_ID
-```
-
 ## Post-removal considerations
 
 ### Security monitoring gaps

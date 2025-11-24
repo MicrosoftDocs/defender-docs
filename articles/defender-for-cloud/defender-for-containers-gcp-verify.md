@@ -17,14 +17,11 @@ Complete these verification steps in order:
 - [ ] [GCP connector shows as connected](#verify-connector-status)
 - [ ] [GKE clusters connected to Arc](#verify-arc-connection)
 - [ ] [Defender sensor pods running](#verify-sensor-deployment)
-- [ ] [Registry integration working](#verify-container-image-scanning)
-- [ ] [Audit logs flowing](#verify-data-collection)
-- [ ] [Test alert generated](#test-security-detection)
-- [ ] [Recommendations appearing](#verify-security-recommendations)
-- [ ] [No errors in logs](#check-component-logs)
+- [ ] [Data collection working](#verify-data-collection)
+- [ ] [Alerts appearing](#view-alerts-for-gke-clusters)
 
 > [!TIP]
-> If any validation step fails, see the troubleshooting section for that component.
+> If any validation step fails, see [Common verification issues](#common-verification-issues) or [Configure advanced settings](defender-for-containers-gcp-configure.md) for troubleshooting guidance.
 
 ## Verify connector status
 
@@ -141,133 +138,6 @@ KubeEvents
 | summarize count() by ClusterName, Namespace
 ```
 
-### Check GKE audit logs
-
-```bash
-# Verify audit logging is enabled
-gcloud container clusters describe CLUSTER_NAME \
-    --zone ZONE \
-    --format="value(loggingConfig)"
-
-# Check logs in Cloud Logging
-gcloud logging read "resource.type=k8s_cluster AND protoPayload.methodName=~'pods'" \
-    --limit 10 \
-    --format json
-```
-
-## Verify container image scanning
-
-### For Google Container Registry (GCR)
-
-```bash
-# List images in GCR
-gcloud container images list --repository=gcr.io/PROJECT_ID
-
-# Check vulnerability scanning status
-gcloud container images describe gcr.io/PROJECT_ID/IMAGE:TAG \
-    --show-package-vulnerability
-```
-
-### For Artifact Registry
-
-```bash
-# List vulnerabilities for an image
-gcloud artifacts docker images scan IMAGE_URI \
-    --remote
-
-# View scan results
-gcloud artifacts docker images list-vulnerabilities IMAGE_URI
-```
-
-### Check scanning results in Azure
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Look for "Container registry images should have vulnerability findings resolved".
-1. Select the recommendation to view detailed findings.
-
-## Test security detection
-
-### Generate a test alert
-
-Run this benign test to verify threat detection:
-
-```bash
-# This command triggers a test alert
-kubectl run test-alert \
-    --image=nginx \
-    --rm \
-    -it \
-    --restart=Never \
-    -- /bin/bash -c "cat /etc/shadow"
-```
-
-Check for the alert in Defender for Cloud within 5-10 minutes.
-
-### Simulate security alerts from Microsoft Defender for Containers
-
-Test various security scenarios on your GKE clusters:
-
-#### Test 1: Cryptocurrency mining detection
-
-```bash
-kubectl run crypto-miner-test \
-    --image=busybox \
-    --rm -it \
-    --restart=Never \
-    -- /bin/sh -c "wget pool.minexmr.com -O /dev/null"
-```
-
-Expected alert: "Digital currency mining behavior detected"
-
-#### Test 2: Kubernetes API reconnaissance
-
-```bash
-kubectl run api-recon \
-    --image=nicolaka/netshoot \
-    --rm -it \
-    --restart=Never \
-    -- /bin/bash -c "curl -k https://kubernetes.default"
-```
-
-Expected alert: "Kubernetes API reconnaissance detected"
-
-#### Test 3: Sensitive mount path
-
-```bash
-kubectl apply -f - <<EOF
-apiVersion: v1
-kind: Pod
-metadata:
-  name: sensitive-mount-test
-spec:
-  containers:
-  - name: test
-    image: nginx
-    volumeMounts:
-    - name: host
-      mountPath: /host
-  volumes:
-  - name: host
-    hostPath:
-      path: /
-  restartPolicy: Never
-EOF
-
-# Clean up
-kubectl delete pod sensitive-mount-test
-```
-
-Expected alert: "Sensitive host path mounted"
-
-### Verify alerts
-
-1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
-1. Set the filter for **Resource type** to **Kubernetes service**.
-1. Look for alerts from your GKE clusters.
-
-> [!NOTE]
-> GKE-specific alerts might include Binary Authorization violations and Workload Identity issues.
-
 ## View alerts for GKE clusters
 
 To view security alerts specifically for your GKE clusters:
@@ -285,60 +155,6 @@ To view security alerts specifically for your GKE clusters:
 1. Select **Ok**.
 
 You should now see only alerts related to your GKE clusters, making it easier to focus on GCP-specific security issues.
-
-## Verify security recommendations
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Set the filter for **Resource type** to **Kubernetes service**.
-1. Look for GKE-specific recommendations:
-   - "GKE clusters should use Workload Identity"
-   - "Binary Authorization should be enabled on GKE clusters"
-   - "GKE clusters should have Private clusters enabled"
-
-## Check component logs
-
-### Defender sensor logs
-
-```bash
-# View recent logs
-kubectl logs -n kube-system -l app=microsoft-defender --tail=100
-
-# Check for errors
-kubectl logs -n kube-system -l app=microsoft-defender | grep -i error
-
-# Check specific pod
-kubectl describe pod -n kube-system $(kubectl get pods -n kube-system -l app=microsoft-defender -o jsonpath='{.items[0].metadata.name}')
-```
-
-### Arc agent logs
-
-```bash
-# Check Arc connectivity
-kubectl logs -n azure-arc deployment/clusterconnect-agent
-
-# Extension manager logs
-kubectl logs -n azure-arc deployment/extension-agent
-```
-
-## Performance validation
-
-### Check resource usage
-
-```bash
-# Check Defender sensor resource usage
-kubectl top pods -n kube-system -l app=microsoft-defender
-
-# Monitor over time
-watch kubectl top pods -n kube-system -l app=microsoft-defender
-```
-
-### Expected resource consumption
-
-Typical resource usage per node:
-
-- **CPU**: Less than 100m (0.1 core)
-- **Memory**: Less than 200Mi
-- **Network**: Minimal, only for telemetry
 
 ## GCP-specific verification
 
@@ -407,24 +223,6 @@ If GKE clusters don't appear:
 1. Check that the service account has the `container.viewer` role.
 1. Ensure clusters are in the connected GCP project.
 1. Wait 15-30 minutes for discovery.
-
-## Monitor deployment health
-
-### Set up monitoring alerts
-
-1. Go to **Microsoft Defender for Cloud** > **Alerts**.
-1. Configure alert rules for:
-   - Defender sensor failures
-   - Arc connectivity issues
-   - High vulnerability counts
-
-### Configure email notifications
-
-1. Go to **Environment settings** > **Email notifications**.
-1. Set up notifications for:
-   - High severity alerts
-   - Weekly security summaries
-   - Compliance reports
 
 ## Related content
 

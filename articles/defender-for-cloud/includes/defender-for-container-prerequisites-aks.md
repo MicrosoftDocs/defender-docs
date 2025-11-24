@@ -16,7 +16,6 @@ The Defender sensor must connect to Microsoft Defender for Cloud to send securit
 The Defender sensor needs connectivity to:
 
 - Microsoft Defender for Cloud (for sending security data and events)
-- The configured Azure Monitor Log Analytics workspace
 
 By default, AKS clusters have unrestricted outbound (egress) internet access.
 

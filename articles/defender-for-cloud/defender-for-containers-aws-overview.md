@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Defender for Containers on AWS (EKS) - Overview
 
-Microsoft Defender for Containers extends Azure's cloud security capabilities to your Amazon Elastic Kubernetes Service (EKS) clusters. It provides enterprise-grade security for containerized workloads running on AWS.
+Microsoft Defender for Containers extends enterprise-grade security to your Amazon Elastic Kubernetes Service (EKS) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all managed through Microsoft Defender for Cloud.
 
 ## What is Defender for Containers?
 
@@ -33,13 +33,14 @@ This integration requires minimal configuration and works with existing AWS secu
 
 ## Key capabilities
 
-Defender for Containers provides comprehensive security coverage through three core protection areas:
+Defender for Containers provides comprehensive security coverage through four core protection areas:
 
 | Capability | Description | Key Features |
 |------------|-------------|--------------|
 | **Vulnerability assessment** | Continuously scans container images in Amazon ECR | • Scan on push and periodic rescanning<br>• CVSS scoring and prioritization<br>• Detailed remediation guidance<br>• Integration with CI/CD pipelines |
 | **Runtime threat detection** | Monitors EKS clusters in real-time for malicious activities | • Kubernetes audit log analysis<br>• Container behavior monitoring<br>• Network anomaly detection<br>• Automated threat response |
 | **Security posture management** | Evaluates cluster configurations against best practices | • CIS Kubernetes Benchmark<br>• AWS security best practices<br>• Custom compliance policies<br>• Actionable recommendations |
+| **Gated deployment** | Prevents vulnerable or misconfigured workloads from reaching production | • Block deployments based on vulnerability severity<br>• Enforce security baselines for configurations<br>• Integration with Azure Policy and admission controllers<br>• DevOps pipeline gates |
 
 ## Architecture overview
 

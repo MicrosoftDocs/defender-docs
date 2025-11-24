@@ -353,15 +353,6 @@ aws eks update-cluster-config \
    - ECR registries
    - Container images
 
-### Check security coverage
-
-1. Go to **Workload protections** > **Containers**.
-
-1. The dashboard shows:
-   - EKS clusters with protection status
-   - Vulnerable images by severity
-   - Recent security alerts
-
 ### Test security detection
 
 Generate a test security alert:
@@ -376,51 +367,6 @@ kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "echo tes
 
 Check for the alert in Defender for Cloud within 5 to 10 minutes.
 
-## Monitor ongoing security
-
-### Security dashboard
-
-1. Go to **Workload protections** > **Containers**.
-
-1. Monitor key metrics:
-   - **Vulnerability trends**: Track ECR image vulnerabilities.
-   - **Alert patterns**: Identify security issues.
-   - **Compliance scores**: Monitor CIS benchmark adherence.
-   - **Coverage gaps**: Find unprotected clusters.
-
-### Configure notifications
-
-1. Go to **Environment settings**.
-
-1. Select **Email notifications**.
-
-1. Configure:
-   - Recipients for high-severity alerts.
-   - Weekly security summaries.
-
-### Review recommendations
-
-1. Go to **Recommendations**.
-
-1. Filter by **Resource type** = **Kubernetes service**.
-
-1. Priority recommendations:
-   - Enable EKS control plane logging
-   - Use IRSA for pod authentication
-   - Implement network policies
-   - Enable secrets encryption
-
-### Monitor partial deployments
-
-For selective deployments:
-
-1. Track which clusters have protection.
-
-1. Document reasons for exclusions.
-
-1. Set reminders to review excluded resources.
-
-1. Monitor unprotected clusters separately.
 
 ## Troubleshooting
 

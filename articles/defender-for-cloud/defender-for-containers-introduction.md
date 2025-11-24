@@ -10,15 +10,17 @@ ms.date: 05/13/2025
 
 # Container protection in Defender for Cloud
 
-Microsoft Defender for Containers is a cloud-native solution to enhance, monitor, and maintain the security of your containerized assets (Kubernetes clusters, nodes, workloads, registries, images, and more) and their applications across multicloud and on-premises environments.
+Microsoft Defender for Containers is a cloud-native solution that enhances, monitors, and maintains the security of your containerized assets. These assets include Kubernetes clusters, nodes, workloads, registries, images, and more. It protects applications across multicloud and on-premises environments.
 
-Defender for Containers assists you with four core domains of container security:
+Defender for Containers helps you with five core domains of container security:
 
-- [**Security posture management**](#security-posture-management) runs continuous monitoring of cloud APIs, Kubernetes APIs, and Kubernetes workloads to discover cloud resources, provide comprehensive inventory capabilities, detect misconfigurations with mitigation guidelines, provide contextual risk assessment, and empowers users to perform enhanced risk hunting capabilities through the Defender for Cloud security explorer.
+- [**Security posture management**](#security-posture-management) runs continuous monitoring of cloud APIs, Kubernetes APIs, and Kubernetes workloads. It discovers cloud resources, provides comprehensive inventory capabilities, detects misconfigurations with mitigation guidelines, provides contextual risk assessment, and empowers users to perform enhanced risk hunting capabilities through the Defender for Cloud security explorer.
 
-- [**Vulnerability assessment**](#vulnerability-assessment) -  performs agentless vulnerability assessment of [container registry images, running containers, and supported K8s nodes](support-matrix-defender-for-containers.md) with remediation guidelines, zero configuration, daily re-scans, coverage for OS and language packages, and exploitability insights. The vulnerability findings artifact is signed with a Microsoft certificate for integrity and authenticity and is associated with the container image in the registry for validation needs.
+- [**Vulnerability assessment**](#vulnerability-assessment) - performs agentless vulnerability assessment of [container registry images, running containers, and supported Kubernetes nodes](support-matrix-defender-for-containers.md) with remediation guidelines, zero configuration, daily re-scans, coverage for OS and language packages, and exploitability insights. The vulnerability findings artifact is signed with a Microsoft certificate for integrity and authenticity and is associated with the container image in the registry for validation needs.
 
 - [**Run-time threat protection**](#run-time-protection-for-kubernetes-nodes-and-clusters) - a rich threat detection suite for Kubernetes clusters, nodes, and workloads, powered by Microsoft leading threat intelligence, provides mapping to MITRE ATT&CK framework for easy understanding of risk and relevant context, and automated response. Security operators can also investigate and respond to threats to Kubernetes services through the [Microsoft Defender XDR portal](/defender-xdr/investigate-respond-container-threats).
+
+- **Containers software supply chain protection** - strengthens your software supply chain by embedding security checks from build to deployment. It scans container images for vulnerabilities, signs vulnerability artifacts with Microsoft certificates to ensure integrity and authenticity, and associates these artifacts with images in the registry for validation. You can enforce organizational security policies by creating rules that block risky images and assess deployments against these rules, helping prevent the introduction of vulnerabilities into your containerized environments.
 
 - **Deployment & monitoring** - Monitors your Kubernetes clusters for missing sensors and provides frictionless at-scale deployment for sensor-based capabilities, support for standard Kubernetes monitoring tools, and management of unmonitored resources.
 
@@ -62,7 +64,7 @@ Now for [public preview in the AKS environment](agentless-vulnerability-assessme
 
 Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
-Learn more about [vulnerability assessments for Defender for Containers supported environments](agentless-vulnerability-assessment-azure.md), including [vulnerability assessment for cluster nodes.](kubernetes-nodes-va.md)
+Learn more about [vulnerability assessments for Defender for Containers supported environments](agentless-vulnerability-assessment-azure.md), including [vulnerability assessment for cluster nodes](kubernetes-nodes-va.md).
 
 ## Run-time protection for Kubernetes nodes and clusters
 

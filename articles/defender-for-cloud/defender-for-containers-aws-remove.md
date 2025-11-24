@@ -23,26 +23,26 @@ The components and roles fall under two removal-type categories:
 
 ### Resources created with CloudFormation script
 
-| Offering                                                     | Resource                                                     | Manual offboarding                                           | Removal information |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
-| Agentless Container Vulnerability Assessment                | **MDCContainersImageAssessmentRole**                             | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
-| Shared between three containers offerings:<br/><br/>  Container runtime threat protection   <br/><br/>  Auto provision Defender's sensor for Azure Arc  <br/><br/> Auto provision Azure Policy extension for Azure Arc | MDCContainersK8sRole                                         | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
-| Container runtime threat protection                                  | **MDCContainersK8sDataCollectionRole**                           | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
-| Container runtime threat protection                                  | **MDCContainersK8sCloudWatchToKinesisRole**                      | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
-| Container runtime threat protection                                  | **MDCContainersK8sKinesisToS3RoleName**                          | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
-| Agentless discovery for Kubernetes                           | **MDCContainersAgentlessDiscoveryK8sRole**                       | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
-| Identity provider required for all Defender for Cloud components | **ASCDefendersOIDCIdentityProvider**                         | **Delete only if removing all Defender for Cloud components.** Retrieve a list the provider clients, using the [AWS IAM API](https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetOpenIDConnectProvider.html). Use the AWS IAM [console](https://console.aws.amazon.com/iam/) or [CLI](https://docs.aws.amazon.com/IAM/latest/UserGuide/iam_example_iam_DeleteOpenIdConnectProvider_section.html) to delete the provider.  | Shared component                    |
+| Offering                                                     | Resource                                    | Manual offboarding                                           | Removal information |
+| ------------------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------ | ------------------- |
+| Agentless Container Vulnerability Assessment                 | **MDCContainersImageAssessmentRole**        | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
+| Shared between three containers offerings:<br/><br/>  Container runtime threat protection   <br/><br/>  Auto provision Defender's sensor for Azure Arc  <br/><br/> Auto provision Azure Policy extension for Azure Arc | MDCContainersK8sRole                        | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
+| Container runtime threat protection                          | **MDCContainersK8sDataCollectionRole**      | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
+| Container runtime threat protection                          | **MDCContainersK8sCloudWatchToKinesisRole** | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
+| Container runtime threat protection                          | **MDCContainersK8sKinesisToS3RoleName**     | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
+| Agentless discovery for Kubernetes                           | **MDCContainersAgentlessDiscoveryK8sRole**  | [Deleting   roles or instance profiles - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) | Safe to remove      |
+| Identity provider required for all Defender for Cloud components | **ASCDefendersOIDCIdentityProvider**        | **Delete only if removing all Defender for Cloud components.** Retrieve a list the provider clients, using the [AWS IAM API](https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetOpenIDConnectProvider.html). Use the AWS IAM [console](https://console.aws.amazon.com/iam/) or [CLI](https://docs.aws.amazon.com/IAM/latest/UserGuide/iam_example_iam_DeleteOpenIdConnectProvider_section.html) to delete the provider. | Shared component    |
 
 ### Resources created automatically after connector creation - AWS
 
 | Offering                                                     | Resource                                                     | Manual offboarding                                           | Removal information |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
-| Container runtime threat protection                                  | S3                                                           | [Deleting   a bucket - Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/userguide/delete-bucket.html)   This resource is created for each cluster.   Naming convention:   `azuredefender-<Region Name>-<AWS Account Id>-<Cluster Name>` | Safe to remove      |
-| Container runtime threat protection                                  | SQS                                                          | [Deleting   an Amazon SQS queue - Amazon Simple Queue Service](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/step-delete-queue.html)   This resource is created for each cluster.   Naming convention:   `azuredefender-<Region Name>-<AWS Account Id>-<Cluster Name>` | Safe to remove      |
-| Container runtime threat protection                                  | [Kinesis   Data firehose (Amazon Kinesis Data Streams)](https://docs.aws.amazon.com/firehose/latest/APIReference/API_DeleteDeliveryStream.html) | For each cluster, [delete   the Amazon Kinesis Delivery stream](https://docs.aws.amazon.com/cli/latest/reference/firehose/delete-delivery-stream.html)  This resource is created for each cluster.   Naming convention:   `arn:aws:firehose:< AWS Region>:< AWS Account Id>:deliverystream/azuredefender-<  Cluster Name>` | Safe to remove      |
+| Container runtime threat protection                          | S3                                                           | [Deleting   a bucket - Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/userguide/delete-bucket.html)   This resource is created for each cluster.   Naming convention:   `azuredefender-<Region Name>-<AWS Account Id>-<Cluster Name>` | Safe to remove      |
+| Container runtime threat protection                          | SQS                                                          | [Deleting   an Amazon SQS queue - Amazon Simple Queue Service](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/step-delete-queue.html)   This resource is created for each cluster.   Naming convention:   `azuredefender-<Region Name>-<AWS Account Id>-<Cluster Name>` | Safe to remove      |
+| Container runtime threat protection                          | [Kinesis   Data firehose (Amazon Kinesis Data Streams)](https://docs.aws.amazon.com/firehose/latest/APIReference/API_DeleteDeliveryStream.html) | For each cluster, [delete   the Amazon Kinesis Delivery stream](https://docs.aws.amazon.com/cli/latest/reference/firehose/delete-delivery-stream.html)  This resource is created for each cluster.   Naming convention:   `arn:aws:firehose:< AWS Region>:< AWS Account Id>:deliverystream/azuredefender-<  Cluster Name>` | Safe to remove      |
 | Workload runtime threat protection  <br/><br/>  Kubernetes data plane hardening | Azure Arc enabled Kubernetes (Connects your EKS clusters to Azure) | Remove Azure Arc-enabled Kubernetes for each cluster via the [Azure CLI or Azure PowerShell](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#clean-up-resources)     Running this command deletes all Arc related resources       including extensions | Safe to remove      |
-| Workload runtime threat protection           | Defender  sensor                                             | Remove the Defender sensor for each cluster using the [Azure portal, Azure CLI, or REST API](defender-for-containers-enable.md#remove-the-defender-sensor) | Safe to remove      |
-| Kubernetes data plane hardening         | Azure Policy extension                                       |  Remove Defender extensions for each cluster using the [Azure portal, Azure CLI, or REST API](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#clean-up-resources) | Safe to remove      |
+| Workload runtime threat protection                           | Defender  sensor                                             | Remove the Defender sensor for each cluster using the [Azure portal, Azure CLI, or REST API](defender-for-containers-enable.md#remove-the-defender-sensor) | Safe to remove      |
+| Kubernetes data plane hardening                              | Azure Policy extension                                       | Remove Defender extensions for each cluster using the [Azure portal, Azure CLI, or REST API](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#clean-up-resources) | Safe to remove      |
 
 ## Removal order
 
@@ -233,32 +233,6 @@ az security connector delete \
 az group delete \
     --name <resource-group> \
     --yes
-```
-
-## Clean up Log Analytics data
-
-### Delete custom workspace (optional)
-
-If you created a dedicated workspace:
-
-```azurecli
-# Delete workspace
-az monitor.log-analytics.workspace delete \
-    --workspace-name <workspace-name> \
-    --resource-group <resource-group> \
-    --yes
-```
-
-### Remove data from existing workspace
-
-To remove historical data while keeping the workspace:
-
-```kusto
-// Run in Log Analytics workspace
-// Note: This permanently deletes data
-.purge table ContainerLog where ClusterName contains "eks"
-.purge table ContainerInventory where ClusterName contains "eks"
-.purge table SecurityAlert where ResourceId contains "eks"
 ```
 
 ## Verify removal

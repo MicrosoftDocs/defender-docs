@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Defender for Containers on GCP (GKE) - Overview
 
-Microsoft Defender for Containers extends enterprise-grade security to your Google Kubernetes Engine (GKE) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, and security posture management—all while maintaining the flexibility and scale that GCP customers expect.
+Microsoft Defender for Containers extends enterprise-grade security to your Google Kubernetes Engine (GKE) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all while maintaining the flexibility and scale that GCP customers expect.
 
 ## What is Defender for Containers on GCP?
 
@@ -31,13 +31,14 @@ This architecture ensures minimal performance impact on your workloads while mai
 
 ## Key capabilities
 
-Defender for Containers delivers comprehensive security across three critical areas:
+Defender for Containers delivers comprehensive security across four critical areas:
 
 | Capability | Description | Key Features |
 |------------|-------------|--------------|
 | **Vulnerability assessment** | Scans container images in GCR and Artifact Registry for known vulnerabilities | • Native integration with Google registries<br>• Support for private endpoints<br>• Automated scanning on push<br>• CVSS scoring with remediation guidance |
 | **Runtime threat protection** | Monitors GKE clusters in real-time for malicious activities and anomalies | • GKE audit log analysis<br>• Workload behavior monitoring<br>• Network anomaly detection<br>• Integration with Binary Authorization |
 | **Security posture management** | Evaluates cluster configurations against security benchmarks and best practices | • CIS GKE Benchmark assessment<br>• GKE-specific recommendations<br>• Workload Identity validation<br>• Pod Security Standards enforcement |
+| **Gated deployment** | Prevents vulnerable or misconfigured workloads from reaching production | • Block deployments based on vulnerability severity<br>• Enforce security baselines for configurations<br>• Integration with Azure Policy and admission controllers<br>• DevOps pipeline gates |
 
 ## Architecture overview
 
@@ -79,54 +80,6 @@ Before deploying Defender for Containers on GKE:
 >
 > - [Enable all components via portal](defender-for-containers-gcp-enable-portal.md#prerequisites)
 > - [Deploy programmatically](defender-for-containers-gcp-enable-programmatically.md#prerequisites)
-
-## GCP-specific features
-
-### Native GCP integrations
-
-- **Workload Identity**: Secure authentication without managing keys
-- **Binary Authorization**: Enforce deployment policies with attestation
-- **GKE Autopilot**: Full support for serverless Kubernetes
-- **Private GKE clusters**: Support for private endpoint configurations
-
-### Security enhancements
-
-- **CIS GKE Benchmark**: Automated compliance assessment
-- **Pod Security Standards**: Enforcement and monitoring
-- **Network Policy validation**: Ensure proper segmentation
-- **RBAC analysis**: Identify overly permissive access
-
-### Operational benefits
-
-- **No egress charges**: Data processing happens in Azure
-- **Resource optimization**: Minimal impact on GKE resources
-- **Multi-project support**: Manage multiple GCP projects from one connector
-- **Existing tools integration**: Works alongside GCP Security Command Center
-
-## Supported GKE configurations
-
-Defender for Containers supports various GKE deployment models:
-
-**Cluster types**:
-
-- Standard GKE clusters (zonal and regional)
-- GKE Autopilot clusters
-- Private GKE clusters
-- GKE clusters with Workload Identity
-- Anthos clusters on GCP
-
-**Registry support**:
-
-- Google Container Registry (GCR)
-- Artifact Registry
-- Private registries with authentication
-
-**Networking**:
-
-- Public clusters with direct connectivity
-- Private clusters with Cloud NAT
-- Clusters using Private Google Access
-- VPC-native clusters
 
 ## Pricing
 

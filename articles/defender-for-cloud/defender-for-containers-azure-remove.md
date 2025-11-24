@@ -110,28 +110,6 @@ az aks disable-addons \
     --resource-group <resource-group>
 ```
 
-## Remove diagnostic settings
-
-### Remove diagnostic settings via Azure portal
-
-1. Go to your AKS cluster.
-1. Select **Diagnostic settings** under **Monitoring**.
-1. Select the diagnostic setting created for Defender.
-1. Select **Delete**.
-
-### Remove diagnostic settings via Azure CLI
-
-```azurecli
-# List diagnostic settings
-az monitor diagnostic-settings list \
-    --resource <cluster-resource-id>
-
-# Delete diagnostic setting
-az monitor diagnostic-settings delete \
-    --name <diagnostic-setting-name> \
-    --resource <cluster-resource-id>
-```
-
 ## Clean up Azure policies
 
 ### Remove policy assignments
@@ -163,42 +141,6 @@ Defender for Containers creates managed identities in Azure Active Directory for
 > [!WARNING]
 > Before removing any managed identity, verify that other services or applications aren't using it.
 
-## Remove vulnerability scanning configuration
-
-### For Azure Container Registry
-
-1. Go to your Azure Container Registry.
-1. Select **Security** > **Defender for Cloud**.
-1. Disable vulnerability scanning.
-
-Or use Azure CLI:
-
-```azurecli
-# Disable vulnerability scanning
-az acr config content-trust update \
-    --registry <registry-name> \
-    --status disabled
-```
-
-## Clean up alerts and recommendations
-
-### Dismiss active alerts
-
-```azurecli
-# List active container-related alerts
-az security alert list \
-    --query "[?status=='Active' && contains(alertType, 'Container')]" \
-    --output table
-
-# Dismiss alerts
-az security alert update \
-    --name <alert-name> \
-    --status Dismiss
-```
-
-### Clear recommendations
-
-Recommendations automatically clear after the next assessment cycle (typically 12-24 hours).
 
 ## Verify removal
 
