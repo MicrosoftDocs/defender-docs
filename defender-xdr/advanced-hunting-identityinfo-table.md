@@ -9,7 +9,7 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 05/13/2025
+ms.date: 11/24/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -29,17 +29,17 @@ appliesto:
 
 The `IdentityInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user accounts obtained from various services, including Microsoft Entra ID. Use this reference to construct queries that return information from this table.
 
-This table was renamed from `AccountInfo`. During renames, all queries saved in the portal are automatically updated. Check queries you have saved elsewhere.
+This table was renamed from `AccountInfo`. During renames, all queries saved in the portal are automatically updated. Check queries you saved elsewhere.
 
-Microsoft Sentinel uses a slightly expanded version of this table in Log Analytics. For more information, see [Microsoft Sentinel UEBA reference | IdentityInfo table](/azure/sentinel/ueba-reference)
+Microsoft Sentinel uses a slightly expanded version of this table in Log Analytics. For more information, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference#identityinfo-table).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
-The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns is available for Defender portal users who have onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
+The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns is available for Defender portal users who onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
 
-Defender portal users who haven't onboarded a Microsoft Sentinel workspace that has the UEBA service turned on can't view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
+Defender portal users who don't onboard a Microsoft Sentinel workspace that has the UEBA service turned on can't view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
 
-This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table don't work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -88,14 +88,15 @@ This advanced hunting table is populated by records from Microsoft Defender for 
 | `UserAccountControl` | `string` | Security attributes of the user account in the Active Directory domain |
 | `IdentityEnvironment` | `string` | Environment where the identity is used; possible values: CloudOnly, Hybrid, On-premises |
 | `SourceProviders` | `dynamic` | Source providers of the accounts for the identity; possible values: ActiveDirectory, EntraID, Okta |
-| `GroupMembership`	| `dynamic` |	Microsoft Entra ID groups where the user account is a member |
+| `GroupMembership` [***](#sentinel)	| `dynamic` |	Microsoft Entra ID groups where the user account is a member |
 
 
-<a name="mdi-only"></a>* Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps or Microsoft Defender for Endpoint P2 licensing.<br>
-<a name="mdi"></a>** Available only for tenants with Microsoft Defender for Identity.
+<a name="mdi-only"></a>* Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, or Microsoft Defender for Endpoint P2 licensing.<br>
+<a name="mdi"></a>** Available only for tenants with Microsoft Defender for Identity.<br>
+<a name="sentinel"></a>*** Available only for tenants with Microsoft Sentinel. For more information about the freshness and limitations of this column, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference#identityinfo-table)
 
 ## UEBA-specific columns
-If you're using the Microsoft Defender portal but haven't onboarded a Microsoft Sentinel workspace with the UEBA service turned on, the following columns aren't available in your `IdentityInfo` table:
+If you use the Microsoft Defender portal but don't onboard a Microsoft Sentinel workspace with the UEBA service turned on, the following columns aren't available in your `IdentityInfo` table:
 
 - `BlastRadius`
 - `CompanyName`
@@ -106,7 +107,7 @@ If you're using the Microsoft Defender portal but haven't onboarded a Microsoft 
 - `State`
 
 
-For more information about UEBA, read [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, read [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
+For more information about UEBA, see [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
 
 
 ## Related articles
