@@ -20,11 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # Export non product code software inventory assessment per device
-
 
 This API returns all the data for installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe), on a per-device basis. The information returned by this API, along with the information returned by the [Export software inventory assessment](get-assessment-non-cpe-software-inventory.md) API, for software that does have a CPE gives you full visibility into the software installed across your organization and the devices it's installed on.
 
@@ -49,7 +47,7 @@ Data that is collected (using either _Json response_ or _via files_) is the curr
 
 ### 1.1 API method description
 
-This API response contains all the data of installed software that does not have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe) per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
+This API response contains all the data of installed software that doesn't have a [Common Platform Enumeration(CPE)](https://nvd.nist.gov/products/cpe) per device. Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion.
 
 #### Limitations
 
@@ -96,6 +94,7 @@ SoftwareLastSeenTimestamp|string|The last time this software was seen on the dev
 SoftwareName|string|Name of the software product.
 SoftwareVendor|string|Name of the software vendor.
 SoftwareVersion|string|Version number of the software product.
+RegistryPath|string| Registry evidence that the product is installed on the device.
 
 ### 1.6 Examples
 
