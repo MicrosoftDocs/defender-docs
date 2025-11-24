@@ -56,17 +56,17 @@ When you enable Defender for Cloud, you automatically receive the protections of
 
 Once the Defender CSPM plan is enabled on your subscription, you have the ability to enable the individual components of the Defender CSPM plan:
 
-- **[Agentless scanning for machines](concept-agentless-data-collection.md)**: Scans your machines for installed software and vulnerabilities without relying on agents or impacting machine performance. You can disable the agentless scanner or add exclusion tags to your subscription.
+- **Agentless scanning for machines**: Scans your machines for installed software and vulnerabilities without relying on agents or impacting machine performance. You can disable the agentless scanner or add exclusion tags to your subscription.
 
-- **[Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-azure-work)**: API-based discovery of information about Kubernetes cluster architecture, workload objects, and setup. Required for Kubernetes inventory, identity, and network exposure detection, risk hunting as part of the cloud security explorer. This extension is required for attack path analysis (Defender CSPM only).
+- **Agentless discovery for Kubernetes**: API-based discovery of information about Kubernetes cluster architecture, workload objects, and setup. Required for Kubernetes inventory, identity, and network exposure detection, risk hunting as part of the cloud security explorer. This extension is required for attack path analysis (Defender CSPM only).
 
-- **[Agentless container vulnerability assessments](agentless-vulnerability-assessment-azure.md)**: Provides vulnerability management for images stored in your container registries.
+- **Agentless container vulnerability assessments**: Provides vulnerability management for images stored in your container registries.
 
-- **[Sensitive data discovery](concept-data-security-posture-prepare.md)**: Sensitive data discovery automatically discovers managed cloud data resources containing sensitive data at scale. This feature accesses your data, it's agentless, uses smart sampling scanning, and integrates with Microsoft Purview sensitive information types and labels.
+- **Sensitive data discovery**: Sensitive data discovery automatically discovers managed cloud data resources containing sensitive data at scale. This feature accesses your data, it's agentless, uses smart sampling scanning, and integrates with Microsoft Purview sensitive information types and labels.
 
-- **[Cloud infrastructure entitlement management (CIEM)](permissions-management.md)** - Insights into Cloud Infrastructure Entitlement Management. CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
+- **Permissions management** - Insights into Cloud Infrastructure Entitlement Management (CIEM). CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps you understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
 
-- **Agentless scanning for Serverless** - detects and assesses serverless resources such as Azure Web Apps, Azure Functions, and AWS Lambda for security risks without requiring agents to be installed. It identifies misconfigurations, vulnerabilities, and insecure dependencies, providing remediation guidance to improve security posture.
+- **Protect serverless workloads** - Secure serverless compute and applications platforms by providing visibility into environments such as Azure Functions, Azure Web Apps, and AWS Lambda. You can view insights in attack path analysis, enabling your team to identify and visualize risks, monitor for misconfigurations, and detect vulnerable resources. 
 
 **To enable the components of the Defender CSPM plan**:
 
