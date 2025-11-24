@@ -10,4 +10,4 @@ ms.service: microsoft-defender-vulnerability-management
 ---
 
 > [!NOTE]
-> The **Vulnerability Management** section in the Microsoft Defender portal is now located under **Exposure management** > **Vulnerability management**. For a summary of where to find specific features and functionalities, see [Microsoft Defender Vulnerability Management integration](/security-exposure-management/whats-new?#microsoft-defender-vulnerability-management-integration).
+> For preview customers, the **Vulnerability Management** section in the Microsoft Defender portal is now located under **Exposure management** > **Vulnerability management**. This is a navigation update only and doesn't affect current features. [Learn more](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management.md#microsoft-defender-vulnerability-management-and-microsoft-security-exposure-management-integration).
