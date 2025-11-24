@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable Defender CSPM on your Azure subscription for Microsoft Defender for Cloud and enhance your security posture.
 ms.topic: install-set-up-deploy
-ms.date: 11/19/2025
+ms.date: 11/24/2025
 ---
 
 # Protect your resources with Defender CSPM
@@ -66,7 +66,7 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 - **[Cloud infrastructure entitlement management (CIEM)](permissions-management.md)** - Insights into Cloud Infrastructure Entitlement Management. CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
 
-- **Agentless scanning for Serverless** - detects and assesses serverless resources such as Azure Web Apps, Azure Functions, and AWS Lambda for security risks without requiring agents to be installed. It identifies misconfigurations, vulnerabilities, and insecure dependencies, providing remediation guidance to improve security posture.
+- **Serverless protection** - detects and assesses serverless resources such as Azure Web Apps, Azure Functions, and AWS Lambda for security risks without requiring agents to be installed. It identifies misconfigurations, vulnerabilities, and insecure dependencies, providing remediation guidance to improve security posture.
 
 **To enable the components of the Defender CSPM plan**:
 
