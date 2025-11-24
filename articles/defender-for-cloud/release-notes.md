@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/23/2025
+ms.date: 11/24/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,8 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-|November 23, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
-|November 23,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
+|November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
+|November 24,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
 |November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
@@ -45,7 +45,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## Update to Attack Path Analysis logic
 
-November 23, 2025
+November 24, 2025
 
 Attack paths that involve lateral movement with plain text keys are generated when both the source and target resources are protected by Defender CSPM. Because of this change, you might see a reduction in the number of attack paths displayed.
 
@@ -55,7 +55,7 @@ Learn more about [Attack Path Analysis](concept-attack-path.md) and how to enabl
 
 ### Update to CSPM multicloud network requirements
  
-November 23, 2025
+November 24, 2025
 Estimated date for change: December 2025
 
 In December 2025, Defender for Cloud is adding IP addresses to its multicloud discovery services to accommodate improvements and ensure a more efficient experience for all users.
