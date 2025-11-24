@@ -7,8 +7,8 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 

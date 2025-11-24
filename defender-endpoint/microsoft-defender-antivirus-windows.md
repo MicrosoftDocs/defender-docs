@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
 ms.topic: overview
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: mkaminska, yonghree, pahuijbr
 manager: bagol
 ms.custom: nextgen

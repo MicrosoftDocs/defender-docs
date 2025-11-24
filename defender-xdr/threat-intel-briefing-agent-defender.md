@@ -70,7 +70,7 @@ The following plugin is optional but can add more context to the output:
 The user account connected to the agent or the created agent identity must have these permissions:
 
 **Required permissions:**
-- **Vulnerability Management (read):** Access to Defender Vulnerability Management data
+- **Microsoft Defender for Endpoint:** Access to Defender Vulnerability Management data
 - **Security Reader:** Access to Threat Analytics and agent results
 - **Security Admin:** Access to agent onboarding and configuration
 
