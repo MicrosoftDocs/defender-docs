@@ -29,7 +29,9 @@ Connecting Salesforce to Defender for Cloud Apps gives you improved insights int
 
 ### Prerequisites
 
-- Install and authorize the Salesforce Connected App in the target Salesforce org before you start the connection process. Salesforce now enforces usage restrictions on Connected Apps. For more information, see:[Prepare for Connected App Usage Restrictions Change](https://help.salesforce.com/s/articleView?id=005132365&type=1)
+- Install and authorize the Salesforce Connected App in the target Salesforce org before you start the connection process. Salesforce enforces usage restrictions on Connected Apps. For more information, see:[Prepare for Connected App Usage Restrictions Change](https://help.salesforce.com/s/articleView?id=005132365&type=1)
+
+- Assign the **Approve Uninstalled Connected Apps** permission to the to the Salesforce service account used to connect Microsoft Defender for Cloud Apps. Salesforce requires this permission to connect third-party apps via OAuth.
 
 ## How Defender for Cloud Apps helps to protect your environment
 
