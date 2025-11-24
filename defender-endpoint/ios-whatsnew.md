@@ -21,9 +21,15 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# What's new in Microsoft Defender for Endpoint on iOS
 
-<!--This page is updated frequently with the latest updates in Defender endpoint security for iOS-->
+# What's new in Microsoft Defender for Endpoint on iOS
+<!-- Please don't adjust this next line without getting approval from the Defender for Endpoint documentation team. It is necessary for proper RSS functionality. -->
+- This page is updated frequently with the latest updates in Defender endpoint security for iOS.
+> [!TIP]
+> Get notified when this page is updated by copying and pasting the following URL into your feed reader:
+>
+> `https://aka.ms/mde/ios-rss`
+
 
 
 
