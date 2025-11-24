@@ -15,12 +15,13 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/11/2025
+ms.date: 11/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
 
@@ -40,7 +41,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
 1. Download the onboarding package from Microsoft Defender portal by following these steps:
 
-   1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+   1. In the [Microsoft Defender portal](https://security.microsoft.com), expand the **System** section and select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
     
    2. In the first drop-down menu, select **Linux Server** as the operating system.
    
