@@ -39,8 +39,8 @@ Using the Jupyter notebooks in Microsoft Sentinel Visual Studio Code extension, 
 
 | Step | Description |
 |------|-------------|
-| **1. Create and investigate a temporary graph** | - Jupyter notebooks in Sentinel provide an interactive environment for exploring and analyzing data in Sentinel Lake.<br>- The Microsoft Sentinel extension includes a graph builder Python library.<br>- Use the Jupyter notebook in Sentinel to define nodes and edges with Lake data, and create temporary graphs.<br>- The graph builder library allows you to query a temporary graph using Graph Query Language (GQL) in the Jupyter graph notebook. |
-| **2. Materialize custom graphs in tenant** | - Materialize a temporary graph in your tenant for continued detection and collaboration.<br>- Use Sentinel jobs to tailor how often you want to refresh a materialized graph with Lake data.<br>- Query and visualize materialized graphs in the Sentinel VSCE extension. |
+| **1. Create and investigate a ephemeral graph** | - Jupyter notebooks in Sentinel provide an interactive environment for exploring and analyzing data in Sentinel Lake.<br>- The Microsoft Sentinel extension includes a graph builder Python library.<br>- Use the Jupyter notebook in Sentinel to define nodes and edges with Lake data, and create ephemeral graphs.<br>- The graph builder library allows you to query a ephemeral graph using Graph Query Language (GQL) in the Jupyter graph notebook. |
+| **2. Materialize custom graphs in tenant** | - Materialize a ephemeral graph in your tenant for continued detection and collaboration.<br>- Use Sentinel jobs to tailor how often you want to refresh a materialized graph with Lake data.<br>- Query and visualize materialized graphs in the Sentinel VSCE extension. |
 | **3. Run advanced graph algorithms** | - Use built-in support for Graph Frames analytics and graph traversal functions.<br>- Leverage purpose-built Sentinel graph algorithms for common security use cases. |
 
 <<<<<<<<<\<Drawing\>>>>>>>>>>

@@ -76,7 +76,7 @@ Custom graphs in Microsoft Sentinel let security teams model complex attack patt
 
 With custom graphs you can:
 
-* Create ad-hoc temporary graphs to rapidly model adversary attack patterns, investigate emerging threats, or investigation hypotheses.
+* Create ad-hoc ephemeral graphs to rapidly model adversary attack patterns, investigate emerging threats, or investigation hypotheses.
 * Materialize a custom graph to continuously update latest security telemetry from the Sentinel data lake and detect systemic threats overtime.
 * Query graphs using the power of Graph Query Language (GQL) and visualize subgraphs and attack paths.
 * Run advanced graph algorithms on your custom graph.
