@@ -4,8 +4,8 @@ description: Enable attack surface reduction rules to protect your devices from 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: paulinbar
-ms.author: painbar
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.subservice: asr
 ms.topic: how-to
