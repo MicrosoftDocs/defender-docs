@@ -29,7 +29,7 @@ Jump to the configuration you need:
 - [Performance optimization](#performance-optimization)
 
 > [!TIP]
-> Most organizations start with [configuring runtime protection](#configure-runtime-protection) and [vulnerability scanning](#configure-vulnerability-scanning). If you need to add or remove components after initial deployment, see [Add or remove components](#add-or-remove-components).
+> Most organizations start with [configuring runtime protection](#configure-runtime-protection). If you need to add or remove components after initial deployment, see [Add or remove components](#add-or-remove-components).
 
 ## Add or remove components
 
