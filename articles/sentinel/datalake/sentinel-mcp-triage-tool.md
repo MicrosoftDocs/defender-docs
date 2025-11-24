@@ -16,10 +16,10 @@ ms.service: microsoft-sentinel
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents rapidly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time.
+The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents quickly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time.
 
 Use the tool for the following scenarios:
-- **Incident triage:** Prioritize incidents rapidly by using your own AI models, reducing mean time to resolution. Use the tools to fetch incidents, alerts, alerts evidence, entities, and other data.
+- **Incident triage:** Prioritize incidents quickly by using your own AI models, reducing mean time to resolution. Use the tools to fetch incidents, alerts, alerts evidence, entities, and other data.
 - **Hunting:** Hunt over your data easily by using your own AI models, reducing risk exposure and dwell time. Use the tools to run hunting queries and fetch the required data during your hunt.
 
 
@@ -102,22 +102,6 @@ This tool retrieves complete column schemas with descriptions for specified adva
 |---|---|---|
 | tableNames |Yes |Advanced hunting table names |
 
-### List Sentinel tables (`FetchSentinelTablesOverview`) 
-
-This tool returns a list of available Microsoft Sentinel log analytics tables. Its response doesn't include descriptions. To better understand the tables, consider calling a follow-up tool.
-
-| Parameters | Required? | Description |
-|---|---|---|
-| tableNames |Yes |Sentinel table names |
-
-### Get Sentinel table schema (`FetchSentinelTablesDetailedSchema`) 
-
-Returns a detailed schema, including columns and their descriptions, for specified Sentinel tables. Use this tool to avoid syntax errors in KQL when calling `RunAdvancedHuntingQuery`. 
-
-| Parameters | Required? | Description |
-|---|---|---|
-| tableNames | Yes  | Sentinel table names|
-
 ### Run hunting query (`RunAdvancedHuntingQuery`)
 
 Run an advanced hunting query by using KQL across supported Microsoft Defender tables to proactively search for threats. To understand data sources, first run `FetchAdvancedHuntingTablesOverview`. For error-free KQL, first run `FetchAdvancedHuntingTablesDetailedSchema`.
@@ -198,9 +182,9 @@ List all security alerts in the organization that are related to a specified IP 
 
 | Parameters | Required? | Description |
 |---|---|---|
-| idAddress | |IP address to retrieve related alerts for |
+| idAddress |Yes |IP address to retrieve related alerts for |
 
-### Get statistics for an IP (`GetDefenderIpStatistics`)   
+### Get statistics for an IP address (`GetDefenderIpStatistics`)   
 
 Get statistics for a given IP address, including the number of distinct devices that communicated with it.
 
@@ -208,13 +192,6 @@ Get statistics for a given IP address, including the number of distinct devices 
 |---|---|---|
 | ipAddress |Yes | IP address to retrieve statistics for|
 
-### Get all devices that communicated with an IP address (`GetDefenderIpMachines`)   
-
-List all devices that communicate with a specific IP address for network mapping and lateral movement analysis.
-
-| Parameters | Required? | Description |
-|---|---|---|
-| idAddress |Yes |IP address to retrieve related devices for |
 
 ### Get endpoint device (`GetDefenderMachine`)   
 
@@ -250,11 +227,12 @@ List discovered security vulnerabilities on a device with Common Vulnerabilities
 
 ### Find device by internal IP address (`FindDefenderMachineByIp`)   
 
-List all devices that have communicated with a specific internal IP address in the time range of 15 minutes prior and after the given timestamp, for network mapping and lateral movement analysis.
+List all devices that communicated with a specific internal IP address in the time range of 15 minutes before and after the given timestamp, for network mapping and lateral movement analysis.
 
 | Parameters | Required? | Description |
 |---|---|---|
-| ipAddress | | Internal IP address to search for|
+| ipAddress |Yes | Internal IP address to search for|
+| timestamp |Yes | The timestamp that defines the query window, checking 15 minutes before and 15 minutes after the specified time |
 
 ### List remediation tasks (`ListDefenderRemediationActivities`)   
 
@@ -270,7 +248,7 @@ List remediation tasks and their execution status across devices. Each remediati
 
 ### Get detailed remediation task information (`GetDefenderRemediationActivity`)   
 
-Get detailed remediation task information including execution status, results, and affected devices.
+Get detailed remediation task information, including execution status, results, and affected devices.
 
 | Parameters | Required? | Description |
 |---|---|---|
@@ -309,33 +287,7 @@ List vulnerabilities affecting specific software on a specific device for target
 | machineID|Yes | Unique identifier of the device|
 | softwareID|Yes |Unique identifier of the software |
 
-### List Microsoft Defender for Identity sensors (`ListIdentitySensors`)
 
-List all Defender for Identity sensors in the tenant, including health status, version, last-seen timestamp, and open-issue count.
-
-| Parameters | Required? | Description |
-|---|---|---|
-| | | |
-
-### List Defender for Identity sensor health issues (`ListIdentitySensorHealthIssues`)
-List of Defender for Identity sensor health issues, such as disconnected sensors, start-failure, and misconfiguration, with severity, status, and troubleshooting links.
-
-| Parameters | Required? | Description |
-|---|---|---|
-| Status |No | Health issue status (Active or Resolved)|
-| healthIssueType |No | Type of health issue (for example, Disconnected or StartFailure)|
-| Severity |No | Severity level (Informational, Low, Medium, or High)|
-| domainNameEndsWith |No |Filter by domain name suffix |
-| sensorDnsEndsWith |No |Filter by sensor DNS name suffix |
-| createdAfter |No | Return issues created after this timestamp|
-| createdBefore |No | Return issues created before this timestamp|
-
-### Get metadata for a specific sensor (`GetIdentitySensor`) 
-Get metadata and health status for a specific Defender for Identity sensor by its ID.
-
-| Parameters | Required? | Description |
-|---|---|---|
-| ID|Yes |Unique identifier of the sensor |
 
 ## Sample prompts
 
@@ -348,7 +300,7 @@ The following sample prompts demonstrate what you can do with the Defender colle
 ## Limitations
 
 - You can't use this collection as a guest in another tenant. You can only use the MCP server on your own home tenant.
-- Querying data in Microsoft Sentinel lake isn't supported yet. For the meantime, you can use the [data exploration tools](sentinel-mcp-data-exploration-tool.md).
+- Querying data in Microsoft Sentinel lake isn't supported. You can use the [data exploration tools](sentinel-mcp-data-exploration-tool.md) instead.
 
 
 ## Related content
