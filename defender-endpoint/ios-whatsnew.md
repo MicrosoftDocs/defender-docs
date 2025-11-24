@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 11/24/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -22,6 +22,8 @@ appliesto:
 
 ---
 # What's new in Microsoft Defender for Endpoint on iOS
+
+<!--This page is updated frequently with the latest updates in Defender endpoint security for iOS-->
 
 
 
