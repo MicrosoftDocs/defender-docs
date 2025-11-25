@@ -3,29 +3,31 @@ title: Overview of critical asset management in Microsoft Security Exposure Mana
 description: Learn about critical asset management in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: Ornat-Spodek
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 06/09/2025
+ms.date: 07/30/2025
 ---
 
 # Overview of critical asset management
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) streamlines the identification and prioritization of business-critical assets, enabling risk-managers and SOC teams to focus efforts where they matter most and reduce overall attack surface risk. Asset classification is driven by proprietary classifiers, which can be fine-tuned manually to reflect organizational context. This article details the underlying mechanisms used for identifying and classifying assets within the Critical Assets Protection framework.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) streamlines the identification and prioritization of business-critical assets across all domains including devices, identities, and cloud resources, enabling risk-managers and SOC teams to focus efforts where they matter most and reduce overall attack surface risk. With the integration of Defender for Cloud in the Defender portal, asset classification now covers the unified inventory spanning endpoints, cloud environments, and external attack surfaces. Asset classification is driven by proprietary classifiers, which can be fine-tuned manually to reflect organizational context. This article details the underlying mechanisms used for identifying and classifying assets within the Critical Assets Protection framework.
 
 - Microsoft Defender XDR automatically detects and categorizes critical assets, streamlining identification and enabling immediate protection.  
 - Your security team can prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets and systems first.
 
 ## Predefined classifications
 
-Security Exposure Management provides an out-of-the-box catalog of predefined critical asset classifications for assets that include devices, identities, and cloud resources. Predefined classifications include:
+Security Exposure Management provides an out-of-the-box catalog of predefined critical asset classifications for assets that include devices, identities, and cloud resources across the unified inventory. Predefined classifications include:
 
 - Critical cyber-security assets such as file servers and domain controllers
 - Databases with sensitive data
 - Identity groups such as Power Users
 - User roles like Privileged Role Administrator
+- Cloud resources from Azure, AWS, and GCP environments
+- External assets discovered through third-party integrations
 
-In addition, you can create custom critical assets to prioritize what your organization considers to be critical when assessing exposure and risk.
+In addition, you can create custom critical assets to prioritize what your organization considers to be critical when assessing exposure and risk across all asset types in the unified inventory.
 
 ## Identifying critical assets
 
@@ -53,18 +55,19 @@ In another example, on the [**Attack surface map**](enterprise-exposure-map.md),
 
 You can work with critical asset settings as follows:
 
-- **Create custom classifications**: You can create new critical asset classifications for devices, identities, and cloud resources, tailored to your organization.
-  - You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
-  - Creating critical asset classification queries is also useful for limited cases where not all assets of interest are identified.
-- **Add assets to classifications**: You can manually add assets to critical asset classifications.
-- **Modify criticality levels**: You can choose to edit criticality levels according to your organization's risk profile.
+- **Create custom classifications**: You can create new critical asset classifications for devices, identities, and cloud resources from any domain (Azure, AWS, GCP, or on-premises), tailored to your organization.
+  - You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical, or cloud resources with specific tags as critical.
+  - Creating critical asset classification queries is also useful for limited cases where not all assets of interest are identified across the unified inventory.
+- **Add assets to classifications**: You can manually add assets from any domain to critical asset classifications in the unified asset management experience.
+- **Modify criticality levels**: You can choose to edit criticality levels according to your organization's risk profile across all asset types.
 - **Edit custom classifications**: You can edit, delete, and turn off custom classifications. Predefined classifications can't be modified. The "turn off" rule functionality is available for predefined queries. However, it might not be visible to some users due to specific issues.
+- **Third-party data integration**: Assets discovered via third-party connectors (such as ServiceNow CMDB) can be automatically tagged as critical if they meet certain criteria, enhancing critical asset identification across the unified inventory.
 
 ## Reviewing critical assets
 
-The critical asset classification logic uses asset behavior from Microsoft Defender workloads and third-party integrations. To implement different logic, turn off the rule and create a custom rule suited to your scenarios.
+The critical asset classification logic uses asset behavior from Microsoft Defender workloads, cloud environments (Azure, AWS, GCP), and third-party integrations. With the integration of Defender for Cloud in the Defender portal, this now includes assets from the unified inventory across all domains. To implement different logic, turn off the rule and create a custom rule suited to your scenarios.
 
-Some assets that match a classification might not meet the criticality threshold. For example, an asset might be a domain controller, but it might not be deemed critical for your business. Use the asset review feature to add these assets to your defined classification. This  feature allows you to include assets based on your organization's specific criticality criteria.
+Some assets that match a classification might not meet the criticality threshold. For example, an asset might be a domain controller or a cloud resource, but it might not be deemed critical for your business. Use the asset review feature to add these assets to your defined classification. This feature allows you to include assets based on your organization's specific criticality criteria across the entire unified asset inventory, ensuring all critical assets across devices, identities, and cloud resources are properly managed in one place.
 
 ## Critical Asset Protection initiative
 

@@ -428,7 +428,7 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-- name: Protect AI agents
+- name: Protect AI agents (Preview)
   items:
   - name: Overview
     href: ai-agent-protection.md
