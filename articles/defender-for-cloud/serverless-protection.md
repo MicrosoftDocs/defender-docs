@@ -54,12 +54,14 @@ Once your results are filtered you can select any of the resources to view more 
 
 You can also review the security recommendations associated with each resource to prioritize remediation efforts based on the severity of the findings and remediate them.
 
-
-
-Attack path
-
-Inventory 
-
 Learn how to [remediate security recommendations](implement-security-recommendations.md). 
+
+### Cloud Security Explorer
+
+Defender for Cloud's Cloud Security Explorer provides advanced filtering and querying capabilities that allow you to analyze the security posture of your serverless resources. You can create custom queries to identify specific misconfigurations or vulnerabilities across your serverless workloads.
+
+:::image type="content" source="media/serverless-protection/serverless-cloud-security-explorer.png" alt-text="Screenshot of the Cloud Security Explorer page with a query specific to serverless protection entered." lightbox="media/serverless-protection/serverless-cloud-security-explorer.png":::
+
+Learn how to [build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
 
 ## Next step
