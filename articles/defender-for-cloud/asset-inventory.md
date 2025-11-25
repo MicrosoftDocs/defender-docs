@@ -370,7 +370,6 @@ Cloud assets connect seamlessly with vulnerability management:
 
 ### Current limitations
 
-- **Software inventory**: Not yet available for cloud assets (planned post-M1 release)
 - **Real-time updates**: Some asset changes may have slight delays before appearing in inventory
 - **Historical data**: Limited historical asset information during initial rollout period
 
