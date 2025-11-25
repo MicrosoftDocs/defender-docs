@@ -54,7 +54,7 @@ For specific regional availability and government cloud support details, see the
 | [Code-to-cloud mapping for containers](container-image-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | GitHub, Azure DevOps<sup>[2](#footnote1)</sup> , Docker Hub, JFrog Artifactory|
 | [Code-to-cloud mapping for IaC](iac-template-mapping.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure DevOps<sup>[2](#footnote1)</sup>, , Docker Hub, JFrog Artifactory |
 | [Critical assets protection](critical-assets-protection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
-|[Custom Recommendations](create-custom-recommendations.md)|-|:::image type="icon" source="./media/icons/yes-icon.png":::|Azure, AWS, GCP, Docker Hub, JFrog Artifactory|
+| [Custom Recommendations](create-custom-recommendations.md)|-|:::image type="icon" source="./media/icons/yes-icon.png":::|Azure, AWS, GCP, Docker Hub, JFrog Artifactory|
 | [Data security posture management (DSPM), Sensitive data scanning](concept-data-security-posture.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP<sup>[1](#footnote1)</sup> |
 | [External attack surface management](concept-easm.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [Governance to drive remediation at-scale](governance-rules.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP , Docker Hub, JFrog Artifactory|
