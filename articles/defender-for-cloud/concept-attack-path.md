@@ -6,7 +6,7 @@ ms.date: 09/10/2025
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
 ---
 
-# Investigate risk with security explorer/attack paths
+# Security explorer and attack paths
 
 > [!VIDEO https://aka.ms/docs/player?id=36a5c440-00e6-4bd8-be1f-a27fbd007119]
 
@@ -15,6 +15,12 @@ One of the biggest challenges for security teams today is the number of daily se
 Defender for Cloud's contextual security capabilities help security teams assess the risk behind each security issue and identify the highest-risk issues that need immediate resolution. Defender for Cloud helps security teams reduce the risk of impactful breaches effectively.
 
 All of these capabilities are available as part of the [Defender Cloud Security Posture Management](concept-cloud-security-posture-management.md) plan and require you to enable either [agentless scanning for VMs](concept-agentless-data-collection.md) or the [vulnerability assessment capability](deploy-vulnerability-assessment-vm.md) on the [Defender for Servers plan](apply-security-baseline.md).
+
+## Access attack paths and security explorer
+
+In the Azure portal, you can access these capabilities through:
+- **Attack path analysis**: Navigate to **Microsoft Defender for Cloud** > **Attack path analysis**
+- **Cloud security explorer**: Navigate to **Microsoft Defender for Cloud** > **Cloud security explorer**
 
 ## What is cloud security graph?
 
