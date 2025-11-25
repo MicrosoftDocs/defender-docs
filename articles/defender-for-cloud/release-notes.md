@@ -60,6 +60,7 @@ November 25, 2025
 Defender for Cloud is announcing the general availability of AI security posture management for GCP Vertex AI. This new capability helps secure AI workloads on GCP by providing continuous monitoring, risk assessments, and actionable recommendations.
 
 Learn more about [AI security posture management](ai-security-posture.md).
+
 ## Update to Attack Path Analysis logic
 
 November 24, 2025
