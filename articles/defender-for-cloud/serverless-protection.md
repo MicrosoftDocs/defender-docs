@@ -16,6 +16,8 @@ Serverless protection provides automatic discovery, which allows Defender for Cl
 
 Serverless protection is available as part of the Defender Cloud Security Posture Management (CSPM) plan. To enable serverless protection, you must [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription, and then [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
 
+You must also [enable Registry access](defender-for-containers-enable.md) under the Defender for Containers plan, to receive Vulnerability Assessments for serverless workloads.
+
 ## Benefits of Serverless protection
 
 Defender for Cloud extends its CSPM capabilities to serverless workloads by providing continuous visibility and risk assessment with the following features:
