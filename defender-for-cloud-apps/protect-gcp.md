@@ -5,14 +5,14 @@ ms.date: 11/25/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
 
 
+Google Cloud Platform is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
 
-Google Cloud Platform is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
-
-Connecting GCP to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of VMs.
-
+Connecting GCP to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of virtual machines (VMs).
+    
 ## Main threats
 
 - Abuse of cloud resources
@@ -64,7 +64,7 @@ We recommend that you use a dedicated project for the integration and restrict a
 > - [Pub/Sub topic – GCP project level](https://cloud.google.com/logging/docs/export/using_exported_logs#pubsub-overview)
 > - [Pub/Sub subscription – GCP project level](https://cloud.google.com/logging/docs/export/using_exported_logs#pubsub-overview)
 >
-> The Defender for Cloud Apps auditing connection only imports Admin Activity audit logs; Data Access and System Event audit logs are not imported. For more information about GCP logs, see [Cloud Audit Logs](https://go.microsoft.com/fwlink/?linkid=2109230).
+> The Defender for Cloud Apps auditing connection only imports Admin Activity audit logs; Data Access and System Event audit logs aren't imported. For more information about GCP logs, see [Cloud Audit Logs](https://go.microsoft.com/fwlink/?linkid=2109230).
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ Create a dedicated project in GCP under your organization to enable integration 
 1. Search for and select **Cloud Pub/Sub API**, and then on the API page, select **ENABLE**.
 
     > [!NOTE]
-    > Make sure that you do not select **Pub/Sub Lite API**.
+    > Make sure that you don't select **Pub/Sub Lite API**.
 
 #### Create a dedicated service account for the security auditing integration
 
@@ -138,7 +138,7 @@ This procedure describes how to add the GCP connection details to connect Google
 1. In the **App connectors** page, to provide the GCP connector credentials, do one of the following:
 
     > [!NOTE]
-    > We recommended that you connect your Google Workspace instance to get unified user management and governance. This is the recommended even if you do not use any Google Workspace products and the GCP users are managed via the Google Workspace user management system.
+    > We recommended that you connect your Google Workspace instance to get unified user management and governance. This is the recommended even if you don't use any Google Workspace products and the GCP users are managed via the Google Workspace user management system.
 
     **For a new connector**
 
@@ -169,7 +169,7 @@ This procedure describes how to add the GCP connection details to connect Google
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
     > [!NOTE]
-    > Defender for Cloud Apps will create an aggregated export sink (organization level), a Pub/Sub topic and Pub/Sub subscription using the integration service account in the integration project.
+    > Defender for Cloud Apps will create an aggregated export sink (organization level), a Pub/Sub topic, and Pub/Sub subscription using the integration service account in the integration project.
     >
     > Aggregated export sink is used to aggregate logs across the GCP organization and the Pub/Sub topic created is used as the destination. Defender for Cloud Apps subscribes to this topic through the Pub/Sub subscription created to retrieve the admin activity logs across the GCP organization.
 
@@ -179,4 +179,3 @@ This procedure describes how to add the GCP connection details to connect Google
 - [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-[!INCLUDE [Open support ticket](includes/support.md)]
