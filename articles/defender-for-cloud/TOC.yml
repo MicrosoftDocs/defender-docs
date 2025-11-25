@@ -325,6 +325,9 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
+        - name: Serverless protection
+          displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
+          href: serverless-protection.md
     - name: Assess your security posture
       items:
         - name: Cloud overview dashboard

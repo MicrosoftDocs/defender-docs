@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
+| November 30, 2025 | Preview | Cloud posture management adds serverless protection for Azure and AWS (Preview)(#cloud-posture-management-adds-serverless-protection-for-azure-and-aws)
 |November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 |November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
 |November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
@@ -44,6 +45,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+### Cloud posture management adds serverless protection for Azure and AWS
+
+Defender for Cloud now extends Cloud Security Posture Management (CSPM) capabilities to serverless workloads in Azure and AWS in preview as part of the Defender CSPM plan.
+
+This release introduces automatic discovery and security posture assessment for Azure Functions, Azure Web Apps, and AWS Lambda functions. Security teams gain unified visibility into serverless resources through a centralized inventory, enabling them to identify misconfigurations, detect vulnerabilities, and assess insecure dependencies.
+
+Learn more about [Serverless protection](serverless-protection.md).
 
 ### Defender for Cloud integration into the Defender portal (preview)
 
