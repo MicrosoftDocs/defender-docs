@@ -55,7 +55,7 @@ To help protect your GKE clusters, use the following steps to enable the Defende
 
      - Enable Defender for Containers automatic provisioning at the project level, as explained in the instructions in this section. We recommend this method.
      - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Microsoft Defender for Cloud **Recommendations** page. [Learn how to deploy the solution to specific clusters](#deploy-the-solution-to-specific-clusters).
-     - Manually install [Azure Arc-enabled Kubernetes](../azure-arc/kubernetes/quickstart-connect-cluster.md) and [extensions](../azure-arc/kubernetes/extensions.md).
+     - Manually install [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
    - The [K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. Set the **K8S API access** toggle to **On**.
 
@@ -134,5 +134,5 @@ To deploy the solution to specific clusters:
 
 - [Verify your deployment](defender-for-containers-gcp-verify.md)
 - [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
-- [View and manage security alerts](managing-and-responding-alerts.md)
+- [View and manage security alerts](manage-respond-alerts.md)
 
