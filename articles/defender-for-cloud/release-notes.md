@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/24/2025
+ms.date: 11/25/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,8 +31,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-|November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
-|November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
+| November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
+| November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
+| November 25, 2025 | Preview | [Discover Azure AI Foundry agents in your environment (Preview)](#discover-azure-ai-foundry-agents-in-your-environment-preview) |
+| November 25, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
 |November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
 |November 24,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
 |November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
@@ -90,6 +92,22 @@ We’ve begun a major revamp of the Microsoft Defender for Cloud documentation t
 - **Simplified navigation**: A unified table of contents based on customer feedback.  
 - **Mixed-mode experience**: Articles that cover both Azure and Defender portals with entry points at the top of the article.  
 - **New Defender portal section**: Features recent enhancements, opt-in guidance, and known limitations.  
+
+### Discover Azure AI Foundry agents in your environment (Preview)
+
+November 25, 2025
+
+You can now discover Azure AI Foundry agents in your environment using Defender for Cloud. This new preview feature helps you identify and monitor AI Foundry agents deployed across your resources, providing insights into their security posture and risks.
+
+Learn more about [AI security posture management](ai-security-posture.md).
+
+### General availability of AI security posture management in GCP Vertex
+
+November 25, 2025
+
+Defender for Cloud is announcing the general availability of AI security posture management for GCP Vertex AI. This new capability helps secure AI workloads on GCP by providing continuous monitoring, risk assessments, and actionable recommendations.
+
+Learn more about [AI security posture management](ai-security-posture.md).
 
 ### Update to Attack Path Analysis logic
 
