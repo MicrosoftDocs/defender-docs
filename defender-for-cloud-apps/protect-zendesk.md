@@ -5,9 +5,8 @@ ms.date: 12/06/2023
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Zendesk
-
-
 
 As a customer service software solution, Zendesk holds the sensitive information to your organization. Any abuse of Zendesk by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
@@ -84,8 +83,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Navigate to **Admin** -> **Apps and integrations** -> **APIs** -> **Zendesk API** -> **OAuth Client** and select **Add OAuth client**.
 
-1. Select **New Credential**.
-1. Fill out the following fields:
+1. Select **New Credential**. Fill out the following fields:
 
     - Client name: **Microsoft Defender for Cloud Apps** (you can also choose another name).
     - Description: **Microsoft Defender for Cloud Apps API Connector** (you can also choose another description).
@@ -98,8 +96,6 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
       >
       > - For US Government GCC customers, enter the following value: `https://portal.cloudappsecuritygov.com/api/oauth/saga`
       > - For US Government GCC High customers, enter the following value: `https://portal.cloudappsecurity.us/api/oauth/saga`
-
-1. Select **Save**, and then select **OK**.
 
 1. Copy the **Secret** that was generated. You'll need it in the upcoming steps.
 
@@ -144,4 +140,3 @@ The default rate limit is 200 requests per minute. To increase the rate limit, [
 
 - [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]
