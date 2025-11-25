@@ -33,6 +33,7 @@ Microsoft Defender delivers comprehensive protection for AI agents, combining pr
 
     Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
 
+See [Protect your AI agents (Preview)](../defender-xdr/ai-agent-inventory.md) for more information.
 
 ## September 2025 
 
