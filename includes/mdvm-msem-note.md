@@ -12,4 +12,4 @@ ms.service: microsoft-defender-vulnerability-management
 > [!NOTE]
 > The **Vulnerability Management** section in the Microsoft Defender portal is now located under **Exposure management**. With this change, you can now consume and manage security exposure data and vulnerability data in a unified location, to enhance your existing Vulnerability Management features. [Learn more](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management#microsoft-defender-vulnerability-management-and-microsoft-security-exposure-management-integration).
 >
-> These changes are relevant for [Preview customers](../defender-xdr/preview.md) (**Microsoft Defender XDR + Microsoft Defender for Identity** preview option).
+> These changes are relevant for [Preview customers](/defender-xdr/preview) (**Microsoft Defender XDR + Microsoft Defender for Identity** preview option).
