@@ -15,12 +15,13 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-ms.date: 11/17/2025
+ms.date: 11/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Onboard Windows devices using a local script
 
 You can also manually onboard individual devices to Defender for Endpoint. You might want to onboard some devices when you're testing the service before you commit to onboarding all devices in your network.
@@ -39,7 +40,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 > [!NOTE]
 > If the Endpoints section isn't visible, try accessing other Defender features (such as Incidents or Hunting) or wait a few minutes for the environment to initialize. Also ensure you have the required roles (like Security Administrator) and appropriate licensing.
 
-   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
+   1. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
    2. Select Windows 10 or Windows 11 as the operating system.
    
@@ -104,7 +105,7 @@ For security reasons, the package used to offboard devices expires seven days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
+   1. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
    
    2. Select Windows 10 or Windows 11 as the operating system.
    
