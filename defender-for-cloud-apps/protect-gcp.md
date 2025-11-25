@@ -1,7 +1,7 @@
 ---
 title: Protect your Google Cloud Platform environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Google Cloud Platform app to Defender for Cloud Apps using the API connector.
-ms.date: 03/04/2025
+ms.date: 11/25/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -85,7 +85,6 @@ Create a dedicated project in GCP under your organization to enable integration 
 1. Select **Create Project** to start a new project.
 1. In the **New project** screen, name your project and select **Create**.
 
-    ![Screenshot showing GCP create project dialog.](media/connect-gcp-create-project.png)
 
 #### Enable required APIs
 
@@ -104,11 +103,7 @@ Create a dedicated project in GCP under your organization to enable integration 
 1. Enter an account name, and then select **Create**.
 1. Specify the **Role** as **Pub/Sub Admin** and then select **Save**.
 
-    ![Screenshot showing GCP add IAM role.](media/connect-gcp-iam-role.PNG)
-
 1. Copy the **Email** value, you'll need this later.
-
-    ![Screenshot showing GCP service account dialog.](media/connect-gcp-create-service-account.png)
 
 1. Under **IAM & admin**, select **IAM**.
 
@@ -117,7 +112,6 @@ Create a dedicated project in GCP under your organization to enable integration 
     1. In the **New members** box, paste the **Email** value you copied earlier.
     1. Specify the **Role** as **Logs Configuration Writer** and then select **Save**.
 
-        ![Screenshot showing add member dialog.](media/connect-gcp-add-member.png)
 
 #### Create a private key for the dedicated service account
 
@@ -127,8 +121,6 @@ Create a dedicated project in GCP under your organization to enable integration 
 1. Select **CREATE KEY**.
 1. In the **Create private key** screen, select **JSON**, and then select **CREATE**.
 
-    ![Screenshot showing create private key dialog.](media/connect-gcp-create-private-key.png)
-
     > [!NOTE]
     > You'll need the JSON file that is downloaded to your device later.
 
@@ -136,7 +128,6 @@ Create a dedicated project in GCP under your organization to enable integration 
 
 Make a note of your **Organization ID**, you'll need this later. For more information, see [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
 
-![Screenshot showing organization ID dialog.](media/connect-gcp-org-id.png)
 
 ### Connect Google Cloud Platform auditing to Defender for Cloud Apps
 
@@ -182,11 +173,10 @@ This procedure describes how to add the GCP connection details to connect Google
     >
     > Aggregated export sink is used to aggregate logs across the GCP organization and the Pub/Sub topic created is used as the destination. Defender for Cloud Apps subscribes to this topic through the Pub/Sub subscription created to retrieve the admin activity logs across the GCP organization.
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
 [!INCLUDE [Open support ticket](includes/support.md)]
