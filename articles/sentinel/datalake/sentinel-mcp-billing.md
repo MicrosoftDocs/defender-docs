@@ -41,7 +41,7 @@ The following limits are specific to Sentinel data lake MCP tools:
 | Query window for tools | 800 characters |
 
 ### Sentinel entity analyzer tool
-Each tenant can use the [entity analyzer](sentinel-mcp-data-exploration-tool.md#entity-analyzer) MCP tool up to 100 times a day. 
+Each tenant can use the [entity analyzer](sentinel-mcp-data-exploration-tool.md#entity-analyzer-preview) MCP tool up to 100 times a day. 
 
 ### Triage tool
 Regular API throttling applies to the tools in the triage tool collection. In addition, tools that call the advanced hunting API are bound by the existing advanced hunting quotas and service limits. [Learn more about advanced hunting quotas and usage parameters](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters)

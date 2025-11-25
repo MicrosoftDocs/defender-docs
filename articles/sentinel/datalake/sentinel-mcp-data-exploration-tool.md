@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 11/18/2025
+ms.date: 12/01/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -12,6 +12,9 @@ ms.service: microsoft-sentinel
 ---
 
 # Explore Microsoft Sentinel data lake with data exploration collection
+
+> [!IMPORTANT]
+> Some information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 The data exploration tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you search for relevant tables and retrieve data from Microsoft Sentinel's data lake by using natural language. 
 
@@ -22,7 +25,7 @@ To access the data exploration tool collection, you need the following prerequis
 - Any of the supported AI-powered code editors and agent-building platforms:
     - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
     - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
-    - [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
+    - [Microsoft Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
     - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the data exploration collection
@@ -44,23 +47,23 @@ For a full list of tables in this index, see [Azure Monitor Log Analytics log ta
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
-| query| Yes |This parameter takes in keywords to search for relevant tables in the connected workspaces. |
-| workspaceId| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
+| `query`| Yes |This parameter takes in keywords to search for relevant tables in the connected workspaces. |
+| `workspaceId`| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
 
 ### Execute KQL (Kusto Query Language) query on Microsoft Sentinel data lake (`query_lake`)
 This tool runs a single KQL query against a specified Microsoft Sentinel data lake workspace and returns the raw result set. It's designed for focused investigative or analytical retrieval and not bulk export. Use this tool to advance an investigation or analytical workflow and retrieve a security event, alert, asset, identity, device, or enrichment data. You can also use it alongside the `search_tables` tool to identify relevant table schemas and build valid KQL queries.
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
-| query| Yes |This parameter takes in a well-formed KQL query to retrieve data from a Microsoft Sentinel data lake workspace. |
-| workspaceId| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
+| `query`| Yes |This parameter takes in a well-formed KQL query to retrieve data from a Microsoft Sentinel data lake workspace. |
+| `workspaceId`| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
 
  
 ### List workspaces (`list_sentinel_workspaces`)
 This tool lists all Microsoft Sentinel data lake workspace name and ID pairs available to you. Including the workspace name provides you with helpful context to understand which workspace is being used. Run this tool before using any other Microsoft Sentinel tools because those tools need a workspace ID argument to function properly.
 
 
-### Entity analyzer
+### Entity analyzer (preview)
 
 These tools use AI to analyze your organization's data in the Microsoft Sentinel data lake. They provide a verdict and detailed insights on URLs, domains, and user entities. They help eliminate the need for manual data collection and complex integrations typically required for enriching and investigating entities.
 
@@ -74,7 +77,7 @@ Entity analysis tools might require a few minutes to generate results, so there 
 |----------|----------|----------|
 | Microsoft Entra object ID or URL| Yes |This parameter takes in the user or URL you want to analyze. |
 | Lookback time| No |This parameter takes in the lookback time. Default is seven days. |
-| workspaceId| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
+| `workspaceId`| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
 
 These tools return an identifier value that you can provide to the retrieve analysis tool as input.
 
@@ -82,7 +85,7 @@ These tools return an identifier value that you can provide to the retrieve anal
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
-| analysisId| Yes |This parameter takes in the job identifier received from the start analysis tools. |
+| `analysisId`| Yes |This parameter takes in the job identifier received from the start analysis tools. |
 
 While this tool automatically polls for a few minutes until results are ready, its internal timeout might not be sufficient for long analysis operations. You might need to run it multiple times to get results.
 

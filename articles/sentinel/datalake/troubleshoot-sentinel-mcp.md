@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the best practices for using Microsoft Sentinel's collection of MCP tools and how to troubleshoot them 
 author: poliveria
 ms.topic: how-to
-ms.date: 11/18/2025
+ms.date: 12/01/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
