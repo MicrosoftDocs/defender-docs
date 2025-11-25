@@ -5,9 +5,8 @@ ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Amazon Web Services (AWS) environment
-
-
 
 Amazon Web Services is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
 
@@ -61,22 +60,13 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
 
 ### Step 1: Configure Amazon Web Services auditing
 
-1. In your [Amazon Web Services console](https://aws.amazon.com/console/), under **Security, Identity & Compliance**, select **IAM**.
+1. In your [Amazon Web Services console](https://aws.amazon.com/console/), go to **IAM** add a new user for Defender for Cloud Apps with **Programmatic access**.
 
    
-1. Select **Users** and then select **Add user**.
+1. Select **Attach existing policies directly**, and then select **Create policy**.
 
    
-1. In the **Details** step, provide a new user name for Defender for Cloud Apps. Make sure that under **Access type** you select **Programmatic access** and select **Next Permissions**.
-
-   
-1. Select **Attach existing policies directly**, and then **Create policy**.
-
-   
-1. Select the **JSON** tab:
-
-   
-1. Paste the following script into the provided area:
+1. Select the **JSON** tab and paste the following script:
 
     ```json
     {
@@ -103,24 +93,11 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
      }
     ```
 
-1. Select **Next: Tags**
+1. Enter a name for your policy and select **Create policy**.
 
+1. Select **Create user**.
    
-1. Select **Next: Review**.
-
-   
-1. Provide a **Name** and select **Create policy**.
-
-   
-1. Go back to the **Add user** screen, refresh the list if necessary, and select the user you created, and select **Next: Tags**.
-
-   
-1. Select **Next: Review**.
-
-1. If all the details are correct, select **Create user**.
-
-   
-1. When you get the success message, select **Download .csv** to save a copy of the new user's credentials. You'll need these later.
+1. Select **Download .csv** to save a copy of the new user's credentials. You'll need these later.
 
    
    > [!NOTE]
@@ -161,8 +138,4 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
-
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
