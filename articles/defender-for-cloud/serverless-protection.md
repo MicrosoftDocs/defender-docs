@@ -42,6 +42,20 @@ Serverless protection in Defender for Cloud operates through a combination of au
 
 Once the resources are discovered, Defender for Cloud continuously monitors their configurations and runtime environments. It evaluates these resources against a set of security best practices and compliance standards to identify misconfigurations, vulnerabilities, and insecure dependencies. When a risk is detected, Defender for Cloud generates security recommendations with detailed remediation steps to help you address the issues.
 
+### Inventory
+
+Defender for Cloud provides a unified inventory of all discovered serverless resources, allowing you to easily view and manage them. The  inventory page includes details such as resource names, types, locations, and associated security findings. Simply filter the results based on resource type to focus on Web Apps, Azure Functions, or AWS Lambda functions.
+
+:::image type="content" source="media/serverless-protection/serverless-inventory.png" alt-text="Screenshot that shows the inventory page filtered by resources." lightbox="media/serverless-protection/serverless-inventory.png":::
+
+Once your results are filtered you can select any of the resources to view more details about its security posture, including any active security recommendations and their severity levels.
+
+:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Screenshot that shows a selected resources health." lightbox="media/defender-for-apis-posture/resource-health.png":::
+
+You can also review the security recommendations associated with each resource to prioritize remediation efforts based on the severity of the findings and remediate them.
+
+
+
 Attack path
 
 Inventory 
