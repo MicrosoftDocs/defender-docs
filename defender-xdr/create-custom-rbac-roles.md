@@ -153,7 +153,7 @@ For more information, see: [Configure scoped access for Microsoft Defender for I
 
 You can configure scoped access using Microsoft Defender XDR’s Unified RBAC model for resources managed by Microsoft Defender for Cloud. This enables you to limit access and visibility to specific **subscriptions**, **resource groups**, or **individual resources**. By applying scoped roles, you help ensure that team members only see and manage the assets relevant to their responsibilities, reducing unnecessary exposure and improving operational security.
 
-For more information, see: [Manage cloud scopes and unified role-based access control](/defender-for-cloud/cloud-scopes-unified-rbac&pivots=defender-portal).
+For more information, see: [Manage cloud scopes and unified role-based access control](https://learn.microsoft.com/en-us/azure/defender-for-cloud/cloud-scopes-unified-rbac?pivots=defender-portal).
 
 ## Next steps
 
