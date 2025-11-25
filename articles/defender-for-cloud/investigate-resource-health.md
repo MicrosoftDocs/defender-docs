@@ -8,11 +8,18 @@ ms.custom: sfi-image-blocked
 
 # Tutorial: Investigate the health of your resources
 
-The resource health page in Microsoft Defender for Cloud provides a detailed view of a resource’s security posture. It shows applied Defender plans, outstanding recommendations and alerts, and direct actions you can take to improve the resource’s health. If your subscription has a [Microsoft Defender plan](defender-for-cloud-introduction.md), the resource health page also shows any active security alerts for that resource.
+The resource health page provides a snapshot view of the overall health of a single resource. You can review detailed information about the resource and all recommendations that apply to that resource. Also, if you're using any of the [advanced protection plans of Microsoft Defender for Cloud](defender-for-cloud-introduction.md), you can see outstanding security alerts for that specific resource too.
+
+This single page, in Defender for Cloud's portal pages shows:
+
+1. **Resource information** - The resource group and subscription it's attached to, the geographic location, and more.
+1. **Applied security feature** - Whether a Microsoft Defender plan is enabled for the resource.
+1. **Counts of outstanding recommendations and alerts** - The number of outstanding security recommendations and Defender for Cloud alerts.
+1. **Actionable recommendations and alerts** - Two tabs list the recommendations and alerts that apply to the resource.
 
 :::image type="content" source="media/investigate-resource-health/resource-health-page-virtual-machine.gif" alt-text="Microsoft Defender for Cloud's resource health page showing the health information for a virtual machine":::
 
-In this tutorial, you'll learn how to:
+In this tutorial you'll learn how to:
 
 > [!div class="checklist"]
 >
@@ -22,18 +29,22 @@ In this tutorial, you'll learn how to:
 
 ## Prerequisites
 
-- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
-- [Enable Microsoft Defender for Cloud](connect-azure-subscription.md) on your subscription.  
-- Make sure you’re signed in with an account with one of these permissions:
-  - To apply security recommendations: Resource Group Contributor, Resource Group Owner, Subscription Contributor, or Subscription Owner.  
-  - To dismiss alerts: Security Admin, Subscription Contributor, or Subscription Owner.
+To step through the features covered in this tutorial:
 
-## View a resource’s health information
+- You need an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+
+- [Microsoft Defender for Cloud enabled on your subscription](connect-azure-subscription.md).
+
+- **To apply security recommendations**: you must be signed in with an account that has the relevant permissions (Resource Group Contributor, Resource Group Owner, Subscription Contributor, or Subscription Owner)
+
+- **To dismiss alerts**: you must be signed in with an account that has the relevant permissions (Security Admin, Subscription Contributor, or Subscription Owner)
+
+## Access the health information for a resource
 
 > [!TIP]
-> The examples in this tutorial use a virtual machine, but the resource health page works the same way for all supported resource types.
+> In the following screenshots, we're opening a virtual machine, but the resource health page can show you the details for all resource types.
 
-To view a resource’s health details:
+**To open the resource health page for a resource**:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -41,48 +52,51 @@ To view a resource’s health details:
 
 1. Select **Inventory**.
 
-1. Choose a resource to open its health page.
+1. Select any resource.
 
     :::image type="content" source="media/investigate-resource-health/inventory-select-resource.png" alt-text="Select a resource from the asset inventory to view the resource health page." lightbox="./media/investigate-resource-health/inventory-select-resource.png":::
 
-1. In the left pane, review the subscription, resource status, and monitoring information. You can also see whether enhanced security features are enabled for the resource.
+1. Review the left pane of the resource health page for an overview of the subscription, status, and monitoring information about the resource. You can also see whether enhanced security features are enabled for the resource:
 
     :::image type="content" source="media/investigate-resource-health/resource-health-left-pane.png" alt-text="The left pane of Microsoft Defender for Cloud's resource health page shows the subscription, status, and monitoring information about the resource. It also includes the total number of outstanding security recommendations and security alerts.":::
 
-1. In the right pane, use the **Recommendations** and **Alerts** tabs to review security findings for the resource.
+1. Use the two tabs on the right pane to review the lists of security recommendations and alerts that apply to this resource:
 
     :::image type="content" source="media/investigate-resource-health/resource-health-right-pane.png" alt-text="The right pane of Microsoft Defender for Cloud's resource health page has two tabs: recommendations and alerts." lightbox="./media/investigate-resource-health/resource-health-right-pane.png":::
 
     > [!NOTE]
-    > Microsoft Defender for Cloud labels each resource as **healthy** or **unhealthy** depending on its compliance with applicable [security recommendations](security-policy-concept.md).  
-    > Even if a resource is marked as **healthy**, the page still lists all related recommendations so you can review its full security posture.
+    > Microsoft Defender for Cloud uses the terms "healthy" and "unhealthy" to describe the security status of a resource. These terms relate to whether the resource is compliant with a specific [security recommendation](security-policy-concept.md).
+    >
+    > In the screenshot above, you can see that recommendations are listed even when this resource is "healthy". One advantage of the resource health page is that all recommendations are listed so you can get a complete picture of your resources' health.
 
-## Evaluate security issues for a resource
+## Evaluate the outstanding security issues for a resource
 
-The resource health page highlights security recommendations where the resource is **unhealthy** and lists any active security alerts. You can use this view to prioritize and remediate risks directly.
+The resource health page lists the recommendations for which your resource is "unhealthy" and the alerts that are active.
 
-### Remediate a resource
+### Harden a resource
 
-Fix issues identified in Defender for Cloud’s recommendations to meet your organization’s security policies:
+To ensure your resource is hardened according to the policies applied to your subscriptions, fix the issues described in the recommendations:
 
-1. In the right pane, select a recommendation.
+1. From the right pane, select a recommendation.
 
-1. Follow the on-screen guidance to apply the recommended remediation.
+1. Continue as instructed on screen.
 
     > [!TIP]
-    > Remediation steps vary by recommendation. To decide which issues to resolve first, consider each recommendation’s severity and its [impact on your secure score](secure-score-security-controls.md).
+    > The instructions for fixing issues raised by security recommendations differ for each of Defender for Cloud's recommendations.
+    >
+    > To decide which recommendations to resolve first, look at the severity of each one and its [potential impact on your secure score](secure-score-security-controls.md).
 
 ### Investigate a security alert
 
-Use the alerts tab to review active security alerts for a selected resource.
+1. From the right pane, select an alert.
 
-1. In the right pane, select an alert.
-
-1. Follow the steps in [Respond to security alerts](manage-respond-alerts.md) to review and address the issue.
+1. Follow the instructions in [Respond to security alerts](manage-respond-alerts.md).
 
 ## Next steps
 
-Learn more about managing and improving your resource security:
+In this tutorial, you learned about using Defender for Cloud’s resource health page.
+
+To learn more, see these related pages:
 
 - [Respond to security alerts](manage-respond-alerts.md#respond-to-a-security-alert)
 - [Review your security recommendations](review-security-recommendations.md)

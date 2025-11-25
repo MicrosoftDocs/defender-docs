@@ -25,7 +25,7 @@ Security administrators can directly assign the recommendation to the most appro
   - Owner
   - Contributor
 
-- [Review cloud availability](support-matrix-cloud-environment.md).
+- [Review cloud availability](support-matrix-defender-for-cloud.md).
 
 ## Assign a recommendation to an active user
 
