@@ -1,6 +1,6 @@
 ---
 title: Configure Defender for Containers on Arc-enabled Kubernetes
-description: Learn how to configure advanced settings for Microsoft Defender for Containers on Arc-enabled Kubernetes clusters.
+description: Learn how to configure Microsoft Defender for Containers settings and components for your Arc-enabled Kubernetes clusters after deployment.
 ms.topic: how-to
 ms.date: 06/04/2025
 ai-usage: ai-assisted
@@ -8,597 +8,120 @@ ai-usage: ai-assisted
 
 # Configure Defender for Containers on Arc-enabled Kubernetes
 
-This article explains how to configure advanced settings for Defender for Containers on your Arc-enabled Kubernetes clusters. It includes how to add or remove components after the initial deployment.
+This article explains how to configure Microsoft Defender for Containers on your Arc-enabled Kubernetes clusters.
 
-## Configuration areas
+## Prerequisites
 
-Jump to the configuration you need:
+- [Connect the Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+- Complete the [prerequisites listed in the documentation for generic cluster extensions](/azure/azure-arc/kubernetes/extensions#prerequisites).
 
-### Component management
+## Enable the plan
 
-- [Add or remove components](#add-or-remove-components)
-- [Configure component exclusions](#configure-component-exclusions)
+1. In Defender for Cloud, select **Settings**, then select the subscription you want.
+1. On **Defender plans**, select **Containers** > **Settings**.
+1. Turn on the component you want.
 
-### Core settings
+   :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
-- [Configure runtime protection](#configure-runtime-protection)
-- [Configure vulnerability scanning](#configure-vulnerability-scanning)
-- [Configure security policies](#configure-security-policies)
+   > [!NOTE]
+   > When you turn off Defender for Containers, the components are set to **Off**. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
 
-### Distribution-specific
+By default, when you enable the plan through the Azure portal, [Microsoft Defender for Containers](defender-for-containers-introduction.md) automatically installs the required components to provide the protections that the plan offers. This configuration includes the assignment of a default workspace.
 
-- [Rancher configuration](#rancher-specific-configuration)
-- [VMware Tanzu configuration](#configure-for-vmware-tanzu)
+If you want to disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
 
-### Advanced features
+You can also modify this configuration from the **Defender plans** page.
 
-- [Configure alerts](#configure-alerts-and-notifications)
-- [Resource optimization](#configure-resource-optimization)
-- [Multi-cluster policies](#configure-multicluster-policies)
+> [!NOTE]
+> If you disable the plan after enabling it through the portal, you need to manually remove Defender for Containers components deployed on your clusters.
 
-## Add or remove components
+You can [assign a custom workspace](#assign-a-custom-workspace) through Azure Policy.
 
-### Check component deployment status
+If you disable the automatic installation of any component, you can deploy the component to one or more clusters by using the appropriate recommendation:
 
-To see which components are currently deployed:
+- Azure Policy add-on for Kubernetes: [Azure Kubernetes Service clusters should have the Azure Policy add-on for Kubernetes installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/08e628db-e2ed-4793-bc91-d13e684401c3)
+- Azure Kubernetes Service profile: [Azure Kubernetes Service clusters should have Defender profile enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9)
+- Defender extension for Azure Arc-enabled Kubernetes: [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6)
+- Azure Policy extension for Azure Arc-enabled Kubernetes: [Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0642d770-b189-42ef-a2ce-9dcc3ec6c169)
 
-1. Go to **Inventory** and filter by Arc-enabled Kubernetes resources.
-1. Check each cluster for:
-   - Arc connectivity status
-   - Defender extension status
-   - Policy extension status
+Learn more about the [roles for provisioning Defender for Containers extensions](permissions.md#roles-used-to-automatically-configure-agents-and-extensions).
 
-### Enable or disable components through portal settings
+## Assign a custom workspace
 
-1. In Defender for Cloud, select **Environment Settings**, then select the relevant subscription.
+When you enable automatic provisioning, the system automatically assigns a default workspace. You can assign a custom workspace through Azure Policy.
 
-1. In **Defender plans**, select **Containers** > **Settings**.
+To check if you have a workspace assigned:
 
-1. Turn on or off the relevant components:
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+1. Search for and select **Policy**.
 
-    > [!NOTE]
-    > - When you turn off Defender for Containers, the components are set to **Off**. They're not deployed to any more containers, but they're not removed from containers where they're already installed.
-    > - To disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
+   :::image type="content" source="media/defender-for-containers/find-policy.png" alt-text="Screenshot that shows how to locate the policy page for Azure Arc." lightbox="media/defender-for-containers/find-policy.png":::
 
-### Deploy missing components
+1. Select **Definitions**.
 
-If you deployed specific components initially and want to add others:
+1. Search for policy ID `708b60a6-d253-4fe0-9114-4be4c00f012c`.
 
-#### Add Defender sensor to existing deployment
+   :::image type="content" source="media/defender-for-containers/policy-search-arc.png" alt-text="Screenshot that shows where to search for the policy by ID for Azure Arc." lightbox="media/defender-for-containers/policy-search-arc.png":::
 
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
-1. Select the clusters missing the sensor.
-1. Select **Fix** to deploy.
+1. Select **Configure Azure Arc enabled Kubernetes clusters to install Microsoft Defender for Cloud extension**.
 
-#### Add Azure Policy extension
+1. Select **Assignments**.
 
-1. Go to your Arc-enabled Kubernetes cluster.
-1. Under **Settings**, select **Extensions**.
-1. Select **+ Add**.
-1. Search for and add **Azure Policy for Kubernetes**.
+   :::image type="content" source="media/defender-for-containers/assignments-tab-arc.png" alt-text="Screenshot that shows the Assignments tab for Azure Arc." lightbox="media/defender-for-containers/assignments-tab-arc.png":::
 
-> [!TIP]
-> You can also use the **azure-defender-extension-arm-template.json** Resource Manager template from the Defender for Cloud [installation examples](https://aka.ms/kubernetes-extension-installation-examples) for automated deployment.
+1. Use one of the next sections in this article as follows:
+   - If you didn't assign the policy to the relevant scope, follow the [Create a new assignment with a custom workspace](#create-a-new-assignment-with-a-custom-workspace) steps.
+   - If you already assigned the policy and want to change it to use a custom workspace, follow the [Update an assignment with a custom workspace](#update-an-assignment-with-a-custom-workspace) steps.
 
-### Remove specific components
+### Create a new assignment with a custom workspace
 
-To remove components while keeping others:
+If you don't assign the policy, the **Assignments** tab shows the number **0**.
 
-1. Go to your Arc-enabled Kubernetes cluster.
-1. Under **Settings**, select **Extensions**.
-1. Select the extension to remove (Microsoft Defender or Azure Policy).
-1. Select **Uninstall**.
+:::image type="content" source="media/defender-for-containers/no-assignment-arc.png" alt-text="Screenshot that shows that no workspace is assigned for Azure Arc." lightbox="media/defender-for-containers/no-assignment-arc.png":::
 
-## Configure component exclusions
+To assign a custom workspace:
 
-### Exclude clusters from automatic provisioning
+1. Select **Assign**.
 
-To prevent automatic component deployment on specific Arc-enabled clusters:
+1. On the **Parameters** tab, clear the **Only show parameters that need input or review** option.
 
-1. Go to your Arc-enabled Kubernetes cluster.
-1. Under **Overview**, select **Tags**.
-1. Add tags to control deployment:
-   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
-   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+1. Select a **LogAnalyticsWorkspaceResourceId** value from the dropdown menu.
 
-### Configure namespace exclusions
+   :::image type="content" source="media/defender-for-containers/drop-down-menu-arc.png" alt-text="Screenshot that shows the dropdown menu for a Log Analytics workspace resource ID related to Azure Arc." lightbox="media/defender-for-containers/drop-down-menu-arc.png":::
 
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-config
-  namespace: mdc
-data:
-  excludedNamespaces: |
-    - kube-system
-    - kube-public
-    - azure-arc
-    - mdc
-```
-
-Apply the configuration:
-
-```bash
-kubectl apply -f defender-config.yaml
-kubectl rollout restart deployment/microsoft-defender-controller -n mdc
-```
-
-## Configure custom workspace assignment
-
-By default, Defender for Containers uses a default Log Analytics workspace. You can assign a custom workspace through Azure Policy for consistent workspace assignment across multiple clusters:
-
-### Using Azure Policy
-
-1. Go to **Azure Policy** in the Azure portal.
-
-1. Search for the policy definition "Configure Arc-enabled Kubernetes clusters to use Log Analytics workspace for Defender".
-
-1. Create a new assignment with these parameters:
-   - **Scope**: Your subscription or resource group containing Arc clusters
-   - **Workspace Resource Id**: Your custom Log Analytics workspace ID
-   - **Effect**: DeployIfNotExists
-
-1. Save the assignment. The policy configures all Arc-enabled clusters in scope to use the specified workspace.
-
-### Using Azure CLI
-
-```azurecli
-# Assign custom workspace via policy
-az policy assignment create \
-    --name "DefenderWorkspaceAssignment" \
-    --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>" \
-    --policy "/providers/Microsoft.Authorization/policyDefinitions/[workspace-policy-id]" \
-    --params '{
-        "workspaceResourceId": {
-            "value": "/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
-        }
-    }'
-```
-
-> [!TIP]
-> For deployment-time workspace configuration, you can specify the workspace when deploying the Defender extension. See [Enable Defender for Containers on Arc-enabled Kubernetes](defender-for-containers-arc-enable-portal.md#configure-log-analytics-workspace).
-
-## Configure runtime protection
-
-### Exclude namespaces from monitoring
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-config
-  namespace: mdc
-data:
-  excludedNamespaces: |
-    - kube-system
-    - kube-public
-    - azure-arc
-    - mdc
-```
-
-Apply the configuration:
-
-```bash
-kubectl apply -f defender-config.yaml
-kubectl rollout restart deployment/microsoft-defender-controller -n mdc
-```
-
-### Configure monitoring scope
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-scope
-  namespace: mdc
-data:
-  monitoringScope: |
-    includeNamespaces:
-      - production
-      - staging
-    excludeLabels:
-      - monitoring: disabled
-      - defender: exclude
-```
-
-### Configure for on-premises clusters
-
-For on-premises Arc-enabled clusters:
-
-1. **Configure private registries**:
-
-   ```bash
-   kubectl create secret docker-registry regcred \
-     --namespace mdc \
-     --docker-server=<registry> \
-     --docker-username=<username> \
-     --docker-password=<password>
-   ```
-
-1. **Set proxy configuration** (if required):
-
-   ```bash
-   az k8s-extension update \
-       --name microsoft.azuredefender.kubernetes \
-       --cluster-type connectedClusters \
-       --cluster-name <cluster-name> \
-       --resource-group <resource-group> \
-       --configuration-settings \
-           httpProxy="http://proxy.company.com:3128" \
-           httpsProxy="http://proxy.company.com:3128" \
-           noProxy="10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
-   ```
-
-## Configure for specific distributions
-
-### Rancher-specific configuration
-
-For Rancher RKE and RKE2 clusters:
-
-1. Configure the audit log path:
-   - RKE: `/var/log/kubernetes/audit.log`
-   - RKE2: `/var/log/kube-audit/audit.log`
-
-1. Apply Rancher-specific configuration:
-
-   ```yaml
-   apiVersion: v1
-   kind: ConfigMap
-   metadata:
-     name: microsoft-defender-rancher
-     namespace: mdc
-   data:
-     rancherConfig: |
-       monitorCattleSystem: false
-       excludeRancherNamespaces: true
-       customAuditPath: /var/log/rancher/audit.log
-   ```
-
-1. Update the extension with the correct audit path:
-
-   ```bash
-   az k8s-extension update \
-       --name microsoft.azuredefender.kubernetes \
-       --cluster-type connectedClusters \
-       --cluster-name <cluster-name> \
-       --resource-group <resource-group> \
-       --configuration-settings \
-           auditLogPath="/var/log/kube-audit/audit.log"  # For RKE2
-   ```
-
-### Configure for VMware Tanzu
-
-For Tanzu clusters:
-
-1. Ensure audit logging is enabled.
-1. Set appropriate PSP or PSA policies.
-1. Configure network policies if required.
-1. Apply Tanzu-specific configuration:
-
-   ```yaml
-   apiVersion: v1
-   kind: ConfigMap
-   metadata:
-     name: microsoft-defender-tanzu
-     namespace: mdc
-   data:
-     tanzuConfig: |
-       enablePSP: true
-       monitorSystemNamespaces: false
-       customLogPath: /var/log/kubernetes/audit.log
-   ```
-
-## Configure vulnerability scanning
-
-### Set up private registry scanning
-
-```bash
-# Create registry credentials
-kubectl create secret docker-registry registry-creds \
-    --docker-server=<registry-url> \
-    --docker-username=<username> \
-    --docker-password=<password> \
-    --namespace=mdc
-
-# Update Defender configuration
-kubectl patch configmap microsoft-defender-config -n mdc --type merge -p '
-{
-  "data": {
-    "registryCredentials": "registry-creds"
-  }
-}'
-```
-
-### Configure scan frequency
-
-```azurecli
-# Update extension configuration
-az k8s-extension update \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters \
-    --configuration-settings \
-        scanFrequency=24h \
-        scanOnPush=true
-```
-
-### Air-gapped registry configuration
-
-For disconnected environments:
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-airgap
-  namespace: mdc
-data:
-  airgapConfig: |
-    localRegistry: "internal-registry.company.com"
-    skipTLSVerify: false
-    caCertificate: |
-      -----BEGIN CERTIFICATE-----
-      [Your CA Certificate]
-      -----END CERTIFICATE-----
-```
-
-## Configure security policies
-
-### Apply custom policies
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-policies
-  namespace: mdc
-data:
-  customPolicies: |
-    - name: "block-privileged-pods"
-      enabled: true
-      enforcement: "deny"
-    - name: "require-resource-limits"
-      enabled: true
-      enforcement: "audit"
-    - name: "restrict-host-network"
-      enabled: true
-      enforcement: "deny"
-```
-
-### Configure CIS benchmark settings
-
-```bash
-# Enable specific CIS controls
-az k8s-extension update \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters \
-    --configuration-settings \
-        cisControls="1.1.1,1.2.1,2.1.1,3.1.1,4.1.1"
-```
-
-## Configure alerts and notifications
-
-### Set up alert rules
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-alerts-config
-  namespace: mdc
-data:
-  alertRules: |
-    - name: "high-severity-only"
-      severity: ["High", "Critical"]
-      enabled: true
-      notification:
-        email: security-team@company.com
-        webhook: https://webhook.company.com/defender
-    - name: "privilege-escalation"
-      categories: ["PrivilegeEscalation", "DefenseEvasion"]
-      enabled: true
-      notification:
-        teams: true
-```
-
-### Configure webhook notifications
-
-```bash
-# Set webhook URL
-kubectl create secret generic webhook-config \
-    --from-literal=url=https://webhook.company.com/defender \
-    --from-literal=token=<webhook-token> \
-    -n mdc
-```
-
-## Configure resource optimization
-
-### Adjust resource limits
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-resources
-  namespace: mdc
-data:
-  resourceLimits: |
-    sensor:
-      memory: "512Mi"
-      cpu: "200m"
-    collector:
-      memory: "256Mi"
-      cpu: "100m"
-```
-
-### Configure node affinity
-
-```yaml
-apiVersion: apps/v1
-kind: DaemonSet
-metadata:
-  name: microsoft-defender-sensor
-  namespace: mdc
-spec:
-  template:
-    spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: node-role.kubernetes.io/worker
-                operator: Exists
-              - key: kubernetes.io/os
-                operator: In
-                values:
-                - linux
-```
-
-### Edge deployment optimization
-
-For resource-constrained edge environments:
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-edge-config
-  namespace: mdc
-data:
-  edgeOptimization: |
-    reducedTelemetry: true
-    localProcessing: true
-    batchSize: 100
-    flushInterval: 300s
-```
-
-## Configure multicluster policies
-
-For organizations with multiple Arc clusters:
-
-```azurecli
-# Apply policy initiative to resource group
-az policy assignment create \
-    --name "DefenderForContainersArc" \
-    --scope "/subscriptions/<sub-id>/resourceGroups/<rg-name>" \
-    --policy-set-definition "/providers/Microsoft.Authorization/policySetDefinitions/[defender-arc-initiative-id]" \
-    --params '{
-        "logAnalyticsWorkspace": {"value": "<workspace-id>"},
-        "excludedNamespaces": {"value": ["kube-system", "azure-arc"]},
-        "enableAutoProvisioning": {"value": true}
-    }'
-```
-
-## Configure compliance scanning
-
-### Enable specific compliance standards
-
-```bash
-# Configure compliance standards
-az k8s-extension update \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters \
-    --configuration-settings \
-        complianceStandards="CIS,PCI-DSS,NIST" \
-        complianceScanInterval="12h"
-```
-
-### Custom compliance rules
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-compliance-custom
-  namespace: mdc
-data:
-  customRules: |
-    - id: "CUSTOM-001"
-      name: "Ensure custom labels"
-      description: "All pods must have company labels"
-      query: |
-        .metadata.labels."company.com/team" != null and
-        .metadata.labels."company.com/env" != null
-```
-
-## Configure for specific scenarios
-
-### High-security environments
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-high-security
-  namespace: mdc
-data:
-  securityConfig: |
-    enforceNetworkPolicies: true
-    blockPrivilegedContainers: true
-    requireSignedImages: true
-    enableAuditAllActions: true
-```
-
-### Development environments
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-dev-config
-  namespace: mdc
-data:
-  devConfig: |
-    reducedAlerts: true
-    excludeTestNamespaces: true
-    suppressInfoAlerts: true
-```
-
-## Monitor configuration changes
-
-```kusto
-// Query configuration changes
-ConfigurationChange
-| where Computer contains "<cluster-name>"
-| where ConfigChangeType == "Files" or ConfigChangeType == "Software"
-| where TimeGenerated > ago(24h)
-| project TimeGenerated, Computer, ConfigChangeType, FieldsChanged
-| order by TimeGenerated desc
-```
-
-## Troubleshooting configuration
-
-If configuration changes don't take effect, try the following steps:
-
-1. Verify you applied the ConfigMap.
-
-   ```bash
-   kubectl get configmap -n mdc microsoft-defender-config -o yaml
-   ```
-
-1. Restart Defender components.
-
-   ```bash
-   kubectl rollout restart deployment -n mdc
-   ```
-
-1. Check logs for configuration errors.
-
-   ```bash
-   kubectl logs -n mdc deployment/microsoft-defender-controller | grep -i config
-   ```
-
-## Related content
-
-- [Verify your configuration](defender-for-containers-arc-verify.md)
+1. Select **Review + create**.
+
+1. Select **Create**.
+
+### Update an assignment with a custom workspace
+
+If you assign the policy to a workspace, the **Assignments** tab shows the number **1**.
+
+> [!NOTE]
+> If you have more than one subscription, the number might be higher. If you see a number **1** or higher but the assignment isn't on the relevant scope, follow the [Create a new assignment with a custom workspace](#create-a-new-assignment-with-a-custom-workspace) steps.
+
+:::image type="content" source="media/defender-for-containers/already-assigned-arc.png" alt-text="Screenshot of the tab that shows an assigned workspace for Azure Arc." lightbox="media/defender-for-containers/already-assigned-arc.png":::
+
+To assign a custom workspace:
+
+1. Select the relevant assignment.
+
+   :::image type="content" source="media/defender-for-containers/relevant-assignment-arc.png" alt-text="Screenshot that shows the selection of an assignment for Azure Arc." lightbox="media/defender-for-containers/relevant-assignment-arc.png":::
+
+1. Select **Edit assignment**.
+
+1. On the **Parameters** tab, clear the **Only show parameters that need input or review** option.
+
+1. Select a **LogAnalyticsWorkspaceResourceId** value from the dropdown menu.
+
+   :::image type="content" source="media/defender-for-containers/drop-down-menu-arc.png" alt-text="Screenshot that shows the dropdown menu for a Log Analytics workspace resource ID for Azure Arc." lightbox="media/defender-for-containers/drop-down-menu-arc.png":::
+
+1. Select **Review + save**.
+
+1. Select **Save**.
+
+## Next steps
+
+- [Verify your deployment](defender-for-containers-arc-verify.md)
 - [Remove Defender for Containers](defender-for-containers-arc-remove.md)

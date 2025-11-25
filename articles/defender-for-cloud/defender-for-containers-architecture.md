@@ -3,14 +3,14 @@ title: Container security architecture
 description: Learn about the architecture of Microsoft Defender for Containers for the Azure, AWS, GCP, and on-premises container platform
 author: dcurwin
 ms.author: dacurwin
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/15/2025
 # customer intent: As a developer, I want to understand the container security architecture of Microsoft Defender for Containers so that I can implement it effectively.
 ---
 
 # Defender for Containers architecture
 
-Defender for Containers is designed differently for each Kubernetes environment, depending on whether they're running in:
+Defender for Containers uses a different design for each Kubernetes environment. The design depends on whether the environment runs in:
 
 - **Azure Kubernetes Service (AKS)** - Microsoft's managed service for developing, deploying, and managing containerized applications.
 
@@ -30,7 +30,7 @@ To protect your Kubernetes containers, Defender for Containers receives and anal
 - Workload configuration from Azure Policy
 - Security signals and events from the node level
 
-To learn more about implementation details such as supported operating systems, feature availability, outbound proxy, see [Defender for Containers feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+For more information about implementation details such as supported operating systems, feature availability, and outbound proxy, see [Defender for Containers feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
 
 ## Architecture for each Kubernetes environment
 
@@ -38,7 +38,7 @@ To learn more about implementation details such as supported operating systems, 
 
 ### Architecture diagram of Defender for Cloud and AKS clusters
 
-When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, the collection of audit log data is agentless and automatic through Azure infrastructure with no extra cost or configuration considerations. To get the full protection offered by Microsoft Defender for Containers, you need these components:
+When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, it collects audit log data agentlessly and automatically through Azure infrastructure with no extra cost or configuration considerations. To get the full protection offered by Microsoft Defender for Containers, you need these components:
 
 - **Defender sensor**: A lightweight DaemonSet deployed on AKS nodes that collects runtime telemetry (Kubernetes events, process, and network data) by using [eBPF technology](https://ebpf.io/). It sends the telemetry securely to Defender for Cloud for runtime threat protection. The sensor registers with a Log Analytics workspace and acts as a data pipeline. However, the audit log data isn't stored in the Log Analytics workspace. The Defender sensor is deployed as an AKS Security profile, natively integrated in AKS Resource Provider (RP).
 
@@ -101,7 +101,7 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 
 ### Architecture diagram of Defender for Cloud and Arc-enabled Kubernetes clusters
 
-To get the full protection from Microsoft Defender for Containers, you need these components:
+To get full protection from Microsoft Defender for Containers, you need these components:
 
 - **[Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview)** - Connects your clusters to Azure and lets Defender for Cloud deploy security components as [Arc extensions](/azure/azure-arc/kubernetes/extensions).
 
@@ -118,7 +118,7 @@ To get the full protection from Microsoft Defender for Containers, you need thes
 
 ### Architecture diagram of Defender for Cloud and EKS clusters
 
-When Defender for Cloud protects a cluster hosted in Elastic Kubernetes Service, the collection of audit log data is agentless. To get the full protection offered by Microsoft Defender for Containers, you need these components:
+When Defender for Cloud protects a cluster hosted in Elastic Kubernetes Service, it collects audit log data without using an agent. To get the full protection offered by Microsoft Defender for Containers, you need these components:
 
 - **[Kubernetes audit logs](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)** – [AWS account's CloudWatch](https://aws.amazon.com/cloudwatch/) enables and collects audit log data through an agentless collector, and sends the collected information to the Microsoft Defender for Cloud backend for further analysis.
 
@@ -153,7 +153,7 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 
 ### Architecture diagram of Defender for Cloud and GKE clusters
 
-When Defender for Cloud protects a cluster hosted in Google Kubernetes Engine, it collects audit log data without using an agent. To get the full protection from Microsoft Defender for Containers, you need these components:
+When Defender for Cloud protects a cluster hosted in Google Kubernetes Engine, it collects audit log data without using an agent. To get full protection from Microsoft Defender for Containers, you need these components:
 
 - **[Kubernetes audit logs](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)** – [GCP Cloud Logging](https://cloud.google.com/logging/) enables and collects audit log data through an agentless collector, and sends the collected information to the Microsoft Defender for Cloud backend for further analysis.
 

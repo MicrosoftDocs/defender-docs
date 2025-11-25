@@ -1,262 +1,96 @@
 ---
-title: Remove Defender for Containers From Arc-Enabled Kubernetes
-description: Learn how to disable and remove Microsoft Defender for Containers from your Arc-enabled Kubernetes clusters.
+title: Remove Defender for Containers from Arc-enabled clusters
+description: Learn how to remove Microsoft Defender for Containers from Azure Arc-enabled Kubernetes clusters.
 ms.topic: how-to
-ms.date: 06/04/2025
-ai-usage: ai-assisted
+ms.date: 01/23/2025
 ---
 
-# Remove Defender for Containers from Arc-enabled Kubernetes
+# Remove Defender for Containers from Arc-enabled clusters
 
-This article explains how to disable and remove Defender for Containers from your Arc-enabled Kubernetes clusters.
+This article explains how to remove Microsoft Defender for Containers from Azure Arc-enabled Kubernetes clusters.
 
-> [!IMPORTANT]
-> Removing Defender for Containers eliminates security protection for your clusters. Make sure you have alternative security measures in place before you remove Defender for Containers.
+## Remove the Defender sensor
 
-## Removal order
+To remove this (or any) Defender for Cloud extension, you need more than just turning off automatic provisioning:
 
-To properly remove Defender for Containers from Arc-enabled clusters, follow these steps:
+1. When you turn on automatic provisioning, it can affect *existing* and *future* machines.
+1. When you turn off automatic provisioning for an extension, it only affects *future* machines. Nothing gets uninstalled when you turn off automatic provisioning.
 
-1. Remove Defender extension from clusters
-1. Remove Azure Policy extension (if present)
-1. Clean up Kubernetes resources
-1. Remove policy assignments
-1. Disable Defender plan (optional)
-1. Verify removal
+> [!NOTE]
+> To disable the Defender for Containers plan entirely, go to **Environment settings** and turn off **Microsoft Defender for Containers**.
 
-## Remove Defender extension
+To make sure the Defender for Containers components aren't automatically provisioned to your resources from now on, disable automatic provisioning of the extensions.
 
-### Using Azure CLI
+You can remove the extension from currently running machines by using the Azure portal, the Azure CLI, or the REST API, as explained on the following tabs.
+
+### [Azure portal](#tab/remove-portal)
+
+#### Use the Azure portal to remove the extension
+
+1. In the Azure portal, open Azure Arc.
+1. In the infrastructure list, select **Kubernetes clusters**, then select the specific cluster.
+1. Open the **Extensions** page, which lists extensions on the cluster.
+1. Select the extension, then select **Uninstall**.
+
+   :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-uninstall-clusters-page.png" alt-text="Screenshot that shows the button for uninstalling an extension from an Azure Arc-enabled Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-uninstall-clusters-page.png":::
+
+### [Azure CLI](#tab/remove-cli)
+
+#### Use the Azure CLI to remove the Defender sensor
+
+1. Remove the Azure Arc extension for Microsoft Defender for Containers by using the following commands:
+
+   ```azurecli
+   az login
+   az account set --subscription <subscription-id>
+   az k8s-extension delete --cluster-type connectedClusters --cluster-name <your-connected-cluster-name> --resource-group <your-rg> --name microsoft.azuredefender.kubernetes --yes
+   ```
+
+   Removing the extension might take a few minutes. Wait before you try to verify that it was successful.
+
+1. To verify that you successfully removed the extension, run the following commands:
+
+   ```azurecli
+   az k8s-extension show --cluster-type connectedClusters --cluster-name <your-connected-cluster-name> --resource-group <your-rg> --name microsoft.azuredefender.kubernetes
+   ```
+
+1. Validate that there are no pods under the `mdc` namespace on the cluster. Run the following command with the `kubeconfig` file pointed to your cluster:
+
+   ```console
+   kubectl get pods -n mdc
+   ```
+
+   Deletion of the pods might take a few minutes.
+
+### [REST API](#tab/remove-rest)
+
+#### Use the REST API to remove the Defender sensor
+
+To remove the extension by using the REST API, run the following DELETE command:
+
+```rest
+DELETE https://management.azure.com/subscriptions/{{Subscription ID}}/resourcegroups/{{Resource Group}}/providers/Microsoft.Kubernetes/connectedClusters/{{Cluster Name}}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes?api-version=2020-07-01-preview
+```
+
+The command includes these parameters:
+
+| Name | In | Required | Type | Description |
+| --- | --- | --- | --- | --- |
+| `Subscription ID` | Path | True | String | Your Azure Arc-enabled Kubernetes cluster's subscription ID |
+| `Resource Group` | Path | True | String | Your Azure Arc-enabled Kubernetes cluster's resource group |
+| `Cluster Name` | Path | True | String | Your Azure Arc-enabled Kubernetes cluster's name |
+
+For **Authentication**, your header must have a bearer token (as with other Azure APIs). To get a bearer token, run the following command:
 
 ```azurecli
-# Delete the Defender extension
-az k8s-extension delete \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters \
-    --yes
+az account get-access-token --subscription <your-subscription-id>
 ```
 
-### Using Azure portal
+The request might take several minutes to complete.
 
-1. Go to your Arc-enabled Kubernetes cluster.
-1. Select **Extensions** under **Settings**.
-1. Select the **Microsoft Defender** extension.
-1. Select **Uninstall**.
-1. Confirm the deletion.
-
-## Remove Azure Policy extension
-
-If you deployed Azure Policy for Kubernetes:
-
-```azurecli
-# Delete Azure Policy extension
-az k8s-extension delete \
-    --name azurepolicy \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters \
-    --yes
-```
-
-## Clean up Kubernetes resources
-
-Remove any remaining resources from the cluster:
-
-```bash
-# Delete namespace
-kubectl delete namespace mdc
-
-# Remove any remaining CRDs
-kubectl delete crd defenderconfigs.mdc.microsoft.com
-kubectl delete crd defenderpolicies.mdc.microsoft.com
-
-# Remove cluster-wide resources
-kubectl delete clusterrole microsoft-defender
-kubectl delete clusterrolebinding microsoft-defender
-
-# Remove any remaining service accounts
-kubectl delete serviceaccount -n mdc microsoft-defender
-```
-
-## Remove policy assignments
-
-### List and remove assignments
-
-```azurecli
-# List Defender-related policy assignments
-az policy assignment list \
-    --scope "/subscriptions/<sub-id>/resourceGroups/<rg-name>/providers/Microsoft.Kubernetes/connectedClusters/<cluster-name>" \
-    --query "[?contains(displayName, 'Defender')].{Name:name, DisplayName:displayName}"
-
-# Delete policy assignments
-az policy assignment delete \
-    --name <assignment-name> \
-    --scope "/subscriptions/<sub-id>/resourceGroups/<rg-name>/providers/Microsoft.Kubernetes/connectedClusters/<cluster-name>"
-```
-
-## Disable Defender plan (optional)
-
-### For specific clusters
-
-To keep Defender enabled but exclude specific clusters:
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-1. Select your subscription.
-1. Select **Settings** next to Containers.
-1. Set up exclusions for specific Arc clusters.
-
-### For entire subscription
-
-```azurecli
-# Disable Defender for Containers
-az security pricing create \
-    --name 'Containers' \
-    --tier 'Free'
-```
-
-## Clean up Arc resources (optional)
-
-> [!WARNING]
-> This action disconnects your cluster from Azure Arc entirely and removes all Arc functionality.
-
-To remove Arc connectivity:
-
-```azurecli
-# Disconnect cluster from Arc
-az connectedk8s delete \
-    --name <cluster-name> \
-    --resource-group <resource-group> \
-    --yes
-```
-
-## Verify removal
-
-### Check extension removal
-
-```azurecli
-# Verify extension is deleted
-az k8s-extension list \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters
-```
-
-### Check Kubernetes resources
-
-```bash
-# Verify namespace is deleted
-kubectl get namespace mdc
-
-# Verify no Defender pods remain
-kubectl get pods --all-namespaces | grep defender
-
-# Verify CRDs are removed
-kubectl get crd | grep mdc
-
-# Check for any remaining resources
-kubectl api-resources --verbs=list --namespaced -o name \
-  | xargs -n 1 kubectl get --show-kind --ignore-not-found --all-namespaces \
-  | grep defender
-```
-
-## Clean up alerts and data
-
-### Dismiss active alerts
-
-```azurecli
-# List active alerts for the cluster
-az security alert list \
-    --resource-group <resource-group> \
-    --query "[?contains(resourceIdentifiers[0].azureResourceId, '<cluster-name>')]"
-
-# Dismiss alerts
-az security alert update \
-    --location <location> \
-    --name <alert-name> \
-    --status Dismiss
-```
-
-### Data retention
-
-Security data stays in your Log Analytics workspace according to retention settings:
-
-```kusto
-// Query to find Defender data
-search *
-| where TimeGenerated > ago(7d)
-| where _ResourceId contains "<cluster-name>"
-| distinct $table
-```
-
-## Remove diagnostic settings
-
-```azurecli
-# List diagnostic settings
-az monitor diagnostic-settings list \
-    --resource <cluster-resource-id>
-
-# Delete diagnostic settings
-az monitor diagnostic-settings delete \
-    --name <setting-name> \
-    --resource <cluster-resource-id>
-```
-
-## Post-removal considerations
-
-### Security monitoring gaps
-
-When you remove Defender for Containers, your Arc-enabled clusters lose several critical security capabilities. Runtime threat detection stops right away, leaving clusters vulnerable to active attacks and suspicious behavior. Container vulnerability scanning stops, so new security flaws in your images aren't identified. Security recommendations based on CIS Kubernetes Benchmark and other standards no longer update. Compliance reporting capabilities are lost, which might affect audit requirements. The unified security view across your hybrid infrastructure disappears, making it harder to maintain consistent security posture.
-
-### Alternative security solutions
-
-Consider implementing alternative security measures for your Arc-enabled clusters. Open source options include Falco for runtime security, Open Policy Agent (OPA) for policy enforcement, and Trivy or Clair for vulnerability scanning. Commercial alternatives include Prisma Cloud, Aqua Security, Sysdig Secure, and StackRox. For basic monitoring, you can use native Kubernetes audit logs with SIEM integration. Evaluate solutions based on your specific requirements for on-premises support, air-gapped capabilities, and integration with existing tools.
-
-### Maintaining Arc connectivity
-
-If you remove only Defender but keep Arc connectivity, you keep several management capabilities. Azure Policy can still enforce configurations, Azure Monitor can collect metrics and logs, and you can deploy other Arc-enabled services. Consider using Azure Policy for basic security controls and Azure Monitor for security-relevant log collection as interim measures.
-
-### Data and compliance considerations
-
-Historical security data stays accessible in your Log Analytics workspace for the configured retention period (default 30 days, maximum 730 days). Security alerts persist in Microsoft Defender for Cloud for 90 days. Exported data in SIEM systems or backup storage follows those systems' retention policies. Document the removal date and reason for compliance audits, as there's a gap in security monitoring that auditors might question.
-
-## Re-enable Defender for Containers
-
-To restore protection, use the following steps:
-
-```azurecli
-# Re-enable Defender plan
-az security pricing create \
-    --name 'Containers' \
-    --tier 'Standard'
-
-# Redeploy extension
-az k8s-extension create \
-    --name microsoft.azuredefender.kubernetes \
-    --extension-type microsoft.azuredefender.kubernetes \
-    --scope cluster \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --cluster-type connectedClusters
-```
-
-## Troubleshooting removal
-
-### Extension stuck in deleting state
-
-```bash
-# Force delete from Kubernetes
-kubectl patch extensionconfig microsoft.azuredefender.kubernetes -n azure-arc \
-    -p '{"metadata":{"finalizers":[]}}' --type='merge'
-
-# Check Azure Resource Manager
-az resource delete \
-    --ids "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Kubernetes/connectedClusters/<cluster>/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes"
-```
+---
 
 ## Related content
 
-- [Learn more about Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview)
-- [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
-- [Re-deploy Defender for Containers](defender-for-containers-arc-enable-portal.md)
+- [Offboarding Microsoft Defender for Containers resources](defender-for-containers-offboard.md)
+- [Enable Defender for Containers on Arc-enabled clusters](defender-for-containers-arc-enable-portal.md)
