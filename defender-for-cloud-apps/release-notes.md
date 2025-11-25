@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 05/13/2025
+ms.date: 11/25/2025
 ms.topic: overview
 ---
 
@@ -19,6 +19,19 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
+
+## November 2025
+
+### AI Agent Protection (Preview)
+Microsoft Defender delivers comprehensive protection for AI agents, combining proactive exposure management with advanced threat detection. It automatically discovers AI agents created in Microsoft Copilot Studio and Azure AI Foundry, collects audit logs, continuously monitors for suspicious activity, and integrates detections and alerts into the XDR Incidents and Alerts experience with a dedicated Agent entity.
+
+  - **Copilot Studio AI agents**
+
+    Defender ingests data from Copilot Studio agents into Advanced Hunting, enabling you to create custom queries and proactively hunt for threats. It also provides real-time protection by monitoring agent runtime and blocking harmful or suspicious actions, fully integrated with XDR incidents and alerts.
+
+  - **Azure AI Foundry AI agents**
+
+    Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
 
 
 ## September 2025 
