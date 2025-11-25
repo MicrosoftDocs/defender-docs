@@ -3,7 +3,7 @@ title: Azure portal vs Defender portal feature comparison
 description: Compare Microsoft Defender for Cloud features and capabilities between the Azure portal and Defender portal experiences to understand the enhanced functionality available in each platform.
 author: dlanger
 ms.author: dlanger
-ms.topic: conceptual
+ms.topic: article
 ms.date: 10/16/2025
 ms.service: defender-for-cloud
 ---

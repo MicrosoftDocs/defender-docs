@@ -4,7 +4,7 @@ description: Learn about the requirements for Defender for APIs deployment in Mi
 author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
-ms.topic: conceptual
+ms.topic: article
 ms.date: 07/15/2025
 ms.custom: references_regions
 ---
