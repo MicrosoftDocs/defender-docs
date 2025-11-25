@@ -3,15 +3,35 @@ title: Start using Microsoft Security Exposure Management
 description: This article describes how to start using the Microsoft Security Exposure Management dashboard
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 11/04/2025
 ---
 
-# Start using Microsoft Security Exposure Management
+# Get started with Microsoft Security Exposure Management
 
-This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard.
+This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard in the unified Microsoft Defender XDR portal.
+
+## Accessing Microsoft Security Exposure Management
+
+Microsoft Security Exposure Management is now fully integrated into the Microsoft Defender XDR portal at [security.microsoft.com](https://security.microsoft.com). All Exposure Management functions are accessible through the unified portal under the **Exposure Management** section in the navigation.
+
+### Prerequisites for access
+
+- Ensure you have appropriate licensing: MSEM features are available with Microsoft 365 E5, certain E3 with add-ons, or Defender suite licenses
+- Verify you have the required permissions: A dedicated Exposure Management role provides granular access, or you can use traditional roles like Security Admin or Global Admin
+- Enable any preview features if needed, such as external data connectors, which are currently in public preview with separate consumption-based pricing
+
+### Navigation in the unified portal
+
+Navigate to **Exposure Management** in the Microsoft Defender XDR portal to access:
+
+- Overview dashboard
+- Attack surface management tools
+- Critical asset management
+- Exposure insights and recommendations
+- Data connectors configuration
 
 ## Reviewing security exposure state
 
@@ -21,7 +41,7 @@ Use the dashboard as a starting point for a snapshot of organizational posture a
 
 You can filter the list of affected devices based on their scope, ensuring that data presentation is aligned with your specific needs. The filter selection persists even when switching between Exposure Management experiences, allowing you to maintain you preferred view and focus on specific devices without reapplying filters.
 
-Initiative scores will reflect the selected scope, whether defined by the admin or adjusted by the end user, ensuring users see accurate and relevant scores based on their access scope.
+Initiative scores reflect the selected scope, whether defined by the admin or adjusted by the end user, ensuring users see accurate and relevant scores based on their access scope.
 
 :::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
 
