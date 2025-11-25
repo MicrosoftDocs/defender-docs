@@ -40,7 +40,7 @@ API Security Posture Management within Defender CSPM is available in the Azure c
 - UK (UK South, UK West)
 - US (East US, East US 2, West US, West US 2, West US 3, Central US, North Central US, South Central US, West Central US, East US 2 EUAP, Central US EUAP)
 
-Review the latest cloud support information for Defender for Cloud plans and features in the [cloud support matrix](support-matrix-cloud-environment.md).
+Review the latest cloud support information for Defender for Cloud plans and features in the [cloud support matrix](support-matrix-defender-for-cloud.md).
 
 ## API support
 
@@ -94,7 +94,7 @@ Review API security posture findings along with your API inventory in the Micros
 
 ## Investigate API security recommendations
 
-API endpoints are continuously assessed for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. Security recommendations are generated with associated risk factors like external exposure and data sensitivity risks. The importance of the security recommendations is calculated based on these risk factors. Learn more about [risk-based security recommendations](risk-prioritization.md#recommendations).
+API endpoints are continuously assessed for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. Security recommendations are generated with associated risk factors like external exposure and data sensitivity risks. The importance of the security recommendations is calculated based on these risk factors. Learn more about [risk-based security recommendations](review-security-recommendations.md#understanding-risk-prioritization).
 
 To investigate your API security posture recommendations:
 
