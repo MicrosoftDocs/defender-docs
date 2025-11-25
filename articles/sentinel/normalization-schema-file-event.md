@@ -70,7 +70,7 @@ The following list mentions fields that have specific guidelines for File activi
 | <a name='eventtype'></a>**EventType**           | Mandatory   | Enumerated |    Describes the operation reported by the record. <br><br>Supported values include: <br><br>- `FileAccessed`<br>- `FileCreated`<br>- `FileModified`<br>- `FileDeleted`<br>- `FileRenamed`<br>- `FileCopied`<br>- `FileMoved`<br>- `FolderCreated`<br>- `FolderDeleted`<br>- `FolderMoved`<br>- `FolderModified`<br>- `FileCreatedOrModified` |
 | **EventSubType**           | Optional   | Enumerated |    Describes details about the operation reported in [EventType](#eventtype). Supported values per event type include:<br>- `FileCreated` -  `Upload`, `Checkin`<br>- `FileModified` - `Checkin`<br>- `FileCreatedOrModified` - `Checkin`    <br>- `FileAccessed` - `Download`, `Preview`, `Checkout`, `Extended`<br>- `FileDeleted` - `Recycled`, `Versions`, `Site` |
 | **EventSchema** | Mandatory | Enumerated | The name of the schema documented here is **FileEvent**. |
-| **EventSchemaVersion**  | Mandatory   | String     | The version of the schema. The version of the schema documented here is `0.2.1`         |
+| **EventSchemaVersion**  | Mandatory   | String     | The version of the schema. The version of the schema documented here is `0.2.2`         |
 | **Dvc** fields| -      | -    | For File activity events, device fields refer to the system on which the file activity occurred. |
 
 
@@ -250,19 +250,20 @@ The path should be normalized to match one of the following formats. The format 
 These are the changes in version 0.1.1 of the schema:
 - Added the field `EventSchema`.
 
-There are the changes in version 0.2 of the schema:
+These are the changes in version 0.2 of the schema:
 - Added [inspection fields](#inspection-fields).
 - Added the fields `ActorScope`, `TargetUserScope`, `HashType`, `TargetAppName`, `TargetAppId`, `TargetAppType`, `SrcGeoCountry`, `SrcGeoRegion`, `SrcGeoLongitude`, `SrcGeoLatitude`, `ActorSessionId`, `DvcScopeId`, and `DvcScope`..
 - Added the aliases `Url`, `IpAddr`, 'FileName', and `Src`.
 
-There are the changes in version 0.2.1 of the schema:
+These are the changes in version 0.2.1 of the schema:
 - Added `Application` as an alias to `TargetAppName`.
 - Added the field `ActorScopeId`
 - Added source device related fields. 
 
-There are the changes in version 0.2.2 of the schema:
+These are the changes in version 0.2.2 of the schema:
 - Added the field `TargetOriginalAppType` 
 - Added the fields `ActingAppId`, `ActingAppName` and `ActingAppType` which are not available in the table `ASimFileEventLogs`.
+
 
 ## Next steps
 

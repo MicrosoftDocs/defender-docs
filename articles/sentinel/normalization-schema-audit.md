@@ -96,7 +96,7 @@ The following list mentions fields that have specific guidelines for Audit Event
 | <a name="eventtype"></a> **EventType** | Mandatory | Enumerated | Describes the operation audited by the event using a normalized value. Use [EventSubType](#eventsubtype) to provide further details, which the normalized value does not convey, and [Operation](#operation). to store the operation as reported by the reporting device.<br><br> For Audit Event records, the allowed values are:<br> - `Set`<br>- `Read`<br>- `Create`<br>- `Delete`<br>- `Execute`<br>- `Install`<br>- `Clear`<br>- `Enable`<br>- `Disable`<br>- `Other` <br><br>Audit events represent a large variety of operations, and the `Other` value enables mapping operations that have no corresponding `EventType`. However, the use of `Other` limits the usability of the event and should be avoided if possible.   |
 | <a name="eventsubtype"></a> **EventSubType** | Optional | String | Provides further details, which the normalized value in [EventType](#eventtype) does not convey. |
 | **EventSchema** | Mandatory | Enumerated | The name of the schema documented here is `AuditEvent`. |
-| **EventSchemaVersion**  | Mandatory   | String     | The version of the schema. The version of the schema documented here is `0.1.1`.  |
+| **EventSchemaVersion**  | Mandatory   | String     | The version of the schema. The version of the schema documented here is `0.1.2`.  |
 
 
 #### All common fields
@@ -149,6 +149,7 @@ Fields that appear in the table are common to all ASIM schemas. Any of guideline
 |<a name="targetappname"></a>**TargetAppName** |Optional |String |The name of the application to which event applies, including a service, a URL, or a SaaS application. <br><br>Example: `Exchange 365` |
 |<a name="application"></a>**Application** | Alias || Alias to [TargetAppName](#targetappname) |
 | **TargetAppType**|Conditional |AppType |The type of the application authorizing on behalf of the Actor. For more information, and allowed list of values, see [AppType](normalization-about-schemas.md#apptype) in the [Schema Overview article](normalization-about-schemas.md).|
+| <a name="targetoriginalapptype"></a>**TargetOriginalAppType** | Optional | String | The type of the application to which event applies as reported by the reporting device. |
 | <a name="targeturl"></a>**TargetUrl** |Optional |URL |The URL associated with the target application. <br><br>Example: `https://console.aws.amazon.com/console/home?fromtb=true&hashArgs=%23&isauthcode=true&nc2=h_ct&src=header-signin&state=hashArgsFromTB_us-east-1_7596bc16c83d260b` |
 
 
@@ -170,7 +171,13 @@ Fields that appear in the table are common to all ASIM schemas. Any of guideline
 |<a name="targetipaddr"></a>**TargetIpAddr** |Recommended | IP Address|The IP address of the target device. <br><br>Example: `2.2.2.2` |
 | **TargetDvcOs**| Optional| String| The OS of the target device. <br><br>Example: `Windows 10`|
 | **TargetPortNumber** |Optional |Integer |The port of the target device.|
-
+| **TargetGeoCountry** | Optional | Country | The country/region associated with the Target IP address.<br><br>Example: `USA` |
+| **TargetGeoRegion** | Optional | Region | The region within a country/region associated with the Target IP address.<br><br>Example: `Vermont` |
+| **TargetGeoCity** | Optional | City | The city associated with the Target IP address.<br><br>Example: `Burlington` |
+| **TargetGeoLatitude** | Optional | Latitude | The latitude of the geographical coordinate associated with the Target IP address.<br><br>Example: `44.475833` |
+| **TargetGeoLongitude** | Optional | Longitude | The longitude of the geographical coordinate associated with the Target IP address.<br><br>Example: `73.211944` |
+| **TargetRiskLevel** | Optional | Integer | The risk level associated with the target. The value should be adjusted to a range of `0` to `100`, with `0` for benign and `100` for a high risk.<br><br>Example: `90` |
+| **TargetOriginalRiskLevel** | Optional | String | The risk level associated with the target, as reported by the reporting device. <br><br>Example: `Suspicious` |
 
 ### Acting Application fields
 
@@ -179,6 +186,7 @@ Fields that appear in the table are common to all ASIM schemas. Any of guideline
 | **ActingAppId** | Optional | String | The ID of the application that initiated the activity reported, including a process, browser, or service. <br><br>For example: `0x12ae8` |
 | **ActingAppName** | Optional | String | The name of the application that initiated the activity reported, including a service, a URL, or a SaaS application. <br><br>For example: `C:\Windows\System32\svchost.exe` |
 | **ActingAppType** | Optional | AppType | The type of acting application. For more information, and allowed list of values, see [AppType](normalization-about-schemas.md#apptype) in the [Schema Overview article](normalization-about-schemas.md). |
+| <a name="actingoriginalapptype"></a>**ActingOriginalAppType** | Optional | String | The type of the application that initiated the activity    as reported by the reporting device. |
 | **HttpUserAgent** |	Optional	| String |	When authentication is performed over HTTP or HTTPS, this field's value is the user_agent HTTP header provided by the acting application when performing the authentication.<br><br>For example: `Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1` |
 
 
@@ -205,7 +213,8 @@ Fields that appear in the table are common to all ASIM schemas. Any of guideline
 | **SrcGeoCity** | Optional | City | The city associated with the source IP address.<br><br>Example: `Burlington` |
 | **SrcGeoLatitude** | Optional | Latitude | The latitude of the geographical coordinate associated with the source IP address.<br><br>Example: `44.475833` |
 | **SrcGeoLongitude** | Optional | Longitude | The longitude of the geographical coordinate associated with the source IP address.<br><br>Example: `73.211944` |
-
+| **SrcRiskLevel** | Optional | Integer | The risk level associated with the source. The value should be adjusted to a range of `0` to `100`, with `0` for benign and `100` for a high risk.<br><br>Example: `90` |
+| **SrcOriginalRiskLevel** | Optional | String | The risk level associated with the source, as reported by the reporting device. <br><br>Example: `Suspicious` |
 
 ### <a name="inspection-fields"></a>Inspection fields
 
@@ -233,6 +242,9 @@ The following fields are used to represent that inspection performed by a securi
 
 The changes in version 0.1.1 of the schema are:
 - Added the field `ObjectId` and `OriginalObjectType`.
+
+The changes in version 0.1.2 of the schema are:
+- Added the field `ActingOriginalAppType`, `OriginalObjectType`, `SrcOriginalRiskLevel`, `SrcRiskLevel`,`TargetGeoCity`,`TargetGeoCountry`,`TargetGeoLatitude`,`TargetGeoLongitude`,`TargetGeoRegion`,`TargetOriginalAppType`,`TargetOriginalRiskLevel`, and `TargetRiskLevel`
 
 ## Next steps
 

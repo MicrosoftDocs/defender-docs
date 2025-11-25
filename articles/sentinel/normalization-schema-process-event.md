@@ -241,6 +241,27 @@ The process event schema references the following entities, which are central to
 | **TargetProcessTokenElevation**    | Optional    | String     |Token type indicating the presence or absence of User Access Control (UAC) privilege elevation applied to the process that was created or terminated.   <br><br>    Example:  `None`     |
 | **TargetProcessStatusCode**    | Optional    | String     | The exit code returned by the target process when terminated. This field is valid only for process termination events. For consistency, the field type is string, even if value provided by the operating system is numeric.     |
 
+### <a name="inspection-fields"></a>Inspection fields
+
+The following fields are used to represent that inspection performed by a security system such an EDR system.
+
+| Field | Class | Type | Description |
+| --- | --- | --- | --- |
+| <a name="rulename"></a>**RuleName** | Optional | String | The name or ID of the rule by associated with the inspection results. |
+| <a name="rulenumber"></a>**RuleNumber** | Optional | Integer | The number of the rule associated with the inspection results. |
+| **Rule** | Conditional | String | Either the value of [kRuleName](#rulename) or the value of [RuleNumber](#rulenumber). If the value of [RuleNumber](#rulenumber) is used, the type should be converted to string. |
+| **ThreatId** | Optional | String | The ID of the threat or malware identified in the file activity. |
+| **ThreatName** | Optional | String | The name of the threat or malware identified in the file activity.<br><br>Example: `EICAR Test File` |
+| **ThreatCategory** | Optional | String | The category of the threat or malware identified in the file activity.<br><br>Example: `Trojan` |
+| **ThreatRiskLevel** | Optional | Integer | The risk level associated with the identified threat. The level should be a number between **0** and **100**.<br><br>**Note**: The value might be provided in the source record by using a different scale, which should be normalized to this scale. The original value should be stored in [ThreatOriginalRiskLevel](#threatoriginalrisklevel). |
+| <a name="threatoriginalrisklevel"></a>**ThreatOriginalRiskLevel** | Optional | String | The risk level as reported by the reporting device. |
+| <a name="threatfield"></a>**ThreatField** | Optional | Enumerated | The field for which a threat was identified. The value is either `SrcFilePath` or `DstFilePath`. |
+| **ThreatConfidence** | Optional | Integer | The confidence level of the threat identified, normalized to a value between 0 and a 100.| 
+| **ThreatOriginalConfidence** | Optional | String |  The original confidence level of the threat identified, as reported by the reporting device.| 
+| **ThreatIsActive** | Optional | Boolean | True if the threat identified is considered an active threat. | 
+| **ThreatFirstReportedTime** | Optional | datetime | The first time the IP address or domain were identified as a threat.  | 
+| **ThreatLastReportedTime** | Optional | datetime | The last time the IP address or domain were identified as a threat.| 
+
 
 ## Schema updates
 

@@ -109,7 +109,7 @@ The following list mentions fields that have specific guidelines for authenticat
 | **EventType**           | Mandatory   | Enumerated |    Describes the operation reported by the record. <br><br>For Authentication records, supported values include: <br>- `Logon` <br>- `Logoff`<br>- `Elevate`|
 | <a name ="eventresultdetails"></a>**EventResultDetails**         | Recommended   | Enumerated |  The details associated with the event result. This field is typically populated when the result is a failure.<br><br>Allowed values include: <br> - `No such user or password`. This value should be used also when the original event reports that there is no such user, without reference to a password.<br> - `No such user`<br> - `Incorrect password`<br> - `Incorrect key`<br>-	`Account expired`<br>-	`Password expired`<br>-	`User locked`<br>-	`User disabled`<br> - `Logon violates policy`. This value should be used when the original event reports, for example: MFA required, log on outside of working hours, conditional access restrictions, or too frequent attempts.<br>-	`Session expired`<br>-	`Other`<br><br>The value may be provided in the source record using different terms, which should be normalized to these values. The original value should be stored in the field [EventOriginalResultDetails](normalization-common-fields.md#eventoriginalresultdetails)|
 | **EventSubType**    | Optional    | Enumerated     |   The sign-in type. Allowed values include:<br> - `System`<br> - `Interactive`<br> - `RemoteInteractive`<br> - `Service`<br> - `RemoteService`<br> - `Remote` - Use when the type of remote sign-in is unknown.<br> - `AssumeRole` - Typically used when the event type is `Elevate`. <br><br>The value may be provided in the source record using different terms, which should be normalized to these values. The original value should be stored in the field [EventOriginalSubType](normalization-common-fields.md#eventoriginalsubtype). |
-| **EventSchemaVersion**  | Mandatory   | String     |    The version of the schema. The version of the schema documented here is `0.1.3`         |
+| **EventSchemaVersion**  | Mandatory   | String     |    The version of the schema. The version of the schema documented here is `0.1.4`         |
 | **EventSchema** | Mandatory | Enumerated | The name of the schema documented here is **Authentication**. |
 | **Dvc** fields| -      | -    | For authentication events, device fields refer to the system reporting the event. |
 
@@ -156,6 +156,7 @@ Fields that appear in the table below are common to all ASIM schemas. Any guidel
 | **ActingAppId** | Optional | String | The ID of the application authorizing on behalf of the actor, including a process, browser, or service. <br><br>For example: `0x12ae8` |
 | **ActingAppName** | Optional | String | The name of the application authorizing on behalf of the actor, including a process, browser, or service. <br><br>For example: `C:\Windows\System32\svchost.exe` |
 | **ActingAppType** | Optional | AppType | The type of acting application. For more information, and allowed list of values, see [AppType](normalization-about-schemas.md#apptype) in the [Schema Overview article](normalization-about-schemas.md). |
+| <a name="actingoriginalapptype"></a>**ActingOriginalAppType** | Optional | String | The type of the acting application as reported by the reporting device. |
 | **HttpUserAgent** |	Optional	| String |	When authentication is performed over HTTP or HTTPS, this field's value is the user_agent HTTP header provided by the acting application when performing the authentication.<br><br>For example: `Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1` |
 
 
@@ -209,7 +210,9 @@ Fields that appear in the table below are common to all ASIM schemas. Any guidel
 |---------------|--------------|------------|-----------------|
 | <a name="targetappid"></a>**TargetAppId** |Optional | String| The ID of the application to which the authorization is required, often assigned by the reporting device. <br><br>Example: `89162` |
 |<a name="targetappname"></a>**TargetAppName** |Optional |String |The name of the application to which the authorization is required, including a service, a URL, or a SaaS application. <br><br>Example: `Saleforce` |
+| <a name="application"></a>**Application** | Alias | | Alias to [TargetAppName](#targetappname). |
 | **TargetAppType**| Conditional |AppType |The type of the application authorizing on behalf of the Actor. For more information, and allowed list of values, see [AppType](normalization-about-schemas.md#apptype) in the [Schema Overview article](normalization-about-schemas.md).|
+| <a name="targetoriginalapptype"></a>**TargetOriginalAppType** | Optional | String | The type of the application authorizing on behalf of the Actor as reported by the reporting device. |
 | <a name="targeturl"></a>**TargetUrl** |Optional |URL |The URL associated with the target application. <br><br>Example: `https://console.aws.amazon.com/console/home?fromtb=true&hashArgs=%23&isauthcode=true&nc2=h_ct&src=header-signin&state=hashArgsFromTB_us-east-1_7596bc16c83d260b` |
 |**LogonTarget**| Alias| |Alias to either [TargetAppName](#targetappname), [TargetUrl](#targeturl), or [TargetHostname](#targethostname), whichever field best describes the authentication target. |
 
@@ -277,6 +280,10 @@ These are the changes in version 0.1.3 of the schema:
 - Added the fields `SrcPortNumber`, `ActorOriginalUserType`,  `ActorScopeId`, `TargetOriginalUserType`,  `TargetUserScopeId`, `SrcDescription`, `SrcRiskLevel`, `SrcOriginalRiskLevel`, and `TargetDescription`.
 - Added inspection fields
 - Added target system geo-location fields.
+
+These are the changes in version 0.1.4 of the schema:
+- Added the fields `ActingOriginalAppType` and `TargetOriginalAppType`.
+- Added the alias `Application`.
 
 ## Next steps
 
