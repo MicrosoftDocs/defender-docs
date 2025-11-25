@@ -24,7 +24,7 @@ The following table lists supported and unsupported Azure Cosmos DB APIs in Defe
 |--|--|
 | Azure Cosmos DB for NoSQL |  Azure Cosmos DB for Apache Cassandra <br>  Azure Cosmos DB for MongoDB <br> Azure Cosmos DB for Table <br> Azure Cosmos DB for Apache Gremlin |
 
-For cloud availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md).
+For cloud availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## Benefits
 
