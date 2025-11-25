@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries and AI-powered security investigations 
 author: poliveria
 ms.topic: get-started
-ms.date: 12/01/2025
+ms.date: 11/24/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 

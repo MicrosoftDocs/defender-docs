@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 12/01/2025
+ms.date: 11/24/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 

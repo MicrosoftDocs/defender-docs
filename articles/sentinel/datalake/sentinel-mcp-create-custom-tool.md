@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to set up and use custom Microsoft Sentinel Model Context Protocol (MCP) tools using saved KQL queries in advanced hunting 
 author: poliveria
 ms.topic: get-started
-ms.date: 12/01/2025
+ms.date: 11/24/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
