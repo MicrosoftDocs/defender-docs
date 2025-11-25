@@ -11,7 +11,7 @@ ms.custom: references_regions
 # Containers support matrix in Defender for Cloud
 
 > [!CAUTION]
-> This article references CentOS, a Linux distribution that reached end of service on June 30, 2024. Consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+> This article references CentOS, a Linux distribution that reached end of service on June 30, 2024. Consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 [!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 

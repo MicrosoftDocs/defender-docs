@@ -124,9 +124,7 @@ Deny mode can introduce a one- or two-second delay during deployments because of
 
 ## Admission monitoring
 
-Gated Deployment events appear in the **Admission Monitoring** view in Defender for Cloud.  
-This view provides visibility into rule evaluations, triggered actions, and affected resources.  
-Use this view to track Audit and Deny decisions across your Kubernetes clusters.
+Gated Deployment events appear in the **Admission Monitoring** view in Defender for Cloud. This view provides visibility into rule evaluations, triggered actions, and affected resources. Use this view to track Audit and Deny decisions across your Kubernetes clusters.
 
 :::image type="content" source="media/enablement-guide-runtime-gating/admission-monitoring.png" alt-text="Screenshot of Admission Monitoring view showing rule evaluations and actions." lightbox="media/enablement-guide-runtime-gating/admission-monitoring.png":::
 
@@ -150,13 +148,13 @@ To investigate a specific admission event, select it from the list. A details pa
 
 ## Disable or delete a Gated Deployment security rule
 
-1.  **Disable a Gated Deployment security rule**
+-  **Disable a Gated Deployment security rule**
 
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
     - Select **Vulnerability Assessment** to view a list of defined Gated Deployment security rules.
     - Select a security rule and then select **Disable**.
 
-1.  **Delete a Gated Deployment security rule**
+-  **Delete a Gated Deployment security rule**
 
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
     - Select **Vulnerability Assessment** to view a list of defined security rules.

@@ -83,7 +83,7 @@ Gated deployment enforces policies when you deploy. You might see specific messa
 | **Scenario** | **Message** |
 |----|----|
 | Image blocked due to CVE | Error from server: admission webhook "defender-admission-controller.kube-system.svc" denied the request: mcr.microsoft.com/mdc/dev/defender-admission-controller/test-images:one-high:Image contains 2 high or higher CVEs, which is more than the allowed count of: 0”  |
-| Image blocked because scan results are missing | No valid reports found on ratify response\nUnscanned images are not allowed by policy |
+| Image blocked because scan results are missing | No valid reports found on ratify response <br/> Unscanned images are not allowed by policy |
 | Image allowed but monitored (audit mode) | Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule |
 | Image allowed without scan results (audit mode) |  Admission request allowed. A security scan runs in the background (audit mode). Learn more: https://aka.ms/KubernetesDefenderAuditRule|
 

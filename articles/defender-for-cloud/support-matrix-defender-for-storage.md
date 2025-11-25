@@ -18,8 +18,13 @@ This article lists the prerequisites and permissions required to [enable Microso
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - The following storage types are supported:
-  - [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard and Premium v2 storage, including Azure Data Lake Storage Gen2): Activity monitoring, malware scanning, and sensitive-data discovery.
-  - Azure Files (over REST API and SMB): Activity monitoring.
+
+|| Azure Blob Standard |||||||||
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| Cell 1   | Cell 2   |||||||||
+|||||||||||
+|||||||||||
+| Cell 3   | Cell 4   |||||||||
 
 - Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
@@ -31,9 +36,9 @@ The following table summarizes the permissions that you need for each scenario. 
 
 | Capability | Subscription level | Storage account level |
 |---------|---------|---------|
-| Activity monitoring | Security Admin or Pricings/read, Pricings/write | Security Admin or Microsoft.Security/defenderforstoragesettings/read, Microsoft.Security/defenderforstoragesettings/write |
-| Malware scanning | Subscription Owner or action set 1 | Action set 2 |
-| Sensitive-data threat detection | Subscription Owner or action set 1 |Action set 2 |
+|Activity monitoring |Security Admin or Pricings/read, Pricings/write |Security Admin or Microsoft.Security/defenderforstoragesettings/read, Microsoft.Security/defenderforstoragesettings/write |
+|Malware scanning |Subscription Owner or action set 1 |Action set 2 |
+|Sensitive-data threat detection |Subscription Owner or action set 1 |Action set 2 |
 
 > [!NOTE]
 > Activity monitoring is always enabled when you enable Defender for Storage.
