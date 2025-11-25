@@ -47,6 +47,7 @@ All features require UEBA to be enabled and are workspace-scoped to the currentl
 
 For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows).
 
+### SAP data connectors
 
 - [Agentless data connector](sap/prerequisites-for-deploying-sap-continuous-threat-monitoring.md) for Sentinel Solution for SAP now generally available. Learn more from our [Tech Community blog](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-for-sap-agentless-connector-ga/4464490).
 
