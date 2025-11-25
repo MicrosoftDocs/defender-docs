@@ -100,6 +100,8 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 
 **Unified vulnerability view** – Customers with both Defender for Cloud and Defender for Endpoint licenses can now see all vulnerabilities affecting their digital estate in one place.
 
+Learn more about the [integration with Microsoft Vulnerability Management](vulnerability-management-integration.md) and the specific [changes to the Microsoft Vulnerability Management experience](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management#microsoft-defender-vulnerability-management-and-microsoft-security-exposure-management-integration).
+
 #### Portal and navigation updates
 
 **Unified portal experience** – All exposure management and vulnerability management functions are now accessible in the Microsoft Defender portal at security.microsoft.com under the Exposure Management section.
