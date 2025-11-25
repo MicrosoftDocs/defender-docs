@@ -5,9 +5,8 @@ ms.date: 12/12/2023
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your NetDocuments environment
-
-
 
 As a productivity and collaboration cloud solution, NetDocuments holds sensitive information to your organization. Any abuse of NetDocuments by a malicious actor or any human error may expose your most critical assets and services to potential attacks.
 
@@ -77,13 +76,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Sign in to your NetDocuments account with a Full NetDocuments Repository Admin user.
 
-1. Enter the **Information and Settings** section from the top-left corner.
-
-    ![Enter the NetDocuments information and settings section.](media/netdocuments-information-and-settings.png)
-
-1. In this page, you can find your repository ID. Copy and save it. You'll need it later.
-
-    ![Your NetDocuments repository ID.](media/netdocuments-repository-id.png)
+1. Copy your repository ID. You'll need it later.
 
 1. Record the URL of your account (it should be one of URLs in the following list). You'll need this information later.
 
@@ -120,7 +113,4 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
