@@ -162,16 +162,6 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
-### **Anomalous tool invocation**
-
-(AI.Azure_AnomalousToolInvocation)
-
-**Description:** This alert analyzes anomalous activity from an AI application connected to an Azure OpenAI model deployment. The application attempted to invoke a tool in a manner that deviates from expected behavior. This behavior may indicate potential misuse or an attempted attack through one of the tools available to the application.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
-
-**Severity**: Low
-
 ### (Preview) Suspicious anomaly detected in sensitive data exposed by an AI resource
 
 (AI.Azure_SensitiveDataAnomaly)
@@ -182,13 +172,13 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
-### (Preview) LLM Reconnaissance Attempt Detected
+### **Anomalous tool invocation**
 
-(AI.Azure_LLMReconnaissance)
+(AI.Azure_AnomalousToolInvocation)
 
-**Description:** A threat actor is interacting with your AI application in a way that resembles reconnaissance behavior, including attempts to extract system instructions, model capabilities, or bypass safety guardrails. These prompts may precede attempted prompt injection or jailbreak attacks. 
+**Description:** This alert analyzes anomalous activity from an AI application connected to an Azure OpenAI model deployment. The application attempted to invoke a tool in a manner that deviates from expected behavior. This behavior may indicate potential misuse or an attempted attack through one of the tools available to the application.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Reconnaissance
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
 
 **Severity**: Low
 
