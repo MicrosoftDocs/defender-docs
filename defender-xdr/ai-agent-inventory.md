@@ -117,5 +117,6 @@ These AI agent details are displayed:
 
 --- 
 
-
-
+## See also
+ - [Discover and protect your Copilot StudioAI Agents (Preview)](../defender-for-cloud-apps/ai-agent-inventory.md).
+ - [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
