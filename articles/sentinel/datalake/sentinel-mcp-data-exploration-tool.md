@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 11/18/2025
+ms.date: 11/24/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -12,6 +12,9 @@ ms.service: microsoft-sentinel
 ---
 
 # Explore Microsoft Sentinel data lake with data exploration collection
+
+> [!IMPORTANT]
+> Some information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 The data exploration tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you search for relevant tables and retrieve data from Microsoft Sentinel's data lake by using natural language. 
 
@@ -22,7 +25,7 @@ To access the data exploration tool collection, you need the following prerequis
 - Any of the supported AI-powered code editors and agent-building platforms:
     - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
     - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
-    - [Azure AI Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
+    - [Microsoft Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
     - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the data exploration collection
@@ -60,7 +63,7 @@ This tool runs a single KQL query against a specified Microsoft Sentinel data la
 This tool lists all Microsoft Sentinel data lake workspace name and ID pairs available to you. Including the workspace name provides you with helpful context to understand which workspace is being used. Run this tool before using any other Microsoft Sentinel tools because those tools need a workspace ID argument to function properly.
 
 
-### Entity analyzer
+### Entity analyzer (preview)
 
 These tools use AI to analyze your organization's data in the Microsoft Sentinel data lake. They provide a verdict and detailed insights on URLs, domains, and user entities. They help eliminate the need for manual data collection and complex integrations typically required for enriching and investigating entities.
 
