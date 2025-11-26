@@ -1,13 +1,13 @@
 ---
 title: Import extra data for detected OT devices - Microsoft Defender for IoT
 description: Learn how to manually enhance the device data automatically detected by your Microsoft Defender for IoT OT sensor with extra, imported data.
-ms.date: 01/24/2023
+ms.date: 11/26/2025
 ms.topic: how-to
 ---
 
 # Import extra data for detected OT devices
 
-OT networks sensors automatically monitor and analyze detected device traffic. In some cases, your organization's network policies may prevent some device data from being ingested to Microsoft Defender for IoT.
+OT networks sensors automatically monitor and analyze detected device traffic. In some cases, your organization's network policies might prevent some device data from being ingested to Microsoft Defender for IoT.
 
 This article describes how you can manually import the missing data to your OT sensor and add it to the device data already detected.
 
@@ -60,8 +60,15 @@ Your device data is updated.
 1. In the downloaded file, enter the following details for each device:
 
     - **IP Address**. Enter the device's IP address.
-    - **Device Type**. Enter one of the device types listed on the **Devices type** sheet.
+    - **Device OS**. Enter one of the device operating systems (OSs) listed on the **Devices type** sheet.
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
+
+The table below shows a sample device entry and the supported operating system values you can use in the Device OS column.
+
+| **Device example**| **Device OS** |
+|---|---|
+| **IP Address:** 192.168.19.200 <br>**Device OS:** Windows 7 <br>**Last Update :** 2017-11-01 | Windows <br> Windows Server <br> Windows 11 <br> Windows 10 <br> Windows 10 32  <br> Windows 10 64 <br> Windows 2000 <br> Windows 7  <br> Windows 7 32 <br> Windows 7 64 <br> Windows 8 <br> Windows 8 32 <br> Windows 8 64 <br> Windows 8.1 <br> Windows 8.1 32 <br> Windows 8.1 64 <br> Windows NT <br> Windows Server 2003 <br> Windows Server 2003 R2 <br> Windows Server 2008 <br> Windows Server 2008 32 <br> Windows Server 2008 64 <br> Windows Server 2008 R2 <br>  Windows Server 2012 <br> Windows Server 2012 R2 <br> Windows Server 2016 <br> Windows Vista <br> Windows Vista 32 <br> Windows Vista 64 <br> Windows XP <br> macOS <br> macOS X <br> Linux <br> Windows Server 2019 <br> HP UX <br> Windows Server 2022 QNX |
+
 
 1. Sign into your OT sensor and select **System settings > Import settings > Device information**.
 
