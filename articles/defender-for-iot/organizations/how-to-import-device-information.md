@@ -36,7 +36,7 @@ Before performing the procedures in this article, you must have:
 1. Open the downloaded .CSV file for editing and modify *only* the following data, as needed:
 
     - **Name**. Maximum length: 30 characters
-    - **Type**. Access the Defender for IoT [device settings file](https://download.microsoft.com/download/8/2/3/823c55c4-7659-4236-bfda-cc2427be2cee/CSS/devices_info_2.2.8%20and%20up.xlsx) and use one of the options listed in the **Devices type** tab
+    - **Device OS**. Access the Defender for IoT [device settings file](https://download.microsoft.com/download/8/2/3/823c55c4-7659-4236-bfda-cc2427be2cee/CSS/devices_info_2.2.8%20and%20up.xlsx) and use one of the options listed in the **Devices type** tab
     - **Group**. Maximum length: 30 characters
     - **Purdue layer**. Enter one of the following: **Enterprise**, **Supervisory**, or **Process Control**
 
@@ -60,7 +60,7 @@ Your device data is updated.
 1. In the downloaded file, enter the following details for each device:
 
     - **IP Address**. Enter the device's IP address.
-    - **Device OS**. Enter one of the device operating systems (OSs) listed on the **Devices type** sheet.
+    - **Device OS**. Enter one of the device operating systems (OSs) listed on the **Devices OS** sheet.
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
 The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
