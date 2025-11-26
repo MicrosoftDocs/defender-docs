@@ -65,9 +65,36 @@ Your device data is updated.
 
 The table below shows a sample device entry and the supported operating system values you can use in the Device OS column.
 
-| **Device example**| **Device OS** |
+| Device example |  |
 |---|---|
-| **IP Address:** 192.168.19.200 <br>**Device OS:** Windows 7 <br>**Last Update :** 2017-11-01 | Windows <br> Windows Server <br> Windows 11 <br> Windows 10 <br> Windows 10 32  <br> Windows 10 64 <br> Windows 2000 <br> Windows 7  <br> Windows 7 32 <br> Windows 7 64 <br> Windows 8 <br> Windows 8 32 <br> Windows 8 64 <br> Windows 8.1 <br> Windows 8.1 32 <br> Windows 8.1 64 <br> Windows NT <br> Windows Server 2003 <br> Windows Server 2003 R2 <br> Windows Server 2008 <br> Windows Server 2008 32 <br> Windows Server 2008 64 <br> Windows Server 2008 R2 <br>  Windows Server 2012 <br> Windows Server 2012 R2 <br> Windows Server 2016 <br> Windows Vista <br> Windows Vista 32 <br> Windows Vista 64 <br> Windows XP <br> macOS <br> macOS X <br> Linux <br> Windows Server 2019 <br> HP UX <br> Windows Server 2022 QNX |
+| **IP Address** | 192.168.19.200 |
+| **Device OS** | Windows 7 |
+| **Last Update** | 2017-11-01 |
+
+Supported values for **Device OS**:
+
+| Windows | Windows Server | Other OS |
+|---|---|---|
+| Windows | Windows Server | macOS |
+| Windows 11 | Windows Server 2003 | macOS X |
+| Windows 10 | Windows Server 2003 R2 | Linux |
+| Windows 10 32 | Windows Server 2008 | HP UX |
+| Windows 10 64 | Windows Server 2008 32 | QNX |
+| Windows 7 | Windows Server 2008 64 |  |
+| Windows 7 32 | Windows Server 2008 R2 |  |
+| Windows 7 64 | Windows Server 2012 |  |
+| Windows 8 | Windows Server 2012 R2 |  |
+| Windows 8 32 | Windows Server 2016 |  |
+| Windows 8 64 | Windows Server 2019 |  |
+| Windows 8.1 | Windows Server 2022 |  |
+| Windows 8.1 32 |  |  |
+| Windows 8.1 64 |  |  |
+| Windows NT |  |  |
+| Windows 2000 |  |  |
+| Windows Vista |  |  |
+| Windows Vista 32 |  |  |
+| Windows Vista 64 |  |  |
+| Windows XP |  |  |
 
 
 1. Sign into your OT sensor and select **System settings > Import settings > Device information**.
