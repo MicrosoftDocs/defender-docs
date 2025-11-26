@@ -119,8 +119,8 @@ Secure score helps organizations to plan and improve overall security posture us
 
 #### Unified secure score experience
 
-- **[Microsoft Secure Score](https://learn.microsoft.com/defender-xdr/microsoft-secure-score)**: A score that covers device, identities, SaaS apps, and data, providing an overall organizational posture metric
-- **[Cloud Secure Score](https://learn.microsoft.com/azure/defender-for-cloud/secure-score-security-controls?pivots=defender-portal)**: A score for Azure, AWS, and GCP resources, providing cloud-specific posture metric
+- **[Microsoft Secure Score](/defender-xdr/microsoft-secure-score)**: A score that covers device, identities, SaaS apps, and data, providing an overall organizational posture metric
+- **[Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls?pivots=defender-portal)**: A score for Azure, AWS, and GCP resources, providing cloud-specific posture metric
 - **Side-by-side visibility**: Both scores are now accessible within MSEM, giving a combined view of organizational posture across different domains
 
 #### How Security Exposure Management uses Secure Score
