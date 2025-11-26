@@ -42,12 +42,12 @@ For more information about remediating threats from apps, see [Governing connect
 
 This section describes how to connect Microsoft Defender for Cloud Apps to your existing Asana account using the App Connector APIs. This connection gives you visibility into and control over your organization's Asana use.
 
-**Prerequisites:**
+### Prerequisites
 
 - An Asana enterprise account. 
 - You must be signed-in as an admin to Asana. 
 
-**To connect Asana**:
+### To connect Asana:
 
 1. Sign into [Asana](https://app.asana.com/) portal with an admin account and navigate to **Admin Console > Apps > Service accounts**.
 
