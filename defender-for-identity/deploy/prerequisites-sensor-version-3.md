@@ -62,7 +62,7 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure RPC on V3.x sensors to support advanced identity detections
+## Configure RPC auditing on sensors v3.x to support advanced identity detections
 
 Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
 
@@ -79,9 +79,9 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
    
    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
    
-   1. Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
+   1. Ensure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
     
-   1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
+   1. Matching should primarily target **domain controllers** with the sensor v3.x installed.
     
 1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
 
@@ -101,7 +101,7 @@ Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rule
 
 Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-The Defender for Identity sensor v3.x can automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones. See [Configure auditing with the Defender for Identity sensor v3.x](configure-windows-event-collection.md#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x).
+The Defender for Identity sensor v3.x can offer preview feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones. See [Configure auditing with the Defender for Identity sensor v3.x](configure-windows-event-collection.md#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x).
 If you do not select automatic Windows auditing configuration, you must [manually configure Windows event auditing](configure-windows-event-collection.md) in the Defender portal or using PowerShell. 
  
 ## Test your prerequisites

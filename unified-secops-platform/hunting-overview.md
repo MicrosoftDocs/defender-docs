@@ -4,8 +4,8 @@ description: Learn about threat hunting features across the Microsoft Defender p
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: austinmc
-author: austinmccollum
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 ms.date: 11/23/2024
 audience: ITPro

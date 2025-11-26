@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -17,23 +17,14 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/17/2024
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
 ---
 # Delete a file from the live response library
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -41,7 +32,7 @@ Delete a file from live response library.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per
+Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
 ## Permissions
@@ -84,8 +75,4 @@ Here is an example of the request.
 DELETE https://api.security.microsoft.com/api/libraryfiles/script1.ps1
 ```
 
-## Related topic
-
-- [Run live response](run-live-response.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 

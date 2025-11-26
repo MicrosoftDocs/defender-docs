@@ -2,8 +2,8 @@
 title: Onboarding using Microsoft Configuration Manager
 description: Learn how to onboard to Microsoft Defender for Endpoint using Microsoft Configuration Manager
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
