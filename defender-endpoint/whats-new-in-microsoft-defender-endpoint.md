@@ -33,7 +33,7 @@ Learn more:
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
-|[Prioritize incidents and hunt for threats with triage collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool) |Preview |Use the triage collection to prioritize incidents and hunt threats with the Sentinel Model Context Protocol (MCP) server.|
+|[Triage collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool) |Preview |Use the triage collection to prioritize incidents and hunt threats with the Sentinel Model Context Protocol (MCP) server.|
 
 ## November 2025
 
