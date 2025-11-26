@@ -118,7 +118,7 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
     Job from and to times are set for the user's locale.
 
     > [!NOTE]
-    > If you schedule a job to run at a high frequency, for example every 30 minutes, you must take into account the time it takes for data to become available in the data lake. There's typically a latency of up to 15 minutes before newly ingested data is available for querying. For more information, see [Data lake ingestion latency](#data-lake-ingestion-latency).
+    > If you schedule a job to run at a high frequency, for example every 30 minutes, you must take into account the time it takes for data to become available in the data lake. There's typically a latency of up to 15 minutes before newly ingested data is available for querying.
    
 1. Select **Next** to review the job details.
 
