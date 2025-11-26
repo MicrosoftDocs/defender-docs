@@ -2,10 +2,10 @@
 title: Troubleshoot Microsoft Defender Antivirus scan issues
 description: Troubleshoot antivirus scan issues, such as scan not finishing or scans affecting device performance. 
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

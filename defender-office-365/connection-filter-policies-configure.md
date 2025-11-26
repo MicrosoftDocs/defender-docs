@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 09/05/2025
+ms.date: 10/30/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -70,7 +70,7 @@ This article describes how to configure the default connection filter policy in 
 
 ## Use the Microsoft Defender portal to modify the default connection filter policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 2. On the **Anti-spam policies** page, select **Connection filter policy (Default)** from the list by clicking anywhere in the row other than the check box next to the name.
 
@@ -97,9 +97,22 @@ This article describes how to configure the default connection filter policy in 
 
 4. Back on the policy details flyout, select **Close**.
 
+> [!TIP]
+> If the IP address ranges you added don't immediately appear in the connection filter policy, do the following steps:
+>
+> - Try refreshing the portal or verify the changes in Exchange Online PowerShell:
+>
+>   ```powershell
+>   Get-HostedConnectionFilterPolicy -Identity Default
+>   ```
+>
+> - Verify you have the required Microsoft Entra ID permissions as described in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+>
+> If the issue persists, it might indicate a synchronization delay or a service issue.
+
 ## Use the Microsoft Defender portal to view the default connection filter policy
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 On the **Anti-spam policies** page, the following properties are displayed in the list of policies:
 
@@ -193,7 +206,7 @@ For example, the source email server 192.168.1.25 sends email from the domains c
 
 ### Scenarios where messages from sources in the IP Allow List are still filtered
 
-> [!NOTE]  
+> [!NOTE]
 > These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model.
 
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:

@@ -72,7 +72,7 @@ The bulk senders insight is available in the following locations:
 
 - In the properties of the default anti-spam policy or custom anti-spam policies:
 
-  1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+  1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
   2. On the **Anti-spam policies** page, select a custom anti-spam policy (the **Type** value is **Custom anti-spam policy**) or the default anti-spam policy named **Anti-spam inbound policy (Default)** by clicking anywhere in the row other than the check box next to the first column.
 
@@ -101,7 +101,7 @@ The bulk senders insight is available in the following locations:
 - On the **Email & collaboration reports and insights** page:
 
   1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Email & collaboration** section \> **Email & collaboration reports and insights**. Or, to go directly to the **Email & collaboration reports and insights** page, use <https://security.microsoft.com/emailandcollabreport>.
-  
+
   2. On the **Email & collaboration reports and insights** page, go to the **Email & collaboration insights** section and find the **Bulk senders insight**.
 
   :::image type="content" source="media/insights-page-bulk-senders-insight.png" alt-text="The bulk senders insight on the Email & collaboration reports and insights page in the Microsoft Defender portal." lightbox="media/insights-page-bulk-senders-insight.png":::

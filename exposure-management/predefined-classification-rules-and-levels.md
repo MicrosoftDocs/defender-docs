@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 06/16/2025
+ms.date: 09/30/2025
 ---
 
 # Predefined classifications - Microsoft Security Research
@@ -25,6 +25,10 @@ Current asset types are:
 
 > [!Note]
 > The critical asset out-of-the-box classification logic classifies your assets based on asset behavior accumulated from Microsoft Defender workloads and  third-party integrations set up in your environment.
+> 
+> When multiple classification rules apply to an asset, the rule with the highest criticality level takes precedence. This classification remains in effect until the asset no longer meets the criteria for that rule, at which point it will automatically revert to the next applicable classification level.
+
+
 
 ##### Device
 
@@ -46,6 +50,9 @@ Current asset types are:
 | VMware vCenter             | Device     | High                      | The VMware vCenter Server is crucial for managing virtual environments. It provides centralized management of virtual machines and ESXi hosts. If it fails, it could disrupt the administration and control of your virtual infrastructure, including provisioning, migration, load balancing of virtual machines, and data center automation. However, as there are often redundant vCenter Servers and High Availability configurations, the immediate halt of all operations might not occur. Its failure could still cause significant inconvenience and potential performance issues. |
 | Hyper-V Server             | Device     | High                      | The Hyper-V hypervisor is essential for running and managing virtual machines within your infrastructure, serving as the core platform for their creation and management. If the Hyper-V host fails, it can lead to the unavailability of hosted virtual machines, potentially causing downtime and disrupting business operations. Moreover, it can result in significant performance degradation and operational challenges. Ensuring the reliability and stability of Hyper-V hosts is therefore critical for maintaining seamless operations in a virtual environment. |
 | SharePoint Server          | Device     | Medium                    | The SharePoint server is responsible for secure content management, collaboration, and document sharing across teams. It hosts intranet portals and enterprise search within an organization. Compromise could lead to unauthorized access to sensitive information and disruption of content services. |
+| Devices with Sensitive Information (Azure Document DB Auth Key) | Device | High | Devices that have accessed documents containing Azure Document DB Auth Keys, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learn more [here](/purview/sit-sensitive-information-type-learn-about) |
+| Devices with Sensitive Information (Azure Redis Cache Connection String) | Device | High | Devices that have accessed documents containing Azure Redis Cache Connection Strings, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learm more [here](/purview/sit-defn-azure-redis-cache-connection-string).|
+| Devices with Sensitive Information (Azure Storage Account Key) | Device | High | Devices that have accessed documents containing Azure Storage Account Keys, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learn more [here](/purview/sit-defn-azure-storage-account-key).|
 
 ##### Identity
 

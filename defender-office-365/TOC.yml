@@ -40,7 +40,7 @@
        href: trial-user-guide-defender-for-office-365.md
 
    - name: Deploy
-     items: 
+     items:
      - name: Pilot and deploy Defender for Office 365
        href: /defender-xdr/pilot-deploy-defender-office-365?toc=/defender-office-365/TOC.json&bc=/defender-office-365/breadcrumb/toc.json
      - name: Get started with Microsoft Defender for Office 365
@@ -120,6 +120,8 @@
          href: mdo-sec-ops-guide.md
        - name: SecOps guide for Teams protection in Defender for Office 365
          href: mdo-support-teams-sec-ops-guide.md
+       - name: SecOps guide for email authentication in Microsoft 365
+         href: email-auth-sec-ops-guide.md
        - name: Threat classification
          href: mdo-threat-classification.md
        - name: Security recommendations for priority accounts

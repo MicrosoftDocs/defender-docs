@@ -61,7 +61,7 @@ Reports replaced, moved, or deprecated are described in the following table.
 |**Spam detection report** <br><br> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Threat protection status report: View data by Email \> Spam](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|MC250529|October 2021|
 |Get-AdvancedThreatProtectionDocumentReport <br><br> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchangepowershell/get-contentmalwaremdoaggregatereport) <br><br> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchangepowershell/get-contentmalwaremdodetailreport)|MC343433|May 2022|
 |**Exchange transport rule report** <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchangepowershell/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport)|[Exchange transport rule report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchangepowershell/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport)|MC316157|April 2022|
-|Get-MailTrafficTopReport|[Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report) <br><br> [Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport) <br><br> **Note**: There's no replacement for the encryption reporting capabilities in Get-MailTrafficTopReport.|MC315742|April 2022|
+|Get-MailTrafficTopReport|[Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report) <br><br> [Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport) <br><br> [Microsoft Purview Reports overview](/purview/purview-reports)|MC315742|April 2022|
 
 ## Compromised users report
 
@@ -560,6 +560,7 @@ In the **View data by Email \> Spam** and **Chart breakdown by Detection Technol
 - **Fingerprint matching**: The message closely resembles a previous detected malicious message.
 - **General filter**
 - **IP reputation**: The message was from a source that was previously identified as sending spam in other Microsoft 365 organizations.
+- **Mail bombing**: Messages detected as part of a mail bombing attack where attackers flood targeted email addresses with an overwhelming volume of messages.
 - **Mixed analysis detection**: Multiple filters contributed to the verdict for the message.
 - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
 
@@ -787,7 +788,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
   - **Advanced filter**: Phishing signals based on machine learning.
   - **General filter**: Phishing signals based on analyst rules.
-  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization. 
+  - **Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.
   - **Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.
   - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
   - **Impersonation brand**: Sender impersonation of well-known brands.
@@ -1067,7 +1068,6 @@ Select **View details** to go to the **Top senders and recipients** page. Or, to
 
 - **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
 - **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
-
 
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 

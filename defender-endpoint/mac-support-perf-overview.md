@@ -1,26 +1,23 @@
----
+﻿---
 title: Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot performance issues overview for Microsoft Defender for Endpoint on macOS.
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 04/16/2025
 ms.subservice: macos
-manager: deniseb
+manager: bagol
 ms.custom: partner-contribution
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 This article provides general guidelines to identify performance issues related to Microsoft Defender for Endpoint on macOS. See [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md) for more specific guidance. 
 
@@ -46,4 +43,5 @@ When troubleshooting performance issues for Microsoft Defender for Endpoint on m
 |wdavdaemon_enterprise| Endpoint Detection and Response (EDR)|Open a [Microsoft support case](contact-support.md).|
 
 Additionally, gather [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs. This is used by the support team to investigate the issue. 
+
 

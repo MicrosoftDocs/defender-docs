@@ -1,11 +1,11 @@
----
+﻿---
 title: Export software vulnerabilities assessment per device
 description: The API response is per device and contains vulnerable software installed on your exposed devices and any known vulnerabilities in these software products. This table also includes operating system information, CVE IDs, and vulnerability severity information.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,23 +15,20 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 07/09/2025
+ms.date: 11/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
+
 ---
 
 # Export software vulnerabilities assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
+The ability to export software vulnerabilities per device returns all known software vulnerabilities and their details for all devices, on a per-device basis. Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-The ability to export software vulnerabilities per device returns all known software vulnerabilities and their details for all devices, on a per-device basis. Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
+Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
 
 1. [Export software vulnerabilities assessment: **JSON response**](#1-export-software-vulnerabilities-assessment-json-response)  The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
@@ -48,8 +45,7 @@ The API pulls data in your organization as Json responses. The response is pagin
 
 Data that is collected (using either _Json response_ or _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export software vulnerabilities assessment (JSON response)
 
@@ -84,11 +80,9 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - Each record is 1 KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
-> - The properties defined in the following table are listed alphabetically, by property ID. While running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+- Each record is 1 KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. While running this API, the resulting output isn't necessarily returned in the same order listed in this table.
 
 <br>
 
@@ -291,13 +285,11 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
-> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
-> - Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some extra columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+- Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
+- Some extra columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
@@ -332,12 +324,15 @@ GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabiliti
 
 Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId. The API pulls data in your organization as Json responses. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results. Unlike the full software vulnerabilities assessment (JSON response), which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device, the delta export JSON response API call is used to fetch only the changes that happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you only get specific information on new, fixed, and updated vulnerabilities. Delta export JSON response API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed?" or "how many new vulnerabilities were added to my organization?"
 
-> [!NOTE]
-> We refresh the __Full _Software Vulnerabilities Assessment(Flat/Full VA) by Device___ export every __six hours__ and store each snapshot in blob storage; the API always serves the latest snapshot, to emphasize  calling the Get Endpoint won't to trigger a generation, call get endpoint will just read latest Flat OR Delta After sinceTime.
-> A successful completion of Full VA export will trigger __delta export__ that captures the changes from latest Flat VA processed by Delta to new Flat VA.
-> > > __RBAC-scoped duplicates__
-> > Because exports are scoped by __RBACGroup__, a device that moves from one RBAC group to another will appear __twice__ in a Delta export when you query with the global view (`RBACGroup=*`): once under its previous group with status "Fixed" and once under its current group with status "New". Use the `rbacGroupId` and device identifiers together (or de-duplicate on your side) if you need a single authoritative record per device.
-> > 
+
+We refresh the __Full _Software Vulnerabilities Assessment(Flat/Full VA) by Device___ export every __six hours__ and store each snapshot in blob storage. 
+The API always serves the latest snapshot, to emphasize  calling the Get Endpoint won't to trigger a generation, call get endpoint will just read latest Flat OR Delta After sinceTime.
+
+A successful completion of Full VA export will trigger __delta export__ that captures the changes from latest Flat VA processed by Delta to new Flat VA.
+
+**_RBAC-scoped duplicates__**
+Exports are scoped by __RBACGroup__.  A device that moves from one RBAC group to another will appear __twice__ in a Delta export when you query with the global view (`RBACGroup=*`), once under its previous group with status "Fixed" and once under its current group with status "New". Use the `rbacGroupId` and device identifiers together (or de-duplicate on your side) if you need a single authoritative record per device.
+
 
 #### 3.1.0 Recommended pull pattern
 
@@ -379,10 +374,9 @@ GET /api/machines/SoftwareVulnerabilityChangesByMachine
 
 Each returned record contains all the data from the full export software vulnerabilities assessment by device API, plus two more fields:  _**EventTimestamp**_ and _**Status**_.
 
-> [!NOTE]
->
-> - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
 
 |Property (ID)|Data type|Description|Example of returned value|
 |:---|:---|:---|:---|
@@ -579,13 +573,5 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 }
 ```
 
-## See also
 
-- [Export assessment methods and properties per device](get-assessment-methods-properties.md)
-- [Export secure configuration assessment per device](get-assessment-secure-config.md)
-- [Export software inventory assessment per device](get-assessment-software-inventory.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

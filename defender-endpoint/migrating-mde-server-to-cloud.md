@@ -1,9 +1,9 @@
----
+﻿---
 title: Migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Servers
 description: Learn how to migrate servers from Microsoft Defender for Endpoint for servers to Microsoft Defender for Servers.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-endpoint
@@ -15,14 +15,13 @@ ms.collection:
 ms.custom: migrationguides
 ms.date: 03/26/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Servers
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article describes how to migrate your servers from Defender for Endpoint to Defender for Servers.
 
@@ -115,3 +114,4 @@ In case you have devices running Windows Server 2012 R2 or Windows Server 2016, 
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

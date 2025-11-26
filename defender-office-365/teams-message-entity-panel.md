@@ -35,7 +35,7 @@ This article explains the information and actions on the Teams message entity pa
 To use the Email entity page, you need to be assigned permissions. You have the following options:
 
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 

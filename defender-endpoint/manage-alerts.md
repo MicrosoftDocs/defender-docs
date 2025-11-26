@@ -1,11 +1,11 @@
----
+﻿---
 title: Manage Microsoft Defender for Endpoint alerts
 description: Change the status of alerts, create suppression rules to hide alerts, submit comments, and review change history for individual alerts with the Manage Alert menu.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,19 +15,13 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 01/15/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage Microsoft Defender for Endpoint alerts
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Defender for Endpoint notifies you of possible malicious events, attributes, and contextual information through alerts. A summary of new alerts is displayed and you can access all alerts in the **Alerts queue**.
 
@@ -47,7 +41,7 @@ You can create a new incident from the alert or link to an existing incident.
 
 ## Assign alerts
 
-If an alert is not yet assigned, you can select **Assign to me** to assign the alert to yourself.
+If an alert isn't yet assigned, you can select **Assign to me** to assign the alert to yourself.
 
 ## Suppress alerts
 
@@ -55,7 +49,7 @@ There might be scenarios where you need to suppress alerts from appearing in Mic
 
 Suppression rules can be created from an existing alert. They can be disabled and reenabled if needed.
 
-When a suppression rule is created, it will take effect from the point when the rule is created. The rule will not affect existing alerts already in the queue, prior to the rule creation. The rule will only be applied on alerts that satisfy the conditions set after the rule is created.
+When a suppression rule is created, it will take effect from the point when the rule is created. The rule won't affect existing alerts already in the queue, prior to the rule creation. The rule will only be applied on alerts that satisfy the conditions set after the rule is created.
 
 There are two contexts for a suppression rule that you can choose from:
 
@@ -68,7 +62,7 @@ You can use the examples in the following table to help you choose the context f
 
 |Context|Definition|Example scenarios|
 |---|---|---|
-|**Suppress alert on this device**|Alerts with the same alert title and on that specific device only will be suppressed. <p> All other alerts on that device will not be suppressed.|<ul><li>A security researcher is investigating a malicious script that has been used to attack other devices in your organization.</li><li>A developer regularly creates PowerShell scripts for their team.</li></ul>|
+|**Suppress alert on this device**|Alerts with the same alert title and on that specific device only will be suppressed. <p> All other alerts on that device won't be suppressed.|<ul><li>A security researcher is investigating a malicious script that has been used to attack other devices in your organization.</li><li>A developer regularly creates PowerShell scripts for their team.</li></ul>|
 |**Suppress alert in my organization**|Alerts with the same alert title on any device will be suppressed.|<ul><li>A benign administrative tool is used by everyone in your organization.</li></ul>|
 
 ### Suppress an alert and create a new suppression rule
@@ -94,14 +88,14 @@ Create custom rules to control when alerts are suppressed, or resolved. You can 
 
    You can automatically resolve an alert or hide it from the portal. Alerts that are automatically resolved will appear in the resolved section of the alerts queue, alert page, and device timeline and will appear as resolved across Defender for Endpoint APIs.
 
-   Alerts that are marked as hidden will be suppressed from the entire system, both on the device's associated alerts and from the dashboard and will not be streamed across Defender for Endpoint APIs.
+   Alerts that are marked as hidden will be suppressed from the entire system, both on the device's associated alerts and from the dashboard and won't be streamed across Defender for Endpoint APIs.
 
 5. Enter a rule name and a comment.
 
 6. Click **Save**.
 
 > [!NOTE]
-> Alert suppression is not compatible for custom detections. Make sure to fine-tune your custom detections to avoid [false positives](/defender-endpoint/defender-endpoint-false-positives-negatives).
+> Alert suppression isn't compatible for custom detections. Make sure to fine-tune your custom detections to avoid [false positives](/defender-endpoint/defender-endpoint-false-positives-negatives).
 
 #### View the list of suppression rules
 
@@ -117,7 +111,7 @@ You can categorize alerts (as **New**, **In Progress**, or **Resolved**) by chan
 
 For example, a team leader can review all **New** alerts, and decide to assign them to the **In Progress** queue for further analysis.
 
-Alternatively, the team leader might assign the alert to the **Resolved** queue if they know the alert is benign, coming from a device that is irrelevant (such as one belonging to a security administrator), or is being dealt with through an earlier alert.
+Alternatively, the team leader might assign the alert to the **Resolved** queue if they know the alert is benign, coming from a device that's irrelevant (such as one belonging to a security administrator), or is being dealt with through an earlier alert.
 
 ## Alert classification
 
@@ -130,7 +124,7 @@ The steps to classify alerts are included in this video:
 
 You can add comments and view historical events about an alert to see previous changes made to the alert.
 
-Whenever a change or comment is made to an alert, it is recorded in the **Comments and history** section.
+Whenever a change or comment is made to an alert, it's recorded in the **Comments and history** section.
 
 Added comments instantly appear on the pane.
 
@@ -148,3 +142,4 @@ Added comments instantly appear on the pane.
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

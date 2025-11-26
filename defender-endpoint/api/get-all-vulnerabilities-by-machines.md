@@ -1,11 +1,11 @@
----
+﻿---
 title: Get all vulnerabilities by machine and software
 description: Retrieves a list of all the vulnerabilities affecting the organization by Machine and Software
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,26 +15,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # List vulnerabilities by machine and software
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
 Retrieves a list of all the vulnerabilities affecting the organization per [machine](machine.md) and [software](software.md).
+
+This API can be used for [Power BI integration](api-power-bi.md).
 
 - If the vulnerability has a fixing KB, it will appear in the response.
 - Supports [OData V4 queries](https://www.odata.org/documentation/).
@@ -42,8 +34,6 @@ Retrieves a list of all the vulnerabilities affecting the organization per [mach
 <br>```$stop``` with max value of 10,000 
 <br>```$skip```
 
-> [!TIP]
-> This is great API for [Power BI integration](api-power-bi.md).
 
 ## Permissions
 
@@ -78,7 +68,7 @@ If successful, this method returns 200 OK with the list of vulnerabilities in th
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/vulnerabilities/machinesVulnerabilities
@@ -86,7 +76,7 @@ GET https://api.securitycenter.microsoft.com/api/vulnerabilities/machinesVulnera
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
@@ -118,8 +108,3 @@ Here is an example of the response.
 }
 ```
 
-## See also
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

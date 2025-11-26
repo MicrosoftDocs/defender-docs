@@ -62,7 +62,7 @@ The rest of this article how to configure preset security policies.
 
 ## Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
 2. During your first visit to the **Preset security policies** page, it's likely that **Standard protection** and **Strict protection** are turned off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
@@ -76,7 +76,7 @@ The rest of this article how to configure preset security policies.
      - **Users**: The specified mailboxes, mail users, or mail contacts.
      - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-       - The specified Microsoft 365 Groups.
+       - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
      > [!TIP]
@@ -195,7 +195,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
 >
 > <u>The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies</u>. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy, unless you want to exclude users who aren't eligible for Safe Links and Safe Attachments protections (users who lack Defender for Office 365 licenses).
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
 2. On the **Preset security policies** page, select **Add exclusions (not recommended)** in the **Built-in protection** section.
 
@@ -203,7 +203,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
    - **Users**
    - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-       - The specified Microsoft 365 Groups.
+       - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
    - **Domains**
 
    Click in the appropriate box, start typing a value, and then select the value displayed below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
