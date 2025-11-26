@@ -5,9 +5,8 @@ ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Okta environment
-
-
 
 As an identity and access management solution, Okta holds the keys to your organizations most business critical services. Okta manages the authentication and authorization processes for your users and customers. Any abuse of Okta by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
@@ -77,6 +76,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
+### Configure Okta
 
 1. In the Okta console, select **Admin** > **Security** and then **API**.
 
@@ -85,6 +85,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     1. Enter a name for your Defender for Cloud Apps token, and select **Create Token**.
 
     1. Copy the **Token value**.
+
+### Configure Defender for Cloud Apps
 
 
 1. In the Microsoft Defender Portal, select **Settings** > **Cloud Apps**. 
