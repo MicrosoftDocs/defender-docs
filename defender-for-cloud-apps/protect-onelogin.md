@@ -1,15 +1,14 @@
 ---
 title: Protect your OneLogin | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your OneLogin app to Defender for Cloud Apps using the API connector.
-ms.date: 12/06/2023
+ms.date: 11/26/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your OneLogin
 
-
-
-As an identity and access management solution, OneLogin holds the keys to your organizations most business critical services. OneLogin manages the authentication and authorization processes for your users. Any abuse of OneLogin by a malicious actor or any human error may expose your most critical assets and services to potential attacks.
+As an identity and access management solution, OneLogin holds the keys to your organizations most business critical services. OneLogin manages the authentication and authorization processes for your users. Any abuse of OneLogin by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
 Connecting OneLogin to Defender for Cloud Apps gives you improved insights into your OneLogin admin activities and managed users sign-ins and provides threat detection for anomalous behavior.
 
@@ -60,14 +59,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure OneLogin
 
-1. Go to the OneLogin admin portal. Select **API Credentials** in the **Developers** dropdown menu.
-
-    ![Select API credentials.](media/api-credentials-onelogin.png)
-
-1. Select **New Credential**.
+1. Sign-in to the OneLogin admin portal. Select the **Developers** tab > **API Credentials** > **New Credential**.
 1. Name your new application as **Microsoft Defender for Cloud Apps**, choose **Read all** permissions, and select **Save**.
-
-    ![Create new API credential.](media/create-new-api-credential-onelogin.png)
 
 1. Copy the **Client ID** and the **Client Secret**. You'll need them in the following steps.
 
@@ -86,7 +79,4 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
