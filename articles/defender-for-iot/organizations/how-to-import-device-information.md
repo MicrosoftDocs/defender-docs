@@ -55,21 +55,15 @@ Your device data is updated.
 
 **To import device IP addresses, operating systems, or patch levels**:
 
-1. Download the Defender for IoT [device settings file](https://download.microsoft.com/download/8/2/3/823c55c4-7659-4236-bfda-cc2427be2cee/CSS/devices_info_2.2.8%20and%20up.xlsx) and open it for editing.
+1. Create a new .CSV file for editing. You can use any text editor or spreadsheet application that supports .CSV file format.
 
-1. In the downloaded file, enter the following details for each device:
+1. In your CSV file, enter the following details for each device:
 
     - **IP Address**. Enter the device's IP address.
     - **Device OS**. Enter one of the device operating systems (OSs) listed in the [supported values for the Device OS table](#supported-values-for-device-os).
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
 The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
-
-#[Device example](#tab/device-example)    
-<content>
-# [Investigation graph](#tab/cases)
-<content>
----
 
 ### Device example
 
