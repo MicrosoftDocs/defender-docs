@@ -302,7 +302,7 @@ List vulnerabilities that affect specific software on a specific device for targ
 
 ## Sample prompts
 
-The following sample prompts demonstrate what you can do with the Defender collection:
+The following sample prompts demonstrate what you can do with the triage collection:
 
 - List the last five incidents from my tenant and assess which one is the most urgent to triage
 - Provide the alerts for <specific incident\> and analyze the alert evidence for maliciousness 
