@@ -36,7 +36,7 @@ You can explore the full breadth of Microsoft's security recommendations without
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management > Recommendations** to open the unified [Recommendations](https://security.microsoft.com/exposure-recommendations) page.
 
-:::image type="content" source="media/security-recommendations/recommendations-landing-page.png" alt-text="Screenshot of recommendations landing page" lightbox="media/security-recommendations/recommendations_landing_page.png":::
+:::image type="content" source="media/security-recommendations/recommendations-landing-page.png" alt-text="Screenshot of recommendations landing page" lightbox="media/security-recommendations/recommendations-landing-page.png":::
 
 ### Navigate the new unified recommendations interface
 
