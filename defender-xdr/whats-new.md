@@ -32,6 +32,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## December 2025
+- Advanced hunting now supports custom functions that use tabular parameters. With tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. [Learn more](advanced-hunting-custom-functions.md#create-custom-functions-with-tabular-parameters)
+
 ## November 2025
 - Microsoft Sentinel customers using the Defender portal, or the Azure portal with the Microsoft Sentinel Defender XDR data connector, now also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation-state actors, major ransomware campaigns, and fraudulent operations. To view these alert types, you must have the **Security Administrator** or **Global Administrator** role. The **Service Source**, **Detection Source**, and **Product Name** values for these alerts are listed as *Microsoft Threat Intelligence*.   For more information, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).
 - (Preview) Defender XDR now includes the **predictive shielding** capability, which uses predictive analytics and real-time insights to dynamically infer risk, anticipate attacker progression, and harden your environment before threats materialize. [Learn more](shield-predict-threats.md)
