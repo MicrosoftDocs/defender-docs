@@ -64,6 +64,8 @@
         href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your IoT/OT assets
         href: protect-against-iot-ot-threats.md
+      - name: Protect your custom AI agents
+        href: ai-agent-inventory.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -633,6 +635,8 @@
           href: alert-classification-password-spray-attack.md
       - name: Incident response playbooks
         href: /security/operations/incident-response-playbooks
+      - name: Customize incident responses
+        href: security-upload-guide.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR

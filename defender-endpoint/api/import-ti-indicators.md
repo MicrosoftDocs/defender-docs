@@ -2,8 +2,8 @@
 title: Import Indicators API
 description: Learn how to use the Import batch of Indicator API in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,23 +15,15 @@ ms.topic: reference
 ms.custom: api
 ms.subservice: reference
 search.appverid: met150
-ms.date: 02/02/2021
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
 
 ---
+
 # Import Indicators API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -41,9 +33,9 @@ CIDR notation for IPs isn't supported.
 
 ## Limitations
 
-1. Rate limitations for this API are 30 calls per minute.
-2. There's a limit of 15,000 active [Indicators](ti-indicator.md) per tenant.
-3. Maximum batch size for one API call is 500.
+- Rate limitations for this API are 30 calls per minute.
+- There's a limit of 15,000 active [Indicators](ti-indicator.md) per tenant.
+- Maximum batch size for one API call is 500.
 
 ## Permissions
 
@@ -51,7 +43,6 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permission|Permission display name|
 |---|---|---|
-|Application|Ti.ReadWrite|`Read and write Indicators`|
 |Application|Ti.ReadWrite.All|`Read and write All Indicators`|
 |Delegated (work or school account)|Ti.ReadWrite|`Read and write Indicators`|
 
@@ -146,8 +137,4 @@ Here's an example of the response.
 }
 ```
 
-## Related article
-
-- [Manage indicators](../indicators-overview.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
