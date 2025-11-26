@@ -19,48 +19,11 @@ The *MicrosoftSentinelGraphProvider* library provides a set of classes and metho
 Custom graphs are created using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information see[Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
 
 
-To initialize this library, connect to the correct graph pool and import the **GraphBuilder** subpackage as folllows:
+To initialize this library, connect to the correct graph pool and import the **GraphBuilder** subpackage as follows:
 
-```graph
+```python
 from sentinel_graph.builders.graph_builder import GraphBuilder
 ```
-
-
-**Need full usage, params and returns for each method as per sentinel provider class reference doc.**
-For example:
-
-### list_tables
-
-List all tables in a given database.
-
-```python
-data_provider.list_tables([database_name],[database_id])
-   
-```
-
-Parameters:
-- `database_name` (str, optional): The name of the database (workspace) to list tables from. IF not specified the system tables database is used.
-- `database_id` (str, optional): The unique identifier of the database if workspace names aren't unique.
-
-Returns:
-- `list[str]`: A list of table names in the specified database.
-
-Examples:
-
-List all tables in the system tables database:
-
-
-```python
-data_provider.list_tables() 
-```
-
-
-List all tables in a specific database. Specify the `database_id` of the database if your workspace names aren't unique:
-
-```python
-data_provider.list_tables("workspace1", database_id="ab1111112222ab333333")
-```
-
 
 ### Methods
 
@@ -80,42 +43,70 @@ THe following table provides a summary of the supported methods. We plan to intr
 | ?? |  |
 
 
-#### initialize_graph() 
+#### start() 
 
-Create a new graph instance
 
-```graph
+Initialize a new graph instance
+
+```python
 from sentinel_graph.builders.graph_builder import GraphBuilder
-my_graph = (GraphBuilder.initialize_graph()…
+my_graph = (GraphBuilder.start()
+            <add nodes and edges>
+            ).done()
 ```
 
 
-### add_node 
+### add_node,  add_edge
 
 Define a new node
 
-```graph
-my_graph.add_node("<Nodename>") 
+```python
+.add_node("<Nodename>") 
             .from_table(“Tablename”)
             .add_properties("id", "<columnname>", "<columnname>", key="<columnname>", display="<columnname>")
 
-```
 
-### add_edge
+#Define a new edge type
 
-Define a new edge type
-
-```graph
+```python
 my_graph.add_edge("<Edgename>") 
             .from_table(“Tablename”)
             .add_properties("id", "<columnname>", "<columnname>", key="<columnname>", display="<columnname>")
 
 ```
 
+Add a user node amd device node and sign-in edge between them
+
+```python
+my_graph = (GraphSpecBuilder.start()
+
+        # Add user node from IdentityInfo table (using direct column names)
+        .add_node("user") 
+            .from_table(identity_info_tbl)
+            .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
+            .with_columns("id", "name", "email", key="id", display="name")
+
+        # Add device node from DeviceInfo table
+        .add_node("device") 
+            .from_table(device_info_tbl)
+            .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
+            .with_columns("id", "name", "type", key="id", display="name")
+
+        # Add edge between users and devices from SigninLogs table
+        .add_edge("sign_in") 
+            .from_table(signin_logs_tbl)
+            .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
+            .source(id_column="UserId", node_type="user")
+            .target(id_column="DeviceId", node_type="device")
+            .with_columns("id", "location", key="id", display="id")
+        
+        ).done()
+```
+
 
 #### build_graph
 
-```graph
+```python
 
 build_result = my_graph.build_graph_with_data()
 
@@ -125,10 +116,12 @@ print(f"Status: {build_result.get('status')}")
 
 #### query()
 
-hTERE IS A WHOLE QUERY LANGUAGE HERE THAT NEEDS TO BE
-```graph
+Query the graph using GQL query language
+For more information on GQL, see [GQL language guide](/fabric/graph/gql-language-guide).
 
-query_result = my_graph.query("MATCH (u:user)-\[s:sign_in\]-\>(d:device) RETURN u,s,d LIMIT 10")
+```python
+
+query_result = my_graph.query("MATCH (u:user)-[s:sign_in]->(d:device) RETURN u,s,d LIMIT 10")
 
 query_result.show()
 ```
@@ -137,12 +130,12 @@ query_result.show()
 
 Convert graph query results to a Graph Frames object 
 
-```graph
+```python
 gf = my_graph.to_graphframe()
 ```
 
-```graph
-\# Sample function: In-degree \[How many edges coming INTO each node\]
+```python
+# Sample function: In-degree [How many edges coming INTO each node]
 gf = my_graph.to_graphframe()
 in_degrees = gf.inDegrees
 
@@ -151,23 +144,23 @@ in_degrees.orderBy("inDegree", ascending=False).show(10)
 
 #### show()
 
-```graph
+```python
 
-query_result = my_graph.query("MATCH (u:user)-\[:sign_in\]-\>(d:device) RETURN u, d LIMIT 10")
+query_result = my_graph.query("MATCH (u:user)-[:sign_in]->(d:device) RETURN u, d LIMIT 10")
 
-query_result.show(format="visual") // “table” – default?
+query_result.show(format="visual") // “table” – default
 ```
 
 
 ### Algorithms
 
-You can run below Sentinel graph algorithms on a custom graph.
+You can run belowthe following Sentinel graph algorithms on a custom graph.
 
 ####  *centrality()*
 
 Identifies critical nodes in the graph that are most connected and could be vulnerable to adversary attacks.
 
-```graph
+```python
 
 my_graph.centrality(CentralityQueryInput(threshold=2))
 ```
@@ -190,7 +183,7 @@ my_graph.centrality(CentralityQueryInput(threshold=2))
 
 Measures how far an impact from a node can spread through connected nodes.
 
-```graph
+```python
 my_graph.k_hop(K_HopQueryInput(source_property_value="user1"))
 ```
 
@@ -237,10 +230,10 @@ Retrieves all nodes within K steps (hops) from a starting node to analyze local 
 | Parameter | Definition | Required | Default |
 |----|----|:--:|:--:|
 | source_property | Name of the property in the source node to filter by. | Yes (if target_property is not provided) | Null |
-| sourcepropertyvalue | Value of the property in the source node to filter by. | Yes\* | Null |
+| sourcepropertyvalue | Value of the property in the source node to filter by. | Yes* | Null |
 | participatingsourcenode_labels | List of labels for source nodes; Null means all labels. | No | Null |
 | target_property | Name of the property in the target node to filter by. | Yes (if source_property is not provided) | Null |
-| targetpropertyvalue | Value of the property in the target node to filter by. | Yes\* | Null |
+| targetpropertyvalue | Value of the property in the target node to filter by. | Yes* | Null |
 | participatingtargetnode_labels | List of labels for target nodes; Null means all labels. | No | Null |
 | participatingedgelabels | List of edge labels for the graph query; Null means all labels. | No | Null |
 | is_directional | Treat graph as directional (source → target) or non-directional. | No | TRUE |
@@ -345,17 +338,17 @@ Request Body Format *
       {   
         "Cols": [   
           {   
-            "Value": "{\n  \\\_id\\: \\sharepoint\\\\system\\\n}",   
+            "Value": "{ _id: sharepointsystemn}",   
             "Metadata": {},   
             "Path": **null**   
           },   
           {   
-            "Value": "{\n  \\lastSeen\\: \\2025-10-17T04:42:18.0000000Z\\,\n  \\firstSeen\\: \\2025-10-17T04:42:18.0000000Z\\,\n  \\\_sourceId\\: \\sharepoint\\\\system\\,\n  \\\_targetId\\: \\fea4797a-89d9-4095-8a08-b821d6bfcd8e\\,\n  \\\_label\\: \\Deleted\\,\n  \\\_sourceLabel\\: \\ENTRAUSER\\,\n  \\\_targetLabel\\: \\ONLINEFILE\\\n}",   
+            "Value": "{ lastSeen: 2025-10-17T04:42:18.0000000Z, firstSeen: 2025-10-17T04:42:18.0000000Z, _sourceId: sharepointsystem, _targetId: fea4797a-89d9-4095-8a08-b821d6bfcd8e, _label: Deleted, _sourceLabel: ENTRAUSER, _targetLabel: ONLINEFILEn}",   
             "Metadata": {},   
             "Path": **null**   
           },   
           {   
-            "Value": "{\n  \\tenantId\\: \\536279f6-15cc-45f2-be2d-61e352b51eef\\,\n  \\\_id\\: \\fea4797a-89d9-4095-8a08-b821d6bfcd8e\\,\n  \\\_label\\: \\ONLINEFILE\\,\n  \\displayName\\: \\0c8a8c07-a918-4540-ac1d-a78bf7c81a84_LThumb.jpg\\\n}",   
+            "Value": "{ tenantId: 536279f6-15cc-45f2-be2d-61e352b51eef, _id: fea4797a-89d9-4095-8a08-b821d6bfcd8e, _label: ONLINEFILE, displayName: 0c8a8c07-a918-4540-ac1d-a78bf7c81a84_LThumb.jpgn}",   
             "Metadata": {},   
             "Path": **null**   
           }   

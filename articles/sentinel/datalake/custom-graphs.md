@@ -3,33 +3,17 @@ title: Get started with custom graphs in Microsoft Sentinel
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 11/17/2025
+ms.date: 12/01/2025
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
 
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
-
-
-
-
-
-Sourin Paul
-
-11/14/2025
-
-DRAFT – Do NOT publish
-
-
-
-- Note: Do not publish documentation in production. These will be shared with customers as PDF and hosted internally in **aka.ms/customgraphs (TBD)**
 ---
-
-
 
 ## Get started with custom graphs in Microsoft Sentinel
 
-Custom graphs in Microsoft Sentinel allow security researchers and analysts to create tailored graph representations of their security data. By building custom graphs, you can model specific attack patterns, investigate threats, and run advanced graph algorithms to uncover hidden relationships within your digital environment. This guide will walk you through the steps to create and manage custom graphs using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension.
+Custom graphs in Microsoft Sentinel enable security researchers and analysts to create tailored graph representations of their security data. By building custom graphs, you can model specific attack patterns, investigate threats, and run advanced graph algorithms to uncover hidden relationships within your digital environment. This guide walks you through the steps to create and manage custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension.
 
 ### Prerequisites
 
@@ -39,7 +23,7 @@ To create custom graphs, you must be onboarded to Microsoft Sentinel data lake. 
 
 #### Permissions
 
-To interact with custom graphs, you need the following XDR permissions in Sentinel Lake. The following table lists the permission requirements for common graph operations:
+To interact with custom graphs, you need the following XDR permissions in Sentinel data lake. The following table lists the permission requirements for common graph operations:
 
 | Graph operation| Permissions required|
 |---------------------|-------------------------|
@@ -51,13 +35,14 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 
 #### Install Visual Studio Code and the Microsoft Sentinel extension 
 
-Custom graphs are created using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information see[Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
+Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see[Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
 
 ## Create a custom graph 
 
 **Important: All screenshots must be updated before our final release.**
 
-Creating and working with custom graphs involves the following steps
+To create and work with custom graphs, complete the following steps:
+
 1. Create an ephemeral graph
 1. Materialize the graph in your tenant
 1. View and manage materialized graphs
@@ -65,110 +50,197 @@ Creating and working with custom graphs involves the following steps
 
 ### Create an ephemeral graph
 
-Create a ephemeral graph using a Jupyter notebook in the Microsoft Sentinel Visual Studio Code extension. 
+Create an ephemeral graph by using a Jupyter notebook in the Microsoft Sentinel Visual Studio Code extension. 
+
+The following steps walk you through creating your first custom graph by using a sample notebook:
+
+1. In Visual Studio Code with the Microsoft Sentinel extension installed, select the **Microsoft Sentinel** icon in the left-hand menu.
+1. Select **Sign in to view graphs**
+1. A dialog box appears with the text *The extension 'Microsoft Sentinel' wants to sign in using Microsoft*. Select **Allow** to sign in.
+1. Sign in with your credentials.
+1. After signing in, select  **+** then select **Create new notebook**.
+1. Name the notebook file and save it in an appropriate location in your workspace.
+
+   :::image type="content" source="media/custom-graphs/sign-in-to-view-graphs.png" lightbox="media/custom-graphs/sign-in-to-view-graphs.png" alt-text="A screenshot of the sign-in page for graphs in Visual Studio Code.":::
+
+1. Select **Select kernel** in the top right of the notebook window to select a spark compute pool.
+1. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
+
+   :::image type="content" source="media/custom-graphs/select-kernel.png"  lightbox="media/custom-graphs/select-kernel.png" alt-text="A screenshot of the select kernel page in Visual Studio Code.":::
 
 
+1. In an empty cell in the new notebook, paste the following sample code to get started with custom graphs:
+
+    ```python
+    # create the graph using the graph spec builder
+    # type: ignore
+    # pyright: off
+    # pylance: off
 
 
-1.  Select the ‘+’ (Create a Graph) icon to create a graph
+    # Data lake tables we will use as input for the graph in this example
+    identity_info_tbl = "cgi_identity_info_SPRK"
+    device_info_tbl = "cgi_device_info_SPRK"
+    signin_logs_tbl = "cgi_signin_logs_SPRK"
 
-:::image type="content" source="media/custom-graphs/image1.gif" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    my_graph = (GraphSpecBuilder.start()
 
-2.  Select “Notebook sample” to create a graph
+            # Add user node from IdentityInfo table (using direct column names)
+            .add_node("user") 
+                .from_table(identity_info_tbl)
+                .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
+                .with_columns("id", "name", "email", key="id", display="name")
 
-> \<Screenshot TBD\>
+            # Add device node from DeviceInfo table
+            .add_node("device") 
+                .from_table(device_info_tbl)
+                .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
+                .with_columns("id", "name", "type", key="id", display="name")
 
-3.  Choose a graph sample to get started
+            # Add edge between users and devices from SigninLogs table
+            .add_edge("sign_in") 
+                .from_table(signin_logs_tbl)
+                .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
+                .source(id_column="UserId", node_type="user")
+                .target(id_column="DeviceId", node_type="device")
+                .with_columns("id", "location", key="id", display="id")
 
-> \<Screenshot TBD\>
+            ).done()
 
-4.  The sample notebook walks you through a step-by-step process to create your first graph. Once familiar, you could create new Jupyter notebooks to create graphs.
+    print(f"✅ Graph specification created successfully")
+    ```
 
-:::image type="content" source="media/custom-graphs/image2.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    This cell creates a simple graph specification with user and device nodes, and sign-in edges between them by using sample tables in Sentinel data lake. You can modify the code to create graphs based on your own data, dates, and requirements.
 
-5.  Select the “Graph” kernel so you can access the MicrosoftSentinelGraphProvider library.
+1. Run the cell to create the graph specification by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
 
-:::image type="content" source="media/custom-graphs/image3.png" alt-text="A screenshot of a computer":::
+   The first time you run a cell, it might take up to five minutes to start the Spark session.
 
-*** Note***
+   :::image type="content" source="media/custom-graphs/run-first-cell.png" lightbox="media/custom-graphs/run-first-cell.png" alt-text="A screenshot showing the running of the first cell in Visual Studio Code.":::
 
-- *Selecting the kernel starts the Spark session and runs the code in the notebook. After selecting the pool, it can take 3-5 mins for the session to start. Subsequent runs are faster as you will have an active session.*
+   After the cell runs successfully, the message *✅ Graph specification created successfully* displays in the last output cell. You have now created a graph specification.
 
-- *The graph libraries are only available in the “Graph” kernel to ensure existing notebook jobs in your environment remain operational.*
+1. Build the graph by using the graph specification created in the previous step. In a new cell, paste and run the following code:
 
-6.  Run the first cell in the template, to ensure you can access the latest graph libraries
+    ```python
+    # build your graph
 
-:::image type="content" source="media/custom-graphs/image4.png" alt-text="A screenshot of a computer program AI-generated content may be incorrect.":::
+    build_result = my_graph.build_graph_with_data()
 
-7.  You can run through the remaining cells in the sample, or refer to [Microsoft Sentinel Graph Provider library](#microsoft-sentinel-graph-provider-reference) to interactively build graphs
+    print(f"Status: {build_result.get('status')}")
+    ```
 
-8.  Once graph is built, you can query your graph using the below code sample in a cell
+    When successful, the last line of the output cell displays *Status: success*.
 
-:::image type="content" source="media/custom-graphs/image5.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::  
+    You have now created an ephemeral graph in the notebook.
+
+1. Show a visual representation of the graph. In a new cell, paste and run the following code:
+This shows a sample of up to 50 elements from the graph as a visual. 
+
+    ```python
+    my_graph.show(limit=50)
+    ```
+
+    The output cell displays a visual representation of the graph.
+
+    :::image type="content" source="media/custom-graphs/graph-visualization.png" lightbox="media/custom-graphs/graph-visualization.png" alt-text="A     screenshot showing the visualization of a graph in Visual Studio Code.":::
+
+## Perform graph analytics
+
+With the ephemeral graph created, you can now run advanced graph analytics by using built-in graph algorithms. The following sections demonstrate two common graph analytics: blast radius and k-hop neighbors.
+
+### Blast radius visualization
+
+To explore and interact with the graph, in a new cell, paste and run the following code to import the library and create a graph object for blast radius visualization. Replace the `source_property_value` and `target_property_value` with appropriate node property values from your data.
+
+```python
+from sentinel_graph.builders.query_input import BlastRadiusQueryInput
+
+result = my_graph.blast_radius(BlastRadiusQueryInput(source_property_value="user-003", target_property_value="device-003", min_hop_count=1))
+
+result.show()
+```
+
+This code runs a blast radius query on the graph, starting from a user node with ID `user-003` and expanding to connected device nodes at least one hop away. The resulting subgraph is visualized in the output.
+
+:::image type="content" source="media/custom-graphs/blast-radius-graph.png" lightbox="media/custom-graphs/blast-radius-graph.png" alt-text="A screenshot showing the blast radius visualization of a graph in Visual Studio Code.":::
+
+### K-hop neighbors visualization
+To find and visualize k-hop neighbors in the graph, in a new cell, paste and run the following code. Replace the `start_property_value` with an appropriate node property value from your data.
+
+```python
+from sentinel_graph.builders.query_input import K_HopQueryInput
+
+result = my_graph.k_hop(K_HopQueryInput(source_property_value="user-001"))
+
+result.show()
+```
+
+This code runs a k-hop query on the graph, starting from a user node with ID `user-001` and expanding to its neighbors. The resulting subgraph is visualized in the output.
+
+:::image type="content" source="media/custom-graphs/k-hop-graph.png" lightbox="media/custom-graphs/k-hop-graph.png" alt-text="A screenshot showing the k-hop neighbors visualization of a graph in Visual Studio Code.":::
   
-  
-//////Code block:
 
-\# This shows a sample of 100 elements from the graph as a visual. You can control the sample size with the limit parameter Ex: my_graph.show(limit=50).
-
-my_graph.show()
-
-Congratulations! You have created your first custom graph.
 
 ### Materialize graph in your tenant
 
-Once you have created a graph and want to persist it, you can simply store the graph in tenant.
+After you create an ephemeral graph, you can persist it by storing the graph in your tenant with a scheduled job.
 
-1.  While in the graph notebook, select **Create Scheduled Job**
+1. From your graph notebook, select **Create Scheduled Job**, then select **Create a graph job**.
 
-> :::image type="content" source="media/custom-graphs/image6.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    :::image type="content" source="media/custom-graphs/create-scheduled-job.png" lightbox="media/custom-graphs/create-scheduled-job.png" alt-text="A screenshot showing the create scheduled job button in a graph notebook.":::
 
-2.  In the “**Create graph job**” form, enter the **Graph name** and **Description**, and verify the correct graph notebook is included in **Path**.
+1.  In the **Create graph job** form, enter the **Graph name** and **Description**, and verify the correct graph notebook is included in **Path**.
 
-:::image type="content" source="media/custom-graphs/image7.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+1.  To build the graph without configuring a refresh schedule, select **On demand** in the **Schedule** section, then select **Submit** to create the graph.
 
-3.  To build the graph without configuring refresh schedule, select **On demand** in the **Schedule** section, then select **Submit** to create the graph.
-
-4.  Alternatively, to customize how often graph data is refreshed, select **Scheduled** in the **Schedule** section.
+1.  To build the graph where the graph data is refreshed regularly, select **Scheduled** in the **Schedule** section.
 
     1.  Select a **Repeat frequency** for the job. You can choose from **By the minute**, **Hourly**, **Weekly**, **Daily**, or **Monthly**.
 
-    2.  Additional options are displayed to configure the schedule, depending on the frequency you select. For example day of the week, time of day, or day of the month.
+    1.  More options are displayed to configure the schedule, depending on the frequency you select. For example day of the week, time of day, or day of the month.
 
-    3.  Select a **Start on** time for the schedule to start running.
+    1.  Select a **Start on** time for the schedule to start running.
 
-    4.  Select an **End on** time for the schedule to stop running. If you don't want to set an end time for the schedule, select **Set job to run indefinitely**. Dates and times are in the user's timezone.
+    1.  Select an **End on** time for the schedule to stop running. If you don't want to set an end time for the schedule, select **Set job to run indefinitely**. Dates and times are in your timezone.
 
-    5.  Select **Submit** to save the job configuration and publish the job.
+    1.  Select **Submit** to save the job configuration and publish the job. The graph building process starts in your tenant. View the newly created graph and its latest status in the Sentinel extension.
 
-> :::image type="content" source="media/custom-graphs/image8.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    :::image type="content" source="media/custom-graphs/configure-graph-job.png" lightbox="media/custom-graphs/configure-graph-job.png" alt-text="A screenshot of the create graph job page":::
 
-This will initiate the graph building process in your tenant. You can now view the newly created graph and its latest status in the Sentinel extension.
+.
 
 ### Viewing and managing materialized graphs
 
-1.  In Microsoft Sentinel extension, select Graphs -\> Custom Graphs -\> and your materialized graph
+1.  In Microsoft Sentinel extension, select **Graphs** -\> **Custom Graphs** -\> and your materialized graph.
 
-:::image type="content" source="media/custom-graphs/image9.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+:::image type="content" source="media/custom-graphs/configure-graph-job.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
 
-2.  In **Graph details** -\> **Status** field shows the latest status of a graph. Once graph building process is complete, status will change to **‘Ready”**.
+1. From the list of graphs, select your materialized graph to view its details.
+1. Select the **Job Details** tab to view the status of the graph job, including last run time, next run time, and any errors encountered during the build process.
+1. Select **Run Now** to manually trigger a graph build outside of the scheduled times. The **Status** changes to **Queued**, then "In Progress" while the graph is being built.
 
-:::image type="content" source="media/custom-graphs/image10.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    :::image type="content" source="media/custom-graphs/graph-job-details.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
 
-3.  You can now query the graph in the Query Editor tab.
+1. When the graph build is complete, the **Status** updates to **Succeeded**. Select the **Graph Details** tab to view information about the graph. The **Status** shows **Ready** when the graph is successfully built and stored in your tenant.
 
-:::image type="content" source="media/custom-graphs/image11.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    :::image type="content" source="media/custom-graphs/graph-details.png" lightbox="media/custom-graphs/graph-details.png" alt-text="A screenshot of the graph details tab.":::
 
-You can learn more about GQL query language \<here\>
+1.  You can now query the graph in the query editor.  Select the **Graph Query** tab to open the graph query editor.
+1. Paste the following sample GQL query to retrieve all user nodes in the graph:
 
-For sample graph notebooks that demonstrate how to build graphs from Microsoft Sentinel data lake, see “Graph samples” \<link\>
+    ```gql
+    MATCH (u: user)-[s:sign_in]->(d: device) 
+    RETURN u,s,d LIMIT 10
+    ```
+:::image type="content" source="media/custom-graphs/graph-query.png" lightbox="media/custom-graphs/graph-query.png" alt-text="A screenshot of the graph query tab.":::
+
+For more information on GQL, see [GQL language guide](/fabric/graph/gql-language-guide).
 
 
 
 
 
-# Appendix:
+## Related articles
 
-## Graph samples (TBD)
-
-## Overview of Graph & Sentinel Graph (TBD)
+- [Microsoft Sentinel graph provider library reference](sentinel-custom-graph-provider-reference.md)
