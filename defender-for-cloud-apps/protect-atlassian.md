@@ -52,7 +52,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 For example, recommendations for Atlassian include: 
 
-- *Enable multi-factor authentication*
+- *Enable multifactor authentication*
 - *Enable session timeout for web users*
 - *Enhance password requirements*
 - *Atlassian mobile app security*
@@ -76,7 +76,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - You must be signed as an Organization admin to Atlassian.
 
 > [!NOTE]
-> Microsoft Defender for Cloud Apps monitors the Atlassian organization associated with the Atlassian Access plan. Monitoring does not extend to sub-organizations that may exist under the same Atlassian environment.
+> Microsoft Defender for Cloud Apps monitors the Atlassian organization associated with the Atlassian Access plan. Monitoring doesn't extend to sub-organizations that might exist under the same Atlassian environment.
 
 ### Configure Atlassian
 
@@ -113,7 +113,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 >
 > - The first connection can take up to four hours to get all users and their activities.
 > - The activities displayed are the activities that were generated from the moment the connector is connected.
-> - Activities from the "Atlassian Access" audit log are fetched by Defender for Cloud apps. Other activities aren't fetched currently. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
+> - Defender for Cloud Apps fetches activities from the Atlassian Access audit log. Other activities aren't fetched currently. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
 > - After the connector’s **Status** is marked as **Connected**, the connector is live and works.
 
 ### Revoke and renew API keys
@@ -121,8 +121,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. Microsoft recommends using short lived keys or tokens for connecting apps as a security best practice.
 1. We recommend refreshing the Atlassian API key every 6 months as a best practice. To refresh the key, revoke the existing API key and generate a new key.
 1. To revoke API key, navigate to **admin.atlassian.com** > **Settings** > **API keys**, determine the API key used for integration, and select **Revoke**.
-1. Recreate an API key in the Atlassian admin portal with the steps described above.
-1. Afterwards, go to the **App Connectors** page in the Microsoft Defender Portal and edit the connector.
+1. Recreate an API key in the Atlassian admin portal.
+1. Go to the **App Connectors** page in the Microsoft Defender Portal and edit the connector.
 
 1. Enter the new generated new **API key** and select **Connect Atlassian**.
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
@@ -147,7 +147,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     - System activities are shown with the **Atlassian Internal System** account name.
 
-## Related topics
+## Related articles
 
 - [Secure collaboration with external users by enforcing real-time session controls](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls)
 
