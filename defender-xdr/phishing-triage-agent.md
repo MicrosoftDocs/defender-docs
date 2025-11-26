@@ -228,7 +228,7 @@ To review the agent’s findings, follow these steps:
 
 1. To view the steps the agent took prior to reaching its classification, select **View agent activity** in the Phishing Triage Agent card. This provides complete transparency into the data analyzed and the logic behind the agent’s final classification.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="/defender/media/agents-in-defender/phishing-triage/view-agent-activity.png"::: 
 
 ## Teach the agent your organization’s context through feedback
 

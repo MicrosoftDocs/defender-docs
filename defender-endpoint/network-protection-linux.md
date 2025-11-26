@@ -4,8 +4,8 @@ description: Protect your network by preventing Linux users from accessing known
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.subservice: linux
 ms.topic: overview
