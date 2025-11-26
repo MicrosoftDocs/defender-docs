@@ -60,20 +60,20 @@ Your device data is updated.
 1. In the downloaded file, enter the following details for each device:
 
     - **IP Address**. Enter the device's IP address.
-    - **Device OS**. Enter one of the device operating systems (OSs) listed on the **Devices type** sheet.
+    - **Device OS**. Enter one of the device operating systems (OSs) listed in the [supported values for the Device OS table](#supported-values-for-device-os).
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
 The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
 
 
-**Device example**
+### Device example
 
 |**IP Address**  |**Device OS**|**Last Update**  |
 |---------|---------|---------|
 |192.168.19.200   |  Windows 7       |  2017-11-01  |
 
 
-Supported values for **Device OS**:
+### Supported values for **Device OS**:
 
 | Windows | Windows Server | Other OS |
 |---|---|---|
