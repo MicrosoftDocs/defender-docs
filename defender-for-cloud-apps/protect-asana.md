@@ -44,7 +44,8 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
 **Prerequisites:**
 
-- An Asana enterprise account is a prerequisite for this connection. You must be signed-in as an admin to Asana. 
+- An Asana enterprise account. 
+- You must be signed-in as an admin to Asana. 
 
 **To connect Asana**:
 
