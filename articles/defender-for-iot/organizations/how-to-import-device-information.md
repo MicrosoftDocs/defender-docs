@@ -63,13 +63,15 @@ Your device data is updated.
     - **Device OS**. Enter one of the device operating systems (OSs) listed on the **Devices type** sheet.
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
-The table below shows a sample device entry and the supported operating system values you can use in the Device OS column.
+The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
 
-| Device example |  |
-|---|---|
-| **IP Address** | 192.168.19.200 |
-| **Device OS** | Windows 7 |
-| **Last Update** | 2017-11-01 |
+
+**Device example**
+
+|**IP Address**  |Device OS |Last Update  |
+|---------|---------|---------|
+|192.168.19.200   |  Windows 7       |  01-11-2017      |
+
 
 Supported values for **Device OS**:
 
@@ -94,14 +96,14 @@ Supported values for **Device OS**:
 | Windows Vista |  |  |
 | Windows Vista 32 |  |  |
 | Windows Vista 64 |  |  |
-| Windows XP |  |  |
+| Windows XP |
 
 
-1. Sign into your OT sensor and select **System settings > Import settings > Device information**.
+3. Sign into your OT sensor and select **System settings > Import settings > Device information**.
 
-1. In the **Device information** pane, select **+ Import file** and then select your edited .CSV file.
+4. In the **Device information** pane, select **+ Import file** and then select your edited .CSV file.
 
-1. Select **Close** to save your changes.
+5. Select **Close** to save your changes.
 
 **To import device authorization status**:
 
@@ -122,4 +124,5 @@ Supported values for **Device OS**:
 
 ## Next steps
 
-For more information, see [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md) and [Manage your OT device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md).
+- [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md) 
+- [Manage your OT device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md).
