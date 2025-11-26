@@ -82,11 +82,9 @@ Create custom functions that use tabular parameters. With tabular parameters, yo
 To create tabular parameters for your custom function:
 1. Select **Add parameter** and then choose **table** as its **Type**.
 1. Enter a **Name** and **Default value** for the table.
-
-      ![Table parameter in custom functions](/defender/media/advanced-hunting-custom-fxns/save-as-function-table.png)
 1. Map each column that your query references to the table. Select **Add column**, then enter the column's properties.
 
-      ![Add column details in table parameter](/defender/media/advanced-hunting-custom-fxns/save-as-function-column.png)
+![Table parameter in custom functions](/defender/media/advanced-hunting-custom-fxns/save-as-function-table.png)
 
 > [!NOTE]
 >- You can save a function with more than one table. 
