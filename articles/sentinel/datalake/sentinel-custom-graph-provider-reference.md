@@ -22,7 +22,7 @@ Custom graphs are created using Jupyter notebooks in the Microsoft Sentinel Visu
 To initialize this library, connect to the correct graph pool and import the **GraphBuilder** subpackage as follows:
 
 ```python
-from sentinel_graph.builders.graph_builder import GraphBuilder
+from sentinel_graph.builders.graph_builder import GraphSpecBuilder
 ```
 
 ### Methods
@@ -31,16 +31,22 @@ THe following table provides a summary of the supported methods. We plan to intr
 
 | Method name | Purpose |
 |----|----|
-| initialize_graph (start) | Creates a new graph instance |
-| add_node / add_edge | Define new node/edge types |
-| build_graph_with_data | Builds graph with mapping specifications |
-| add_node / add_edge | Define new node/edge types |
-| query | Query graph |
-| show | Displays graph query results in tabular or graphical formats |
-| to_graphframe | Convert results to Graph Frames object |
-| to_dataframe |  |
-| get | Get the handle of custom graph |
-| ?? |  |
+| builder.start | Creates a new graph instance |
+| builder.add_node / add_edge | Define new node/edge types |
+| builder.build_graph_with_data | Builds graph with mapping specifications |
+| graph.query | Query graph |
+| graph.show | Displays graph query results in tabular or graphical formats |
+| graph.to_graphframe | Convert results to Graph Frames object |
+| builder.get | Get the handle of custom graph |
+| builder.add_node/add_edge.from dataframe | Create graph ontology from a Dataframe |
+| builder.from_table	| Create graph ontology from a Lake table| 
+| graph.node/ graph.edge | Get node/edge definitions |
+| graph.get_schema  | Get graph schema |
+| with_time_range   | Specify time range for data extraction |
+| with_columns      | Specify columns to include in nodes/edges |
+| node.with_label   | Specify node label |
+| edge.edge_label   | Specify edge label |
+
 
 
 #### start() 
@@ -106,6 +112,8 @@ my_graph = (GraphSpecBuilder.start()
 
 #### build_graph
 
+Build the graph with data from a graph specification.
+
 ```python
 
 build_result = my_graph.build_graph_with_data()
@@ -135,7 +143,7 @@ gf = my_graph.to_graphframe()
 ```
 
 ```python
-# Sample function: In-degree [How many edges coming INTO each node]
+
 gf = my_graph.to_graphframe()
 in_degrees = gf.inDegrees
 
@@ -143,6 +151,8 @@ in_degrees.orderBy("inDegree", ascending=False).show(10)
 ```
 
 #### show()
+
+Display graph query results in tabular or graphical formats.
 
 ```python
 
@@ -368,10 +378,4 @@ Request Body Format *
 
 - **200 OK** - Query executed successfully 
 
- 
 
-# Appendix:
-
-## Graph samples (TBD)
-
-## Overview of Graph & Sentinel Graph (TBD)
