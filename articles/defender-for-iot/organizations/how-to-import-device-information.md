@@ -36,7 +36,7 @@ Before performing the procedures in this article, you must have:
 1. Open the downloaded .CSV file for editing and modify *only* the following data, as needed:
 
     - **Name**. Maximum length: 30 characters
-    - **Device OS**. Access the Defender for IoT [device settings file](https://download.microsoft.com/download/8/2/3/823c55c4-7659-4236-bfda-cc2427be2cee/CSS/devices_info_2.2.8%20and%20up.xlsx) and use one of the options listed in the **Devices type** tab
+    - **Device OS**. Use one of the options listed in the [supported values for the Device OS table](#supported-values-for-device-os)
     - **Group**. Maximum length: 30 characters
     - **Purdue layer**. Enter one of the following: **Enterprise**, **Supervisory**, or **Process Control**
 
@@ -65,6 +65,11 @@ Your device data is updated.
 
 The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
 
+#[Device example](#tab/device-example)    
+<content>
+# [Investigation graph](#tab/cases)
+<content>
+---
 
 ### Device example
 
