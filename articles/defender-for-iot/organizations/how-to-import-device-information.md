@@ -68,9 +68,9 @@ The tables below shows a sample device entry and the supported operating system 
 
 **Device example**
 
-|**IP Address**  |Device OS |Last Update  |
+|**IP Address**  |**Device OS**|**Last Update**  |
 |---------|---------|---------|
-|192.168.19.200   |  Windows 7       |  01-11-2017      |
+|192.168.19.200   |  Windows 7       |  2017-11-01  |
 
 
 Supported values for **Device OS**:
@@ -96,7 +96,7 @@ Supported values for **Device OS**:
 | Windows Vista |  |  |
 | Windows Vista 32 |  |  |
 | Windows Vista 64 |  |  |
-| Windows XP |
+| Windows XP |  |  |
 
 
 3. Sign into your OT sensor and select **System settings > Import settings > Device information**.
