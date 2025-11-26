@@ -29,12 +29,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## November 2025
 
-| Date | Category | Update |
-|------|---------|-------|
-| November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
-| November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
-| November 25, 2025 | Preview | [Discover Azure AI Foundry agents in your environment (Preview)](#discover-azure-ai-foundry-agents-in-your-environment-preview) |
-| November 25, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
+|November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
+|November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
+|November 25, 2025 | Preview | [Discover Azure AI Foundry agents in your environment (Preview)](#discover-azure-ai-foundry-agents-in-your-environment-preview) |
+|November 25, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
 |November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
 |November 24,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
 |November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
@@ -46,6 +47,32 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+### Kubernetes gated deployment (GA)
+
+November 26, 2025
+
+Kubernetes gated deployment in Microsoft Defender for Containers is now generally available. This feature enforces container image security at deployment time by using Kubernetes admission control.
+
+**Key capabilities**
+
+- **Admission control for Kubernetes clusters**: Blocks or audits deployments of container images that violate organizational security rules.
+- **Security rules framework**: Define custom rules for AKS, EKS, and GKE clusters based on vulnerability assessment results.
+- **Audit and Deny modes**: 
+  - *Audit*: Generates recommendations when deployments violate security rules
+  - *Deny*: Prevents noncompliant images from being deployed
+- **Multicloud support**: Works with Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry.
+- **Integrated monitoring**: View admission monitoring and violation details in the Defender for Cloud portal.
+
+**GA improvements**
+
+- Streamlined setup experience in the Defender for Cloud portal
+- Default audit rule enabled for faster onboarding
+- Scoped exemption management for specific namespaces or workloads
+- Performance optimizations with reduced latency for admission decisions
+- Enhanced documentation for troubleshooting and developer experience
+
+Learn more about [gated deployment for Kubernetes container images](runtime-gated-overview.md), [how to enable gated deployment](enablement-guide-runtime-gated.md), and [gated deployment FAQ](faq-runtime-gated.md).
 
 ### Defender for Cloud integration into the Defender portal (preview)
 
@@ -338,7 +365,7 @@ The permission is narrowly scoped, aligning with least privilege principles to s
 
 - **Via GitHub settings:** In your GitHub organization, go to **Settings > GitHub Apps**, select the **Microsoft Security DevOps** application, and approve the pending permission request.
 
-- **Via email (for organization owners):** GitHub sends an automated email to **organization owners** with the subject **"Review permissions request for Microsoft Security DevOps"**. Click **Review permission request** to approve or reject the change.
+- **Via email (for organization owners):** GitHub sends an automated email to **organization owners** with the subject **"Review permissions request for Microsoft Security DevOps"**. Select **Review permission request** to approve or reject the change.
 
 > **Didn’t get the email?**
 > Only GitHub **organization owners** receive this notification. If you're not an owner, please contact one in your organization to approve the request via GitHub settings.
