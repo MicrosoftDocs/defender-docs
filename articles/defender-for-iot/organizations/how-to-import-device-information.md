@@ -69,7 +69,7 @@ The tables below shows a sample device entry and the supported operating system 
 
 |**IP Address**  |**Device OS**|**Last Update**  |
 |---------|---------|---------|
-|192.168.19.200   |  Windows 7       |  2017-11-01  |
+|192.168.19.200   |  Windows 7  |  2017-11-01  |
 
 
 ### Supported values for Device OS
