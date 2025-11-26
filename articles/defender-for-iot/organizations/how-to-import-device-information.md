@@ -65,18 +65,6 @@ Your device data is updated.
 
 The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
 
-# [Device example ](#tab/device-example)
-|Example |
-|**IP Address**  |**Device OS**|**Last Update**  |
-|---------|---------|---------|
-|192.168.19.200   |  Windows 7  |  2017-11-01  |
-
-# [Supported values for Device OS](#tab/supported-values-for-device-os)
-|Device OS|
-| Windows | Windows Server | Other OS |
-| Windows | Windows Server | macOS |
----
-
 
 ### Device example
 
