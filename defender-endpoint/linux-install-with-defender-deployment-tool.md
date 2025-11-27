@@ -225,7 +225,7 @@ To preview new features and provide early feedback, it's recommended that you co
 1. Install Microsoft Defender for Endpoint on Linux using the production channel.
 
    ```bash
-   sudo ./defender_deployment_tool.sh --install --channel prod
+   sudo ./defender_deployment_tool.sh --channel prod
    ```
 
 ## Related content
