@@ -1,7 +1,7 @@
 ---
 title: Protect your NetDocuments environment | Microsoft Defender for Cloud Apps
 description: This article provides information about the benefits of connecting your NetDocuments app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 12/12/2023
+ms.date: 11/27/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
