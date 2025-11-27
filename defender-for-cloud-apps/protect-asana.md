@@ -64,7 +64,6 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 1. Defender for Cloud Apps will start to fetch Asana audit logs once the connection is successfully established.
 
 
-
 ## Related content
 
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](/defender-cloud-apps/troubleshooting-api-connectors-using-error-messages).
