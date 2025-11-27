@@ -1,6 +1,6 @@
 ---
-title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
-description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
+title: Configure advandced settings | Microsoft Defender for Identity
+description: This article describes how to configure advanced settings of deploying a Microsoft Defender for Identity sensor.
 ms.date: 11/05/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
@@ -10,7 +10,7 @@ ms.reviewer: rlitinsky
 
 ## Automatic Windows event auditing (Preview)
 
-Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. 
+Defender for Identity uses specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. 
 This article describes how to configure the advanced audit policy settings to avoid gaps in the event logs and incomplete Defender for Identity coverage.
 
 Defender for Identity generates health issues when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
@@ -31,7 +31,7 @@ When automatic windows event auditing is enabled, it:
 - Configures local Windows audit policy using Windows Local Security Authority (LSA) audit policy APIs.
 - Sends health alerts about the configuration state.
 
-If you do not select automatic Windows auditing configuration, you must [manually configure Windows event auditing](configure-windows-event-collection.md) in the Defender portal or using PowerShell.
+If you don't select automatic Windows auditing configuration, you must [manually configure Windows event auditing](configure-windows-event-collection.md) in the Defender portal or using PowerShell.
 
 ### Enable Automatic Windows event auditing
  
@@ -41,7 +41,7 @@ To turn on automatic windows auditing:
 1. Turn on **Automatic Windows auditing configuration**.​
 
 ## Disable Automatic Windows event auditing 
-When you turn off automatic windows auditing, Defender for Identity stops checking and applying the required audit settings on your domain controllers. Any configurations that were applied by automatic windows auditing remain unchanged.
+When you turn off automatic windows auditing, Defender for Identity stops checking and applying the required audit settings on your domain controllers. Any configurations applied by automatic windows auditing remain unchanged.
 
 To turn off automatic windows auditing:
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**. 
