@@ -3,7 +3,7 @@ title: Alerts for Windows machines
 description: This article lists the security alerts visible for Windows machines in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 10/29/2025
+ms.date: 10/21/2024
 ai-usage: ai-assisted
 ---
 
@@ -695,6 +695,14 @@ This resembles a burst attack, in which an attacker performs numerous authentica
 ### **Suspicious process name detected [seen multiple times]**
 
 **Description**: Analysis of host data on %{Compromised Host} detected a process whose name is suspicious, for example corresponding to a known attacker tool or named in a way that is suggestive of attacker tools that try to hide in plain sight. This process could be legitimate activity, or an indication that one of your machines has been compromised. This behavior was seen [x] times today on the following machines: [Machine names]
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: -
+
+**Severity**: Medium
+
+### **Suspicious process name detected**
+
+**Description**: Analysis of host data on %{Compromised Host} detected a process whose name is suspicious, for example corresponding to a known attacker tool or named in a way that is suggestive of attacker tools that try to hide in plain sight. This process could be legitimate activity, or an indication that one of your machines has been compromised.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: -
 

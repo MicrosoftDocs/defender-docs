@@ -8,25 +8,30 @@ ms.date: 10/19/2025
 
 # What is Cloud Security Posture Management (CSPM)
 
-One of the main features of Microsoft Defender for Cloud is cloud security posture management (CSPM). CSPM provides detailed visibility into the security state of your assets and workloads and offers hardening guidance to help you improve your security posture.
+Cloud Security Posture Management (CSPM) is a core feature of Microsoft Defender for Cloud. CSPM provides continuous visibility into the security state of your cloud assets and workloads, offering actionable guidance to improve your security posture across Azure, AWS, and GCP.
 
 Defender for Cloud continually assesses your cloud infrastructure against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations to help you identify and reduce cloud misconfigurations and security risks.
 
 By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) standard is enabled and provides recommendations to secure your multicloud environment. The [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations helps you monitor cloud compliance. A higher score indicates a lower identified risk level.
 
-## CSPM plans
+## CSPM Plans
 
-Defender for Cloud offers two CSPM plan options:
+Defender for Cloud offers two CSPM plans:
 
-- **Foundational CSPM** - A free plan enabled by default for subscriptions and accounts that onboard to Defender for Cloud.
-
-- **Defender CSPM** - A paid plan that provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
+- **Foundational CSPM** (free): Enabled by default for all onboarded subscriptions and accounts.
+- **Defender CSPM** (paid): Provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
 
 ## Plan availability
 
-Learn more about [Defender CSPM pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+Defender CSPM is available across multiple deployment models and cloud environments:
 
-The following table summarizes each plan and their cloud availability.
+- **Commercial clouds**: Available in all Azure commercial regions
+- **Government clouds**: Available in Azure Government and Azure Government Secret
+- **Multi-cloud**: Support for Azure, AWS, and GCP environments
+- **Hybrid**: On-premises resources through Azure Arc
+- **DevOps**: GitHub and Azure DevOps integration
+
+For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-defender-for-cloud.md).
 
 | Feature | Foundational CSPM | Defender CSPM | Cloud availability |
 |--|--|--|--|
@@ -60,53 +65,51 @@ The following table summarizes each plan and their cloud availability.
 | [API security posture management](api-security-posture-overview.md)| - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Azure Kubernetes Service security dashboard (Preview)](cluster-security-dashboard.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 
-
 <sup><a name="footnote1"></a>1</sup>: GCP sensitive data discovery [only supports Cloud Storage](concept-data-security-posture-prepare.md#whats-supported). 
 <sup><a name="footnote1"></a>2</sup>: DevOps security capabilities, such as code-to-cloud contextualization powering security explorer, attack paths, and pull request annotations for Infrastructure-as-Code security findings, are only available when you enable the paid Defender CSPM plan. Learn more about DevOps security [support and prerequisites](devops-support.md).
 
+For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-defender-for-cloud.md).
+
+## Plan Pricing
+
+- See [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and use the [cost calculator](cost-calculator.md) to estimate costs.
+- Advanced DevOps security posture features (pull request annotations, code-to-cloud mapping, attack path analysis, security explorer) require the paid Defender CSPM plan. The free plan provides basic Azure DevOps recommendations. See [DevOps security features](devops-support.md#azure-devops).
+- Defender CSPM billing is based on specific resources. See the pricing page for details on billable resources for Azure, AWS, and GCP.
+
 ## Integrations
 
-Microsoft Defender for Cloud now has built-in integrations to help you use partner systems to seamlessly manage and track tickets, events, and customer interactions. You can push recommendations to a partner ticketing tool and assign responsibility to a team for remediation.
+Defender for Cloud supports integrations with partner systems for incident management and ticketing. Currently, ServiceNow integration is available (preview). For setup, see [Integrate ServiceNow with Microsoft Defender for Cloud](integration-servicenow.md).
 
-Integration streamlines your incident response process and improves your ability to manage security incidents. You can track, prioritize, and resolve security incidents more effectively.
-
-You can choose which ticketing system to integrate. For preview, only ServiceNow integration is supported. For more information about configuring ServiceNow integration, see [Integrate ServiceNow with Microsoft Defender for Cloud (preview)](integration-servicenow.md).
-
-## Plan pricing
-
-- Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender CSPM pricing. You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+## Supported Clouds and Resources
 
 - DevOps security posture capabilities such as pull request annotations, code to cloud mapping, attack path analysis, and cloud security explorer are only available through the paid Defender CSPM plan. The free foundational security posture management plan provides Azure DevOps recommendations. Learn more about the features provided by [Azure DevOps security features](devops-support.md#azure-devops).
 
-- For subscriptions that use both Defender CSPM and Defender for Containers plans, free vulnerability assessment is calculated based on free image scans provided via the Defender for Containers plan, as summarized [in the Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+### Azure
 
 - Defender CSPM protects all multicloud workloads, but billing applies only on specific resources. The following tables list the billable resources when you enable Defender CSPM on Azure subscriptions, AWS accounts, or GCP projects.
 
-    | Azure Service | Resource types | Exclusions |
-    |---|---|---|
-    | Compute | Microsoft.Compute/virtualMachines<br/>Microsoft.Compute/virtualMachineScaleSets/virtualMachines<br/>Microsoft.ClassicCompute/virtualMachines | - Deallocated VMs<br/>- Databricks VMs |
-    | Storage | Microsoft.Storage/storageAccounts | Storage accounts without blob containers or file shares |
-    | DBs | Microsoft.Sql/servers<br/>Microsoft.DBforPostgreSQL/flexibleServers <br/>Microsoft.DBforMySQL/flexibleServers <br/>Microsoft.DBforPostgreSQL/servers<br/>Microsoft.DBforMySQL/servers<br/>Microsoft.Sql/managedInstances<br/>Microsoft.DBforMariaDB/servers<br/>Microsoft.Synapse/workspaces | --- |
+### AWS
 
+| Service | Resource Types | Exclusions |
+|---|---|---|
+| Compute | EC2 instances | Deallocated VMs |
+| Storage | S3 buckets | – |
+| Databases | RDS instances | – |
 
-    | AWS Service | Resource types | Exclusions |
-    |---|---|---|
-    | Compute | EC2 instances |  Deallocated VMs |
-    | Storage | S3 Buckets | --- |
-    | DBs | RDS instances | --- |
+### GCP
 
-    | GCP Service | Resource types | Exclusions |
-    |---|---|---|
-    | Compute |  1. Google Compute instances<br/> 2. Google Instance Group | Instances with nonrunning states |
-    | Storage | Storage buckets | - Buckets from classes: 'nearline', 'coldline', 'archive'<br/>- Buckets from regions other than: europe-west1, us-east1, us-west1, us-central1, us-east4, asia-south1, northamerica-northeast1 |
-    | DBs | Cloud SQL Instances | --- |
+| Service | Resource Types | Exclusions |
+|---|---|---|
+| Compute | Compute instances, Instance Groups | Nonrunning instances |
+| Storage | Storage buckets | Nearline/coldline/archive classes, unsupported regions |
+| Databases | Cloud SQL instances | – |
 
-## Azure cloud support
+## Azure Cloud Support
 
-For commercial and national cloud coverage, review the [features supported in Azure cloud environments](support-matrix-cloud-environment.md).
+For commercial and national cloud coverage, see [Azure cloud environment support matrix](support-matrix-defender-for-cloud.md).
 
-## Next steps
+## Next Steps
 
-- Watch [Predict future security incidents! Cloud Security Posture Management with Microsoft Defender](https://www.youtube.com/watch?v=jF3NSR_OepI).
-- Learn about [security standards and recommendations](security-policy-concept.md).
-- Learn about [secure score](secure-score-security-controls.md).
+- Watch [Cloud Security Posture Management with Microsoft Defender](https://www.youtube.com/watch?v=jF3NSR_OepI)
+- Learn about [security standards and recommendations](security-policy-concept.md)
+- Learn about [secure score](secure-score-security-controls.md)

@@ -4,7 +4,7 @@ description: This article helps you understand which Defender for Servers plan t
 ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
-ms.date: 11/02/2025
+ms.date: 02/23/2025
 #customer intent: As a reader, I want to understand which Defender for Servers plan I want to deploy.
 ---
 
@@ -34,6 +34,7 @@ Defender for Servers offers two paid plans:
   - [OS updates assessment](enable-periodic-system-updates.md) with Azure Updates integrated into Defender for Servers.
   - [File integrity monitoring](file-integrity-monitoring-overview.md) to examine files and registries for changes that might indicate an attack.
   - [Just-in-time machine access](just-in-time-access-overview.md) to lock down machine ports and reduce attack surfaces.
+  - [Network map](protect-network-resources.md) to get a geographical view of network recommendations.
 
 For a full list, review [Defender for Servers plan features](defender-for-servers-overview.md#plan-protection-features).
 

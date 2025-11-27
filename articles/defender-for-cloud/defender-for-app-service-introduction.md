@@ -32,7 +32,7 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
   - App Service Environment v2
   - App Service Environment v3
     
-- Check out Defender for App Service's [cloud availability](support-matrix-cloud-environment.md).
+- Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
 
 ## What are the benefits of Microsoft Defender for App Service?
 
