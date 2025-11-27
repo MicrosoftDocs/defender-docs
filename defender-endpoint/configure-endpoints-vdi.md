@@ -94,6 +94,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
    > [!NOTE]
    > When using the 'Single entry for each device' onboarding method for non-persistent VDI environments, ensure that the Onboard-NonPersistentMachine.ps1 script is executed only after the virtual machine has received its final hostname and completed its final reboot.<br>
    > For example, if your VDI provisioning process includes multiple reboots or configuration stages after the VM is cloned from a master image, delay the script execution until the last reboot is complete and final machine name is assigned.<br> Running the script too early may result in duplicate device entries or inconsistent onboarding to Microsoft Defender for Endpoint.
+   > The script `Onboard-NonPersistentMachine.ps1` is not signed, and administrators will need to use an approved method to run this in a restricted environment if PowerShell's execution policy is restricted. Example "-ExecutionPolicy Bypass". 
 
 5. Test your solution by following these steps:
 
