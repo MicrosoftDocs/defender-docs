@@ -22,7 +22,6 @@ Jump to the configuration you need:
 ### Core settings
 
 - [Enable or disable plan components](#configure-plan-components)
-- [Monitoring configuration](#monitoring-configuration-health)
 
 > [!TIP]
 > Most organizations start with [configuring plan components](#configure-plan-components). If you need to add or remove components after initial deployment, see [Add or remove components](#add-or-remove-components).
