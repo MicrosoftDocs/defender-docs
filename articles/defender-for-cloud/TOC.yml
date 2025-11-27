@@ -246,8 +246,6 @@
                       href: defender-for-containers-arc-enable-programmatically.md
                     - name: Verify deployment
                       href: defender-for-containers-arc-verify.md
-                    - name: Configure
-                      href: defender-for-containers-arc-configure.md
                     - name: Remove
                       href: defender-for-containers-arc-remove.md
                 - name: Configure sensor deployed with Helm

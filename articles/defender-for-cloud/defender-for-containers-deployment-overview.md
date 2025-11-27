@@ -2,7 +2,7 @@
 title: Defender for Containers Deployment Overview
 description: Learn about the different deployment options for enabling Microsoft Defender for Containers across various Kubernetes environments.
 ms.topic: overview
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 

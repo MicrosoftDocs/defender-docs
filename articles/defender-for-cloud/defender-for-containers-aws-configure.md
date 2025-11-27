@@ -2,7 +2,7 @@
 title: Configure Defender for Containers on AWS (EKS)
 description: Learn how to configure and customize Microsoft Defender for Containers settings for your Amazon EKS clusters, including how to add or remove components after initial deployment.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -171,42 +171,14 @@ You can enable or disable specific Defender for Containers components:
 1. Select **Settings** for the Containers plan.
 
 1. Turn components on or off:
-   - **Agentless discovery for Kubernetes**
-   - **Agentless container vulnerability assessment**
-   - **Defender DaemonSet**
+   - **Defender sensor**
    - **Azure Policy for Kubernetes**
+   - **K8s API access**
+   - **Registry access**
 
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
 1. Select **Continue** and **Save**.
-
-## Monitoring configuration health
-
-### Health metrics
-
-Monitor configuration effectiveness:
-
-```kusto
-// Check configuration changes
-AzureActivity
-| where OperationNameValue contains "Microsoft.Security"
-| where ActivityStatusValue == "Succeeded"
-| project TimeGenerated, OperationNameValue, Caller, Properties
-| order by TimeGenerated desc
-```
-
-### Configuration drift detection
-
-Set up alerts for configuration changes:
-
-```azurecli
-az monitor activity-log alert create \
-    --name "DefenderConfigChange" \
-    --resource-group <resource-group> \
-    --condition category=Administrative and \
-                operationName=Microsoft.Security/pricings/write \
-    --action-group <action-group-id>
-```
 
 ## Troubleshooting component issues
 

@@ -2,7 +2,7 @@
 title: Enable Defender for Containers on Arc-enabled Kubernetes via portal
 description: Learn how to enable Microsoft Defender for Containers on your Arc-enabled Kubernetes clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -225,6 +225,5 @@ For Arc-enabled clusters, configure registry scanning:
 ## Next steps
 
 - [Verify deployment](defender-for-containers-arc-verify.md)
-- [Configure advanced settings](defender-for-containers-arc-configure.md)
 - [Deploy programmatically](defender-for-containers-arc-enable-programmatically.md)
 - [Configure sensor deployed with Helm](deploy-helm.md)

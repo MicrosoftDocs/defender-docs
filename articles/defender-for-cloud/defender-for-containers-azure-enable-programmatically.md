@@ -2,7 +2,7 @@
 title: Deploy Defender for Containers on Azure (AKS) programmatically
 description: Learn how to programmatically deploy Microsoft Defender for Containers components on AKS clusters using Azure CLI, REST API, and automation tools.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -627,40 +627,6 @@ To deploy by using recommendations programmatically:
 az security assessment remediate \
     --assessment-name "56a83a6e-c417-42ec-b567-1e6fcb3d09a9" \
     --resource-id "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.ContainerService/managedClusters/{clusterName}"
-```
-
-## Configure custom workspace
-
-You can assign a custom workspace for the Defender sensor through Azure Policy instead of using the default workspace:
-
-### [Azure CLI](#tab/azure-cli-workspace)
-
-```azurecli
-# Create policy assignment for custom workspace
-az policy assignment create \
-    --name "DefenderWorkspaceAssignment" \
-    --scope "/subscriptions/{subscriptionId}" \
-    --policy "/providers/Microsoft.Authorization/policyDefinitions/64def556-fbad-4622-930e-72d1d5589bf5" \
-    --params '{
-        "workspaceResourceId": {
-            "value": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}"
-        }
-    }'
-```
-
-### [PowerShell](#tab/powershell-workspace)
-
-```powershell
-# Assign custom workspace via policy
-$workspace = Get-AzOperationalInsightsWorkspace `
-    -ResourceGroupName "myRG" `
-    -Name "myWorkspace"
-
-New-AzPolicyAssignment `
-    -Name "DefenderWorkspaceAssignment" `
-    -Scope "/subscriptions/$((Get-AzContext).Subscription.Id)" `
-    -PolicyDefinition (Get-AzPolicyDefinition -Id "/providers/Microsoft.Authorization/policyDefinitions/64def556-fbad-4622-930e-72d1d5589bf5") `
-    -PolicyParameterObject @{"workspaceResourceId"=$workspace.ResourceId}
 ```
 
 ## Next steps

@@ -2,7 +2,7 @@
 title: Verify Defender for Containers deployment on GCP (GKE)
 description: Learn how to verify that Microsoft Defender for Containers is properly deployed on your GKE clusters.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 

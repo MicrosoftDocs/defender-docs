@@ -2,7 +2,7 @@
 title: Defender for Containers on Arc-enabled Kubernetes - Overview
 description: Learn about Microsoft Defender for Containers capabilities for Arc-enabled Kubernetes clusters.
 ms.topic: overview
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -31,12 +31,13 @@ This architecture ensures that sensitive workload data remains in your environme
 
 ## Key capabilities
 
-Defender for Containers delivers comprehensive security across two critical areas:
+Defender for Containers delivers comprehensive security across three critical areas:
 
 | Capability | Description | Key Features |
 |------------|-------------|--------------|
 | **Runtime threat protection** | Monitors clusters in real-time for malicious activities and anomalies | • Distribution-agnostic monitoring<br>• Behavioral analytics<br>• Kubernetes-aware detection<br>• Custom alert rules |
 | **Security posture management** | Evaluates configurations against security benchmarks and compliance standards | • CIS Kubernetes Benchmark<br>• Custom policy support<br>• Multicluster governance<br>• Automated remediation |
+| **Gated deployment** | Prevents vulnerable or misconfigured workloads from reaching production | • Block deployments based on vulnerability severity<br>• Enforce security baselines for configurations<br>• Integration with Azure Policy and admission controllers<br>• DevOps pipeline gates |
 
 ## Architecture overview
 

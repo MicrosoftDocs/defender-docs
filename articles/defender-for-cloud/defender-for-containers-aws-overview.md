@@ -1,8 +1,8 @@
 ---
 title: Defender for Containers on AWS (EKS) - Overview
 description: Learn about Microsoft Defender for Containers capabilities, architecture, and deployment options for Amazon Elastic Kubernetes Service (EKS).
-ms.topic: conceptual
-ms.date: 06/04/2025
+ms.topic: overview
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 

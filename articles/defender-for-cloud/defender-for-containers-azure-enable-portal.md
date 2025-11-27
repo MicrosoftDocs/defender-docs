@@ -2,7 +2,7 @@
 title: Enable Defender for Containers on AKS via portal
 description: Learn how to enable Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -89,6 +89,8 @@ After you save your changes, Defender for Cloud automatically starts deploying t
 1. Select each recommendation to see the affected resources and remediation progress.
 
 ## Deploy the Defender sensor
+
+[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
 
 When you enable the Defender sensor setting, it automatically deploys to all AKS clusters in your subscription. If you disable automatic deployment, you can manually deploy the sensor by using the following methods:
 

@@ -2,7 +2,7 @@
 title: Remove Defender for Containers from GCP (GKE)
 description: Learn how to disable and remove Microsoft Defender for Containers from your GKE clusters.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 

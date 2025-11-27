@@ -2,7 +2,7 @@
 title: Enable Defender for Containers on AWS (EKS) via portal
 description: Learn how to enable Microsoft Defender for Containers on your Amazon EKS clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -176,6 +176,8 @@ You need to install and run Azure Arc-enabled Kubernetes, the Defender sensor, a
     :::image type="content" source="media/defender-for-kubernetes-intro/install-eks-components-recommendation.png" alt-text="Screenshot explaining how to remediate the EKS clusters recommendation by installing the required Defender for Containers components." lightbox="media/defender-for-kubernetes-intro/install-eks-components-recommendation.png":::
 
 ### Deploy the Defender sensor
+
+[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
 
 **Required if you enabled**: Auto provision Defender's sensor for Azure Arc
 

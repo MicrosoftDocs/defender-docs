@@ -2,7 +2,7 @@
 title: Defender for Containers on Azure (AKS) - Overview
 description: Learn about Microsoft Defender for Containers capabilities for Azure Kubernetes Service (AKS) clusters.
 ms.topic: overview
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 

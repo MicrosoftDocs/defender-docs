@@ -2,7 +2,7 @@
 title: Deploy Defender for Containers Components on GCP (GKE) Programmatically
 description: Learn how to deploy Microsoft Defender for Containers components on GKE clusters using CLI, REST API, and automation tools.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 

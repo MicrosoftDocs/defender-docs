@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers, a cloud-native solut
 ms.topic: overview
 author: dcurwin
 ms.author: dacurwin
-ms.date: 05/13/2025
+ms.date: 11/27/2025
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
@@ -20,7 +20,7 @@ Defender for Containers helps you with five core domains of container security:
 
 - [**Run-time threat protection**](#run-time-protection-for-kubernetes-nodes-and-clusters) - a rich threat detection suite for Kubernetes clusters, nodes, and workloads, powered by Microsoft leading threat intelligence, provides mapping to MITRE ATT&CK framework for easy understanding of risk and relevant context, and automated response. Security operators can also investigate and respond to threats to Kubernetes services through the [Microsoft Defender XDR portal](/defender-xdr/investigate-respond-container-threats).
 
-- **Containers software supply chain protection** - strengthens your software supply chain by embedding security checks from build to deployment. It scans container images for vulnerabilities, signs vulnerability artifacts with Microsoft certificates to ensure integrity and authenticity, and associates these artifacts with images in the registry for validation. You can enforce organizational security policies by creating rules that block risky images and assess deployments against these rules, helping prevent the introduction of vulnerabilities into your containerized environments.
+- **Containers software supply chain protection** - strengthens your software supply chain by embedding security checks from build to deployment. It scans container images for vulnerabilities, signs vulnerability artifacts with Microsoft certificates to ensure integrity and authenticity, and associates these artifacts with images in the registry for validation. You can enforce organizational security policies by creating rules that block risky images and assess deployments against these rules, helping prevent the introduction of vulnerabilities into your containerized environments. For more information, see [Gated deployment for Kubernetes container images](runtime-gated-overview.md).
 
 - **Deployment & monitoring** - Monitors your Kubernetes clusters for missing sensors and provides frictionless at-scale deployment for sensor-based capabilities, support for standard Kubernetes monitoring tools, and management of unmonitored resources.
 

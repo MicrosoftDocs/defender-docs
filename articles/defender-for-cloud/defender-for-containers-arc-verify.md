@@ -2,7 +2,7 @@
 title: Verify Defender for Containers Deployment on Arc-Enabled Kubernetes
 description: Learn how to verify that Microsoft Defender for Containers is properly deployed on your Arc-enabled Kubernetes clusters.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -19,8 +19,6 @@ Complete these verification steps in order:
 - [ ] [Sensor pods are running](#verify-sensor-deployment)
 - [ ] [Recommendations appearing](#verify-security-insights)
 
-> [!TIP]
-> If any step fails, see [Configure advanced settings](defender-for-containers-arc-configure.md) for troubleshooting guidance.
 
 ## Verify Arc connection
 
@@ -182,5 +180,4 @@ After deployment completes:
 
 ## Related content
 
-- [Configure advanced settings](defender-for-containers-arc-configure.md)
 - [Remove Defender for Containers](defender-for-containers-arc-remove.md)

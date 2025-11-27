@@ -2,7 +2,7 @@
 title: Configure Defender for Containers on Azure (AKS)
 description: Learn how to configure advanced settings for Microsoft Defender for Containers on AKS clusters, including how to add or remove components after initial deployment.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -21,7 +21,7 @@ Jump to the configuration you need:
 
 ### Core settings
 
-- [Configure runtime protection](#configure-runtime-protection)
+- [Enable or disable plan components](#configure-plan-components)
 
 ### Optimization
 
@@ -29,7 +29,7 @@ Jump to the configuration you need:
 - [Performance optimization](#performance-optimization)
 
 > [!TIP]
-> Most organizations start with [configuring runtime protection](#configure-runtime-protection). If you need to add or remove components after initial deployment, see [Add or remove components](#add-or-remove-components).
+> Most organizations start with [configuring plan components](#configure-plan-components). If you need to add or remove components after initial deployment, see [Add or remove components](#add-or-remove-components).
 
 ## Add or remove components
 
@@ -148,55 +148,25 @@ To deploy policy assessment only to specific clusters:
 
 1. Create an assignment scoped to specific resource groups or clusters.
 
-## Configure runtime protection
-
-### Enable or disable plan components
+## Configure plan components
 
 You can enable or disable specific Defender for Containers components:
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select your subscription.
+1. Select your Azure subscription.
 
 1. Select **Settings** for the Containers plan.
 
 1. Turn components on or off:
    - **Agentless discovery for Kubernetes**
    - **Agentless container vulnerability assessment**
-   - **Runtime threat protection**
+   - **Defender DaemonSet**
+   - **Azure Policy for Kubernetes**
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png" alt-text="Screenshot that shows turning on components for AKS." lightbox="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png":::
 
 1. Select **Continue** and **Save**.
-
-### Exclude namespaces from monitoring
-
-To exclude specific namespaces from runtime monitoring:
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-config
-  namespace: kube-system
-data:
-  excludedNamespaces: |
-    - kube-system
-    - kube-public
-    - azure-arc
-```
-
-Apply the configuration:
-
-```bash
-kubectl apply -f defender-config.yaml
-```
-
-### Adjust threat detection sensitivity
-
-Configure detection sensitivity through Azure Policy:
-
-1. Go to **Azure Policy** > **Definitions**.
-1. Search for "Configure Defender for Containers".
-1. Create an assignment with your preferred settings.
 
 ## Configure compliance scanning
 

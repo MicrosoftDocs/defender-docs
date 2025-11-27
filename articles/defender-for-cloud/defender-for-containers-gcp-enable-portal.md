@@ -2,7 +2,7 @@
 title: Enable Defender for Containers on GCP (GKE) via portal
 description: Learn how to enable Microsoft Defender for Containers on your GKE clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
-ms.date: 06/04/2025
+ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
@@ -139,6 +139,8 @@ After creating the connector:
    ```
 
 ### Deploy the Defender sensor
+
+[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
 
 After connecting your GKE clusters to Azure Arc:
 
