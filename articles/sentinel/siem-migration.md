@@ -100,13 +100,13 @@ After exporting the rules, use the feature flag URL to sign in to [https://secur
 
 1. Select the rule. This action opens the rules wizard, where you can view the rules template details.
 
-  At the bottom of the wizard, select **More actions** > **Compare with origin**.
+    At the bottom of the wizard, select **More actions** > **Compare with origin**.
 
-   :::image type="content" source="./media/siem-migration/more-actions.png" alt-text="Screenshot of the More actions button in the rules wizard.":::
+    :::image type="content" source="./media/siem-migration/more-actions.png" alt-text="Screenshot of the More actions button in the rules wizard.":::
 
-   The wizard shows the Splunk SPL rule and you can compare it with the Microsoft Sentinel KQL.
+    The wizard shows the Splunk SPL rule and you can compare it with the Microsoft Sentinel KQL.
 
-   :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
+    :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
 
 If the matched Microsoft Sentinel rule is correct for your use case, proceed to create the rule.
 
