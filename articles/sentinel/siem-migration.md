@@ -96,9 +96,9 @@ After obtaining the rules export, use the feature flag URL provided to login int
 
     :::image type="content" source="./media/siem-migration/recommendation-card.png" alt-text="A screenshot of a recommendation card.":::
 
-    The tool matches the Splunk or QRadar rules to out-of-box Microsoft Sentinel data connectors and out-of-box Microsoft Sentinel detection rules as shown in the next screenshots
+    The tool matches the Splunk or QRadar rules to out-of-box Microsoft Sentinel data connectors and out-of-box Microsoft Sentinel detection rules as shown in the next screenshots:
 
-:::image type="content" source="./media/siem-migration/image9.png" alt-text="":::
+:::image type="content" source="./media/siem-migration/connectors.png" alt-text="":::
 
 :::image type="content" source="./media/siem-migration/image10.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
 
