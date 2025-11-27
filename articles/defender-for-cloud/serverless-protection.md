@@ -1,8 +1,8 @@
 ---
 title: What is Serverless protection
 description: Learn about Serverless protection in Microsoft Defender for Cloud and how it helps secure your serverless resources.
-ms.topic: concept-article
-ms.date: 11/25/2025
+ms.topic: overview
+ms.date: 11/27/2025
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
 ---
 
@@ -14,7 +14,9 @@ Serverless protection automatically discovers and inventories all Web Apps, Azur
 
 ## Serverless protection requirements
 
-Serverless protection is available as part of the Defender Cloud Security Posture Management (CSPM) plan. To enable serverless protection, you must [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription, and then [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
+Serverless protection is available as part of the [Defender Cloud Security Posture Management (CSPM) plan](concept-cloud-security-posture-management.md#cspm-plans). 
+
+To enable serverless protection, you must [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription, and [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) of the Defender CSPM plan.
 
 ## Benefits of Serverless protection
 
@@ -24,9 +26,12 @@ Defender for Cloud extends its CSPM capabilities to serverless workloads by prov
 
 - **Continuous posture assessment**: Evaluates configurations for risks like public endpoints, weak authentication, and missing encryption.
 
-- **Misconfiguration detection**: Identifies overly permissive roles, insecure environment variables, and network vulnerabilities.
-
-- **Vulnerability scanning**: Scans function packages for vulnerable dependencies and provides remediation guidance.
+- **Misconfiguration detection**: which includes:
+    - Access Control: Restrict network exposure, enforce authentication.
+    - Identity & Permissions: Prevent lateral movement, data exfiltration and privilege abuse.
+    - Code Integrity: Protect against unauthorized code changes [like AWS Lambda code signing].
+ 
+- **Vulnerability assessment**: Scans function packages for vulnerable dependencies and provides remediation guidance.
 
 - **Attack Path Analysis**: Maps potential attack chains involving serverless resources for proactive risk mitigation
 
@@ -34,7 +39,7 @@ Defender for Cloud uses these features to help organizations secure their server
 
 Beyond these core benefits, serverless security in Defender for Cloud aligns with the broader vision of CNAPP, which aims to secure applications throughout their lifecycle. 
 
-Defender for Cloud's integration with Microsoft Defender XDR further enhances visibility by correlating alerts across workloads, enabling faster incident response. To maximize protection, organizations should follow best practices such as enforcing HTTPS, applying least-privilege Identity and Access Management (IAM) roles, and regularly updating dependencies. These measures, combined with Defender for Cloud’s capabilities, create a robust security framework for serverless applications.
+Serverless protection is integrated into the Defender portal, providing visibility for misconfiguration detection, attack path analysis, and vulnerability assessment in a single interface.
 
 ## How Serverless protection works
 
