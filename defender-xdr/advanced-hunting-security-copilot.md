@@ -1,6 +1,6 @@
 ---
 title: Microsoft Security Copilot in advanced hunting
-description: Learn how Microsoft Security Copilot advanced hunting (NL2KQL) plugin can generate a KQL query for you.
+description: Learn about the different Microsoft Security Copilot advanced hunting capabilities in Microsoft Defender.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 10/17/2024
+ms.date: 12/01/2025
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
@@ -28,82 +28,152 @@ appliesto:
 
 # Microsoft Security Copilot in advanced hunting
 
+[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides two powerful capabilities in advanced hunting to enhance threat hunting and security analysis:
+
+- [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) - AI-powered conversational threat hunting experience
+- [Query assistant](advanced-hunting-security-copilot-query-assistant.md) - Natural language to KQL query generation
+
+These features empower security analysts of all skill levels to hunt threats faster, more accurately, and with greater confidence—without needing to write complex KQL queries.
+
+Users with access to Security Copilot have access to these capabilities in advanced hunting.
+
+## Choosing the right capability
+Both capabilities are designed to enhance your threat hunting experience, but they serve different purposes:
+Capability	Best for	Output	Experience
+Query assistant	Generating queries	KQL query with explanation	Query-focused
+Threat Hunting Agent	Complete investigations, complex multi-step hunting, exploratory analysis, getting direct answers	Conversational answers, KQL queries, results, insights, and recommendations	Investigation-focused
 
 
-## Security Copilot in advanced hunting
+## Switching between capabilities
+These two modes can not be active at the same time, only one mode needs to be selected.
 
-[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) comes with a query assistant capability in advanced hunting.
+The default mode is Threat Hunting Agent. To switch to Query assistant mode, you will need to click the 3 dots menu at the top right corner of the chat, and toggle off the Threat Hunting Agent button.  When switching between modes, the conversation would be reset. 
 
-Threat hunters or security analysts who aren't yet familiar with or have yet to learn Kusto query language (KQL) can make a request or ask a question in natural language (for instance, *Get all alerts involving user admin123*). Security Copilot then generates a KQL query that corresponds to the request using the advanced hunting data schema.
+## Scope of Security Copilot in advanced hunting
 
-This feature reduces the time  it takes to write a hunting query from scratch so that threat hunters and security analysts can focus on hunting and investigating threats.
+### Use case support
+The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering and aggregation), our supported, but we recommend on validating their accuracy. Help us improve by providing feedback with incorrect queries or responses exmamples. 
+Best practices
+1.	Be unambiguous: try to ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
+2.	Ask one question at a time: ask for a single task/type of information at a time when possible. Don't expect the model to perform several unrelated tasks at once. You can always ask follow up questions instead of combining unrelated asks into a single response.
+Be specific: if you know anything about the data you are looking for, help provide that information in your question.
 
-Users with access to Security Copilot have access to this capability in advanced hunting.
+### Supported tables
+The Threat Hunting Agent and Query assistant supports the following tables in advanced hunting:
 
-> [!NOTE]
-> The advanced hunting capability is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+**Microsoft Defender tables:**
+- AADSignInEventsBeta
+- AADSpnSignInEventsBeta
+- AlertEvidence
+- AlertInfo
+- BehaviorEntities
+- BehaviorInfo
+- CloudAppEvents
+- DeviceAlertEvents
+- DeviceBaselineComplianceAssessment
+- DeviceBaselineComplianceAssessmentKB
+- DeviceBaselineComplianceProfiles
+- DeviceEvents
+- DeviceFileCertificateInfo
+- DeviceFileEvents
+- DeviceImageLoadEvents
+- DeviceInfo
+- DeviceInternetFacing
+- DeviceLogonEvents
+- DeviceNetworkEvents
+- DeviceNetworkInfo
+- DeviceProcessEvents
+- DeviceRegistryEvents
+- DeviceScriptEvents
+- DeviceTvmInfoGathering
+- DeviceTvmInfoGatheringKB
+- DeviceTvmSecureConfigurationAssessment
+- DeviceTvmSecureConfigurationAssessmentKB
+- DeviceTvmSoftwareEvidenceBeta
+- DeviceTvmSoftwareInventory
+- DeviceTvmSoftwareVulnerabilities
+- DeviceTvmSoftwareVulnerabilitiesKB
+- DynamicEventCollection
+- EmailAttachmentInfo
+- EmailEvents
+- EmailPostDeliveryEvents
+- EmailUrlInfo
+- IdentityDirectoryEvents
+- IdentityInfo
+- IdentityLogonEvents
+- IdentityQueryEvents
+- UrlClickEvents
 
-## Try your first request
-
-1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
-
-    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png":::
-
-    You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
-1. In the Copilot prompt bar, ask any threat hunting query that you want to run and press :::image type="icon" source="./media/advanced-hunting-security-copilot/Send.png" border="false"::: or **Enter**.
-
-
-
-    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-query-big.png" alt-text="Screenshot that shows prompt bar in the Security Copilot for advanced hunting." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-query-big.png":::
-
-1. Copilot generates a KQL query from your text instruction or question. While Copilot is generating, you can cancel the query generation by selecting **Stop generating**.
-
-    ![Screenshot of Security Copilot in advanced hunting generating a response.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-generate.png)
-
-
-1. Review the generated query. To check how Copilot came up with the query, you can select **See the logic behind the query** below the query text to expand the explanation behind the query. Select it again to minimize.
-
-   ![Screenshot of Copilot button showing See the logic behind the query.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-see-logic.png)
-
-     You can then choose to run the query by selecting **Run query**.
-
-   ![Screenshot of Copilot button showing Run query option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-run-query.png)
-
-    The generated query then appears as the last query in the query editor and runs automatically.
-
-    If you need to make further tweaks, select **Add to editor**.
-
-   ![Screenshot of Security Copilot in advanced hunting showing the Add to editor option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-add-editor.png)
-
-    The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
-
-
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right**, **Needs improvement**, or **Inappropriate**.
-
-
-> [!TIP]
-> Providing feedback is an important way to let the Security Copilot team know how well the query assistant was able to help in generating a useful KQL query. Feel free to articulate what could make the query better, what adjustments you had to make before running the generated KQL query, or share the KQL query that you eventually used.
-
-
-> [!NOTE]
-> In the [unified Microsoft Defender portal](advanced-hunting-microsoft-defender.md), you can prompt Security Copilot to generate advanced hunting queries for both Defender XDR and Microsoft Sentinel tables. Not all Microsoft Sentinel tables are currently supported, but support for these tables can be expected in the future.
-
-## Query sessions
-
-You can start your first session anytime by asking a question in the Copilot side pane in advanced hunting. Your session contains the requests you made using your user account. Closing the side pane or refreshing the advanced hunting page doesn't discard the session. You can still access the generated queries should you need them.
-
-Select the chat bubble icon (**New chat**) to discard the current session.
-
-   ![Screenshot of Security Copilot in advanced hunting showing the new chat icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-clear-session.png)
-
-## Query explanations
-
-
-
-## Modify settings
-
-Select the ellipses in the Copilot side pane to choose whether or not to automatically add and run the generated query in advanced hunting.
-
-   ![Screenshot of Security Copilot in advanced hunting showing the settings ellipses icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-settings.png)
-
-Deselecting the **Run generated query automatically** setting gives you the option of running the generated query automatically (**Add and run**) or adding the generated query to the query editor for further modification (**Add to editor**).
+**Microsoft Sentinel tables:**
+-	AADManagedIdentitySignInLogs 
+-	AADNonInteractiveUserSignInLogs 
+-	AADProvisioningLogs 
+-	AADRiskyUsers 
+-	AADServicePrincipalSignInLogs 
+-	AADUserRiskEvents 
+-	ABAPAuditLog_CL 
+-	AlertEvidence 
+-	AlertInfo 
+-	Anomalies 
+-	AppDependencies 
+-	AppTraces 
+-	AuditLogs 
+-	AWSCloudTrail 
+-	AWSGuardDuty 
+-	AzureActivity 
+-	AzureDevOpsAuditing 
+-	AzureDiagnostics 
+-	AzureMetrics 
+-	BehaviorAnalytics 
+-	CloudAppEvents 
+-	CommonSecurityLog 
+-	ContainerInventory 
+-	ContainerLog 
+-	DeviceEvents 
+-	DeviceFileCertificateInfo 
+-	DeviceFileEvents 
+-	DeviceImageLoadEvents 
+-	DeviceInfo 
+-	DeviceLogonEvents 
+-	DeviceNetworkEvents 
+-	DeviceNetworkInfo 
+-	DeviceProcessEvents 
+-	DeviceRegistryEvents 
+-	DnsEvents 
+-	Dynamics365Activity 
+-	EmailPostDeliveryEvents 
+-	Event 
+-	Heartbeat 
+-	IdentityInfo 
+-	InsightsMetrics 
+-	IntuneAuditLogs 
+-	IntuneDevices 
+-	LAQueryLogs 
+-	MicrosoftAzureBastionAuditLogs 
+-	MicrosoftPurviewInformationProtection 
+-	OfficeActivity 
+-	Perf 
+-	PowerBIActivity 
+-	ProtectionStatus 
+-	SecurityAlert 
+-	SecurityEvent 
+-	SecurityIncident 
+-	SecurityRecommendation 
+-	SigninLogs 
+-	SqlAtpStatus 
+-	StorageBlobLogs 
+-	StorageFileLogs 
+-	Syslog 
+-	ThreatIntelligenceIndicator 
+-	Update 
+-	UrlClickEvents 
+-	Usage 
+-	UserAccessAnalytics 
+-	UserPeerAnalytics 
+-	VMBoundPort 
+-	VMComputer 
+-	VMConnection 
+-	VMProcess 
+-	WindowsEvent 
+-	W3CIISLog 
+-	WindowsFirewall
