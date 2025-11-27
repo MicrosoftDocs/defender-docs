@@ -101,6 +101,12 @@ kubectl logs -n kube-system -l app=microsoft-defender --tail=50
 kubectl get pods -n kube-system -l app=microsoft-defender -o wide
 ```
 
+## Test security detection
+
+To verify that your Defender for Containers deployment is working correctly, you can simulate security alerts. These simulations trigger real alerts without causing harm to your clusters.
+
+For detailed instructions on generating test alerts and simulating various threat scenarios, see [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
+
 ## Common verification issues
 
 ### Connector shows disconnected

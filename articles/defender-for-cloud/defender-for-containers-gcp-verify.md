@@ -179,6 +179,12 @@ gcloud container binauthz policy export | grep evaluationMode
 gcloud container binauthz attestors list
 ```
 
+## Test security detection
+
+To verify that your Defender for Containers deployment is working correctly, you can simulate security alerts. These simulations trigger real alerts without causing harm to your clusters.
+
+For detailed instructions on generating test alerts and simulating various threat scenarios, see [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
+
 ## Common verification issues
 
 ### Connector shows disconnected

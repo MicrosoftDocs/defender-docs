@@ -178,6 +178,12 @@ After deployment completes:
 
 1. Wait 15-30 minutes for your Arc-enabled clusters to appear.
 
+## Test security detection
+
+To verify that your Defender for Containers deployment is working correctly, you can simulate security alerts. These simulations trigger real alerts without causing harm to your clusters.
+
+For detailed instructions on generating test alerts and simulating various threat scenarios, see [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
+
 ## Related content
 
 - [Remove Defender for Containers](defender-for-containers-arc-remove.md)
