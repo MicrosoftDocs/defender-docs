@@ -1,7 +1,7 @@
 ---
 title: Protect your Zendesk | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Zendesk app to Defender for Cloud Apps using the API connector.
-ms.date: 12/06/2023
+ms.date: 11/27/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -124,17 +124,15 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. After the connector's **Status** is marked as **Connected**, the connector is live and works.
 
 >[!NOTE]
->Microsoft recommends using a short lived access token. Zendesk doesn't currently support short lived tokens. We recommend our customers refresh the token every 6 months as a security best practice. To refresh the access token, revoke the old token by following [Revoke Token](https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/#revoke-token). Once the old token is revoked, create a new secret and reconnect the Zendesk connector as documented above.
-
->[!NOTE]
->System activities are shown with the **Zendesk** account name.
+> - Microsoft recommends using a short lived access token. Zendesk doesn't currently support short lived tokens. We recommend refreshing your token every 6 months as a security best practice. To refresh and revoke an old access token see: [Revoke Token](https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/#revoke-token). After you revoke the old token, create a new secret and reconnect the Zendesk connector.
+>
+>- System activities are shown with the **Zendesk** account name.
 
 ## Rate limits
 
 The default rate limit is 200 requests per minute. To increase the rate limit, [open a support ticket](/defender-xdr/contact-defender-support).
 
->[!NOTE]
->The maximum rate limit for every subscription is described [here](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).
+For more information about the maximum rate limit for every subscription, see:[Zendesk Suite plan limits](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).
 
 ## Next steps
 
