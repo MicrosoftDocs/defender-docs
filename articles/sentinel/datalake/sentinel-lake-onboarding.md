@@ -73,8 +73,6 @@ This article describes how customers using Microsoft Defender, Data Security Inv
 
 ## Prerequisites
 
-[!INCLUDE [Customer-managed keys limitation](../includes/customer-managed-keys-limitation.md)]
-
 To onboard to the Microsoft Sentinel data lake and graph (preview) in Microsoft Defender XDR, Data Security Investigations, and Insider Risk Management, you must meet the following prerequisites:
 
 + Microsoft Defender (`security.microsoft.com`) and Microsoft Sentinel must be configured. A Microsoft Defender XDR license isn't required to use Microsoft Sentinel data lake with Microsoft Sentinel in the Microsoft Defender portal.
