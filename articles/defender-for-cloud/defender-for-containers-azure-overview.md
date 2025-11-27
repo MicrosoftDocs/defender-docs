@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 # Defender for Containers on Azure (AKS) - Overview
 
 Microsoft Defender for Containers provides enterprise-grade security for Azure Kubernetes Service (AKS) clusters. It offers comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all natively integrated with Azure services.
-    , 
+
 ## What is Defender for Containers?
 
 Defender for Containers is a cloud-native security solution that protects containerized applications throughout their lifecycle. For Azure environments, it provides seamless integration with ACR and AKS to deliver real-time protection, continuous security assessments, and actionable recommendations without requiring complex configurations or third-party tools.
