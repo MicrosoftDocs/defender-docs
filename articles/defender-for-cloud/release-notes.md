@@ -53,9 +53,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November 30, 2025
 
-Defender for Cloud now extends Cloud Security Posture Management (CSPM) capabilities to serverless workloads in Azure and AWS in preview as part of the Defender CSPM plan.
+Defender for Cloud has extended the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) in preview in both the Azure portal and the Defender portal.
 
-This release introduces automatic discovery and security posture assessment for Azure Functions, Azure Web Apps, and AWS Lambda functions. Security teams gain unified visibility into serverless resources through a centralized inventory, enabling them to identify misconfigurations, detect vulnerabilities, and assess insecure dependencies.
+The Defender for Cloud portal includes onboarding through the Defender CSPM plan, reviewing misconfiguration recommendations, and exploring workloads in Cloud Inventory. While the Defender portal includes Vulnerability Assessment.
+
+This release introduces automatic discovery and security posture assessment for:
+- Azure Functions
+- Azure Web Apps
+- AWS Lambda functions
+
+Security teams can view all serverless resources in a centralized inventory and identify misconfigurations, vulnerabilities, and insecure dependencies.
 
 Learn more about [Serverless protection](serverless-protection.md).
 
