@@ -8,7 +8,7 @@ ms.reviewer: AmitMishaeli
 
 # How Defender for Cloud Apps helps protect your NetDocuments environment
 
-As a productivity and collaboration cloud solution, NetDocuments holds sensitive information to your organization. Any abuse of NetDocuments by a malicious actor or any human error may expose your most critical assets and services to potential attacks.
+As a productivity and collaboration cloud solution, NetDocuments holds sensitive information to your organization. Any abuse of NetDocuments by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
 Connecting NetDocuments to Defender for Cloud Apps gives you improved insights into your NetDocuments activities and provides threat detection for anomalous behavior.
 
@@ -36,7 +36,7 @@ Connecting NetDocuments to Defender for Cloud Apps gives you improved insights i
 | Activity  policy                   | Built a customized policy by the NetDocuments [Audit Log](https://support.netdocuments.com/hc/en-us/articles/205220260-Consolidated-Activity-Log) activities |
 
 >[!NOTE]
->Login/Logouts activities are not supported by NetDocuments.
+>Login/Logouts activities aren't supported by NetDocuments.
 
 For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy)
 .
@@ -109,7 +109,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 ## Rate limits and limitations
 
 - The default rate limit is 100,000 requests per minute.
-- Login/Logouts activities are not supported by NetDocuments.
+- Login/Logouts activities aren't supported by NetDocuments.
 
 ## Next steps
 
