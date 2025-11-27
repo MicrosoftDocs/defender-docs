@@ -28,7 +28,6 @@ Use the tool for the following scenarios:
 To access the triage tool collection, you must have the following prerequisites:
 - Microsoft Defender XDR, Microsoft Defender for Endpoint, or Microsoft Sentinel onboarded to the Defender portal
 - Any of the supported AI-powered code editors and agent-building platforms:
-    - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
     - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the triage collection
