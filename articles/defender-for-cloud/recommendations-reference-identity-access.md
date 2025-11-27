@@ -77,6 +77,13 @@ These accounts can be targets for attackers looking to find ways to access your 
 
 **Severity**: Low
 
+### (Preview) Overly permissive permissions should not be configured on Function App, Web App or Logic App
+
+**Description**: Defender for Cloud identified that the Function App, Web App or Logic App Identity has overly permissive permissions. By restricting permissions, you can ensure that only necessary access is granted, reducing the risk of unauthorized access and potential security breaches.
+(No related policy)
+
+**Severity**: High
+
 ### External accounts with owner permissions should be removed from subscriptions
 
 **Description**: Accounts with owner permissions that have different domain names (external accounts), should be removed from your subscription. This prevents unmonitored access. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
