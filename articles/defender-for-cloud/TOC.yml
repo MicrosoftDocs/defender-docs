@@ -47,7 +47,7 @@
       expanded: false
       items:
         - name: Connect Azure subscriptions
-          displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+          displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, free, trial, free trial
           href: connect-azure-subscription.md
         - name: Connect AWS accounts
           displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
@@ -306,6 +306,9 @@
           - name: Resolve VPC Service Controls restriction issues
             displayName: connector, GCP, VPC, service, controls, restriction, issues
             href: resolve-vpc-service-controls-issues.md
+        - name: Check the status of your free trial
+          displayName: free, trial, status
+          href: free-trial.md
 
 - name: Posture management
   items:
