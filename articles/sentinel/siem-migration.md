@@ -98,17 +98,19 @@ After obtaining the rules export, use the feature flag URL provided to login int
 
     The tool matches the Splunk or QRadar rules to out-of-box Microsoft Sentinel data connectors and out-of-box Microsoft Sentinel detection rules as shown in the next screenshots:
 
-:::image type="content" source="./media/siem-migration/connectors.png" alt-text="":::
+    :::image type="content" source="./media/siem-migration/connectors.png" alt-text="Screenshot of Microsoft Sentinel data connectors matched to Splunk or QRadar rules.":::
 
-:::image type="content" source="./media/siem-migration/image10.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    :::image type="content" source="./media/siem-migration/detection.png" alt-text="Screenshot of Microsoft Sentinel detection rules matched to Splunk or QRadar rules.":::
 
-Select the rule, this opens the rules wizard, and you can view the rules template details.
+1. Select the rule. This opens the rules wizard, and you can view the rules template details.
 
-At the bottom of the wizard, click on ‘More Actions” and select “Compare with origin’. The wizard shows the Splunk SPL rule and you can compare it with the Microsoft Sentinel KQL
+  At the bottom of the wizard, select **More actions** > **Compare with origin**.
 
-:::image type="content" source="./media/siem-migration/image11.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+   :::image type="content" source="./media/siem-migration/more-actions.png" alt-text="Screenshot of the More actions button in the rules wizard.":::
 
-:::image type="content" source="./media/siem-migration/image12.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+   The wizard shows the Splunk SPL rule and you can compare it with the Microsoft Sentinel KQL.
+
+   :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
 
 If the matched Microsoft Sentinel rule is correct for your use case, proceed to create the rule.
 
