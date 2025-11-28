@@ -28,152 +28,39 @@ appliesto:
 
 # Microsoft Security Copilot in advanced hunting
 
-[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides two powerful capabilities in advanced hunting to enhance threat hunting and security analysis:
+[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides two powerful capabilities in advanced hunting to enhance threat hunting and security analysis. 
 
-- [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) - AI-powered conversational threat hunting experience
-- [Query assistant](advanced-hunting-security-copilot-query-assistant.md) - Natural language to KQL query generation
+The following table describes these capabilities, where they're best used, and the expected output:
 
-These features empower security analysts of all skill levels to hunt threats faster, more accurately, and with greater confidence—without needing to write complex KQL queries.
+| Capability | Description |Output |Experience |
+| ------------- | ------------- |------------- |------------- |
+| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) | AI-powered conversational threat hunting experience that's best used for complete investigations, complex multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
+| [Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
 
-Users with access to Security Copilot have access to these capabilities in advanced hunting.
+These features empower you to hunt threats faster, more accurately, and with greater confidence without needing to write complex KQL queries.
 
-## Choosing the right capability
-Both capabilities are designed to enhance your threat hunting experience, but they serve different purposes:
-Capability	Best for	Output	Experience
-Query assistant	Generating queries	KQL query with explanation	Query-focused
-Threat Hunting Agent	Complete investigations, complex multi-step hunting, exploratory analysis, getting direct answers	Conversational answers, KQL queries, results, insights, and recommendations	Investigation-focused
+## Get access
+Users with access to Security Copilot can use these capabilities in advanced hunting.
 
+You can only use one capability at a time. By default, the Threat Hunting Agent is the active mode. To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Agent** switch off.
 
-## Switching between capabilities
-These two modes can not be active at the same time, only one mode needs to be selected.
+>[!NOTE]
+> Switching between modes resets your conversation with Security Copilot. 
 
-The default mode is Threat Hunting Agent. To switch to Query assistant mode, you will need to click the 3 dots menu at the top right corner of the chat, and toggle off the Threat Hunting Agent button.  When switching between modes, the conversation would be reset. 
 
 ## Scope of Security Copilot in advanced hunting
 
 ### Use case support
-The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering and aggregation), our supported, but we recommend on validating their accuracy. Help us improve by providing feedback with incorrect queries or responses exmamples. 
-Best practices
-1.	Be unambiguous: try to ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
-2.	Ask one question at a time: ask for a single task/type of information at a time when possible. Don't expect the model to perform several unrelated tasks at once. You can always ask follow up questions instead of combining unrelated asks into a single response.
-Be specific: if you know anything about the data you are looking for, help provide that information in your question.
+The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering, and aggregation) are supported, but we recommend validating their accuracy. Help us improve by [providing feedback](security-copilot-in-microsoft-365-defender#provide-feedback) with incorrect queries or response examples. 
+
+### Best practices
+- **Be unambiguous.** Ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
+- **Ask one question at a time.** Ask for a single task or type of information at a time. Don't expect the AI model to perform several unrelated tasks at once. You can always ask follow-up questions instead of combining unrelated asks into a single prompt.
+- **Be specific.** If you know anything about the data you're looking for, provide that information in your question.
 
 ### Supported tables
-The Threat Hunting Agent and Query assistant supports the following tables in advanced hunting:
+The Threat Hunting Agent and Query assistant support the following tables in advanced hunting:
 
-**Microsoft Defender tables:**
-- AADSignInEventsBeta
-- AADSpnSignInEventsBeta
-- AlertEvidence
-- AlertInfo
-- BehaviorEntities
-- BehaviorInfo
-- CloudAppEvents
-- DeviceAlertEvents
-- DeviceBaselineComplianceAssessment
-- DeviceBaselineComplianceAssessmentKB
-- DeviceBaselineComplianceProfiles
-- DeviceEvents
-- DeviceFileCertificateInfo
-- DeviceFileEvents
-- DeviceImageLoadEvents
-- DeviceInfo
-- DeviceInternetFacing
-- DeviceLogonEvents
-- DeviceNetworkEvents
-- DeviceNetworkInfo
-- DeviceProcessEvents
-- DeviceRegistryEvents
-- DeviceScriptEvents
-- DeviceTvmInfoGathering
-- DeviceTvmInfoGatheringKB
-- DeviceTvmSecureConfigurationAssessment
-- DeviceTvmSecureConfigurationAssessmentKB
-- DeviceTvmSoftwareEvidenceBeta
-- DeviceTvmSoftwareInventory
-- DeviceTvmSoftwareVulnerabilities
-- DeviceTvmSoftwareVulnerabilitiesKB
-- DynamicEventCollection
-- EmailAttachmentInfo
-- EmailEvents
-- EmailPostDeliveryEvents
-- EmailUrlInfo
-- IdentityDirectoryEvents
-- IdentityInfo
-- IdentityLogonEvents
-- IdentityQueryEvents
-- UrlClickEvents
-
-**Microsoft Sentinel tables:**
--	AADManagedIdentitySignInLogs 
--	AADNonInteractiveUserSignInLogs 
--	AADProvisioningLogs 
--	AADRiskyUsers 
--	AADServicePrincipalSignInLogs 
--	AADUserRiskEvents 
--	ABAPAuditLog_CL 
--	AlertEvidence 
--	AlertInfo 
--	Anomalies 
--	AppDependencies 
--	AppTraces 
--	AuditLogs 
--	AWSCloudTrail 
--	AWSGuardDuty 
--	AzureActivity 
--	AzureDevOpsAuditing 
--	AzureDiagnostics 
--	AzureMetrics 
--	BehaviorAnalytics 
--	CloudAppEvents 
--	CommonSecurityLog 
--	ContainerInventory 
--	ContainerLog 
--	DeviceEvents 
--	DeviceFileCertificateInfo 
--	DeviceFileEvents 
--	DeviceImageLoadEvents 
--	DeviceInfo 
--	DeviceLogonEvents 
--	DeviceNetworkEvents 
--	DeviceNetworkInfo 
--	DeviceProcessEvents 
--	DeviceRegistryEvents 
--	DnsEvents 
--	Dynamics365Activity 
--	EmailPostDeliveryEvents 
--	Event 
--	Heartbeat 
--	IdentityInfo 
--	InsightsMetrics 
--	IntuneAuditLogs 
--	IntuneDevices 
--	LAQueryLogs 
--	MicrosoftAzureBastionAuditLogs 
--	MicrosoftPurviewInformationProtection 
--	OfficeActivity 
--	Perf 
--	PowerBIActivity 
--	ProtectionStatus 
--	SecurityAlert 
--	SecurityEvent 
--	SecurityIncident 
--	SecurityRecommendation 
--	SigninLogs 
--	SqlAtpStatus 
--	StorageBlobLogs 
--	StorageFileLogs 
--	Syslog 
--	ThreatIntelligenceIndicator 
--	Update 
--	UrlClickEvents 
--	Usage 
--	UserAccessAnalytics 
--	UserPeerAnalytics 
--	VMBoundPort 
--	VMComputer 
--	VMConnection 
--	VMProcess 
--	WindowsEvent 
--	W3CIISLog 
--	WindowsFirewall
+| Microsoft Defender tables | Microsoft Sentinel tables |
+| ------------- | ------------- |
+|<ul><li>AADSignInEventsBeta <li>AADSpnSignInEventsBeta <li>AlertEvidence <li>AlertInfo <li>BehaviorEntities <li>BehaviorInfo <li>CloudAppEvents <li>DeviceAlertEvents <li>DeviceBaselineComplianceAssessment <li>DeviceBaselineComplianceAssessmentKB <li>DeviceBaselineComplianceProfiles <li>DeviceEvents<li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceInternetFacing <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DeviceScriptEvents <li>DeviceTvmInfoGathering <li>DeviceTvmInfoGatheringKB <li>DeviceTvmSecureConfigurationAssessment <li>DeviceTvmSecureConfigurationAssessmentKB <li>DeviceTvmSoftwareEvidenceBeta <li>DeviceTvmSoftwareInventory <li>DeviceTvmSoftwareVulnerabilities <li>DeviceTvmSoftwareVulnerabilitiesKB <li>DynamicEventCollection <li>EmailAttachmentInfo <li>EmailEvents <li>EmailPostDeliveryEvents <li>EmailUrlInfo <li>IdentityDirectoryEvents <li>IdentityInfo <li>IdentityLogonEvents <li>IdentityQueryEvents <li>UrlClickEvents</ul> |<ul><li>AADManagedIdentitySignInLogs <li>AADNonInteractiveUserSignInLogs <li>AADProvisioningLogs <li>AADRiskyUsers <li>AADServicePrincipalSignInLogs <li>AADUserRiskEvents <li>ABAPAuditLog_CL <li>AlertEvidence <li>AlertInfo <li>Anomalies <li>AppDependencies <li>AppTraces <li>AuditLogs <li>AWSCloudTrail <li>AWSGuardDuty <li>AzureActivity <li>AzureDevOpsAuditing <li>AzureDiagnostics <li>AzureMetrics <li>BehaviorAnalytics <li>CloudAppEvents <li>CommonSecurityLog <li>ContainerInventory <li>ContainerLog <li>DeviceEvents <li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DnsEvents <li>Dynamics365Activity <li>EmailPostDeliveryEvents <li>Event <li>Heartbeat <li>IdentityInfo <li>InsightsMetrics <li>IntuneAuditLogs <li>IntuneDevices <li>LAQueryLogs <li>MicrosoftAzureBastionAuditLogs <li>MicrosoftPurviewInformationProtection <li>OfficeActivity <li>Perf <li>PowerBIActivity <li>ProtectionStatus <li>SecurityAlert <li>SecurityEvent <li>SecurityIncident <li>SecurityRecommendation <li>SigninLogs <li>SqlAtpStatus <li>StorageBlobLogs <li>StorageFileLogs <li>Syslog <li>ThreatIntelligenceIndicator <li>Update <li>UrlClickEvents <li>Usage <li>UserAccessAnalytics <li>UserPeerAnalytics <li>VMBoundPort <li>VMComputer <li>VMConnection <li>VMProcess <li>WindowsEvent <li>W3CIISLog <li>WindowsFirewall</ul>|
