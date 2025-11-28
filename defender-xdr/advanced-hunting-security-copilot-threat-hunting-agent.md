@@ -73,19 +73,33 @@ When the Threat Hunting Agent responds to your question, you get a comprehensive
 
 - **Direct conversational answer:** A natural language response to your question is displayed in the Copilot side pane.
 
+    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
+
 - **KQL query and results:** The underlying KQL query is generated and run automatically, with the results displayed in the advanced hunting results pane and seamlessly integrated into the experience.
-	 
+
+    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-query.png" alt-text="Screenshot of the advanced hunting page with query and results highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-query.png"::: 
+
 - **Explanation of how the query was built:** To check how Copilot came up with the query, select **See the logic behind the query** below the query.
-	 
+
+
+
 - **Observations:** Data highlights and a chart are displayed above the results, simplifying results analysis. You can change the chart type or field grouping.
- 
+
+    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-chart.png" alt-text="Screenshot of the advanced hunting page with Copilot-generated chart highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-chart.png":::
+
 - **Contextual insights:** Additional insights derived from various appropriate resources are displayed in the Copilot side pane as part of the natural language response.
-	 
+
+    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-insights.png" alt-text="Screenshot of the Copilot pane in advanced hunting with insights highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-insights.png":::
+
 - **Smart follow-up suggestions:** Recommended next questions or actions are displayed at the bottom of the Copilot side pane to help drive your hunt in the right direction:
 
     - **Follow-up question suggestions** appear and the bottom of the side pane, above the prompt. Select one of the questions to run it automatically. 
 
+      :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-suggestions.png" alt-text="Screenshot of the Copilot pane in advanced hunting with follow-up suggestions highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-suggestions.png":::
+
     - You might also get **Action suggestions** in case a remediation action is recommended and needed in the context of your investigation. When you select a suggestion, the **Take actions** wizard opens with the action type and targeted entities already filled out. Complete the wizard to apply the suggested action. 
+
+      :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-take-action.png" alt-text="Screenshot of the Copilot pane in advanced hunting with action suggestion highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-take-action.png":::
 
       >[!NOTE]
       >You can only select the action suggestions for the last response in the conversation. If you send another question, the previous action suggestions are disabled.  
@@ -105,6 +119,8 @@ To start a new hunting session, select the **+** button at the top of the Copilo
 
 ## Provide feedback
 You can provide feedback directly in the portal by selecting the feedback icon and choosing your response. Your feedback helps improve the Threat Hunting Agent's capabilities and accuracy.
+
+:::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-feedback.png" alt-text="Screenshot of the advanced hunting page with Copilot feedback buttons highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-feedback.png":::
 
 >[!TIP]
 > Providing detailed feedback about what worked well or what could be improved helps us continuously enhance the Threat Hunting Agent experience.

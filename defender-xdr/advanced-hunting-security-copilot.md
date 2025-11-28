@@ -51,7 +51,7 @@ You can only use one capability at a time. By default, the Threat Hunting Agent 
 ## Scope of Security Copilot in advanced hunting
 
 ### Use case support
-The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering, and aggregation) are supported, but we recommend validating their accuracy. Help us improve by [providing feedback](security-copilot-in-microsoft-365-defender#provide-feedback) with incorrect queries or response examples. 
+The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering, and aggregation) are supported, but we recommend validating their accuracy. Help us improve by [providing feedback](security-copilot-in-microsoft-365-defender.md#provide-feedback) with incorrect queries or response examples. 
 
 ### Best practices
 - **Be unambiguous.** Ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
