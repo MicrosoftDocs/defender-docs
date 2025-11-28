@@ -1,0 +1,299 @@
+﻿{
+    "MissingInCsv":  [
+                         "Class"
+                     ],
+    "TypeMismatches":  [
+                           {
+                               "Field":  "ActingProcessGuid",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "GUID",
+                               "CsvEffectiveType":  "GUID",
+                               "DocType":  "string",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ActingProcessSHA512",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "SHA521",
+                               "CsvEffectiveType":  "SHA521",
+                               "DocType":  "SHA512",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ActorUserIdType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Conditional",
+                               "ListOfValues":  "SID, UID, AADID... (10 total)"
+                           },
+                           {
+                               "Field":  "HashType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Conditional",
+                               "ListOfValues":  "MD5, SHA, SHA256... (5 total)"
+                           },
+                           {
+                               "Field":  "TargetProcessFileSize",
+                               "CsvType":  "long",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "long",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "TargetProcessGuid",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "GUID",
+                               "CsvEffectiveType":  "GUID",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "TargetUserIdType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Conditional",
+                               "ListOfValues":  "SID, UID, AADID... (10 total)"
+                           }
+                       ],
+    "ClassMismatches":  [
+                            {
+                                "Field":  "EventSchema",
+                                "CsvClass":  "Recommended",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "HashType",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "TargetUsername",
+                                "CsvClass":  "Mandatory",
+                                "DocClass":  "Mandatory for process create events.",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            }
+                        ],
+    "Schema":  "ProcessEvent",
+    "DocFile":  "normalization-schema-process-event.md",
+    "MissingInDoc":  [
+                         {
+                             "Field":  "ActingProcessFilename",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorScopeId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserAadId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserSid",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserUpn",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "RuleName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "RuleNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetProcessFilename",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetScope",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetScopeId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetUserAadId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetUserSessionGuid",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetUserSid",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetUserUpn",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatCategory",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatConfidence",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatField",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatFirstReportedTime",
+                             "Type":  "datetime",
+                             "EffectiveType":  "datetime",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatIsActive",
+                             "Type":  "bool",
+                             "EffectiveType":  "bool",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatLastReportedTime",
+                             "Type":  "datetime",
+                             "EffectiveType":  "datetime",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatOriginalConfidence",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatOriginalRiskLevel",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatRiskLevel",
+                             "Type":  "int",
+                             "EffectiveType":  "RiskLevel",
+                             "Class":  "Optional",
+                             "LogicalType":  "RiskLevel",
+                             "ListOfValues":  ""
+                         }
+                     ],
+    "CsvFieldCount":  149,
+    "DocFieldCount":  125
+}

@@ -1,0 +1,1014 @@
+﻿{
+    "MissingInCsv":  [
+                         "Class",
+                         "FileHashType"
+                     ],
+    "TypeMismatches":  [
+                           {
+                               "Field":  "EventResultDetails",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Recommended",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "EventSchema",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Mandatory",
+                               "ListOfValues":  "WebSession"
+                           },
+                           {
+                               "Field":  "FileContentType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "HttpRequestMethod",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "Enumerated",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "HttpRequestXff",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "IP Address",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "HttpUserAgent",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Useragent",
+                               "CsvEffectiveType":  "Useragent",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "Url",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "URL",
+                               "CsvEffectiveType":  "URL",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "UrlOriginal",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "URL",
+                               "CsvEffectiveType":  "URL",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           }
+                       ],
+    "ClassMismatches":  [
+                            {
+                                "Field":  "HttpRequestMethod",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "Url",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Mandatory",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "URL"
+                            }
+                        ],
+    "Schema":  "WebSession",
+    "DocFile":  "normalization-schema-web.md",
+    "MissingInDoc":  [
+                         {
+                             "Field":  "ASimMatchingIpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Recommended",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "SrcIpAddr, DstIpAddr, Both, -"
+                         },
+                         {
+                             "Field":  "Dst",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Mandatory",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstAppId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstAppName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstAppType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Process, Service, Resource, URL, SaaS application... (and 1 more)"
+                         },
+                         {
+                             "Field":  "DstBytes",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstDescription",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstDeviceType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Computer, Mobile Device, IOT Device, Other"
+                         },
+                         {
+                             "Field":  "DstDomain",
+                             "Type":  "string",
+                             "EffectiveType":  "Domain",
+                             "Class":  "Optional",
+                             "LogicalType":  "Domain",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstDomainType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Windows, FQDN, ResourceGroup"
+                         },
+                         {
+                             "Field":  "DstDvcId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstDvcIdType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "AzureResourceId, MDEid, MD4IoTid, VMConnectionId, AwsVpcId... (and 3 more)"
+                         },
+                         {
+                             "Field":  "DstFQDN",
+                             "Type":  "string",
+                             "EffectiveType":  "FQDN",
+                             "Class":  "Optional",
+                             "LogicalType":  "FQDN",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstGeoCity",
+                             "Type":  "string",
+                             "EffectiveType":  "City",
+                             "Class":  "Optional",
+                             "LogicalType":  "City",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstGeoCountry",
+                             "Type":  "string",
+                             "EffectiveType":  "Country",
+                             "Class":  "Optional",
+                             "LogicalType":  "Country",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstGeoLatitude",
+                             "Type":  "real",
+                             "EffectiveType":  "real",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstGeoLongitude",
+                             "Type":  "real",
+                             "EffectiveType":  "real",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstGeoRegion",
+                             "Type":  "string",
+                             "EffectiveType":  "Region",
+                             "Class":  "Optional",
+                             "LogicalType":  "Region",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstHostname",
+                             "Type":  "string",
+                             "EffectiveType":  "Hostname",
+                             "Class":  "Recommended",
+                             "LogicalType":  "Hostname",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstInterfaceGuid",
+                             "Type":  "string",
+                             "EffectiveType":  "GUID",
+                             "Class":  "Optional",
+                             "LogicalType":  "GUID",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstInterfaceName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstIpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "IP Address",
+                             "Class":  "Recommended",
+                             "LogicalType":  "IP Address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstMacAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "MAC address",
+                             "Class":  "Optional",
+                             "LogicalType":  "MAC address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstNatIpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "IP Address",
+                             "Class":  "Optional",
+                             "LogicalType":  "IP Address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstNatPortNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstOriginalUserType",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstPackets",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstPortNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstUserId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstUserIdType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "SID, UID, AADID, OktaId, AWSId... (and 5 more)"
+                         },
+                         {
+                             "Field":  "DstUsername",
+                             "Type":  "string",
+                             "EffectiveType":  "Username",
+                             "Class":  "Optional",
+                             "LogicalType":  "Username",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstUsernameType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "UPN, Windows, DN, Simple"
+                         },
+                         {
+                             "Field":  "DstUserType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Regular, Guest, Machine, Admin, System... (and 3 more)"
+                         },
+                         {
+                             "Field":  "DstVlanId",
+                             "Type":  "sting",
+                             "EffectiveType":  "sting",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstZone",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "Duration",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Alias",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DvcInboundInterface",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DvcOutboundInterface",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HashType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "MD5, SHA1, SHA256, SHA512"
+                         },
+                         {
+                             "Field":  "Hostname",
+                             "Type":  "string",
+                             "EffectiveType":  "Hostname",
+                             "Class":  "Alias",
+                             "LogicalType":  "Hostname",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpCookie",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpIsProxied",
+                             "Type":  "bool",
+                             "EffectiveType":  "bool",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpRequestBodyBytes",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpRequestCacheControl",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpRequestHeaderCount",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpResponseBodyBytes",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpResponseCacheControl",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpResponseExpires",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "HttpResponseHeaderCount",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "InnerVlanId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Alias",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "IpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "IP Address",
+                             "Class":  "Alias",
+                             "LogicalType":  "IP Address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkApplicationProtocol",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkBytes",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkConnectionHistory",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkDirection",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Inbound, Outbound, Listen, Unknown, Local... (and 2 more)"
+                         },
+                         {
+                             "Field":  "NetworkDuration",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkIcmpCode",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkIcmpType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkPackets",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkProtocol",
+                             "Type":  "string",
+                             "EffectiveType":  "NetworkProtocol",
+                             "Class":  "Optional",
+                             "LogicalType":  "NetworkProtocol",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "NetworkProtocolVersion",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "IPv4, IPv6"
+                         },
+                         {
+                             "Field":  "NetworkSessionId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "OuterVlanId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Alias",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "Rule",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Alias",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "RuleName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "RuleNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SessionId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Alias",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "Src",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Recommended",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcAppId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcAppName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcAppType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Process, Service, Resource, URL, SaaS application... (and 1 more)"
+                         },
+                         {
+                             "Field":  "SrcBytes",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcDescription",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcDeviceType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Computer, Mobile Device, IOT Device, Other"
+                         },
+                         {
+                             "Field":  "SrcDomain",
+                             "Type":  "string",
+                             "EffectiveType":  "Domain",
+                             "Class":  "Recommended",
+                             "LogicalType":  "Domain",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcDomainType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Windows, FQDN, ResourceGroup"
+                         },
+                         {
+                             "Field":  "SrcDvcId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcDvcIdType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "AzureResourceId, MDEid, MD4IoTid, VMConnectionId, AwsVpcId... (and 4 more)"
+                         },
+                         {
+                             "Field":  "SrcFQDN",
+                             "Type":  "string",
+                             "EffectiveType":  "FQDN",
+                             "Class":  "Optional",
+                             "LogicalType":  "FQDN",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcGeoCity",
+                             "Type":  "string",
+                             "EffectiveType":  "City",
+                             "Class":  "Optional",
+                             "LogicalType":  "City",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcGeoCountry",
+                             "Type":  "string",
+                             "EffectiveType":  "Country",
+                             "Class":  "Optional",
+                             "LogicalType":  "Country",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcGeoLatitude",
+                             "Type":  "real",
+                             "EffectiveType":  "real",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcGeoLongitude",
+                             "Type":  "real",
+                             "EffectiveType":  "real",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcGeoRegion",
+                             "Type":  "string",
+                             "EffectiveType":  "Region",
+                             "Class":  "Optional",
+                             "LogicalType":  "Region",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcHostname",
+                             "Type":  "string",
+                             "EffectiveType":  "Hostname",
+                             "Class":  "Recommended",
+                             "LogicalType":  "Hostname",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcInterfaceGuid",
+                             "Type":  "string",
+                             "EffectiveType":  "GUID",
+                             "Class":  "Optional",
+                             "LogicalType":  "GUID",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcInterfaceName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcIpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "IP Address",
+                             "Class":  "Recommended",
+                             "LogicalType":  "IP Address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcMacAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "MAC address",
+                             "Class":  "Optional",
+                             "LogicalType":  "MAC address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcNatIpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "IP Address",
+                             "Class":  "Optional",
+                             "LogicalType":  "IP Address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcNatPortNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcOriginalUserType",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcPackets",
+                             "Type":  "long",
+                             "EffectiveType":  "long",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcPortNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcUserId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcUserIdType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "SID, UID, AADID, OktaId, AWSId... (and 5 more)"
+                         },
+                         {
+                             "Field":  "SrcUsername",
+                             "Type":  "string",
+                             "EffectiveType":  "Username",
+                             "Class":  "Optional",
+                             "LogicalType":  "Username",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcUsernameType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Conditional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "UPN, Windows, DN, Simple"
+                         },
+                         {
+                             "Field":  "SrcUserType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Regular, Guest, Machine, Admin, System... (and 3 more)"
+                         },
+                         {
+                             "Field":  "SrcVlanId",
+                             "Type":  "sting",
+                             "EffectiveType":  "sting",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcZone",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatCategory",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatConfidence",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatField",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatFirstReportedTime",
+                             "Type":  "datetime",
+                             "EffectiveType":  "datetime",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatIpAddr",
+                             "Type":  "string",
+                             "EffectiveType":  "IP Address",
+                             "Class":  "Optional",
+                             "LogicalType":  "IP Address",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatIsActive",
+                             "Type":  "bool",
+                             "EffectiveType":  "bool",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatLastReportedTime",
+                             "Type":  "datetime",
+                             "EffectiveType":  "datetime",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatOriginalConfidence",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatOriginalRiskLevel",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatRiskLevel",
+                             "Type":  "int",
+                             "EffectiveType":  "RiskLevel",
+                             "Class":  "Optional",
+                             "LogicalType":  "RiskLevel",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "User",
+                             "Type":  "string",
+                             "EffectiveType":  "Username",
+                             "Class":  "Alias",
+                             "LogicalType":  "Username",
+                             "ListOfValues":  ""
+                         }
+                     ],
+    "CsvFieldCount":  177,
+    "DocFieldCount":  68
+}

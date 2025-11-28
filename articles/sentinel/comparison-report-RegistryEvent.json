@@ -1,0 +1,192 @@
+﻿{
+    "MissingInCsv":  [
+                         "ActorScope",
+                         "Class",
+                         "HKEY_LOCAL_MACHINE",
+                         "HKEY_USERS",
+                         "Reg_Binary",
+                         "Reg_DWord",
+                         "Reg_Expand_Sz",
+                         "Reg_Multi_Sz",
+                         "Reg_None",
+                         "Reg_QWord",
+                         "Reg_Sz"
+                     ],
+    "TypeMismatches":  [
+                           {
+                               "Field":  "ActingProcessGuid",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "GUID",
+                               "CsvEffectiveType":  "GUID",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ActorUserIdType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Conditional",
+                               "ListOfValues":  "SID, UID, AADID... (10 total)"
+                           }
+                       ],
+    "ClassMismatches":  [
+                            {
+                                "Field":  "ActorSessionId",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Conditional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "ActorUserIdType",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "EventSchema",
+                                "CsvClass":  "Mandatory",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            }
+                        ],
+    "Schema":  "RegistryEvent",
+    "DocFile":  "normalization-schema-registry-event.md",
+    "MissingInDoc":  [
+                         {
+                             "Field":  "DstDescription",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "Rule",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Alias",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "RuleName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "RuleNumber",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcDescription",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatCategory",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatConfidence",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatField",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatFirstReportedTime",
+                             "Type":  "datetime",
+                             "EffectiveType":  "datetime",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatIsActive",
+                             "Type":  "bool",
+                             "EffectiveType":  "bool",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatLastReportedTime",
+                             "Type":  "datetime",
+                             "EffectiveType":  "datetime",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatOriginalConfidence",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatOriginalRiskLevel",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ThreatRiskLevel",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         }
+                     ],
+    "CsvFieldCount":  69,
+    "DocFieldCount":  75
+}

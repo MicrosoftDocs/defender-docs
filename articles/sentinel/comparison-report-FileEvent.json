@@ -1,0 +1,282 @@
+﻿{
+    "MissingInCsv":  [
+                         "Class",
+                         "SrcSubscriptionId",
+                         "Unix"
+                     ],
+    "TypeMismatches":  [
+                           {
+                               "Field":  "ActingProcessGuid",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "GUID",
+                               "CsvEffectiveType":  "GUID",
+                               "DocType":  "string",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ActorUserIdType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Conditional",
+                               "ListOfValues":  "SID, UID, AADID... (11 total)"
+                           },
+                           {
+                               "Field":  "Dvc",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "-",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "EventSchema",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Mandatory",
+                               "ListOfValues":  "FileEvent"
+                           },
+                           {
+                               "Field":  "HashType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Conditional",
+                               "ListOfValues":  "MD5, SHA, SHA256... (5 total)"
+                           },
+                           {
+                               "Field":  "HttpUserAgent",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Agent",
+                               "CsvEffectiveType":  "Agent",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "NetworkApplicationProtocol",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Protocol",
+                               "CsvEffectiveType":  "Protocol",
+                               "DocType":  "String",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "SrcFileCreationTime",
+                               "CsvType":  "datetime",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "datetime",
+                               "DocType":  "Date/Time",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "SrcFileMimeType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "Enumerated",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "TargetFileCreationTime",
+                               "CsvType":  "datetime",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "datetime",
+                               "DocType":  "Date/Time",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "TargetFileMimeType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "Enumerated",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ThreatRiskLevel",
+                               "CsvType":  "int",
+                               "CsvLogicalType":  "RiskLevel",
+                               "CsvEffectiveType":  "RiskLevel",
+                               "DocType":  "Integer",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           }
+                       ],
+    "ClassMismatches":  [
+                            {
+                                "Field":  "Dvc",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "-",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "HashType",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "Rule",
+                                "CsvClass":  "Alias",
+                                "DocClass":  "Conditional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "Src",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Alias",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "IP Address"
+                            },
+                            {
+                                "Field":  "SrcDomain",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "SrcFileName",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "SrcHostname",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Hostname"
+                            },
+                            {
+                                "Field":  "TargetAppType",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "TargetFileName",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "TargetFilePath",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Mandatory",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "ThreatField",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            }
+                        ],
+    "Schema":  "FileEvent",
+    "DocFile":  "normalization-schema-file-event.md",
+    "MissingInDoc":  [
+                         {
+                             "Field":  "ActingAppId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActingAppName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActingAppType",
+                             "Type":  "string",
+                             "EffectiveType":  "Enumerated",
+                             "Class":  "Optional",
+                             "LogicalType":  "Enumerated",
+                             "ListOfValues":  "Process, Service, Resource, URL, SaaS application... (and 2 more)"
+                         },
+                         {
+                             "Field":  "ActorScopeId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUpn",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserAadId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserPuid",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserSid",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "DstDescription",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetOriginalAppType",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         }
+                     ],
+    "CsvFieldCount":  137,
+    "DocFieldCount":  130
+}

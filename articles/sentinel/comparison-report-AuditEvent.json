@@ -1,0 +1,276 @@
+﻿{
+    "MissingInCsv":  [
+                         "ActiveAppName",
+                         "Class",
+                         "SrcSubscriptionId"
+                     ],
+    "TypeMismatches":  [
+                           {
+                               "Field":  "ActorOriginalUserType",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "UserType",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "EventSchema",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "Enumerated",
+                               "CsvEffectiveType":  "Enumerated",
+                               "DocType":  "String",
+                               "CsvClass":  "Mandatory",
+                               "ListOfValues":  "AuditEvent"
+                           },
+                           {
+                               "Field":  "TargetHostname",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "Hostname",
+                               "CsvClass":  "Recommended",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "TargetUrl",
+                               "CsvType":  "string",
+                               "CsvLogicalType":  "",
+                               "CsvEffectiveType":  "string",
+                               "DocType":  "URL",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ThreatConfidence",
+                               "CsvType":  "int",
+                               "CsvLogicalType":  "ConfidenceLevel",
+                               "CsvEffectiveType":  "ConfidenceLevel",
+                               "DocType":  "Integer",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           },
+                           {
+                               "Field":  "ThreatRiskLevel",
+                               "CsvType":  "int",
+                               "CsvLogicalType":  "RiskLevel",
+                               "CsvEffectiveType":  "RiskLevel",
+                               "DocType":  "Integer",
+                               "CsvClass":  "Optional",
+                               "ListOfValues":  ""
+                           }
+                       ],
+    "ClassMismatches":  [
+                            {
+                                "Field":  "Dst",
+                                "CsvClass":  "Recommended",
+                                "DocClass":  "Alias",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "NewValue",
+                                "CsvClass":  "Recommended",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "ObjectType",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Mandatory",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "Src",
+                                "CsvClass":  "Recommended",
+                                "DocClass":  "Alias",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "SrcDomain",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "SrcHostname",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Hostname"
+                            },
+                            {
+                                "Field":  "TargetAppType",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "TargetDomain",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Recommended",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  ""
+                            },
+                            {
+                                "Field":  "TargetIpAddr",
+                                "CsvClass":  "Recommended",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "IP Address"
+                            },
+                            {
+                                "Field":  "ThreatField",
+                                "CsvClass":  "Conditional",
+                                "DocClass":  "Optional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            },
+                            {
+                                "Field":  "ValueType",
+                                "CsvClass":  "Optional",
+                                "DocClass":  "Conditional",
+                                "CsvType":  "string",
+                                "CsvLogicalType":  "Enumerated"
+                            }
+                        ],
+    "Schema":  "AuditEvent",
+    "DocFile":  "normalization-schema-audit.md",
+    "MissingInDoc":  [
+                         {
+                             "Field":  "ActingAppName",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActingOriginalAppType",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserAadId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ActorUserSid",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "ObjectId",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Recommended",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "OriginalObjectType",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcOriginalRiskLevel",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "SrcRiskLevel",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetGeoCity",
+                             "Type":  "string",
+                             "EffectiveType":  "City",
+                             "Class":  "Optional",
+                             "LogicalType":  "City",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetGeoCountry",
+                             "Type":  "string",
+                             "EffectiveType":  "Country",
+                             "Class":  "Optional",
+                             "LogicalType":  "Country",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetGeoLatitude",
+                             "Type":  "real",
+                             "EffectiveType":  "real",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetGeoLongitude",
+                             "Type":  "real",
+                             "EffectiveType":  "real",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetGeoRegion",
+                             "Type":  "string",
+                             "EffectiveType":  "Region",
+                             "Class":  "Optional",
+                             "LogicalType":  "Region",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetOriginalAppType",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetOriginalRiskLevel",
+                             "Type":  "string",
+                             "EffectiveType":  "string",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         },
+                         {
+                             "Field":  "TargetRiskLevel",
+                             "Type":  "int",
+                             "EffectiveType":  "int",
+                             "Class":  "Optional",
+                             "LogicalType":  "",
+                             "ListOfValues":  ""
+                         }
+                     ],
+    "CsvFieldCount":  132,
+    "DocFieldCount":  119
+}
