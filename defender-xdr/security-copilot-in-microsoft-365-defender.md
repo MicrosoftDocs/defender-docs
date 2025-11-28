@@ -106,7 +106,7 @@ Copilot in Defender helps security teams proactively hunt for threats in their n
 
 #### Hunt for threats from natural-language input
 
-The Threat Hunting Agent revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower analysts of all levels to hunt threats faster, more accurately, and with greater confidence. [Learn more](advanced-hunting-security-copilot-threat-hunting-agent.md)
+The Threat Hunting Agent revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence. [Learn more](advanced-hunting-security-copilot-threat-hunting-agent.md)
 
 #### Generate KQL queries from natural-language input
 

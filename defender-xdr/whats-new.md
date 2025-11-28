@@ -34,7 +34,7 @@ You can also get product updates and important notifications through the [messag
 
 
 ## December 2025
-- (Preview) Microsoft Security Copilot in Microsoft Defender now includes the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md), which lets you to hunt for and investigate threats using natural language. This agent delivers a complete, conversational threat hunting experience by not only generates queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions. 
+- (Preview) Microsoft Security Copilot in Microsoft Defender now lets you to hunt for threats using natural language with the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md). This agent delivers a complete, conversational threat hunting experience by not only generates queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions. 
 
 ## November 2025
 - Microsoft Sentinel customers using the Defender portal, or the Azure portal with the Microsoft Sentinel Defender XDR data connector, now also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation-state actors, major ransomware campaigns, and fraudulent operations. To view these alert types, you must have the **Security Administrator** or **Global Administrator** role. The **Service Source**, **Detection Source**, and **Product Name** values for these alerts are listed as *Microsoft Threat Intelligence*.   For more information, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).

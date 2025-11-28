@@ -88,7 +88,7 @@ When the Threat Hunting Agent responds to your question, you get a comprehensive
 
 - **Explanation of how the query was built:** To check how Copilot came up with the query, select **See the logic behind the query** below the query.
 
-
+    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-logic.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the logic behind the query highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-logic.png":::
 
 - **Observations:** Data highlights and a chart are displayed above the results, simplifying results analysis. You can change the chart type or field grouping.
 
