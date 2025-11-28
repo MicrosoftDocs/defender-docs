@@ -50,16 +50,21 @@ The Threat Hunting Agent goes beyond query generation by delivering a complete, 
 ## Try your first request
 To start using the Threat Hunting Agent, follow these steps:
 
-1.	Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
+>[!NOTE]
+> Make sure that the Threat Hunting Agent mode is active. [Learn more](advanced-hunting-security-copilot.md#get-access)
 
-1. Make sure that the Threat Hunting Agent mode is active. [Learn more](advanced-hunting-security-copilot.md#get-access)
+1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
-1.	Start your hunting session by:
-    - Typing a question in natural language in the prompt bar, for example:
+    :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png":::
+
+    You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
+
+1.	Start your hunting session by doing one of the following:
+    - Typing a question in natural language in the prompt bar and pressing :::image type="icon" source="./media/advanced-hunting-security-copilot/Send.png" border="false"::: or Enter.
     - Selecting a suggested prompt
     - Using the Threat Hunting Agent
 
-Sample questions you can ask the agent:
+**Sample questions you can ask the agent:**
   - Give me the list of users who sent more than 100 emails in the last 30 days.
   - Show me all failed sign-in attempts for admin accounts this week.
   - Which devices communicated with suspicious domains today?

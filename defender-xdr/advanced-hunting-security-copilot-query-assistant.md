@@ -40,6 +40,10 @@ Users with access to Security Copilot can use this feature in advanced hunting.
 > The advanced hunting capability is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
 ## Try your first request
+To start using the Query assistant, follow these steps:
+
+>[!NOTE]
+> Make sure that the Query assistant mode is active. [Learn more](advanced-hunting-security-copilot.md#get-access)
 
 1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
@@ -47,7 +51,6 @@ Users with access to Security Copilot can use this feature in advanced hunting.
 
     You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
 
-1. Make sure that the Query assistant mode is active. [Learn more](advanced-hunting-security-copilot.md#get-access)
  
 1. In the Copilot prompt bar, ask any threat hunting query that you want to run and press :::image type="icon" source="./media/advanced-hunting-security-copilot/Send.png" border="false"::: or **Enter**.
 
