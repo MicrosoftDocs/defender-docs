@@ -15,13 +15,16 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/17/2025
+ms.date: 11/25/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
+
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This page is updated frequently with the latest updates in Defender endpoint security for Android devices. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/android-rss`
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 

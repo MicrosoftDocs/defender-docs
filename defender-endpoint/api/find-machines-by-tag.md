@@ -2,8 +2,8 @@
 title: Find devices by tag API
 description: Find all devices that contain specific tag
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
