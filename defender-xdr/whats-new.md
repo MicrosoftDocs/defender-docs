@@ -32,6 +32,10 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+
+## December 2025
+- (Preview) Microsoft Security Copilot in Microsoft Defender now includes the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md), which lets you to hunt for and investigate threats using natural language. This agent delivers a complete, conversational threat hunting experience by not only generates queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions. 
+
 ## November 2025
 - Microsoft Sentinel customers using the Defender portal, or the Azure portal with the Microsoft Sentinel Defender XDR data connector, now also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation-state actors, major ransomware campaigns, and fraudulent operations. To view these alert types, you must have the **Security Administrator** or **Global Administrator** role. The **Service Source**, **Detection Source**, and **Product Name** values for these alerts are listed as *Microsoft Threat Intelligence*.   For more information, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).
 - (Preview) Defender XDR now includes the **predictive shielding** capability, which uses predictive analytics and real-time insights to dynamically infer risk, anticipate attacker progression, and harden your environment before threats materialize. [Learn more](shield-predict-threats.md)
@@ -42,14 +46,14 @@ You can also get product updates and important notifications through the [messag
 - (Preview) The overview section of [threat analytics](threat-analytics.md) now includes additional details about a threat, such as alias, origin, and related intelligence, providing you with more insights on what the threat is and how it might impact your organization.
 
 ## October 2025
-- [Microsoft Defender Experts for XDR reports](reports-xdr.md) now include a **Trends** tab that provides you with the monthly volume of investigated and resolved incidents for the last six months, visualized according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
+- [Microsoft Defender Experts for XDR reports](reports-xdr.md) now include a **Trends** tab that provides you with the monthly volume of investigated and resolved incidents for the last six months. The tab visualizes the data according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
 - [Microsoft Defender Experts for Hunting reports](defender-experts-report.md) now include an **Emerging threats** section that details the proactive, hypothesis-based hunts Defender Experts conducted in your environment. Each report also now includes investigation summaries for nearly every hunt that Defender Experts conduct in your environment, regardless of whether they identified a confirmed threat.
 
 ## September 2025
 
-- (Preview) You can now use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](./split-incidents-into-tasks.md)
-- (Preview) You can investigate incidents using [Blast radius analysis](investigate-incidents.md#blast-radius-analysis), which is an advanced graph visualization built on the Microsoft Sentinel data lake and graph infrastructure. This feature generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
-- (Preview) In advanced hunting, you can now hunt using the [hunting graph](advanced-hunting-graph.md), which renders rendering predefined threat scenarios as interactive graphs.
+- (Preview) Use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](./split-incidents-into-tasks.md)
+- (Preview) Investigate incidents by using [Blast radius analysis](investigate-incidents.md#blast-radius-analysis), which is an advanced graph visualization built on the Microsoft Sentinel data lake and graph infrastructure. This feature generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
+- (Preview) In advanced hunting, you can now hunt by using the [hunting graph](advanced-hunting-graph.md), which renders rendering predefined threat scenarios as interactive graphs.
 
 ## August 2025
 
@@ -60,7 +64,7 @@ You can also get product updates and important notifications through the [messag
 - (Preview) Advanced hunting now lets you investigate Microsoft Defender for Cloud behaviors. For more information, see [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
 - (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000. 
 - (GA) [Microsoft Defender Experts for XDR](dex-xdr-overview.md) and [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) customers can now expand their service coverage to include server and cloud workloads protected by Microsoft Defender for Cloud through the respective add-ons, **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers**. [Learn more](faq-cloud-coverage-defender-experts.md)
-- (GA) Defender Experts for XDR customers can now [incorporate third-party network signals](third-party-enrichment-defender-experts.md) for enrichment, which could allow our security analysts to not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, but also provide customers with a more holistic view of the threat in their environments.
+- (GA) Defender Experts for XDR customers can now [incorporate third-party network signals](third-party-enrichment-defender-experts.md) for enrichment. This feature allows our security analysts to gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response. It also provides customers with a more holistic view of the threat in their environments.
 - (GA) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
     - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
@@ -110,9 +114,9 @@ You can also get product updates and important notifications through the [messag
 
 ## March 2025
 
-- (Preview) The incident description has moved within the incident page. The incident description is now displayed after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).
+- (Preview) The incident description moved within the incident page. The incident description now appears after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).
 
-- The Microsoft 365 alert policies can now only be managed in the Microsoft Defender portal. For more information, see [Alert policies in Microsoft 365](alert-policies.md).
+- You can now manage the Microsoft 365 alert policies only in the Microsoft Defender portal. For more information, see [Alert policies in Microsoft 365](alert-policies.md).
 
 - You can now link Threat analytics reports when setting up custom detections. [Learn more](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports)
 

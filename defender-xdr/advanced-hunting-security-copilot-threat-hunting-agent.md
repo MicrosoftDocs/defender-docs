@@ -26,7 +26,9 @@ appliesto:
 - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Microsoft Security Copilot Threat Hunting Agent in advanced hunting
+# Microsoft Security Copilot Threat Hunting Agent in advanced hunting (preview)
+
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 The Microsoft Security Copilot Threat Hunting Agent is an AI-powered agent that revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. Unlike traditional hunting methods that rely heavily on Kusto query language (KQL) expertise, the Threat Hunting Agent transforms complex data into actionable insights quickly and intuitively, helping you drive the investigation into actions.
 

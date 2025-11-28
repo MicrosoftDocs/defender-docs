@@ -28,13 +28,15 @@ appliesto:
 
 # Microsoft Security Copilot in advanced hunting
 
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
+
 [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides two powerful capabilities in advanced hunting to enhance threat hunting and security analysis. 
 
 The following table describes these capabilities, where they're best used, and the expected output:
 
 | Capability | Description |Output |Experience |
 | ------------- | ------------- |------------- |------------- |
-| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) | AI-powered conversational threat hunting experience that's best used for complete investigations, complex multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
+| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) (preview) | AI-powered conversational threat hunting experience that's best used for complete investigations, complex multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
 | [Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
 
 These features empower you to hunt threats faster, more accurately, and with greater confidence without needing to write complex KQL queries.
