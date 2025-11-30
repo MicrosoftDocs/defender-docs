@@ -83,6 +83,11 @@ To successfully generate a cloud discovery report, your traffic logs must meet t
 1. The log file is valid and includes outbound traffic information.
 1. Configure the appliance to forward only traffic logs. Including unrelated logs in the configuration can inflate the ingested traffic volume.
 
+> [!IMPORTANT]
+> ZIP upload is supported **only for a single compressed file.** ZIP archives containing multiple log files are **not supported.**
+> Individual log files larger than **1 GB** cannot be uploaded. Split large logs before uploading. You can upload up to 20 files per batch.
+
+
 ## Next steps
 
 > [!div class="nextstepaction"]
