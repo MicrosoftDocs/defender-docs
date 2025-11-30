@@ -1,7 +1,7 @@
 ---
 title: Security alerts and incidents
 description: Learn how Microsoft Defender for Cloud generates security alerts and correlates them into incidents.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
 ms.date: 07/14/2025

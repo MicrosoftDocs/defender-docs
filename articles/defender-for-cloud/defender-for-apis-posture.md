@@ -4,7 +4,7 @@ description: Learn how to analyze your API security alerts and posture in Micros
 author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/15/2025
 ---
 # Investigate API findings, recommendations, and alerts

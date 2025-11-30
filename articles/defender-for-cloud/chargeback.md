@@ -3,7 +3,7 @@ title: Chargeback Process Using Azure Cost Analysis
 description: Learn how to use Microsoft Defender for Cloud's chargeback feature to allocate cloud expenses accurately across teams using Azure Cost Analysis.
 author: Elazark
 contributors:
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 03/17/2025
 ms.author: elkrieger
 ---

@@ -2,7 +2,7 @@
 title: Azure Kubernetes Service (AKS) Security Dashboard
 description: Explain the views and actions in the AKS security Dashboard to enable and protect an individual cluster with Defender for Containers.
 ms.author: elkrieger
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 08/17/2025
 CustomerIntent: As the person responsible for the security of a cluster, I want know what views and actions the cluster security dashboard provides, so I can remediate security issues in the cluster.
 ---

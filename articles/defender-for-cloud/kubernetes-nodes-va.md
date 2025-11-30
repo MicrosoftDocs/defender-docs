@@ -2,7 +2,7 @@
 title: Kubernetes Nodes Vulnerability Assessment
 description: Learn about Defender for Containers vulnerability assessment for Kubernetes nodes.
 ms.date: 11/15/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: sfi-image-nochange
 ---
 
