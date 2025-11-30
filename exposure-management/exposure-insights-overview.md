@@ -113,16 +113,15 @@ Security Exposure Management ingests security recommendations from multiple sour
 - Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics
 - Use the new filtering capabilities to focus on specific domains (Cloud, Devices, etc.) or issue types (misconfigurations, vulnerabilities, etc.)
 
-### Secure Score integration
+### Secure score integration
 
-[Microsoft Secure Score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional Secure Score and new Cloud secure scores side-by-side for comprehensive posture management.
+Secure score helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional **Microsoft Secure Score** and new **Cloud Secure Score** side-by-side for comprehensive posture management.
 
-#### Unified Secure Score experience
+#### Unified secure score experience
 
-- **Traditional Secure Score**: Covers Microsoft 365 assets and remains as in Microsoft Defender Vulnerability Management (MDVM)
-- **Cloud Security Score**: A new score (sometimes called "Cloud Security Initiative") for Azure, AWS, and GCP resources, providing cloud-specific posture metrics
+- **[Microsoft Secure Score](/defender-xdr/microsoft-secure-score)**: A score that covers device, identities, SaaS apps, and data, providing an overall organizational posture metric
+- **[Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls?pivots=defender-portal)**: A score for Azure, AWS, and GCP resources, providing cloud-specific posture metric
 - **Side-by-side visibility**: Both scores are now accessible within MSEM, giving a combined view of organizational posture across different domains
-- **Integrated recommendations**: Secure Score recommendations are integrated into the unified Recommendations Catalog alongside cloud and other security recommendations
 
 #### How Security Exposure Management uses Secure Score
 
