@@ -15,9 +15,10 @@ Defender for Identity generates health alerts when it detects incorrect windows 
 
 ## Prerequisites
 
-- Before you run Defender for Identity PowerShell commands, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
-> [!NOTE]
-> The Active Directory PowerShell module is required when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
+If you are using the Active Directory PowerShell module to configure a domain controller, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/). 
+
+    > [!NOTE]
+    > The Active Directory PowerShell module is only required when configuring Defender for Identity on domain controllers. It isn’t required on AD CS servers running the Certification Authority Role Service.
 
 ## Generate a report of current configurations using PowerShell
 
