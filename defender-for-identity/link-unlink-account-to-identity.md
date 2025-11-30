@@ -87,6 +87,9 @@ Follow these steps to manually link accounts to a selected identity.
 
 1. Select **Next**.
 1. Review the selected accounts and your justification.
+
+    :::image type="content" source="media/link-unlink-account-to-identity/review-and-finish.png" alt-text="Review the selected accounts and the justification." lightbox="media/link-unlink-account-to-identity/review-and-finish.png":::
+
 1. Confirm that the accounts listed are correct.
 1. The account list refreshes automatically.
 
