@@ -2,8 +2,8 @@
 title: Gated Deployment FAQ for Defender for Containers
 description: Find answers to common questions about gated deployment in Defender for Containers, including rule creation, exemptions, and multicloud support.
 #customer intent: As a Kubernetes administrator, I want to understand gated deployment so that I can enforce container image security policies in my cluster.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.reviewer: dacurwin
 ms.date: 10/29/2025
 ms.topic: concept-article

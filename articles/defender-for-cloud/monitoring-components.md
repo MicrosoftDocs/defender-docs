@@ -1,8 +1,8 @@
 ---
 title: Overview of the extensions that collect data from your workloads
 description: Protect your workloads with Microsoft Defender for Cloud by learning about the extensions that collect data from your workloads.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: concept-article
 ms.date: 09/11/2025
 ---
