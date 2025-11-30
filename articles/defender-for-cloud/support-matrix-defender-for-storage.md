@@ -4,7 +4,7 @@ description: Learn about the prerequisites and permissions required to enable Mi
 ms.topic: reference
 author: dcurwin
 ms.author: dacurwin
-ms.date: 08/21/2023
+ms.date: 11/30/2025
 ---
 
 # Prerequisites for Microsoft Defender for Storage
@@ -19,12 +19,12 @@ This article lists the prerequisites and permissions required to [enable Microso
 
 - The following storage types are supported:
 
-|| Azure Blob Standard |||||||||
-| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Cell 1   | Cell 2   |||||||||
-|||||||||||
-|||||||||||
-| Cell 3   | Cell 4   |||||||||
+|Capability | Azure Blob Standard | Azure Blob Standard + Azure Files NFS | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen2 | Azure File Premium Provisioned v1 | Azure File Premium Provisioned v2 |
+|--|--|--|--|--|--|--|
+| Activity Monitoring | Supported | Not supported | Supported | Supported | Supported | Supported | Supported |
+| Sensitive Data Discovery | Supported | Not supported | Supported | Supported  | Supported | Not supported | Not supported |
+| On-upload Malware Scanning | Supported | Supported | Supported only for blobs | Not supported | Supported only for blobs | Not supported | Not supported |
+| On-demand Malware Scanning | Supported | Supported | Supported | Not supported | Supported | Not supported | Not supported |
 
 - Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
