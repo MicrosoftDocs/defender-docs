@@ -3,8 +3,8 @@ title: OData queries with Microsoft Defender for Endpoint
 ms.reviewer: yongrhee
 description: Use these examples of Open Data Protocol (OData) queries to help with data access protocols in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 ms.date: 05/20/2025
 manager: bagol
@@ -29,7 +29,7 @@ appliesto:
 
 
 > [!IMPORTANT]
-> Advanced hunting capabilities are not included in Defender for Business. 
+> Advanced hunting capabilities aren't included in Defender for Business. 
 
 
 
@@ -416,7 +416,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen
 
 ### Example 6
 
-Get all the Anti-Virus scans that the user Analyst@examples.onmicrosoft.com created using Microsoft Defender for Endpoint:
+Get the Anti-Virus scans that the user Analyst@examples.onmicrosoft.com created using Microsoft Defender for Endpoint:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machineactions?$filter=requestor eq 'Analyst@contoso.com' and type eq 'RunAntiVirusScan'
