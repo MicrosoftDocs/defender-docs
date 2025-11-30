@@ -170,7 +170,7 @@ When a Defender for Identity sensor parses Windows event 8004, Defender for Iden
 
 To configure NTLM auditing:
 
-1. After you configure your initial Advanced Audit Policy settings (In the [Defender portal](#configure-advanced-audit-policy-settings-from-the-ui) or [using PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell)), open **Group Policy Management**. Then go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
+1. After you configure your initial Advanced Audit Policy settings in the [Defender portal](#configure-advanced-audit-policy-settings-from-the-ui) or [using PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell), open **Group Policy Management**. Then go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
 
 1. Configure the specified security policies as follows:
 
@@ -188,7 +188,7 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 To collect events for object changes, such as for event 4662, you must also configure object auditing on the user, group, computer, and other objects. The following procedure describes how to enable auditing in the Active Directory domain.
 
-Review and audit your policies (in the [Defender portal](#configure-advanced-audit-policy-settings-from-the-ui) or [using PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell)) before you enable event collection, to ensure that the domain controllers are properly configured to record the necessary events. If this auditing is configured properly, it should have a minimal effect on server performance.
+To ensure that the domain controllers are properly configured to record the necessary events, review and audit your policies in the [Defender portal](#configure-advanced-audit-policy-settings-from-the-ui) or [using PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell) before you enable event collection. If auditing is configured properly, it has minimal effect on server performance.
 
 To configure domain object auditing:
 

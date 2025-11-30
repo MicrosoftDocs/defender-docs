@@ -13,7 +13,7 @@ ms.reviewer: rlitinsky
 Defender for Identity uses specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. 
 This article describes how to configure the advanced audit policy settings to avoid gaps in the event logs and incomplete Defender for Identity coverage.
 
-Defender for Identity generates health issues when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
+Defender for Identity generates health issues when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
 
 Defender for Identity sensor v3.x supports automatic Windows event auditing on your domain controllers. This feature applies the required Windows event auditing settings to new sensors and fixes misconfigurations on existing ones.
 
@@ -48,13 +48,9 @@ To turn off automatic windows auditing:
 1. In the **General** section, select **Advanced features**.
 1. Turn off **Automatic Windows auditing configuration**.​
 
+## See also
 
-
-- [Event collection with Microsoft Defender for Identity](event-collection-overview.md)
+- [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md)
 - [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
 - [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing)
 
-## Next step
-
-> [!div class="step-by-step"]
-> [What are Defender for Identity roles and permissions?](../role-groups.md)
