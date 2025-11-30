@@ -1,11 +1,9 @@
 ---
 title: Reference table for serverless protection security recommendations 
 description: This article lists the Microsoft Defender for Cloud security recommendations for serverless protection.
-author: dcurwin
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 11/30/2025
-ms.author: dacurwin
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -61,13 +59,6 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: Medium
 
-### (Preview) Security mechanism should be used on lambda function API Gateway
-
-**Description**: Defender for Cloud has identified that authentication is not enabled for lambda function API Gateway. This poses a risk of unauthorized access and potential abuse of the function endpoints. Enforcing authentication can help mitigate these risks.
-(No related policy)
-
-**Severity**: High
-
 ### (Preview) Overly permissive permissions should not be configured on Function App, Web App or Logic App
 
 **Description**: Defender for Cloud identified that the Function App, Web App or Logic App Identity has overly permissive permissions. By restricting permissions, you can ensure that only necessary access is granted, reducing the risk of unauthorized access and potential security breaches.
@@ -82,73 +73,12 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: High
 
+### (Preview) Security mechanism should be used on lambda function API Gateway
 
-
-
-
-
-
-
-
-
-
-### (Preview) Azure Functions and Web Apps should use authentication
-
-**Description**: Azure Functions and Web Apps should use authentication to ensure secure access and prevent unauthorized usage.
-(No related policy).
+**Description**: Defender for Cloud has identified that authentication is not enabled for lambda function API Gateway. This poses a risk of unauthorized access and potential abuse of the function endpoints. Enforcing authentication can help mitigate these risks.
+(No related policy)
 
 **Severity**: High
-
-### (Preview) Azure Functions and Web Apps should use Code Signing
-
-**Description**: Code signing helps ensure the integrity and authenticity of your Azure Functions and Web Apps code.
-(No related policy).
-
-**Severity**: Medium
-
-### (Preview) Lambda functions should use authentication
-
-**Description**: AWS Lambda functions should use authentication mechanisms to ensure secure access and prevent unauthorized invocation.
-(No related policy).
-
-**Severity**: High
-
-### (Preview) Lambda functions should use the latest runtime version
-
-**Description**: Using the latest runtime version ensures that Lambda functions benefit from the latest security patches and features.
-(No related policy).
-
-**Severity**: Medium
-
-### (Preview) Lambda functions with internet connectivity should use Reserved Concurrency
-
-**Description**: Reserved concurrency limits the number of concurrent executions, helping to prevent denial-of-service attacks and manage costs.
-(No related policy).
-
-**Severity**: Medium
-
-### (Preview) Lambda functions with internet connectivity should use a security mechanism
-
-**Description**: Lambda functions exposed to the internet should implement security mechanisms such as API Gateway, IAM authentication, or other access controls.
-(No related policy).
-
-**Severity**: High
-
-### (Preview) Serverless workloads should not have overly permissive permissions
-
-**Description**: Serverless workloads should follow the principle of least privilege to minimize security risks.
-(No related policy).
-
-**Severity**: High
-
-### (Preview) Serverless workloads should not allow unrestricted network access
-
-**Description**: Network access to serverless workloads should be restricted to prevent unauthorized access and reduce attack surface.
-(No related policy).
-
-**Severity**: High
-
-
 
 ## Related content
 

@@ -59,7 +59,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: Medium
 
-### (Preview) Authentication should be enabled on Lambda Function URLs
+### Automation account variables should be encrypted
 
 **Description**: It is important to enable encryption of Automation account variable assets when storing sensitive data.
 (Related policy: [Automation account variables should be encrypted](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2f3657f5a0-770e-44a3-b44e-9431ba1e9735)).
@@ -270,7 +270,7 @@ Replaces the older recommendation *Virtual machines should encrypt temp disks, c
 
 **Severity**: High
 
-### (Preview) Lambda function should implement Reserved Concurrency to prevent resource exhaustion
+### Linux virtual machines should enforce kernel module signature validation
 
 **Description**: To help mitigate against the execution of malicious or unauthorized code in kernel mode, enforce kernel module signature validation on supported Linux virtual machines. Kernel module signature validation ensures that only trusted kernel modules will be allowed to run. This assessment only applies to Linux virtual machines that have the Azure Monitor Agent installed.
 (No related policy)
