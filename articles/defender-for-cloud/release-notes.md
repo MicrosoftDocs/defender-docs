@@ -53,9 +53,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 November 30, 2025
 
-Defender for Cloud has extended the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) **(Preview)** in both the Azure portal and the Defender portal.
+Defender for Cloud extends the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) **(Preview)** in both the Azure portal and the Defender portal.
 
-The features available vary by portal. The table shows which features are available in each portal: 
+Currently, the available features vary by portal. The following table shows which features are available in each portal: 
 
 | Feature | Defender for Cloud portal | Defender portal |
 |--|--|--|
@@ -64,7 +64,7 @@ The features available vary by portal. The table shows which features are availa
 | Build queries with the cloud security explorer | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
 | Explore workloads in Cloud Inventory | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | 
 | Investigate attack paths | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
-| Vulnerability Assessment | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Vulnerability Assessment | **Coming soon** | :::image type="icon" source="./media/icons/yes-icon.png"::: |
 
 This release introduces automatic discovery and security posture assessment for:
 - Azure Functions
@@ -109,7 +109,7 @@ November 25, 2025
 
 This integration brings new value and benefits for security personas:
 
-**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. For more information.
+**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This integration eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. For more information.
 
 **Cloud dashboard** - The new cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and includes tools to track security progress over time out of the box. The unified dashboard consolidates security posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments. For more information, see [Cloud Overview dashboard](cloud-infrastructure-dashboard.md).
 
@@ -117,11 +117,11 @@ This integration brings new value and benefits for security personas:
 
 **Unified cloud security posture capabilities** – We're unifying all the cloud security posture management (CSPM) capabilities into **Microsoft Security Exposure Management** (MSEM). Security personas can now view secure scores, prioritized recommendations, attack paths and vulnerabilities in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps, and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
 
-**Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
+**Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This access model allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
 
 **New modeling for security recommendations**
 
-Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (e.g., **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
+Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (for example, **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
 
 With this change, you get:
 
