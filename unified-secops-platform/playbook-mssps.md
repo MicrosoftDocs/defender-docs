@@ -54,119 +54,52 @@ The first step in the journey is to onboard your customers to the new experience
 
 # How to access multiple customer tenants
 
-This section focuses on the different ways that are available to connect to other customer tenants.
+There are two ways available to connect to other customer tenants.
 
-<span id="_Toc214214355" class="anchor"></span>
+- [GDAP (Granular Delegated Admin Privileges) (preferred)](/partner-center/customers/gdap-introduction)
+- [Azure Lighthouse](/azure/lighthouse/) for scenarios where GDAP is not supported. Some scenarios include:
 
-## Preferred - Granular Delegated Admin Privileges (GDAP)
+  - CSP partners with Sentinel workloads (partner center???)
+  - [Non-CSP partners (Azure RBAC)](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal)
+  - [B2B collaboration](/entra/external-id/what-is-b2b) (Entra RBAC) to manage Defender customers.
+  - [Service principal delegation across tenants](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890)
+  - Workbooks querying data across tenants
+  - Cross-workspace analytics rules
+    - When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
+    - To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
 
-For MSSPs to manage their Sentinel and Defender customer environments at scale, there are generally two options available today, which can be used in different combinations.
+    >[!NOTE]
+    > It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
 
-### GDAP to manage Defender (exclusively for Microsoft CSP partners) and Azure Lighthouse for Sentinel
+  - Advanced automation rule/playbook scenario
 
-GDAP, part of [Partner Center](/partner-center/enroll/overview), is a security feature that provides partners with least-privileged access following the Zero Trust cybersecurity protocol. It lets partners configure granular and time-bound access to their customers' workloads in production and sandbox environments. Customers must explicitly grant the least-privileged access to their partners.
-
-In order for a Microsoft CSP partner to manage their customer's Defender environment, a [GDAP relationship](/partner-center/customers/gdap-introduction) is required. Follow this process to [request a GDAP relationship with a customer.](/partner-center/customers/gdap-obtain-admin-permissions-to-manage-customer#request-a-granular-admin-relationship-with-a-customer) For managing the customer's Sentinel environment, use [Azure Lighthouse](/azure/lighthouse/).
-
-CSP partners often manage more than Defender and Sentinel workloads, this is where [Partner Center](/partner-center/enroll/overview) comes in which streamlines several business processes to make it easier to manage their customer relationship.
-
-### For non-CSP partners – Azure Lighthouse and B2B collaboration
-
-Non-CSP partners rely on Azure Lighthouse (Azure RBAC) to manage their Sentinel customers and B2B collaboration (Entra RBAC) to manage their Defender customers. Learn how to [onboard a customer to Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal) and how to [set up B2B collaboration](/entra/external-id/what-is-b2b).
-
-### What are the upcoming changes?
-
-The planned retirement of the Sentinel portal in Azure scheduled for July 2026, presents significant management challenges for
-
-CSP partners utilizing GDAP, especially those not leveraging B2B collaboration. Since GDAP does not support Azure ARM (Azure
-
-Resource Manager) for delegated Sentinel access, these limitations impede a seamless transition to the unified Defender platform.
-
-To address the current GDAP challenges, engineering work has started which is broken out in two different streams that are covered in the following sections.
-
-### Phase 1 - Manage permissions for Microsoft Sentinel via GDAP over ARM
-
-This update – *applicable to MSSPs who already are managing their customers over GDAP today* - will leverage an existing admin relationship with a customer, no new relationship or changes are required.
-
-For each Entra security group in the MSSP tenant that is part of the previously created relationship, a remote tenant group will be created in the customer tenant. These remote tenant groups will represent the Entra roles which were part of the admin relationship creation as depicted in the example picture below.
-
-:::image type="content" source="media/playbook-mssps/gdap-remote-tenant-groups.png" alt-text="Screenshot of remote tenant groups representing Entra roles in customer tenant.":::
-
-The customer required update would be to delegate Azure role permissions to those remote tenant groups, like Sentinel Responder or Sentinel Contributor. This action effectively grants Azure RBAC to the MSSP Entra security groups. Please note that a remote tenant group in the customer tenant is a representation of the Entra security group in the management tenant.
-
-### Phase 2 - GDAP support for non CSPs
-
-For non-CSP partners, including customers going forward, a new feature is being built in the Defender portal which allows the creation of an invitation which is similar to creating a GDAP relationship. This invitation contains a title, a description, justification and which Entra global roles are requested. After an internal approval process, the invitation is sent to the customer who can then approve or reject the request. After approval – the relationship is in place which allows the MSSP to manage their customer in the Defender portal.
-
-The screenshot below shows the assignment of the Microsoft Sentinel Responder role to a resource group (best practice) which contains the Sentinel workspace. This same process will be used to delegate Sentinel permissions to complete the GDAP relationship by the new addition of “Remote tenant group.”
-
-:::image type="content" source="media/playbook-mssps/sentinel-responder-role-assignment.png" alt-text="Screenshot of Microsoft Sentinel Responder role assignment to resource group.":::
-
-## Azure Lighthouse
-
-[Azure Lighthouse](/azure/lighthouse/) provides a way to delegate Azure resource access across Entra ID tenants. As such, it was the main way in which MSSPs, and multitenant organizations managed their multitenant Sentinel environments.
-
-With the introduction of the unified platform, multitenant management and multitenant experiences are now powered by [Microsoft Defender multitenant management](/unified-secops-platform/mto-overview) (MTO).
-
-However, there are still some scenarios in which Azure Lighthouse might still be needed, and we will cover those in this section.
-
-### Service principal delegation across tenants
-
-Many MSSPs utilize service principals to automate tasks in the context of Microsoft Sentinel. The main example being content distribution via CI/CD pipelines. This scenario is achieved through the [delegation of permissions to service principals through Azure Lighthouse](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890). However, this scenario is something that is not achievable through MTO due to its reliance on B2B invites, which are not supported for service principal identities.
-
-You can continue using Azure Lighthouse and service principals for this task after your transition to the Defender portal. No additional actions or changes are needed.
-
-If you don't want to depend on Azure Lighthouse, you can use [Sentinel repositories](/azure/sentinel/ci-cd-custom-content) as a way to run your CI/CD pipelines.
-
-### Workbooks querying data across tenants
-
-Azure Workbooks are Azure resources that exist in Azure under a subscription and resource group. When you create a new query inside a workbook, this query uses the Log Analytics query API, which requires the *workspace()* operator to reference other workspaces. If the workspaces that need to be queried are in a different tenant, the only way to reference them is by having the corresponding Azure Lighthouse delegation.
-
-Workbooks are also available in Defender multitenant management, allowing you to see a list of all workbooks across all tenants in a single place, enabling easy access. This capability is currently in preview. There is also a cross-tenant out-of-the-box workbook available in multitenant management; situational awareness. This gives you cross-tenant insights within a single workbook without relying on Azure Lighthouse and is also a preview capability.
-
-### Cross-workspace analytics rules
-
-Cross-workspace analytics rules can be used in two different scenarios:
-
-- When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
-
-- To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
-
-In these cases, MSSPs still need to use Azure Lighthouse to provide the ability to reference multiple workspaces within a rule query. This is something that is not possible with Custom Detections today although it is on the roadmap.
-
-It's important to remember that there are other scenarios where MSSPs should not use cross-workspace rules:
-
-- When the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
-
-### Advanced automation rule/playbook scenario
-
-There are certain advanced scenarios in the use of automation rules and playbooks that might still require the use of Azure Lighthouse delegations. For example, when the MSSP needs to protect the intellectual property of a playbook and this is hosted in the partner tenant, but still the playbook needs to execute actions in the customer tenant. Another example is described here: [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
+    Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
 
 ## Entitlement Management
 
-Entitlement management is an [identity governance](/entra/id-governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
+[Entitlement management](/entra/id-governance/entitlement-management-overview) is an [identity governance](/entra/id-governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
 
-The typical entitlement management configurations that often are being considered are:
+Some typical entitlement management configurations that are often considered are:
 
-**B2B Collaboration**
+### B2B Collaboration
 
 - Invite external users as guests into your tenant
 - Supports Conditional Access, MFA, and lifecycle management
 - Ideal for partners, suppliers, and contractors needing app/resource access which can be governed
 
-**Cross-Tenant access settings**
+### Cross-Tenant access settings
 
 - Fine-grained control over inbound/outbound collaboration
 - Trust MFA and device compliance claims across tenants
 - Configure default or organization-specific policies
 
-**B2B Direct Connect**
+### B2B Direct Connect
 
 - Enables mutual trust between two Entra tenants
 - Seamless collaboration via Teams shared channels without adding guests
 - Perfect for ongoing partnerships where users keep home credentials
 
-Most commonly a combination of B2B Collaboration and Cross-Tenant access settings are the most relevant choices for an MSSP. B2B Direct Connect is often considered too invasive due to the creation of a persistent trust relationship and synchronization of identities which causes a perceived loss of tenant boundary control.
+Often, a combination of B2B Collaboration and Cross-Tenant access settings are the most relevant choices for an MSSP.
 
 The picture below shows the B2B collaboration guest representation in the customer tenant.
 
@@ -184,7 +117,7 @@ The following section discusses the most commonly used B2B collaboration options
 
 This enables the MSSP analyst to connect to the customer tenant leveraging the Defender portal to manage both Sentinel and Defender using *security.microsoft.com/homepage?tid=\[tenantID\]* or switch tenant from the MSSP Defender portal. Notice that the identity UPN “changes” from the MSSP UPN to the guest UPN using the \#EXT# identifier. The same experience is noticeable when using GDAP.
 
-Since there's no or little management or governance available using this option, it is generally not being used by MSSPs.
+Since there’s little or no management or governance available with this option, it is generally not used by MSSPs.
 
 **Option 2 – leveraging entitlement access packages**
 
@@ -192,32 +125,29 @@ A simple invitation and redemption process lets MSSP's use their own credentials
 
 Together with Azure Lighthouse, this is the most common option used by MSSPs to manage their customers' environment. Entra service limitations are described [here](/entra/identity/users/directory-service-limits-restrictions).
 
-The most notable limitations of this option are:
+### Limitations
 
-- A single user can only belong to a maximum of 500 Microsoft Entra tenants as a member or a guest.
+- A single user can belong to a maximum of 500 Microsoft Entra tenants as a member or a guest.
 
-- Entra P2 licensing might be required for the customer tenant, please check [here](/entra/id-governance/licensing-fundamentals).
+- Entra P2 licensing might be required for the customer tenant, please check [the licensing fundamentals](/entra/id-governance/licensing-fundamentals).
 
 # Defender Portal Permissions
 
 ## URBAC / Azure RBAC
 
-After setting establishing delegated access in the section above, the next step would be setting up granular roles in the Defender portal, which will be used to access Defender and Sentinel.
+After setting establishing delegated access, the next step is to set up granular roles in the Defender portal, which will be used to access Defender and Sentinel.
 
-Prior to the unified experience, we had three relevant RBAC models: ***Entra ID RBAC*** (used for delegating access to Defender assets, such as device groups), ***Azure RBAC*** (used by Microsoft Sentinel to delegate permissions) and ***Defender (U)RBAC*** (used to delegate permissions for several Defender solutions).
-
-The unified experience integrates both Microsoft Sentinel's and Defender's RBAC models. Permissions granted through Azure RBAC for Microsoft Sentinel are federated during runtime with Defender's RBAC, resulting in a unified RBAC model. Although being federated, Azure RBAC and Defender RBAC continue to be managed separately.
-
-Defender has introduced [Unified RBAC](/defender-xdr/manage-rbac) to provide centralized permissions management for several Defender solutions. This is not a requirement to transition to the unified experience, but it does simplify the delegation of Defender permissions. Your Microsoft Sentinel permissions will continue to work as expected in the unified experience, with or without URBAC. Instructions on how to enable Defender URBAC can be found here [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac)
+[Unified RBAC](/defender-xdr/manage-rbac) to provides centralized permissions management for several Defender solutions. You not a required to transition to the unified experience, but it does simplify the delegation of Defender permissions. Your Microsoft Sentinel permissions will continue to work as expected in the unified experience, with or without URBAC. Instructions on how to enable Defender URBAC can be found here [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac)
 
 The minimal required permissions for an analyst to view Microsoft Sentinel data is to delegate permissions for the Azure RBAC **Sentinel Reader** role. These permissions are also applied to the unified portal. Without these permissions, the Microsoft Sentinel navigation menu is not available on the unified portal, despite the analyst having access to the Defender portal. Microsoft Sentinel permissions will not provide access to Microsoft Defender XDR incidents/data, and you will need appropriate Unified RBAC or global Entra ID roles to see those incidents/data.
 
-Please refer to the permissions table mentioned here [Connect Microsoft Sentinel to the Microsoft Defender portal Prerequisites](/defender-xdr/microsoft-sentinel-onboard?view=o365-worldwide#prerequisites) for specific Microsoft Sentinel roles.
+Refer to the permissions  mentioned in [Connect Microsoft Sentinel to the Microsoft Defender portal Prerequisites](/defender-xdr/microsoft-sentinel-onboard#microsoft-sentinel-prerequisites) for specific Microsoft Sentinel roles.
 
 A best practice is to have all Microsoft Sentinel-related resources in the same Azure resource group, then delegate Microsoft Sentinel role permissions, such as the Sentinel Reader role, at the resource group level that contains the Microsoft Sentinel workspace. This approach ensures that the role assignment applies to all resources supporting Microsoft Sentinel.
 
-Specific Defender URBAC mappings can be found here: [Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions](/defender-xdr/compare-rbac-roles#map-microsoft-defender-xdr-unified-rbac-permissions-to-existing-rbac-permissions)
+Specific Defender URBAC mappings can be found at [Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions](/defender-xdr/compare-rbac-roles#map-microsoft-defender-xdr-unified-rbac-permissions-to-existing-rbac-permissions).
 
+<!---
 The section below shows an example of how a user, with only Microsoft Sentinel read permissions, can see, and then in the second example, can manage incidents that contain alerts from other Defender workloads.
 
 After enabling Defender URBAC, permissions can be delegated in the unified portal through **System\> Settings\> Endpoints\> Microsoft Defender XDR** as shown below:
@@ -249,112 +179,8 @@ To allow an analyst to triage and **manage** incidents for the Microsoft Sentine
 Additional permission might be required for the analyst to triage and investigate incidents like the Microsoft Sentinel Playbook Operator role, specific Entra ID, Cloud Apps, etc., roles and permissions.
 
 Please refer here: [Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/import-rbac-roles) to import roles to get you quickly started with URBAC, or here [Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/create-custom-rbac-roles#create-a-custom-role) to create custom roles.
-
-## Sample Permissions Mapping
-
-These are examples of the permissions that can be assigned to the users based on their roles. As Unified RBAC is providing option to have more granular permissions on Microsoft Defender XDR, you can utilize that granularity to separate certain Microsoft Defender XDR permissions on Tier level as well, ex. Live Response Basic can be provided to Tier 1, but Live Response Advanced permission will be applied to Tier 2.
-
-If some users need only read access to Microsoft Sentinel SIEM raw data, they can also utilize Log Analytics [Granular RBAC](/azure/azure-monitor/logs/granular-rbac-log-analytics) functionality to scope access to only specific data saved in Log Analytics workspace. Please note that Granular RBAC will not scope access to Microsoft Sentinel incidents, alerts, watchlists, UEBA, TI, or any other Microsoft Sentinel SIEM features.
-
-<table style="width:100%;">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 17%" />
-<col style="width: 28%" />
-<col style="width: 42%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;"><strong>Group</strong></th>
-<th><strong>Role</strong></th>
-<th><strong>Scope</strong></th>
-<th><strong>Notes</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3" style="text-align: center;">Security Analysts</td>
-<td>Microsoft Sentinel Responder</td>
-<td>Microsoft Sentinel's Resource Group</td>
-<td>View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.)</td>
-</tr>
-<tr>
-<td>Microsoft Sentinel Playbook Operator</td>
-<td>Microsoft Sentinel's Resource Group<br />
-(or the Resource Group where Playbooks are<br />
-stored)</td>
-<td>List, view and run playbooks. To attach playbooks to analytics rules, Microsoft Sentinel Contributor role is needed</td>
-</tr>
-<tr>
-<td>Security Operator Unified RBAC role</td>
-<td>Microsoft Defender portal</td>
-<td>View, investigate, and respond to security threats alerts<br />
-Manage Microsoft Defender XDR security settings<br />
-List of URBAC permissions equivalent for Security Operator Entra ID role are listed on this link:<br />
-/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access</td>
-</tr>
-<tr>
-<td rowspan="7" style="text-align: center;">Security Engineer</td>
-<td>Microsoft Sentinel Contributor</td>
-<td>Microsoft Sentinel's Resource Group</td>
-<td>View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.). Create and edit workbooks, analytics rules, and other Microsoft Sentinel resources.</td>
-</tr>
-<tr>
-<td>Logic Apps Contributor</td>
-<td>Microsoft Sentinel's Resource Group (or the Resource Group where Playbooks are stored)</td>
-<td>Run and modify playbooks.<br />
-Attach playbooks to analytics rules and automation rules.</td>
-</tr>
-<tr>
-<td>Monitoring Contributor</td>
-<td>Subscription and/or Resource group and/or An existing data collection rule</td>
-<td>Create or edit data collection rules</td>
-</tr>
-<tr>
-<td>Log Analytics Contributor</td>
-<td>Microsoft Sentinel's Resource Group</td>
-<td>Use the Search feature</td>
-</tr>
-<tr>
-<td>Virtual Machine Contributor Azure Connected Machine Resource Administrator</td>
-<td>Virtual machines, virtual machine scale sets Arc-enabled servers</td>
-<td>Deploy DCR associations (i.e. to assign rules to the machine)</td>
-</tr>
-<tr>
-<td>Template Spec Contributor</td>
-<td>Microsoft Sentinel's Resource Group</td>
-<td>Deploy v2.0 solutions from Content hub.</td>
-</tr>
-<tr>
-<td>Security Administrator Unified RBAC role</td>
-<td>Microsoft Defender portal</td>
-<td>Monitor security-related policies across Microsoft Defender XDR services<br />
-Manage security threats and alerts<br />
-View reports<br />
-<br />
-List of URBAC permissions equivalent for Security Administrator Entra ID role are listed on this link:<br />
-/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access</td>
-</tr>
-<tr>
-<td rowspan="3" style="text-align: center;">Security Architect</td>
-<td>Microsoft Sentinel Contributor</td>
-<td>Microsoft Sentinel's Resource Group</td>
-<td>View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.). Create and edit workbooks, analytics rules, and other Microsoft Sentinel resources.</td>
-</tr>
-<tr>
-<td>User Access Administrator</td>
-<td>Microsoft Sentinel's Resource Group</td>
-<td>This is privileged role! This permission is needed to onboard Microsoft Sentinel SIEM to Microsoft Defender portal.</td>
-</tr>
-<tr>
-<td>Security Administrator</td>
-<td>Entara ID Tenant level</td>
-<td>This is a privileged role! Users with this role have permissions to manage security-related features in the Microsoft 365 Defender portal, Microsoft Entra ID Protection, Microsoft Entra Authentication, Azure Information Protection, and Microsoft Purview compliance portal.<br />
-<br />
-This permission is needed to onboard Microsoft Sentinel SIEM to Microsoft Defender portal, offboard the workspace, or change primary/secondary workspace.</td>
-</tr>
-</tbody>
-</table>
+--->
+For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
 
 ## Managing security operations across tenants
 The Microsoft Defender portal provides all relevant information so you don't have to switch to another portal or page. Its unified incident queue and the ability to correlate events and alerts can reveal a larger, potentially more comprehensive attack, providing a complete attack story. It also lets you view the detection source and product names, and apply and share filters for these, making incident and alert triaging more efficient.
@@ -787,13 +613,12 @@ Two common methods to avoid this situation are:
 
 - To allow joined content management, make sure that items managed by the MSSP are clearly marked, typically using a name prefix. This does not block local users from updating those items but significantly reduces the chance for an error.
 
-# Case Management
+# Case management
 
-Beyond incident response and content distribution, MSSPs need a centralized way to track security work that spans multiple incidents, threat hunting campaigns, and detection tuning efforts across customer tenants. The unified security operations platform provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
+The unified security operations portal provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
+For complete guidance on case features, workflows, linking incidents and IoCs, RBAC requirements, and customization options, see [Cases overview](cases-overview.md). For multi-tenant case management, see [Manage cases in MTO](./mto-manage-cases.md).
 
-For complete guidance on case features, workflows, linking incidents and IoCs, RBAC requirements, and customization options, see [Cases overview](/unified-secops-platform/cases-overview). For multi-tenant case management, see [Manage cases in MTO](/unified-secops-platform/mto-manage-cases).
-
-**Note:** Case management supports custom workflows, task assignments, rich collaboration, and evidence linking. Future enhancements include automation, SLA tracking, and AI-powered insights.
+**Note:** Case management supports custom workflows, task assignments, rich collaboration, and evidence linking.
 
 ## Get started with Microsoft Sentinel data lake
 
