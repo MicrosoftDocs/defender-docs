@@ -80,13 +80,6 @@ VMs with 'High' severity are internet-facing VMs.
 
 **Severity**: High
 
-### (Preview) Restricted network access should be configured on Internet exposed Function app
-
-**Description**: Defender for Cloud identified that the Function App is exposed to the internet without any restrictions. By restricting network access, you can ensure that only allowed networks can access the Functionapp. If the function does not require public network access, set 'Public Network Access' setting to 'disabled' or 'Enabled from selected virtual networks and IP addresses'. This action restricts the network access, reducing exposure to unauthorized access and protecting your application from potential threats.
-(No related policy)
-
-**Severity**: High
-
 ### Management ports of virtual machines should be protected with just-in-time network access control
 
 **Description**: Defender for Cloud has identified some overly permissive inbound rules for management ports in your Network Security Group. Enable just-in-time access control to protect your VM from internet-based brute-force attacks. Learn more in [Understanding just-in-time (JIT) VM access](just-in-time-access-overview.md).

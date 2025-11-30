@@ -59,21 +59,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: Medium
 
-### (Preview) Authentication should be enabled on Azure Functions
-
-**Description**: Defender for Cloud identified that authentication is not enabled for your Azure Functions App, and at least one HTTP triggered function is set to 'anonymous'. This poses a risk of unauthorized access to a Function. Add an Identity provider for the Function app or change the authentication type of the function itself to prevent this risk.
-(No related policy)
-
-**Severity**: High
-
 ### (Preview) Authentication should be enabled on Lambda Function URLs
-
-**Description**: Defender for Cloud has identified that authentication is not enabled for one or more Lambda Function URLs. Publicly accessible Lambda Function URLs without authentication pose a risk of unauthorized access and potential abuse. Enforcing AWS IAM authentication on Lambda Function URLs helps mitigate these risks.
-(No related policy)
-
-**Severity**: High
-
-### Automation account variables should be encrypted
 
 **Description**: It is important to enable encryption of Automation account variable assets when storing sensitive data.
 (Related policy: [Automation account variables should be encrypted](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2f3657f5a0-770e-44a3-b44e-9431ba1e9735)).
@@ -105,13 +91,6 @@ When you restore from a recovery point, you can restore the whole VM or specific
 ### [(Preview) Azure Local systems should have encrypted volumes](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fae95f12a-b6fd-42e0-805c-6b94b86c9830)
 
 **Description**: Use BitLocker to encrypt the OS and data volumes on Azure Local systems. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
-
-**Severity**: High
-
-### (Preview) Code Signing should be enabled on Lambda
-
-**Description**: Defender for Cloud has identified that code signing is not enabled on Lambda, which poses a risk of unauthorized modifications to the Lambda function code. Enabling code signing ensures the integrity and authenticity of the code, preventing such modifications.
-(No related policy)
 
 **Severity**: High
 
@@ -291,21 +270,7 @@ Replaces the older recommendation *Virtual machines should encrypt temp disks, c
 
 **Severity**: High
 
-### (Preview) Lambda function should be configured with automatic runtime version updates
-
-**Description**: Defender for Cloud identified that the Lambda function is not using an automatic runtime version update. This poses a risk of exposure to outdated runtime versions with vulnerabilities. Using automatic updates keeping runtime up to date and ensures the function benefits from the latest security patches and improvements.
-(No related policy)
-
-**Severity**: Medium
-
 ### (Preview) Lambda function should implement Reserved Concurrency to prevent resource exhaustion
-
-**Description**: Defender for Cloud identified that the Lambda function is using an outdated layer version. This poses a risk of exposure to known vulnerabilities. Keeping layers up to date ensures the function benefits from the latest security patches and improvements.
-(No related policy)
-
-**Severity**: Medium
-
-### Linux virtual machines should enforce kernel module signature validation
 
 **Description**: To help mitigate against the execution of malicious or unauthorized code in kernel mode, enforce kernel module signature validation on supported Linux virtual machines. Kernel module signature validation ensures that only trusted kernel modules will be allowed to run. This assessment only applies to Linux virtual machines that have the Azure Monitor Agent installed.
 (No related policy)
@@ -430,13 +395,6 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 (No related policy)
 
 **Severity**: Low
-
-### (Preview) Security mechanism should be used on lambda function API Gateway
-
-**Description**: Defender for Cloud has identified that authentication is not enabled for lambda function API Gateway. This poses a risk of unauthorized access and potential abuse of the function endpoints. Enforcing authentication can help mitigate these risks.
-(No related policy)
-
-**Severity**: High
 
 ### Service Fabric clusters should have the ClusterProtectionLevel property set to EncryptAndSign
 
