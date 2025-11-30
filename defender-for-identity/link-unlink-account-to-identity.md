@@ -59,7 +59,7 @@ Follow these steps to manually link accounts to a selected identity.
 1. Navigate to **Assets** > **Identity Inventory**.
 1. Select an **Identity** from the list.
 
-    :::image type="content" source="media/identity-inventory/inventory11.png" alt-text=":::image type="content" source="media/identity-inventory/inventory11.png" alt-text="Screenshot of the Identity Inventory page in the Defender portal. " lightbox="media/identity-inventory/inventory11.png":::":::
+  :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page ion the Microsoft Defender portal. " lightbox="media/identity-inventory/inventory-page.png":::
 
 1. Select the **Observed in organization** tab.
 1. Open the **Accounts** tab.
