@@ -57,90 +57,49 @@ The first step in the journey is to onboard your customers to the new experience
 There are two ways available to connect to other customer tenants.
 
 - [GDAP (Granular Delegated Admin Privileges) (preferred)](/partner-center/customers/gdap-introduction)
-- [Azure Lighthouse](/azure/lighthouse/)
+- [Azure Lighthouse](/azure/lighthouse/) for scenarios where GDAP is not supported. Some scenarios include:
 
-  - For managing the customer’s Sentinel environment.
-  - For non-CSP partners
-  - B2B collaboration (Entra RBAC) to manage their Defender customers.
-  - Service principal delegation across tenants
+  - CSP partners with Sentinel workloads (partner center???)
+  - [Non-CSP partners (Azure RBAC)](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal)
+  - [B2B collaboration](/entra/external-id/what-is-b2b) (Entra RBAC) to manage Defender customers.
+  - [Service principal delegation across tenants](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890)
+  - Workbooks querying data across tenants
+  - Cross-workspace analytics rules
+    - When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
+    - To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
 
+    >[!NOTE]
+    > It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
 
-    - GDAP for Defnder  
-    - MTO for Sentinel  
-    - Lighthouse for sentinel in specific cases???
+  - Advanced automation rule/playbook scenario
 
-<!---
-CSP partners often manage more than Defender and Sentinel workloads, this is where [Partner Center](/partner-center/enroll/overview) comes in which streamlines several business processes to make it easier to manage their customer relationship.
-
-**For non-CSP partners – Azure Lighthouse and B2B collaboration**
-
-Non-CSP partners rely on Azure Lighthouse (Azure RBAC) to manage their Sentinel customers and B2B collaboration (Entra RBAC) to manage their Defender customers. Learn how to [onboard a customer to Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal) and how to [set up B2B collaboration](/entra/external-id/what-is-b2b).
-
---->
-
-### Azure Lighthouse
-
-There are some scenarios where [MTO](/unified-secops-platform/mto-overview) isn't recommended. In these cases, [Azure Lighthouse](/azure/lighthouse/) provides a way to delegate Azure resource access across Entra ID tenants.
-
-Some of these scenarios are described below:
-
-#### Service principal delegation across tenants
-
-Many MSSPs utilize service principals to automate tasks in the context of Microsoft Sentinel. The main example being content distribution via CI/CD pipelines. This scenario is achieved through the [delegation of permissions to service principals through Azure Lighthouse](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890). However, this scenario is something that is not achievable through MTO due to its reliance on B2B invites, which are not supported for service principal identities.
-
-You can continue using Azure Lighthouse and service principals for this task after your transition to the Defender portal. No additional actions or changes are needed.
-
-If you don’t want to depend on Azure Lighthouse, you can use [Sentinel repositories](/azure/sentinel/ci-cd-custom-content) as a way to run your CI/CD pipelines.
-
-#### Workbooks querying data across tenants
-
-Azure Workbooks are Azure resources that exist in Azure under a subscription and resource group. When you create a new query inside a workbook, this query uses the Log Analytics query API, which requires the *workspace()* operator to reference other workspaces. If the workspaces that need to be queried are in a different tenant, the only way to reference them is by having the corresponding Azure Lighthouse delegation.
-
-Workbooks are also available in Defender multitenant management, allowing you to see a list of all workbooks across all tenants in a single place, enabling easy access. This capability is currently in preview. There is also a cross-tenant out-of-the-box workbook available in multitenant management; situational awareness. This gives you cross-tenant insights within a single workbook without relying on Azure Lighthouse and is also a preview capability.
-
-#### Cross-workspace analytics rules
-
-Cross-workspace analytics rules can be used in two different scenarios:
-
-- When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
-
-- To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
-
-In these cases, MSSPs still need to use Azure Lighthouse to provide the ability to reference multiple workspaces within a rule query. This is something that is not possible with Custom Detections today although it is on the roadmap.
-
-It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules:
-
-- When the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
-
-#### Advanced automation rule/playbook scenario
-
-There are certain advanced scenarios in the use of automation rules and playbooks that might still require the use of Azure Lighthouse delegations. For example, when the MSSP needs to protect the intellectual property of a playbook and this is hosted in the partner tenant, but still the playbook needs to execute actions in the customer tenant. Another example is described here: [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
+    Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
 
 ## Entitlement Management
 
 [Entitlement management](/entra/id-governance/entitlement-management-overview) is an [identity governance](/entra/id-governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
 
-The typical entitlement management configurations that often are being considered are:
+Some typical entitlement management configurations that are often considered are:
 
-**B2B Collaboration**
+### B2B Collaboration
 
 - Invite external users as guests into your tenant
 - Supports Conditional Access, MFA, and lifecycle management
 - Ideal for partners, suppliers, and contractors needing app/resource access which can be governed
 
-**Cross-Tenant access settings**
+### Cross-Tenant access settings
 
 - Fine-grained control over inbound/outbound collaboration
 - Trust MFA and device compliance claims across tenants
 - Configure default or organization-specific policies
 
-**B2B Direct Connect**
+### B2B Direct Connect
 
 - Enables mutual trust between two Entra tenants
 - Seamless collaboration via Teams shared channels without adding guests
 - Perfect for ongoing partnerships where users keep home credentials
 
-Most commonly a combination of B2B Collaboration and Cross-Tenant access settings are the most relevant choices for an MSSP. B2B Direct Connect is often considered too invasive due to the creation of a persistent trust relationship and synchronization of identities which causes a perceived loss of tenant boundary control.
+Often, a combination of B2B Collaboration and Cross-Tenant access settings are the most relevant choices for an MSSP.
 
 The picture below shows the B2B collaboration guest representation in the customer tenant.
 
@@ -158,7 +117,7 @@ The following section discusses the most commonly used B2B collaboration options
 
 This enables the MSSP analyst to connect to the customer tenant leveraging the Defender portal to manage both Sentinel and Defender using *security.microsoft.com/homepage?tid=\[tenantID\]* or switch tenant from the MSSP Defender portal. Notice that the identity UPN “changes” from the MSSP UPN to the guest UPN using the \#EXT# identifier. The same experience is noticeable when using GDAP.
 
-Since there’s no or little management or governance available using this option, it is generally not being used by MSSPs.
+Since there’s no or little management or governance available using this option, it is generally not used by MSSPs.
 
 **Option 2 – leveraging entitlement access packages**
 
@@ -166,18 +125,17 @@ A simple invitation and redemption process lets MSSP’s use their own credentia
 
 Together with Azure Lighthouse, this is the most common option used by MSSPs to manage their customers’ environment. Entra service limitations are described [here](/entra/identity/users/directory-service-limits-restrictions).
 
-Limitations of this option are:
+### Limitations
 
-- A single user can only belong to a maximum of 500 Microsoft Entra tenants as a member or a guest.
+- A single user can belong to a maximum of 500 Microsoft Entra tenants as a member or a guest.
 
-- Entra P2 licensing might be required for the customer tenant, please check [here](/entra/id-governance/licensing-fundamentals).
-
+- Entra P2 licensing might be required for the customer tenant, please check [the licensing fundamentals](/entra/id-governance/licensing-fundamentals).
 
 # Defender Portal Permissions
 
 ## URBAC / Azure RBAC
 
-After setting establishing delegated access in the section above, the next step is to set up granular roles in the Defender portal, which will be used to access Defender and Sentinel.
+After setting establishing delegated access, the next step is to set up granular roles in the Defender portal, which will be used to access Defender and Sentinel.
 
 [Unified RBAC](/defender-xdr/manage-rbac) to provides centralized permissions management for several Defender solutions. You not a required to transition to the unified experience, but it does simplify the delegation of Defender permissions. Your Microsoft Sentinel permissions will continue to work as expected in the unified experience, with or without URBAC. Instructions on how to enable Defender URBAC can be found here [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac)
 
