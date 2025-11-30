@@ -5,7 +5,7 @@ ms.date: 05/06/2025
 ms.topic: how-to
 #customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and i soperating the way it should be.
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 ---
 
 # Connect a Microsoft Sentinel connected AWS account to Defender for Cloud

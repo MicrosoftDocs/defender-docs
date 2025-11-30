@@ -5,7 +5,7 @@ ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 05/05/2025
 ai-usage: ai-assisted
-ms.ms.author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ---
 

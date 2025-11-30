@@ -1,6 +1,6 @@
 ---
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 09/11/2025

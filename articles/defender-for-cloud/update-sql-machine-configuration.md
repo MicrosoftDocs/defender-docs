@@ -2,7 +2,7 @@
 title: Update Defender for SQL servers on Machines plan configuration
 description: Learn how to update your SQL Servers on machine configuration across Azure VMs, on-premises, and hybrid environments with Defender for Cloud.
 ms.topic: how-to
-ms.ms.author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 04/28/2025
 #customer intent: As a security administrator, I want to update the Defender for SQL servers on Machines plan so that I can ensure my SQL servers in various environments have the latest configuration.

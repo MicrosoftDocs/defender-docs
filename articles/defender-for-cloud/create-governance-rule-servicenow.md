@@ -2,7 +2,7 @@
 title: Create automatic tickets with governance rules
 description: Learn how to create a governance rule in Defender for Cloud that connects recommendations or severity levels to a specific owner.
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 10/13/2024
 ai-usage: ai-assisted

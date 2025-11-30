@@ -2,7 +2,7 @@
 title: Overview of Mend.io integration
 description: Learn how to enhance vulnerability analysis and provide comprehensive visibility of critical vulnerabilities by integrating Mend.io with Microsoft Defender.
 author: ElazarK
-ms.ms.author: elkrieger
+ms.author: elkrieger
 ms.topic: overview
 ms.date: 05/20/2025
 ai-usage: ai-assisted

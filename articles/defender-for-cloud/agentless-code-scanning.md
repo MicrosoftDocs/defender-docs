@@ -1,7 +1,7 @@
 ---
 title: Configure agentless code scanning (Preview)
 description: Discover how agentless code scanning in Microsoft Defender for Cloud identifies vulnerabilities in code and IaC configurations.
-ms.ms.author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: how-to

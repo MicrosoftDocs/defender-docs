@@ -2,7 +2,7 @@
 title: Use the data ingestion benefit in Microsoft Defender for Cloud
 description: Learn how to take advantage of the data ingestion benefit in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.ms.author: elkrieger
+ms.author: elkrieger
 author: elazark
 ms.date: 04/08/2025
 ai-usage: ai-assisted

@@ -1,7 +1,7 @@
 ---
 title: Risk prioritization
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 description: Learn how Defender for Cloud prioritizes security recommendations and mitigates risks to protect your environment.
 ms.topic: concept-article
 ms.date: 07/15/2025

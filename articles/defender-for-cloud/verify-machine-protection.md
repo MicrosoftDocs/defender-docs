@@ -1,7 +1,7 @@
 ---
 title: Verify SQL machine protection
 description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected. Ensure that all security measures are properly implemented.
-ms.ms.author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
 ms.date: 04/27/2025

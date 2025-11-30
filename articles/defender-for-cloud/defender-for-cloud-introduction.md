@@ -3,7 +3,7 @@ title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud. This cloud-native application protection platform (CNAPP) includes two key capabilities, cloud security posture management (CSPM) and cloud workload protection platform (CWPP). It helps protect your environments across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises systems.
 ms.topic: overview
 ms.date: 11/13/2025
-ms.ms.author: elkrieger
+ms.author: elkrieger
 author: Elazark
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
 ---

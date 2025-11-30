@@ -4,7 +4,7 @@ metadata:
   description: Common questions about the integrated Microsoft Defender Vulnerability Management solution in Defender for Cloud.
   services: defender-for-cloud
   author: ElazarK
-  ms.ms.author: elkrieger
+  ms.author: elkrieger
   manager: raynew
   ms.topic: faq
   ms.date: 05/18/2025

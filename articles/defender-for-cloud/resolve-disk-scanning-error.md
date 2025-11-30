@@ -4,7 +4,7 @@ description: Troubleshoot disk scan error in Microsoft Defender for Cloud to ens
 ms.date: 05/25/2025
 ms.topic: how-to
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve the disk scan errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Delegate recommendations with Microsoft Security Copilot
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 description: Learn how to delegate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
 ms.date: 09/25/2025

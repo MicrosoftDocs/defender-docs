@@ -4,7 +4,7 @@ description: Troubleshoot deployment issues for your GCP connector within Micros
 ms.date: 06/03/2025
 ms.topic: how-to
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve the Domain Restricted Sharing policy in Google Cloud Platform (GCP) to ensure my resources are connected and protected.
 ---
 

@@ -2,7 +2,7 @@
 title: Remediate system updates and patches recommendations
 description: Learn how to enable system updates on your servers to keep them secure and healthy by following the steps provided in this guide to ensure optimal security.
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 02/19/2025
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.

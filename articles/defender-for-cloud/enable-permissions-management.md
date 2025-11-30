@@ -1,7 +1,7 @@
 ---
 title: Enable cloud infrastructure entitlement management (CIEM)
 author: Elazark
-ms.ms.author: elkrieger
+ms.author: elkrieger
 description: Learn how to enable CIEM for better access control and security in your cloud infrastructure.
 ms.topic: how-to
 ms.date: 11/13/2025
