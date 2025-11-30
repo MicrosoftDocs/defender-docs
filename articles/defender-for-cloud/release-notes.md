@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/27/2025
+ms.date: 11/30/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| November 30, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws) |
+| November 30, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
 |November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
 |November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 |November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
@@ -49,13 +49,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-### Cloud posture management adds serverless protection for Azure and AWS
+### Cloud posture management adds serverless protection for Azure and AWS (Preview)
 
 November 30, 2025
 
-Defender for Cloud has extended the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) in preview in both the Azure portal and the Defender portal.
+Defender for Cloud has extended the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) **(Preview)** in both the Azure portal and the Defender portal.
 
-The Defender for Cloud portal includes onboarding through the Defender CSPM plan, reviewing misconfiguration recommendations, and exploring workloads in Cloud Inventory. While the Defender portal includes Vulnerability Assessment.
+The features available vary by portal. The table shows which features are available in each portal: 
+
+| Feature | Defender for Cloud portal | Defender portal |
+|--|--|--|
+| Onboarding through the Defender CSPM plan | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Review misconfiguration recommendations | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | 
+| Build queries with the cloud security explorer | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Explore workloads in Cloud Inventory | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | 
+| Investigate attack paths | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Vulnerability Assessment | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
 
 This release introduces automatic discovery and security posture assessment for:
 - Azure Functions
