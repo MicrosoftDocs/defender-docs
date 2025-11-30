@@ -1,8 +1,8 @@
 ---
 title: Archive of what's new in Microsoft Defender for Cloud
 description: A description of what's new and changed in Microsoft Defender for Cloud from six months ago and earlier.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: reference
 ms.date: 07/06/2025
 ms.custom: sfi-ga-nochange, sfi-image-nochange

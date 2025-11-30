@@ -1,8 +1,8 @@
 ---
 title: Overview of API security testing integrations (preview)
 description: Learn about security testing scan results from partner applications within Microsoft Defender for Cloud.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 11/26/2024
