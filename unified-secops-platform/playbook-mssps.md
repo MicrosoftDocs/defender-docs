@@ -63,8 +63,8 @@ There are two ways available to connect to other customer tenants.
   - [Non-CSP partners (Azure RBAC)](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal)
   - [B2B collaboration](/entra/external-id/what-is-b2b) (Entra RBAC) to manage Defender customers.
   - [Service principal delegation across tenants](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890)
-  - Workbooks querying data across tenants
-  - Cross-workspace analytics rules
+  - [Workbooks querying data across multiple tenants](/azure/sentinel/multiple-tenants-service-providers)
+  - [Cross-workspace analytics rules](/azure/sentinel/multiple-workspace-view)
     - When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
     - To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
 
@@ -79,25 +79,25 @@ There are two ways available to connect to other customer tenants.
 
 [Entitlement management](/entra/id-governance/entitlement-management-overview) is an [identity governance](/entra/id-governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
 
-Some typical entitlement management configurations that are often considered are:
+Some typical entitlement management configurations are:
 
-### B2B Collaboration
+- B2B Collaboration
 
-- Invite external users as guests into your tenant
-- Supports Conditional Access, MFA, and lifecycle management
-- Ideal for partners, suppliers, and contractors needing app/resource access which can be governed
+  - Invite external users as guests into your tenant
+  - Supports Conditional Access, MFA, and lifecycle management
+  - Ideal for partners, suppliers, and contractors needing app/resource access which can be governed
 
-### Cross-Tenant access settings
+- Cross-Tenant access settings
 
-- Fine-grained control over inbound/outbound collaboration
-- Trust MFA and device compliance claims across tenants
-- Configure default or organization-specific policies
+  - Fine-grained control over inbound/outbound collaboration
+  - Trust MFA and device compliance claims across tenants
+  - Configure default or organization-specific policies
 
-### B2B Direct Connect
+- B2B Direct Connect
 
-- Enables mutual trust between two Entra tenants
-- Seamless collaboration via Teams shared channels without adding guests
-- Perfect for ongoing partnerships where users keep home credentials
+  - Enables mutual trust between two Entra tenants
+  - Seamless collaboration via Teams shared channels without adding guests
+  - Perfect for ongoing partnerships where users keep home credentials
 
 Often, a combination of B2B Collaboration and Cross-Tenant access settings are the most relevant choices for an MSSP.
 
@@ -105,6 +105,7 @@ The picture below shows the B2B collaboration guest representation in the custom
 
 :::image type="content" source="media/playbook-mssps/b2b-collaboration-diagram.png" alt-text="Diagram illustrating B2B collaboration.":::
 
+<!---
 The following section discusses the most commonly used B2B collaboration options:
 
 **Option 1 – invite an external user (guest permissions only)**
