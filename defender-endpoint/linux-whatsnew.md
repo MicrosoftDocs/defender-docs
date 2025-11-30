@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 11/04/2025
+ms.date: 11/25/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -24,7 +24,8 @@ appliesto:
 # What's new in Microsoft Defender for Endpoint on Linux
 
 
-This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux.
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/linux-rss`
 
 > [!IMPORTANT]
 > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support is available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
