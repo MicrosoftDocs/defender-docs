@@ -1,8 +1,8 @@
 ---
 title: Enable agentless scanning for Virtual Machines
 description: Run agentless scanning on Virtual Machines (VMs) for vulnerabilities and threats in Microsoft Defender for Cloud.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: how-to
 ms.date: 07/20/2025
 ms.custom: sfi-image-nochange

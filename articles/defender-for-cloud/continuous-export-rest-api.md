@@ -1,8 +1,8 @@
 ---
 title: Set up continuous export with REST API
 description: Learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations with REST API.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: how-to
 ms.date: 07/15/2025
 # customer intent: As a reader, I want to learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations using the REST API, so that I can integrate it into my own applications.

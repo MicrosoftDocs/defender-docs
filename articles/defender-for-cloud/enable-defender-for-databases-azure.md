@@ -3,8 +3,8 @@ title: Enable Defender for open-source relational databases on Azure
 description: Learn how to enable Microsoft Defender for open-source relational databases to detect potential security threats on Azure environments.
 ms.date: 06/30/2025
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my Azure databases.
 ---
 

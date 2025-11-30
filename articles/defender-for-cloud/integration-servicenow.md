@@ -1,8 +1,8 @@
 ---
 title: Overview of the ServiceNow integration
 description: Learn about integrating ServiceNow with Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: overview
 ms.date: 05/20/2025
 ai-usage: ai-assisted

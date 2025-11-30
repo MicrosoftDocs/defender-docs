@@ -2,8 +2,8 @@
 title: Defender for Cloud CLI Overview
 description: "Defender for Cloud CLI: Orchestrate security scans in CI/CD pipelines or locally with minimal setup. Upload results to Defender for Cloud for prioritization and tracking."
 #customer intent: As a developer, I want to integrate Defender for Cloud CLI into my CI/CD pipeline so that I can automate security scans with minimal setup.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.reviewer: dacurwin
 ms.date: 11/06/2025
 ms.topic: concept-article

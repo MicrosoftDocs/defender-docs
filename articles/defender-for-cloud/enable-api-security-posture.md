@@ -1,8 +1,8 @@
 ---
 title: Enable API security posture management
 description: Learn how to enable API security posture management in Microsoft Defender for Cloud to protect your APIs.
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ms.topic: how-to
 
 ms.date: 04/25/2025

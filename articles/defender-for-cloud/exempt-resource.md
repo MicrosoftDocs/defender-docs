@@ -3,8 +3,8 @@ title: Exempt resources from recommendation in Microsoft Defender for Cloud
 description: Learn how to exempt resources from recommendation in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.custom: ignite-2023
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ms.date: 07/14/2025
 ---
 

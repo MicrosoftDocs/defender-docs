@@ -2,8 +2,8 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 06/01/2023
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ---
 ## Remove the Defender sensor
 

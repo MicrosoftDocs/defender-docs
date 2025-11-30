@@ -1,9 +1,9 @@
 ---
-author: dcurwin
+author: Elazark
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 09/27/2023
-ms.author: dacurwin
+author: elkrieger
 
 ---
 ## DevOps recommendations

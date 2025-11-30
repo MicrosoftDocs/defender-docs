@@ -2,8 +2,8 @@
 title: Understand Defender for Storage security threats and alerts 
 description: Learn about the security threats and alerts Microsoft Defender for Storage provides to detect and respond to potential security risks.
 ms.date: 07/15/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: concept-article
 #customer intent: As a security professional, I want to understand the security threats and alerts in Microsoft Defender for Storage so that I can better protect my organization's data.
 ---

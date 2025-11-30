@@ -1,8 +1,8 @@
 ---
 title: Remediate Defender for Endpoint misconfiguration issues in Microsoft Defender for Cloud
 description: Identify and remediate Defender for Endpoint misconfigurations in Defender for Cloud
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: how-to
 ms.date: 02/19/2025
 ai-usage: ai-assisted

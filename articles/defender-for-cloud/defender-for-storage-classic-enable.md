@@ -2,8 +2,8 @@
 title: Enable and configure Microsoft Defender for Storage (classic)
 description: Learn how to enable and configure Microsoft Defender for Storage (classic) to protect your storage accounts from potential security threats.
 ms.date: 03/20/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage (classic) so that I can protect my storage accounts from threats.
 ms.custom: devx-track-azurepowershell, devx-track-azurecli

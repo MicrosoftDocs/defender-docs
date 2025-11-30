@@ -2,8 +2,8 @@
 title: Manage security incidents
 description: This document helps you to use Microsoft Defender for Cloud to manage security incidents.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ms.date: 05/19/2025
 ms.custom: sfi-image-nochange
 ---

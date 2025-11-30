@@ -1,8 +1,8 @@
 ---
 title: Set up continuous export in the Azure portal
 description: Learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: how-to
 ms.date: 07/14/2025
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations in Microsoft Defender for Cloud so that I can analyze the data in Log Analytics or Azure Event Hubs.

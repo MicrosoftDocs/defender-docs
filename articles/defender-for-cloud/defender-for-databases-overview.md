@@ -3,8 +3,8 @@ title: Overview of Defender for Databases
 description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL, MySQL, and MariaDB.
 ms.date: 05/13/2025
 ms.topic: overview
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 #customer intent: As a reader, I want to understand the Microsoft Defender for Databases plan types so that I can make informed decisions about their usage.
 ---
 

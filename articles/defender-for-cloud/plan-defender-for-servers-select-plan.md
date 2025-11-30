@@ -2,8 +2,8 @@
 title: Select a Defender for Servers plan
 description: This article helps you understand which Defender for Servers plan to deploy in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ms.date: 02/23/2025
 #customer intent: As a reader, I want to understand which Defender for Servers plan I want to deploy.
 ---

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot connectors guide
 description: This guide is for IT professionals, security analysts, and cloud admins who need to troubleshoot problems related to Microsoft Defender for Cloud's AWS and GCP connectors.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.topic: conceptual
 ms.date: 06/18/2025
 ---

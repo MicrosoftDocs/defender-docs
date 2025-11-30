@@ -2,8 +2,8 @@
 title: Configure email notifications for alerts and attack paths
 description: Learn how to fine-tune the Microsoft Defender for Cloud security alert emails to ensure the right people receive timely notifications.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ms.date: 09/10/2025
 ms.custom: mode-other
 #customer intent: As a user, I want to learn how to customize email notifications for alerts and attack paths in Microsoft Defender for Cloud.

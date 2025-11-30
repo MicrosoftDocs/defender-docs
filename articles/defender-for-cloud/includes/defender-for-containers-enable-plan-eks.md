@@ -2,8 +2,8 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 02/24/2025
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ---
 
 ## Enable the plan

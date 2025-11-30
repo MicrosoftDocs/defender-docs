@@ -2,8 +2,8 @@
 title: Alerts schema
 description: This article describes the different schemas used by Microsoft Defender for Cloud for security alerts.
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+author: elkrieger
+author: Elazark
 ms.date: 05/18/2025
 ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to understand the different schemas used by Microsoft Defender for Cloud for security alerts so that I can effectively work with the alerts.

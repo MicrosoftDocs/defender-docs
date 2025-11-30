@@ -4,8 +4,8 @@ metadata:
   description: Get answers to common questions about protecting containers
   ms.topic: faq
   ms.service: defender-for-cloud
-  author: dcurwin
-  ms.author: dacurwin
+  author: Elazark
+  author: elkrieger
   ms.date: 07/15/2025
 title: Common questions about protecting containers
 summary: Get answers to common questions about protecting containers

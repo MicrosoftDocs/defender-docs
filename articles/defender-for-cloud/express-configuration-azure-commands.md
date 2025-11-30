@@ -3,8 +3,8 @@ title: Express configuration Azure Command Line Interface (CLI) commands referen
 description: In this article, you can review the Express configuration Azure Command Line Interface (CLI) commands reference and copy example scripts to use in your environments.
 ms.topic: sample
 ms.custom: devx-track-azurecli
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 ms.date: 09/17/2024
 ---
 

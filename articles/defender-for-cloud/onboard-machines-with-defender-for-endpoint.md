@@ -3,8 +3,8 @@ title: Onboard non-Azure servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
 ms.date: 05/01/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+author: elkrieger
 
 ---
 
