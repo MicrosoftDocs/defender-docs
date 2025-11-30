@@ -2,7 +2,7 @@
 title: Plan Defender for Servers roles and permissions 
 description: Review roles and permissions for Microsoft Defender for Servers.
 ms.topic: concept-article
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 02/19/2025
 ---

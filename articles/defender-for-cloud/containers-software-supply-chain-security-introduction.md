@@ -2,7 +2,7 @@
 title: Containers software supply chain security using Defender for Containers
 description: Understand how Defender for Containers can secure your containers software supply chain.
 ms.topic: concept-article
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 3/19/2025
 #customer intent: As a devops person, I want to understand how Defender for Containers can secure my containers software supply chain.

@@ -3,7 +3,7 @@ title: Binary drift detection
 description: Learn how binary drift detection can help you detect unauthorized external processes within containers.
 ms.topic: how-to
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 07/15/2025
 #customer intent: As a user, I want to understand how binary drift detection can help me detect unauthorized external processes within containers.
 ---

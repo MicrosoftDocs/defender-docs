@@ -3,7 +3,7 @@ title: Enable Defender for open-source relational databases on Amazon Web Servic
 description: Learn how to enable Microsoft Defender for open-source relational databases to detect potential security threats on AWS environments.
 ms.date: 06/30/2025
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my AWS databases.
 ---

@@ -4,7 +4,7 @@ description: Learn about the benefits and features of Microsoft Defender for con
 ms.date: 07/15/2025
 ms.topic: overview
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ---
 # Introduction to Microsoft Defender for container registries (deprecated)
 

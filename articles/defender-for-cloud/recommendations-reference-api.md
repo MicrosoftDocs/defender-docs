@@ -5,7 +5,7 @@ author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 05/18/2025
-author: elkrieger
+ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
 ---

@@ -4,7 +4,7 @@ description: Design a solution to protect on-premises and multicloud servers wit
 ms.topic: concept-article
 ms.date: 03/05/2025
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 #customer intent: As a cloud solution architect, I want to plan a Defender for Servers deployment so that I can protect on-premises and multicloud servers.
 ---
 

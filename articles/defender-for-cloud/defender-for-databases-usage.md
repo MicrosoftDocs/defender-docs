@@ -3,7 +3,7 @@ title: Respond to Defender open-source database alerts
 description: Configure Microsoft Defender for open-source relational databases to detect potential security threats.
 ms.date: 07/31/2025
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my databases.

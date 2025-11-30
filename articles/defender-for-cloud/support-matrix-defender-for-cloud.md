@@ -3,7 +3,7 @@ title: Interoperability with Azure services, Azure clouds, and client operating 
 description: Learn about the Azure cloud environments where Defender for Cloud can be used, the Azure services that Defender for Cloud protects, and the client operating systems that Defender for Cloud supports.
 ms.topic: limits-and-quotas
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 05/01/2025
 ---
 

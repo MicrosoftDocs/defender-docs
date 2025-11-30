@@ -2,7 +2,7 @@
 title: Prerequisites for data security posture management
 description: Learn about the requirements and prerequisites for data security posture management in Microsoft Defender for Cloud, including supported resources and regions.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 03/31/2025

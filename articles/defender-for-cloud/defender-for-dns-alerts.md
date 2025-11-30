@@ -3,7 +3,7 @@ title: Respond to Microsoft Defender for DNS alerts
 description: Learn best practices for responding to alerts that indicate security risks in DNS services.
 ms.date: 06/11/2025
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ---
 

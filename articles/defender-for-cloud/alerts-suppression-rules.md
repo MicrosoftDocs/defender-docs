@@ -3,7 +3,7 @@ title: Suppressing false positives or other unwanted security alerts
 description: This article explains how to use Microsoft Defender for Cloud's suppression rules to hide unwanted security alerts, such as false positives.
 ms.date: 08/20/2025
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.custom: sfi-image-nochange
 ---

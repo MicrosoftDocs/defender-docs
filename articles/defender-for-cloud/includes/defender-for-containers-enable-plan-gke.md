@@ -2,7 +2,7 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 01/10/2024
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.custom: sfi-image-nochange
 ---

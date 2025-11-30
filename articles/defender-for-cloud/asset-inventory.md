@@ -3,7 +3,7 @@ title: Cloud asset inventory
 description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
 ms.date: 09/03/2025
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 zone_pivot_groups: defender-portal-experience
 ---

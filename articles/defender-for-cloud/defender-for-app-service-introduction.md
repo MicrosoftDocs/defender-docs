@@ -3,7 +3,7 @@ title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
 ms.date: 05/13/2025
 ms.topic: overview
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.custom: sfi-image-nochange
 ---

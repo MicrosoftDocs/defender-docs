@@ -2,7 +2,7 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 07/14/2022
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ---
 

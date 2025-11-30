@@ -3,7 +3,7 @@ title: CI/CD in pipeline-scanning with Defender for Cloud CLI
 description: Learn how to integrate Microsoft Defender for Cloud CLI into your CI/CD workflows for automated security scanning and standards-based SARIF output.
 #customer intent: As a developer, I want to integrate Microsoft Defender for Cloud CLI into my CI/CD pipeline so that I can automate security scanning for container images.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.reviewer: dacurwin
 ms.date: 11/06/2025
 ms.topic: concept-article

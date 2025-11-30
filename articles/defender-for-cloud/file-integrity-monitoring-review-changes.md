@@ -2,7 +2,7 @@
 title: Review machine changes with file integrity monitoring in Microsoft Defender for Cloud 
 description: Learn how to review machine changes with file integrity monitoring in Microsoft Defender for Cloud 
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 07/14/2025
 ---

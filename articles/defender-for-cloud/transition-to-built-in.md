@@ -3,7 +3,7 @@ title: Move to scanning with Defender Vulnerability Management
 description: Learn how to transition to the Microsoft Defender Vulnerability Management solution in Microsoft Defender for Cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.author: elkrieger
+ms.ms.author: elkrieger
 author: elazark
 ms.date: 10/05/2025
 ---

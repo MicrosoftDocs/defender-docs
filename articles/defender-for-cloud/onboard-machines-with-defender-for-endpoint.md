@@ -4,7 +4,7 @@ description: Learn how to connect your non-Azure machines directly to Microsoft 
 ms.topic: quickstart
 ms.date: 05/01/2025
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 
 ---
 

@@ -3,7 +3,7 @@ title: Prerequisites for Microsoft Defender for Storage
 description: Learn about the prerequisites and permissions required to enable Microsoft Defender for Storage and its features of malware scanning and sensitive-data threat detection.
 ms.topic: reference
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 11/30/2025
 ---
 

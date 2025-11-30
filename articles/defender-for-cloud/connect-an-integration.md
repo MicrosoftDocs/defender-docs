@@ -2,7 +2,7 @@
 title: Connect an integration
 description: Learn how to connect partner integrations into Microsoft Defender for Cloud to enhance security and gain insights for your multicloud environment.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 11/03/2024

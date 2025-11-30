@@ -3,7 +3,7 @@ title: Technical onboarding guide for 42Crunch (preview)
 description: Learn how to use 42Crunch with Microsoft Defender.
 ms.date: 07/15/2025
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ---
 

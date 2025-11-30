@@ -1,7 +1,7 @@
 ---
 title: Identify and remediate attack paths
 author: Elazark
-ms.author: elkrieger
+ms.ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
 ms.date: 05/18/2025

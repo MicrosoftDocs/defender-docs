@@ -3,7 +3,7 @@ title: Review CI/CD Pipeline Results in Cloud Security Explorer
 description: Learn how to use Cloud Security Explorer in Microsoft Defender for Cloud to review CI/CD pipeline results and map them to container images effectively.
 #customer intent: As a security analyst, I want to review CI/CD pipeline results in Cloud Security Explorer so that I can identify potential vulnerabilities in my DevOps environment.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.reviewer: dacurwin
 ms.date: 11/06/2025
 ms.topic: concept-article

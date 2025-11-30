@@ -2,7 +2,7 @@
 title: Overview of Defender for Servers in Defender for Cloud
 description: Get an overview of the Defender for Servers plan in Microsoft Defender for Cloud, including its features and integration with other Defender services.
 ms.topic: concept-article
-ms.author: elkrieger
+ms.ms.author: elkrieger
 author: Elazark
 ms.date: 09/10/2025
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.

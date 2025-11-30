@@ -2,7 +2,7 @@
 title: Connect Endor Labs to Defender for Cloud
 description: Learn how to connect Endor Labs with Microsoft Defender for Cloud to enhance vulnerability analysis and gain visibility of critical vulnerabilities.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 11/20/2024
 ai-usage: ai-assisted

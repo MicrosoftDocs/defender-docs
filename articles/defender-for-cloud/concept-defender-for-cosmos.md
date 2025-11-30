@@ -2,7 +2,7 @@
 title: Overview of Defender for Azure Cosmos DB
 description: Learn about the benefits, features, and security capabilities of Microsoft Defender for Azure Cosmos DB to help protect your databases.
 ms.topic: concept-article
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 12/24/2024
 #customer intent: As a security administrator, I want to understand the features of Microsoft Defender for Azure Cosmos DB so that I can protect my databases from threats.

@@ -4,7 +4,7 @@ description: Learn how to install and configure the Microsoft Defender for Conta
 author: Elazark
 ms.topic: how-to
 ms.date: 06/16/2025
-author: elkrieger
+ms.author: elkrieger
 ai-usage: ai-assisted
 ---
 

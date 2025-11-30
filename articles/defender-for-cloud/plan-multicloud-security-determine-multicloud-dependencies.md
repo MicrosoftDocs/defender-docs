@@ -3,7 +3,7 @@ title: Planning multicloud security determine multicloud dependencies CSPM CWPP 
 description: Learn about determining multicloud dependencies when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 04/28/2025
 ---
 

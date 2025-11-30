@@ -3,7 +3,7 @@ title: Classify APIs with sensitive data exposure
 description: Learn how to monitor your APIs for sensitive data exposure.
 ms.date: 07/01/2025
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: conceptual
 ms.custom: sfi-image-nochange
 ---

@@ -1,7 +1,7 @@
 ---
 title: Retrieve attack path data with API
 description: Learn how to Retrieve attack path data with APIs in Microsoft Defender for Cloud and enhance the security of your environment.
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
 ms.date: 08/11/2025

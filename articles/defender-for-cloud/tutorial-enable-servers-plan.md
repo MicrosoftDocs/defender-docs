@@ -2,7 +2,7 @@
 title: Protect your servers with Defender for Servers
 description: Learn how to enable the Defender for Servers plan in Microsoft Defender for Cloud to protect your virtual machines and reduce security risks.
 ms.topic: install-set-up-deploy
-ms.author: elkrieger
+ms.ms.author: elkrieger
 author: elazark
 ms.date: 09/28/2025
 # customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.

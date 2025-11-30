@@ -2,7 +2,7 @@
 title: Protecting your network resources
 description: This document addresses recommendations in Microsoft Defender for Cloud that help you protect your Azure network resources and stay in compliance with security policies.
 ms.topic: concept-article
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 02/19/2025
 ms.custom: sfi-image-nochange

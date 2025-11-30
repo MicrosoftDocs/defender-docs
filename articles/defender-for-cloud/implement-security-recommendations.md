@@ -2,7 +2,7 @@
 title: Remediate Recommendations
 description: Improve the security posture of your environments by remediating security recommendations in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.author: elkrieger
+ms.ms.author: elkrieger
 author: ElazarK
 ms.date: 05/19/2025
 ai-usage: ai-assisted

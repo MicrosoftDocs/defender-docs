@@ -2,7 +2,7 @@
 title: Review OS misconfiguration recommendations in Microsoft Defender for Cloud
 description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare machine OS settings with baselines in Microsoft Cloud Security Benchmark.
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 02/19/2025
 ---

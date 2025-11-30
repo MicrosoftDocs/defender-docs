@@ -2,7 +2,7 @@
 title: Overview of file integrity monitoring in Microsoft Defender for Cloud
 description: Learn about tracking file change with file integrity monitoring in Microsoft Defender for Cloud.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: conceptual
 ms.date: 08/12/2025
 ---

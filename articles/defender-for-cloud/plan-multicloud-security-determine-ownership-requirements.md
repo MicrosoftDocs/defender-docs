@@ -3,7 +3,7 @@ title: Planning multicloud security determine ownership requirements security fu
 description: Learn about determining ownership requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 05/25/2025
 ---
 

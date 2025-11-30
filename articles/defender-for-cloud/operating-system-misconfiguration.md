@@ -2,7 +2,7 @@
 title: Overview of improving operating system baseline configurations in Microsoft Defender for Cloud
 description: Learn how to improve operating system baseline configurations in Microsoft Defender for Cloud
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 03/10/2025
 ---

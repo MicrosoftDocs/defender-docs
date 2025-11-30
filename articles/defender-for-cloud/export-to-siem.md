@@ -2,7 +2,7 @@
 title: Stream alerts to monitoring solutions
 description: Learn how to stream your security alerts to Microsoft Sentinel, SIEMs, SOAR, or ITSM solutions.
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 07/14/2025
 ---

@@ -2,7 +2,7 @@
 title: Overview of the Defender for SQL on Machines plan in Microsoft Defender for Cloud
 description: Learn about the Defender for SQL Servers on Machines plan in Microsoft Defender for Cloud
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 07/15/2025
 ---

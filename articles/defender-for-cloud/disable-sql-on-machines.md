@@ -4,7 +4,7 @@ description: Learn how to disable Defender for SQL Servers on Machines in Micros
 ms.topic: how-to
 ms.date: 06/30/2025
 author: Elazark
-ms.author: elkrieger
+ms.ms.author: elkrieger
 #customer intent: As a security administrator, I want to disable Defender for SQL Servers on Machines in Defender for Cloud to manage my security posture effectively.
 ---
 

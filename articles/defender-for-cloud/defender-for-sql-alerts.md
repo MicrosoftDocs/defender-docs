@@ -2,7 +2,7 @@
 title: Explore and investigate Defender for SQL security alerts
 description: Learn how to explore and investigate Defender for SQL security alerts in Microsoft Defender for Cloud.
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 07/08/2024
 ---

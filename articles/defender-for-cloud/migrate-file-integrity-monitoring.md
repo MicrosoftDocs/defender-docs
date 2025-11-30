@@ -2,7 +2,7 @@
 title: Migrate from the Microsoft Monitoring Agent or the Azure Monitor Agent 
 description: Learn how to migrate File Integrity Monitor (FIM) from previous versions to the new version using Defender for Endpoint.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/15/2025
 #customer intent: As a security administrator, I want to migrate FIM so that I can use the latest features and improvements.

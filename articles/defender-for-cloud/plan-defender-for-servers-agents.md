@@ -2,7 +2,7 @@
 title: Understand Defender for Servers data collection in Microsoft Defender for Cloud
 description: Understand how the Defender for Servers plan collects data. 
 ms.topic: concept-article
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 02/19/2025
 #customer intent: As a reader, I want to understand how to plan the deployment of Defender for Servers agents and extensions.

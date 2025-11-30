@@ -4,7 +4,7 @@ description: Learn how to validate security alerts in Microsoft Defender for Clo
 ms.topic: how-to
 ms.custom: linux-related-content
 ms.date: 07/14/2025
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ---
 

@@ -4,7 +4,7 @@ description: Review support requirements, network configurations, and feature su
 ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: elazark
-ms.author: elkrieger
+ms.ms.author: elkrieger
 ms.date: 11/17/2025
 ---
 

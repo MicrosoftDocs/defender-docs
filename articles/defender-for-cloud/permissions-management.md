@@ -3,7 +3,7 @@ title: Cloud infrastructure entitlement management (CIEM)
 description: Learn about CIEM in Microsoft Defender for Cloud and enhance the security of your cloud infrastructure.
 ms.topic: concept-article
 author: Elazark
-ms.author: elkrieger
+ms.ms.author: elkrieger
 ms.date: 07/15/2025
 #customer intent: As a user, I want to understand how to manage permissions effectively so that I can enhance the security of my cloud infrastructure.
 ---

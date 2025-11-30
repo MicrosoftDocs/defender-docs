@@ -3,7 +3,7 @@ title: Export alerts and recommendations with continuous export
 description: Learn about the benefits of continuous export in Microsoft Defender for Cloud. Stream security data to Azure Monitor workspace for analysis and visualization.
 ms.date: 07/15/2025
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: concept-article
 #customer intent: As a reader, I want to understand the benefits of continuous export in Microsoft Defender for Cloud so that I can make informed decisions about implementing it in my organization.
 ---

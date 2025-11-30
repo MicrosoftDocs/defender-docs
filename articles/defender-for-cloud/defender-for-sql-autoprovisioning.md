@@ -2,7 +2,7 @@
 title: Migrate to Defender for SQL on machines using AMA
 description: Learn how to enable SQL server-targeted Azure Monitoring Agent's autoprovisioning process for Defender for SQL.
 ms.topic: install-set-up-deploy
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 05/05/2025
 ---

@@ -3,7 +3,7 @@ author: Elazark
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 09/27/2023
-author: elkrieger
+ms.author: elkrieger
 
 ---
 ## DevOps recommendations

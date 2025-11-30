@@ -2,7 +2,7 @@
 title: Regulatory compliance in Defender for Cloud
 description: Learn about regulatory compliance in Microsoft Defender for Cloud, and how it helps ensure compliance with industry, regional, and global standards.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: concept-article
 ms.date: 09/09/2024
 zone_pivot_groups: defender-portal-experience

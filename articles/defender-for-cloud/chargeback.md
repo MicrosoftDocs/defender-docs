@@ -5,7 +5,7 @@ author: Elazark
 contributors:
 ms.topic: conceptual
 ms.date: 03/17/2025
-author: elkrieger
+ms.author: elkrieger
 ---
 
 # Microsoft Defender for Cloud chargeback process using Azure Cost Analysis

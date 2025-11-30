@@ -2,7 +2,7 @@
 title: Test the Defender for Storage data security features
 description: Learn how to test the malware scanning, sensitive data threat detection, and activity monitoring features provided by Defender for Storage.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 07/15/2025
 ms.topic: how-to
 ms.custom: sfi-image-nochange

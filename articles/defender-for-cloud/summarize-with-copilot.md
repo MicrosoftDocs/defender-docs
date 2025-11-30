@@ -1,7 +1,7 @@
 ---
 title: Summarize recommendations with Microsoft Security Copilot
 author: Elazark
-ms.author: elkrieger
+ms.ms.author: elkrieger
 description: Learn how to summarize recommendations with Microsoft Security Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
 ms.date: 09/25/2025

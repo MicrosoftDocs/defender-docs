@@ -3,7 +3,7 @@ title: Building Cloud Security Explorer software vulnerabilities query
 description: Learn to build queries with cloud security explorer in Microsoft Defender for Cloud to proactively identify software vulnerabilities in VMs and container images
 ms.topic: how-to
 ms.date: 09/29/2024
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.custom: sfi-image-nochange
 # Customer Intent: As a security professional, I want to learn how to build queries with Cloud Security Explorer in Microsoft Defender for Cloud to show software vulnerabilities in VMs and container images.

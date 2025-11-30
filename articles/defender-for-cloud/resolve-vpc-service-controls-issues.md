@@ -4,7 +4,7 @@ description: Troubleshoot VPC service controls issues in Microsoft Defender for 
 ms.date: 06/05/2025
 ms.topic: how-to
 author: Elazark
-ms.author: elkrieger
+ms.ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve VPC service controls issues in Microsoft Defender for Cloud to ensure my resources are connected and protected.
 ---
 

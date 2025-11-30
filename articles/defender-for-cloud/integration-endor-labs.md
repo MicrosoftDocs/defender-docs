@@ -2,7 +2,7 @@
 title: Overview of Endor Labs integration
 description: Learn how to enhance vulnerability analysis and provide comprehensive visibility of critical vulnerabilities by integrating Endor Labs with Microsoft Defender.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: overview
 ms.date: 05/20/2025
 ai-usage: ai-assisted

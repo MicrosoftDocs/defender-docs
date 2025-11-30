@@ -2,7 +2,7 @@
 title: Integrate partner integrations
 description: Learn how to integrate partner integrations in to Microsoft Defender for Cloud.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/20/2025

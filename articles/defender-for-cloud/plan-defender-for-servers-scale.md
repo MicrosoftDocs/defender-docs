@@ -2,7 +2,7 @@
 title: Scale a Defender for Servers deployment 
 description: Scale protection of Azure, AWS, GCP, and on-premises servers by using Microsoft Defender for Servers.
 ms.topic: conceptual
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 02/19/2025
 ---

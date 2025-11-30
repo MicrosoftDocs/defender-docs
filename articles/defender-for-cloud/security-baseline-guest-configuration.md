@@ -2,7 +2,7 @@
 title: Set up Azure Policy guest configuration on machines protected by Microsoft Defender for Cloud
 description: Learn how to install the guest configuration on machines protected by Microsoft Defender for Cloud to assess OS misconfigurations. 
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 ms.date: 02/19/2025
 ---

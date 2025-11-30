@@ -3,7 +3,7 @@ title: Responding to Defender for Resource Manager alerts
 description: Learn about the steps necessary for responding to alerts from Microsoft Defender for Resource Manager
 ms.date: 03/30/2025
 ms.topic: how-to
-author: elkrieger
+ms.author: elkrieger
 author: Elazark
 #customer intent: As a security administrator, I want to respond to alerts so that I can mitigate threats effectively.
 ---

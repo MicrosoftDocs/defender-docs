@@ -2,7 +2,7 @@
 title: Set up the required Azure resources to export security alerts to IBM QRadar and Splunk
 description: Learn how to configure the required Azure resources in the Azure portal to stream security alerts to IBM QRadar and Splunk
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 07/15/2025
 ---

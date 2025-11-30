@@ -2,7 +2,7 @@
 title: Connect Mend.io to Defender for Cloud
 description: Learn how to connect Mend.io with Microsoft Defender for Cloud to enhance vulnerability analysis and gain visibility of critical vulnerabilities.
 author: ElazarK
-ms.author: elkrieger
+ms.ms.author: elkrieger
 ms.topic: how-to
 ms.date: 04/28/2025
 ai-usage: ai-assisted

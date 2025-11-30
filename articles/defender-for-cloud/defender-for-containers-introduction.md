@@ -3,7 +3,7 @@ title: Overview of Microsoft Defender for Containers
 description: Learn about Microsoft Defender for Containers, a cloud-native solution that secures your containerized assets across multicloud and on-premises environments.
 ms.topic: overview
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 05/13/2025
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---

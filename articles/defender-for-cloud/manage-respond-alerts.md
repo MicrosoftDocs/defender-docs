@@ -2,7 +2,7 @@
 title: Manage and respond to security alerts
 description: This document helps you to use Microsoft Defender for Cloud capabilities to manage and respond to security alerts.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 05/20/2025
 ms.topic: how-to
 ms.custom:

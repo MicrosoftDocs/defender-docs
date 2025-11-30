@@ -3,7 +3,7 @@ title: Enable Gated Deployment for Kubernetes Clusters
 description: Learn how to configure Gated Deployment in Microsoft Defender for Containers to enforce container image security policies for Kubernetes clusters.
 #customer intent: As a Kubernetes administrator, I want to configure Gated Deployment in Defender for Containers so that I can enforce container image security policies during deployments.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.reviewer: dacurwin
 ms.date: 10/29/2025
 ms.topic: concept-article

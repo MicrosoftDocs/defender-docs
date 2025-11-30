@@ -3,7 +3,7 @@ title: Microsoft Defender for Storage (classic)
 description: Learn about the benefits and features of Microsoft Defender for Storage (classic).
 ms.date: 05/13/2025
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.topic: overview
 ---
 

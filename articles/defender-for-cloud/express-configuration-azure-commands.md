@@ -4,7 +4,7 @@ description: In this article, you can review the Express configuration Azure Com
 ms.topic: sample
 ms.custom: devx-track-azurecli
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.date: 09/17/2024
 ---
 

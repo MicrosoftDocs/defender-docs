@@ -2,7 +2,7 @@
 title: Protect your APIs with Defender for APIs
 description: Learn how to enable and deploy the Defender for APIs plan in the Microsoft Defender for Cloud portal.
 author: Elazark
-author: elkrieger
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: conceptual
 ms.date: 09/28/2025
