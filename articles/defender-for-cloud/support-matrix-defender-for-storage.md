@@ -19,8 +19,8 @@ This article lists the prerequisites and permissions required to [enable Microso
 
 - The following storage types are supported:
 
-| Azure Blob Standard | Azure Blob Standard + Azure Files NFS | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen2 | Azure File Premium Provisioned v1 | Azure File Premium Provisioned v2 |
-|--|--|--|--|--|--|--|--|--|
+|Capability | Azure Blob Standard | Azure Blob Standard + Azure Files NFS | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen2 | Azure File Premium Provisioned v1 | Azure File Premium Provisioned v2 |
+|--|--|--|--|--|--|--|
 | Activity Monitoring | Supported | Not supported | Supported | Supported | Supported | Supported | Supported |
 | Sensitive Data Discovery | Supported | Not supported | Supported | Supported  | Supported | Not supported | Not supported |
 | On-upload Malware Scanning | Supported | Supported | Supported only for blobs | Not supported | Supported only for blobs | Not supported | Not supported |
