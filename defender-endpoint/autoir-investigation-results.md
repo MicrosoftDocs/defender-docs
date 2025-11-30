@@ -31,7 +31,7 @@ With Microsoft Defender for Endpoint, when an [automated investigation](automate
 
 ## Unified investigation page
 
-The unified investigation page includes information across your devices, email, and collaboration content. It defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). For more information, see [View the details and results of an automated investigation](./autoir-investigation-results.md).
+The unified investigation page includes information across your devices, email, and collaboration content. It defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). For more information, see [Details and results of an automated investigation](/defender-xdr/m365d-autoir-results).
 
 ## Open the investigation details view
 
