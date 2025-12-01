@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/30/2025
+ms.date: 12/01/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -27,31 +27,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
-## November 2025
+## December 2025
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| November 30, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
-|November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
-|November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
-|November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
-|November 25, 2025 | Preview | [Discover Azure AI Foundry agents in your environment (Preview)](#discover-azure-ai-foundry-agents-in-your-environment-preview) |
-|November 25, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
-|November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
-|November 24,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
-|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
-|November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
-|November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
-|November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
-|November 17, 2025| Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview)|
-|November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
-|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
-|November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
-|November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+| December 1, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
 
 ### Cloud posture management adds serverless protection for Azure and AWS (Preview)
 
-November 30, 2025
+December 1, 2025
 
 Defender for Cloud extends the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) **(Preview)** in both the Azure portal and the Defender portal.
 
@@ -74,6 +58,27 @@ This release introduces automatic discovery and security posture assessment for:
 Security teams can view all serverless resources in a centralized inventory and identify misconfigurations, vulnerabilities, and insecure dependencies.
 
 Learn more about [Serverless protection](serverless-protection.md).
+
+## November 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
+|November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
+|November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
+|November 25, 2025 | Preview | [Discover Azure AI Foundry agents in your environment (Preview)](#discover-azure-ai-foundry-agents-in-your-environment-preview) |
+|November 25, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
+|November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
+|November 24,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
+|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
+|November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
+|November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
+|November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
+|November 17, 2025| Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview)|
+|November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
+|November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
+|November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
 ### Kubernetes gated deployment (GA)
 
