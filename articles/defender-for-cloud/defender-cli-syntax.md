@@ -2,8 +2,8 @@
 title: Defender for Cloud CLI Syntax
 description: Discover how to scan container images for security risks using Microsoft Container Security Scanner. Includes syntax, parameters, and examples.
 #customer intent: As a DevOps engineer, I want to scan container images for vulnerabilities so that I can ensure the security of my deployments.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.reviewer: dacurwin
 ms.date: 11/06/2025
 ms.topic: concept-article

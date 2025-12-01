@@ -2,8 +2,8 @@
 title: Configure Microsoft Defender for Containers components
 description: Configure the container protections of Microsoft Defender for Containers
 ms.topic: how-to
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.custom: devx-track-azurecli, sfi-image-nochange
 zone_pivot_groups: k8s-host
 ms.date: 03/13/2025
