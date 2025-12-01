@@ -6,9 +6,9 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/01/2025
-author: batamig
-ms.author: bagol
+ms.date: 10/20/2025
+author: KesemSharabi
+ms.author: kesharab
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
@@ -24,9 +24,6 @@ appliesto:
 # Microsoft Defender Antivirus exclusions on Windows Server
 
 
-**Platforms**
-
-- Windows Server
 
 ## Important notes about automatic exclusions on Windows Server
 
@@ -44,6 +41,12 @@ This article describes the two main types of exclusions that you don't have to d
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
 
 For a more detailed overview of exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows Server
 
 ## Automatic server role exclusions
 

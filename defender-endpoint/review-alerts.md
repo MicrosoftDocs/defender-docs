@@ -4,8 +4,8 @@ description: Review alert information, including a visualized alert story and de
 ms.service: defender-endpoint
 f1.keywords: 
   - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -23,11 +23,6 @@ appliesto:
 
 ---
 # Review alerts in Microsoft Defender for Endpoint
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 
 The alert page in Microsoft Defender for Endpoint provides full context to the alert, by combining attack signals and alerts related to the selected alert, to construct a detailed alert story.

@@ -4,8 +4,8 @@ description: Resources and sample code to troubleshoot issues with Network prote
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: oogunrinde, yongrhee
 manager: bagol
 ms.subservice: asr
@@ -23,8 +23,6 @@ appliesto:
 
 ---
 # Troubleshoot network protection
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 This article provides troubleshooting information for [network protection](network-protection.md), in cases, such as:

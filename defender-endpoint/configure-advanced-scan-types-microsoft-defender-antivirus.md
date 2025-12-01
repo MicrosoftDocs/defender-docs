@@ -3,13 +3,13 @@ title: Configure scanning options for Microsoft Defender Antivirus
 description: You can configure Microsoft Defender Antivirus to scan email storage files, back-up or reparse points, network files, and archived files (such as .zip files).
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: bagol
 ms.subservice: ngp
-ms.date: 02/18/2025
+ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -23,12 +23,17 @@ search.appverid: met150
 
 # Configure Microsoft Defender Antivirus scanning options
 
-**Platforms**
-- Windows 
 
 ## Use Microsoft Intune to configure scanning options
 
 For more information, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
+
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Use Microsoft Configuration Manager to configure scanning options
 

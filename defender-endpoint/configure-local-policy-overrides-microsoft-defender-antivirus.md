@@ -4,11 +4,11 @@ description: Enable or disable users from locally changing settings in Microsoft
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 07/25/2024
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
 manager: bagol
 ms.collection: 
@@ -25,10 +25,14 @@ appliesto:
 # Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings
 
 
-**Platforms**
-- Windows
-
 By default, Microsoft Defender Antivirus settings that are deployed via a Group Policy Object to the endpoints in your network will prevent users from locally changing the settings. You can change this configuration in some instances. For example, it might be necessary to allow certain user groups, such as security researchers and threat investigators, to have further control over individual settings on the endpoints they use.
+
+
+## Prerequisites 
+
+### Supported operating systems
+
+- Windows
 
 ## Configure local overrides for Microsoft Defender Antivirus settings
 

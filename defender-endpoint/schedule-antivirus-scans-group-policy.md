@@ -3,10 +3,10 @@ title: Schedule antivirus scans using Group Policy
 description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
-ms.date: 04/29/2025
+ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens
 manager: bagol
 ms.subservice: ngp
@@ -24,11 +24,13 @@ appliesto:
 ---
 # Schedule antivirus scans using Group Policy
 
-
-**Platforms**
-- Windows
-
 This article describes how to configure scheduled scans using Group Policy. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Configure antivirus scans using Group Policy
 

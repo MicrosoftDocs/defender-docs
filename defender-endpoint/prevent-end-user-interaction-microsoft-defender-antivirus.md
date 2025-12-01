@@ -3,10 +3,10 @@ title: Hide the Microsoft Defender Antivirus interface
 description: You can hide virus and threat protection tile in the Windows Security app.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: pahuijbr
 manager: bagol
 ms.subservice: ngp
@@ -22,16 +22,17 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-**Platforms**
-- Windows
 
 You can use Group Policy to prevent users on endpoints from seeing the Microsoft Defender Antivirus interface. You can also prevent them from pausing scans.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Hide the Microsoft Defender Antivirus interface
 

@@ -1,10 +1,10 @@
 ﻿---
 title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
-ms.date: 02/05/2025
+ms.date: 10/23/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -187,7 +187,7 @@ Device control policies define access (called an entry) for a set of devices. En
 
 | Entry setting | Options |
 |---|---|
-| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>  1 - Device Read<br>2 - Device Write<br>4 - Device Execute<br>8 - File Read<br>16 - File Write<br>32 - File Execute<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>|
+| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>1 - Device Read - Allows inspection of device-level metadata and mounting. Allows ability to view files.<br>2 - Device Write -  Grants ability to format or reconfigure the device.<br>4 - Device Execute - Allows renaming the USB in Explorer (a form of execution at the system level).<br>8 - File Read - Enables viewing and browsing of stored content on the external device.<br>16 - File Write - Permits editing, copying, or deleting files and folders on the external device.<br>32 - File Execute - Enables launching of executable content from the external device.<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>|
 | Action | Allow <br/> Deny <br/> AuditAllow <br/> AuditDeny |
 | Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> |
 

@@ -3,12 +3,12 @@ title: Use the command line to manage Microsoft Defender Antivirus
 description: Run Microsoft Defender Antivirus scans and configure next-generation protection with a dedicated command-line utility.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: bagol
-ms.date: 01/16/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -23,9 +23,6 @@ appliesto:
 ---
 # Configure and manage Microsoft Defender Antivirus with the mpcmdrun.exe command-line tool
 
-
-**Platforms**
-- Windows
 
 You can perform various functions in Microsoft Defender Antivirus using the dedicated command-line tool **mpcmdrun.exe**. This utility is useful when you want to automate Microsoft Defender Antivirus tasks. You can find the utility in `%ProgramFiles%\Windows Defender\MpCmdRun.exe`. Run it from a command prompt.
 
@@ -44,9 +41,16 @@ Here's an example:
 MpCmdRun.exe -Scan -ScanType 2
 ```
 
-In our example, the MpCmdRun utility starts a full antivirus scan on the device.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Commands
+
+In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 
 |Command|Description|
 |---|---|

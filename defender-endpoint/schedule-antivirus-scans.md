@@ -3,10 +3,10 @@ title: Schedule regular quick and full scans with Microsoft Defender Antivirus
 description: Set up recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
-ms.date: 04/30/2025
+ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
 manager: bagol
 ms.subservice: ngp
@@ -25,10 +25,13 @@ appliesto:
 # Configure scheduled quick or full Microsoft Defender Antivirus scans
 
 
-**Platforms**
-- Windows
-
 You can set up regular, scheduled antivirus scans on devices. These scheduled scans are in addition to always-on, real-time protection and [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scans. When you schedule a scan, you can specify the type of scan, when the scan should occur, and if the scan should occur after a [protection update](manage-protection-updates-microsoft-defender-antivirus.md) or when a device isn't being used. You can also set up special scans to complete remediation actions if needed.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Comparing the quick scan, full scan, and custom scan
 

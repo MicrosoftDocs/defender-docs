@@ -14,21 +14,15 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ---
+
 # Manage updates for mobile devices and virtual machines (VMs)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-**Platforms**
-- Windows
 
 Mobile devices and VMs may require more configuration to ensure performance is not impacted by updates.
 
@@ -41,6 +35,14 @@ The following articles may also be useful in these situations:
 - [Configuring scheduled and catch-up scans](schedule-antivirus-scans.md)
 - [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Deployment guide for Microsoft Defender Antivirus in a virtual desktop infrastructure (VDI) environment](deployment-vdi-microsoft-defender-antivirus.md)
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
+
 
 ## Opt in to Microsoft Update on mobile computers without a WSUS connection
 

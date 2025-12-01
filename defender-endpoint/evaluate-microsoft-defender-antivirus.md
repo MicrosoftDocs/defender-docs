@@ -4,12 +4,12 @@ description: Businesses of all sizes can use this guide to evaluate and test the
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: article
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
-ms.date: 01/28/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -24,15 +24,14 @@ appliesto:
 ---
 # Evaluate Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+Use this guide to determine how well Microsoft Defender Antivirus protects you from viruses, malware, and potentially unwanted applications. It explains the important next-generation protection features of Microsoft Defender Antivirus available for both small and large enterprises, and how they increase malware detection and protection across your network.
+
+## Prerequisites
 
 
-
-**Platforms**
+### Supported operating systems
 
 - Windows
-
-Use this guide to determine how well Microsoft Defender Antivirus protects you from viruses, malware, and potentially unwanted applications. It explains the important next-generation protection features of Microsoft Defender Antivirus available for both small and large enterprises, and how they increase malware detection and protection across your network.
 
 You can choose to configure and evaluate each setting independently, or all at once. We have grouped similar settings based upon typical evaluation scenarios, and include instructions for using PowerShell to enable the settings.
 

@@ -2,8 +2,8 @@
 title: Review detected threats using the Microsoft Defender for Endpoint Antivirus and Intune integration
 description: Use the Microsoft Defender for Endpoint Antivirus and Intune integration to view and manage threat detections.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/21/2024
+ms.date: 10/20/2025
 ms.subservice: edr
 search.appverid: met150
 appliesto:
@@ -20,14 +20,12 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+## Prerequisites
 
-
-
-
-**Platforms**
+### Supported operating systems
 
 - Windows
 - macOS
@@ -35,7 +33,7 @@ appliesto:
 
 In the Microsoft Defender portal, you can view and manage threat detections using the following steps:
 
-1. Visit [Microsoft XDR portal](https://security.microsoft.com/) and sign-in.
+1. Visit the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com) and sign-in.
 
     On the landing page, you see the **Devices with active malware** card with the following information:
 
@@ -70,7 +68,7 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 ## FAQs
 
-#### In the Microsoft XDR portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
+#### In the Microsoft Defender portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
 
 To see when the malware was detected, you can take the following steps:
 

@@ -4,7 +4,7 @@ description: Learn about the latest feature releases of Microsoft Defender for E
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 06/11/2025
 manager: bagol
@@ -19,9 +19,6 @@ appliesto:
 
 ---
 # What's new in Microsoft Defender for Endpoint on Windows
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).

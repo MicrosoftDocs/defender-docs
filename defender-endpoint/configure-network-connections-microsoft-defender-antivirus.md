@@ -4,12 +4,12 @@ description: Configure and test your connection to the Microsoft Defender Antivi
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
+author: paulinbar
 manager: bagol
-ms.author: bagol
+ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 10/08/2024
+ms.date: 10/20/2025
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
@@ -26,11 +26,13 @@ appliesto:
 > [!IMPORTANT]
 > This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
-**Platforms**
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
+
+## Prerequisites
+
+### Supported operating systems
 
 - Windows
-
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 
@@ -109,7 +111,6 @@ The following table lists solutions:
 |Solution|Description|
 |:---|:---|
 | Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
-| Solution (Preferred 2) | 1. Go to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Public Key Policies** > **Certificate Path Validation Settings**.<br/>2. Select the **Network Retrieval** tab, and then select **Define these policy settings**.<br/>3. Clear the **Automatically update certificates in the Microsoft Root Certificate Program (recommended)** check box.<br/><br/> Here are some useful resources: <br/> - [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))<br/>- [Improving application Start up time: GeneratePublisherEvidence setting in Machine.config](/archive/blogs/amolravande/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config)|
 | Work-around solution (Alternative) <br/> *This is not a best practice since you're no longer checking for revoked certificates or certificate pinning.*| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet**, and then set `SSLOptions (dword)` to `2` (hex). <br/>For reference, here are possible values for the DWORD: <br/> - `0 – disable pinning and revocation checks` <br/> - `1 – disable pinning` <br/>  - `2 – disable revocation checks only` <br/> - `3 – enable revocation checks and pinning (default)` |
 
 ## Attempt to download a fake malware file from Microsoft

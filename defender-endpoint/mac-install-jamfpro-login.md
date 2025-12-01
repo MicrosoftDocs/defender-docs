@@ -2,8 +2,8 @@
 title: Sign in to Jamf Pro
 description: Sign in to Jamf Pro.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -22,10 +22,6 @@ appliesto:
 
 ---
 # Sign in to Jamf Pro
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 1. Enter your credentials.

@@ -4,11 +4,11 @@ description: Configure what Microsoft Defender Antivirus should do when it detec
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
 manager: bagol
 ms.collection: 
@@ -25,10 +25,6 @@ appliesto:
 # Configure remediation for Microsoft Defender Antivirus detections
 
 
-
-**Platforms**
-- Windows
-
 When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices. You can choose from several methods, such as:
 
 - [Configure remediation for Microsoft Defender Antivirus detections](#configure-remediation-for-microsoft-defender-antivirus-detections)
@@ -44,6 +40,13 @@ When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remov
 > If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid this problem in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
 Also see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
+
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Configure remediation options using Intune
 

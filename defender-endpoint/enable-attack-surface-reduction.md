@@ -4,8 +4,8 @@ description: Enable attack surface reduction rules to protect your devices from 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: paulinbar
-ms.author: painbar
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.subservice: asr
 ms.topic: how-to
@@ -19,7 +19,7 @@ appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
 search.appverid: met150
-ms.date: 09/12/2025
+ms.date: 10/20/2025
 ---
 
 # Enable attack surface reduction rules
@@ -32,28 +32,8 @@ ms.date: 09/12/2025
 - [Group policy (GP)](#group-policy)
 - [PowerShell](#powershell)
 
-> [!TIP]
-
 
 ## Prerequisites
-
-### Supported operating systems
-
-You can set attack surface reduction rules for devices that are running any of the following editions and versions of Windows:
-
-- [Windows 11 Pro](/windows/whats-new/windows-11-overview)
-- [Windows 11 Enterprise](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise)
-- Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
-- Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
-- Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
-- [Windows Server 2012 R2](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
-- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
-- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
-- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
-- Windows Server 2025
-- Azure Stack HCI OS, version 23H2 and later
-
-### Requirements
 
 To use the entire feature-set of attack surface reduction rules, the following requirements must be met:
 
@@ -72,6 +52,22 @@ To use the entire feature-set of attack surface reduction rules, the following r
    If you have another license, such as Windows Professional or Microsoft 365 E3 that doesn't include advanced monitoring and reporting capabilities, you can develop your own monitoring and reporting tools on top of the events that are generated at each endpoint when attack surface reduction rules are triggered (for example, Event Forwarding).
 
    To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=11091).
+
+### Supported operating systems
+
+You can set attack surface reduction rules for devices that are running any of the following editions and versions of Windows:
+
+- [Windows 11 Pro](/windows/whats-new/windows-11-overview)
+- [Windows 11 Enterprise](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise)
+- Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
+- [Windows Server 2012 R2](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
+- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
+- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
+- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
+- Windows Server 2025
+- Azure Stack HCI OS, version 23H2 and later
 
 > [!NOTE]
 > Some attack surface reduction rules are only enforced if Office executables are installed under the system-defined %ProgramFiles% or %ProgramFiles(x86)% directories (on most systems, %ProgramFiles% points to C:\Program Files). If Office is installed in a custom path outside one of these system-defined directories, these rules won't apply. The affected rules are:
@@ -171,6 +167,12 @@ The following procedures for enabling attack surface reduction rules include ins
    `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
    
 1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
+
+> [!NOTE]
+> In the latest Intune interface, **Configuration profiles** is located under  **Devices > Configuration profiles**.  
+> Earlier versions of Intune showed this under **Device configuration > Profiles**.  
+> If you don't see "Configuration Profile" as written in older instructions, look for **Configuration profiles** under the Devices menu.
+
 
 #### Device Configuration Profiles (Alternative 1)
 
@@ -342,6 +344,10 @@ Example:
    > [!WARNING]
    > Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
    > The rule ID shouldn't have any leading or trailing spaces.
+
+> [!NOTE]
+> Microsoft rebranded Windows Defender Antivirus to Microsoft Defender Antivirus beginning with Windows 10 version 20H1.
+> Group Policy paths on earlier Windows versions may still reference Windows Defender Antivirus, while newer builds show Microsoft Defender Antivirus. Both names refer to the same policy location.
 
 ### PowerShell
 

@@ -3,8 +3,8 @@ title: Get started with troubleshooting mode in Microsoft Defender for Endpoint
 description: Turn on the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: pricci
@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: get-started
 ms.subservice: ngp
-ms.date: 08/14/2025
+ms.date: 10/27/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
@@ -59,6 +59,8 @@ Administrators can also review the changes in settings that take place during tr
 - Potential events can include events with IDs 5000, 5001, 5004, 5007 and others. See more details at [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml#event-id-5000).
 
 Troubleshooting mode automatically turns off after reaching its expiration time (it lasts for 4 hours). When troubleshooting mode has expired, all policy-managed configurations become read-only again and revert to how the device was configured before enabling troubleshooting mode. 
+> [!NOTE]
+> Troubleshooting mode is limited to 8 hours per day per device. This cannot be changed. The 8-hour quota resets 24 hours after troubleshooting mode is first enabled.
 
 It can take up to 15 minutes from the time the command is sent from Microsoft Defender XDR to when it becomes active on the device.
 
@@ -73,7 +75,10 @@ You can query all troubleshooting mode events in advanced hunting.
 
 - Devices must be running a supported operating system.
 
-   - Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019 and later, or Azure Stack HCI OS, version 23H2 and later.
+   - Windows 10 (version 19044.1618 or later)
+   -  Windows 11
+   -  Windows Server 2019 and later
+   -  Azure Stack HCI OS, version 23H2 and later.
 
       |Semester/Redstone|OS version|Release|
       |:---|:---|:---|

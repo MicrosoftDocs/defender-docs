@@ -2,8 +2,8 @@
 title: Production ring deployment using Group Policy and network share
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy over a network share.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: yongrhee
 ms.localizationpriority: high
 manager: bagol
@@ -15,36 +15,30 @@ ms.custom: intro-overview
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ---
+
 # Microsoft Defender Antivirus production ring deployment using Group Policy and network share
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
-> Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
-
-## Introduction
+> A new Microsoft Defender Vulnerability Management add-on is now available for Microsoft Defender for Endpoint Plan 2.
 
 This article describes how to deploy Microsoft Defender Antivirus in rings using Group Policy and Network share (also known as UNC path, SMB, CIFS).
 
 ## Prerequisites
 
 Review the _read me_ article at [Readme](https://github.com/microsoft/defender-updatecontrols/blob/main/README.md)
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 1. Download the latest Windows Defender .admx and .adml.
 

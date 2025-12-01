@@ -4,11 +4,11 @@ description: Learn how to configure and customize both standard and other Micros
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
+author: KesemSharabi
 ms.topic: how-to
-ms.author: bagol
+ms.author: kesharab
 ms.custom: nextgen
-ms.date: 02/19/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
 manager: bagol
 ms.collection: 
@@ -25,12 +25,15 @@ appliesto:
 # Configure Microsoft Defender Antivirus notifications that appear on endpoints
 
 
-**Platforms**
-- Windows
-
 In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. These notifications also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.
 
 If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat was detected and remediated.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Configure antivirus notifications using Group Policy or the Windows Security app
 

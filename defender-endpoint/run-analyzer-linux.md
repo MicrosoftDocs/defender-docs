@@ -1,8 +1,8 @@
 ﻿---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
-author: paulinbar
-ms.author: painbar
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
@@ -60,7 +60,7 @@ To run this client analyzer follow these steps:
 
 Follow the steps below to use the standalone ClientAnalyzer binary
 
-1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the Linux machine that you need to investigate. If you're using a terminal, download the tool by entering the following command:
+1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2336125) tool to the Linux machine that you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
     wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2336125"
@@ -140,7 +140,7 @@ To run this client analyzer follow these steps:
 
 ### Download and run the Client Analyzer standalone python version
 
-1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on the Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
+1. Download the [XMDE Client Analyzer](https://go.microsoft.com/fwlink/?linkid=2336046) tool on the Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
     wget --quiet -O XMDEClientAnalyzerPython.zip "https://go.microsoft.com/fwlink/?linkid=2336046"

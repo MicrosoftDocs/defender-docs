@@ -17,15 +17,15 @@ Service accounts are classified into several types:
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
 - User Account: These standard user accounts are typically used for interactive logins but can also be configured to run services.
 
-The auto discovery feature quickly identifies gMSA and sMSA accounts and user accounts within Active Directory that meet specific criteria. These criteria include having a [Service Principal Name](/windows/win32/ad/service-principal-names)(SPN) or a "password never expires" attribute assigned. The feature then classifies these accounts as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
+The auto discovery feature quickly identifies gMSA and sMSA accounts and user accounts within Active Directory that meet specific criteria. These criteria include having a [Service Principal Name](/windows/win32/ad/service-principal-names)(SPN) and has an assigned ***password never expires*** attribute. The feature classifies these accounts as service accounts. These accounts are highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
-Service account types are displayed in the Identity Info table within Advanced Hunting.
+Service account types are displayed in the **Identity Info** table within Advanced Hunting.
 
 ## Service accounts page
 
 #### Navigate to the Service accounts page
 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Identities > Service Accounts.
+In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to Identities > Service Accounts.
 
 The following image depicts the Service accounts page:
 

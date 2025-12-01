@@ -2,8 +2,8 @@
 title: Microsoft Defender for Endpoint reports
 description: Access the various reports for devices, protection features, and more in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -20,7 +20,7 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint reports
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 
 This article provides an overview of the reports available to Microsoft Defender for Endpoint users. It offers information on various reports that can be used to collect data, summarize findings, and obtain recommended actions when applicable.

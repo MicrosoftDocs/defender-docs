@@ -4,9 +4,9 @@ description: Turn on cloud protection to benefit from fast and advanced protecti
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
-ms.date: 11/10/2024
+author: KesemSharabi
+ms.author: kesharab
+ms.date: 10/20/2025
 ms.reviewer: pahuijbr
 manager: bagol
 ms.custom: nextgen
@@ -25,13 +25,16 @@ appliesto:
 # Turn on cloud protection in Microsoft Defender Antivirus
 
 
-**Platforms**
-- Windows
-
 [Cloud protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) delivers accurate, real-time, and intelligent protection. Cloud protection should be enabled by default. 
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep cloud protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+
+## Prerequistes
+
+### Supported operating systems
+
+- Windows
 
 ## Why cloud protection should be turned on
 

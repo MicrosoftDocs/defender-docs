@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -55,7 +55,7 @@ Advanced hunting in guided mode supports several data types that you can use to 
 ![Screenshot of datetime values as third condition](/defender/media/guided-hunting/25-datetime.png)
 
 
-- Closed list - You don't need to remember the exact value you are looking for. You can easily choose from a suggested closed list that supports multi-selection.<br>
+- Closed list - You don't need to remember the exact value you're looking for. You can easily choose from a suggested closed list that supports multi-selection.<br>
 ![Screenshot of a closed list used as third condition](/defender/media/guided-hunting/26-closed.png)
 
 
@@ -68,7 +68,7 @@ You can create groups of conditions by clicking **Add subgroup**:
 
 ## Use smart auto-complete for search
 Smart auto-complete for searching devices and user accounts is supported. 
-You don't need to remember the device ID, full device name, or user account name. You can start typing the first few characters of the device or user you are looking for and a suggested list appears from which you can choose what you need:
+You don't need to remember the device ID, full device name, or user account name. You can start typing the first few characters of the device or user you're looking for and a suggested list appears from which you can choose what you need:
 
 ![Screenshot showing smart auto-complete support](/defender/media/guided-hunting/29-smart-auto.png)
 
@@ -91,7 +91,7 @@ If you're still working on your query and would like to see its performance and 
  
 ![Screenshot of sample size dropdown menu](/defender/media/guided-hunting/32-sample-size.png)
 
-The sample size is set to 10,000 results by default. This is the maximum number of records that can be returned in hunting. However, we highly recommend lowering the sample size to 10 or 100 to quickly test your query as doing so consumes less resources while you are still working on improving the query.
+The sample size is set to 10,000 results by default, which is the maximum number of records that can be returned in hunting. However, we highly recommend lowering the sample size to 10 or 100 to quickly test your query, as doing so consumes less resources while you're still working on improving the query.
 
 Then, once you finalize your query and are ready to use it to get all the relevant results for your hunting activity, make sure that the sample size is set to 10k, the maximum.
 

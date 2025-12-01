@@ -3,12 +3,12 @@ title: Review the results of Microsoft Defender Antivirus scans
 description: Review the results of scans using Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
-ms.date: 05/08/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -24,16 +24,16 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
+
 # Review Microsoft Defender Antivirus scan results
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand](run-scan-microsoft-defender-antivirus.md) or [scheduled scan](schedule-antivirus-scans.md), the results are recorded and you can view the results.
 
+## Prerequisites
 
-**Platforms**
+### Supported operating systems
 
 - Windows
-
-After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand](run-scan-microsoft-defender-antivirus.md) or [scheduled scan](schedule-antivirus-scans.md), the results are recorded and you can view the results.
 
 ## Use Microsoft Defender XDR to review scan results
 

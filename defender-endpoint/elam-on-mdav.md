@@ -1,13 +1,13 @@
 ﻿---
 title: Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
 description: How Microsoft Defender Antivirus incorporates Early Launch Antimalware (ELAM) for preventing rootkit and drivers with malware from loading before the antivirus service and drivers are loaded.
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
@@ -23,11 +23,20 @@ appliesto:
 # Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
 
 
-**Platforms:**
-- Windows 11, Windows 10, Windows 8.1, Windows 8
-- Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Detecting malware that starts early in the boot cycle was a challenge before Windows 8. In August 2012, Microsoft Defender Antivirus (MDAV) for Windows 8 or later, and Windows Server 2012 and later incorporated a new feature called the [Early Launch Antimalware (ELAM)](/windows/compatibility/early-launch-antimalware) driver. ELAM combats early boot threats (for example, rootkits or malicious drivers that can hide from detection) by using a Wdboot.sys driver that starts before other boot-start drivers. ELAM enables the evaluation of other drivers, and helps the Windows kernel decide whether those drivers should be initialized.
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows 11
+- Windows 10
+- Windows 8.1
+- Windows 8
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
+- Windows Server 2012
 
 ## Where are the ELAM detections logged?
 

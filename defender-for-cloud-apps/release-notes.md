@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 05/13/2025
+ms.date: 11/25/2025
 ms.topic: overview
 ---
 
@@ -20,6 +20,20 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+## November 2025
+
+### AI Agent Protection (Preview)
+Microsoft Defender delivers comprehensive protection for AI agents, combining proactive exposure management with advanced threat detection. It automatically discovers AI agents created in Microsoft Copilot Studio and Azure AI Foundry, collects audit logs, continuously monitors for suspicious activity, and integrates detections and alerts into the XDR Incidents and Alerts experience with a dedicated Agent entity.
+
+  - **Copilot Studio AI agents**
+
+    Defender ingests data from Copilot Studio agents into Advanced Hunting, enabling you to create custom queries and proactively hunt for threats. It also provides real-time protection by monitoring agent runtime and blocking harmful or suspicious actions, fully integrated with XDR incidents and alerts.
+
+  - **Azure AI Foundry AI agents**
+
+    Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
+
+For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.md).
 
 ## September 2025 
 
@@ -174,8 +188,8 @@ For more information, see:
  
  ### Enhanced alert source accuracy
  
- Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
- Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Microsoft Defender portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Microsoft Defender portal, Advanced hunting, and Graph API.
  The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
  
  To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
@@ -378,7 +392,7 @@ See [Microsoft Edge releases](/deployedge/microsoft-edge-release-schedule#micros
 
 ### Automatic redirection for the classic Defender for Cloud Apps portal - General Availability
 
-The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender XDR Portal. As of June 2024, all customers using the classic Defender for Cloud Apps portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
+The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender portal. As of June 2024, all customers using the classic Defender for Cloud Apps portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
 
 For more information, see [Microsoft Defender for Cloud Apps in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-defender-cloud-apps).
 
@@ -596,7 +610,7 @@ For more information, see [Protect apps with Microsoft Defender for Cloud Apps C
 
 ### Automatic redirection for the classic Defender for Cloud Apps portal (Preview)
 
-The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender XDR Portal. As of January 9, 2024, customers using the classic Defender for Cloud Apps portal with Preview features are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
+The classic Microsoft Defender for Cloud Apps portal experience and functionality have been converged into the Microsoft Defender portal. As of January 9, 2024, customers using the classic Defender for Cloud Apps portal with Preview features are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
 
 For more information, see:
 

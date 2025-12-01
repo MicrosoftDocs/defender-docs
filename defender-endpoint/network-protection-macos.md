@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 04/08/2025
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: ericlaw
 manager: bagol
 ms.custom: asr
@@ -22,9 +22,6 @@ appliesto:
 
 ---
 # Network protection for macOS
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 ### Prerequisites
 

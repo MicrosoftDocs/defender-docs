@@ -4,8 +4,8 @@ description: Test how Microsoft Defender for Endpoint SmartScreen helps you iden
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: bagol 
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: yongrhee 
 ms.localizationpriority: medium
 manager: bagol
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - demo
 ms.topic: article
-ms.date: 07/22/2024
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -27,19 +27,20 @@ appliesto:
 
 Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing and malware websites based on App reputation.
 
-## Scenario requirements and setup
+## Prerequisites
 
-- The following versions of Windows are supported:
+- Microsoft Edge or Internet Explorer browser required. 
+
+
+### Supported operating systems
+
    - Windows 11
    - Windows 10
-   - Windows Server 2025
-   - Windows Server 2022
-   - Windows Server 2019
-   - Windows Server 2016
+   - Windows Server 2016 and later
    - Windows Server 2012 R2
    - Windows Server 2008 R2 
    - Azure Stack HCI OS, version 23H2 and later.
-- Microsoft Edge or Internet Explorer browser required. 
+
 
 ## Scenario Demos
 
@@ -69,7 +70,7 @@ This download is known malware; SmartScreen should block this program from runni
 
 - [Known malware](https://demo.smartscreen.msft.net/download/known/knownmalicious.exe)
 
-Launching this link should render a message similar to the following:
+  Launching this link should render a message similar to the following:
 
   :::image type="content" source="media/smartscreen-app-reputation-known-malware.png" alt-text="Screenshot showing how SmartScreen detects a file download with an unsafe reputation; the download is blocked.":::
 

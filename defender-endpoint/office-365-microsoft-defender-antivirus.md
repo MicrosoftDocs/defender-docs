@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -17,19 +17,13 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Better together: Microsoft Defender Antivirus and Office 365
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-- Windows
 
 You might already know that:
 
@@ -46,6 +40,12 @@ You might already know that:
  2. [Integration means better protection](#integration-means-better-protection).
 
 Read the following sections to learn more.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Ransomware protection and recovery
 

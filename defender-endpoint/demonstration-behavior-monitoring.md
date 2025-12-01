@@ -3,8 +3,8 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yonghree
 ms.localizationpriority: medium
 manager: bagol
@@ -29,15 +29,16 @@ appliesto:
 
 Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
 
-## Scenario requirements and setup
 
-- Client devices must be running Windows 11, Windows 10, Windows 8.1, Windows 7 SP1, or macOS
-
-- Server devices must be running Windows Server 2008 R2, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
+## Prerequisites
 
 - [Microsoft Defender Real-time protection is enabled](#verify-microsoft-defender-real-time-protection-is-enabled)
 
 - [Behavior Monitoring is enabled](#enable-behavior-monitoring-for-microsoft-defender-for-endpoint)
+
+- Client devices must be running Windows 11, Windows 10, Windows 8.1, Windows 7 SP1, or macOS
+
+- Server devices must be running Windows Server 2008 R2, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
 ## Windows
 

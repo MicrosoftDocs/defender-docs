@@ -3,10 +3,10 @@ title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 11/25/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -23,10 +23,9 @@ appliesto:
 
 # What's new in Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux.
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/linux-rss`
 
 > [!IMPORTANT]
 > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support is available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
@@ -43,6 +42,25 @@ This article is updated frequently to let you know what's new in the latest rele
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## Releases for Defender for Endpoint on Linux
+
+### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
+
+|Build:             |**101.25092.0001**    |
+|-------------------|----------------------|
+|Released:          |**November 05, 2025**|
+|Published:         |**November 05, 2025**|
+|Expiry:            |**July 10, 2026**|
+|Release version:   |**30.125092.0001.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.558.0**|
+
+What's new
+
+- Added support for RHEL 10.
+
+- Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability.
+
+- Other quality and stability fixes.
 
 ### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
 

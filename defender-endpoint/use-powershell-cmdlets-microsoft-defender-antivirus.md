@@ -3,10 +3,10 @@ title: Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus
 description: In Windows 10 and Windows 11, you can use PowerShell cmdlets to run scans, update Security intelligence, and change settings in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: ngp
@@ -26,9 +26,6 @@ appliesto:
 # Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus
 
 
-**Platforms**
-- Windows
-
 You can use PowerShell to perform various functions in Microsoft Defender Antivirus. Similar to the command prompt or command line, PowerShell is a task-based command-line shell and scripting language designed especially for system administration. You can read more about it in the [PowerShell documentation](/powershell/scripting/overview).
 
 For a list of the cmdlets and their functions and available parameters, see the [Microsoft Defender Antivirus cmdlets](/powershell/module/defender) topic.
@@ -43,6 +40,12 @@ Changes made with PowerShell will affect local settings on the endpoint where th
 You can [configure which settings can be overridden locally with local policy overrides](configure-local-policy-overrides-microsoft-defender-antivirus.md).
 
 PowerShell is typically installed under the folder `%SystemRoot%\system32\WindowsPowerShell`.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Use Microsoft Defender Antivirus PowerShell cmdlets
 

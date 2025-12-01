@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -16,24 +16,24 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-**Platforms**
-- Windows
 
 Microsoft Defender Antivirus is the next-generation protection component of [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Microsoft Defender for Endpoint).
 
 Although you can use a non-Microsoft antivirus solution with Microsoft Defender for Endpoint, there are advantages to using Microsoft Defender Antivirus together with Defender for Endpoint. Not only is Microsoft Defender Antivirus an excellent next-generation antivirus solution, but combined with other Defender for Endpoint capabilities, such as [endpoint detection and response](overview-endpoint-detection-response.md) and [automated investigation and remediation](automated-investigations.md), you get better protection that's coordinated across products and services.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## 13 reasons to use Microsoft Defender Antivirus together with Microsoft Defender for Endpoint
 

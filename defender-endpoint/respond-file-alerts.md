@@ -2,8 +2,8 @@
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -20,9 +20,6 @@ appliesto:
 
 ---
 # Take response actions on a file
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 [!include[Prerelease information](../includes/prerelease.md)]
@@ -313,14 +310,14 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
     - **Devices list** - select the file links from the **Description** or **Details** in the **Device in organization** section
     - **Search box** - select **File** from the drop-down menu and enter the file name
 
-2. In the **Deep analysis** tab of the file view, select **Submit**.
+1. In the **Deep analysis** tab of the file view, select **Submit**.
 
-   :::image type="content" source="media/submit-file.png" alt-text="The submit PE files button" lightbox="media/submit-file.png":::
+      :::image type="content" source="media/submit-file.png" alt-text="The submit PE files button" lightbox="media/submit-file.png":::
 
    > [!NOTE]
-   > Only PE files are supported, including _.exe_ and _.dll_ files.
-
-   A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
+   > Only PE files are supported, including _.exe_ and _.dll_ files. Additionally, Windows App Store Executables are unsupported.
+   
+      A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
 > [!NOTE]
 > Depending on device availability, sample collection time can vary. There is a 3-hour timeout for sample collection. The collection will fail and the operation will abort if there is no online Windows 10 device (or Windows 11 or Windows Server 2012 R2+) reporting at that time. You can re-submit files for deep analysis to get fresh data on the file.

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: article
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: sugamar, moeghasemi
 manager: bagol
 ms.subservice: asr
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 08/14/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -24,19 +24,20 @@ appliesto:
 ---
 # Evaluate controlled folder access
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-- Windows
-
-
-
-[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2019 and later, Azure Stack HCI OS, version 23H2 and later and client devices running Windows 10 or Windows 11.
+[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps.
 
 It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
 
 This article helps you evaluate controlled folder access. It explains how to enable audit mode so you can test the feature directly in your organization.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server 2019 and later
+-  Azure Stack HCI OS, version 23H2 and later
+- Windows 10 or Windows 11.
 
 ## Use audit mode to measure impact
 

@@ -2,8 +2,8 @@
 title: Prepare to deploy Microsoft Defender for Endpoint
 description: Learn how to set up the deployment for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -24,10 +24,6 @@ appliesto:
 
 ---
 # Prepare to deploy Microsoft Defender for Endpoint deployment
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 The first step when deploying Microsoft Defender for Endpoint is to set up your Defender for Endpoint environment.
@@ -87,7 +83,7 @@ Ensure devices can connect to the Defender for Endpoint cloud services. The use 
 
 3. [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
-In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you need to evaluate how to address this potential issue in your environment. For example, you might need to download updates to a central location and then distribute them. For more information, see Configure connectivity using static IP ranges](configure-device-connectivity.md#option-2-configure-connectivity-using-static-ip-ranges).
+In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you need to evaluate how to address this potential issue in your environment. For example, you might need to download updates to a central location and then distribute them. For more information, see [Configure connectivity using static IP ranges](./configure-device-connectivity.md#option-2-configure-connectivity-using-static-ip-ranges).
 
 ## Next step
 

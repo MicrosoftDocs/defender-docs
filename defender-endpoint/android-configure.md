@@ -2,8 +2,8 @@
 title: Configure Microsoft Defender for Endpoint on Android features
 description: Describes how to configure Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: denishdonga
 ms.localizationpriority: medium
 manager: bagol
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: android
 search.appverid: met150
-ms.date: 06/05/2025
+ms.date: 11/06/2025
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
@@ -33,7 +33,7 @@ For more information about how to set up Defender for Endpoint on Android and Co
 ## Configure custom indicators
 
 > [!NOTE]
-> Defender for Endpoint on Android only supports creating custom indicators for IP addresses and URLs/domains.
+> Defender for Endpoint on Android supports creating custom indicators only for URLs and domains. IP-based custom indicators aren't supported on Android.
 > 
 > IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
 > Also, alerts for custom indicators are currently not supported for Defender for Endpoint on Android.
@@ -130,14 +130,12 @@ Following privacy controls are available for configuring the data that is sent b
 
 ## Root Detection (Preview)
 
-Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, these events occur:
+Microsoft Defender for Endpoint has the ability to detect unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, the following events occur:
 
-- A high-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
+- A high-risk alert is reported to the Microsoft Defender portal. If Device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
 
-- User data on app is cleared. When user opens the app after rooted.
+- User data on the app is cleared after the device has been detected as rooted. The feature is enabled by default; no action is required from admin or user.
 
-  The feature is enabled by default; no action is required from admin or user. Any android device running Defender version **1.0.8125.0302** (or later) will have it activated.
-  
 **Prerequisite**
 
 - Company portal must be installed, and version must be >=5.0.6621.0

@@ -2,8 +2,8 @@
 title: Troubleshooting issues when moving to Microsoft Defender for Endpoint
 description: Learn how to troubleshoot issues when you migrate to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -53,6 +53,8 @@ To resolve this issue, take the following steps:
 
 > [!TIP]
 > If you're planning to keep Microsoft Defender Antivirus in passive mode for your Windows Servers, the `ForceDefenderPassiveMode` setting needs to be set **before** onboarding the device to Microsoft Defender for Endpoint.
+
+## Prerequisites
 
 You must set Microsoft Defender Antivirus to passive mode manually on Windows Server 2012 R2 and later,  Windows Server, version 1803 and later, or Azure Stack HCI OS, version 23H2 and later. This action helps prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key.
 

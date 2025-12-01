@@ -4,8 +4,8 @@ description: Define when and how updates should be applied for out of date endpo
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier3
 search.appverid: met150
-ms.date: 02/18/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -24,13 +24,16 @@ appliesto:
 # Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date
 
 
-**Platforms**
-
-- Windows
-
 With Microsoft Defender Antivirus, your security team can define how long an endpoint can avoid an update or how many scans it can miss before it's required to receive the update and run a scan. This capability is especially useful in environments where devices aren't often connected to a corporate or external network, or for devices that aren't used on a daily basis.
 
 For example, an employee who uses a particular computer takes three days off of work, and doesn't sign on their computer during that time. When the employee returns to work and signs into their computer, Microsoft Defender Antivirus will immediately check and download the latest protection updates, and then run a scan.
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
 
 ## Set up catch-up protection updates for endpoints that haven't updated for a while
 

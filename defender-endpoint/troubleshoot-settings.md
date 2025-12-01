@@ -1,13 +1,13 @@
 ﻿---
 title: Troubleshoot Microsoft Defender Antivirus settings
 description: Find out where settings for Microsoft Defender Antivirus are coming from.
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
-ms.date: 04/01/2025
+ms.date: 11/06/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
@@ -16,11 +16,12 @@ search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
 appliesto:
-  - Microsoft Defender for Business
+- Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
 
 ---
+
 # Troubleshoot Microsoft Defender Antivirus settings
 
 
@@ -51,6 +52,9 @@ To remove policy conflicts, here's our current, recommended process:
 4. Work with your security team to remove or revise conflicting policies.
 
 ## Step 1: Understand the order of precedence
+
+> [!NOTE]
+> Microsoft Defender for Endpoint attach configurations can be overridden by other configuration tools that write to the same registry location.
 
 When policies and settings are configured in multiple tools, in general, here's the order of precedence:
 

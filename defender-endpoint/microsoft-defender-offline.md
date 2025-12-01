@@ -4,8 +4,8 @@ description: You can use Microsoft Defender Offline Scan straight from the Micro
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 09/18/2024
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
@@ -128,7 +128,7 @@ Starting with Windows 10, version 1607 or newer, and Windows 11, Microsoft Defen
 > [!NOTE]
 > In Windows 10, version 1607, the offline scan can be run from **Windows Settings > Update & security > Windows Defender** or from the Windows Defender client.
 
-1. On your Windows device, open the Windows Security app, and then **Scan options**.
+1. On your Windows device, open the **Windows Security** app. Select **Virus & threat protection**, and then choose **Scan options**.
 
 2. Select the radio button **Microsoft Defender Offline scan** and select **Scan now**.
 
