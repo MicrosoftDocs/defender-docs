@@ -153,6 +153,7 @@ Alternative access paths to recommendations:
 
 > [!NOTE]
 > **Why you might see different resources between the Azure portal and Defender portal:**
+>
 > - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
 > - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
 
