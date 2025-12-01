@@ -55,7 +55,7 @@ Advanced hunting and custom detection experiences now include a contextual banne
 
 All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
 
-For more information, see [UEBA experiences in the Defender portal empower analysts and streamline workflows](/azure/sentinel/identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows).
+For more information, see [UEBA experiences in the Defender portal empower analysts and streamline workflows](/azure/sentinel/identify-threats-with-entity-behavior-analytics#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows).
 
 ## September 2025
 
