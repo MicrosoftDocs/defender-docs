@@ -1,14 +1,19 @@
 ---
 title: Regulatory compliance in Defender for Cloud
 description: Learn about regulatory compliance in Microsoft Defender for Cloud, and how it helps ensure compliance with industry, regional, and global standards.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 11/04/2025
+ms.date: 09/09/2024
+zone_pivot_groups: defender-portal-experience
 #customer intent: As a cloud security professional, I want to understand how Defender for Cloud helps me meet regulatory compliance standards, so that I can ensure my organization is compliant with industry standards and regulations.
 ---
 
 # Regulatory compliance standards in Microsoft Defender for Cloud
+
+::: zone pivot="azure-portal"
+
+## Azure portal
 
 Microsoft Defender for Cloud streamlines the regulatory compliance process by helping you to identify issues that are preventing you from meeting a particular compliance standard, or achieving compliance certification.
 
@@ -17,18 +22,14 @@ Industry standards, regulatory standards, and benchmarks are represented in Defe
 ## Compliance controls
 
 Each security standard consists of multiple compliance controls, which are logical groups of related security recommendations.
-
 Defender for Cloud continually assesses the environment-in-scope against any compliance controls that can be automatically assessed. Based on assessments, it shows resources as being compliant or non-compliant with controls.
-
 > [!NOTE]
 > It's important to note that if standards have compliance controls that can't be automatically assessed, Defender for Cloud isn't able to decide whether a resource complies with the control. In this case, the control will show as greyed out. In addition, if a subscription has no relevant resources to a specific standard, the standard won't be shown in the regulatory compliance dashboard at all, even if it assigned.
 
 ## View compliance standards
 
 The **Regulatory compliance** dashboard provides an interactive overview of compliance state.
-
 :::image type="content" source="media/concepts-regulatory-compliance-standards/compliance-standards.png" alt-text="Screenshot showing the regulatory compliance dashboard." lightbox="media/concepts-regulatory-compliance-standards/compliance-standards.png":::
-
 In the dashboard you can:
 
 - Get a summary of standards controls that have been passed.
@@ -56,6 +57,68 @@ For each compliance standard you can view:
 
 You can drill down into controls to get information about resources that have passed/failed assessments, and for remediation steps.
 
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+## Defender portal
+
+The Defender portal provides a consumption-focused experience for regulatory compliance, allowing you to monitor and track your compliance posture across assigned standards. 
+
+Configuration and assignment of compliance standards is managed through the [Azure portal experience](?pivots=azure-portal), while the Defender portal focuses on providing enhanced visualization and tracking of your compliance progress through the unified security dashboard.
+
+## Compliance controls
+
+Each security standard consists of multiple compliance controls, which are logical groups of related security recommendations.
+
+Defender for Cloud continually assesses the environment-in-scope against any compliance controls that can be automatically assessed. Based on assessments, it shows resources as being compliant or non-compliant with controls.
+
+> [!NOTE]
+> It's important to note that if standards have compliance controls that can't be automatically assessed, Defender for Cloud isn't able to decide whether a resource complies with the control. In this case, the control will show as greyed out. In addition, if a subscription has no relevant resources to a specific standard, the standard won't be shown in the regulatory compliance dashboard at all, even if it assigned.
+
+## View compliance standards
+
+The Defender portal provides a consumption-focused regulatory compliance experience through the enhanced M1 widget and integrated dashboard views. 
+
+> [!IMPORTANT]
+> To configure and assign compliance standards to your environment, use the [Azure portal experience](?pivots=azure-portal). The Defender portal focuses on monitoring and tracking compliance progress for already assigned standards.
+
+### Compliance status monitoring
+
+The regulatory compliance widget displays the current status of your assigned compliance frameworks, providing:
+
+- Real-time compliance score for each assigned standard
+- Visual representation of compliance progress
+- Quick identification of frameworks requiring attention
+- Integration with the unified security dashboard
+
+### Recommendations filtering
+
+You can drill down into specific compliance requirements through the recommendations page by:
+
+- Filtering recommendations by compliance framework
+- Viewing framework-specific security recommendations 
+- Tracking remediation progress for compliance-related findings
+- Accessing detailed remediation guidance for each control
+
+For comprehensive compliance management including standard assignment and policy configuration, refer to the [Azure portal regulatory compliance experience](?pivots=azure-portal).
+
+## Compliance standard details
+
+The Defender portal provides read-only access to compliance standard details for monitoring purposes:
+
+- View assigned standards and their current compliance status
+- Review compliance progress across different framework controls
+- Access compliance assessment summaries within your assigned scope
+- The status displays reflect compliance with the standard through three states:
+  - A green circle indicates that resources in scope are compliant with the control
+  - A red circle indicates that resources are not compliant with the control  
+  - Unavailable controls are those that can't be automatically assessed
+
+> [!NOTE]
+> For detailed configuration, scope assignment, and policy management of compliance standards, use the [Azure portal experience](?pivots=azure-portal).
+::: zone-end
+
 ## Default compliance standards
 
 By default, when you enable Defender for Cloud, the following standards are enabled:
@@ -68,63 +131,55 @@ By default, when you enable Defender for Cloud, the following standards are enab
 
 The following standards are available in Defender for Cloud:
 
-|Standard|Cloud|
-|------------|--------|
-| APRA CPS 234 2019 | Azure, AWS |
-| Australian Government ISM Protected | Azure |
-| Australian Government Information Security Manual 12.2023 | AWS, GCP |
-| AWS Foundational Security Best Practices | AWS |
-| AWS Well Architected Framework 2024 | AWS |
-| Brazil General Data Protection Law (LGPD) 2018 | Azure, AWS, GCP |
-| California Consumer Privacy Act (CCPA) | AWS, GCP |
-| Canada Federal PBMM 3.2020 | Azure, AWS, GCP |
-| CIS Amazon Elastic Kubernetes Service (EKS) Benchmark | AWS |
-| CIS AWS Foundations v3.0.0 | AWS |
-| CIS Azure Foundations v2.1.0 | Azure |
-| CIS Azure Kubernetes Service (AKS) Benchmark | Azure |
-| CIS Controls v8.1 | Azure, AWS, GCP |
-| CIS GCP Foundations v3.0 | GCP |
-| CIS Google Cloud Platform Foundation Benchmark | GCP |
-| CIS Google Kubernetes Engine (GKE) Benchmark | GCP |
-| CIS Azure Foundations v3.0.0 (Preview) | Azure |
-| CRI Profile | AWS, GCP |
-| Criminal Justice Information Services Security Policy v5.9.5 | Azure, AWS, GCP |
-| CSA Cloud Controls Matrix v4.0.12 | Azure, AWS, GCP |
-| Cyber Essentials v3.1 | Azure, AWS, GCP |
-| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
-| DORA 2022 2554 (Preview) | Azure, AWS, GCP |
-| EU 2022 2555 (NIS2) 2022 | Azure, AWS, GCP |
-| EU General Data Protection Regulation (GDPR) 2016 679 | Azure, AWS, GCP |
-| EU AI Act 2024 1689 (Preview) | Azure, AWS, GCP |
-| FedRAMP ‘H’ & ‘M’ | Azure |
-| FedRAMP High Baseline Rev5 | AWS, GCP |
-| FedRAMP Moderate Baseline Rev5 | AWS, GCP |
-| FFIEC CAT 2017 | Azure, AWS, GCP |
-| HIPAA | Azure |
-| HITRUST CSF v11.3.0 | Azure, AWS, GCP |
-| HiTrust v11.3 | Azure, AWS |
-| ISO IEC 27001:2022 | Azure, AWS, GCP |
-| ISO IEC 27002:2022 | Azure, AWS, GCP |
-| ISO IEC 27017:2015 | Azure, AWS, GCP |
-| K ISMS P 2023 (Preview) | Azure, AWS, GCP |
-| NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
-| NIST 800 171 Rev3 | Azure, AWS, GCP |
-| NIST CSF v2.0 | Azure, AWS, GCP |
-| NIST SP 800 53 R5 | AWS |
-| NIST SP 800 53 R5.1.1 | Azure, AWS, GCP |
-| NIST SP 800 172 2021 | AWS, GCP |
-| NZISM v3.7 | Azure, AWS, GCP |
-| PCI DSS 3.2.1 | GCP |
-| PCI DSS v4.0.1 | Azure, AWS, GCP |
-| RMIT Malaysia | Azure |
-| Sarbanes Oxley Act 2022 (SOX) | Azure, AWS, GCP |
-| SOC 2023 | Azure, AWS, GCP |
-| SOC 2 | Azure, GCP |
-| Spanish ENS | Azure |
-| SWIFT Customer Security Controls Framework 2024 | Azure, AWS, GCP |
-| SWIFT CSP-CSCF v2020 | Azure, AWS, GCP |
-| UK OFFICIAL and UK NHS | Azure |
-| Reserve Bank of India - IT Framework for NBFC | Azure, AWS, GCP |
+|Standards|Clouds|
+| -------- | -------- |
+|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
+|EU General Data Protection Regulation (GDPR) 2016 679  |Azure, AWS, GCP|
+|NIST CSF v2.0  |Azure, AWS, GCP|
+|NIST 800 171 Rev3  |Azure, AWS, GCP|
+|NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
+|PCI DSS v4.0.1  |Azure, AWS, GCP|
+|CIS AWS Foundations v3.0.0  |AWS|
+|CIS Azure Foundations v2.1.0  |Azure|
+|CIS Controls v8.1  |Azure, AWS, GCP|
+|CIS GCP Foundations v3.0  |GCP|
+|CIS Google Cloud Platform Foundation Benchmark|GCP|
+|CIS Azure Kubernetes Service (AKS) Benchmark|Azure|
+|CIS Amazon Elastic Kubernetes Service (EKS) Benchmark|AWS|
+|CIS Google Kubernetes Engine (GKE) Benchmark|GCP|
+|HITRUST CSF v11.3.0  |Azure, AWS, GCP|
+|SOC 2023  |Azure, AWS, GCP|
+|SWIFT Customer Security Controls Framework 2024  |Azure, AWS, GCP|
+|ISO IEC 27001:2022  |Azure, AWS, GCP|
+|ISO IEC 27002:2022  |Azure, AWS, GCP|
+|ISO IEC 27017:2015  |Azure, AWS, GCP|
+|Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0  |Azure, AWS, GCP|
+|AWS Well Architected Framework 2024  |AWS|
+|Canada Federal PBMM 3.2020  |Azure, AWS, GCP|
+|APRA CPS 234 2019  |Azure, AWS|
+|CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
+|Cyber Essentials v3.1  |Azure, AWS, GCP|
+|Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
+|FFIEC CAT 2017  |Azure, AWS, GCP|
+|Brazilian General Data Protection Law (LGPD) 2018  |Azure, AWS, GCP|
+|NZISM v3.7  |Azure, AWS, GCP|
+|Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS, GCP|
+|NCSC Cyber Assurance Framework (CAF) v3.2  |Azure, AWS, GCP|
+|Australian Government ISM Protected|Azure|
+|FedRAMP ‘H’ & ‘M’|Azure|
+|HIPAA|Azure|
+|RMIT Malaysia  |Azure|
+|SOC 2|Azure, GCP|
+|Spanish ENS|Azure|
+|California Consumer Privacy Act (CCPA)|AWS, GCP|
+|UK OFFICIAL and UK NHS              |Azure|
+|AWS Foundational Security Best Practices             |AWS|
+|CRI Profile          |AWS, GCP|
+|NIST SP 800-172|AWS, GCP|
+|Digital Operational Resilience Act (DORA) |Azure, AWS, GCP|
+|European Union Artificial Intelligence Act (EU AI Act)|Azure, AWS, GCP|
+|Korean Information Security Management System for Public Cloud (k-ISMS-P)|Azure, AWS, GCP|
+|(CIS) Microsoft Azure Foundations Benchmark v3.0|Azure|
 
 ## Related content
 

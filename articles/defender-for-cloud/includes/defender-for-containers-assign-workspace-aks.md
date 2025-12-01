@@ -2,8 +2,8 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 07/06/2022
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ---
 
 ## Set a default Log Analytics workspace for AKS

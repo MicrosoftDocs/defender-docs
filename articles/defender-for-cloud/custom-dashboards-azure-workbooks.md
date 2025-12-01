@@ -1,9 +1,9 @@
 ---
 title: Azure Monitor workbooks with Defender for Cloud data
 description: Learn how to create rich, interactive reports for your Microsoft Defender for Cloud data by using workbooks from the integrated Azure Monitor workbooks gallery.
-ms.topic: conceptual
-ms.author: dacurwin
-author: dcurwin
+ms.topic: concept-article
+ms.author: elkrieger
+author: Elazark
 ms.date: 08/14/2025
 ms.custom: sfi-image-nochange
 ---

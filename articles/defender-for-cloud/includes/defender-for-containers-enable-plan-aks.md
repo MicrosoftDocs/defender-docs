@@ -1,6 +1,6 @@
 ---
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 06/01/2023

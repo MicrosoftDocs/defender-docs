@@ -2,13 +2,28 @@
 title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud. This cloud-native application protection platform (CNAPP) includes two key capabilities, cloud security posture management (CSPM) and cloud workload protection platform (CWPP). It helps protect your environments across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises systems.
 ms.topic: overview
-ms.date: 11/05/2025
+ms.date: 11/13/2025
 ms.author: elkrieger
 author: Elazark
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
 ---
 
 # What is Microsoft Defender for Cloud?
+
+> [!IMPORTANT]
+> Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
+> 
+> This change is designed to:
+>
+> - Unlock new cloud and posture management experiences.
+> - Provide deep integration with other Microsoft security services.
+> - Empower security teams with streamlined workflows by bringing all tools together in one portal.
+> 
+> To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
+> 
+> Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
+> 
+> Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp), which is a unified solution that combines multiple cloud security tools to protect applications across their entire lifecycle. The solution provides a comprehensive view of your security posture across your cloud and on-premises resources. It also helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. It has three core components:
 
@@ -18,11 +33,11 @@ Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform 
 
 - [Cloud Workload Protection Platform (CWPP)](#cloud-workload-protection-platform-cwpp) defends workloads such as virtual machines (VMs), containers, storage, databases, and serverless functions from threats.
 
-Defender for Cloud uses its broader Cloud Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early.
+Defender for Cloud uses its broader Cloud Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early. Defender for Cloud integrates with the Defender XDR portal and the Microsoft Security ecosystem, offering unified posture management and SOC experiences.
 
 In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI security and AI threat protection](#ai-security-and-threat-protection) to safeguard generative AI workloads throughout their lifecycle. These features help you discover AI applications, identify vulnerabilities, reduce risks, and detect threats targeting your generative AI workloads.
 
-:::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
+:::image type="content" source="media/defender-for-cloud-introduction/cloud-security-pillars.png" alt-text="Diagram showing the core functionality of Defender for Cloud":::
 
 > [!NOTE]
 > For pricing information, check out [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
@@ -31,9 +46,9 @@ In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI secu
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
 
-After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments. Defender for Cloud uses the data to give insights, recommendations, and actions that help you protect your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [Defender for Containers](tutorial-enable-containers-azure.md).
+After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments. Defender for Cloud uses the data to give insights, recommendations, and actions that help you protect your cloud workloads and resources. You can increase your cloud workloads protection and coverage by enabling additional plans that are listed below.
 
-Defender for Cloud's available plans and their CNAPP benefits include: 
+Defender for Cloud's available plans and their CNAPP benefits include:
 
 | Defender for Cloud plan | CNAPP benefits | Relevant links |
 |--|--|--|
@@ -66,8 +81,7 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 | [Data Security Posture Management](concept-data-security-posture.md) | Data security posture management automatically discovers datastores containing sensitive data, and helps reduce risk of data breaches. | [Enable data security posture management](data-security-posture-enable.md) | Defender CSPM or Defender for Storage |
 | [Attack path analysis](concept-attack-path.md#what-is-an-attack-path) | Model traffic on your network to identify potential risks before you implement changes to your environment. | [Build queries to analyze paths](how-to-manage-attack-path.md) | Defender CSPM                         |
 | [Cloud Security Explorer](concept-attack-path.md#what-is-cloud-security-explorer) | A map of your cloud environment that lets you build queries to find security risks. | [Build queries to find security risks](how-to-manage-cloud-security-explorer.md) | Defender CSPM                         |
-| [Security governance](governance-rules.md)                   | Drive security improvements through your organization by assigning tasks to resource owners and tracking progress in aligning your security state with your security policy. | [Define governance rules](governance-rules.md)               | Defender CSPM                         |
-| [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/) | Provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP. | [Review your Permission Creep Index (PCI)](other-threat-protections.md#entra-permission-management-formerly-cloudknox) | Defender CSPM                         |
+| [Security governance](governance-rules.md)                   | Drive security improvements through your organization by assigning tasks to resource owners and tracking progress in aligning your security state with your security policy. | [Define governance rules](governance-rules.md)               | Defender CSPM             |
 | [AI SPM](identify-ai-workload-model.md) | Provides a comprehensive view of your organization's AI Bill of Materials (AI BOM) which assesses the security posture of the scanned AI workloads. | [Discover generative AI workloads](identify-ai-workload-model.md) | Defender CSPM |
 
 ## Development security operations (DevSecOps)

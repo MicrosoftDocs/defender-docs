@@ -3,7 +3,7 @@ title: Defender for Cloud integration with Microsoft Entra | Defender for Cloud 
 
 description: Learn about Defender for Cloud integration with Microsoft Entra.
 ms.topic: reference
-ms.date: 10/05/2025
+ms.date: 11/13/2025
 ---
 
 # Defender for Cloud integration with Microsoft Entra | Defender for Cloud in the Field
@@ -21,8 +21,6 @@ ms.date: 10/05/2025
 - [03:58](/shows/mdc-in-the-field/integrate-entra#time=03m58s) - Demonstration
 
 ## Recommended resources
-
-Learn more about [Microsoft Entra Permission Management](other-threat-protections.md#entra-permission-management-formerly-cloudknox).
 
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS)
 

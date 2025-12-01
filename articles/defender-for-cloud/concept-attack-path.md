@@ -6,7 +6,7 @@ ms.date: 09/10/2025
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
 ---
 
-# Investigate risk with security explorer/attack paths
+# Security explorer and attack paths
 
 > [!VIDEO https://aka.ms/docs/player?id=36a5c440-00e6-4bd8-be1f-a27fbd007119]
 
@@ -16,12 +16,19 @@ Defender for Cloud's contextual security capabilities help security teams assess
 
 All of these capabilities are available as part of the [Defender Cloud Security Posture Management](concept-cloud-security-posture-management.md) plan and require you to enable either [agentless scanning for VMs](concept-agentless-data-collection.md) or the [vulnerability assessment capability](deploy-vulnerability-assessment-vm.md) on the [Defender for Servers plan](apply-security-baseline.md).
 
+## Access attack paths and security explorer
+
+In the Azure portal, you can access these capabilities through:
+- **Attack path analysis**: Navigate to **Microsoft Defender for Cloud** > **Attack path analysis**
+- **Cloud security explorer**: Navigate to **Microsoft Defender for Cloud** > **Cloud security explorer**
+
 ## What is cloud security graph?
 
 The cloud security graph is a graph-based context engine within Defender for Cloud. The cloud security graph collects data from your multicloud environment and other sources. For example, it includes cloud assets inventory, connections, lateral movement possibilities, internet exposure, permissions, network connections, vulnerabilities, and more. The collected data builds a graph representing your multicloud environment.
 
 Defender for Cloud uses the generated graph to perform an attack path analysis and find the highest-risk issues in your environment. You can also query the graph using the cloud security explorer.
 
+Learn more about how [Defender for Cloud collects and protects your data](data-security.md).
 
 :::image type="content" source="media/concept-cloud-map/security-map.png" alt-text="Screenshot of a conceptualized graph that shows the complexity of security graphing." lightbox="media/concept-cloud-map/security-map.png":::
 

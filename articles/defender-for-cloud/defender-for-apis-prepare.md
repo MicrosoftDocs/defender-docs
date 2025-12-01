@@ -1,10 +1,10 @@
 ---
 title: Support and prerequisites for deploying the Defender for APIs plan
 description: Learn about the requirements for Defender for APIs deployment in Microsoft Defender for Cloud
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.service: defender-for-cloud
-ms.topic: conceptual
+ms.topic: article
 ms.date: 07/15/2025
 ms.custom: references_regions
 ---
@@ -26,7 +26,7 @@ Defender for APIs is available in the Azure commercial cloud, in these regions:
 - UK (UK South, UK West)
 - US (East US, East US 2, West US, West US 2, West US 3, Central US, North Central US, South Central US, West Central US, East US 2 EUAP, Central US EUAP)
 
-Review the latest cloud support information for Defender for Cloud plans and features in the [cloud support matrix](support-matrix-cloud-environment.md).
+Review the latest cloud support information for Defender for Cloud plans and features in the [cloud support matrix](support-matrix-defender-for-cloud.md).
 
 ## API support
 
