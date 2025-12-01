@@ -148,4 +148,3 @@ After migrating to the built-in Defender Vulnerability Management solution in De
 ## Next step
 
 - [Common questions about vulnerability scanning questions](faq-scanner-detection.yml)
-

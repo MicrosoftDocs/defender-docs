@@ -3,8 +3,8 @@ title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
 ms.date: 05/13/2025
 ms.topic: overview
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.custom: sfi-image-nochange
 ---
 
@@ -32,7 +32,7 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
   - App Service Environment v2
   - App Service Environment v3
     
-- Check out Defender for App Service's [cloud availability](support-matrix-cloud-environment.md).
+- Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
 
 ## What are the benefits of Microsoft Defender for App Service?
 

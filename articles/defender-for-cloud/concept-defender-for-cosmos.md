@@ -2,8 +2,8 @@
 title: Overview of Defender for Azure Cosmos DB
 description: Learn about the benefits, features, and security capabilities of Microsoft Defender for Azure Cosmos DB to help protect your databases.
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 12/24/2024
 #customer intent: As a security administrator, I want to understand the features of Microsoft Defender for Azure Cosmos DB so that I can protect my databases from threats.
 ---
@@ -24,7 +24,7 @@ The following table lists supported and unsupported Azure Cosmos DB APIs in Defe
 |--|--|
 | Azure Cosmos DB for NoSQL |  Azure Cosmos DB for Apache Cassandra <br>  Azure Cosmos DB for MongoDB <br> Azure Cosmos DB for Table <br> Azure Cosmos DB for Apache Gremlin |
 
-For cloud availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md).
+For cloud availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## Benefits
 

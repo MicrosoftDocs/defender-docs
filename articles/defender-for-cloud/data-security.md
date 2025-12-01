@@ -2,8 +2,8 @@
 title: Microsoft Defender for Cloud data security
 description: Learn how data is managed and safeguarded in Microsoft Defender for Cloud to ensure the security of your data.
 ms.topic: overview
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 07/18/2024
 #customer intent: As a reader, I want to understand how data is managed and safeguarded in Microsoft Defender for Cloud so that I can ensure the security of my data.
 ---
@@ -82,7 +82,7 @@ Customers can access Defender for Cloud related data from the following data str
 
 | Stream                                                                                | Data types                                                                                                                                                                                                          |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Azure Activity log](/azure/azure-monitor/essentials/activity-log)                       | All security alerts, approved Defender for Cloud [just-in-time](enable-just-in-time-access.md) access requests. |
+| [Azure Activity log](/azure/azure-monitor/essentials/activity-log)                       | All security alerts, approved Defender for Cloud [just-in-time](just-in-time-access-usage.yml) access requests.|
 | [Azure Monitor logs](/azure/azure-monitor/data-platform)                      | All security alerts.                                                                                                                                                                                                |
 | [Azure Resource Graph](/azure/governance/resource-graph/overview)                      | Security alerts, security recommendations, vulnerability assessment results, secure score information, status of compliance checks, and more.                                                                       |
 | [Microsoft Defender for Cloud REST API](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true) | Security alerts, security recommendations, and more.                                                                                                                                                                |
@@ -98,7 +98,7 @@ Calculated data, such as attack paths, might be kept for an additional 14 days. 
 
 This information is collected in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement).
 
-Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securely and retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
+Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securelyand retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
 
 ## Defender for Cloud and Microsoft Defender 365 Defender integration
 

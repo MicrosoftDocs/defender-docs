@@ -3,8 +3,8 @@ metadata:
   title: Common questions -  General questions
   description: Frequently asked general questions about Microsoft Defender for Cloud, a product that helps you prevent, detect, and respond to threats
   services: defender-for-cloud
-  author: dcurwin
-  ms.author: dacurwin
+  author: Elazark
+  ms.author: elkrieger
   manager: raynew
   ms.topic: faq
   ms.date: 09/17/2025
