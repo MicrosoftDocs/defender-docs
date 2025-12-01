@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 11/03/2025
+ms.date: 11/24/2025
 ---
 
 # Threat analytics in Microsoft Defender
@@ -62,6 +62,8 @@ To access Threat analytics in the Defender portal, you need a license for at lea
 
 >[!NOTE]
 > The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and doesn't grant Threat analytics access.
+>
+> Microsoft Sentinel SIEM customers have access to certain Threat analytics sections or tabs only. [Learn more](/azure/sentinel/threat-analytics-sentinel) 
 
 The following roles and permissions are also required to access Threat analytics: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
@@ -137,7 +139,7 @@ The **Overview** section provides a preview of the detailed analyst report. It a
 Each report includes the following details about a threat, whenever applicable or available, providing you a quick glance of what the threat is and how it might impact your organization:
 - **Aliases**—lists the publicly disclosed names given by other security vendors to the threat
 - **Origin**—shows the country or region the threat originated from 
-- **Related intelligence**—lists other threat analytics reports that relevant or are related to the threat
+- **Related intelligence**—lists other threat analytics reports that are relevant or related to the threat
 - **Targets**—lists the countries or regions and industries targeted by the threat
 - **MITRE attack techniques**—lists the threat’s observed tactics, techniques, and procedures (TTPs) according to the [MITRE ATT&CK framework](https://attack.mitre.org/)
 
@@ -148,8 +150,8 @@ Each report includes charts designed to provide information about the organizati
 - **Related incidents**—provides an overview of the impact of the tracked threat to your organization with the following data:
   - Number of active alerts and the number of active incidents they're associated with
   - Severity of active incidents
-- **Alerts over time**—shows the number of related **Active** and **Resolved** alerts over time. The number of resolved alerts indicates how quickly your organization responds to alerts associated with a threat. Ideally, the chart should be showing alerts resolved within a few days.
-- **Impacted assets**—shows the number of distinct assets that currently have at least one active alert associated with the tracked threat. Alerts are triggered for mailboxes that received threat emails. Review both org- and user-level policies for overrides that cause the delivery of threat emails.
+- **Alerts over time**—shows the number of related **Active** and **Resolved** alerts over time. The number of resolved alerts indicates how quickly your organization responds to alerts associated with a threat. Ideally, the chart should show alerts resolved within a few days.
+- **Impacted assets**—shows the number of distinct assets that currently have at least one active alert associated with the tracked threat. Alerts are triggered for mailboxes that receive threat emails. Review both org- and user-level policies for overrides that cause the delivery of threat emails.
 
 #### Review security resilience and posture
 
@@ -217,11 +219,21 @@ The **Indicators** tab provides a list of all indicators of compromise (IOCs) as
 >Only verified customers can access the information in the **Indicators** tab. If you don't have access to this information, you need to verify your tenant. [Learn more about getting access to IOCs](threat-analytics-indicators.md)
 
 ## Stay updated with the latest reports and threat intelligence
-Threat analytics leverages and integrates various Microsoft Defender features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
+Threat analytics leverages and integrates various Microsoft Defender and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)	features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
+
+### Set up the Threat Intelligence Briefing Agent (preview)
+
+Set up the Threat Intelligence Briefing Agent to get timely, relevant threat intelligence reports with detailed technical analysis based on the latest threat actor activity and both internal and external vulnerability exposure. The agent correlates Microsoft threat data and customer signals to add critical context to threat information in a matter of minutes, saving analyst teams hours or even days spent on intelligence gathering and correlation.
+
+Once deployed, the Threat Intelligence Briefing Agent appears as a banner at the top of the Threat analytics page. 
+
+:::image type="content" source="media/ti-briefing-agent/agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page." lightbox="media/ti-briefing-agent/agent.png":::
+
+[Learn more about the Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md)
 
 ### Set up custom detections and link them to Threat analytics reports
 
-You can set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-provide-alert-details) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
+Set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-provide-alert-details) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
 
 :::image type="content" source="/defender/media/threat-analytics/ta-custom-detection.png" alt-text="Screenshot of custom detection setup page with Threat analytics option highlighted." lightbox="/defender/media/threat-analytics/ta-custom-detection.png":::
 
@@ -229,11 +241,11 @@ You can set up [custom detection rules](custom-detection-rules.md#2-create-new-r
 
 ### Set up email notifications for report updates
 
-You can set up email notifications that send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
+Set up email notifications that send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
 
 ## Other report details and limitations
 
-When you look at the threat analytics data, remember the following factors:
+When you review the threat analytics data, consider the following factors:
 
 - The checklist in the **Recommended actions** tab only displays recommendations tracked in [Microsoft Secure Score](microsoft-secure-score.md). Check the **Analyst report** tab for more recommended actions that aren't tracked in Secure Score.
 - The recommended actions don't guarantee complete resilience and only reflect the best possible actions needed to improve it.

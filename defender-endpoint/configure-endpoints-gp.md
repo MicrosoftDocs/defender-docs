@@ -2,8 +2,8 @@
 title: Onboard Windows Servers to Microsoft Defender for Endpoint via Group Policy
 description: Use Group Policy to deploy the configuration package on Windows devices so that they're onboarded to the service.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
-ms.date: 10/13/2025
+ms.date: 11/17/2025
 ms.subservice: onboard
 search.appverid: met150
 appliesto:
@@ -22,6 +22,8 @@ appliesto:
 ---
 
 # Onboard Windows devices using Group Policy 
+
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Prerequisites
 
@@ -34,7 +36,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 1. Open the GP configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
 
    1. Select the operating system.
 
@@ -177,7 +179,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
    1. Select the operating system.
     

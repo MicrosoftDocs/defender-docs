@@ -2,8 +2,8 @@
 title: Certificate assessment methods and properties per device
 description: Provides information about the certificates APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,32 +15,28 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 05/02/2022
+ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
+
 # Export certificate inventory per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
+Unless indicated otherwise, all export security baseline assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
-- **JSON response**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+The data can be retrieved in two ways:
 
-- **via files** This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. You can download data from Azure Storage as follows:
+- **JSON**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+
+- **Files** This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. You can download data from Azure Storage as follows:
   - Call the API to get a list of download URLs with all your organization data.
   - Download all the files using the download URLs and process the data as you like.
 
 Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
-
-> [!NOTE]
-> Unless indicated otherwise, all export security baseline assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
 ## 1. Export certificate assessment (JSON response)
 
@@ -55,7 +51,7 @@ Returns all certificate assessments for all devices, on a per-device basis. It r
 
 ### 1.2 Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
+One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
 Permission type|Permission|Permission display name
 :---|:---|:---
@@ -76,12 +72,12 @@ GET /api/machines/certificateAssessmentByMachine
 
 ### 1.5 Properties (JSON response)
 
-> [!NOTE]
-> Each record is approximately 1 KB of data. You should take this into account when choosing the correct pageSize parameter.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
->
-> The properties defined in the following table are listed alphabetically by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
+
+- Each record is approximately 1 KB of data. You should take this into account when choosing the correct pageSize parameter.
+
+- Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+
+The properties defined in the following table are listed alphabetically by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
 
 Property (ID)|Data type|Description
 :---|:---|:---
@@ -169,16 +165,15 @@ GET /api/machines/certificateAssessmentExport
 
 ### 2.5 Properties (JSON response)
 
-> [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+- The files are gzip compressed & in multiline Json format.
+
+- The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
+
+- To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+
+- Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
+
+- Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
@@ -203,5 +198,3 @@ GET https://api.securitycenter.contoso.com/api/machines/certificateAssessmentExp
         "generatedTime":"2022-03-20T13:18:00Z"
    }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

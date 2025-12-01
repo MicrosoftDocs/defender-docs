@@ -1,8 +1,8 @@
 ﻿---
 title: Behavioral blocking and containment
 description: Learn about behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol
 ms.reviewer: shwetaj
 audience: ITPro
