@@ -1,11 +1,11 @@
----
+﻿---
 title: Security baselines assessment profiles
 description: Provides information about the security baselines assessment profiles APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,21 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 05/02/2022
+ms.date: 11/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 ---
 
 # List all security baselines assessment profiles
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 ## 1. Get security baselines assessment profiles
 
@@ -113,8 +107,3 @@ GET https://api.securitycenter.microsoft.com/api/baselineProfiles
 }
 ```
 
-## See also
-
-- [Export security baselines assessment](export-security-baseline-assessment.md)
-- [Get security baselines assessment configurations](get-security-baselines-assessment-configurations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

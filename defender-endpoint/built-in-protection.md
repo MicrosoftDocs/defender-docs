@@ -1,10 +1,10 @@
----
+﻿---
 title: Built-in protection helps guard against ransomware
 description: Learn how built-in protection protects against ransomware as part of Microsoft Defender for Endpoint.
 search.appverid: MET150
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 audience: IT Pro
 ms.topic: overview
 ms.date: 06/24/2024
@@ -17,15 +17,14 @@ ms.collection:
 - mde-ngp
 ms.custom: 
 ms.reviewer: joshbregman
-f1.keywords: NOCSH 
----
+f1.keywords: NOCSH
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Built-in protection helps guard against ransomware
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) helps prevent, detect, investigate, and respond to advanced threats, such as ransomware attacks. [Next-generation protection](next-generation-protection.md) and [attack surface reduction](overview-attack-surface-reduction.md) capabilities in Defender for Endpoint were designed to catch emerging threats. In order for the best protection from ransomware and other cyberthreats to be in place, certain settings must be configured. Built-in protection can help by providing you with default settings for better protection.
 
@@ -79,3 +78,4 @@ Built-in protection is a set of default settings. Your security team isn't requi
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,11 +1,11 @@
----
+﻿---
 title: List alerts API
 description: Learn how to use the List alerts API to retrieve a collection of alerts in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,24 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+
 ---
 
 # List alerts API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 
 ## API description
@@ -52,31 +43,31 @@ OData supported operators:
 
 ## Limitations
 
-1. You can get alerts last updated according to your configured retention period.
+- You can get alerts last updated according to your configured retention period.
 
-2. Maximum page size is 10,000.
+- Maximum page size is 10,000.
 
-3. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
 
 
 ## Permissions
+
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: `View Data`. For more information,see: [Create and manage roles](../user-roles.md).
+
+- The response includes only alerts that are associated with devices that the user can access, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
+
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type | Permission | Permission display name|
 |:---|:---|:---|
-|Application | Alert.Read.All | `Read all alerts`|
 |Application | Alert.ReadWrite.All | `Read and write all alerts`|
-|Delegated (work or school account) | Alert.Read | `Read alerts`|
 |Delegated (work or school account) | Alert.ReadWrite | `Read and write alerts`|
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md) for more information)
-> - The response includes only alerts that are associated with devices that the user can access, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
 
 ## HTTP request
 
@@ -110,10 +101,7 @@ GET https://api.securitycenter.microsoft.com/api/alerts
 
 ### Response
 
-Here's an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity. All alerts will be returned from an actual call.
+The response list shown here has been shortened. The call returns the full set of alerts.
 
 ```json
 {
@@ -179,10 +167,7 @@ GET https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=evidence
 
 ### Response
 
-Here's an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity. All alerts will be returned from an actual call.
+The response list shown here has been shortened. The call returns the full set of alerts.
 
 ```json
 {
@@ -319,8 +304,6 @@ Here's an example of the response.
 }
 ```
 
-## See also
 
-[OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

@@ -1,10 +1,10 @@
 ---
 title: Insights and reports Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
 ms.collection: 
@@ -226,9 +226,9 @@ The details table below the chart shows the following information. You can sort 
 - **Email address**: Email address of the user.
 - **Latest repeat count**: Latest count of compromises for users categorized as repeat offenders. For example, if the repeat offender threshold is set to 3, and a user was compromised in 3 consecutive simulations, then the latest repeat count is 3. If the user was compromised in 4 consecutive simulations, then the latest repeat count is 4. If the user was compromised in 2 consecutive simulations, then the value N/A. The latest repeat count sets to 0 (N/A), every time a repeat offender flag is reset (meaning the user passes a simulation).
 - **Repeat offences**: Includes the number of times a user was classified as a repeat offender. For example:
-  -   The user was classified as a repeat offender in first few simulations (they were compromised 3 consecutive times, where repeat offender threshold is 2).
-  -   The user was classified as 'clean' after passing a simulation.
-  -   The user was classified as a repeat offender in the next few simulations (they were compromised 4 consecutive times, where repeat offender threshold is 2).
+  - The user was classified as a repeat offender in first few simulations (they were compromised 3 consecutive times, where repeat offender threshold is 2).
+  - The user was classified as 'clean' after passing a simulation.
+  - The user was classified as a repeat offender in the next few simulations (they were compromised 4 consecutive times, where repeat offender threshold is 2).
 
   In these cases, the number of repeat offences is set to 2. The count updates every time a user is considered a repeat offender.
 
@@ -463,7 +463,7 @@ How user activity signals are captured is described in the following table.
 |Read Message|The user read the simulation message.|Message read signals might experience issues in the following scenarios: <ul><li>The user reported the message as phishing in Outlook without leaving the reading pane, and **Mark items as read when viewed in the Reading Pane** wasn't configured (default).</li><li>The user reported the unread message as phishing in Outlook, the message was deleted, and **Mark messages as read when deleted** wasn't configured (default).</li></ul>|
 |Out of Office|Determines whether the user is out of office.|Currently calculated by the Automatic replies setting from Outlook.|
 |Compromised User|The user was compromised. The compromise signal varies based on the social engineering technique.|<ul><li>**Credential Harvest**: The user entered their credentials on the login page (credentials aren't stored by Microsoft).¹</li><li>**Malware Attachment**: The user opened the payload attachment and selected **Enable Editing** in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653).</li><li>**Link in Attachment**: The user opened the attachment and entered their credentials after clicking on the payload link.</li><li>**Link to Malware**: The user clicked on the payload link and entered their credentials.</li><li>**Drive by URL**: The user clicked on the payload link (entering credentials isn't required).¹</li><li>**OAuth Consent Grant**: The user clicked on the payload link and accepted the prompt to share permissions.¹</li></ul>|
-|Clicked Message Link|The user clicked on the payload link in the simulation message.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Third-party filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message-or-i-see-clicks-within-a-few-seconds-of-delivery-for-many-users-false-positives-whats-going-on)|
+|Clicked Message Link|The user clicked on the payload link in the simulation message.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Non-Microsoft filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message-or-i-see-clicks-within-a-few-seconds-of-delivery-for-many-users-false-positives-whats-going-on)|
 |Forwarded Message|The user forwarded the message.||
 |Replied to Message|The user replied to the message.||
 |Deleted message|The user deleted the message.|The signal comes from the Outlook activity of the user. If the user reports the message as phishing, the message might be moved to the Deleted Items folder, which is identified as a deletion.|

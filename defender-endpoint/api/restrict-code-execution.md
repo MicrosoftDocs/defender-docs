@@ -1,11 +1,11 @@
----
+﻿---
 title: Restrict app execution API
 description: Use this API to create calls related to restricting an application from executing.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,24 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/13/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+
 ---
 
 # Restrict app execution API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -40,18 +31,21 @@ Restrict execution of all applications on the device except a predefined set.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-
-[!include[Device actions note](../../includes/machineactionsnote.md)]
+Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 
-> [!IMPORTANT]
->
-> - This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
-> - This feature is available if your organization uses Microsoft Defender Antivirus.
-> - This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/device-security/device-guard/requirements-and-deployment-planning-guidelines-for-device-guard#code-integrity-policy-formats-and-signing).
+## Prerequisites
+
+- This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
+- This feature is available if your organization uses Microsoft Defender Antivirus.
+- This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see: [Code integrity policy formats and signing](/windows/device-security/device-guard/requirements-and-deployment-planning-guidelines-for-device-guard#code-integrity-policy-formats-and-signing).
 
 ## Permissions
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md). 
+- The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
@@ -60,13 +54,6 @@ Permission type|Permission|Permission display name
 Application|Machine.RestrictExecution|'Restrict code execution'
 Delegated (work or school account)|Machine.RestrictExecution|'Restrict code execution'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'Active remediation actions' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
 ## HTTP request
 
@@ -111,5 +98,3 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
 }
 ```
 
-- To remove code execution restriction from a device, see [Remove app restriction](unrestrict-code-execution.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

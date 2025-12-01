@@ -1,0 +1,7 @@
+- name: Microsoft Defender for Identity
+  tocHref: /defender-for-identity/
+  topicHref: /defender-for-identity/index
+  items:
+  - name: Microsoft Defender for Identity
+    tocHref: /microsoft-365/security/defender/
+    topicHref: /defender-for-identity/index

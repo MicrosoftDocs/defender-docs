@@ -1,11 +1,11 @@
----
+﻿---
 title: List software by recommendation
 description: Retrieves a security recommendation related to a specific software.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,21 +15,13 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 08/11/2021
+ms.date: 11/13/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+
 ---
 
 # List software by recommendation
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 
 [!include[Prerelease information](../../includes/prerelease.md)]
@@ -69,7 +61,7 @@ If successful, this method returns 200 OK with the software associated with the 
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/software 
@@ -93,8 +85,3 @@ Here is an example of the response.
 }
 ```
 
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management security recommendation](/defender-vulnerability-management/tvm-security-recommendation)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

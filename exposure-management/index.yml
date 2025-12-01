@@ -41,6 +41,8 @@ landingContent:
             url: get-started-exposure-management.md
           - text: Review prerequisites
             url: prerequisites.md
+          - text: Import data from external data connectors
+            url: overview-data-connectors.md  
 
 
   # Card

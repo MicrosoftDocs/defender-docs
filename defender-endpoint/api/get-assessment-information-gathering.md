@@ -1,11 +1,11 @@
----
+﻿---
 title: Export information gathering assessment
 description: Returns a table with an entry for every unique combination of DeviceId, DeviceName, Additional fields.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,25 +15,20 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
+ms.date: 12/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
-ms.date: 07/26/2022
 ---
 
 # Information gathering assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink) <br/>
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 This API response returns all information gathering assessments for all devices, on a per-device basis. It returns a table with a separate entry for every DeviceId.
+
+Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 It pulls all relevant data in your organization as a download file. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
 
@@ -42,8 +37,7 @@ It pulls all relevant data in your organization as a download file. The response
 
 Data that is collected (using _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export information gathering assessment (via files)
 
@@ -72,18 +66,15 @@ GET /api/Machines/InfoGatheringExport
 
 ### 1.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours)
+- `sasValidHours`: The number of hours that the download URLs are valid for Maximum is 6 hours.
 
 ### 1.5 Properties
 
-> [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise, you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+- Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
@@ -113,10 +104,4 @@ GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$s
 }
 ```
 
-## Other related
 
-- [DeviceTvmInfoGathering](/defender-xdr/advanced-hunting-devicetvminfogathering-table)
-- [DeviceTvmInfoGatheringKB](/defender-xdr/advanced-hunting-devicetvminfogatheringkb-table)
-- [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

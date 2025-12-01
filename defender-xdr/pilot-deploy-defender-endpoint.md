@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 05/15/2024
+ms.date: 06/19/2025
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -18,20 +18,21 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: To learn how to pilot and deploy Microsoft Defender for Endpoint in your production Microsoft 365 tenant.
 ---
 
 # Pilot and deploy Microsoft Defender for Endpoint
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 This article provides a workflow for piloting and deploying Microsoft Defender for Endpoint in your organization. You can use these recommendations to onboard Microsoft Defender for Endpoint as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender XDR.
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Endpoint in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
 Defender for Endpoint contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
+
+[!INCLUDE [side-by-side-scenarios](../defender-endpoint/includes/side-by-side-scenarios.md)]
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -47,7 +48,7 @@ The articles in this series correspond to the following phases of end-to-end dep
 | B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - **Pilot and deploy Defender for Endpoint** (this article) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
-## Pilot and deploy workflow for Defender for Identity
+## Pilot and deploy workflow for Defender for Endpoint
 
 The following diagram illustrates a common process to deploy a product or service in an IT environment.
 
@@ -55,9 +56,9 @@ The following diagram illustrates a common process to deploy a product or servic
 
 You start by evaluating the product or service and how it will work within your organization. Then, you pilot the product or service with a suitably small subset of your production infrastructure for testing, learning, and customization. Then, gradually increase the scope of the deployment until your entire infrastructure or organization is covered.
 
-Here is the workflow for piloting and deploying Defender for Identity in your production environment.
+Here is the workflow for piloting and deploying Defender for Endpoint in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" border="false":::
+:::image type="content" source="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Endpoint." lightbox="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
@@ -131,7 +132,7 @@ The [Plan deployment](/defender-endpoint/deployment-strategy) topic outlines the
 
 Watch this video for a quick overview of the onboarding process and learn about the available tools and methods.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bGqr]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
 
 ### Onboarding tool options
 

@@ -2,12 +2,12 @@
 title: Trial user guide - Microsoft Defender for Endpoint
 description: Use this guide to get the most of your 90-day free trial. See how Defender for Endpoint can help prevent, detect, investigate, and respond to advanced threats.
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 audience: ITPro
 ms.topic: how-to
-ms.date: 09/10/2024
+ms.date: 06/19/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -24,6 +24,8 @@ Welcome to the Microsoft Defender for Endpoint Plan 2 trial user guide!
 
 This playbook is a simple guide to help you make the most of your free trial. Using the suggested steps in this article from the Microsoft Defender team, you learn how Defender for Endpoint can help you to prevent, detect, investigate, and respond to advanced threats.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## What is Defender for Endpoint?
 
 [Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform that uses the following combination of technology built into Windows and Microsoft's robust cloud service: 
@@ -37,19 +39,19 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 <center><h2>Microsoft Defender for Endpoint</center></h2>
 <table>
 <tr>
-<td><a href="microsoft-defender-endpoint.md#tvm"><center><img src="media/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Vulnerability Management</b></center></a></td>
-<td><a href="microsoft-defender-endpoint.md#asr"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
-<td><center><a href="microsoft-defender-endpoint.md#ngp"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#edr"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#ai"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#mte"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
+<td><a href="/defender-vulnerability-management/defender-vulnerability-management"><center><img src="media/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Vulnerability Management</b></center></a></td>
+<td><a href="overview-attack-surface-reduction.md"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
+<td><center><a href="next-generation-protection.md"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
+<td><center><a href="overview-endpoint-detection-response.md"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
+<td><center><a href="automated-investigations.md"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
+<td><center><a href="endpoint-attack-notifications.md"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
 </tr>
 <tr>
 <td colspan="7">
-<a href="microsoft-defender-endpoint.md#apis"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
+<a href="api/management-apis.md"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
 </tr>
 <tr>
-<td colspan="7"><a href="microsoft-defender-endpoint.md#mtp"><center><b>Microsoft Defender portal</a></center></b></td>
+<td colspan="7"><a href="/unified-secops/overview-defender-portal"><center><b>Microsoft Defender portal</a></center></b></td>
 </tr>
 </table>
 <br>
@@ -69,9 +71,13 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 
 To make sure your Defender for Endpoint subscription is properly provisioned, you can check your license state in either the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) or Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products)).
 
-[Check your license state](production-deployment.md#check-license-state).
+[Check your license state](production-deployment.md#check-your-license-state).
 
 ## Step 2: Set up role-based access control and grant permissions to your security team
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. [Review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles might need to be applied temporarily and removed after the trial is finished.
 
@@ -101,7 +107,7 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 
 This section outlines the general steps you to onboard devices (endpoints).
 
-1. [Watch this video](https://www.microsoft.com/videoplayer/embed/RE4bGqr) for a quick overview of the onboarding process and learn about the available tools and methods.
+1. [Watch this video](https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60) for a quick overview of the onboarding process and learn about the available tools and methods.
 
 2. Review your [device onboarding tool options](onboarding.md) and select the most appropriate option for your environment. 
 
@@ -117,6 +123,8 @@ After you have onboarded devices, [run a detection test](run-detection-test.md).
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).   
 
+> [!IMPORTANT]
+> If you decide not to renew your trial or purchase a subscription, make sure to offboard devices before your trial expires.
 
 ## See also
 

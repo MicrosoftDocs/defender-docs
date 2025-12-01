@@ -4,42 +4,23 @@ description: Describes the procedure to tune the performance of Microsoft Defend
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
-ms.date: 09/20/2024
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+manager: bagol
 ms.collection: 
 - m365-security
 - mde-ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ---
 
 # Performance analyzer for Microsoft Defender Antivirus
 
-**Applies to**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-
-## Requirements
-
-Microsoft Defender Antivirus performance analyzer has the following prerequisites:
-
-- Supported Windows versions: 
-   - Windows 10
-   - Windows 11
-   - Windows Server 2016 and later
-   - Windows Server 2012 R2 (when onboarded using [modern, unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution))
-   - For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
-- Platform Version: `4.18.2108.7` or later
-- PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
 ## What is the Microsoft Defender Antivirus performance analyzer?
 
@@ -61,6 +42,20 @@ Some options to analyze include:
   - top processes per path
   - top scans per file
   - top scans per file per process
+
+## Prerequisites 
+
+- Platform Version: `4.18.2108.7` or later
+- PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
+- For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
+
+
+### Supported operating systems 
+
+   - Windows 10
+   - Windows 11
+   - Windows Server 2016 and later
+   - Windows Server 2012 R2 (when onboarded using [modern, unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
 
 ## Running performance analyzer
 
@@ -91,7 +86,7 @@ To start recording system events, open PowerShell in administrator mode and perf
 
 4. Analyze the results using the performance analyzer's `Get-MpPerformanceReport` parameter. For example, on executing the command `Get-MpPerformanceReport -Path <recording.etl> -TopFiles 3 -TopScansPerFile 10`, the user is provided with a list of top-ten scans for the top three files affecting performance.
 
-   For more information on command-line parameters and options, see the [New-MpPerformanceRecording](#new-mpperformancerecording) and [Get-MpPerformanceReport](#get-mpperformancereport).
+   For more information on command-line parameters and options, see the [New-MpPerformanceRecording](/powershell/module/defenderperformance/new-mpperformancerecording)   and [Get-MpPerformanceReport](/powershell/module/defenderperformance/get-mpperformancereport).
 
 > [!NOTE]
 > When running a recording, if you get the error "Cannot start performance recording because Windows Performance Recorder is already recording", run the following command to stop the existing trace with the new command: `wpr -cancel -instancename MSFT_MpPerformanceRecording`.
@@ -116,449 +111,25 @@ Starting with Defender version `4.18.2206.X`, users are able to view scan skip r
 
 - **To export**:
 
-```powershell
-(Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | Export-CSV -Path .\Repro-Install-Scans.csv -Encoding UTF8 -NoTypeInformation
-```
+    ```powershell
+    (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | Export-CSV -Path .\Repro-Install-Scans.csv -Encoding UTF8 -NoTypeInformation
+    ```
 
 - **To convert**:
-```powershell
-(Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 100).TopScans | ConvertTo-Csv -NoTypeInformation
-```
+  
+    ```powershell
+    (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 100).TopScans | ConvertTo-Csv -NoTypeInformation
+    ```
 
 ### For JSON
 
 - **To convert**:
-```powershell
-(Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | ConvertTo-Json -Depth 1
-```
+    ```powershell
+    (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | ConvertTo-Json -Depth 1
+    ```
 
 To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. See the following sections for more details.
 
-## PowerShell reference
-
-There are two new PowerShell cmdlets used to tune performance of Microsoft Defender Antivirus:
-
-- [New-MpPerformanceRecording](#new-mpperformancerecording)
-- [Get-MpPerformanceReport](#get-mpperformancereport)
-
-### New-MpPerformanceRecording
-
-The following section describes the reference for the new PowerShell cmdlet `New-MpPerformanceRecording`. This cmdlet Collects a performance recording of Microsoft Defender Antivirus scans.
-
-#### Syntax: New-MpPerformanceRecording
-
-```powershell
-New-MpPerformanceRecording -RecordTo <String>
-```
-
-#### Description: New-MpPerformanceRecording
-
-The `New-MpPerformanceRecording` cmdlet collects a performance recording of Microsoft Defender Antivirus scans. These performance recordings contain Microsoft-Antimalware-Engine and NT kernel process events and can be analyzed after collection using the [Get-MpPerformanceReport](#get-mpperformancereport) cmdlet.
-
-This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "as is", and isn't intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
-
-For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
-
-> [!IMPORTANT]
-> This cmdlet requires elevated administrator privileges.
-
-
-#### Examples: New-MpPerformanceRecording
-
-##### Example 1: Collect a performance recording and save it
-
-```powershell
-New-MpPerformanceRecording -RecordTo .\Defender-scans.etl
-```
-
-The command collects a performance recording and saves it to the specified path: `.\Defender-scans.etl`.
-
-##### Example 2: Collect a performance recording for remote PowerShell session
-
-```powershell
-$s = New-PSSession -ComputerName Server02 -Credential Domain01\User01
-New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $s
-```
-
-The command collects a performance recording on `Server02` (as specified by argument $s of parameter Session) and saves it to the specified path: `C:\LocalPathOnServer02\trace.etl` on `Server02`.
-
-
-#### Parameters: New-MpPerformanceRecording
-
-##### -RecordTo
-
-Specifies the location in which to save the Microsoft Defender Antimalware performance recording.
-
-```yaml
-Type: String
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -Session
-
-Specifies the `PSSession` object in which to create and save the Microsoft Defender Antivirus performance recording. When you use this command, the `RecordTo` parameter refers to the local path on the remote machine. Available with Defender platform version `4.18.2201.10` and later.
-
-```yaml
-Type: PSSession[]
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### Get-MpPerformanceReport
-
-The following section describes the `Get-MpPerformanceReport` PowerShell cmdlet. Analyzes and reports on Microsoft Defender Antivirus performance recording.
-
-#### Syntax: Get-MpPerformanceReport
-
-```output
-    Get-MpPerformanceReport [-Path] <String> [-TopFiles <Int32>] [-TopScansPerFile <Int32>] [-TopProcessesPerFile 
-<Int32>] [-TopScansPerProcessPerFile <Int32>] [-TopPaths <Int32>] [-TopPathsDepth <Int32>] [-TopScansPerPath 
-<Int32>] [-TopFilesPerPath <Int32>] [-TopScansPerFilePerPath <Int32>] [-TopExtensionsPerPath <Int32>] 
-    [-TopScansPerExtensionPerPath <Int32>] [-TopProcessesPerPath <Int32>] [-TopScansPerProcessPerPath <Int32>] 
-    [-TopExtensions <Int32>] [-TopScansPerExtension <Int32>] [-TopPathsPerExtension <Int32>] 
-    [-TopScansPerPathPerExtension <Int32>] [-TopFilesPerExtension <Int32>] [-TopScansPerFilePerExtension <Int32>] 
-    [-TopProcessesPerExtension <Int32>] [-TopScansPerProcessPerExtension <Int32>] [-TopProcesses <Int32>] 
-    [-TopScansPerProcess <Int32>] [-TopFilesPerProcess <Int32>] [-TopScansPerFilePerProcess <Int32>] 
-    [-TopExtensionsPerProcess <Int32>] [-TopScansPerExtensionPerProcess <Int32>] [-TopPathsPerProcess <Int32>] 
-    [-TopScansPerPathPerProcess <Int32>] [-TopScans <Int32>] [-MinDuration <String>] [-MinStartTime <DateTime>] 
-    [-MinEndTime <DateTime>] [-MaxStartTime <DateTime>] [-MaxEndTime <DateTime>] [-Overview] [-Raw] 
-    [<CommonParameters>]
-```
-
-#### Description: Get-MpPerformanceReport
-
-The `Get-MpPerformanceReport` cmdlet analyzes a previously collected Microsoft Defender Antivirus performance recording ([New-MpPerformanceRecording](#new-mpperformancerecording)) and reports the file paths, file extensions, and processes that cause the highest impact to Microsoft Defender Antivirus scans.
-
-The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "as is" and isn't intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
-
-For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
-
-**Supported OS versions**:
-
-Windows Version 10 and later.
-
-> [!NOTE]
-> This feature is available starting with platform version `4.18.2108.X` and later.
-
-#### Examples: Get-MpPerformanceReport
-
-##### Example 1: Single query
-
-```powershell
-Get-MpPerformanceReport -Path .\Defender-scans.etl -TopScans 20
-```
-
-##### Example 2: Multiple queries
-
-```powershell
-Get-MpPerformanceReport -Path .\Defender-scans.etl -TopFiles 10 -TopExtensions 10 -TopProcesses 10 -TopScans 10
-```
-
-##### Example 3: Nested queries
-
-```powershell
-Get-MpPerformanceReport -Path .\Defender-scans.etl -TopProcesses 10 -TopExtensionsPerProcess 3 -TopScansPerExtensionPerProcess 3
-```
-
-##### Example 4: Using -MinDuration parameter
-
-```powershell
-Get-MpPerformanceReport -Path .\Defender-scans.etl -TopScans 100 -MinDuration 100ms
-```
-
-##### Example 5: Using -Raw parameter
-
-```powershell
-Get-MpPerformanceReport -Path .\Defender-scans.etl -TopFiles 10 -TopExtensions 10 -TopProcesses 10 -TopScans 10 -Raw | ConvertTo-Json
-```
-
-Using `-Raw` in the command specifies that the output should be machine readable and readily convertible to serialization formats like JSON.
-
-#### Parameters: Get-MpPerformanceReport
-
-##### -TopPaths
-
-Requests a top-paths report and specifies how many top paths to output, sorted by duration. Aggregates the scans based on their path and directory. User can specify how many directories should be displayed on each level and the depth of the selection.
-
-```yaml
-- Type: Int32
-- Position: Named
-- Default value: None
-- Accept pipeline input: False
-- Accept wildcard characters: False
-```
-
-##### -TopPathsDepth
-
-Specifies recursive depth that is used to group and display aggregated path results. For example `C:\` corresponds to a depth of 1, and `C:\Users\Foo` corresponds to a depth of 3.
-
-This flag can accompany all other Top Path options. If missing, a default value of 3 is assumed. The value can't be 0.
-
-```yaml
-- Type: Int32
-- Position: Named
-- Default value: 3
-- Accept pipeline input: False
-- Accept wildcard characters: False
-```
-
-| flag | definition |
-|:---|:---|  
-|  -`TopScansPerPath` | Specifies how many top scans to specify for each top path. |
-|  -`TopFilesPerPath` | Specifies how many top files to specify for each top path. |
-|  -`TopScansPerFilePerPath` | Specifies how many top scans to output for each top file for each top path, sorted by "Duration" |
-|  -`TopExtensionsPerPath` | Specifies how many top extensions to output for each top path |
-|  -`TopScansPerExtensionPerPath` | Specifies how many top scans to output for each top extension for each top path |
-|  -`TopProcessesPerPath` | Specifies how many top processes to output for each top path |
-|  -`TopScansPerProcessPerPath` | Specifies how many top scans to output for each top process for each top path |
-|  -`TopPathsPerExtension` | Specifies how many top paths to output for each top extension |
-|  -`TopScansPerPathPerExtension` | Specifies how many top scans to output for each top path for each top extension |
-|  -`TopPathsPerProcess` | Specifies how many top paths to output for each top process |
-|  -`TopScansPerPathPerProcess` | Specifies how many top scans to output for each top path for each top process |
-
-##### -MinDuration
-
-Specifies the minimum duration of any scan or total scan durations of files, extensions, and processes included in the report; accepts values like  `0.1234567sec`, `0.1234ms`, `0.1us`, or a valid TimeSpan.
-
-```yaml
-Type: String
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -Path
-
-Specifies the path or paths to one or more locations.
-
-```yaml
-Type: String
-Position: 0
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-##### -Raw
-
-Specifies that output of performance recording should be machine readable and readily convertible to serialization formats like JSON (for example, via Convert-to-JSON command). This configuration is recommended for users interested in batch processing with other data processing systems.
-
-```yaml
-Type: <SwitchParameter>
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopExtensions
-
-Specifies how many top extensions to output, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopExtensionsPerProcess
-
-Specifies how many top extensions to output for each top process, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopFiles
-
-Requests a top-files report and specifies how many top files to output, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopFilesPerExtension
-
-Specifies how many top files to output for each top extension, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopFilesPerProcess
-
-Specifies how many top files to output for each top process, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopProcesses
-
-Requests a top-processes report and specifies how many of the top processes to output, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopProcessesPerExtension
-
-Specifies how many top processes to output for each top extension, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopProcessesPerFile
-
-Specifies how many top processes to output for each top file, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScans
-
-Requests a top-scans report and specifies how many top scans to output, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerExtension
-
-Specifies how many top scans to output for each top extension, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerExtensionPerProcess
-
-Specifies how many top scans to output for each top extension for each top process, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerFile
-
-Specifies how many top scans to output for each top file, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerFilePerExtension
-
-Specifies how many top scans to output for each top file for each top extension, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerFilePerProcess
-
-Specifies how many top scans for output for each top file for each top process, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerProcess
-
-Specifies how many top scans to output for each top process in the Top Processes report, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerProcessPerExtension
-
-Specifies how many top scans for output for each top process for each top extension, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-##### -TopScansPerProcessPerFile
-
-Specifies how many top scans for output for each top process for each top file, sorted by duration.
-
-```yaml
-Type: Int32
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### [Microsoft Defender Antivirus Performance Analyzer reference](/defender-endpoint/performance-analyzer-reference)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

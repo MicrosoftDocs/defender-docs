@@ -1,33 +1,26 @@
----
+﻿---
 title: Create and manage device groups in Microsoft Defender for Endpoint
 description: Create device groups and set automated remediation levels on them by confirming the rules that apply on the group
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/12/2023
----
+ms.date: 03/26/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Create and manage device groups
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Entra ID
-- Office 365
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
@@ -113,3 +106,4 @@ For more information on linking to device groups definitions, see [Device groups
 - [Create and manage device tags](machine-tags.md)
 - [Get list of tenant device groups using Graph API](/graph/api/device-list-memberof)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

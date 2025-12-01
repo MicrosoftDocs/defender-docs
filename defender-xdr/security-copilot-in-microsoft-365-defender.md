@@ -1,11 +1,11 @@
 ---
-title: Microsoft Copilot in Microsoft Defender
-description: Learn about Microsoft Copilot for Security capabilities embedded in Microsoft Defender.
+title: Microsoft Security Copilot in Microsoft Defender
+description: Learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,38 +14,43 @@ ms.collection:
 - tier1
 - security-copilot
 - magic-ai-copilot 
-ms.topic: conceptual
+ms.topic: article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 10/10/2024
+ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+#customer intent: As an IT admin, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
+#customer intent: As a security analyst, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
 ---
 
-# Microsoft Copilot in Microsoft Defender
+# Microsoft Security Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]
 > Microsoft Defender XDR provides a unified XDR experience for Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Vulnerability Management. Learn more about this pre- and post-breach defense suite in [What is Microsoft Defender XDR?](microsoft-365-defender.md)
 
-This article provides an overview for users of Microsoft Copilot in Microsoft Defender, including steps to access, key capabilities, and links to the details of these capabilities.
+This article provides an overview for users of Microsoft Security Copilot in Microsoft Defender, including steps to access, key capabilities, and links to the details of these capabilities.
 
 ## Know before you begin
 
-If you're new to Copilot for Security, you should familiarize yourself with it by reading the following articles:
+If you're new to Security Copilot, you should familiarize yourself with it by reading the following articles:
 
-- [What is Copilot for Security?](/security-copilot/microsoft-security-copilot)
-- [Copilot for Security experiences](/security-copilot/experiences-security-copilot)
-- [Get started with Copilot for Security](/security-copilot/get-started-security-copilot)
-- [Understand authentication in Copilot for Security](/security-copilot/authentication)
-- [Prompting in Copilot for Security](/security-copilot/prompting-security-copilot)
+- [What is Security Copilot?](/security-copilot/microsoft-security-copilot)
+- [Security Copilot experiences](/security-copilot/experiences-security-copilot)
+- [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
+- [Understand authentication in Security Copilot](/security-copilot/authentication)
+- [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
+- [Responsible AI FAQs](responsible-ai-copilot-defender.md)
 
-## Microsoft Copilot integration in Microsoft Defender
+## Microsoft Security Copilot integration in Microsoft Defender
 
-[Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Copilot for Security is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Copilot for Security.
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
+
+Copilot in Defender operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
 
 ## Key features
 
@@ -55,9 +60,9 @@ Enable security teams to tackle attack investigations in a timely manner with ea
 
 #### Summarize incidents quickly
 
-Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page.
+Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page. It also helps you understand the assets involved and how to act by suggesting prompts about related identities, devices, IPs, and so on. 
 
-:::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-small.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
+:::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
 #### Take action on incidents through guided responses
 
@@ -85,7 +90,7 @@ Copilot helps security teams quickly assess and understand suspicious files with
 
 #### Investigate identities immediately
 
-Quickly assess a user’s risk by generating an [identity summary](security-copilot-defender-identity-summary.md) with Copilot. Identify when an identity is at risk or suspicious with contextualized information about a user’s role and role changes, sign in behaviors, devices signed in to, and relevant contact information.
+Quickly assess a user's risk by generating an [identity summary](security-copilot-defender-identity-summary.md) with Copilot. Identify when an identity is at risk or suspicious with contextualized information about a user's role and role changes, sign in behaviors, devices signed in to, and relevant contact information.
 
 :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph.png":::
 
@@ -101,7 +106,7 @@ Copilot in Defender helps security teams proactively hunt for threats in their n
 
 #### Generate KQL queries from natural-language input
 
-Security teams who use advanced hunting to proactively hunt for threats in their network can now use a query assistant that converts any natural-language question, in the context of threat hunting, into a ready-to-run KQL query. The query assistant saves security teams time by generating a KQL query that can then be automatically run or further tweaked according to the analyst needs. Read more about the query assistant in [Copilot for Security in advanced hunting](advanced-hunting-security-copilot.md).
+Security teams who use advanced hunting to proactively hunt for threats in their network can now use a query assistant that converts any natural-language question, in the context of threat hunting, into a ready-to-run KQL query. The query assistant saves security teams time by generating a KQL query that can then be automatically run or further tweaked according to the analyst needs. Read more about the query assistant in [Security Copilot in advanced hunting](advanced-hunting-security-copilot.md).
 
 :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
 
@@ -111,15 +116,15 @@ Empower your security organization to make informed decisions with the latest th
 
 #### Monitor threat intelligence
 
-Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Copilot for Security in threat intelligence](/defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr).
+Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Security Copilot in threat intelligence](/defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr).
 
-:::image type="content" source="/defender/media/copilot-in-defender/TI/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="/defender/media/copilot-in-defender/TI/copilot-defender-threat-intel-full.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-full.png":::
 
 <a name='access-security-copilot-in-microsoft-365-defender'></a>
 
 ## Access Copilot in Defender
 
-To ensure that you have access to Copilot in Defender, see the [Copilot for Security purchase and licensing information](/security-copilot/faq-security-copilot). Once you have access to Copilot for Security, the key features become available in the Microsoft Defender portal.
+To ensure that you have access to Copilot in Defender, see the [Security Copilot purchase and licensing information](/security-copilot/faq-security-copilot). Once you have access to Security Copilot, the key features become available in the Microsoft Defender portal.
 
 ## Sample prompts in Copilot
 
@@ -127,13 +132,13 @@ In the Microsoft Defender portal, you can find sample prompts to help you naviga
 
 Advanced hunting prompts:
 
-:::image type="content" source="/defender/media/copilot-in-defender/sample-prompt-adv-hunting-small.png" alt-text="Screenshot highlighting the Copilot prompts in the advanced hunting page." lightbox="/defender/media/copilot-in-defender/sample-prompt-adv-hunting.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/sample-prompt-adv-hunting-small.png" alt-text="Screenshot highlighting the Copilot prompts in the advanced hunting page." lightbox="./media/security-copilot-in-microsoft-365-defender/sample-prompt-adv-hunting.png":::
 
 Threat intelligence prompts:
 
-:::image type="content" source="/defender/media/copilot-in-defender/sample-prompt-threat-intel-small.png" alt-text="Screenshot highlighting the Copilot prompts in the threat intelligence page." lightbox="/defender/media/copilot-in-defender/sample-prompt-threat-intel.png":::
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/sample-prompt-threat-intel-small.png" alt-text="Screenshot highlighting the Copilot prompts in the threat intelligence page." lightbox="./media/security-copilot-in-microsoft-365-defender/sample-prompt-threat-intel.png":::
 
-You can extend your investigation in the Copilot for Security standalone portal using natural language prompts. The following are sample prompts that you can type in the prompt bar to help you summarize an incident with recommendations:
+You can extend your investigation in the Security Copilot standalone portal using natural language prompts. The following are sample prompts that you can type in the prompt bar to help you summarize an incident with recommendations:
 
 - Type **Summarize incident {incident number} and conclude with a set of recommendations** to generate the incident summary and recommendations.
 - Type **What can you tell me about the reputation of the indicators in the script? Are they malicious? If so, why?** to analyze the script and generate details about the script.
@@ -157,7 +162,7 @@ Because of its continuing evolution, Copilot might miss some things. Reviewing a
 
 <a name='microsoft-365-defender-plugin-in-security-copilot'></a>
 
-## Plugins in Copilot for Security
+## Plugins in Security Copilot
 
 Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#preinstalled-plugins) like Microsoft Defender XDR, Defender Threat Intelligence, and Natural Language to KQL for Microsoft Sentinel and Defender XDR plugins to generate relevant information, provide more context to incidents, and generate more accurate results. Ensure that [plugins are turned on in Copilot](/security-copilot/manage-plugins#managing-preinstalled-plugins) to allow access to relevant data and to generate requested content from other Microsoft services in your organization.
 
@@ -175,9 +180,9 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 
 ## See also
 
-- [Get started with Copilot for Security](/security-copilot/get-started-security-copilot)
+- [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
 - [Privacy and data security in Copilot](/security-copilot/privacy-data-security)
-- [Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
-- Other [Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
+- [Security Copilot Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
+- Other [Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -1,33 +1,29 @@
----
+﻿---
 title: Manage indicators
 ms.reviewer:
 description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
 ms.date: 10/28/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage indicators
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
@@ -78,14 +74,15 @@ The following table shows the supported parameters.
 > Network indicators do not support the action type, `BlockAndRemediate`. If a network indicator is set to `BlockAndRemediate`, it won't import. 
 
 Watch this video to learn how Microsoft Defender for Endpoint provides multiple ways to add and manage Indicators of compromise (IoCs). 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qLVw]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a4469df9-4f31-4ed0-9577-8b26ac5293ad]
 
 ## See also
 
-- [Create indicators](manage-indicators.md)
+- [Create indicators](indicators-overview.md)
 - [Create indicators for files](indicator-file.md)
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,12 +1,12 @@
----
+﻿---
 title: Behavioral blocking and containment
 description: Learn about behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol
 ms.reviewer: shwetaj
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
@@ -15,22 +15,14 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 02/29/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Behavioral blocking and containment
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## Overview
 
@@ -51,6 +43,13 @@ With these capabilities, more threats can be prevented or blocked, even if they 
 The following image shows an example of an alert that was triggered by behavioral blocking and containment capabilities:
 
 :::image type="content" source="media/blocked-behav-alert.png" alt-text="The Alerts page with an alert through behavioral blocking and containment" lightbox="media/blocked-behav-alert.png":::
+
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Components of behavioral blocking and containment
 
@@ -135,3 +134,4 @@ This example shows that with behavioral blocking and containment capabilities, t
 
 - [Get an overview of Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

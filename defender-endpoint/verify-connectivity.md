@@ -1,32 +1,29 @@
----
+﻿---
 title: Verify client connectivity to Microsoft Defender for Endpoint service URLs
 description: Learn how to verify client connectivity to Defender for Endpoint service URLs
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.reviewer: mkaminska
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 09/19/2023
+ms.date: 09/21/2024
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
-
 # STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 
 Check that clients are able to connect to the Defender for Endpoint service URLs using the Defender for Endpoint Client Analyzer to ensure that endpoints are able to communicate telemetry to the service. 
@@ -108,7 +105,7 @@ For more info on how to access streamlined onboarding script, see [Onboarding de
 
  See the following guidance to eliminate the wildcard (*) requirement for your specific environment when using the Microsoft Monitoring Agent (MMA) for previous versions of Windows.
 
-1. Onboard a previous operating system with the Microsoft Monitoring Agent (MMA) into Defender for Endpoint (for more information, see [Onboard previous versions of Windows on Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2010326) and [Onboard Windows servers](configure-server-endpoints.md)).
+1. Onboard a previous operating system with the Microsoft Monitoring Agent (MMA) into Defender for Endpoint. For more information, see [Onboard Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboard-windows-server-2016-and-windows-server-2012-r2).
 
 2. Ensure the machine is successfully reporting into the Microsoft Defender portal.
 
@@ -127,6 +124,5 @@ The `*.blob.core.windows.net` URL endpoint can be replaced with the URLs shown i
 
 ## Next step
 
-[Onboard Windows Client](onboard-windows-client.md)
-[Onboard Windows Server](onboard-windows-server.md)
-[Onboard non-Windows devices](configure-endpoints-non-windows.md)
+- [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)

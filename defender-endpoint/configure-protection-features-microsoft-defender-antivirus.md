@@ -1,34 +1,28 @@
----
+﻿---
 title: Enable and configure Microsoft Defender Antivirus protection features
 description: Enable behavior-based, heuristic, and real-time protection in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
-ms.topic: conceptual
+author: KesemSharabi
+ms.author: kesharab
+ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/18/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
-
 # Configure behavioral, heuristic, and real-time protection
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus 
-
-**Platforms**
-- Windows
 
 Microsoft Defender Antivirus uses several methods to provide threat protection:
 
@@ -38,15 +32,23 @@ Microsoft Defender Antivirus uses several methods to provide threat protection:
 
 You can configure how Microsoft Defender Antivirus uses these methods with [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration), [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md), Microsoft Configuration Manager, [Group Policy](use-group-policy-microsoft-defender-antivirus.md), [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md), and [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md).
 
-This section covers configuration for always-on scanning, including how to detect and block apps that are deemed unsafe, but may not be detected as malware.
+This section covers configuration for always-on scanning, including how to detect and block apps that are deemed unsafe, but might not be detected as malware.
 
 See [Use next-gen Microsoft Defender Antivirus technologies through cloud protection](cloud-protection-microsoft-defender-antivirus.md) for how to enable and configure Microsoft Defender Antivirus cloud protection.
 
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
+
 ## In this section
 
-| Topic|Description |
+| Article|Description |
 |---|---|
-| [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Detect and block apps that may be unwanted in your network, such as adware, browser modifiers and toolbars, and rogue or fake antivirus apps |
+| [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Detect and block apps that mighty be unwanted in your network, such as adware, browser modifiers and toolbars, and rogue or fake antivirus apps |
 | [Enable and configure Microsoft Defender Antivirus protection capabilities](configure-real-time-protection-microsoft-defender-antivirus.md)|Enable and configure real-time protection, heuristics, and other always-on Microsoft Defender Antivirus monitoring features |
 
 > [!TIP]
@@ -63,3 +65,4 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

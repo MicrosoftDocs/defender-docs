@@ -1,50 +1,43 @@
----
-title: Configure and validate exclusions for Microsoft Defender for Endpoint on Mac
-description: Provide and validate exclusions for Microsoft Defender for Endpoint on Mac. Exclusions can be set for files, folders, and processes.
+﻿---
+title: Configure and validate exclusions for Microsoft Defender for Endpoint on macOS 
+description: Provide and validate exclusions for Microsoft Defender for Endpoint on macOS. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+ms.reviewer: joshbregman
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/14/2024
----
+ms.date: 04/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring. The exclusions described in this article don't apply to other Defender for Endpoint on macOS capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
-
-This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring.
-
-> [!IMPORTANT]
-> The exclusions described in this article don't apply to other Defender for Endpoint on Mac capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
-
-You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Mac scans.
-
-Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Mac.
+You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on macOS scans. Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on macOS.
 
 To narrow down which process and/or path and/or extension you need to exclude, use [real-time-protection-statistics](mac-support-perf.md).
 
 > [!WARNING]
-> Defining exclusions lowers the protection offered by Defender for Endpoint on Mac. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
+> Defining exclusions lowers the protection offered by Defender for Endpoint on macOS. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Supported exclusion types
 
-The following table shows the exclusion types supported by Defender for Endpoint on Mac.
+The following table shows the exclusion types supported by Defender for Endpoint on macOS.
 
 Exclusion|Definition|Examples
 ---|---|---
@@ -61,11 +54,11 @@ File, folder, and process exclusions support the following wildcards:
 |?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not `file123.log`|
 
 > [!NOTE]
-> When using the * wildcard at the end of the path, it will match all files and subdirectories under the parent of the wildcard.
+> Using the * wildcard at the end of the path, it matches all files and subdirectories under the parent of the wildcard.
 >
-> The product attempts to resolve firmlinks when evaluating exclusions. Firmlink resolution does not work when the exclusion contains wildcards or the target file (on the `Data` volume) does not exist.
+> The product attempts to resolve firm links when evaluating exclusions. Firm link resolution doesn't work when the exclusion contains wildcards or the target file (on the `Data` volume) doesn't exist.
 
-## Best practices for adding antimalware exclusions for Microsoft Defender for Endpoint on macOS.
+## Best practices for adding anti-malware exclusions for Microsoft Defender for Endpoint on macOS
 
 1. Write down why an exclusion was added to a central location where only SecOps and/or Security Administrator have access. For example, list the submitter, date, app name, reason, and exclusion information.
 
@@ -73,7 +66,7 @@ File, folder, and process exclusions support the following wildcards:
 
    *except for apps that the ISV stated that there's no other tweaking that could be done to prevent the false positive or higher cpu utilization from occurring.
 
-1. Avoid migrating non-Microsoft antimalware exclusions since they may no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
+1. Avoid migrating non-Microsoft anti-malware exclusions since they might no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
 
 1. Order of exclusions to consider top (more secure) to bottom (least secure):
 
@@ -140,7 +133,7 @@ In the following Bash snippet, replace `test.txt` with a file that conforms to y
 curl -o test.txt https://secure.eicar.org/eicar.com.txt
 ```
 
-If Defender for Endpoint on Mac reports malware, then the rule isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
+If Defender for Endpoint on macOS reports malware, then the rule isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
 If you don't have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
 
@@ -173,3 +166,4 @@ mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

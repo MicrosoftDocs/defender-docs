@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -18,15 +18,15 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 02/11/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to review and classify alerts by using alert classification playbooks so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification playbooks
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Alert classification playbooks allow you to methodically review and quickly classify the alerts for well-known attacks and take recommended actions to remediate the attack and protect your network. Alert classification will also help in properly classifying the overall incident.
 
@@ -89,6 +89,7 @@ See these playbooks for steps to more quickly classify alerts for the following 
 - [Suspicious inbox forwarding rules](alert-grading-playbook-inbox-forwarding-rules.md)
 - [Suspicious IP addresses related to password spray activity](alert-classification-suspicious-ip-password-spray.md)
 - [Password spray attacks](alert-classification-password-spray-attack.md)
+- [Malicious Exchange connectors](alert-classification-malicious-exchange-connectors.md)
 
 See [Investigate alerts](investigate-alerts.md) for information on how to examine alerts with the Microsoft Defender portal.
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

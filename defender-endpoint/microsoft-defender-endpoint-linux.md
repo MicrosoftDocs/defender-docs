@@ -1,200 +1,147 @@
----
+﻿---
 title: Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes how to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/23/2024
+ms.date: 03/31/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!TIP]
+> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
 
-This article describes how to install, configure, update, and use Microsoft Defender for Endpoint on Linux.
 
-> [!CAUTION]
-> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on Linux is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring antivirus functionality to run in [Passive mode](linux-preferences.md#enforcement-level-for-antivirus-engine).
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-## How to install Microsoft Defender for Endpoint on Linux
+## What is Microsoft Defender for Endpoint on Linux?
 
-Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint detection and response (EDR) capabilities.
+Microsoft Defender for Endpoint is a comprehensive enterprise endpoint security platform designed to help organizations prevent, detect, investigate, and respond to advanced threats. It safeguards a wide range of devices, including Windows and Mac client computers, Windows and Linux servers, as well as iOS and Android mobile devices.
 
-### Prerequisites
+The following table describes capabilities in Defender for Endpoint on Linux:
 
-- Access to the Microsoft Defender portal
-- Linux distribution using the [systemd](https://systemd.io/)system manager
+|Category|Description|
+|---|---|
+|Posture management| Defender for Endpoint on Linux combines monitoring and risk-based vulnerability management with intelligent prioritization, remediation, and tracking to help effectively manage and secure your Linux servers. <br><br>With a single pane-of-glass experience, your security team gains a comprehensive view of your organization's exposure score, recommendations, remediation, inventories, and more.|
+|Threat protection| Defender for Endpoint on Linux includes next-generation antivirus protection using local & cloud-based machine learning models, behavior analysis, and heuristics. <br><br>Cloud protection provides near-instant detection and blocking of new/emerging threats.<br><br>You get dedicated, continuous protection with regular security intelligence and product updates. <br><br>You can also investigate and define policies for customer IP- and URL-based indicators of compromise.|
+|Endpoint detection and response| Defender for Endpoint on Linux uses AI and advanced analytics to detect and respond to threats close to real time. <br><br> In the Microsoft Defender portal, you have a central location to view detections across the Microsoft Defender suite and your organization's devices. <br><br>You can use advanced hunting to view raw data and get more insight into your network events. <br><br>Response actions are available to act swiftly and nimbly on security alerts.|
+|Streamlined management and operations| Defender for Endpoint on Linux offers broad coverage across a breadth of Linux distributions while making operations easier for your security team. <br><br>You can manage your security settings in the Microsoft Defender portal and plan your update cycles in advance, while supporting your Linux servers where they are, with offline and multicloud options.|
+|Enterprise-grade scale, performance, and reliability| Microsoft Defender for Endpoint on Linux ensures stable and durable performance with a rich sensor framework that operates without kernel modules and integrates eBPF for operational stability. <br><br>Defender for Endpoint seamlessly integrates with the larger Microsoft Defender suite, offering extensibility through API integration, SIEM connectors, Power BI support, role-based access control (RBAC), and MSPP support.|
 
-  > [!NOTE]
-  > Linux distribution using system manager, support both SystemV and Upstart.
+## Server licenses 
 
-- Beginner-level experience in Linux and BASH scripting
-- Administrative privileges on the device (for manual deployment)
+To onboard servers to Defender for Endpoint, server licenses are required. You can choose from the following options:
 
-> [!NOTE]
-> Microsoft Defender for Endpoint on Linux agent is independent from [OMS agent](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender for Endpoint for servers
+- [Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
 
-### Installation instructions
+For more detailed information about licensing requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint licensing information](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
 
-There are several methods and deployment tools that you can use to install and configure Microsoft Defender for Endpoint on Linux. Before you begin, make sure the [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md) are met.
+For detailed licensing information, see [Product Terms: Microsoft Defender for Endpoint]( https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS) and work with your account team to learn more about the terms and conditions.
 
-You can use one of the following methods to deploy Microsoft Defender for Endpoint on Linux:
+<!---If/when we add a page about server licensing, let's add that link here.--->
+  
+## Deploy and configure policies for Defender for Endpoint on Linux 
 
-- To use command-line tool, see [Manual deployment](linux-install-manually.md)
-- To use Puppet, see [Deploy using Puppet configuration management tool](linux-install-with-puppet.md)
-- To use Ansible, see [Deploy using Ansible configuration management tool](linux-install-with-ansible.md)
-- To use Chef, see [Deploy using Chef configuration management tool](linux-deploy-defender-for-endpoint-with-chef.md)
-- To use Saltstack, see [Deploy using Saltstack configuration management tool](linux-install-with-saltack.md)
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux. Make sure to meet the [prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md).
 
-If you experience any installation failures, see [Troubleshooting installation failures in Microsoft Defender for Endpoint on Linux](linux-support-install.md).
+- [Installer script based deployment](/defender-endpoint/linux-installer-script)
+- [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
+- [Chef based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef)
+- [Puppet based deployment](/defender-endpoint/linux-install-with-puppet)
+- [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
+- [Manual deployment](/defender-endpoint/linux-install-manually)
+- [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
+- [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
-> Installing Microsoft Defender for Endpoint in any location other than the default install path is not supported.
-> Microsoft Defender for Endpoint on Linux creates an `mdatp` user with random UID and GID. If you want to control the UID and GID, create an `mdatp` user prior to installation using the  `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+> Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
-### System requirements
+If you experience any installation issues, self-troubleshooting resources are available. See the links in the [See also](#see-also) section.
 
-- Disk space: 2 GB
+### Configure policies for Defender for Endpoint on Linux
 
-  > [!NOTE]
-  > An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections. Please make sure that you have free disk space in /var.
+To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
 
-- Cores: Two minimum, four preferred
+- [Enroll in Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management) and use the Microsoft Defender portal to configure and manage your policies
+- [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences?branch=main&branchFallbackFrom=pr-en-us-2468%22%20%5Cl%20%22configuration-profile)
 
-  > [!NOTE]
-  > If you are on Passive or RTP ON mode, at least two Cores are required. Four Cores are preferred. If you are turning on BM, then at least four Cores are required.
+For more information, see [Configure security settings and policies for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 
-- Memory: 1 GB minimum, 4 GB preferred
+## Software updates
 
-- The following Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions are supported:
-  - Red Hat Enterprise Linux 7.2 or higher
-  - Red Hat Enterprise Linux 8.x
-  - Red Hat Enterprise Linux 9.x
-  - CentOS 7.2 or higher
-  - Ubuntu 16.04 LTS 
-  - Ubuntu 18.04 LTS
-  - Ubuntu 20.04 LTS
-  - Ubuntu 22.04 LTS
-  - Ubuntu 24.04 LTS
-  - Debian 9 - 12
-  - SUSE Linux Enterprise Server 12.x
-  - SUSE Linux Enterprise Server 15.x
-  - Oracle Linux 7.2 or higher
-  - Oracle Linux 8.x
-  - Oracle Linux 9.x
-  - Amazon Linux 2
-  - Amazon Linux 2023
-  - Fedora 33-38 
-  - Rocky 8.7 and higher
-  - Rocky 9.2 and higher 
-  - Alma 8.4 and higher
-  - Alma 9.2 and higher 
-  - Mariner 2
-    
-  > [!NOTE]
-  > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
-  > After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that which are listed in this section are provided for technical upgrade support only.
-  > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
-  > Microsoft Defender for Endpoint for all other supported distributions and versions is kernel-version-agnostic. With a minimal requirement for the kernel version to be at or greater than 3.10.0-327.
+Microsoft publishes software updates for Defender for Endpoint on Linux to improve performance, improve security, and deliver new features. Software updates are released on a monthly basis, following testing, and verification. Occasionally, it can take more than 30 days between releases. For more information, see [What's new in Defender for Endpoint on Linux](/defender-endpoint/linux-whatsnew)
 
-  > [!CAUTION]
-  > Running Defender for Endpoint on Linux side by side with other `fanotify`-based security solutions is not supported. It can lead to unpredictable results, including hanging the operating system. If there are any other applications on the system that use `fanotify` in blocking mode, applications are listed in the `conflicting_applications` field of the `mdatp health` command output. The Linux **FAPolicyD** feature uses `fanotify` in blocking mode, and is therefore unsupported when running Defender for Endpoint in active mode. You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to [Passive mode](linux-preferences.md#enforcement-level-for-antivirus-engine).
+Each version of Defender for Endpoint on Linux is set to expire automatically after nine months. We recommend using current versions so you get available enhancements and fixes. For more information, see [How to deploy updates for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
-- List of supported filesystems for RTP, Quick, Full, and Custom Scan.
+## Device health reporting
 
-   |RTP, Quick, Full Scan| Custom Scan|
-   |---|---|
-   |`btrfs`|All filesystems supported for RTP, Quick, Full Scan|
-   |`ecryptfs`|`Efs`|
-   |`ext2`|`S3fs`|
-   |`ext3`|`Blobfuse`|
-   |`ext4`|`Lustr`|
-   |`fuse`|`glustrefs`|
-   |`fuseblk`|`Afs`|
-   |`jfs`|`sshfs`|
-   |`nfs` (v3 only)|`cifs`|
-   |`overlay`|`smb`|
-   |`ramfs`|`gcsfuse`|
-   |`reiserfs`|`sysfs`|
-   |`tmpfs`||
-   |`udf`||
-   |`vfat`||
-   |`xfs`||
-    
-- Audit framework (`auditd`) must be enabled if you're using auditd as your primary event provider.
+The Device Health report provides information about the antivirus status of Linux servers, including details such as antivirus mode, scan results, platform version, antivirus engine version, and security intelligence version. 
 
-  > [!NOTE]
-  > System events captured by rules added to `/etc/audit/rules.d/` will add to `audit.log`(s) and might affect host auditing and upstream collection. Events added by Microsoft Defender for Endpoint on Linux will be tagged with `mdatp` key.
+You can access this information either through the portal or via API. For more information, see the following articles:
 
-- /opt/microsoft/mdatp/sbin/wdavdaemon requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
+- [Device health reporting in Microsoft Defender for Endpoint](/defender-endpoint/device-health-microsoft-defender-antivirus-health)
+- [Microsoft Defender Antivirus export device antivirus health details API methods and properties](/defender-endpoint/device-health-microsoft-defender-antivirus-health)
 
-### External package dependency
+## Response actions and live response 
 
-If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
+The security operations team can remotely connect to a device and execute various response actions such as running an antivirus scan, isolating the device, and collecting investigation packages.
 
-- The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage` `selinux-policy-targeted`, and `mde-netfilter`
-- For RHEL6 the mdatp RPM package requires `audit`, `policycoreutils`, `libselinux`, and `mde-netfilter`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, and `mde-netfilter`
+Additionally, they can use live response for a remote shell connection to perform in-depth investigative work. For more information, see the following articles:
 
-The mde-netfilter package also has the following package dependencies:
+- [Take response actions on a device](/defender-endpoint/respond-machine-alerts)
+- [Investigate entities on devices using live response](/defender-endpoint/live-response)
 
-- For DEBIAN the mde-netfilter package requires `libnetfilter-queue1`, and `libglib2.0-0`
-- For RPM the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+## Privacy
 
-### Configuring Exclusions
+Microsoft is committed to providing you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
+  
+For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy).
 
-When adding exclusions to Microsoft Defender Antivirus, you should be mindful of [Common Exclusion Mistakes for Microsoft Defender Antivirus](common-exclusion-mistakes-microsoft-defender-antivirus.md).
+## Common applications that Defender for Endpoint impacts 
 
-### Network connections
+High I/O workloads from certain applications can experience performance issues when Defender for Endpoint is installed. Such applications for developer scenarios include Jenkins and Jira, and database workloads like OracleDB and Postgres. 
 
-Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+If you see performance degradation, consider setting exclusions for trusted applications. See the following articles:
 
-Defender for Endpoint on Linux can connect through a proxy server by using the following discovery methods:
+- [Configure and validate exclusions for Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions)
+- [Review common Exclusion Mistakes for Microsoft Defender Antivirus](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus)
+  
+If you're using non-Microsoft applications, also see their documentation regarding antivirus exclusions.
 
-- Transparent proxy
-- Manual static proxy configuration
+## Next steps
 
-If a proxy or firewall is blocking anonymous traffic, make sure that anonymous traffic is permitted in the previously listed URLs. For transparent proxies, no another configuration is needed for Defender for Endpoint. For static proxy, follow the steps in [Manual Static Proxy Configuration](linux-static-proxy-configuration.md).
+- [Review the prerequisites for Defender for Endpoint on Linux](/defender-endpoint/mde-linux-prerequisites)
+- [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
+- [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
+- [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
-> [!WARNING]
-> PAC, WPAD, and authenticated proxies are not supported. Ensure that only a static proxy or transparent proxy is being used.
-> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Defender for Endpoint on Linux to the relevant URLs without interception. Adding your interception certificate to the global store will not allow for interception.
+## See also
 
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md).
+- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
+- [Linux Resources](linux-resources.md)
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
+- [Investigate agent health issues](health-status.md)
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
-## How to update Microsoft Defender for Endpoint on Linux
-
-Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. To update Microsoft Defender for Endpoint on Linux, refer to [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
-
-## How to configure Microsoft Defender for Endpoint on Linux
-
-Guidance for how to configure the product in enterprise environments is available in [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md).
-
-## Common Applications to Microsoft Defender for Endpoint can impact
-
-High I/O workloads from certain applications can experience performance issues when Microsoft Defender for Endpoint is installed. Such applications for developer scenarios include Jenkins and Jira, and database workloads like OracleDB and Postgres. If experiencing performance degradation, consider setting exclusions for trusted applications, keeping [Common Exclusion Mistakes for Microsoft Defender Antivirus](common-exclusion-mistakes-microsoft-defender-antivirus.md) in mind. For more guidance, consider consulting documentation regarding antivirus exclusions from non-Microsoft applications.
-
-## Resources
-
-- For more information about logging, uninstalling, or other articles, see [Resources](linux-resources.md).
-
-## Related articles
-
-- [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint)
-- [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines)
-- [Turn on network protection for Linux](network-protection-linux.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+ > [!TIP]
+> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)

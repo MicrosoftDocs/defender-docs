@@ -1,13 +1,13 @@
----
+﻿---
 title: Get started with Microsoft Defender for Endpoint Plan 1
 description: Get started using Defender for Endpoint Plan 1. Learn how to use the Microsoft Defender portal, manage alerts and devices, and view reports. 
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 audience: ITPro
 ms.topic: overview
-ms.date: 08/22/2023
+ms.date: 03/21/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
@@ -17,14 +17,13 @@ ms.collection:
 - m365-security
 - tier1
 ms.custom: intro-get-started
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Get started with Microsoft Defender for Endpoint Plan 1
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) enables you to view information about detected threats, manage your alerts and incidents, take any needed action on detected threats, and manage devices. The Microsoft Defender portal is where you can get started interacting with the threat protection capabilities you get with Defender for Endpoint Plan 1. The following sections describe how to get started:
 
@@ -81,7 +80,7 @@ The navigation bar on the left side of the screen enables you to move easily bet
 | **Health** > **Message center** | Navigates to the Message center in the Microsoft 365 admin center. The Message center provides information about planned changes. Each message describes what's coming, how it might affect users, and how to manage changes. |  
 | **Permissions & roles** | Enables you to grant permissions to use the Microsoft Defender portal. Permissions are granted through roles in Microsoft Entra ID. Select a role, and a flyout pane appears. The flyout contains a link to Microsoft Entra ID where you can add or remove members in a role group. <br/><br/> To learn more, see [Manage portal access using role-based access control](rbac.md).  |
 | **Settings** | Navigates to general settings for your Microsoft Defender portal (listed as **Security center**) and Defender for Endpoint (listed as **Endpoints**). <br/><br/> To learn more, see [Settings](/defender-xdr/microsoft-365-defender-portal). |
-| **More resources** | Displays a list of more portals and centers, such as Microsoft Entra ID and the Microsoft Purview compliance portal. <br/><br/> To learn more, see [Microsoft security portals and admin centers](/defender-xdr/portals). |
+| **More resources** | Displays a list of more portals and centers, such as Microsoft Entra ID and the Microsoft Purview portal. <br/><br/> To learn more, see [Microsoft security portals and admin centers](/defender-xdr/portals). |
 
 > [!TIP]
 > To learn more, see the [Microsoft Defender portal overview](/defender-xdr/microsoft-365-security-center-mde).
@@ -173,3 +172,4 @@ Scroll down to see all the views in the Web protection report. Some views includ
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

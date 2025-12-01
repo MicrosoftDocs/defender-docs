@@ -1,34 +1,31 @@
----
+﻿---
 title: Device health Microsoft Defender Antivirus health report
 description: Use the Microsoft Defender Antivirus report to track antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-ms.date: 02/18/2024
-manager: deniseb
+ms.date: 04/08/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: ngp
 ms.reviewer: mkaminska, yongrhee
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Device health, Microsoft Defender Antivirus health report
 
-**Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
 
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 
@@ -37,36 +34,51 @@ The Device Health report provides information about the devices in your organiza
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
 > - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (non MMA), MacOS, Linux 
-> - Sense (MsSense.exe): **10.8210.** \*+. See [Prerequisites](#prerequisites) section for related details.
+> - Sense (MsSense.exe): **10.8210.** \*+.
 >
-> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+
+## View device health cards
 
 In the Microsoft Defender portal, in the navigation pane, select **Reports**, and then open **Device health and compliance**. The [**Microsoft Defender Antivirus health** tab](#microsoft-defender-antivirus-health-tab) has eight cards that report on the following aspects of Microsoft Defender Antivirus:
 
-- [Antivirus mode card](#antivirus-mode-card)
-- [Antivirus engine version card](#antivirus-engine-version-card)
-- [Antivirus security intelligence version card](#antivirus-security-intelligence-version-card)
-- [Antivirus platform version card](#antivirus-platform-version-card)
-- [Recent antivirus scan results card](#recent-antivirus-scan-results-card)
-- [Antivirus engine updates card](#antivirus-engine-updates-card)
-- [Security intelligence updates card](#security-intelligence-updates-card)
-- [Antivirus platform updates card](#antivirus-platform-updates-card)
+- [Device health, Microsoft Defender Antivirus health report](#device-health-microsoft-defender-antivirus-health-report)
+  - [View device health cards](#view-device-health-cards)
+  - [Report access permissions](#report-access-permissions)
+  - [Microsoft Defender Antivirus health tab](#microsoft-defender-antivirus-health-tab)
+    - [Card functionality](#card-functionality)
+      - [New Microsoft Defender Antivirus filter definitions](#new-microsoft-defender-antivirus-filter-definitions)
+      - [Export report](#export-report)
+        - [Top level export](#top-level-export)
+    - [Microsoft Defender Antivirus version and update cards functionality](#microsoft-defender-antivirus-version-and-update-cards-functionality)
+      - [Full report](#full-report)
+    - [Card descriptions](#card-descriptions)
+      - [Antivirus mode card](#antivirus-mode-card)
+      - [Recent antivirus scan results card](#recent-antivirus-scan-results-card)
+      - [Antivirus engine version card](#antivirus-engine-version-card)
+      - [Antivirus security intelligence version card](#antivirus-security-intelligence-version-card)
+        - [Antivirus platform version card](#antivirus-platform-version-card)
+      - [Up-to-date cards](#up-to-date-cards)
+        - [Up-to-date definitions](#up-to-date-definitions)
+        - [Antivirus engine updates card](#antivirus-engine-updates-card)
+      - [Antivirus platform updates card](#antivirus-platform-updates-card)
+        - [Security intelligence updates card](#security-intelligence-updates-card)
+  - [See also](#see-also)
 
 ## Report access permissions
 
 To access the Device health and antivirus compliance report in the Microsoft Defender portal, the following permissions are required:
 
 | Permission name | Permission type |
-|:---|:---|
+|---|---|
 | View Data | Threat and vulnerability management (TVM) |
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
+To assign permissions, follow these steps:
 
-To Assign these permissions:
-
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with Security administrator or Global administrator role assigned.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -90,33 +102,21 @@ Two cards, [Antivirus mode card](#antivirus-mode-card) and [Recent antivirus sca
 
 The remaining six cards report about the Microsoft Defender Antivirus status for devices in your organization:
 
-| `version` cards: | `update` cards{<a id="fn1">1</a>} |
+| `version` cards: | `update` cards |
 |:---|:---|
 | [Antivirus engine version card](#antivirus-engine-version-card) <br> [Antivirus security intelligence version card](#antivirus-security-intelligence-version-card) <br> [Antivirus platform version card](#antivirus-platform-version-card) | [Antivirus engine updates card](#antivirus-engine-updates-card) <br> [Security intelligence updates card](#security-intelligence-updates-card) <br> [Antivirus platform updates card](#antivirus-platform-updates-card) |
 | The three version cards provide flyout reports that provide additional information, and enable further exploration. | The three up-to-date reporting cards provide links to resources to learn more. |
 
-<sup>{[1](#fn1)}</sup> For the three `updates` cards (also known as up-to-date reporting cards), "**No data available**" (or "Unknown" value) indicates devices that aren't reporting update status. Devices that aren't reporting update status can be due to various reasons, such as:
+For the three `updates` cards (also known as up-to-date reporting cards), "**No data available**" (or "Unknown" value) indicates devices that aren't reporting update status. Devices that aren't reporting update status can be due to various reasons, such as:
 
 - Computer is disconnected from the network.
 - Computer is powered down or in a hibernation state.
 - Microsoft Defender Antivirus is disabled.
-- Device is a non-Windows (Mac or Linux) device.
+- Device is a Mac device.
 - Cloud protection isn't enabled.
 - Device doesn't meet pre-requisites for Antivirus engine or platform version.
 
-### Prerequisites
-
-Up-to-date reporting generates information for devices that meet the following criteria:
-
-- Engine version: 1.1.19300.2+
-- Platform version: 4.18.2202.1+
-- Cloud protection enabled
-- Sense (MsSense.exe): **10.8210.** \*+
-- Windows OS - Windows 10 1809 or later
-
-  > [!NOTE]
-  > \* Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under "No data available"/Unknown.
-
+  
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 
 ### Card functionality
@@ -139,7 +139,7 @@ To add or remove specific types of information on the **Microsoft Defender Antiv
 The following table contains a list of terms that are new to Microsoft Defender Antivirus reporting.
 
 | Column name | Description |
-|:---|:---|
+|---|---|
 | Security intelligence publish time | Indicates Microsoft's release date of the security intelligence update version on the device. Devices with a security intelligence publish time greater than seven days are considered out of date in the reports. |
 | Last seen | Indicates date when device last had connection. |
 | Data refresh timestamp | Indicates when client events were last received for reporting on: AV mode, AV engine version, AV platform version, AV security intelligence version, and scan information. |
@@ -157,7 +157,7 @@ There are two different export csv functionalities through the portal:
 
 - **Top level export**. You can use the top-level **Export** button to gather an all-up Microsoft Defender Antivirus health report (500-K limit).
 
-:::image type="content" source="media/device-health-defender-antivirus-health-tab-export.png" alt-text="Screenshot that shows the top-level export report button." lightbox="media/device-health-defender-antivirus-health-tab-export.png":::
+  :::image type="content" source="media/device-health-defender-antivirus-health-tab-export.png" alt-text="Screenshot that shows the top-level export report button." lightbox="media/device-health-defender-antivirus-health-tab-export.png":::
 
 - **Flyout level export**. You can use the **Export** button within the flyouts to export a report to an Excel spreadsheet (100-K limit).
 
@@ -215,9 +215,16 @@ Reports on how many devices in your organization – on the date indicated on th
 Following are descriptions for each mode:
 
 - **Active** mode - In active mode, Microsoft Defender Antivirus is used as the primary antivirus app on the device. Files are scanned, threats are remediated, and detected threats are listed in your organization's security reports and in your Windows Security app.
-- **Passive** mode - In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. Files are scanned, and detected threats are reported, but threats aren't remediated by Microsoft Defender Antivirus. IMPORTANT: Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
+
+- **Passive** mode - In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. 
+
+   > [!IMPORTANT]
+   > Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
+
 - **Disabled** mode - synonymous with: uninstalled, disabled, sideBySidePassive, and Low Periodic Scan. When disabled, Microsoft Defender Antivirus isn't used. Files aren't scanned, and threats aren't remediated. In general, Microsoft doesn't recommend disabling or uninstalling Microsoft Defender Antivirus.
+
 - **Others** mode - Not running, Unknown
+
 - **EDR in Block** mode - In endpoint detection and response (EDR) blocked mode. See [Endpoint detection and response in block mode](edr-in-block-mode.md)
 
 Devices that are in either passive, LPS, or Off present a potential security risk and should be investigated.
@@ -264,14 +271,15 @@ For more information about the aforementioned terms, refer back to the section: 
 
 > [!NOTE]
 >
-> Up to date reporting generates information for devices that meet the following criteria:
->
-> - Engine version: `1.1.19300.2` or later
-> - Platform version: `4.18.2202.1` or later
-> - Cloud protection enabled
-> - Windows OS
->
-> Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under `no data available`.>
+> Up-to-date reporting generates information for devices that meet the following criteria:
+> * **Windows:**
+>    * OS - Windows 10 1809 or later
+>    * Engine version: 1.1.19300.2+  
+>    * Platform version: 4.8.2202.1+  
+>    * Sense (MsSense.exe): 10.8210.*+  
+> * **Linux and Mac:**
+>    * Platform version: 101.23112.*+  
+> * **Cloud Protection enabled**
 
 ##### Up-to-date definitions
 
@@ -375,3 +383,4 @@ The following table lays out the possible up to date report values for **Securit
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

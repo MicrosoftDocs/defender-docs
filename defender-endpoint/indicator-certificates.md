@@ -1,51 +1,45 @@
----
+﻿---
 title: Create indicators based on certificates
 ms.reviewer:
 description: Create indicators based on certificates that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
-ms.date: 07/31/2024
----
+ms.date: 03/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Create indicators based on certificates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
 You can create indicators for certificates. Some common use cases include:
 
-- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allow list.
-- Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Windows Defender AV will prevent file executions (block and remediate) and the Automated Investigation and Remediation behave the same.
+- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
+- Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Microsoft Defender Antivirus prevents file executions (block and remediate), and automated investigation and remediation behaves the same.
 
 ## Before you begin
 
-It's important to understand the following requirements prior to creating indicators for certificates:
+It's important to understand the following requirements before creating indicators for certificates:
 
-- This feature is available if your organization uses Microsoft Defender Antivirus and Cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
-- The Antimalware client version must be  4.18.1901.x or later.
-- Supported on machines on Windows 10, version 1703 or later, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2022.
+- This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- The anti-malware client version must be `4.18.1901.x` or later.
+- Supported on machines on Windows 10, version 1703 or later, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 will need to be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for this feature to work.
 
 - The virus and threat protection definitions must be up to date.
 - This feature currently supports entering .CER or .PEM file extensions.
@@ -53,8 +47,8 @@ It's important to understand the following requirements prior to creating indica
 > [!IMPORTANT]
 >
 > - A valid leaf certificate is a signing certificate that has a valid certification path and must be chained to the Root Certificate Authority (CA) trusted by Microsoft. Alternatively, a custom (self-signed) certificate can be used as long as it's trusted by the client (Root CA certificate is installed under the Local Machine 'Trusted Root Certification Authorities').
-> - The children or parent of the allow/block certificate IOCs are not included in the allow/block IoC functionality, only leaf certificates are supported.
-> - Microsoft signed certificates cannot be blocked.
+> - The children or parent of the allow/block certificate IOCs aren't included in the allow/block IoC functionality, only leaf certificates are supported.
+> - Microsoft signed certificates can't be blocked.
 
 ## Create an indicator for certificates from the settings page:
 
@@ -66,17 +60,20 @@ It's important to understand the following requirements prior to creating indica
 2. Select **Add indicator**.
 
 3. Specify the following details:
-   - Indicator - Specify the entity details and define the expiration of the indicator.
-   - Action - Specify the action to be taken and provide a description.
-   - Scope - Define the scope of the machine group.
 
-4. Review the details in the Summary tab, then click **Save**.
+   - **Indicator**: Specify the entity details and define the expiration of the indicator.
+   - **Action**: Specify the action to be taken and provide a description.
+   - **Scope**: Define the scope of the machine group.
+
+4. Review the details on the **Summary** tab, and then select **Save**.
 
 ## Related articles
 
-- [Create indicators](manage-indicators.md)
+- [Create indicators](indicators-overview.md)
 - [Create indicators for files](indicator-file.md)
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -12,35 +12,37 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/18/2024
+ms.date: 04/03/2025
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Microsoft Defender XDR prerequisites
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- Microsoft Defender XDR
-
 Learn about licensing and other requirements for provisioning and using [Microsoft Defender XDR](microsoft-365-defender.md).
 
 ## Licensing requirements
-Any of these licenses gives you access to Microsoft Defender XDR features via the Microsoft Defender portal without additional cost:
+
+Microsoft Defender XDR natively correlates Microsoft security products' signals, providing security operations teams a single pane of glass to detect, investigate, respond, and protect your assets. These signals are dependent on the license that you have and the access provisioned to you.
+
+Any of these licenses give you access to Microsoft Defender XDR features via the Microsoft Defender portal without any additional cost:
 
 - Microsoft 365 E5 or A5
-- Microsoft 365 E3 with the Microsoft 365 E5 Security add-on
+- Microsoft 365 E3 with the Microsoft Defender Suite add-on
 - Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on
 - Microsoft 365 A3 with the Microsoft 365 A5 Security add-on
 - Windows 10 Enterprise E5 or A5
 - Windows 11 Enterprise E5 or A5
 - Enterprise Mobility + Security (EMS) E5 or A5
 - Office 365 E5 or A5
-- Microsoft Defender for Endpoint
+- Microsoft Defender for Endpoint 
+- [Microsoft Defender for IoT - Enterprise IoT protection](/defender-for-iot/enterprise-iot-licenses#enterprise-iot-licenses) (includes protection for enterprise IoT devices with the Microsoft 365 E5 (ME5) or E5 Security license)
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps or [Cloud App Discovery](/defender-cloud-apps/editions-cloud-app-security-aad)
 - Microsoft Defender for Office 365 (Plan 2)
@@ -50,7 +52,8 @@ Any of these licenses gives you access to Microsoft Defender XDR features via th
 For more information, [view the Microsoft 365 Enterprise service plans](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 > [!NOTE]
-> Automatic attack disruption requires Microsoft Defender for Endpoint Plan 2. For more information, see [Configure automatic attack disruption capabilities](configure-attack-disruption.md).
+> - Automatic attack disruption requires Microsoft Defender for Endpoint Plan 2. For more information, see [Configure automatic attack disruption capabilities](configure-attack-disruption.md).
+> - Threat analytics also requires Defender for Endpoint Plan 2. For more information, see [Threat analytics in Microsoft Defender XDR](threat-analytics.md).
 
 > Don't have license yet? [Try or buy a Microsoft 365 subscription](/microsoft-365/commerce/try-or-buy-microsoft-365)
 
@@ -65,10 +68,8 @@ Go to Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.
 
 You must at least be a **security administrator** in Microsoft Entra ID to turn on Microsoft Defender XDR. For the list of roles required to use Microsoft Defender XDR and information on how access to data is regulated, read about [managing access to Microsoft Defender XDR](m365d-permissions.md).
 
->[!IMPORTANT]
->Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Browser requirements
 
@@ -86,10 +87,10 @@ Currently, the Microsoft Defender for Office 365 integration into the unified Mi
 - Sweden
 - Singapore
 
-
 ## Related articles
 
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Manage access and permissions](m365d-permissions.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -1,12 +1,12 @@
----
+﻿---
 title: Advanced Hunting API
 ms.reviewer:
 description: Learn to use the advanced hunting API to run advanced queries on Microsoft Defender for Endpoint. Find out about limitations and see an example.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,19 +16,19 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
----
+ms.date: 08/18/2025
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # Advanced hunting API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 > [!WARNING]
 > This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API that can query more tables is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -105,13 +105,11 @@ POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
 ```
 
 ```json
+
 {
-    "Query":"DeviceProcessEvents
-|where InitiatingProcessFileName =~ 'powershell.exe'
-|where ProcessCommandLine contains 'appdata'
-|project Timestamp, FileName, InitiatingProcessFileName, DeviceId
-|limit 2"
+    "Query":"DeviceProcessEvents |where InitiatingProcessFileName =~ 'powershell.exe' |where ProcessCommandLine contains 'appdata'|project Timestamp, FileName, InitiatingProcessFileName, DeviceId|limit 2"
 }
+
 ```
 
 ### Response example
@@ -166,3 +164,4 @@ Here's an example of the response.
 - [Advanced Hunting from Portal](/defender-xdr/advanced-hunting-query-language)
 - [Advanced Hunting using PowerShell](run-advanced-query-sample-powershell.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

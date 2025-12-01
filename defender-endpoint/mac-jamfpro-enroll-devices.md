@@ -1,10 +1,11 @@
----
+﻿---
 title: Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 description: Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+ms.reviewer: joshbregman
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -14,20 +15,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
----
+ms.date: 05/08/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 ## Enroll macOS devices
 
@@ -104,3 +99,4 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 
    :::image type="content" source="media/jamfpro-mdm-profile.png" alt-text="The Jamf Pro enrollment6" lightbox="media/jamfpro-mdm-profile.png":::
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

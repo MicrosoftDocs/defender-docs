@@ -1,6 +1,6 @@
 ---
 title: Provide managed security service provider (MSSP) access
-description: Learn about changes from the Microsoft Defender Security Center to the Microsoft Defender portal
+description: Learn about changes from the Microsoft Defender Security Center to the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
@@ -9,14 +9,17 @@ ms.author: macapara
 author: mjcaparas
 manager: dansimp
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
 - MOE150
 - MET150
 ms.collection: 
 - m365-security
 - tier2 
-ms.date: 06/21/2024
+ms.date: 11/19/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Defender for Endpoint
 ---
 
 # Provide managed security service provider (MSSP) access 
@@ -25,10 +28,8 @@ ms.date: 06/21/2024
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+> [!IMPORTANT]
+> Procedures in this article use features that require at a minimum Microsoft Entra ID P2 [for each user under scope of management](/entra/id-governance/licensing-fundamentals#how-can-i-license-usage-of-microsoft-entra-id-governance-features-for-business-guests).
 
 To implement a multitenant delegated access solution, take the following steps:
 
@@ -125,4 +126,5 @@ To implement a multitenant delegated access solution, take the following steps:
      At this point, analyst access has been provisioned, and each analyst should be able to access the customer's Microsoft Defender portal:
 
     `https://security.microsoft.com/?tid=<CustomerTenantId>` with the permissions and roles they were assigned.
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

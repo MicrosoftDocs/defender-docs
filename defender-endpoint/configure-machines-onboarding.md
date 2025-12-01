@@ -1,31 +1,26 @@
----
+﻿---
 title: Get devices onboarded to Microsoft Defender for Endpoint
 description: Track onboarding of Intune-managed devices to Microsoft Defender for Endpoint and increase onboarding rate.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2023
----
+ms.date: 03/24/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Get devices onboarded to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
 
 Each onboarded device adds an additional endpoint detection and response (EDR) sensor and increases visibility over breach activity in your network. Onboarding also ensures that a device can be checked for vulnerable components as well security configuration issues and can receive critical remediation actions during attacks.
 
@@ -35,7 +30,7 @@ Before you can track and manage onboarding of devices:
 - [Ensure you have the necessary permissions](configure-machines.md#obtain-required-permissions)
 
 Watch this video to learn how to easily onboard clients with Microsoft Defender for Endpoint.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4bGqr?rel=0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
 
 ## Discover and track unprotected devices
 
@@ -50,7 +45,7 @@ The **Onboarding** card provides a high-level overview of your onboarding rate b
 
 ## Onboard more devices with Intune profiles
 
-Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboard-configure.md). For Intune-managed devices, however, you can leverage Intune profiles to conveniently deploy the Defender for Endpoint sensor to select devices, effectively onboarding these devices to the service.
+Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboarding.md). For Intune-managed devices, however, you can leverage Intune profiles to conveniently deploy the Defender for Endpoint sensor to select devices, effectively onboarding these devices to the service.
 
 From the **Onboarding** card, select **Onboard more devices** to create and assign a profile on Intune. The link takes you to the device compliance page on Intune, which provides a similar overview of your onboarding state.
 
@@ -71,7 +66,7 @@ From the device compliance page, create a configuration profile specifically for
 
 For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/mem/intune/protect/advanced-threat-protection#onboard-devices).
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-belowfoldlink)
+
 
 ## Related topics
 
@@ -79,3 +74,4 @@ For more information, [read about using Intune device configuration profiles to 
 - [Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)
 - [Optimize ASR rule deployment and detections](configure-machines-asr.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,44 +1,48 @@
----
+﻿---
 title: Deploy, manage, and report on Microsoft Defender Antivirus
-description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI
+description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/23/2023
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.date: 10/20/2025
+ms.topic: install-set-up-deploy
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Deploy, manage, and report on Microsoft Defender Antivirus
 
-**Applies to:**
+You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus 
-
-**Platforms**
-
-- Windows
-
-Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later (Windows Server 2012 requires Microsoft Defender for Endpoint). You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
-
-- [Microsoft Intune](#microsoft-intune)
-- [Configuration Manager](#configuration-manager)
-- [PowerShell](#powershell)
-- [Group Policy and Microsoft Entra ID](#powershell)
-- [Windows Management Instrumentation](#windows-management-instrumentation)
-
+- [Deploy, manage, and report on Microsoft Defender Antivirus](#deploy-manage-and-report-on-microsoft-defender-antivirus)
+  - [Microsoft Intune](#microsoft-intune)
+  - [Configuration Manager](#configuration-manager)
+  - [PowerShell](#powershell)
+  - [Group Policy and Microsoft Entra ID](#group-policy-and-microsoft-entra-id)
+  - [Windows Management Instrumentation](#windows-management-instrumentation)
+  
 This article describes these options for deployment, management, and reporting.
+
+## Prerequisites
+
+### Supported operating systems
+
+Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later.
+
+> [!NOTE]
+> Windows Server 2012 requires Microsoft Defender for Endpoint.
 
 ## Microsoft Intune
 
@@ -68,7 +72,7 @@ For reporting, you can choose from several options:
 
 ## PowerShell
 
-You can use PowerShell with Group Policy or Configuration Manager to manage Microsoft Defender Antivirus on client devices. You can also use PowerShell to manage Microsoft Defender Antivirus manually on individual devices that are not managed by a security team. 
+You can use PowerShell with Group Policy or Configuration Manager to manage Microsoft Defender Antivirus on client devices. You can also use PowerShell to manage Microsoft Defender Antivirus manually on individual devices that aren't managed by a security team. 
 
 - Use the appropriate [Get- cmdlets available in the Defender module](/powershell/module/defender).
 
@@ -102,7 +106,8 @@ With Windows Management Instrumentation (WMI), you can manage Microsoft Defender
 
 - Use the [MSFT_MpComputerStatus](/previous-versions/windows/desktop/defender/msft-mpcomputerstatus) class and the get method of associated classes in the [Windows Defender WMIv2 Provider](/windows/win32/wmisdk/wmi-providers).
 
-For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511)). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+
 
 ## See also
 
@@ -117,5 +122,6 @@ For reporting, Windows events comprise several security event sources, including
 
 
 > [!TIP]
-> **Performance tip** Due to a variety of factors, Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues. You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
+> **Performance tip**: Due to various factors, Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues. You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

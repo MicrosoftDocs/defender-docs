@@ -1,41 +1,39 @@
----
+﻿---
 title: Why you should use Microsoft Defender Antivirus together with Microsoft Defender for Endpoint
 description: For best results, use Microsoft Defender Antivirus together with your other Microsoft offerings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.topic: concept-article
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/29/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
 Microsoft Defender Antivirus is the next-generation protection component of [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Microsoft Defender for Endpoint).
 
 Although you can use a non-Microsoft antivirus solution with Microsoft Defender for Endpoint, there are advantages to using Microsoft Defender Antivirus together with Defender for Endpoint. Not only is Microsoft Defender Antivirus an excellent next-generation antivirus solution, but combined with other Defender for Endpoint capabilities, such as [endpoint detection and response](overview-endpoint-detection-response.md) and [automated investigation and remediation](automated-investigations.md), you get better protection that's coordinated across products and services.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## 13 reasons to use Microsoft Defender Antivirus together with Microsoft Defender for Endpoint
 
@@ -47,7 +45,7 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 |4|Details about blocked malware|More details and actions for blocked malware are available with Microsoft Defender Antivirus and Microsoft Defender for Endpoint. [Understand malware & other threats](malware/understanding-malware.md).|
 |5|Attack surface reduction|Your organization's security team can reduce your vulnerabilities (attack surfaces), giving  attackers fewer ways to perform attacks. Attack surface reduction uses cloud protection for a number of rules. [Get an overview of attack surface reduction](overview-attack-surface-reduction.md).|
 |6|Network protection|Your organization's security team can protect your network by blocking specific URLs and IP addresses. [Protect your network](network-protection.md).|
-|7|Indicators, such as file, IP address, URL, and/or certificate allow or block indicators |Your organization's security team can import threat intel, which blocks known Indicators of Compromise (IoC's) [Get an overview of Indicator of compromise (IoC)](manage-indicators.md).|
+|7|Indicators, such as file, IP address, URL, and/or certificate allow or block indicators |Your organization's security team can import threat intel, which blocks known Indicators of Compromise (IoC's) [Get an overview of Indicator of compromise (IoC)](indicators-overview.md).|
 |8|File blocking|Your organization's security team can block specific files. [Stop and quarantine files in your network](respond-file-alerts.md#stop-and-quarantine-files-in-your-network).|
 |9|Auditing events|Auditing event signals are available in [endpoint detection and response capabilities](overview-endpoint-detection-response.md). (These signals are not available with non-Microsoft antivirus solutions.)|
 |10|File recovery via OneDrive|If you are using Microsoft Defender Antivirus together with [Office 365](/Office365/Enterprise), and your device is attacked by ransomware, your files are protected and recoverable. [OneDrive Files Restore and Windows Defender take ransomware protection one step further](https://techcommunity.microsoft.com/t5/Microsoft-OneDrive-Blog/OneDrive-Files-Restore-and-Windows-Defender-takes-ransomware/ba-p/188001).|
@@ -71,3 +69,4 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 
 [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

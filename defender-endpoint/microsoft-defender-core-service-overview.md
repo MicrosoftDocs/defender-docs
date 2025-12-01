@@ -1,13 +1,14 @@
 ---
 title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol
+ms.reviewer: yongrhee 
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 06/21/2024
+ms.date: 06/30/2025
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
@@ -32,35 +33,50 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
    - Mid April 2024 to Enterprise customers running Windows clients.
    - Beginning of July 2024 to U.S. Government customers running Windows clients.
       
-3. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
+      The Microsoft Defender Core service for Windows Server is releasing with [Microsoft Defender Antivirus platform version 4.18.25050.5.](/defender-endpoint/microsoft-defender-antivirus-updates)
+      
+   - Mid July 2025 to Enterprise customers running Windows Server 2019 or later.
+      
+   - Mid September 2025 to Enterprise customers running the [unified Microsoft Defender for Endpoint client](/defender-endpoint/update-agent-mma-windows) for Windows Server 2012 R2 or Windows Server 2016.
+      
+1. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 
-4. If you're using the Microsoft Defender for Endpoint **standard** device connectivity experience:
+1. If you're using the Microsoft Defender for Endpoint **standard** device connectivity experience:
 
    Enterprise customers should allow the following URLs:
    
    - `*.endpoint.security.microsoft.com`
+      
    - `ecs.office.com/config/v1/MicrosoftWindowsDefenderClient`
+      
    - `*.events.data.microsoft.com`
       
    If you don't want to use the wildcards for `*.events.data.microsoft.com`, you can use:
    
    - `us-mobile.events.data.microsoft.com/OneCollector/1.0`   
    - `eu-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
    - `uk-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
    - `au-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
    - `mobile.events.data.microsoft.com/OneCollector/1.0`
-   
+      
    Enterprise U.S. Government customers should allow the following URLs:
    
    - `*.events.data.microsoft.com`
+      
    - `*.endpoint.security.microsoft.us (GCC-H & DoD)`
+      
    - `*.gccmod.ecs.office.com (GCC-M)`
+      
    - `*.config.ecs.gov.teams.microsoft.us (GCC-H)`
+      
    - `*.config.ecs.dod.teams.microsoft.us (DoD)`
       
-5. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
+1. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
 
-6. Consumers don't need to take any actions to prepare.
+1. Consumers don't need to take any actions to prepare.
 
 ## Microsoft Defender Antivirus processes and services
 
@@ -159,7 +175,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
    > [!NOTE]
    > Copy the .admx, and separately the .adml to the En-US folder.
 
-3. Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc   
+3. Start, GPMC.msc (e.g. Domain Controller or) or GPEdit.msc   
 4. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
   
 5. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service
@@ -176,19 +192,20 @@ On the script page of the Run Script wizard, choose your script from the list (M
 2. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration` $true or $false command, where `$false` = enabled and `$true` = disabled. For example:
 
    ```powershell
-   Set-MpPreferences -DisableCoreServiceECSIntegration $false 
+   Set-MpPreference -DisableCoreServiceECSIntegration $false 
    ```
 
-3. Use the `Set-MpPreferences -DisableCoreServiceTelemetry` $true or $false command, for example: 
+3. Use the `Set-MpPreference -DisableCoreServiceTelemetry` $true or $false command, for example: 
 
    ```powershell
-   Set-MpPreferences -DisableCoreServiceTelemetry $true
+   Set-MpPreference -DisableCoreServiceTelemetry $true
    ```
 
 #### Use the Registry to update the policies for Microsoft Defender Core service.
 
 1. Select **Start**, and then open Regedit.exe as an administrator.
-2. Go to `HKLM\Software\Policies\Microsoft\Windows Defender\Features`
+1. Go to `HKLM\Software\Policies\Microsoft\Windows Defender\Features`
+
 3. Set the values:
 
    `DisableCoreService1DSTelemetry` (dword) 0 (hex)  

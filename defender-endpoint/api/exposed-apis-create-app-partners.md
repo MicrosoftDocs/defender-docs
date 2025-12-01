@@ -1,13 +1,13 @@
----
+﻿---
 title: Partner access through Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a web app to get programmatic access to  Microsoft Defender for Endpoint on behalf of your users.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-ms.date: 08/29/2024
-manager: deniseb
+ms.date: 03/21/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,24 +17,23 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Partner access through Microsoft Defender for Endpoint APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -275,3 +274,4 @@ Confirm you received a correct token.
 - [Access Microsoft Defender for Endpoint on behalf of a user](exposed-apis-create-app-nativeapp.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

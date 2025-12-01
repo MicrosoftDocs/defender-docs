@@ -1,14 +1,14 @@
----
+﻿---
 title: Access the Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how you can use APIs to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-ms.date: 01/25/2022
-manager: deniseb
+ms.date: 11/11/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,29 +17,28 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Access the Microsoft Defender for Endpoint APIs
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business. 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
+
+
 
 Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
 Watch this video for a quick overview of Defender for Endpoint's APIs.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4d73M]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f6300637-b48e-49d7-aa76-2778a711ae6c]
 
 In general, you'll need to take the following steps to use the APIs:
 
@@ -86,4 +85,5 @@ You can access Defender for Endpoint API with **Application Context** or **User 
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 - [Access Microsoft Defender for Endpoint with user context](exposed-apis-create-app-nativeapp.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
+

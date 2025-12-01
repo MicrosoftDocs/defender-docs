@@ -13,11 +13,11 @@ ms.collection:
 - m365-security
 - Adm_TOC
 - tier2
-ms.topic: conceptual
+ms.topic: article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 09/29/2024
+ms.date: 04/28/2025
 ---
 
 # Microsoft Secure Score
@@ -35,7 +35,7 @@ Secure Score helps organizations:
 - Compare with benchmarks and establish key performance indicators (KPIs).
 
 Watch this video for a quick overview of Secure score.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWUPrP]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7a45971a-f075-48b9-b8f1-1f7f20152a73]
 
 Organizations gain access to robust visualizations of metrics and trends, integration with other Microsoft products, score comparison with similar organizations, and much more. The score can also reflect when non-Microsoft solutions addressed recommended actions.
 
@@ -97,7 +97,7 @@ Recommendations for other security products are coming soon. The recommendations
 
 ### Security defaults
 
-Microsoft Secure Score includes updated recommended actions to support [security defaults in Microsoft Entra ID](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults to make it easier to help protect your organization with preconfigured security settings for common attacks.
+Microsoft Secure Score includes updated recommended actions to support [security defaults in Microsoft Entra ID](/entra/fundamentals/security-defaults) to make it easier to help protect your organization with preconfigured security settings for common attacks.
 
 If you turn on security defaults, you are awarded full points for the following recommended actions:
 
@@ -159,7 +159,7 @@ Microsoft Secure Score is a numerical summary of your security posture based on 
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community.
+If you have any issues, let us know by posting in the [Defender XDR community](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/discussions/microsoftthreatprotection).
 
 ## Related resources
 

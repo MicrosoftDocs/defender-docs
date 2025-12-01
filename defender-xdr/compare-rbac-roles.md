@@ -11,10 +11,18 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom:
-ms.topic: reference
-ms.date: 06/27/2024
+ms.topic: concept-article
+ms.date: 10/24/2025
 ms.reviewer:
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365 P2
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud
+- Microsoft Defender for Cloud Apps
 ---
 
 # Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
@@ -25,21 +33,17 @@ This article describes how existing roles and permissions in Microsoft Defender 
 
 [!INCLUDE[Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2118804)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/p/?LinkID=2198108)
-- [Microsoft Defender for Office 365 Plan 2](https://go.microsoft.com/fwlink/p/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](https://go.microsoft.com/fwlink/p/?linkid=2229011)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 <a name='map-microsoft-365-defender-unified-rbac-permissions-to-existing-rbac-permissions'></a>
 
 ## Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions
+
+> [!IMPORTANT]
+> Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model. Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration
+>
+> Starting March 2, 2025, new Microsoft Defender for Identity tenants will also have the Unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
 
 Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender XDR Unified RBAC roles:
 
@@ -122,7 +126,50 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 > [!NOTE]
 > Defender for Identity experiences will also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).
-> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in the Microsoft Defender for Cloud Apps portal, these permissions do not carry over. You need to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
+> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in Microsoft Defender for Cloud Apps, these permissions do not carry over. You need to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
+
+<a name='map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-365-defender-unified-rbac-permissions'></a>
+### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
+
+> [!IMPORTANT]
+> App Governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and does not support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.</br></br>
+> Once you activate the Defender for Cloud Apps integration with Microsoft Defender XDR Unified RBAC, the following roles, configured through [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in Defender for Cloud Apps, will no longer be supported: **App/instance admin**, **User group admin**, **Cloud Discovery global admin**, and **Cloud Discovery report admin**.
+
+|Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
+|---|-----|
+|Local Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (all permissions) </br>Authorization and settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (all permissions)|
+|Local Security operator|Security operations \ Security data \ Security data basics (read) </br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security setting (all permissions) </br>Authorization and settings \ System setting (read)|
+|Local Security reader|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (read) </br>Authorization and settings \ System settings (read)|
+|Local Compliance administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
+
+### Unified RBAC roles in Microsoft Defender for Cloud
+
+Unified Role-Based Access Control (uRBAC) lets you manage permissions across Microsoft Defender for Cloud resources using a consistent model. Roles define what actions users can perform and assign roles carefully to maintain least-privilege access.
+
+The following table lists the available uRBAC roles and their permissions.
+
+| **Role**                | **Permissions**                                                                                              | **Description**                                                                 |
+|-------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Security data basics**: Security operations / Security data / Security data basics (read)   | Read | Access alerts, incidents, investigations, hunting, devices, cloud assets, and reports. Includes cloud inventory and threat protection. |
+| **Alerts**: Security operations / Security data / Alerts (manage) | Manage | Manage alerts, investigations, scans, device tags, and packages. Includes cloud threat protection features. |
+| **Vulnerability Management**: Security posture / Posture management / Vulnerability management (read) | Read | View vulnerability data: software inventory, weaknesses, missing KBs, baselines, hunting, and devices. Includes data lake (Preview). |
+| **Exposure Management**: Security posture / Posture management / Exposure Management (read); Security posture / Posture management / Exposure Management (manage) | Read/Manage  | View or manage exposure insights, including Secure Score, recommendations, initiatives, and metrics.|
+
+> [!NOTE]
+> Roles can be combined for broader access, but always apply least-privilege principles. Some capabilities may require additional permissions or feature enablement.
+
+### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
+
+> [!IMPORTANT]
+> App Governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and does not support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.</br></br>
+> Once you activate the Defender for Cloud Apps integration with Microsoft Defender XDR Unified RBAC, the following roles, configured through [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in Defender for Cloud Apps, will no longer be supported: **App/instance admin**, **User group admin**, **Cloud Discovery global admin**, and **Cloud Discovery report admin**.
+
+|Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
+|---|-----|
+|Local Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (all permissions) </br>Authorization and settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (all permissions)|
+|Local Security operator|Security operations \ Security data \ Security data basics (read) </br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security setting (all permissions) </br>Authorization and settings \ System setting (read)|
+|Local Security reader|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (read) </br>Authorization and settings \ System settings (read)|
+|Local Compliance administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
 
 <a name='azure-active-directory-global-roles-access'></a>
 
@@ -134,22 +181,23 @@ Use this table to learn about the permissions assigned by default for each workl
 
 |Microsoft Entra role|Microsoft Defender XDR Unified RBAC assigned permissions for all workloads|Microsoft Defender XDR Unified RBAC assigned permissions – workload specific|
 |---|-|---|
-|Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)</br>Security posture \ Posture management \ Secure Score (read) </br> Security posture \ Posture management \ Secure Score (manage)</br>Authorization and settings \ Authorization (Read and manage)</br>Authorization and settings \ Security settings (All permissions)</br>Authorization and settings \ System settings (Read and manage) |_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ </br>Security operations \ Basic live response (manage)</br>Security operations \ Advanced live response (manage) </br> Security operations  \ Security data \ File collection (manage) </br>Security posture \ Posture management \ Vulnerability management (read)</br>Security posture \ Posture management \ Exception handling (manage)</br>Security posture \ Posture management \ Remediation handling (manage)</br>Security posture \ Posture management \ Application handling (manage)</br>Security posture \ Posture management \ Security baseline assessment (manage)</br></br> _**Defender for Office only permissions**_ </br> Security operations \ Security data \ Email quarantine (manage)</br>Security operations \ Security data \ Email advanced actions (manage)</br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)|
+|Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)</br>Security posture \ Posture management \ Exposure Management (read)</br>Security posture \ Posture management \ Exposure Management (manage)</br>Authorization and settings \ Authorization (Read and manage)</br>Authorization and settings \ Security settings (All permissions)</br>Authorization and settings \ System settings (Read and manage) |_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ </br>Security operations \ Basic live response (manage)</br>Security operations \ Advanced live response (manage) </br> Security operations  \ Security data \ File collection (manage) </br>Security posture \ Posture management \ Vulnerability management (read)</br>Security posture \ Posture management \ Exception handling (manage)</br>Security posture \ Posture management \ Remediation handling (manage)</br>Security posture \ Posture management \ Application handling (manage)</br>Security posture \ Posture management \ Security baseline assessment (manage)</br></br> _**Defender for Office only permissions**_ </br> Security operations \ Security data \ Email quarantine (manage)</br>Security operations \ Security data \ Email advanced actions (manage)</br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)|
 |Security administrator|Same as Global administrator|Same as Global administrator|
-|Global reader|Security operations \ Security data \ Security data basics (read)</br>Security posture \ Posture management \ Secure Score (read) </br>|_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ </br>Security posture \ Posture management \ Vulnerability management (read)</br></br> _**Defender for Office only permissions**_ </br> Security operations \ Security data \ Response (manage)</br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)</br>Authorization and settings \ Authorization (read) </br></br>_**Defender for Office and Defender for Identity only permissions**_ </br>Authorization and settings \ Security settings \ Core security settings (read)</br>Authorization and settings \ System settings (read)|
-|Security reader|Security operations \ Security data \ Security data basics (read)</br>Security posture \ Posture management \ Secure Score (read) </br>|_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ </br>Security posture \ Posture management \ Vulnerability management (read)</br></br> _**Defender for Office only permissions**_ </br> Security operations \ Security data \ Response (manage)</br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) </br></br>_**Defender for Office and Defender for Identity only permissions**_ </br>Authorization and settings \ Security settings \ Core security settings (read)</br>Authorization and settings \ System settings (read)|
-|Security operator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)</br>Security posture \ Posture management \ Secure Score (read)</br>Authorization and settings \ Security settings (All permissions)|_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_</br>Security operations  \ Security data \ Basic live response (manage)</br>Security operations  \ Security data \ Advanced live response (manage)</br> Security operations \ Security data \ File collection (manage) </br>Security posture \ Posture management \ Vulnerability management (read)</br>Security posture \ Posture management \ Exception handling (manage)</br>Security posture \ Posture management \ Remediation handling (manage)</br></br>_**Defender for Office only permissions**_ </br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)</br>Authorization and settings \ System settings (Read and manage)</br></br>_**Defender for Identity only permissions**_ </br>Authorization and settings \ System settings (read)|
-|Exchange Administrator|Security posture \ Posture management \ Secure Score (read) </br> Security posture \ Posture management \ Secure Score (manage) |_**Defender for Office only permissions**_ </br>Security operations \ Security data \ Security data basic (read) </br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) </br>Authorization and settings \ System settings (Read and manage)|
-|SharePoint Administrator|Security posture \ Posture management \ Secure Score (read) </br> Security posture \ Posture management \ Secure Score (manage)|not applicable|
-|Service Support Administrator|Security posture \ Posture management \ Secure Score (read) |not applicable|
-|User Administrator|Security posture \ Posture management \ Secure Score (read) |not applicable|
-|HelpDesk Administrator|Security posture \ Posture management \ Secure Score (read) |not applicable|
+|Global reader|Security operations \ Security data \ Security data basics (read)</br>Security posture \ Posture management \ Exposure Management (read) </br>|_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ </br>Security posture \ Posture management \ Vulnerability management (read)</br></br> _**Defender for Office only permissions**_ </br> Security operations \ Security data \ Response (manage)</br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)</br>Authorization and settings \ Authorization (read) </br></br>_**Defender for Office and Defender for Identity only permissions**_ </br>Authorization and settings \ Security settings \ Core security settings (read)</br>Authorization and settings \ System settings (read)|
+|Security reader|Security operations \ Security data \ Security data basics (read)</br>Security posture \ Posture management \ Exposure Management (read) </br>|_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ </br>Security posture \ Posture management \ Vulnerability management (read)</br></br> _**Defender for Office only permissions**_ </br> Security operations \ Security data \ Response (manage)</br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) </br></br>_**Defender for Office and Defender for Identity only permissions**_ </br>Authorization and settings \ Security settings \ Core security settings (read)</br>Authorization and settings \ System settings (read)|
+|Security operator|Security operations \ Security data \ Security data basics (read)</br>Security posture \ Posture management \ Exposure Management (read) </br>Security operations \ Security data \ Response (manage)</br>Security posture \ Posture management \ Secure Score (read)</br>Authorization and settings \ Security settings (All permissions)|_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_</br>Security operations  \ Security data \ Basic live response (manage)</br>Security operations  \ Security data \ Advanced live response (manage)</br> Security operations \ Security data \ File collection (manage) </br>Security posture \ Posture management \ Vulnerability management (read)</br>Security posture \ Posture management \ Exception handling (manage)</br>Security posture \ Posture management \ Remediation handling (manage)</br></br>_**Defender for Office only permissions**_ </br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)</br>Authorization and settings \ System settings (Read and manage)</br></br>_**Defender for Identity only permissions**_ </br>Authorization and settings \ System settings (read)|
+|Exchange Administrator|Security posture \ Posture management \ Exposure Management (read) </br> Security posture \ Posture management \ Exposure Management (manage) |_**Defender for Office only permissions**_ </br>Security operations \ Security data \ Security data basic (read) </br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) </br>Authorization and settings \ System settings (Read and manage)|
+|SharePoint Administrator|Security posture \ Posture management \ Exposure Management (read) </br> Security posture \ Posture management \ Exposure Management (manage)|not applicable|
+|Service Support Administrator|Security posture \ Posture management \ Exposure Management (read) |not applicable|
+|User Administrator|Security posture \ Posture management \ Exposure Management (read) |not applicable|
+|HelpDesk Administrator|Security posture \ Posture management \ Exposure Management (read) |not applicable|
 |Compliance administrator|not applicable|_**Defender for Office only permissions**_ </br> Security operations \ Security data \ Security data basics (read)</br> Security operations \ Security data \ Alerts (manage)|
 |Compliance data administrator|not applicable|Same as Compliance administrator|
 |Billing admin|not applicable|not applicable|
 
 > [!NOTE]
-> By activating the Microsoft Defender XDR Unified RBAC model, users with Security Reader and Global Reader roles can access Defender for Endpoint data.
+> By activating the Microsoft Defender XDR Unified RBAC model, users with the Security Reader and Global Reader roles are granted read-only access to resources from workloads integrated into the model.
+> However, accessing Microsoft Defender for Endpoint device data requires additional configuration before Security Reader permissions take effect. For details, see the [Before you begin section](/defender-endpoint/rbac).
 
 ## Next steps
 

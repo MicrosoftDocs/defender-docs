@@ -1,32 +1,28 @@
----
+﻿---
 title: Sign in to Jamf Pro
 description: Sign in to Jamf Pro.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+ms.reviewer: joshbregman
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
----
+ms.date: 05/08/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Sign in to Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 1. Enter your credentials.
 
@@ -46,3 +42,4 @@ ms.date: 04/30/2024
 [Setup the device groups in Jamf Pro](mac-jamfpro-device-groups.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

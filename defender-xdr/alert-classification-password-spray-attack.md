@@ -4,8 +4,8 @@ description: Alert classification guide for password spray attacks coming to rev
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -13,19 +13,19 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 02/11/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for password spray attacks so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification for password spray attacks
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat actors use innovative ways to compromise their target environments. One type of attack gaining traction is the password spray attack, where attackers aim to access many accounts within a network with minimal effort. Unlike traditional brute force attacks, where threat actors try many passwords on a single account, password spray attacks focus on guessing the correct password for many accounts with a limited set of commonly used passwords. It makes the attack particularly effective against organizations with weak or easily guessable passwords, leading to severe data breaches and financial losses for organizations.
 

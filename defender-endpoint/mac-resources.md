@@ -1,33 +1,29 @@
----
-title: Resources for Microsoft Defender for Endpoint on Mac
-description: Resources for Microsoft Defender for Endpoint on Mac, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
+﻿---
+title: Resources for Microsoft Defender for Endpoint on macOS
+description: Resources for Microsoft Defender for Endpoint on macOS, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+ms.reviewer: joshbregman
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
-ms.date: 09/13/2024
----
+ms.date: 04/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Resources for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## Collecting diagnostic information
 
@@ -178,21 +174,21 @@ All of the uninstall of Microsoft Defender for Endpoint on macOS require the fol
 
 1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag *decommissioned* and assign it to the macOS where Microsoft Defender for macOS is being uninstalled.
 
-1. Create a [Device group](/defender-endpoint/machine-groups) and name it (e.g. *Decommissioned macOS*) and assign a user *group* that should be able to see them.
+1. Create a [Device group](/defender-endpoint/machine-groups) and name it (for example, *Decommissioned macOS*) and assign a user *group* that should be able to see them.
 
-   Note: Steps 1 and 2 are optional if you do not want to see these devices that are retired in the "Device inventory" for 180 days.
+   Note: Steps 1 and 2 are optional if you don't want to see these devices that are retired in the "Device inventory" for 180 days.
    
 1. Remove the "Set Preferences" policies that contain [Tamper Protection](/defender-endpoint/tamperprotection-macos) or through the manual configuration.
 
-1. Offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+1. In the Microsoft Defender portal, in the navigation pane, select **Settings** > **Offboard**, and then select the operating system to start the process.
 
-1. Uninstall the Microsoft Defender for Endpoint for macOS apps
+1. Uninstall the Microsoft Defender for Endpoint app.
 
 1. Remove the device from the *group* for *system extension* policies if an MDM was used to set them.
 
 ### Interactive uninstallation
 
-- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
+- Open **Finder** > **Applications**. Right select on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
 
 ### From the command line
 
@@ -224,3 +220,4 @@ When threats are detected, your security team can view detections and if necessa
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

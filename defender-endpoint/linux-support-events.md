@@ -1,29 +1,31 @@
----
+﻿---
 title: Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot missing events or alerts issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: deniseb
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
 ms.date: 10/11/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This article provides some general steps to mitigate missing events or alerts in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+This article provides some general steps to mitigate missing events or alerts in the [Microsoft Defender portal](https://security.microsoft.com).
 
 Once **Microsoft Defender for Endpoint** has been installed properly on a device, a _device page_ will be generated in the portal. You can review all recorded events in the timeline tab in the device page, or in advanced hunting page. This section troubleshoots the case of some or all expected events are missing.
 For instance, if all _CreatedFile_ events are missing.
@@ -40,7 +42,7 @@ Microsoft Defender for Endpoint utilized `audit` framework from linux to track n
 
     expected output:
 
-    ```output
+    ```console
     ● auditd.service - Security Auditing Service
     Loaded: loaded (/usr/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
     Active: active (running) since Mon 2020-12-21 10:48:02 IST; 2 weeks 0 days ago
@@ -73,7 +75,7 @@ Microsoft Defender for Endpoint utilized `audit` framework from linux to track n
 
     if the following line is present, remove it or edit it to enable Microsoft Defender for Endpoint to track specific SYSCALLs.
 
-    ```output
+    ```console
     -a task, never
     ```
 
@@ -81,11 +83,13 @@ Microsoft Defender for Endpoint utilized `audit` framework from linux to track n
 
 ## Missing file events
 
-File events are collected with `fanotify` framework. In case some or all file events are missing, make sure `fanotify` is enabled on the device and that the file system is [supported](microsoft-defender-endpoint-linux.md#system-requirements).
+File events are collected with `fanotify` framework. In case some or all file events are missing, make sure `fanotify` is enabled on the device and that the file system is [supported](/defender-endpoint/mde-linux-prerequisites).
 
 List the filesystems on the machine with:
 
 ```bash
 df -Th
 ```
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

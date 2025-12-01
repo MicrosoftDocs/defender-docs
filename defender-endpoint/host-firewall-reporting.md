@@ -1,14 +1,14 @@
----
+﻿---
 title: Host firewall reporting in Microsoft Defender for Endpoint
 description: Host and view firewall reporting in Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/11/2024
+ms.date: 05/08/2025
 audience: ITPro
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
+ms.topic: concept-article
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
@@ -16,22 +16,19 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Host firewall reporting in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 If you're a Global or security administrator, you can now host firewall reporting to the [Microsoft Defender portal](https://security.microsoft.com). This feature enables you to view Windows firewall reporting from a centralized location.
 
 ## What do you need to know before you begin?
 
-- Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+- Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 - To onboard devices to the Microsoft Defender for Endpoint service, see [onboarding guidance](onboard-configure.md).
 
@@ -140,3 +137,4 @@ The query can now be executed, and all related Firewall events from the last 30 
 For more reporting, or custom changes, the query can be exported into Power BI for further analysis. Custom reporting can be facilitated by downloading the [Custom Reporting script](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) to monitor the Windows Defender Firewall activities using Power BI.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

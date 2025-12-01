@@ -1,11 +1,11 @@
----
+﻿---
 title: Create alert from event API
 description: Learn how to use the Create alert API to create a new Alert on top of Event in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,24 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+
 ---
 
 # Create alert API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
 
 ## API description
 
@@ -46,24 +36,24 @@ Creates new [Alert](alerts.md) on top of **Event**.
 
 ## Limitations
 
-1. Rate limitations for this API are 15 calls per minute.
+Rate limitations for this API are 15 calls per minute.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
+
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: *Alerts investigation*. For more information, see [Create and manage roles](../user-roles.md).
+
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
+One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 Permission type | Permission | Permission display name
 :---|:---|:---
 Application | Alert.ReadWrite.All | 'Read and write all alerts'
 Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: *Alerts investigation*. For more information, see [Create and manage roles](../user-roles.md).
-> - The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
->
-> Device Group creation is supported in both Defender for Endpoint Plan 1 and Plan 2
 
 ## HTTP request
 
@@ -119,4 +109,5 @@ POST https://api.securitycenter.microsoft.com/api/alerts/CreateAlertByReference
     "category": "Exploit"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
+

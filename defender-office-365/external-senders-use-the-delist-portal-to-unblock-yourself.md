@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 ms.date: 06/10/2024
 audience: ITPro
 ms.topic: troubleshooting
@@ -21,7 +21,7 @@ ms.custom:
 description: Learn how to resolve 5.7.606-649 Access denied, banned sending IP errors, and what to do for 5.7.511 Access denied, banned sender errors for sending mail to Microsoft 365.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -33,7 +33,7 @@ As an email sender from outside Microsoft 365, are you getting an **Access denie
 > [!TIP]
 > There are good reasons for senders to wind up on the blocked senders list, but mistakes can happen. Take a look at this video for a balanced explanation of blocked senders and delisting:
 >
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvD]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=74e1b7cf-3d15-4b69-b201-7b9220406244]
 >
 > For more information about best practices for sending messages to Microsoft 365, see the following articles:
 >
@@ -68,7 +68,7 @@ For these delivery failures, we provide the **Office 365 Anti-Spam IP Delist Por
 
 5. In the delist portal, select **Delist IP**.
 
-After the IP address is removed from the blocked senders list, email messages that pass the protection filters in [Exchange Online Protection (EOP)](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md) (including [composite authentication](email-authentication-about.md#composite-authentication)) are delivered to Microsoft 365 recipients. Verify that messages aren't abusive or malicious. Otherwise, the IP address might be blocked again.
+After the IP address is removed from the blocked senders list, email messages that pass the [default email protections for cloud mailboxes](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md) (including [composite authentication](email-authentication-about.md#composite-authentication)) are delivered to Microsoft 365 recipients. Verify that messages aren't abusive or malicious. Otherwise, the IP address might be blocked again.
 
 > [!NOTE]
 > Results can vary widely before the restrictions are removed. It might take up to 24 hours or longer.
@@ -77,7 +77,7 @@ After the IP address is removed from the blocked senders list, email messages th
 
 In some scenarios, we might need to conduct other investigations on email traffic from your blocked source IP address. If your message is returned in an NDR with code **5.7.511**, you can't use the delist portal as described earlier in this article. For example:
 
-> 550 5.7.511 Access denied, banned sender[xxx.xxx.xxx.xxx]. To request removal from this list, forward this message to delist@microsoft.com. For more information, go to <https://go.microsoft.com/fwlink/?LinkId=526653>.
+> 550 5.7.511 Access denied, banned sender[xxx.xxx.xxx.xxx]. To request removal from this list, forward this message to `delist@microsoft.com`. For more information, go to <https://go.microsoft.com/fwlink/?LinkId=526653>.
 
 As described in the NDR, send a message to `delist@microsoft.com` to unblock your email source. Include the full NDR code and IP address. Microsoft will contact you within 48 hours with the next steps.
 

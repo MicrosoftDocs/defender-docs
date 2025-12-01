@@ -5,26 +5,26 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 04/10/2023
+ms.date: 04/28/2025
 manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: autoir
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand the automated investigation and response capabilities in Microsoft Defender XDR
 ---
 
 # Automated investigation and response in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 If your organization is using [Microsoft Defender XDR](microsoft-365-defender.md), your security operations team receives an alert within the Microsoft Defender portal whenever a malicious or suspicious activity or artifact is detected. Given the seemingly never-ending flow of threats that can come in, security teams often face the challenge of addressing the high volume of alerts. Fortunately, Microsoft Defender XDR includes automated investigation and response (AIR) capabilities that can help your security operations team address threats more efficiently and effectively.
 
@@ -36,7 +36,7 @@ As security alerts are triggered, it's up to your security operations team to lo
 
 Watch the following video to see how self-healing works: <p>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4BzwB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-562206a4bc23]
 
 In Microsoft Defender XDR, automated investigation and response with self-healing capabilities works across your devices, email & content, and identities.
 > [!TIP]
@@ -91,12 +91,11 @@ To view investigations, go to the **Incidents** page. Select an incident, and th
 
 ## Automated investigation & response card 
 
-The new Automated investigation & response card is available in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). This new card visibility to the total number of available remediation actions. The card also gives an overview of all the alerts and required approval time for each alert.
+The Automated investigation & response card is available in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) homepage. This card provides visibility to the total number of available remediation actions. The card also gives an overview of all the alerts and required approval time for each alert.
 
 :::image type="content" source="/defender/media/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
 
-Using the Automated investigation & response card, your security operations team can quickly navigate to the Action center by selecting the **Approve in Action Center** link, and then taking appropriate actions. The card enables your security operations team to more effectively manage actions that are pending approval. 
-
+Using the Automated investigation & response card, your security operations team can quickly navigate to the Action center by selecting the **View pending actions** link, and then taking appropriate actions. The card enables your security operations team to more effectively manage actions that are pending approval.
 
 ## Next steps
 

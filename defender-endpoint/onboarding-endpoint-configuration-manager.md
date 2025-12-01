@@ -1,11 +1,11 @@
----
+﻿---
 title: Onboarding using Microsoft Configuration Manager
 description: Learn how to onboard to Microsoft Defender for Endpoint using Microsoft Configuration Manager
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -14,23 +14,17 @@ ms.collection:
   - highpri
   - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2020
----
+ms.date: 03/26/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Onboarding using Microsoft Configuration Manager
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 This article acts as an example onboarding method.
 
@@ -120,7 +114,7 @@ This section guides you in configuring the following capabilities using Microsof
 
 From within the Microsoft Defender portal it's possible to download the `.onboarding` policy that can be used to create the policy in System Center Configuration Manager and deploy that policy to Windows 10 and Windows 11 devices.
 
-1. From a <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, select [Settings and then Onboarding](https://security.microsoft.com/preferences2/onboarding).
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select [Settings and then Onboarding](https://security.microsoft.com/preferences2/onboarding).
 
 2. Under Deployment method, select the supported version of **Microsoft Configuration Manager**.
 
@@ -172,7 +166,7 @@ From within the Microsoft Defender portal it's possible to download the `.onboar
 
 Follow the steps below to identify the Defender for Endpoint Workspace ID and Workspace Key that will be required for the onboarding of previous versions of Windows.
 
-1. From a <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, select **Settings** \> **Endpoints** \> **Onboarding** (under **Device Management**).
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings** \> **Endpoints** \> **Onboarding** (under **Device Management**).
 
 2. Under operating system, choose **Windows 7 SP1 and 8.1**.
 
@@ -368,3 +362,4 @@ You have now successfully configured Controlled folder access in test mode.
 
 - [Onboarding using Microsoft Configuration Manager](onboarding-endpoint-manager.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,32 +1,26 @@
----
+﻿---
 title: Configure advanced features in Microsoft Defender for Endpoint
 description: Turn on advanced features such as block file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 06/21/2024
----
+ms.date: 10/31/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure advanced features in Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedfeats-abovefoldlink)
 
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Defender for Endpoint with.
 
@@ -44,7 +38,7 @@ Use the following advanced features to get better protected from potentially mal
 
 ## Restrict correlation to within scoped device groups
 
-This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. By turning on this setting, an incident composed of alerts that cross-device groups will no longer be considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC will see several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
+This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. When this setting is turned on, an incident composed of alerts that cross-device groups are no longer considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC sees several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
 
 > [!NOTE]
 > - Changing this setting impacts future alert correlations only.
@@ -57,7 +51,7 @@ Endpoint detection and response (EDR) in block mode provides protection from mal
 
 ## Automatically resolve alerts
 
-Turn this setting on to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
+Turn on this setting to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
 
 > [!NOTE]
 > - The result of the auto-resolve action may influence the Device risk level calculation which is based on the active alerts found on a device.
@@ -74,7 +68,7 @@ This feature enables you to block potentially malicious files in your network. B
 
 To turn **Allow or block** files on:
 
-1. In the Microsoft Defender portal, in navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
+1. In the Microsoft Defender portal, in the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
 
 2. Toggle the setting between **On** and **Off**.
  
@@ -96,9 +90,9 @@ This setting is turned on by default and is applied tenant wide. If you don't wa
 
 Turning on this feature allows you to create indicators for IP addresses, domains, or URLs, which determine whether they'll be allowed or blocked based on your custom indicator list.
 
-To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11. They should also have network protection in block mode and version 4.18.1906.3 or later of the antimalware platform [see KB 4052623](https://go.microsoft.com/fwlink/?linkid=2099834).
+To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11. 
 
-For more information, see [Manage indicators](manage-indicators.md).
+For more information, see [Overview of indicators](indicators-overview.md).
 
 > [!NOTE]
 > Network protection leverages reputation services that process requests in locations that might be outside of the location you've selected for your Defender for Endpoint data.
@@ -129,8 +123,7 @@ Enabling the Skype for Business integration gives you the ability to communicate
 
 Enabling this setting forwards Defender for Endpoint signals to Microsoft Defender for Cloud Apps to provide deeper visibility into cloud application usage. Forwarded data is stored and processed in the same location as your Defender for Cloud Apps data.
 
-> [!NOTE]
-> This feature will be available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) on devices running Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441)), Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464)), Windows 10, version 1809 (OS Build 17763.379 with [KB4489899](https://support.microsoft.com/help/4489899)), later Windows 10 versions, or Windows 11.
+For more information, see [Microsoft Defender for Cloud Apps overview](/defender-cloud-apps/what-is-defender-for-cloud-apps).
 
 ## Web content filtering
 
@@ -172,13 +165,13 @@ For more information about role assignments, see [Create and manage roles](user-
 
 Enabling this feature allows you to run unsigned scripts in a live response session.
 
-## Deception
+## Automatic attack disruption
 
-Deception enables your security team to manage and deploy lures and decoys to catch attackers in your environment. After you turn this on, go to Rules > Deception rules to run deception campaigns. See [Manage the deception capability in Microsoft Defender XDR](/defender-xdr/deception-overview).
+Automatic attack disruption disrupts attacks by automatically containing compromised assets that the attacker is using. It limits lateral movement early on, thereby reducing the overall impact of an attack, both on the associated costs and on  loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online. For more information, see [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption).
 
 ## Share endpoint alerts with Microsoft Compliance Center
 
-Forwards endpoint security alerts and their triage status to Microsoft Purview compliance portal, allowing you to enhance insider risk management policies with alerts and remediate internal risks before they cause harm. Forwarded data is processed and stored in the same location as your Office 365 data.
+Forwards endpoint security alerts and their triage status to Microsoft Purview portal, allowing you to enhance insider risk management policies with alerts and remediate internal risks before they cause harm. Forwarded data is processed and stored in the same location as your Office 365 data.
 
 After configuring the [Security policy violation indicators](/microsoft-365/compliance/insider-risk-management-settings#indicators) in the insider risk management settings, Defender for Endpoint alerts will be shared with insider risk management for applicable users.
 
@@ -220,3 +213,4 @@ For proactive hunting across the full scope of Microsoft Defender XDR, including
 - [Configure alert notifications](/defender-xdr/configure-email-notifications)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

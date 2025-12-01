@@ -1,18 +1,18 @@
----
+﻿---
 title: Microsoft Defender Antivirus full scan considerations and best practices
 description: Understand when and how to use full scans with Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/17/2024
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: conceptual
-author: bsabetghadam
-ms.author: bsabetghadam
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: 
 - nextgen
 - partner-contribution
-ms.reviewer: pahuijbr, tudobril, yongrhee, bsabetghadam
-manager: deniseb
+ms.reviewer: bsabetghadam
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -20,17 +20,8 @@ ms.collection:
 - mde-ngp
 search.appverid: met150
 ---
-
 # Microsoft Defender Antivirus full scan considerations and best practices
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 This article explains the considerations and best practices for running full antivirus scans with Microsoft Defender for Endpoint. This article outlines factors that impact scan performance and describes scenarios where increased resource consumption results in increased protection efficacy.
 
@@ -39,6 +30,12 @@ This article explains the considerations and best practices for running full ant
 [Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) in Defender for Endpoint is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans#comparing-the-quick-scan-full-scan-and-custom-scan)).
 
 However, you might have to run full scans to meet your organization's specific requirements. A full scan starts with a quick scan, and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance isn't solely a function of file size, and is mostly determined by the type and complexity of the content.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Protection efficiency and performance impact
 
@@ -147,3 +144,4 @@ Excluding certain locations from scanning can shorten the scan time. There are t
   - `%Windir%\Temp`
 
 - The use of environment variables as a wildcard in exclusion lists is limited to system variables only. Don't use user-scoped environment variables when adding Microsoft Defender Antivirus folder and process exclusions. 
+

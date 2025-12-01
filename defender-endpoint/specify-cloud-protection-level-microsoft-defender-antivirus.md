@@ -1,13 +1,14 @@
----
+﻿---
 title: Specify the cloud protection level for Microsoft Defender Antivirus
 description: Set your level of cloud protection for Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: denisebmsft
-ms.author: deniseb
-ms.date: 07/25/2024
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+ms.reviewer: yongrhee
+ms.date: 10/20/2025
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
@@ -15,20 +16,22 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Specify the cloud protection level
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Cloud protection works together with Microsoft Defender Antivirus to deliver protection to your devices faster than through traditional security intelligence updates. You can configure your level of cloud protection by using Microsoft Intune (recommended) or Group Policy.
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Use Microsoft Intune to specify the level of cloud protection
 
@@ -38,16 +41,16 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 
 3. Select an antivirus profile. If you don't have one yet, or if you want to create a new profile, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure).
 
-4. Select **Properties**. Then, next to **Configuration settings**, choose **Edit**.
+4. Next to **Configuration settings**, choose **Edit**.
 
-5. Expand **Cloud protection**, and then in the **Cloud-delivered protection level** list, select one of the following:
+5. Scroll down to **Cloud Block Level**, and select one of the following:
 
     - **Not configured**: Default state.
     - **High**: Applies a strong level of detection.
-    - **High plus**: Uses the **High** level and applies extra protection measures (might affect client performance).
-    - **Zero tolerance**: Blocks all unknown executables.
+    - **High Plus**: Uses the **High** level and applies extra protection measures (might affect client performance).
+    - **Zero Tolerance**: Blocks all unknown executables.
 
-6. Choose **Review + save**, and then choose **Save**.
+6. Choose **Next**, and then choose **Save**.
 
 > [!TIP]
 > Need some help? See the following resources:
@@ -87,6 +90,7 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 
 ## See also
 
-- [Onboard non-Windows devices to Defender for Endpoint](configure-endpoints-non-windows.md)
 - [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

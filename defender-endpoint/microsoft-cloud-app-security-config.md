@@ -1,37 +1,32 @@
----
+﻿---
 title: Configure Microsoft Defender for Cloud Apps integration
 ms.reviewer:
 description: Learn how to turn on the settings to enable the Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud Apps.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
-ms.date: 12/18/2020
----
+ms.date: 03/27/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure Microsoft Defender for Cloud Apps in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 To benefit from Microsoft Defender for Endpoint cloud app discovery signals, turn on Microsoft Defender for Cloud Apps integration.
 
 > [!NOTE]
-> This feature will be available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) on devices running Windows 10 and Windows 11.
+> This feature will be available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/en-us/security) on devices running Windows 10 and Windows 11.
 
 > [!TIP]
 > See [Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud Apps](/cloud-app-security/mde-integration) for detailed integration of Microsoft Defender for Endpoint with Microsoft Defender for Cloud Apps.
@@ -56,3 +51,4 @@ If you're interested in trying Microsoft Defender for Cloud Apps, see [Microsoft
 
 - [Microsoft Defender for Cloud Apps integration](microsoft-cloud-app-security-integration.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

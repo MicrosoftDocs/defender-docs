@@ -1,11 +1,11 @@
----
+﻿---
 title: Common Microsoft Defender for Endpoint API errors
 description: List of common Microsoft Defender for Endpoint API errors with descriptions.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,8 +16,11 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 12/18/2020
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
 
+---
 # Handling REST API errors 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
@@ -31,12 +34,9 @@ The error codes listed in the following table may be returned by an operation on
 * The message is a free text that can be changed.
 * At the bottom of the page, you can find response examples.
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+
 
 Error code|HTTP status code|Message
 ---|---|---
@@ -106,3 +106,4 @@ When contacting us about an error, attaching this ID helps find the root cause o
 }
 ```
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

@@ -4,8 +4,8 @@ description: Generate a summary for devices with Microsoft Copilot in Microsoft 
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,41 +14,41 @@ ms.collection:
   - tier1
   - security-copilot
   - magic-ai-copilot
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid:
   - MOE150
   - MET150
-ms.date: 10/04/2024
+ms.date: 04/25/2025
 appliesto:
 - Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
 ---
 
 # Summarize device information with Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal helps security teams in speeding up device inspection through AI-powered investigation capabilities.
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal helps security teams in speeding up device inspection through AI-powered investigation capabilities.
 
 ## Know before you begin
 
-If you're new to Copilot for Security, you should familiarize yourself with it by reading the following articles:
+If you're new to Security Copilot, you should familiarize yourself with it by reading the following articles:
 
-- [What is Copilot for Security?](/security-copilot/microsoft-security-copilot)
-- [Copilot for Security experiences](/security-copilot/experiences-security-copilot)
-- [Get started with Copilot for Security](/security-copilot/get-started-security-copilot)
-- [Understand authentication in Copilot for Security](/security-copilot/authentication)
-- [Prompting in Copilot for Security](/security-copilot/prompting-security-copilot)
+- [What is Security Copilot?](/security-copilot/microsoft-security-copilot)
+- [Security Copilot experiences](/security-copilot/experiences-security-copilot)
+- [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
+- [Understand authentication in Security Copilot](/security-copilot/authentication)
+- [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
 
 Security operations teams are tasked to sift through device data to find suspicious activities or entities to prevent malicious attacks. These teams need to summarize large amounts of data and simplify complex information to quickly assess, triage, and connect a device's status and activities to potentially malicious attacks.
 
 The device summary capability of Copilot in Defender enables security teams to get a device's security posture, vulnerable software information, and any unusual behaviors. Security analysts can use a device's summary to speed up their investigation of incidents and alerts.
 
-## Copilot for Security integration in Microsoft Defender
+## Security Copilot integration in Microsoft Defender
 
-The device summary capability is available in the Microsoft Defender portal for customers who have provisioned access to Copilot for Security. 
+The device summary capability is available in the Microsoft Defender portal for customers who have provisioned access to Security Copilot. 
 
-This capability is also available in the Copilot for Security standalone portal through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins).
+This capability is also available in the Security Copilot standalone portal through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
 ## Key features
 
@@ -65,34 +65,34 @@ You can access the device summary capability through the following ways:
 
 - From the main menu, open the Device inventory page by selecting **Devices** under Assets. Choose a device to investigate from the list. Upon opening the device page, Copilot automatically summarizes the device information of the chosen device and displays the summary in the Copilot pane.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page.png":::
+   :::image type="content" source="media/copilot-in-defender-device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="media/copilot-in-defender-device-summary/copilot-defender-device-summary-device-page.png":::
 
 - From an incident page, you can choose a device on the incident graph and then (1) select **Device details**. On the device pane, (2) select **Summarize** to generate the device summary. The summary is displayed in the Copilot pane.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot highlighting the steps to access the device summary in an incident page in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png":::
+   :::image type="content" source="media/copilot-in-defender-device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot highlighting the steps to access the device summary in an incident page in Copilot in Defender." lightbox="media/copilot-in-defender-device-summary/copilot-defender-device-summary-device-page-small.png":::
 
    You can also access the device summary capability by choosing a device listed in the **Assets** tab of an incident. Select **Copilot** in the device pane to generate the device summary.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-assets-small.png" alt-text="Screenshot highlighting the device summary option in the assets tab of an incident page in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-assets.png":::
+   :::image type="content" source="media/copilot-in-defender-device-summary/copilot-defender-device-summary-assets-small.png" alt-text="Screenshot highlighting the device summary option in the assets tab of an incident page in Copilot in Defender." lightbox="media/copilot-in-defender-device-summary/copilot-defender-device-summary-assets.png":::
 
-Review the results of the device summary. You can copy the results to clipboard, regenerate the results, or open the Copilot for Security portal by selecting the More actions ellipsis (...) on top of the device summary card.
+Review the results of the device summary. You can copy the results to clipboard, regenerate the results, or open the Security Copilot portal by selecting the More actions ellipsis (...) on top of the device summary card.
 
 ## Sample device summary prompt
 
-In the Copilot for Security standalone portal, you can use the following prompt to generate a device summary:
+In the Security Copilot standalone portal, you can use the following prompt to generate a device summary:
 
 - *Summarize device information in Defender incident {incident number.*
 
 > [!TIP]
-> When investigating devices in the Copilot for Security portal, Microsoft recommends including the word ***Defender*** in your prompts to ensure that the device summary capability delivers the results.
+> When investigating devices in the Security Copilot portal, Microsoft recommends including the word ***Defender*** in your prompts to ensure that the device summary capability delivers the results.
 
 ## Provide feedback
 
 Your feedback helps improve the quality of the results generated by Copilot. You can provide feedback about the results by navigating to the bottom of the Copilot pane and selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/copilot-defender-feedback.png).
 
-## See also
+## Related content
 
-- [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
-- [Privacy and data security in Copilot for Security](/copilot/security/privacy-data-security)
+- [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
+- [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

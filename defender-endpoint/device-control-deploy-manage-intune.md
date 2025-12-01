@@ -1,9 +1,9 @@
----
+﻿---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Microsoft Intune
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: limwainstein
+ms.author: lwainstein
+manager: bagol 
 ms.date: 07/30/2024
 ms.topic: overview
 ms.service: defender-endpoint
@@ -17,16 +17,15 @@ ms.custom:
 - partner-contribution
 ms.reviewer: joshbregman
 search.appverid: MET150
-f1.keywords: NOCSH 
----
+f1.keywords: NOCSH
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 If you're using Intune to manage Defender for Endpoint settings, you can use it to deploy and manage device control capabilities. Different aspects of device control are managed differently in Intune, as described in the following sections.
 
@@ -93,7 +92,7 @@ In the following table, identify the setting you want to configure, and then use
 | Setting | OMA-URI, data type, & values |
 |---|---|
 | **Device control default enforcement** <br/>Default enforcement establishes what decisions are made during device control access checks when none of the policy rules match | `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`<br/><br/>Integer: <br/>- `DefaultEnforcementAllow` = `1`<br/>- `DefaultEnforcementDeny` = `2` |
-| **Device types** <br/>Device types, identified by their Primary IDs, with device control protection turned on | `./Vendor/MSFT/Defender/Configuration/SecuredDevicesConfiguration`<br/><br/>String:<br/>- `RemovableMediaDevices`<br/>- `CdRomDevices`<br/>- `WpdDevices`<br/>- `PrinterDevices` |
+| **Device types** <br/>Device types, identified by their Primary IDs, with device control protection turned on. You must specify the product family IDs, separated by a pipe. When selecting multiple devices types you need to ensure the string is all one word with no spaces. A configuration that does not follow this syntax will cause unexpected behavior.  | `./Vendor/MSFT/Defender/Configuration/SecuredDevicesConfiguration`<br/><br/>String:<br/>- `RemovableMediaDevices`<br/>- `CdRomDevices`<br/>- `WpdDevices`<br/>- `PrinterDevices` |
 | **Enable device control** <br/>Enable or disable device control on the device | `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`<br/><br/>Integer:<br/>- Disable = `0`<br/>- Enable = `1` |
 
 ### Creating policies with OMA-URI
@@ -159,3 +158,4 @@ In Intune, device control groups appear as reusable settings.
 - [Device control in Defender for Endpoint](device-control-overview.md)
 - [Device control policies and settings](device-control-policies.md)
 - [Device Control for macOS](mac-device-control-overview.md)
+

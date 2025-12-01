@@ -1,10 +1,11 @@
----
-title: Set preferences for Microsoft Defender for Endpoint on Mac
-description: Configure Microsoft Defender for Endpoint on Mac in enterprise organizations.
+﻿---
+title: Set preferences for Microsoft Defender for Endpoint on macOS
+description: Configure Microsoft Defender for Endpoint on macOS in enterprise organizations.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: bagol
+ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -14,17 +15,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/15/2024
----
+ms.date: 07/01/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Set preferences for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!IMPORTANT]
 > This article contains instructions for how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations. To configure Microsoft Defender for Endpoint on macOS using the command-line interface, see [Resources](mac-resources.md#configuring-from-the-command-line).
@@ -40,7 +39,7 @@ This article describes the structure of the configuration profile, includes a re
 The configuration profile is a *.plist* file that consists of entries identified by a key (which denotes the name of the preference), followed by a value, which depends on the nature of the preference. Values can either be simple (such as a numerical value) or complex, such as a nested list of preferences.
 
 > [!CAUTION]
-> The layout of the configuration profile depends on the management console that you are using. The following sections contain examples of configuration profiles for JAMF and Intune.
+> The layout of the configuration profile depends on the management console that you're using. The following sections contain examples of configuration profiles for JAMF and Intune.
 
 The top level of the configuration profile includes product-wide preferences and entries for subareas of Microsoft Defender for Endpoint, which are explained in more detail in the next sections.
 
@@ -94,7 +93,7 @@ Determines whether behavior monitoring and blocking capability is enabled on the
 
 #### Configure file hash computation feature
 
-Enables or disables file hash computation feature. When this feature is enabled, Defender for Endpoint computes hashes for files it scans to enable better matching against the indicator rules. On macOS, only the script and Mach-O (32 and 64 bit) files are considered for this hash computation (from engine version 1.1.20000.2 or higher). Note that enabling this feature might impact device performance. For more details, please refer to: [Create indicators for files](indicator-file.md).
+Enables or disables file hash computation feature. When this feature is enabled, Defender for Endpoint computes hashes for files it scans to enable better matching against the indicator rules. On macOS, only the script and Mach-O (32 bit and 64 bit) files are considered for this hash computation (from engine version 1.1.20000.2 or higher). Enabling this feature might affect device performance. For more details, please refer to: [Create indicators for files](indicator-file.md).
 
 |Section|Value|
 |---|---|
@@ -130,7 +129,7 @@ Specifies whether to scan archives during on-demand antivirus scans.
 
 #### Degree of parallelism for on-demand scans
 
-Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and impacts the CPU usage, as well as the duration of the on-demand scan.
+Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and affects the CPU usage, and the duration of the on-demand scan.
 
 |Section|Value|
 |---|---|
@@ -189,7 +188,7 @@ Specify content excluded from being scanned by full file path.
 
 ## Supported exclusion types
 
-The following table shows the exclusion types supported by Defender for Endpoint on Mac.
+The following table shows the exclusion types supported by Defender for Endpoint on macOS.
 
 |Exclusion|Definition|Examples|
 |---|---|---|
@@ -205,7 +204,7 @@ File, folder, and process exclusions support the following wildcards:
 
 |Wildcard|Description|Example|Matches|Doesn't match|
 |---|---|---|---|---|
-|\*|Matches any number of any characters including none (note that when this wildcard is used inside a path it will substitute only one folder)|`/var/\*/\*.log`|`/var/log/system.log`|`/var/log/nested/system.log`|
+|\*|Matches any number of any characters including none (note that when this wildcard is used inside a path it substitutes only one folder)|`/var/\*/\*.log`|`/var/log/system.log`|`/var/log/nested/system.log`|
 |?|Matches any single character|`file?.log`|`file1.log` <p> `file2.log`|`file123.log`|
 
 ### Path type (file / directory)
@@ -246,7 +245,7 @@ Specify a process for which all file activity is excluded from scanning. The pro
 
 #### Allowed threats
 
-Specify threats by name that aren't blocked by Defender for Endpoint on Mac. These threats will be allowed to run.
+Specify threats by name that aren't blocked by Defender for Endpoint on macOS. These threats are allowed to run.
 
 |Section|Value|
 |---|---|
@@ -293,7 +292,7 @@ Specify threat types.
 Specify what action to take when a threat of the type specified in the preceding section is detected. Choose from the following options:
 
 - **Audit**: your device isn't protected against this type of threat, but an entry about the threat is logged.
-- **Block**: your device is protected against this type of threat and you're notified in the user interface and the security console.
+- **Block**: your device is protected against this type of threat and you're notified in the user interface and the Microsoft Defender portal.
 - **Off**: your device isn't protected against this type of threat and nothing is logged.
 
 |Section|Value|
@@ -324,7 +323,7 @@ Specify the number of days that results are retained in the scan history on the 
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|scanResultsRetentionDays|
 |**Data type**|String|
-|**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|
+|**Possible values**|90 (default). Allowed values are from one day to 180 days.|
 |**Comments**|Available in Microsoft Defender for Endpoint version 101.07.23 or higher.|
 
 
@@ -375,11 +374,11 @@ Diagnostic data is used to keep Microsoft Defender for Endpoint secure and up to
 
 #### Configure cloud block level
 
-This setting determines how aggressive Defender for Endpoint will be in blocking and scanning suspicious files. If this setting is on, Defender for Endpoint will be more aggressive when identifying suspicious files to block and scan; otherwise, it will be less aggressive and therefore block and scan with less frequency. There are five values for setting cloud block level:
+This setting determines how aggressive Defender for Endpoint will be in blocking and scanning suspicious files. If this setting is on, Defender for Endpoint will be more aggressive when identifying suspicious files to block and scan; otherwise, it's less aggressive and therefore block and scan with less frequency. There are five values for setting cloud block level:
 
 - Normal (`normal`): The default blocking level.
 - Moderate (`moderate`): Delivers verdict only for high confidence detections.
-- High (`high`): Aggressively blocks unknown files while optimizing for performance (greater chance of blocking non-harmful files).
+- High (`high`): Aggressively blocks unknown files while optimizing for performance (greater chance of blocking nonharmful files).
 - High Plus (`high_plus`): Aggressively blocks unknown files and applies additional protection measures (might impact client device performance).
 - Zero Tolerance (`zero_tolerance`): Blocks all unknown programs.
 
@@ -396,7 +395,7 @@ This setting determines how aggressive Defender for Endpoint will be in blocking
 Determines whether suspicious samples (that are likely to contain threats) are sent to Microsoft. There are three levels for controlling sample submission:
 
 - **None**: no suspicious samples are submitted to Microsoft.
-- **Safe**: only suspicious samples that don't contain personally identifiable information (PII) are submitted automatically. This is the default value for this setting.
+- **Safe**: only suspicious samples that don't contain personal data (PII) are submitted automatically. This is the default value for this setting.
 - **All**: all suspicious samples are submitted to Microsoft.
 
 |Description|Value|
@@ -414,6 +413,40 @@ Determines whether security intelligence updates are installed automatically:
 |**Key**|automaticDefinitionUpdateEnabled|
 |**Data type**|Boolean|
 |**Possible values**|true (default) <p> false|
+
+#### Duration for security intelligence updates due (in days)
+
+Determines the number of days after which the last installed security intelligence updates are considered outdated.
+
+|Section|Value|
+|---|---|
+|**Key**|definitionUpdateDue|
+|**Data type**|Integer|
+|**Possible values**|7 (default). Allowed values are integers between 1 and 30|
+
+#### Security intelligence update interval (in seconds)
+
+Specifies the time interval (in seconds) after which security intelligence updates will be checked.
+
+|Section|Value|
+|---|---|
+|**Key**|definitionUpdatesInterval|
+|**Data type**|Integer|
+|**Possible values**|28800 (default, 8 hours). Allowed values are integers between 60 (1 minute) and 86400 (24 hours)|
+|**Comments**|Setting the value too low may lead to repeated or unnecessary security intelligence update checks.|
+
+#### Proxy for Defender for Endpoint communication 
+
+Configure proxy for all Defender for Endpoint cloud communication. If not set, the system-wide proxy is used.
+
+|Section|Value|
+|---|---|
+|**Key**|proxy|
+|**Data type**|String|
+|**Comments**|Format: "http://proxy.server:port" or "https://proxy.server:port".|
+> [!IMPORTANT]
+> - Incorrect proxy configuration can disrupt MDE functionality.
+> - You can run "mdatp connectivity test" on endpoint to test mde connectivity after applying proxy settings.
 
 ### User interface preferences
 
@@ -510,7 +543,7 @@ Specifies the value of tag
 > [!IMPORTANT]
 >
 > - Only one value per tag type can be set.
-> - Type of tags are unique, and should not be repeated in the same configuration profile.
+> - Type of tags are unique, and shouldn't be repeated in the same configuration profile.
 
 #### Group identifier
 
@@ -523,9 +556,9 @@ EDR Group identifiers
 |**Data type**|String|
 |**Comments**|Group identifier|
 
-### Tamper Protection
+### Tamper protection
 
-Manage the preferences of the Tamper Protection component of Microsoft Defender for Endpoint on macOS.
+Manage the preferences of the tamper protection component of Microsoft Defender for Endpoint on macOS.
 
 |Section|Value|
 |---|---|
@@ -548,7 +581,7 @@ If Tamper Protection is enabled and if it is in the strict mode
 Possible values:
 
 - disabled - Tamper Protection is turned off, no prevention of attacks or reporting to the Cloud
-- audit - Tamper Protection reports tampering attempts to the Cloud only, but does not block them
+- audit - Tamper Protection reports tampering attempts to the Cloud only, but doesn't block them
 - block - Tamper Protection both blocks and reports attacks to the Cloud
 
 #### Exclusions
@@ -573,11 +606,11 @@ Exact path of the process executable.
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|path|
 |**Data type**|String|
-|**Comments**| In case of a shell script it will be the exact path to the interpreter binary, e.g. `/bin/zsh`. No wildcards allowed. |
+|**Comments**| If a shell script it's the exact path to the interpreter binary, for example, `/bin/zsh`. No wildcards allowed. |
 
-##### Team Id
+##### Team ID
 
-Apple's "Team Id" of the vendor.
+Apple's "Team ID" of the vendor.
 
 |Section|Value|
 |---|---|
@@ -586,9 +619,9 @@ Apple's "Team Id" of the vendor.
 |**Data type**|String|
 |**Comments**| For example, `UBF8T346G9` for Microsoft |
 
-##### Signing Id
+##### Signing ID
 
-Apple's "Signing Id" of the package.
+Apple's "Signing ID" of the package.
 
 |Section|Value|
 |---|---|
@@ -612,7 +645,7 @@ Used in combination with other parameters to identify the process.
 
 To get started, we recommend the following configuration for your enterprise to take advantage of all protection features that Microsoft Defender for Endpoint provides.
 
-The following configuration profile (or, in case of JAMF, a property list that could be uploaded into the custom settings configuration profile) will:
+The following configuration profile (or, if there's JAMF, a property list that could be uploaded into the custom settings configuration profile) will:
 
 - Enable real-time protection (RTP)
 - Specify how the following threat types are handled:
@@ -681,7 +714,7 @@ The following configuration profile (or, in case of JAMF, a property list that c
         <key>PayloadOrganization</key>
         <string>Microsoft</string>
         <key>PayloadIdentifier</key>
-        <string>
+        <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
         <key>PayloadDisplayName</key>
         <string>Microsoft Defender for Endpoint settings</string>
         <key>PayloadDescription</key>
@@ -704,7 +737,7 @@ The following configuration profile (or, in case of JAMF, a property list that c
                 <key>PayloadOrganization</key>
                 <string>Microsoft</string>
                 <key>PayloadIdentifier</key>
-                <string>
+                <string/>
                 <key>PayloadDisplayName</key>
                 <string>Microsoft Defender for Endpoint configuration settings</string>
                 <key>PayloadDescription</key>
@@ -741,6 +774,8 @@ The following configuration profile (or, in case of JAMF, a property list that c
                     <true/>
                     <key>automaticDefinitionUpdateEnabled</key>
                     <true/>
+                    <key>definitionUpdateDue</key>
+                    <integer>7</integer>
                 </dict>
                 <key>tamperProtection</key>
                 <dict>
@@ -854,6 +889,8 @@ The following templates contain entries for all settings described in this docum
         <true/>
         <key>cloudBlockLevel</key>
         <string>normal</string>
+        <key>definitionUpdateDue</key>
+        <integer>7</integer>
     </dict>
     <key>edr</key>
     <dict>
@@ -956,6 +993,8 @@ The following templates contain entries for all settings described in this docum
                 <dict>
                     <key>enforcementLevel</key>
                     <string>real_time</string>
+                    <key>behaviorMonitoring</key>
+                    <string>enabled</string>
                     <key>scanAfterDefinitionUpdate</key>
                     <true/>
                     <key>scanArchives</key>
@@ -1042,6 +1081,8 @@ The following templates contain entries for all settings described in this docum
                     <true/>
                     <key>cloudBlockLevel</key>
                     <string>normal</string>
+                    <key>definitionUpdateDue</key>
+                    <integer>7</integer>
                 </dict>
                 <key>edr</key>
                 <dict>
@@ -1119,7 +1160,7 @@ Once you've built the configuration profile for your enterprise, you can deploy 
 From the JAMF console, open **Computers** \> **Configuration Profiles**, navigate to the configuration profile you'd like to use, then select **Custom Settings**. Create an entry with `com.microsoft.wdav` as the preference domain and upload the *.plist* produced earlier.
 
 > [!CAUTION]
-> You must enter the correct preference domain (`com.microsoft.wdav`); otherwise, the preferences will not be recognized by Microsoft Defender for Endpoint.
+> You must enter the correct preference domain (`com.microsoft.wdav`); otherwise, the preferences won't be recognized by Microsoft Defender for Endpoint.
 
 ### Intune deployment
 
@@ -1138,10 +1179,11 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 7. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
 
 > [!CAUTION]
-> You must enter the correct custom configuration profile name; otherwise, these preferences will not be recognized by Microsoft Defender for Endpoint.
+> You must enter the correct custom configuration profile name; otherwise, these preferences won't be recognized by Microsoft Defender for Endpoint.
 
 ## Resources
 
 - [Configuration Profile Reference (Apple developer documentation)](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

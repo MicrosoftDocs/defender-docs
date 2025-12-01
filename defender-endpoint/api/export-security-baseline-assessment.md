@@ -1,11 +1,11 @@
----
+﻿---
 title: Security baseline assessment methods and properties per device
 description: Provides information about the security baselines APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,21 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 05/02/2022
+ms.date: 11/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
+
 ---
 
 # Export security baselines assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 
@@ -160,25 +155,23 @@ GET /api/machines/BaselineComplianceAssessmentExport
 
 ### 2.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours).
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
 
 ### 2.5 Properties (via files)
 
 > [!NOTE]
-> The files are gzip compressed & in multiline Json format.
->
-> The download URLs are only valid for 3 hours; otherwise you can use the parameter.
->
-> To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
->
-> Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
+> 
+> - The files are GZIP compressed & in multiline JSON format.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+> - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
+> - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
 Property (ID)|Data type|Description
 :---|:---|:---
 |Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.
 |GeneratedTime|String|The time that the export was generated.
 
-## 2.6 Example
+## 2.6 Examples
 
 ### 2.6.1 Request example
 
@@ -204,4 +197,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAsse
 
 - [Get security baselines assessment profiles](get-security-baselines-assessment-profiles.md)
 - [Get security baselines assessment configurations](get-security-baselines-assessment-configurations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

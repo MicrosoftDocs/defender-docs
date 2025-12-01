@@ -1,11 +1,11 @@
----
+﻿---
 title: Stream Microsoft Defender for Endpoint events to Azure Event Hubs
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Event Hubs.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,21 +16,20 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 06/28/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
 
+---
 # Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Azure Event Hubs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 > [!NOTE]
 > For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api).
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
+
 
 ## Before you begin
 
@@ -118,3 +117,4 @@ To get the data types for event properties, do the following:
 - [Troubleshoot connectivity issues - Azure Event Hubs](/azure/event-hubs/troubleshooting-guide)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

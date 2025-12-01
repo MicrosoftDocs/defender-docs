@@ -20,7 +20,7 @@ ms.date: 01/04/2023
 
 # Introduction
 
-Historically, allowlists enabled Exchange Online Protection to ignore the signals indicating an email is malicious. It's commonplace for vendors to request IPs, domains, and sender addresses be overridden unnecessarily. Attackers are known to take advantage of this mistake and it's a pressing security loophole to have unnecessary allowlist entries. This step-by-step guide walks you through using advanced hunting to identify these misconfigured overrides and remove them, so you can increase your organization's security posture.
+Historically, allowlists enabled Microsoft 365 organizations with cloud mailboxes to ignore the signals indicating an email is malicious. It's commonplace for vendors to request IPs, domains, and sender addresses be overridden unnecessarily. Attackers are known to take advantage of this mistake and it's a pressing security loophole to have unnecessary allowlist entries. This step-by-step guide walks you through using advanced hunting to identify these misconfigured overrides and remove them, so you can increase your organization's security posture.
 
 ## What you need
 
@@ -99,4 +99,4 @@ Hopefully you found this article to be useful, with some basic queries to get yo
 
 Learn more about advanced hunting: [Overview - Advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-Learn more about authentication: [Email Authentication in Exchange Online Protection](../email-authentication-about.md).
+Learn more about authentication: [Email authentication](../email-authentication-about.md).

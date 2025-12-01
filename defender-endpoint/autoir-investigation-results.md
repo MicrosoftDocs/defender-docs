@@ -1,41 +1,37 @@
----
+﻿---
 title: View the details and results of an automated investigation
 description: During and after an automated investigation, you can view the results and key findings
 search.appverid: met150
 f1.keywords:
 - NOCSH
-author: denisebmsft
-ms.author: deniseb
+author: KesemSharabi
+ms.author: kesharab
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 02/21/2024
+ms.date: 11/30/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
 # View the details and results of an automated investigation
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 With Microsoft Defender for Endpoint, when an [automated investigation](automated-investigations.md) runs, details about that investigation are available both during and after the automated investigation process. If you have the necessary permissions, you can view those details in an investigation details view. The investigation details view provides you with up-to-date status and the ability to approve any pending actions.
 
-## (NEW!) Unified investigation page
+## Unified investigation page
 
-The investigation page has recently been updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)  and [Microsoft Defender for Office 365](/defender-office-365/mdo-about).
-
-> [!TIP]
-> To learn more about what's changing, see [(NEW!) Unified investigation page](/microsoft-365/security/mtp/mtp-autoir-results).
+The unified investigation page includes information across your devices, email, and collaboration content. It defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). For more information, see [Details and results of an automated investigation](/defender-xdr/m365d-autoir-results).
 
 ## Open the investigation details view
 
@@ -69,12 +65,10 @@ Use an incident details page to view detailed information about an incident, inc
 
 ## Investigation details
 
-Use the investigation details view to see past, current, and pending activity pertaining to an investigation. The investigation details view resembles the following image:
-
-In the Investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
+Use the investigation details view to see past, current, and pending activity pertaining to an investigation. In the investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
 
 > [!NOTE]
-> - The specific tabs you see in an investigation details page depends on what your subscription includes. For example, if your subscription does not include Microsoft Defender for Office 365 Plan 2, you won't see a **Mailboxes** tab.
+> - The specific tabs you see in an investigation details page depends on what your subscription includes. For example, if your subscription doesn't include Microsoft Defender for Office 365 Plan 2, you won't see a **Mailboxes** tab.
 >
 > - Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
@@ -83,8 +77,8 @@ In the Investigation details view, you can see information on the **Investigatio
 |**Investigation graph**|Provides a visual representation of the investigation. Depicts entities and lists threats found, along with alerts and whether any actions are awaiting approval. <p> You can select an item on the graph to view more details. For example, selecting the **Evidence** icon takes you to the **Evidence** tab, where you can see detected entities and their verdicts.|
 |**Alerts**|Lists alerts associated with the investigation. Alerts can come from threat protection features on a user's device, in Office apps, Defender for Cloud Apps, and other Microsoft Defender XDR features.|
 |**Devices**|Lists devices included in the investigation along with their remediation level. (Remediation levels correspond to the [automation level for device groups](automation-levels.md).)|
-|**Mailboxes**|Lists mailboxes that are impacted by detected threats.|
-|**Users**|Lists user accounts that are impacted by detected threats.|
+|**Mailboxes**|Lists mailboxes that are affected by detected threats.|
+|**Users**|Lists user accounts that are affected by detected threats.|
 |**Evidence**|Lists pieces of evidence raised by alerts/investigations. Includes verdicts (*Malicious*, *Suspicious*, or *No threats found*) and remediation status.|
 |**Entities**|Provides details about each analyzed entity, including a verdict for each entity type (*Malicious*, *Suspicious*, or *No threats found*).|
 |**Log**|Provides a chronological, detailed view of all the investigation actions taken after an alert was triggered.|
@@ -99,7 +93,7 @@ The following table lists investigation states and what they indicate.
 |---------|---------|
 |Benign   | Artifacts were investigated and a determination was made that no threats were found.|
 |PendingResource     | An automated investigation is paused because either a remediation action is pending approval, or the device on which an artifact was found is temporarily unavailable.|
-|UnsupportedAlertType     | An automated investigation is not available for this type of alert. Further investigation can be done manually, by using advanced hunting. |
+|UnsupportedAlertType     | An automated investigation isn't available for this type of alert. Further investigation can be done manually, by using advanced hunting. |
 |Failed     | At least one investigation analyzer ran into a problem where it couldn't complete the investigation. If an investigation fails after remediation actions were approved, the remediation actions might still have succeeded.|
 |Successfully remediated| An automated investigation completed, and all remediation actions were completed or approved.|
 
@@ -147,3 +141,4 @@ To provide more context about how investigation states show up, the following ta
 - [Review remediation actions following an automated investigation](manage-auto-investigation.md)
 - [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -4,10 +4,10 @@ description: Learn how to build queries in guided mode by combining different av
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,16 +17,17 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 10/18/2024
+ms.date: 03/28/2025
 ---
 
 # Build hunting queries using guided mode in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -37,7 +38,7 @@ The analyst can choose which data set to look at and which filters and condition
 
 You can watch this video to get an overview of guided hunting:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW12cm6]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=782ffe97-7528-4bbc-b13a-2fd209dd6d87]
 
 ## Open Query in builder
 

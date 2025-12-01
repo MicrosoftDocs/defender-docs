@@ -1,40 +1,37 @@
----
+﻿---
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+ms.reviewer: joshbregman
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/05/2024
----
+ms.date: 06/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Individuals
 
+---
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 This article provides some general steps that can be used to narrow down performance issues related to Defender for Endpoint on macOS.
 
 Depending on the applications that you're running and your device characteristics, you might experience suboptimal performance when running Microsoft Defender for Endpoint on macOS. In particular, applications or system processes that access many resources over a short timespan can lead to performance issues in Defender for Endpoint on macOS.
 
 > [!WARNING]
-> Before you perform the procedures described in this article, make sure that other security products are not currently running on the device. Multiple security products can conflict and impact the host performance.
+> Before you perform the procedures described in this article, make sure that other security products aren't currently running on the device. Multiple security products can conflict and affect the host performance.
 
 ## Troubleshoot performance issues using real-time protection statistics
 
@@ -47,10 +44,10 @@ Real-time protection (RTP) is a feature of Defender for Endpoint on macOS that c
 Prerequisites:
 
 - Microsoft Defender for Endpoint version (Platform Update) 100.90.70 or newer
-- If you have [Tamper protection](tamperprotection-macos.md) turned on in block mode, use [Troubleshooting mode](mac-troubleshoot-mode.md) to capture real-time-protection-statistics. Otherwise, you will get null results. 
+- If you have [Tamper protection](tamperprotection-macos.md) turned on in block mode, use [Troubleshooting mode](mac-troubleshoot-mode.md) to capture real-time-protection-statistics. Otherwise, you get null results. 
 
 > [!TIP]
-> As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.
+> As a general best practice, it's recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.
 
 To troubleshoot and mitigate performance issues, follow these steps:
 
@@ -98,8 +95,8 @@ To troubleshoot and mitigate performance issues, follow these steps:
    ```
    
    > [!NOTE]
-   > Using `--output json` (note the double dash) ensures that the output format is ready for parsing. The output of this command will show all processes and their associated scan activity. 
-6. On your Mac system, download the sample Python parser `high_cpu_parser.py` using the command:
+   > Using `--output json` (note the double dash) ensures that the output format is ready for parsing. The output of this command shows all processes and their associated scan activity. 
+6. On your macOS system, download the sample Python parser `high_cpu_parser.py` using the command:
 
       ```bash
    curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/linux/diagnostic/high_cpu_parser.py
@@ -145,20 +142,25 @@ To troubleshoot and mitigate performance issues, follow these steps:
    125  CrashPlanService 164
    ```
 
-8. To improve the performance of Defender for Endpoint on Mac, locate the one with the highest number under the **Total files scanned** row, and then add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on macOS](mac-exclusions.md).
+8. To improve the performance of Defender for Endpoint on macOS, locate the one with the highest number under the **Total files scanned** row, and then add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on macOS](mac-exclusions.md).
 
    > [!NOTE]
-   > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off are not counted. Additionally, only events which triggered scans are counted.
+   > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off aren't counted. Additionally, only events which triggered scans are counted.
 
 9. Configure Microsoft Defender for Endpoint on macOS with exclusions for the processes or disk locations that contribute to the performance issues and re-enable real-time protection. 
 
    See [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md).
 
+## Troubleshoot performance issues from Behavior Monitoring
+
+See the guide on our support page for [Behavior Monitoring](behavior-monitor-macos.md).
+
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
 The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on macOS.
 
-To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](run-analyzer-macos-linux.md).
+To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](overview-client-analyzer.md).
 
 > [!NOTE]
-> The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited    to) IP addresses, PC names that will help troubleshoot issues you may be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+> The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited    to) IP addresses, PC names that help troubleshoot issues you might be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+

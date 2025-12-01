@@ -1,14 +1,14 @@
----
+﻿---
 title: Turn on cloud protection in Microsoft Defender Antivirus
 description: Turn on cloud protection to benefit from fast and advanced protection features.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: denisebmsft
-ms.author: deniseb
-ms.date: 04/03/2024
+author: KesemSharabi
+ms.author: kesharab
+ms.date: 10/20/2025
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: asr
 ms.collection: 
@@ -16,23 +16,25 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Turn on cloud protection in Microsoft Defender Antivirus
 
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-**Platforms**
-- Windows
 
 [Cloud protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) delivers accurate, real-time, and intelligent protection. Cloud protection should be enabled by default. 
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep cloud protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+
+## Prerequistes
+
+### Supported operating systems
+
+- Windows
 
 ## Why cloud protection should be turned on
 
@@ -52,17 +54,22 @@ The following table summarizes the features and capabilities that depend on clou
 | **[Emergency signature updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates)**. When malicious content is detected, emergency signature updates and fixes are deployed. Rather than wait for the next regular update, you can receive these fixes and updates within minutes. <br/><br/>To learn more about updates, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) |    
 | **[Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md)**. EDR in block mode provides extra protection when Microsoft Defender Antivirus isn't the primary antivirus product on a device. EDR in block mode remediates artifacts found during EDR-generated scans that the non-Microsoft, primary antivirus solution might have missed. When enabled for devices with Microsoft Defender Antivirus as the primary antivirus solution, EDR in block mode provides the added benefit of automatically remediating artifacts identified during EDR-generated scans. <br/><br/>To learn more, see [EDR in block mode](edr-in-block-mode.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) | 
 | **[Attack surface reduction rules](attack-surface-reduction.md)**. ASR rules are intelligent rules that you can configure to help stop malware. Certain rules require cloud protection to be turned on in order to function fully. These rules include: <br/>- Block executable files from running unless they meet a prevalence, age, or trusted list criteria <br/>- Use advanced protection against ransomware <br/>- Block untrusted programs from running from removable drives <br/><br/>To learn more, see [Use attack surface reduction rules to prevent malware infection](attack-surface-reduction.md). | Microsoft Defender for Endpoint Plan 1 or Plan 2 (Standalone or included in a plan like Microsoft 365 E3 or E5) |   
-| **[Indicators of compromise (IoCs)](manage-indicators.md)**. In Defender for Endpoint, IoCs can be configured to define the detection, prevention, and exclusion of entities. Examples: <br/>"Allow" indicators can be used to define exceptions to antivirus scans and remediation actions.<br/>"Alert and block" indicators can be used to prevent files or processes from executing. <br/><br/>To learn more, see [Create indicators](manage-indicators.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) | 
+| **[Indicators of compromise (IoCs)](indicators-overview.md)**. In Defender for Endpoint, IoCs can be configured to define the detection, prevention, and exclusion of entities. Examples: <br/>"Allow" indicators can be used to define exceptions to antivirus scans and remediation actions.<br/>"Alert and block" indicators can be used to prevent files or processes from executing. <br/><br/>To learn more, see [Create indicators](indicators-overview.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) | 
 
 
 ## Methods to configure cloud protection
 
 You can turn Microsoft Defender Antivirus cloud protection on or off by using one of several methods, such as:
 
-- [Microsoft Intune](#use-microsoft-intune-to-turn-on-cloud-protection)  
-- [Group Policy](#use-group-policy-to-turn-on-cloud-protection)
-- [PowerShell cmdlets](#use-powershell-cmdlets-to-turn-on-cloud-protection)
-- [Windows Management Instruction](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection) (WMI)
+- [Turn on cloud protection in Microsoft Defender Antivirus](#turn-on-cloud-protection-in-microsoft-defender-antivirus)
+  - [Why cloud protection should be turned on](#why-cloud-protection-should-be-turned-on)
+  - [Methods to configure cloud protection](#methods-to-configure-cloud-protection)
+  - [Use Microsoft Intune to turn on cloud protection](#use-microsoft-intune-to-turn-on-cloud-protection)
+  - [Use Group Policy to turn on cloud protection](#use-group-policy-to-turn-on-cloud-protection)
+  - [Use PowerShell cmdlets to turn on cloud protection](#use-powershell-cmdlets-to-turn-on-cloud-protection)
+  - [Use Windows Management Instruction (WMI) to turn on cloud protection](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection)
+  - [Turn on cloud protection on individual clients with the Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app)
+  - [See also](#see-also)
 
 You can also use [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection). And, you can turn cloud protection on or off on individual endpoints by using the [Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app). 
 
@@ -81,7 +88,7 @@ For more information about the specific network-connectivity requirements to ens
 
    | Task  | Steps  |
    |---------|---------|
-   | Create a new policy     | 1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**. <br/><br/>2. For **Profile**, select **Microsoft Defender Antivirus**.<br/><br/>3. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.<br/><br/>4. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**. Then choose **Next**. <br/><br/>5. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>6. On the **Scope tags** step, if your organization is using [scope tags](/mem/intune/fundamentals/scope-tags), select the tags you want to use, and then choose **Next**.<br/><br/>7. On the **Assignments** step, select the groups, users, or devices that you want to apply this policy to, and then choose **Next**.<br/><br/>8. On the **Review + create** step, review the settings for your policy, and then choose **Create**.          |
+   | Create a new policy     | 1. For **Platform**, select **Windows**. <br/><br/>2. For **Profile**, select **Microsoft Defender Antivirus**.<br/><br/>3. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.<br/><br/>4. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>5. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>6. On the **Scope tags** step, if your organization is using [scope tags](/mem/intune/fundamentals/scope-tags), select the tags you want to use, and then choose **Next**.<br/><br/>7. On the **Assignments** step, select the groups, users, or devices that you want to apply this policy to, and then choose **Next**.<br/><br/>8. On the **Review + create** step, review the settings for your policy, and then choose **Create**.          |
    | Edit an existing policy     | 1. Select the policy that you want to edit.<br/><br/>2. Under **Configuration settings**, choose **Edit**.<br/><br/>3. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>4. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>5. Select **Review + save**.        |
 
 > [!TIP]
@@ -181,3 +188,4 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

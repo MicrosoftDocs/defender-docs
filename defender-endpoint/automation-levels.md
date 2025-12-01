@@ -1,30 +1,28 @@
----
+﻿---
 title: Automation levels in automated investigation and remediation
 description: Get an overview of automation levels and how they work in Microsoft Defender for Endpoint
-author: denisebmsft
+author: KesemSharabi
 ms.service: defender-endpoint
 ms.subservice: edr
-ms.author: deniseb
+ms.author: kesharab
 ms.localizationpriority: medium
-ms.date: 07/27/2023
-manager: deniseb
+ms.date: 04/04/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.custom: AIR
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Automation levels in automated investigation and remediation capabilities
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 Automated investigation and remediation (AIR) capabilities in Microsoft Defender for Business are preconfigured and aren't configurable. In Microsoft Defender for Endpoint, you can configure AIR to one of several levels of automation. Your automation level affects whether remediation actions following AIR investigations are taken automatically or only upon approval.
 
@@ -43,8 +41,8 @@ Automated investigation and remediation (AIR) capabilities in Microsoft Defender
 |Automation level|Description|
 |---|---|
 |**Full - remediate threats automatically** <br> (also referred to as *full automation*)|With full automation, remediation actions are performed automatically on entities that are considered to be malicious. All remediation actions that are taken can be viewed in the [Action Center](auto-investigation-action-center.md) on the **History** tab. If necessary, a remediation action can be undone. <p> ***Full automation is recommended** and is selected by default for tenants with Defender for Endpoint that were created on or after August 16, 2020, with no device groups defined yet.*<p>*Full automation is set by default in Defender for Business.*|
-|**Semi - require approval for all folders** <br> (also referred to as *semi-automation*)|With this level of semi-automation, approval is required for remediation actions on all files. Such pending actions can be viewed and approved in the [Action Center](auto-investigation-action-center.md), on the **Pending** tab. Pending actions time out after 7 days. If an action times out, the behavior is the same as if the action is rejected. <p> *This level of semi-automation is selected by default for tenants that were created before August 16, 2020 with Microsoft Defender for Endpoint, with no device groups defined.*|
-|**Semi - require approval for core folders remediation** <br> (also a type of *semi-automation*)|With this level of semi-automation, approval is required for any remediation actions needed on files or executables that are in core folders. Core folders include operating system directories, such as the **Windows** (`\windows\*`). <p> Remediation actions can be taken automatically on files or executables that are in other (non-core) folders. <p> Pending actions for files or executables in core folders can be viewed and approved in the [Action Center](auto-investigation-action-center.md), on the **Pending** tab. <p> Actions that were taken on files or executables in other folders can be viewed in the [Action Center](auto-investigation-action-center.md), on the **History** tab.|
+|**Semi - require approval for all folders** <br> (also referred to as *semi-automation*)|With this level of semi-automation, approval is required for remediation actions on all files. Such pending actions can be viewed and approved in the [Action Center](auto-investigation-action-center.md), on the **Pending** tab. Pending actions time out after seven days. If an action times out, the behavior is the same as if the action is rejected. <p> *This level of semi-automation is selected by default for tenants that were created before August 16, 2020 with Microsoft Defender for Endpoint, with no device groups defined.*|
+|**Semi - require approval for core folders remediation** <br> (also a type of *semi-automation*)|With this level of semi-automation, approval is required for any remediation actions needed on files or executables that are in core folders. Core folders include operating system directories, such as the **Windows** (`\windows\*`). <p> Remediation actions can be taken automatically on files or executables that are in other (noncore) folders. <p> Pending actions for files or executables in core folders can be viewed and approved in the [Action Center](auto-investigation-action-center.md), on the **Pending** tab. <p> Actions that were taken on files or executables in other folders can be viewed in the [Action Center](auto-investigation-action-center.md), on the **History** tab.|
 |**Semi - require approval for non-temp folders remediation** <br> (also a type of *semi-automation*)|With this level of semi-automation, approval is required for any remediation actions needed on files or executables that aren't* in temporary folders. <p> Temporary folders can include the following examples: <ul><li>`\users\*\appdata\local\temp\*`</li><li>`\documents and settings\*\local settings\temp\*`</li><li>`\documents and settings\*\local settings\temporary\*`</li><li>`\windows\temp\*`</li><li>`\users\*\downloads\*`</li><li>`\program files\`</li><li>`\program files (x86)\*`</li><li>`\documents and settings\*\users\*`</li></ul> <p> Remediation actions can be taken automatically on files or executables that are in temporary folders. <p> Pending actions for files or executables that aren't in temporary folders can be viewed and approved in the [Action Center](auto-investigation-action-center.md), on the **Pending** tab. <p> Actions that were taken on files or executables in temporary folders can be viewed and approved in the [Action Center](auto-investigation-action-center.md), on the **History** tab.|
 |**No automated response** <br> (also referred to as *no automation*)|With no automation, automated investigation doesn't run on your organization's devices. As a result, no remediation actions are taken or pending as a result of automated investigation. However, other threat protection features, such as [protection from potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus), can be in effect, depending on how your antivirus and next-generation protection features are configured. <p> ***Using the *no automation* option is not recommended**, because it reduces the security posture of your organization's devices. [Consider setting up your automation level to full automation (or at least semi-automation)](machine-groups.md).|
 
@@ -68,3 +66,4 @@ Automated investigation and remediation (AIR) capabilities in Microsoft Defender
 - [Configure automated investigation and remediation capabilities in Defender for Endpoint](configure-automated-investigations-remediation.md)
 - [Visit the Action Center](auto-investigation-action-center.md#the-unified-action-center)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

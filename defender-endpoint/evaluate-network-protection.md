@@ -1,31 +1,28 @@
----
+﻿---
 title: Evaluate network protection
 description: See how network protection works by testing common scenarios that it protects against.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.topic: how-to
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/28/2024
----
+ms.date: 04/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Evaluate network protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 [Network protection](network-protection.md) helps prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 
@@ -89,3 +86,4 @@ If network protection fails to detect, make sure that the following prerequisite
 - [Troubleshoot network protection](troubleshoot-np.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
