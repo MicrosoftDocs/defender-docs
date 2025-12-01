@@ -172,6 +172,6 @@ You may need to extract the following types of identifiers from the Defender por
 
 ### How do I find Environment IDs for Cloud Scopes?
 
-1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud Infrastructure**.
+1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud**.
 1. Check the scope filter dropdown - the environment filter lists all environment identifiers.
 1. Select a scope and then choose the environment filter to see detailed information including all environment IDs within that scope.

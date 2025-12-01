@@ -85,7 +85,7 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
+1. Navigate to **Exposure Management** > **Recommendations** > **Cloud** tab.
 
    :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
 
@@ -265,7 +265,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 ::: zone pivot="defender-portal"
 
-In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud assets** tab, you can explore detailed information and take action.
+In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud** tab, you can explore detailed information and take action.
 
 Apply filters and filter sets such as **Exposed asset**, **Asset risk factors**, **Environment**, **Workload**, **Recommendation maturity** and others.
 
@@ -277,7 +277,7 @@ There are separate views for issue types:
 - **Vulnerabilities**
 - **Exposed Secrets**.
 
-For each view you will view the **Cloud secure score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
+For each view you will view the **Cloud Secure Score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
 
 > [!NOTE]
 > In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.

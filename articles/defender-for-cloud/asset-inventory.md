@@ -264,7 +264,7 @@ Integrated risk indicators provide comprehensive asset context:
 ### Accessing the cloud inventory
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com)
-1. Select **Assets** > **Cloud Infrastructure** from the main navigation
+1. Select **Assets** > **Cloud** from the main navigation
 1. Use workload-specific tabs for focused views:
    - **All Assets**: Comprehensive view across all workload types
    - **VMs**: Virtual machine-specific inventory and insights
@@ -405,8 +405,8 @@ Some assets may appear outside defined cloud scopes:
 
 ## Review the inventory
 
-1. In the Microsoft Defender portal, navigate to **Assets** > **Cloud Infrastructure**.
-1. Review the unified cloud infrastructure assets overview:
+1. In the Microsoft Defender portal, navigate to **Assets** > **Cloud**.
+1. Review the unified cloud assets overview:
     - **Total resources** across all connected cloud environments
     - **Security posture summary** showing healthy vs. unhealthy resources
     - **Coverage metrics** indicating Defender for Cloud protection status

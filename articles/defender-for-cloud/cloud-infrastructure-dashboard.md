@@ -39,7 +39,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 
 You can access the Cloud Overview dashboard from the left navigation bar in the Microsoft Defender portal:
 
-1. Navigate to **Cloud infrastructure** > **Overview**
+1. Navigate to **Cloud security** > **Overview**
 
 ## Top controls
 
@@ -112,7 +112,7 @@ Each tile acts as a mini dashboard, showing top issues, protection coverage, and
 ## Next steps
 
 - [Identify and remediate attack paths](how-to-manage-attack-path.md?pivots=defender-portal)
-- [Review cloud infrastructure assets](asset-inventory.md?pivots=defender-portal)
+- [Review cloud assets](asset-inventory.md?pivots=defender-portal)
 - [Configure cloud scopes for filtering](cloud-scopes-unified-rbac.md?pivots=defender-portal)
 
 ::: zone-end
