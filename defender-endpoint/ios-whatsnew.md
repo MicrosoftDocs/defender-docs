@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 11/25/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -21,9 +21,11 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # What's new in Microsoft Defender for Endpoint on iOS
 
-
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This page is updated frequently with the latest updates in Defender endpoint security for iOS devices. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/ios-rss`
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
