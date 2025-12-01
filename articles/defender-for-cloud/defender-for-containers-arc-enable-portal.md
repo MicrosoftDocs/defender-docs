@@ -186,7 +186,7 @@ After deployment, verify the sensor is running:
 kubectl get pods -n kube-system -l app=microsoft-defender
 
 # Check DaemonSet status
-kubectl get daemonset -n kube-system microsoft-defender-sensor
+kubectl get ds microsoft-defender-collector-ds -n kube-system
 ```
 
 All nodes should have a running sensor pod within 5-10 minutes.

@@ -1,10 +1,10 @@
 ---
-title: Configure Defender for Containers sensor deployed with Helm
-description: Learn how to configure and manage the Microsoft Defender for Containers sensor after deployment with Helm, including security rules, upgrades, and troubleshooting.
-author: dcurwin
+title: Install Defender for Containers sensor Using Helm
+description: Learn how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters using Helm, including prerequisites, scripts, and troubleshooting steps.
+author: Elazark
 ms.topic: how-to
 ms.date: 06/16/2025
-ms.author: dacurwin
+ms.author: elkrieger
 ai-usage: ai-assisted
 ---
 

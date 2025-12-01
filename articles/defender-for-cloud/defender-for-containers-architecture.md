@@ -1,8 +1,8 @@
 ---
 title: Container security architecture
 description: Learn about the architecture of Microsoft Defender for Containers for the Azure, AWS, GCP, and on-premises container platform
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: concept-article
 ms.date: 07/15/2025
 # customer intent: As a developer, I want to understand the container security architecture of Microsoft Defender for Containers so that I can implement it effectively.
