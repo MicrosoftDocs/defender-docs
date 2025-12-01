@@ -345,6 +345,10 @@ Example:
    > Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
    > The rule ID shouldn't have any leading or trailing spaces.
 
+> [!NOTE]
+> Microsoft rebranded Windows Defender Antivirus to Microsoft Defender Antivirus beginning with Windows 10 version 20H1.
+> Group Policy paths on earlier Windows versions may still reference Windows Defender Antivirus, while newer builds show Microsoft Defender Antivirus. Both names refer to the same policy location.
+
 ### PowerShell
 
 > [!WARNING]
