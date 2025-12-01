@@ -92,7 +92,7 @@ Setting up Security Private Link involves multiple roles to ensure secure connec
 ## DNS changes for private endpoints
 
 > [!NOTE]
-> For details about how to configure your DNS settings for private endpoints, see [Azure Private Endpoint DNS integration](../../private-link/private-endpoint-dns-integration.md).
+> For details about how to configure your DNS settings for private endpoints, see [Azure Private Endpoint DNS integration](/azure/private-link/private-endpoint-dns).
 
 When you create a private endpoint, by default, a [private DNS zone](/azure/dns/private-dns-overview) is provisioned that corresponds to the Microsoft Defender private link subdomain `*.defender.microsoft.com`.
 
