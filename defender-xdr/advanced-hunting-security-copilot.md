@@ -36,10 +36,10 @@ The following table describes these capabilities, where they're best used, and t
 
 | Capability | Description |Output |Experience |
 | ------------- | ------------- |------------- |------------- |
-| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) (preview) | AI-powered conversational threat hunting experience that's best used for complete investigations, complex multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
+| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) (preview) | AI-powered conversational threat hunting agent that's best used for complete investigations, multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
 | [Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
 
-These features empower you to hunt threats faster, more accurately, and with greater confidence without needing to write complex KQL queries.
+These features empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
 
 ## Get access
 Users with access to Security Copilot can use these capabilities in advanced hunting.

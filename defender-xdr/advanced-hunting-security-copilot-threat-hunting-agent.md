@@ -37,7 +37,7 @@ The Threat Hunting Agent goes beyond query generation by delivering a complete, 
 ## Key capabilities
 - **Natural language question to natural language answer.** Ask any data-related question in natural language (for example, *Which devices communicated with IPs in France in the last 24 hours?*) and receive direct conversational answers backed by KQL queries and tabular results. 
 
-- **Conversational flow.** The agent maintains context throughout your hunting session and supports follow-up questions that build on previous queries, and the agent understands the session context.
+- **Conversational flow.** The agent keeps track of context throughout your hunting session, enabling you to ask follow-up questions that build on previous ones and ensuring continuity across the entire session.
 
 - **Observations.** The agent provides natural language observations and charts (pie, timeline, or vertical bar) to simplify result analysis. It selects relevant chart fields automatically, but you can change the chart type or grouping afterward.
 
@@ -59,10 +59,8 @@ To start using the Threat Hunting Agent, follow these steps:
 
     You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
 
-1.	Start your hunting session by doing one of the following:
-    - Typing a question in natural language in the prompt bar and pressing :::image type="icon" source="./media/advanced-hunting-security-copilot/Send.png" border="false"::: or Enter.
-    - Selecting a suggested prompt
-    - Using the Threat Hunting Agent
+1.	Start your hunting session by selecting a suggested prompt or typing a question in natural language in the prompt bar and pressing :::image type="icon" source="./media/advanced-hunting-security-copilot/Send.png" border="false"::: or Enter.
+
 
 **Sample questions you can ask the agent:**
   - Give me the list of users who sent more than 100 emails in the last 30 days.
