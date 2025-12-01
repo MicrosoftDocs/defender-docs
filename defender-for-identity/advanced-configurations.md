@@ -1,5 +1,5 @@
 ---
-title: Configure advandced settings | Microsoft Defender for Identity
+title: Configure advanced settings | Microsoft Defender for Identity
 description: This article describes how to configure advanced settings of deploying a Microsoft Defender for Identity sensor.
 ms.date: 11/05/2025
 ms.topic: how-to
