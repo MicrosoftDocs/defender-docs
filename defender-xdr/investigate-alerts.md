@@ -162,7 +162,7 @@ To configure alert service settings in Microsoft Defender XDR:
   :::image type="content" source="/defender/media/investigate-alerts/alerts-ss-entra-alert.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="/defender/media/investigate-alerts/alerts-ss-entra-alert.png":::
 
   > [!IMPORTANT]
-  > Starting December 11, 2025, Microsoft Defender XDR is rolling out ne risk-based enhanced configuration options for identity-related alerts from Entra ID Protection. These updates give you more granular control over risk-based alerting. The new default setting is **High-risk detections only**. Change the default setting to **High + Medium** or **All detections** based on your organization’s needs.
+  > Starting December 11, 2025, Microsoft Defender XDR is rolling out risk-based enhanced configuration options for identity-related alerts from Entra ID Protection. These updates give you more granular control over risk-based alerting. The new default setting is **High-risk detections only**. Change the default setting to **High + Medium** or **All detections** based on your organization’s needs.
 
 
 By default, only the most relevant alerts for the security operation center are enabled. If you want to get all Microsoft Entra IP risk detections, you can change it in the **Alert service settings** section.
