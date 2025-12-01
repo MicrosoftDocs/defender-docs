@@ -117,7 +117,7 @@ After receiving a response, you can continue your hunting session in several way
 - **Use advanced hunting features:** Save your query, export results, create a detection rule, or use any of the other advanced hunting features for the KQL query displayed in the editor and the generated results.
 
 ## Start a new session
-To start a new hunting session, select the **+** button at the top of the Copilot side pane.
+To start a new hunting session, select the **New chat (+)** icon at the top of the Copilot side pane.
 
 >[!NOTE]
 > Starting a new session deletes all chat history, which isn't saved.
