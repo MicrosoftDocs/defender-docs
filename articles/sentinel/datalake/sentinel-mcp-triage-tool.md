@@ -32,7 +32,7 @@ To access the triage tool collection, you must have the following prerequisites:
 
 ## Add the triage collection
 
-To add the data exploration collection, you must first set up add Microsoft Sentinel's unified MCP server interface. For more information, see [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md).
+To add the data exploration collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible AI-powered code editors and agent-building platforms listed in the **Prerequisites** section.
 
 The triage collection is hosted at the following URL:
 
