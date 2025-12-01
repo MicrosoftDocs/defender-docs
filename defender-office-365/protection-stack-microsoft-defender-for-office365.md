@@ -4,8 +4,8 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
-ms.date: 02/24/2025
+manager: bagol
+ms.date: 07/07/2025
 ms.reviewer: gigarrub
 audience: ITPro
 ms.topic: how-to
@@ -25,16 +25,16 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-The Microsoft Defender for Office 365 protection or filtering stack can be broken out into four phases, as in this article. Generally speaking, incoming mail passes through all of these phases before delivery, but the actual path email takes is subject to an organization's Defender for Office 365 configuration.
+This article describes the protection stack or _filtering stack_ of Microsoft Defender for Office 365. You can divide the stack into four separate phases. Typically, incoming mail passes through all four protection phases before delivery. But the actual mail path depends on the Defender for Office 365 configuration in your organization.
 
 > [!TIP]
-> Stay tuned till the end of this article for a *unified* graphic of all 4 phases of Defender for Office 365 protection!
+> Stay tuned till the end of this article for a unified graphic of all for phases of Defender for Office 365 protection.
 
-## Phase 1 - Edge Protection
+## Phase 1: Edge Protection
 
-Unfortunately, Edge blocks that were once *critical* are now relatively simple for bad actors to overcome. Over time, less traffic is blocked here, but it remains an important part of the stack.
+Unfortunately, Edge blocks are now relatively simple for attackers to overcome. Although less traffic is blocked here than in years past, it remains an important part of the protection stack.
 
-Edge blocks are designed to be automatic. In the case of false positive, senders are notified and told how to address their issue. Connectors from trusted partners with limited reputation can ensure deliverability, or temporary overrides can be put in place, when onboarding new endpoints.
+Edge blocks are designed to be automatic. For false positives (good mail marked as bad), senders are notified with information to address their issues. Connectors from trusted partners with limited reputation can ensure deliverability, or temporary overrides can be put in place, when onboarding new endpoints.
 
 :::image type="content" source="media/mdo-filtering-stack/mdo-filter-stack-phase1.PNG" alt-text="The Phase-1 filtering in Defender for Office 365" lightbox="media/mdo-filtering-stack/mdo-filter-stack-phase1.PNG":::
 
@@ -48,7 +48,7 @@ Edge blocks are designed to be automatic. In the case of false positive, senders
 
 5. **Backscatter detection** prevents an organization from being attacked through invalid non-delivery reports (NDRs).
 
-6. **Enhanced filtering for connectors** preserves authentication information even when traffic passes through another device before it reaches Office 365. This improves filtering stack accuracy, including heuristic clustering, anti-spoofing, and anti-phishing machine learning models, even when in complex or hybrid routing scenarios.
+6. **Enhanced Filtering for Connectors** (also known as _skip listing_) preserves authentication information when mail passes through a service or device before delivery to Microsoft 365.  device before it reaches Office 365. This improves filtering stack accuracy, including heuristic clustering, anti-spoofing, and anti-phishing machine learning models, even when in complex or hybrid routing scenarios.
 
 ## Phase 2 - Sender Intelligence
 
@@ -92,13 +92,13 @@ In this phase the filtering stack begins to handle the specific contents of the 
 
 3. The anti-virus (AV) engine uses true type matching to detect the file type, regardless of the filename extension (for example, `exe` files renamed to `txt` are detected as `exe` files). This capability allows **Type blocking** (also known as the common attachment filter) to correctly block file types specified by admins. For the list of supported file types, see [True type matching in the common attachments filter](anti-malware-protection-about.md#true-type-matching-in-the-common-attachments-filter).
 
-4. Whenever Microsoft Defender for Office 365 detects a malicious attachment, the file's hash, and a hash of its active content, are added to Exchange Online Protection (EOP) reputation. **Attachment reputation blocking** blocks that file across all Office 365, and on endpoints, through MSAV cloud calls.
+4. Whenever Microsoft Defender for Office 365 detects a malicious attachment, the file's hash, and a hash of its active content, are identified. **Attachment reputation blocking** blocks that file across all Office 365, and on endpoints, through MSAV cloud calls.
 
 5. **Heuristic clustering** can determine that a file is suspicious based on delivery heuristics. When a suspicious attachment is found, the entire campaign pauses, and the file is sandboxed. If the file is found to be malicious, the entire campaign is blocked.
 
 6. **Machine learning models** act on the header, body content, and URLs of a message to detect phishing attempts.
 
-7. Microsoft uses a determination of reputation from URL sandboxing and URL reputation from third party feeds in **URL reputation blocking**, to block any message with a known malicious URL.
+7. Microsoft uses a determination of reputation from URL sandboxing and URL reputation from non-Microsoft feeds in **URL reputation blocking**, to block any message with a known malicious URL.
 
 8. **Content heuristics** can detect suspicious messages based on structure and word frequency within the body of the message, using machine learning models.
 
@@ -134,7 +134,7 @@ The last stage takes place after mail or file delivery, acting on mail that is i
 
 ## The filtering stack diagram
 
-The final diagram (as with all parts of the diagram composing it) *is subject to change as the product grows and develops*. Bookmark this page and use the **feedback** option you'll find at the bottom if you need to ask after updates. For your records, this is the stack with all the phases in order:
+The final diagram (as with all parts of the diagram composing it) _is subject to change as the product grows and develops_. Bookmark this page and use the **feedback** option at the bottom of the page if you need to ask after updates. For your records, the following diagram shows the stack with all the phases in order:
 
 :::image type="content" source="media/mdo-filtering-stack/mdo-filter-stack-phase5.PNG" alt-text="All the phases of filtering in Defender for Office 365 in order, from 1 to 4" lightbox="media/mdo-filtering-stack/mdo-filter-stack-phase5.PNG":::
 

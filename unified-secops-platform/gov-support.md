@@ -3,9 +3,10 @@ title: Microsoft Defender Portal Service Support for US Government Customers
 description: Learn about support in the Microsoft Defender portal for US Government clouds.
 author: batamig
 ms.author: bagol
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.topic: concept-article #Don't change.
-ms.date: 03/11/2025
+ms.date: 06/22/2025
 ms.collection:
 - usx-security
 
@@ -25,8 +26,6 @@ This article provides information about support for US Government customers by u
   GCC is supported with the following limitation: The [Advanced hunting](/defender-xdr/advanced-hunting-overview) [JOIN operator](/defender-xdr/advanced-hunting-query-language#learn-common-query-operators) isn't supported between Defender tables and Microsoft Sentinel tables unless you configure per-table retention on your Defender tables in Log Analytics. For more information, see [Advanced hunting event collection](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=defender-portal#advanced-hunting-event-collection).
   
 - Features still in preview are available only in the commercial cloud.
-
-While [automatic attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Defender XDR is generally available, [SAP support for attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Sentinel and Microsoft Defender XDR is available only in the commercial cloud.
 
 For more information, see:
 

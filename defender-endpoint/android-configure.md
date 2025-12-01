@@ -2,11 +2,11 @@
 title: Configure Microsoft Defender for Endpoint on Android features
 description: Describes how to configure Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: denishdonga
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,17 +15,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: android
 search.appverid: met150
-ms.date: 06/05/2025
+ms.date: 11/06/2025
+appliesto:
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Configure Defender for Endpoint on Android features
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 ## Conditional Access with Defender for Endpoint on Android
 
@@ -36,7 +33,7 @@ For more information about how to set up Defender for Endpoint on Android and Co
 ## Configure custom indicators
 
 > [!NOTE]
-> Defender for Endpoint on Android only supports creating custom indicators for IP addresses and URLs/domains.
+> Defender for Endpoint on Android supports creating custom indicators only for URLs and domains. IP-based custom indicators aren't supported on Android.
 > 
 > IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
 > Also, alerts for custom indicators are currently not supported for Defender for Endpoint on Android.
@@ -113,11 +110,12 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 > [!IMPORTANT]
 > Starting May 19, 2025, alerts are no longer generated in the Microsoft Defender portal for mobile devices connecting or disconnecting to an open wireless network and for downloading/installing/deleting self-signed certificates. Instead, these activities are now generated as events and are viewable in the device timeline.
 > Here are key changes about this new experience:
-> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on mid-May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.
-> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.
-> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including trusted networks, are sent to the device timeline as events.
-> - Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.
-> - The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+- For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on mid-May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.
+- When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.
+- Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including trusted networks, are sent to the device timeline as events.
+- Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.
+- The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+
 
 ## Privacy Controls
 
@@ -129,6 +127,18 @@ Following privacy controls are available for configuring the data that is sent b
 |Phish report |Admins can set up privacy control for phishing reports. If privacy is enabled, then Defender for Endpoint won't send the domain name and details of the unsafe website as part of the phishing alert report. |
 |Vulnerability assessment of apps |By default only information about apps installed in the work profile is sent for vulnerability assessment. Admins can disable privacy to include personal apps|
 |Network Protection | Admins can enable or disable privacy in network protection. If enabled, then Defender won't send network details.|
+
+## Root Detection (Preview)
+
+Microsoft Defender for Endpoint has the ability to detect unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, the following events occur:
+
+- A high-risk alert is reported to the Microsoft Defender portal. If Device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
+
+- User data on the app is cleared after the device has been detected as rooted. The feature is enabled by default; no action is required from admin or user.
+
+**Prerequisite**
+
+- Company portal must be installed, and version must be >=5.0.6621.0
 
 ### Configure privacy alert report
 
@@ -179,29 +189,6 @@ From version 1.0.3425.0303 of Microsoft Defender for Endpoint on Android, you're
 - For Android Enterprise with a work profile, only apps installed on the work profile will be supported.
 - For other BYOD modes, by default, vulnerability assessment of apps will **not** be enabled. However, when the device is on administrator mode, admins can explicitly enable this feature through Microsoft Intune to get the list of apps installed on the device. For more information, see details below.
 
-### Configure privacy for device administrator mode
-
-Use the following steps to **enable vulnerability assessment of apps** from devices in **device administrator** mode for targeted users.
-
-> [!NOTE]
-> By default, this is turned off for devices enrolled with device admin mode.
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Devices** > **Configuration profiles** > **Create profile** and enter the following settings:
-
-   - **Platform**: Select Android device administrator
-   - **Profile**: Select "Custom" and select Create.
-
-2. In the **Basics** section, specify a name and description of the profile.
-
-3. In the **Configuration settings**, select Add **OMA-URI** setting:
-
-   - **Name**: Enter a unique name and description for this OMA-URI setting so you can find it easily later.
-   - OMA-URI: **./Vendor/MSFT/DefenderATP/DefenderTVMPrivacyMode**
-   - Data type: Select Integer in the drop-down list.
-   - Value: Enter 0 to disable privacy setting (By default, the value is 1)
-
-4. Select **Next** and assign this profile to targeted devices/users.
-
 ### Configure privacy for Android Enterprise work profile
 
 Defender for Endpoint supports vulnerability assessment of apps in the work profile. However, in case you want to turn off this feature for targeted users, you can use the following steps:
@@ -222,28 +209,6 @@ Turning the above privacy controls on or off won't affect the device compliance 
 
 Privacy control for phish report can be used to disable the collection of domain name or website information in the phish threat report. This setting gives organizations the flexibility to choose whether they want to collect the domain name when a malicious or phish website is detected and blocked by Defender for Endpoint.
 
-### Configure privacy for phishing alert report on Android Device Administrator enrolled devices:
-
-Use the following steps to turn it on for targeted users:
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Devices** > **Configuration profiles** > **Create profile** and enter the following settings:
-
-   - **Platform**: Select Android device administrator.
-   - **Profile**: Select "Custom" and select **Create**.
-
-2. In the **Basics** section, specify a name and description of the profile.
-
-3. In the **Configuration settings**, select Add **OMA-URI** setting:
-
-   - **Name**: Enter a unique name and description for this OMA-URI setting so you can find it easily later.
-   - OMA-URI: **./Vendor/MSFT/DefenderATP/DefenderExcludeURLInReport**
-   - Data type: Select Integer in the drop-down list.
-   - Value: Enter 1 to enable privacy setting. The default value is 0.
-
-4. Select **Next** and assign this profile to targeted devices/users.
-
-Using this privacy control won't affect the device compliance check or conditional access.
-
 ### Configure privacy for phishing alert report on Android Enterprise work profile
 
 Use the following steps to turn on privacy for targeted users in the work profile:
@@ -262,28 +227,6 @@ Turning the above privacy controls on or off won't affect the device compliance 
 ## Configure privacy for malware threat report
 
 Privacy control for malware threat report can be used to disable the collection of app details (name and package information) from the malware threat report. This setting gives organizations the flexibility to choose whether they want to collect the app name when a malicious app is detected.
-
-### Configure privacy for malware alert report on Android Device Administrator enrolled devices:
-
-Use the following steps to turn it on for targeted users:
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Devices** > **Configuration profiles** > **Create profile** and enter the following settings:
-
-   - **Platform**: Select Android device administrator.
-   - **Profile**: Select "Custom" and select **Create**.
-
-2. In the **Basics** section, specify a name and description of the profile.
-
-3. In the **Configuration settings**, select Add **OMA-URI** setting:
-
-   - **Name**: Enter a unique name and description for this OMA-URI setting so you can find it easily later.
-   - OMA-URI: **./Vendor/MSFT/DefenderATP/DefenderExcludeAppInReport**
-   - Data type: Select Integer in the drop-down list.
-   - Value: Enter 1 to enable privacy setting. The default value is 0.
-
-4. Select **Next** and assign this profile to targeted devices/users.
-
-Using this privacy control won't affect the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
 
 ### Configure privacy for malware alert report on Android Enterprise work profile
 
@@ -308,9 +251,10 @@ Use the following steps to configure Disable out sign:
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
-4. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
+1. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
 
-   - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles and 0 for device administrator mode.
+   - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles.
+      
    - Admins need to make Disable Sign Out = 0 to enable the sign out button in the app. Users are able to see the sign out button once the policy is pushed.
 
 5. Select **Next** and assign this profile to targeted devices and users.

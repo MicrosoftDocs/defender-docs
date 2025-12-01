@@ -2,9 +2,9 @@
 title: Report spam, non-spam, phishing, suspicious emails and files to Microsoft
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.date: 02/24/2025
 audience: ITPro
 ms.topic: overview
@@ -18,7 +18,7 @@ ms.collection:
 description: How do I report a suspicious email or file to Microsoft? Report messages, URLs, email attachments and files to Microsoft for analysis. Learn to report spam email and phishing emails.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Wondering what to do with suspicious email messages, URLs, email attachments, or files? In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, *users* and *admins* have different ways to report suspicious email messages, URLs, and email attachments to Microsoft.
+Wondering what to do with suspicious email messages, URLs, email attachments, or files? In all organizations with cloud mailboxes, *users* and *admins* have different ways to report suspicious email messages, URLs, and email attachments to Microsoft.
 
 In addition, admins in Microsoft 365 organizations with Microsoft Defender for Endpoint also have several methods for reporting files.
 
@@ -47,7 +47,7 @@ Watch this video that shows more information about the unified submissions exper
 |Method|Submission type|Comments|
 |---|---|---|
 |[The built-in Report button in supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)|User||
-|[The Submissions page in the Microsoft Defender portal](submissions-admin.md)|Admin|Admins can report good (false positives) and bad (false negative) messages, email attachments, and URLs (entities) from the available tabs on the **Submissions** page. <br><br> Admins can also submit user reported messages from the **User reported** tab on the **Submissions** page to Microsoft for analysis. The **Submissions** page is available only in organizations with Exchange Online mailboxes as part of a Microsoft 365 subscription (not available in standalone EOP).|
+|[The Submissions page in the Microsoft Defender portal](submissions-admin.md)|Admin|Admins can report good (false positives) and bad (false negative) messages, email attachments, and URLs (entities) from the available tabs on the **Submissions** page. <br><br> Admins can also submit user reported messages from the **User reported** tab on the **Submissions** page to Microsoft for analysis. The **Submissions** page is available only in organizations with cloud mailboxes.|
 |Report messages from quarantine|Admin and User|Admins can [submit quarantined messages to Microsoft for analysis](quarantine-admin-manage-messages-files.md#submit-email-to-microsoft-for-review-from-quarantine) (false positives and false negatives). <br><br> If users are allowed to [release their own messages from quarantine](quarantine-end-user.md#release-quarantined-email), and [user reported settings](submissions-user-reported-messages-custom-mailbox.md) is configured to allow users to report quarantined messages, users can select **Report message as having no threats** (false positive) when they release a quarantined message.|
 
 ## Related reporting settings for admins

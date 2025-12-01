@@ -2,9 +2,10 @@
 title: Threat hunting features across the Microsoft Defender portal
 description: Learn about threat hunting features across the Microsoft Defender portal
 search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: austinmc
-author: austinmccollum
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 ms.date: 11/23/2024
 audience: ITPro

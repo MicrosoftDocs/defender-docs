@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -35,9 +35,11 @@ Microsoft Sentinel uses a slightly expanded version of this table in Log Analyti
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
-The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns below is available for Defender portal users who have onboarded Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
+The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns is available for Defender portal users who have onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
 
-Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
+Defender portal users who haven't onboarded a Microsoft Sentinel workspace that has the UEBA service turned on can't view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
+
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -74,7 +76,7 @@ Defender portal users who have not onboarded a Sentinel workspace that has the U
 | `OtherMailAddresses` | `dynamic` | Additional email addresses of the user account |
 | `RiskLevel` | `string` | Microsoft Entra ID risk level of the user account; possible values: Low, Medium, High |
 | `RiskLevelDetails` | `string` | Details regarding the Microsoft Entra ID risk level |
-| `State` | `string` | State where the sign-in occured, if available |
+| `State` | `string` | State where the sign-in occurred, if available |
 | `Tags` [*](#mdi-only)  | `dynamic` | Tags assigned to the account user by Defender for Identity |
 | `AssignedRoles` [*](#mdi-only) | `dynamic` | For identities from Microsoft Entra-only, the roles assigned to the account user|
 | `PrivilegedEntraPimRoles` (Preview)  [**](#mdi) | `dynamic` | A snapshot of privileged role assignment schedules and eligibility schedules for the account as maintained by Microsoft Entra Privileged Identity Management (excluding activated assignments) |
@@ -93,22 +95,21 @@ Defender portal users who have not onboarded a Sentinel workspace that has the U
 <a name="mdi"></a>** Available only for tenants with Microsoft Defender for Identity.
 
 ## UEBA-specific columns
-If you are using the Microsoft Defender portal but have not onboarded a Microsoft Sentinel workspace with the UEBA service turned on, the following columns are not available in your `IdentityInfo` table:
+If you're using the Microsoft Defender portal but haven't onboarded a Microsoft Sentinel workspace with the UEBA service turned on, the following columns aren't available in your `IdentityInfo` table:
 
 - `BlastRadius`
 - `CompanyName`
 - `DeletedDateTime`
 - `EmployeeId`
 - `OtherMailAddresses`
-- `RiskLevel`
-- `RiskLevelDetails`
-- `State`
 - `Tags`
+- `State`
+
 
 For more information about UEBA, read [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, read [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
 
 
-## Related topics
+## Related articles
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

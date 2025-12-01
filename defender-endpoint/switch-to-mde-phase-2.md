@@ -1,13 +1,13 @@
----
+﻿---
 title: Migrate to Microsoft Defender for Endpoint - Setup
 description: Move to Defender for Endpoint. Review the setup process, which includes installing Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 05/08/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -20,14 +20,13 @@ ms.topic: how-to
 ms.custom: migrationguides
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Migrate to Microsoft Defender for Endpoint - Phase 2: Setup
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 |[![Phase 1: Prepare.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare](switch-to-mde-phase-1.md)|![Phase 2: Set up.](media/phase-diagrams/setup.png#lightbox)<br/>Phase 2: Set up|[![Phase 3: Onboard3.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md)|
 |---|---|---|
@@ -40,8 +39,7 @@ search.appverid: met150
 3. Configure Defender for Endpoint Plan 1 or Plan 2.
 4. Set up your device groups, device collections, and organizational units.
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Step 1: Reinstall/enable Microsoft Defender Antivirus on your endpoints
 
@@ -85,7 +83,7 @@ The specific exclusions to configure depend on which version of Windows your end
 
 | OS | Exclusions |
 |--|--|
-| Windows 11<br/>Windows 10, version 1803 or later (See Windows 10 release information)<br/>Windows 10, version 1703 or 1709 with KB4493441 installed<br/>Windows Server 2025<br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803<br/>Windows Server 2016 running the modern unified solution<br/>Windows Server 2012 R2 running the modern unified solution | **EDR exclusions**: <br/>`C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCncProxy.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseSampleUploader.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseIR.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCM.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseNdr.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\Classification\SenseCE.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseTVM.exe` <br/><br/> **Antivirus exclusions**:<br/>`C:\Program Files\Windows Defender\MsMpEng.exe`<br/>`C:\Program Files\Windows Defender\NisSrv.exe`<br/>`C:\Program Files\Windows Defender\ConfigSecurityPolicy.exe`<br/>`C:\Program Files\Windows Defender\MpCmdRun.exe`<br/>`C:\Program Files\Windows Defender\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MsMpEng.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\NisSrv.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\ConfigSecurityPolicy.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCopyAccelerator.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCmdRun.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\mpextms.exe` <br/><br/> **Endpoint Data Loss Prevention (Endpoint DLP) exclusions**:<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpCmd.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MipDlp.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\DlpUserAgent.exe`|
+| Windows 11<br/>Windows 10, version 1803 or later (See Windows 10 release information)<br/>Windows 10, version 1703 or 1709 with KB4493441 installed<br/>Windows Server 2025 <br/> Azure Stack HCI OS, version 23H2 and later <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803<br/>Windows Server 2016 running the modern unified solution<br/>Windows Server 2012 R2 running the modern unified solution | **EDR exclusions**: <br/>`C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCncProxy.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseSampleUploader.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseIR.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCM.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseNdr.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\Classification\SenseCE.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseTVM.exe` <br/><br/> **Registry path**:<br/>`HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\*` <br/><br/> **Antivirus exclusions**:<br/>`C:\Program Files\Windows Defender\MsMpEng.exe`<br/>`C:\Program Files\Windows Defender\NisSrv.exe`<br/>`C:\Program Files\Windows Defender\ConfigSecurityPolicy.exe`<br/>`C:\Program Files\Windows Defender\MpCmdRun.exe`<br/>`C:\Program Files\Windows Defender\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MsMpEng.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\NisSrv.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\ConfigSecurityPolicy.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCopyAccelerator.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCmdRun.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\mpextms.exe` <br/><br/> **Endpoint Data Loss Prevention (Endpoint DLP) exclusions**:<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpCmd.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MipDlp.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\DlpUserAgent.exe`|
 | Windows Server 2016 or Windows Server 2012 R2 running the [modern unified solution](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fswitch-to-mde-phase-2.md/main/76b249d7-f914-4c03-3eaf-48aa43b2fa4a/onboard-server.md) | The following **additional** exclusions are required after updating the Sense EDR component using [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac): <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\MsSense.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseCnCProxy.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseIR.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseCE.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseSampleUploader.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseCM.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`<br/> `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseTVM.exe`|
 | [Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2) [Windows 7](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) [Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) | `C:\Program Files\Microsoft Monitoring Agent\Agent\Health Service State\Monitoring Host Temporary Files 6\45\MsSenseS.exe` <br/>( Monitoring Host Temporary Files 6\45 can be different numbered subfolders.) <br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\AgentControlPanel.exe`<br/> `C:\Program Files\Microsoft Monitoring Agent\Agent\HealthService.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\HSLockdown.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\MOMPerfSnapshotHelper.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\TestCloudConnection.exe` |
 
@@ -235,3 +233,4 @@ Device groups, device collections, and organizational units enable your security
 - [Proceed to Phase 3: Onboard to Defender for Endpoint](switch-to-mde-phase-3.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

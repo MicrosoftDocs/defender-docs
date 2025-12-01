@@ -5,10 +5,10 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 04/25/2025
+ms.date: 10/21/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-When an automatic attack disruption triggers in Microsoft Defender XDR, the details about the risk and the containment status of compromised assets are available during and after the process. You can view the details on the incident page, which provides the full details of the attack and the up-to-date status of associated assets.
+When an automatic attack disruption triggers in Microsoft Defender XDR, you can view the details about the risk and the containment status of compromised assets during and after the process. You can view the details on the incident page, which provides the full details of the attack and the up-to-date status of associated assets.
 
 ## Review the incident graph
 
@@ -35,11 +35,11 @@ Microsoft Defender XDR automatic attack disruption is built-in in the incident v
 
 The incident page includes the following information:
 
-- Disrupted incidents include a tag for 'Attack Disruption' and the specific threat type identified (i.e., ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
+- Disrupted incidents include a tag for 'Attack Disruption' and the specific threat type identified (for example, ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
 - A highlighted notification below the incident title indicating that the incident was disrupted.
 - Suspended users and contained devices appear with a label indicating their status.
 
-To release a user account or a device from containment, click on the contained asset and click **release from containment** for a device or **enable user** for a user account.
+To release a user account or a device from containment, select the contained asset and select **release from containment** for a device or **enable user** for a user account.
 
 ## Track the actions in the Action center
 
@@ -52,18 +52,18 @@ You can release the contained assets, for example, enable a blocked user account
 
 You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track contain device or user, and disable user account actions.
 
-### Hunt for contain actions
+### Containment-related events in advanced hunting
 
-Contain actions triggered by attack disruption are found in the [DeviceEvents table](advanced-hunting-deviceevents-table.md) in advanced hunting. Use the following queries to hunt for these specific contain actions:
+Containment in Microsoft Defender for Endpoint prevents further threat actor activity by blocking communication from contained entities. In advanced hunting, the [DeviceEvents table](advanced-hunting-deviceevents-table.md) logs **block actions that result from containment**, not the initial containment action itself:
 
-- Device contain actions:
+- **Device-derived block actions** - These events indicate activity (such as network communication) that was *blocked because the device was contained*:
 
   ```Kusto
   DeviceEvents
   | where ActionType contains "ContainedDevice"
   ```
 
-- User contain actions:
+- **User-derived block actions** - These events indicate activity (such as sign-in or resource access attempts) that was *blocked because the user was contained*:
 
   ```Kusto
   DeviceEvents
@@ -72,7 +72,7 @@ Contain actions triggered by attack disruption are found in the [DeviceEvents ta
 
 ### Hunt for disable user account actions
 
-Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity uses the LocalSystem account of the domain controller by default for all remediation actions. 
+Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. By default, Microsoft Defender for Identity uses the LocalSystem account of the domain controller for all remediation actions. 
 
 The following query looks for events where a domain controller disabled user accounts. This query also returns user accounts disabled by automatic attack disruption by triggering account disable in Microsoft Defender XDR manually: 
 
@@ -94,7 +94,7 @@ IdentityDirectoryEvents
 | project TimeGenerated, TargetAccountUpn, ACTOR_DEVICE
 ```
 
-The above query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Identity/MDI-AttackDisruption.md#microsoft-365-defender).
+The preceding query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Identity/MDI-AttackDisruption.md#microsoft-365-defender).
 
 ## Related content
 

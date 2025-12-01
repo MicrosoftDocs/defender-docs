@@ -1,12 +1,12 @@
----
+﻿---
 title: Microsoft Defender for Endpoint on macOS overview
 ms.reviewer: joshbregman
-description: An introducttion and overview of Microsoft Defender for Endpoint on macOS.
+description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,23 +15,20 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/17/2025
----
+ms.date: 07/01/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 This article provides an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information.
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
  
@@ -46,7 +43,7 @@ This article describes how to install, configure, update, and use Defender for E
 > [!TIP]
 > If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on Mac on your device and navigating to **Help** \> **Send feedback**.
 
-To get the latest features, including preview capabilities (such as endpoint detection and response for your Mac devices), configure your macOS device running Defender for Endpoint to use the Beta channel (formerly `Insider-Fast`).
+To get the latest features, including preview capabilities, configure your macOS device running Defender for Endpoint to use the Beta channel (formerly `Insider-Fast`).
 
 ## How to install Microsoft Defender for Endpoint on Mac
 
@@ -70,10 +67,10 @@ There are several methods and deployment tools that you can use to install and c
 
 These three most recent major releases of macOS are supported.
 
+- 26 (Tahoe)
+
 - 15.0.1 (Sequoia)
 - 14 (Sonoma)
-- 13 (Ventura)
-
 - Supported processors: x64 and ARM64 (Mx processors)
 
 - Disk space: 1GB
@@ -90,7 +87,7 @@ After you've enabled the service, you might need to configure your network or fi
 Defender for Endpoint on Mac requires one of the following Microsoft Volume Licensing offers:
 
 - Microsoft 365 E5
-- Microsoft 365 E5 Security
+- Microsoft Defender Suite
 - Microsoft 365 A5
 - Windows 10 Enterprise E5
 - Microsoft 365 Business Premium
@@ -166,3 +163,4 @@ Starting with macOS 11 (Big Sur), Defender for Endpoint has been fully migrated 
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

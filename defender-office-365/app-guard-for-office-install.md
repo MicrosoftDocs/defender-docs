@@ -2,7 +2,7 @@
 title: Application Guard for Office for admins
 f1.keywords:
   - NOCSH
-ms.author: maccruz
+ms.author: deniseb
 author: schmurky
 manager: deniseb
 audience: ITPro
@@ -32,7 +32,7 @@ Microsoft Defender Application Guard for Office (Application Guard for Office) h
 
 ### Licensing requirements
 
-- Microsoft 365 E5 or Microsoft 365 E5 Security
+- Microsoft 365 E5 or the Microsoft Defender Suite
 - [Safe Documents in Microsoft 365](safe-documents-in-e5-plus-security-about.md)
 
 ### Minimum hardware requirements
@@ -48,6 +48,7 @@ Microsoft Defender Application Guard for Office (Application Guard for Office) h
 - **Update package**: Windows 10 cumulative monthly security update [KB4571756](https://support.microsoft.com/help/4571756/windows-10-update-KB4571756)
 
 For detailed system requirements, refer to [System requirements for Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard). Also, refer to your computer manufacturer's guides on how to enable virtualization technology.
+
 To learn more about Microsoft 365 Apps update channels, see [Overview of update channels for Microsoft 365 Apps](/deployoffice/overview-update-channels).
 
 ## Deploy Application Guard for Office
@@ -131,10 +132,10 @@ Office supports the following policies to configure Application Guard for Office
 |Policy|Description|
 |---|---|
 |Don't use Application Guard for Office|Forces Word, Excel, and PowerPoint to use the Protected View isolation container instead of Application Guard for Office.|
-|Configure Application Guard for Office container precreation|Determines if the Application Guard for Office container is precreated for improved run-time performance. When you enable this policy, you can specify the number of days to continue precreating a container or let the Office built-in heuristic precreate the container.
+|Configure Application Guard for Office container precreation|Determines if the Application Guard for Office container is precreated for improved run-time performance. When you enable this policy, you can specify the number of days to continue precreating a container or let the Office built-in heuristic precreate the container.|
 |Configure copy and paste from Office documents opened in Application Guard|Allows you to control whether users can copy and paste content from Office to and from documents opened in Application Guard, as well as the allowed formats.|
-|Disable hardware acceleration in Application Guard for Office|Controls whether Application Guard for Office uses hardware acceleration to render graphics. If you enable this setting, Application Guard for Office uses software-based (CPU) rendering and doesn't load any third-party graphics drivers or interact with any connected graphics hardware.
-|Disable unsupported file types protection in Application Guard for Office|Controls whether Application Guard for Office blocks unsupported file types from being opened or if it enables redirection to Protected View.
+|Disable hardware acceleration in Application Guard for Office|Controls whether Application Guard for Office uses hardware acceleration to render graphics. If you enable this setting, Application Guard for Office uses software-based (CPU) rendering and doesn't load any non-Microsoft graphics drivers or interact with any connected graphics hardware.|
+|Disable unsupported file types protection in Application Guard for Office|Controls whether Application Guard for Office blocks unsupported file types from being opened or if it enables redirection to Protected View.|
 |Turn off camera and microphone access for documents opened in Application Guard for Office|Enabling this policy removes Office access to the camera and microphone inside Application Guard for Office.|
 |Restrict printing from documents opened in Application Guard for Office|Limits the printers that a user can print to from a file opened in Application Guard for Office. For example, you can use this policy to restrict users to only print to PDF.|
 |Prevent users from removing Application Guard for Office protection on files|Removes the option (within the Office application experience) to disable Application Guard for Office protection or to open a file outside Application Guard for Office. <br/><br/> **Note:** Users can still bypass this policy by manually removing the mark-of-the-web property from the file or by moving a document to a trusted location.|

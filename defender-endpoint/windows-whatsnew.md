@@ -1,29 +1,24 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Windows
 description: Learn about the latest feature releases of Microsoft Defender for Endpoint on Windows Client and Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 06/11/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: reference
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
 # What's new in Microsoft Defender for Endpoint on Windows
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
@@ -46,7 +41,7 @@ All updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
 
-## May-2025 (Release version: 10.8797)
+## May-2025 (Release version: 10.8797.25857.1000)
 
 | OS | KB |
 |--|--|
@@ -78,7 +73,7 @@ All updates contain:
 - Improved Data Completeness and Detection: Enhancements have been made to improve the completeness of data collected and reduce the time it takes to detect potential data loss incidents. These improvements enable faster and more accurate identification of data exfiltration attempts across monitored endpoints. 
 - Improved Handling for Offline Network Environments: Refined the handling of scenarios where devices operate in offline or restricted network environments. Specifically addresses cases where result uploads to blob storage fail due to offline Certificate Revocation List (CRL) checks, ensuring better reliability and continuity in data collection. 
 
-## July-2024 (Release version: 10.8760)
+## July-2024 (Release version: 10.8760.27617.1006)
 
 |OS  |KB |
 | -------- | -------- |
@@ -98,11 +93,11 @@ All updates contain:
 - Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
 - OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
-## May-2024 (Release version: 10.8750)
+## May-2024 (Release version: 10.8750.27558.1004)
 
 |OS  |KB |Release version |
 | -------- | -------- | -------- |
-|Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8750|
+|Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8750.27558.1004|
 
 ### What's new
 
@@ -226,3 +221,4 @@ All updates contain:
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

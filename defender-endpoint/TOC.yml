@@ -1,4 +1,4 @@
-- name: Microsoft Defender for Endpoint
+﻿- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -8,7 +8,7 @@
     items:
     - name: What is Microsoft Defender for Endpoint?
       items: 
-      - name: Defender for Endpoint on Windows
+      - name: Defender for Endpoint
         href: microsoft-defender-endpoint.md
       - name: Defender for Endpoint on macOS
         href: microsoft-defender-endpoint-mac.md
@@ -126,17 +126,17 @@
             - name: Step 2 - Configure device proxy and Internet settings
               href: configure-proxy-internet.md
             - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md
-            
-        - name: Streamlined connectivity
-          items:
-            - name: Onboarding devices using streamlined method
-              href: configure-device-connectivity.md
-            - name: Migrating devices to streamlined method
+              href: verify-connectivity.md        
+            - name: Onboard devices using streamlined method
+              href: configure-device-connectivity.md            
+            - name: Migrate devices to streamlined method
               href: migrate-devices-streamlined.md
-
+            - name: Enable access to service URLs - US government            
+              href: streamlined-device-connectivity-urls-gov.md                       
         - name: Onboard client devices
           items:
+          - name: Onboard Windows devices using the Defender deployment tool
+            href: defender-deployment-tool-windows.md
           - name: Onboard client devices running Windows or macOS
             href: onboard-client.md
           - name: Defender for Endpoint plug-in for WSL
@@ -176,6 +176,7 @@
             href: mde-linux-deployment-on-sap.md
           - name: Use custom detection rules to protect SAPXPG
             href: mde-sap-custom-detection-rules.md
+
         - name: Defender for Endpoint on macOS
           items:
           - name: Deploy Defender for Endpoint on macOS
@@ -210,6 +211,8 @@
                 href: mac-pua.md
               - name: Protect macOS security settings using tamper protection
                 href: tamperprotection-macos.md
+              - name: Configure offline security intelligence updates on Mac
+                href: mac-support-offline-security-intelligence-update.md
               - name: Device control
                 items:
                 - name: Device control overview on Mac
@@ -263,8 +266,12 @@
             items:
             - name: Prerequisites
               href: mde-linux-prerequisites.md
-            - name: Choose a deployment method
+            - name: Choose a deployment method                       
               items:
+              - name: Enabling deployment to a custom location
+                href: linux-custom-location-installation.md
+              - name: Deployment tool based deployment
+                href: linux-install-with-defender-deployment-tool.md
               - name: Installer script based deployment
                 href: linux-installer-script.md
               - name: Ansible based deployment
@@ -273,12 +280,16 @@
                 href: linux-deploy-defender-for-endpoint-with-chef.md
               - name: Puppet based deployment
                 href: linux-install-with-puppet.md
-              - name: Saltstack-based deployment
+              - name: Saltstack based deployment
                 href: linux-install-with-saltack.md
               - name: Manual deployment
                 href: linux-install-manually.md
+              - name: Golden image based deployment
+                href: linux-deploy-defender-for-endpoint-using-golden-images.md
               - name: Direct onboarding with Defender for Cloud
                 href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+                href: mde-linux-deployment-on-sap.md
           - name: Configure Defender for Endpoint on Linux
             items:
             - name: Configure security policies and settings
@@ -506,6 +517,8 @@
             href: run-analyzer-linux.md
           - name: Run the client analyzer on macOS
             href: run-analyzer-macos.md
+          - name: Diagnose issues with Client Analyzer
+            href: use-client-analyzer.md        
           - name: Data collection for advanced troubleshooting on Windows
             href: data-collection-analyzer.md
           - name: Understand the analyzer HTML report
@@ -617,6 +630,12 @@
         href: exclude-devices.md
       - name: Identifying transient devices
         href: transient-device-tagging.md
+      - name: Collect custom device data
+        items:
+        - name: Overview
+          href: custom-data-collection.md
+        - name: Create custom data collection rules
+          href: create-custom-data-collection-rules.md
       - name: Internet facing devices
         href: internet-facing-devices.md
       - name: Device timeline
@@ -803,6 +822,8 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Defender for Endpoint passive mode
+        href: microsoft-defender-passive-mode.md
       - name: Microsoft Defender Antivirus and third-party antivirus solutions without
           Defender for Endpoint
         href: defender-antivirus-compatibility-without-mde.md
@@ -1046,10 +1067,16 @@
             href: respond-machine-alerts.md#restrict-app-execution
           - name: Isolate devices from the network
             href: respond-machine-alerts.md#isolate-devices-from-the-network
+          - name: Isolation exclusions
+            href: isolation-exclusions.md
           - name: Contain devices from the network
             href: respond-machine-alerts.md#contain-devices-from-the-network
           - name: Contain user from the network
             href: respond-machine-alerts.md#contain-user-from-the-network
+          - name: Automatically apply GPO hardening (predictive shielding)
+            href: respond-machine-alerts.md#gpo-hardening
+          - name: Automatically apply Safeboot hardening (predictive shielding)
+            href: respond-machine-alerts.md#safeboot-hardening                     
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
@@ -1086,10 +1113,7 @@
           href: live-response-command-examples.md
 
       - name: Use sensitivity labels to prioritize incident response
-        href: information-protection-investigation.md
-
-    - name: Advanced hunting
-      href: /defender-xdr/advanced-hunting-overview?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+        href: information-protection-investigation.md    
 
     - name: Threat analytics
       items:
@@ -1147,7 +1171,7 @@
           href: api/api-power-bi.md                         
     - name: Configure integration with other Microsoft solutions
       items:
-      - name: Configure conditional access
+      - name: Configure Conditional Access
         href: configure-conditional-access.md
       - name: Configure Microsoft Defender for Cloud Apps integration
         href: microsoft-cloud-app-security-config.md
@@ -1164,7 +1188,7 @@
           - name: Microsoft Defender for Endpoint API license and terms
             href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
-            href: /defender-vulnerability-management/tvm-supported-os
+            href: /defender-endpoint/api/apis-intro
           - name: Hello World
             href: api/api-hello-world.md
           - name: Get access with application context
@@ -1183,7 +1207,7 @@
 
           - name: Alert
             items:
-            - name: Alert methods and properties
+            - name: Alert properties
               href: api/alerts.md
             - name: List alerts
               href: api/get-alerts.md
@@ -1221,7 +1245,7 @@
 
           - name: Authenticated scan
             items:
-            - name: Authenticated scan methods and properties
+            - name: Authenticated scan properties
               href: api/get-authenticated-scan-properties.md
             - name: Get all scan definitions
               href: api/get-all-scan-definitions.md
@@ -1245,7 +1269,7 @@
 
           - name: Automated investigation
             items:
-            - name: Investigation methods and properties
+            - name: Investigation properties
               href: api/investigation.md
             - name: List Investigation
               href: api/get-investigation-collection.md
@@ -1277,7 +1301,7 @@
 
           - name: File
             items:
-            - name: File methods and properties
+            - name: File properties
               href: api/files.md
             - name: Get file information
               href: api/get-file-information.md
@@ -1290,12 +1314,12 @@
 
           - name: Indicators
             items:
-            - name: Indicators methods and properties
+            - name: Indicators properties
               href: api/ti-indicator.md
             - name: List Indicators
               href: api/get-ti-indicators-collection.md
             - name: Submit Indicator
-              href: api/ti-indicator.md
+              href: api/post-ti-indicator.md
             - name: Import Indicator
               href: api/import-ti-indicators.md
             - name: Delete Indicator
@@ -1317,7 +1341,7 @@
 
           - name: Live response library
             items:
-            - name: Live response library methods and properties
+            - name: Live response library properties
               href: live-response-library-methods.md
             - name: List library files
               href: api/list-library-files.md
@@ -1328,7 +1352,7 @@
 
           - name: Machine
             items:
-            - name: Machine methods and properties
+            - name: Machine properties
               href: api/machine.md
             - name: List machines
               href: api/get-machines.md
@@ -1363,7 +1387,7 @@
 
           - name: Machine Action
             items:
-            - name: Machine Action methods and properties
+            - name: Machine Action properties
               href: api/machineaction.md
             - name: List Machine Actions
               href: api/get-machineactions-collection.md
@@ -1396,7 +1420,7 @@
 
           - name: Recommendation
             items:
-            - name: Recommendation methods and properties
+            - name: Recommendation properties
               href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
@@ -1411,7 +1435,7 @@
 
           - name: Remediation activity
             items:
-            - name: Remediation activity methods and properties
+            - name: Remediation activity properties
               href: api/get-remediation-methods-properties.md
             - name: Get one remediation activity by ID
               href: api/get-remediation-one-activity.md
@@ -1422,7 +1446,7 @@
 
           - name: Score
             items:
-            - name: Score methods and properties
+            - name: Score properties
               href: api/score.md
             - name: List exposure score by machine group
               href: api/get-machine-group-exposure-score.md
@@ -1442,7 +1466,7 @@
 
           - name: Software
             items:
-            - name: Software methods and properties
+            - name: Software properties
               href: api/software.md
             - name: List software
               href: api/get-software.md
@@ -1458,8 +1482,6 @@
               href: api/get-missing-kbs-software.md
           - name: User
             items:
-            - name: User methods
-              href: api/user.md
             - name: Get user related alerts
               href: api/get-user-related-alerts.md
             - name: Get user related machines
@@ -1467,7 +1489,7 @@
 
           - name: Vulnerability
             items:
-            - name: Vulnerability methods and properties
+            - name: Vulnerability properties
               href: api/vulnerability.md
             - name: List vulnerabilities
               href: api/get-all-vulnerabilities.md
@@ -1543,7 +1565,7 @@
       items:
       - name: Microsoft Defender for Endpoint integrations
         href: threat-protection-integration.md
-      - name: Protect users, data, and devices with conditional access
+      - name: Protect users, data, and devices with Conditional Access
         href: conditional-access.md
       - name: Microsoft Defender for Cloud Apps integration overview
         href: microsoft-cloud-app-security-integration.md

@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -21,15 +21,12 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/18/2025
+ms.date: 11/18/2025
 ---
 
-# MessageEvents (Preview)
+# MessageEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `MessageEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains details about messages sent and received within your organization at the time of delivery. Use this reference to construct queries that return information from this table. 
 
@@ -66,6 +63,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `DeliveryAction` | `string` |Delivery action of the message: Delivered, Blocked|
 | `DeliveryLocation` | `string` |Location of the message at the time of delivery|
 | `ReportId` | `string` |Unique identifier for the event|
+| `SafetyTip` | `string` |The safety tip that has been added on a message, if any|
 
 
 

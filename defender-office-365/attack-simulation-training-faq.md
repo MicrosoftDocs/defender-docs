@@ -2,9 +2,9 @@
 title: Attack simulation training deployment considerations and FAQ
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 03/18/2025
+ms.date: 11/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -72,7 +72,7 @@ It's possible that all users targeted by the simulation don't receive the simula
 - Guests.
 - Users that are no longer active in Microsoft Entra ID.
 
-You can use the [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to view and validate targeted group members.
+You can use the [Get-DistributionGroupMember](/powershell/module/exchangepowershell/get-distributiongroupmember) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to view and validate targeted group members.
 
 ### Trainings unexpectedly assigned or not assigned to users
 
@@ -99,7 +99,7 @@ By default, Outlook is configured to block automatic image downloads in messages
 
 ### I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?
 
-These events can occur when other security devices or applications inspect simulation messages. For example (but not limited to): 
+These events can occur when other security devices or applications inspect simulation messages. For example (but not limited to):
 
 - Applications or plugins within Outlook that inspect or intercept the message.
 - Email security applications.
@@ -165,7 +165,20 @@ If you own the sender domain, the undelivered simulation report is returned in a
 ## Reporting issues
 
 > [!TIP]
-> Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
+>
+> - Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
+>
+> - After December 2025 as described in Message Center post [MC1166864](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1166864), user interaction signals are captured consistently until the simulation ends. For example:
+>   - Compromise
+>   - Report
+>   - Read
+>   - Delete
+>   - Reply
+>   - Forward
+>   - Out-of-office (only when active at the time of receiving the attack simulation email)
+>   - Attachment opened
+>
+>   Training-related events (for example, Training completed or In progress) are reflected in simulation reporting up to the training due date, even after the simulation ends.
 
 ### Differences in user activity data from Attack simulation training reports and other reports
 

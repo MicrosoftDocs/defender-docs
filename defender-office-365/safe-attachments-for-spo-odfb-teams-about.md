@@ -2,9 +2,9 @@
 title: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365, Safe Attachments for SharePoint, OneDrive, and Microsoft Teams provides an additional layer of protection against harmful files. After files are asynchronously scanned by the [common virus detection engine in Microsoft 365](anti-malware-protection-for-spo-odfb-teams-about.md), Safe Attachments opens files in a virtual environment to see what happens (a process known as _detonation_). As part of detonation, any password protected files are checked against a list of known passwords or patterns that are typically used by malicious actors. Safe Attachments for SharePoint, OneDrive, and Microsoft Teams also helps detect and block existing files that are identified as malicious in team sites and document libraries.
+In organizations with Microsoft Defender for Office 365, Safe Attachments for SharePoint, OneDrive, and Microsoft Teams provides an extra layer of protection against harmful files. After the [common virus detection engine in Microsoft 365](anti-malware-protection-for-spo-odfb-teams-about.md) scans the files, Safe Attachments opens files in a virtual environment to see what happens (a process known as _detonation_). As part of detonation, any password protected files are checked against a list of known passwords or patterns that are typically used by malicious actors. Safe Attachments for SharePoint, OneDrive, and Microsoft Teams also helps detect and block existing files that are identified as malicious in team sites and document libraries.
 
 Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled by default. To turn it on or off, see [Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-configure.md).
 
@@ -53,11 +53,11 @@ By default, people can download a blocked file. Here's what downloading a blocke
 
 SharePoint admins can prevent people from downloading malicious files. For instructions, see [Use SharePoint Online PowerShell to prevent users from downloading malicious files](safe-attachments-for-spo-odfb-teams-configure.md#step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files).
 
-To learn more about the user experience when a file has been detected as malicious, see [What to do when a malicious file is found in SharePoint, OneDrive, or Microsoft Teams](https://support.microsoft.com/office/01e902ad-a903-4e0f-b093-1e1ac0c37ad2).
+To learn more about the user experience when a file is identified as malicious, see [What to do when a malicious file is found in SharePoint, OneDrive, or Microsoft Teams](https://support.microsoft.com/office/01e902ad-a903-4e0f-b093-1e1ac0c37ad2).
 
 ## View information about malicious files detected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 
-Files that are identified as malicious by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams appear in [reports for Microsoft Defender for Office 365](reports-defender-for-office-365.md) and in [Explorer (and real-time detections)](threat-explorer-real-time-detections-about.md).
+Files identified as malicious by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams appear in [reports for Microsoft Defender for Office 365](reports-defender-for-office-365.md) and in [Explorer (and real-time detections)](threat-explorer-real-time-detections-about.md).
 
 When a file is identified as malicious by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the file is also available in quarantine, but only to admins. For more information, see [Manage quarantined files in Defender for Office 365](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-quarantined-files-in-defender-for-office-365).
 
@@ -67,4 +67,4 @@ When a file is identified as malicious by Safe Attachments for SharePoint, OneDr
 
 - Make sure your SharePoint sites are configured to use the [Modern experience](/sharepoint/guide-to-sharepoint-modern-experience). Visual indicators that a file is blocked are available only in the Modern experience.
 
-- Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is part of your organization's overall threat protection strategy, which includes anti-spam and anti-malware protection in Exchange Online Protection (EOP), as well as Safe Links and Safe Attachments protection in Microsoft Defender for Office 365.
+- Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is part of your organization's overall threat protection strategy. Other features include the default anti-spam and anti-malware protections in all organizations with cloud mailboxes, and Safe Links and Safe Attachments protection in Microsoft Defender for Office 365.

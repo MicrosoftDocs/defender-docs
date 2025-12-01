@@ -1,11 +1,11 @@
----
+﻿---
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -15,20 +15,16 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/10/2025
----
+ms.date: 06/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Individuals
 
+---
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides some general steps that can be used to narrow down performance issues related to Defender for Endpoint on macOS.
 
@@ -155,6 +151,10 @@ To troubleshoot and mitigate performance issues, follow these steps:
 
    See [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md).
 
+## Troubleshoot performance issues from Behavior Monitoring
+
+See the guide on our support page for [Behavior Monitoring](behavior-monitor-macos.md).
+
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
 The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on macOS.
@@ -163,3 +163,4 @@ To run the client analyzer for troubleshooting performance issues, see [Run the 
 
 > [!NOTE]
 > The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited    to) IP addresses, PC names that help troubleshoot issues you might be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+

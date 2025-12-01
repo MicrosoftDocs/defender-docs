@@ -4,8 +4,8 @@ description: Get answers to the most commonly asked questions about topics and i
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -117,7 +117,7 @@ Your feedback helps us get better at protecting your environment from advanced a
 
 In the Microsoft Defender portal, select the feedback icon on the top right and provide your feedback.
 
-![Screenshot of the portal menu, highlighting the feedback icon](/defender/media/portal-feedback.png)
+![Screenshot of the portal menu, highlighting the feedback icon](media/m365d-enable-faq/portal-feedback.png)
 
 Rate your experience and provide details on what you liked or where improvements can be made. You can also choose to be contacted about the feedback.
 

@@ -1,14 +1,14 @@
----
+﻿---
 title: Plan attack surface reduction rules deployment
 description: Provides guidance to plan your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar, yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.topic: article
 ms.collection: 
@@ -19,14 +19,13 @@ ms.collection:
 - mde-asr
 ms.date: 03/27/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Plan attack surface reduction rules deployment
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Before you test or enable attack surface reduction rules, you should plan your deployment. Careful planning helps you test your attack surface reduction rules deployment and get ahead of any rule exceptions. When planning to test attack surface reduction rules, make sure you start with the right business unit. Start with a small group of people in a specific business unit. You can identify some champions within a particular business unit who can provide feedback to help tune your implementation.
 
@@ -100,3 +99,4 @@ See: [Create a deployment plan for Windows](/windows/deployment/update/create-de
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

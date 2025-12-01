@@ -1,11 +1,11 @@
----
+﻿---
 title: Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
 description: Troubleshoot issues that might arise during the onboarding of devices using Security Management for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,19 +14,14 @@ ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 06/12/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration)
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Security Management for Microsoft Defender for Endpoint is a capability for devices that aren't managed by Microsoft Intune to receive security configurations.
 
@@ -72,10 +67,11 @@ The following table lists errors and directions on what to try/check in order to
 |`40`|Clock sync issue|The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow. Verify that the clock is set correctly and is synced on the device where the error occurs.|
 |`43`|MDE and ConfigMgr|The device is managed using Configuration Manager and Microsoft Defender for Endpoint. Controlling policies through both channels may cause conflicts and undesired results. To avoid this, endpoint security policies should be isolated to a single control plane. |
 |`2`|Device is not enrolled and has never been enrolled|The device was successfully onboarded to Microsoft Defender for Endpoint. However, it is not enrolled to be managed by Defender for Endpoint. For more information, see [Configure Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration?pivots=mdssc-preview). |
-|`4`|Device is managed by SCCM Agent|The device was successfully onboarded to Microsoft Defender for Endpoint. However, it is configured to be managed by SCCM. In order for the machine to be managed by MDE go to  Settings > Endpoints > Configuration Management > Enforcement Scope and turn of the "Manage Security setting using Configuration Manager" toggle. For more information on co-existence with Configuration Manager, see [Defender for Endpoint integration with Configuration Manager](/mem/intune/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager). |
+|`4`|Device is managed by SCCM Agent|The device was successfully onboarded to Microsoft Defender for Endpoint. However, it is configured to be managed by SCCM. In order for the machine to be managed by MDE go to  Settings > Endpoints > Configuration Management > Enforcement Scope and turn off the "Manage Security setting using Configuration Manager" toggle. For more information on co-existence with Configuration Manager, see [Defender for Endpoint integration with Configuration Manager](/mem/intune/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager). |
 
 ## Related topic
 
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

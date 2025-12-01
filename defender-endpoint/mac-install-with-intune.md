@@ -1,10 +1,10 @@
----
+﻿---
 title: Intune-based deployment for Microsoft Defender for Endpoint on macOS
 description: Install Microsoft Defender for Endpoint on macOS, using Microsoft Intune.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
@@ -15,23 +15,23 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/24/2025
----
+ms.date: 06/27/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 
 This article describes how to deploy Microsoft Defender for Endpoint on macOS through Microsoft Intune.
 
 ## Prerequisites and system requirements
 
 Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information. For a description of prerequisites and system requirements for the current software version, see [Microsoft Defender for Endpoint on MacOS prerequisites](/defender-endpoint/microsoft-defender-endpoint-mac-prerequisites).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Overview
 
@@ -62,7 +62,7 @@ Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
-1. On the **Policies** tab, select **Create** > **New Policy**. 
+1. Under Configuration tab, On the **Policies** tab, select **+ Create** > **+ New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
@@ -120,9 +120,11 @@ To configure your network filter:
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -155,9 +157,11 @@ To configure Full Disk Access:
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [fulldisk.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -191,9 +195,11 @@ To configure background services:
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [background_services.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/background_services.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -227,9 +233,11 @@ To configure notifications:
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [notif.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/notif.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -257,9 +265,11 @@ Download [accessibility.mobileconfig](https://raw.githubusercontent.com/microsof
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [accessibility.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/macos/mobileconfig/profiles/accessibility.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -288,9 +298,11 @@ Download **[bluetooth.mobileconfig](https://raw.githubusercontent.com/microsoft/
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [bluetooth.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -330,9 +342,11 @@ Download **[com.microsoft.autoupdate2.mobileconfig](https://raw.githubuserconten
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the [com.microsoft.autoupdate2.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) **Configuration profile file** downloaded earlier, then select **Next**.
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -389,9 +403,11 @@ To create this profile, copy the code for the [Intune recommended profile](/defe
 
 1. On the **Configuration settings** tab, enter the **Custom configuration profile** **name** `com.microsoft.wdav`
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the `com.microsoft.wdav.xml` Configuration profile file created earlier, then select **Next.**
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -419,12 +435,15 @@ The Device Control setting is included in the MacOS Full disk access template cr
 
 For more information about Device Control for Microsoft Defender for Endpoint on macOS see [Device Control for MacOS](/defender-endpoint/mac-device-control-overview)
 
+> [!IMPORTANT]
+> You should create and deploy the configuration profiles in the order specified (steps 1-11) for a successful system configuration.
+
 ### Step 12: Publish the Microsoft Defender application
 
 > [!IMPORTANT]
 > The Microsoft Defender app for macOS splits features for both Microsoft Defender for Endpoint and Microsoft Purview Endpoint Data Loss Prevention, if you are also planning to onboard MacOS devices to Purview (Step 18), ensure Device Monitoring is turned on **at this stage**. To enable Purview Device Monitoring on the [Microsoft Purview Portal](https://purview.microsoft.com) go to **Settings > Devices.**
 
-This step enables deploying Microsoft Defender for Endpoint to enrolled machines.
+This step enables deploying Microsoft Defender for Endpoint to machines enrolled in Microsoft Intune.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), open **Apps**.
 
@@ -440,18 +459,18 @@ This step enables deploying Microsoft Defender for Endpoint to enrolled machines
 
    :::image type="content" source="media/mdatp-10-properties.png" alt-text="Screenshot that shows the application properties page." lightbox="media/mdatp-10-properties.png":::
    
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
+
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
-   :::image type="content" source="media/mdatp-11-assignments.png" alt-text="Screenshot that shows the Intune assignments information page." lightbox="media/mdatp-11-assignments.png":::
-   
-1. On the Review+Create tab, select **Create**. 
+      :::image type="content" source="media/mdatp-11-assignments.png" alt-text="Screenshot that shows the Intune assignments information page." lightbox="media/mdatp-11-assignments.png":::
 
-   :::image type="content" source="media/mdatp-12-applications.png" alt-text="Screenshot that shows the application lists page." lightbox="media/mdatp-12-applications.png":::
-   
-   For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
-   
-> [!IMPORTANT]
-> You should create and deploy the configuration profiles in the order specified (steps 1-12) for a successful system configuration.
+1. On the **Review+Create** tab, select **Create**. 
+
+      :::image type="content" source="media/mdatp-12-applications.png" alt-text="Screenshot that shows the application lists page." lightbox="media/mdatp-12-applications.png":::
+
+      For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
+
 
 ### Step 13: Download the Microsoft Defender for Endpoint onboarding package
 
@@ -463,25 +482,24 @@ To download the onboarding package from the Microsoft Defender portal:
 
 1. On the **Deployment method** drop-down, select **Mobile Device Management / Microsoft Intune**.
 
-   :::image type="content" source="media/macos-install-with-intune.png" alt-text="Screenshot that shows the Onboarding settings page." lightbox="media/macos-install-with-intune.png":::
+   ![Screenshot of the Onboarding page with Deployment method Mobile Device Management / Microsoft Intune highlighted.](media/mac-install-with-intune/macos-download-onboarding-package.png)
 
-3. Select **Download onboarding package**. Save it as _WindowsDefenderATPOnboardingPackage.zip_ to the same directory.
+1. Select **Download onboarding package**. Save it as _GatewayWindowsDefenderATPOnboardingPackage.zip_ to the same directory.
+
 
 1. Extract the contents of the .zip file:
 
    ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
+   unzip GatewayWindowsDefenderATPOnboardingPackage.zip
    ```
 
    ```console
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   warning:  WindowsDefenderATPOnboardingPackage.zip appears to use backslashes as path separators
+   Archive:  GatewayWindowsDefenderATPOnboardingPackage.zip
+   warning:  GatewayWindowsDefenderATPOnboardingPackage.zip appears to use backslashes as path separators
     inflating: intune/kext.xml
     inflating: intune/WindowsDefenderATPOnboarding.xml
     inflating: jamf/WindowsDefenderATPOnboarding.plist
    ```
-
-   :::image type="content" source="media/deploy-onboarding-package.png" alt-text="Screenshot that shows the sample description."  lightbox="media/deploy-onboarding-package.png":::
 
 ### Step 14: Deploy the Microsoft Defender for Endpoint onboarding package for MacOS
 
@@ -503,9 +521,11 @@ This profile contains license information for Microsoft Defender for Endpoint.
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** **name.**
 
-1. Choose a **Deployment channel** and select **Next**.
+1. Choose a **Deployment channel**.
 
 1. Select the *WindowsDefenderATPOnboarding.xml* Configuration profile file created earlier, then select **Next.**
+
+1. On the **Scope Tags** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
@@ -528,11 +548,11 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 1. Confirm device management.
 
    ![Screenshot that shows the Confirmed device management page](media/mdatp-3-confirmdevicemgmt.png)
-
-2. Select **Open System Preferences**, locate **Management Profile** on the list, and select **Approve...**. Your Management Profile would be displayed as **Verified**:
+   
+1. Select **Open System Preferences**, locate **Management Profile** on the list, and select **Approve...**. Your Management Profile would be displayed as **Verified**:
 
    ![Screenshot that shows the Management profile page.](media/mdatp-4-managementprofile.png)
-
+   
 1. Select **Continue** and complete the enrollment.
 
    You might now enroll more devices. You can also enroll them later, after finishing the provisioning system configuration and application packages.
@@ -540,7 +560,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 1. In Intune, select **Devices** > **All devices**. Here you can see your device among the listed:
 
    ![Screenshot that shows the All Devices page.](media/mdatp-5-alldevices.png)
-
+   
 #### Step 15c. Verify client device state
 
 1. After the configuration profiles are deployed to your devices, open **System Settings > General > Device Management** on your MacOS device.
@@ -560,7 +580,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 1. You should also see the **Microsoft Defender** icon in the top-right corner.
 
    ![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](media/mdatp-icon-bar.png)
-
+   
 ### Step 16: Verify anti-malware detection
 
 See the following article to test for an anti-malware detection review: [Antivirus detection test for verifying device's onboarding and reporting services](validate-antimalware.md)
@@ -596,4 +616,5 @@ For information on troubleshooting procedures, see:
 ## Uninstallation
 
 See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove Microsoft Defender for Endpoint on macOS from client devices.
+
 

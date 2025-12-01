@@ -2,9 +2,9 @@
 title: Privacy in Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.date: 05/08/2025
 audience: ITPro
 ms.topic: concept-article
@@ -18,7 +18,7 @@ ms.custom:
 description: Admins can learn about privacy in Defender for Office 365.
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -45,7 +45,7 @@ All [reports in Defender for Office 365](reports-defender-for-office-365.md) are
 
 Microsoft stores this data securely in Microsoft Entra and maintains it in accordance with Microsoft privacy practices and [Microsoft Trust Center policies](https://go.microsoft.com/fwlink/p/?linkid=827578). All service log data at rest is encrypted and hashed using Office Data Loader (ODL) and Common Data Platform (CDP) encryption (no clear text). Defender for Office 365 uses this data for the following features:
 
-- Threat protection policies to set the appropriate level of protection for your organization.
+- Threat policies to set the appropriate level of protection for your organization.
 - Real-time reports to monitor Defender for Office 365 performance in your organization.
 - Threat investigation and response capabilities that use leading-edge tools to investigate, understand, simulate, and prevent threats.
 - Automated investigation and response capabilities that save time and effort investigating and mitigating threats.
@@ -77,7 +77,7 @@ Defender for Office 365 operates in the Microsoft Entra datacenters. For the fol
 - United Kingdom
 - United States
 
-In Exchange Online Protection (EOP), the following data is stored at rest in the local region geo:
+In the default email protections for cloud mailboxes, the following data is stored at rest in the local region geo:
 
 - Alerts
 - Attachments

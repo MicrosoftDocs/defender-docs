@@ -2,7 +2,7 @@
 title: Remediate malicious email that was delivered in Office 365
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 ms.topic: concept-article
 ms.collection:
 - m365-security
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 search.appverid: MET150
 description: Threat remediation
 ms.service: defender-office-365
-ms.date: 05/19/2025
+ms.date: 09/16/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -31,7 +31,7 @@ Remediation means to take a prescribed action against a threat. Malicious email 
   - **Organization limits**: The maximum number of active, concurrent email remediations is 50. Once the limit is reached, no new remediations are triggered until some actions are completed.
   - **Email message limits**: If an active remediation involves more than one million email messages, no new email remediations are allowed.
   - **Recipient requirements in remediations**:
-    - The total percentage of selected recipients must be at least 40% of the total email message count in the remediation. If the remediation requires the deletion of 5,000 email messages, the remediation must target at least 2,000 recipients. Explorer (Threat Explorer) counts each recipient as a unique email message. For example, Threat Exporer counts a message sent to 5 addresses as 5 messages.
+    - The total percentage of selected recipients must be at least 40% of the total email message count in the remediation. If the remediation requires the deletion of 5,000 email messages, the remediation must target at least 2,000 recipients. Explorer (Threat Explorer) counts each recipient as a unique email message. For example, Threat Explorer counts a message sent to 5 addresses as 5 messages.
     - If the recipient count is less than 40% of the total email message count, the remediation can't be used to delete more than 1,000 messages that were sent to a single recipient.
 
 - You need to be assigned permissions before you can do the procedures in this article. Admins can take the required action on email messages, but the **Search and Purge** role is required to get those actions approved. To assign the **Search and Purge** role, you have the following options:
@@ -77,7 +77,7 @@ Unified Action Center shows remediation actions for the past 30 days. Actions ta
 
 Open any remediation item to view details about it, including its remediation name, approval ID, Investigation ID, creation date, description, status, action source, action type, decided by, status. It also opens a side pane with action details, email cluster details, alert, and Incident details.
 
-- **Open Investigation page**: Opens an admin investigation that contains fewer details and tabs. It shows details like: related alert, entity selected for remediation, action taken, remediation status, entity count, logs, and approver of action. Tracks an investigation manually done by the admin manually and contains details to selections made by the admin. There's no need to act on the investigation and alert (it's already in the Approved state).
+- **Open Investigation page**: Opens an admin investigation that contains fewer details and tabs. It shows details like: related alert, entity selected for remediation, action taken, remediation status, entity count, logs, and approver of action. Tracks an investigation manually done by the admin and contains details to selections made by the admin. There's no need to act on the investigation and alert (it's already in the Approved state).
 - **Email count**: Displays the number of email messages submitted through Explorer. These messages can be actionable or not actionable.
 - **Action logs**: Shows the details of remediation status like successful, failed, and already in destination.
 
@@ -106,11 +106,11 @@ Open any remediation item to view details about it, including its remediation na
 
       **Delete sender's copy**: Also try to soft delete the message from the sender's Sent Items folder if the sender is the organization.
 
-    - **Hard delete**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items).
+    - **Hard delete**: Purge the deleted message and the corresponding calendar entry for meeting invite messages. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items). If you use [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac), you also need the **Email & collaboration content (read)** permission to hard delete messages.
 
   > [!NOTE]
   > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also, the action logs are available only at <https://security.microsoft.com/threatincidents>, not in the **Action Center** at <https://security.microsoft.com/action-center>.
-  
+
   Suspicious messages are categorized as either remediable or nonremediable. In most cases, the total of remediable and nonremediable messages equals the total number of messages submitted. But the totals might not match because of system delays, time-outs, or expired messages. Messages expire based on the Explorer retention period for your organization.
 
   Unless you're remediating old messages after your organization's Explorer retention period, it's advisable to retry remediating items if you see number inconsistencies. For system delays, remediation updates are typically refreshed within a few hours.

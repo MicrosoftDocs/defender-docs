@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 11/17/2025
 ---
 
 # Understand the advanced hunting schema
@@ -56,6 +56,7 @@ The following reference lists all the tables in the schema. Each table name link
 |------------|-------------|
 | **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |
+|**[AIAgentsInfo](advanced-hunting-aiagentsinfo-table.md)** | Information about AI agents created with Microsoft Copilot Studio, including agent configuration and ownership details |
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | Files, IP addresses, URLs, users, or devices associated with alerts |
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Behavior data types in Microsoft Defender for Cloud Apps (not available for GCC) |
@@ -64,6 +65,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |
 | **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |
+| **[CloudStorageAggregatedEvents](advanced-hunting-cloudstorageaggregatedevents-table.md)** (Preview)| Cloud storage activity and related events |
 | **[DataSecurityBehaviors](advanced-hunting-datasecuritybehaviors-table.md)** (Preview)| Insights about potentially suspicious user behaviors that violate user-defined or default policies configured in the Microsoft Purview suite of solutions|
 | **[DataSecurityEvents](advanced-hunting-datasecurityevents-table.md)** (Preview)| Information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions |
 | **[DeviceBaselineComplianceAssessment](advanced-hunting-devicebaselinecomplianceassessment-table.md)** (Preview) | Baseline compliance assessment snapshot, which indicates the status of various security configurations related to baseline profiles on devices |
@@ -91,20 +93,26 @@ The following reference lists all the tables in the schema. Each table name link
 | **[DeviceTvmSoftwareInventory](advanced-hunting-devicetvmsoftwareinventory-table.md)** | Inventory of software installed on devices, including their version information and end-of-support status |
 | **[DeviceTvmSoftwareVulnerabilities](advanced-hunting-devicetvmsoftwarevulnerabilities-table.md)** | Software vulnerabilities found on devices and the list of available security updates that address each vulnerability |
 | **[DeviceTvmSoftwareVulnerabilitiesKB](advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md)** | Knowledge base of publicly disclosed vulnerabilities, including whether exploit code is publicly available |
+| **[DisruptionAndResponseEvents](advanced-hunting-disruptionandresponseevents-table.md)** (Preview)|  [Automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR|
 | **[EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md)** | Information about files attached to emails |
 | **[EmailEvents](advanced-hunting-emailevents-table.md)** | Microsoft 365 email events, including email delivery and blocking events |
 | **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | Security events that occur post-delivery, after Microsoft 365 delivers the emails to the recipient mailbox |
 | **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | Information about URLs on emails |
+| **[EntraIdSignInEvents](advanced-hunting-entraidsigninevents-table.md)** (Preview)| Microsoft Entra interactive and non-interactive sign-ins |
+| **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** (Preview)| Microsoft Entra service principal and managed identity sign-ins |
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |
 | **[FileMaliciousContentInfo](advanced-hunting-emailurlinfo-table.md)** | Files that were identified as malicious by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams |
+| **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)**  (Preview) | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |
+| **[IdentityAccountInfo](advanced-hunting-identityaccountinfo-table.md)** (Preview) | Account information from various sources, including Microsoft Entra ID. This table also includes information and link to the identity that owns the account. |
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)** | Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller. |
+| **[IdentityEvents](advanced-hunting-identityevents-table.md)** (Preview) | Information about identity events obtained from other cloud identity service providers |
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |
 | **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)** | Queries for Active Directory objects, such as users, groups, devices, and domains |
-| **[MessageEvents](advanced-hunting-messageevents-table.md)** (Preview) | Messages sent and received within your organization at the time of delivery |
-| **[MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md)** (Preview) | Security events that occurred after the delivery of a Microsoft Teams message in your organization |
-| **[MessageUrlInfo](advanced-hunting-messageurlinfo-table.md)** (Preview) | URLs sent through Microsoft Teams messages in your organization |
+| **[MessageEvents](advanced-hunting-messageevents-table.md)** | Messages sent and received within your organization at the time of delivery |
+| **[MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md)**  | Security events that occurred after the delivery of a Microsoft Teams message in your organization |
+| **[MessageUrlInfo](advanced-hunting-messageurlinfo-table.md)** | URLs sent through Microsoft Teams messages in your organization |
 | **[OAuthAppInfo](advanced-hunting-oauthappinfo-table.md)** (Preview) | Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability |
 | **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** | Safe Links clicks from email messages, Teams, and Office 365 apps |
 
@@ -115,4 +123,5 @@ The following reference lists all the tables in the schema. Each table name link
 - [Use shared queries](advanced-hunting-shared-queries.md)
 - [Hunt across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

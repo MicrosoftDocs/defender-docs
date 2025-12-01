@@ -2,9 +2,9 @@
 title: User tags in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.date: 06/13/2025
 audience: ITPro
 ms.topic: how-to
@@ -36,11 +36,11 @@ If your organization has Defender for Office 365 (included in your subscription 
 - You can assign the Priority account tag to a maximum of 250 users.
 - You can create a maximum of 500 custom user tags.
 - You can assign a custom tag to a maximum of 10000 individual users.
-- If you assign a custom user tag to a group, the tag is applied to the first 999 group members (users). 
+- If you assign a custom user tag to a group, the tag is applied to the first 999 group members (users).
 
-This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchange/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
+This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchangepowershell/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
 
-To see how user tags are part of the strategy to help protect high-impact user accounts, see [Security recommendations for priority accounts in Microsoft 365](priority-accounts-security-recommendations.md).
+To see how user tags are part of the strategy to help protect high-impact user accounts, see [Security recommendations for priority accounts](priority-accounts-security-recommendations.md).
 
 ## What do you need to know before you begin?
 
@@ -59,7 +59,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> and **Security Administrator** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - You can also manage and monitor the Priority account tag in the Microsoft 365 admin center. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
@@ -81,7 +81,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
-     - Or, start typing a name to filter the list, and then select the value below the box. 
+     - Or, start typing a name to filter the list, and then select the value below the box.
 
      To add more members, click in an empty area in the box and repeat the previous step.
 
@@ -106,7 +106,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
    > [!NOTE]
    > It can take up to 8 hours to completely apply tags.
    >
-   > If you assign a group to a user tag, members of the group at the time of tag creation are assigned tag. Users later added to the group aren't automatically assigned the user tag. 
+   > If you assign a group to a user tag, members of the group at the time of tag creation are assigned tag. Users later added to the group aren't automatically assigned the user tag.
 
 ## Use the Microsoft Defender portal to view user tags
 

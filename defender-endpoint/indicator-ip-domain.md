@@ -1,12 +1,12 @@
----
+﻿---
 title: Create indicators for IPs and URLs/domains
 ms.reviewer: ericlaw
 description: Create indicators for IPs and URLs/domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,17 +15,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: 
 search.appverid: met150
-ms.date: 04/08/2025
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Create indicators for IPs and URLs/domains
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 ## Overview
 
@@ -40,25 +37,10 @@ The default threat-intelligence data set to block malicious IPs/URLs is managed 
 
 You can block additional malicious IPs/URLs by configuring "**Custom network indicators**".
 
-### Supported operating systems
-
-- Windows 11
-- Windows 10, version 1709 or later
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
-- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
-- macOS
-- Linux
-- iOS 
-- Android
-
-## Before you begin
+## Prerequisites
 
 It's important to understand the following prerequisites before creating indicators for IPs, URLs, or domains.
 
-### Microsoft Defender Antivirus version requirements
 Integration into Microsoft browsers is controlled by the browser's SmartScreen setting. For other browsers and applications, your organization must have:
 
 - [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows) configured in active mode.
@@ -70,6 +52,21 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 - [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 - The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
+
+### Supported operating systems
+
+- Windows 11
+- Windows 10, version 1709 or later
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Azure Stack HCI OS, version 23H2 and later
+- macOS
+- Linux
+- iOS 
+- Android
 
 ### Network Protection requirements
 
@@ -85,7 +82,7 @@ For support of indicators on Android, see [Microsoft Defender for Endpoint on An
 
 ### Indicator list limitations
 
-Only external IPs can be added to the indicator list; indicators cannot be created for internal IPs.
+Only external IPs can be added to the indicator list; indicators can't be created for internal IPs.
 
 ### Non Microsoft Edge and Internet Explorer processes
 
@@ -94,7 +91,7 @@ For processes other than Microsoft Edge and Internet Explorer, web protection sc
 - IP addresses are supported for all three protocols (TCP, HTTP, and HTTPS (TLS))
 - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators
 - HTTP URLs (including a full URL path) can be blocked for any browser or process
-- HTTPS fully-qualified domain names (FQDN) can be blocked in non-Microsoft browsers (indicators specifying a full URL path can only be blocked in Microsoft Edge)
+- HTTPS fully qualified domain names (FQDN) can be blocked in non-Microsoft browsers (indicators specifying a full URL path can only be blocked in Microsoft Edge)
 - Blocking FQDNs in non-Microsoft browsers requires that QUIC and Encrypted Client Hello be disabled in those browsers 
 - FQDNs loaded via HTTP2 connection coalescing can only be blocked in Microsoft Edge
 - If there are conflicting URL indicator policies, the longer path is applied. For example, the URL indicator policy `https://support.microsoft.com/office` takes precedence over the URL indicator policy `https://support.microsoft.com`.
@@ -146,7 +143,7 @@ In the case where multiple different action types are set on the same indicator 
 
 ### Defender for Cloud Apps Indicators
 
-If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. If an application is put in monitor mode, warn indicators (bypassable block) are created for the URLs associated with the application. Allow indicators are not automatically created for sanctioned applications. Indicators created by Defender for Cloud Apps follow the same policy conflict handling described in the previous section.
+If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. If an application is put in monitor mode, warn indicators (bypassable block) are created for the URLs associated with the application. Allow indicators aren't automatically created for sanctioned applications. Indicators created by Defender for Cloud Apps follow the same policy conflict handling described in the previous section.
 
 ## Policy precedence
 
@@ -175,12 +172,12 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 
    - **Indicator**: Specify the entity details and define the expiration of the indicator.
    - **Action**: Specify the action to be taken and provide a description.
-   - **Scope**: Specify the machine group(s) which should enforce the indicator.
+   - **Scope**: Specify the machine group(s) that should enforce the indicator.
 
 5. Review the details in the **Summary** tab, then select **Save**.
 
 > [!IMPORTANT]
-> It can take up to 48 hours after a policy is created for a URL or IP address to be blocked on a device. In most cases, blocks will take effect in under two hours.
+> It can take up to 48 hours after a policy is created for a URL or IP address to be blocked on a device. In most cases, blocks take effect in under two hours.
 
 ## Related articles
 
@@ -191,3 +188,4 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

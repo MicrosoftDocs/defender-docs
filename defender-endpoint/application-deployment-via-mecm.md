@@ -1,27 +1,26 @@
----
+﻿---
 title: Migrating servers from Microsoft Monitoring Agent to the unified solution
 description: Learn how to migrate down-level servers from Microsoft Monitoring Agent to the new unified solution step-by-step from this article.
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier1
 ms.topic: install-set-up-deploy
 ms.date: 03/27/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Migrating servers from Microsoft Monitoring Agent to the unified solution
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article guides you in migrating servers running Windows Server 2016 or Windows Server 2012 R2 from Microsoft Monitoring Agent (MMA) to the modern, unified solution. In this article, the phrase *down-level servers* refers to older versions of Windows Server, such as Windows Server 2016 and Windows Server 2012 R2.
 
@@ -130,3 +129,4 @@ Copy the unified solution package, onboarding script, and migration script to th
 - [Microsoft Defender for Endpoint: Defending Windows Server 2012 R2 and 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

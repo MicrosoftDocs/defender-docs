@@ -2,10 +2,10 @@
 title: Troubleshoot issues on Microsoft Defender for Endpoint on Android
 description: Troubleshoot issues for Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,18 +15,13 @@ ms.topic: troubleshooting-general
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/21/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Troubleshooting issues on Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 When onboarding a device, you might see sign in issues after the app is installed.
 
@@ -139,7 +134,7 @@ The Android devices Battery Optimization screen opens automatically as part of t
 1. Install MDE app in personal profile. (Sign-in isn't required.)
 2. Open the Company Portal and tap on Settings.
 3. Go to the Battery Optimization section, tap on the **Turn Off** button, and then select on **Allow** to turn off Battery Optimization for the Company Portal.
-4. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens. 
+4. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens.
 5. Find the Defender app and tap on it.
 6. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
 7. The application shouldn't be uninstalled from personal profile for this to work.
@@ -157,7 +152,7 @@ Users need to disable MDE VPN from the Settings page. The following steps can be
 2. Search for VPN or open 'Network and Internet' and select on VPN.
 3. Select on Microsoft Defender and select Disconnect.
 
-Users should enable VPN when they're no longer using the banking app to ensure that their devices are protected. 
+Users should enable VPN when they're no longer using the banking app to ensure that their devices are protected.
 
 > [!NOTE]
 > This a temporary workaround. We are working on other alternatives to provide users more control over the VPN settings from within the app.

@@ -1,9 +1,9 @@
----
+﻿---
 title: Migration and setup guides to move to Microsoft Defender for Endpoint
 description: Learn how to make the switch from a non-Microsoft Defender XDR solution to Microsoft Defender for Endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: bagol
 audience: ITPro
 ms.topic: install-set-up-deploy
 ms.service: defender-endpoint
@@ -17,16 +17,15 @@ f1.keywords: NOCSH
 ms.date: 04/04/2025
 ms.subservice: onboard
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Move to Microsoft Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Migration and setup guides
 
@@ -56,3 +55,4 @@ Let us know what you think! Submit your feedback at the bottom of the page. We'l
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

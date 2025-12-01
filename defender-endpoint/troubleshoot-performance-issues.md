@@ -1,13 +1,13 @@
----
+﻿---
 title: Troubleshoot performance issues
 description: Troubleshoot high CPU usage related to the real-time protection service in Microsoft Defender for Endpoint.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
-ms.date: 05/14/2025
+manager: bagol
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: troubleshooting
 ms.subservice: ngp
@@ -15,26 +15,26 @@ ms.collection:
 - m365-security
 - tier3
 - mde-ngp
+appliesto:
+  - Microsoft Defender Antivirus
+
 ---
 
 # Troubleshoot performance issues related to real-time protection
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-- Windows Server
 
 If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Anti-malware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
 
 As an admin, you can also troubleshoot these issues on your own.
 
 First, you might want to check if other software is causing the issue. Read [Check with the vendor for known issues with antivirus exclusions](#check-with-the-vendor-for-known-issues-with-antivirus-products).
+
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Common reasons for higher CPU utilization by Microsoft Defender Antivirus
 
@@ -75,12 +75,6 @@ If you can readily identify the software affecting system performance, go to the
 
 We recommend that software vendors follow the various guidelines in [Partnering with the industry to minimize false positives](https://www.microsoft.com/security/blog/2018/08/16/partnering-with-the-industry-to-minimize-false-positives/). The vendor can submit their software through the [Microsoft Security Intelligence portal](https://www.microsoft.com/wdsi/filesubmission?persona=SoftwareDeveloper).
 
-## What if I still have an issue?
-
-You can submit a ticket to [Microsoft support](/defender-endpoint/contact-support).
-
-Follow the steps in [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
-
 ## See also
 
 - [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md)
@@ -88,3 +82,4 @@ Follow the steps in [Collect Microsoft Defender Antivirus diagnostic data](colle
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

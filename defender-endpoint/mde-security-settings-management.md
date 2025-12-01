@@ -1,14 +1,14 @@
----
+﻿---
 title: Manage Microsoft Defender Antivirus by using Defender for Endpoint Security Settings Management
 description: Learn how to use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 05/28/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -18,28 +18,16 @@ ms.localizationpriority: medium
 ms.custom: 
 - nextgen
 - partner-contribution
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-
-**Platforms**
-
-- Windows
-- Windows Server
-- macOS
-- Linux
 
 This article describes how to manage Microsoft Defender Antivirus security policies on devices with Defender for Endpoint Security Settings Management (in the [Microsoft Defender portal](https://security.microsoft.com)). 
 
-### Prerequisites
-
-Review the prerequisites [here](/mem/intune/protect/mde-security-integration). 
 
 > [!NOTE]
 > The **Endpoint Security Policies** page in the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, can't access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in the scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
@@ -64,6 +52,18 @@ The following list provides a brief description of each endpoint security policy
 - **Endpoint detection and response** - When you integrate Microsoft Defender for Endpoint with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 
 - **Attack surface reduction** - When Microsoft Defender Antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for attack surface reduction to manage those settings for your devices.
+
+## Prerequisites
+
+Review the prerequisites [here](/mem/intune/protect/mde-security-integration). 
+
+### Supported operating systems
+
+- Windows
+- Windows Server
+- macOS
+- Linux
+
 
 ## Create an endpoint security policy
 
@@ -385,11 +385,11 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 10. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
-   |Description| Setting|
-   | -------- | -------- |
-   | TamperProtection (Device) | On|
+     |Description| Setting|
+     | -------- | -------- |
+     | TamperProtection (Device) | On|
 
-   For more information, see [Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
+     For more information, see [Protect security settings with tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 
 #### Check the Cloud Protection network connectivity
 
@@ -443,7 +443,7 @@ To report False Negatives (FNs), see the following articles:
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.
 
-## **See also**
+## See also
 
 - [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
 - [Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated](/defender-endpoint/troubleshoot-security-intelligence-not-updated)
@@ -454,4 +454,5 @@ To report False Negatives (FNs), see the following articles:
 - [Troubleshoot performance issues related to real-time protection](/defender-endpoint/troubleshoot-performance-issues)
 - [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+
 

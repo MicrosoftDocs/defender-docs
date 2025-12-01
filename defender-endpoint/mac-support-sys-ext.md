@@ -1,11 +1,11 @@
----
+﻿---
 title: Troubleshoot system extension issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalsh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -16,21 +16,13 @@ ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device and by navigating to **Help > Send feedback**.
 
@@ -279,3 +271,4 @@ The output shows all potential issues with profiles.
 - [Set up device groups in Jamf Pro](mac-jamfpro-device-groups.md): 
 Learn how to set up device groups in Jamf Pro for Microsoft Defender for Endpoint on macOS.
 - [Sign-in to Jamf Pro](mac-install-jamfpro-login.md)
+

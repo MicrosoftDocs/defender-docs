@@ -1,34 +1,26 @@
----
+﻿---
 title: Assign user access 
 description: Assign read and write or read only access to the Microsoft Defender for Endpoint portal.
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.date: 01/28/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Assign user access 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- Microsoft Entra ID
-- Office 365
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Defender for Endpoint supports two ways to manage permissions:
 
@@ -42,7 +34,7 @@ Defender for Endpoint supports two ways to manage permissions:
 
 ## Change from basic permissions to RBAC
 
-If you have basic permissions, you can switch to RBAC anytime. Consider the following before making the switch:
+If you have basic permissions, you can switch to Role-based access control (RBAC) anytime. Consider the following before making the switch:
 
 - Users who have full access are automatically assigned the default Defender for Endpoint administrator role.
 - Other Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC.
@@ -59,3 +51,4 @@ If you have basic permissions, you can switch to RBAC anytime. Consider the foll
 - [Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

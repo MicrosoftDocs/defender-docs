@@ -2,10 +2,10 @@
 title: EDR detection test for verifying device's onboarding and reporting service
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,19 +16,18 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 04/30/2025
+appliesto: 
+    - Microsoft Defender for Endpoint Plan 2
+    - Microsoft Defender for Business
+
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
 
-#### Applies to:
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
-## Scenario requirements and setup
+## Prerequisites
 
 - Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2 SP1.
+- Windows server devices must be running Windows Server 2008 R2 SP1, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 - Linux servers must be running a supported version (see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md))
 - Devices must be onboarded to Defender for Endpoint
 
@@ -76,21 +75,21 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
  
 ### macOS
 
-1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract the zipped folder.
+1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP macOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract the zipped folder.
 
       The following prompt appears:
 
       > Do you want to allow downloads on "mdatpclientanalyzer.blob.core.windows.net"?<br/>
       > You can change which websites can download files in **Websites Preferences**.
 
-4. Click **Allow**.
+4. Select **Allow**.
 
 5. Open **Downloads**.
 
 6. You must be able to see **MDATP MacOS DIY**.
 
    > [!TIP]
-   > If you double-click **MDATP MacOS DIY**, you will get the following message:
+   > If you double-click **MDATP MacOS DIY**, you'll get the following message:
    >
    > > **"MDATP MacOS DIY" cannot be opened because the developer cannot be verified.**<br/>
    > > macOS cannot verify that this app is free from malware.<br/>
@@ -107,7 +106,7 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
 
 9. Click **Open**.
 
-    The system will display the following message:
+    The system displays the following message:
 
     > Microsoft Defender for Endpoint - macOS EDR DIY test file<br/>
     > Corresponding alert will be available in the MDATP portal.

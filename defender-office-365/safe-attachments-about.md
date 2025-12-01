@@ -2,9 +2,9 @@
 title: Safe Attachments
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -21,15 +21,19 @@ ms.date: 06/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I need an overview of Safe Attachments so I can choose policies that protect users from malicious attachments while minimizing delivery delays.
 ---
 
 # Safe Attachments in Microsoft Defender for Office 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Safe Attachments in [Microsoft Defender for Office 365](mdo-about.md) provides an additional layer of protection for email attachments that have already been scanned by [anti-malware protection in Exchange Online Protection (EOP)](anti-malware-protection-about.md). Specifically, Safe Attachments uses a virtual environment to check attachments in email messages for harmful attachments (for example, malware, ransomware, and phishing) before they're delivered to recipients (a process known as _detonation_).
+Safe Attachments in [Microsoft Defender for Office 365](mdo-about.md) provides an additional layer of protection for email attachments that have already been scanned by [Anti-malware protection](anti-malware-protection-about.md). Specifically, Safe Attachments uses a virtual environment to check attachments in email messages for harmful attachments (for example, malware, ransomware, and phishing) before they're delivered to recipients (a process known as _detonation_).
 
-Safe Attachments protection for email messages is controlled by Safe Attachments policies. Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies). For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md). You can also create Safe Attachments policies that apply to specific users, group, or domains. For instructions, see [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md).
+> [!TIP]
+> Typically, email attachment scanning completes within 15 minutes. Sometimes, it takes longer due to retry delays and processing time to analyze the file in the virtual environment.
+
+Safe Attachments protection for email messages is controlled by Safe Attachments policies. Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies). For more information, see [Preset security policies](preset-security-policies.md). You can also create Safe Attachments policies that apply to specific users, group, or domains. For instructions, see [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md).
 
 The following table describes scenarios for Safe Attachments in Microsoft 365 and Office 365 organizations that include Microsoft Defender for Office 365 (in other words, lack of licensing is never an issue in the examples).
 
@@ -58,7 +62,7 @@ This section describes the settings in Safe Attachments policies:
   - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
   - **Groups**:
     - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-    - The specified Microsoft 365 Groups.
+    - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
   - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
   You can use a condition or exception only once, but the condition or exception can contain multiple values:
@@ -79,12 +83,12 @@ This section describes the settings in Safe Attachments policies:
 
   |Option|Effect|Use when you want to:|
   |---|---|---|
-  |**Off**|Attachments aren't scanned for threats by Safe Attachments (for example, malware, ransomware, and phishing). Messages are still scanned for malware by [anti-malware protection in EOP](anti-malware-protection-about.md).|Turn scanning off for selected recipients. <br/><br/> Prevent unnecessary delays in routing internal mail. <br/><br/> **This option is not recommended for most users. You should only use this option to turn off Safe Attachments scanning for recipients who only receive messages from trusted senders. ZAP doesn't quarantine messages if Safe Attachments is turned off and a threat signal isn't received. For details, see [Zero-hour auto purge](zero-hour-auto-purge.md)**|
+  |**Off**|Attachments aren't scanned for threats by Safe Attachments (for example, malware, ransomware, and phishing). Messages are still scanned for malware by [Anti-malware protection](anti-malware-protection-about.md).|Turn scanning off for selected recipients. <br/><br/> Prevent unnecessary delays in routing internal mail. <br/><br/> **This option is not recommended for most users. You should only use this option to turn off Safe Attachments scanning for recipients who only receive messages from trusted senders. ZAP doesn't quarantine messages if Safe Attachments is turned off and a threat signal isn't received. For details, see [Zero-hour auto purge](zero-hour-auto-purge.md)**|
   |**Monitor**|Delivers messages with attachments and then tracks what happens with detected threats. <br/><br/> Delivery of safe messages might be delayed due to Safe Attachments scanning.|See where detected messages go in your organization.|
-  |**Block**|Prevents messages with detected attachments from being delivered. <br/><br/> Messages are quarantined. By default, only admins (not users) can review, release, or delete the messages.¹ <br/><br/> Automatically blocks future instances of the messages and attachments. <br/><br/> Delivery of safe messages might be delayed due to Safe Attachments scanning.|Protects your organization from repeated attacks using the same attachments. <br/><br/> This is the default value, and the recommended value in Standard and Strict [preset security policies](preset-security-policies.md).|
+  |**Block**|Prevents messages with detected attachments from being delivered. <br/><br/> Messages are quarantined. By default, only admins (not users) can review, release, or delete the messages.¹ <br/><br/> Automatically blocks future instances of the messages and attachments. <br/><br/> Delivery of safe messages might be delayed due to Safe Attachments scanning.|Protects your organization from repeated attacks using the same attachments. <br/><br/> This value is the default, and the recommended value in Standard and Strict [preset security policies](preset-security-policies.md).|
   |**Dynamic Delivery**|Delivers messages immediately, but replaces attachments with placeholders until Safe Attachments scanning is complete. <br/><br/> Messages that contain malicious attachments are quarantined. By default, only admins (not users) can review, release, or delete the messages.¹ <br/><br/> For details, see the [Dynamic Delivery in Safe Attachments policies](#dynamic-delivery-in-safe-attachments-policies) section later in this article.|Avoid message delays while protecting recipients from malicious files.|
 
-  ¹ Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy). Users can't release their own messages that were quarantined as malware or phishing by Safe Attachments, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or phishing messages.
+  ¹ Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy). Users can't release their own messages quarantined as malware or phishing by Safe Attachments, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
 - **Redirect messages with detected attachments**: **Enable redirect** and **Send messages that contain monitored attachments to the specified email address**: For the **Monitor** action only, send messages that contain detected attachments to the specified internal or external email address for analysis and investigation.
 

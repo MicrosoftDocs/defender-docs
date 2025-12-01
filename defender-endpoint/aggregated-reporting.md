@@ -2,24 +2,23 @@
 title: Aggregated reporting in Microsoft Defender for Endpoint
 description: Learn how you collect important telemetry in Microsoft Defender for Endpoint by turning on aggregated reporting.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
 search.appverid: met150
-ms.date: 03/04/2025
+ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Aggregated reporting in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 Aggregated reporting addresses constraints on event reporting in Microsoft Defender for Endpoint. Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.
 
@@ -33,13 +32,16 @@ When aggregated reporting is turned on, you can query for a summary of all suppo
 
 The following requirements must be met before turning on aggregated reporting:
 
-- Defender for Endpoint Plan 2 license
 - Permissions to enable advanced features
 
-Aggregated reporting supports the following:
 
-- Client version: Windows version 2411 and later
-- Operating systems: Windows 11 22H2, Windows 11 Enterprise, Windows 10 20H2, 21H1, 21H2, Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server version 20H2
+### Supported operating systems: 
+
+  - Windows 10 (20H2, 21H1, 21H2)
+  - Windows 11 (22H2, Enterprise)
+  - Windows Server 2019 and later
+  - Windows Server version 20H2 or Azure Stack HCI OS, version 23H2 and later
+  - Client version: Windows version 24H and later
 
 ## Turn on aggregated reporting
 
@@ -77,9 +79,9 @@ To query new data with aggregated reports:
 3. When necessary, create new custom rules to incorporate new action types.
 4. Go to the **Advanced Hunting** page and query the new data.
 
-Here is an example of advanced hunting query results with aggregated reports.
+   Here is an example of advanced hunting query results with aggregated reports.
 
-:::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
+   :::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
 
 ## Sample advanced hunting queries
 
