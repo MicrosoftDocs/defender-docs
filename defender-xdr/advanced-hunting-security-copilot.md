@@ -46,6 +46,8 @@ Users with access to Security Copilot can use these capabilities in advanced hun
 
 You can only use one capability at a time. By default, the Threat Hunting Agent is the active mode. To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Agent** switch off.
 
+![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Agent mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
+
 >[!NOTE]
 > Switching between modes resets your conversation with Security Copilot. 
 

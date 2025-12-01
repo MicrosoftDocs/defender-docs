@@ -89,8 +89,8 @@ To start using the Query assistant, follow these steps:
 
 ## Modify settings
 
-Select the ellipses in the Copilot side pane to choose whether to automatically add and run the generated query in advanced hunting.
+Select the three-dot menu in the Copilot side pane to choose whether to automatically add and run the generated query in advanced hunting.
 
-   ![Screenshot of Security Copilot in advanced hunting showing the settings ellipses icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-settings.png)
+   ![Screenshot of Security Copilot in advanced hunting showing the settings three-dot menu icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-settings.png)
 
 If you deselect the **Run generated query automatically** setting, you can choose to run the generated query automatically (**Add and run**) or add the generated query to the query editor for further modification (**Add to editor**).
