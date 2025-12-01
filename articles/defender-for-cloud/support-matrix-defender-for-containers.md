@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 09/11/2025
+ms.date: 12/01/2025
 ms.custom: references_regions
 ---
 
@@ -227,9 +227,9 @@ The following table lists the features provided by Defender for Containers for t
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets. | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation |  Foundational CSPM  **OR** Defender CSPM **OR** Defender for Containers  | - |
-| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that bad actors might use to breach your environment. | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation | Defender CSPM | - |
-| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | Docker Hub, JFrog | Preview | Preview | Connector creation | Defender for Containers **OR** Defender CSPM |  |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets. | Docker Hub, JFrog Artifactory | GA | GA | Connector creation |  Foundational CSPM  **OR** Defender CSPM **OR** Defender for Containers  | - |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that bad actors might use to breach your environment. | Docker Hub, JFrog Artifactory | GA | GA | Connector creation | Defender CSPM | - |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | Docker Hub, JFrog | GA | GA | Connector creation | Defender for Containers **OR** Defender CSPM |  |
 
 ---
 
