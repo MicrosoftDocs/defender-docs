@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/09/2025
+ms.date: 12/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
