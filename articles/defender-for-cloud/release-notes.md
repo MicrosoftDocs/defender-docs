@@ -31,12 +31,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|December 2, 2025| GA | [General availability of the Endor Labs integration](#general-availability-of-the-endor-labs-integration) |
+|December 1, 2025| GA | [General availability of the Endor Labs integration](#general-availability-of-the-endor-labs-integration) |
 | December 1, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
 
 ### General availability of the Endor Labs integration
 
-December 2, 2025
+December 1, 2025
 
 Defender for Cloud's integration with Endor labs is now generally available.
 
