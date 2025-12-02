@@ -26,9 +26,11 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## November 2025
 
-### Integration of Microsoft Defender for Cloud’s CSPM capabilities and Microsoft Defender Vulnerability Management and into Exposure Management
+### Integration of Microsoft Defender for Cloud’s CSPM capabilities and Microsoft Defender Vulnerability Management into Exposure Management
 
 This major milestone brings comprehensive Microsoft Defender for Cloud’s posture capabilities (secure score, recommendations, and attack paths) and vulnerability management integration to Microsoft Security Exposure Management, which significantly expands the scope and capabilities of the platform.
+
+**Unified portal experience** – All exposure management and vulnerability management functions are now accessible in the Microsoft Defender portal at security.microsoft.com under the Exposure Management section.
 
 #### New unified recommendations catalog
 
@@ -58,11 +60,11 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 
 #### Devices misconfigurations and vulnerabilities
 
-**Separated workflows** – For the first time, misconfigurations recommendations are separated from vulnerabilities, recognizing they represent distinct workflows handled by different personas.
+**Separated workflows** – For the first time, misconfiguration recommendations are separated from vulnerabilities, recognizing they represent distinct workflows handled by different personas.
 
-- **Devices Misconfigurations**: Configuration issues from Vulnerability Management, Microsoft Secure Score, and Security Exposure Management, contributing to Devices Secure Score
+- **Devices Misconfigurations**: Configuration issues from Vulnerability Management, Microsoft Secure Score, and Security Exposure Management, contributing to Devices Secure Score.
 
-- **Devices Vulnerabilities**: Software vulnerabilities from Vulnerability Management with the same exposure score and prioritization logic customers know, preserving familiar structure and workflows
+- **Devices Vulnerabilities**: Software vulnerabilities from Vulnerability Management with the same exposure score and prioritization logic customers know, preserving familiar structure and workflows.
 
 #### Cloud Resources with risk-based prioritization
 
@@ -101,10 +103,6 @@ This major milestone brings comprehensive Microsoft Defender for Cloud’s postu
 **Unified vulnerability view** – Customers with both Defender for Cloud and Defender for Endpoint licenses can now see all vulnerabilities affecting their digital estate in one place.
 
 Learn more about the [integration with Microsoft Vulnerability Management](vulnerability-management-integration.md) and the specific [changes to the Microsoft Vulnerability Management experience](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management#microsoft-defender-vulnerability-management-and-microsoft-security-exposure-management-integration).
-
-#### Portal and navigation updates
-
-**Unified portal experience** – All exposure management and vulnerability management functions are now accessible in the Microsoft Defender portal at security.microsoft.com under the Exposure Management section.
 
 #### Expanded Critical Asset Management
 
