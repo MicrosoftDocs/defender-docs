@@ -36,10 +36,9 @@ The Microsoft Defender Portal delivers unique advantages that make it the premie
 
 ## Set up access to multiple customer tenants
 
-There are two ways available to connect to other customer tenants.
+The default way to connect to other customer tenants in Defender is using [GDAP (Granular Delegated Admin Privileges) (preferred)](/partner-center/customers/gdap-introduction).
 
-- [GDAP (Granular Delegated Admin Privileges) (preferred)](/partner-center/customers/gdap-introduction)
-- [Azure Lighthouse](/azure/lighthouse/) for scenarios where GDAP is not supported. Some scenarios include:
+There are some scenarios where GDAP is not supported. In those cases, [Azure Lighthouse](/azure/lighthouse/) is recommended. These scenarios include:
 
   - CSP partners with Sentinel workloads (partner center???)
   - [Non-CSP partners (Azure RBAC)](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal)
