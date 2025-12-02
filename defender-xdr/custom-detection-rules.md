@@ -38,7 +38,10 @@ Custom detection rules are rules you design and tweak using [advanced hunting](a
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-To manage custom detections, you need to be assigned one of these roles:
+To manage custom detections, you need roles that let you manage the data that these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see the following sections.
+
+### Microsoft Defender
+To manage custom detections on Microsoft Defender data, you need to be assigned one of these roles:
 
 - **Security settings (manage)** - Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
 
@@ -46,14 +49,17 @@ To manage custom detections, you need to be assigned one of these roles:
 
 - **Security Operator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the **Manage Security Settings** permission for Defender for Endpoint.
 
-- **Microsoft Sentinel Contributor** - Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
-
-You can manage custom detections that apply to data from specific Microsoft Defender XDR solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
+You can manage custom detections that apply to data from specific Microsoft Defender solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
 
 Likewise, since the `IdentityLogonEvents` table holds authentication activity information from both Microsoft Defender for Cloud Apps and Defender for Identity, you need to have manage permissions for both services to manage custom detections querying the said table.
 
 > [!NOTE]
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
+
+### Microsoft Sentinel
+To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
+
+### Managing required permissions
 
 To manage required permissions, a Global Administrator can:
 
@@ -77,14 +83,14 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 
 To create a custom detection rule using Defender XDR data, the query must return the following columns:
-1. `Timestamp` - This column sets the timestamp for generated alerts. The query shouldn't manipulate the `Timestamp` and should return it exactly as it appears in the raw event.
+1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. The query shouldn't manipulate this column and should return it exactly as it appears in the raw event.
    
-3. A column or combination of columns that uniquely identify the event in Defender XDR tables:
+3. **For detections based on XDR tables**, a column or combination of columns that uniquely identify the event in these tables:
       - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
       - For Alert* tables, `Timestamp` must appear in the event
       - For Observation* tables, `Timestamp`and `ObservationId` must appear in the same event
       - For all others, `Timestamp` and `ReportId` must appear in the same event
-4. One of the following columns that contain a strong identifier for an impacted asset:
+4. A column that contains a strong identifier for an impacted asset. To map an impacted asset automatically in the wizard, project one of the following columns that contain a strong identifier for an impacted asset:
       - `DeviceId`
       - `DeviceName`
       - `RemoteDeviceName`
@@ -339,7 +345,7 @@ These actions are applied to devices in the `DeviceId` column of the query resul
 - Select **Force password reset** to prompt the user to change their password on the next sign in session.
 - Both the `Disable user` and `Force password reset` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
 
-For more details on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
+For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
 
 #### Actions on emails
 
