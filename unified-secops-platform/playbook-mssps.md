@@ -34,7 +34,7 @@ The Microsoft Defender Portal delivers unique advantages that make it the premie
 
 **Continuous improvement through AI insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
-# How to access multiple customer tenants
+## How to access multiple customer tenants
 
 There are two ways available to connect to other customer tenants.
 
@@ -57,7 +57,7 @@ There are two ways available to connect to other customer tenants.
 
     Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
 
-## Entitlement Management
+## Entitlement management
 
 [Entitlement management](/entra/id-governance/entitlement-management-overview) is an [identity governance](/entra/id-governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
 
