@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 11/25/2025
+ms.date: 12/01/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -27,6 +27,66 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## December 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|December 2, 2025| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic)|
+|December 1, 2025| GA | [General availability of the Endor Labs integration](#general-availability-of-the-endor-labs-integration) |
+| December 1, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
+
+### Updated CIEM recommendation logic
+
+December 2, 2025
+
+As part of the ongoing deprecation of the Microsoft Entra Permissions Management functionality, Microsoft Defender for Cloud is updating its Cloud Infrastructure Entitlement Management (CIEM) recommendation logic across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
+
+The updated model evaluates inactive identities based on unused role assignments rather than sign-in activity and uses a 90-day lookback window. Identities created within the past 90 days are not evaluated as inactive. Coverage for AWS has also been refined so that CIEM recommendations apply only to AWS Service Principals with reliably evaluated permissions, and serverless and compute resources are no longer included, which may result in changes to recommendation counts.
+
+**Cloud-specific requirements**  
+- **AWS:** CIEM evaluations for SAML and SSO identities require AWS CloudTrail Logs (Preview) to be enabled in the Defender CSPM plan.  
+- **GCP:** CIEM evaluations require Cloud Logging ingestion (Preview) to be enabled in the Defender CSPM plan.
+
+The Permissions Creep Index (PCI) metric is being deprecated as part of this update, providing clearer identity insights and reducing noise across multicloud environments.
+
+Learn more about [permissions management in Defender for Cloud](/azure/defender-for-cloud/permissions-management).
+
+### General availability of the Endor Labs integration
+
+December 1, 2025
+
+Defender for Cloud's integration with Endor labs is now generally available.
+
+Defender for Cloud's integration with Endor Labs enhances vulnerability analysis by using reachability-based Software Composition Analysis (SCA), which shows exploitable vulnerabilities from code to runtime.
+
+Learn more about the [Endor Labs integration](integration-endor-labs.md).
+
+### Cloud posture management adds serverless protection for Azure and AWS (Preview)
+
+December 1, 2025
+
+Defender for Cloud extends the capabilities of the Defender Cloud Security Posture Management (CSPM) plan to serverless workloads in Azure and Amazon Web Service (AWS) **(Preview)** in both the Azure portal and the Defender portal.
+
+Currently, the available features vary by portal. The following table shows which features are available in each portal: 
+
+| Feature | Defender for Cloud portal | Defender portal |
+|--|--|--|
+| Onboarding through the Defender CSPM plan | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Review misconfiguration recommendations | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | 
+| Build queries with the cloud security explorer | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Explore workloads in Cloud Inventory | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | 
+| Investigate attack paths | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Vulnerability Assessment | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+
+This release introduces automatic discovery and security posture assessment for:
+- Azure Functions
+- Azure Web Apps
+- AWS Lambda functions
+
+Security teams can view all serverless resources in a centralized inventory and identify misconfigurations, vulnerabilities, and insecure dependencies.
+
+Learn more about [Serverless protection](serverless-protection.md).
+
 ## November 2025
 
 |Date | Category | Update|
@@ -44,7 +104,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
 |November 17, 2025| Preview | [Microsoft Cloud Security Benchmark v2 in Defender for Cloud (Preview)](#microsoft-cloud-security-benchmark-v2-in-defender-for-cloud-preview)|
 |November 12, 2025| Preview |[Restrict Pod Access response action (preview)](#restrict-pod-access-response-action-preview)|
-|November 10, 2025| GA |[Updates to container image continuous vulnerability re-scan policy](#updates-to-container-image-continuous-vulnerability-re-scan-policy)|
+|November 10, 2025| GA |[Updates to container image continuous vulnerability rescan policy](#updates-to-container-image-continuous-vulnerability-rescan-policy)|
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
@@ -82,7 +142,7 @@ November 25, 2025
 
 This integration brings new value and benefits for security personas:
 
-**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. For more information.
+**Unified cloud security experience** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This integration eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads. The new cloud-agnostic integration supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. For more information.
 
 **Cloud dashboard** - The new cloud security dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and includes tools to track security progress over time out of the box. The unified dashboard consolidates security posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments. For more information, see [Cloud Overview dashboard](cloud-infrastructure-dashboard.md).
 
@@ -90,21 +150,21 @@ This integration brings new value and benefits for security personas:
 
 **Unified cloud security posture capabilities** – We're unifying all the cloud security posture management (CSPM) capabilities into **Microsoft Security Exposure Management** (MSEM). Security personas can now view secure scores, prioritized recommendations, attack paths and vulnerabilities in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps, and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
 
-**Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
+**Granular access management** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This access model allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. For more information, see [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
 
 **New modeling for security recommendations**
 
-Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (e.g., **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
+Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (for example, **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
 
 With this change, you get:
 
 - **Smarter prioritization** based on individual impact  
-- **Governance** - more detailed usage of governance, recommendations and exemption capabilities
+- **Governance** - more detailed usage of governance, recommendations, and exemption capabilities
 - **More accurate scoring** since each finding counts separately  
 
 In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
 
-**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the **Defender portal, the classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
+**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal. The classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
 
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
@@ -153,7 +213,7 @@ Estimated date for change: December 2025
 
 In December 2025, Defender for Cloud is adding IP addresses to its multicloud discovery services to accommodate improvements and ensure a more efficient experience for all users.
 
-To ensure uninterrupted access from our services, your IP allowlist should be [updated with the new ranges](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/Network%20requirements). 
+To ensure uninterrupted access from our services, your IP allow list should be [updated with the new ranges](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/Network%20requirements). 
 
 You should make the necessary adjustments in your firewall settings, security groups, or any other configurations that might be applicable to your environment. The list is sufficient for full capability of the CSPM foundational (free) offering.
 
@@ -217,15 +277,15 @@ The action blocks sensitive interfaces within Kubernetes pods that could enable 
 
 Learn more about [Restrict Pod Access in Defender XDR](/defender-xdr/investigate-respond-container-threats).
 
-### Updates to container image continuous vulnerability re-scan policy
+### Updates to container image continuous vulnerability rescan policy
 
 November 10, 2025
 
-Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability re-scan policy.
+Microsoft Defender for Cloud has temporarily updated its container image continuous vulnerability rescan policy.
 
-Images stored in container registries are scanned when pushed and periodically re-scanned to maintain up-to-date vulnerability assessments. With this temporary update, images are now re-scanned daily if they were pushed to or pulled from the registry within the last 30 days.
+Images stored in container registries are scanned when pushed and periodically rescanned to maintain up-to-date vulnerability assessments. With this temporary update, images are now rescanned daily if they were pushed to or pulled from the registry within the last 30 days.
 
-This change shortens the previous 90-day re-scan period to 30 days, ensuring more current vulnerability data for actively used images. Vulnerability information for images older than 30 days remains available from previous scans but is no longer updated.
+This change shortens the previous 90-day rescan period to 30 days, ensuring more current vulnerability data for actively used images. Vulnerability information for images older than 30 days remains available from previous scans but is no longer updated.
 
 Learn more about [container vulnerability scanning in Defender for Cloud](agentless-vulnerability-assessment-azure.md). 
 
@@ -782,7 +842,7 @@ March 30, 2025
 
 Defender for Cloud now provides vulnerability assessment and malware detection for the nodes in Azure Kubernetes Service (AKS) as GA.
 Providing security protection for these Kubernetes nodes allow customers to maintain security and compliance across the managed Kubernetes service, and understand their part in the shared security responsibility they have with the managed cloud provider.
-To receive the new capabilities, you have to enable the **Agentless scanning for machines**"** as part of Defender CSPM, Defender for Containers, or Defender for Servers P2 plan on your subscription.
+To receive the new capabilities, you have to enable the **Agentless scanning for machines**" as part of Defender CSPM, Defender for Containers, or Defender for Servers P2 plan on your subscription.
 
 #### Vulnerability Assessment
 
