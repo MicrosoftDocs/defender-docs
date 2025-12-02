@@ -30,7 +30,7 @@ Multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the 
 
 For each tenant, the Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
 
-If you have tenants with Microsoft Sentinel workspaces onboarded to the Defender portal, you're able to:
+If you have tenants with Microsoft Sentinel workspaces onboarded to the Defender portal, you can:
 
 - Triage incidents and alerts across Security Information and Event Management (SIEM) and eXtended Detection and Response (XDR) data.
 - Proactively search for SIEM and XDR data across multiple tenants.
@@ -80,6 +80,14 @@ The following key capabilities are available for each tenant you have access to 
 | **Endpoints** >**Vulnerability Management** > **[Dashboard](mto-dashboard.md)** | The Microsoft Defender Vulnerability Management dashboard provides both security administrators and security operations teams with aggregated vulnerability management information across multiple tenants. |
 | **Endpoints** > **Vulnerability management** > **[Tenants](mto-dashboard.md)** | For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
 | **Configuration** > **Settings** | Lists the tenants you have access to. Use this page to view and manage your tenants. |
+
+## Limitations
+
+MTO supports multi tenant single workspaces. This means that you can query multiple tenants (multi tenant single workspace) through Advanced Hunting without Lighthouse.
+[Lighthouse](/azure/lighthouse/) is required if you want to:
+
+- Use features such as workbooks or analytic rules on Sentinel data.
+- Query multiple workspace environments.
 
 ## Next steps
 
