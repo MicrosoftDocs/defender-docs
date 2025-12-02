@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Verify Microsoft Defender for Containers deployment on Arc-enabled Kubernetes
 
-After you enable Defender for Containers, use this article to verify all components are functioning correctly on your Arc-enabled clusters.
+After you enable Microsoft Defender for Containers, use this article to verify all components are functioning correctly on your Arc-enabled clusters.
 
 ## Validation checklist
 
@@ -22,42 +22,22 @@ Complete these verification steps in order:
 
 ## Verify Arc connection
 
-### Check Arc agent status
-
-```bash
-# Check Arc agent pods
-kubectl get pods -n azure-arc
-
-# Verify Arc operators
-kubectl get deployments -n azure-arc
-
-# Check connectivity status
-kubectl logs -n azure-arc -l app.kubernetes.io/component=connect-agent --tail=50
-```
-
 ### Using Azure CLI
 
 ```azurecli
-# Verify cluster connection
 az connectedk8s show \
     --name <cluster-name> \
     --resource-group <resource-group> \
     --query connectivityStatus
 ```
 
+The output should show `Connected`.
+
 ## Verify Defender extension
 
 ### Check extension status
 
 ```azurecli
-# Get extension details
-az k8s-extension show \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-type connectedClusters \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group>
-
-# Check provisioning state
 az k8s-extension show \
     --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
@@ -66,21 +46,9 @@ az k8s-extension show \
     --query provisioningState
 ```
 
-### Verify extension components
+The output should show `Succeeded`.
 
-```bash
-# List Defender pods
-kubectl get pods -n mdc
-
-# Check DaemonSet
-kubectl get daemonset -n mdc
-
-# Expected output:
-# NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE
-# microsoft-defender-sensor   5         5         5       5            5
-```
-
-### Verify extension deployment
+### Verify extension in Azure portal
 
 1. In your Arc-enabled cluster, go to **Extensions**.
 
@@ -96,52 +64,13 @@ kubectl get daemonset -n mdc
 
 ## Verify sensor deployment
 
-### Check sensor health
-
-```bash
-# View sensor logs
-kubectl logs -n mdc -l app=microsoft-defender --tail=100
-
-# Check for errors
-kubectl logs -n mdc -l app=microsoft-defender | grep -i error
-
-# Describe pods for issues
-kubectl describe pods -n mdc -l app=microsoft-defender
-```
-
-### Verify resource consumption
-
-```bash
-# Check CPU and memory usage
-kubectl top pods -n mdc
-
-# View resource requests and limits
-kubectl describe daemonset -n mdc microsoft-defender-sensor | grep -A 5 Resources
-```
-
-### Verify sensor deployment
-
 After deployment, verify the sensor is running:
 
 ```bash
-# Check sensor pods
 kubectl get pods -n kube-system -l app=microsoft-defender
-
-# Check DaemonSet status
-kubectl get daemonset -n kube-system microsoft-defender-sensor
 ```
 
-All nodes should have a running sensor pod within 5-10 minutes.
-
-### Check sensor pods
-
-```bash
-# List all Defender pods
-kubectl get pods -n mdc -l app=microsoft-defender
-
-# Check pod logs for any errors
-kubectl logs -n mdc -l app=microsoft-defender --tail=50
-```
+All pods should show a status of `Running`. All nodes should have a running sensor pod within 5-10 minutes.
 
 ## Verify security insights
 
@@ -180,7 +109,7 @@ After deployment completes:
 
 ## Test security detection
 
-To verify that your Defender for Containers deployment is working correctly, you can simulate security alerts. These simulations trigger real alerts without causing harm to your clusters.
+To verify that your Defender for Containers deployment works correctly, simulate security alerts. These simulations trigger real alerts without causing harm to your clusters.
 
 For detailed instructions on generating test alerts and simulating various threat scenarios, see [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
 

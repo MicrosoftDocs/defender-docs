@@ -2,8 +2,6 @@
 title: Configure Defender for Containers on GCP (GKE)
 description: Learn how to configure and customize Microsoft Defender for Containers settings for your GKE clusters, including how to add or remove components after initial deployment.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
 ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
@@ -86,22 +84,6 @@ az k8s-extension create \
     --cluster-name $CLUSTER_NAME \
     --resource-group $RESOURCE_GROUP
 ```
-
-Or use Helm (for more control):
-
-```bash
-# Add Defender Helm repository
-helm repo add mdc https://azuredefender.azurecr.io/helm/v1/repo
-helm repo update
-
-# Install Defender sensor
-helm install defender-sensor mdc/azuredefender \
-    --namespace mdc \
-    --create-namespace \
-    --set cluster.name=$CLUSTER_NAME
-```
-
-See [Deploy Defender sensor using Helm](deploy-helm.md) for detailed Helm configuration options.
 
 #### Add Azure Policy extension
 

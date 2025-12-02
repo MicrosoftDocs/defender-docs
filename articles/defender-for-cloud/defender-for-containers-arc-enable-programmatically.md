@@ -1,6 +1,6 @@
 ---
 title: Deploy Defender for Containers on Arc-Enabled Kubernetes Programmatically
-description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using CLI, API, or Infrastructure as Code.
+description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using Azure CLI and ARM templates.
 ms.topic: how-to
 ms.date: 11/27/2025
 ai-usage: ai-assisted
@@ -21,64 +21,20 @@ Additionally, you need:
 
 - Azure CLI with the `k8s-extension` extension
 - `kubectl` configured to access your cluster
-- Helm 3.0 or later (for Helm deployment)
 
 ## Connect your cluster to Azure Arc
 
-First, ensure your Kubernetes cluster is connected to Azure Arc:
-
-```bash
-# Register Azure Arc providers
-az provider register --namespace Microsoft.Kubernetes
-az provider register --namespace Microsoft.KubernetesConfiguration
-az provider register --namespace Microsoft.ExtendedLocation
-
-# Connect cluster to Azure Arc
-az connectedk8s connect \
-    --name <cluster-name> \
-    --resource-group <resource-group> \
-    --location <location>
-```
+Before deploying the Defender sensor, ensure your Kubernetes cluster is connected to Azure Arc. For instructions, see [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 ## Enable Defender for Containers
 
-### [Azure CLI - Enable Plan](#tab/azure-cli-enable)
-
-```azurecli
-# Enable Defender for Containers on subscription
-az security pricing create \
-    --name Containers \
-    --tier Standard
-
-# Enable Arc auto-provisioning
-az security auto-provisioning-setting update \
-    --name ArcK8s \
-    --auto-provision On
-```
-
-### [REST API - Enable Plan](#tab/rest-api-enable)
-
-```bash
-# Enable via REST API
-curl -X PUT \
-  "https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
-  -H "Authorization: Bearer {token}" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "properties": {
-      "pricingTier": "Standard"
-    }
-  }'
-```
-
----
+To enable the Defender for Containers plan on your subscription, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md). You can enable the plan through the Azure portal, REST API, or Azure Policy.
 
 ## Deploy the Defender sensor
 
-### [Azure CLI - Deploy Sensor](#tab/azure-cli-deploy)
+After enabling the plan and connecting your cluster to Azure Arc, deploy the Defender sensor extension:
 
 ```azurecli
-# Deploy Defender sensor
 az k8s-extension create \
     --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
@@ -90,47 +46,18 @@ az k8s-extension create \
         auditLogPath="/var/log/kube-apiserver/audit.log"
 ```
 
-### [Helm - Deploy Sensor](#tab/helm-deploy)
+## Deploy the Azure Policy extension
 
-```bash
-# Add Azure Arc Helm repository
-helm repo add azure-arc https://azurearck8s.azurecr.io/helm/v1/repo
-helm repo update
+To enable Azure Policy for Kubernetes on Arc-enabled clusters:
 
-# Create namespace
-kubectl create namespace mdc
-
-# Install Defender sensor
-helm install azure-defender azure-arc/azure-defender \
-    --namespace mdc \
-    --set systemDefaultRegistry=<registry-url> \
-    --set global.credentials.workspaceId=<workspace-id> \
-    --set global.credentials.workspaceKey=<workspace-key> \
-    --set global.clusterName=<cluster-name>
+```azurecli
+az k8s-extension create \
+    --name azure-policy \
+    --cluster-type connectedClusters \
+    --cluster-name <cluster-name> \
+    --resource-group <resource-group> \
+    --extension-type Microsoft.PolicyInsights
 ```
-
-### [GitOps - Deploy Sensor](#tab/gitops-deploy)
-
-```yaml
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: defender-sensor
-  namespace: flux-system
-spec:
-  interval: 10m
-  path: "./clusters/production"
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  postBuild:
-    substitute:
-      cluster_name: "${CLUSTER_NAME}"
-      workspace_id: "${WORKSPACE_ID}"
-```
-
----
 
 ## Next steps
 

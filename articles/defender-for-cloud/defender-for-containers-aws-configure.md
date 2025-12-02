@@ -85,22 +85,6 @@ az k8s-extension create \
     --resource-group $RESOURCE_GROUP
 ```
 
-Or use Helm (for more control):
-
-```bash
-# Add Defender Helm repository
-helm repo add mdc https://azuredefender.azurecr.io/helm/v1/repo
-helm repo update
-
-# Install Defender sensor
-helm install defender-sensor mdc/azuredefender \
-    --namespace mdc \
-    --create-namespace \
-    --set cluster.name=$CLUSTER_NAME
-```
-
-See [Deploy Defender sensor using Helm](deploy-helm.md) for detailed Helm configuration options.
-
 #### Add Azure Policy extension
 
 To add policy assessment to existing deployments:

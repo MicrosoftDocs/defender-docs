@@ -20,18 +20,6 @@ If you decide to stop using those capabilities, you might also want to remove th
 > - When you turn on automatic provisioning, it can affect *existing* and *future* machines.
 > - When you turn off automatic provisioning for an extension, it only affects *future* machines. Nothing gets uninstalled when you turn off automatic provisioning.
 
-## Removal order
-
-To properly remove Defender for Containers from Arc-enabled clusters, follow this order:
-
-1. Remove Arc extensions from clusters (Defender sensor, Azure Policy)
-1. Disconnect clusters from Azure Arc
-1. Disable Defender plan in Azure
-1. Verify removal
-
-> [!IMPORTANT]
-> If you're using Azure Arc for other purposes (like Azure Monitor, GitOps, or other extensions), skip step 2. Only disconnect from Arc if you're no longer using any Arc-enabled services.
-
 ## Remove Arc extensions from clusters
 
 You can remove extensions by using the Azure portal, Azure CLI, or REST API.
@@ -53,24 +41,22 @@ You can remove extensions by using the Azure portal, Azure CLI, or REST API.
 ### [Azure CLI](#tab/cli)
 
 ```azurecli
-# Set variables
-CLUSTER_NAME="<your-cluster-name>"
-RESOURCE_GROUP="<your-resource-group>"
-
-# Remove Defender sensor extension
 az k8s-extension delete \
     --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
-    --cluster-name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP \
+    --cluster-name <cluster-name> \
+    --resource-group <resource-group> \
     --yes
+```
 
-# Remove Azure Policy extension
+To remove the Azure Policy extension:
+
+```azurecli
 az k8s-extension delete \
     --name azurepolicy \
     --cluster-type connectedClusters \
-    --cluster-name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP \
+    --cluster-name <cluster-name> \
+    --resource-group <resource-group> \
     --yes
 ```
 
@@ -102,68 +88,23 @@ The request might take several minutes to complete.
 
 ---
 
-### Remove extensions by using kubectl
-
-If Azure CLI removal fails, manually remove components:
-
-```bash
-# Remove Defender components
-kubectl delete namespace mdc
-kubectl delete clusterrolebinding azuredefender-sensor
-kubectl delete clusterrole azuredefender-sensor
-
-# Remove Policy components
-kubectl delete namespace azurepolicy
-kubectl delete namespace gatekeeper-system
-kubectl delete clusterrolebinding azure-policy
-kubectl delete clusterrole azure-policy
-```
-
-### Clean up remaining resources
-
-```bash
-# Remove any remaining ConfigMaps
-kubectl delete configmap -n kube-system azure-defender-config
-
-# Remove webhooks
-kubectl delete validatingwebhookconfigurations gatekeeper-validating-webhook-configuration
-kubectl delete mutatingwebhookconfigurations azure-policy-mutating-webhook-configuration
-```
-
 ## Disconnect clusters from Azure Arc
 
 > [!WARNING]
 > Only disconnect from Azure Arc if you no longer use any Arc-enabled services on the cluster.
 
-### Disconnect using Azure CLI
+To disconnect a cluster from Azure Arc:
 
 ```azurecli
-# Disconnect cluster from Arc
 az connectedk8s delete \
-    --name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP \
+    --name <cluster-name> \
+    --resource-group <resource-group> \
     --yes
-```
-
-### Remove Arc agents using kubectl
-
-If Azure CLI fails, manually remove Arc agents:
-
-```bash
-# Delete Arc namespace and all resources
-kubectl delete namespace azure-arc
-
-# Remove Arc cluster role bindings
-kubectl delete clusterrolebinding azure-arc-operator
-kubectl delete clusterrolebinding azure-arc-reader
-
-# Remove Arc CRDs
-kubectl get crd -o name | grep -i arc | xargs kubectl delete
 ```
 
 ## Disable Defender plan
 
-### Disable using Azure portal
+### Using Azure portal
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -173,86 +114,24 @@ kubectl get crd -o name | grep -i arc | xargs kubectl delete
 
 1. Select **Save**.
 
-### Disable using Azure CLI
-
-```azurecli
-# Disable Containers plan
-az security pricing create \
-    --name "Containers" \
-    --subscription <subscription-id> \
-    --tier "Free"
-```
-
 ## Verify removal
 
 ### Check Azure resources
 
 ```azurecli
-# Verify Arc clusters status
-az connectedk8s list \
-    --resource-group $RESOURCE_GROUP
-
-# Check for remaining extensions
 az k8s-extension list \
     --cluster-type connectedClusters \
-    --cluster-name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP
+    --cluster-name <cluster-name> \
+    --resource-group <resource-group>
 ```
 
 ### Check cluster resources
 
 ```bash
-# Verify namespaces are removed
-kubectl get namespace | grep -E "mdc|azurepolicy|azure-arc"
-
-# Check for remaining CRDs
-kubectl get crd | grep -E "defender|policy|arc"
-
-# Verify no Defender pods running
-kubectl get pods --all-namespaces | grep -E "defender|policy|arc"
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
 
-## Troubleshooting removal
-
-### Extension deletion stuck
-
-If extension deletion hangs:
-
-```azurecli
-# Force delete the extension
-az k8s-extension delete \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-type connectedClusters \
-    --cluster-name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP \
-    --force \
-    --yes
-```
-
-### Arc disconnection fails
-
-If Arc disconnection fails:
-
-```bash
-# Get Arc uninstall script
-curl -o uninstall-arc.sh https://aka.ms/ArcK8sUninstallScript
-
-# Run uninstall
-bash uninstall-arc.sh
-```
-
-### Resources remain after deletion
-
-Check for and remove finalizers preventing deletion:
-
-```bash
-# Remove finalizers from stuck namespace
-kubectl get namespace mdc -o json | jq '.spec.finalizers = []' | kubectl apply -f -
-
-# Remove stuck webhooks
-kubectl delete validatingwebhookconfigurations --all
-kubectl delete mutatingwebhookconfigurations --all
-```
+No pods should be returned after successful removal.
 
 ## Related content
 

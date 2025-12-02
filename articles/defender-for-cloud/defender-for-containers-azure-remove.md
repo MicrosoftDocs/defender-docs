@@ -26,161 +26,72 @@ The components and roles fall under two removal-type categories:
 
 | Offering | Resource |Manual offboarding | Removal information |
 |---|---|---|---|
-| Workload runtime threat protection | Defender sensor (per cluster inside project) + Arc for Kubernetes | [Defender sensor removal](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-cli%2Caks-removeprofile-api&pivots=defender-for-container-arc&preserve-view=true#use-the-azure-cli-to-remove-the-defender-sensor) | Safe to remove |
+| Workload runtime threat protection | Defender sensor (per cluster inside project) + Arc for Kubernetes | [Defender sensor removal](#remove-the-defender-sensor) | Safe to remove |
 | Kubernetes data plane hardening | Azure Policy for Kubernetes | [Delete Arc-enabled resources](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#clean-up-resources) | Safe to remove |
-
-## Removal order
-
-To properly remove Defender for Containers, follow this order:
-
-1. Remove Defender components from clusters
-1. Disable Azure Policy add-on
-1. Remove diagnostic settings
-1. Clean up Azure policies
-1. Disable Defender plan
-1. Clean up remaining resources
 
 ## Disable Defender for Containers plan
 
-### Disable using Azure portal
+### Using Azure portal
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select the subscription that contains your AKS clusters.
 1. In the Defender plans page, toggle **Containers** to **Off**.
 1. Select **Save**.
 
-### Disable using Azure CLI
-
-```azurecli
-# Disable Defender for Containers
-az security pricing create \
-    --name 'Containers' \
-    --tier 'Free'
-```
-
-### Disable using PowerShell
-
-```powershell
-# Disable Defender for Containers
-Set-AzSecurityPricing `
-    -Name "Containers" `
-    -PricingTier "Free"
-```
-
-### Disable using REST API
-
-```bash
-curl -X PUT \
-  "https://management.azure.com/subscriptions/${SUBSCRIPTION_ID}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
-  -H "Authorization: Bearer ${TOKEN}" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "properties": {
-      "pricingTier": "Free"
-    }
-  }'
-```
-
 ## Remove Defender components from clusters
 
 ### Remove the Defender sensor
 
-```bash
-# Delete the Defender DaemonSet
-kubectl delete daemonset microsoft-defender-collector-ds -n kube-system
+To remove the Defender sensor from an AKS cluster:
 
-# Delete ConfigMaps
-kubectl delete configmap microsoft-defender-config -n kube-system
-kubectl delete configmap microsoft-defender-fim-config -n kube-system
-kubectl delete configmap microsoft-defender-process-config -n kube-system
-
-# Delete ServiceAccount and RBAC
-kubectl delete serviceaccount microsoft-defender -n kube-system
-kubectl delete clusterrole microsoft-defender
-kubectl delete clusterrolebinding microsoft-defender
+```azurecli
+az aks update \
+    --name <cluster-name> \
+    --resource-group <resource-group> \
+    --disable-defender
 ```
 
 ### Disable Azure Policy add-on
 
 ```azurecli
-# Disable Azure Policy for Kubernetes
 az aks disable-addons \
     --addons azure-policy \
     --name <cluster-name> \
     --resource-group <resource-group>
 ```
 
-## Clean up Azure policies
-
-### Remove policy assignments
-
-```azurecli
-# List policy assignments related to Defender
-az policy assignment list \
-    --query "[?contains(displayName, 'Defender') || contains(displayName, 'Kubernetes')]" \
-    --output table
-
-# Delete specific assignments
-az policy assignment delete --name <assignment-name>
-```
-
-### Remove custom initiatives
-
-If you created custom policy initiatives:
-
-```azurecli
-# Delete custom initiative
-az policy set-definition delete \
-    --name <initiative-name>
-```
-
-## Remove managed identities
-
-Defender for Containers creates managed identities in Azure Active Directory for various operations. Review these identities and remove them if they're no longer needed after disabling the service.
-
-> [!WARNING]
-> Before removing any managed identity, verify that other services or applications aren't using it.
-
-
 ## Verify removal
 
 ### Check component removal
 
 ```bash
-# Verify DaemonSet is removed
-kubectl get daemonset -n kube-system | grep defender
-
-# Verify no Defender pods are running
-kubectl get pods --all-namespaces | grep defender
-
-# Verify ConfigMaps are removed
-kubectl get configmap -n kube-system | grep defender
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
+
+No pods should be returned after successful removal.
 
 ### Verify plan status
 
 ```azurecli
-# Check that Defender for Containers is disabled
 az security pricing show --name 'Containers'
 ```
+
+The output should show `pricingTier` as `Free`.
 
 ## Post-removal considerations
 
 ### Security monitoring gaps
 
-When you remove Defender for Containers, your security posture changes significantly. Runtime threat detection stops immediately, leaving your AKS clusters without real-time protection against active threats. Container image vulnerability scanning in ACR stops, so new vulnerabilities in the container images go undetected. Security recommendations based on Kubernetes best practices no longer update, which might leave configuration weaknesses unaddressed. Additionally, compliance reporting for standards like CIS Kubernetes Benchmark stops, which might affect your ability to demonstrate adherence to regulatory requirements.
+When you remove Defender for Containers, your security posture changes significantly:
+
+- Runtime threat detection stops immediately
+- Container image vulnerability scanning in ACR stops
+- Security recommendations no longer update
+- Compliance reporting for standards like CIS Kubernetes Benchmark stops
 
 ### Alternative security solutions
 
-To maintain protection for your AKS clusters, consider implementing alternative security measures. Native Azure services like Azure Policy can help enforce some security controls, while Azure Monitor can provide basic observability. Open source solutions such as Falco offer runtime security monitoring, while Open Policy Agent (OPA) can help enforce security policies. For vulnerability scanning, consider tools like Trivy or Clair. Commercial container security platforms from vendors like Aqua Security, Sysdig, or Prisma Cloud provide comprehensive alternatives. Evaluate these options based on your security requirements, budget, and operational preferences.
-
-### Data retention policies
-
-Understanding data retention is important for compliance and forensic purposes. Security alerts generated by Defender for Containers remain accessible in Microsoft Defender for Cloud for 90 days after removal, giving you time for investigation or compliance audits. Log Analytics workspace data follows your configured retention settings, which can range from 30 to 730 days. Security recommendations clear from the portal within 24 hours of removal but might be retained in exported reports or SIEM systems. Historical vulnerability scan results remain in your Azure Container Registry for 90 days unless you manually purge them.
-
-### Future re-enablement planning
-
-If you decide to re-enable Defender for Containers in the future, the process is straightforward. You can redeploy all components following the standard deployment guides, and protection resumes from that point forward. Historical data (if not purged) remains accessible according to retention policies. However, there's a gap in security coverage for the period when Defender was disabled, which you should consider in any security audit or incident investigation.
+To maintain protection for your AKS clusters, consider implementing alternative security measures such as Azure Policy for basic controls, Azure Monitor for observability, or third-party container security platforms.
 
 ## Re-enable Defender for Containers
 
@@ -188,10 +99,9 @@ To re-enable Defender for Containers:
 
 1. Follow the deployment guide: [Enable all Defender for Containers components on Azure (AKS)](defender-for-containers-azure-enable-portal.md)
 1. All security features are restored.
-1. Historical data remains available if you didn't purge it.
 
 ## Related content
 
 - [Learn more about AKS security](/azure/aks/concepts-security)
 - [View the Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md)
-- [Re-deploy Defender for Containers](defender-for-containers-azure-enable-portal.md) - To restore protection
+- [Re-deploy Defender for Containers](defender-for-containers-azure-enable-portal.md)

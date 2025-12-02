@@ -3452,7 +3452,7 @@ You can [deploy the Defender agent](./defender-for-containers-enable.md?pivots=d
 
 With this announcement, the runtime protection - threat detection (workload) is now also generally available.
 
-Learn more about the Defender for Container's [feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+Learn more about the Defender for Container's [feature availability](support-matrix-defender-for-containers.md).
 
 You can also review [all available alerts](alerts-containers.md).
 
@@ -3464,7 +3464,7 @@ Defender for Container's vulnerability assessment (VA) is able to detect vulnera
 
 This feature is in preview and is only available for Linux images.
 
-To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](supported-machines-endpoint-solutions-clouds-containers.md#registries-and-images).
+To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](support-matrix-defender-for-containers.md#registries-and-images).
 
 ### Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149
 
@@ -3871,7 +3871,7 @@ Learn how to protect and connect your [AWS environment](quickstart-onboard-aws.m
 
 Registry scan for Windows images is now supported in Azure Government and Microsoft Azure operated by 21Vianet. This addition is currently in preview.
 
-Learn more about our [feature's availability](supported-machines-endpoint-solutions-clouds-containers.md).
+Learn more about our [feature's availability](support-matrix-defender-for-containers.md).
 
 ## February 2022
 

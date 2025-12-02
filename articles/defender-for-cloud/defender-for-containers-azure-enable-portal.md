@@ -159,5 +159,5 @@ To disable Defender for Containers and remove all deployed components from your 
 - [Verify deployment](defender-for-containers-azure-verify.md)
 - [Configure advanced settings for Defender for Containers](defender-for-containers-azure-configure.md)
 - [Investigate and respond to runtime security alerts](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)
-- [Review and remediate vulnerability findings](defender-for-containers-vulnerability-assessment-azure.md)
+- [Review and remediate vulnerability findings](view-and-remediate-vulnerabilities-containers.md)
 

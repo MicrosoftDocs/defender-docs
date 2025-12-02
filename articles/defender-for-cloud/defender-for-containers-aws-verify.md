@@ -32,74 +32,28 @@ Complete these verification steps in order:
    - Last sync time is recent (within 15 minutes)
    - Containers plan shows as **On**
 
-### Check connector using Azure CLI
-
-```azurecli
-# Check connector status
-az security connector show \
-    --name <connector-name> \
-    --resource-group <resource-group>
-
-# Check pricing tier
-az security pricing show \
-    --name 'Containers' \
-    --scope "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Security/securityConnectors/{connector-name}"
-```
-
 ## Verify Arc connection
 
 ### Check EKS clusters in Arc
 
 ```azurecli
-# List Arc-connected EKS clusters
-az connectedk8s list \
-    --resource-group <resource-group> \
-    --query "[?contains(name, 'eks')]"
-
-# Check specific cluster status
 az connectedk8s show \
     --name <cluster-name> \
     --resource-group <resource-group> \
     --query connectivityStatus
 ```
 
-### Verify from EKS cluster
-
-```bash
-# Check Arc agents
-kubectl get pods -n azure-arc
-
-# Verify Arc operators
-kubectl get deployments -n azure-arc
-
-# Check connectivity
-kubectl logs -n azure-arc deployment/clusterconnect-agent --tail=50
-```
+The output should show `Connected`.
 
 ## Verify sensor deployment
 
-### Check DaemonSet status
+Check if the Defender sensor pods are running:
 
 ```bash
-# Check if the Defender sensor DaemonSet is running
-kubectl get daemonset -n kube-system | grep defender
-
-# Expected output:
-# microsoft-defender-sensor   3         3         3       3            3           <none>          5m
-```
-
-### Check pod status
-
-```bash
-# List Defender pods
 kubectl get pods -n kube-system -l app=microsoft-defender
-
-# Check pod logs
-kubectl logs -n kube-system -l app=microsoft-defender --tail=50
-
-# Verify all nodes have sensor pods
-kubectl get pods -n kube-system -l app=microsoft-defender -o wide
 ```
+
+All pods should show a status of `Running`.
 
 ## Test security detection
 

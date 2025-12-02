@@ -85,7 +85,7 @@ AWS-specific requirements:
      - Configure the retention period for your audit logs
      - Discovers all EKS clusters in your AWS account
      > [!NOTE]
-     > If you disable this configuration, control plane threat detection is disabled. Learn more about [feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+     > If you disable this configuration, control plane threat detection is disabled. Learn more about [feature availability](support-matrix-defender-for-containers.md).
 
    - **Kubernetes API access** (Agentless discovery for Kubernetes): Sets permissions to allow API-based discovery of your Kubernetes clusters.
      - Set the toggle to **On** to enable
@@ -121,9 +121,9 @@ AWS-specific requirements:
    - Create a new stack with the downloaded template
    - Review and create the stack
 
-1. After stack creation completes, copy the Role ARN from the stack outputs.
+1. After stack creation completes, copy the role ARN from the stack outputs.
 
-1. Return to Azure portal and paste the Role ARN.
+1. Return to Azure portal and paste the role ARN.
 
 1. Select **Next: Review and create**.
 
@@ -423,10 +423,10 @@ az k8s-extension delete \
 
 ### Common verification issues
 
-- **Missing resources**: Wait 15-30 minutes for discovery
-- **Partial coverage**: Check excluded resources configuration
-- **No alerts**: Verify audit logging is enabled
-- **Scan failures**: Check ECR permissions and network access
+- **Missing resources**: Wait 15-30 minutes for discovery.
+- **Partial coverage**: Check excluded resources configuration.
+- **No alerts**: Verify audit logging is enabled.
+- **Scan failures**: Check ECR permissions and network access.
 
 ## Best practices
 

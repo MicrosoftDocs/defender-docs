@@ -30,7 +30,7 @@ To protect your Kubernetes containers, Defender for Containers receives and anal
 - Workload configuration from Azure Policy
 - Security signals and events from the node level
 
-For more information about implementation details such as supported operating systems, feature availability, and outbound proxy, see [Defender for Containers feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+For more information about implementation details such as supported operating systems, feature availability, and outbound proxy, see [Defender for Containers feature availability](support-matrix-defender-for-containers.md).
 
 ## Architecture for each Kubernetes environment
 
