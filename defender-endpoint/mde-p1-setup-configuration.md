@@ -1,29 +1,27 @@
----
+﻿---
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
 description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
-audience: ITPro
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 09/26/2024
-ms.reviewer: 
+ms.date: 03/04/2025
+ms.reviewer: yonghree, pahuijbr
 f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier2
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Set up and configure Microsoft Defender for Endpoint Plan 1
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 This article describes how to set up and configure Defender for Endpoint Plan 1. Whether you have assistance or are doing it yourself, you can use this article as a guide throughout your deployment.  
 
@@ -53,17 +51,17 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 | Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3) |
 | Browser requirements | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
 | Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
-| Operating systems (server) | Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution)<br/>[Linux Server](microsoft-defender-endpoint-linux.md)   |
+| Operating systems (server) | Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/> Azure Stack HCI OS, version 23H2 and later <br/>[Linux](microsoft-defender-endpoint-linux.md)   |
 | Datacenter | One of the following datacenter locations: <br/>- European Union <br/>- United Kingdom <br/>- United States |
 
 > [!NOTE]
 > The standalone version of Defender for Endpoint Plan 1 doesn't include server licenses. To onboard servers, you'll require an additional license, such as:
 > 
 > - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering.
-> - Microsoft Defender for Endpoint for Servers
+> - Microsoft Defender for Endpoint Server
 > - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses)
 > 
-> To learn more. see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md)
+> To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md)
 
 ## Plan your deployment
 
@@ -78,7 +76,7 @@ When you plan your deployment, you can choose from several different architectur
 
 To learn more about your deployment options, see [Plan your Defender for Endpoint deployment](deployment-strategy.md). And, download the following poster: 
 
-[:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Screnshot of deployment strategy poster thumbnail.":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
+[:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Screenshot of deployment strategy poster thumbnail.":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
 
 **[Get the deployment poster](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)**
 
@@ -104,6 +102,10 @@ Microsoft recommends assigning users only the level of permission they need to p
 
 - With basic permissions management, Global Administrators and Security Administrators have full access, whereas Security Readers have read-only access.
 - With RBAC, you can set more granular permissions through more roles. For example, you can have Security Readers, Security Operators, Security Administrators, Endpoint Administrators, and more.
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 The following table describes key roles to consider for Defender for Endpoint in your organization: <br/><br/>
 
@@ -251,7 +253,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 5. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
 
-6. Select an item in the list, such as **All Removable Storage classes: Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
+6. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
 
 7. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
 
@@ -412,3 +414,4 @@ Now that you've finished the setup and configuration process, your next step is 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

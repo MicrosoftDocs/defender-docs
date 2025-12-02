@@ -1,13 +1,13 @@
----
+﻿---
 title: Customize controlled folder access
 description: Add other folders that should be protected by controlled folder access, or allow apps that are incorrectly blocking changes to important files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -15,25 +15,18 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 10/17/2024
----
+ms.date: 03/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Customize controlled folder access
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
 
-Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11 clients.
 
 > [!IMPORTANT]
 > Controlled folder access is not supported on Linux servers.
@@ -46,6 +39,16 @@ This article describes how to customize controlled folder access capabilities, a
 
 > [!IMPORTANT]
 > Controlled folder access monitors apps for activities that are detected as malicious. Sometimes, legitimate apps are blocked from making changes to your files. If controlled folder access impacts your organization's productivity, you might consider running this feature in [audit mode](overview-attack-surface-reduction.md) to fully assess the impact.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows 11
+- Windows 10
+- Windows Server 2019 and later
+- Azure Stack HCI OS, version 23H2 and later
 
 ## Protect additional folders
 
@@ -122,7 +125,7 @@ An allowed application or service only has write access to a controlled folder a
 
 2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar) and then select **Manage ransomware protection**.
 
-3. Under the **Controlled folder access** section, select **Allow an app through Controlled folder access**
+3. Under the **Controlled folder access** section, select **Allow an app through Controlled folder access**.
 
 4. Select **Add an allowed app** and follow the prompts to add apps.
 
@@ -142,7 +145,7 @@ An allowed application or service only has write access to a controlled folder a
 
 ### Use PowerShell to allow specific apps
 
-1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**
+1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**.
 2. Enter the following cmdlet:
 
     ```PowerShell
@@ -171,7 +174,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedAppli
 Microsoft Defender for Endpoint certificate and file indicators can allow signed executable files to access protected folders. For implementation details, see [Create indicators based on certificates](indicator-certificates.md).
 
 > [!Note]
-> This does no apply to scripting engines, including Powershell
+> This does not apply to scripting engines, including Powershell.
 
 ## Customize the notification
 
@@ -183,3 +186,4 @@ For more information about customizing the notification when a rule is triggered
 - [Enable controlled folder access](enable-controlled-folders.md)
 - [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

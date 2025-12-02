@@ -1,38 +1,39 @@
----
+﻿---
 title: Create a custom gradual rollout process for Microsoft Defender updates
 description: Learn how to use supported tools to create a custom gradual rollout process for updates
 ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
-ms.date: 01/12/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
 
 # Create a custom gradual rollout process for Microsoft Defender updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+## Prerequisites
 
-**Applies to:**
+- This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer. 
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
-> [!NOTE]
-> This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer.
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
 
@@ -49,11 +50,9 @@ The following table lists the available group policy settings for configuring up
 ## Group Policy
 
 > [!NOTE]
-> An updated Defender ADMX template are published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
+> An updated Defender ADMX template is published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
 
-You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints.
-
-In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
+You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints. In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
 
 1. On your Group Policy management machine, open the **Group Policy Management Console**, right-click the **Group Policy Object** (GPO) you want to configure and select **Edit**.
 
@@ -61,7 +60,7 @@ In general, you can use the following procedure to configure or change Microsoft
 
 3. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components > Microsoft Defender Antivirus**.
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
 5. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
@@ -88,15 +87,22 @@ Set-MpPreference
 -DisableGradualRelease 1|0
 -DefinitionUpdatesChannel Staged|Broad|NotConfigured
 ```
-
 Example:
 
 Use `Set-MpPreference -PlatformUpdatesChannel Beta` to configure platform updates to arrive from the Beta Channel.
 
 For more information on the parameters and how to configure them, see [Set-MpPreference](/powershell/module/defender/set-mppreference) (Microsoft Defender Antivirus).
 
+## Registry
+
+These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
+
+- `EngineRing`
+- `PlatformRing`
+- `SignaturesRing`
+
 > [!NOTE]
-> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts) for guidance on this topic.
+> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
@@ -109,3 +115,4 @@ For more information on the parameters and how to configure them, see [Set-MpPre
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,46 +1,63 @@
----
+﻿---
 title: Configure Microsoft Defender Antivirus notifications
 description: Learn how to configure and customize both standard and other Microsoft Defender Antivirus notifications on endpoints.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.topic: conceptual
-ms.author: deniseb
+author: KesemSharabi
+ms.topic: how-to
+ms.author: kesharab
 ms.custom: nextgen
-ms.date: 10/18/2021
-ms.reviewer: 
-manager: deniseb
+ms.date: 10/20/2025
+ms.reviewer: yongrhee
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure Microsoft Defender Antivirus notifications that appear on endpoints
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. These notifications also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.
 
-If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat has been detected and remediated.
+If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat was detected and remediated.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Configure antivirus notifications using Group Policy or the Windows Security app
 
-You can configure the display of additional notifications, such as recent threat detection summaries, in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
+You can configure the display of more notifications, such as recent threat detection summaries, in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
+
+
+| Setting| Description |
+| -------- | -------- |
+| Configure time interval for service health reports | This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. If you disable or don't configure this setting, the default value is applied. The default value is set at 60 minutes (1 hour). If you configure this setting to 0, no service health reports are sent. The maximum value allowed to be set is 14400 minutes (10 days). |
+| Configure time out for detections in critically failed state | This policy setting configures the time in minutes before a detection in the "critically failed" state to moves to either the "additional action" state or the "cleared" state. |
+| Configure time out for detections in noncritical failed state | This policy setting configures the time in minutes before a detection in the "non-critically failed" state moves to the "cleared" state. |
+| Configure time out for detections in recently remediated state | This policy setting configures the time in minutes before a detection in the "completed" state moves to the "cleared" state. |
+| Configure time out for detections in requiring additional action | This policy setting configures the time in minutes before a detection in the "additional action" state moves to the "cleared" state. |
+| Configure Watson events | This policy setting allows you to configure whether or not Watson events are sent. If you enable or don't configure this setting, Watson events are sent. If you disable this setting, Watson events aren't sent. |
+| Configure whether to report Dynamic Signature dropped events | This policy setting configures whether to report Dynamic Signature dropped events. If you don't configure this setting, the default value is applied. The default value is set to disabled (such events aren't reported). If you configure this setting to be enabled, Dynamic Signature dropped events are reported. If you configure this setting to disabled, Dynamic Signature dropped events aren't reported. |
+| Configure Windows software trace preprocessor components | This policy configures Windows software trace preprocessor (WPP Software Tracing) components. |
+| Configure WPP tracing level | This policy allows you to configure tracing levels for Windows software trace preprocessor (WPP Software Tracing). Tracing levels are defined as:  1 - Error  2 - Warning  3 - Info  4 - Debug |
+| Turn off enhanced notifications | Use this policy setting to specify if you want Microsoft Defender Antivirus enhanced notifications to display on clients. If you disable or do not configure this setting, Microsoft Defender Antivirus enhanced notifications will display on clients. If you enable this setting, Microsoft Defender Antivirus enhanced notifications will not display on clients. |
+
 
 > [!NOTE]
 > In Windows 10, version 1607 the feature was called **Enhanced notifications** and was configured under **Windows Settings** \> **Update & security** \> **Windows Defender**. In Group Policy settings for all versions of Windows 10 and Windows 11, the notification feature is called **Enhanced notifications**.
 
-### Use Group Policy to disable additional notifications
+### Use Group Policy to disable other notifications
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
@@ -52,10 +69,10 @@ You can configure the display of additional notifications, such as recent threat
 
 5. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** > **Reporting**.
 
-6. Double-click **Turn off enhanced notifications**, and set the option to **Enabled**. Then select **OK**. This will prevent additional notifications from appearing.
+6. Double-click **Turn off enhanced notifications**, and set the option to **Enabled**. Then select **OK**. This setting prevents more notifications from appearing.
 
 > [!IMPORTANT]
-> Disabling additional notifications will not disable critical notifications, such as threat detection and remediation alerts.
+> Disabling other notifications won't disable critical notifications, such as threat detection and remediation alerts.
 
 ### Use the Windows Security app to disable additional notifications
 
@@ -65,20 +82,20 @@ You can configure the display of additional notifications, such as recent threat
 
 3. Scroll to the **Notifications** section and select **Change notification settings**.
 
-4. Slide the switch to **Off** or **On** to disable or enable additional notifications.
+4. Slide the switch to **Off** or **On** to disable or enable other notifications.
 
 > [!IMPORTANT]
-> Disabling additional notifications will not disable critical notifications, such as threat detection and remediation alerts.
+> Disabling other notifications won't disable critical notifications, such as threat detection and remediation alerts.
 
 ## Configure standard notifications on endpoints using Group Policy
 
 You can use Group Policy to:
 
-- Display additional, customized text on endpoints when the user needs to perform an action
+- Display more, customized text on endpoints when the user needs to perform an action
 - Hide all notifications on endpoints
 - Hide reboot notifications on endpoints
 
-Hiding notifications can be useful in situations where you can't hide the entire Microsoft Defender Antivirus interface. See [Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) for more information. Hiding notifications will only occur on endpoints to which the policy has been deployed. Notifications related to actions that must be taken (such as a reboot) will still appear on the [Microsoft Configuration Manager Endpoint Protection monitoring dashboard and reports](/configmgr/protect/deploy-use/monitor-endpoint-protection). 
+Hiding notifications can be useful in situations where you can't hide the entire Microsoft Defender Antivirus interface. See [Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) for more information. Hiding notifications will only occur on endpoints to which the policy is deployed. Notifications related to actions that must be taken (such as a reboot) will still appear on the [Microsoft Configuration Manager Endpoint Protection monitoring dashboard and reports](/configmgr/protect/deploy-use/monitor-endpoint-protection). 
 
 To add custom contact information to endpoint notifications, see [Customize the Windows Security app for your organization](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center).
 
@@ -94,7 +111,7 @@ To add custom contact information to endpoint notifications, see [Customize the 
 
 5. Double-click **Suppress all notifications** and set the option to **Enabled**. 
 
-6. Select **OK**. This will prevent additional notifications from appearing.
+6. Select **OK**. This setting prevents more notifications from appearing.
 
 ### Use Group Policy to hide reboot notifications
 
@@ -110,7 +127,7 @@ To add custom contact information to endpoint notifications, see [Customize the 
 
 5. Double-click **Suppresses reboot notifications** and set the option to **Enabled**. 
 
-5. Select **OK**. This will prevent additional notifications from appearing.
+5. Select **OK**. This setting prevents more notifications from appearing.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
@@ -122,3 +139,4 @@ To add custom contact information to endpoint notifications, see [Customize the 
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

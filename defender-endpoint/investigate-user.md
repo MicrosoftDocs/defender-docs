@@ -1,33 +1,27 @@
----
+﻿---
 title: Investigate a user account in Microsoft Defender for Endpoint
 description: Investigate a user account for potential compromised credentials or pivot on the associated user account during an investigation.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
-ms.date: 04/24/2018
+ms.topic: how-to
+ms.date: 03/26/2025
 ms.subservice: edr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Investigate a user account in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatgeuser-abovefoldlink)
 
 ## Investigate user account entities
 
@@ -60,7 +54,10 @@ The **User details** pane on left provides information about the user, such as r
 The Overview, Alerts, and Observed in organization are different tabs that display various attributes about the user account.
 
 > [!NOTE]
-> For Linux devices, information about logged in users is not displayed.
+> For Linux devices, information about logged in users isn't displayed.
+
+> [!NOTE]
+> Microsoft Defender for Business doesn't include Microsoft Defender for Identity (MDI) by default. In SMB-based environments, Logon User data won't be available unless MDI sensors are installed. To ensure visibility into logon events, customers must deploy MDI sensors.
 
 ### Overview
 
@@ -102,3 +99,4 @@ You can filter the results by the following time periods:
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

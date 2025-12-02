@@ -1,12 +1,12 @@
----
+﻿---
 title: Microsoft Defender for Endpoint data storage and privacy
 description: Learn about how Microsoft Defender for Endpoint handles privacy and data that it collects.
 keywords: Microsoft Defender for Endpoint, data storage and privacy, storage, privacy, licensing, geolocation, data retention, data
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,28 +14,26 @@ ms.collection:
 - essentials-privacy
 - essentials-security
 - essentials-compliance
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: met150
-ms.date: 08/20/2024
----
+ms.date: 09/03/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Microsoft Defender for Endpoint data storage and privacy
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 This section covers some of the most frequently asked questions regarding privacy and data handling for Defender for Endpoint.
 
 > [!NOTE]
-> This article explains the data storage and privacy details related to Defender for Endpoint and Defender for Business. For more information related to Defender for Endpoint and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=827576), and also [Windows privacy FAQ](https://go.microsoft.com/fwlink/?linkid=827577).
+> This article explains the data storage and privacy details related to Defender for Endpoint and Defender for Business. For more information related to Defender for Endpoint and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=827576).
 
 ## What are we collecting?
 
@@ -45,7 +43,7 @@ Information collected includes file data (file names, sizes, and hashes), proces
 
 Microsoft stores this data securely in Microsoft Azure and maintains it in accordance with Microsoft privacy practices and  [Microsoft Trust Center policies](https://go.microsoft.com/fwlink/?linkid=827578).
 
-This data enables Defender for Endpoint to:
+This data lets Defender for Endpoint:
 
 - Proactively identify indicators of attack (IOAs) in your organization
 - Generate alerts if a possible attack was detected
@@ -55,13 +53,13 @@ Microsoft doesn't use your data for advertising.
 
 ## Data location
 
-Defender for Endpoint operates in the Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, Switzerland, or India. Customer data collected by the service might be stored in: (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
+Defender for Endpoint operates in the Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, Switzerland, India, or the United Arab Emirates (UAE). Customer data collected by the service might be stored in: (a) the geolocation of the tenant as identified during provisioning or, (b) the geolocation as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
-(a) the geo-location of the tenant as identified during provisioning; or
+(a) the geolocation of the tenant as identified during provisioning; or
 
-(b) the geo-location as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data.
+(b) the geolocation as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data.
 
-## Data Retention
+## Data retention
 
 Data from Microsoft Defender for Endpoint is retained for 180 days, visible across the portal. 
 
@@ -69,9 +67,15 @@ Your data is kept and is available to you while the license is under grace perio
 
 In the advanced hunting investigation experience, it's accessible via a query for 30 days.
 
+## Data recovery
+
+The Microsoft Defender for Endpoint (MDE) service incorporates a regional disaster recovery strategy aligned with Microsoft's broader resiliency framework. For more information, see [Resiliency and continuity - Microsoft Service Assurance | Microsoft Learn](/compliance/assurance/assurance-resiliency-and-continuity). In the event of a service disruption, all MDE components are designed to fail over to a paired region within the same geographic boundary, thereby maintaining data residency requirements.
+
+However, due to current service limitations in the United Arab Emirates, MDE components that depend on Azure Synapse workloads are supported with zonal resiliency only. At this time, for the workloads, there is no cross-region business continuity and disaster recovery (BCDR) capability available. For more information on Synapse’s disaster recovery capabilities, refer to the official documentation.
+
 ## Data sharing for Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint shares data, including customer data, among the following Microsoft products, also licensed by the customer.
+Microsoft Defender for Endpoint shares data, including customer data, among the following Microsoft products, also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
@@ -80,4 +84,5 @@ Microsoft Defender for Endpoint shares data, including customer data, among the 
 - Microsoft Defender for Cloud
 - Microsoft Defender for Identity
 - Microsoft Security Exposure Management (public preview)
+
 

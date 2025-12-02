@@ -1,11 +1,11 @@
----
+﻿---
 title: Import Indicators API
 description: Learn how to use the Import batch of Indicator API in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,23 +15,15 @@ ms.topic: reference
 ms.custom: api
 ms.subservice: reference
 search.appverid: met150
-ms.date: 02/02/2021
+ms.date: 12/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+
 ---
 
 # Import Indicators API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -41,9 +33,9 @@ CIDR notation for IPs isn't supported.
 
 ## Limitations
 
-1. Rate limitations for this API are 30 calls per minute.
-2. There's a limit of 15,000 active [Indicators](ti-indicator.md) per tenant.
-3. Maximum batch size for one API call is 500.
+- Rate limitations for this API are 30 calls per minute.
+- There's a limit of 15,000 active [Indicators](ti-indicator.md) per tenant.
+- Maximum batch size for one API call is 500.
 
 ## Permissions
 
@@ -51,7 +43,6 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permission|Permission display name|
 |---|---|---|
-|Application|Ti.ReadWrite|`Read and write Indicators`|
 |Application|Ti.ReadWrite.All|`Read and write All Indicators`|
 |Delegated (work or school account)|Ti.ReadWrite|`Read and write Indicators`|
 
@@ -146,7 +137,4 @@ Here's an example of the response.
 }
 ```
 
-## Related article
 
-- [Manage indicators](../manage-indicators.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

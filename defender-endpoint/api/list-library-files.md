@@ -1,14 +1,14 @@
----
+﻿---
 title: List library files 
 description: Learn how to list live response library files.
 search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,22 +17,14 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/17/2024
+ms.date: 12/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint
 ---
 
 #  List library files 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:** [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-- Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -40,7 +32,7 @@ List live response library files.
 
 ## Limitations
 
-1.  Rate limitations for this API are 100 calls per minute and 1,500 calls per
+Rate limitations for this API are 100 calls per minute and 1,500 calls per
     hour.
 
 ## Permissions
@@ -127,6 +119,4 @@ Content-type: application/json
 ```
 
 
-## Related article
-- [Run live response](run-live-response.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

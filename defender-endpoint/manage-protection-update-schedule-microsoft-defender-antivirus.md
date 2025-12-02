@@ -1,34 +1,31 @@
----
+﻿---
 title: Schedule Microsoft Defender Antivirus protection updates
 description: Schedule the day, time, and interval for when protection updates should be downloaded
 ms.service: defender-endpoint
 search.appverid: met150
 ms.localizationpriority: medium
-ms.date: 12/20/2022
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.date: 10/20/2025
+ms.topic: how-to
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Manage the schedule for when protection updates should be downloaded and applied
 
 > [!IMPORTANT]
-> Customers who applied the March 2022 Microsoft Defender engine update (**1.1.19100.5**) might have encountered high resource utilization (CPU and/or memory). Microsoft has released an update (**1.1.19200.5**) that resolves the bugs introduced in the earlier version. Customers are recommended to update to this new engine build of Antivirus Engine (**1.1.19200.5**). To ensure any performance issues are fully fixed, it is recommended to reboot machines after applying update. For more information, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+> Customers who applied the March 2022 Microsoft Defender engine update (**1.1.19100.5**) might have encountered high resource utilization (CPU and/or memory). Microsoft has released an update (**1.1.19200.5**) that resolves the bugs introduced in the earlier version. Customers are recommended to update to this new engine build of Antivirus Engine (**1.1.19200.5**). To ensure any performance issues are fully fixed, it's recommended to reboot machines after applying update. For more information, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Microsoft Defender Antivirus lets you determine when it should look for and download updates.
 
@@ -39,6 +36,12 @@ You can schedule updates for your endpoints by:
 - Specifying the time to check for protection updates
 
 You can also randomize the times when each endpoint checks and downloads protection updates. See the [Schedule scans](schedule-antivirus-scans.md) topic for more information.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Use Configuration Manager to schedule protection updates
 
@@ -58,8 +61,8 @@ You can also randomize the times when each endpoint checks and downloads protect
 ## Use Group Policy to schedule protection updates
 
 > [!IMPORTANT]
-> By default, "SignatureScheduleDay" is set as "8" and "SignatureUpdateInterval" is set as "0" so Microsoft Defender Antivirus will not schedule protection updates.
-Enabling these settings will override that default.
+> By default, "SignatureScheduleDay" is set as "8" and "SignatureUpdateInterval" is set as "0" so Microsoft Defender Antivirus won't schedule protection updates.
+Enabling these settings overrides that default.
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and click **Edit**.
 
@@ -120,3 +123,4 @@ See the following for more information and allowed parameters:
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10 and 11](microsoft-defender-antivirus-windows.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

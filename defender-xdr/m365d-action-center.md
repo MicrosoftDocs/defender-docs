@@ -5,11 +5,11 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 5/9/2024
-manager: dansimp
+ms.date: 4/28/2025
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -19,12 +19,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand how to view and approve automated investigation and remediation tasks in the Action center.
 ---
 
 # The Action center
-
-**Applies to:**
-- Microsoft Defender XDR
 
 The Action center provides a "single pane of glass" experience for incident and alert tasks such as:
 
@@ -40,11 +40,6 @@ The unified Action center ([https://security.microsoft.com/action-center](https:
 
 :::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
 
-For example:
-
-- If you were using the Action center in the Microsoft Defender Security Center ([https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)), try the unified Action center in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
-- If you were already using the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, you'll see several improvements in the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)).
-
 The unified Action center brings together remediation actions across Microsoft Defender for Endpoint and Microsoft Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.
 
 You can use the unified Action center if you have appropriate permissions and one or more of the following subscriptions:
@@ -59,20 +54,20 @@ You can use the unified Action center if you have appropriate permissions and on
 You can navigate to the list of actions pending approval in two different ways:
 
 - Go to [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center); or
-- In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), in the Automated investigation & response card, select **Approve in Action Center**.
+- In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) homepage, in the Automated investigation & response card, select **View pending actions**.
 
 ## Using the Action center
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in.
 
-2. In the navigation pane under **Actions and submissions**, choose **Action center**. Or, in the Automated investigation & response card, select **Approve in Action Center**.
+2. In the navigation pane under **Actions and submissions**, choose **Action center**. Or, in the Automated investigation & response card in the homepage, select **View pending actions**.
 
 3. Use the **Pending actions** and **History** tabs. The following table summarizes what you'll see on each tab:
 
    |Tab|Description|
    |---|---|
-   |**Pending**|Displays a list of actions that require attention. You can approve or reject actions one at a time, or select multiple actions if they have the same type of action (such as Quarantine file). <br/><br/> Make sure to review and approve (or reject) pending actions as soon as possible so that your automated investigations can complete in a timely manner.|
-   |**History**|Serves as an audit log for actions that were taken, such as: <ul><li>>Remediation actions that were taken as a result of automated investigations</li><li>Remediation actions that were taken on suspicious or malicious email messages, files, or URLs</li><li>Remediation actions that were approved by your security operations team</li><li>Commands that were run and remediation actions that were applied during Live Response sessions</li><li>Remediation actions that were taken by your antivirus protection</li></ul> <br/><br/> Provides a way to undo certain actions (see [Undo completed actions](m365d-autoir-actions.md#undo-completed-actions)).|
+   |**Pending**|Displays a list of actions that require attention. You can approve or reject actions one at a time, or select multiple actions if they have the same type of action (like Quarantine file). <br/><br/> Make sure to review and approve (or reject) pending actions as soon as possible so that your automated investigations can complete in a timely manner.|
+   |**History**|Serves as an audit log for actions that were taken, such as: <ul><li>Remediation actions that were taken as a result of automated investigations</li><li>Remediation actions that were taken on suspicious or malicious email messages, files, or URLs</li><li>Remediation actions that were approved by your security operations team</li><li>Commands that were run and remediation actions that were applied during Live Response sessions</li><li>Remediation actions that were taken by your antivirus protection</li></ul> <br/><br/> Provides a way to undo certain actions (see [Undo completed actions](m365d-autoir-actions.md#undo-completed-actions)).|
 
 4. You can customize, sort, filter, and export data in the Action center.
 
@@ -119,7 +114,8 @@ The improved Action center includes an **Action source** column that tells you w
 
 ## Required permissions for Action center tasks
 
-To perform tasks, such as approving or rejecting pending actions in the Action center, you need specific permissions. You have the following options:
+To perform tasks, such as approving or rejecting pending actions in the Action center, you need specific permissions.
+You have the following options:
 
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Security Administrator** role.
@@ -138,12 +134,12 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
 
     - Membership in a role group in [Email & collaboration permissions](/defender-office-365/mdo-portal-permissions) with the **Search and Purge** role assigned. By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups in Email & collaboration permissions. You can add users to those role groups, or you can [create a new role group in Email & collaboration permissions](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac)
-   - _Microsoft Defender for Endpoint remediation_: **Security operations \ Security data \ Response (manage)**.
-   - _Microsoft Defender for Office 365 remediation_ (Office content and email, if **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="/defender-office-365/media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
-     - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
-     - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**. 
-    
+- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md)
+  - _Microsoft Defender for Endpoint remediation_: **Security operations \ Security data \ Response (manage)**.
+  - _Microsoft Defender for Office 365 remediation_ (Office content and email, if **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="/defender-office-365/media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+    - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
+    - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**. 
+
   > [!TIP]
   > Membership in the **Security Administrator** role group Email & collaboration permissions doesn't grant access to the Action center or Microsoft Defender XDR capabilities. For those, you need to be a member of the **Security Administrator** role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 

@@ -1,30 +1,31 @@
----
+﻿---
 title: Microsoft Defender for Endpoint attack surface reduction rules demonstrations
 description: See how attack surface reduction rules block various known threat types.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb 
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - demo
-ms.topic: article
+ms.topic: how-to
 ms.subservice: asr
-ms.date: 01/15/2024
----
+ms.date: 03/10/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
+  - Microsoft 365 Apps
 
+---
 # Attack surface reduction rules demonstrations
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 Attack surface reduction rules target specific behaviors that are typically used by malware and malicious apps to infect machines, such as:
 
@@ -32,12 +33,15 @@ Attack surface reduction rules target specific behaviors that are typically used
 - Scripts that are obfuscated or otherwise suspicious
 - Behaviors that apps undertake that aren't initiated during normal day-to-day work
 
-## Scenario requirements and setup
+## Prerequisites
 
-- Windows 11, Windows 10 1709 build 16273 or later
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 with the unified MDE client.
-- Microsoft Defender Antivirus
-- Microsoft 365 Apps (Office; required for Office rules and sample)
+- Windows client devices must be running Windows 11, Windows 10 1709 build 16273, or later
+- Windows server devices must be running Windows Server 2012 R2 and later (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
+- Azure Stack HCI OS, version 23H2 and later.
+
+
+## Setup
+
 - [Download attack surface reduction PowerShell scripts](https://demo.wd.microsoft.com/Content/WindowsDefender_ASR_scripts.zip)
 
 ## PowerShell commands
@@ -61,6 +65,8 @@ Add-MpPreference -AttackSurfaceReductionRules_Ids e6db77e5-3df2-4cf1-b95a-636979
 Add-MpPreference -AttackSurfaceReductionRules_Ids a8f5898e-1dc8-49a9-9878-85004b8a61e6 -AttackSurfaceReductionRules_Actions Enabled
 Add-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49E8-8B27-EB1D0A1CE869 -AttackSurfaceReductionRules_Actions AuditMode
 Add-MpPreference -AttackSurfaceReductionRules_Ids 7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C -AttackSurfaceReductionRules_Actions AuditMode
+Add-MpPreference -AttackSurfaceReductionRules_Ids 33ddedf1-c6e0-47cb-833e-de6133960387 -AttackSurfaceReductionRules_Actions Enabled
+Add-MpPreference -AttackSurfaceReductionRules_Ids c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb -AttackSurfaceReductionRules_Actions Enabled
 ```
 
 ### Rule states
@@ -82,24 +88,26 @@ Get-MpPreference
 
 Note - some test files have multiple exploits embedded and triggers multiple rules
 
-| Rule name | Rule GUID | 
+| Rule name | Rule GUID |
 |:---|:---|
 | Block executable content from email client and webmail | BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550 |
 | [Block Office applications from creating child processes](https://demo.wd.microsoft.com/Content/TestFile_OfficeChildProcess_D4F940AB-401B-4EFC-AADC-AD5F3C50688A.docm) | D4F940AB-401B-4EFC-AADC-AD5F3C50688A |
-| [Block Office applications from creating executable content](https://demo.wd.microsoft.com/Content/TestFile_Block_Office_applications_from_creating_executable_content_3B576869-A4EC-4529-8536-B80A7769E899.docm) | 3B576869-A4EC-4529-8536-B80A7769E899 | 
-| Block Office applications from injecting into other processes | 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84 | 
-| [Impede JavaScript and VBScript to launch executables](https://demo.wd.microsoft.com/Content/TestFile_Impede_JavaScript_and_VBScript_to_launch_executables_D3E037E1-3EB8-44C8-A917-57927947596D.js) | D3E037E1-3EB8-44C8-A917-57927947596D |  
-| Block execution of potentially obfuscated scripts | 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC | 
-| [Block Win32 imports from Macro code in Office](https://demo.wd.microsoft.com/Content/Block_Win32_imports_from_Macro_code_in_Office_92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B.docm) | 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B |  
-|[{Block Process Creations originating from PSExec & WMI commands](https://demo.wd.microsoft.com/Content/TestFile_PsexecAndWMICreateProcess_D1E49AAC-8F56-4280-B9BA-993A6D77406C.vbs) | D1E49AAC-8F56-4280-B9BA-993A6D77406C | 
-| [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe) | B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 |  
-| Aggressive Ransomware Prevention | C1DB55AB-C21A-4637-BB3F-A12568109D35 |  
-| Block executable files from running unless they meet a prevalence, age, or trusted list criteria | 01443614-CD74-433A-B99E-2ECDC07BFC25 | 
-| Block Adobe Reader from creating child processes | 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c | 
-| Block abuse of exploited vulnerable signed drivers | 56a863a9-875e-4185-98a7-b882c64b5ce5 | 
-| Block credential stealing from the Windows local security authority subsystem (lsass.exe) | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 | 
-| Block persistence through WMI event subscription | e6db77e5-3df2-4cf1-b95a-636979351e5b | 
-| Block Webshell creation for Servers | a8f5898e-1dc8-49a9-9878-85004b8a61e6 | 
+| [Block Office applications from creating executable content](https://demo.wd.microsoft.com/Content/TestFile_Block_Office_applications_from_creating_executable_content_3B576869-A4EC-4529-8536-B80A7769E899.docm) | 3B576869-A4EC-4529-8536-B80A7769E899 |
+| Block Office applications from injecting into other processes | 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84 |
+| [Impede JavaScript and VBScript to launch executables](https://demo.wd.microsoft.com/Content/TestFile_Impede_JavaScript_and_VBScript_to_launch_executables_D3E037E1-3EB8-44C8-A917-57927947596D.js) | D3E037E1-3EB8-44C8-A917-57927947596D |
+| Block execution of potentially obfuscated scripts | 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC |
+| [Block Win32 imports from Macro code in Office](https://demo.wd.microsoft.com/Content/Block_Win32_imports_from_Macro_code_in_Office_92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B.docm) | 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B |
+|[{Block Process Creations originating from PSExec & WMI commands](https://demo.wd.microsoft.com/Content/TestFile_PsexecAndWMICreateProcess_D1E49AAC-8F56-4280-B9BA-993A6D77406C.vbs) | D1E49AAC-8F56-4280-B9BA-993A6D77406C |
+| [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe) | B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 |
+| Aggressive Ransomware Prevention | C1DB55AB-C21A-4637-BB3F-A12568109D35 |
+| Block executable files from running unless they meet a prevalence, age, or trusted list criteria | 01443614-CD74-433A-B99E-2ECDC07BFC25 |
+| Block Adobe Reader from creating child processes | 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c |
+| Block abuse of exploited vulnerable signed drivers | 56a863a9-875e-4185-98a7-b882c64b5ce5 |
+| Block credential stealing from the Windows local security authority subsystem (lsass.exe) | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 |
+| Block persistence through WMI event subscription | e6db77e5-3df2-4cf1-b95a-636979351e5b |
+| Block Webshell creation for Servers | a8f5898e-1dc8-49a9-9878-85004b8a61e6 |
+|Block rebooting machine in Safe Mode (preview)|33ddedf1-c6e0-47cb-833e-de6133960387|
+|Block use of copied or impersonated system tools (preview)|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|
 
 ## Scenarios
 
@@ -145,11 +153,11 @@ You should immediately see an "Action blocked" notification.
 
 1. Configure the rule for USB protection (`B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4`).
 
-```powershell
-Add-MpPreference -AttackSurfaceReductionRules_Ids B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 -AttackSurfaceReductionRules_Actions Enabled
-```
+    ```powershell
+    Add-MpPreference -AttackSurfaceReductionRules_Ids B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 -AttackSurfaceReductionRules_Actions Enabled
+    ```
 
-3. Download the file and put it on a USB stick and execute it [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)
+1. Download the file and put it on a USB stick and execute it [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)
 
 #### Scenario 3 expected results
 
@@ -190,9 +198,11 @@ Add-MpPreference -AttackSurfaceReductionRules_Ids e6db77e5-3df2-4cf1-b95a-636979
 Add-MpPreference -AttackSurfaceReductionRules_Ids a8f5898e-1dc8-49a9-9878-85004b8a61e6 -AttackSurfaceReductionRules_Actions Disabled
 Add-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49E8-8B27-EB1D0A1CE869 -AttackSurfaceReductionRules_Actions Disabled
 Add-MpPreference -AttackSurfaceReductionRules_Ids 7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C -AttackSurfaceReductionRules_Actions Disabled
+Add-MpPreference -AttackSurfaceReductionRules_Ids 33ddedf1-c6e0-47cb-833e-de6133960387 -AttackSurfaceReductionRules_Actions Disabled
+Add-MpPreference -AttackSurfaceReductionRules_Ids c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb -AttackSurfaceReductionRules_Actions Disabled
 ```
 
-Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
+Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe).
 
 ## See also
 
@@ -203,3 +213,4 @@ Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://de
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

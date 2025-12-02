@@ -7,8 +7,9 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
+
 audience: ITPro
 ms.collection:
   - m365-security
@@ -18,7 +19,7 @@ ms.collection:
   - essentials-security
   - essentials-compliance
 ms.date: 05/10/2024
-ms.topic: conceptual
+ms.topic: how-to
 adobe-target: true
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -36,11 +37,11 @@ Microsoft Defender for Office 365 is a cloud-based email filtering service that 
 |---|---|---|
 |Always authenticate and authorize based on all available data points.|Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.|Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses.|
 
-Defender for Office 365 is a primary component of the **Assume breach** principle and an important element of your extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Office 365 consists of three levels of protection based on your subscription level and starts with built-in Exchange Online Protection (EOP). EOP is present in any Microsoft 365 subscription where there are Exchange Online mailboxes.
+Defender for Office 365 is the primary component of the **Assume breach** principle and an important element of your extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Office 365 consists of three levels of protection based on your subscription level as described in the following table:
 
 |Protection level|Description|
 |---|---|
-|EOP|Prevents broad, volume-based, known attacks.|
+|Default email protections in all organizations with cloud mailboxes|Prevent broad, volume-based, known attacks.|
 |Defender for Office 365 P1|Protects email and collaboration from zero-day malware, phish, and business email compromise.|
 |Defender for Office 365 P2|Adds post-breach investigation, hunting, and response, as well as automation, and simulation (for training).|
 
@@ -61,6 +62,6 @@ Learn how to set up your SecOps team with the [Microsoft Defender for Office 365
 
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
 
-Learn about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
+Learn about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/defender-xdr/zero-trust-with-microsoft-365-defender).
 
 For an overview of Zero Trust for Microsoft Defender XDR services, see [Zero Trust with Microsoft Defender XDR](/defender-xdr/zero-trust-with-microsoft-365-defender).

@@ -1,33 +1,28 @@
----
+﻿---
 title: Review events and errors using Event Viewer
 description: Get descriptions and further troubleshooting steps (if necessary) for all events reported by the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
+ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
-ms.topic: conceptual
-ms.date: 10/27/2023
+ms.topic: how-to
+ms.date: 03/25/2025
 ms.subservice: ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Review events and errors using Event Viewer
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
 ## View events in the Defender for Endpoint service event log
 
@@ -55,29 +50,29 @@ See the following table for a list of events recorded by the service.
    |3|Microsoft Defender for Endpoint service failed to start. Failure code: `variable`.|Service didn't start.|Review other messages to determine possible cause and troubleshooting steps.|
    |4|Microsoft Defender for Endpoint service contacted the server at `variable`.|Variable = URL of the Defender for Endpoint processing servers. <br/><br/> This URL matches that seen in the Firewall or network activity.|Normal operating notification; no action required.|
    |5|Microsoft Defender for Endpoint service failed to connect to the server at `variable`.|Variable = URL of the Defender for Endpoint processing servers. <br/><br/> The service couldn't contact the external processing servers at that URL.|Check the connection to the URL. See [Configure proxy and Internet connectivity](configure-proxy-internet.md).|
-   |6|Microsoft Defender for Endpoint service isn't onboarded and no onboarding parameters were found.|The device didn't onboard correctly and isn't reporting to the portal.|Onboarding must be run before starting the service. <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
-   |7|Microsoft Defender for Endpoint service failed to read the onboarding parameters. Failure: `variable`.|Variable = detailed error description. The device didn't onboard correctly and isn't reporting to the portal.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
-   |8|Microsoft Defender for Endpoint service failed to clean its configuration. Failure code: `variable`.|**During onboarding:** The service failed to clean its configuration during the onboarding. The onboarding process continues. <br/><br/> **During offboarding:** The service failed to clean its configuration during the offboarding. The offboarding process finished but the service keeps running.|**Onboarding:** No action required. <br/><br/> **Offboarding:** Reboot the system. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
-   |9|Microsoft Defender for Endpoint service failed to change its start type. Failure code: `variable`.|**During onboarding:** The device didn't onboard correctly and isn't reporting to the portal. <br/><br/>**During offboarding:** Failed to change the service start type. The offboarding process continues. |Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
-   |10|Microsoft Defender for Endpoint service failed to persist the onboarding information. Failure code: `variable`.|The device didn't onboard correctly and isn't reporting to the portal.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
+   |6|Microsoft Defender for Endpoint service isn't onboarded and no onboarding parameters were found.|The device didn't onboard correctly and isn't reporting to the portal.|Onboarding must be run before starting the service. <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices](onboard-client.md).|
+   |7|Microsoft Defender for Endpoint service failed to read the onboarding parameters. Failure: `variable`.|Variable = detailed error description. The device didn't onboard correctly and isn't reporting to the portal.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices](onboard-client.md).|
+   |8|Microsoft Defender for Endpoint service failed to clean its configuration. Failure code: `variable`.|**During onboarding:** The service failed to clean its configuration during the onboarding. The onboarding process continues. <br/><br/> **During offboarding:** The service failed to clean its configuration during the offboarding. The offboarding process finished but the service keeps running.|**Onboarding:** No action required. <br/><br/> **Offboarding:** Reboot the system. <br/><br/> See [Onboard client devices](onboard-client.md).|
+   |9|Microsoft Defender for Endpoint service failed to change its start type. Failure code: `variable`.|**During onboarding:** The device didn't onboard correctly and isn't reporting to the portal. <br/><br/>**During offboarding:** Failed to change the service start type. The offboarding process continues. |Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices](onboard-client.md).|
+   |10|Microsoft Defender for Endpoint service failed to persist the onboarding information. Failure code: `variable`.|The device didn't onboard correctly and isn't reporting to the portal.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
    |11|Onboarding or reonboarding of Defender for Endpoint service completed.|The device onboarded correctly.|Normal operating notification; no action required. <br/><br/> It might take several hours for the device to appear in the portal.|
    |12|Microsoft Defender for Endpoint failed to apply the default configuration.|Service was unable to apply the default configuration.|This error should resolve after a short period of time.|
    |13|Microsoft Defender for Endpoint device ID calculated: `variable`.|Normal operating process.|Normal operating notification; no action required.|
    |15|Microsoft Defender for Endpoint can't start command channel with URL: `variable`.|Variable = URL of the Defender for Endpoint processing servers. <br/><br/> The service couldn't contact the external processing servers at that URL.|Check the connection to the URL. See [Configure proxy and Internet connectivity](configure-proxy-internet.md).|
-   |17|Microsoft Defender for Endpoint service failed to change the Connected User Experiences and Telemetry service location. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy)">Ensure the diagnostic data service is enabled. <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
+   |17|Microsoft Defender for Endpoint service failed to change the Connected User Experiences and Telemetry service location. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy)">Ensure the diagnostic data service is enabled. <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
    |18|OOBE (Windows Welcome) is completed.|Service will only start after any Windows updates have finished installing.|Normal operating notification; no action required.|
    |19|OOBE (Windows Welcome) hasn't yet completed.|Service will only start after any Windows updates finish installing.|Normal operating notification; no action required. <br/><br/> If this error persists after a system restart, ensure all Windows updates have full installed.|
    |20|Can't wait for OOBE (Windows Welcome) to complete. Failure code: `variable`.|Internal error.|If this error persists after a system restart, ensure all Windows updates are installed.|
-   |25|Microsoft Defender for Endpoint service failed to reset health status in the registry. Failure code: `variable`.|The device didn't onboard correctly. It reports to the portal; however, the service might not appear as registered in SCCM or the registry.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
-   |26|Microsoft Defender for Endpoint service failed to set the onboarding status in the registry. Failure code: `variable`.|The device didn't onboard correctly. <br/><br/> It reports to the portal; however the service may not appear as registered in SCCM or the registry.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
-   |27|Microsoft Defender for Endpoint service failed to enable SENSE aware mode in Microsoft Defender Antivirus. Onboarding process failed. Failure code: `variable`.|Normally, Microsoft Defender Antivirus enters a special passive state if another real-time antimalware product is running properly on the device, and the device is reporting to Defender for Endpoint.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md). <br/><br/> Ensure real-time antimalware protection is running properly.|
-   |28|Microsoft Defender for Endpoint Connected User Experiences and Telemetry service registration failed. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy). <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
+   |25|Microsoft Defender for Endpoint service failed to reset health status in the registry. Failure code: `variable`.|The device didn't onboard correctly. It reports to the portal; however, the service might not appear as registered in SCCM or the registry.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
+   |26|Microsoft Defender for Endpoint service failed to set the onboarding status in the registry. Failure code: `variable`.|The device didn't onboard correctly. <br/><br/> It reports to the portal; however the service may not appear as registered in SCCM or the registry.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
+   |27|Microsoft Defender for Endpoint service failed to enable SENSE aware mode in Microsoft Defender Antivirus. Onboarding process failed. Failure code: `variable`.|Normally, Microsoft Defender Antivirus enters a special passive state if another real-time antimalware product is running properly on the device, and the device is reporting to Defender for Endpoint.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md). <br/><br/> Ensure real-time antimalware protection is running properly.|
+   |28|Microsoft Defender for Endpoint Connected User Experiences and Telemetry service registration failed. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy). <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
    |29|Failed to read the offboarding parameters. Error type: %1, Error code: %2, Description: %3|This event occurs when the system can't read the offboarding parameters.|Ensure the device has Internet access, then run the entire offboarding process again. Ensure the offboarding package isn't expired.|
-   |30|Microsoft Defender for Endpoint service failed to disable SENSE aware mode in Microsoft Defender Antivirus. Failure code: `variable`.|Normally, Microsoft Defender Antivirus enters a special passive state if another real-time antimalware product is running properly on the device, and the device is reporting to Defender for Endpoint.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md). <br/><br/> Ensure real-time antimalware protection is running properly.|
+   |30|Microsoft Defender for Endpoint service failed to disable SENSE aware mode in Microsoft Defender Antivirus. Failure code: `variable`.|Normally, Microsoft Defender Antivirus enters a special passive state if another real-time antimalware product is running properly on the device, and the device is reporting to Defender for Endpoint.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md). <br/><br/> Ensure real-time antimalware protection is running properly.|
    |31|Microsoft Defender for Endpoint Connected User Experiences and Telemetry service unregistration failed. Failure code: `variable`.|An error occurred with the Windows telemetry service during onboarding. The offboarding process continues.|[Check for errors with the Windows telemetry service](troubleshoot-onboarding.md#ensure-the-diagnostic-data-service-is-enabled).|
    |32|Microsoft Defender for Endpoint service failed to request to stop itself after offboarding process. Failure code: %1|An error occurred during offboarding.|Reboot the device.|
    |33|Microsoft Defender for Endpoint service failed to persist SENSE GUID. Failure code: `variable`.|A unique identifier is used to represent each device that is reporting to the portal. <br/><br/> If the identifier doesn't persist, the same device might appear twice in the portal.|Check registry permissions on the device to ensure the service can update the registry.|
-   |34|Microsoft Defender for Endpoint service failed to add itself as a dependency on the Connected User Experiences and Telemetry service, causing onboarding process to fail. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy). <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard Windows client devices](onboard-windows-client.md).|
+   |34|Microsoft Defender for Endpoint service failed to add itself as a dependency on the Connected User Experiences and Telemetry service, causing onboarding process to fail. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy). <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
    |35| Communication quotas are updated. Disk quota in MB: `variable`, daily upload quota in MB: `variable`| Variable = disk quota in MB. |Normal operating notification; no action required.|
    |36|Microsoft Defender for Endpoint Connected User Experiences and Telemetry service registration succeeded. Completion code: `variable`.|Registering Defender for Endpoint with the Connected User Experiences and Telemetry service completed successfully.|Normal operating notification; no action required.|
    |37|Microsoft Defender for Endpoint A module is about to exceed its quota. Module: %1, Quota: {%2} {%3}, Percentage of quota utilization: %4.|The device is near its allocated quota of the current 24-hour window. It's about to be throttled.|Normal operating notification; no action required.|
@@ -97,7 +92,6 @@ See the following table for a list of events recorded by the service.
    |51|New cloud configuration failed to apply, version: %1. Successfully applied the last known good configuration, version %2.|Received a bad configuration file from the cloud service. Last known good configuration was applied successfully.|If this error persists, contact Support.|
    |52|New cloud configuration failed to apply, version: %1. Also failed to apply last known good configuration, version %2. Successfully applied the default configuration.|Received a bad configuration file from the cloud service. Failed to apply the last known good configuration - and the default configuration was applied.|The service will attempt to download a new configuration file within 5 minutes. If you don't see event #50 - contact Support.|
    |53|Cloud configuration loaded from persistent storage, version: %1.|The configuration was loaded from persistent storage on service startup.|Normal operating notification; no action required.|
-   |54| Global (per-pattern) state changed. State: %1, pattern: %2 | If state = 0: Cyber-data reporting rule has reached its defined capping quota and doesn't send more data until the capping quota expires. If state = 1: The capping quota expired and the rule will resume sending data. | Normal operating notification; no action required. |
    |55|Failed to create the Secure ETW autologger. Failure code: %1|Failed to create the secure ETW logger.|Reboot the device. If this error persists, contact Support.|
    |56|Failed to remove the Secure ETW autologger. Failure code: %1|Failed to remove the secure ETW session on offboarding.|Contact Support.|
    |57|Capturing a snapshot of the machine for troubleshooting purposes.|An investigation package, also known as forensics package, is being collected.|Normal operating notification; no action required.|
@@ -213,14 +207,15 @@ You can use this table for more information on the Defender for Endpoint events 
 
    |Event ID|Message|Description|Action|
    |---|---|---|---|
-   |1|The backing-file for the real-time session "SenseNdrPktmon" has reached its maximum size. As a result, new events will not be logged to this session until space becomes available.|This real-time session, between Pktmon - the built-in Windows service that captures network traffic, and our agent (SenseNDR) - that analyzes packets asynchronously, is configured to limited to prevent potential performance issues. As a result, this alert may appear if too many packets are intercepted in a short time period, causing some packets to be skipped. This alert is more common with high network traffic.|Normal operating notification; no action required.|
+   |1|The backing-file for the real-time session "SenseNdrPktmon" has reached its maximum size. As a result, new events will not be logged to this session until space becomes available.|This real-time session, between Pktmon - the built-in Windows service that captures network traffic, and our agent (SenseNDR) - that analyzes packets asynchronously, is configured to be limited to prevent potential performance issues. As a result, this alert may appear if too many packets are intercepted in a short time period, causing some packets to be skipped. This alert is more common with high network traffic.|Normal operating notification; no action required.|
 
 ## See also
 
-- [Onboard Windows client devices](onboard-windows-client.md)
+- [Onboard client devices running Windows or macOS](onboard-client.md)
 - [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Troubleshoot Microsoft Defender for Endpoint](troubleshoot-onboarding.md)
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

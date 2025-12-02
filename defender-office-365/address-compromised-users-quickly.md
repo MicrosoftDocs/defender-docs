@@ -1,10 +1,10 @@
 ---
 title: Address compromised user accounts with automated investigation and response
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -17,7 +17,7 @@ ms.date: 06/09/2023
 description: Learn how to speed up the process of detecting and addressing compromised user accounts with automated investigation and response capabilities in Microsoft Defender for Office 365 Plan 2.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -47,11 +47,11 @@ When a user account is compromised, alerts are triggered. And in some cases, tha
 - [View details about automated investigations](#view-details-about-automated-investigations)
 
 > [!IMPORTANT]
-> You must have appropriate permissions to perform the following tasks. See [Required permissions to use AIR capabilities](air-about.md#required-permissions-to-use-air-capabilities).
+> You must have appropriate permissions to perform the following tasks. For more information, see [Required permissions to use AIR capabilities](air-about.md#required-permissions-and-licensing-for-air).
 
 Watch this short video to learn how you can detect and respond to user compromise in Microsoft Defender for Office 365 using Automated Investigation and Response (AIR) and compromised user alerts.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAl83]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=efb1e40c-dc48-42ea-a73c-1811a3913192]
 
 ### View and investigate restricted users
 
@@ -81,7 +81,7 @@ To learn more, see [View details of an investigation](air-view-investigation-res
 
 ## Next steps
 
-- [Review the required permissions to use AIR capabilities](air-about.md#required-permissions-to-use-air-capabilities)
+- [Review the required permissions to use AIR capabilities](air-about.md#required-permissions-and-licensing-for-air)
 
 - [Find and investigate malicious email in Office 365](threat-explorer-investigate-delivered-malicious-email.md)
 

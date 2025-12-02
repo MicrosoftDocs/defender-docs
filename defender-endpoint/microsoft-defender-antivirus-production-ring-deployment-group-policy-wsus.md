@@ -1,50 +1,50 @@
----
+﻿---
 title: Production ring deployment using Group Policy and Windows Server Update Services
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus production clients using Group Policy and Windows Server Update Services (WSUS).
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
+ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus production ring deployment using Group Policy and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
 > Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
 
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
+- Windows Server
+
 ## Before you begin
 
 This article assumes that you have experience with Windows Server Update Services (WSUS) and/or already have WSUS installed. If you aren't already familiar with WSUS, see the following articles for important configuration details:
 
-- [Configure WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus) - Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012)
+- [Configure WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus) - Applies to: Windows Server 2012 and later, and  Azure Stack HCI OS, version 23H2 and later.
 - [Configure Windows Server Update Services (WSUS) in Analytics Platform System][/sql/analytics-platform-system/configure-windows-server-update-services-wsus.md] - Analytics Platform System
 
 ## Setting up the production environment
@@ -165,9 +165,10 @@ If you encounter problems with your deployment, create or append your Microsoft 
 
 1. After the issue is resolved, set the **Signature Update Fallback Order** back to the original setting. `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC|FileShare`.
 
- See also:
+ ## See also
 
- - [Step 3: Configure WSUS | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852346(v=ws.11)?redirectedfrom=MSDN#31-configure-network-connections)
- - [Step 4: Approve and Deploy WSUS Updates | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852348(v=ws.11)?redirectedfrom=MSDN)
- - [Step 5: Configure Group Policy Settings for Automatic Updates | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn595129(v=ws.11))
+ - [Step 3: Configure WSUS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852346(v=ws.11)?redirectedfrom=MSDN#31-configure-network-connections)
+ - [Step 4: Approve and Deploy WSUS Updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852348(v=ws.11)?redirectedfrom=MSDN)
+ - [Step 5: Configure Group Policy Settings for Automatic Updates](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn595129(v=ws.11))
  - [Microsoft Defender Antivirus pilot ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-pilot-ring-deployment-group-policy-wsus.md)
+

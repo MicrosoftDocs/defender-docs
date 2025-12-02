@@ -1,11 +1,11 @@
----
+﻿---
 title: Get alerts API
 description: Learn about the methods and properties of the Alert resource type in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,39 +15,17 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+
 ---
 
 # Alert resource type
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-
-> [!NOTE]
-> For the full available Alerts API experience across all Microsoft Defenders' products, visit: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-## Methods
-
-|Method|Return Type|Description|
-|---|---|---|
-|[Get alert](get-alert-info-by-id.md)|[Alert](alerts.md)|Get a single [alert](alerts.md) object|
-|[List alerts](get-alerts.md)|[Alert](alerts.md) collection|List [alert](alerts.md) collection|
-|[Update alert](update-alert.md)|[Alert](alerts.md)|Update specific [alert](alerts.md)|
-|[Batch update alerts](batch-update-alerts.md)||Update a batch of [alerts](alerts.md)|
-|[Create alert](create-alert-by-reference.md)|[Alert](alerts.md)|Create an alert based on event data obtained from [Advanced Hunting](run-advanced-query-api.md)|
-|[List related domains](get-alert-related-domain-info.md)|Domain collection|List URLs associated with the alert|
-|[List related files](get-alert-related-files-info.md)|[File](files.md) collection|List the [file](files.md) entities that are associated with the [alert](alerts.md)|
-|[List related IPs](get-alert-related-ip-info.md)|IP collection|List IPs that are associated with the alert|
-|[Get related machines](get-alert-related-machine-info.md)|[Machine](machine.md)|The [machine](machine.md) that is associated with the [alert](alerts.md)|
-|[Get related users](get-alert-related-user-info.md)|[User](user.md)|The [user](user.md) that is associated with the [alert](alerts.md)|
+For the full available Alerts API experience across all Microsoft Defenders' products, visit: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
 ## Properties
 
@@ -221,8 +199,5 @@ GET https://api.securitycenter.microsoft.com/api/alerts/da637472900382838869_136
 }
 ```
 
-## Related articles
 
-[Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -1,8 +1,8 @@
 ---
 title: End-user notifications for Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -111,7 +111,7 @@ On the details flyout from the **Tenant notifications** tab only, select **Edit 
    - **From display name**: Enter the display name of the sender.
    - **From email address**: Enter the email address of the sender.
    - **Select the language of the email**: Select one of the following languages: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **English**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese**, **Russian**, **Spanish**, **Dutch**, **Polish**, **Arabic**, **Finnish**, **Greek**, **Hungarian**, **Indonesian**, **Norwegian Bokmål**, **Romanian**, **Slovak**, **Swedish**, **Thai**, **Turkish**, **Vietnamese**, **Catalan**, **Croatian**, or **Slovenian**.
-   - **Mark this as the default language**: Because this is the first and only language for the notification, this language value is selected as the default, and you can't change it.
+   - **Mark this as the default language**: Because this language is the first and only language for the notification, this language value is selected as the default, and you can't change it.
    - **Subject**: The default that's used depends on the notification type that you selected in the previous step, but you can change it:
      - Positive reinforcement: **Thank you for reporting a phish!**
      - Simulation: **Thank you for participating in a phishing campaign!**

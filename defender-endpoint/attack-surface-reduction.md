@@ -1,35 +1,30 @@
----
+﻿---
 title: Use attack surface reduction rules to prevent malware infection
 description: Attack surface reduction rules can help prevent exploits from using apps and scripts to infect devices with malware.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar
-manager: deniseb
+manager: bagol
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
+
 
 # Attack surface reduction rules overview
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
@@ -53,6 +48,12 @@ For a sequential, end-to-end process of how to manage attack surface reduction r
 - [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
 - [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
+
 ## Assess rules before deployment
 
 You can assess how an attack surface reduction rule might affect your network by opening the security recommendation for that rule in [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/).
@@ -61,7 +62,7 @@ You can assess how an attack surface reduction rule might affect your network by
 
 In the recommendation details pane, check for user impact to determine what percentage of your devices can accept a new policy enabling the rule in blocking mode without adversely affecting productivity.
 
-See [Requirements](enable-attack-surface-reduction.md#requirements) in the "Enable attack surface reduction rules" article for information about supported operating systems and other requirement information.
+See [Requirements](enable-attack-surface-reduction.md) in the "Enable attack surface reduction rules" article for information about supported operating systems and other requirement information.
 
 ## Audit mode for evaluation
 
@@ -79,7 +80,7 @@ For information about configuring per-rule exclusions, see the section titled **
 
 ## Warn mode for users
 
-(**NEW**!) Prior to warn mode capabilities, attack surface reduction rules that are enabled could be set to either audit mode or block mode. With the new warn mode, whenever content is blocked by an attack surface reduction rule, users see a dialog box that indicates the content is blocked. The dialog box also offers the user an option to unblock the content. The user can then retry their action, and the operation completes. When a user unblocks content, the content remains unblocked for 24 hours, and then blocking resumes.
+Whenever an attack surface reduction rule blocks content, users see a dialog box that indicates the content is blocked. The dialog box also offers the user an option to unblock the content. The user can then retry their action, and the operation completes. When a user unblocks content, the content remains unblocked for 24 hours, and then blocking resumes.
 
 Warn mode helps your organization have attack surface reduction rules in place without preventing users from accessing the content they need to perform their tasks.
 
@@ -93,12 +94,12 @@ Warn mode is supported on devices running the following versions of Windows:
 
 Microsoft Defender Antivirus must be running with real-time protection in [Active mode](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility#functionality-and-features-available-in-each-state).
 
-Also, make sure [Microsoft Defender Antivirus and antimalware updates](/windows/security/threat-protection/microsoft-defender-antivirus/manage-updates-baselines-microsoft-defender-antivirus#platform-and-engine-releases) are installed.
+Also, make sure [Microsoft Defender Antivirus and anti-malware updates](/windows/security/threat-protection/microsoft-defender-antivirus/manage-updates-baselines-microsoft-defender-antivirus#platform-and-engine-releases) are installed.
 
 - Minimum platform release requirement: `4.18.2008.9`
 - Minimum engine release requirement: `1.1.17400.5`
 
-For more information and to get your updates, see [Update for Microsoft Defender antimalware platform](https://support.microsoft.com/help/4052623/update-for-microsoft-defender-antimalware-platform).
+For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](/defender-endpoint/microsoft-defender-antivirus-updates).
 
 ### Cases where warn mode isn't supported
 
@@ -116,7 +117,7 @@ Whenever an attack surface reduction rule is triggered, a notification is displa
 
 Also, when certain attack surface reduction rules are triggered, alerts are generated.
 
-Notifications and any alerts that are generated can be viewed in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+Notifications and any alerts that are generated can be viewed in the [Microsoft Defender portal](https://security.microsoft.com).
 
 For specific details about notification and alert functionality, see: [Per rule alert and notification details](attack-surface-reduction-rules-reference.md#per-asr-rule-alert-and-notification-details), in the article **Attack surface reduction rules reference**.
 
@@ -124,7 +125,7 @@ For specific details about notification and alert functionality, see: [Per rule 
 
 You can use advanced hunting to view attack surface reduction events. To streamline the volume of incoming data, only unique processes for each hour are viewable with advanced hunting. The time of an attack surface reduction event is the first time that event is seen within the hour.
 
-For example, suppose that an attack surface reduction event occurs on 10 devices during the 2:00 PM hour. Suppose that the first event occurred at 2:15, and the last at 2:45. With advanced hunting, you see one instance of that event (even though it actually occurred on 10 devices), and its timestamp will be 2:15 PM.
+For example, suppose that an attack surface reduction event occurs on 10 devices during the 2:00 PM hour. Suppose that the first event occurred at 2:15, and the last at 2:45. With advanced hunting, you see one instance of that event (even though it actually occurred on 10 devices), and its timestamp is 2:15 PM.
 
 For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
@@ -134,16 +135,20 @@ You can set attack surface reduction rules for devices that are running any of t
 
 - Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
 - Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows 11 Pro, version 21H2 or later
+- Windows 11 Enterprise, version 21H2 or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
+- Windows Server 2025
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh801901(v=ws.11))
+- Azure Stack HCI OS, version 23H2 and later
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for this feature to work.
 
-Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:
+Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:S
 
 - The monitoring, analytics, and workflows available in [Defender for Endpoint](microsoft-defender-endpoint.md)
 - The reporting and configuration capabilities in [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender).
@@ -179,15 +184,15 @@ You can review the Windows event log to view events generated by attack surface 
 
 5. Select **OK**.
 
-You can create a custom view that filters events to only show the following events, all of which are related to controlled folder access:
+   You can create a custom view that filters events to only show the following events, all of which are related to controlled folder access:
 
-|Event ID|Description|
-|---|---|
-|5007|Event when settings are changed|
-|1121|Event when rule fires in Block-mode|
-|1122|Event when rule fires in Audit-mode|
+    |Event ID|Description|
+    |---|---|
+    |5007|Event when settings are changed|
+    |1121|Event when rule fires in Block-mode|
+    |1122|Event when rule fires in Audit-mode|
 
-The "engine version" listed for attack surface reduction events in the event log, is generated by Defender for Endpoint, not by the operating system. Defender for Endpoint is integrated with Windows 10 and Windows 11, so this feature works on all devices with Windows 10 or Windows 11 installed.
+Defender for Endpoint generates the "engine version" that's listed in the event log for attack surface reduction. The operating system doesn't generate this version. Defender for Endpoint is integrated with Windows 10 and Windows 11, so this feature works on all devices with Windows 10 or Windows 11 installed.
 
 ## See also
 
@@ -211,3 +216,4 @@ The "engine version" listed for attack surface reduction events in the event log
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

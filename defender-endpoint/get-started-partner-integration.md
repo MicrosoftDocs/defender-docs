@@ -1,38 +1,34 @@
----
+﻿---
 title: Become a Microsoft Defender for Endpoint partner
 ms.reviewer:
 description: Learn the steps and requirements to integrate your solution with Microsoft Defender for Endpoint and be a partner.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
-ms.date: 12/18/2020
----
+ms.date: 03/26/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Become a Microsoft Defender for Endpoint partner
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 To become a Defender for Endpoint solution partner, complete steps outlined in this article.
 
 ## Step 1: Subscribe to a Microsoft Defender for Endpoint license
 
-Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink). Subscribing allows you to use a Microsoft Defender for Endpoint tenant with up to three devices to developing solutions that integrate with Microsoft Defender for Endpoint.
+Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630). Subscribing allows you to use a Microsoft Defender for Endpoint tenant with up to three devices to developing solutions that integrate with Microsoft Defender for Endpoint.
 
 ## Step 2: Fulfill the solution validation and certification requirements
 
@@ -81,3 +77,4 @@ Managed security service providers (MSSP) and independent software vendors (ISV)
 - [Technical partner opportunities](partner-integration.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

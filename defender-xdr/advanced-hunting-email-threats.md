@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,16 +17,18 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
-ms.topic: how-to
-ms.date: 04/22/2024
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.topic: reference
+ms.date: 03/28/2025
 ---
 
 # Advanced hunting example for Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 Want to get started searching for email threats using advanced hunting? Try these steps:
 

@@ -2,9 +2,9 @@
 title: "Microsoft Defender for Business trial user guide"
 f1.keywords:
 - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.collection:
@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.localizationpriority: high
-ms.date: 06/19/2024
+ms.date: 02/28/2025
 ms.service: defender-business
 search.appverid:
 - MOE150
@@ -39,35 +39,28 @@ Defender for Business is a new endpoint security solution designed especially fo
 
 Here's how to set up your trial subscription:
 
-1. [Add users and assign licenses](#step-1-add-users-and-assign-licenses).
-2. [Visit the Microsoft Defender portal](#step-2-visit-the-microsoft-365-defender-portal).
-3. [Use the setup wizard](#step-3-use-the-setup-wizard-in-defender-for-business-recommended).
-4. [Set up and configure Defender for Business](#step-4-set-up-and-configure-defender-for-business).
+1. [Visit the Microsoft Defender portal](#step-1-visit-the-microsoft-defender-portal).
+2. [Use the setup wizard](#step-2-use-the-setup-wizard-in-defender-for-business).
+3. [Set up and configure Defender for Business](#step-3-set-up-and-configure-defender-for-business).
 
-### Step 1: Add users and assign licenses
-
-After you sign up for Defender for Business, the first step is to **[add users and assign licenses](mdb-add-users.md)**.
-
-<a name='step-2-visit-the-microsoft-365-defender-portal'></a>
-
-### Step 2: Visit the Microsoft Defender portal
+### Step 1: Visit the Microsoft Defender portal
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is the one-stop shop where you use and manage Defender for Business. It includes callouts to help you get started, cards that surface relevant information, and a navigation bar that provides easy access to the various features and capabilities.
 
 - **[Visit the Microsoft Defender portal](mdb-get-started.md)**.
 - **[Explore the navigation bar](mdb-get-started.md#the-navigation-bar)** on the left side of the screen to access your incidents, view reports, and manage your security policies and settings.
 
-### Step 3: Use the setup wizard in Defender for Business (recommended)
+### Step 2: Use the setup wizard in Defender for Business
 
 Defender for Business was designed to save small and medium-sized businesses time and effort. You can do initial setup and configuration through a setup wizard. The setup wizard helps you grant access to your security team, set up email notifications for your security team, and onboard your company's Windows devices. **[Use the setup wizard](mdb-setup-configuration.md)**.
 
 > [!NOTE]
-> You can only use the setup wizard once.
+> You don't have to use the wizard, but it's highly recommended. You can only use the setup wizard once.
 
 #### Setup wizard flow: what to expect
 
 > [!TIP]
-> **Using the setup wizard is optional.** If you choose not to use the wizard, or if the wizard is closed before your setup process is complete, you can complete the setup and configuration process on your own. See [Step 4: Set up and configure Defender for Business](#step-4-set-up-and-configure-defender-for-business).
+> **Using the setup wizard is optional.** If you choose not to use the wizard, or if the wizard is closed before your setup process is complete, you can complete the setup and configuration process on your own. See [Step 3: Set up and configure Defender for Business](#step-3-set-up-and-configure-defender-for-business).
 
 1. **[Assign user permissions](mdb-roles-permissions.md#view-and-edit-role-assignments)**. Grant your security team access to the Microsoft Defender portal.
 
@@ -78,17 +71,17 @@ Defender for Business was designed to save small and medium-sized businesses tim
    > [!NOTE]
    > When you use the setup wizard, the system detects if you have Windows devices that are already enrolled in Intune. You'll be asked if you want to use automatic onboarding for all or some of those devices. You can onboard all Windows devices at once or select specific devices at first and then add more devices later.
 
-   To onboard other devices, see [Step 4: Set up and configure Defender for Business](#step-4-set-up-and-configure-defender-for-business).
+   To onboard other devices, see [Step 3: Set up and configure Defender for Business](#step-3-set-up-and-configure-defender-for-business).
 
 4. **[View and edit your security policies](mdb-configure-security-settings.md)**. Defender for Business includes default security policies for next-generation protection and firewall protection that can be applied to your company's devices. These preconfigured security policies use recommended settings, so you're protected as soon as your devices are onboarded to Defender for Business. And you can edit the policies or create new ones.
 
-### Step 4: Set up and configure Defender for Business
+### Step 3: Set up and configure Defender for Business
 
 If you choose not to use the setup wizard, see the following diagram that depicts the [overall setup and configuration process](mdb-setup-configuration.md) for Defender for Business.
 
 [:::image type="content" source="media/mdb-setup-process-2.png" alt-text="Setup and configuration process for Defender for Business.":::](mdb-setup-configuration.md)
 
-If you used the setup wizard but you need to onboard more devices, such as non-Windows devices, go directly to [step 4](mdb-onboard-devices.md) in the following procedure:
+If you used the setup wizard but you need to onboard more devices, such as non-Windows devices, go directly to [onboard devices](mdb-onboard-devices.md).
 
 1. **[Review the requirements](mdb-requirements.md)** to configure and use Defender for Business.
 
@@ -110,7 +103,7 @@ Defender for Business includes pre-configured security policies that use recomme
 
 Security policies to review and configure include:
 
-- [Next-generation protection policies](mdb-next-generation-protection.md) which determine antivirus and antimalware protection for your company's devices
+- [Next-generation protection policies](mdb-next-generation-protection.md) which determine antivirus and anti-malware protection for your company's devices
 - [Firewall protection and rules](mdb-firewall.md) which determine what network traffic is allowed to flow to and from your company's devices
 - [Web content filtering](mdb-web-content-filtering.md) which prevents people from visiting certain websites (URLs) based on categories, such as adult content or legal liability
 - [Advanced features](mdb-portal-advanced-feature-settings.md#view-settings-for-advanced-features) such as automated investigation and response and endpoint detection and response (EDR) in block mode
@@ -119,7 +112,7 @@ Security policies to review and configure include:
 
 For the next 30 days, here's guidance from the product team on key features to try:
 
-1. [Use your Microsoft Defender Vulnerability Management dashboard](#1-use-the-defender-vulnerability-management-dashboard).
+1. [Use your dashboard](#1-use-the-dashboard).
 
 2. [View and respond to detected threats](#2-view-and-respond-to-detected-threats).
 
@@ -127,9 +120,9 @@ For the next 30 days, here's guidance from the product team on key features to t
 
 4. [Prepare for ongoing security management](#4-prepare-for-ongoing-security-management).
 
-### 1. Use the Defender Vulnerability Management dashboard
+### 1. Use the dashboard
 
-Defender for Business includes a Defender Vulnerability Management dashboard that's designed to save your security team time and effort. Learn how to [use your Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md).
+Defender for Business includes a dashboard that's designed to save your security team time and effort. Learn how to [use your dashboard](mdb-view-tvm-dashboard.md).
 
 - View your exposure score, which is associated with devices in your organization.
 - View your top security recommendations, such as address impaired communications with devices, turn on firewall protection, or update Microsoft Defender Antivirus definitions.

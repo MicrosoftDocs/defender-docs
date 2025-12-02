@@ -1,32 +1,31 @@
----
+﻿---
 title: Operationalize attack surface reduction rules
 description: Provides guidance to operationalize your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
-ms.reviewer: sugamar
-manager: deniseb
+author: limwainstein
+ms.author: lwainstein
+ms.reviewer: sugamar, yongrhee
+manager: bagol
 ms.custom: asr
-ms.topic: conceptual
+ms.topic: article
 ms.collection: 
- - m365-security
- - m365solution-asr-rules
- - highpri
- - tier1
- - mde-asr
-ms.date: 08/29/2023
+- m365-security
+- m365solution-asr-rules
+- highpri
+- tier1
+- mde-asr
+ms.date: 03/26/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Operationalize attack surface reduction rules
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 After you've fully deployed attack surface reduction rules, it's vital that you have processes in place to monitor and respond to ASR-related activities. Activities include: 
 
@@ -73,7 +72,7 @@ If you want to focus on the AsrOfficeChildProcess rule and get details on the ac
 
 ```kusto
 DeviceEvents
-| where (Actiontype startswith "AsrOfficechild")
+| where (ActionType startswith "AsrOfficechild")
 | extend RuleId=extractjson("$Ruleid", AdditionalFields, typeof(string))
 | project DeviceName, FileName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
 ```
@@ -97,3 +96,4 @@ For more information about hunting options, see: [Demystifying attack surface re
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

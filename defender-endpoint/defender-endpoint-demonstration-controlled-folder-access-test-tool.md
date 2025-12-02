@@ -1,12 +1,13 @@
----
+﻿---
 title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstration test tool
 description: See how malicious apps and threats are evaluated and countered by Microsoft Defender Antivirus.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
+ms.reviewer: yongrhee
 audience: ITPro
 ms.collection:
 - m365-security
@@ -14,21 +15,21 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: asr
-ms.date: 10/21/2022
----
+ms.date: 03/10/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Controlled folder access (CFA) demonstration test tool (block script)
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Controlled Folder Access helps you protect valuable data from malicious apps and threats, such as ransomware. All apps (any executable file, including .exe, .scr, .dll files and others) are assessed by Microsoft Defender Antivirus, which then determines if the app is malicious or safe. If the app is determined to be malicious or suspicious, then it will not be allowed to make changes to any files in any protected folder.
 
 ## Scenario requirements and setup
 
-- Windows 10 1709 build 16273
+- Windows 10, version 1709 (build 16273) or newer
+
 - Microsoft Defender Antivirus (active mode)
 
 ## PowerShell commands
@@ -89,3 +90,4 @@ Set-MpPreference -EnableControlledFolderAccess Disabled
 ## See also
 [Controlled folder access](/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

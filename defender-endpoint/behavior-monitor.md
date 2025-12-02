@@ -1,27 +1,26 @@
----
+﻿---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+ms.reviewer: yongrhee
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 02/29/2024
+ms.date: 04/29/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Behavior monitoring in Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-- Microsoft Defender Antivirus
 
 Behavior monitoring is a critical detection and protection functionality of Microsoft Defender Antivirus.
 
@@ -68,7 +67,7 @@ The following table shows the different ways to configure behavior monitoring.
 | CSP | AllowBehaviorMonitoring | [Defender Policy CSP](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#real-time-protection)   |
 | Configuration Manager Tenant Attach | Turn on behavior monitoring | [Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices](/mem/intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach#real-time-protection) |
 | Group Policy | Turn on behavior monitoring | [Download Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)   |
-| PowerShell | Set-Preference -DisableBehaviorMonitoring | [Set-MpPreference](/powershell/module/defender/set-mppreference#-disablebehaviormonitoring) |
+| PowerShell | Set-MpPreference -DisableBehaviorMonitoring | [Set-MpPreference](/powershell/module/defender/set-mppreference#-disablebehaviormonitoring) |
 | WMI | boolean  DisableBehaviorMonitoring;  | [MSFT\_MpPreference class](/previous-versions/windows/desktop/defender/msft-mppreference) |
 
 If you use Microsoft Defender for Business, see [Review or edit your next-generation protection policies in Microsoft Defender for Business](/defender-business/mdb-next-generation-protection).
@@ -132,7 +131,7 @@ withNames | join kind = fullouter DefUpdate on DeviceId
 
 ## Troubleshooting high CPU usage
 
-Detections related to behavior monitoring start with "[Behavior](/defender-xdr/malware-naming#type)".
+Detections related to behavior monitoring start with "[Behavior](/unified-secops-platform/malware-naming#type)".
 
 When investigating high CPU usage in `MsMpEng.exe`, you can temporarily disable behavior monitoring to see if the issues continue.
 
@@ -151,3 +150,4 @@ If you're still encountering high CPU usage issues, contact Microsoft support an
 If behavior monitoring isn't causing the issue, use [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md) to collect log information. Collect two different logs using `a -c` and `a -a`. Have this information ready when you contact Microsoft support.
 
 For more information, see [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md).
+

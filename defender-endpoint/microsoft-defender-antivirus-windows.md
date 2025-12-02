@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/02/2024
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.date: 10/20/2025
+ms.topic: overview
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
@@ -16,19 +16,13 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus in Windows Overview
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint Plans 1 and 2
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 Microsoft Defender Antivirus is available in Windows 10 and Windows 11, and in versions of Windows Server.
 
@@ -36,15 +30,21 @@ Microsoft Defender Antivirus is a major component of your next-generation protec
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 ## Microsoft Defender Antivirus capabilities
 
 Microsoft Defender Antivirus provides anomaly detection, a layer of protection for malware that doesn't fit any predefined pattern. Anomaly detection monitors for process creation events or files that are downloaded from the internet. Through machine learning and cloud-delivered protection, Microsoft Defender Antivirus can stay one step ahead of attackers. Anomaly detection is on by default and can help block attacks such as [3CX Security Alert for Electron Windows App](https://www.3cx.com/blog/news/desktopapp-security-alert/). Microsoft Defender Antivirus started blocking this malware four days before the attack was registered in VirusTotal.  
 
-Modern malware requires modern solutions. In 2015, Microsoft Defender Antivirus moved away from using a static signature-based engine to a model that uses predictive technologies such as, machine learning, applied science, and artificial intelligence as this is what's necessary to keep you and your organizations safe from the complexity of today's ever-evolving malware landscape.
+Modern malware requires modern solutions. In 2015, Microsoft Defender Antivirus moved away from using a static signature-based engine to a model that uses predictive technologies such as, machine learning, applied science, and artificial intelligence as this switch is what's necessary to keep you and your organizations safe from the complexity of today's ever-evolving malware landscape.
 
 Microsoft Defender Antivirus can block almost all malware at first sight, in milliseconds.
 
-We've also designed our antivirus solution to work in both online and offline scenarios.  For offline scenarios, the latest dynamic intelligence from the Intelligence Security Graph is provisioned to the endpoint regularly throughout the day. When connected to the cloud, it's fed real-time intelligence from the [Intelligent Security Graph](https://www.microsoft.com/security/blog/2018/04/17/connect-to-the-intelligent-security-graph-using-a-new-api/).
+We designed our antivirus solution to work in both online and offline scenarios.  For offline scenarios, the latest dynamic intelligence from the Intelligence Security Graph is provisioned to the endpoint regularly throughout the day. When connected to the cloud, real-time intelligence gets fed from the [Intelligent Security Graph](https://www.microsoft.com/security/blog/2018/04/17/connect-to-the-intelligent-security-graph-using-a-new-api/).
 
 Microsoft Defender Antivirus can also stop threats based on their behaviors and process trees even when the threat has started execution. A common example of these kinds of attacks is fileless malware. Microsoft's Next-generation protection features work together to identify and block malware based on abnormal behavior. To learn more, see [Behavioral blocking and containment](behavioral-blocking-containment.md).
 
@@ -64,7 +64,7 @@ The following table summarizes Microsoft Defender Antivirus processes and servic
 | **Microsoft Defender Antivirus command-line utility** | - **Processes** tab: N/A <br/>- **Details** tab: `MpCmdRun.exe` <br/>- **Services** tab: N/A  | 
 | **Microsoft Security Client Policy Configuration Tool** | - **Processes** tab: N/A <br/>- **Details** tab: `ConfigSecurityPolicy.exe` <br/>- **Services** tab: N/A | 
 
-To learn more about the Microsoft Defender Core service, please visit [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md).
+To learn more about the Microsoft Defender Core service, visit [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md).
 
 For [Microsoft Endpoint Data Loss Prevention](/purview/endpoint-dlp-getting-started) (Endpoint DLP), the following table summarizes processes and services. You can view them in Task Manager in Windows.
 
@@ -93,7 +93,7 @@ You can use one of several methods, such as the Windows Security app or Windows 
 > Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#platform-and-engine-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it will place it into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature will allow a switch to active mode but not to passive mode.
 > 
 > - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, there will be no change and Defender Antivirus will remain disabled.
-> - To switch Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
+> - To switch Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#manually-set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
 > 
 > Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection will prevent it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
@@ -165,3 +165,4 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

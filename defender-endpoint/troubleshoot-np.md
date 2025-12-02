@@ -1,13 +1,13 @@
----
+﻿---
 title: Troubleshoot problems with Network protection
 description: Resources and sample code to troubleshoot issues with Network protection in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: oogunrinde, yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
@@ -15,21 +15,15 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 03/03/2024
----
+ms.date: 02/24/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Troubleshoot network protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business?branch=main)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
-> [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 This article provides troubleshooting information for [network protection](network-protection.md), in cases, such as:
 
@@ -161,3 +155,4 @@ You can configure the registry key by using PowerShell, Microsoft Configuration 
 - [Address false positives/negatives in Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -2,8 +2,8 @@
 title: IP address entity page in Microsoft Defender
 description: The IP address entity page in the Microsoft Defender portal helps you in your investigation of IP address entities that appear in incidents and alerts. The page has all the important information about each entity. If an alert or incident indicates that an IP address is the source or target of suspicious behavior, check and investigate the IP address.
 ms.service: defender-xdr
-ms.author: yelevin
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 03/27/2024
 search.appverid: met150
 appliesto:
@@ -127,5 +127,5 @@ Response actions run along the top of a specific IP entity page and include:
 - [Device entity page in Microsoft Defender](entity-page-device.md)
 - [User entity page in Microsoft Defender](investigate-users.md)
 - [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-integration-with-azure-sentinel.md)
-- [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+- [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

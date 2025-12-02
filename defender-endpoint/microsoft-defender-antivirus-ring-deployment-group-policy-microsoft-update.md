@@ -1,39 +1,29 @@
----
+﻿---
 title: Production ring deployment using Group Policy and Microsoft Update (MU)
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy and Microsoft Update (MU).
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
+ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus production ring deployment using Group Policy and Microsoft Updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
@@ -51,6 +41,12 @@ Download the latest Windows Defender .admx and .adml
 - [WindowsDefender.adml](https://github.com/microsoft/defender-updatecontrols/blob/main/WindowsDefender.adml)
 
 Copy the latest .admx and .adml to the Domain Controller [Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
+
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Setting up the Pilot (UAT/Test/QA) environment
 
@@ -189,3 +185,4 @@ If you encounter problems with your deployment, create or append your Microsoft 
 - [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md#manage-the-gradual-rollout-process-for-microsoft-defender-updates)
 - [Microsoft Defender Antivirus ring deployment overview](microsoft-defender-antivirus-ring-deployment.md#ring-deployment-overview)
+

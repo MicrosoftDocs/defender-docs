@@ -1,8 +1,8 @@
 ---
 title: Training modules for Training campaigns in Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn about the Training modules that are available to use in Training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 08/14/2024
+ms.date: 06/30/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -25,11 +25,24 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 To see the available Training modules, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Training modules**. Or, to go directly to the **Content library** tab where you can select **Training modules**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
-> [!TIP]
-> The following training modules for QR codes are available:
+> [!NOTE]
 >
-> - **Malicious digital QR codes**
-> - **Malicious printed QR codes**
+> - The following training modules for QR codes are available:
+>   - Malicious digital QR codes
+>   - Malicious printed QR codes
+>
+> - The following modules will be retired from the training catalog. Avoid assigning the following trainings in new training campaigns:
+>   - Security Essentials for IT Administrators 01: Introduction and Overview
+>   - Security Essentials for IT Administrators 02: Core Principles of Cyber Security
+>   - Security Essentials for IT Administrators 03: Security Program Management
+>   - Security Essentials for IT Administrators 04: Security Maintenance and Hygiene
+>   - Security Essentials for IT Administrators 05: Authentication and Authorization
+>   - Security Essentials for IT Administrators 06: Data Protection
+>   - Security Essentials for IT Administrators 07: Sample Attacks
+>   - Security Essentials for IT Administrators 08: Attack Scenario
+>   - Security Essentials for IT Administrators 10: Securing Cloud Computing Environments
+>   - Security Essentials for IT Administrators 11: Securing Web Servers
+>   - Security Essentials for IT Administrators 12: Attack Case Study, Supply Chain Attacks
 
 The **Training modules** page shows the following information for each module. You can sort the modules by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 

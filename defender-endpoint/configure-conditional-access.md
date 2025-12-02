@@ -1,30 +1,25 @@
----
+﻿---
 title: Configure Conditional Access in Microsoft Defender for Endpoint
-description: Learn about steps that you need to do in Intune, Microsoft Defender XDR, and Azure to implement Conditional access
+description: Learn about steps that you need to do in Intune, Microsoft Defender XDR, and Azure to implement Conditional Access
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
 ms.date: 06/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure Conditional Access in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 This section guides you through all the steps you need to take to properly implement Conditional Access.
 
@@ -41,7 +36,7 @@ You need to make sure that all your devices are enrolled in Intune. You can use 
 
 There are steps you'll need to take in the Microsoft Defender portal, the Intune portal, and Microsoft Entra admin center.
 
-It's important to note the required roles to access these portals and implement Conditional access:
+It's important to note the required roles to access these portals and implement Conditional Access:
 
 - **Microsoft Defender portal** - You'll need to sign into the portal with an appropriate role to turn on integration. See [Permission options](user-roles.md#permission-options).
 - **Intune** - You'll need to sign in to the portal with Security Administrator rights with management permissions.
@@ -113,27 +108,31 @@ Take the following steps to enable Conditional Access:
 
 ### Step 5: Create a Microsoft Entra Conditional Access policy
 
-1. In the [Azure portal](https://portal.azure.com), open **Microsoft Entra ID** \> **Conditional Access** \> **New policy**.
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) as at least a [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
+1. Browse to **Entra ID** > **Conditional Access** > **Policies**.
+1. Select **New policy**.
+1. Give your policy a name. We recommend that organizations create a meaningful standard for the names of their policies.
+1. Under **Assignments**, select **Users or workload identities**.
+   1. Under **Include**, select **All users**
+   1. Under **Exclude**: 
+      1. Select **Users and groups** 
+         1. Choose your organization's emergency access or break-glass accounts.
+         1. If you use hybrid identity solutions like Microsoft Entra Connect or Microsoft Entra Connect Cloud Sync, select **Directory roles**, then select **Directory Synchronization Accounts**
+1. Under **Target resources** > **Resources (formerly cloud apps)** > **Include**, select **All resources (formerly 'All cloud apps')**.
+1. Under **Access controls** > **Grant**.
+   1. Select **Require device to be marked as compliant**.
+   1. Select **Select**.
+1. Confirm your settings and set **Enable policy** to **Report-only**.
+1. Select **Create** to create to enable your policy.
 
-2. Enter a policy **Name**, and select **Users and groups**. Use the Include or Exclude options to add your groups for the policy, and select **Done**.
-
-3. Select **Cloud apps**, and choose which apps to protect. For example, choose **Select apps**, and select **Office 365 SharePoint Online** and **Office 365 Exchange Online**. Select **Done** to save your changes.
-
-4. Select **Conditions** \> **Client apps** to apply the policy to apps and browsers. For example, select **Yes**, and then enable **Browser** and **Mobile apps and desktop clients**. Select **Done** to save your changes.
-
-5. Select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** \> **Require device to be marked as compliant**. Choose **Select** to save your changes.
-
-6. Select **Enable policy**, and then **Create** to save your changes.
+After confirming your settings using [policy impact or report-only mode](/entra/identity/conditional-access/concept-conditional-access-report-only#reviewing-results), move the **Enable policy** toggle from **Report-only** to **On**.
 
 > [!NOTE]
 > You can use the Microsoft Defender for Endpoint app along with the **Approved Client app** , **App Protection policy** and **Compliant Device** (Require device to be marked as compliant) controls in Microsoft Entra Conditional Access policies. There's no exclusion required for the Microsoft Defender for Endpoint app while setting up Conditional Access. Although Microsoft Defender for Endpoint on Android & iOS (App ID - dd47d17a-3194-4d86-bfd5-c6ae6f5651e3) isn't an approved app, it is able to report device security posture in all the three grant permissions. 
-> 
-> However, internally Defender requests **MSGraph/User.read** scope and **Intune Tunnel** scope (in case of Defender+Tunnel scenarios). So these scopes must be excluded*. To exclude MSGraph/User.read scope, any one cloud app can be excluded. To exclude Tunnel scope, you need to exclude 'Microsoft Tunnel Gateway'.These permission and exclusions enables the flow for compliance information to Conditional Access.
-
-Applying a Conditional Access policy to All Cloud Apps could inadvertently block user access in some cases, so it's not recommended. Read more about [Conditional Access policies on Cloud Apps](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#all-cloud-apps)
 
 For more information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](/mem/intune/protect/advanced-threat-protection).
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-conditionalaccess-belowfoldlink)
+
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

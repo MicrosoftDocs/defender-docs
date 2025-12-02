@@ -1,44 +1,43 @@
----
+﻿---
 title: Advanced Hunting with PowerShell API Guide
 ms.reviewer: 
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
-ms.date: 01/25/2023
+ms.date: 03/21/2025
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Microsoft Defender for Endpoint APIs using PowerShell
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
-> Advanced hunting capabilities are not included in Defender for Business.
+> Advanced hunting capabilities aren't included in Defender for Business.
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+
 
 Full scenario using multiple APIs from Microsoft Defender for Endpoint.
 
@@ -51,23 +50,24 @@ In this section, we share PowerShell samples to
 
 ## Preparation instructions
 
-- Open a PowerShell window.
-- If your policy doesn't allow you to run the PowerShell commands, you can run the below command:
-  ```
-  Set-ExecutionPolicy -ExecutionPolicy Bypass
-  ```
+1. Open a PowerShell window.
 
-For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy)
+2. If your policy doesn't allow you to run the PowerShell commands, you can run the following command:
+
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy Bypass
+   ```
+
+For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 ## Get token
 
-Run the below:
+Run the following command, using your information as follows:
 
-- $tenantId: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
-- $appId: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint)
-- $appSecret: Secret of your Microsoft Entra app
-
-- $suspiciousUrl: The URL
+- `$tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant).
+- `$appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint).
+- `$appSecret`: Secret of your Microsoft Entra app.
+- `$suspiciousUrl`: The URL
 
 
 ```
@@ -132,7 +132,10 @@ $response
 
 
 ## See also
+
 - [Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Advanced Hunting API](run-advanced-query-api.md)
 - [Advanced Hunting using Python](run-advanced-query-sample-python.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

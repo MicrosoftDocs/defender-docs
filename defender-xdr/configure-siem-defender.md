@@ -11,17 +11,16 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
-ms.date: 06/27/2024
+ms.topic: how-to
+ms.date: 04/25/2025
+appliesto:
+- Microsoft Defender for Endpoint   
+- Microsoft Defender XDR
 ---
 
 # Integrate your SIEM tools with Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 <a name='pull-microsoft-365-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools'></a>
 
@@ -84,14 +83,16 @@ For more information on:
 The new SmartConnector for Microsoft Defender XDR ingests incidents into ArcSight and maps these onto its Common Event
 Framework (CEF).
 
-For more information on the new ArcSight SmartConnector for Microsoft Defender XDR, see [ArcSight Product Documentation](https://community.microfocus.com/cyberres/productdocs/w/connector-documentation/39246/smartconnector-for-microsoft-365-defender).
+For more information on the new ArcSight SmartConnector for Microsoft Defender XDR, see [ArcSight Product Documentation](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/microsoft-365-defender/index.html).
 
 The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint that's now retired.
 
 ### Elastic
 
 Elastic Security combines SIEM threat detection features with endpoint prevention and response capabilities in one solution.
+
 The Elastic integration for Microsoft Defender XDR and Defender for Endpoint enables organizations to leverage incidents and alerts from Defender within Elastic Security to perform investigations and incident response. Elastic correlates this data with other data sources, including cloud, network, and endpoint sources using robust detection rules to find threats quickly.
+
 For more information on the Elastic connector, see: [Microsoft M365 Defender | Elastic docs](https://docs.elastic.co/integrations/m365_defender)
 
 ## Ingesting streaming event data via Event Hubs
@@ -114,7 +115,7 @@ Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM) that c
 
 For more information on the Elastic streaming API integration, see [Microsoft M365 Defender | Elastic docs](https://docs.elastic.co/integrations/m365_defender).
 
-## Related articles
+## Related content
 
 [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 

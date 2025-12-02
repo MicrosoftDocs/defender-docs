@@ -1,40 +1,34 @@
----
+﻿---
 title: Protect macOS security settings with tamper protection
 description: Use tamper protection to prevent malicious apps from changing important macOS security settings.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 08/01/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Protect macOS security settings with tamper protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-rbac-abovefoldlink)
 
 Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. This capability also helps important security files, processes, and configuration settings from being tampered.
 
 > [!IMPORTANT]
-> Starting March of 2023, Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting was not enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
+> Starting March of 2023, Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting wasn't enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
 
-You can set tamper protection in the following modes:
+You can set the "tamper protection" setting in the following modes:
 
 |Article|Description|
 |---|---|
@@ -65,12 +59,12 @@ Here's an example of a system message in response to a blocked action:
 
 ![Screenshot of operation blocked message.](media/operation-blocked.png)
 
-You can configure the tamper protection mode by providing the mode name as enforcement-level.
+You can configure the "tamper protection" mode by providing the mode name as enforcement-level.
 
 > [!NOTE]
 >
-> - The mode change will apply immediately.
-> - If you used JAMF during the initial configuration, then you'll need to update the configuration using JAMF as well.
+> - The mode change applies immediately.
+> - If you used JAMF during the initial configuration, then you need to update the configuration using JAMF as well.
 
 ## Before you begin
 
@@ -550,3 +544,4 @@ $ sudo grep -F '[{tamperProtection}]: Feature state:' /Library/Logs/Microsoft/md
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

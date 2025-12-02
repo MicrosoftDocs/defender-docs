@@ -1,11 +1,11 @@
----
+﻿---
 title: Export secure configuration assessment per device
 description: Returns  an entry for every unique combination of DeviceId, ConfigurationId.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,23 +15,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/04/2021
+ms.date: 11/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
+
 ---
 
 # Export secure configuration assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-Returns all of the configurations and their status, on a per-device basis.
+Returns all of the configurations and their status, on a per-device basis. Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
 There are different API calls to get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
@@ -45,8 +40,6 @@ There are different API calls to get different types of data. Because the amount
 
 Data that is collected (using either _JSON response_ or _via files_) is the current snapshot of the current state, and does not contain historic data. In order to collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
 
 ## 1. Export secure configuration assessment (JSON response)
 
@@ -82,10 +75,8 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
+- Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
 
 <br>
 
@@ -238,17 +229,16 @@ Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerab
 GET /api/machines/SecureConfigurationsAssessmentExport
 ```
 
-### Parameters
+### 2.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours).
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are gzip compressed & in multiline Json format.
-> - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
+
 
 <br>
 
@@ -256,7 +246,7 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 
 Property (ID)|Data type|Description|Example of a returned value
 ---|---|---|---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
@@ -281,15 +271,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
     "generatedTime": "2021-01-11T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Export assessment methods and properties per device](get-assessment-methods-properties.md)
-- [Export software inventory assessment per device](get-assessment-software-inventory.md)
-- [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
-
-Other related
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

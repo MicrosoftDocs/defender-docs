@@ -1,46 +1,42 @@
----
+﻿---
 title: Microsoft Defender for Cloud Apps integration overview
 ms.reviewer:
 description: Microsoft Defender for Endpoint integrates with Defender for Cloud Apps by forwarding all cloud app networking activities.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.date: 10/18/2018
+ms.date: 03/27/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Cloud Apps in Defender for Endpoint overview
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Defender for Cloud Apps is a comprehensive solution that gives visibility into cloud apps and services by allowing you to control and limit access to cloud apps, while enforcing compliance requirements on data stored in the cloud. For more information, see [Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security).
 
 > [!NOTE]
-> This feature is available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) on devices running Windows 10 version 1809 or later, or Windows 11.
+> This feature is available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/en-us/security) on devices running Windows 10 version 1809 or later, or Windows 11.
 
 ## Microsoft Defender for Endpoint and Defender for Cloud Apps integration
 
 Defender for Cloud Apps discovery relies on cloud traffic logs being forwarded to it from enterprise firewall and proxy servers. Microsoft Defender for Endpoint integrates with Defender for Cloud Apps by collecting and forwarding all cloud app networking activities, providing unparalleled visibility to cloud app usage. The monitoring functionality is built into the device, providing complete coverage of network activity.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4r4yQ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0bba87dc-5047-492b-add5-c942faa050d4]
 
 The integration provides the following major improvements to the existing Defender for Cloud Apps discovery:
 

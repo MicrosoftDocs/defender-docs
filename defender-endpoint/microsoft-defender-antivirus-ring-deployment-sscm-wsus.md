@@ -1,44 +1,42 @@
----
+﻿---
 title: Ring deployment using System Center Configuration Manager and Windows Server Update Services
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using System Center Configuration Manager (SCCM) and Windows Server Update Services (WSUS).
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
+ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus ring deployment using System Center Configuration Manager and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
 > Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Setting up the pilot environment 
 
@@ -82,7 +80,7 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
    
    These settings are shown in the following image:
    
-   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings for the Software Updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png":::
+     :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings for the Software Updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-sccm-wizard-software-updates.png":::
    
    > [!TIP]
    > Click **Preview** - to make sure "Security Intelligence Update for Windows Defender Antivirus" is listed. You should see **KB2267602**.
@@ -130,7 +128,7 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
    
 1. On the **Distribution location** page, under **Specify the update languages for product**, under **product**, select **Windows Update**. 
    
-1. Select **Next**. On the **Download Settings** page, under **Specify the software updates download behavior for clients on slow site boundaries**,  select the following:
+1. Select **Next**. On the **Download Settings** page, under **Specify the software updates download behavior for clients on slow site boundaries**, select the following:
    
    | In: | Change: |
    |:---|:---|
@@ -235,3 +233,4 @@ On about 10-500 Windows and/or Windows Server systems, depending on how many tot
 ## See also 
 
 [Microsoft Defender for Endpoint ring deployment](microsoft-defender-antivirus-ring-deployment.md)
+

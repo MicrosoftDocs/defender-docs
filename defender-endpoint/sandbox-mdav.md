@@ -1,13 +1,14 @@
----
+﻿---
 title: Run Microsoft Defender Antivirus in a sandbox environment
 description: This article describes how to run Microsoft Defender Antivirus in a sandbox to further strengthen against tampering.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
-ms.date: 02/26/2024
+ms.topic: how-to
+author: KesemSharabi
+ms.author: kesharab
+ms.reviewer: yongrhee
+manager: bagol
+ms.date: 03/26/2025
 ms.subservice: ngp
 ms.collection:
 - m365-security
@@ -16,23 +17,14 @@ ms.collection:
 search.appverid: met150
 f1.keywords: NOCSH 
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Run Microsoft Defender Antivirus in a sandbox
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-
-**Platforms:**
-
-- Windows
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 This article describes how to run Microsoft Defender Antivirus in a sandbox environment for enhanced protection against tampering. 
 
@@ -40,11 +32,9 @@ Microsoft Defender Antivirus with its built-in antivirus capabilities can run wi
 
 ## Prerequisites
 
-Before you begin, you must meet the following requirements:
-
 - Microsoft Defender Antivirus (active mode)
-- Windows 11 or Windows 10 version 1703 or newer
-- Windows Server 2022 or Windows Server 2019 or Windows Server 2016 or newer
+- Windows client devices must be running Windows 11 or Windows 10 version 1703 or newer
+- Windows server devices must be running Windows Server 2016 and later, or Azure Stack HCI OS, version 23H2 and later
 
 ## Why run Microsoft Defender Antivirus in a sandbox?
 
@@ -68,7 +58,7 @@ You can follow these steps to enable sandboxing by setting a machine-wide enviro
     setx /M MP_FORCE_USE_SANDBOX 1  
     ```
 
-    :::image type="content" source="media/enable-sandbox.png" alt-text="Screenshot that shows Windows PowerShell tool for admins with cmdlet details to enable sanbox.":::
+    :::image type="content" source="media/enable-sandbox.png" alt-text="Screenshot that shows Windows PowerShell tool for admins with cmdlet details to enable sandbox.":::
 
 2. Restart the device. Once you've restarted, you'll see a new process besides MsMpEng.exe that is `MsMpEngCP.exe` in the following folders:
    
@@ -118,3 +108,4 @@ Lastly, a significant challenge from the security perspective is related to cont
 ### What to do while troubleshooting the MsMpEng.CP.exe process, if it starts and stops after a few minutes?
 
 Collect the [support diagnostic logs](collect-diagnostic-data.md) and any relevant dumps/crash information if there are associated Windows Error Reporting (WER) events around the time the process stops.
+

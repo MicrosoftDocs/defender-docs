@@ -1,11 +1,11 @@
----
+﻿---
 title: Export browser extensions assessment
 description: Returns a table with an entry for every unique combination of DeviceId, BrowserName, ExtensionID.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,38 +15,29 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/01/2022
+ms.date: 11/10/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+
 ---
 
 # Export browser extensions assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink).
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 Returns all known installed browser extensions and their details for all devices, on a per-device basis.
+Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
 Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
 - [Export browser extensions assessment **JSON response**](#1-export-browser-extensions-assessment-json-response) The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- [Export browser extensions assessment **via files**](#2-export-browser-extension-assessment-via-files) This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
+- [Export browser extensions assessment **via files**](#2-export-browser-extension-assessment-via-files) This API solution enables pulling larger amounts of data faster and more reliably. This is recommended for large organizations with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
   - Call the API to get a list of download URLs with all your organization data.
   - Download all the files using the download URLs and process the data as you like.
 
 Data that is collected (using either _Json response_ or _via files_) is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
-> [!NOTE]
-> Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**).
+
 
 ## 1. Export browser extensions assessment (JSON response)
 
@@ -57,7 +48,7 @@ This API response contains all the data for installed browser extensions per dev
 #### 1.1.1 Limitations
 
 - Maximum page size is 200,000.
-- Rate limitations for this API are 30 calls per minute and 1000 calls per hour.
+- Rate limitations for this API are 30 calls per minute and 1,000 calls per hour.
 
 ### 1.2 Permissions
 
@@ -81,13 +72,11 @@ GET /api/Machines/BrowserExtensionsInventoryByMachine
 
 ### 1.5 Properties
 
-> [!NOTE]
->
-> - Each record is approximately 0.5KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+- Each record is 0.5KB of data. You should take this size into account when choosing the correct pageSize parameter for you.
+- The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
+- Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 
-<br>
+</br>
 
 ****
 
@@ -103,7 +92,7 @@ ExtensionRisk|string|The highest risk level generated by the browser extension. 
 ExtensionVersion|string|Version number of a specific browser extension.
 IsActivated|Boolean|Indicates whether a browser extension is active.
 RbacGroupId|integer|The role-based access control (RBAC) group ID.
-RbacGroupName|string|The role-based access control (RBAC) group. If this device is not assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
+RbacGroupName|string|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."
 InstallationTime|string|The time the browser extension was installed.
 Permissions|Array[string]|The set of permissions requested by a specific browser extension.
 
@@ -184,15 +173,14 @@ GET /api/machines/browserextensionsinventoryExport
 
 ### 2.4 Parameters
 
-- sasValidHours: The number of hours that the download URLs will be valid for (Maximum 24 hours)
+- `sasValidHours`: The number of hours that the download URLs are valid for. Maximum is 6 hours.
 
 ### 2.5 Properties
 
-> [!NOTE]
->
-> - The files are gzip compressed & in multiline JSON format.
-> - The download URLs are only valid for 3 hours. Otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region that your data resides.
+
+- The files are GZIP compressed & in multiline JSON format.
+- The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 
 <br>
 
@@ -200,7 +188,7 @@ GET /api/machines/browserextensionsinventoryExport
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
 
 ### 2.6 Examples
@@ -224,14 +212,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/browserextensionsinven
     "generatedTime": "2021-01-11T11:01:00Z"
 }
 ```
-
-## See also
-
-- [Get browser extensions permission info](get-browser-extensions-permission-info.md)
-- [Browser extensions assessment](/defender-vulnerability-management/tvm-browser-extensions)
-
-## Other related
-
-- [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

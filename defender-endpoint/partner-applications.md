@@ -1,33 +1,28 @@
----
+﻿---
 title: Partner applications in Microsoft Defender for Endpoint
 ms.reviewer:
 description: View supported partner applications to enhance the detection, investigation, and threat intelligence capabilities of the platform
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
-ms.date: 09/20/2024
----
+ms.date: 06/03/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Partner applications in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Defender for Endpoint supports third-party applications to help enhance the detection, investigation, and threat intelligence capabilities of the platform.
 
@@ -56,7 +51,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |![Logo for Micro Focus ArcSight.](media/arcsight-logo.png)|[Micro Focus ArcSight](https://go.microsoft.com/fwlink/?linkid=2113548)|Use Micro Focus ArcSight to pull Defender for Endpoint detections |
 |![Logo for RSA NetWitness.](media/rsa-netwitness-logo.png)|[RSA NetWitness](https://go.microsoft.com/fwlink/?linkid=2118566)|Stream Defender for Endpoint Alerts to RSA NetWitness using Microsoft Graph Security API |
 |![Logo for SafeBreach.](media/safebreach-logo.png)|[SafeBreach](https://go.microsoft.com/fwlink/?linkid=2114114)|Gain visibility into Defender for Endpoint security events that are automatically correlated with SafeBreach simulations |
-|![Logo for Skybox Vulnerability Control.](media/skybox-logo.png)|[Skybox Vulnerability Control](https://go.microsoft.com/fwlink/?linkid=2127467)|Skybox Vulnerability Control cuts through the noise of vulnerability management, correlating business, network, and threat context to uncover your riskiest vulnerabilities |
+|![Logo for Skybox Vulnerability Control.](media/skybox-logo.png)|[Skybox Vulnerability Control](https://www.skyboxsecurity.com/products/vulnerability-control/)|Skybox Vulnerability Control cuts through the noise of vulnerability management, correlating business, network, and threat context to uncover your riskiest vulnerabilities |
 |![Logo for Splunk.](media/splunk-logo.png)|[Splunk](https://go.microsoft.com/fwlink/?linkid=2129805)|The Defender for Endpoint Add-on allows Splunk users to ingest all of the alerts and supporting information to their Splunk |
 |![Logo for XM Cyber.](media/xmcyber-logo.png)|[XM Cyber](/microsoft-365/compliance/insider-risk-management-configure)|Prioritize your response to an alert based on risk factors and high value assets|
 
@@ -68,7 +63,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |![Logo for Delta Risk ActiveEye.](media/delta-risk-activeeye-logo.png)|[Delta Risk ActiveEye](https://go.microsoft.com/fwlink/?linkid=2127468)|Delta Risk, a leading provider of SOC-as-a-Service and security services, integrate Defender for Endpoint with its cloud-native SOAR platform, ActiveEye. |
 |![Logo for Demisto, a Palo Alto Networks Company.](media/demisto-logo.png)|[Demisto, a Palo Alto Networks Company](https://go.microsoft.com/fwlink/?linkid=2108414)|Demisto integrates with Defender for Endpoint to enable security teams to orchestrate and automate endpoint security monitoring, enrichment, and response |
 |![Logo for Microsoft Flow & Azure Functions.](media/ms-flow-logo.png)|[Microsoft Flow & Azure Functions](https://go.microsoft.com/fwlink/?linkid=2114300)|Use the Defender for Endpoint connectors for Azure Logic Apps & Microsoft Flow to automating security procedures |
-|![Logo for Rapid7 InsightConnect.](media/rapid7-logo.png)|[Rapid7 InsightConnect](https://go.microsoft.com/fwlink/?linkid=2116040)|InsightConnect integrates with Defender for Endpoint to accelerate, streamline, and integrate your time-intensive security processes |
+|![Logo for Rapid7 InsightConnect.](media/rapid7-logo.png)|[Rapid7 InsightConnect](https://www.rapid7.com/about)|InsightConnect integrates with Defender for Endpoint to accelerate, streamline, and integrate your time-intensive security processes |
 |![Logo for ServiceNow.](media/servicenow-logo.png)|[ServiceNow](https://go.microsoft.com/fwlink/?linkid=2135621)|Ingest alerts into ServiceNow Security Operations solution based on Microsoft Graph API integration |
 |![Logo for Swimlane.](media/swimlane-logo.png)|[Swimlane](https://go.microsoft.com/fwlink/?linkid=2113902)|Maximize incident response capabilities utilizing Swimlane and Defender for Endpoint together |
 
@@ -86,7 +81,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |---|---|---|
 |![Logo for Aruba ClearPass Policy Manager.](media/aruba-logo.png)|[Aruba ClearPass Policy Manager](https://go.microsoft.com/fwlink/?linkid=2127544)|Ensure Defender for Endpoint is installed and updated on each endpoint before allowing access to the network |
 |![Logo for Blue Hexagon for Network.](media/bluehexagon-logo.png)|[Blue Hexagon for Network](/training/modules/explore-malware-threat-protection/)|Blue Hexagon has built the industry's first real-time deep learning platform for network threat protection |
-|![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2135620)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment |
+|![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://www.forescout.com/press-releases/forescout-acquires-cybermdx-to-expand-healthcare-cybersecurity-focus/)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment |
 |![Logo for HYAS Protect.](media/hyas-logo.png)|[HYAS Protect](https://go.microsoft.com/fwlink/?linkid=2156763)|HYAS Protect utilizes authoritative knowledge of attacker infrastructure to proactively protect Microsoft Defender for Endpoint endpoints from cyberattacks |
 |![Logo for Vectra Network Detection and Response (NDR).](media/vectra-logo.png)|[Vectra Network Detection and Response (NDR)](https://go.microsoft.com/fwlink/?linkid=866934)|Vectra applies AI & security research to detect and respond to cyber-attacks in real time |
 
@@ -143,3 +138,4 @@ Defender for Endpoint currently supports IOC matching and remediation for file a
 
 Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms, including mobile devices. You'll be able to see alerts from various supported operating systems (OS) in the portal and better protect your organization's network.
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

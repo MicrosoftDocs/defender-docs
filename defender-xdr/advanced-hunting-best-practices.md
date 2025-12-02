@@ -4,10 +4,10 @@ description: Learn how to construct fast, efficient, and error-free threat hunti
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -18,7 +18,10 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: best-practice
-ms.date: 04/22/2024
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.date: 03/28/2025
 ---
 
 # Advanced hunting query best practices
@@ -26,10 +29,15 @@ ms.date: 04/22/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
+Get results faster and avoid timeouts while running complex queries by optimizing your queries. For guidance on improving query performance:
+- [General optimization tips](#understand-cpu-resource-quotas) - in this article
+- [Optimize the `join` operator](#optimize-the-join-operator) - in this article
+- [Optimize the `summarize` operator](#optimize-the-summarize-operator) - in this article
+- [Query scenarios](#query-scenarios) - in this article
+- [Kusto query best practices](/azure/kusto/query/best-practices) - includes several scenarios for making your query  more efficient
+- [Optimize log queries in Azure Monitor](/azure/azure-monitor/logs/query-optimization#early-filtering-of-records-prior-to-using-high-cpu-functions) - contains additional guidance for query optimization
+- [Optimizing KQL queries](https://www.youtube.com/watch?v=ceYvRuPp5D8) (video) - most common ways to improve your query
 
-Apply these recommendations to get results faster and avoid timeouts while running complex queries. For more guidance on improving query performance, read [Kusto query best practices](/azure/kusto/query/best-practices).
 
 ## Understand CPU resource quotas
 Depending on its size, each tenant has access to a set amount of CPU resources allocated for running advanced hunting queries. For detailed information about various usage parameters, [read about advanced hunting quotas and usage parameters](advanced-hunting-limits.md).
@@ -40,7 +48,6 @@ After running your query, you can see the execution time and its resource usage 
 
 Customers who run multiple queries regularly should track consumption and apply the optimization guidance in this article to minimize disruption resulting from exceeding quotas or usage parameters.
 
-Watch [Optimizing KQL queries](https://www.youtube.com/watch?v=ceYvRuPp5D8) to see some of the most common ways to improve your queries.  
 
 ## General optimization tips
 
@@ -127,7 +134,7 @@ The [join operator](/azure/data-explorer/kusto/query/joinoperator) merges rows f
     | join kind=inner (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256
     ```
 
-- **Use hints for performance**—Use hints with the `join` operator to instruct the backend to distribute load when running resource-intensive operations. [Learn more about join hints](/azure/data-explorer/kusto/query/joinoperator#join-hints)
+- **Use hints for performance**—Use hints with the `join` operator to instruct the backend to distribute load when running resource-intensive operations. [Learn more about join hints](/azure/data-explorer/kusto/query/joinoperator#join-hints).
 
     For example, the **[shuffle hint](/azure/data-explorer/kusto/query/shufflequery)** helps improve query performance when joining tables using a key with high cardinality—a key with many unique values—such as the `AccountObjectId` in the query below:
 
@@ -186,19 +193,13 @@ The [summarize operator](/azure/data-explorer/kusto/query/summarizeoperator) agg
     | summarize hint.shufflekey = RecipientEmailAddress count() by Subject, RecipientEmailAddress
     ```
 
-
-
 ## Query scenarios
 
 ### Identify unique processes with process IDs
 
 Process IDs (PIDs) are recycled in Windows and reused for new processes. On their own, they can't serve as unique identifiers for specific processes.
 
-To get a unique identifier for a process on a specific machine, use the process ID together with the process creation time. When you join or summarize data around processes, include columns for the machine identifier (either `DeviceId` or `DeviceName`), the process ID (`ProcessId` or `InitiatingProcessId`), and the process creation time (`ProcessCreationTime` or `InitiatingProcessCreationTime`)
-
-The following example query finds processes that access more than 10 IP addresses over port 445 (SMB), possibly scanning for file shares.
-
-Example query:
+Typically, the only way to uniquely identify a process on a specific device was by combining its process ID with its process creation time, along with the device identifier (either `DeviceId` or `DeviceName`). For instance, the following example query finds processes that access more than 10 IP addresses over port 445 (SMB), possibly scanning for file shares.
 
 ```kusto
 DeviceNetworkEvents
@@ -207,7 +208,42 @@ DeviceNetworkEvents
 | where RemoteIPCount > 10
 ```
 
-The query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
+The above query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
+
+This approach is still valid, especially for non-Windows systems. However, in Windows, there’s a more direct method using the `ProcessUniqueId` field. While both the previous method and the one discussed below yield unique process instances, as a best practice we recommend using `ProcessUniqueId` when available, as it simplifies queries and eliminates the need to handle PID reuse scenarios.
+
+This query demonstrates how to use the `ProcessUniqueId` and `InitiatingProcessUniqueId` fields to link a specific parent process to its child processes. By matching each child’s `InitiatingProcessUniqueId` to the parent’s `ProcessUniqueId`, it isolates only those child processes launched by that exact parent instance, even if process IDs get reused over time.
+
+Example query:
+
+```kusto
+// Step 1: Select a specific parent process instance (for instance, powershell.exe). 
+let parentProcess = 
+    DeviceProcessEvents
+    | where FileName =~ "powershell.exe" // For your specific use case, consider modifying the FileName and adding more identifying properties to specify your query.
+    | where isnotempty(ProcessUniqueId)
+    | top 1 by Timestamp asc 
+    | project DeviceId, DeviceName, ParentProcessUniqueId = ProcessUniqueId, ParentFileName = FileName;
+// Step 2: Find all child processes started by this unique parent.
+DeviceProcessEvents
+| where isnotempty(InitiatingProcessUniqueId)
+| join kind=inner (
+    parentProcess
+) on DeviceId
+| where InitiatingProcessUniqueId == ParentProcessUniqueId
+| project 
+    DeviceName,
+    ParentProcessUniqueId,
+    ParentFileName,
+    ChildProcessName = FileName,
+    ChildProcessId = ProcessId,
+    ChildProcessUniqueId = ProcessUniqueId,
+    Timestamp
+```
+
+Likewise, the query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
+
+:::image type="content" source="/defender-xdr/media/best-practice-unique-processid-tb.png" alt-text="Screenshot of sample query results for getting unique processes in the Microsoft Defender portal." lightbox="/defender-xdr/media/best-practice-unique-processid.png":::
 
 ### Query command lines
 There are numerous ways to construct a command line to accomplish a task. For example, an attacker could reference an image file without a path, without a file extension, using environment variables, or with quotes. The attacker could also change the order of parameters or add multiple quotes and spaces.

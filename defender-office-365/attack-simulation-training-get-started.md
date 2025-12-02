@@ -2,9 +2,9 @@
 title: Get started using Attack simulation training
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to use Attack simulation training to run simulated phishing and password attacks in their Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 08/14/2024
+ms.date: 02/04/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -33,7 +33,7 @@ In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses 
 This article explains the basics of Attack simulation training.
 
 Watch this short video to learn more about Attack simulation training.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWMhvB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 > [!NOTE]
 > Attack simulation training replaces the old Attack Simulator v1 experience that was available in the Security & Compliance Center at **Threat management** \> **Attack simulator** or <https://protection.office.com/attacksimulator>.
@@ -53,24 +53,39 @@ Watch this short video to learn more about Attack simulation training.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): You need membership in one of the following roles:
     - **Global Administrator**¹
     - **Security Administrator**
-    - **Attack Simulation Administrators**²: Create and manage all aspects of attack simulation campaigns.
+    - **Attack Simulation Administrator**²: Create and manage all aspects of attack simulation campaigns.
     - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
+    - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
-    > ¹ Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > ¹ Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
     >
     > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
+    >
+    > Members of Attack Payload Author have the following limitations in attack simulation training:
+    >
+    > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    > - They can't change global settings.
+    > - They can't change content (for example, notifications), but they can change payloads.
+    > - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
+    >
+    > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
+    >
+    > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    > - They can't change global settings.
+    > - They can't change content (for example, tenant payloads or notifications).
+    > - They can access data through read APIs with user scope, but they can't use write APIs.
 
     Currently, [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) isn't supported.
 
 - There are no corresponding PowerShell cmdlets for Attack simulation training.
 
-- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, BRA, CAN, CHE, DEU, ESP, FRA, GBR, IND, ISR, ITA, JPN, KOR, LAM, MEX, NOR, POL, QAT, SGP, SWE, and ZAF.
+- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, BRA, CAN, CHE, DEU, ESP, FRA, GBR, IDN, IND, ISR, ITA, JPN, KOR, LAM, MEX, NOR, NZL, POL, QAT, SGP, SWE, TWN and ZAF.
 
   > [!NOTE]
   > NOR, ZAF, ARE and DEU are the latest additions. All features except reported email telemetry are available in these regions. We're working to enable the features and we'll notify customers as soon as reported email telemetry becomes available.
 
-- Attack simulation training is available in Microsoft 365 GCC, GCC High and DoD environments, but certain advanced features aren't available in GCC High and DoD (for example, payload automation, recommended payloads, the predicted compromised rate). If your organization has Microsoft 365 G5, Office 365 G5 or Microsoft Defender for Office 365 (Plan 2) for Government, you can use Attack simulation training as described in this article. 
+- Attack simulation training is available in Microsoft 365 GCC, GCC High and DoD environments, but certain advanced features aren't available in GCC High and DoD (for example, payload automation, recommended payloads, the predicted compromised rate). If your organization has Microsoft 365 G5, Office 365 G5 or Microsoft Defender for Office 365 (Plan 2) for Government, you can use Attack simulation training as described in this article.
 
 > [!NOTE]
 > Attack simulation training offers a subset of capabilities to E3 customers as a trial. The trial offering contains the ability to use a Credential Harvest payload and the ability to select 'ISA Phishing' or 'Mass Market Phishing' training experiences. No other capabilities are part of the E3 trial offering.
@@ -94,7 +109,7 @@ The following social engineering techniques are available:
 
 - **Link in Attachment**: This technique is a hybrid of a credential harvest. An attacker sends the recipient a message that contains a link inside of an attachment. When the recipient opens the attachment and clicks on the link, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
 
-- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint Online or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
+- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
 
 - **Drive-by-url**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
 

@@ -5,34 +5,25 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
-ms.reviewer: 
-manager: deniseb
+ms.reviewer: yonghree 
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 10/10/2023
+ms.date: 10/20/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Better together: Microsoft Defender Antivirus and Office 365
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-- Microsoft 365
-
-**Platforms**
-- Windows
 
 You might already know that:
 
@@ -49,6 +40,12 @@ You might already know that:
  2. [Integration means better protection](#integration-means-better-protection).
 
 Read the following sections to learn more.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Ransomware protection and recovery
 
@@ -74,13 +71,13 @@ Microsoft Defender for Office 365 integrated with Microsoft Defender for Endpoin
 
     SO
 
-- Your security operations team can see a list of devices that are used by the recipients of any detected URLs or email messages, along with recent alerts for those devices, in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+- Your security operations team can see a list of devices that are used by the recipients of any detected URLs or email messages, along with recent alerts for those devices, in the [Microsoft Defender portal](https://security.microsoft.com).
 
 ## More good reasons to use OneDrive
 
 Protection from ransomware is one great reason to put your files in OneDrive. And there are several more good reasons, summarized in this video: <br/><br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/70b4d256-46fb-481f-ad9b-921ef5fd7bed]
+> [!VIDEO 50131993-b117-4ef6-af5e-2cedfbdc020f]
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
