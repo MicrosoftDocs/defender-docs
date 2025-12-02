@@ -36,6 +36,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### General availability of the Endor Labs integration
 
+December 2, 2025
+
 Defender for Cloud's integration with Endor labs is now generally available.
 
 Defender for Cloud's integration with Endor Labs enhances vulnerability analysis by using reachability-based Software Composition Analysis (SCA), which shows exploitable vulnerabilities from code to runtime.
