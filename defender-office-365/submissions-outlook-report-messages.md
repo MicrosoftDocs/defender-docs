@@ -51,7 +51,7 @@ The built-in **Report** button is available in the following versions of Outlook
 - The new Outlook for Windows<sup>\*</sup>
 - Outlook on the web<sup>\*</sup>
 
-<sup>\*</sup> In this version of Outlook, the built-in **Report** button also supports reporting messages from shared mailboxes or other mailboxes by a delegate.
+<sup>\*</sup> In this version of Outlook, the built-in **Report** button also supports reporting messages from shared mailboxes or other mailboxes by a delegate. The user will need [SendAs permissions](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/give-mailbox-permissions-to-another-user?view=o365-worldwide) in order to actually report from the shared mailbox; otherwise, the message does **not** get sent to the reporting mailbox and is only moved out of the folder.
 
 The **Report** button is available in supported versions of Outlook if both of the following conditions are true:
 
