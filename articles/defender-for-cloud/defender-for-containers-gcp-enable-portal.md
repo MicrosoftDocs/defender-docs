@@ -159,7 +159,7 @@ After connecting your GKE clusters to Azure Arc:
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot that shows the location of the Fix button.":::
 
 > [!NOTE]
-> You can also deploy the Defender sensor by using Helm for more control. For more information, see [Deploy Defender sensor using Helm](defender-for-containers-gcp-enable-programmatically.md#deploy-defender-sensor).
+> You can also deploy the Defender sensor by using Helm for more control. For more information, see [Deploy Defender sensor using Helm](deploy-helm.md).
 
 ### Configure container registry scanning
 

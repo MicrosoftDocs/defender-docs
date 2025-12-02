@@ -192,7 +192,7 @@ After connecting your EKS clusters to Azure Arc, deploy the Defender sensor:
 1. The sensor provides runtime threat detection for your clusters.
 
 > [!NOTE]
-> You can also deploy the Defender sensor by using Helm for more control over the deployment configuration. For Helm deployment instructions, see [Deploy Defender sensor using Helm](defender-for-containers-aws-enable-programmatically.md#deploy-defender-sensor).
+> You can also deploy the Defender sensor by using Helm for more control over the deployment configuration. For Helm deployment instructions, see [Deploy Defender sensor using Helm](deploy-helm.md).
 
 ### Configure ECR vulnerability scanning
 

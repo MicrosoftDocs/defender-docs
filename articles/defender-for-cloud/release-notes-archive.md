@@ -3464,7 +3464,7 @@ Defender for Container's vulnerability assessment (VA) is able to detect vulnera
 
 This feature is in preview and is only available for Linux images.
 
-To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](support-matrix-defender-for-containers.md#registries-and-images).
+To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](support-matrix-defender-for-containers.md).
 
 ### Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149
 
