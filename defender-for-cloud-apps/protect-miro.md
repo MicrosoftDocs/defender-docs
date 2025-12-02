@@ -53,11 +53,10 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure Miro 
 
-1. Sign into [Miro](https://miro.com/app/dashboard/) portal with a company admin account.
 1. Create a developer team from the portal. To create a developer team, navigate to **Company Settings > User & Team management > Teams > Create new team**.
 1. Give a descriptive name to the team and set the permissions to ‘Default’. Select ‘Create as a Developer Team’ and create the team.
 1. Create a new application in the newly created developer team. To create a new application, navigate to **Profile settings > Your apps** and select on **‘Create new app’**
-1. Give a name to the app, select the newly created developer team, and select on **Create app**.
+1. Give a name to the app and select the newly created developer team.
 1. Copy the Client ID and Client secret for future reference. 
 1. Provide 'https://portal.cloudappsecurity.com/api/oauth/saga' as the 'Redirect URI for OAuth2.0'.
 1. Provide ‘auditlogs:read’ and ‘organization:read; permissions and select on **Install app and get OAuth token**.
