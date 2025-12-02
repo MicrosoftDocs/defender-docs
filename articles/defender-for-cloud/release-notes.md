@@ -39,13 +39,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 December 2, 2025
 
-As part of the ongoing deprecation of the Enterprise Permissions Management (EPM) functionality, Microsoft Defender for Cloud is updating its Cloud Infrastructure Entitlement Management (CIEM) recommendation logic across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP). 
+As part of the ongoing deprecation of the Microsoft Entra Permissions Management functionality, Microsoft Defender for Cloud is updating its Cloud Infrastructure Entitlement Management (CIEM) recommendation logic across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
 The updated model evaluates inactive identities based on unused role assignments rather than sign-in activity and uses a 90-day lookback window. Identities created within the past 90 days are not evaluated as inactive. Coverage for AWS has also been refined so that CIEM recommendations apply only to AWS Service Principals with reliably evaluated permissions, and serverless and compute resources are no longer included, which may result in changes to recommendation counts.
 
 **Cloud-specific requirements**  
-- **AWS:** CIEM evaluations for SAML and SSO identities require AWS CloudTrail Logs (Preview).  
-- **GCP:** CIEM evaluations require Cloud Logging ingestion (Preview).
+- **AWS:** CIEM evaluations for SAML and SSO identities require AWS CloudTrail Logs (Preview) to be enabled in the Defender CSPM plan.  
+- **GCP:** CIEM evaluations require Cloud Logging ingestion (Preview) to be enabled in the Defender CSPM plan.
 
 The Permissions Creep Index (PCI) metric is being deprecated as part of this update, providing clearer identity insights and reducing noise across multicloud environments.
 
