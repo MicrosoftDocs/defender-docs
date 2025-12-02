@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 03/26/2025
 audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER

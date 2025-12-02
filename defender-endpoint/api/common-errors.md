@@ -2,8 +2,8 @@
 title: Common Microsoft Defender for Endpoint API errors
 description: List of common Microsoft Defender for Endpoint API errors with descriptions.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
