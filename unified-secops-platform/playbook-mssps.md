@@ -1,56 +1,38 @@
 ---
-title: Microsoft Defender Technical Playbook for MSSPs
-description: Technical guide for partners and SOC architects implementing Microsoft Defender Platform with multitenant management capabilities.
+title: Microsoft Defender portal implementation guide for MSSPs
+description: Implementation guide for partners and SOC architects implementing Microsoft Defender portal with multitenant management capabilities.
 author: guywi-ms
 ms.author: guywild
 ms.date: 11/20/2025
 ms.topic: concept-article
 ---
-# Microsoft Defender Technical Playbook for MSSPs
+# Microsoft Defender portal implementation guide for MSSPs
 
-How to deploy Microsoft products to provide Managed SOC Services
+This implementation guide provides Managed Security Service Providers (MSSPs) with step-by-step guidance to implement and operationalize multitenant management capabilities in the Microsoft Defender portal. 
 
-# Introduction
+The Microsoft Defender portal's multitenant management features enable MSSPs to manage security operations across multiple customer tenants through a single, unified interface. For a comprehensive overview of these capabilities and their benefits, see [Microsoft Defender multitenant management](mto-overview.md).
 
-Thank you for considering the Microsoft Defender Platform as the heart of your Managed security service providers.
+This guide focuses on practical implementation - from initial setup and customer onboarding through advanced operational workflows. Use this guide to transform the multitenant management features into an efficient, scalable security operations practice for your MSSP organization.
 
-The Defender Platform integrates Microsoft Sentinel and Microsoft Defender into a single portal. This platform offers innovations such as unified incident queue, alert correlation, attack disruption, and hunting capabilities across both Microsoft Sentinel and Microsoft Defender data. These features help a Security Operations Center (SOC) gain comprehensive insights into the full attack story, avoiding a siloed approach when triaging incidents. Additionally, the unified experience provides access to other valuable insights from tools like Exposure Management, Defender for Cloud, Copilot for Security, and more.
+## Why Microsoft Defender Portal for MSSPs
 
-## Target audience
+The Microsoft Defender Portal delivers unique advantages that make it the premier choice for MSSPs seeking to provide world-class security operations across multiple customer tenants:
 
-This document informs Microsoft partners researching how to integrate the Microsoft Defender Platform into their portfolio of services. It is written through the lens of Implementers & SOC architects who seek a distilled technical walkthrough of:
+**Unified incident management with comprehensive visibility**: A single unified incidents queue includes data from Microsoft Sentinel, Defender, and third-party sources, giving your analysts complete visibility into the threat landscape across all customers without portal switching. See [Managing Security Operations across tenants](#managing-security-operations-across-tenants) for implementation details.
 
-- Microsoft Defender capabilities
+**Cross-platform threat hunting**: Unified hunting capabilities cover both Microsoft Sentinel and Defender data, eliminating the need to switch between portals and allowing analysts to easily locate the data they need across your entire customer base. Learn more in [How advanced hunting works across different tenants](#how-advanced-hunting-works-across-different-tenants).
 
-- Multi-tenant management
+**Proactive attack disruption**: Attack Disruption is a core differentiator of the Microsoft Defender platform, delivering proactive protection by stopping attacks in progress—not just on Defender native technologies, but across third-party environments such as SAP, AWS, Proofpoint and Okta where Sentinel is deployed on top of XDR. By automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds, Defender reduces dwell time and prevents lateral movement.
 
-Beyond Managed Security Services Providers (MSSPs), this document aims to guide large organizations and institutions who operate security operations within environments requiring multitenant architectures.
+**Attack path analysis and exposure visualization**: Analyze attack paths and reduce exposure by visualizing how cyber attackers could exploit vulnerabilities to move laterally across exposed assets in customer environments. This feature provides guided recommendations on reducing exposure and helps prioritize actions based on each exposure's potential impact. See [Microsoft Security Exposure Management](#microsoft-security-exposure-management) for complete capabilities.
 
-## The Microsoft Defender Platform value for MSSPs
+**Enhanced detection accuracy**: Detect and investigate faster and more accurately by combining the depth of XDR signals from Defender with the flexibility of log sources from Microsoft Sentinel, resulting in an improved signal-to-noise ratio and enhanced alert correlation.
 
-Here we can see the advantages to use the Defender Platform:
+**AI-powered security operations**: Take advantage of Security Copilot for incident summaries and reports, guided investigation, autogenerated Microsoft Teams messages, code analysis, and more—accelerating analyst productivity and reducing time-to-resolution. Explore implementation options in [Agentic AI](#agentic-ai).
 
-- Have a single unified incidents queue that includes data from Microsoft Sentinel, Defender, and third-party sources.
+**Scalable multitenant management**: Leverage a comprehensive set of [multitenant capabilities](#managing-security-operations-across-tenants) that allow you to see aggregate views of your tenants' alerts, incidents, assets, and more, as well as hunt over all your tenants' data. Maintain a consistent security baseline across your tenants using [content distribution features](#content-and-configuration-management) for custom detection rules, endpoint security policies, analytics rules, automation rules, and more.
 
-- Unified hunting capability covering both Microsoft Sentinel and Defender data, eliminating the need to switch between portals and allowing analysts to easily locate the data they need.
-
-- Attack Disruption is a core differentiator of the Microsoft Defender platform, delivering proactive protection by stopping attacks in progress, not just on your Defender native technologies, but across third-party environments such as SAP, AWS, Proofpoint and Okta where Sentinel is deployed on top of XDR. By automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds, Defender reduces dwell time and prevents lateral movement.
-
-- Analyze attack paths and reduce exposure by visualizing how a cyber attacker could exploit vulnerabilities to move laterally across exposed assets in your environment. This feature provides guided recommendations on reducing exposure and helps prioritize actions based on each exposure's potential impact.
-
-- Detect and investigate faster and more accurately by combining the depth of XDR signals from Defender with the flexibility of log sources from Microsoft Sentinel, resulting in an improved signal-to-noise ratio and enhanced alert correlation.
-
-- Take advantage of Security Copilot for incident summaries and reports, guided investigation, autogenerated Microsoft Teams messages, code analysis, and more.
-
-- Leverage a set of multitenant capabilities that allow you to see aggregate views of your tenants' alerts, incidents, assets, and more, as well as hunt over all your tenants' data. In addition, you can maintain a consistent security baseline across your tenants using features such as the ability to distribute content (custom detection rules, endpoint security policies, analytics rules, automation rules, etc.).
-
-- Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into the Microsoft Security Exposure Management initiatives to automatically improve readiness scores as actions are completed.
-
-# Onboard your customers to the Sentinel Defender portal
-
-Embracing innovation often requires changes, which may be necessary to successfully transition your SOC to the unified experience.
-
-The first step in the journey is to onboard your customers to the new experience - The Transition Guide document outlines the most common changes to be aware of and provides guidance on how to prepare your environment before onboarding your Microsoft Sentinel workspace to the unified experience. We highly recommend you access the [transition guide](/azure/sentinel/move-to-defender).
+**Continuous improvement through AI insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
 # How to access multiple customer tenants
 
@@ -286,333 +268,80 @@ Key integrations include:
 -	**Context enrichment:** Purview's data inventory and classification enrich the Security Exposure Management story by mapping critical data assets to exposure insights and attack paths. This helps prioritize mitigations based on the business impact of exposed data.
 
 
-# Content and Configuration Management
+## Manage and distribute content
 
-## Content distribution in MTO
+In Microsoft Sentinel, content refers to the building blocks that enable security operations - such as analytics rules, data connectors, hunting queries, parsers, playbooks, watchlists, and workbooks. [Microsoft Sentinel provides out-of-the-box content](/azure/sentinel/sentinel-solutions) that you can use as-is or customize. You can also create and distribute custom content to meet unique requirements. Effective content management and distribution ensures consistent security baselines, rapid threat response, and scalable operations across customer tenants. 
 
-Microsoft Defender multitenant management enables MSSPs to deploy security content at scale across customer tenants. For complete guidance on creating distribution profiles, requirements, and troubleshooting, see [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles). 
+MSSPs working in the Microsoft Defender portal have several tools for managing and distributing security content at scale:
 
-**Currently supported content types:** 
 
-- Custom detection rules 
+| **Option**                               | **Best For**                                                   | **Key Capabilities**                                                                                           | **Technical Details**                                                                                                      | **Learn More**                                                                                     |
+|------------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Native multitenant content distribution** | Quick deployment of standard content across many tenants | - Create once, deploy everywhere across multiple tenants <br> - Execute content on target scopes (devices, workspaces) <br> - Centralized tracking to reduce duplication and errors | Uses Defender portal’s built-in multitenant management. Ideal for OOB content or lightly customized content.              | [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles) |
+| **Microsoft Sentinel repositories (Content as Code)** | Structured DevOps processes and moderate customization needs | - Manage SIEM content using automation <br> - Apply CI/CD practices for version control, testing, and deployment <br> - Supports hybrid workflows combining native distribution and DevOps | Implemented via Sentinel repositories. Enables advanced governance and lifecycle management. Comprehensive CI/CD guidance. | [Manage content as code with Microsoft Sentinel repositories (public preview)](/azure/sentinel/ci-cd-custom-content) |
+| **Custom CI/CD pipelines**              | Maximum customization and automation across tenants | - Full flexibility for complex workflows <br> - Custom testing and integration with existing DevOps practices <br> - Supports additional content types (custom detections, summary rules, AI agents) | Built using Azure DevOps or GitHub Actions. Requires custom scripts and configuration files. Current method for advanced content types.
 
-- Endpoint security policies (MDE customers only) 
 
-**Preview content types** (availability varies by tenant/license): 
+- **Native multitenant content distribution capabilities**: Deploy security content at scale across customer tenants without repeatedly creating or switching between tenants. 
 
-- URBAC roles 
+  Multitenant content distribution lets you:
 
-- Microsoft Sentinel solutions 
+  - **Create once, deploy everywhere**: Author content in one tenant and distribute to groups of tenants.
+  - **Run seamlessly**: Execute distributed content on the target tenant’s scope - including devices, workspaces, and so on.
+  - **Save time and reduce errors**: Avoid manual duplication and track all content from a single place.
 
-- Automation rules 
+  For more information, see [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles).
 
-- Analytics rules  
+- **Microsoft Sentinel repositories for managing content as code**: Manage SIEM content using automation and CI/CD practices for advanced version control, testing, and deployment workflows. For comprehensive implementation guidance, including Microsoft Sentinel Repositories and custom CI/CD pipelines, see [Microsoft Sentinel CI/CD custom content](/azure/sentinel/ci-cd-custom-content). 
 
-- Workbooks 
+- **Custom CI/CD pipelines**: Build your own CI/CD pipelines using tools like Azure DevOps or GitHub Actions to automate content deployment across multiple customer tenants. This approach provides maximum flexibility for complex workflows, custom testing, and integration with existing DevOps practices. Currently, additional content types such as custom detections, summary rules, and AI agents can be managed using the second approach—building your own CI/CD pipeline.
 
-**Key MSSP considerations:** 
+- **Hybrid approaches**: Combine native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
 
-- **Scope flexibility**: Define different device groups, workspace assignments, or role scopes per tenant 
+## MSSP repository architecture patterns
 
-- **Ongoing management**: Update content and resync across all tenants without recreating profiles 
+A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
 
-- **Sync visibility**: Track deployment status (success/partial/failure) and troubleshoot failed tenants individually 
+**Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
+- One central repository for common content deployed to all customers
+- Individual repositories for customer-specific customizations
+- Each customer workspace connects to both repositories
+- Optimal for MSSPs with balanced common and tailored content needs
 
-For step-by-step setup instructions and detailed requirements, see the [complete distribution profiles guide](/unified-secops-platform/mto-distribution-profiles).
+  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
 
-## Content as a Code
+**Pattern 2: Single repository with custom folders**
+- All content in one repository
+- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
+- Deployment pipelines customized per customer connection
+- Requires more initial setup but simplifies repository management
 
-While configuring multiple tenants using MTO is an effective solution, managing your SIEM content as code, using automation and DevOps practices, can be powerful for scaled management of a security practice. These are some of the key benefits:
+  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
 
-- Further reduction of human errors.
+**Pattern 3: One repository per customer**
+- Complete content separation across customers
+- Full customization flexibility for each customer
+- Best for customers with unique content requirements
+- Higher management overhead but maximum isolation
 
-- Much faster deployment and configurations.
+  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
 
-- Improved change management as changes are tracked in source code control.
+To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
 
-- Time savings to allow employees to focus on adding value.
+For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
 
-Those benefits are especially important for MSSPs who need to manage many customer environments.
+## Multi-Tenancy Considerations
 
-In this section we will try to review all the options and best practices to build a successful CI/CD framework on top of Microsoft Sentinel, with a focus on MSSPs managing many environments.
+**Platform Constraints**: GitHub repositories support connections from different tenants, enabling all architecture patterns above. Azure DevOps repositories must be in the same tenant as the workspace, limiting deployment to single-repository-per-customer patterns.
 
-The Microsoft Sentinel Repositories feature offers an easy starting point for implementing CI/CD but enables a limited level of customization. Another option is to build a custom CI/CD pipeline using the hosting repository workflow tools alongside the Microsoft Sentinel PowerShell, Az CLI, APIs and templating support. The latter option enables endless flexibility and may be the right choice for more advanced users.
+**Intellectual Property Protection**: Implement clear content management governance to prevent conflicts between MSSP and customer modifications:
+- Use centralized content management with restricted permissions
+- Apply naming conventions (e.g., prefixes) to identify MSSP-managed content
+- Establish clear ownership boundaries for custom content
 
-In the following sections we discuss each option.
+**Content Lifecycle Management**: Maintain consistent security baselines across customer tenants while supporting individual customization needs. Balance rapid deployment capabilities with proper testing and validation processes.
 
-### Microsoft Sentinel Repositories
-
-[<u>Microsoft Sentinel Repositories</u>](/azure/sentinel/ci-cd-custom-content) allow you to create and manage your custom content from an external source control repository for continuous integration / continuous delivery (CI/CD). Currently Microsoft Sentinel supports Azure DevOps and GitHub. Repositories thus provide a way to automate Microsoft Sentinel deployment and operations of your custom content to your new and existing customers. Each Microsoft Sentinel workspace is currently limited to five repository connections. More information on how to connect your Repositories [<u>here</u>.](/azure/sentinel/ci-cd?tabs=github)
-
-**How it works**
-
-Updates made to the content in your external repositories are synced to your Microsoft Sentinel workspace and will overwrite any changes you make to that content through the Microsoft Sentinel portal. The repository that you connect to will now be your “single source of truth” for custom content in the connected workspaces. If you make changes outside of the repository, it is important to ensure that the content in your repository is updated accordingly and that your deployments are happening as you expect them to.
-
-Repositories can be especially useful for MSSPs serving multiple Sentinel customers and workspaces for content deployment. Repositories connections offer various ways for you to manage and customize the deployment experience across your customers. The first is choosing the content type(s) you'd like to deploy through a connection, which can be easily specified in the connection creation wizard. Upon creating your connection, you can easily modify the connection workflow (GitHub) or pipeline definition (Azure DevOps) to customize your trigger and deployment paths amongst other things. Learn more about customizing your connections in [<u>this</u>](https://aka.ms/CustomizeSentinelRepos) [<u>article</u>.](https://aka.ms/CustomizeSentinelRepos)
-
-**Supported content types**
-
-Repositories' content needs to be stored as ARM or Bicep templates. The repository deployment pipeline doesn't validate the content except to confirm it's in the correct JSON format. The following Microsoft Sentinel content types are supported:
-
-- Analytic rules
-
-- Automation rules
-
-- Hunting queries
-
-- Parsers
-
-- Playbooks
-
-- Workbooks
-
-We are planning to extend the list to additional content types such as custom detections, summary rules, and AI agents in the future. Note that all those can be managed today using the second approach, i.e. building your own CI/CD pipeline.
-
-:::image type="content" source="media/playbook-mssps/sentinel-repositories-content-types.png" alt-text="Screenshot of Microsoft Sentinel Repositories supported content types.":::
-
-**Repositories templates**
-
-Microsoft Sentinel Repositories use ARM or Bicep templates. Any such template, for the selected content types, placed in a connected repository, is deployed to the connected workspace.
-
-The templates for each content type has specific structure and parameter name which are documented in the [Sentinel resources template reference](/azure/templates/microsoft.securityinsights/allversions); visit [<u>RepositoriesSampleContent repository</u>](https://github.com/SentinelCICD/RepositoriesSampleContent) to find samples for each content type and useful script to convert from The Sentinel public GitHub YAML format to ARM format.
-
-While you can start building templates from scratch, it is often easier to start from either the Sentinel Public GitHub repository YAML files or from a content item developed within Sentinel. The following table outlines how to convert those to an ARM template for use with Microsoft Sentinel Repositories. To convert ARM to Bicep, refer to the [Bicep conversion notes](/azure/sentinel/ci-cd-custom-content#plan-your-repository-content).
-
-<table>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 23%" />
-<col style="width: 33%" />
-<col style="width: 12%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr>
-<th></th>
-<th>Convert from Sentinel Public YAML</th>
-<th>Export from Sentinel</th>
-<th>Template reference</th>
-<th>Sample templates</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><blockquote>
-<p>Analytic rules</p>
-</blockquote></td>
-<td>Use <a href="https://github.com/Azure/Azure-Sentinel/blob/master/Tools/ConvertYamlToJson/ConvertSentinelRuleFrom-Yaml.ps1">this</a> Power Shell script</td>
-<td>Use the <a href="/azure/sentinel/import-export-analytics-rules#export-rules">analytic rules export feature</a> or this <a href="https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Az.SecurityInsights-Samples/Alert%20Rules/Export%20Analytics%20Rules">PowerShell script</a></td>
-<td><a href="/azure/templates/microsoft.securityinsights/2025-03-01/alertrules">Reference</a></td>
-<td><a href="https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/AnalyticsRules">Templates</a></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>Automation rules</p>
-</blockquote></td>
-<td>N/A</td>
-<td>Use the <a href="/azure/sentinel/import-export-automation-rules#export-rules">automation rules export feature</a> or those <a href="https://github.com/garybushey/MicrosoftSentinelAutomation/tree/main">PowerShell scripts</a></td>
-<td><a href="/azure/templates/microsoft.securityinsights/2025-03-01/automationrules">Reference</a></td>
-<td></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>Hunting queries</p>
-</blockquote></td>
-<td>Use <a href="https://github.com/SentinelCICD/RepositoriesSampleContent/blob/main/Hunting/ConvertHuntingQueryFromYamlToArm.ps1">this</a> PowerShell script</td>
-<td>Hunting queries are Log Analytic saved searches. Use these <a href="/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest">Azure CLI commands</a>.</td>
-<td><a href="/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches">Reference</a></td>
-<td></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>Parsers</p>
-</blockquote></td>
-<td>For ASIM parsers YAML files use this <a href="https://github.com/Azure/Azure-Sentinel/tree/master/ASIM/dev/ASimYaml2ARM">PowerShell script</a></td>
-<td>Parsers are Log Analytic saved searches. Use these <a href="/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest">Azure CLI commands</a>.</td>
-<td><a href="/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches">Reference</a></td>
-<td><a href="https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/ParserQuery">Templates</a></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>Playbooks</p>
-</blockquote></td>
-<td>N/A</td>
-<td>Use <a href="https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator">this</a> PowerShell utility</td>
-<td><a href="/azure/logic-apps/logic-apps-azure-resource-manager-templates-overview">Reference</a></td>
-<td></td>
-</tr>
-<tr>
-<td><blockquote>
-<p>Workbooks</p>
-</blockquote></td>
-<td>N/A</td>
-<td>See <a href="/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template">exporting workbooks as ARM templates</a></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-**Repositories architecture**
-
-One of the most interesting exercises MSSPs run into when working with CI/CD pipelines for multiple customers is how to best structure their set of pipelines to service all their customers. There's certainly no one-size-fits-all structure, but below are three patterns to consider:
-
-1. *One repository for all, and one repository per customer*
-
-There are times when all customers need the same set of Sentinel content, whether it's the newest set of detections related to a popular cybersecurity incident, or it's a set of popular hunting queries. Having one generic content repository for all customers allows MSSPs to connect each customer's workspace to a centrally managed workspace. This allows the MSSP to add any generic content to that repository without having to deploy the content manually into each customer's repository. To complement this central repository, MSSPs can create a specific repository for each customer that needs tailored content and include their specific content there. Those per-customer repositories only need to be modified when customers need modification to their specific content. This results in each customer's workspace having two connections, one to the centrally managed repository with generic content, and another the one that is managed specifically for them. Here is a high-level diagram for this option:
-
-:::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.jpeg" alt-text="Graphical user interface, diagram Description automatically generated with medium confidence":::
-
-This structure is best for MSSPs that have a balance of content-for-all, and content tailored to specific customers. This same structure can be applied at a branch level if preferable to having multiple repositories (one repository with a main branch for all, and a specific branch per customer).
-
-1. *One repository for all with custom folders per customer*
-
-Some MSSPs prefer not to manage multiple repositories and/or prefer to group their content based on the shared data sources as opposed to splitting it by customer. In those cases, one structure to consider is having all your content in one repository and connecting all your customers to this repository. You can then specify what folders each customer's connection deploys from by customizing each connections workflow or pipeline definitions as shown in [<u>this article</u>.](https://aka.ms/CustomizeSentinelRepos) Here is a high-level diagram for this option:
-
-:::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Diagram Description automatically generated":::
-
-This structure offers flexibility and maintenance of a single repository but requires more upfront work during the onboarding stage to ensure that each connection is properly mapped to the folder(s) it should be deploying content from. You can opt to structure your folders based on the content they have (e.g. Entra ID Analytics folder') and map this folder to any connections that need Entra ID content. Another approach is naming your folders based on the customer(s) that this folder serves (e.g. Customer X folder') which has all the customer's needed content and have it be mapped to their connection(s).
-
-\*Please note that anytime you update an existing connection (to include more or less content types) from the portal wizard, any workflow/pipeline customization will be reset.
-
-1. *One repository per customer*
-
-If your customers don't have any overlap in their Sentinel content needs, or the idea of a repository where multiple customers are sharing the same content is not appealing, simply creating a repository per customer might be the best method to use for managing your CICD pipelines. This allows for full separation content across your customers and can best serve customers with very specific needs across their workspaces. Here is a high- level diagram for this option:
-
-:::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.jpeg" alt-text="Diagram Description automatically generated with medium confidence":::
-
-Of course, these are just example folder structures that have worked for many of our partners, and there are certainly many more that can be used to best optimize your scenarios.
-
-**Additional options**
-
-To further customize your CI/CD pipelines with any structure you use, you can utilize the newly supported configuration files with each repository branch to prioritize the deployment of high-priority content, exclude any content you want to avoid deploying, or map parameter files to their respective content files. Learn more repositories configuration files in [<u>this article</u>.](https://aka.ms/SentinelReposConfiguration)
-
-**Multi-tenancy with Microsoft Sentinel Repositories**
-
-Connections to **a GitHub repository can be initiated from different tenants, so all the approaches above can be used with GitHub repositories. When using Azure DevOps, the repository must be in the same tenant as the workspace, which limits deployment to option (3) above.**
-
-To learn more about how Azure DevOps can be used in multitenant scenarios, check: [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant/ba-p/4008109).
-
-### A Custom CI/CD workflow
-
-**Custom CI/CD workflow use cases**
-
-Microsoft Sentinel Repositories are the simplest way to manage your SIEM content as code, but there might be situations where you need more flexibility. Some of the use cases that may warrant a custom CI/CD pipeline are:
-
-- Not all content types are supported by Microsoft Sentinel Repositories, like Data Connectors or Watchlists. You can find a few sample ARM templates for deploying connectors [here](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/DataConnectors).
-
-- Automate the deployment of the Log Analytics workspace and Microsoft Sentinel themselves. You can find a sample ARM template for onboarding Sentinel [<u>here</u>.](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/Onboarding)
-
-- Allow for content variations between customers, beyond what's possible using the architecture described above. For example, using a table to manage what content items are deployed for each customer. For example, [these scripts](https://github.com/garybushey/AzSentinelAnalyticsRules) export rules to a CVS file and then import only those marked for import. You can use the script with a different CSV file per customer to select which rules to import for the specific customer.
-
-- Deploy and update content available on the Content Hub. You can refer to the [Sentinel-All-in-1](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Sentinel-All-In-One) solution, and particularly the “[Create-NewSolutionAndRulesFromList”](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/Sentinel-All-In-One/v2/Scripts/Create-NewSolutionAndRulesFromList.ps1) script as a starting point for deploying and enabling content from the Content hub. Another great resource is the [Sentinel-Deployment-CI](https://github.com/noodlemctwoodle/Sentinel-As-Code) open source project.
-
-**Setting up a custom CI/CD workflow**
-
-To set up the initial workflows, you can use the Microsoft Sentinel Repositories feature itself and go on customizing the scripts it creates. You can review the [documented customization options](/azure/sentinel/ci-cd-custom-deploy?tabs=github#customize-the-workflow-or-pipeline) as examples for how to further customize the CI/CD workflow. This also implies that the topics covered above such as repositories templates and architecture, are relevant for a custom CI/CD workflow.
-
-If you prefer to start from scratch you can use [this](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/deploying-and-managing-microsoft-sentinel-as-code/1131928) blog post and the documentation of the code management workflow engines themselves:
-
-- [GitHub actions](https://docs.github.com/en/actions)
-
-- [Azure DevOps pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines)
-
-**Deploying templates in your workflow**
-
-The simplest way to deploy Sentinel content in your workflow is by deploying ARM, Bicep, or Terraform templates. This is most suitable when you would like to deploy templates as is. If you need to modify the templates prior to deploying you may be able to use template parameters, or consider scripting, described later.
-
-To deploy a template in your CI/CD workflow, use the following:
-
-<table>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 39%" />
-<col style="width: 46%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;"></th>
-<th style="text-align: left;">GitHub Actions</th>
-<th style="text-align: left;">Azure DevOps Pipelines</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">ARM</td>
-<td><a href="https://github.com/azure/bicep-deploy">Azure Deployment Action</a> (Supports both ARM and Bicep)</td>
-<td><ul>
-<li><p>Documentation: <a href="/azure/azure-resource-manager/templates/deployment-tutorial-pipeline">Continuous integration with Azure Pipelines - Azure Resource Manager ,</a></p></li>
-<li><p>Tutorial: <a href="/azure/azure-resource-manager/templates/deployment-tutorial-pipeline">Continuous integration with Azure Pipelines - Azure Resource Manager</a></p></li>
-</ul></td>
-</tr>
-<tr>
-<td style="text-align: left;">Bicep</td>
-<td><a href="https://github.com/azure/bicep-deploy">Azure Deployment Action</a> (Supports both ARM and Bicep)</td>
-<td><a href="/azure/azure-resource-manager/bicep/add-template-to-azure-pipelines?tabs=azure-cli">Quickstart: Integrate Bicep with Azure Pipelines - Azure Resource Manager</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Terraform</td>
-<td><a href="https://thomasthornton.cloud/2021/03/19/deploy-terraform-using-github-actions-into-azure/">Deploy Terraform using GitHub Actions to Azure - Thomas Thornton Azure Blog</a></td>
-<td><a href="https://thomasthornton.cloud/2020/07/08/deploy-terraform-using-azure-devops/">Deploy Terraform using Azure DevOps - Thomas Thornton Azure Blog</a></td>
-</tr>
-</tbody>
-</table>
-
-> Note the following:
-
-- Looking at the various templates, you might have noticed that there's two ways to specify the resource type in template<span dir="rtl">ד</span>: one using the *scope* property and one without it. Both are equally valid. This is because all Sentinel resources are **extension resources** that are deployed on top of a Log Analytics workspace, i.e., they can't exist without an underlying workspace.
-
-> When using the *scope* property, you specify in that property the parent resource for the extension resource you're <span dir="rtl"></span>deploying, like this:
->
-> "type": "Microsoft.SecurityInsights/automationRules", "name": "\[\<resource name\>\]",
->
-> "scope": "\[concat('Microsoft.OperationalInsights/workspaces/', \<workspace name\>)\]"
->
-> When not using *scope,* you create the Sentinel resource as follows:
->
-> "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
->
-> "name": "\[concat(parameters('workspace'),'/Microsoft.SecurityInsights/', \<analytic rule id\>)\]"
->
-> You can use whichever method you want in your custom workflows, but keep in mind that Microsoft Sentinel Repositories features supports only the second one.
-
-**Scripting**
-
-If the flexibility of your CI/CD workflow technology is not optimal for your use case, you may want to use scripting to deploy resources in your pipeline.
-
-You may still want to deploy a template as part of your script. Use the following guidelines to do so:
-
-- Deploy ARM templates using: [Azure CLI](/azure/azure-resource-manager/templates/deploy-cli), [PowerShell](/azure/azure-resource-manager/templates/deploy-powershell), [Python](/azure/azure-resource-manager/templates/deploy-python) or the [Rest API](/azure/azure-resource-manager/templates/deploy-rest) directly.
-
-- Deploy Bicep templates: [Azure CLI](/azure/azure-resource-manager/bicep/deploy-cli) or [PowerShell](/azure/azure-resource-manager/bicep/deploy-powershell)
-
-- Or use [Terraform](/azure/developer/terraform/get-started-azapi-resource?tabs=azure-cli).
-
-You may also want to directly deploy content items in your script, which allows you to more easily control the content item parameters. To do so, you can use:
-
-| Group | Artifacts | PowerShell | Azure CLI | REST API |
-|----|----|----|----|----|
-| Native Sentinel | Onboarding, Analytic Rules, selected Data Connectors, Automation rules | See the [<u>Blog</u>](https://techcommunity.microsoft.com/t5/azure-sentinel/new-year-new-official-azure-sentinel-powershell-module/ba-p/2025041) and [<u>samples</u>](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Az.SecurityInsights-Samples) | [<u>Documentation</u>](/cli/azure/sentinel?view=azure-cli-latest) | [<u>Reference</u>](/rest/api/securityinsights/api-versions) |
-| Azure Monitor | Hunting Queries and parsers | [<u>Documentation</u>](/powershell/module/az.operationalinsights/new-azoperationalinsightssavedsearch?view=azps-8.3.0) | [<u>Documentation</u>](/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [<u>Reference</u>](/rest/api/loganalytics/saved-searches) |
-|  | Playbooks | [<u>Documentation</u>](/powershell/module/az.logicapp/?view=azps-8.3.0) | [<u>Documentation</u>](/cli/azure/logicapp?view=azure-cli-latest) | [<u>Reference</u>](/rest/api/logic/) |
-|  | Workbooks | As part of the [Application Insights PowerShell module](/powershell/module/az.applicationinsights/) | [Documentation](/cli/azure/monitor/app-insights/workbook?view=azure-cli-latest) | [Reference](/rest/api/application-insights/workbooks) |
-| Defender XDR | Custom Detections |  |  | [Reference](/graph/api/resources/security-detectionrule?view=graph-rest-beta) |
-
-Notes:
-
-- Some of the Sentinel native artifacts are supported only using API.
-
-- In many cases, Sentinel is referred to as SecurityInsights, which is the name of the Microsoft Sentinel Azure resource provider.
-
-**Joined content management**
-
-Managing content across workspaces and tenants requires also addressing how to co-exist with local management. For example, whether and how an MSSP and a customer can both update content such as analytic rules. Dual management, for example using content as code and Sentinel user interface leads to the “last one wins” situation which is not predictable and should be avoided.
-
-Two common methods to avoid this situation are:
-
-- Allowing only central management of content, whether using MTO or content as code. To do that, make sure that only MSSP users have the permissions to create and update content.
-
-- To allow joined content management, make sure that items managed by the MSSP are clearly marked, typically using a name prefix. This does not block local users from updating those items but significantly reduces the chance for an error.
+For workload-specific configuration management, see [Workload management](#workload-management).
 
 # Case management
 
