@@ -15,13 +15,9 @@ This article provides an overview of using private endpoints with Microsoft Secu
 > [!NOTE]
 > For a complete understanding of private endpoints and private links, see [What is a private endpoint?](/azure/private-link/private-endpoint-overview).
 
----
-
 ## What is Microsoft Security Private Link?
 
 Microsoft Security Private Link enables you to connect to Microsoft Defender services by using private endpoints, ensuring secure and private connectivity from your virtual network. You can create a Security Private Link resource in your subscription and then create private endpoints in your Azure virtual networks to the Security Private Link. This approach ensures that all security-related traffic from your workloads, including telemetry from Defender agents, sensors, add-ons, and extensions, traverses the Microsoft backbone network without exposure to the public internet. Microsoft Security Private Link simplifies network architecture by securing connections between your applications and Microsoft Defender services, meeting strict regulatory compliance requirements for network isolation.
-
----
 
 ## Benefits and scenarios
 
@@ -37,32 +33,29 @@ When you use private endpoints with Microsoft Security Private Link, you can:
 
 :::image type="content" source="media/active-user/recommended-owner.png" alt-text="Screenshot of a conceptual diagram showing Security Private Link with customer's.":::
 
----
-
 ## Prerequisites
+
 - Azure subscription with Defender services enabled.
 - Required roles: Security Administrator, Network Administrator.
 - Supported regions: [Insert list or link].
-
----
 
 ## Architecture
 
 Security Private Link uses Azure Private Endpoints to establish secure connectivity between your virtual network and Microsoft Defender services.
 
 **How it works:**
+
 - You create a private endpoint in your virtual network and assign it an IP address from your VNet range.
 - All traffic between your workloads and Defender services flows through the Microsoft backbone network, never traversing the public internet.
 - Multiple Defender services can share a single Security Private Link resource, simplifying network architecture.
 
 **Benefits:**
+
 - Eliminates public exposure for Defender telemetry and management traffic.
 - Supports hybrid scenarios with VPN or ExpressRoute private peering.
 
 **Diagram Placeholder:**  
 `PLACEHOLDER`
-
----
 
 ## Overview
 
@@ -73,8 +66,6 @@ Workloads in the virtual network can connect to the Microsoft Defender service o
 When you create a private endpoint connection for a Security Private Link in your virtual network, the process sends a consent request for approval to the Security Administrator. If the user requesting the creation of the private endpoint is also an owner of the Security Private Link, this consent request is automatically approved.
 
 Workload owners and security administrators can manage consent requests and the private endpoints through the **Private endpoint connections** tab for the Security Private Link in the Azure portal.
-
----
 
 ## Personas
 
@@ -89,16 +80,13 @@ Setting up Security Private Link involves multiple roles to ensure secure connec
 - **Subscription Owner**  
   Provides cross-subscription permissions when resources span multiple subscriptions.
 
----
-
 ## Approval workflow
 
 **Approval Process:**
+
 - When you create a private endpoint, the process sends a consent request to the Security Private Link resource owner.
 - If you're also the resource owner, the process auto-approves the request.
 - You can manage all pending and approved connections in the **Private endpoint connections** tab in the Azure portal.
-
----
 
 ## DNS configuration
 
@@ -118,8 +106,6 @@ Security Private Link enables your workload to communicate with different Micros
 
 If you're using a custom DNS server, configure delegation or A records to resolve FQDNs to the private endpoint IP address.
 
----
-
 ## Comparison Table
 
 | Feature                     | Without Private Endpoint | With Security Private Link |
@@ -128,15 +114,13 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 | Compliance Alignment       | Limited                  | Strong                      |
 | Multi-Service Integration  | Manual                   | Simplified                 |
 
----
-
 ## Limitations
+
 - Azure-only support (AWS and GCP aren't supported).
 - Service-specific constraints.
 
----
-
 ## Screenshots and visuals
+
 - **Azure Portal – Private Endpoint creation:**  
 `PLACEHOLDER`
 - **Connection approval status:**  
