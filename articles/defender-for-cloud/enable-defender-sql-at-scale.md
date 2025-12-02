@@ -2,8 +2,8 @@
 title: Enable Microsoft Defender for SQL Servers on Machines at scale
 description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud at scale.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 05/05/2025
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ---

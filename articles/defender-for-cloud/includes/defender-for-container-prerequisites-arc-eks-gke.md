@@ -2,8 +2,8 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 07/27/2022
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ---
 
 ## Network requirements

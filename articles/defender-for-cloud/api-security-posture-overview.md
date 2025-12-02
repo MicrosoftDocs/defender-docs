@@ -1,8 +1,8 @@
 ---
 title: API security posture overview
 description: Learn how Microsoft Defender for Cloud enhances API security posture management for your APIs across Azure API Management, Function Apps, and Logic Apps.
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 06/18/2025
@@ -40,7 +40,7 @@ Defender for Cloud continuously discovers APIs across Azure API Management, Func
 
 ## Prioritize and implement API security best practices
 
-Assess and secure your APIs against high-risk issues such as lack of encryption and anonymous access with broken or weak authentication. Gain insights into inactive APIs and those exposed directly to the internet. Defender for Cloud scans for API risks, considering potential exploitability and business impact. [Security recommendations](risk-prioritization.md#recommendations) are prioritized based on these factors, allowing you to fix critical vulnerabilities first.
+Assess and secure your APIs against high-risk issues such as lack of encryption and anonymous access with broken or weak authentication. Gain insights into inactive APIs and those exposed directly to the internet. Defender for Cloud scans for API risks, considering potential exploitability and business impact. [Security recommendations](review-security-recommendations.md#understanding-risk-prioritization) are prioritized based on these factors, allowing you to fix critical vulnerabilities first.
 
 ## Classify APIs exposing sensitive data
 
