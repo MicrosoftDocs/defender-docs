@@ -38,10 +38,10 @@ Custom detection rules are rules you design and tweak using [advanced hunting](a
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-To manage custom detections, you need roles that let you manage the data that these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see the following sections.
+To manage custom detections, you need roles that let you manage the data that these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see the following sections.
 
-### Microsoft Defender
-To manage custom detections on Microsoft Defender data, you need to be assigned one of these roles:
+### Microsoft Defender XDR
+To manage custom detections on Microsoft Defender XDR data, you need to be assigned one of these roles:
 
 - **Security settings (manage)** - Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
 
@@ -49,7 +49,7 @@ To manage custom detections on Microsoft Defender data, you need to be assigned 
 
 - **Security Operator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the **Manage Security Settings** permission for Defender for Endpoint.
 
-You can manage custom detections that apply to data from specific Microsoft Defender solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
+You can manage custom detections that apply to data from specific Defender XDR solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
 
 Likewise, since the `IdentityLogonEvents` table holds authentication activity information from both Microsoft Defender for Cloud Apps and Defender for Identity, you need to have manage permissions for both services to manage custom detections querying the said table.
 
