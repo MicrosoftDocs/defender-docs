@@ -34,7 +34,7 @@ The Microsoft Defender Portal delivers unique advantages that make it the premie
 
 **Continuous improvement through AI insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
-## How to access multiple customer tenants
+## Set up access to multiple customer tenants
 
 There are two ways available to connect to other customer tenants.
 
@@ -57,7 +57,7 @@ There are two ways available to connect to other customer tenants.
 
     Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
 
-## Entitlement management
+## Manage entitlement
 
 [Entitlement management](/entra/id-governance/entitlement-management-overview) is an [identity governance](/entra/id-governance/identity-governance-overview) feature that enables organizations to manage identity and access lifecycle at scale, by automating access request workflows, access assignments, reviews, and expiration.
 
@@ -116,7 +116,7 @@ Together with Azure Lighthouse, this is the most common option used by MSSPs to 
 
 # Defender Portal Permissions
 
-## URBAC / Azure RBAC
+## Define permissions and URBAC
 
 After setting establishing delegated access, the next step is to set up granular roles in the Defender portal, which will be used to access Defender and Sentinel.
 
@@ -165,10 +165,10 @@ Please refer here: [Import roles to Microsoft Defender XDR Unified role-based ac
 --->
 For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
 
-## Managing security operations across tenants
+## Manage security operations across tenants
 The Microsoft Defender portal provides all relevant information so you don't have to switch to another portal or page. Its unified incident queue and the ability to correlate events and alerts can reveal a larger, potentially more comprehensive attack, providing a complete attack story. It also lets you view the detection source and product names, and apply and share filters for these, making incident and alert triaging more efficient.
 
-### Managing incidents and alerts
+### Manage incidents and alerts
 
 - **Incident triage:** Triaging incidents is a core activity in a SOC, starting with the Investigation and response section in the Defender portal. The Microsoft Sentinel incident and alert integration with Defender consolidates all relevant information in one place, eliminating the need to switch between portals or pages. This streamlined workflow might require some analyst retraining and updates to existing SOC processes.
   
@@ -195,7 +195,7 @@ Advanced hunting lets you proactively hunt for intrusion attempts and breach act
 For more information, see [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md).
 
 
-## Managing workloads across tenants
+## Manage workloads across tenants
 
 This sections explores the various actions you can take and methods you can use for managing specific workloads, either through MTO or other available means.
 
@@ -298,7 +298,7 @@ MSSPs working in the Microsoft Defender portal have several tools for managing a
 
 - **Hybrid approaches**: Combine native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
 
-## MSSP repository architecture patterns
+### MSSP repository architecture patterns
 
 A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
 
@@ -330,7 +330,7 @@ To customize your CI/CD pipelines, use configuration files in each repository br
 
 For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
 
-## Multi-Tenancy Considerations
+### Multi-Tenancy Considerations
 
 **Platform Constraints**: GitHub repositories support connections from different tenants, enabling all architecture patterns above. Azure DevOps repositories must be in the same tenant as the workspace, limiting deployment to single-repository-per-customer patterns.
 
@@ -343,7 +343,7 @@ For more information about how to use Azure DevOps in multitenant scenarios, see
 
 For workload-specific configuration management, see [Workload management](#workload-management).
 
-# Case management
+## Manage cases
 
 The unified security operations portal provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
 For complete guidance on case features, workflows, linking incidents and IoCs, RBAC requirements, and customization options, see [Cases overview](cases-overview.md). For multi-tenant case management, see [Manage cases in MTO](./mto-manage-cases.md).
@@ -405,7 +405,7 @@ Develop Security Copilot agents that can be monetized through the Microsoft Secu
 You can use the investment your customers have made with Microsoft and partner developed agents within their Microsoft Defender environment as part of their [partner managed SOC offering](https://www.microsoft.com/security/business/find-a-partner). This includes acting on behalf of your customer within their tenant as an augmentation of their internal team, or performing SOC activities from their tenant and leveraging multitenancy capabilities of Microsoft Defender through delegated access.
 
 
-# Training and community resources
+## Training and community resources
 
 - Transition Guide: [Transition Your Microsoft Sentinel Environment to the Defender Portal](/azure/sentinel/move-to-defender)
 
