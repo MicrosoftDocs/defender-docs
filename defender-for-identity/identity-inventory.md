@@ -46,7 +46,8 @@ There are several options you can choose from to customize the identities list v
 > [!NOTE]
 > When exporting the identities list to a CSV file, a maximum of 5,000 identities are displayed.
 
-## ![A screenshot of identity inventory page.](media/identity-inventory/inventory11.png)
+:::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
+
 
 ### Identity details 
 
