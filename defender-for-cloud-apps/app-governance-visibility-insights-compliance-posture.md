@@ -14,15 +14,13 @@ The **Overview** page shows the following details:
 
 |Apps / incidents  |Details shown  | Use this data to... |
 |---------|---------|---------|
-|**OAuth-enabled apps that use the Microsoft Graph API**     |  - How many apps are in your tenant <br>- How many apps might be overprivileged <br>- How many apps are highly privileged | Determine the level of risk to your organization by overprivileged and highly privileged apps. |
-|**For incidents**    | - How many active incidents your tenant has <br>- How many are based on app governance detections (**Threat incidents**) <br>- How many are based on app policies you have in place (**Policy incidents**) <br>- The 10 latest incidents  | Determine how quickly incidents are being generated and the relative number of detected and policy-based incidents. |
+|**OAuth-enabled apps that use the Microsoft Graph API**     |  - How many apps are in your tenant <br>  - How many apps are unused in the last 90 days <br>  - How many apps might be overprivileged <br>  - How many apps are highly privileged | Determine the level of risk to your organization by unused, overprivileged and highly privileged apps. |
+|**For incidents**    | - How many active incidents your tenant has <br>- How many are based on app governance detections (**Threat incidents**) <br> - How many are based on app policies you have in place (**Policy incidents**) <br>- The 10 latest incidents  | Determine how quickly incidents are being generated and the relative number of detected and policy-based incidents. |
 
 For example:
 
 > [!div class="mx-imgBorder"]
-> ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)
-> 
-> [!div class="mx-imgBorder"]
+> ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)> [!div class="mx-imgBorder"]
 > ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
 
 ## Data usage cards
