@@ -13,7 +13,7 @@ When you connect an Amazon Web Services (AWS) account to Microsoft Defender for 
 
 Defender for Cloud doesn't store long-lived AWS credentials. Instead, it requests a token from Microsoft Entra ID and exchanges it through AWS Security Token Service (STS) for short-lived AWS credentials. 
 
-The IAM roles that customers deploy through the onboarding template include a trust policy that defines who can assume the role. The permissions granted to Defender for Cloud are defined by the IAM policies attached to each role in the CloudFormation template.
+The identity and access management (IAM) roles that customers deploy through the onboarding template include a trust policy that defines who can assume the role. The permissions granted to Defender for Cloud are defined by the IAM policies attached to each role in the CloudFormation template.
 
 ## Authentication resources created in AWS
 
