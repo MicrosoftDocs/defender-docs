@@ -39,9 +39,9 @@ During onboarding, the CloudFormation template automatically defines:
 - the AWS OpenID Connect (OIDC) identity provider bound to the Microsoft-managed Entra application  
 - the IAM role trust policies that allow Defender for Cloud to request short-lived AWS credentials  
 
-These values are automatically generated during onboarding and appear in the CloudFormation template that you download from the Azure portal. To verify the connection is legitimate, compare the expected `aud` (audience) value defined in the IAM role’s trust policy
+These values are automatically generated during onboarding and appear in the CloudFormation template that you download from the Azure portal. To verify the connection is legitimate, compare the expected `aud` (audience) value defined in the IAM role’s trust policy.
 
-:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-openid-connect-provider.png" alt-text="Screenshot showing the OIDC identity provider and IAM role trust relationship created by the onboarding CloudFormation template." lightbox="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png":::
+:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png" alt-text="Screenshot of the AWS CloudFormation identity provider entry created during onboarding." lightbox="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png":::
 
 ## Cross-cloud authentication flow
 
