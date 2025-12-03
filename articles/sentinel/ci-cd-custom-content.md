@@ -21,13 +21,26 @@ ms.collection: usx-security
 
 # Manage content as code with Microsoft Sentinel repositories (public preview)
 
-The Microsoft Sentinel repositories feature provides a central experience for the deployment and management of Sentinel content as code. Repositories allow connections to an external source control for continuous integration / continuous delivery (CI/CD). This automation removes the burden of manual processes to update and deploy your custom content across workspaces. A subset of content as code is *detections* as code (DaC). Microsoft Sentinel **Repositories** implements DaC as well.
+Microsoft Sentinel repositories let you deploy and manage custom Sentinel content from an external source control repository for continuous integration/continuous delivery (CI/CD). This automation removes the need for manual processes to update and deploy your custom content across workspaces. A subset of content as code is *detections* as code (DaC). Microsoft Sentinel **Repositories** implements DaC as well.
 
 For more information on Sentinel content, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md).
 
 > [!IMPORTANT]
 > The Microsoft Sentinel **Repositories** feature is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for more legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
+
+
+## How Microsoft Sentinel repositories work
+
+You can deploy these Microsoft Sentinel custom content types from an external source control repository you connect to Microsoft Sentinel:
+
+- Analytics rules 
+- Automation rules
+- Hunting queries
+- Parsers
+- Playbooks
+- Workbooks
+
+Updates you make to the content in your Microsoft Sentinel repositories are synchronized to your Microsoft Sentinel workspace and  overwrite any changes you make to that content through the Microsoft Sentinel portal. Your Microsoft Sentinel repositories become your “single source of truth” for custom content in the connected workspaces. 
 
 ## Plan your repository connection
 
@@ -46,44 +59,43 @@ If you find content in a public repository where you aren't a contributor, first
 
 ## Plan your repository content
 
-Repository content must be stored as [Bicep files](../azure-resource-manager/bicep/file.md) or [Azure Resource Manager (ARM) templates](../azure-resource-manager/templates/overview.md). However, Bicep is more intuitive and makes it easier to describe Azure resources and Microsoft Sentinel content. 
+Microsoft Sentinel repositories support deployment of content you store as [Bicep files](../azure-resource-manager/bicep/overview.md) or [Azure Resource Manager (ARM) templates](../azure-resource-manager/templates/overview.md). We recommend using Bicep, which is more intuitive and makes it easier to describe Azure resources and Microsoft Sentinel content. 
 
-Deploy Bicep file templates alongside or instead of ARM JSON templates. If you're considering infrastructure as code options, we recommend looking at Bicep. For more information, see [What is Bicep?](../azure-resource-manager/bicep/overview.md).
+The template for each content type has a specific structure and parameter name, as documented in the [Sentinel resources template reference](/azure/templates/microsoft.securityinsights/allversions). For samples of each content type, see[RepositoriesSampleContent repository](https://github.com/SentinelCICD/RepositoriesSampleContent).
 
-> [!IMPORTANT]
-> In order to use Bicep files, your repositories connection needs to be updated if your connection was created before November 1, 2024. Repositories connections must be [removed](ci-cd.md#remove-a-repository-connection) and recreated in order to update.
+We've provided a sample repository with templates for each of the content types listed. The repo also demonstrates how to use advanced features of repository connections. For more information, see [Microsoft Sentinel CI/CD repositories sample](https://github.com/SentinelCICD/RepositoriesSampleContent). 
+
+:::image type="content" source="media/ci-cd-custom-content/repositories-connection-success.png" alt-text="Screenshot of a successful repository connection. The RepositoriesSampleContent is shown. This screenshot is after the sample was imported from the SentinelCICD repo to a private GitHub repo in the FourthCoffee organization." lightbox="media/ci-cd-custom-content/repositories-connection-success.png":::
+
+Although you can build templates from scratch, it's often easier to start from either the Sentinel Public GitHub repository YAML files or from out-of-the-box Microsoft Sentinel content. This table outlines how to convert an ARM template for use with Microsoft Sentinel Repositories. 
+
+
+| Content Type      | Convert from YAML | Export from Sentinel | Template Reference | Sample Templates |
+|-------------------|-------------------|-----------------------|---------------------|------------------|
+| Analytic rules    | [PowerShell script](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/ConvertYamlToJson/ConvertSentinelRuleFrom-Yaml.ps1) | [Export feature](https://learn.microsoft.com/en-us/azure/sentinel/import-export-analytics-rules) | [Reference](https://learn.microsoft.com/en-us/azure/templates/microsoft.securityinsights/2025-03-01/alertrules) | [ARM Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/AnalyticsRules) |
+| Automation rules  | N/A              | [Export feature](https://learn.microsoft.com/en-us/azure/sentinel/import-export-automation-rules) | [Reference](https://learn.microsoft.com/en-us/azure/templates/microsoft.securityinsights/2025-03-01/automationrules) | [Scripts](https://github.com/garybushey/MicrosoftSentinelAutomation/tree/main) |
+| Hunting queries   | [PowerShell script](https://github.com/SentinelCICD/RepositoriesSampleContent/blob/main/Hunting/ConvertHuntingQueryFromYamlToArm.ps1) | [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](https://learn.microsoft.com/en-us/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches) | [Samples](https://github.com/SentinelCICD/RepositoriesSampleContent) |
+| Parsers           | [ASIM script](https://github.com/Azure/Azure-Sentinel/tree/master/ASIM/dev/ASimYaml2ARM) | [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](https://learn| Parsers           | [ASIM script](https://github.com/Azure/Azure-Sentinel/tree/master/ASIM/dev/ASimYaml2ARM) | [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](https://learn.microsoft.com/en-us/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches) | [Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/ParserQuery) |
+| Playbooks         | N/A              | [PowerShell utility](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator) | [Reference](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-azure-resource-manager-templates-overview) | - |
 
 Even if your original content is an ARM template, consider converting to Bicep to make the review and update processes less complex. Bicep is closely related to ARM because during a deployment, each Bicep file is converted to an ARM template. For more information on converting ARM templates, see [Decompiling ARM template JSON to Bicep](../azure-resource-manager/bicep/decompile.md).
 
-> [!NOTE]
-> Known Bicep limitations:
+> [!IMPORTANT]
+> Bicep considerations:
+> - To use Bicep files, your repositories connection needs to be updated if your connection was created before November 1, 2024. Repositories connections must be [removed](ci-cd.md#remove-a-repository-connection) and recreated in order to update.
 > - Bicep files don't support the `id` property. When decompiling ARM JSON to Bicep, make sure you don't have this property. For example, analytic rule templates exported from Microsoft Sentinel have the `id` property that needs removal.
 > - Change the ARM JSON schema to version `2019-04-01` for best results when decompiling.
 
-### Validate your content
-
-The following Microsoft Sentinel content types can be deployed through a repository connection:
-- Analytics rules 
-- Automation rules
-- Hunting queries
-- Parsers
-- Playbooks
-- Workbooks
 
 > [!IMPORTANT]
-> Analytic rules deployed using The Microsoft Sentinel **Repositories** feature can use cross-workspace queries only if the destination workspace is in the same Resource Group as the workspace connected to the repository.
->
+> Analytic rules deployed using the Microsoft Sentinel **Repositories** feature can use cross-workspace queries only if the destination workspace is in the same Resource Group as the workspace connected to the repository.
 
-> [!TIP]
-> This article does *not* describe how to create these types of content from scratch. For more information, see the relevant [Microsoft Sentinel GitHub wiki](https://github.com/Azure/Azure-Sentinel/wiki#get-started) for each content type.
->
+
+For information on creating custom content from scratch, see the relevant [Microsoft Sentinel GitHub wiki](https://github.com/Azure/Azure-Sentinel/wiki#get-started) for each content type.
+
+### Validate your content
 
 The repositories deployment doesn't validate the content except to confirm it's in the correct JSON or Bicep format. Be sure to test your content within Microsoft Sentinel before deploying.
-
-A sample repository is available with templates for each of the content types listed. The repo also demonstrates how to use advanced features of repository connections. For more information, see [Microsoft Sentinel CI/CD repositories sample](https://github.com/SentinelCICD/RepositoriesSampleContent). 
-
-
-:::image type="content" source="media/ci-cd-custom-content/repositories-connection-success.png" alt-text="Screenshot of a successful repository connection. The RepositoriesSampleContent is shown. This screenshot is after the sample was imported from the SentinelCICD repo to a private GitHub repo in the FourthCoffee organization." lightbox="media/ci-cd-custom-content/repositories-connection-success.png":::
 
 
 ### Maximum connections and deployments
@@ -126,6 +138,38 @@ Once the workflow or pipeline is triggered, the deployment supports the followin
 
 These options are available through a feature of the PowerShell deployment script called from the workflow or pipeline. For more information on how to implement these customizations, see [Customize repository deployments](ci-cd-custom-deploy.md#customize-your-connection-configuration).
 
+
+## Common repository architecture patterns for MSSPs
+
+A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
+
+**Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
+- One central repository for common content deployed to all customers
+- Individual repositories for customer-specific customizations
+- Each customer workspace connects to both repositories
+- Optimal for MSSPs with balanced common and tailored content needs
+
+  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
+
+**Pattern 2: Single repository with custom folders**
+- All content in one repository
+- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
+- Deployment pipelines customized per customer connection
+- Requires more initial setup but simplifies repository management
+
+  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
+
+**Pattern 3: One repository per customer**
+- Complete content separation across customers
+- Full customization flexibility for each customer
+- Best for customers with unique content requirements
+- Higher management overhead but maximum isolation
+
+  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
+
+To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
+
+For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
 
 ## Next steps
 
