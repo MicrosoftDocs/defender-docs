@@ -93,6 +93,7 @@ You can apply the following filters to get a more focused view:
 | **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant. |
 | **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app. |
 | **Publisher**| Publisher of the app and their verification status. |
+| **Last used**| Date and time when the app last signed in. Tracking of this data goes back to June, 2022. | 
 | **Last modified**| Date and time when registration information was last updated on Microsoft Entra ID |
 | **Added on**| Shows the date and time when the app was registered to Microsoft Entra ID and assigned a service principal. |
 | **Permission usage**| Shows whether the app has any unused Graph API permissions in the last 90 days. |
