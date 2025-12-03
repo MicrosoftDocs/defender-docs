@@ -59,7 +59,7 @@ Follow these steps to manually link accounts to a selected identity.
 1. Navigate to **Assets** > **Identity Inventory**.
 1. Select an **Identity** from the list.
 
-      :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page ion the Microsoft Defender portal. " lightbox="media/identity-inventory/inventory-page.png":::
+      :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/inventory-page.png":::
 
 1. Select the **Observed in organization** tab.
 1. Open the **Accounts** tab.
@@ -88,7 +88,7 @@ Follow these steps to manually link accounts to a selected identity.
 1. Select **Next**.
 1. Review the selected accounts and your justification.
 
-    :::image type="content" source="media/link-unlink-account-to-identity/review-and-finish.png" alt-text="Review the selected accounts and the justification." lightbox="media/link-unlink-account-to-identity/review-and-finish.png":::
+    :::image type="content" source="media/link-unlink-account-to-identity/review-and-finish.png" alt-text="Screenshot that shows the review of the selected accounts and the justification." lightbox="media/link-unlink-account-to-identity/review-and-finish.png":::
 
 1. Confirm that the accounts listed are correct.
 1. The account list refreshes automatically.
@@ -97,7 +97,7 @@ Follow these steps to manually link accounts to a selected identity.
 
 Follow these steps to manually unlink accounts from a selected identity.
 
-1. Go to **Identity Inventory > Observed in organization**
+1. Go to **Identity Inventory > Observed in organization**.
 1. Open the **Accounts** tab.
 1. Select one account set from the table.
 1. Select **Unlink account**.
