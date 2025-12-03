@@ -12,6 +12,8 @@
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
       href: release-notes.md
+    - name: What's new in recommendations, alerts, and incidents
+      href: release-notes-recommendations-alerts.md
 
 - name: Experience in the Defender portal
   expanded: true
@@ -1023,8 +1025,6 @@
 
 - name: Investigation & response
   items:
-    - name: What's new in recommendations, alerts, and incidents
-      href: release-notes-recommendations-alerts.md
     - name: Defender for APIs
       items: 
         - name: Investigate findings, recommendations, alerts
