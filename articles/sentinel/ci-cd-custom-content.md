@@ -75,7 +75,6 @@ We've provided a sample repository with templates for each of the content types 
 
 Although you can build templates from scratch, it's often easier to start from either the Sentinel Public GitHub repository YAML files or from out-of-the-box Microsoft Sentinel content. This table outlines how to convert an ARM template for use with Microsoft Sentinel Repositories. 
 
-
 | Content Type      | Convert from Sentinel Public YAML                                                                                     | Export from Sentinel                                                                                                   | Template Reference                                                                                      | Sample Templates                                                                                       |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | **Analytic rules**| [PowerShell script](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/ConvertYamlToJson/ConvertSentinelRuleFrom-Yaml.ps1) | [Export feature](/azure/sentinel/import-export-analytics-rules#export-rules) or [PowerShell script](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Az.SecurityInsights-Samples/Alert%20Rules/Export%20Analytics%20Rules) | [Reference](/azure/templates/microsoft.securityinsights/2025-03-01/alertrules) | [ARM Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/AnalyticsRules) |
@@ -133,39 +132,6 @@ Once the workflow or pipeline is triggered, the deployment supports the followin
 - specify ARM template parameter files 
 
 These options are available through a feature of the PowerShell deployment script called from the workflow or pipeline. For more information on how to implement these customizations, see [Customize repository deployments](ci-cd-custom-deploy.md#customize-your-connection-configuration).
-
-
-## Common repository architecture patterns for MSSPs
-
-A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
-
-**Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
-- One central repository for common content deployed to all customers
-- Individual repositories for customer-specific customizations
-- Each customer workspace connects to both repositories
-- Optimal for MSSPs with balanced common and tailored content needs
-
-  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
-
-**Pattern 2: Single repository with custom folders**
-- All content in one repository
-- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
-- Deployment pipelines customized per customer connection
-- Requires more initial setup but simplifies repository management
-
-  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
-
-**Pattern 3: One repository per customer**
-- Complete content separation across customers
-- Full customization flexibility for each customer
-- Best for customers with unique content requirements
-- Higher management overhead but maximum isolation
-
-  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
-
-To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
-
-For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
 
 ## Next steps
 
