@@ -22,7 +22,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## December 2025
 
-### App governance unused app insights and policy capabilities (Preview)
+### Increased availability of App governance unused app insights feature (Preview)
 
 Microsoft Defender for Cloud Apps app governance unused app insights and policy capabilities allow administrators to identify and manage unused Microsoft 365-connected OAuth applications, enforce policy-based governance, and leverage advanced hunting queries for enhanced security. They are now broadly available to all Microsoft Defender for Cloud Apps commercial cloud customers. For more information see [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md).
 
