@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| December 3, 2025 | Recommendation | Deprecation | The following recommendation has been deprecated: `Microsoft Defender for SQL status should be protected for Arc-enabled SQL Servers` |
 | December 1, 2025  | Recommendation | Preview              | [(Preview) Code Signing should be enabled on Lambda](recommendations-reference-serverless-protection.md#preview-code-signing-should-be-enabled-on-lambda) |
 | December 1, 2025  | Recommendation | Preview              | [(Preview) Security mechanism should be used on lambda function API Gateway](recommendations-reference-serverless-protection.md#preview-security-mechanism-should-be-used-on-lambda-function-api-gateway) |
 | December 1, 2025  | Recommendation | Preview              | [(Preview) Authentication should be enabled on Lambda Function URLs](recommendations-reference-serverless-protection.md#preview-authentication-should-be-enabled-on-lambda-function-urls) |
