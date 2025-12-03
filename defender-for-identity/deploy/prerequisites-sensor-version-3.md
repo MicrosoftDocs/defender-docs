@@ -101,8 +101,7 @@ Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rule
 
 Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-The Defender for Identity sensor v3.x can offer preview feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones. See [Configure auditing with the Defender for Identity sensor v3.x](configure-windows-event-collection.md#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x).
-If you do not select automatic Windows auditing configuration, you must [manually configure Windows event auditing](configure-windows-event-collection.md) in the Defender portal or using PowerShell. 
+For more information about configuring windows event auditing in the Defender portal or using PowerShell, see [Configure Windows event auditing](configure-windows-event-collection.md).
  
 ## Test your prerequisites
 
