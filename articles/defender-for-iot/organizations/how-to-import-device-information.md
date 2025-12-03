@@ -55,7 +55,7 @@ Your device data is updated.
 
 **To import device IP addresses, operating systems, or patch levels**:
 
-1. Create a new .CSV file for editing. You can use any text editor or spreadsheet application that supports .CSV file format.
+1. Create a new .CSV file for editing.
 
 1. In your CSV file, enter the following details for each device:
 
@@ -63,8 +63,7 @@ Your device data is updated.
     - **Device OS**. Enter one of the device operating systems (OSs) listed in the [supported values for the Device OS table](#supported-values-for-device-os).
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
-The tables below shows a sample device entry and the supported operating system values you can use in the Device OS column.
-
+The tables below show a sample device entry and the supported operating system values you can use in the Device OS column.
 
 ### Device example
 
