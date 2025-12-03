@@ -341,6 +341,28 @@ Watch this short video to learn how automation works efficiently to create a smo
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=01afebcb-850c-4a6f-abb4-692188ac6de7]
 
+
+## Use Dynamic Threat Detection Agent to triage alerts
+
+[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) includes the Dynamic Threat Detection Agent, an AI-powered security agent framework that automates investigation, triage, proactive threat hunting, and dynamic detection rule generation. It uses AI to continuously monitor and analyze system activity, proactively uncovering hidden threats and surfacing high-fidelity alerts. These features and capabilities empower organizations to detect and respond to threats with greater speed, accuracy, and confidence. 
+
+
+### Get access
+Users with access to Security Copilot can use the Dynamic Threat Detection Agent.
+
+This agent is always on, operates seamlessly in the Defender backend, and requires no setup or onboarding. 
+
+### Start using the Dynamic Threat Detection Agent
+
+The Dynamic Threat Detection Agent runs automatically in the background. When it generates an alert, the alert shows up in your incidents and alerts queues with **Security Copilot** as the **Detection source**.
+ 
+To view more details about the alert, select the alert title. The Dynamic Threat Detection Agent provides a summary and recommended actions in the alert page.
+ 
+>[!IMPORTANT]
+>The summary and recommended actions are AI-generated, so make sure to review and verify them for accuracy.
+
+
+
 ## Next steps
 
 As needed for in-process incidents, continue your [investigation](investigate-incidents.md).
