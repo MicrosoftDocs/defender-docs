@@ -68,6 +68,8 @@ The OAuth apps tab provides visibility into Microsoft 365, Google workspace and 
 
 * **Highly privileged apps** – Shows apps with powerful permissions that allow them to access data or change important settings. (Available for Microsoft 365 and Google)
 
+* **Unused apps** - Shows apps that have not signed in within the last 90 days (Available for Microsoft 365)
+
 * **Overprivileged apps** – Shows apps with unused permissions. (Available for Microsoft 365)
 
 * **Apps from external unverified publishers** – Shows apps that originated from an external unverified publisher tenant. (Available for Microsoft 365)
@@ -103,8 +105,8 @@ You can apply the following filters to get a more focused view:
 
 > [!TIP]
 > To see all columns, you might need to do one or more of the following steps:
-> * Horizontally scroll in your web browser.
-> * Narrow the width of appropriate columns.
+* Horizontally scroll in your web browser.
+* Narrow the width of appropriate columns.
 > * Zoom out in your web browser.
 
 ## Next steps
