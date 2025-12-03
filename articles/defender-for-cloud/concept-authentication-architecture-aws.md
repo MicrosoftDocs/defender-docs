@@ -15,31 +15,31 @@ Defender for Cloud doesn't store long-lived AWS credentials. Instead, it request
 
 - Scan AWS configuration posture
 - Collect metadata for security assessments
-- Generate recommendations and alerts
+- Generate security findings and recommendations in Azure
 
-AWS IAM roles created during onboarding limit all permissions.
+The IAM roles created during onboarding include a trust policy that restricts who can assume the role, but the permissions granted to Defender for Cloud are defined by the IAM policies attached to each role in the CloudFormation template.
 
-## Resources provisioned in AWS
+## Authentication resources created in AWS
 
-During onboarding, the CloudFormation template creates authentication components that Defender for Cloud requires:
+During onboarding, the CloudFormation template creates the authentication components that Defender for Cloud requires to establish trust between Microsoft Entra ID and AWS. These typically include:
 
-- An **OpenID Connect (OIDC) identity provider** bound to Microsoft Entra ID
+- An **OpenID Connect (OIDC) identity provider** bound to a Microsoft-managed Microsoft Entra application  
 - One or more **IAM roles** that Defender for Cloud can assume through web identity federation
 
-These resources create the trust boundary between Microsoft Entra ID and AWS.
+Depending on the Defender plan you enable, additional AWS resources may be created as part of the onboarding process.
 
 ## Identity provider model
 
 Defender for Cloud is a SaaS service and uses a Microsoft-managed Microsoft Entra application as the identity provider when authenticating to AWS. The service can't use identities from a customer’s Entra tenant to request federated credentials, because it operates independently of customer-managed identity providers. Using a Microsoft-managed identity ensures consistent token issuance, isolation between tenants, and a predictable authentication model across all Defender plans.
 
-Each plan that you enable creates its own AWS IAM role through the onboarding template. These roles define the least-privilege permissions that Defender for Cloud can assume when assessing posture and collecting configuration data.
+Each plan that you enable creates its own AWS IAM role through the onboarding template. These roles grant the permissions that each Defender plan requires to assess posture and collect configuration data.
 
 During onboarding, the CloudFormation template automatically defines:
 
 - the AWS OpenID Connect (OIDC) identity provider bound to the Microsoft-managed Entra application  
 - the IAM role trust policies that allow Defender for Cloud to request short-lived AWS credentials  
 
-These values are automatically generated during onboarding and appear in the CloudFormation template that you download from the Azure portal. To verify the connection is legitimate, compare the `aud` (audience) value in the IAM role’s trust relationship with the corresponding parameter values defined in the CloudFormation template.
+These values are automatically generated during onboarding and appear in the CloudFormation template that you download from the Azure portal. To verify the connection is legitimate, compare the expected `aud` (audience) value defined in the IAM role’s trust policy
 
 :::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-openid-connect-provider.png" alt-text="Screenshot showing the OIDC identity provider and IAM role trust relationship created by the onboarding CloudFormation template." lightbox="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png":::
 
@@ -59,7 +59,7 @@ Before AWS issues temporary credentials, it performs several checks:
 
 - **Certificate thumbprint validation** confirms that the signer matches the trusted identity provider.
 
-- **Role-level conditions** restrict access to the Defender for Cloud CSPM application and prevent other applications from assuming the same role.
+- **Role-level conditions** restrict which federated identities can assume the role and prevent other Microsoft identities from using the same role.
 
 AWS grants access only when all validation rules succeed.
 
