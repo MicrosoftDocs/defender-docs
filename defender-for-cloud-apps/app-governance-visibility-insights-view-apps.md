@@ -73,13 +73,13 @@ In the details pane, select any of the following tabs to view more details:
 
   ![Screenshot 2025-02-24 005703](media/app-governance-visibility-insights-view-apps/screenshot-2025-02-24-005703.png)
   
-       If an app is *admin consented*, the **Total consented users** are all users in the tenant.
+  If an app is *admin consented*, the **Total consented users** are all users in the tenant.
 
 - Select the **Permissions** tab to see a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level and whether they are in use. For example:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/permissions.png" alt-text="Screenshot of the Permissions tab.":::
 
-    For more information, see the [Microsoft Graph permissions reference](/graph/permissions-reference).
+  For more information, see the [Microsoft Graph permissions reference](/graph/permissions-reference).
 
 - Select the **Sensitivity labels** tab to see how frequently items with certain sensitivity labels were accessed by the app on Microsoft 365. For example:
 
