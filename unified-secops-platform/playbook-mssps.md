@@ -282,7 +282,39 @@ MSSPs working in the Microsoft Defender portal have several tools for managing a
 >[!TIP]
 > We recommend a hybrid approach, combining native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
 
-### Shared content management
+### Common repository architecture patterns for MSSPs
+
+A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
+
+**Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
+- One central repository for common content deployed to all customers
+- Individual repositories for customer-specific customizations
+- Each customer workspace connects to both repositories
+- Optimal for MSSPs with balanced common and tailored content needs
+
+  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
+
+**Pattern 2: Single repository with custom folders**
+- All content in one repository
+- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
+- Deployment pipelines customized per customer connection
+- Requires more initial setup but simplifies repository management
+
+  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
+
+**Pattern 3: One repository per customer**
+- Complete content separation across customers
+- Full customization flexibility for each customer
+- Best for customers with unique content requirements
+- Higher management overhead but maximum isolation
+
+  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
+
+To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
+
+For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
+
+### Shared content management considerations
 
 When MSSPs and customers both manage content, conflicts can occur, especially if you're using both content-as-code and the portal for content management because updates you make in your content-as-code repositories overwrite any changes made to that content through the portal. 
 
@@ -290,6 +322,7 @@ To prevent such conflicts, we recommend:
 
 - Centralized management only - Restrict permissions so only MSSP users can create and update content.
 - Shared management with clear markers - Prefix MSSP-managed items with a naming convention. This allows local updates but reduces errors.
+
 ## Manage cases
 
 The unified security operations portal provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
