@@ -21,7 +21,7 @@ Before performing the procedures in this article, you must have:
 
 - An understanding of the extra device data you want to import. Use that understanding to choose one of the following import methods:
 
-    - **Import data from the device map** to import device names, types, groups, or Purdue layer
+    - **Import data from the device map** to import device names, operating systems, groups, or Purdue layer
     - **Import data from system settings** to import device IP addresses, operating systems, patch levels, or authorization statuses
 
 > [!TIP]
@@ -29,14 +29,14 @@ Before performing the procedures in this article, you must have:
 
 ## Import data from the OT sensor device map
 
-**To import device names, types, groups, or Purdue layers**:
+**To import device names,types groups, or Purdue layers**:
 
 1. Sign into your OT sensor and select **Device map** > **Export Devices** to export the device data already detected by your OT sensor.
 
 1. Open the downloaded .CSV file for editing and modify *only* the following data, as needed:
 
     - **Name**. Maximum length: 30 characters
-    - **Device OS**. Use one of the options listed in the [supported values for the Device OS table](#supported-values-for-device-os)
+    - **Device type**. The device’s functional role (for example, printer, surveillance camera, or smart appliance).
     - **Group**. Maximum length: 30 characters
     - **Purdue layer**. Enter one of the following: **Enterprise**, **Supervisory**, or **Process Control**
 
