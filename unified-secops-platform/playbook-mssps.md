@@ -273,75 +273,23 @@ In Microsoft Sentinel, content refers to the building blocks that enable securit
 
 MSSPs working in the Microsoft Defender portal have several tools for managing and distributing security content at scale:
 
+| **Option**                               | **Best for**                                                   | **Technical details**                                                                                                      | **Key capabilities**                                                                                           | **Learn more**                                                                                     |
+|------------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Native multitenant content distribution** | Quick deployment of standard content across many tenants | Uses Defender portal's built-in multitenant management. Ideal for OOB content or lightly customized content.              | <ul><li>Create once, deploy everywhere across multiple tenants</li><li>Execute content on target scopes (devices, workspaces)</li><li>Centralized tracking to reduce duplication and errors</li></ul> | [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles) |
+| **Microsoft Sentinel repositories (content as code)** | Structured DevOps processes and moderate customization needs | Enables advanced governance and lifecycle management. Quick configuration and reduction in human error. | <ul><li>Manage SIEM content using automation</li><li>Apply CI/CD practices for version control, testing, and deployment</li><li>Supports hybrid workflows combining native distribution and DevOps</li></ul> | [Manage content as code with Microsoft Sentinel repositories (public preview)](https://aka.ms/microsoft-sentinel-repos) |
+| **Custom CI/CD pipelines**              | Maximum customization and automation across tenants | Built using Azure DevOps or GitHub Actions. Requires custom scripts and configuration files. Current method for advanced content types. | <ul><li>Full flexibility for complex workflows</li><li>Custom testing and integration</li></ul> | [Customize repository deployments (public preview)](/azure/sentinel/ci-cd-custom-deploy) |
 
-| **Option**                               | **Best For**                                                   | **Key Capabilities**                                                                                           | **Technical Details**                                                                                                      | **Learn More**                                                                                     |
-|------------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| **Native multitenant content distribution** | Quick deployment of standard content across many tenants | - Create once, deploy everywhere across multiple tenants <br> - Execute content on target scopes (devices, workspaces) <br> - Centralized tracking to reduce duplication and errors | Uses Defender portal’s built-in multitenant management. Ideal for OOB content or lightly customized content.              | [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles) |
-| **Microsoft Sentinel repositories (Content as Code)** | Structured DevOps processes and moderate customization needs | - Manage SIEM content using automation <br> - Apply CI/CD practices for version control, testing, and deployment <br> - Supports hybrid workflows combining native distribution and DevOps | Implemented via Sentinel repositories. Enables advanced governance and lifecycle management. Comprehensive CI/CD guidance. | [Manage content as code with Microsoft Sentinel repositories (public preview)](/azure/sentinel/ci-cd-custom-content) |
-| **Custom CI/CD pipelines**              | Maximum customization and automation across tenants | - Full flexibility for complex workflows <br> - Custom testing and integration with existing DevOps practices <br> - Supports additional content types (custom detections, summary rules, AI agents) | Built using Azure DevOps or GitHub Actions. Requires custom scripts and configuration files. Current method for advanced content types.
+>[!TIP]
+> We recommend a hybrid approach, combining native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
 
+### Shared content management
 
-- **Native multitenant content distribution capabilities**: Deploy security content at scale across customer tenants without repeatedly creating or switching between tenants. 
+When MSSPs and customers both manage content, conflicts can occur, especially if you're using both content-as-code and the portal for content management because updates you make in your content-as-code repositories overwrite any changes made to that content through the portal. 
 
-  Multitenant content distribution lets you:
+To prevent such conflicts, we recommend:
 
-  - **Create once, deploy everywhere**: Author content in one tenant and distribute to groups of tenants.
-  - **Run seamlessly**: Execute distributed content on the target tenant’s scope - including devices, workspaces, and so on.
-  - **Save time and reduce errors**: Avoid manual duplication and track all content from a single place.
-
-  For more information, see [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles).
-
-- **Microsoft Sentinel repositories for managing content as code**: Manage SIEM content using automation and CI/CD practices for advanced version control, testing, and deployment workflows. For comprehensive implementation guidance, including Microsoft Sentinel Repositories and custom CI/CD pipelines, see [Microsoft Sentinel CI/CD custom content](/azure/sentinel/ci-cd-custom-content). 
-
-- **Custom CI/CD pipelines**: Build your own CI/CD pipelines using tools like Azure DevOps or GitHub Actions to automate content deployment across multiple customer tenants. This approach provides maximum flexibility for complex workflows, custom testing, and integration with existing DevOps practices. Currently, additional content types such as custom detections, summary rules, and AI agents can be managed using the second approach—building your own CI/CD pipeline.
-
-- **Hybrid approaches**: Combine native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
-
-### MSSP repository architecture patterns
-
-A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
-
-**Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
-- One central repository for common content deployed to all customers
-- Individual repositories for customer-specific customizations
-- Each customer workspace connects to both repositories
-- Optimal for MSSPs with balanced common and tailored content needs
-
-  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
-
-**Pattern 2: Single repository with custom folders**
-- All content in one repository
-- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
-- Deployment pipelines customized per customer connection
-- Requires more initial setup but simplifies repository management
-
-  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
-
-**Pattern 3: One repository per customer**
-- Complete content separation across customers
-- Full customization flexibility for each customer
-- Best for customers with unique content requirements
-- Higher management overhead but maximum isolation
-
-  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
-
-To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
-
-For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
-
-### Multi-Tenancy Considerations
-
-**Platform Constraints**: GitHub repositories support connections from different tenants, enabling all architecture patterns above. Azure DevOps repositories must be in the same tenant as the workspace, limiting deployment to single-repository-per-customer patterns.
-
-**Intellectual Property Protection**: Implement clear content management governance to prevent conflicts between MSSP and customer modifications:
-- Use centralized content management with restricted permissions
-- Apply naming conventions (e.g., prefixes) to identify MSSP-managed content
-- Establish clear ownership boundaries for custom content
-
-**Content Lifecycle Management**: Maintain consistent security baselines across customer tenants while supporting individual customization needs. Balance rapid deployment capabilities with proper testing and validation processes.
-
-For workload-specific configuration management, see [Workload management](#workload-management).
-
+- Centralized management only - Restrict permissions so only MSSP users can create and update content.
+- Shared management with clear markers - Prefix MSSP-managed items with a naming convention. This allows local updates but reduces errors.
 ## Manage cases
 
 The unified security operations portal provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
