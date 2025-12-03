@@ -65,7 +65,7 @@ az aks disable-addons \
 ### Check component removal
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get ds microsoft-defender-collector-ds -n kube-system
 ```
 
 No pods should be returned after successful removal.

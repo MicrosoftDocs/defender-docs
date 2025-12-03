@@ -47,7 +47,7 @@ The output should show `securityMonitoring.enabled` as `true`.
 Check if the Defender sensor pods are running:
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get ds microsoft-defender-collector-ds -n kube-system
 ```
 
 All pods should show a status of `Running`.
@@ -75,7 +75,7 @@ For detailed instructions on generating test alerts and simulating various threa
 
 If sensor pods aren't running:
 
-1. Check pod events: `kubectl describe pods -n kube-system -l app=microsoft-defender`
+1. Check pod events: `kubectl get ds microsoft-defender-collector-ds -n kube-system`
 1. Verify resource availability: `kubectl top nodes`
 
 Common causes:
