@@ -53,6 +53,7 @@ The following table lists the app governance templates supported to generate ale
 
 |Template name|Description|
 |---|---|
+|**Unused app**|Find apps that have not authenticated recently. This policy checks the following conditions: <ul><li>Last used: More than 90 days (customizable)</li></ul>|
 |**New app with high data usage**|Find newly registered apps that have uploaded or downloaded large amounts of data using Microsoft Graph and EWS APIs. This policy checks the following conditions: <ul><li>Registration age: Seven days or less (customizable)</li><li>Data usage: Greater than 1 GB in one day (customizable)</li></ul>|
 |**Increase in users**|Find apps with a sizable increase in the number of users. This policy checks the following conditions: <ul><li>Time range: Last 90 days</li><li>Increase in consenting users: At least 50% (customizable)</li></ul>|
 
