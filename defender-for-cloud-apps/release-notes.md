@@ -20,12 +20,18 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+## December 2025
+
+### App governance unused app insights and policy capabilities (Preview)
+
+Microsoft Defender for Cloud Apps app governance unused app insights and policy capabilities allow administrators to identify and manage unused Microsoft 365-connected OAuth applications, enforce policy-based governance, and leverage advanced hunting queries for enhanced security. They are now broadly available to all Microsoft Defender for Cloud Apps commercial cloud customers. For more information see [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md).
+
 ## November 2025
 
 ### AI Agent Protection (Preview)
 Microsoft Defender delivers comprehensive protection for AI agents, combining proactive exposure management with advanced threat detection. It automatically discovers AI agents created in Microsoft Copilot Studio and Azure AI Foundry, collects audit logs, continuously monitors for suspicious activity, and integrates detections and alerts into the XDR Incidents and Alerts experience with a dedicated Agent entity.
 
-  - **Copilot Studio AI agents**
+- **Copilot Studio AI agents**
 
     Defender ingests data from Copilot Studio agents into Advanced Hunting, enabling you to create custom queries and proactively hunt for threats. It also provides real-time protection by monitoring agent runtime and blocking harmful or suspicious actions, fully integrated with XDR incidents and alerts.
 
@@ -57,14 +63,14 @@ To support ongoing security enhancements and maintain service availability, Micr
 To avoid service disruption, take action by **August 25, 2025**, and update your firewall configuration as follows:
 
 Allow outbound traffic on port 443 to the following IP ranges:
-  - `51.54.53.136/29`
+- `51.54.53.136/29`
   - `51.54.114.160/29`
   - `62.11.173.176/29`
 
 If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
 
 Add the following endpoint to your firewall allowlist on port 443:
-  - `discoveryresources-cdn-prod.cloudappsecurity.com`
+- `discoveryresources-cdn-prod.cloudappsecurity.com`
 
 For the full list of required IP addresses and endpoints, see [Network requirements](network-requirements.md#portal-access).
 
