@@ -96,7 +96,7 @@
           items: 
             - name: Overview
               href: mto-overview.md
-            - name: MSSP implementation guide
+            - name: MSSP deployment guide
               href: playbook-mssps.md
             - name: Set up multitenant management
               href: mto-requirements.md
