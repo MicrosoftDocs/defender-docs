@@ -1,7 +1,7 @@
 ---
 title: Overview - AI security posture management
 description: Learn about AI security posture management in Microsoft Defender for Cloud and how it protects resources from AI threats.
-ms.date: 11/25/2025
+ms.date: 12/02/2025
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
@@ -54,10 +54,8 @@ With these features, Defender for Cloud provides full visibility of AI workloads
 
 Defender for Cloud discovers AI agent workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI agent applications from potential threats.
 
-> [!NOTE]
-> To view preview features in the Defender portal, you need to [enable Microsoft Defender for Cloud preview features in the Defender portal.](/defender-xdr/preview).
->
-> :::image type="content" source="media/ai-security-posture/enable-preview-features.png" alt-text="Screenshot that shows Defender for Cloud's preview features set to enabled in the Defender portal." lightbox="media/ai-security-posture/enable-preview-features.png":::
+> [!IMPORTANT]
+> This feature is currently in preview and included with your Microsoft Defender for CSPM at no extra cost. Licensing requirements might change when the feature becomes generally available. If a change in pricing occurs, the feature is automatically disabled, and you'll receive notification. To continue using the feature, you might need a new license to re-enable the feature.
 
 Defender for Cloud automatically and continuously discovers deployed AI agents across the following services:
 
@@ -65,6 +63,11 @@ Defender for Cloud automatically and continuously discovers deployed AI agents a
 - Copilot Studio AI Agents (requires a [Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-protection) license) 
 
 When you enable the Defender CSPM plan on your Azure subscription, the portal automatically discovers and inventories AI agents deployed with Azure AI Foundry and populates the AI inventory with the list of discovered AI agents.
+
+> [!NOTE]
+> To view preview features in the Defender portal, you need to [enable Microsoft Defender for Cloud preview features in the Defender portal.](/defender-xdr/preview).
+>
+> :::image type="content" source="media/ai-security-posture/enable-preview-features.png" alt-text="Screenshot that shows Defender for Cloud's preview features set to enabled in the Defender portal." lightbox="media/ai-security-posture/enable-preview-features.png":::
 
 Learn how to [Protect your AI agents (Preview)](/defender-xdr/ai-agent-inventory).
 
@@ -78,7 +81,7 @@ Defender for Cloud assesses AI workloads. It issues recommendations on identity,
 
 #### Detect IaC misconfigurations
 
-DevOps security detects IaC misconfigurations, which can expose generative AI applications to security vulnerabilities, such as overexposed access controls or inadvertent publicly exposed services. These misconfigurations could lead to data breaches, unauthorized access, and compliance issues, especially when handling strict data privacy regulations.
+DevOps security detects IaC misconfigurations, which can expose generative AI applications to security vulnerabilities, such as overexposed access controls or inadvertently publicly exposed services. These misconfigurations could lead to data breaches, unauthorized access, and compliance issues, especially when handling strict data privacy regulations.
 
 Defender for Cloud assesses your generative AI apps configuration and provides security recommendations to improve your AI security posture.
 

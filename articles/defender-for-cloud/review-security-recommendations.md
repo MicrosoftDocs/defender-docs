@@ -2,9 +2,9 @@
 title: Review Security Recommendations
 description: Learn how to review security recommendations in Microsoft Defender for Cloud to improve the security posture of your environments.
 ms.topic: how-to
-author: ElazarK
-ms.author: elkrieger
-ms.date: 04/22/2025
+author: dlanger
+ms.author: dlanger
+ms.date: 12/03/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.

@@ -4,7 +4,6 @@ description: Troubleshoot Gated Deployment in Kubernetes with this guide. Resolv
 #customer intent: As a security team member, I want to troubleshoot why Gated Deployment is not active after enabling Defender for Containers so that I can ensure container image security policies are enforced.
 author: Elazark
 ms.author: elkrieger
-ms.reviewer: dacurwin
 ms.date: 10/29/2025
 ms.topic: concept-article
 ---
