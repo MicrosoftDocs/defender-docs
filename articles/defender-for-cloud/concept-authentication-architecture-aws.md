@@ -7,7 +7,7 @@ ms.date: 11/02/2025
 
 # Authentication architecture for AWS connectors
 
-When you connect an AWS account to Microsoft Defender for Cloud, Defender for Cloud uses federated authentication to securely access AWS APIs and assess configuration posture. This article explains how identity trust is established across clouds and how short-lived credentials are exchanged.
+When you connect an Amazon Web Services (AWS) account to Microsoft Defender for Cloud, Defender for Cloud uses federated authentication to securely access AWS APIs and assess configuration posture. This article explains how identity trust is established across clouds and how short-lived credentials are exchanged.
 
 ## Federated authentication overview
 
@@ -22,11 +22,11 @@ During onboarding, the CloudFormation template creates the authentication compon
 - An **OpenID Connect (OIDC) identity provider** bound to a Microsoft-managed Microsoft Entra application  
 - One or more **IAM roles** that Defender for Cloud can assume through web identity federation
 
-Depending on the Defender offering you enable, additional AWS resources may be created as part of the onboarding process.
+Depending on the Defender offering you enable, additional AWS resources might be created as part of the onboarding process.
 
 ## Identity provider model
 
-Defender for Cloud is a SaaS service and authenticates to AWS using OIDC federation with Microsoft-managed Microsoft Entra applications. The service cannot use identities from a customer’s Entra tenant to request federated AWS credentials because it operates independently of customer-managed identity providers. Using a Microsoft-managed identity ensures that authentication is handled consistently across Defender offerings.
+Defender for Cloud is a SaaS service and authenticates to AWS using OIDC federation with Microsoft-managed Microsoft Entra applications. The service can't use identities from a customer’s Entra tenant to request federated AWS credentials because it operates independently of customer-managed identity providers. Using a Microsoft-managed identity ensures that authentication is handled consistently across Defender offerings.
 
 When you onboard an AWS account, the CloudFormation template deploys the authentication components into your AWS environment. These components include:
 
