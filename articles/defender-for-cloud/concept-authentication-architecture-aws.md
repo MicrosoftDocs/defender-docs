@@ -1,7 +1,7 @@
 ---
 title: Authentication architecture for AWS connectors
 description: Learn how Microsoft Defender for Cloud authenticates to AWS using short-lived credentials, federated trust, and role-based access controls.
-ms.topic: conceptual
+ms.topic: article
 ms.date: 11/02/2025
 ---
 
@@ -41,7 +41,7 @@ During onboarding, the CloudFormation template automatically defines:
 
 These values are automatically generated during onboarding and appear in the CloudFormation template that you download from the Azure portal. To verify the connection is legitimate, compare the `aud` (audience) value in the IAM role’s trust relationship with the corresponding parameter values defined in the CloudFormation template.
 
-:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png" alt-text="Screenshot showing the OIDC identity provider and IAM role trust relationship created by the onboarding CloudFormation template." lightbox="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png":::
+:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-openid-connect-provider.png" alt-text="Screenshot showing the OIDC identity provider and IAM role trust relationship created by the onboarding CloudFormation template." lightbox="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png":::
 
 ## Cross-cloud authentication flow
 
