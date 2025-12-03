@@ -15,8 +15,6 @@ Microsoft Defender for Cloud proactively utilizes a dynamic engine that assesses
 
 When Defender for Cloud performs a risk assessment of your security issues, the engine identifies the most significant security risks while distinguishing them from less risky issues. The recommendations are then sorted based on their risk level, allowing you to address the security issues that pose immediate threats with the greatest potential of being exploited in your environment.
 
-Although risk prioritization doesn't affect the secure score, it helps you to address the most critical security issues in your environment by focusing on urgent security concerns and making remediation efforts more efficient and effective.
-
 ## Prerequisites
 
 Risk prioritization and governance are supported only with the [Defender CSPM plan](concept-cloud-security-posture-management.md#plan-availability). While recommendations are included with the [Foundational CSPM plan](concept-cloud-security-posture-management.md#plan-availability), risk prioritization features require the enhanced capabilities of Defender CSPM.
