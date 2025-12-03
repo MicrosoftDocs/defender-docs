@@ -351,7 +351,7 @@ For complete guidance on case features, workflows, linking incidents and IoCs, R
 
 ## Get started with Microsoft Sentinel data lake
 
-Microsoft has expanded its industry-leading SIEM solution, Microsoft Sentinel, to include a unified, security data lake, designed to help optimize costs, simplify data management, and accelerate the adoption of AI in security operations. This modern data lake serves as the foundation for the Microsoft Sentinel platform. It has a cloud-native architecture and is purpose-built for security, bringing together all security data for greater visibility, deeper security analysis and contextual awareness. It provides affordable, long-term retention allowing organizations to maintain robust security while not compromising on costs. For more information, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datalake/sentinel-lake-overview).
+Microsoft has expanded its industry-leading SIEM solution, Microsoft Sentinel, to include a unified, security data lake, designed to help optimize costs, simplify data management, and accelerate the adoption of AI in security operations. This modern data lake serves as the foundation for the Microsoft Sentinel platform. It has a cloud-native architecture and is purpose-built for security, bringing together all security data for greater visibility, deeper security analysis and contextual awareness. It provides affordable, long-term retention allowing organizations to maintain robust security while not compromising on costs. 
 
 The Sentinel platform lets you to expand your MSSP offerings through professional services, managed services, and agentic solutions:
 -	Offer advisory, consulting, and strategic guidance on lake architectures, with high-value opportunities in deployment, configuration, and cost optimization.
@@ -359,26 +359,7 @@ The Sentinel platform lets you to expand your MSSP offerings through professiona
 -	Provide ongoing management of Sentinel data lake platforms and SOC operations, helping your customers lower data ingestion and retention costs while expanding recurring revenue streams through enhanced security protection opportunities.
 -	Differentiate by developing AI agentic solutions for automated threat enrichment and response, building analytics, and evolving SOAR to agent-based workflows, positioning yourselves as innovators in AI-driven security services.
 
-### Additional information
--	**Prerequisites:** Before onboarding to Microsoft Sentinel data lake, make sure that you've onboarded your Microsoft Sentinel experience to the Defender portal. For more information, see:
-    -	[Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
-    - [Onboard to Microsoft Sentinel data lake from the Defender portal](/azure/sentinel/datalake/sentinel-lake-onboard-defender)
--	**Regional support:** For supported regions, see [Geographical availability and data residency in Microsoft Sentinel](/azure/sentinel/geographical-availability-data-residency).
-
--	**Ingesting data into the data lake:** To ingest data into the Sentinel data lake, you can use existing Sentinel data connectors or custom connectors that bring data from Microsoft and third-party sources. Data retention is configured in table management. For more information, see [Set up connectors for the Microsoft Sentinel data lake](/azure/sentinel/datalake/sentinel-lake-connectors). 
-
-    You can also bring asset data from Microsoft services like Microsoft Entra, Azure resource graph, and Microsoft 365 into the data lake, but certain tables don't support data lake-only ingestion through either API or data connector UI.
-
--	**Data lake integration with existing Microsoft Security products:** The Sentinel data lake seamlessly integrates with Microsoft Security products by consolidating security data across the Security ecosystem. Once ingested, this unified data powers graph-based experiences in both Defender and Purview. It also lays the foundation for AI agents to accelerate and enhance threat detection and response. 
--	**Difference between the analytics and data lake tiers:** Microsoft Sentinel offers flexible, built-in data tiering to effectively meet diverse business use cases and achieve cost optimization goals. The analytics tier in Microsoft Sentinel supports all log types, providing full analytics, alerts, and query capabilities. This tier is suitable for high-value security data that indicates the status, usage, security posture, and performance of your environment. 
-
-    Data in the analytics tier is best monitored proactively with scheduled alerts and scheduled analytics to enable security detections. The Sentinel data lake enables low-cost storage, full KQL queries, Spark Notebooks, and scheduled jobs (both KQL and Notebook) using a single copy of their data kept in the data lake for long term retention. You can also promote data from the data lake tier to the analytics tier. For more information, see [How data tiers and retention work](/azure/sentinel/manage-data-overview#how-data-tiers-and-retention-work).
--	**KQL Queries:** The KQL queries page under **Data Lake exploration** lets you edit and run KQL queries on data lake resources. You can also create jobs to promote data from the data lake to the analytics tier or create aggregate tables in the data lake tier. For more information, see:
-    -	[Run KQL queries against the Microsoft Sentinel data lake](/azure/sentinel/datalake/kql-queries)
-    -	[Create jobs in the Microsoft Sentinel data lake](/azure/sentinel/datalake/kql-jobs)
-
--	**Auxiliary logs:** When you enable the Microsoft Sentinel data lake and you have the Auxiliary logs feature/plan, all auxiliary log tables are automatically available in the Sentinel data lake tier for use with the Sentinel data lake experiences. Logs that are ingested into existing analytics tier automatically get mirrored to lake at no additional cost. To ingest low-fidelity, high-volume, verbose log data at low cost into the Sentinel data lake, you can set the table tier to data lake tier. You can use existing first-party data connectors to enable access to their Microsoft Security product data from the Microsoft Sentinel data lake.
--	**Microsoft Defender data:** By default, Microsoft Defender retains threat hunting data in the **XDR default tier** for 30 days. This data isn't ingested into the analytics or data lake tiers by default. Supported XDR tables can be ingested into the analytics and data lake tiers by increasing the retention period to more than 30 days. For more information, see [Manage XDR data in Microsoft Sentinel](/azure/sentinel/manage-data-overview#manage-xdr-data-in-microsoft-sentinel).
+For more information, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datalake/sentinel-lake-overview).
 
 
 ## Get started with agentic AI
@@ -390,7 +371,7 @@ You can engage with your customers to sell consulting services that educate, ena
 -	**Partner-developed consulting services** - These services are available through the [Microsoft Marketplace](https://marketplace.microsoft.com/) and are your traditional consulting services. You can provide training workshops, implementation engagements, and assessments, proof-of-concepts, or proof-of-value deliveries. These services are great opportunities to improve your customer environment's security maturity, increase their staff's skilling and readiness, and showcase product return on investment with real-world use case scenarios.
 
 -	**Partner-developed security services** – These services are available in the [Microsoft Security Store](https://securitystore.microsoft.com/) and are your traditional security service offerings like partner-managed security services, partner-managed XDR solutions, and other partner-developed security services.
--	**Microsoft-developed Security Copilot agents** - These are [Microsoft-developed Security Copilot agents](https://www.microsoft.com/en-us/security/blog/2025/03/24/microsoft-unveils-microsoft-security-copilot-agents-and-new-protections-for-ai/?msockid=34642c80b7816cec21673fa0b62a6d20) that span across Microsoft Defender, Microsoft Sentinel, and other security solutions available within the Defender portal. Two examples are the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent.md) and the [Threat Intelligence Briefing Agent](/defender-xdr/threat-intel-briefing-agent-defender.md). For more information, see [Microsoft Security Copilot agents](/copilot/security/agents-security-copilot).
+-	**Microsoft-developed Security Copilot agents** - These are [Microsoft-developed Security Copilot agents](https://www.microsoft.com/en-us/security/blog/2025/03/24/microsoft-unveils-microsoft-security-copilot-agents-and-new-protections-for-ai/?msockid=34642c80b7816cec21673fa0b62a6d20) that span across Microsoft Defender, Microsoft Sentinel, and other security solutions available within the Defender portal. For more information, see [Microsoft Security Copilot agents](/copilot/security/agents-security-copilot).
 
 -	**Partner-developed Security Copilot agents** - These agents are available for purchase and deployment through the Microsoft Security Store. You can integrate your own published Security Copilot agents or other partner agents into your customers' Microsoft Defender environment. For more information, see [Partner agents](/copilot/security/agents-other).
 
@@ -399,6 +380,8 @@ Develop Security Copilot agents that can be monetized through the Microsoft Secu
 -	**Role/Persona-based agents** - Designed with skills to perform a specific type of persona or role like an L1 SOC Analyst
 -	**Scenario-based agents** - Designed with skills for a specific type of scenario like phishing, insider threat, or advanced persistent threats (APTs)
 -	**Product-based agents** - Designed with skills to integrate with a specific product/solution like Microsoft Defender or a third-party security vendors
+
+For more information, see [Microsoft Security Copilot agent development overview](/copilot/security/developer/custom-agent-overview).
 
 ### Use
 You can use the investment your customers have made with Microsoft and partner developed agents within their Microsoft Defender environment as part of their [partner managed SOC offering](https://www.microsoft.com/security/business/find-a-partner). This includes acting on behalf of your customer within their tenant as an augmentation of their internal team, or performing SOC activities from their tenant and leveraging multitenancy capabilities of Microsoft Defender through delegated access.
