@@ -57,6 +57,12 @@ Creating a connection to a repository requires an **Owner** role in the resource
 
 If you find content in a public repository where you aren't a contributor, first import, fork, or clone the content to a repo where you're a contributor. Then connect your repo to your Microsoft Sentinel workspace. For more information, see [Deploy custom content from your repository](ci-cd.md).
 
+
+### Maximum connections and deployments
+
+- Each Microsoft Sentinel workspace is currently limited to **five repository connections**.
+- Each Azure resource group is limited to **800 deployments** in its deployment history. If you have a high volume of template deployments one or more of your resource groups, you may see the `Deployment QuotaExceeded` error. For more information, see [DeploymentQuotaExceeded](/azure/azure-resource-manager/templates/deployment-quota-exceeded) in the Azure Resource Manager templates documentation.
+
 ## Plan your repository content
 
 Microsoft Sentinel repositories support deployment of content you store as [Bicep files](../azure-resource-manager/bicep/overview.md) or [Azure Resource Manager (ARM) templates](../azure-resource-manager/templates/overview.md). We recommend using Bicep, which is more intuitive and makes it easier to describe Azure resources and Microsoft Sentinel content. 
@@ -92,16 +98,6 @@ Even if your original content is an ARM template, consider converting to Bicep t
 
 
 For information on creating custom content from scratch, see the relevant [Microsoft Sentinel GitHub wiki](https://github.com/Azure/Azure-Sentinel/wiki#get-started) for each content type.
-
-### Validate your content
-
-The repositories deployment doesn't validate the content except to confirm it's in the correct JSON or Bicep format. Be sure to test your content within Microsoft Sentinel before deploying.
-
-
-### Maximum connections and deployments
-
-- Each Microsoft Sentinel workspace is currently limited to **five repository connections**.
-- Each Azure resource group is limited to **800 deployments** in its deployment history. If you have a high volume of template deployments one or more of your resource groups, you may see the `Deployment QuotaExceeded` error. For more information, see [DeploymentQuotaExceeded](/azure/azure-resource-manager/templates/deployment-quota-exceeded) in the Azure Resource Manager templates documentation.
 
 
 ## Improve performance with smart deployments
