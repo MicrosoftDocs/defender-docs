@@ -5,8 +5,8 @@ ms.service: microsoft-defender
 ms.subservice: unified-security-operations
 f1.keywords: 
   - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: high
 manager: orspodek
 audience: ITPro

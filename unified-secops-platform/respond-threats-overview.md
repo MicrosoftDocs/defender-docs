@@ -4,8 +4,8 @@ description: Learn about the features that help respond to threats in the Micros
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 02/23/2025
 ms.collection:
