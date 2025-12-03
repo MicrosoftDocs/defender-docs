@@ -28,6 +28,21 @@ During onboarding, the CloudFormation template creates authentication components
 
 These resources create the trust boundary between Microsoft Entra ID and AWS.
 
+## Identity provider model
+
+Defender for Cloud is a SaaS service and uses a Microsoft-managed Microsoft Entra application as the identity provider when authenticating to AWS. The service can't use identities from a customer’s Entra tenant to request federated credentials, because it operates independently of customer-managed identity providers. Using a Microsoft-managed identity ensures consistent token issuance, isolation between tenants, and a predictable authentication model across all Defender plans.
+
+Each plan that you enable creates its own AWS IAM role through the onboarding template. These roles define the least-privilege permissions that Defender for Cloud can assume when assessing posture and collecting configuration data.
+
+During onboarding, the CloudFormation template automatically defines:
+
+- the AWS OpenID Connect (OIDC) identity provider bound to the Microsoft-managed Entra application  
+- the IAM role trust policies that allow Defender for Cloud to request short-lived AWS credentials  
+
+These values are automatically generated during onboarding and appear in the CloudFormation template that you download from the Azure portal. To verify the connection is legitimate, compare the `aud` (audience) value in the IAM role’s trust relationship with the corresponding parameter values defined in the CloudFormation template.
+
+:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png" alt-text="Screenshot showing the OIDC identity provider and IAM role trust relationship created by the onboarding CloudFormation template." lightbox="media/concept-authentication-architecture-aws/cloudformation-oidc-provider.png":::
+
 ## Cross-cloud authentication flow
 
 The following diagram shows how Defender for Cloud authenticates to AWS by exchanging Microsoft Entra tokens for short-lived AWS credentials.
