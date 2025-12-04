@@ -86,8 +86,9 @@ The following key capabilities are available for each tenant you have access to 
 MTO supports multi tenant single workspaces. This means that you can query multiple tenants (multi tenant single workspace) through Advanced Hunting without Lighthouse.
 [Lighthouse](/azure/lighthouse/) is required if you want to:
 
-- Use features such as workbooks or analytic rules on Sentinel data.
-- Query multiple workspace environments.
+- Query secondary workspaces in other tenants, both from MTO or `security.microsoft.com`, through Advanced Hunting.
+- Use features such as workbooks or analytic rules on Sentinel data in secondary workspaces in other tenants.
+- Query multiple workspace environments in other tenants.
 
 ## Next steps
 
