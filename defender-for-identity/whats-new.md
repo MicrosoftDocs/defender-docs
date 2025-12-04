@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/16/2025
+ms.date: 11/30/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
 
-Defender for Identity offers automatic Windows event-auditing configuration for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones; admins can enable it in the Defender portal or via the Graph API. The new feature will roll out gradually over the next few weeks, and related health alerts are expected to be available in early Jan 2026.
+Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you will be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API. 
 
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
