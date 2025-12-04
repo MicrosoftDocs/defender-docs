@@ -69,7 +69,7 @@ The possible values for the `status` field are:
 - UnderException 
 - PartialException
 
-This field is supported for [CVE exceptions](/defender-vulnerability-management/tvm-exception-overview.md#cve-exceptions-preview).
+This field is supported for [CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#cve-exceptions-preview).
 
 ## Example
 
