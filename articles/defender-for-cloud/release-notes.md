@@ -41,13 +41,13 @@ December 2, 2025
 
 As part of the ongoing deprecation of the Microsoft Entra Permissions Management functionality, Microsoft Defender for Cloud is updating its Cloud Infrastructure Entitlement Management (CIEM) recommendation logic across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
-The updated model evaluates inactive identities based on unused role assignments rather than sign-in activity and uses a 90-day (previously 45) lookback window. Identities created within the past 90 days are not evaluated as inactive. Coverage for AWS has also been refined so that CIEM recommendations apply only to AWS Service Principals with reliably evaluated permissions, and serverless and compute resources are no longer included, which may result in changes to recommendation counts.
+The updated model evaluates inactive users and roles based on unused role assignments rather than sign-in activity and uses a 90-day (previously 45) lookback window. Identities created within the past 90 days are not evaluated as inactive. Coverage for AWS has also been refined so that CIEM recommendations apply only to AWS Service Principals with reliably evaluated permissions, and serverless and compute resources are no longer included, which may result in changes to recommendation counts.
 
 **Cloud-specific requirements**  
 - **AWS:** CIEM evaluations for SAML and SSO identities require [AWS CloudTrail Logs (Preview)](quickstart-onboard-aws.md) to be enabled in the Defender CSPM plan.  
 - **GCP:** CIEM evaluations require [Cloud Logging ingestion (Preview)](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview) to be enabled in the Defender CSPM plan.
 
-The Permissions Creep Index (PCI) metric is being deprecated as part of this update and will no longer appear in the Defender for Cloud recommendations page. This update provides clearer guidance, improved accuracy, reduced noise, and updated CIEM recommendations for both human and non-human identities across multicloud environments.
+The Permissions Creep Index (PCI) metric is being deprecated as part of this update and will no longer appear in the Defender for Cloud recommendations page. This update provides clearer guidance, improved accuracy, reduced noise, and updated CIEM recommendations for both users and roles across multicloud environments.
 
 Learn more about [permissions management in Defender for Cloud](permissions-management.md).
 
