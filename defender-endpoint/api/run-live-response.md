@@ -69,7 +69,7 @@ Runs a sequence of live response commands on a device
 
 - 25 concurrently running sessions (requests exceeding the throttling limit receives a "429 - Too many requests" response).
 
-- If the machine isn't available, the session is queued for up to three days.
+- If the machine isn't available, the session is queued for up to 2 hours.
 
 - RunScript command time-outs after 10 minutes.
 

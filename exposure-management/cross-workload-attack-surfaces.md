@@ -3,15 +3,15 @@ title: Overview of attack surface management in Microsoft Security Exposure Mana
 description: Learn about attack surface management in Microsoft Security Exposure Management. s
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 10/26/2025
 ---
 
 # Overview of attack surface management
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces spanning on-premises, cloud, and hybrid environments. With the integration of Defender for Cloud in the Defender portal, attack surface management includes hybrid attack paths that bridge on-premises and cloud contexts, providing comprehensive visibility across your entire digital estate.
 
 ## Enterprise exposure graph
 
@@ -32,21 +32,22 @@ The enterprise exposure graph and the exposure graph schemas extend the existing
 - The schemas provide attack surface information to help understand how potential threats can reach and compromise valuable assets.
 - You use the schema tables and operators to query the enterprise exposure graph. Queries allow you to inspect and search attack surface data, and to retrieve exposure information to help prevent risk.
 - The enterprise exposure graph currently includes assets, findings, and entity relationships from:
-  - Microsoft Defender for Cloud
+  - Microsoft Defender for Cloud (including Azure, AWS, and GCP resources)
   - Microsoft Defender for Endpoint
   - Microsoft Defender Vulnerability Management
   - Microsoft Defender for Identity
   - Microsoft Entra ID
+  - External data sources through Exposure Management connectors (ServiceNow CMDB, Tenable, Qualys, Rapid7)
 
 By correlating exposure queries with other graph data, such as incident data, you can uncover risk to a greater degree.
 
 ## Attack surface map
 
-The attack surface map helps you to visualize the exposure data that you query using the exposure graph schema.  
+The attack surface map helps you to visualize the exposure data that you query using the exposure graph schema, including cloud resources and their relationships.  
 
-In the map you can explore the data, check what assets are at risk, contextualize them in a broader network framework, and prioritize security focus.
+In the map you can explore the data across hybrid environments, check what assets are at risk, contextualize them in a broader network framework that spans on-premises and cloud, and prioritize security focus.
 
-For example, you can check whether a particular asset has unwanted connections, or see whether a device has a path to the internet, and if so, what other devices are exposed.  
+For example, you can check whether a particular asset has unwanted connections across cloud and on-premises environments, see whether a device has a path to the internet through cloud resources, identify how cloud misconfigurations might expose on-premises assets, and understand the full scope of hybrid attack paths.
 
 ## Next steps
 

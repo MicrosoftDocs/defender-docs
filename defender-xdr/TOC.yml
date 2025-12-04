@@ -64,6 +64,8 @@
         href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your IoT/OT assets
         href: protect-against-iot-ot-threats.md
+      - name: Protect your custom AI agents
+        href: ai-agent-inventory.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -100,7 +102,6 @@
           href: move-alert-to-another-incident.md
         - name: Merge incidents manually
           href: merge-incidents-manually.md
-        - name: Alerts
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Investigate entity pages
@@ -239,6 +240,8 @@
             href: advanced-hunting-behaviorentities-table.md
           - name: BehaviorInfo
             href: advanced-hunting-behaviorinfo-table.md
+          - name: CampaignIno
+            href: advanced-hunting-campaigninfo-table.md            
           - name: CloudAppEvents
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
@@ -319,6 +322,8 @@
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
+          - name: FileMaliciousContentInfo
+            href: advanced-hunting-filemaliciouscontentinfo-table.md            
           - name: GraphApiAuditEvents
             href: advanced-hunting-graphapiauditevents-table.md            
           - name: IdentityAccountInfo
@@ -633,6 +638,8 @@
           href: alert-classification-password-spray-attack.md
       - name: Incident response playbooks
         href: /security/operations/incident-response-playbooks
+      - name: Customize incident responses
+        href: security-upload-guide.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
