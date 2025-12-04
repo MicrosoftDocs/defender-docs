@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 12/01/2025
+ms.date: 12/04/2025
 ---
 
 # FileMaliciousContentInfo (Preview)
@@ -31,7 +31,7 @@ ms.date: 12/01/2025
 > [!IMPORTANT]
 > Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `FileMaliciousContentInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about files that were identified as malicious by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams. Use this reference to construct queries that return information from this table.
+The `FileMaliciousContentInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
 > For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
