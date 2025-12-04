@@ -79,7 +79,7 @@ Conflicting rules are applied in scope order. For example, rules on a management
 1. Specify how the rule affects recommendations. (To apply the rule on already-generated recommendations, the rule can be re-executed using the UI or API.)
 
    - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date.
-   - **By risk level**: The rule assigns an owner and a due date to any recommendations that match the specified risk levels
+   - **By risk level**: The rule assigns an owner and a due date to any recommendations that match the specified risk levels.
    - **By recommendation category**: The rule assigns an owner and a due date to any recommendations that match the specified security category.
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
 
