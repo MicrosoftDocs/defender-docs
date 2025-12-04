@@ -21,7 +21,7 @@ For more information about normalization in Microsoft Sentinel, see [Normalizati
 
 ## Parsers
 
-Deploy ASIM authentication parsers from the [Microsoft Sentinel GitHub repository](https://aka.ms/DeployASIM). For more information about ASIM parsers, see the articles [ASIM parsers overview](normalization-parsers-overview.md)..
+Deploy ASIM authentication parsers from the [Microsoft Sentinel GitHub repository](https://aka.ms/DeployASIM). For more information about ASIM parsers, see the articles [ASIM parsers overview](normalization-parsers-overview.md).
 
 ### Unifying parsers
 

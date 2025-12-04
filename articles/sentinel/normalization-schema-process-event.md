@@ -49,7 +49,7 @@ The following filtering parameters are available:
 | **starttime** | datetime | Filter only process events occurred at or after this time. |
 | **endtime** | datetime | Filter only process events queries that occurred at or before this time. |
 | **commandline_has_any** | dynamic | Filter only process events for which the command line executed has **any** of the listed values. The length of the list is limited to 10,000 items. |
-| **commandline_has_all**| dynamic | Filter only process events for which the command line executed has **all** of the listed values.. The length of the list is limited to 10,000 items.
+| **commandline_has_all**| dynamic | Filter only process events for which the command line executed has **all** of the listed values. The length of the list is limited to 10,000 items.
 | **commandline_has_any_ip_prefix** | dynamic | Filter only process events for which the command line executed has **all** of the listed IP addresses or IP address prefixes. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.  |
 | **actingprocess_has_any** | dynamic | Filter only process events for which the acting process name, which includes the entire process path, has any of the listed values. The length of the list is limited to 10,000 items. |
 | **targetprocess_has_any** | dynamic| Filter only process events for which the target process name, which includes the entire process path, has any of the listed values. The length of the list is limited to 10,000 items.  |
@@ -59,10 +59,7 @@ The following filtering parameters are available:
 | **dvchostname_has_any**| dynamic | Filter only process events for which the device hostname, or device FQDN is available,  has any of the listed values. The length of the list is limited to 10,000 items. | 
 | **eventtype**| string | Filter only process events of the specified type. |
 
-
-
-
-or example, to filter only authentication events from the last day to a specific user, use:
+For example, to filter only authentication events from the last day to a specific user, use:
 
 ```kusto
 imProcessCreate (targetusername_has = 'johndoe', starttime = ago(1d), endtime=now())

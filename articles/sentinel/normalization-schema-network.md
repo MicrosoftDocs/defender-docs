@@ -222,7 +222,7 @@ Fields that appear in the table below are common to all ASIM schemas. Any guidel
 | Field | Class | Type | Description |
 |-------|-------|------|-------------|
 | <a name="dstappname"></a>**DstAppName** | Optional | String | The name of the destination application.<br><br>Example: `Facebook` |
-| <a name="dstappid"></a>**DstAppId** | Optional | String | The ID of the destination application, as reported by the reporting device.If [DstAppType](#dstapptype) is `Process`, `DstAppId` and `DstProcessId` should have the same value.<br><br>Example: `124` |
+| <a name="dstappid"></a>**DstAppId** | Optional | String | The ID of the destination application, as reported by the reporting device. If [DstAppType](#dstapptype) is `Process`, `DstAppId` and `DstProcessId` should have the same value.<br><br>Example: `124` |
 | <a name="dstapptype"></a>**DstAppType** | Optional | AppType | The type of the destination application. For a list of allowed values and further information, refer to [AppType](normalization-about-schemas.md#apptype) in the [Schema Overview article](normalization-about-schemas.md).<br><br>This field is mandatory if [DstAppName](#dstappname) or [DstAppId](#dstappid) are used. |
 | <a name="dstprocessname"></a>**DstProcessName**              | Optional     | String     |   The file name of the process that terminated the network session. This name is typically considered to be the process name.  <br><br>Example: `C:\Windows\explorer.exe`  |
 | <a name="process"></a>**Process**        | Alias        |            | Alias to the [DstProcessName](#dstprocessname) <br><br>Example: `C:\Windows\System32\rundll32.exe`|

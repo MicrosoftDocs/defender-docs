@@ -72,7 +72,7 @@ The following filtering parameters are available:
 
 Some parameter can accept both list of values of type `dynamic` or a single string value. To pass a literal list to parameters that expect a dynamic value, explicitly use a [dynamic literal](/kusto/query/scalar-data-types/dynamic?view=microsoft-sentinel&preserve-view=true#dynamic-literals). For example: `dynamic(['192.168.','10.'])`
 
-For example, to filter only audit events with the terms `install` or `update` in their [Operation](#operation) field, from the last day , use:
+For example, to filter only audit events with the terms `install` or `update` in their [Operation](#operation) field, from the last day, use:
 
 ```kusto
 imAuditEvent (operation_has_any=dynamic(['install','update']), starttime = ago(1d), endtime=now())
