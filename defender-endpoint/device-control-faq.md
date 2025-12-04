@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Device Control frequently asked questions
 description: Answers frequently asked questions about device control in Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: asr
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

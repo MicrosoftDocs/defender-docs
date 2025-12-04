@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/16/2025
+ms.date: 11/30/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -29,9 +29,9 @@ For updates about versions and features released six months ago or earlier, see 
 |---------|---------|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you may notice an increase in recorded activity.|
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
 
-Defender for Identity now offers automatic Windows event-auditing configuration for Defender for Identity sensors v3.x. Automatic event auditing streamlines deployment by applying required Windows auditing settings to new sensors and fixing any misconfigurations on existing sensors. Admins can enable the option in the Defender portal or using Graph API. 
+Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you will be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API. 
 
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
@@ -49,7 +49,6 @@ For more information, see: [Link or Unlink an Account to an Identity (Preview)](
 **Identity-level remediation actions**
 
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
-Defender for Identity now offers an opt-in automatic event-auditing configuration for unified sensors (V3.x). This feature streamlines deployment by automatically applying required Windows auditing settings to new sensors and fixing misconfigurations on existing ones. Admins can enable the option in the Defender for Identity Settings -> Advanced Features or via Graph API. The capability and its related health alerts will roll out globally beginning mid-November 2025.
 
 ### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
 
@@ -302,7 +301,7 @@ New [health issue](health-alerts.md) for cases where sensors running on VMware h
 Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
 Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
 
-Learn more about [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
+Learn more about [Privileged Identity Management.](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 

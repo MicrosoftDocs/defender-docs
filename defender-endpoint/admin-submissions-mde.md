@@ -6,8 +6,8 @@ ms.date: 05/06/2024
 appliesto:
   - Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro

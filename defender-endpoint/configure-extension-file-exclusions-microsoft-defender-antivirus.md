@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: thdoucet
