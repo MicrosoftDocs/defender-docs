@@ -3452,7 +3452,7 @@ You can [deploy the Defender agent](./defender-for-containers-enable.md?pivots=d
 
 With this announcement, the runtime protection - threat detection (workload) is now also generally available.
 
-Learn more about the Defender for Container's [feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+Learn more about the Defender for Container's [feature availability](support-matrix-defender-for-containers.md).
 
 You can also review [all available alerts](alerts-containers.md).
 
@@ -3464,7 +3464,7 @@ Defender for Container's vulnerability assessment (VA) is able to detect vulnera
 
 This feature is in preview and is only available for Linux images.
 
-To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](supported-machines-endpoint-solutions-clouds-containers.md#registries-and-images).
+To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](support-matrix-defender-for-containers.md).
 
 ### Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149
 
@@ -3871,7 +3871,7 @@ Learn how to protect and connect your [AWS environment](quickstart-onboard-aws.m
 
 Registry scan for Windows images is now supported in Azure Government and Microsoft Azure operated by 21Vianet. This addition is currently in preview.
 
-Learn more about our [feature's availability](supported-machines-endpoint-solutions-clouds-containers.md).
+Learn more about our [feature's availability](support-matrix-defender-for-containers.md).
 
 ## February 2022
 
@@ -4493,7 +4493,7 @@ These alerts are generated based on a new machine learning model and Kubernetes 
 
 | Alert (alert type)                                                                 | Description                                                                                                                                                                                                                                                                                                                                                      | MITRE tactic | Severity |
 |------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------:|----------|
-| **Anomalous pod deployment (Preview)**<br>(K8S_AnomalousPodDeployment)             | Kubernetes audit log analysis detected pod deployment that is anomalous, based on previous pod deployment activity. This activity is considered an anomaly when taking into account how the different features seen in the deployment operation are in relations to one another. The features monitored by this analytics include the container image registry used, the account performing the deployment, day of the week, how often does this account performs pod deployments, user agent used in the operation, is this a namespace which is pod deployment occur to often, or other feature. Top contributing reasons for raising this alert as anomalous activity are detailed under the alert extended properties. | Execution | Medium |
+| **Anomalous pod deployment (Preview)**<br>(K8S_AnomalousPodDeployment)             | Kubernetes audit log analysis detected an anomalous pod deployment based on previous deployment activity. This activity is considered anomalous when examining how the different features in the deployment operation relate to one another. The features monitored include the container image registry used, the deploying account, day of the week, deployment frequency for this account, user agent used, namespace deployment patterns, and other characteristics. The alert's extended properties detail the top contributing reasons for identifying this as anomalous activity. | Execution | Medium |
 | **Excessive role permissions assigned in Kubernetes cluster (Preview)**<br>(K8S_ServiceAcountPermissionAnomaly) | Analysis of the Kubernetes audit logs detected an excessive permissions role assignment to your cluster. From examining role assignments, the listed permissions are uncommon to the specific service account. This detection considers previous role assignments to the same service account across clusters monitored by Azure, volume per permission, and the impact of the specific permission. The anomaly detection model used for this alert takes into account how this permission is used across all clusters monitored by Azure Defender. | Privilege Escalation | Low |
 
 For a full list of the Kubernetes alerts, see [Alerts for Kubernetes clusters](alerts-containers.md).
