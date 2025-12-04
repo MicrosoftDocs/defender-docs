@@ -110,4 +110,4 @@ We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/
 The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
 ## Next step
-[Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
+[Activate the Microsoft Defender for Identity sensor](activiate-sensor.md)
