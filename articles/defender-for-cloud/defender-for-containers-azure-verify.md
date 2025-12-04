@@ -14,10 +14,10 @@ After you enable Defender for Containers, use this guide to verify all component
 
 Complete these verification steps in order:
 
-1. [ ] [Defender plan shows as enabled](#verify-plan-enablement)
-1. [ ] [Defender sensor pods are running](#verify-sensor-deployment)
-1. [ ] [Azure Policy add-on is enabled](#verify-azure-policy-add-on)
-1. [ ] [Test security alert generated successfully](#test-security-detection)
+1. [Defender plan shows as enabled](#verify-plan-enablement)
+1. [Defender sensor pods are running](#verify-sensor-deployment)
+1. [Azure Policy add-on is enabled](#verify-azure-policy-add-on)
+1. [Test security alert generated successfully](#test-security-detection)
 
 > [!TIP]
 > If any validation step fails, see the [Troubleshooting](#common-verification-issues) section for that component.
