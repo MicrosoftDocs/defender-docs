@@ -1,0 +1,106 @@
+---
+title: Anti-malware
+description: Learn how to configure Container runtime Anti-Malware Detection & Prevention to block or alert on malware in Azure, AWS, and GCP environments.
+#customer intent: As a security admin, I want to configure container runtime Anti-Malware policies so that I can detect and prevent malware in my containerized workloads.
+author: ElazarK
+ms.author: elkrieger
+ms.reviewer: elkrieger
+ms.date: 12/04/2025
+ms.topic: concept-article
+---
+
+**Container runtime Anti-Malware Detection & Prevention (Preview)** 
+
+Container runtime Anti-Malware detection & Prevention happens when a container is running an executable that was identified as Malware.  
+
+With this, you can receive an alert when such malware is identified, and you can also decide to block it. You can define Anti-Malware policies to specify conditions under which alerts should be generated, when blocking should happen, helping you distinguish between legitimate activities and potential threats. 
+
+Container runtime Anti-Malware Detection & Prevention is integrated into the Defender for Containers plan and is available for the Azure (AKS), Amazon (EKS), and Google (GKE) clouds. 
+
+**Prerequisites** 
+
+- To use Container runtime Anti-Malware detection & Prevention, you need to run the Defender for Container sensor, which is available for the AWS, GCP, and AKS clouds. Currently this is in Preview and is only supported Via Helm provisioning with sensor version \<XXX\>. 
+
+- The Defender for Container sensor must be enabled on the subscriptions and connectors. 
+
+- To create and modify Anti-Malware policies, you need Security Admin or higher permissions on the tenant. To view Anti-Malware policies, you need Security Reader or higher permissions on the tenant. 
+
+- In addition to the core sensor memory & CPU requirements ([Container security architecture - Microsoft Defender for Cloud \| Microsoft Learn](/azure/defender-for-cloud/defender-for-containers-architecture?tabs=defender-for-container-arch-aks#defender-sensor-component-details))  you'll need -    
+  
+:::image type="content" source="media/container-runtime-anti/image1.png" alt-text="Screenshot of memory and CPU requirements table.":::
+
+**Components** 
+
+The following components are part of Anti-Malware Detection & Prevention: 
+
+- An enhanced sensor capable of Anti-Malware Detection & Prevention 
+
+- Anti-Malware Policy configuration options 
+
+- A new Anti-Malware alert 
+
+**Configure Anti-Malware policies** 
+
+Create Anti-Malware policies to define when alerts should be generated. Each policy is made up of rules that define the conditions under which alerts should be generated. This allows you to tailor the feature to your specific needs, reducing false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces. 
+
+To create and configure policies, follow these steps: 
+
+1.  In Microsoft Defender for Cloud, go to **Management** > **Security rules**. 
+
+1.  Select **Anti-Malware policy** 
+
+    :::image type="content" source="media/container-runtime-anti/alert-on-malware-rule-screen.png" alt-text="Screenshot of Microsoft Defender for Cloud showing the Anti-Malware policy page with three rules: Alert on Malware, Default for workload, and Default for host." lightbox="media/container-runtime-anti/alert-on-malware-rule-screen.png":::
+
+1.  You receive three rules out of the box: the **Alert on Malware** rule which is a suggested rule for situations it’s a drifted binary. You may modify this rule as you see fit; and two **Default** Anti-malware rules (For workload and for host). The default rules are special rules that applies to everything if no other rule before it's matched. You can only modify their action, either to **alert or Block** or return it to the default **Ignore**.  
+
+    :::image type="content" source="media/container-runtime-anti/configure-new-rule-screen.png" alt-text="Screenshot of the Add Rule side panel showing fields for rule name, conditions, and actions with options to alert, block, or ignore." lightbox="media/container-runtime-anti/configure-new-rule-screen.png":::
+
+1.  To add a new rule, select **Add rule**. A side panel appears where you can configure the rule. 
+
+    :::image type="content" source="media/container-runtime-anti/rule-action-settings-screen.png" alt-text="Screenshot of the rule setup screen displaying input fields for Rule name and dropdowns for selecting actions." lightbox="media/container-runtime-anti/rule-action-settings-screen.png":::
+ 
+1.  To configure the rule, define the following fields: 
+
+    - **Rule name**: A descriptive name for the rule. 
+
+    - **Action**: Select **Ignore malware, Alert on Malware or Block Malware. ** 
+
+    - **Scope description**: A description of the scope to which the rule applies. 
+
+    - **Cloud scope**: The cloud provider to which the rule applies. You can choose any combination of Azure, AWS, or GCP. If you expand a cloud provider, you can select specific subscription. If you don't select the entire cloud provider, new subscriptions added to the cloud provider won't be included in the rule. 
+
+    - **Resource scope**:  
+
+       1. choose if the rule apply on he workload or the host level.  
+
+       1. You can add filters based on the following categories: **Container name**, **Image name**, **Namespace**, **Pod labels**, **Pod name**, or **Cluster name**. Then choose an operator: **Starts with**, **Ends with**, **Equals**, or **Contains**. Finally, enter the value to match. You can add as many conditions as needed by selecting **+Add condition**. 
+
+    - **Allow list for processes**: A list of processes that are allowed to run in the container. If a process not on this list is detected, an alert is generated. 
+
+    :::image type="content" source="media/container-runtime-anti/image5.png" alt-text="Screenshot of the Resource scope configuration options.":::
+
+1.  Select **Apply** to save the rule. 
+
+1.  Once you configure your rule, select and drag the rule up or down on the list to change its priority. The rule with the highest priority is evaluated first. If there's a match, it either generates an alert or ignores it (based on what was chosen for that rule) and the evaluation stops. If no match is found, the next rule is evaluated. If there's no match for any rule, the default rule is applied. 
+
+1.  To edit an existing rule, choose the rule and select **Edit**. This opens the side panel where you can make changes to the rule. 
+
+1.  You can select **Duplicate rule** to create a copy of a rule. This can be useful if you want to create a similar rule with only minor changes. 
+
+1. To delete a rule, select **Delete rule**. 
+
+1. After you configured your rules, select **Save** to apply the changes and create the policy. 
+
+1. Within 30 minutes, the sensors on the protected clusters are updated with the new policy. 
+
+**Adjust policies as needed** 
+
+Based on the alerts, you receive and your review of them, you might find it necessary to adjust your rules in the Anti-Malware policy. This could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined Anti Malware policies with their rules effectively balance security needs with operational efficiency. 
+
+The effectiveness of Anti Malware detection relies on your active engagement in configuring, monitoring, and adjusting policies to suit your environment's unique requirements. 
+
+## Related content
+
+- [Overview of Container security in Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+
+ 
