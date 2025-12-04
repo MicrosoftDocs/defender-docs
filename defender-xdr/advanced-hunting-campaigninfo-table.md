@@ -24,11 +24,12 @@ ms.topic: reference
 ms.date: 12/01/2025
 ---
 
-# CampaignInfo
+# CampaignInfo (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
+> [!IMPORTANT]
+> Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 
 The `CampaignInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about email campaigns identified by Microsoft Defender for Office 365. Use this reference to construct queries that return information from this table.
@@ -37,8 +38,7 @@ This advanced hunting table is populated by records from Defender for Office 365
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
-> [!IMPORTANT]
-> Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
