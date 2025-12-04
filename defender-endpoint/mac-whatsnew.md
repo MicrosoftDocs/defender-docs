@@ -59,6 +59,7 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 ## Releases for Defender for Endpoint on macOS
 
+
 ### Offline updates for security intelligence updates on macOS is now in public preview
 
 This feature enables organizations to configure offline updates for security intelligence updates (also referred to as definition updates or signatures) on macOS using a local mirror server. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
@@ -66,6 +67,19 @@ This feature enables organizations to configure offline updates for security int
 ### Behavior Monitoring for macOS is now generally available
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
+
+### Nov-2025 (Build: 101.25102.0016 | Release version: 20.125102.16.0)
+
+| Build: | **101.25102.0016** |
+|--------------------|-----------------------|
+| Release version: | **20.125102.16.0** |
+| Engine version: | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0** |
+
+##### What's new
+
+- Bug and performance fixes
+
 
 ### Oct-2025 (Build: 101.25082.0006  | Release version: 20.125082.6.0)
 
