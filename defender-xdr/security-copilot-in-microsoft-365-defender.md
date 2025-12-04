@@ -64,6 +64,11 @@ Investigating incidents with multiple alerts can be a daunting task. To immediat
 
 :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
+#### Detect threats faster
+
+The [Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md) in the Defender portal uses AI to continuously monitor and analyze system activity, proactively uncovering hidden threats and surfacing high-fidelity alerts. These features and capabilities empower organizations to detect and respond to threats with greater speed, accuracy, and confidence. 
+
+
 #### Take action on incidents through guided responses
 
 Resolving incidents require analysts to have an understanding of an attack to know what solutions are appropriate. Copilot recommends solutions through [guided responses](security-copilot-m365d-guided-response.md) that are specific to each incident.

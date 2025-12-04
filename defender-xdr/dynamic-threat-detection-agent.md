@@ -22,7 +22,13 @@ appliesto:
 - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Microsoft Security Copilot Dynamic Threat Detection Agent
+# Microsoft Security Copilot Dynamic Threat Detection Agent (preview)
+
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+> [!IMPORTANT]
+> Microsoft Security Copilot Dynamic Threat Detection Agent is currently in preview.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) includes the Dynamic Threat Detection Agent, an AI-powered security agent framework that automates investigation, triage, proactive threat hunting, and dynamic detection rule generation. It augments and amplifies human analyst capabilities, delivering comprehensive, real-time security insights across complex and high-volume signal environments. It enables your security teams to move beyond manual, reactive processes and embrace strategic, AI-driven threat management. 
 
@@ -46,9 +52,12 @@ To view more details about the alert, select the alert title. The Dynamic Threat
 >[!IMPORTANT]
 >The summary and recommended actions are AI-generated, so make sure to review and verify them for accuracy.
 
-You can then proceed to investigate the alert or incident. For more information, see the following articles:
-- [Investigate incidents in the Microsoft Defender portal](investigate-incidents.md)
-- [Investigate alerts in Microsoft Defender XDR](investigate-alerts.md)
+## Next steps
+
+As needed for in-process incidents, continue your [investigation](investigate-incidents.md).
 
 ## See also
-- [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md)
+- [Investigate alerts in Microsoft Defender XDR](investigate-alerts.md)
+- [Incidents overview](incidents-overview.md)
+- [Manage incidents](manage-incidents.md)
+- [Investigate incidents](investigate-incidents.md)
