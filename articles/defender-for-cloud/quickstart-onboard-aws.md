@@ -2,7 +2,7 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 11/18/2025
+ms.date: 12/04/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -293,110 +293,42 @@ Deploy the CloudFormation template by using Stack (or StackSet if you have a man
 
 ### Do you need to update your CloudFormation template?
 
-Depending on the change you made to your connector configuration, you might need to update your CloudFormation template. Use the following interactive decision tree to determine if you need to update your template:
+Depending on the change you made to your connector configuration, you might need to update your CloudFormation template. Follow this guide to determine if an update is required:
 
-<details>
-<summary><b>Question 1: Have you enabled a new Defender plan?</b> (e.g., CSPM, Data Security, Defender for Servers)</summary>
+#### Step 1: Check if you enabled a new Defender plan
 
-<br/>
+**Did you enable a new Defender plan?** (e.g., CSPM, Data Security, Defender for Servers)
 
-<details>
-<summary>✅ <b>YES</b> - I enabled a new Defender plan</summary>
+- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. Follow the steps in [Deploy a CloudFormation template to your AWS account](#deploy-a-cloudformation-template-to-your-aws-account). **STOP HERE.**
 
-<br/>
+- **NO** → Continue to Step 2.
 
-**Action Required:** Update the CloudFormation Stack with the latest template.
+#### Step 2: Check if you modified plan configuration
 
-Follow the steps in [Deploy a CloudFormation template to your AWS account](#deploy-a-cloudformation-template-to-your-aws-account) to apply the changes.
+**Did you modify plan configuration?** (e.g., enabled Agentless scanning or Defender for Endpoint deployment in a specific region)
 
-</details>
+- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector). **STOP HERE.**
 
-<details>
-<summary>❌ <b>NO</b> - I did not enable a new plan</summary>
+- **NO** → Continue to Step 3.
 
-<br/>
+#### Step 3: Check for new template version
 
-<details>
-<summary><b>Question 2: Are you modifying plan configuration?</b> (e.g., enabling Agentless scanning or Defender for Endpoint deployment in a specific region)</summary>
+**Has Microsoft released a new version of the CloudFormation template?**
 
-<br/>
+- **YES** → Continue to Step 4.
 
-<details>
-<summary>✅ <b>YES</b> - I modified plan configuration</summary>
+- **NO** → ❌ **NO ACTION REQUIRED** - No update of CloudFormation template needed. **STOP HERE.**
 
-<br/>
+#### Step 4: Check for functionality issues
 
-**Action Required:** Update the CloudFormation Stack with the latest template.
+**Are you experiencing functionality issues?** (e.g., Lambda function errors)
 
-Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector) to apply the changes.
+- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector). **STOP HERE.**
 
-</details>
-
-<details>
-<summary>❌ <b>NO</b> - I did not modify configuration</summary>
-
-<br/>
-
-<details>
-<summary><b>Question 3: Has Microsoft released a new version of the template?</b></summary>
-
-<br/>
-
-<details>
-<summary>✅ <b>YES</b> - A new template version is available</summary>
-
-<br/>
-
-<details>
-<summary><b>Question 4: Are you experiencing functionality issues?</b> (e.g., Lambda function errors)</summary>
-
-<br/>
-
-<details>
-<summary>✅ <b>YES</b> - I'm experiencing issues</summary>
-
-<br/>
-
-**Action Required:** Update the CloudFormation Stack with the latest template.
-
-Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector) to apply the changes.
-
-</details>
-
-<details>
-<summary>❌ <b>NO</b> - No functionality issues</summary>
-
-<br/>
-
-**No Action Required:** No update of CloudFormation template needed at this time.
-
-You can update when convenient to stay current with the latest features and improvements.
-
-</details>
-
-</details>
-
-</details>
-
-<details>
-<summary>❌ <b>NO</b> - No new template version available</summary>
-
-<br/>
-
-**No Action Required:** No update of CloudFormation template needed.
-
-</details>
-
-</details>
-
-</details>
-
-</details>
-
-</details>
+- **NO** → ⚠️ **OPTIONAL** - No update needed at this time. You can update when convenient to stay current with the latest features and improvements.
 
 > [!NOTE]
-> If you are experiencing specific errors or functionality issues not addressed by the decision tree, contact Microsoft Support with logs and details.
+> If you are experiencing specific errors or functionality issues not addressed by this guide, contact Microsoft Support with logs and details.
 
 ## Monitor your AWS resources
 
