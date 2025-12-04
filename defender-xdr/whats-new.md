@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 12/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -35,7 +35,7 @@ You can also get product updates and important notifications through the [messag
 ## December 2025
 - (Preview) The following advanced hunting schema tables are now available for preview:
     - The [`CampaignInfo`](advanced-hunting-campaigninfo-table.md) table contains contains information about email campaigns identified by Microsoft Defender for Office 365
-    - The [`FileMaliciousContentInfo`](advanced-hunting-filemaliciouscontentinfo-table.md) table contains information about files that were identified as malicious by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams
+    - The [`FileMaliciousContentInfo`](advanced-hunting-filemaliciouscontentinfo-table.md) table contains information about files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams
 - (GA) The [hunting graph](advanced-hunting-graph.md) in advanced hunting is now generally available. It also now has two new predefined threat scenarios that you can use to render your hunts as interactive graphs.
 - (GA) Advanced hunting now supports custom functions that use tabular parameters. With tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. [Learn more](advanced-hunting-custom-functions.md#create-custom-functions-with-tabular-parameters) 
 
