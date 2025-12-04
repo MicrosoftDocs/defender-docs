@@ -14,10 +14,10 @@ After you enable Defender for Containers, use this article to verify all compone
 
 Complete these verification steps in order:
 
-1. [ ] [GCP connector shows as connected](#verify-connector-status)
-1. [ ] [GKE clusters connected to Arc](#verify-arc-connection)
-1. [ ] [Defender sensor pods running](#verify-sensor-deployment)
-1. [ ] [Alerts appearing](#view-alerts-for-gke-clusters)
+1. [GCP connector shows as connected](#verify-connector-status)
+1. [GKE clusters connected to Arc](#verify-arc-connection)
+1. [Defender sensor pods running](#verify-sensor-deployment)
+1. [Alerts appearing](#view-alerts-for-gke-clusters)
 
 > [!TIP]
 > If any validation step fails, see [Common verification issues](#common-verification-issues) or [Configure advanced settings](defender-for-containers-gcp-configure.md) for troubleshooting guidance.
