@@ -6,7 +6,7 @@ ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
-# Defender for Containers on AWS (EKS) - Overview
+# Defender for Containers on AWS (EKS) - overview
 
 Microsoft Defender for Containers extends enterprise-grade security to your Amazon Elastic Kubernetes Service (EKS) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all managed through Microsoft Defender for Cloud.
 

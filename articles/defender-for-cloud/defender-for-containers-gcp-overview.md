@@ -6,7 +6,7 @@ ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
-# Defender for Containers on GCP (GKE) - Overview
+# Defender for Containers on GCP (GKE) - overview
 
 Microsoft Defender for Containers extends enterprise-grade security to your Google Kubernetes Engine (GKE) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all while maintaining the flexibility and scale that GCP customers expect.
 

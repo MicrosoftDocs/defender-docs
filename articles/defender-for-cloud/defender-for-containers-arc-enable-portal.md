@@ -47,10 +47,10 @@ If your Kubernetes cluster isn't already connected to Azure Arc, follow these st
 1. Select **Add a Kubernetes cluster with Azure Arc**.
 
 1. Follow the connection instructions:
-   - Select or create a resource group
-   - Enter a cluster name
-   - Choose a region
-   - Add tags (optional)
+   1. Select or create a resource group
+   1. Enter a cluster name
+   1. Choose a region
+   1. Add tags (optional)
 
 1. In the **Cluster details** tab, copy and run the registration script on your cluster:
 
@@ -108,7 +108,7 @@ Follow these steps to enable comprehensive protection for all your Arc-enabled c
 
 1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/extension-recommendation.png" alt-text="Microsoft Defender for Cloud's recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/tutorial-enable-containers-azure/extension-recommendation.png":::
+    :::image type="content" source="media/tutorial-enable-containers-azure/extension-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud's recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/tutorial-enable-containers-azure/extension-recommendation.png":::
 
 1. Select the recommendation.
 
@@ -130,10 +130,10 @@ Follow these steps to enable comprehensive protection for all your Arc-enabled c
 1. Select **+ Add**.
 
 1. Install the **Microsoft Defender for Containers** extension:
-   - Search for "Microsoft Defender"
-   - Select the extension
-   - Configure the Log Analytics workspace
-   - Complete installation
+   1. Search for "Microsoft Defender"
+   1. Select the extension
+   1. Configure the Log Analytics workspace
+   1. Complete installation
 
 1. Repeat to install **Azure Policy for Kubernetes** extension if needed.
 

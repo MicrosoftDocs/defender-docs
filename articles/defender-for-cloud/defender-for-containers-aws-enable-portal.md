@@ -117,9 +117,9 @@ AWS-specific requirements:
 1. Download the CloudFormation template from the portal.
 
 1. Deploy the CloudFormation stack in AWS:
-   - Open AWS CloudFormation console
-   - Create a new stack with the downloaded template
-   - Review and create the stack
+   1. Open AWS CloudFormation console
+   1. Create a new stack with the downloaded template
+   1. Review and create the stack
 
 1. After stack creation completes, copy the role ARN from the stack outputs.
 

@@ -6,7 +6,7 @@ ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
-# Defender for Containers on Arc-enabled Kubernetes - Overview
+# Defender for Containers on Arc-enabled Kubernetes - overview
 
 Microsoft Defender for Containers extends enterprise-grade security to your Kubernetes clusters running anywhere—on-premises, in datacenters, at the edge, or in other clouds—through Azure Arc integration. This solution provides the same comprehensive protection you get in the cloud, including vulnerability assessment, runtime threat detection, software supply chain capabilities, and security posture management, for your hybrid and multicloud Kubernetes environments.
 

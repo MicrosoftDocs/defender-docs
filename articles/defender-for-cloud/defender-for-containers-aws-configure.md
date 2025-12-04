@@ -203,7 +203,7 @@ kubectl describe pods -n kube-system -l app=microsoft-defender
 1. **Test changes**: Test configuration changes in non-production environments first.
 1. **Document settings**: Maintain documentation of custom configurations.
 1. **Monitor impact**: Watch for performance impact after changes.
-1. **Backup settings**: Export configurations before major changes.
+1. **Back up settings**: Export configurations before major changes.
 1. **Track exclusions**: Document why certain clusters or components are excluded.
 
 ## Related content

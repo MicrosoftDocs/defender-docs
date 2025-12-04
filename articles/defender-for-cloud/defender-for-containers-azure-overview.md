@@ -6,7 +6,7 @@ ms.date: 11/27/2025
 ai-usage: ai-assisted
 ---
 
-# Defender for Containers on Azure (AKS) - Overview
+# Defender for Containers on Azure (AKS) - overview
 
 Microsoft Defender for Containers provides enterprise-grade security for Azure Kubernetes Service (AKS) clusters. It offers comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all natively integrated with Azure services.
 
@@ -34,7 +34,7 @@ This deep integration means you get comprehensive security without managing extr
 
 ## Key capabilities
 
-Defender for Containers provides security across three critical areas:
+Defender for Containers provides security across four critical areas:
 
 | Capability | Description | Key Features |
 |------------|-------------|--------------|
@@ -73,7 +73,7 @@ Before deploying Defender for Containers on AKS, ensure you meet these requireme
 
 - AKS clusters running Kubernetes 1.19 or later
 - Network connectivity for outbound HTTPS to Azure endpoints
-- By default, AKS clusters have unrestricted outbound (egress) internet access. Clusters with restricted egress, must allow specific endpoints. See: [Microsoft Defender for Containers - Required FQDN/application rules](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers)
+- By default, AKS clusters have unrestricted outbound (egress) internet access. Clusters with restricted egress must allow specific endpoints. See: [Microsoft Defender for Containers - Required FQDN/application rules](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers)
 
 > [!NOTE]
 > For detailed prerequisites and setup instructions, see:

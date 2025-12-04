@@ -38,7 +38,7 @@ First, enable the Defender for Containers plan on your subscription:
 
 1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/containers-enabled-aks.png" alt-text="Screenshot of the Defender plans page that shows where to toggle the containers plan switch to on is located." lightbox="media/tutorial-enable-containers-azure/containers-enabled-aks.png":::
+   :::image type="content" source="media/tutorial-enable-containers-azure/containers-enabled-aks.png" alt-text="Screenshot showing the Containers plan toggle switch on the Defender plans page." lightbox="media/tutorial-enable-containers-azure/containers-enabled-aks.png":::
 
 ## Configure plan components
 
@@ -100,7 +100,7 @@ When you enable the Defender sensor setting, it automatically deploys to all AKS
 
 1. Search for and select "Azure Kubernetes Service clusters should have Defender profile enabled".
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Azure Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
+   :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot showing the recommendations page with the Azure Kubernetes Service cluster recommendation highlighted in the search results." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
 
 1. Select the AKS clusters that need the sensor.
 
@@ -125,7 +125,7 @@ To deploy the Defender sensor to specific AKS clusters:
 
 1. On the Microsoft Defender for Cloud page for your cluster, select **Settings** in the top row, locate the **Defender sensor** row, and toggle it to **On**.
 
-   :::image type="content" source="media/defender-for-containers-enable-plan-aks/defender-sensor-on.png" alt-text="Defender sensor toggled to on." lightbox="media/defender-for-containers-enable-plan-aks/defender-sensor-on.png":::
+   :::image type="content" source="media/defender-for-containers-enable-plan-aks/defender-sensor-on.png" alt-text="Screenshot of Defender sensor toggled to on." lightbox="media/defender-for-containers-enable-plan-aks/defender-sensor-on.png":::
 
 1. Select **Save**.
 

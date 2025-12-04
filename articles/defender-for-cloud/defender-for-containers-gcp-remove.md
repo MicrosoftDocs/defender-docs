@@ -24,7 +24,7 @@ The components and roles fall under two removal-type categories:
 
 ## GCP scenarios
 
-### Resource created via script
+### Resources created via script
 
 | Offering                                                     | Resource                                                 | Manual offboarding                                           | Removal information |
 | ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------- |
