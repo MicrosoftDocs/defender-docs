@@ -27,9 +27,6 @@ Note: Once the opt-in is selected, it takes up to 24 hours for the data to popul
 
 Yes, Azure, AWS, GCP, and on-premises environments are supported.
 
->[!Note]
-> It is not currently supported in Government clouds.
-
 ### What are the risks associated with this move?
 
 There is no operational risk in transitioning to the Defender portal. The experience is designed with parallel functionalities in both the Azure and Defender portal. Customers can choose to enable the new experience without disrupting their experience in the Azure portal. However, there are known limitations that customers should be aware of while testing new capabilities. Read more in the official documentation here, [Known limitations](known-limitations.md).
