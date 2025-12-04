@@ -155,6 +155,7 @@ Alternative access paths to recommendations:
 > **Why you might see different resources between the Azure portal and Defender portal:**
 > - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
 > - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
+> - Resources tied to free subscriptions do not currently appear in the Defender portal.
 
 ## Understanding risk prioritization in Defender portal
 
@@ -297,17 +298,6 @@ Key improvements in the cloud recommendations experience include:
 - **Risk-based scoring**: New scoring that weighs recommendations based on severity, asset context, and potential impact
 - **Enhanced data**: Core recommendation data from Azure Recommendations enriched with additional fields and capabilities from Exposure Management
 - **Prioritized by criticality**: Greater emphasis on critical issues that pose the highest risk to your organization
-
-The recommendation details page provides comprehensive information including:
-
-1. **Overview**: Summary of the recommendation with:
-   - - Description
-   - Recommendation details (risk level, attack paths, status, owner)
-   - Exposed asset details (Asset name, type, environment)
-1. **Remediation steps** where available.
-1. **Map preview**: A visual representation of the resource's attack surface and its relation to potential attack scenarios.
-1. **Related initiatives**: The security initiatives and compliance frameworks associated with the recommendation.
-1. **Associated CVEs**: Links to relevant Common Vulnerabilities and Exposures when applicable.
 
 The unified experience ensures that cloud security recommendations are contextualized within the broader security landscape, enabling more informed decision-making and efficient remediation workflows.
 
