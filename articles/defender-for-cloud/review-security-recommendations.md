@@ -81,7 +81,7 @@ On the recommendations page, you can review the following risk-prioritized detai
 > This capability is currently in preview.
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
-The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
+The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities, misconfigurations, and exposed secrets. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -287,7 +287,7 @@ For each view you will view the **Cloud secure score**, **Score history**, **Rec
 > - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and does not affect Secure Score yet.
 > - Secure Score currently applies to the parent recommendation only, not to each individual item.
 >
- **Tip**: If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
+> If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
 
 With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
 
