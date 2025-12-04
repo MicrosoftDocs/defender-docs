@@ -299,7 +299,7 @@ Depending on the change you made to your connector configuration, you might need
 
 **Did you enable a new Defender plan?** (e.g., CSPM, Data Security, Defender for Servers)
 
-- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. Follow the steps in [Deploy a CloudFormation template to your AWS account](#deploy-a-cloudformation-template-to-your-aws-account). **STOP HERE.**
+- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. **STOP HERE.**
 
 - **NO** → Continue to Step 2.
 
@@ -307,7 +307,7 @@ Depending on the change you made to your connector configuration, you might need
 
 **Did you modify plan configuration?** (e.g., enabled Agentless scanning or Defender for Endpoint deployment in a specific region)
 
-- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector). **STOP HERE.**
+- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. **STOP HERE.**
 
 - **NO** → Continue to Step 3.
 
