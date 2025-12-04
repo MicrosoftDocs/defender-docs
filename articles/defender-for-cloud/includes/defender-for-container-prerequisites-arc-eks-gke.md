@@ -2,11 +2,11 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 07/27/2022
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ---
 
-## Network requirements
+### Network requirements
 
 Validate that the following endpoints for public cloud deployments are configured for outbound access. Configuring them for outbound access helps ensure that the Defender sensor can connect to Microsoft Defender for Cloud to send security data and events.
 

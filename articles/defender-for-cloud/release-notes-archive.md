@@ -1,8 +1,8 @@
 ---
 title: Archive of what's new in Microsoft Defender for Cloud
 description: A description of what's new and changed in Microsoft Defender for Cloud from six months ago and earlier.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: reference
 ms.date: 07/06/2025
 ms.custom: sfi-ga-nochange, sfi-image-nochange
@@ -322,7 +322,7 @@ Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md
 
 November 26, 2024
 
-You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft Defender XDR portal or Microsoft Purview portal.
+You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview portal.
 
 With this change, all custom information types and sensitivity labels are automatically imported into the Microsoft Defender for Cloud portal.
 
@@ -332,12 +332,12 @@ Learn more about [data sensitivity settings](data-sensitivity-settings.md#import
 
 November 26, 2024
 
-Until recently, Defender for Cloud imported all sensitivity labels from the Microsoft Defender XDR portal that met the following two conditions:
+Until recently, Defender for Cloud imported all sensitivity labels from the Microsoft 365 Defender portal that met the following two conditions:
 
 - Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
 - The sensitivity label has an automatic labeling rule configured.
 
-As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft Defender XDR portal and the Microsoft Purview portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with "Items -> Files" before this change took place are automatically migrated to the new "Files and other data assets" scope.
@@ -1448,7 +1448,7 @@ The updated experience for managing security policies, initially released in Pre
 
 February 26, 2024
 
-Azure Kubernetes Service (AKS) threat detection features in Defender for Containers are now fully supported in commercial, Azure Government, and Azure operated by 21Vianet. [Review](support-matrix-defender-for-containers.md?tabs=azurert#runtime-protection-features) supported features.
+Azure Kubernetes Service (AKS) threat detection features in Defender for Containers are now fully supported in commercial, Azure Government, and Azure China 21Vianet clouds. [Review](support-matrix-defender-for-containers.md?tabs=azurert#runtime-protection-features) supported features.
 
 ### Update: New version of Defender sensor for Defender for Containers
 
@@ -1547,7 +1547,7 @@ Learn more about [agentless malware scanning](agentless-malware-scanning.md) for
 
 January 15, 2024
 
-We're announcing the general availability (GA) of the integration between Defender for Cloud and Microsoft Defender XDR (formerly Microsoft Defender XDR).
+We're announcing the general availability (GA) of the integration between Defender for Cloud and Microsoft Defender XDR (formerly Microsoft 365 Defender).
 
 The integration brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender for Cloud and the Defender XDR integration, SOC teams can discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Office 365, and more.
 
@@ -1577,7 +1577,7 @@ January 9, 2024**
 
 **Estimated date for change: May 2024**
 
-The Defender for Servers built-in vulnerability assessment solution powered by Qualys is on a retirement path, which is estimated to complete on **May 1st, 2024**. If you're currently using the vulnerability assessment solution powered by Qualys, you should plan your [transition to the integrated Microsoft Defender vulnerability management solution](transition-to-built-in.md).
+The Defender for Servers built-in vulnerability assessment solution powered by Qualys is on a retirement path, which is estimated to complete on **May 1st, 2024**. If you're currently using the vulnerability assessment solution powered by Qualys, you should plan your [transition to the integrated Microsoft Defender vulnerability management solution](how-to-transition-to-built-in.yml).
 
 For more information about our decision to unify our vulnerability assessment offering with Microsoft Defender Vulnerability Management, you can read [this blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-cloud-unified-vulnerability-assessment-powered-by/ba-p/3990112).
 
@@ -1752,7 +1752,7 @@ For a list of all supported operating systems, see [Registries and images suppor
 | November 22 | [Defender for Cloud integration with ServiceNow](#defender-for-cloud-integration-with-servicenow) |
 | November 20 | [General Availability of the autoprovisioning process for SQL Servers on machines](#general-availability-of-the-autoprovisioning-process-for-sql-servers-on-machines-plan)|
 | November 15 | [General availability of Defender for APIs](#general-availability-of-defender-for-apis) |
-| November 15 | [Defender for Cloud is now integrated with Microsoft Defender XDR (Preview)](#defender-for-cloud-is-now-integrated-with-microsoft-defender-xdr-preview) |
+| November 15 | [Defender for Cloud is now integrated with Microsoft 365 Defender (Preview)](#defender-for-cloud-is-now-integrated-with-microsoft-365-defender-preview) |
 | November 15 | [General availability of Containers Vulnerability Assessment powered by Microsoft Defender Vulnerability Management (MDVM) in Defender for Containers and Defender for Container Registries](#general-availability-of-containers-vulnerability-assessment-powered-by-microsoft-defender-vulnerability-management-mdvm-in-defender-for-containers-and-defender-for-container-registries) |
 | November 15 | [Change to Container Vulnerability Assessments recommendation names](#change-to-container-vulnerability-assessments-recommendation-names) |
 | November 15 | [Risk prioritization is now available for recommendations](#risk-prioritization-is-now-available-for-recommendations) |
@@ -1828,7 +1828,7 @@ You can learn how to [Protect your APIs with Defender for APIs](defender-for-api
 
 You can also read [this blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-announces-general-availability-of-defender-for-apis/ba-p/3981488) to learn more about the GA announcement.
 
-### Defender for Cloud is now integrated with Microsoft Defender XDR (Preview)
+### Defender for Cloud is now integrated with Microsoft 365 Defender (Preview)
 
 November 15, 2023
 
@@ -2547,8 +2547,7 @@ The changes are listed as follows:
 |JIT firewall rule collection names | ASC-JIT | MDC-JIT |
 |JIT firewall rules names | ASC-JIT | MDC-JIT |
 
-Learn how to [secure your management ports with Just-In-Time access](enable-just-in-time-access.md
-).
+Learn how to [secure your management ports with Just-In-Time access](just-in-time-access-usage.yml).
 
 ### Onboard selected AWS regions
 
@@ -3435,7 +3434,7 @@ Updates in July include:
 - [General availability (GA) of the Cloud-native security agent for Kubernetes runtime protection](#general-availability-ga-of-the-cloud-native-security-agent-for-kubernetes-runtime-protection)
 - [Defender for Container's VA adds support for the detection of language specific packages (Preview)](#defender-for-containers-va-adds-support-for-the-detection-of-language-specific-packages-preview)
 - [Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149](#protect-against-the-operations-management-infrastructure-vulnerability-cve-2022-29149)
-- [Integration with Microsoft Entra Permissions Management](#integration-with-microsoft-entra-permissions-management)
+- [Integration with Entra Permissions Management](#integration-with-entra-permissions-management)
 - [Key Vault recommendations changed to "audit"](#key-vault-recommendations-changed-to-audit)
 - [Deprecate API App policies for App Service](#deprecate-api-app-policies-for-app-service)
 
@@ -3453,7 +3452,7 @@ You can [deploy the Defender agent](./defender-for-containers-enable.md?pivots=d
 
 With this announcement, the runtime protection - threat detection (workload) is now also generally available.
 
-Learn more about the Defender for Container's [feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+Learn more about the Defender for Container's [feature availability](support-matrix-defender-for-containers.md).
 
 You can also review [all available alerts](alerts-containers.md).
 
@@ -3465,7 +3464,7 @@ Defender for Container's vulnerability assessment (VA) is able to detect vulnera
 
 This feature is in preview and is only available for Linux images.
 
-To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](supported-machines-endpoint-solutions-clouds-containers.md#registries-and-images).
+To see all of the included language specific packages that have been added, check out Defender for Container's full list of [features and their availability](support-matrix-defender-for-containers.md).
 
 ### Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149
 
@@ -3475,11 +3474,13 @@ Log Analytics integrated with Azure HDInsight running OMI version 13 requires a 
 
 If you have Defender for Servers enabled with Vulnerability Assessment, you can use [this workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/OMI%20Vulnerability%20Dashboard) to identify affected resources.
 
-### Integration with Microsoft Entra Permissions Management
+### Integration with Entra Permissions Management
 
 Defender for Cloud has integrated with [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/), a cloud infrastructure entitlement management (CIEM) solution that provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP.
 
 Each Azure subscription, AWS account, and GCP project that you onboard, will now show you a view of your [Permission Creep Index (PCI)](/azure/active-directory/cloud-infrastructure-entitlement-management/ui-dashboard).
+
+Learn more about [Entra Permission Management (formerly Cloudknox)](other-threat-protections.md)
 
 ### Key Vault recommendations changed to "audit"
 
@@ -3870,7 +3871,7 @@ Learn how to protect and connect your [AWS environment](quickstart-onboard-aws.m
 
 Registry scan for Windows images is now supported in Azure Government and Microsoft Azure operated by 21Vianet. This addition is currently in preview.
 
-Learn more about our [feature's availability](supported-machines-endpoint-solutions-clouds-containers.md).
+Learn more about our [feature's availability](support-matrix-defender-for-containers.md).
 
 ## February 2022
 
@@ -4492,7 +4493,7 @@ These alerts are generated based on a new machine learning model and Kubernetes 
 
 | Alert (alert type)                                                                 | Description                                                                                                                                                                                                                                                                                                                                                      | MITRE tactic | Severity |
 |------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------:|----------|
-| **Anomalous pod deployment (Preview)**<br>(K8S_AnomalousPodDeployment)             | Kubernetes audit log analysis detected pod deployment that is anomalous, based on previous pod deployment activity. This activity is considered an anomaly when taking into account how the different features seen in the deployment operation are in relations to one another. The analytics monitors features such as the container image registry, the deploying account, the day of the week, the frequency of deployments from that account, the user agent, and whether pod deployments occur too often in the same namespace. Top contributing reasons for raising this alert as anomalous activity are detailed under the alert extended properties. | Execution | Medium |
+| **Anomalous pod deployment (Preview)**<br>(K8S_AnomalousPodDeployment)             | Kubernetes audit log analysis detected an anomalous pod deployment based on previous deployment activity. This activity is considered anomalous when examining how the different features in the deployment operation relate to one another. The features monitored include the container image registry used, the deploying account, day of the week, deployment frequency for this account, user agent used, namespace deployment patterns, and other characteristics. The alert's extended properties detail the top contributing reasons for identifying this as anomalous activity. | Execution | Medium |
 | **Excessive role permissions assigned in Kubernetes cluster (Preview)**<br>(K8S_ServiceAcountPermissionAnomaly) | Analysis of the Kubernetes audit logs detected an excessive permissions role assignment to your cluster. From examining role assignments, the listed permissions are uncommon to the specific service account. This detection considers previous role assignments to the same service account across clusters monitored by Azure, volume per permission, and the impact of the specific permission. The anomaly detection model used for this alert takes into account how this permission is used across all clusters monitored by Azure Defender. | Privilege Escalation | Low |
 
 For a full list of the Kubernetes alerts, see [Alerts for Kubernetes clusters](alerts-containers.md).
@@ -4550,7 +4551,7 @@ We've added two **preview** recommendations to deploy and maintain the endpoint 
 |[Endpoint protection health issues should be resolved on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000) |Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. Azure Security Center supported endpoint protection solutions are documented [here](./supported-machines-endpoint-solutions-clouds-servers.md?tabs=features-windows). Endpoint protection assessment is documented [here](endpoint-protection-recommendations-technical.md).<br />(Related policy: [Monitor missing Endpoint Protection in Azure Security Center](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faf6cd1bd-1635-48cb-bde7-5b15693900b9)) |Medium |
 
 > [!NOTE]
-> The recommendations show their freshness interval as 8 hours, but there are some scenarios in which this might take significantly longer. For example, when an on-premises machine is deleted, it takes 24 hours for Security Center to identify the deletion. After that, the assessment will take up to 8 hours to return the information. In that specific situation therefore, it might take 32 hours for the machine to be removed from the list of affected resources.
+> The recommendations show their freshness interval as 8 hours, but there are some scenarios in which this might take significantly longer. For example, when an on premises machine is deleted, it takes 24 hours for Security Center to identify the deletion. After that, the assessment will take up to 8 hours to return the information. In that specific situation therefore, it might take 32 hours for the machine to be removed from the list of affected resources.
 >
 > :::image type="content" source="media/release-notes/freshness-interval.png" alt-text="Freshness interval indicator for these two new Security Center recommendations":::
 
@@ -6548,8 +6549,7 @@ This update brings the following changes to this feature:
 
 - The recommendation is triggered only if there are open management ports.
 
-Learn more about [the JIT access feature](enable-just-in-time-access.md
-).
+Learn more about [the JIT access feature](just-in-time-access-usage.yml).
 
 ### Custom recommendations have been moved to a separate security control
 
@@ -6712,8 +6712,7 @@ The features, operation, and UI for Azure Security Center's just-in-time tools t
 - **Justification field** - When requesting access to a virtual machine (VM) through the just-in-time page of the Azure portal, a new optional field is available to enter a justification for the request. Information entered into this field can be tracked in the activity log.
 - **Automatic cleanup of redundant just-in-time (JIT) rules** - Whenever you update a JIT policy, a cleanup tool automatically runs to check the validity of your entire ruleset. The tool looks for mismatches between rules in your policy and rules in the NSG. If the cleanup tool finds a mismatch, it determines the cause and, when it's safe to do so, removes built-in rules that aren't needed anymore. The cleaner never deletes rules that you've created.
 
-Learn more about [the JIT access feature](enable-just-in-time-access.md
-).
+Learn more about [the JIT access feature](just-in-time-access-usage.yml).
 
 ### Two security recommendations for web applications deprecated
 
