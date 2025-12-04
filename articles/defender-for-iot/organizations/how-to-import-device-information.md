@@ -29,7 +29,7 @@ Before performing the procedures in this article, you must have:
 
 ## Import data from the OT sensor device map
 
-**To import device names,types groups, or Purdue layers**:
+**To import device names, types, groups, or Purdue layers**:
 
 1. Sign into your OT sensor and select **Device map** > **Export Devices** to export the device data already detected by your OT sensor.
 
