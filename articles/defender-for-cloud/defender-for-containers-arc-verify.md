@@ -14,10 +14,10 @@ After you enable Microsoft Defender for Containers, use this article to verify a
 
 Complete these verification steps in order:
 
-- [ ] [Arc connection is healthy](#verify-arc-connection)
-- [ ] [Defender extension shows as installed](#verify-defender-extension)
-- [ ] [Sensor pods are running](#verify-sensor-deployment)
-- [ ] [Recommendations appearing](#verify-security-insights)
+- [Arc connection is healthy](#verify-arc-connection)
+- [Defender extension shows as installed](#verify-defender-extension)
+- [Sensor pods are running](#verify-sensor-deployment)
+- [Recommendations appearing](#verify-security-insights)
 
 
 ## Verify Arc connection
