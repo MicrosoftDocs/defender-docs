@@ -14,9 +14,9 @@ After you enable Defender for Containers, use this guide to verify all component
 
 Complete these verification steps in order:
 
-1. [ ] [AWS connector shows as connected](#verify-connector-status)
-1. [ ] [EKS clusters connected to Arc](#verify-arc-connection)  
-1. [ ] [Defender sensor pods running](#verify-sensor-deployment)
+1. [AWS connector shows as connected](#verify-connector-status)
+1. [EKS clusters connected to Arc](#verify-arc-connection)  
+1. [Defender sensor pods running](#verify-sensor-deployment)
 
 > [!TIP]
 > If any validation step fails, see the [Common verification issues](#common-verification-issues) section for troubleshooting guidance.
