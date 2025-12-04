@@ -35,8 +35,7 @@ The Workbooks feature in Microsoft Sentinel enables users to manage and view wor
 
 Before using Workbooks in MTO, ensure you have the following prerequisites:
 
-* Access to Microsoft Sentinel. ​
-* Onboarded to the Defender portal. ​
+* Access to Microsoft Sentinel on the Defender portal. ​
 * Access to more than one tenant using B2B/GDAP.
 * For the workbook aggregated view, at least one workbook must be available on one or more target tenants.
 * For the Situational Awareness workbook, your home tenant (primary workspace) must have threat intelligence data. ​
