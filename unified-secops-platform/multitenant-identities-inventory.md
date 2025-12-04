@@ -5,8 +5,8 @@
 
 title: Multitenant identities
 description: A multi-tenant identity inventory
-author: guywild
-ms.author: guywi-ms
+author: guywi-ms
+ms.author: guywild
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date: 06/29/2025

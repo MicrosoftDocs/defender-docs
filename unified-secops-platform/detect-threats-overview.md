@@ -13,7 +13,7 @@ ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: article
 # customer intent: As a security operations center business decision maker, I want to learn about the tools available to detect threats in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---
 

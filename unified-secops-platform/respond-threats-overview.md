@@ -12,7 +12,7 @@ ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: article
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
