@@ -31,25 +31,25 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|December 2, 2025| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic)|
+|December 2, 2025| Upcoming change | [Updated CIEM recommendation logic](#upcoming-change-to-ciem-recommendation-logic)|
 |December 1, 2025| GA | [General availability of the Endor Labs integration](#general-availability-of-the-endor-labs-integration) |
 | December 1, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
 
-### Updated CIEM recommendation logic
+### Upcoming change to CIEM recommendation logic
 
 December 2, 2025
 
 As part of the ongoing deprecation of the Microsoft Entra Permissions Management functionality, Microsoft Defender for Cloud is updating its Cloud Infrastructure Entitlement Management (CIEM) recommendation logic across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
-The updated model evaluates inactive identities based on unused role assignments rather than sign-in activity and uses a 90-day lookback window. Identities created within the past 90 days are not evaluated as inactive. Coverage for AWS has also been refined so that CIEM recommendations apply only to AWS Service Principals with reliably evaluated permissions, and serverless and compute resources are no longer included, which may result in changes to recommendation counts.
+The updated model evaluates inactive users and roles based on unused role assignments rather than sign-in activity and uses a 90-day (previously 45) lookback window. Identities created within the past 90 days are not evaluated as inactive. Coverage for AWS has also been refined so that CIEM recommendations apply only to AWS Service Principals with reliably evaluated permissions, and serverless and compute resources are no longer included, which may result in changes to recommendation counts.
 
 **Cloud-specific requirements**  
-- **AWS:** CIEM evaluations for SAML and SSO identities require AWS CloudTrail Logs (Preview) to be enabled in the Defender CSPM plan.  
-- **GCP:** CIEM evaluations require Cloud Logging ingestion (Preview) to be enabled in the Defender CSPM plan.
+- **AWS:** CIEM evaluations for SAML and SSO identities require [AWS CloudTrail Logs (Preview)](quickstart-onboard-aws.md) to be enabled in the Defender CSPM plan.  
+- **GCP:** CIEM evaluations require [Cloud Logging ingestion (Preview)](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview) to be enabled in the Defender CSPM plan.
 
-The Permissions Creep Index (PCI) metric is being deprecated as part of this update, providing clearer identity insights and reducing noise across multicloud environments.
+The Permissions Creep Index (PCI) metric is being deprecated as part of this update and will no longer appear in the Defender for Cloud recommendations page. This update provides clearer guidance, improved accuracy, reduced noise, and updated CIEM recommendations for both users and roles across multicloud environments.
 
-Learn more about [permissions management in Defender for Cloud](/azure/defender-for-cloud/permissions-management).
+Learn more about [permissions management in Defender for Cloud](permissions-management.md).
 
 ### General availability of the Endor Labs integration
 
