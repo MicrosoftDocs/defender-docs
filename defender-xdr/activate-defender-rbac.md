@@ -44,14 +44,12 @@ This article lists the steps to activate Defender workloads available in your en
 
 The following steps guide you on how to activate the Microsoft Defender XDR Unified RBAC model. You can activate your workloads in the following ways:
 
-1. [Activate in the permissions and roles page](#activate-from-the-permissions-and-roles-page)
-2. [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
+* [Activate in the permissions and roles page](#activate-from-the-permissions-and-roles-page)
+* [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
 
 > [!IMPORTANT]
 > You must be at least a Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.
->
-> To activate Microsoft Sentinel workspaces, make sure you have the correct role or combination of roles.
 
 ### Activate from the Permissions and roles page
 
@@ -63,8 +61,8 @@ You can activate your workloads in two ways from the Permissions and roles page:
 
 1. **Activate workloads**
 
-   - Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
-   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
+    1. Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
+    2. You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
 
      :::image type="content" source="/defender/media/defender/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
 
@@ -73,14 +71,13 @@ You can activate your workloads in two ways from the Permissions and roles page:
       > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
       > Defender XDR Unified RBAC is automatically active for Exposure Management access. Once a custom role with one of the Exposure Management permissions is created, it has an immediate impact on assigned users. There's no need to activate it.
       >
-      > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
+      > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active.
 
 2. **Workload settings**
 
-- Select **Workload settings**.
-- This brings you to the Microsoft Defender XDR **Permission and roles** page.
-- Select the toggle for the workload you want to activate. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
-- Select **Activate** on the confirmation message.
+   1. Select **Workload settings**. This brings you to the Microsoft Defender XDR **Permission and roles** page.
+   1. Select the toggle for the workload you want to activate. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
+   1. Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
 
