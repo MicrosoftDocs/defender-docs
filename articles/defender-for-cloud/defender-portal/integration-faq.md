@@ -27,6 +27,9 @@ Note: Once the opt-in is selected, it takes up to 24 hours for the data to popul
 
 Yes, Azure, AWS, GCP, and on-premises environments are supported.
 
+>[!Note]
+> It is not currently supported in Government clouds.
+
 ### What are the risks associated with this move?
 
 There is no operational risk in transitioning to the Defender portal. The experience is designed with parallel functionalities in both the Azure and Defender portal. Customers can choose to enable the new experience without disrupting their experience in the Azure portal. However, there are known limitations that customers should be aware of while testing new capabilities. Read more in the official documentation here, [Known limitations](known-limitations.md).
@@ -35,6 +38,10 @@ There is no operational risk in transitioning to the Defender portal. The experi
 
 We recognize that MDC serves multiple personas including security admins, cloud security architects, workload owners, DevOps teams, and more. With this release, MDC in the Azure portal remains as is, and we have no plans to deprecate it. Hence, adding security for new resources continues to remain in the Azure portal.  
 Defender portal focuses on security teams overseeing cloud security across cloud and code environments. The Azure portal continues to serve Azure-focused personas such as workload owners and DevOps engineers. Our goal is to provide tailored experiences in each portal, ensuring every persona has the most relevant tools and insights for their needs. 
+
+### Will enabling this feature lead to changes or new deployments that might impact other Defender for Cloud plans, features, or configurations in the future?
+
+No. 
 
 ### Is there a feature parity list for all the features expanding into the Defender portal?
 
