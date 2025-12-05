@@ -31,7 +31,7 @@ To add a Microsoft Entra application, follow these steps:
 1. On your newly registered app's page, go to **Manage** > **API permissions**, then select **Add a permission**.
 1. On the flyout panel that appears, go to the **APIs my organization uses** tab and search for `Sentinel Platform Services`.
 1. Choose **SentinelPlatform.DelegatedAccess**, then select **Add permissions**.
-1. Go back to your app's Overview page, then select **Add a redirect URI**.
+1. Go back to your app's **Overview** page, then select **Add a redirect URI**.
 1. Select **+ Add a platform** > **Web**.
 1. In the **Redirect URIs** text box, add the following URL, then select **Configure**:
     ```
