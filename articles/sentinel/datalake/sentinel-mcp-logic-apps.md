@@ -32,13 +32,11 @@ You have two options for adding the entity analyzer tool to your logic app:
 - [Add to an existing logic app](#add-to-an-existing-logic-app)
 
 ### Use an existing logic app template 
-You can use the following logic app template for an easy and quick implementation of the entity analyzer tool: [Insert link]
-
-This logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident.
+You can use a logic app template for an easy and quick implementation of the entity analyzer tool. The logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident.
 
 :::image type="content" source="media/sentinel-mcp/logic-app-template.png" alt-text="Screenshot of the entity analyzer tool added to logic app template." lightbox="media/sentinel-mcp/logic-app-template.png":::
 
-The following sample output from the Incident logic app shows entity analyzer tool insights within incident comments:
+<!--The following sample output from the Incident logic app shows entity analyzer tool insights within incident comments:-->
 
 ### Add to an existing logic app
 
