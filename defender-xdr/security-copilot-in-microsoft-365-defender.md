@@ -64,10 +64,9 @@ Investigating incidents with multiple alerts can be a daunting task. To immediat
 
 :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
-#### Detect threats faster
+#### Uncover hidden threats
 
-The [Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md) in the Defender portal uses AI to continuously monitor and analyze system activity, proactively uncovering hidden threats and surfacing high-fidelity alerts. These features and capabilities empower organizations to detect and respond to threats with greater speed, accuracy, and confidence. 
-
+The [Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md) in the Defender portal is an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. It uses AI to identify gaps and uncover false negatives by correlating alerts, events, anomalies, and threat intelligence. When the agent identifies a gap, it generates a dynamic alert with the full context in the alert details, including natural language explanations, mapped [MITRE ATT&CK techniques](https://attack.mitre.org/), and tailored remediation steps.
 
 #### Take action on incidents through guided responses
 
