@@ -36,7 +36,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 1. Open the GP configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
 
    1. Select the operating system.
 
@@ -179,7 +179,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
    1. Select the operating system.
     
