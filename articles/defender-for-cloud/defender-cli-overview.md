@@ -45,10 +45,10 @@ For detailed reference, see [Syntax](defender-cli-syntax.md).
 * Provides readable console output with issues and next steps for remediation.   
 * When invoked from CI/CD pipelines, it uploads results to Defender for Cloud, where findings appear in asset inventories, recommendations, and attack paths with runtime context (for example, internet exposure and affected workloads).  
 
-To review results, see [Reviewing Results](defender-cli-reviewing-results).
+To review results, see [Reviewing Results](defender-cli-reviewing-results.md).
 
 ## Code‑to‑runtime visibility
-When findings are uploaded, Defender for Cloud models repository, pipeline, image, and runtime resource relationships so security teams can target the right owners, understand blast radius, and align remediation with risk. For more details, see [Container Image Mapping](container-image-mapping).
+When findings are uploaded, Defender for Cloud models repository, pipeline, image, and runtime resource relationships so security teams can target the right owners, understand blast radius, and align remediation with risk. For more details, see [Container Image Mapping](container-image-mapping.md).
 
 ## Migration from MSDO CLI
 If you're using the legacy Microsoft Security DevOps (MSDO) CLI, consider moving to the Defender for Cloud CLI to get:
