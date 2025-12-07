@@ -8,7 +8,6 @@ ms.date: 11/27/2025
 ms.author: monaberdugo
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
-    - Microsoft Sentinel in the Azure portal
 
 #Customer intent: As an security operations administrator, I want to use the SIEM migration so I can streamline a migration to Microsoft Sentinel to enhance my security monitoring capabilities.
 ---
@@ -23,15 +22,16 @@ Migrate your SIEM to Microsoft Sentinel for all your security monitoring use cas
 The SIEM Migration experience includes the following features:
 
 **Splunk**
+
 - The experience focuses on migrating Splunk security monitoring to Microsoft Sentinel and mapping out-of-the-box (OOTB) analytics rules wherever possible.
-- The experience supports migration of Splunk detections to Microsoft Sentinel analytics rules, including mapping Splunk data sources and lookups.
+- The experience supports migration of Splunk detections to Microsoft Sentinel analytics rules.
 
 ## Prerequisites
 
 ### Microsoft Sentinel requirements
 
-- Microsoft Sentinel must be onboarded to the Microsoft Defender portal
-- At least Security Admin permissions at the tenant level
+- Microsoft Sentinel in Microsoft Defender portal
+- At least Contributor permissions in the Microsoft Sentinel workspace
 - Copilot enabled in your tenant
 
 ### Splunk requirements
@@ -58,9 +58,11 @@ Export your QRadar rule data as a CSV file, as explained here Exporting rule
 
 ## Start the SIEM migration experience
 
-After exporting the rules, use the feature flag URL to sign in to [https://security.microsoft.com/sentinel/precision?flight=PrecisionRedesign](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsecurity.microsoft.com%2Fsentinel%2Fprecision%3Fflight%3DPrecisionRedesign&data=05%7C02%7Cmmwaura%40microsoft.com%7C9ca1c4a2a9e444102d7808dddfea314e%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638912919272517602%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=LQgGzTHedB58lwGTVIt6jt8%2BJ7tbzq0INvwVjkL8D0A%3D&reserved=0)
+After exporting the rules,
 
-1. From the **SOC Optimization** tab, select **Set up your new SIEM**.
+1. Go to `security.microsoft.com`.
+
+1. From the **SOC Optimization** blade, select **Set up your new SIEM**.
 
     :::image type="content" source="./media/siem-migration/set-up-new-siem.png" alt-text="Screenshot of the Setup your new SIEM option in the top right corner of the SOC Optimization screen.":::
 
@@ -108,13 +110,10 @@ After exporting the rules, use the feature flag URL to sign in to [https://secur
 
     :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
 
-If the matched Microsoft Sentinel rule is correct for your use case, proceed to create the rule.
+If the data connector is not installed and configured to stream logs, *Enable detection* is disabled"
 
-If the data connector isn't configured, the option is disabled.
-
-The migration doesn't explicitly install any connectors or rules.
+The SIEM migration tool doesn't explicitly install any connectors or enable detection rules
 
 ## Limitations
 
-- The migration tool currently works with out-of-the-box Splunk or QRadar rules.
 - The migration tool maps the rules export to out-of-the-box Microsoft Sentinel data connectors and detection rules.
