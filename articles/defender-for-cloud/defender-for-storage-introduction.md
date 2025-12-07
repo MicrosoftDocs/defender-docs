@@ -2,8 +2,8 @@
 title: What is Microsoft Defender for Storage
 description: Learn about the benefits, features, and security capabilities of Microsoft Defender for Storage to protect your data and workloads.
 ms.date: 05/13/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: overview
 #customer intent: As a security professional, I want to understand the features and benefits of Microsoft Defender for Storage so that I can ensure the security of my data.
 ---
@@ -41,7 +41,7 @@ When you enable Defender for Storage at the subscription level, all existing and
 
 Defender for Storage provides the following features:
 
-- **Better protection against malware**: Malware scanning detects in near real-time all file types, including archives of every uploaded blob. It provides fast and reliable results, preventing your storage accounts from acting as an entry and distribution point for threats. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
+- **Better protection against malware**: Malware scanning detects malware in files. It provides fast and reliable results, preventing your storage accounts from acting as an entry and distribution point for threats. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
 
 - **Improved threat detection and protection of sensitive data**: Sensitive data threat detection helps security professionals prioritize and examine security alerts efficiently. It considers the sensitivity of the data at risk, improving detection and protection against potential threats. This capability reduces the chance of data breaches by identifying and addressing the most significant risks. It improves sensitive data protection by detecting exposure events and suspicious activities on resources containing sensitive data. Learn more about [sensitive data threat detection](defender-for-storage-data-sensitivity.md).
 
@@ -63,7 +63,7 @@ Defender for Storage continuously analyzes data and control plane logs from prot
 
 ### Malware scanning (powered by Microsoft Defender Antivirus)
 
-Malware scanning in Defender for Storage protects storage accounts from malicious content by performing a full malware scan on uploaded content in near real time, applying Microsoft Defender Antivirus capabilities. It fulfills security and compliance requirements to handle untrusted content. Every file type is scanned, and results are returned for every file. Malware scanning is an agentless SaaS solution that allows simple setup at scale, with zero maintenance, and supports automating response at scale. Malware scanning is a configurable feature in the new Defender for Storage plan that is priced per GB scanned. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
+Malware scanning in Defender for Storage protects storage accounts from malicious content by performing a full malware scan on uploaded content or via on-demand malware scanning, applying Microsoft Defender Antivirus capabilities. It fulfills security and compliance requirements to handle untrusted content. Once a file is scanned, results are returned using a variety of methods. Malware scanning is an agentless SaaS solution that allows simple setup at scale, with zero maintenance, and supports remediating malicious files at scale. Malware scanning is a configurable feature in the new Defender for Storage plan that is priced per GB scanned. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
 
 ### Sensitive data threat detection (powered by Sensitive Data Discovery)
 
