@@ -2,7 +2,7 @@
 title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 04/28/2025
+ms.date: 12/01/2025
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -34,8 +34,8 @@ Software composition analysis (SCA) partners that are partnered with Defender fo
 
 | Partner name | Logo | Description | Documentation |
 |--|--|--|--|
-| Endor Labs | :::image type="icon" source="media/partner-integrations/endor-logo.png" border="false"::: | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Endor Labs Onboarding guide](https://www.endorlabs.com/lp/microsoft-defender-for-cloud) |
-| Mend.io | | Mend.io provides advanced Software Composition Analysis (SCA) and reachability analysis. Its integration with Microsoft Defender for Cloud helps prioritize and remediate open source vulnerabilities in cloud-native environments. | [Mend.io integration page](connect-mend-io.md) |
+| [Endor Labs](https://www.endorlabs.com/) | :::image type="icon" source="media/partner-integrations/endor-logo.png" border="false"::: | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Endor Labs Onboarding guide](https://www.endorlabs.com/lp/microsoft-defender-for-cloud) |
+| [Mend.io](https://www.mend.io/) | :::image type="icon" source="media/partner-integrations/mend-io-logo.png" border="false"::: | Mend.io delivers advanced application and AI security. Its integration with Microsoft Defender for Cloud provides a unified view of SCA and container vulnerabilities, while reducing noise by identifying unreachable code and container instances. | [Mend.io integration page](connect-mend-io.md) |
 
 ### API security testing integrations
 
