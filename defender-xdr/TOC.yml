@@ -160,8 +160,14 @@
           href: advanced-hunting-overview.md
         - name: Guided and advanced modes
           href: advanced-hunting-modes.md
-        - name: Generate KQL queries with Security Copilot
-          href: advanced-hunting-security-copilot.md
+        - name: Hunt for threats with Security Copilot
+          items:
+          - name: Overview
+            href: advanced-hunting-security-copilot.md
+          - name: Use the Threat Hunting Agent
+            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Generate KQL queries
+            href: advanced-hunting-security-copilot-query-assistant.md
         - name: Hunt over Microsoft Sentinel data
           items:
           - name: Microsoft Sentinel data in advanced hunting
@@ -458,8 +464,10 @@
           href: security-copilot-defender-identity-summary.md                
         - name: Use guided responses
           href: security-copilot-m365d-guided-response.md
+        - name: Hunt for threats using natural language
+          href: advanced-hunting-security-copilot-threat-hunting-agent.md
         - name: Generate KQL queries
-          href: advanced-hunting-security-copilot.md
+          href: advanced-hunting-security-copilot-query-assistant.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
         - name: Responsible AI FAQs
