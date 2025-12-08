@@ -20,7 +20,7 @@ We designed this integration to work out-of-the-box for teams using GitHub, GHAS
 
 ### Smart code-to-cloud mapping
 
-As soon as you connect your GitHub organization / repo to Microsoft Defender for Cloud (MDC), the system automatically maps source repositories to running cloud workloads, using GitHub's Artifact Attestations and MDC proprietary "Code 2 Cloud" methods that ensure every workload is tracked to it's repo of origin and vice versa.
+As soon as you connect your GitHub organization / repo to Microsoft Defender for Cloud (MDC), the system automatically maps source repositories to running cloud workloads, using GitHub's Artifact Attestations and MDC proprietary "Code 2 Cloud" methods that ensure every workload is tracked to its repo of origin and vice versa.
 
 This gives instant end-to-end visibility, so you know which code powers each deployed application without time-consuming manual mapping.
 
@@ -28,7 +28,7 @@ This gives instant end-to-end visibility, so you know which code powers each dep
 
 Cut through noisy security alerts and focus on vulnerabilities that truly matter. 
 
-GHAS Security findings in GitHub are prioritized by real runtime context from MDC, highlighting risk factors like: Internet Exposure, Sensitive Data processing, Critical Resources and Lateral Movement. Those risk, spotted for runtime workloads are dynamically linked to those workloads code repositories of origin and the specific build artifacts in GitHub, letting you filter, triage, and act only on security issues with actual production impact, helping your team stay efficient and keep your most important applications secure.
+GHAS Security findings in GitHub are prioritized by real runtime context from MDC, highlighting risk factors like: Internet Exposure, Sensitive Data processing, Critical Resources, and Lateral Movement. Those risk, spotted for runtime workloads are dynamically linked to those workloads code repositories of origin and the specific build artifacts in GitHub, letting you filter, triage, and act only on security issues with actual production impact, helping your team stay efficient and keep your most important applications secure.
 
 ### Unified AI-driven remediation 
 
@@ -42,7 +42,7 @@ that would be generated on the repository of origin, providing runtime informati
 
 Engineering manager can assign the issue to a developer for furthered resolution and the assignee can leverage Copilot Coding Agent for AI-powered autofixes.
 
-GitHub issues fixes advancements and campaign progress is tracked in real time and the statuses reflected both in GitHub and in MDC.
+GitHub issues fixes, advancements, and campaign progress are tracked in real time and the statuses reflected both in GitHub and in MDC.
 
 This ensures fixes are delivered rapidly, creates clear accountability, and simplifies collaboration, all inside the tools your teams already use.
 
