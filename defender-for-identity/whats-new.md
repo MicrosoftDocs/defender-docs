@@ -23,6 +23,11 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## December 2025
+|Version number |Updates |
+|---------|---------|
+|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
 ## November 2025
 
 |Version number |Updates |
