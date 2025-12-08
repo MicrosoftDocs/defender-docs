@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 12/01/2025
+ms.date: 12/08/2025
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
