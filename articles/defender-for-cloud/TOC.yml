@@ -914,6 +914,12 @@
         href: concept-devops-environment-posture-management-overview.md
       - name: Reliability in Cloud for DevOps security
         href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
+      - name: GitHub Advanced Security
+        items:
+          - name: Overview
+            href: github-advanced-security-overview.md
+          - name: Deploy GitHub Advanced Security integration
+            href: github-advanced-security-deploy.md
       - name: Onboard
         items:
           - name: Connect Azure DevOps environments
