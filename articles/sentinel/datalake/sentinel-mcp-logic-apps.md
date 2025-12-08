@@ -24,7 +24,12 @@ The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a s
 
 If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analyzer tool.
 
-Each tenant can use the entity analyzer tool up to [five concurrent runs at a time](sentinel-mcp-billing.md#sentinel-entity-analyzer-tool-1). If you're setting up a **For each** loop in your entity analyzer workflow, set its concurrency to five. For more information, see [Add loops to repeat actions in workflows for Azure Logic Apps](../../logic-apps/logic-apps-control-flow-loops.md).
+Each tenant can use the entity analyzer tool up to [five concurrent runs at a time](sentinel-mcp-billing.md#sentinel-entity-analyzer-tool-1). Make sure to set up a **For each** loop in your entity analyzer workflow, turn the **Concurrecny control** on, and set to **Degree of parallelism** to `5`. 
+
+:::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
+
+
+For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](../../logic-apps/logic-apps-control-flow-loops.md).
 
 ## Add entity analyzer tool to a logic app
 
