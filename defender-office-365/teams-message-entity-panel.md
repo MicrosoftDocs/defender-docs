@@ -152,6 +152,8 @@ Do the following steps in the **Take action** wizard:
 
    When you're finished on the **Choose target entities** page, select **Next**.
 
+   :::image type="content" source="media/teams-message-entity-panel-choose-target-entities.png" alt-text="Screenshot of the Choose target entities page of the Take action wizard of the Teams message entity panel in the Microsoft Defender portal." lightbox="media/teams-message-entity-panel-choose-target-entities.png":::
+
 3. On the **Review and submit** page, review your previous selections.
 
    Select **Back** to go back and change your selections.
