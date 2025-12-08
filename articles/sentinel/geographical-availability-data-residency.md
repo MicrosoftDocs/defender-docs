@@ -39,9 +39,9 @@ Data used by the service, including customer data, might be stored and processed
  
 ### Supported regions
 
-Regions supported for Microsoft Sentinel raw data, and for processed and configuration data in workspaces not onboarded to the Defender portal, include:
+The following table shows the supported regions supporting Microsoft Sentinel SIEM and data lake.
 
-| Continent | Country/Region | SIEM Supported Region | Data Lake Supported Region |
+| Continent | Country/Region | SIEM supported region | Data lake supported region |
 |---------|---------|---------|---------|
 | **North America**| **Canada** | • Canada Central<br>• Canada East | • Canada Central |
 | |   **United States** | • Central US<br>• East US<br>• East US 2<br>• East US 2 EUAP<br>• North Central US<br>• South Central US<br>• West US<br>• West US 2<br>• West US 3<br>• West Central US<br><br>**Azure government** <br>• USGov Arizona<br>• USGov Virginia<br>• USNat East<br>• USNat West<br>• USSec East<br>• USSec West| • Central US<br>• East US<br>• East US 2<br>• South Central US<br>• West US 2 |
