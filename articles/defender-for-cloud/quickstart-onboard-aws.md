@@ -301,7 +301,7 @@ Depending on the change you made to your connector configuration, you might need
 
 - **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. **STOP HERE.**
 
-- **NO** → Continue to Step 2.
+- **NO** → [Continue to Step 2](#step-2-check-if-you-modified-plan-configuration).
 
 #### Step 2: Check if you modified plan configuration
 
@@ -309,13 +309,13 @@ Depending on the change you made to your connector configuration, you might need
 
 - **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. **STOP HERE.**
 
-- **NO** → Continue to Step 3.
+- **NO** → [Continue to Step 3](#step-3-check-for-new-template-version).
 
 #### Step 3: Check for new template version
 
 **Has Microsoft released a new version of the CloudFormation template?**
 
-- **YES** → Continue to Step 4.
+- **YES** → [Continue to Step 4](#step-4-check-for-functionality-issues).
 
 - **NO** → ❌ **NO ACTION REQUIRED** - No update of CloudFormation template needed. **STOP HERE.**
 
@@ -323,12 +323,12 @@ Depending on the change you made to your connector configuration, you might need
 
 **Are you experiencing functionality issues?** (e.g., Lambda function errors)
 
-- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. Follow the steps in [Update your CloudFormation template](#update-a-deployed-multicloud-connector). **STOP HERE.**
+- **YES** → ✅ **UPDATE REQUIRED** - Update the CloudFormation Stack with the latest template. **STOP HERE.**
 
 - **NO** → ⚠️ **OPTIONAL** - No update needed at this time. You can update when convenient to stay current with the latest features and improvements.
 
 > [!NOTE]
-> If you are experiencing specific errors or functionality issues not addressed by this guide, contact Microsoft Support with logs and details.
+> If you are experience specific errors or functionality issues not addressed by this guide, contact Microsoft Support with logs and details.
 
 ## Monitor your AWS resources
 
