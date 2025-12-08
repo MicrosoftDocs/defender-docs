@@ -32,18 +32,19 @@ To add a Microsoft Entra application, follow these steps:
 1. On the flyout panel that appears, go to the **APIs my organization uses** tab and search for `Sentinel Platform Services`.
 1. Choose **SentinelPlatform.DelegatedAccess**, then select **Add permissions**.
 1. Go back to your app's **Overview** page, then select **Add a redirect URI**.
-1. Select **+ Add a platform** > **Web**.
+1. Select **+ Add a platform** > **Public client/native (mobile & desktop)**.
 1. In the **Redirect URIs** text box, add the following URL, then select **Configure**:
     ```
     https://chatgpt.com/connector_platform_oauth_redirect
     ```
- 
+
 ## Create a custom Sentinel MCP connector in ChatGPT
 
 To create a custom Sentinel connector in ChatGPT, follow these steps:
 
 >[!NOTE]
->For ChatGPT Enterprise, an administrator can roll out a connector to all users in that ChatGPT organization. 
+>- If you're using the ChatGPT desktop application, you must first complete this connector setup in the ChatGPT web version.
+>- For ChatGPT Enterprise, an administrator can roll out a connector to all users in that ChatGPT organization. 
 
 1. Turn on the ChatGPT developer mode. In ChatGPT, select your account icon, then go to **Apps & connectors** > **Advanced Settings** and toggle **Developer mode**. 
 1.	Go back to **Apps & connectors** and select **Create Connector**.
