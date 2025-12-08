@@ -12,10 +12,10 @@ The resource health page provides a snapshot view of the overall health of a sin
 
 This single page, in Defender for Cloud's portal pages shows:
 
-1. **Resource information** - The resource group and subscription it's attached to, the geographic location, and more.
-1. **Applied security feature** - Whether a Microsoft Defender plan is enabled for the resource.
-1. **Counts of outstanding recommendations and alerts** - The number of outstanding security recommendations and Defender for Cloud alerts.
-1. **Actionable recommendations and alerts** - Two tabs list the recommendations and alerts that apply to the resource.
+- **Resource information** - The resource group and subscription it's attached to, the geographic location, and more.
+- **Applied security feature** - Whether a Microsoft Defender plan is enabled for the resource.
+- **Counts of outstanding recommendations and alerts** - The number of outstanding security recommendations and Defender for Cloud alerts.
+- **Actionable recommendations and alerts** - Two tabs list the recommendations and alerts that apply to the resource.
 
 :::image type="content" source="media/investigate-resource-health/resource-health-page-virtual-machine.gif" alt-text="Microsoft Defender for Cloud's resource health page showing the health information for a virtual machine":::
 

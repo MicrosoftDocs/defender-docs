@@ -87,7 +87,7 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 
 1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
 
-   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
+   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal." lightbox="media/defender-portal-recommendations.png":::
 
 1. Apply filters such as:
    - **Exposed asset**: Filter by assets with exposure to threats
@@ -144,7 +144,7 @@ When you select an aggregated recommendation row, a side panel opens displaying:
 - **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
 - Additional tabs may appear for specific recommendations with relevant contextual information
 
-:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
+:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane." lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 Alternative access paths to recommendations:
 

@@ -83,10 +83,10 @@ Relationship to unified RBAC:
 
 Planning guidance:
 
-1. Start coarse (major org / region boundaries).
-1. Validate operational ownership and review cadence.
-1. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
-1. Document purpose and owner for each scope to support lifecycle and audit.
+- Start coarse (major org / region boundaries).
+- Validate operational ownership and review cadence.
+- Introduce finer scopes only when risk, confidentiality, or compliance requires it.
+- Document purpose and owner for each scope to support lifecycle and audit.
 
 ## Prerequisites
 
@@ -108,30 +108,30 @@ Characteristics:
 ### Create a scope (wizard)
 
 1. Select **Create new cloud scope**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Create scope action." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Screenshot of create scope action." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
 2. Enter name and description.  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Screenshot of scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
 3. Select environment primitives (individually or via filters).  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-3.png" alt-text="Select environment primitives." lightbox="media/cloud-scopes-unified-rbac/create-scope-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-3.png" alt-text="Screenshot of select environment primitives." lightbox="media/cloud-scopes-unified-rbac/create-scope-3.png":::
 4. Review and finish.  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Review scope configuration." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Screenshot of review scope configuration." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
 
 ## 2. Activate cloud scopes (one-time)
 
 Before scopes can be used in role assignments, run the activation wizard if prompted. This:
 
-1. Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
-1. Lets you map those roles to chosen cloud scopes
-1. Highlights manage / sensitive permissions (for example: response actions)
-1 Finalizes activation (irreversible; future changes are through normal management)
+- Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
+- Lets you map those roles to chosen cloud scopes
+- Highlights manage / sensitive permissions (for example: response actions)
+- Finalizes activation (irreversible; future changes are through normal management)
 
 If no device groups or unified RBAC roles exist yet, the wizard may be skipped until needed.
 
 ### Activation & bulk assignment wizard
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Activation wizard start." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Role-to-scope assignment." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Screenshot of activation wizard start." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Screenshot of role-to-scope assignment." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Screenshot of activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
 
 Guidelines:
 
@@ -145,8 +145,8 @@ Navigation: **Settings > Permissions > Microsoft XDR Roles > Roles**.
 
 Permission groups (select one or both):
 
-1. **Security operations** – incidents, alerts, and cloud inventory
-1. **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
+- **Security operations** – incidents, alerts, and cloud inventory
+- **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
 
 > [!NOTE]
 > For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
@@ -160,9 +160,9 @@ During the role wizard:
   - All cloud scopes
   - Custom (pick specific scopes)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Screenshot of role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Screenshot of data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Screenshot of scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
 ## 4. Use scope and environment filters
 
@@ -184,9 +184,9 @@ Behavior:
 - Device group filtering applies where device-centric data is relevant
 - Mixed experiences apply scope category contextually (for example: Recommendations: device groups affect Devices tab; cloud scopes affect Cloud tab)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Scope filter UI." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Contextual filtering behavior." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Screenshot of scope filter UI." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Screenshot of contextual filtering behavior." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Screenshot of authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
 
 ### Environments filter
 
@@ -202,7 +202,7 @@ Characteristics:
   - Scope first, then environment (subset refine)
   - Environment first, then scope (scope selection overrides previous set)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Screenshot of environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
 
 ## 5. Ongoing management
 

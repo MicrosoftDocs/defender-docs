@@ -142,6 +142,9 @@ The attack path page shows you an overview of all of your attack paths. You can 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png" alt-text="Screenshot that shows where to select recommendations in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png":::
 
 1. Select a recommendation.
+
+1. [Remediate the recommendation](implement-security-recommendations.md).
+
    Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
 
 1. [Remediate the recommendation](implement-security-recommendations.md).

@@ -37,7 +37,7 @@ Defender for Cloud uses its broader Cloud Native Application Protection Platform
 
 In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI security and AI threat protection](#ai-security-and-threat-protection) to safeguard generative AI workloads throughout their lifecycle. These features help you discover AI applications, identify vulnerabilities, reduce risks, and detect threats targeting your generative AI workloads.
 
-:::image type="content" source="media/defender-for-cloud-introduction/cloud-security-pillars.png" alt-text="Diagram showing the core functionality of Defender for Cloud":::
+:::image type="content" source="media/defender-for-cloud-introduction/cloud-security-pillars.png" alt-text="Diagram showing the core functionality of Defender for Cloud.":::
 
 > [!NOTE]
 > For pricing information, check out [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
