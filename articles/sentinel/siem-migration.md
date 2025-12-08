@@ -62,7 +62,8 @@ After exporting the rules,
 
 1. Go to `security.microsoft.com`.
 
-1. From the **SOC Optimization** blade, select **Set up your new SIEM**.
+1. From the **SOC Optimization** blade
+1. , select **Set up your new SIEM**.
 
     :::image type="content" source="./media/siem-migration/set-up-new-siem.png" alt-text="Screenshot of the Setup your new SIEM option in the top right corner of the SOC Optimization screen.":::
 
@@ -110,7 +111,7 @@ After exporting the rules,
 
     :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
 
-If the data connector is not installed and configured to stream logs, *Enable detection* is disabled"
+If the data connector isn't installed and configured to stream logs, *Enable detection* is disabled.
 
 The SIEM migration tool doesn't explicitly install any connectors or enable detection rules
 
