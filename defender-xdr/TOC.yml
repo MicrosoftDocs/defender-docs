@@ -102,7 +102,6 @@
           href: move-alert-to-another-incident.md
         - name: Merge incidents manually
           href: merge-incidents-manually.md
-        - name: Alerts
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Investigate entity pages
@@ -247,6 +246,8 @@
             href: advanced-hunting-behaviorentities-table.md
           - name: BehaviorInfo
             href: advanced-hunting-behaviorinfo-table.md
+          - name: CampaignIno
+            href: advanced-hunting-campaigninfo-table.md            
           - name: CloudAppEvents
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
@@ -327,6 +328,8 @@
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
+          - name: FileMaliciousContentInfo
+            href: advanced-hunting-filemaliciouscontentinfo-table.md            
           - name: GraphApiAuditEvents
             href: advanced-hunting-graphapiauditevents-table.md            
           - name: IdentityAccountInfo
