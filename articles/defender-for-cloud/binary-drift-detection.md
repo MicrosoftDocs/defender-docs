@@ -1,14 +1,14 @@
 ---
-title: Binary drift detection and prevention
-description: Learn how binary drift detection and prevention can help you detect unauthorized external processes within containers.
+title: Binary drift detection and blocking
+description: Learn how binary drift detection and blocking can help you detect unauthorized external processes within containers.
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
 ms.date: 07/15/2025
-#customer intent: As a user, I want to understand how binary drift detection and prevention can help me detect unauthorized external processes within containers.
+#customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
 ---
 
-# Binary drift detection and prevention
+# binary drift detection and blocking
 
 Binary drift occurs when a container runs an executable that didn't come from the original image. This drift can be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, you should evaluate any processes launched from binaries not included in the original image as suspicious activity.
 
