@@ -139,23 +139,15 @@ The Android devices Battery Optimization screen opens automatically as part of t
 6. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
 7. The application shouldn't be uninstalled from personal profile for this to work.
 
-## Unable to use banking applications with MDE app
+## Unable to use certain 3rd party applications along with MDE app (VPN)
 
-**Applies to:** Banking apps like iMobile Pay (ICICI), PNB ONE.
+**Applies to:** (Not limited) Apps handling banking, government services, or handling sensitive personal information
 
-**Cause:** Android allows apps in the personal profile to check if there's a VPN active on the device, even outside of the personal profile. The banking app checks that and blocks it in VPN work profiles only. The banking app doesn't work with any other VPN product.
+**Cause:** Some applications, such as those used for banking, government services, or handling sensitive personal information, may restrict access if a VPN is detected on your device. These restrictions are determined by the app developer as part of their implementation and even applies all VPNs *including 3rd party) on tyhe device. Microsoft Defender does not control or enforce this behavior through its settings or policies.
 
-**Solution:**
-Users need to disable MDE VPN from the Settings page. The following steps can be used:
-
-1. Go to Settings on the mobile device.
-2. Search for VPN or open 'Network and Internet' and select on VPN.
-3. Select on Microsoft Defender and select Disconnect.
-
-Users should enable VPN when they're no longer using the banking app to ensure that their devices are protected.
-
-> [!NOTE]
-> This a temporary workaround. We are working on other alternatives to provide users more control over the VPN settings from within the app.
+**Workaround:**
+If an app does not function while a VPN is enabled/present in work profile, you may need to disable the VPN or work profile when using the app. 
+Users should enable VPN when they're no longer using the app to ensure that their devices are protected.
 
 ## Send in-app feedback
 
