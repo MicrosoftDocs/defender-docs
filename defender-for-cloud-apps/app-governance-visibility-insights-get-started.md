@@ -64,18 +64,18 @@ One of the primary value points for app governance is the ability to quickly vie
       
        Use one of the following nondefault filters to further customize the apps listed:
 
-   - **Last modified**
+       - **Last modified**
    
-   - **Added on**
+       - **Added on**
    
-   - **Certification**
+       - **Certification**
    
-   - **Users**
+       - **Users**
    
-   - **Data usage**
-   
-      > [!TIP]
-   > Save the query to save the currently selected filters for use again in the future.
+       - **Data usage**
+
+    > [!TIP]
+    > Save the query to save the currently selected filters for use again in the future.
    
    
 1. Select the name of an app to view more details. For example:
