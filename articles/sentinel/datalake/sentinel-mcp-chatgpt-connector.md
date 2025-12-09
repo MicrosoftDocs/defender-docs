@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to turn on and use a custom Microsoft Sentinel's Model Context Protocol (MCP) connector in ChatGPT
 author: poliveria
 ms.topic: how-to
-ms.date: 11/18/2025
+ms.date: 12/09/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
