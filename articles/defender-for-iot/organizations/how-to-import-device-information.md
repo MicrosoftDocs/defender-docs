@@ -47,7 +47,7 @@ Before performing the procedures in this article, you must have:
 
 1. When you're done, save your file to a location accessible from your OT sensor.
 
-1. On your OT sensor, in the **Device map** page, select **Import Devices** and select your modified .CSV file.
+1. On your OT sensor, in the **Device map** page, select **Import Devices** and select your modified .csv file.
 
 Your device data is updated.
 
@@ -55,7 +55,7 @@ Your device data is updated.
 
 **To import device IP addresses, operating systems, or patch levels**:
 
-1. Create a new .CSV file for editing.
+1. Create a new CSV file. In Excel, open a blank workbook and select **Save As** to save it in `.csv` format.
 
 1. In your CSV file, enter the following details for each device:
 
@@ -104,7 +104,7 @@ The tables below show a sample device entry and the supported operating system v
 
 5. Select **Close** to save your changes.
 
-**To import device authorization status**:
+### Import device authorization status:
 
 > [!IMPORTANT]
 > After importing device authorization status, any devices *not* included in the import list are newly defined as not-authorized, and you'll start to receive new alerts about any traffic on each of these devices.
