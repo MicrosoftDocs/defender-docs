@@ -46,7 +46,7 @@ For more information, see:
 
 ## Feature availability
 
-Multitenant management is also available to US government customers. Refer to the table below for specific scenarios for GCC, GCC High, DoD, and Commercial customers.
+Multitenant management is also available to US government customers. Refer to the following table for specific scenarios for GCC, GCC High, DoD, and Commercial customers.
 
 | Scenario | Availability |
 | ------ | ------ |
@@ -65,7 +65,7 @@ Some of the key benefits you get with multitenant management for Defender XDR an
 
 <a name='whats-included-in-multi-tenant-management-in-microsoft-365-defender'></a>
 
-## What's included in multitenant management
+## What does multitenant management include?
 
 The following key capabilities are available for each tenant you have access to in multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal:
 
@@ -83,12 +83,8 @@ The following key capabilities are available for each tenant you have access to 
 
 ## Limitations
 
-MTO supports multi tenant single workspaces. This means that you can query multiple tenants (multi tenant single workspace) through Advanced Hunting without Lighthouse.
-[Lighthouse](/azure/lighthouse/) is required if you want to:
-
-- Query secondary workspaces in other tenants, both from MTO or `security.microsoft.com`, through Advanced Hunting.
-- Use features such as workbooks or analytic rules on Sentinel data in secondary workspaces in other tenants.
-- Query multiple workspace environments in other tenants.
+MTO supports multitenant single workspaces. This means that you can query multiple tenants and their primary workspace through Advanced Hunting without Lighthouse.
+[Azure Lighthouse](/azure/lighthouse/) is required when you want to query a secondary workspace in a different tenant (from Advanced Hunting, analytic rules, workbooks, etc.). For these queries, use the workspace() operator from either MTO or `security.microsoft.com`.
 
 ## Next steps
 
