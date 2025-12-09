@@ -79,7 +79,7 @@ The following table lists the app governance templates supported to generate ale
 
 Use a custom app policy when you need to do something not already done by one of the built-in templates.
 
-- To create a new custom app policy, first select **Create new policy** on the **Policies** page. On the **Choose App policy template page**, select the **Custom** category, the **Custom policy** template, and then select **Next**.
+1. To create a new custom app policy, first select **Create new policy** on the **Policies** page. On the **Choose App policy template page**, select the **Custom** category, the **Custom policy** template, and then select **Next**.
 
 1. On the **Name and description** page, configure the following settings:
    - Policy Name
@@ -178,9 +178,9 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 
 3. You might want to set the policy based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the Administrators group.
 
-For example:
-
-![new OAuth app policy.](media/app-permissions-policy.png)
+   For example:
+    
+    ![new OAuth app policy.](media/app-permissions-policy.png)
 
 ### Anomaly detection policies for OAuth apps connected to Salesforce and Google Workspace
 
@@ -190,7 +190,6 @@ This section is only relevant for Salesforce and Google Workspace applications.
 
 > [!NOTE]
 > Anomaly detection policies are only available for OAuth apps that are authorized in your Microsoft Entra ID.
->
 > The severity of OAuth app anomaly detection policies can't be modified.
 
 The following table describes the out-of-the-box anomaly detection policies provided by Defender for Cloud Apps:
