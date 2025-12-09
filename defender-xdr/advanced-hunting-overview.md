@@ -104,7 +104,7 @@ Entity data populates tables with information about users and devices. This data
 ### Queries
 
 Advanced hunting data uses the UTC (Universal Time Coordinated) timezone. 
-![Screenshot of custom time range.](/defender/media/custom-time-range.png)
+![Screenshot of custom time range.](media/advanced-hunting-overview/custom-time-range.png)
 
 Queries should be created in UTC.
 
