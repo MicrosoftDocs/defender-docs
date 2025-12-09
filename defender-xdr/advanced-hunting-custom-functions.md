@@ -40,7 +40,7 @@ A function is a type of query in advanced hunting that you can use in other quer
 
 There are three different types of functions in advanced hunting:
 
-![Function types](/defender/media/advanced-hunting-custom-fxns/function-types.png)
+![Function types](media/advanced-hunting-custom-functions/function-types.png)
 
 - **Built-in functions** – Prebuilt functions included with Microsoft Defender XDR advanced hunting. These functions are available in all advanced hunting instances and can't be modified.
 - **Shared functions** – Custom functions that users create. All users in a specific tenant can access these functions. Users can modify and control these functions.
@@ -51,7 +51,7 @@ There are three different types of functions in advanced hunting:
 To create a function from the current query in the editor:
 
 1. Select **Save** and then **Save as function**.
-  ![Save as function](/defender/media/advanced-hunting-custom-fxns/save-as-function.png)
+  ![Save as function](media/advanced-hunting-custom-functions/save-as-function.png)
 
 1. In the **Save as function** flyout panel, provide the following information:
 
@@ -60,7 +60,7 @@ To create a function from the current query in the editor:
     - **Description** - A description that helps other users understand the purpose of the function and how it works.
     - **Parameters** - Add a parameter for each variable in the function that requires a value when it's used. For more information, see [Add parameters to your custom function](#add-parameters-to-your-custom-function).
 
-    ![Save as function dialog box](/defender/media/advanced-hunting-custom-fxns/save-as-function-dialog-box.png)
+    ![Save as function dialog box](media/advanced-hunting-custom-functions/save-as-function-dialog-box.png)
 
 1. Select **Save**.
 
@@ -84,7 +84,7 @@ To create tabular parameters for your custom function:
 1. Enter a **Name** and **Default value** for the table.
 1. Map each column that your query references to the table. Select **Add column**, then enter the column's properties.
 
-![Table parameter in custom functions](/defender/media/advanced-hunting-custom-fxns/save-as-function-table.png)
+![Table parameter in custom functions](media/advanced-hunting-custom-functions/save-as-function-table.png)
 
 > [!NOTE]
 >- You can save a function with more than one table. 
@@ -98,7 +98,7 @@ Add a function to the current query by double-clicking on its name or selecting 
 
 If a query requires arguments, provide them using the following syntax: *function_name(parameter 1, parameter 2, ...)*
 
-![Open in query editor](/defender/media/advanced-hunting-custom-fxns/open-in-query-editor.png)
+![Open in query editor](media/advanced-hunting-custom-functions/open-in-query-editor.png)
 
 > [!NOTE]
 > You can't use functions inside another function.
@@ -106,13 +106,13 @@ If a query requires arguments, provide them using the following syntax: *functio
 ## Work with function codes
 You can view the code of a function to understand how it works or to modify its code. Select the three dots to the right of the function and select **Load function code** to open a new tab with the function code. 
 
-![Load function code](/defender/media/advanced-hunting-custom-fxns/load-function-code.png)
+![Load function code](media/advanced-hunting-custom-functions/load-function-code.png)
 
 ## Edit a custom function
 
 Edit the properties of a function by selecting the three dots to the right of the function and selecting **Edit details**. Make any modifications that you want to the properties and parameters of the function, then select **Save**.
 
-![Edit function code](/defender/media/advanced-hunting-custom-fxns/edit-function.png)
+![Edit function code](media/advanced-hunting-custom-functions/edit-function.png)
 
 If the function code is already loaded in the editor, you can also select **Save** to apply any changes to the code or properties of the function.
 
@@ -125,7 +125,7 @@ You can delete functions from **My functions** and functions you created in **Sh
 
 To delete a function, select the three dots to the right of the function and select **Delete**.
 
-![Screenshot that shows how to delete a custom function.](/defender/media/advanced-hunting-custom-fxns/delete-function.png)
+![Screenshot that shows how to delete a custom function.](media/advanced-hunting-custom-functions/delete-function.png)
 ## See also
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
