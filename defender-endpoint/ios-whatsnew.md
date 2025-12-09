@@ -23,10 +23,9 @@ appliesto:
 ---
 
 # What's new in Microsoft Defender for Endpoint on iOS
-<!-- Please don't adjust this next line without getting approval from the Defender for Endpoint documentation team. It is necessary for proper RSS functionality. -->
-This page is updated frequently with the latest updates in Defender endpoint security for iOS.
 
-To be notified when this page is updated, copy and paste the following URL into your feed reader: `https://aka.ms/mde/ios-rss`
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This page is updated frequently with the latest updates in Defender endpoint security for iOS devices. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/ios-rss`
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 

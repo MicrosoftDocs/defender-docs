@@ -19,6 +19,18 @@ ms.date: 07/06/2025
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
 
+## November 2025
+
+### Microsoft Defender for Cloud permissions are now integrated with Microsoft Defender XDR unified RBAC (Preview)
+
+We’ve introduced Unified Role-Based Access Control (uRBAC) to simplify permission management across Defender for Cloud resources.
+
+Assign roles consistently across cloud scopes.
+Apply least-privilege principles with granular permissions.
+New consolidated role table available for quick reference.
+
+For more information, see: [Unified RBAC roles in Microsoft Defender for Cloud](compare-rbac-roles.md#unified-rbac-roles-in-microsoft-defender-for-cloud)
+
 ## July 2025
 
 ### Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (Preview)
