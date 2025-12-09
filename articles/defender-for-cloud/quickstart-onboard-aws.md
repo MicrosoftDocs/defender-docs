@@ -18,12 +18,6 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 > [!NOTE]
 > If you have an AWS account that is connected to Microsoft Sentinel, you can't connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
-## AWS authentication process
-
-Defender for Cloud and AWS use federated authentication. During onboarding, the CloudFormation template automatically creates the required identity provider and IAM roles in AWS. These resources establish trust between Microsoft Entra ID and AWS so that Defender for Cloud can assume short-lived AWS credentials for posture assessment.
-
-Learn more about [the authentication architecture for AWS connectors](concept-authentication-architecture-aws.md).
-
 ## Prerequisites
 
 Before you connect your AWS account, make sure you have:
@@ -209,6 +203,12 @@ As part of onboarding, deploy the generated CloudFormation template:
 > This error indicates that you haven't enabled [the trusted access for AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html).
 >
 > To remediate this error message, your CloudFormation StackSets page has a prompt with a button that you can select to enable trusted access. After trusted access is enabled, the CloudFormation Stack must be run again.
+
+## Enable AWS CloudTrail log ingestion (Preview)
+
+After you connect your AWS account, you can enable AWS CloudTrail management event ingestion to enhance identity and configuration insights. CloudTrail ingestion provides additional context for CIEM assessments, activity-based risk indicators, and configuration change detection.
+
+Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloudtrail-defender-for-cloud.md).
 
 ## Learn more
 
