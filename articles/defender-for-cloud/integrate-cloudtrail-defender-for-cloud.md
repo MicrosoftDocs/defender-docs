@@ -19,6 +19,7 @@ CloudTrail ingestion is available for single AWS accounts and AWS Organizations 
 
 Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
+- Defender CSPM plan enabled on the Azure subscription.
 - Permission to access AWS CloudTrail.
 - Access to the Amazon S3 bucket that stores CloudTrail log files.
 - Access to Amazon SQS queue notifications associated with that bucket.
@@ -45,7 +46,10 @@ After your AWS account is connected:
 
 1. Provide the required Amazon S3 bucket and SQS queue details if using an existing trail.
 
-1. If prompted, deploy or update the CloudFormation stack to grant required access for log retrieval.
+1. If prompted, deploy or update the CloudFormation stack. 
+
+> [!NOTE]
+> If you are connecting an existing trail, you must paste the SQS ARN into the CloudFormation parameter field when requested by the AWS console.
 
 You might be prompted to deploy a CloudFormation template to establish IAM permissions, trust relationships, and resource access needed for Defender for Cloud to retrieve CloudTrail logs.
 
@@ -69,7 +73,7 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 - Ensure SQS notifications are configured for new log deliveries.
 - Confirm IAM roles allow access to CloudTrail artifacts and encrypted objects.
 - Review Defender for Cloud recommendations and identity insights after setup.
-
+t
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
 
 ## Troubleshoot CloudTrail ingestion

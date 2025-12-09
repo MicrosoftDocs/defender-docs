@@ -125,6 +125,9 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
 
+By default, the **Databases** plan is set to **On**. This setting extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
+
+
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
    Each plan incurs charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
@@ -148,6 +151,9 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
    > [!NOTE]
    > When onboarding a **management account**, Defender for Cloud uses AWS StackSets and automatically creates connectors for child accounts. Autoprovisioning is enabled for newly discovered accounts.
+
+    > [!NOTE]
+    > If you select **Management account** to create a connector to a management account, the tab for onboarding with Terraform isn’t visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
 
 1. Follow the on-screen instructions to deploy the CloudFormation template. If you select Terraform, follow the equivalent deployment instructions provided in the portal.
 
