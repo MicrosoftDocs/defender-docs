@@ -60,10 +60,10 @@ Your device data is updated.
 1. In your .csv file, type the following details for each device:
 
     - **IP Address**. Enter the device's IP address.
-    - **Device OS**. Enter one of the device operating systems listed in the [supported values for the Device OS table](#supported-values-for-device-os).
+    - **Device OS**. Enter one of the device operating systems listed in the [supported values for the Device OS table](#supported-values-for-device-operating-system).
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
-The following sections include information to help you fill in the Device OS column: The [device example](#device-example) includes sample device details, and the [supported values table](#supported-values-for-device-os) includes the supported operating system values.
+The following sections include information to help you fill in the Device OS column: The [device information example](#device-information-example) includes sample device details, and the [supported values table](#supported-values-for-device-operating-system) includes the supported operating system values.
 
 ### Device information example
 
