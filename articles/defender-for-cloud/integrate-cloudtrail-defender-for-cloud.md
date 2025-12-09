@@ -76,7 +76,7 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 - Ensure SQS notifications are configured for new log deliveries.
 - Confirm IAM roles allow access to CloudTrail artifacts and encrypted objects.
 - Review Defender for Cloud recommendations and identity insights after setup.
-t
+
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
 
 ## Troubleshoot CloudTrail ingestion
