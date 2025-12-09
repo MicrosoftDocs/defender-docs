@@ -21,7 +21,7 @@ For example:
 
 :::image type="content" source="media/incidents-summary1.png" alt-text="Screenshot showing relative number of detected and policy-based incidents.":::
 
-:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/top-alerts" alt-text="Screenshot showing top alerts.":::
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/top-alerts.png" alt-text="Screenshot showing top alerts.":::
 
 ## Data usage cards
 
