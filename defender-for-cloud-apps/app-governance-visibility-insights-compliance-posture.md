@@ -51,7 +51,7 @@ For example:
 
 The number of apps that have accessed content with sensitivity labels.
 
-:::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Number of apps that have accessed content with sensitivity labels.":::
+:::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Screenshot showing the number of apps that have accessed content with sensitivity labels.":::
 
 ## Next steps
 
