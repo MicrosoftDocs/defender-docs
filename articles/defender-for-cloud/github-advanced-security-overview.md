@@ -10,7 +10,7 @@ author: DebLanger
 
 # What is GitHub Advanced Security integration with Microsoft Defender for Cloud?
 
-GitHub Advanced Security integration with Microsoft Defender for Cloud connects your source code repositories to cloud workloads, providing unified security visibility across your development lifecycle. This integration automatically maps code changes to production environments, prioritizes security alerts based on real runtime context, and enables coordinated remediation workflows between development and security teams.
+GitHub Advanced Security (GHAS) integration with Microsoft Defender for Cloud connects your source code repositories to cloud workloads, providing unified security visibility across your development lifecycle. This integration automatically maps code changes to production environments, prioritizes security alerts based on real runtime context, and enables coordinated remediation workflows between development and security teams.
 
 Use this integration to:
 
@@ -25,7 +25,7 @@ This overview explains how the integration works and helps you understand its co
 
 ### Smart code-to-cloud mapping
 
-When you connect your GitHub organization or repo to Microsoft Defender for Cloud (MDC), the system automatically maps source repositories to running cloud workloads. It uses GitHub's Artifact Attestations and MDC proprietary "Code 2 Cloud" methods that ensure every workload is tracked to its repo of origin and vice versa.
+When you connect your GitHub organization or repo to Microsoft Defender for Cloud (MDC) as explained [here](/azure/defender-for-cloud/quickstart-onboard-github), the system automatically maps source repositories to running cloud workloads. It uses [GitHub's Artifact Attestations](https://docs.github.com/en/actions/concepts/security/artifact-attestations) and MDC proprietary "Code 2 Cloud" methods that ensure every workload is tracked to its repo of origin and vice versa.
 
 This capability gives you instant end-to-end visibility, so you know which code powers each deployed application without time-consuming manual mapping.
 
@@ -33,7 +33,7 @@ This capability gives you instant end-to-end visibility, so you know which code 
 
 Cut through noisy security alerts and focus on vulnerabilities that truly matter.
 
-GHAS Security findings in GitHub are prioritized by real runtime context from MDC, highlighting risk factors like Internet Exposure, Sensitive Data processing, Critical Resources, and Lateral Movement. These risks, identified in runtime workloads, are dynamically linked to those workloads' code repositories of origin and the specific build artifacts in GitHub. You can filter, triage, and act only on security issues with actual production impact, helping your team stay efficient and keep your most important applications secure.
+GHAS Security findings in GitHub are prioritized by real runtime context from MDC, highlighting risk factors like **Internet Exposure**, **Sensitive Data** processing, **Critical Resources**, and **Lateral Movement**. These risks, identified in runtime workloads, are dynamically linked to those workloads' code repositories of origin and the specific build artifacts in GitHub. You can filter, triage, and act only on security issues with actual production impact, helping your team stay efficient and keep your most important applications secure.
 
 ### Unified AI-driven remediation
 
@@ -41,13 +41,25 @@ Bridge the gap between security and engineering teams with integrated workflows 
 
 Within MDC, security managers can see which security issues the engineering team already knows about and their status by selecting the **View on GitHub** link.
 
+ :::image type="content" source="media/GHAS/cve-vulnerability-tracking.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE titles, CVSS scores, fix versions, and 'View on GitHub' links for related alerts." lightbox="media/GHAS/cve-vulnerability-tracking.jpg":::
+
 They can assign security recommendations for resolution to the relevant engineering teams by generating a GitHub issue assignment.
+
+:::image type="content" source="media/GHAS/code-to-runtime-workflow.jpg" alt-text="Screenshot of MDC displaying remediation insights with impacted assets linked to Code and Runtime phases. Runtime phase includes a 'Take Action' button." lightbox="media/GHAS/code-to-runtime-workflow.jpg":::
 
 The assignment is generated on the repository of origin, providing runtime information and context to facilitate the engineering fix.
 
+:::image type="content" source="media/ghas/github-security-issue-list.jpg" alt-text="Screenshot of GitHub Issues tab showing open issues with labels 'security' and 'vulnerability' highlighted for tracking fixes." lightbox="media/ghas/github-security-issue-list.jpg":::
+
+:::image type="content" source="media/ghas/github-issue-security-recommendation.jpg" alt-text="Screenshot of a GitHub issue interface highlighting security details, risk levels, and actionable insights for engineering teams." lightbox="media/ghas/github-issue-security-recommendation.jpg":::
+
 Engineering managers can assign the issue to a developer for further resolution, and the assignee can leverage Copilot Coding Agent for AI-powered autofixes.
 
+:::image type="content" source="media/ghas/copilot-ai-autofix-tracking.jpg" alt-text="Screenshot of GitHub pull request details displaying updated Dockerfile base image, CVE links, and Copilot's comments on security fixes." lightbox="media/ghas/copilot-ai-autofix-tracking.jpg":::
+
 GitHub issue fixes, progress, and campaign advancements are tracked in real time, and the statuses are reflected both in GitHub and in MDC.
+
+:::image type="content" source="media/ghas/github-issue-status-details.jpg" alt-text="Screenshot of GitHub issue details showing repository URL, owner, status, and interactive 'Take Action' button." lightbox="media/ghas/github-issue-status-details.jpg":::
 
 This approach ensures fixes are delivered rapidly, creates clear accountability, and simplifies collaboration, all inside the tools your teams already use.
 
@@ -60,7 +72,7 @@ This approach ensures fixes are delivered rapidly, creates clear accountability,
 | Cloud Environments | - Available in Commercial Clouds only (not in US Gov, China Gov, or other sovereign clouds) |
 
 > [!NOTE]
-> GHAS & MDC native integration is supported for Containers workloads only for the Preview
+> GHAS and MDC native integration is supported for Containers workloads only for the the current preview release.
 
 ## Next steps
 
