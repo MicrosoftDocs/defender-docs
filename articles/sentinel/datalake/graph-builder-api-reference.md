@@ -166,13 +166,14 @@ nodes_df.select("id", "label", "properties").show()
 
 **Example:**
 
-> # Example: Access node properties
 ```python
+# Example: Access node properties
 nodes_df.select("id", "label", "properties").show() 
 ```
 
-# Example: Filter nodes by property value 
+
 ```python
+# Example: Filter nodes by property value 
 active_users = nodes_df.filter(nodes_df.properties["status"] == "active") active_users.show()
 ```
 
@@ -510,135 +511,113 @@ Node builder after data source is set: configuration methods available.
 
 #### Constructor
 
-> NodeBuilderSourceSet(alias: str, graph_builder: GraphSpecBuilder, source_step: DataInputETLStep)
+```NodeBuilderSourceSet(alias: str, graph_builder: GraphSpecBuilder, source_step: DataInputETLStep)```
 
-**Note:** Created internally by NodeBuilderInitial source methods.
+>[!NOTE]
+> Created internally by NodeBuilderInitial source methods.
 
 #### Methods
 
 **`with_time_range`**
 
-> def with_time_range(  
-> time_column: str,  
-> start_time: Optional[Union[str, datetime]] = None,  
-> end_time: Optional[Union[str, datetime]] = None,  
-> lookback_hours: Optional[float] = None  
-> ) -> NodeBuilderSourceSet
+```def with_time_range(  
+time_column: str,  
+start_time: Optional[Union[str, datetime]] = None,  
+end_time: Optional[Union[str, datetime]] = None,  
+lookback_hours: Optional[float] = None  
+) -> NodeBuilderSourceSet
+```
 
 Apply time range filtering to the node's data source.
 
 **Parameters:**
-
 - time_column (str): Column name containing timestamp data (required)
-
 - start_time (str or datetime, optional): Start date ('10/20/25', '2025-10-20', or datetime object)
-
 - end_time (str or datetime, optional): End date (same formats as start_time)
-
 - lookback_hours (float, optional): Hours to look back from now
 
-**Returns:**
+**Returns:** NodeBuilderSourceSet: Self for method chaining
 
-- NodeBuilderSourceSet: Self for method chaining
-
-**Raises:**
-
-- ValueError: If time column not found in source schema
+**Raises:** ValueError: If time column not found in source schema
 
 **Time Range Logic:**
 
-4.  If start*time and end*time provided: use them directly
-
-5.  If only lookback*hours provided: end=now, start=now-lookback*hours
-
-6.  If nothing provided: no time filtering
-
-7.  If start/end AND lookback_hours: start/end take precedence
+1.  If start*time and end*time provided: use them directly
+1.  If only lookback*hours provided: end=now, start=now-lookback*hours
+1.  If nothing provided: no time filtering
+1.  If start/end AND lookback_hours: start/end take precedence
 
 **Example:**
 
-> \# Explicit date range  
-> builder.add_node("user").from_table("SigninLogs") \\  
-> .with_time_range(time_column="TimeGenerated", start_time="2025-01-01", end_time="2025-01-31")  
->   
-> \# Lookback window  
-> builder.add_node("user").from_table("SigninLogs") \\  
-> .with_time_range(time_column="TimeGenerated", lookback_hours=24)
+```python
+# Explicit date range  
+builder.add_node("user").from_table("SigninLogs") \\  
+.with_time_range(time_column="TimeGenerated", start_time="2025-01-01", end_time="2025-01-31")  
+  
+# Lookback window  
+builder.add_node("user").from_table("SigninLogs") \\  
+.with_time_range(time_column="TimeGenerated", lookback_hours=24)
+```
 
 **`with_label`**
 
-> def with_label(label: str) -> NodeBuilderSourceSet
+```def with_label(label: str) -> NodeBuilderSourceSet```
 
 Set node label (defaults to alias if not called).
 
-**Parameters:**
+**Parameters:** label (str): Node label
 
-- label (str): Node label
+**Returns:** NodeBuilderSourceSet: Self for method chaining
 
-**Returns:**
-
-- NodeBuilderSourceSet: Self for method chaining
-
-**Raises:**
-
-- ValueError: If label already set
+**Raises:** ValueError: If label already set
 
 **Example:**
+```python
+builder.add_node("u").from_table("Users").with_label("user")
+```
 
-> builder.add_node("u").from_table("Users").with_label("user")
 
 **`with_columns`**
 
-> def with_columns(  
-> \*columns: str,  
-> key: str,  
-> display: str  
-> ) -> NodeBuilderSourceSet
+```
+def with_columns(  
+*columns: str,  
+key: str,  
+display: str  
+) -> NodeBuilderSourceSet
+```
 
 Configure columns with required key and display designation.
 
 **Parameters:**
-
-- \*columns (str): Column names to include (at least one required)
-
+- columns (str): Column names to include (at least one required)
 - key (str): Column name to mark as key (required, must be in columns)
-
 - display (str): Column name to mark as display value (required, must be in columns, can be same as key)
 
-**Returns:**
+**Returns:** NodeBuilderSourceSet: Self for method chaining
 
-- NodeBuilderSourceSet: Self for method chaining
+**Raises:** ValueError: If validation fails (duplicate columns, missing key/display, etc.)
 
-**Raises:**
-
-- ValueError: If validation fails (duplicate columns, missing key/display, etc.)
-
-**Notes:**
-
-- Properties are automatically built from column types
-
-- Time filter column is automatically added if specified
-
-- Property types are auto-inferred from source schema
+> [!NOTE]
+> - Properties are automatically built from column types
+> - Time filter column is automatically added if specified
+> - Property types are auto-inferred from source schema
 
 **Example:**
-
-> builder.add_node("user").from_table("Users") \\  
-> .with_columns("id", "name", "email", "created_at", key="id", display="name")
+```python
+builder.add_node("user").from_table("Users") \\  
+.with_columns("id", "name", "email", "created_at", key="id", display="name")
+```
 
 **`add_node`**
 
-> def add_node(alias: str) -> NodeBuilderInitial
+```def add_node(alias: str) -> NodeBuilderInitial```
 
 Finish this node and start building another node.
 
-**Parameters:**
+**Parameters:**alias (str): Alias for the new node
 
-- alias (str): Alias for the new node
-
-**Returns:**
-
-- NodeBuilderInitial: New node builder
+**Returns:** NodeBuilderInitial: New node builder
 
 **Example:**
 
@@ -1601,36 +1580,36 @@ Display query result in various formats.
 **Example:**
 
 > result = graph.query("MATCH (u:user)-[r:accessed]->(d:device) RETURN u, r, d")  
-> result.show() \# Visual by default  
-> result.show(format="table") \# Table format
+> result.show() # Visual by default  
+> result.show(format="table") # Table format
 
 ## Complete Example – <span class="mark">Do not publish</span>
 
 > from sentinel_graph.builders import GraphSpecBuilder  
 > from sentinel_graph.core.context import ExecutionContext  
 >   
-> \# Create execution context  
+> # Create execution context  
 > context = ExecutionContext.default()  
 >   
-> \# Build graph specification  
+> # Build graph specification  
 > graph_spec = (  
 > GraphSpecBuilder.start(context)  
 > .with_sink_database("security_db")  
 >   
-> \# Define user node  
+> # Define user node  
 > .add_node("user")  
 > .from_table("SigninLogs")  
 > .with_time_range(time_column="TimeGenerated", lookback_hours=24)  
 > .with_label("user")  
 > .with_columns("UserId", "UserName", "Email", key="UserId", display="UserName")  
 >   
-> \# Define device node  
+> # Define device node  
 > .add_node("device")  
 > .from_table("DeviceInfo")  
 > .with_label("device")  
 > .with_columns("DeviceId", "DeviceName", "OS", key="DeviceId", display="DeviceName")  
 >   
-> \# Define accessed edge  
+> # Define accessed edge  
 > .add_edge("accessed")  
 > .from_table("AccessLogs")  
 > .with_time_range(time_column="TimeGenerated", lookback_hours=24)  
@@ -1641,19 +1620,19 @@ Display query result in various formats.
 > .done()  
 > )  
 >   
-> \# Build graph with data  
+> # Build graph with data  
 > result = graph_spec.build_graph_with_data()  
 > print(f"Build status: {result['status']}")  
 >   
-> \# Query the graph  
+> # Query the graph  
 > query_result = graph_spec.query("MATCH (u:user)-[a:accessed]->(d:device) RETURN u, a, d LIMIT 100")  
 > query_result.show()  
 >   
-> \# Convert to DataFrame for further analysis  
+> # Convert to DataFrame for further analysis  
 > df = query_result.to_dataframe()  
 > df.printSchema()  
 >   
-> \# Convert to GraphFrame for graph algorithms  
+> # Convert to GraphFrame for graph algorithms  
 > gf = graph_spec.to_graphframe()  
 > pagerank_result = gf.pageRank(resetProbability=0.15, maxIter=10)  
 > pagerank_result.vertices.select("id", "pagerank").show()
@@ -1673,7 +1652,7 @@ All builders support method chaining for readable, declarative graph definitions
 
 Multiple edges with the same alias are automatically union'ed with merged properties:
 
-> \# Both edges use alias "sign_in" - they will be merged into one schema edge  
+> # Both edges use alias "sign_in" - they will be merged into one schema edge  
 > builder.add_edge("sign_in") \\  
 > .from_table("AzureSignins") \\  
 > .source(id_column="UserId", node_type="AZuser") \\  
