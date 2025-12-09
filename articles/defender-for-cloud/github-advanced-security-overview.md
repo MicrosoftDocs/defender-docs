@@ -41,17 +41,17 @@ Bridge the gap between security and engineering teams with integrated workflows 
 
 Within MDC, security managers can see which security issues the engineering team already knows about and their status by selecting the **View on GitHub** link.
 
- :::image type="content" source="media/GHAS/cve-vulnerability-tracking.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE titles, CVSS scores, fix versions, and 'View on GitHub' links for related alerts." lightbox="media/GHAS/cve-vulnerability-tracking.jpg":::
+ :::image type="content" source="media/ghas/cve-vulnerability-tracking.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE titles, CVSS scores, fix versions, and 'View on GitHub' links for related alerts." lightbox="media/ghas/cve-vulnerability-tracking.jpg":::
 
 They can assign security recommendations for resolution to the relevant engineering teams by generating a GitHub issue assignment.
 
-:::image type="content" source="media/GHAS/code-to-runtime-workflow.jpg" alt-text="Screenshot of MDC displaying remediation insights with impacted assets linked to Code and Runtime phases. Runtime phase includes a 'Take Action' button." lightbox="media/GHAS/code-to-runtime-workflow.jpg":::
+:::image type="content" source="media/ghas/code-to-runtime-workflow.jpg" alt-text="Screenshot of MDC displaying remediation insights with impacted assets linked to Code and Runtime phases. Runtime phase includes a 'Take Action' button." lightbox="media/ghas/code-to-runtime-workflow.jpg":::
 
 The assignment is generated on the repository of origin, providing runtime information and context to facilitate the engineering fix.
 
 :::image type="content" source="media/ghas/github-security-issue-list.jpg" alt-text="Screenshot of GitHub Issues tab showing open issues with labels 'security' and 'vulnerability' highlighted for tracking fixes." lightbox="media/ghas/github-security-issue-list.jpg":::
 
-:::image type="content" source="media/ghas/github-issue-security-recommendation.jpg" alt-text="Screenshot of a GitHub issue interface highlighting security details, risk levels, and actionable insights for engineering teams." lightbox="media/ghas/github-issue-security-recommendation.jpg":::
+:::image type="content" source="media/ghas/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue interface highlighting security details, risk levels, and actionable insights for engineering teams." lightbox="media/ghas/github-issue-security-details.jpg":::
 
 Engineering managers can assign the issue to a developer for further resolution, and the assignee can leverage Copilot Coding Agent for AI-powered autofixes.
 

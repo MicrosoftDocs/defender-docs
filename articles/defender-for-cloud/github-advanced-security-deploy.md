@@ -114,7 +114,7 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 1. Test that [GitHub agentless scanning](agentless-code-scanning.md) picks up the repo.
 
 1. Go to Cloud Security Explorer and perform the query.
-:::image type="content" source="media/ghas/validat:::image type="content" source="media/ghas/query_validating_image_been_scanned_in_acr_vulnerabilities.jpg" alt-text="" lightbox="media/ghas/query_validating_image_been_scanned_in_acr_vulnerabilities.jpg":::e-mdc-container-scan-results.jpg" alt-text="Screenshot of query builder in Cloud Security Explorer with filters set to GitHub repositories and container images, showing search results." lightbox="media/ghas/validate-mdc-container-scan-results.jpg":::
+:::image type="content" source="media/ghas/validate-mdc-container-scan-results.jpg" alt-text="Screenshot of query builder in Cloud Security Explorer with filters set to GitHub repositories and container images, showing search results." lightbox="media/ghas/validate-mdc-container-scan-results.jpg":::
 
 1. Validate that the MDC (in ACR) scanned the container image and used it to create a container. In your query, add the conditions for your specific deployment.
 :::image type="content" source="media/ghas/github-repo-container-vulnerabilities.jpg" alt-text="Screenshot of Cloud Security Explorer showing a query with filters for GitHub repositories and container images, displaying scan results." lightbox="media/ghas/github-repo-container-vulnerabilities.jpg":::
