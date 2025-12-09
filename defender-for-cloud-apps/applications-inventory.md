@@ -106,8 +106,8 @@ You can apply the following filters to get a more focused view:
 
 > [!TIP]
 > To see all columns, you might need to do one or more of the following steps:
-* Horizontally scroll in your web browser.
-* Narrow the width of appropriate columns.
+> * Horizontally scroll in your web browser.
+> * Narrow the width of appropriate columns.
 > * Zoom out in your web browser.
 
 ## Next steps
