@@ -18,13 +18,13 @@ ms.service: microsoft-sentinel
 
 You can access the value of Microsoft Sentinel's collection of Model Context Protocol (MCP) tools in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md#entity-analyzer-preview). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
 
-The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into preexisting playbooks.
+The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into pre-existing playbooks.
 
 ## Prerequisites to building a logic app
 
 If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analyzer tool.
 
-Each tenant can use the entity analyzer tool up to [five concurrent runs at a time](sentinel-mcp-billing.md#sentinel-entity-analyzer-tool-1). Make sure to set up a **For each** loop in your entity analyzer workflow, turn the **Concurrecny control** on, and set to **Degree of parallelism** to `5`. 
+Each tenant can use the entity analyzer tool up to [five concurrent runs at a time](sentinel-mcp-billing.md#sentinel-entity-analyzer-tool-1). If you're using a **For each** loop in your entity analyzer workflow, turn the **Concurrency control** on, and set the **Degree of parallelism** to `5`. 
 
 :::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
 
@@ -38,17 +38,23 @@ You have two options for adding the entity analyzer tool to your logic app:
 - [Add to an existing logic app](#add-to-an-existing-logic-app)
 
 ### Use an existing logic app template 
-You can use the following logic app template for an easy and quick implementation of the entity analyzer tool: 
-
-[Link]
-
-This logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident.
+You can use a logic app template for an easy and quick implementation of the entity analyzer tool. The logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident.
 
 :::image type="content" source="media/sentinel-mcp/logic-app-template.png" alt-text="Screenshot of the entity analyzer tool added to logic app template." lightbox="media/sentinel-mcp/logic-app-template.png":::
 
-The following sample output from the Incident logic app shows entity analyzer tool insights within incident comments:
+>[!IMPORTANT]
+> Make sure that you have the **Sentinel SOAR Essentials** solution installed and up-to-date before installing a pre-existing logic app template for entity analyzer. From the Microsoft Defender portal navigation menu, go to **Microsoft Sentinel** > **Content management** > **Content hub** to check and install or update.
 
-[Screenshot]
+To install a pre-existing logic app template:
+
+1. From the Microsoft Defender portal navigation menu, go to **Microsoft Sentinel** > **Configuration** > **Automation**.
+1. Select **Playbook templates**, then search for **Entity Analyzer**.
+1. Choose any of the following playbooks:
+    - Incident Trigger Entity Analyzer
+    - Url Trigger Entity Analyzer
+    - HTTP Trigger Entity Analyzer
+1. Select **Create playbook**.
+
 
 ### Add to an existing logic app
 
@@ -75,7 +81,7 @@ To add the entity analyzer tool by using an existing logic app:
             ```
             {
             "entityType": "User",
-            "userId": "[User]"
+            "userId": "[Microsoft Entra object ID]"
             }
             ```
         You can enter these properties either manually or as dynamic values from previous actions.
