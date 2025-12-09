@@ -19,7 +19,6 @@ The **Overview** page shows the following details:
 
 For example:
 
-> [!div class="mx-imgBorder"]
 > ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)> [!div class="mx-imgBorder"]
 > ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
 

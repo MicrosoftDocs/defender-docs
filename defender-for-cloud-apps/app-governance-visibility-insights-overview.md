@@ -36,7 +36,7 @@ App governance provides access to the following data:
 
   - High-privileged apps.
   - Overprivileged apps.
-  - Unused apps
+  - Unused apps.
     
   - High-usage apps.
   - Top consented users whose data a specific app can access.
