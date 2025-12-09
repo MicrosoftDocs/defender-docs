@@ -19,8 +19,9 @@ The **Overview** page shows the following details:
 
 For example:
 
-> ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)> [!div class="mx-imgBorder"]
-> ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
+:::image type="content" source="media/incidents-summary1.png" alt-text="Screenshot showing relative number of detected and policy-based incidents.":::
+
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/top-alerts" alt-text="Screenshot showing top alerts.":::
 
 ## Data usage cards
 
@@ -32,8 +33,7 @@ Data usage cards show the following types of information:
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![Total data accessed by apps.](media/app-governance-visibility-insights-compliance-posture/data-usage-chart.png)
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/data-usage-chart.png" alt-text="Screenshot showing total data accessed by apps.":::
 
 ## Apps that access data on Microsoft 365
 
@@ -41,8 +41,7 @@ For apps that access data on Microsoft 365, cards show the number of apps that h
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![Apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days.](media/app-governance-visibility-insights-compliance-posture/apps-accessed-m365-services-chart.png)
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/apps-accessed-m365-services-chart.png" alt-text="Screenshot showing apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days.":::
 
 ## Sensitivity labels accessed
 
@@ -51,7 +50,8 @@ For sensitivity labeling data, cards show the number apps that have accessed con
 For example:
 
 The number of apps that have accessed content with sensitivity labels.
-> :::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Number of apps that have accessed content with sensitivity labels.":::
+
+:::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Number of apps that have accessed content with sensitivity labels.":::
 
 ## Next steps
 
