@@ -28,6 +28,9 @@ Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
 CloudTrail must record management events to provide identity and configuration telemetry.
 
+> [!NOTE]
+> **Microsoft Sentinel users:** If you already stream AWS CloudTrail logs to Microsoft Sentinel, enabling CloudTrail ingestion in Defender for Cloud may require updates to your Sentinel configuration. Review the updated workflow to avoid ingestion conflicts by following [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+
 ## Configure CloudTrail ingestion in Microsoft Defender for Cloud
 
 After your AWS account is connected:

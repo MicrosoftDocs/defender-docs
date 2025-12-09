@@ -15,8 +15,8 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 
 :::image type="content" source="./media/quickstart-onboard-aws/aws-account-in-overview.png" alt-text="Screenshot showing AWS accounts listed in the Defender for Cloud overview dashboard." lightbox="./media/quickstart-onboard-aws/aws-account-in-overview.png":::
 
-> [!NOTE]
-> If you have an AWS account that is connected to Microsoft Sentinel, you can't connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+> [!IMPORTANT]
+> If your AWS account is already connected to Microsoft Sentinel, enabling the Defender for Cloud connector without additional configuration may cause ingestion issues. To support both services simultaneously, follow the steps described in [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 ## Prerequisites
 
