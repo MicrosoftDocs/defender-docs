@@ -2,7 +2,7 @@
 title: Defender for Containers on Arc-enabled Kubernetes - Overview
 description: Learn about Microsoft Defender for Containers capabilities for Arc-enabled Kubernetes clusters.
 ms.topic: overview
-ms.date: 11/27/2025
+ms.date: 12/09/2025
 ai-usage: ai-assisted
 ---
 
@@ -92,6 +92,12 @@ Before deploying Defender for Containers on Arc-enabled Kubernetes clusters, mak
 ## Pricing
 
 For current pricing details, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 
