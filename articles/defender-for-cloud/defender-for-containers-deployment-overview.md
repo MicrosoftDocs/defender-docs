@@ -2,7 +2,7 @@
 title: Defender for Containers Deployment Overview
 description: Learn about the different deployment options for enabling Microsoft Defender for Containers across various Kubernetes environments.
 ms.topic: overview
-ms.date: 11/27/2025
+ms.date: 12/09/2025
 ai-usage: ai-assisted
 ---
 
@@ -98,6 +98,12 @@ Defender for Containers involves two main steps:
         - Azure portal
         - Programmatically (Azure CLI, REST API, IaC templates)
     - Helm chart deployment
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 
