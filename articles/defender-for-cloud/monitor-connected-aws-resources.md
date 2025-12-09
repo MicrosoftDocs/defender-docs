@@ -91,11 +91,18 @@ Arc-enabled EC2 instances appear in the **Asset inventory** as Azure Arc resourc
 ### Kubernetes signals (Defender for Containers)
 Alerts, recommendations, and inventory data for your EKS clusters are surfaced in the **Alerts** page, **Recommendations** page, and **Asset inventory**. Learn more about [protecting Amazon Elastic Kubernetes Service clusters](defender-for-containers-enable.md).
 
-## Enable AWS CloudTrail log ingestion (Preview)
+## Monitor CloudTrail ingestion and insights (Preview)
 
 Microsoft Defender for Cloud can ingest AWS CloudTrail management events (Preview) to increase visibility into identity operations, configuration changes, and other control-plane activity across your AWS environments. CloudTrail log collection enhances entitlement and configuration assessments by providing insight into unused or excessive permissions, privilege escalation paths, and activity associated with security incidents.
 
-CloudTrail ingestion supports both single-account deployments and multi-account AWS Organizations using a central logging account. After you enable the feature, Defender for Cloud retrieves CloudTrail log events and uses this data to generate recommendations, attack path context, and identity-based risk insights.
+CloudTrail ingestion supports both single-account deployments and multi-account AWS Organizations using a central logging account. After you enable the feature, Defender for Cloud retrieves CloudTrail log events and correlates this data with configuration and identity context to generate recommendations, attack path insights, and identity-based risk indicators.
+
+If you've enabled this feature, you will see CloudTrail-driven insights reflected in:
+
+- CIEM recommendations
+- Attack path analysis
+- Configuration change alerts
+- Identity-based anomaly indicators
 
 Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloudtrail-defender-for-cloud.md).
 
