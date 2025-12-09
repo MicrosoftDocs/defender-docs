@@ -87,8 +87,8 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
    You can use a condition only once, but the condition can contain multiple values:
 
-   - Multiple **values** of the **same condition** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). If the recipient matches **any** of the specified values, the policy is applied to them.
-   - Different **types of conditions** use AND logic. The recipient must match **all** of the specified conditions for the policy to apply to them. For example, you configure a condition with the following values:
+   - Multiple **values** of the **same condition** use OR logic (for example, _\<sender1\>_ or _\<sender2\>_). If the recipient matches **any** of the specified values, the policy is applied to them.
+   - Different **types of conditions** use AND logic. The sender must match **all** of the specified conditions for the policy to apply to them. For example, you configure a condition with the following values:
      - Users: `romain@contoso.com`
      - Groups: Executives
 
@@ -98,8 +98,8 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      You can use an exception only once, but the exception can contain multiple values:
 
-     - Multiple **values** of the **same exception** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). If the recipient matches **any** of the specified values, the policy isn't applied to them.
-     - Different **types of exceptions** use OR logic (for example, _\<recipient1\>_ or _\<member of group1\>_ or _\<member of domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
+     - Multiple **values** of the **same exception** use OR logic (for example, _\<sender1\>_ or _\<sender2\>_). If the recipient matches **any** of the specified values, the policy isn't applied to them.
+     - Different **types of exceptions** use OR logic (for example, _\<sender1\>_ or _\<member of group1\>_ or _\<sender domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
 
    When you're finished on the **Users, groups, and domains**, select **Next**.
 

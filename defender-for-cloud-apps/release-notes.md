@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 05/13/2025
+ms.date: 11/25/2025
 ms.topic: overview
 ---
 
@@ -20,6 +20,26 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+## December 2025
+
+### Increased availability of App governance unused app insights feature (Preview)
+
+The Microsoft Defender for Cloud Apps app governance unused app insights feature helps administrators identify and manage unused Microsoft 365-connected OAuth apps, enforce policy-based governance, and use advanced hunting queries for better security. This feature is now available for most commercial cloud customers. For more information, see [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md).
+
+## November 2025
+
+### AI Agent Protection (Preview)
+Microsoft Defender delivers comprehensive protection for AI agents, combining proactive exposure management with advanced threat detection. It automatically discovers AI agents created in Microsoft Copilot Studio and Azure AI Foundry, collects audit logs, continuously monitors for suspicious activity, and integrates detections and alerts into the XDR Incidents and Alerts experience with a dedicated Agent entity.
+
+- **Copilot Studio AI agents**
+
+    Defender ingests data from Copilot Studio agents into Advanced Hunting, enabling you to create custom queries and proactively hunt for threats. It also provides real-time protection by monitoring agent runtime and blocking harmful or suspicious actions, fully integrated with XDR incidents and alerts.
+
+  - **Azure AI Foundry AI agents**
+
+    Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
+
+For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.md).
 
 ## September 2025 
 
@@ -43,14 +63,14 @@ To support ongoing security enhancements and maintain service availability, Micr
 To avoid service disruption, take action by **August 25, 2025**, and update your firewall configuration as follows:
 
 Allow outbound traffic on port 443 to the following IP ranges:
-  - `51.54.53.136/29`
+- `51.54.53.136/29`
   - `51.54.114.160/29`
   - `62.11.173.176/29`
 
 If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
 
 Add the following endpoint to your firewall allowlist on port 443:
-  - `discoveryresources-cdn-prod.cloudappsecurity.com`
+- `discoveryresources-cdn-prod.cloudappsecurity.com`
 
 For the full list of required IP addresses and endpoints, see [Network requirements](network-requirements.md#portal-access).
 
