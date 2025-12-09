@@ -4,7 +4,6 @@ description: Enforce container image security in Kubernetes with gated deploymen
 #customer intent: As a Kubernetes administrator, I want to enforce security policies for container images so that I can prevent the deployment of vulnerable workloads.
 author: Elazark
 ms.author: elkrieger
-ms.reviewer: dacurwin
 ms.date: 10/29/2025
 ms.topic: overview
 ---
