@@ -53,7 +53,7 @@ As part of the ongoing [deprecation of the Microsoft Entra Permissions Managemen
 |-------|--------|
 | Azure | Inactive identity recommendations now include read-level permission evaluation for improved fidelity. |
 | AWS | - CIEM evaluations now apply to all AWS users and roles whose permissions can be reliably assessed.<br>- SAML and SSO identities require [AWS CloudTrail Logs (Preview)](quickstart-onboard-aws.md) to be enabled within the Defender CSPM plan.<br>- Serverless and compute identities are no longer included in CIEM’s inactivity logic, which may change recommendation counts. |
-| GCP | CIEM evaluations require [Cloud Logging ingestion (Preview)](quickstart-onboard-gcp.md#ingest-gcp-cloud) to be enabled within the Defender CSPM plan. |
+| GCP | CIEM evaluations require [Cloud Logging ingestion (Preview)](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview) to be enabled within the Defender CSPM plan. |
 
 The Permissions Creep Index (PCI) metric is being deprecated and will no longer appear in the Defender for Cloud recommendations. PCI is replaced by the improved activity-based CIEM logic, offering clearer guidance and more consistent identity risk insights.
 
