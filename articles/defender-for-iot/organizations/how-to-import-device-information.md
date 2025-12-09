@@ -55,7 +55,7 @@ Your device data is updated.
 
 **To import device IP addresses, operating systems, or patch levels**:
 
-1. Create a new .csv file. In Excel, open a blank workbook and select **Save As** to save it in `.csv` format.
+1. In Excel, open a blank workbook and select **Save As** to save it in `.csv` format.
 
 1. In your .csv file, type the following details for each device:
 
