@@ -904,64 +904,6 @@
         displayName: DNS
         href: defender-for-dns-alerts.md
 
-  - name: DevOps security
-    items:
-      - name: DevOps security overview
-        href: defender-for-devops-introduction.md
-      - name: Support and prerequisites
-        href: devops-support.md
-      - name: DevOps environment security posture
-        href: concept-devops-environment-posture-management-overview.md
-      - name: Reliability in Cloud for DevOps security
-        href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
-      - name: GitHub Advanced Security
-        items:
-          - name: Overview
-            href: github-advanced-security-overview.md
-          - name: Deploy GitHub Advanced Security integration
-            href: github-advanced-security-deploy.md
-      - name: Onboard
-        items:
-          - name: Connect Azure DevOps environments
-            href: quickstart-onboard-devops.md
-          - name: Configure agentless code scanning (Preview)
-            href: agentless-code-scanning.md
-          - name: Connect GitHub environments
-            href: quickstart-onboard-github.md
-          - name: Connect GitLab environments
-            href: quickstart-onboard-gitlab.md
-          - name: Configure the Microsoft Security DevOps Azure DevOps extension
-            href: configure-azure-devops-extension.md
-          - name: Configure the Microsoft Security DevOps GitHub action
-            href: github-action.md
-          - name: Defender for Cloud CLI
-            items:
-              - name: Overview
-                href: defender-cli-overview.md
-              - name: Authentication
-                href: defender-cli-authentication.md
-              - name: Syntax
-                href: defender-cli-syntax.md
-              - name: CI/CD in pipeline scanning
-                href: ci-cd-pipeline-scanning-with-defender-cli.md
-              - name: Reviewing results
-                href: defender-cli-reviewing-results.md
-          - name: Configure pull request annotations
-            href: enable-pull-request-annotations.md
-          - name: Map IaC templates from code to cloud
-            href: iac-template-mapping.md
-          - name: Map container images from code to cloud
-            href: container-image-mapping.md
-          - name: Edit DevOps connectors
-            href: edit-devops-connector.md
-      - name: Investigate and remediate
-        items:
-          - name: Discover IaC misconfigurations
-            href: iac-vulnerabilities.md
-          - name: Review pull request annotations
-            href: review-pull-request-annotations.md
-      - name: Common questions about DevOps security
-        href: faq-defender-for-devops.yml
   - name: Defender for AI services
     items:
       - name: Overview
@@ -981,6 +923,12 @@
       href: concept-devops-environment-posture-management-overview.md
     - name: Reliability in Cloud for DevOps security
       href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
+    - name: GitHub Advanced Security
+      items:
+        - name: Overview
+          href: github-advanced-security-overview.md
+        - name: Deploy GitHub Advanced Security integration
+          href: github-advanced-security-deploy.md
     - name: Onboard
       items:
         - name: Connect Azure DevOps environments
