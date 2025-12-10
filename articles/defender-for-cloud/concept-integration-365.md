@@ -74,7 +74,7 @@ The [CloudAuditEvents table](/defender-xdr/advanced-hunting-cloudauditevents-tab
 
 The [CloudProcessEvents table](/defender-xdr/advanced-hunting-cloudauditevents-table) in advanced hunting allows you to triage, investigate and create custom detections for suspicious activities that are invoked in your cloud infrastructure with information that includes details on the process details.
 
-The [CloudStorageAggregatedEvents table](//defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table)in advanced hunting allows you to investigate and hunt through cloud storage activities and to create custom detections that help surface suspicious file operations, access patterns and data interactions occurring across your cloud storage resources.
+The [CloudStorageAggregatedEvents table](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table)in advanced hunting allows you to investigate and hunt through cloud storage activities and to create custom detections that help surface suspicious file operations, access patterns and data interactions occurring across your cloud storage resources.
 
 ## Microsoft Sentinel customers
 

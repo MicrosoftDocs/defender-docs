@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 09/11/2025
+ms.date: 12/03/2025
 ms.custom: references_regions
 ---
 
@@ -23,6 +23,14 @@ This article summarizes support information for container capabilities in Micros
 > - Defender for Cloud officially supports only the versions of AKS, EKS, and GKE that the cloud vendor supports.
 
 The following table lists the features provided by Defender for Containers for the supported cloud environments and container registries.
+
+## Microsoft Defender for Containers plan availability
+
+| Aspect | Details |
+|--|--|
+| Release state: | General availability (GA)<br> Certain features are in preview. For a full list, see the tables below|
+| Pricing: | **Microsoft Defender for Containers** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). |
+| Required roles and permissions: | *To deploy the required components, see the [permissions for each of the components](monitoring-components.md#defender-for-containers-extensions)<br>* **Security admin** can dismiss alerts<br> * **Security reader** can view vulnerability assessment findings<br> See also [Roles for remediation](permissions.md#roles-used-to-automatically-configure-agents-and-extensions) and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles) |
 
 ## Vulnerability assessment (VA) features
 
@@ -63,10 +71,9 @@ The following table lists the features provided by Defender for Containers for t
 
 | Aspect | Details |
 |--|--|
-| Registries and images | **Supported**<br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br>   * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
-| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-24.04 <br>  * Fedora 31-37<br> * Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br> * Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br> * Rocky Linux 8.7 or later |
+| Registries and images | **Supported**<br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-24.04 <br> * Fedora 31-37<br> * Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br> * Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br> * Rocky Linux 8.7 or later |
 | Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
-
 
 ## Runtime protection features
 
@@ -111,7 +118,7 @@ The following table lists the features provided by Defender for Containers for t
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported**<br>*  [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)<br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1awsrt)</sup> <sup>[2](#footnote2awsrt)</sup><br> * [Kubernetes](https://kubernetes.io/docs/home/)<br />**Unsupported**<br /> * EKS private clusters |
+| Kubernetes distributions and configurations | **Supported**<br>*[Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)<br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1awsrt)</sup> <sup>[2](#footnote2awsrt)</sup><br>* [Kubernetes](https://kubernetes.io/docs/home/)<br />**Unsupported**<br /> * EKS private clusters |
 
 <sup><a name="footnote1awsrt"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters are tested.
 
@@ -136,7 +143,7 @@ The following table lists the features provided by Defender for Containers for t
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported**<br>  * [Google Kubernetes Engine (GKE) Standard](https://cloud.google.com/kubernetes-engine/) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1gcprt)</sup> <sup>[2](#footnote2gcprt)</sup><br> * [Kubernetes](https://kubernetes.io/docs/home/)<br><br />**Unsupported**<br /> * Private network clusters<br /> * GKE autopilot<br /> * GKE AuthorizedNetworksConfig |
+| Kubernetes distributions and configurations | **Supported**<br>  *[Google Kubernetes Engine (GKE) Standard](https://cloud.google.com/kubernetes-engine/) <br><br> **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1gcprt)</sup> <sup>[2](#footnote2gcprt)</sup><br>* [Kubernetes](https://kubernetes.io/docs/home/)<br><br />**Unsupported**<br /> *Private network clusters<br />* GKE autopilot<br /> * GKE AuthorizedNetworksConfig |
 
 <sup><a name="footnote1gcprt"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters are tested.
 
@@ -160,7 +167,7 @@ The following table lists the features provided by Defender for Containers for t
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>|
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>* [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br>* [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
 
 <sup><a name="footnote1arc"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters are tested.
 
@@ -227,9 +234,9 @@ The following table lists the features provided by Defender for Containers for t
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
-| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets. | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation |  Foundational CSPM  **OR** Defender CSPM **OR** Defender for Containers  | - |
-| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that bad actors might use to breach your environment. | Docker Hub, JFrog Artifactory | Preview | Preview | Connector creation | Defender CSPM | - |
-| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | Docker Hub, JFrog | Preview | Preview | Connector creation | Defender for Containers **OR** Defender CSPM |  |
+| Comprehensive inventory capabilities | Enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets. | Docker Hub, JFrog Artifactory | GA | GA | Connector creation |  Foundational CSPM  **OR** Defender CSPM **OR** Defender for Containers  | - |
+| Attack path analysis | A graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that bad actors might use to breach your environment. | Docker Hub, JFrog Artifactory | GA | GA | Connector creation | Defender CSPM | - |
+| Enhanced risk-hunting | Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md). | Docker Hub, JFrog | GA | GA | Connector creation | Defender for Containers **OR** Defender CSPM |  |
 
 ---
 

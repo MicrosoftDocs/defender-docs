@@ -2,9 +2,9 @@
 title: Review Security Recommendations
 description: Learn how to review security recommendations in Microsoft Defender for Cloud to improve the security posture of your environments.
 ms.topic: how-to
-author: ElazarK
-ms.author: elkrieger
-ms.date: 04/22/2025
+author: dlanger
+ms.author: dlanger
+ms.date: 12/03/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -81,7 +81,7 @@ On the recommendations page, you can review the following risk-prioritized detai
 > This capability is currently in preview.
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
-The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
+The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities, misconfigurations, and exposed secrets. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -156,6 +156,7 @@ Alternative access paths to recommendations:
 >
 > - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
 > - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
+> - Resources tied to free subscriptions do not currently appear in the Defender portal.
 
 ## Understanding risk prioritization in Defender portal
 
@@ -288,7 +289,7 @@ For each view you will view the **Cloud Secure Score**, **Score history**, **Rec
 > - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and does not affect Secure Score yet.
 > - Secure Score currently applies to the parent recommendation only, not to each individual item.
 >
- **Tip**: If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
+> If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
 
 With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
 
@@ -298,17 +299,6 @@ Key improvements in the cloud recommendations experience include:
 - **Risk-based scoring**: New scoring that weighs recommendations based on severity, asset context, and potential impact
 - **Enhanced data**: Core recommendation data from Azure Recommendations enriched with additional fields and capabilities from Exposure Management
 - **Prioritized by criticality**: Greater emphasis on critical issues that pose the highest risk to your organization
-
-The recommendation details page provides comprehensive information including:
-
-1. **Overview**: Summary of the recommendation with:
-   - - Description
-   - Recommendation details (risk level, attack paths, status, owner)
-   - Exposed asset details (Asset name, type, environment)
-1. **Remediation steps** where available.
-1. **Map preview**: A visual representation of the resource's attack surface and its relation to potential attack scenarios.
-1. **Related initiatives**: The security initiatives and compliance frameworks associated with the recommendation.
-1. **Associated CVEs**: Links to relevant Common Vulnerabilities and Exposures when applicable.
 
 The unified experience ensures that cloud security recommendations are contextualized within the broader security landscape, enabling more informed decision-making and efficient remediation workflows.
 

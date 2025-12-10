@@ -12,6 +12,8 @@
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
       href: release-notes.md
+    - name: What's new in recommendations, alerts, and incidents
+      href: release-notes-recommendations-alerts.md
 
 - name: Experience in the Defender portal
   expanded: true
@@ -190,23 +192,66 @@
               href: support-matrix-defender-for-containers.md
             - name: Defender for Containers permissions for EKS and GKE
               href: containers-permissions.md
-            - name: Protect Azure containers
-              href: tutorial-enable-containers-azure.md
-            - name: Protect on-premises and IaaS Kubernetes clusters
-              href: tutorial-enable-containers-arc.md
-            - name: Protect Amazon Web Service (AWS) accounts containers
-              href: tutorial-enable-container-aws.md
-            - name: Protect Google Cloud Platform (GCP) project containers
-              href: tutorial-enable-container-gcp.md
-            - name: Configure Defender for Containers components
-              displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
-                azure arc, multicloud
-              href: defender-for-containers-enable.md
-            - name: Deploy with Helm
-              href: deploy-helm.md
-            - name: Defender for Containers resources and offboarding
-              displayName: defender, containers, offboard, resources
-              href: defender-for-containers-offboard.md
+            - name: Deploy Defender for Containers
+              items:
+                - name: Defender for Containers deployment overview
+                  href: defender-for-containers-deployment-overview.md
+                - name: Azure (AKS)
+                  items:
+                    - name: Overview
+                      href: defender-for-containers-azure-overview.md
+                    - name: Enable via portal
+                      href: defender-for-containers-azure-enable-portal.md
+                    - name: Enable programmatically
+                      href: defender-for-containers-azure-enable-programmatically.md
+                    - name: Verify deployment
+                      href: defender-for-containers-azure-verify.md
+                    - name: Configure
+                      href: defender-for-containers-azure-configure.md
+                    - name: Remove
+                      href: defender-for-containers-azure-remove.md
+                - name: AWS (EKS)
+                  items:
+                    - name: Overview
+                      href: defender-for-containers-aws-overview.md
+                    - name: Enable via portal
+                      href: defender-for-containers-aws-enable-portal.md
+                    - name: Enable programmatically
+                      href: defender-for-containers-aws-enable-programmatically.md
+                    - name: Verify deployment
+                      href: defender-for-containers-aws-verify.md
+                    - name: Configure
+                      href: defender-for-containers-aws-configure.md
+                    - name: Remove
+                      href: defender-for-containers-aws-remove.md
+                - name: GCP (GKE)
+                  items:
+                    - name: Overview
+                      href: defender-for-containers-gcp-overview.md
+                    - name: Enable via portal
+                      href: defender-for-containers-gcp-enable-portal.md
+                    - name: Enable programmatically
+                      href: defender-for-containers-gcp-enable-programmatically.md
+                    - name: Verify deployment
+                      href: defender-for-containers-gcp-verify.md
+                    - name: Configure
+                      href: defender-for-containers-gcp-configure.md
+                    - name: Remove
+                      href: defender-for-containers-gcp-remove.md
+                - name: Arc-enabled Kubernetes (Preview)
+                  items:
+                    - name: Overview
+                      href: defender-for-containers-arc-overview.md
+                    - name: Enable via portal
+                      href: defender-for-containers-arc-enable-portal.md
+                    - name: Enable programmatically
+                      href: defender-for-containers-arc-enable-programmatically.md
+                    - name: Verify deployment
+                      href: defender-for-containers-arc-verify.md
+                    - name: Remove
+                      href: defender-for-containers-arc-remove.md
+                - name: Configure sensor deployed with Helm
+                  href: deploy-helm.md
         - name: Protect key vaults with Defender for Key Vault
           displayName: enable, key, vault, key vault
           href: tutorial-enable-key-vault-plan.md
@@ -328,6 +373,9 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
+        - name: Serverless protection
+          displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
+          href: serverless-protection.md
     - name: Assess your security posture
       items:
         - name: Cloud overview dashboard
@@ -1020,8 +1068,6 @@
 
 - name: Investigation & response
   items:
-    - name: What's new in recommendations, alerts, and incidents
-      href: release-notes-recommendations-alerts.md
     - name: Defender for APIs
       items: 
         - name: Investigate findings, recommendations, alerts
@@ -1111,6 +1157,9 @@
           href: recommendations-reference-keyvault.md
         - name: Networking recommendations
           href: recommendations-reference-networking.md
+        - name: Serverless protection recommendations
+          displayName: serverless, protection, recommendations
+          href: recommendations-reference-serverless-protection.md
         - name: Assessment checks for endpoint detection and response solutions
           href: endpoint-protection-recommendations-technical.md
         - name: Deprecated recommendations

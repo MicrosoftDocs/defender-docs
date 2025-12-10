@@ -21,6 +21,16 @@ To see the version of the sensor run:
 
 ### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
 
+__Sensor v0.8.40__ **– GA**
+
+- __Released:__ December 2025
+
+- __What's included:__
+
+   - Bug fixes and security enhancements
+   
+      - Improve latency for webhook calls in the api gating validation.
+      
 **Sensor v0.8.39 – GA**  
 - **Released:** November 2025  
 - **What's included:**
@@ -37,6 +47,16 @@ To see the version of the sensor run:
 
 ### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
 
+**Sensor v0.9.46 – Preview**
+
+- **Released:** December 2025
+
+- **What's included:**
+
+- Bug fixes and security enhancements
+
+  - Convert log analytics keys in defender helm chart to optional
+  
 **Sensor v0.9.44 – Preview**  
 - **Released:** November 2025  
 - **What's included:**
