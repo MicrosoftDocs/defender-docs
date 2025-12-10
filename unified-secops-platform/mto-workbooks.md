@@ -26,10 +26,7 @@ appliesto:
 
 # Workbooks in multitenant management (preview)
 
-Defender multi-tenant management allows users to access an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. This document walks you through the steps to access and use this feature effectively.
-
-<!---
-The Workbooks feature in Microsoft Sentinel enables users to manage and view workbooks across multiple tenants from a single page in the multitenant Organization (MTO) portal. ​This feature includes access to an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. ​This document walks you through the steps to access and use this feature effectively. ​--->
+The Workbooks feature in Microsoft Sentinel enables users to manage and view workbooks across multiple tenants from a single page in the multitenant Organization (MTO) portal. ​This feature allows users to access an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. ​This document walks you through the steps to access and use this feature effectively. 
 
 ## Prerequisites
 
@@ -42,7 +39,7 @@ Before using Workbooks in MTO, ensure you have the following prerequisites:
 
 ## Access a workbook​
 
-To navigate to the multitenant Organization (MTO) portal in Microsoft Sentinel. ​
+To navigate to the workbook page in the multitenant Organization (MTO) portal in Microsoft Sentinel. ​
 
 1. In the left-hand navigation pane, select **Microsoft Sentinel** > **Workbooks**. ​The Workbooks page displays an aggregated list of all workbooks across your tenants.
 
