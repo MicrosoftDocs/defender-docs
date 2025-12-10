@@ -4,7 +4,6 @@ description: Learn how to securely integrate Azure DevOps with Microsoft Defende
 #customer intent: As a DevOps engineer, I want to integrate Azure DevOps with Microsoft Defender for Cloud using a connector so that I can automate authentication securely.
 author: Elazark
 ms.author: elkrieger
-ms.reviewer: dacurwin
 ms.date: 11/06/2025
 ms.topic: concept-article
 ---

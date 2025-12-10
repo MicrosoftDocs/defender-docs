@@ -4,7 +4,6 @@ description: Learn how to configure Gated Deployment in Microsoft Defender for C
 #customer intent: As a Kubernetes administrator, I want to configure Gated Deployment in Defender for Containers so that I can enforce container image security policies during deployments.
 author: Elazark
 ms.author: elkrieger
-ms.reviewer: dacurwin
 ms.date: 10/29/2025
 ms.topic: concept-article
 ---
