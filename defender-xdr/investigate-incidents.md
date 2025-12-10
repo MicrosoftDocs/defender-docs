@@ -4,8 +4,8 @@ description: Investigate incidents on various assets from correlated signals of 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: edbaynash
-author: EdB-MSFT
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
