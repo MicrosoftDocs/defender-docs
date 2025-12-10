@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/11/2025
+ms.date: 12/10/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -75,11 +75,15 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Red Hat Enterprise Linux 10.x
 - CentOS 7.2 and higher, excluding CentOS Stream
 - CentOS 8.x
+- CentOS Stream 8.x
+- CentOS Stream 9.x
+- CentOS Stream 10.x
 - Ubuntu 16.04 LTS
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
+- Ubuntu Pro
 - Debian 9 - 12
 - SUSE Linux Enterprise Server 12.x
 - SUSE Linux Enterprise Server 15.x
@@ -97,9 +101,13 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 **The following Linux server distributions on ARM64 are now GA:**
 
-- Ubuntu 20.04 ARM64
-- Ubuntu 22.04 ARM64
-- Ubuntu 24.04 ARM64
+- Ubuntu 20.04 LTS ARM64
+- Ubuntu 22.04 LTS ARM64
+- Ubuntu 24.04 LTS ARM64
+- Ubuntu Pro ARM64
+- CentOS Stream 8.x ARM64
+- CentOS Stream 9.x ARM64
+- CentOS Stream 10.x ARM64
 - Debian 11, 12 ARM64
 - Amazon Linux 2 ARM64
 - Amazon Linux 2023 ARM64
