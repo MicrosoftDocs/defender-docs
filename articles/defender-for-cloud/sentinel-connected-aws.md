@@ -1,6 +1,6 @@
 ---
 title: Connect a Microsoft Sentinel connected AWS account to Defender for Cloud
-description: Troubleshoot deployment issues for your AWS connector within Microsoft Defender for Cloud to ensure your resources are connected and protected.
+description: Troubleshoot AWS connector deployment issues in Microsoft Defender for Cloud to ensure your resources are connected and protected.
 ms.date: 12/10/2025
 ms.topic: how-to
 #customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and is operating the way it should be.
@@ -36,7 +36,7 @@ To complete the procedures in this article, you need:
 If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable CloudTrail ingestion for Defender for Cloud by using Amazon SNS as a fan-out mechanism. This configuration allows both services to receive CloudTrail events in parallel.
 
 > [!IMPORTANT]
-> Complete the remaining CloudTrail ingestion steps in [Integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-defender-for-cloud.md).
+> These steps configure AWS resources for shared CloudTrail ingestion. To finalize Defender for Cloud setup, [integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-defender-for-cloud.md).
 
 ### Create an Amazon SNS topic for CloudTrail
 
@@ -111,7 +111,7 @@ After these changes, both Microsoft Sentinel and Defender for Cloud receive Clou
 1. Select **Actions** > **Add audience**.
 
 1. Paste the **ClientIdList** section you copied in step 4.
-
+ 
 1. Navigate to the Configure access page in Defender for Cloud.
 
 1. Follow the Create a Stack in AWS instructions, and use the template you saved locally.
