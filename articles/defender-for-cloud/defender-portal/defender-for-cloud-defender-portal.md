@@ -42,11 +42,11 @@ Cloud security data and signals can be accessed through several experiences. Som
       #### Cloud security
 
       - [Cloud Overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)
-      - [Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)
+      - [Cloud inventory](../asset-inventory.md?pivots=defender-portal)
    :::column-end:::
    :::column span="":::
       #### Posture Management
-      - [Cloud secure score](../secure-score-access-and-track.md?pivots=defender-portal)
+      - [Cloud Secure Score](../secure-score-access-and-track.md?pivots=defender-portal)
       - [Recommendations](../review-security-recommendations.md?pivots=defender-portal)
       - [Attack paths](../how-to-manage-attack-path.md?pivots=defender-portal)
       - [Cloud vulnerabilities](/security-exposure-management/vulnerability-management-integration)
@@ -77,9 +77,9 @@ Cloud security data and signals can be accessed through several experiences. Som
 
 ## Why integrate into the Defender portal? 
 
-The Microsoft Defender portal delivers a unified security operations experience across endpoints, identities, email, and cloud resources. By integrating Defender solutions, such as Defender for Cloud, Defender for Endpoint, and others, it provides comprehensive protection, detection, investigation, and response capabilities in one place. This unified approach streamlines threat detection, correlates insights, and strengthens your organization’s security posture. Powered by advanced AI and Microsoft’s global threat intelligence, it helps identify emerging risks faster and enables proactive defense against sophisticated attacks. 
+The Microsoft Defender portal delivers a unified security operations experience across endpoints, identities, email, and cloud resources. By integrating Defender solutions, such as Defender for Cloud, Defender for Endpoint, and others, it provides comprehensive protection, detection, investigation, and response capabilities in one place. This unified approach streamlines threat detection, correlates insights, and strengthens your organization’s security posture. Powered by advanced AI and Microsoft’s global threat intelligence, it helps identify emerging risks faster and enables proactive defense against sophisticated attacks.
 
-### How to get started? 
+### How to get started?
 
 During the preview phase, Defender for Cloud customers with at any paid plan can access the consumption experiences in the Defender portal. 
 
