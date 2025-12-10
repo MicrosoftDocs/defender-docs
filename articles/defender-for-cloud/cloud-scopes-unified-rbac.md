@@ -96,7 +96,7 @@ Planning guidance:
 
 ## 1. Create cloud scopes
 
-Navigation: **Settings > Permissions > Microsoft XDR Roles > Scopes > Cloud scopes**.
+Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Scopes**.
 
 Characteristics:
 
@@ -107,7 +107,7 @@ Characteristics:
 
 ### Create a scope (wizard)
 
-1. Select **Create new cloud scope**.
+1. Select **Add cloud scope**.
    :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Create scope action." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
 2. Enter name and description.  
    :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
@@ -118,20 +118,23 @@ Characteristics:
 
 ## 2. Activate cloud scopes (one-time)
 
-Before scopes can be used in role assignments, run the activation wizard if prompted. This:
+Before scopes can be used in role assignments, they must be activated using a wizard. This:
 
-1. Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
-1. Lets you map those roles to chosen cloud scopes
-1. Highlights manage / sensitive permissions (for example: response actions)
-1 Finalizes activation (irreversible; future changes are through normal management)
+* Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
+* Lets you map those roles to chosen cloud scopes
+* Highlights manage / sensitive permissions (for example: response actions)
+* Finalizes activation (irreversible; future changes are through normal management)
 
 If no device groups or unified RBAC roles exist yet, the wizard may be skipped until needed.
 
 ### Activation & bulk assignment wizard
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Activation wizard start." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Role-to-scope assignment." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
+1. When prompted by a banner, select **Activate cloud scopes** to run the wizard.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Activation wizard start." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
+1. Set permissions for roles assigned through cloud scopes.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Role-to-scope assignment." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
+1. Finish activating cloud scopes assignment.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
 
 Guidelines:
 
@@ -141,28 +144,28 @@ Guidelines:
 
 ## 3. Define unified RBAC roles and assignments
 
-Navigation: **Settings > Permissions > Microsoft XDR Roles > Roles**.
+Follow these steps to activate the role wizard to define unified RBAC roles and assignments.
+Navigation: **System > Permissions > Microsoft Defender XDR > Roles**.
 
-Permission groups (select one or both):
+1. Select **Create custom role**.
+1. Choose a role name and description.
+1. Choose permission groups (select one or both):
+   1. **Security operations** – incidents, alerts, and cloud inventory
+   1. **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
+1. Add an assignment. 
+   * Assign users/groups.
+   * Select data sources: All / MDC / Exposure Management (XSPM)
+   * Select scope option:
+     - All cloud scopes
+     - Custom (pick specific scopes)
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
-1. **Security operations** – incidents, alerts, and cloud inventory
-1. **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
+   > [!NOTE]
+   > For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
 
-> [!NOTE]
-> For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
-
-During the role wizard:
-
-- Choose permission groups
-- Select data sources: All / MDC / Exposure Management (XSPM)
-- Assign users / groups
-- Select scope option:
-  - All cloud scopes
-  - Custom (pick specific scopes)
-
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
+1. Review and finish.
 
 ## 4. Use scope and environment filters
 
