@@ -86,7 +86,7 @@ The following steps walk you through creating your first custom graph by using a
     print(f"Logging level set to: {logging.getLevelName(logging.getLogger('sentinel_graph').level)} and above")
     ```
 
-    This cell imports the Microsoft Sentinel graph provider library, checks the version, and sets the logging level to DEBUG for detailed output.
+    This checks the version of the library, your Spark custer region and account ID, and sets the logging level to DEBUG for detailed output.
     
 1. Run the cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
 
@@ -218,26 +218,26 @@ You have now created an ephemeral graph in the notebook.
 
 1. Show a visual representation of the graph. In a new cell, paste and run the following code:
 
-```python
-query1 = "MATCH (n:Users)-[e]->(s) WHERE n.department = 'Customer XP' RETURN * LIMIT 50"
-builder.query(query1).show()
-```
+    ```python
+    query1 = "MATCH (n:Users)-[e]->(s) WHERE n.department = 'Customer XP' RETURN * LIMIT 50"
+    builder.query(query1).show()
+    ```
 
 This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
-:::image type="content" source="media/custom-graphs/graph-visualization.png" lightbox="media/custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
+   :::image type="content" source="media/custom-graphs/graph-visualization.png" lightbox="media/custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
 The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
-```python
-query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
-        WHERE d.Org IN ["Customer XP"]
-        RETURN *
-        LIMIT 50"""
-builder.query(query2).show()
-```
+    ```python
+    query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
+            WHERE d.Org IN ["Customer XP"]
+            RETURN *
+            LIMIT 50"""
+    builder.query(query2).show()
+    ```
 
-:::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
+   :::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
 
 ### Materialize graph in your tenant
