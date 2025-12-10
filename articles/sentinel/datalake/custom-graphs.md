@@ -96,7 +96,7 @@ The following steps walk you through creating your first custom graph by using a
 
 1. Read the `SignInLogs` and `EntraUsers` tables from Sentinel data lake to create DataFrames to use in your graph specification. Replace `<LogAnalyiticsWorkspace>` with your Log Analytics workspace that contains your `SignInLogs` table.
 
-In a new cell, paste and run the following code:
+    In a new cell, paste and run the following code:
 
     ```python
     from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -239,42 +239,6 @@ builder.query(query2).show()
 
 :::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
-## Perform graph analytics
-
-With the ephemeral graph created, you can now run advanced graph analytics by using built-in graph algorithms. The following sections demonstrate two common graph analytics: blast radius and k-hop neighbors.
-
-### Blast radius visualization
-
-To explore and interact with the graph, in a new cell, paste and run the following code to import the library and create a graph object for blast radius visualization. Replace the `source_property_value` and `target_property_value` with appropriate node property values from your data.
-
-```python
-from sentinel_graph.builders.query_input import BlastRadiusQueryInput
-
-result = my_graph.blast_radius(BlastRadiusQueryInput(source_property_value="user-003", target_property_value="device-003", min_hop_count=1))
-
-result.show()
-```
-
-This code runs a blast radius query on the graph, starting from a user node with ID `user-003` and expanding to connected device nodes at least one hop away. The resulting subgraph is visualized in the output.
-
-:::image type="content" source="media/custom-graphs/blast-radius-graph.png" lightbox="media/custom-graphs/blast-radius-graph.png" alt-text="A screenshot showing the blast radius visualization of a graph in Visual Studio Code.":::
-
-### K-hop neighbors visualization
-To find and visualize k-hop neighbors in the graph, in a new cell, paste and run the following code. Replace the `start_property_value` with an appropriate node property value from your data.
-
-```python
-from sentinel_graph.builders.query_input import K_HopQueryInput
-
-result = my_graph.k_hop(K_HopQueryInput(source_property_value="user-001"))
-
-result.show()
-```
-
-This code runs a k-hop query on the graph, starting from a user node with ID `user-001` and expanding to its neighbors. The resulting subgraph is visualized in the output.
-
-:::image type="content" source="media/custom-graphs/k-hop-graph.png" lightbox="media/custom-graphs/k-hop-graph.png" alt-text="A screenshot showing the k-hop neighbors visualization of a graph in Visual Studio Code.":::
-  
-
 
 ### Materialize graph in your tenant
 
@@ -300,7 +264,7 @@ After you create an ephemeral graph, you can persist it by storing the graph in 
 
     1.  Select **Submit** to save the job configuration and publish the job. The graph building process starts in your tenant. View the newly created graph and its latest status in the Sentinel extension.
 
-    :::image type="content" source="media/custom-graphs/configure-graph-job.png" lightbox="media/custom-graphs/configure-graph-job.png" alt-text="A screenshot of the create graph job page":::
+    :::image type="content" source="media/custom-graphs/configure-graph-job.png" lightbox="media/custom-graphs/configure-graph-job.png" alt-text="A screenshot of the create graph job page.":::
 
 .
 
@@ -329,7 +293,7 @@ After you create an ephemeral graph, you can persist it by storing the graph in 
     ```
 :::image type="content" source="media/custom-graphs/graph-query.png" lightbox="media/custom-graphs/graph-query.png" alt-text="A screenshot of the graph query tab.":::
 
-For more information on GQL, see [GQL language guide](/fabric/graph/gql-language-guide).
+For more information on GQL, see [GQL language guide](/kusto/query/graph-query-language-reference?view=microsoft-fabric).
 
 
 
