@@ -24,7 +24,7 @@ App governance provides access to the following data:
 
 - Data accessed and permissions used by all apps with workload and user level insights.
 
-- App information and metadata, such as Graph API and legacy permissions, registration date, and certification.
+- App information and metadata, such as Graph API and legacy permissions, registration date, last used date and certification.
 
 - Publisher information and metadata, such as name and verification status.
 
@@ -36,6 +36,8 @@ App governance provides access to the following data:
 
   - High-privileged apps.
   - Overprivileged apps.
+  - Unused apps.
+    
   - High-usage apps.
   - Top consented users whose data a specific app can access.
   - Priority accounts who have data that a specific app can access.
