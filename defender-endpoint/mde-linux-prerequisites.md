@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/11/2025
+ms.date: 12/10/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
