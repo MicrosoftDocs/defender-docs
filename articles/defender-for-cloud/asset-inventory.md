@@ -355,7 +355,7 @@ Cloud assets connect seamlessly with vulnerability management:
 ### Built-in reporting
 
 - **Coverage reports**: Assess Defender for Cloud deployment across your cloud estate
-- **Risk assessments**: Comprehensive risk analysis across multi-cloud environments  
+- **Risk assessments**: Comprehensive risk analysis across multicloud environments  
 - **Compliance dashboards**: Track regulatory compliance status across all cloud assets
 - **Trend analysis**: Monitor changes in security posture over time
 
