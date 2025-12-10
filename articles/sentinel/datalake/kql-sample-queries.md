@@ -26,9 +26,9 @@ Microsoft Sentinel includes a set of out-of-the-box KQL queries that you can use
 
 ### Anomalous sign-in locations increase
 
-Analyze trend analysis of Entra ID sign-in logs to detect unusual location changes for users across applications by computing trend lines of location diversity. It highlights the top three accounts with the steepest increase in location variability and lists their associated locations within 21-day windows.
-
 **Category**: Threat activities
+
+Analyze trend analysis of Entra ID sign-in logs to detect unusual location changes for users across applications by computing trend lines of location diversity. It highlights the top three accounts with the steepest increase in location variability and lists their associated locations within 21-day windows.
  
 ```kql
 /SigninLogs
@@ -59,9 +59,9 @@ Analyze trend analysis of Entra ID sign-in logs to detect unusual location chang
 
 ### Anomalous sign-in behavior based on location changes
 
-Identify anomalous sign-in behavior based on location changes for Entra ID users and apps to detect sudden changes in behavior.
-
 **Category**: Anomalies
+
+Identify anomalous sign-in behavior based on location changes for Entra ID users and apps to detect sudden changes in behavior.
 
 ```kql
 SigninLogs
@@ -92,9 +92,9 @@ SigninLogs
 
 ### Audit rare activity by app
 
-Find apps performing rare actions (for example, consent, grants) that can quietly create privilege. Compare the current day to last 14 days of audits to identify new audit activities. Useful for tracking malicious activity related to user/group additions or removals by Azure Apps and automated approvals.
-
 **Category**: Threat activities
+
+Find apps performing rare actions (for example, consent, grants) that can quietly create privilege. Compare the current day to last 14 days of audits to identify new audit activities. Useful for tracking malicious activity related to user/group additions or removals by Azure Apps and automated approvals.
 
 ```kql
 let starttime = todatetime('{{StartTimeISO}}');
@@ -144,9 +144,9 @@ RareAudits
 
 ### Azure rare subscription level operations
 
-Identify sensitive Azure subscription-level events based on Azure Activity Logs. For example, monitoring based on operation name "Create or Update Snapshot", which is used for creating backups but could be misused by attackers to dump hashes or extract sensitive information from the disk.
-
 **Category**: Threat activities
+
+Identify sensitive Azure subscription-level events based on Azure Activity Logs. For example, monitoring based on operation name "Create or Update Snapshot", which is used for creating backups but could be misused by attackers to dump hashes or extract sensitive information from the disk.
 
 ```kql
 let starttime = 14d;
@@ -175,9 +175,9 @@ SensitiveActivity
 
 ### Daily activity trend by app in AuditLogs
 
-From the last 14 days, identify any "Consent to application" operation occurs by a user or app. This could indicate that permissions to access the listed AzureApp was provided to a malicious actor. Consent to application, add service principal and add Auth2PermissionGrant events should be rare. If available, extra context is added from the AuditLogs based on CorrleationId from the same account that performed "Consent to application".
-
 **Category**: Baselines 
+
+From the last 14 days, identify any "Consent to application" operation occurs by a user or app. This could indicate that permissions to access the listed AzureApp was provided to a malicious actor. Consent to application, add service principal and add Auth2PermissionGrant events should be rare. If available, extra context is added from the AuditLogs based on CorrleationId from the same account that performed "Consent to application".
 
 ```kql
 let starttime = todatetime('{{StartTimeISO}}');
@@ -246,9 +246,9 @@ Results
 
 ### Daily location trend per user or app in SignInLogs
 
-Build daily trends for all user sign-ins, locations count, and their app usage.
-
 **Category**: Baseline
+
+Build daily trends for all user sign-ins, locations count, and their app usage.
 
 ```kql
 SigninLogs
@@ -261,9 +261,9 @@ SigninLogs
 
 ### Daily network traffic trend per destination IP
 
-Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.
-
 **Category**: Baseline
+
+Create a baseline including bytes and distinct peers to detect beaconing and exfiltration.
 
 ```kql
 // Daily Network traffic trend Per destination IP along with data transfer stats
@@ -306,10 +306,9 @@ CommonSecurityLog
 
 ### Daily network traffic trend per source IP with data transfer stats
 
-Today's connections and bytes are evaluated against the host's day-over-day baseline to determine whether the observed behaviors deviate significantly from established pattern.
-
 **Category**: Threat activities
 
+Today's connections and bytes are evaluated against the host's day-over-day baseline to determine whether the observed behaviors deviate significantly from established pattern.
 
 ```kql
 // Daily Network traffic trend Per Destination IP along with Data transfer stats
@@ -597,7 +596,7 @@ CommonSecurityLog
 | extend nextTimeGenerated = next(TimeGenerated, 1), nextSourceIP = next(SourceIP, 1)
 | extend TimeDeltainSeconds = datetime_diff('second', nextTimeGenerated, TimeGenerated)
 | where SourceIP == nextSourceIP
-//Whitelisting criteria/ threshold criteria
+//Allowlisting criteria/ threshold criteria
 | where TimeDeltainSeconds > TimeDeltaThreshold
 | summarize count(), sum(ReceivedBytes), sum(SentBytes) by TimeDeltainSeconds, bin(TimeGenerated, 1h), DeviceName, SourceUserID, SourceIP, DestinationIP, DestinationPort
 | summarize (MostFrequentTimeDeltaCount, MostFrequentTimeDeltainSeconds) = arg_max(count_, TimeDeltainSeconds), TotalEvents = sum(count_), TotalSentBytes = sum(sum_SentBytes), TotalReceivedBytes = sum(sum_ReceivedBytes) by bin(TimeGenerated, 1h), DeviceName, SourceUserID, SourceIP, DestinationIP, DestinationPort
@@ -605,10 +604,6 @@ CommonSecurityLog
 | extend BeaconPercent = MostFrequentTimeDeltaCount / toreal(TotalEvents) * 100
 | where BeaconPercent > PercentBeaconThreshold
 ```
-
-************************
-dd
-******************
 
 ### Windows suspicious login outside normal hours
 
@@ -714,7 +709,7 @@ AllLogonEvents
 ```
 
 
-## Additional sample  queries
+## Additional sample queries
 
 The following sample queries can be used to explore and analyze data in the Microsoft Sentinel data lake.
 
