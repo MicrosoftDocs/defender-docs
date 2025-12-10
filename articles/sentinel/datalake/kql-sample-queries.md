@@ -7,7 +7,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.subservice: sentinel-graph
-ms.date: 12/09/2025
+ms.date: 12/10/2025
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -31,7 +31,7 @@ Microsoft Sentinel includes a set of out-of-the-box KQL queries that you can use
 Analyze trend analysis of Entra ID sign-in logs to detect unusual location changes for users across applications by computing trend lines of location diversity. It highlights the top three accounts with the steepest increase in location variability and lists their associated locations within 21-day windows.
  
 ```kql
-/SigninLogs
+SigninLogs
 | where TimeGenerated > ago(1d)
 // Forces Log Analytics to recognize that the query should be run over full time range
 | extend locationString = strcat(tostring(LocationDetails["countryOrRegion"]), "/", tostring(LocationDetails["state"]), "/", tostring(LocationDetails["city"]), ";")

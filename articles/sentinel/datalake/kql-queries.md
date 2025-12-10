@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel  
 ms.topic: how-to
 ms.subservice: sentinel-graph
-ms.date: 12/09/2025
+ms.date: 12/10/2025
 ms.author: edbaynash  
 
 ms.collection: ms-security  
