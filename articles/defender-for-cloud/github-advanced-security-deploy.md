@@ -67,12 +67,12 @@ You can find this information in the Azure portal by following these steps:
 1. Select the **ACR** you want to deploy to.
 1. Select **Access Keys** under **Settings**.
 
-:::image type="content" source="media/github-advanced-security/acr-access-keys-panel.jpg" alt-text="Screenshot of Azure portal showing Access Keys page for a container registry with login server, username, and password fields visible." lightbox="media/github-advanced-security/acr-access-keys-panel.jpg":::
+   :::image type="content" source="media/github-advanced-security/acr-access-keys-panel.jpg" alt-text="Screenshot of Azure portal showing Access Keys page for a container registry with login server, username, and password fields visible." lightbox="media/github-advanced-security/acr-access-keys-panel.jpg":::
 
 1. In your repository, select **Actions**.
 1. Select the **Build and Push to ACR** workflow and run the workflow.
 
-:::image type="content" source="media/github-advanced-security/build-push-acr-workflow.jpg" alt-text="Screenshot of GitHub repository Actions section showing workflow history and options to manually trigger the workflow." lightbox="media/github-advanced-security/build-push-acr-workflow.jpg":::
+   :::image type="content" source="media/github-advanced-security/build-push-acr-workflow.jpg" alt-text="Screenshot of GitHub repository Actions section showing workflow history and options to manually trigger the workflow." lightbox="media/github-advanced-security/build-push-acr-workflow.jpg":::
 
 1. Check that the image was deployed to your Azure Container Registry.
 1. For the example repo provided: The image should be in a registry called **mdc-mock-0001** with the tag **mdc-ghas-integration**.
@@ -103,17 +103,17 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 1. In the Microsoft Defender for Cloud portal (Azure portal), go to **Environment Settings**, choose **Resource Criticality**.
 1. In the right pane, select the link to open Microsoft Defender.
 
-:::image type="content" source="media/github-advanced-security/microsoft-defender-resource-criticality.jpg" alt-text="Screenshot of Microsoft Defender for Cloud interface showing Resource Criticality tile and Open Microsoft Defender portal link in the right pane." lightbox="media/github-advanced-security/microsoft-defender-resource-criticality.jpg":::
+   :::image type="content" source="media/github-advanced-security/microsoft-defender-resource-criticality.jpg" alt-text="Screenshot of Microsoft Defender for Cloud interface showing Resource Criticality tile and Open Microsoft Defender portal link in the right pane." lightbox="media/github-advanced-security/microsoft-defender-resource-criticality.jpg":::
 
 1. Select **Create a new classification**.
 
-:::image type="content" source="media/github-advanced-security/microsoft-defender-create-classification.jpg" alt-text="Screenshot of Microsoft Defender XDR settings page with 'Create a new classification' link highlighted in red." lightbox="media/github-advanced-security/microsoft-defender-create-classification.jpg":::
+   :::image type="content" source="media/github-advanced-security/microsoft-defender-create-classification.jpg" alt-text="Screenshot of Microsoft Defender XDR settings page with 'Create a new classification' link highlighted in red." lightbox="media/github-advanced-security/microsoft-defender-create-classification.jpg":::
 
 1. Enter a name and description.
 1. Choose **Cloud resource** in the query builder.
 1. Write a query to set **Resource Name** equal to the name of the container you deployed to your cluster for validation and select **Next**.
 
-:::image type="content" source="media/github-advanced-security/query-builder-cloud-resource.jpg" alt-text="Screenshot of Microsoft Defender query builder with Resource Name equals 'mdc-ghas-container' filter applied under Cloud resource." lightbox="media/github-advanced-security/query-builder-cloud-resource.jpg":::
+   :::image type="content" source="media/github-advanced-security/query-builder-cloud-resource.jpg" alt-text="Screenshot of Microsoft Defender query builder with Resource Name equals 'mdc-ghas-container' filter applied under Cloud resource." lightbox="media/github-advanced-security/query-builder-cloud-resource.jpg":::
 
 1. In the **Preview Assets** page, if Microsoft Defender already detected your resource, the name of the container shows with the asset type being K8s-container or K8s-pod. Even if it's not yet visible in the preview assets page, continue with the next step. Microsoft Defender applies the criticality label to the container once detected. This process can take up to 24 hours.
 
@@ -146,11 +146,11 @@ Since the workflow deploys an image that creates a running container with one of
 1. In GitHub, go to the GitHub organization you used for the setup testing.
 1. Select **Security** > **Campaigns** > **Create a campaign from code scanning filters**.
 
-:::image type="content" source="media/github-advanced-security/security-campaigns-code-scanning.jpg" alt-text="Screenshot of GitHub interface showing Security > Campaigns tab with options to create a campaign from code or secret scanning filters." lightbox="media/github-advanced-security/security-campaigns-code-scanning.jpg":::
+   :::image type="content" source="media/github-advanced-security/security-campaigns-code-scanning.jpg" alt-text="Screenshot of GitHub interface showing Security > Campaigns tab with options to create a campaign from code or secret scanning filters." lightbox="media/github-advanced-security/security-campaigns-code-scanning.jpg":::
 
 1. Create the following campaign. This campaign shows open alerts with medium severity where the image deployed from the repository is tied to a critical resource. Your test repository should be detected with this campaign.
 
-:::image type="content" source="media/github-advanced-security/campaigns-creation-filters.jpg" alt-text="Screenshot of GitHub Campaigns interface showing filters for open alerts, severity set to critical and medium, and runtime risk as critical resource." lightbox="media/github-advanced-security/campaigns-creation-filters.jpg":::
+   :::image type="content" source="media/github-advanced-security/campaigns-creation-filters.jpg" alt-text="Screenshot of GitHub Campaigns interface showing filters for open alerts, severity set to critical and medium, and runtime risk as critical resource." lightbox="media/github-advanced-security/campaigns-creation-filters.jpg":::
 
 1. Select **Save** and then **Publish as campaign**.
 1. Enter the required information, then publish the campaign.
@@ -173,7 +173,7 @@ Use the C2C Recommendation SDLC experience and security alerts enrichment to und
 
 1. Select the **Associated CVEs** tab. Notice that some CVEs have a link in the column **Related GitHub Alerts**.
 
-:::image type="content" source="media/github-advanced-security/associated-cves-tab-view.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE-2025-5889 with CVSS score 3.1, fix version 2.0.2, and a View on GitHub link under Related GitHub Alerts." lightbox="media/github-advanced-security/associated-cves-tab-view.jpg":::
+   :::image type="content" source="media/github-advanced-security/associated-cves-tab-view.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE-2025-5889 with CVSS score 3.1, fix version 2.0.2, and a View on GitHub link under Related GitHub Alerts." lightbox="media/github-advanced-security/associated-cves-tab-view.jpg":::
 
 1. Select the View on GitHub link to open the relevant GHAS security alert.
 
