@@ -187,11 +187,13 @@ Behavior:
 - Device group filtering applies where device-centric data is relevant
 - Mixed experiences apply scope category contextually (for example: Recommendations: device groups affect Devices tab; cloud scopes affect Cloud tab)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Scope filter UI." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Contextual filtering behavior." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+1. Navigate to the [Defender for Cloud Overview page](https://security.microsoft.com/cloud-overview).
+1. Select **Scope filter**.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Screenshot of scope filter UI." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
+1. Apply your desired filters.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Screenshot of contextual filtering behavior." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
 
-### Environments filter
+### Environment filter
 
 Purpose: deep investigation, mitigation, remediation focus.
 
@@ -205,7 +207,11 @@ Characteristics:
   - Scope first, then environment (subset refine)
   - Environment first, then scope (scope selection overrides previous set)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
+1. Navigate to the [Defender for Cloud Overview page](https://security.microsoft.com/cloud-overview).
+1. Select **Environment filter**.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+1. Apply your desired filters.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
 
 ## 5. Ongoing management
 
