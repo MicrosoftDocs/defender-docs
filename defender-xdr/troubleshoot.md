@@ -4,8 +4,8 @@ description: Find and solve known Microsoft Defender XDR issues and use workarou
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: macapara
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

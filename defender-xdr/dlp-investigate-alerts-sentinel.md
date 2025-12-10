@@ -4,8 +4,8 @@ description: Investigate data loss prevention alerts in Microsoft Sentinel.
 f1.keywords: 
   - NOCSH
 ms.service: defender-xdr
-ms.author: chrfox
-author: chrfox
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 manager: laurawi
 audience: ITPro
