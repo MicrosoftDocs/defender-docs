@@ -125,9 +125,10 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > [!WARNING]
 > Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
 > If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
-> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).> **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
+> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+> **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
 >
->
+
 
 ## Supported filesystems for real-time protection and quick, full, and custom scans
 
@@ -174,7 +175,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
 > Adding your interception certificate to the global store doesn't enable interception.
 
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
 
 ## External package dependency
 
