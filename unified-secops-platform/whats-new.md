@@ -4,8 +4,8 @@ description: Lists the new features and functionality available for Microsoft un
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 08/20/2025
 manager: orspodek

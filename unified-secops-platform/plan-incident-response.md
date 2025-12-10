@@ -4,8 +4,8 @@ description: Plan an incident response workflow in the Microsoft Defender portal
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: lwainstein
-author: limwainstein
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: raynew
 audience: ITPro
