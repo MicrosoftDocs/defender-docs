@@ -39,8 +39,6 @@ Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual
 
 ## Create a custom graph 
 
-**Important: All screenshots must be updated before our final release.**
-
 To create and work with custom graphs, complete the following steps:
 
 1. Create an ephemeral graph
@@ -71,79 +69,175 @@ The following steps walk you through creating your first custom graph by using a
 
 1. In an empty cell in the new notebook, paste the following sample code to get started with custom graphs:
 
+
     ```python
-    # create the graph using the graph spec builder
-    # type: ignore
-    # pyright: off
-    # pylance: off
+    import pkg_resources
+    from packaging import version
+    import logging
+
+    version = pkg_resources.get_distribution('MicrosoftSentinelGraphProvider').version
+    print(f"✅ MicrosoftSentinelGraphProvider: {version}" + f" using pool name : {spark.conf.get('spark.synapse.pool.   name')}")
+
+    print(f"Running in: Region  : {spark.conf.get('spark.cluster.region')}" + f" | Account id : {spark.conf.get ('spark.pjs.account.id')}")
 
 
-    # Data lake tables we will use as input for the graph in this example
-    identity_info_tbl = "cgi_identity_info_SPRK"
-    device_info_tbl = "cgi_device_info_SPRK"
-    signin_logs_tbl = "cgi_signin_logs_SPRK"
-
-    my_graph = (GraphSpecBuilder.start()
-
-            # Add user node from IdentityInfo table (using direct column names)
-            .add_node("user") 
-                .from_table(identity_info_tbl)
-                .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
-                .with_columns("id", "name", "email", key="id", display="name")
-
-            # Add device node from DeviceInfo table
-            .add_node("device") 
-                .from_table(device_info_tbl)
-                .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
-                .with_columns("id", "name", "type", key="id", display="name")
-
-            # Add edge between users and devices from SigninLogs table
-            .add_edge("sign_in") 
-                .from_table(signin_logs_tbl)
-                .with_time_range(time_column="TimeGenerated", start_time="2025-10-22", end_time="2025-10-24")
-                .source(id_column="UserId", node_type="user")
-                .target(id_column="DeviceId", node_type="device")
-                .with_columns("id", "location", key="id", display="id")
-
-            ).done()
-
-    print(f"✅ Graph specification created successfully")
+    # Set the logging level for the entire package
+    logging.getLogger('sentinel_graph').setLevel(logging.DEBUG)  # or ERROR, WARNING, INFO, DEBUG. Default is INFO
+    print(f"Logging level set to: {logging.getLevelName(logging.getLogger('sentinel_graph').level)} and above")
     ```
 
-    This cell creates a simple graph specification with user and device nodes, and sign-in edges between them by using sample tables in Sentinel data lake. You can modify the code to create graphs based on your own data, dates, and requirements.
+    This cell imports the Microsoft Sentinel graph provider library, checks the version, and sets the logging level to DEBUG for detailed output.
+    
+1. Run the cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
 
-1. Run the cell to create the graph specification by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
-
-   The first time you run a cell, it might take up to five minutes to start the Spark session.
+     The first time you run a cell, it might take up to five minutes to start the Spark session.
 
    :::image type="content" source="media/custom-graphs/run-first-cell.png" lightbox="media/custom-graphs/run-first-cell.png" alt-text="A screenshot showing the running of the first cell in Visual Studio Code.":::
 
-   After the cell runs successfully, the message *✅ Graph specification created successfully* displays in the last output cell. You have now created a graph specification.
+1. Read the `SignInLogs` and `EntraUsers` tables from Sentinel data lake to create DataFrames to use in your graph specification. Replace `<LogAnalyiticsWorkspace>` with your Log Analytics workspace that contains your `SignInLogs` table.
+
+In a new cell, paste and run the following code:
+
+    ```python
+    from sentinel_lake.providers import MicrosoftSentinelProvider
+    from pyspark.sql.functions import col, count, lit, coalesce, window, expr, sum, first
+    #from pyspark.sql.types import StructType, StructField, StringType
+
+    sentinel_provider = MicrosoftSentinelProvider(spark)
+
+    ## Read SignIn logs and Entra User tables from Sentinel Lake
+    signIn_df = (sentinel_provider.read_table('SigninLogs',"<LogAnalyiticsWorkspace>")
+                  .filter((col("UserType").isin("Member")) & (col('TimeGenerated') >= expr("current_timestamp()     - INTERVAL 14 DAYS")) & (col("UserId").isNotNull()))\
+                    .select("Identity", "CorrelationId", "ResourceId", "AppId", "ResourceDisplayName",  "UserPrincipalName", "UserId", "IPAddress", "ResourceGroup", "UserDisplayName", "UserAgent",     "TimeGenerated")\
+                          ).persist()
+
+    users_df = (sentinel_provider.read_table('EntraUsers').filter(
+        (col("id").isNotNull()) &
+        (col("id") != '') &
+        (col('TimeGenerated') >= expr("current_timestamp() - INTERVAL 14 DAYS"))
+    ).select(
+        "country", "department", "displayName", "employeeId", "givenName", "id", "mail", "TimeGenerated"
+    ).dropDuplicates(["id"])\
+    .persist()
+    )
+
+    ## Show the first 5 rows of each DataFrame
+    signIn_df.show(5, truncate=False)
+    users_df.show(5, truncate=False)
+    ```
+
+1. Create dataframes for the graph's nodes & edges. In a new cell, paste and run the following code:
+
+    ```python
+    
+    EntraUsers_df = users_df.withColumn("nodeType", lit("User"))
+
+    Department_df = users_df.selectExpr("Department as Org").distinct().withColumn("nodeType", lit("Department"))
+
+    BelongsTo_df = users_df.withColumn("edgeType", lit("BelongsTo"))\
+                            .withColumn("UserId_BT", col("id"))
+
+    AppInfo_df = signIn_df.selectExpr("ResourceId", "AppId", "ResourceDisplayName as AppName")\
+                        .withColumn("nodeType", lit("App"))\
+                        .dropDuplicates(["ResourceId", "AppId"])
+                            #.withColumn("dest", concat(col("UserId"), lit("_User")))
+
+    CommunicatedWith_df = signIn_df.groupBy(
+                                        col("UserId"), col("IPAddress"), col("AppId"), col("UserAgent"),
+                                        col("UserId").alias("UserId_dest"), 
+                                        lit("communicatedWith").alias("edgeType"),
+                                        #window(col("TimeGenerated"), "4 hours").alias("TimeGenerated")
+                                    ).agg(count("*").alias("count"), first("TimeGenerated").alias   ("FirstTimeSeen"))
+
+
+    #- Validate the DataFrames
+    EntraUsers_df.show(5, truncate=False)
+    AppInfo_df.show(5, truncate=False)
+    BelongsTo_df.show(5, truncate=False)
+    Department_df.show(5, truncate=False)
+    CommunicatedWith_df.show(5, truncate=False) 
+    ```
+
+1. Create a graph specification by using the DataFrames created in the previous step.  
+    This step creates 3 node types
+        + Users
+        + Applications 
+        + Department
+    and 2 edge types
+        + BelongsTo 
+        + communicatedWith
+
+    In a new cell, paste and run the following code:
+
+    ```python
+    from sentinel_graph.builders import GraphSpecBuilder
+
+    builder = (GraphSpecBuilder.start()
+
+        .add_node("Users") \
+            .from_dataframe(EntraUsers_df.df) \
+            .with_columns("country", "department", "displayName", "employeeId",     "givenName", "id", "mail", "TimeGenerated", "nodeType", key="id",   display="id")
+
+        .add_node("Applications") \
+            .from_dataframe(AppInfo_df.df) \
+            .with_columns("ResourceId", "AppId", "AppName", "nodeType", key     ="AppId", display="AppId")
+
+         .add_node("Department") \
+            .from_dataframe(Department_df.df) \
+            .with_columns("Org", "nodeType", key="Org", display="Org")
+
+        .add_edge("BelongsTo") \
+            .from_dataframe(BelongsTo_df.df) \
+            .source(id_column="UserId_BT", node_type="Users") \
+            .target(id_column="department", node_type="Department") \
+            .with_columns("edgeType","TimeGenerated", key ="edgeType",  display="edgeType")
+
+        .add_edge("communicatedWith") \
+            .from_dataframe(CommunicatedWith_df) \
+            .source(id_column="UserId", node_type="Users") \
+            .target(id_column="AppId", node_type="Applications") \
+            .with_columns("edgeType","count", "FirstTimeSeen",
+                          #Other fields can be added here if needed
+                          #"TimeGenerated", 
+                      key="edgeType", display="edgeType")
+    
+    ).done()
+    ```
 
 1. Build the graph by using the graph specification created in the previous step. In a new cell, paste and run the following code:
 
     ```python
-    # build your graph
-
+    # Create the graph object
     build_result = my_graph.build_graph_with_data()
 
     print(f"Status: {build_result.get('status')}")
     ```
-
     When successful, the last line of the output cell displays *Status: success*.
 
-    You have now created an ephemeral graph in the notebook.
+You have now created an ephemeral graph in the notebook.
 
 1. Show a visual representation of the graph. In a new cell, paste and run the following code:
-This shows a sample of up to 50 elements from the graph as a visual. 
 
-    ```python
-    my_graph.show(limit=50)
-    ```
+```python
+query1 = "MATCH (n:Users)-[e]->(s) WHERE n.department = 'Customer XP' RETURN * LIMIT 50"
+builder.query(query1).show()
+```
 
-    The output cell displays a visual representation of the graph.
+This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
-    :::image type="content" source="media/custom-graphs/graph-visualization.png" lightbox="media/custom-graphs/graph-visualization.png" alt-text="A     screenshot showing the visualization of a graph in Visual Studio Code.":::
+:::image type="content" source="media/custom-graphs/graph-visualization.png" lightbox="media/custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
+
+The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
+
+```python
+query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
+        WHERE d.Org IN ["Customer XP"]
+        RETURN *
+        LIMIT 50"""
+builder.query(query2).show()
+```
+
+:::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
 ## Perform graph analytics
 
