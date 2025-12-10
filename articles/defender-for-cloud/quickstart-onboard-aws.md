@@ -16,7 +16,7 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 :::image type="content" source="./media/quickstart-onboard-aws/aws-account-in-overview.png" alt-text="Screenshot showing AWS accounts listed in the Defender for Cloud overview dashboard." lightbox="./media/quickstart-onboard-aws/aws-account-in-overview.png":::
 
 > [!IMPORTANT]
-> If your AWS account is already connected to Microsoft Sentinel, enabling the Defender for Cloud connector without additional configuration may cause ingestion issues. To support both services simultaneously, follow the steps described in [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+> If your AWS account is already connected to Microsoft Sentinel, connecting it to Defender for Cloud may require additional configuration to avoid deployment or ingestion issues. Follow the guidance in [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 ## Prerequisites
 
@@ -69,11 +69,12 @@ Region availability: All public AWS regions except Tel Aviv, Milan, Jakarta, Spa
 - [Microsoft Defender for Servers enabled](enable-enhanced-security.md) on your subscription.  
 - An active AWS account with EC2 instances.  
 - Azure Arc for servers installed on your EC2 instances. Autoprovisioning is recommended and requires the **Owner** role on the Azure subscription.  
+  Ensure that you fulfilled the [network requirements for Azure Arc](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
 - AWS SSM Agent installed with the [AmazonSSMManagedInstanceCore](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonSSMManagedInstanceCore.html) policy. If it isn’t preinstalled, install it for [Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html) or [Linux](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html).
 
-    > [!NOTE]
-    > If the SSM Agent is missing or removed, Arc autoprovisioning can’t proceed.  
-    > The onboarding CloudFormation template also creates a 30-day automation scan that verifies each EC2 instance has the required IAM profile.
+> [!NOTE]
+> If the SSM Agent is missing or removed, Arc autoprovisioning can’t proceed.  
+> The onboarding CloudFormation template also creates a 30-day automation scan that verifies each EC2 instance has the required IAM profile.
 
 - The following extensions enabled on your Arc-connected machines:
     - Microsoft Defender for Endpoint  
@@ -84,6 +85,9 @@ Region availability: All public AWS regions except Tel Aviv, Milan, Jakarta, Spa
 > Learn more about [upcoming changes](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
 Defender for Servers assigns resource tags (`AccountId`, `Cloud`, `InstanceId`, `MDFCSecurityConnector`) to manage the autoprovisioning process.
+
+> [!NOTE]
+> The respective Azure Arc servers for EC2 instances or GCP virtual machines that no longer exist (and the respective Azure Arc servers with a status of Disconnected or Expired) are removed after seven days. This cleanup ensures that only active Arc-enabled servers continue to appear in Defender for Cloud.
 
 ### [Defender CSPM](#tab/Defender-for-CSPM)
 
@@ -120,17 +124,13 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
    | 1 hour | EC2Instance, ECRImage, ECRRepository, RDSDBInstance, S3Bucket, S3BucketTags, S3Region, EKSCluster, EKSClusterName, EKSNodegroup, EKSNodegroupName, AutoScalingAutoScalingGroup |
    | 12 hours | EcsClusterArn, EcsService, EcsServiceArn, EcsTaskDefinition, EcsTaskDefinitionArn, EcsTaskDefinitionTags, AwsPolicyVersion, LocalPolicyVersion, AwsEntitiesForPolicy, LocalEntitiesForPolicy, BucketEncryption, BucketPolicy, S3PublicAccessBlockConfiguration, BucketVersioning, S3LifecycleConfiguration, BucketPolicyStatus, S3ReplicationConfiguration, S3AccessControlList, S3BucketLoggingConfig, PublicAccessBlockConfiguration |
 
-   > [!IMPORTANT]
-   > Each plan may incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
-
 1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
 
-By default, the **Databases** plan is set to **On**. This setting extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
-
+Review the default plan selections, as some plans may be enabled automatically depending on your configuration. For example, the Databases plan extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
-   Each plan incurs charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
+   Each plan may incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
 
    > [!IMPORTANT]
    > To present up-to-date recommendations, Defender CSPM queries AWS resource APIs several times a day. These read-only API calls incur no AWS charges. However, CloudTrail may record them if you enable read-event logging. Exporting this data to external SIEM systems may increase ingestion costs. If required, filter read-only calls from:
@@ -212,7 +212,7 @@ As part of onboarding, deploy the generated CloudFormation template:
 
 ## Enable AWS CloudTrail log ingestion (Preview)
 
-After you connect your AWS account, you can enable AWS CloudTrail management event ingestion to enhance identity and configuration insights. CloudTrail ingestion provides additional context for CIEM assessments, activity-based risk indicators, and configuration change detection.
+AWS CloudTrail management event ingestion can enhance identity and configuration insights by adding context for CIEM assessments, activity-based risk indicators, and configuration change detection.
 
 Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloudtrail-defender-for-cloud.md).
 

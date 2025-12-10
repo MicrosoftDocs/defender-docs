@@ -7,36 +7,25 @@ ms.date: 11/02/2025
 
 # Authentication architecture for AWS connectors
 
-When you connect an Amazon Web Services (AWS) account to Microsoft Defender for Cloud, Defender for Cloud uses federated authentication to securely access AWS APIs and assess configuration posture. This article explains how identity trust is established across clouds and how short-lived credentials are exchanged.
+When you connect an AWS account to Microsoft Defender for Cloud, the service uses federated authentication to securely call AWS APIs without storing long-lived credentials. Temporary access is granted through AWS Security Token Service (STS), using short-lived credentials exchanged through a cross-cloud trust relationship.
 
-## Federated authentication overview
-
-Defender for Cloud doesn't store long-lived AWS credentials. Instead, it requests a token from Microsoft Entra ID and exchanges it through AWS Security Token Service (STS) for short-lived AWS credentials. 
-
-The identity and access management (IAM) roles that customers deploy through the onboarding template include a trust policy that defines who can assume the role. The permissions granted to Defender for Cloud are defined by the IAM policies attached to each role in the CloudFormation template.
+This article explains how that trust is established and how short-lived credentials are used to access AWS resources securely.
 
 ## Authentication resources created in AWS
 
 During onboarding, the CloudFormation template creates the authentication components that Defender for Cloud requires to establish trust between Microsoft Entra ID and AWS. These typically include:
 
-- An **OpenID Connect (OIDC) identity provider** bound to a Microsoft-managed Microsoft Entra application  
+- An **OpenID Connect (OIDC) identity provider** bound to a Microsoft-managed Microsoft Entra application 
+
 - One or more **IAM roles** that Defender for Cloud can assume through web identity federation
 
 Depending on the Defender offering you enable, additional AWS resources might be created as part of the onboarding process.
 
 ## Identity provider model
 
-Defender for Cloud is a SaaS service and authenticates to AWS using OIDC federation with Microsoft-managed Microsoft Entra applications. The service can't use identities from a customer’s Entra tenant to request federated AWS credentials because it operates independently of customer-managed identity providers. Using a Microsoft-managed identity ensures that authentication is handled consistently across Defender offerings.
+Defender for Cloud authenticates to AWS using OIDC federation with a Microsoft-managed Microsoft Entra application. As a SaaS service, it operates independently of customer-managed identity providers and does not use identities from a customer’s Entra tenant to request federated AWS credentials.
 
-When you onboard an AWS account, the CloudFormation template deploys the authentication components into your AWS environment. These components include:
-
-- An OpenID Connect (OIDC) identity provider that trusts a Microsoft-managed Entra application.
-
-- One or more IAM roles that the customer deploys through the onboarding template, each containing a trust policy that specifies which identity can assume the role.
-
-These resources define the trust relationship that allows Defender for Cloud to obtain short-lived AWS credentials through web identity federation.
-
-These values are automatically generated during onboarding and are included in the CloudFormation template used to deploy the connector:
+The authentication resources created during onboarding establish the trust relationship required for Defender for Cloud to obtain short-lived AWS credentials through web identity federation.
 
 :::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png" alt-text="Screenshot of the AWS CloudFormation identity provider entry created during onboarding." lightbox="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png":::
 
@@ -62,9 +51,9 @@ AWS grants access only when all validation rules succeed.
 
 ## Role trust relationships
 
-The IAM role defined by the CloudFormation template includes a trust policy that allows Defender for Cloud to assume the role through web identity federation. AWS only accepts tokens if they meet the trust relationship conditions. This policy prevents unauthorized principals from assuming the same role.
+The IAM role defined by the CloudFormation template includes a trust policy that allows Defender for Cloud to assume the role through web identity federation. AWS only accepts tokens that satisfy this trust policy, which prevents unauthorized principals from assuming the same role.
 
-The IAM roles that customers deploy through the onboarding template include a trust policy that defines who can assume the role. The permissions granted to Defender for Cloud are defined by the IAM policies attached to each role in the CloudFormation template.
+The permissions granted to Defender for Cloud are controlled separately by the IAM policies attached to each role. You can adjust these policies to align with your organization’s least-privilege requirements, as long as the minimum permissions for the selected Defender plans are preserved.
 
 ## Related articles
 

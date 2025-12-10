@@ -55,7 +55,7 @@ Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors
 
 ## Review coverage with workbooks
 
-Microsoft Defender for Cloud provides **coverage workbooks** that summarize:
+Microsoft Defender for Cloud provides coverage workbooks that summarize:
 - Enabled plans
 - Resource types in scope
 - Feature availability by environment
@@ -86,7 +86,7 @@ Agentless scanning results for vulnerabilities and data exposure can take up to 
 Learn more about [agentless data collection and scanning cadence](concept-agentless-data-collection.md).
 
 ### Server resources (Defender for Servers)
-Arc-enabled EC2 instances appear in the **Asset inventory** as Azure Arc resources. Learn more about [how Arc-enabled servers are managed](/azure/azure-arc/servers/overview).
+Arc-enabled EC2 instances appear in the Asset inventory as Azure Arc resources. Learn more about [how Arc-enabled servers are managed](/azure/azure-arc/servers/overview).
 
 ### Kubernetes signals (Defender for Containers)
 Alerts, recommendations, and inventory data for your EKS clusters are surfaced in the **Alerts** page, **Recommendations** page, and **Asset inventory**. Learn more about [protecting Amazon Elastic Kubernetes Service clusters](defender-for-containers-enable.md).
