@@ -240,7 +240,7 @@ The following code runs another sample GQL query to retrieve all nodes that comm
    :::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
 
-### Materialize graph in your tenant
+### Materialize a graph in your tenant
 
 After you create an ephemeral graph, you can persist it by storing the graph in your tenant with a scheduled job.
 
