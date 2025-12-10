@@ -4,7 +4,7 @@ description: Learn how to exclude specific analytics rules from the correlation 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: monaberdufo
+ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
 reviewer: noa nutkevitch
