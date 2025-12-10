@@ -1,33 +1,27 @@
----
+﻿---
 title: Device inventory
 description: Learn about the available features that you can use from the Devices list such as sorting, filtering, and exporting the list to enhance investigations.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
-ms.date: 01/23/2025
----
+ms.date: 07/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
+---
 # Device inventory
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The **Device inventory** shows a list of the devices in your network where alerts were generated. By default, the queue displays devices seen in the last 30 days. At a glance, you see information such as domain, risk level, OS platform, and other details for easy identification of devices most at risk.
 
@@ -46,7 +40,7 @@ There are several options you can choose from to customize the devices list view
 During the onboarding process, the **Devices list** is gradually populated with devices as they begin to report sensor data. Use this view to track your onboarded endpoints as they come online, or download the complete endpoint list as a CSV file for offline analysis.
 
 > [!NOTE]
-> If you export the devices list, it contains every device in your organization. It might take a significant amount of time to download, depending on how large your organization is. Exporting the list in CSV format displays the data in an unfiltered manner. The CSV file includes all devices in the organization, regardless of any filtering applied in the view itself.
+> If you export the devices list, it contains every device in your organization. It might take a significant amount of time to download, depending on how large your organization is.
 >
 > In addition, when you export the devices list, the antivirus status shows as `Not-Supported`. For antivirus status, use the recently released [Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md) instead. This report allows you to export even more details.
 
@@ -152,7 +146,7 @@ The available device properties to use as filters vary based on the device inven
 |**Mitigation status**|**All devices**, **Computers & mobile**|The available values are **Contained** and **Isolated**.|
 |**Model**|**All devices**|The model of the device. Enter a value or select from the available values.|
 |**Onboarding status**|**All devices**, **Computers & mobile**|Whether the device is currently onboarded in Defender for Endpoint. Device discovery must be enabled for this filter to appear. The available values are: <br/> - **Onboarded**: The device is onboarded to Defender for Endpoint. <br/> - **Can be onboarded**: The supported device was discovered, but it isn't currently onboarded. We highly recommend onboarding these devices. <br/> - **Unsupported**: The unsupported device was discovered. <br/> - **Insufficient info**: The system couldn't determine the supportability of the device.|
-|**OS distribution**|**All devices**, **Computers & mobile**|The distribution of the operating system. The available values are: <br/> - **Windows 11** <br/>- **Windows 10** <br/> - **Windows 8.1** <br/> - **Windows 8**<br/> - **Windows 7** <br/> - **Windows Server 2025** <br/> - **Windows Server 2022** <br/> - **Windows Server 2019** <br/> - **Windows Server 2016** <br/> - **Windows Server 2012 R2** <br/> - **Windows Server 2008 R2** <br/> - **Linux** <br/> - **macOS** <br/> - **iOS** <br/> - **Android** <br/> - **Windows 10 WVD** <br/> - **Other**|
+|**OS distribution**|**All devices**, **Computers & mobile**|The distribution of the operating system. The available values are: <br/> - **Windows 11** <br/>- **Windows 10** <br/> - **Windows 8.1** <br/> - **Windows 8**<br/> - **Windows 7** <br/> - **Windows Server 2012 R2 and later** <br/> - **Windows Server 2008 R2** <br/> - **Azure Stack HCI OS, version 23H2 and later** <br/> - **Linux** <br/> - **macOS** <br/> - **iOS** <br/> - **Android** <br/> - **Windows 10 WVD** <br/> - **Other**|
 |**OS Platform**|**All devices**, **Computers & mobile**|The operating system on the device. The available
 |**Risk level**|All|The overall risk assessment of the device based on a combination of factors, including the type and severity of active alerts on the device. The available values are: - **High** - **Medium** - **Low** - **Informational** - **No known risk** Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.|
 |**Sensor health state**|**All devices**, **Computers & mobile** |The available values for onboarded devices are: <br/> - **Active**: Devices that are actively reporting sensor data to the service. <br/> - **Inactive**: Devices that stopped sending signals for more than seven days. <br/> - **Misconfigured**: Devices with impaired communications or devices that can't send sensor data. For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).|
@@ -288,8 +282,12 @@ You can sort the entries by clicking on an available column header. Select :::im
 > - Narrow the width of appropriate columns.
 > - Zoom out in your web browser.
 
+> [!TIP]
+> The API, UI, export, and AH interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. Each interface is optimized for its specific use case: export for large data retrieval, UI for fast interactive tasks like tag management, and AH for tracking device update history over time.
+
 ## Related articles
 
 [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

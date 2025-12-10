@@ -1,10 +1,10 @@
----
+﻿---
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
 description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -15,14 +15,13 @@ f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier2
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Set up and configure Microsoft Defender for Endpoint Plan 1
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 This article describes how to set up and configure Defender for Endpoint Plan 1. Whether you have assistance or are doing it yourself, you can use this article as a guide throughout your deployment.  
 
@@ -52,7 +51,7 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 | Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3) |
 | Browser requirements | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
 | Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
-| Operating systems (server) | Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/>[Linux](microsoft-defender-endpoint-linux.md)   |
+| Operating systems (server) | Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/> Azure Stack HCI OS, version 23H2 and later <br/>[Linux](microsoft-defender-endpoint-linux.md)   |
 | Datacenter | One of the following datacenter locations: <br/>- European Union <br/>- United Kingdom <br/>- United States |
 
 > [!NOTE]
@@ -415,3 +414,4 @@ Now that you've finished the setup and configuration process, your next step is 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

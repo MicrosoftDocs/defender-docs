@@ -4,8 +4,8 @@ description: Alert classification for suspicious inbox manipulation rules to rev
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

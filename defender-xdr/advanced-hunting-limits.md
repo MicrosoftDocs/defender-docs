@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -17,16 +17,18 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/02/2025
+ms.date: 08/04/2025
 ---
 
 # Use the advanced hunting query resource report
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 ## Understand advanced hunting quotas and usage parameters
 
@@ -37,7 +39,7 @@ Refer to the following table to understand existing quotas and usage parameters.
 | Quota or parameter | Size | Refresh cycle | Description |
 |--|--|--|--|
 | Date range | 30 days for Defender XDR data unless streamed through Microsoft Sentinel  | Every query | Each query can look up Defender XDR data from up to the past 30 days, or longer if streamed through Microsoft Sentinel  |
-| Result set | 30,000 rows | Every query | Each query can return up to 30,000 records. |
+| Result set | 100,000 rows | Every query | Each query can return up to 100,000 records. |
 | Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it doesn't complete within 10 minutes, the service displays an error.
 | CPU resources | Based on tenant size | Every 15 minutes | The portal displays a warning whenever a query runs and the tenant consumes over 10% of allocated resources. [Queries are blocked](advanced-hunting-errors.md) if the tenant reaches 100% until after the next 15-minute cycle. |
 
@@ -59,11 +61,11 @@ The report can be accessed in two ways:
 
 - In the advanced hunting page, select **Query resources report**:
 
-  :::image type="content" source="/defender/media/ah-query-resources/view-query-resources report.png" alt-text="view the query resources report button in the AH portal" lightbox="/defender/media/ah-query-resources/view-query-resources report.png":::
+  :::image type="content" source="./media/advanced-hunting-limits/view-query-resources report.png" alt-text="view the query resources report button in the AH portal" lightbox="./media/advanced-hunting-limits/view-query-resources report.png":::
 
 - Within the **Reports** page, find the new report entry in the **General** section
 
-  :::image type="content" source="/defender/media/ah-query-resources/reports-general-query-resources.png" alt-text="view the query resources report in the Reports section" lightbox="/defender/media/ah-query-resources/reports-general-query-resources.png":::
+  :::image type="content" source="./media/advanced-hunting-limits/reports-general-query-resources.png" alt-text="view the query resources report in the Reports section" lightbox="./media/advanced-hunting-limits/reports-general-query-resources.png":::
 
 All users can access the reports; however, only the Microsoft Entra Global Administrator, Microsoft Entra Security Administrator, and Microsoft Entra Security Reader roles can see queries done by all users in all interfaces. Any other user can only see:
 
@@ -91,7 +93,7 @@ The query resources report contains all queries that ran, including detailed res
 > [!TIP]
 > If the query state is **Failed**, you can hover the field to view the reason for the query failure.
 
-:::image type="content" source="/defender/media/ah-query-resources/excessive-usage-sample.png" alt-text="view inefficient queries" lightbox="/defender/media/ah-query-resources/excessive-usage-sample.png":::
+:::image type="content" source="./media/advanced-hunting-limits/excessive-usage-sample.png" alt-text="view inefficient queries" lightbox="./media/advanced-hunting-limits/excessive-usage-sample.png":::
 
 ### Find resource-heavy queries
 
@@ -110,7 +112,7 @@ The graph supports two views:
 - Average use per day –  the average use of resources per day
 - Highest use per day – the highest actual use of resources per day
 
-![Two view modes for query resources report](/defender/media/ah-query-resources/resource-usage-over-time.png)
+![Two view modes for query resources report](./media/advanced-hunting-limits/resource-usage-over-time.png)
 
 This means that, for instance, if on a specific day you ran two queries, one used 50% of your resources and one used 100%, the average daily use value would show 75%, while the top daily use would show 100%.
 

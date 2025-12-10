@@ -14,7 +14,7 @@ ms.collection:
     - m365solution-getstarted
     - highpri
     - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 search.appverid: 
   - MOE150
   - MET150

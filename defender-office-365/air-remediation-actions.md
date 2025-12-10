@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
 - MET150

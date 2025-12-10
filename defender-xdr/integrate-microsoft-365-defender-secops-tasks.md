@@ -4,15 +4,15 @@ description: Identify SOC maintenance tasks when integrating Microsoft Defender 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150

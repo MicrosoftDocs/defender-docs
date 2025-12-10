@@ -2,29 +2,26 @@
 title: Microsoft Defender for Endpoint on Android - Privacy information
 description: Privacy controls, how to configure policy settings that impact privacy and information about the diagnostic data collected in Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-android
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/21/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Microsoft Defender for Endpoint on Android - Privacy information
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Defender for Endpoint on Android collects information from your configured Android devices and stores it in the same tenant where you have Defender for Endpoint. The information is collected to help keep Defender for Endpoint for Android secure, up to date, performing as expected, and to support the service.
 
@@ -83,7 +80,7 @@ For Android Enterprise with a work profile - Information about Android applicati
 
 ### Product and service usage data
 
-The following information is collected only for Microsoft Defender for Endpoint app installed on the device. 
+The following information is collected only for Microsoft Defender for Endpoint app installed on the device.
 
 - App package info, including name, version, and app upgrade status.
 - Actions performed in the app.

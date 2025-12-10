@@ -2,9 +2,9 @@
 title: "Microsoft Defender for Business trial user guide"
 f1.keywords:
 - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.collection:

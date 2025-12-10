@@ -2,12 +2,12 @@
 title: Trial user guide - Microsoft Defender for Endpoint
 description: Use this guide to get the most of your 90-day free trial. See how Defender for Endpoint can help prevent, detect, investigate, and respond to advanced threats.
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 audience: ITPro
 ms.topic: how-to
-ms.date: 11/11/2024
+ms.date: 06/19/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -24,6 +24,8 @@ Welcome to the Microsoft Defender for Endpoint Plan 2 trial user guide!
 
 This playbook is a simple guide to help you make the most of your free trial. Using the suggested steps in this article from the Microsoft Defender team, you learn how Defender for Endpoint can help you to prevent, detect, investigate, and respond to advanced threats.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## What is Defender for Endpoint?
 
 [Defender for Endpoint](microsoft-defender-endpoint.md) is an enterprise endpoint security platform that uses the following combination of technology built into Windows and Microsoft's robust cloud service: 
@@ -37,19 +39,19 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 <center><h2>Microsoft Defender for Endpoint</center></h2>
 <table>
 <tr>
-<td><a href="microsoft-defender-endpoint.md#tvm"><center><img src="media/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Vulnerability Management</b></center></a></td>
-<td><a href="microsoft-defender-endpoint.md#asr"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
-<td><center><a href="microsoft-defender-endpoint.md#ngp"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#edr"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#ai"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#mte"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
+<td><a href="/defender-vulnerability-management/defender-vulnerability-management"><center><img src="media/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Vulnerability Management</b></center></a></td>
+<td><a href="overview-attack-surface-reduction.md"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
+<td><center><a href="next-generation-protection.md"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
+<td><center><a href="overview-endpoint-detection-response.md"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
+<td><center><a href="automated-investigations.md"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
+<td><center><a href="endpoint-attack-notifications.md"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
 </tr>
 <tr>
 <td colspan="7">
-<a href="microsoft-defender-endpoint.md#apis"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
+<a href="api/management-apis.md"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
 </tr>
 <tr>
-<td colspan="7"><a href="microsoft-defender-endpoint.md#mtp"><center><b>Microsoft Defender portal</a></center></b></td>
+<td colspan="7"><a href="/unified-secops/overview-defender-portal"><center><b>Microsoft Defender portal</a></center></b></td>
 </tr>
 </table>
 <br>

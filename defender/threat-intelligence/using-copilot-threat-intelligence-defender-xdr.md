@@ -15,8 +15,8 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-mdti
-ms.topic: conceptual
-ms.date: 04/17/2025
+ms.topic: how-to
+ms.date: 09/12/2025
 ---
 
 # Using Microsoft Security Copilot for threat intelligence

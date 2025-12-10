@@ -5,8 +5,8 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
 ms.topic: how-to

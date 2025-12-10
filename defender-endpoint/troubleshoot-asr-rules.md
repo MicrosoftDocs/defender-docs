@@ -1,34 +1,30 @@
----
+﻿---
 title: Report and troubleshoot Microsoft Defender for Endpoint attack surface reduction rules
 description: This article describes how to report and troubleshoot Microsoft Defender for Endpoint attack surface reduction rules
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: 
 - mde-asr
 - admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier3
 search.appverid: met150
 ms.date: 03/10/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Report and troubleshoot Defender for Endpoint attack surface reduction rules
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 The [Microsoft Defender portal](https://security.microsoft.com) is the new interface for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure. Here you can easily view the security health of your organization, act to configure devices, users, and apps, and get alerts for suspicious activity. The Microsoft Defender portal is intended for security admins and security operations teams to better manage and protect their organization. Visit the Microsoft Defender portal at<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a>.
 
@@ -79,4 +75,5 @@ Review [Troubleshoot attack surface reduction rules](/defender-endpoint/troubles
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

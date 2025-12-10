@@ -1,14 +1,14 @@
----
+﻿---
 title: Turn on cloud protection in Microsoft Defender Antivirus
 description: Turn on cloud protection to benefit from fast and advanced protection features.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: denisebmsft
-ms.author: deniseb
-ms.date: 11/10/2024
+author: KesemSharabi
+ms.author: kesharab
+ms.date: 10/20/2025
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: asr
 ms.collection: 
@@ -16,23 +16,25 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Turn on cloud protection in Microsoft Defender Antivirus
 
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-**Platforms**
-- Windows
 
 [Cloud protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) delivers accurate, real-time, and intelligent protection. Cloud protection should be enabled by default. 
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep cloud protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+
+## Prerequistes
+
+### Supported operating systems
+
+- Windows
 
 ## Why cloud protection should be turned on
 
@@ -59,10 +61,15 @@ The following table summarizes the features and capabilities that depend on clou
 
 You can turn Microsoft Defender Antivirus cloud protection on or off by using one of several methods, such as:
 
-- [Microsoft Intune](#use-microsoft-intune-to-turn-on-cloud-protection)  
-- [Group Policy](#use-group-policy-to-turn-on-cloud-protection)
-- [PowerShell cmdlets](#use-powershell-cmdlets-to-turn-on-cloud-protection)
-- [Windows Management Instruction](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection) (WMI)
+- [Turn on cloud protection in Microsoft Defender Antivirus](#turn-on-cloud-protection-in-microsoft-defender-antivirus)
+  - [Why cloud protection should be turned on](#why-cloud-protection-should-be-turned-on)
+  - [Methods to configure cloud protection](#methods-to-configure-cloud-protection)
+  - [Use Microsoft Intune to turn on cloud protection](#use-microsoft-intune-to-turn-on-cloud-protection)
+  - [Use Group Policy to turn on cloud protection](#use-group-policy-to-turn-on-cloud-protection)
+  - [Use PowerShell cmdlets to turn on cloud protection](#use-powershell-cmdlets-to-turn-on-cloud-protection)
+  - [Use Windows Management Instruction (WMI) to turn on cloud protection](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection)
+  - [Turn on cloud protection on individual clients with the Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app)
+  - [See also](#see-also)
 
 You can also use [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection). And, you can turn cloud protection on or off on individual endpoints by using the [Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app). 
 
@@ -181,3 +188,4 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

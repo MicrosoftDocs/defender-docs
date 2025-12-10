@@ -1,10 +1,10 @@
----
+﻿---
 title: Advanced technologies at the core of Microsoft Defender Antivirus
 description: Microsoft Defender Antivirus engines and advanced technologies
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 01/24/2025
@@ -13,18 +13,14 @@ ms.localizationpriority: medium
 ms.custom: partner-contribution
 f1.keyboards: NOSCH
 audience: ITPro
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 ---
-
 # Advanced technologies at the core of Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 Microsoft Defender Antivirus and the multiple engines that lead to the advanced detection and prevention technologies under the hood to detect and stop a wide range of threats and attacker techniques at multiple points, as depicted in the following diagram:
 
@@ -82,7 +78,7 @@ An additional layer to help prevent memory-based attacks is to use the Attack Su
 
 ### How many malware threats does Microsoft Defender Antivirus block per month?
 
-[Five billion threats on devices every month](https://www.microsoft.com/en-us/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
+[Five billion threats on devices every month](https://www.microsoft.com/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
 
 ### How does Microsoft Defender Antivirus memory protection help?
 
@@ -101,3 +97,4 @@ We focus on every industry.
 When you're pen-testing, you should demand where no human analysts are engaged on detect/protect, to see how the actual antivirus engine (prebreach) efficacy truly is, and a separate one where human analysts are engaged. You can add [Microsoft Defender Experts for XDR](/defender-xdr/dex-xdr-overview) a managed extended detection and response service to augment your SOC.
 
 The ***continuous iterative enhancement*** each of these engines to be increasingly effective at catching the latest strains of malware and attack methods. These enhancements show up in consistent [top scores in industry tests](/defender-xdr/top-scoring-industry-tests), but more importantly, translate to [threats and malware outbreaks](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign/) stopped and [more customers protected](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise/).
+

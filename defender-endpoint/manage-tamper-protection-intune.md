@@ -1,15 +1,15 @@
----
+﻿---
 title: Manage tamper protection for your organization using Microsoft Intune
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
-manager: deniseb
+manager: bagol
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -19,20 +19,15 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Manage tamper protection for your organization using Microsoft Intune
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-- [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
-
-**Platforms**
-- Windows
 
 Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), you can manage the tamper protection feature for your organization in the [Intune admin center](https://intune.microsoft.com). Or, you can use [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure). With Intune or Configuration Manager, you can perform the following tasks:
 
@@ -50,6 +45,13 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 >
 > - If you're managing tamper protection through Intune, you can change [tamper-protected antivirus exclusions](#tamper-protection-for-antivirus-exclusions).
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
+
 ## Requirements for managing tamper protection in Intune
 
 | Requirement | Details |
@@ -65,7 +67,7 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 
 > [!NOTE]
 > If devices aren't enrolled in Microsoft Defender for Endpoint, tamper protection shows up as **Not Applicable** until the onboarding process completes.
-> Tamper protection can prevent changes to security settings from occurring. If you see an error code with Event ID 5013, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+> Tamper protection may block changes to certain security settings. If you see an error code with Event ID 5013, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
 
 ## Turn tamper protection on (or off) in Microsoft Intune
 
@@ -137,3 +139,4 @@ You can use a registry key to determine whether the functionality to protect Mic
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

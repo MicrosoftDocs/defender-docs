@@ -1,31 +1,29 @@
----
+﻿---
 title: Manage indicators
 ms.reviewer:
 description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
 ms.date: 10/28/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage indicators
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
@@ -87,3 +85,4 @@ Watch this video to learn how Microsoft Defender for Endpoint provides multiple 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,27 +1,29 @@
----
+﻿---
 title: Microsoft Defender Antivirus in the Windows Security app
 description: With Microsoft Defender Antivirus now included in the Windows Security app, you can review, compare, and perform common tasks.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
-author: emmwalshh
-ms.author: ewalsh
+ms.topic: how-to
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
 ms.date: 04/09/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+#customer intent: As an IT admin or endpoint operator, I want a concise how‑to on using the Windows Security app to view and manage Microsoft Defender Antivirus settings so I can verify protection, run scans, and configure exclusions on endpoints.
 ---
 
 # Microsoft Defender Antivirus in the Windows Security app
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus settings are viewable in the Windows Security app. See [Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) for more information about security features and settings that are built into Windows.
 
@@ -129,5 +131,6 @@ To learn more, see the following resources:
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 

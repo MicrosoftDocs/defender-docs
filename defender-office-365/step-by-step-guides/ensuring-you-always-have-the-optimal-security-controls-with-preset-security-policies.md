@@ -6,8 +6,8 @@ f1.keywords:
  - NOCSH
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -20,7 +20,7 @@ ms.date: 8/21/2023
 
 # Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365
 
-Does Microsoft Defender for Office 365 gave you a way to apply security policies that it would then maintain?
+Does Microsoft Defender for Office 365 gave you a way to apply threat policies that it would then maintain?
 
 Did you know that when a best practice for a security control changes due to the evolving threat landscape, or as new controls are added, Microsoft *automatically* updates security control settings for users assigned to a *Standard* or *Strict* preset security policy?
 
@@ -57,8 +57,8 @@ Once you've chosen between the Standard and Strict security preset policies for 
 1. Select **Threat policies**.
 1. Select **Preset Security Policies** underneath the **Templated policies** heading
 1. Select **Manage** underneath the Standard protection preset.
-1. Select **All Recipients** to apply Exchange Online Protection tenant wide, or select **Specific recipients** to manually add users, groups, or domains you want to apply the protection policy to. Click the **Next** button.
-1. Select **All Recipients** to apply Defender for Office 365 Protection tenant wide, or select **Specific recipients** to manually add users, groups, or domains you want to apply the protection policy to. Click the **Next** button.
+1. Select **All Recipients** to apply default email protections for all cloud mailboxes in the organization, or select **Specific recipients** to manually add users, groups, or domains you want to apply the preset security policy to. Click the **Next** button.
+1. Select **All Recipients** to apply Defender for Office 365 Protection for all cloud mailboxes in the organization, or select **Specific recipients** to manually add users, groups, or domains you want to apply the preset security policy to. Click the **Next** button.
 1. On the **Impersonation Protection** section, add email addresses & domains to protect from impersonation attacks, then add any trusted senders and domains you don't want the impersonation protection to apply to, then press **Next**.
 1. Click on the **Confirm** button.
 1. Select the **Manage protection settings** link in the Strict protection preset.
@@ -66,13 +66,13 @@ Once you've chosen between the Standard and Strict security preset policies for 
 1. Click on the **Confirm** button.
 
 > [!TIP]
-> To learn more about preset policies click [here](../preset-security-policies.md)
+> To learn more about preset security policies see [this article](../preset-security-policies.md).
 
 ## Your next step is Config Analyzer
 
 Use config analyzer to determine if your users are configured per Microsoft's best practices.
 
 > [!TIP]
-> Configuration analyzer allows admins to find and fix security policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out more about Configuration analyzer [here](../configuration-analyzer-for-security-policies.md).
+> Configuration analyzer allows admins to find and fix threat policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out more about Configuration analyzer [in this article](../configuration-analyzer-for-security-policies.md).
 
-Secure Presets are always recommended because it *ensures* admins are exercising Microsoft best practices. However, in some cases customized configurations are required. Learn about the reasons to use custom policies [here](../mdo-deployment-guide.md#determine-your-protection-policy-strategy)
+We always recommend preset security policies because they *ensure* admins are exercising Microsoft best practices. However, customized configurations are required is some cases. Learn about the reasons to use custom threat policies [in this article](../mdo-deployment-guide.md#determine-your-protection-policy-strategy).

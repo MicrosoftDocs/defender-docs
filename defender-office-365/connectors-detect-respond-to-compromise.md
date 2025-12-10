@@ -2,9 +2,9 @@
 title: Respond to a compromised connector in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 6/14/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -38,7 +38,7 @@ This article explains the symptoms of a compromised connector and how to regain 
 A compromised connector exhibits one or more of the following characteristics:
 
 - A sudden spike in outbound mail volume.
-- A mismatch between the `5321.MailFrom` address (also known as the **MAIL FROM** address, P1 sender, or envelope sender) and the `5322.From` address (also known as the From address or P2 sender) in outbound email. For more information about these senders, see [How EOP validates the From address to prevent phishing](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
+- A mismatch between the `5321.MailFrom` address (also known as the **MAIL FROM** address, P1 sender, or envelope sender) and the `5322.From` address (also known as the From address or P2 sender) in outbound email. For more information about these senders, see [How Microsoft 365 validates the From address to prevent phishing](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
 - Outbound mail sent from a domain that isn't provisioned or registered.
 - The connector is blocked from sending or relaying mail.
 - The presence of an inbound connector that wasn't created by an admin.
@@ -76,7 +76,7 @@ In [Microsoft Defender for Office 365 Plan 2](mdo-about.md), open the Microsoft 
 
     :::image type="content" source="media/connector-compromise-sender-ip.png" alt-text="Sender IP and your organization's on-prem IP address" lightbox="media/connector-compromise-sender-ip.png":::
 
-In [Microsoft Defender for Office 365](mdo-about.md) or [Exchange Online Protection](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
+In [Microsoft Defender for Office 365](mdo-about.md) or [the default email protections for cloud mailboxes](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
 
 1. Open the Defender portal at <https://security.microsoft.com> and go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, useOpen **Suspicious connector activity** alert in <https://security.microsoft.com/alerts>.
 
@@ -108,7 +108,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Search-UnifiedAuditLog -StartDate "<ExDateTime>" -EndDate "<ExDateTime>" -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector
 ```
 
-For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchangepowershell/search-unifiedauditlog).
 
 ### Step 2: Review and revert unauthorized change(s) in a connector
 

@@ -1,35 +1,34 @@
----
+﻿---
 title: Microsoft Defender for Endpoint on Linux resources
 ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/11/2024
----
+ms.date: 05/02/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Resources
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+This article provides resources for resolving issues or configuring Microsoft Defender for Endpoint on Linux. This article describes how to collect diagnostic information, log installation issues, and configure Defender for Endpoint on Linux using the command line. This article also describes how to uninstall Defender for Endpoint on Linux.
 
 ## Collect diagnostic information
+
+> [!TIP]
+> Run the [Defender for Endpoint client analyzer](run-analyzer-linux.md) with live response or locally on the device to collect diagnostic information from Defender for Endpoint on Linux. 
 
 If you can reproduce a problem, first increase the logging level, run the system for some time, and then restore the logging level to the default.
 
@@ -74,17 +73,6 @@ If an error occurs during installation, the installer will only report a general
 The detailed log will be saved to `/var/log/microsoft/mdatp/install.log`.
 If you experience issues during installation, send us this file so we can help diagnose the cause.
 
-## Uninstall Defender for Endpoint on Linux
-
-There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
-
-### Manual uninstallation
-
-- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
-- `sudo zypper remove mdatp` for SLES and variants.
-- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
-- `sudo dnf remove mdatp` for Mariner
-
 ## Configure from the command line
 
 Important tasks, such as controlling product settings and triggering on-demand scans, can be done from the command line.
@@ -97,18 +85,14 @@ By default, the command-line tool outputs the result in human-readable format. I
 
 The following table lists commands for some of the most common scenarios. Run `mdatp help` from the Terminal to view the full list of supported commands.
 
-<br>
-
-****
-
 |Group|Scenario|Command|
 |---|---|---|
 |Configuration|Turn on/off real-time protection|`mdatp config real-time-protection --value [enabled\|disabled]`|
-|Configuration|Turn on/off behavior monitoring|`mdatp config behavior-monitoring --value [enabled\|disabled]`
+|Configuration|Turn on/off behavior monitoring|`mdatp config behavior-monitoring --value [enabled\|disabled]` |
 |Configuration|Turn on/off cloud protection|`mdatp config cloud --value [enabled\|disabled]`|
 |Configuration|Turn on/off product diagnostics|`mdatp config cloud-diagnostic --value [enabled\|disabled]`|
 |Configuration|Turn on/off automatic sample submission|`mdatp config cloud-automatic-sample-submission --value [enabled\|disabled]`|
-|Configuration|Turn on/off AV passive mode|`mdatp config passive-mode --value [enabled\|disabled]`|
+|Configuration|Turn on/off antivirus passive mode|`mdatp config passive-mode --value [enabled\|disabled]`|
 |Configuration|Add/remove an antivirus exclusion for a file extension|`mdatp exclusion extension [add\|remove] --name [extension]`|
 |Configuration|Add/remove an antivirus exclusion for a file|`mdatp exclusion file [add\|remove] --path [path-to-file]`|
 |Configuration|Add/remove an antivirus exclusion for a directory|`mdatp exclusion folder [add\|remove] --path [path-to-directory]`|
@@ -143,12 +127,47 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Quarantine management|Remove all files from the quarantine|`mdatp threat quarantine remove-all`|
 |Quarantine management|Add a file detected as a threat to the quarantine|`mdatp threat quarantine add --id [threat-id]`|
 |Quarantine management|Remove a file detected as a threat from the quarantine|`mdatp threat quarantine remove --id [threat-id]`|
-|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version lower than 101.23092.0012.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat quarantine restore threat-id --id [threat-id] --destination-path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat quarantine restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version earlier than `101.23092.0012`.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version `101.23092.0012` or later.|`mdatp threat quarantine restore threat-id --id [threat-id] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version `101.23092.0012` or later.|`mdatp threat quarantine restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Endpoint Detection and Response|Set early preview |`mdatp edr early-preview [enabled\|disabled]`|
 |Endpoint Detection and Response|Set group-id|`mdatp edr group-ids --group-id [group-id]`|
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
 |Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
-|
+
+## Uninstall Defender for Endpoint on Linux
+
+There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
+
+### Offboard Linux devices
+
+To prevent decommissioned devices from showing up in your device inventory, and to help ensure a more accurate Secure Score rating, add device tags to devices that you want to offboard from Defender for Endpoint. Otherwise, you'll see those devices in the [Device inventory](machines-view-overview.md) for 180 days.
+
+1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
+
+2. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
+   
+3. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
+
+   :::image type="content" source="media/offboard-linux.png" alt-text="Screenshot showing Offboarding page in the Microsoft Defender portal.":::
+
+   Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
+
+4. Uninstall Defender for Endpoint on the devices.
+
+### Manual uninstallation
+
+- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
+- `sudo zypper remove mdatp` for SLES and variants.
+- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
+- `sudo dnf remove mdatp` for Mariner.
+
+## Related content
+
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+- [Run the client analyzer on Linux](run-analyzer-linux.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

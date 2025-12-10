@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,7 +17,7 @@ ms.collection:
   - essentials-security
   - essentials-compliance
 ms.custom: 
-ms.topic: conceptual
+ms.topic: get-started
 adobe-target: true
 ms.date: 05/31/2024
 ---

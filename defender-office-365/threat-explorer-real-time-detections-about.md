@@ -2,12 +2,12 @@
 title: About Threat Explorer and Real-time detections in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
-ms.date: 04/25/2025
+ms.topic: concept-article
+ms.date: 09/08/2025
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -54,7 +54,7 @@ The rest of this article explains the views and features that are available in T
 >
 > - [Threat hunting in Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-threat-hunting.md)
 > - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
-> - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+> - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
 ## Permissions and licensing for Threat Explorer and Real-time detections
 
@@ -69,19 +69,21 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
     - _Move messages in and delete messages from mailboxes_: Requires the **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
   - _Read-only access_: Membership in the **Security Reader** role group.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles. More permissions are required to do all available actions:
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default.
   - _Search for Exchange mail flow rules (transport rules) by name in Threat Explorer_: Membership in the **Security Administrator** or **Security Reader** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 > [!TIP]
 > End-user spam notifications and system generated messages aren't available in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
 >
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
+>
+> Email delivered to moderated mailboxes or moderated distribution groups is visible in Threat Explorer. But moderator actions (for example, approve or reject messages) and messages released by a moderator to members of a distribution group aren't logged and aren't shown in Threat Explorer.
 
 To use Threat Explorer or Real-time detections, you need to be assigned a license for Defender for Office 365 (included in your subscription or an add-on license).
 
@@ -101,21 +103,18 @@ Threat Explorer and Real-time detections contain the following elements:
   |**Malware**|✔|✔|Default view for Real-time detections. Information about email messages that contain malware.|
   |**Phish**|✔|✔|Information about email messages that contain phishing threats.|
   |**Campaigns**|✔||Information about malicious email that Defender for Office 365 Plan 2 identified as part of a [coordinated phishing or malware campaign](campaigns.md).|
-  |**Content malware**|✔|✔|Information about malicious files detected by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
+  |**Content malware**|✔|✔|Information about files processed by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
   |**URL clicks**|✔||Information about user clicks on URLs in email messages, Teams messages, SharePoint files, and OneDrive files.|
 
   These views are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
-  
+
   > [!TIP]
-  > Real-time detections shows the malicious email detections at the time of delivery only. Threat Explorer shows all email detections at the time of delivery along with post-delivery activities.
+  > Real-time detections show the malicious email detections at the time of delivery only. Threat Explorer shows all email detections at the time of delivery along with post-delivery activities.
 
 - **Date/time filters**: By default, the view is filtered by yesterday and today. To change the date filter, select the date range, and then select **Start Date** and **End date** values up to 30 days ago.
 
   :::image type="content" source="media/te-rtd-date-filter.png" alt-text="Screenshot of the date filter used in Threat Explorer and Real-time detections in the Defender portal." lightbox="media/te-rtd-date-filter.png":::
 
-  > [!TIP]
-  > Users with trial licenses assigned can filter only within the last 15 days.
-  
 - **Property filters (queries)**: Filter the results in the view by the available message, file, or threat properties. The available filterable properties depend on the view. Some properties are available in many views, while other properties are limited to a specific view.
 
   The available property filters for each view are listed in this article, including the differences between Threat Explorer and Real-time detections.
@@ -187,7 +186,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |Delivery action|Select one or more values: <ul><li>**Blocked**: Email messages that were quarantined, that failed delivery, or were dropped.</li><li>**Delivered**: Email delivered to the user's Inbox or other folder where the user can access the message.</li><li>**Delivered to junk**: Email delivered to the user's Junk Email folder or Deleted Items folder where the user can access the message.</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**: The message was retroactively identified as good.</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|
-|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|
+|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li<li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|
 |Threat classification|Select one or more values: <ul><li>**Business intelligence**</li><li>**Contact establishment**</li><li>**Gift card**</li><li>**Invoice**</li><li>**Payroll**</li><li><**PII gathering**/li><li>**Task**</li></ul> For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|
 |Latest delivery location¹|Same values as **Original delivery location**</li></ul>|
@@ -204,7 +203,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |**Advanced**||
 |Internet Message ID|Text. Separate multiple values by commas. <br/><br/> Available in the **Message-ID** header field in the message header. An example value is `<08f1e0f6806a47b4ac103961109ae6ef@server.domain>` (note the angle brackets).|
 |Network message ID|Text. Separate multiple values by commas. <br/><br/> A GUID value that's available in the **X-MS-Exchange-Organization-Network-Message-Id** header field in the message header.|
-|Sender IP|Text. Separate multiple values by commas.|
+|Sender IP²|Text. Separate multiple values by commas.|
 |Attachment SHA256|Text. Separate multiple values by commas.|
 |Cluster ID|Text. Separate multiple values by commas.|
 |Alert ID|Text. Separate multiple values by commas.|
@@ -213,10 +212,10 @@ The filterable properties that are available in the **Delivery action** box in t
 |ZAP URL signal|Text. Separate multiple values by commas.|
 |**Urls**||
 |URL Count|Integer. Separate multiple values by commas.|
-|URL domain²|Text. Separate multiple values by commas.|
-|URL domain and path²|Text. Separate multiple values by commas.|
-|URL²|Text. Separate multiple values by commas.|
-|URL path²|Text. Separate multiple values by commas.|
+|URL domain³|Text. Separate multiple values by commas.|
+|URL domain and path³|Text. Separate multiple values by commas.|
+|URL³|Text. Separate multiple values by commas.|
+|URL path³|Text. Separate multiple values by commas.|
 |URL source|Select one or more values: <ul><li>**Attachments**</li><li>**Cloud attachment**</li><li>**Email body**</li><li>**Email header**</li><li>**QR Code**</li><li>**Subject**</li><li>**Unknown**</li></ul>|
 |Click verdict|Select one or more values: <ul><li>**Allowed**: The user was allowed to open the URL.</li><li>**Block overridden**: The user was blocked from directly opening the URL, but they overrode the block to open the URL.</li><li>**Blocked**: The user was blocked from opening the URL.</li><li>**Error**: The user was presented with the error page, or an error occurred in capturing the verdict.</li><li>**Failure**: An unknown exception occurred while capturing the verdict. The user might have opened the URL.</li><li>**None**: Unable to capture the verdict for the URL. The user might have opened the URL.</li><li>**Pending verdict**: The user was presented with the detonation pending page.</li><li>**Pending verdict bypassed**: The user was presented with the detonation page, but they overrode the message to open the URL.</li></ul>|
 |URL Threat|Select one or more values: <ul><li>**Malware**</li><li>**Phish**</li><li>**Spam**</li></ul>|
@@ -233,19 +232,26 @@ The filterable properties that are available in the **Delivery action** box in t
 |Composite|Select one or more values: <ul><li>**Fail**</li><li>**None**</li><li>**Pass**</li><li>**Soft pass**</li></ul>|
 
 > [!TIP]
-> ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
-> There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
+> - ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
-> - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
-> - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
+>   There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
 >
-> ² By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+>   - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
+>   - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
 >
-> - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
-> - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
-> - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
-> - `/` at the end of the **URL** field is ignored.
+> - ² **Sender IP** values are sometimes logged as empty or 0.0.0.0 in the following scenarios:
+>   - Automatic replies.
+>   - Undelivered email where delivery has failed.
+>   - Email where the sender IP address is Microsoft internal. For example, system generated notifications, alerts, or forwarded messages delivered from Microsoft IP addresses.
+>
+>   IP addresses in these scenarios might be visible in Exchange message trace.
+>
+> - ³ By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+>   - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
+>   - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
+>   - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
+>   - `/` at the end of the **URL** field is ignored.
 
 ### Pivots for the chart in the All email view in Threat Explorer
 
@@ -399,13 +405,13 @@ The following actions are available at the top of the Email summary panel for Th
 - Add the users to the **Data Investigator** or **eDiscovery Manager** role groups.
 - [Create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² You can preview or download email messages that are available in Microsoft 365 mailboxes. Examples of when messages are no longer available in mailboxes include:
+² You can preview or download email messages that are available in cloud mailboxes and quarantine. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
 - The message was _soft deleted_ (deleted from the Deleted items folder, which moves the message to the Recoverable Items\Deletions folder).
 - ZAP moved the message to quarantine.
 
-³ **Download email** isn't available for messages that were quarantined. Instead, [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
+³ **Download email** for quarantined messages is available with password protection. You can also [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
 
 ⁴ **Go hunt** is available only in Threat Explorer. It isn't available in Real-time detections.
 
@@ -644,7 +650,7 @@ The filterable properties that are available in the **Sender address** box in th
 |Delivery action|Select one or more values: <ul><li>**Blocked**</li><li>**Delivered**</li><li>**Delivered to junk**</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|✔|✔|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|✔|✔|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|✔|✔|
-|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li><li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|✔|✔|
+|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li><li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|✔|✔|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|✔|✔|
 |Latest delivery location|Same values as **Original delivery location**</li></ul>|✔|✔|
 |Primary override|Select one or more values: <ul><li>**Allowed by organization policy**</li><li>**Allowed by user policy**</li><li>**Blocked by organization policy**</li><li>**Blocked by user policy**</li><li>**None**</li></ul>|✔|✔|
@@ -917,7 +923,7 @@ The filterable properties that are available in the **Sender address** box in th
 |Delivery action|Select one or more values: <ul><li>**Blocked**</li><li>**Delivered**</li><li>**Delivered to junk**</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|✔|✔|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**</li></ul>|✔|✔|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|✔|✔|
-|Detection technology|Select one or more values: <ul><li>**Advanced filter**</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**</li><li>**File detonation reputation**</li><li>**File reputation**</li><li>**Fingerprint matching**</li><li>**General filter**</li><li>**Impersonation brand**</li><li>**Impersonation domain**</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**</li><li>**Mixed analysis detection**</li><li>**spoof DMARC**</li><li>**Spoof external domain**</li><li>**Spoof intra-org**</li><li>**URL detonation**</li><li>**URL detonation reputation**</li><li>**URL malicious reputation**</li></ul>|✔|✔|
+|Detection technology|Select one or more values: <ul><li>**Advanced filter**</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**</li><li>**File detonation reputation**</li><li>**File reputation**</li><li>**Fingerprint matching**</li><li>**General filter**</li><li>**Impersonation brand**</li><li>**Impersonation domain**</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**</li><li>**Mail bombing**</li><li>**Mailbox intelligence impersonation**</li><li>**Mixed analysis detection**</li><li>**spoof DMARC**</li><li>**Spoof external domain**</li><li>**Spoof intra-org**</li><li>**URL detonation**</li><li>**URL detonation reputation**</li><li>**URL malicious reputation**</li></ul>|✔|✔|
 |Threat classification|Select one or more values: <ul><li>**Business intelligence**</li><li>**Contact establishment**</li><li>**Gift card**</li><li>**Invoice**</li><li>**Payroll**</li><li><**PII gathering**/li><li>**Task**</li></ul> For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).|✔|✔|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|✔|✔|
 |Latest delivery location|Same values as **Original delivery location**</li></ul>|✔|✔|
@@ -1230,7 +1236,7 @@ All of the available information and actions are identical to the information an
 
 ## Content malware view in Threat Explorer and Real-time detections
 
-The **Content malware** view in Threat Explorer and Real-time detections shows information about files that were identified as malware by:
+The **Content malware** view in Threat Explorer and Real-time detections shows information about files that were processed by:
 
 - [Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)
 - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
@@ -1258,7 +1264,7 @@ The filterable properties that are available in the **File name** box in the **C
 |Last modified by|Text. Separate multiple values by commas.|✔|✔|
 |SHA256|Integer. Separate multiple values by commas. <br/><br/> To find the SHA256 hash value of a file, run the following command in PowerShell: `Get-FileHash -Path "<Path>\<Filename>" -Algorithm SHA256`.|✔|✔|
 |Malware family|Text. Separate multiple values by commas.|✔|✔|
-|Detection technology|Select one or more values: <ul><li>**Advanced filter**</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**</li><li>**File detonation reputation**</li><li>**File reputation**</li><li>**Fingerprint matching**</li><li>**General filter**</li><li>**Impersonation brand**</li><li>**Impersonation domain**</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**</li><li>**Mixed analysis detection**</li><li>**spoof DMARC**</li><li>**Spoof external domain**</li><li>**Spoof intra-org**</li><li>**URL detonation**</li><li>**URL detonation reputation**</li><li>**URL malicious reputation**</li></ul>|✔|✔|
+|Detection technology|Select one or more values: <ul><li>**Advanced filter**</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**</li><li>**File detonation reputation**</li><li>**File reputation**</li><li>**Fingerprint matching**</li><li>**General filter**</li><li>**Impersonation brand**</li><li>**Impersonation domain**</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**</li><li>**Mail bombing**</li><li>**Mailbox intelligence impersonation**</li><li>**Mixed analysis detection**</li><li>**spoof DMARC**</li><li>**Spoof external domain**</li><li>**Spoof intra-org**</li><li>**URL detonation**</li><li>**URL detonation reputation**</li><li>**URL malicious reputation**</li></ul>|✔|✔|
 |Threat type|Select one or more values: <ul><li>**Block**</li><li>**Malware**</li><li>**Phish**</li><li>**Spam**</li></ul>|✔|✔|
 
 ### Pivots for the chart in the Content malware view in Threat Explorer and Real-time Detections
@@ -1605,6 +1611,6 @@ When you open the query by selecting **Explore** from the **Threat tracker** pag
 
 - [Threat Explorer collect email details on the Email entity page](mdo-email-entity-page.md)
 - [Find and investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
-- [View malicious files detected in SharePoint Online, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)
+- [View malicious files detected in SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)
 - [Threat protection status report](reports-email-security.md#threat-protection-status-report)
 - [Automated investigation and response in Microsoft Threat Protection](air-about.md)

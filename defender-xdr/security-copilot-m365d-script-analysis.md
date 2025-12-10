@@ -4,8 +4,8 @@ description: Use Microsoft Copilot script analysis in Microsoft Defender to inve
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - security-copilot
   - magic-ai-copilot
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - MET150
@@ -64,19 +64,19 @@ To begin analysis, perform the following steps:
 
    Alternately, you can select an event to inspect in the device timeline view. On the file details pane, select **Analyze** to run the script analysis capability.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-device-timeline-small.png" alt-text="Screenshot that shows the Analyze button in the device timeline." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-device-timeline.png":::
+   :::image type="content" source="media/security-copilot-m365d-script-analysis/copilot-defender-script-device-timeline-small.png" alt-text="Screenshot that shows the Analyze button in the device timeline." lightbox="media/security-copilot-m365d-script-analysis/copilot-defender-script-device-timeline.png":::
   
 2. Copilot runs script analysis and displays the results in the Copilot pane. Select **Show code** to expand the script, or **Hide code** to close the expansion.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/show-code-script-small.png" alt-text="Screenshot highlighting the show or hide code option within the script analysis results." lightbox="/defender/media/copilot-in-defender/script-analyzer/show-code-script.png":::
+   :::image type="content" source="media/security-copilot-m365d-script-analysis/show-code-script-small.png" alt-text="Screenshot highlighting the show or hide code option within the script analysis results." lightbox="media/security-copilot-m365d-script-analysis/show-code-script.png":::
 
 3. Select **Show MITRE techniques** to view the MITRE ATT&CK techniques associated with the script. This information helps you understand the techniques used by the script and how it can impact your environment. Select **Hide MITRE techniques** to close the expansion.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/hide-mitre-script-small.png" alt-text="Screenshot highlighting the show or hide MITRE techniques option within the script analysis results." lightbox="/defender/media/copilot-in-defender/script-analyzer/hide-mitre-script.png":::
+   :::image type="content" source="media/security-copilot-m365d-script-analysis/hide-mitre-script-small.png" alt-text="Screenshot highlighting the show or hide MITRE techniques option within the script analysis results." lightbox="media/security-copilot-m365d-script-analysis/hide-mitre-script.png":::
 
 4. Select the **More actions** ellipsis (...) on the upper right of the script analysis card to copy or regenerate the results, or view the results in the Security Copilot standalone experience. Selecting **Open in Security Copilot** opens a new tab to the Copilot standalone portal where you can input prompts and access other plugins.
   
-    ![Screenshot that shows the More actions option in the Copilot script analysis card.](/defender/media/copilot-in-defender/script-analyzer/script-analysis-options.png)
+    ![Screenshot that shows the More actions option in the Copilot script analysis card.](media/security-copilot-m365d-script-analysis/script-analysis-options.png)
 
 5. Review the results an use the information to guide your investigation and response to the incident.
 

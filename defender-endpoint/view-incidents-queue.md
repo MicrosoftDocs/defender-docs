@@ -1,34 +1,28 @@
----
+﻿---
 title: View and organize the Incidents queue
 ms.reviewer: 
 description: See the list of incidents and learn how to apply filters to limit the list and get a more focused view.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 01/06/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # View and organize the Microsoft Defender for Endpoint Incidents queue
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The **Incidents queue** shows a collection of incidents that were flagged from devices in your network. It helps you sort through incidents to prioritize and create an informed cybersecurity response decision.
 
@@ -96,3 +90,4 @@ For example: *Multi-stage incident on multiple endpoints reported by multiple so
 - [Investigate incidents](investigate-incidents.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

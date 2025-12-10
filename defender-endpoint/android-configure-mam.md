@@ -3,28 +3,25 @@ title: Configure Microsoft Defender for Endpoint on Android risk signals using A
 description: Describes how to configure Microsoft Defender for Endpoint risk signals using App Protection policies
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
-manager: deniseb
+ms.author: painbar
+author: paulinbar
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-android
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: android
 ms.date: 08/26/2024
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Microsoft Defender for Endpoint on Android, which already protects enterprise users on Mobile Device Management (MDM) scenarios, now extends support to Mobile App Management (MAM), for devices that aren't enrolled using Intune mobile device management (MDM). It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for mobile application management (MAM). This capability allows you to manage and protect your organization's data within an application.
 

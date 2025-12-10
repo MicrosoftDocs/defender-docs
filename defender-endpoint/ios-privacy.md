@@ -1,31 +1,30 @@
----
+﻿---
 title: Privacy information - Microsoft Defender for Endpoint on iOS
 ms.reviewer:
 description: Describes privacy information for Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: ios
 search.appverid: met150
 ms.date: 07/15/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Privacy information - Microsoft Defender for Endpoint on iOS
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 > [!NOTE]
 > Defender for Endpoint on iOS uses a VPN to provide the Web Protection feature. This is not a regular VPN and is a local or self-looping VPN that does not take traffic outside the device. **Microsoft or your organization, does not see your browsing activity.**
@@ -81,3 +80,4 @@ Feedback Data is collected through in-app feedback provided by the user.
 
 For more information, see [More on Privacy](https://aka.ms/mdatpiosprivacystatement).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

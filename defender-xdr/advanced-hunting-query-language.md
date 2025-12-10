@@ -4,10 +4,10 @@ description: Create your first threat hunting query and learn about common opera
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -18,11 +18,11 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
-ms.topic: how-to
-ms.date: 10/18/2024
 appliesto:
-- Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.topic: how-to
+ms.date: 03/28/2025
 ---
 
 # Learn the advanced hunting query language

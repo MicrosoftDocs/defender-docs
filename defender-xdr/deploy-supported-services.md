@@ -4,8 +4,8 @@ description: Learn about the Microsoft security services that integrate with Mic
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
   - m365solution-getstarted
   - highpri
   - tier1
-ms.topic: concept-article
+ms.topic: install-set-up-deploy
 search.appverid: 
   - MOE150
   - MET150

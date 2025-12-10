@@ -5,8 +5,8 @@ author: alexroland24
 ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
-ms.topic: conceptual
-ms.date: 01/15/2025
+ms.topic: concept-article
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -14,6 +14,9 @@ ms.custom:
 ---
 
 # Infrastructure chaining
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 Infrastructure chaining uses the relationships between highly connected datasets to build out an investigation. This process is the core of threat infrastructure analysis and allows organizations to surface new connections, group similar attack activity and substantiate assumptions during incident response.
 

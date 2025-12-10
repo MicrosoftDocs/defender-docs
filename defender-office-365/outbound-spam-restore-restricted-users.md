@@ -2,9 +2,9 @@
 title: Remove blocked users from the Restricted entities page
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 f1_keywords:
@@ -22,16 +22,17 @@ ms.custom:
 ms.service: defender-office-365
 ms.date: 05/07/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I need steps to unblock users restricted for outbound spam, including required checks and portal/PowerShell actions so I can safely restore sending.
 ---
 
 # Remove blocked users from the Restricted entities page
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, several things happen if a user exceeds the [outbound sending limits of the service](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options) or the [limits in outbound spam policies](outbound-spam-policies-configure.md):
+In all organizations with cloud mailboxes, several things happen if a user exceeds the [outbound sending limits of the service](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options) or the [limits in outbound spam policies](outbound-spam-policies-configure.md):
 
 - The user is restricted from sending email, but they can still receive email.
 - The user is added to the **Restricted entities** page in the Microsoft Defender portal.
@@ -64,7 +65,7 @@ For more information about compromised _connectors_ and how to remove them from 
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - A sender exceeding the outbound email limits is an indicator of a compromised account. Before you follow the procedures in this article to remove a user from the **Restricted entities** page, be sure to follow the required steps to regain control of the account as described in [Responding to a compromised email account in Office 365](responding-to-a-compromised-email-account.md).
 
@@ -139,7 +140,7 @@ To view details about a specific user, replace \<emailaddress\> with their email
 Get-BlockedSenderAddress -SenderAddress <emailaddress> | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-BlockedSenderAddress](/powershell/module/exchange/get-blockedsenderaddress).
+For detailed syntax and parameter information, see [Get-BlockedSenderAddress](/powershell/module/exchangepowershell/get-blockedsenderaddress).
 
 To remove a user from the Restricted users list, replace \<emailaddress\> with their email address and run the following command:
 
@@ -147,7 +148,7 @@ To remove a user from the Restricted users list, replace \<emailaddress\> with t
 Remove-BlockedSenderAddress -SenderAddress <emailaddress>
 ```
 
-For detailed syntax and parameter information, see [Remove-BlockedSenderAddress](/powershell/module/exchange/remove-blockedsenderaddress).
+For detailed syntax and parameter information, see [Remove-BlockedSenderAddress](/powershell/module/exchangepowershell/remove-blockedsenderaddress).
 
 ## More information
 

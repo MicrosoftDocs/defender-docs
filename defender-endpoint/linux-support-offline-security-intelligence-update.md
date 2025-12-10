@@ -1,31 +1,30 @@
----
+﻿---
 title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux
 description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.subservice: linux
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
 ms.date: 03/31/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## How offline security intelligence updates work
 
@@ -52,7 +51,7 @@ Key benefits include:
 - To start and configure the update process, you can update the managed configuration json file on your Linux devices.
 - You can view the status of updates in the mdatp CLI.
 
-:::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
+:::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-1.png":::
 
 Fig. 1: Process flow diagram on the mirror server for downloading the security intelligence updates
 
@@ -303,3 +302,4 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 - [Linux resources](linux-resources.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+

@@ -1,35 +1,35 @@
----
+﻿---
 title: Onboard Windows devices in Azure Virtual Desktop
 description: Learn about onboarding Windows devices to Defender for Endpoint in Azure Virtual Desktop
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.topic: install-set-up-deploy
+author: paulinbar
+ms.author: painbar
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 11/17/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # Onboard Windows devices in Azure Virtual Desktop
 
 6 minutes to read
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Windows multi-session running on Azure Virtual Desktop (AVD)
-- [Windows 10 Enterprise Multi-Session](/azure/virtual-desktop/windows-10-multisession-faq)
 
 Microsoft Defender for Endpoint supports monitoring both VDI and Azure Virtual Desktop sessions. Depending on your organization's needs, you might need to implement VDI or Azure Virtual Desktop sessions to help your employees access corporate data and apps from an unmanaged device, remote location, or similar scenario. With Microsoft Defender for Endpoint, you can monitor these virtual machines for anomalous activity.
+
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Before you begin
 
@@ -134,10 +134,10 @@ When using Windows Enterprise multi-session, per our security best practices the
 - Windows Enterprise E3
 - Windows Enterprise E5
 - Microsoft 365 E3
-- Microsoft 365 E5 Security
+- Microsoft Defender Suite
 - Microsoft 365 E5
 
-Licensing requirements for Microsoft Defender for Endpoint can be found at: [Licensing requirements](minimum-requirements.md#licensing-requirements).
+Licensing requirements for Microsoft Defender for Endpoint can be found at: [Licensing requirements](minimum-requirements.md).
 
 #### Related Links
 
@@ -148,3 +148,4 @@ Licensing requirements for Microsoft Defender for Endpoint can be found at: [Lic
 [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](deployment-vdi-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

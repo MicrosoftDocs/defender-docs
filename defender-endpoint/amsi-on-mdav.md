@@ -1,12 +1,17 @@
 ---
 title: "Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus"
 description: Describes fileless malware and how Microsoft Defender Antivirus uses AMSI to protect against hidden threats.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol
 ms.reviewer: yongrhee
-ms.date: 12/05/2024
-ms.topic: conceptual
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.custom: 
@@ -23,18 +28,6 @@ ai-usage: ai-assisted
 
 # Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus
 
-**Applies to**:
-
-- Microsoft Defender XDR
-- Microsoft Defender Antivirus
-- Microsoft Defender for Endpoint P1 & P2
-- Microsoft Defender for Business
-- Microsoft Defender for Individuals
-
-**Platforms**:
-
-- Windows 10 and newer
-- Windows Server 2016 and newer
 
 Microsoft Defender for Endpoint utilizes the anti-malware Scan Interface (AMSI) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. This article describes the benefits of AMSI integration, the types of scripting languages it supports, and how to enable AMSI for improved security.
 
@@ -69,9 +62,12 @@ Microsoft Defender Antivirus blocks most malware using generic, heuristic, and b
    - Detecting and remediating WMI persistence techniques by scanning the WMI repository, both periodically and whenever anomalous behavior is observed
    - Detecting reflective DLL injection through enhanced memory scanning techniques and behavioral monitoring
 
-## Why AMSI?
+## Prerequisites 
 
-AMSI provides a deeper level of inspection for malicious software that employs obfuscation and evasion techniques on Windows' built-in scripting hosts. By integrating AMSI, Microsoft Defender for Endpoint offers extra layers of protection against advanced threats.
+### Supported operating systems
+
+- Windows 10 and later
+- Windows Server 2016 and later
 
 ### Supported Scripting Languages
 
@@ -85,6 +81,11 @@ AMSI provides a deeper level of inspection for malicious software that employs o
 If you use Microsoft 365 Apps, AMSI also supports JavaScript, VBA, and XLM.
 
 AMSI doesn't currently support Python or Perl.
+
+## Why AMSI?
+
+AMSI provides a deeper level of inspection for malicious software that employs obfuscation and evasion techniques on Windows' built-in scripting hosts. By integrating AMSI, Microsoft Defender for Endpoint offers extra layers of protection against advanced threats.
+
 
 ### Enabling AMSI
 

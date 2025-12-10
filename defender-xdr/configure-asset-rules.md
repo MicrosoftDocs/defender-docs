@@ -2,8 +2,8 @@
 title: Create dynamic rules for devices in asset rule management
 description: Use asset rule management in Microsoft Defender for Endpoint to configure dynamic tagging for devices.
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -37,9 +37,6 @@ You can create dynamic rules in the **Asset rule management** in the Microsoft D
 ## Create a new dynamic rule
 
 A rule can be based on device name, domain, OS platform, internet facing status, onboarding status and manual device tags. You can select or create a tag that will be applied based on the conditions you've set.
-
-> [!IMPORTANT]
-> Use of [dynamic device tagging](/defender-xdr/configure-asset-rules) capabilities in Defender for Endpoint to tag devices with `MDE-Management` isn't currently supported with security settings management. Devices tagged through this capability don't successfully enroll. This is currently under investigation.
 
 The following steps guide you on how to create a new dynamic rule in Microsoft Defender XDR:
 

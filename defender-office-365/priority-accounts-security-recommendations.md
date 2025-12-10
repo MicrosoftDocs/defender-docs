@@ -2,9 +2,9 @@
 title: Security recommendations for priority accounts in Microsoft 365, priority accounts, priority accounts in Office 365, priority accounts in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: solution-overview
 ms.localizationpriority: medium
@@ -21,23 +21,23 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to elevate the security settings and use reports, alerts, and investigations for priority accounts in their Microsoft 365 organizations.
 ms.service: defender-office-365
-ms.date: 7/31/2023
+ms.date: 07/07/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Security recommendations for priority accounts in Microsoft 365
+# Security recommendations for priority accounts in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Not all user accounts have access to the same company information. Some accounts have access to sensitive information, such as financial data, product development information, partner access to critical build systems, and more. If compromised, accounts that have access to highly confidential information pose a serious threat. We call these types of accounts _priority accounts_. Priority accounts include (but aren't limited to) CEOs, CISOs, CFOs, infrastructure admin accounts, build system accounts, and more.
+Not all user accounts have access to the same company information. Some accounts have access to sensitive information. For example, financial data, product development schedules, partner access to critical build systems, and more. If compromised, these accounts pose a serious threat. We call these types of accounts _priority accounts_. Priority accounts include (but aren't limited to) CEOs, CISOs, CFOs, infrastructure admin accounts, build system accounts, and more.
 
 Microsoft Defender for Office 365 supports priority accounts as tags that can be used in filters in alerts, reports, and investigations. For more information, see [User tags in Microsoft Defender for Office 365](user-tags-about.md).
 
 For attackers, ordinary phishing attacks that cast a random net for ordinary or unknown users are inefficient. On the other hand, _spear phishing_ or _whaling_ attacks that target priority accounts are very rewarding for attackers. So, priority accounts require stronger than ordinary protection to help prevent account compromise.
 
-Microsoft 365 and Microsoft Defender for Office 365 contain several key features that provide additional layers of security for your priority accounts. This article describes these capabilities and how to use them.
+Microsoft 365 and Microsoft Defender for Office 365 contain several key features that provide extra layers of security for your priority accounts. This article describes these capabilities and how to use them.
 
 :::image type="content" source="media/security-recommendations-for-priority-users.png" alt-text="The summary of the security recommendations in icon form" lightbox="media/security-recommendations-for-priority-users.png":::
 
@@ -50,35 +50,32 @@ Microsoft 365 and Microsoft Defender for Office 365 contain several key features
 |[Train users](#train-users)|:::image type="icon" source="media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
 
 > [!NOTE]
-> For information about securing _privileged accounts_ (admin accounts), see [this topic](/purview/privileged-access-management).
+> For information about securing _privileged accounts_ (admin accounts), see [this article](/purview/privileged-access-management).
 
 ## Increase sign-in security for priority accounts
 
-Priority accounts require increased sign-in security. You can increase their sign-in security by requiring multi-factor authentication (MFA) and disabling legacy authentication protocols.
+Priority accounts require increased sign-in security. You can increase their sign-in security by requiring multifactor authentication (MFA) and disabling legacy authentication protocols.
 
 For instructions, see [Step 1. Increase sign-in security for remote workers with MFA](/microsoft-365/solutions/empower-people-to-work-remotely-secure-sign-in). Although this article is about remote workers, the same concepts apply to priority users.
 
-**Note**: We strongly recommend that you globally disable legacy authentication protocols for all priority users as described in the previous article. If your business requirements prevent you from doing so, Exchange Online offers the following controls to help limit the scope of legacy authentication protocols:
-
-- You can ([until October 2023](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-client-access-rules-in-exchange-online/3638563)) use [Client Access Rules](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) in Exchange Online to block or allow Basic authentication and legacy authentication protocols like POP3, IMAP4, and authenticated SMTP for specific users.
-
-- You can disable POP3 and IMAP4 access on individual mailboxes. You can disable authenticated SMTP at the organizational level and enable it on specific mailboxes that still require it. For instructions, see the following articles:
-  - [Enable or Disable POP3 or IMAP4 access for a user](/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access)
-  - [Enable or disable authenticated client SMTP submission (SMTP AUTH)](/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission)
-
-It's also worth noting that Basic authentication is in the process of being deprecated in Exchange Online for Exchange Web Services (EWS), Exchange ActiveSync, POP3, IMAP4, and remote PowerShell. For details, see this [blog post](https://developer.microsoft.com/office/blogs/deferred-end-of-support-date-for-basic-authentication-in-exchange-online/).
+> [!NOTE]
+> We strongly recommend that you globally disable legacy authentication protocols for all priority users as described in the previous article. If your business requirements prevent you from doing so, Exchange Online offers the following controls to help limit the scope of legacy authentication protocols:
+>
+> - You can disable POP3 and IMAP4 access on individual mailboxes. You can disable authenticated SMTP at the organizational level and enable it on specific mailboxes that still require it. For instructions, see the following articles:
+>   - [Enable or Disable POP3 or IMAP4 access for a user](/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access)
+>   - [Enable or disable authenticated client SMTP submission (SMTP AUTH)](/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission)
 
 ## Use Strict preset security policies for priority accounts
 
-Priority users require more stringent actions for the various protections that are available in Exchange Online Protection (EOP) and Defender for Office 365.
+Priority users require more stringent actions for the default email protections for cloud mailboxes and the protections in Defender for Office 365.
 
-For example, instead of delivering messages that were classified as spam to the Junk Email folder, you should quarantine those same messages if they're intended for priority accounts.
+For example, instead of delivering messages that were classified as spam to the Junk Email folder, you should quarantine those same messages intended for priority accounts.
 
 You can implement this stringent approach for priority accounts by using the Strict profile in preset security policies.
 
-Preset security policies are a convenient and central location to apply our recommended Strict policy settings for all of the protections in EOP and Defender for Office 365. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+Preset security policies are a convenient and central location to apply our recommended Strict policy settings for all threat policies in Microsoft 365 and Defender for Office 365. For more information, see [Preset security policies](preset-security-policies.md).
 
-For details about how the Strict policy settings differ from the default and Standard policy settings, see [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+For details about how the Strict policy settings differ from the default and Standard policy settings, see [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
 ## Apply user tags to priority accounts
 
@@ -90,7 +87,7 @@ You can also create custom tags to further identify and classify your priority a
 
 ## Monitor priority accounts in alerts, reports, and detections
 
-After you secure and tag your priority users, you can use the available reports, alerts, and investigations in EOP and Defender for Office 365 to quickly identify incidents or detections that involve priority accounts. The features that support user tags are described in the following table.
+After you secure and tag your priority users, you can see how Microsoft 365 and Defender for Office 365 protects these users. The features that support user tags are described in the following table.
 
 |Feature|Description|
 |---|---|
@@ -104,7 +101,7 @@ After you secure and tag your priority users, you can use the available reports,
 |Top senders and recipients report|You can add this user tag to the top 20 message senders in your organization. For more information, see [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report).|
 |Compromised user report|User accounts that are marked as **Suspicious** or **Restricted** in Microsoft 365 organizations with Exchange Online mailboxes shows up in this report. For more information, see [Compromised user report](reports-email-security.md#compromised-users-report).|
 |Admin submissions and user reported messages|Use the Submissions page in the Microsoft Defender portal to submit email messages, URLs, and attachments to Microsoft for analysis. For more information, see [Admin submissions and user reported messages](submissions-admin.md).|
-|Quarantine|Quarantine is available to hold potentially dangerous or unwanted messages in Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations for **Priority accounts**. For more information, see [Quarantine email messages](quarantine-about.md).|
+|Quarantine|Quarantine is available to hold potentially dangerous or unwanted messages for **Priority accounts**. For more information, see [Quarantine email messages](quarantine-about.md).|
 |Attack simulation|To test your security policies and practices, run a benign cyberattack simulation for your target users. For more information, see [Attack simulation](attack-simulation-training-simulations.md#target-users).|
 |Email issues for priority accounts report|The **Email issues for priority accounts** report in the Exchange admin center (EAC) contains information about undelivered and delayed messages for **priority accounts**. For more information, see [Email issues for priority accounts report](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report).|
 

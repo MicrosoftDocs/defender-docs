@@ -4,10 +4,10 @@ description: Learn about events from cloud apps and services in the CloudAppEven
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,19 +17,32 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 06/09/2024
+ms.date: 05/15/2025
 ---
 
 # CloudAppEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about events involving accounts and objects in Office 365 and other [cloud apps and services](#apps-and-services-covered). Use this reference to construct queries that return information from this table.
 
+## Prerequisites
+This advanced hunting table is populated by records from Microsoft Defender for Cloud Apps. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Cloud Apps in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+
+
+To make sure the `CloudAppEvents` table is populated:
+
+1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
+
+1.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
+
+ For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -91,7 +104,7 @@ The __CloudAppEvents__ table contains enriched logs from all SaaS applications c
 
 Connect supported cloud apps for instant, out-of-the-box protection, deep visibility into the app's user and device activities, and more. For more information, see [Protect connected apps using cloud service provider APIs](/defender-cloud-apps/protect-connected-apps).
 
-## Related topics
+## Related articles
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

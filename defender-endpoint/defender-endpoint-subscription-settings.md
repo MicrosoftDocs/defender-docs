@@ -2,9 +2,9 @@
 title: Manage your Microsoft Defender for Endpoint subscription settings across client devices
 description: Learn about your options for managing your Defender for Endpoint subscription settings. Choose Plan 1, Plan 2, or mixed mode.
 search.appverid: MET150  
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 audience: ITPro
 ms.topic: overview
 ms.date: 03/05/2025
@@ -28,19 +28,16 @@ In Defender for Endpoint, a mixed-licensing scenario is a situation in which an 
 | *Mixed trial* | Try a premium level subscription for some users. Examples include: <br/>- Defender for Endpoint Plan 1 (purchased for all users), and Defender for Endpoint Plan 2 (a trial subscription has been started for some users)<br/>- Microsoft 365 E3 (purchased for all users), and Microsoft 365 E5 (a trial subscription has been started for some users) |
 | *Phased upgrades* | Upgrade user licenses in phases. Examples include:<br/>- Moving groups of users from Defender for Endpoint Plan 1 to Plan 2<br/>- Moving groups of users from Microsoft 365 E3 to E5  |
 
- Until recently, mixed-licensing scenarios weren't supported; in cases of multiple subscriptions, the highest functional subscription would take precedence for your tenant. Now, you can manage your subscription settings to accommodate mixed licensing scenarios across client devices. These capabilities enable you to:
+You can manage your subscription settings to accommodate mixed licensing scenarios across client devices. These capabilities enable you to:
 
 - **Set your tenant to mixed mode and tag devices** to determine which client devices will receive features and capabilities from each plan (we call this option *mixed mode*); **OR**,
 - **Use the features and capabilities from one plan across all your client devices**. 
 
 You can also use a newly added license usage report to track status.
 
-> [!NOTE]
-> If you're using Microsoft Defender for Business and you want to switch to Defender for Endpoint Plan 2, contact support. For more information, see [Change your endpoint security subscription](/defender-business/mdb-manage-subscription).
-
 ## [**Use mixed mode**](#tab/mixed)
 
-## Set your tenant to mixed mode and tag devices
+To set your tenant to mixed mode and tag devices, follow the guidance on this tab.
 
 > [!IMPORTANT]
 > - **Mixed-mode settings apply to client endpoints only**. Tagging server devices won't change their subscription state. All server devices running Windows Server or Linux should have appropriate licenses, such as [Defender for Servers](/azure/defender-for-cloud/plan-defender-for-servers-select-plan). See [Options for onboarding servers](onboard-windows-server.md).
@@ -96,10 +93,9 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 
 2. Set up a dynamic rule using the condition operator `Tag Does not contain VIP`. In this case, all devices that do not have the `VIP` tag will receive the `License MDE P1` tag and Defender for Endpoint Plan 1 capabilities. 
 
-
 ## [**Use one plan**](#tab/oneplan)
 
-## Use the features and capabilities from one plan across all your devices
+To use the features and capabilities from one plan across all your devices, follow the guidance on this tab.
 
 > [!IMPORTANT]
 > To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
@@ -122,6 +118,10 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
    If you chose to apply Defender for Endpoint Plan 1 to all devices, proceed to [Validate that devices are receiving only Defender for Endpoint Plan 1 capabilities](#validate-that-a-device-is-receiving-only-defender-for-endpoint-plan-1-capabilities).
 
 ---
+
+Microsoft Defender for Business isn't supported for mixed-license scenarios. If you're using Defender for Business and you want to switch to Defender for Endpoint Plan 2, contact support. For more information, see [Change your endpoint security subscription](/defender-business/mdb-manage-subscription).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.

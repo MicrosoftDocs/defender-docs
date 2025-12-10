@@ -1,13 +1,13 @@
----
+﻿---
 title: Microsoft Defender for Endpoint demonstration scenarios
 description: Lists Microsoft Defender for Endpoint demonstration scenarios that you can run.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,17 +16,14 @@ ms.collection:
 ms.topic: article
 ms.subservice: ngp
 ms.date: 10/16/2024
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender for Endpoint - demonstration scenarios
 
-**Applies to:**
-
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Endpoint Plan 1 or 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Servers
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 Demonstration scenarios help you learn about the capabilities of Microsoft Defender for Endpoint on Windows, Mac, and Linux. Demonstration scenarios are provided for the following Microsoft Defender for Endpoint protection areas:
 
@@ -70,3 +67,4 @@ The following table lists the available demonstrations alphabetically, with thei
 [Microsoft Defender for Endpoint security blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

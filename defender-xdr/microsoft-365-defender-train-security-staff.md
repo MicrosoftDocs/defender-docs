@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier3
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150

@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - Adm_TOC
 - tier2
-ms.topic: conceptual
+ms.topic: article
 search.appverid:
 - MOE150
 - MET150

@@ -4,8 +4,8 @@ description: Investigate alerts seen across devices, users, and mailboxes.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,13 +14,14 @@ ms.collection:
 - m365initiative-m365-defender
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
-  - MOE150
-  - met150
-ms.date: 3/25/2025
-appliesto:
+- MOE150
+- met150
+ms.date: 6/04/2025
+appliesto: 
 - Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -28,13 +29,13 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]
-> This article describes security alerts in Microsoft Defender XDR. However, you can use activity alerts to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Create activity alerts - Microsoft Purview | Microsoft Docs](/Microsoft-365/compliance/create-activity-alerts).
+> This article describes security alerts in Microsoft Defender XDR. However, you can use alert policies to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
 
-Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Alerts are typically part of a broader attack and provide clues about an incident.
+Alerts are signals that result from various threat detection activities. These signals are produced by the many security services that reside in the Microsoft Defender portal, and they indicate the occurrence of malicious or suspicious events in your environment.
 
-In Microsoft Defender XDR, related alerts are aggregated together to form [incidents](incidents-overview.md). Incidents will always provide the broader context of an attack, however, analyzing alerts can be valuable when deeper analysis is required.
+These suspicious events are typically part of a broader attack story. In the Microsoft Defender portal, alerts represent individual pieces of evidence that Defender XDR correlates together to form [incidents](incidents-overview.md). Incidents tell the whole attack story; however, analyzing alerts can be valuable when deeper analysis is required.
 
-The **Alerts queue** shows the current set of alerts. You get to the alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
+The **Alerts queue** shows the current set of alerts. You can view the entire alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139). You can also see the alerts for each incident on the **incidents queue**, and on each individual incident's page, on the **Alerts** tab.
 
 :::image type="content" source="/defender/media/investigate-alerts/alerts-page-defender-small.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alerts-page-defender.png":::
 
@@ -44,7 +45,7 @@ By default, the alerts queue in the Microsoft Defender portal displays the new a
 
 From the default alerts queue, you can select **Filter** to see all available filters from which you can specify a subset of the alerts. Here's an example.
 
-:::image type="content" source="/defender/media/investigate-alerts/alerts-all-filters.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal":::
+:::image type="content" source="/defender/media/investigate-alerts/alert-filters-small.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alert-filters.png":::
 
 You can filter alerts according to these criteria:
 
@@ -56,10 +57,12 @@ You can filter alerts according to these criteria:
 - Policy/Policy rule
 - Alert type
 - Product name
+- Alert subscription ID
 - Entities (the impacted assets)
 - Automated investigation state
 - Workspace
 - Data stream (workload or location)
+- Sensitivity label
 
 > [!NOTE]
 > Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
@@ -148,15 +151,18 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 
 <a name='configure-aad-ip-alert-service'></a>
 
-### Configure Microsoft Entra IP alert service
+### Configure alert service settings
+
+To configure alert service settings in Microsoft Defender XDR:
 
 1. Go to the Microsoft Defender portal ([security.microsoft.com](https://security.microsoft.com)), select **Settings** > **Microsoft Defender XDR**.
 
-2. From the list, select **Alert service settings**, and then configure your **Microsoft Entra ID Protection** alert service.
+1. From the list, select **Alert service settings**, and then configure the alert settings for the service.
 
-   :::image type="content" source="/defender/media/investigate-alerts/alerts-ss-entra-alert.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="/defender/media/investigate-alerts/alerts-ss-entra-alert.png":::
+    > [!IMPORTANT]
+    > Starting December 11, 2025, Microsoft Defender XDR is rolling out enhanced configuration options for Entra ID Protection alerts in public preview. These updates give you more granular control over risk-based alerting. The new default setting is **High-risk detections only**. Change the default setting to **High + Medium** or **All detections** based on your organization’s needs.
 
-By default, only the most relevant alerts for the security operation center are enabled. If you want to get all Microsoft Entra IP risk detections, you can change it in the **Alert service settings** section.
+    :::image type="content" source="/defender/media/investigate-alerts/alert-service-settings-entra.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="/defender/media/investigate-alerts/alert-service-settings-entra.png":::
 
 You can also access **Alert service settings** directly from the **Incidents** page in the Microsoft Defender portal.
 
@@ -297,9 +303,6 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
 > The *Hide alert* feature is only available in Defender for Endpoint alerts.
 
-<!--what does this mean?-->
-
-<!--i don't see how to validate this?>
 After creating your alert tuning rule from an alert details page, in the **Successful rule creation** page that appears, add any of the alert-related IOCs as indicators to an *allow list* to prevent them from being blocked in the future. IOCs that are configured as part of the alert tuning rule are selected by default. For example:
 
 1. Add a file to the **Select evidence (IOC) to allow** list. By default, the file that triggered the alert is already selected.

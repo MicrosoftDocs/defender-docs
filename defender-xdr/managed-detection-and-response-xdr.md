@@ -3,28 +3,29 @@ title: Managed detection and response
 ms.reviewer:
 description: Defender Experts for XDR provides actionable managed response to your security operations center (SOC) teams.
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-manage
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/31/2024
+ms.date: 08/01/2025
 ---
 
 # Managed detection and response
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsoft Defender Experts for Servers
 
 For managed detection and response instructions, check out this short video.
 
@@ -127,7 +128,7 @@ Apart from these one-click actions, you can also receive managed responses from 
 4. If you don't want to complete a required action right away, select **Skip**, then select **Yes, skip this action** in the confirmation dialog box that appears.
 
 > [!IMPORTANT]
->If you notice that any of the buttons on the action cards are grayed out, it could indicate that you don't have the necessary permissions to perform the action. Make sure that you're signed into the Microsoft Defender XDR portal with the appropriate permissions. Most managed response actions require that you have at least the Security Operator access. If you still encounter this issue even with the appropriate permissions, navigate to **View device details** and complete the steps from there.
+>If you notice that any of the buttons on the action cards are grayed out, it could indicate that you don't have the necessary permissions to perform the action. Make sure that you're signed into the Microsoft Defender portal with the appropriate permissions. Most managed response actions require that you have at least the Security Operator access. If you still encounter this issue even with the appropriate permissions, navigate to **View device details** and complete the steps from there.
 
 ## Get visibility to Defender Experts investigations in your SIEM or ITSM application
 

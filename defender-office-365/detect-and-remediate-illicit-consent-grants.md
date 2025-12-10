@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
 - tier2
 - m365-security
@@ -108,7 +108,7 @@ The simplest way to verify the Illicit Consent Grant attack is to run [the Get-A
 > [!IMPORTANT]
 > We ***highly recommend*** that you require multifactor authentication on your admin account. This script supports MFA authentication.
 >
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. Sign in to the computer where you want to run the scripts with local administrator rights.
 
@@ -158,7 +158,7 @@ After you identified the application with illicit permissions, you have several 
 
 - You can disable sign-in for the affected account, which disables access to data in the account by the app. This action isn't ideal for user productivity, but it can be a short-term remediation to quickly limit the results of the attack.
 
-- You can turn off integrated applications in your organization. This action is drastic. Although it prevents users from accidentally granting access to a malicious app, it also prevents all users from granting consent to any applications. We don't recommend this action because it severely impairs user productivity with third-party applications. You can turn off integrated apps by following the steps in [Turning Integrated Apps on or off](/microsoft-365/admin/misc/user-consent).
+- You can turn off integrated applications in your organization. This action is drastic. Although it prevents users from accidentally granting access to a malicious app, it also prevents all users from granting consent to any applications. We don't recommend this action because it severely impairs user productivity with non-Microsoft applications. You can turn off integrated apps by following the steps in [Turning Integrated Apps on or off](/microsoft-365/admin/misc/user-consent).
 
 ## See also
 

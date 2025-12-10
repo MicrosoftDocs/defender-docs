@@ -1,38 +1,33 @@
----
+﻿---
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on Linux. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
-ms.reviewer: gopkr, ardeshmukh
+ms.author: painbar
+author: paulinbar
+ms.reviewer: ratujdange, ardeshmukh
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/28/2025
----
+ms.date: 06/06/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), and behavior monitoring (BM). Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all the associated antivirus detections, EDR alerts, and visibility for the excluded item.
 
 > [!IMPORTANT]
-> The antivirus exclusions described in this article apply to only antivirus capabilities and not to endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Global exclusions described in this section apply to antivirus **and** endpoint detection and response capabilities, thus stopping all associated antivirus protection, EDR alerts, and detections. Global exclusions are currently in public preview, and are available in Defender for Endpoint version `101.23092.0012` or later, in the Insiders Slow and Production rings. For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
+> The antivirus exclusions described in this article apply to only antivirus capabilities, and not to endpoint detection and response (EDR). Files that you exclude by using the antivirus exclusions described in this article can still result in EDR alerts and other detections. Global exclusions described in this section apply to antivirus and EDR capabilities, thus stopping all associated antivirus protection, EDR alerts, and detections. Global exclusions are available in production for Defender for Endpoint on Linux, version `101.23092.0012` or later. For EDR-only exclusions, [contact support](/microsoft-365/admin/get-help-support).
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux.
 
@@ -40,6 +35,8 @@ Exclusions can be useful to avoid incorrect detections on files or software that
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Supported exclusion scopes
 
@@ -68,7 +65,7 @@ The following table shows the exclusion types supported by Defender for Endpoint
 |File extension|All files with the extension, anywhere on the device (not available for global exclusions) |`.test`|
 |File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`|
 |Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`|
-|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>*We recommend using full and trusted process launch path.*|`/bin/cat`<br/>`cat`<br/>`c?t`|
+|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>Antivirus exclusions can be added using either a full path or file name, but for global exclusions, only use full and trusted process launch paths. In both the cases, it is recommended to use the full path.|`/bin/cat`<br/>`cat`<br/>`c?t`|
 
 > [!IMPORTANT]
 > The paths used must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`. When implementing global process exclusions, exclude only what is necessary to ensure system reliability and security. Verify that the process is known and trusted, specify the complete path to the process location, and confirm that the process will consistently launch from the same trusted full path.
@@ -87,7 +84,7 @@ Wildcard|Description|Examples|
 
 ## How to configure the list of exclusions
 
-You can configure exclusions using a management Json configuration, Defender for Endpoint security settings management, or the command line.
+You can configure exclusions using a management JSON configuration, Defender for Endpoint security settings management, or the command line.
 
 ### Using the management console
 
@@ -141,7 +138,6 @@ In enterprise environments, exclusions can also be managed through a configurati
 ### Using Defender for Endpoint security settings management
 
 > [!NOTE]
-> This method is currently in private Preview. To enable this feature, please reach out to xplatpreviewsupport@microsoft.com.
 > Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/mem/intune/protect/mde-security-integration#prerequisites)
 
 You can use the Microsoft Intune admin center or the Microsoft Defender portal to manage exclusions as endpoint security policies and assign those policies to Microsoft Entra ID groups. If you're using this method for the first time, make sure to complete the following steps:
@@ -428,3 +424,4 @@ mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

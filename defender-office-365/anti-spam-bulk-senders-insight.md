@@ -2,11 +2,11 @@
 title: Bulk senders insight
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
@@ -14,26 +14,30 @@ ms.assetid:
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn about the Bulk senders insight page in Exchange Online Protection (EOP) to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages.
+description: Admins can learn about the Bulk senders insight page in the Microsoft Defender portal to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages.
 ms.service: defender-office-365
-ms.date: 02/24/2025
+ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Bulk senders insight in Exchange Online Protection
+# Bulk senders insight in cloud organizations
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to see how much email was identified as bulk at the current bulk threshold level in anti-spam policies, and to simulate identified vs. allowed bulk email based on changes in the bulk sender threshold and the quality of the bulk sender.
+In all organizations with cloud mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to view information about bulk email (also known as gray mail) detections in your organization.
 
-EOP assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL threshold value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
 
 The bulk senders insight has the following capabilities:
 
 - View how much mail is identified as bulk at every BCL level (1 to 9) for the last 60 days.
-- Simulate changes to the bulk email threshold and view the results on the number of messages that would be delivered vs. identified as bulk by the default anti-spam or custom anti-spam policies where you can set the BCL threshold. You can't set the BCL threshold in the Standard or Strict [preset security policies](preset-security-policies.md).
-- View information about message senders that were affected by the bulk email threshold, including filtering based on the quality of the sender.
+- Simulate changes to the bulk email threshold in anti-spam policies. The results show the number of messages that would be delivered vs. identified as bulk.
+
+  > [!TIP]
+  > You can modify the BCL threshold in the default anti-spam policy and custom anti-spam policies. You can't modify the BCL threshold in the Standard or Strict [preset security policies](preset-security-policies.md).
+
+- View information about message senders affected by the bulk email threshold, including filtering based on the quality of the sender.
 
 This article describes how to use the bulk senders insight in the Microsoft Defender portal.
 
@@ -41,7 +45,7 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Bulk senders insight** page, use <https://security.microsoft.com/senderinsights>.
 
-- Bulk simulation and detection might not work correctly if the MX record for your Microsoft 365 domain points to a third party service or device.
+- Bulk simulation and detection might not work correctly if the MX record for your Microsoft 365 domain points to a non-Microsoft service or device.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
@@ -53,14 +57,14 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
     - _Read-only access to policies_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- For our recommended settings for anti-spam policies, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+- For our recommended settings for anti-spam policies, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
 > [!TIP]
 > Settings in the default or custom anti-spam policies are ignored if a recipient is also included in the [Standard or Strict preset security policies](preset-security-policies.md). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
 >
-> The **Bulk threshold** value in an anti-spam policy determines the BCL threshold that's used to identify a message as bulk. For example, the **Bulk threshold** value 7 means that messages with the BCL value 7, 8, or 9 are identified as bulk. What happens to bulk messages is determined by the **Bulk complaint level (BCL) met or exceeded** action in the anti-spam policy (for example, **Move message to Junk Email folder**, **Quarantine**, or **Delete message**). For simplicity, identifying a message as bulk and taking action on it is called **blocked** in the bulk senders insight.
+> The **Bulk threshold** value in an anti-spam policy determines the BCL threshold that's used to identify a message as bulk. For example, the **Bulk threshold** value 7 means that messages with the BCL value 7, 8, or 9 are identified as bulk. What happens to bulk messages is determined by the **Bulk complaint level (BCL) met or exceeded** action in the anti-spam policy (for example, **Move message to Junk Email folder**, **Quarantine**, or **Delete message**). For simplicity, identifying a message as bulk and taking action on the message is called **blocked** in the bulk senders insight.
 
 ## Open the bulk senders insight in the Microsoft Defender portal
 
@@ -68,7 +72,7 @@ The bulk senders insight is available in the following locations:
 
 - In the properties of the default anti-spam policy or custom anti-spam policies:
 
-  1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+  1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
   2. On the **Anti-spam policies** page, select a custom anti-spam policy (the **Type** value is **Custom anti-spam policy**) or the default anti-spam policy named **Anti-spam inbound policy (Default)** by clicking anywhere in the row other than the check box next to the first column.
 
@@ -76,22 +80,28 @@ The bulk senders insight is available in the following locations:
 
   4. In the **Spam threshold and properties** flyout that opens, the bulk senders insight contains the following information about all bulk email detected by all anti-spam policies in the organization for the last 60 days:
 
-     - By default, the insight shows the number of bulk messages that were blocked and allowed at the current BCL threshold:
+     - By default, the insight shows the number of messages that were delivered and identified as bulk at the current BCL threshold of the anti-spam policy.
 
        :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-default.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy with the default BCL threshold value." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-default.png":::
 
-     - If you decrease the BCL threshold value to block more bulk email, the insight shows the number of bulk messages that would be blocked and allowed at the new BCL threshold:
+     - Decreasing the bulk email threshold value shows:
+       - How many fewer messages would be delivered.
+       - How many more messages would be identified as bulk.
+       - How many bulk message identifications are likely to be false positives (good email identified as bad).
 
        :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy with BCL threshold lower than the original value." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png":::
 
-     - If you increase the BCL threshold value to allow more bulk email, the insight shows the number of bulk messages that would be blocked and allowed at the new BCL threshold:
+     - Increasing the bulk email threshold value shows:
+       - How many more messages would be delivered.
+       - How many fewer messages would be identified as bulk.
+       - How many bulk message identifications are likely to be false negatives (bad email delivered).
 
        :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy with BCL threshold higher than the original value." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png":::
 
 - On the **Email & collaboration reports and insights** page:
 
   1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Email & collaboration** section \> **Email & collaboration reports and insights**. Or, to go directly to the **Email & collaboration reports and insights** page, use <https://security.microsoft.com/emailandcollabreport>.
-  
+
   2. On the **Email & collaboration reports and insights** page, go to the **Email & collaboration insights** section and find the **Bulk senders insight**.
 
   :::image type="content" source="media/insights-page-bulk-senders-insight.png" alt-text="The bulk senders insight on the Email & collaboration reports and insights page in the Microsoft Defender portal." lightbox="media/insights-page-bulk-senders-insight.png":::
@@ -200,11 +210,11 @@ To view details about a specific sender from the sender details table at the bot
 - **Messages**: The number of messages from the sender.
 - **Messages in Inbox**: The number of messages from the sender that were delivered to user Inboxes.
 - **Messages in quarantine or Junk Email**: The number of messages from the sender that were delivered to user Junk Email folders or quarantined.
-- **Admin setting**: Whether the sender is allowed or blocked by the [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)Valid values are:
+- **Admin setting**: Whether the [Tenant Allow/Block List](tenant-allow-block-list-about.md) allowed or blocked the sender. Valid values are:
   - **Allow**: An allow entry exists for the message sender.
   - **Block**: A block entry exists for the message sender.
-- **User allowed messages**: The number of messages from the sender that were added the Safe Senders list in user mailboxes.
-- **User blocked messages**: The number of messages from the sender that were added the Blocked Senders list in user mailboxes.
+- **User allowed messages**: The number of messages from the sender where the sender is in the Safe Senders list in user mailboxes.
+- **User blocked messages**: The number of messages from the sender where the sender is in the Blocked Senders list in user mailboxes.
 - **False positive submissions**: The number of messages from the sender that were submitted as good mail accidentally blocked.
 - **False negative submissions**: The number of messages from the sender that were submitted as bad mail accidentally delivered.
 - **User moved from Junk Email to Inbox**

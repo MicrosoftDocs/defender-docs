@@ -2,89 +2,33 @@
 title: Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 description: Describes how to deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-android
 ms.custom: partner-contribution
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/24/2025
+appliesto: 
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll your device](/mem/intune/user-help/enroll-device-android-company-portal).
 
 > [!NOTE]
 > **Defender for Endpoint on Android is now available on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx)**
->
-> You can connect to Google Play from Microsoft Intune to deploy Defender for Endpoint app across device administrator and Android Enterprise enrollment modes. Updates to the app are automatic via Google Play.
-
-## Deploy on Device Administrator enrolled devices
-
-Learn how to deploy Defender for Endpoint on Android by using the Microsoft Intune Company Portal for device administrator enrolled devices.
-
-### Add as Android store app
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Apps** \> **Android Apps** \> **Add** \> **Android store app**. Then choose **Select**.
-
-   :::image type="content" source="media/mda-addandroidstoreapp.png" alt-text="The Add Android store application pane in the Microsoft Intune admin center portal"  lightbox="media/mda-addandroidstoreapp.png":::
-
-2. On the **Add app** page, in the **App Information** section specify the following details:
-
-   - **Name**
-   - **Description**
-   - **Publisher** as Microsoft.
-   - **App store URL** as `https://play.google.com/store/apps/details?id=com.microsoft.scmx` (URL for the Defender for Endpoint app in the Google Play Store)
-
-   Other fields are optional. Then select **Next**.
-
-   :::image type="content" source="media/mda-addappinfo.png" alt-text=" The Add App page displaying the application's publisher and URL information in the Microsoft Intune admin center portal" lightbox="media/mda-addappinfo.png":::
-
-3. In the **Assignments** section, go to the **Required** section and select **Add group.** You can then choose the user group (or groups) to receive the Defender for Endpoint on Android app. Choose **Select**, and then tap **Next**.
-
-    The selected user group should consist of Intune enrolled users.
-    
-    :::image type="content" source="media/363bf30f7d69a94db578e8af0ddd044b.png" alt-text="Screenshot that shows the Add group pane in the Add App page in the Microsoft Intune admin center portal." lightbox="media/363bf30f7d69a94db578e8af0ddd044b.png":::
-
-4. In the **Review+Create** section, verify that all the information entered is correct, and then select **Create**.
-
-    In a few moments, the Defender for Endpoint app should be created, and a notification should appear in the upper right corner of the screen.
-
-    :::image type="content" source="media/86cbe56f88bb6e93e9c63303397fc24f.png" alt-text="The application status pane in the Microsoft Intune admin center portal" lightbox="media/86cbe56f88bb6e93e9c63303397fc24f.png":::
-
-5. In the app information page that is displayed, in the **Monitor** section, select **Device install status** to verify that the device installation completed successfully.
-
-    :::image type="content" source="media/513cf5d59eaaef5d2b5bc122715b5844.png" alt-text="The Device install status page in the Microsoft Defender portal" lightbox="media/513cf5d59eaaef5d2b5bc122715b5844.png":::
-
-### Complete onboarding and check status
-
-1. After Defender for Endpoint on Android is installed on the device, you should see the app icon.
-
-   :::image type="content" source="media/7cf9311ad676ec5142002a4d0c2323ca.jpg" alt-text="The Microsoft Defender ATP icon listed in the Search pane" lightbox="media/7cf9311ad676ec5142002a4d0c2323ca.jpg":::
-
-2. Tap the Microsoft Defender for Endpoint app icon, and follow the on-screen instructions to complete onboarding. The details include end-user acceptance of Android permissions required by Defender for Endpoint on Android.
-
-3. Upon successful onboarding, the device shows up in the list of devices in the [Microsoft Defender portal](https://security.microsoft.com).
-
-    :::image type="content" source="media/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="A device in the Microsoft Defender for Endpoint portal"  lightbox="media/9fe378a1dce0f143005c3aa53d8c4f51.png":::
-
+> > You can connect to Google Play from Microsoft Intune to deploy Defender for Endpoint app across device administrator and Android Enterprise enrollment modes. Updates to the app are automatic via Google Play.
 ## Deploy on Android Enterprise enrolled devices
 
 Defender for Endpoint on Android supports Android Enterprise enrolled devices.

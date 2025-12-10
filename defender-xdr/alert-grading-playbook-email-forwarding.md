@@ -4,8 +4,8 @@ description: Alert classification for suspicious email forwarding activity to re
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -228,7 +228,7 @@ You can also find suspicious forwarding rules using the Exchange admin center, b
 
 - InboxRule
 
-  Inbox rules are configured with the e-mail client. You can use the [Get-InboxRule](/powershell/module/exchange/get-inboxrule) PowerShell cmdlet to list the inbox rules created by users.
+  Inbox rules are configured with the e-mail client. You can use the [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule) PowerShell cmdlet to list the inbox rules created by users.
 
 ### Additional investigation
 

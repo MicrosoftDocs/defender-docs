@@ -1,34 +1,33 @@
----
+﻿---
 title: Implement attack surface reduction rules
 description: Provides guidance to implement your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar
-manager: deniseb
+manager: bagol
 ms.custom: asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: 
  - m365-security
  - m365solution-asr-rules
  - highpri
  - tier1
  - mde-asr
-ms.date: 03/27/2025
+ms.date: 06/10/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Implement attack surface reduction rules
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-Implementing attack surface reduction rules move the first test ring into an enabled, functional state.
+When you're implementing attack surface reduction rules, move the first test ring into an enabled, functional state.
 
 > :::image type="content" source="media/asr-rules-implementation-steps.png" alt-text="The procedure to implement attack surface reduction rules" lightbox="media/asr-rules-implementation-steps.png":::
   
@@ -36,15 +35,18 @@ Implementing attack surface reduction rules move the first test ring into an ena
 ## Step 1: Transition attack surface reduction rules from Audit to Block
 
 1. After all exclusions are determined while in audit mode, start setting some attack surface reduction rules to "block" mode, starting with the rule that has the fewest triggered events. See [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+
 2. Review the reporting page in the Microsoft Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your champions.
+
 3. Refine exclusions or create new exclusions as determined necessary.
+
 4. Switch problematic rules back to Audit.
 
-  > [!NOTE]
-  > For problematic rules (rules creating too much noise), it is better to create exclusions than to turn rules off or switching back to Audit. You will have to determine what is best for your environment.
+   > [!NOTE]
+   > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You have to determine what is best for your environment.
 
-  > [!TIP]
-  > When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
+> [!TIP]
+> When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
 
 ### How does Warn mode work?
 
@@ -54,20 +56,27 @@ Warn mode is effectively a Block instruction, but with the option for the user t
 
 When you're confident that you've correctly configured the attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
-The deployment process, steps 1 – 3,  is essentially the same for each subsequent ring:
+In the following deployment process, steps 1 – 3 are essentially the same for each subsequent ring:
 
-1. Test rules in Audit
-2. Review attack surface reduction-triggered audit events in the Microsoft Defender portal
-3. Create exclusions
-4. Review: refine, add, or remove exclusions as necessary
-5. Set rules to "block"
+1. Test rules in Audit mode.
+
+2. Review attack surface reduction-triggered audit events in the Microsoft Defender portal.
+
+3. Create exclusions.
+
+4. Review, and then refine, add, or remove exclusions as necessary.
+
+5. Set rules to "block" mode.
+
 6. Review the reporting page in the Microsoft Defender portal.
+
 7. Create exclusions.
+
 8. Disable problematic rules or switch them back to Audit.
 
 #### Customize attack surface reduction rules
 
-As you continue to expand your attack surface reduction rules deployment, you may find it necessary or beneficial to customize the attack surface reduction rules that you've enabled.
+As you continue to expand your attack surface reduction rules deployment, you might find it necessary or beneficial to customize the attack surface reduction rules that are enabled.
 
 ##### Exclude files and folders
 
@@ -75,12 +84,12 @@ You can choose to exclude files and folders from being evaluated by attack surfa
 
 For example, consider the ransomware rule:
 
-The ransomware rule is designed to help enterprise customers reduce risks of ransomware attacks while ensuring business continuity. By default, the ransomware rule errors on the side of caution and protect against files that haven't yet attained sufficient reputation and trust. To reemphasize, the ransomware rule only triggers on files that haven't gained enough positive reputation and prevalence, based on usage metrics of millions of our customers. Usually, the blocks are self resolved, because each file's "reputation and trust" values are incrementally upgraded as non-problematic usage increases.
+The ransomware rule is designed to help enterprise customers reduce risks of ransomware attacks while ensuring business continuity. By default, the ransomware rule errors on the side of caution and protect against files that haven't yet attained sufficient reputation and trust. To re-emphasize, the ransomware rule only triggers on files that haven't gained enough positive reputation and prevalence, based on usage metrics of millions of our customers. Usually, the blocks are self resolved, because each file's "reputation and trust" values are incrementally upgraded as nonproblematic usage increases.
 
 In cases in which blocks aren't self resolved in a timely manner, customers can - _at their own risk_ - make use of either the self-service mechanism or an Indicator of Compromise (IOC)-based "allowlist" capability to unblock the files themselves.
 
 > [!WARNING]
-> Excluding or unblocking files or folders could potentially allow unsafe files to run and infect your devices. Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Files that would have been blocked by a rule will be allowed to run, and there will be no report or event recorded.
+> Excluding or unblocking files or folders could potentially allow unsafe files to run and infect your devices. Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Files that would be blocked by a rule are allowed to run, and there's no report or event recorded.
 
 An exclusion can apply to all rules that allow exclusions or apply to specific rules using [per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions). You can specify an individual file, folder path, or the fully qualified domain name for a resource.
 
@@ -102,22 +111,22 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 4. Double-click the **Exclude files and paths from Attack surface reduction Rules** setting and set the option to **Enabled**. Select **Show** and enter each file or folder in the **Value name** column. Enter **0** in the **Value** column for each item.
 
 > [!WARNING]
-> Do not use quotes as they are not supported for either the **Value name** column or the **Value** column.
+> Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
 
 ##### Use PowerShell to exclude files and folders
 
-1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
+1. Type **powershell** in the Start menu, right-click **Windows PowerShell**, and then select **Run as administrator**.
 
 2. Enter the following cmdlet:
 
-    ```PowerShell
-    Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
-    ```
+   ```PowerShell
+   Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
+   ```
 
-    Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
+   Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
 
-    > [!IMPORTANT]
-    > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
+   > [!IMPORTANT]
+   > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet overwrites the existing list.
 
 ##### Use MDM CSPs to exclude files and folders
 
@@ -127,7 +136,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusio
 
 You can customize the notification for when a rule is triggered and blocks an app or file. See the [Windows Security](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center#customize-notifications-from-the-windows-defender-security-center) article.
 
-## Additional articles in this deployment collection
+## More articles in this deployment collection
 
 [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
 
@@ -142,4 +151,6 @@ You can customize the notification for when a rule is triggered and blocks an ap
 ## See also
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

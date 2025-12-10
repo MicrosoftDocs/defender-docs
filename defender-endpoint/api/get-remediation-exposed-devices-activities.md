@@ -1,11 +1,11 @@
----
+﻿---
 title: List exposed devices of one remediation activity
 description: Returns information about exposed devices for the specified remediation task.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,26 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/25/2021
+ms.date: 11/13/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # List exposed devices of one remediation activity
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
 [!include[Prerelease information](../../includes/prerelease.md)]
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API Description
 
@@ -110,11 +100,3 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c
 }
 ```
 
-## See also
-
-- [Remediation methods and properties](get-remediation-methods-properties.md)
-- [Get one remediation activity by Id](get-remediation-one-activity.md)
-- [List all remediation activities](get-remediation-all-activities.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -4,10 +4,10 @@ description: Learn how to construct fast, efficient, and error-free threat hunti
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -21,7 +21,7 @@ ms.topic: best-practice
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 02/24/2025
+ms.date: 03/28/2025
 ---
 
 # Advanced hunting query best practices

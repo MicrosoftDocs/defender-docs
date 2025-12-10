@@ -4,15 +4,15 @@ description: Set up email notifications to get notified of manual and automated 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150

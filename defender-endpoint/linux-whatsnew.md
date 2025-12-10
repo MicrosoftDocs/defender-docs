@@ -2,12 +2,12 @@
 title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 04/23/2025
-manager: deniseb
+ms.date: 11/25/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -17,31 +17,149 @@ ms.custom: partner-contribution
 ms.topic: reference
 ms.subservice: linux
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Server
 ---
 
 # What's new in Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
-
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
-
-This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux.
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/linux-rss`
 
 > [!IMPORTANT]
 > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support is available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
 > 
 > 1. Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 >
-> 2. If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. In the event of a fallback, all process operations continue to flow seamlessly. 
+> 2. If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. If a fallback occurs, all operations continue to flow seamlessly.
 >
 > Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
+> [!NOTE]  
+> Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
+
 ## Releases for Defender for Endpoint on Linux
+
+### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
+
+|Build:             |**101.25092.0001**    |
+|-------------------|----------------------|
+|Released:          |**November 05, 2025**|
+|Published:         |**November 05, 2025**|
+|Expiry:            |**July 10, 2026**|
+|Release version:   |**30.125092.0001.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.558.0**|
+
+What's new
+
+- Added support for RHEL 10.
+
+- Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability.
+
+- Other quality and stability fixes.
+
+### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
+
+|Build:             |**101.25082.0003**    |
+|-------------------|----------------------|
+|Released:          |**September 25, 2025**|
+|Published:         |**September 25, 2025**|
+|Expiry:            |**Jun 04, 2026**|
+|Release version:   |**30.125082.0003.0**|
+|Engine version:    |**1.1.25070.4000**|
+|Signature version: |**1.435.242.0**|
+
+What's new
+- Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8, ensuring comprehensive vulnerability coverage.
+
+- Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. This ensures consistent availability across environments and streamlines troubleshooting for customers by making diagnostic tools readily accessible out-of-the-box.
+
+- Other quality and stability fixes.
+
+### September-2025 Build: 101.25072.0003 | Release version: 30.125072.0003.0
+
+|Build:             |**101.25072.0003**    |
+|-------------------|----------------------|
+|Released:          |**September 02, 2025**|
+|Published:         |**September 02, 2025**|
+|Expiry:            |**May 06, 2026**|
+|Release version:   |**30.125072.0003.0**|
+|Engine version:    |**1.1.25060.4000**|
+|Signature version: |**1.431.4.0**|
+
+What's new
+- Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Microsoft Defender via Golden image](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images).
+
+- Other stability enhancements and bug fixes.
+
+### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
+
+|Build:             |**101.25062.0003**    |
+|-------------------|----------------------|
+|Released:          |**August 08, 2025**   |
+|Published:         |**August 08, 2025**   |
+|Release version:   |**30.125062.0003.0**  |
+|Engine version:    |**1.1.25040.4000**    |
+|Signature version: |**1.429.442.0**       |
+
+What's new
+- Defender for Endpoint on Linux now supports installation to a custom location (preview). For more information, see [Enabling deployment of Microsoft Defender for Endpoint to a custom location (preview)](/defender-endpoint/linux-custom-location-installation). Support for this feature is being added to the installer script.
+- The `mdatp threat quarantine add` command now requires superuser (root) privileges.
+- Custom definition path can now be updated without stopping Defender for Endpoint. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
+- Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus (real-time protection) and EDR functionality to operate without conflict. For other fanotify-based tools, MDE can still be used safely by setting the antivirus enforcement level to passive, helping avoid system instability.
+- Other stability enhancements and bug fixes.
+
+### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
+
+|Build:             |**101.25052.0007**    |
+|-------------------|----------------------|
+|Released:          |**July 22, 2025**     |
+|Published:         |**July 22, 2025**     |
+|Release version:   |**30.125052.0007.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+- Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified.
+- Other stability improvements and bug fixes.
+
+### June-2025 Build: 101.25042.0003 | Release version: 30.125042.0003.0
+
+|Build:             |**101.25042.0003**    |
+|-------------------|----------------------|
+|Released:          |**June 30, 2025**     |
+|Published:         |**June 30, 2025**     |
+|Release version:   |**30.125042.0003.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+- The Defender for Endpoint package rollout into production happens gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
+- Removed external dependency of uuid-runtime from the Defender for Endpoint package
+- Other stability improvements and bug fixes
+
+### May-2025 Build: 101.25032.0010 | Release version: 30.125032.0010.0
+
+|Build:             |**101.25032.0010**    |
+|-------------------|----------------------|
+|Released:          |**May 23, 2025**      |
+|Published:         |**May 23, 2025**      |
+|Release version:   |**30.125032.0010.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+
+- Removed external dependency of MDE Netfilter and libpcre from MDE package
+  
+- Fix for Python script executing unverified binaries with root-level privileges to identify Java processes using outdated versions of log4j (CVE-2025-26684) has been addressed.
+  
+- Added detection mechanism for CVE-2025-31324 affecting the "Visual Composer" component of the SAP NetWeaver application server.
+  
 
 ### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
 
@@ -83,25 +201,25 @@ What's new
 
 Known Issues
 
-- There's a known issue where MDE is deleting the configuration file located at /etc/system/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
+- There's a known issue where MDE is deleting the configuration file located at /etc/systemd/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
 
   To set the file to be unmodifiable, execute the following command:
-    
+  
 ```bash
 
   sudo chattr +i /etc/systemd/system/mdatp.service.d/[file name]
   ```
   
- This command makes the file unchangeable. T If you need to restore modification permissions, use the following command:
-  
+ This command makes the file unchangeable. If you need to restore modification permissions, use the following command:
+
   ```bash
   
   sudo chattr -i /etc/systemd/system/mdatp.service.d/[file name]
   ```
   
-  Please note that the chattr command can only be used on supported file systems, such as ext4.
+  Note that the chattr command can only be used on supported file systems, such as ext4.
   
- If you need further assistance, you can reach out to our support team with your organization ID, and we can implement a temporary mitigation to prevent deletion. A permanent fix for this issue will be available in MDE version 101.25032.0000.
+ If you need further assistance, you can reach out to our support team with your organization ID, and we can implement a temporary mitigation to prevent deletion. A permanent fix for this issue is available in MDE version 101.25032.0000.
   
 ### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
@@ -154,7 +272,7 @@ What's new
   - Enabled: When eBPF is enabled as working as expected.
   - Disabled: When eBPF is disabled due to one of the following reasons:
     - When MDE is using auditD as a supplementary sensor
-    - When eBPF isn't present and we fallback to Net link as supplementary event provider
+    - When eBPF isn't present and we fall back to Net link as supplementary event provider
     - There's no supplementary sensor present.
 
 - Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast, and insiderSlow, are unaffected by this change.
@@ -207,7 +325,7 @@ What's new
 
 #### What's new
 
-- Starting this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Net link as a fallback supplementary event provider. Net link provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
+- Starting with this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Net link as a fallback supplementary event provider. Net link provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
 
 - Stability and performance improvements
 
@@ -713,7 +831,7 @@ There are multiple fixes and new changes in this release
    - Files
    - Executables
     
-- Network Protection: Connections that is blocked by Network Protection and have the block overridden by users is now correctly reported to Microsoft Defender XDR
+- Network Protection: Connections that are blocked by Network Protection and have the block overridden by users is now correctly reported to Microsoft Defender XDR
 
 - Improved logging in Network Protection block and audit events for debugging
 |
@@ -1186,7 +1304,7 @@ sudo systemctl disable mdatp
 
 #### What's new
 
-- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) isn't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
+- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) aren't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
 
 #### Known issues
 
@@ -1327,8 +1445,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 #### What's new
 
-- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
-
+- This version contains a security update for CVE-2022-23278.
 
 ### Mar-2022 Build: 101.60.05 | Release version: 30.122012.16005.0
 

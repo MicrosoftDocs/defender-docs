@@ -1,34 +1,32 @@
----
+﻿---
 title: Microsoft Defender for Endpoint APIs connection to Power BI
 ms.reviewer: yongrhee
 description: Create a Power Business Intelligence (BI) report on top of Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - must-keep
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 03/21/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # Create custom reports using Power BI
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -151,3 +149,4 @@ View the [Microsoft Defender for Endpoint Power BI report samples](/samples/brow
 - [Using OData Queries](exposed-apis-odata-samples.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

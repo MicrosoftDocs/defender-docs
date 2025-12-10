@@ -1,38 +1,42 @@
----
+﻿---
 title: Enable and configure Microsoft Defender Antivirus always-on protection
 description: Enable and configure Microsoft Defender Antivirus real-time protection features such as behavior monitoring, heuristics, and machine learning.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
-ms.topic: conceptual
-ms.date: 04/03/2024
-manager: deniseb
+ms.topic: how-to
+ms.date: 10/20/2025
+manager: bagol
 ms.custom: nextgen
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Enable and configure Microsoft Defender Antivirus always-on protection
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Always-on protection consists of real-time protection, behavior monitoring, and heuristics to identify malware based on known suspicious and malicious activities. These activities include events, such as processes making unusual changes to existing files, modifying or creating automatic startup registry keys and startup locations (also known as autostart extensibility points, or ASEPs), and other changes to the file system or file structure. Always-on protection is an important part of your antivirus protection and should be enabled. 
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep always-on protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+> If a file that contains a threat is placed in an Azure file share, it's not remediated when placed. A user has to open the file for it to be detected by real-time protection.
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Manage antivirus settings with Microsoft Intune
 
@@ -140,3 +144,4 @@ If you're looking for antivirus-related information for other platforms, see:
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,12 +1,12 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: limwainstein
+ms.author: lwainstein
+manager: bagol
 ms.localizationpriority: medium
-ms.date: 04/16/2025
+ms.date: 08/20/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,30 +16,34 @@ ms.topic: reference
 ms.subservice: macos
 search.appverid: met150
 ms.reviewer: mavel
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 For more information on Microsoft Defender for Endpoint on other operating systems:
 
+- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+- [What's new in Microsoft Defender for Endpoint on Android](android-whatsnew.md)
+
+
+> [!TIP]
+> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
+
+To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
 
 ## Known issues
 
-- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+- In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
 
-- In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
+- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
+
+- In [macOS Sonoma 14.3.1](https://developer.apple.com/documentation/macos-release-notes/macos-14_3-release-notes), Apple made a change to the handling of Bluetooth devices that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
 
 - In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
 
@@ -47,35 +51,126 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
    ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
   
-If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web).  This issue is fixed in macOS Sequoia 15.2.
-
-## Sequoia support
-
-- Microsoft Defender for Endpoint supports version 15.0.1 or newer.
+If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## macOS Deprecation
 
-- Microsoft Defender for Endpoint no longer supports Big Sur (11).
-- macOS 12 (Monterey) won't be supported starting December 2024.
+- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur), 12 (Monterey) and 13 (Ventura)
 
 ## Releases for Defender for Endpoint on macOS
 
-### Behavior Monitoring for macOS is now in public preview
 
-Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+### Offline updates for security intelligence updates on macOS is now in public preview
+
+This feature enables organizations to configure offline updates for security intelligence updates (also referred to as definition updates or signatures) on macOS using a local mirror server. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
+
+### Behavior Monitoring for macOS is now generally available
+
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
+
+### Nov-2025 (Build: 101.25102.0016 | Release version: 20.125102.16.0)
+
+| Build: | **101.25102.0016** |
+|--------------------|-----------------------|
+| Release version: | **20.125102.16.0** |
+| Engine version: | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0** |
+
+##### What's new
+
+- Bug and performance fixes
+
+
+### Oct-2025 (Build: 101.25082.0006  | Release version: 20.125082.6.0)
+
+| Build:             | **101.25082.0006**         |
+|--------------------|-----------------------|
+| Release version:   | **20.125082.6.0** |
+| Engine version:    | **1.1.25070.3000**       |
+| Signature version: | **1.437.276.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Sep-2025 (Build: 101.25072.0011  | Release version: 20.125072.11.0)
+
+| Build:             | **101.25072.0011**         |
+|--------------------|-----------------------|
+| Release version:   | **20.125072.11.0** |
+| Engine version:    | **1.1.25070.3000**       |
+| Signature version: | **1.429.309.0**      |
+
+##### What's new
+
+- Enhanced malware detection timing and archive scanning improvements
+- Improved diagnostic capabilities and error reporting
+- Performance and diagnostic improvements for endpoint Data Loss Prevention (DLP)
+
+- Bug fixes
+
+### Aug-2025 (Build: 101.25062.0006  | Release version: 20.125062.6.0)
+
+| Build:             | **101.25062.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.6.0**    |
+| Engine version:    | **1.1.25070.3000**   |
+| Signature version: | **1.435.357.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
+
+| Build:             | **101.25062.0005**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.5.0**    |
+| Engine version:    | **1.1.25040.3000**   |
+| Signature version: | **1.427.248.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jun-2025 (Build: 101.25052.0012  | Release version: 20.125052.12.0)
+
+| Build:             | **101.25052.0012**   |
+|--------------------|----------------------|
+| Release version:   | **20.125052.12.0**   |
+| Engine version:    | **1.1.25060.3000**   |
+| Signature version: | **1.431.226.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### May-2025 (Build: 101.25042.0009  | Release version: 20.125042.9.0)
+
+| Build:             | **101.25042.0009**   |
+|--------------------|----------------------|
+| Release version:   | **20.125042.9.0**    |
+| Engine version:    | **1.1.25040.3000**   |
+| Signature version: | **1.429.521.0**      |
+
+##### What's new
+
+- `mdatp health --details edr` now includes AAD info
+- Bug and performance fixes
 
 ### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
 
-| Build:             | **101.25032.0006**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125032.6.0** |
-| Engine version:    | **1.1.25020.3000**       |
+| Build:             | **101.25032.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125032.6.0**    |
+| Engine version:    | **1.1.25020.3000**   |
 | Signature version: | **1.427.158.0**      |
 
 ##### What's new
 
 - Hardware UUID is now displayed in the Security Portal
 - Bug and performance fixes
+- **(GA) Behavior Monitoring for macOS**: For information on Behavior Monitoring for Microsoft Defender for Endpoint on macOS, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
 ### Mar-2025 (Build: 101.25022.0003  | Release version: 20.125022.3.0)
 
@@ -642,7 +737,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
+- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
 ### Feb-2022 (Build: 101.59.50 | Release version: 20.122021.15950.0)
 
@@ -934,7 +1029,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!IMPORTANT]
 > We're working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
-> We continue supporting the old syntax in parallel with the new syntax and provides more communications around the deprecation plan for the old syntax in the upcoming months.
+> We continue supporting the old syntax in parallel with the new syntax and provide more communications around the deprecation plan for the old syntax in the upcoming months.
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
 - Performance improvements & Product improvements
 
@@ -1067,3 +1162,4 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Performance improvements & Product improvements
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

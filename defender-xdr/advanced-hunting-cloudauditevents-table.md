@@ -4,10 +4,10 @@ description: Learn about events from Microsoft Defender for Cloud in the CloudAu
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,16 +17,16 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 12/29/2023
+ms.date: 05/20/2025
 ---
 
 # CloudAuditEvents (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 
 
@@ -34,6 +34,8 @@ The `CloudAuditEvents` table in the [advanced hunting](advanced-hunting-overview
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+This advanced hunting table is populated by records from Microsoft Defender for Cloud. If your organization doesn't have Microsoft Defender for Cloud, queries that use the table aren’t going to work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender XDR, read [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

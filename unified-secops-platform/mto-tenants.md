@@ -2,9 +2,10 @@
 title: Manage tenants with Microsoft Defender multitenant management
 description: Learn about the tenant list in Microsoft Defender multitenant management
 search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: deniseb
-author: denisebmsft
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -13,7 +14,7 @@ ms.collection:
   - highpri
   - tier1
   - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 08/19/2024
 appliesto:
   - Microsoft Defender XDR

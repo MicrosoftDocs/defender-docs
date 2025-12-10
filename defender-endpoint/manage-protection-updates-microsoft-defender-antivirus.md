@@ -1,32 +1,27 @@
----
+﻿---
 title: Manage how and where Microsoft Defender Antivirus receives updates
 description: Manage the fallback order for how Microsoft Defender Antivirus receives protection updates.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
-author: emmwalshh
-ms.author: ewalsh
+ms.topic: how-to
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 ---
-
 # Manage the sources for Microsoft Defender Antivirus protection updates
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 <a id="protection-updates"></a>
 <!-- this has been used as anchor in VDI content -->
@@ -42,6 +37,12 @@ This article describes how to specify from where updates should be downloaded (t
 > Microsoft Defender Antivirus Security intelligence updates and platform updates are delivered through Windows Update and starting Monday, October 21, 2019, all security intelligence updates are SHA-2 signed exclusively. Your devices must be updated to support SHA-2 in order to update your security intelligence. To learn more, see [2019 SHA-2 Code Signing Support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 <a id="fallback-order"></a>
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Fallback order
 
@@ -81,7 +82,7 @@ Each source has typical scenarios that depend on how your network is configured,
 |---|---|
 |Windows Server Update Service|You're using Windows Server Update Service to manage updates for your network.|
 |Microsoft Update|You want your endpoints to connect directly to Microsoft Update. This option is useful for endpoints that irregularly connect to your enterprise network, or if you don't use Windows Server Update Service to manage your updates.|
-|File share|You have devices that aren't connected to the Internet (such as virtual machines, or VMs). You can use your Internet-connected VM host to download the updates to a network share, from which the VMs can obtain the updates. See the [VDI deployment guide](deployment-vdi-microsoft-defender-antivirus.md) for how file shares are used in virtual desktop infrastructure (VDI) environments.|
+|UNC Share|You have devices that aren't connected to the Internet (such as virtual machines, or VMs). You can use your Internet-connected VM host to download the updates to a network share, from which the VMs can obtain the updates. See the [VDI deployment guide](deployment-vdi-microsoft-defender-antivirus.md) for how file shares are used in virtual desktop infrastructure (VDI) environments. Platform updates can also be deployed using this method. |
 |Microsoft Endpoint Configuration Manager|You're using Microsoft Endpoint Configuration Manager to update your endpoints.|
 |Security intelligence updates and platform updates for Microsoft Defender Antivirus and other Microsoft anti-malware (formerly referred to as MMPC)|[Make sure devices are updated to support SHA-2](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Antivirus Security intelligence and platform updates are delivered through Windows Update. As of October 21, 2019, security intelligence updates and platform updates are SHA-2 signed exclusively. <br/>Download the latest protection updates because of a recent infection or to help provision a strong, base image for [VDI deployment](deployment-vdi-microsoft-defender-antivirus.md). This option should be used only as a final fallback source, and not the primary source. It's only to be used if updates can't be downloaded from Windows Server Update Service or Microsoft Update for [a specified number of days](manage-outdated-endpoints-microsoft-defender-antivirus.md#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
 
@@ -132,8 +133,8 @@ See [Configure Security intelligence Updates for Endpoint Protection](/configmgr
 Use the following PowerShell cmdlets to set the update order.
 
 ```PowerShell
-Set-MpPreference -SignatureFallbackOrder {LOCATION|LOCATION|LOCATION|LOCATION}
-Set-MpPreference -SignatureDefinitionUpdateFileSharesSource {\\UNC SHARE PATH|\\UNC SHARE PATH}
+Set-MpPreference -SignatureFallbackOrder "LOCATION|LOCATION|LOCATION|LOCATION"
+Set-MpPreference -SignatureDefinitionUpdateFileSharesSource "\\UNC\PATH1|\\UNC\PATH2"
 ```
 
 For more information, see the following articles:
@@ -274,6 +275,32 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
     > [!NOTE]
     > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.
 
+## Enable platform updates using UNC share
+
+To enable platform updates using UNC share, download KB4052623 and copy it into the architecture folders as `updateplatform.exe`. These files are updated monthly and need to get manually updated by you.
+
+KB4052623 is available for the following architectures:
+
+* [x86](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x86)
+
+* [amd64](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x64)
+
+* [arm64](https://go.microsoft.com/fwlink/?LinkID=851034&clcid=0x409&arch=arm64) 
+
+**Example structure**
+
+```dos
+[UNC Share]\ 
+    x86\ 
+       mpam-fe.exe 
+       mpam-d.exe 
+       updateplatform.exe 
+    x64\ 
+       mpam-fe.exe 
+       mpam-d.exe 
+       updateplatform.exe 
+```
+
 ## Related articles
 
 - [Deploy Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
@@ -286,3 +313,4 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

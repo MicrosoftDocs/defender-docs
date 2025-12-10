@@ -1,31 +1,27 @@
----
+﻿---
 title: Configure Microsoft Defender for Endpoint on iOS features
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS features.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ios
 search.appverid: met150
-ms.date: 03/27/2025
----
+ms.date: 05/19/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure Microsoft Defender for Endpoint on iOS features
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -127,10 +123,10 @@ To set up network protection using MDM configuration for enrolled devices, follo
 
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
-   | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, alerts are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
+   | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit; 0 - Disable; 2 - Enable (default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, events are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
    | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
-   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
-   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
+   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable; false - disable. This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not device timeline events. So, this is not applicable to open Wi-Fi detection.|
+   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable; false - disable. This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
    
 7. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
@@ -156,10 +152,10 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 
    |Key| Default (true - enable, false - disable)|Description|
    |---|---|---|
-   |`DefenderOpenNetworkDetection`|2| 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, alerts are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
-   |`DefenderEndUserTrustFlowEnable`| false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
-   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
-   |`DefenderNetworkProtectionPrivacy`| true |true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
+   |`DefenderOpenNetworkDetection`|2| 1 - Audit; 0 - Disable; 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, events are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
+   |`DefenderEndUserTrustFlowEnable`| false | true - enable; false - disable. This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
+   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable; false - disable. This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not the device timeline events. So, this is not applicable to open Wi-Fi detection.|
+   |`DefenderNetworkProtectionPrivacy`| true |true - enable; false - disable. This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
    
 5. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
@@ -167,9 +163,13 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 
 6. Review and create the configuration policy.
 
-> [!NOTE]
-> **Open Wi-Fi Network Alert:**
-> An alert is generated whenever a user connects to an open Wi-Fi network. If the user reconnects to the same network within a seven-day period, no new alert is generated. However, connecting to a different open Wi-Fi network results in an immediate alert.
+> [!IMPORTANT]
+> Starting May 19, 2025, alerts in the Microsoft Defender portal are no longer generated when users connect to an open wireless network. Instead, this activity now generates events and are viewable in the device timeline. With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
+> Here are key points about this change:</br>
+> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on iOS available on May 2025. Otherwise, the previous experience of generating alerts is still in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
+> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.</br>
+> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to user trusted networks, are sent to the device timeline as events.</br>
+> - This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
 
 ## Coexistence of multiple VPN profiles
 
@@ -335,7 +335,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 
 2. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
-     :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="media/tvm-app-sync-toggle.png":::
+   :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="media/tvm-app-sync-toggle.png":::
 
 > [!NOTE]
 > To get the list of all the apps including unmanaged apps, the admin has to enable **Send full application inventory data on personally owned iOS/iPadOS devices** setting in the Intune Admin Portal for the supervised devices marked as "Personal".
@@ -380,6 +380,8 @@ Once the client versions are deployed to target iOS devices, processing starts. 
 
 > [!NOTE]
 > If you're using SSL inspection solution within your iOS device, add the domain names `securitycenter.windows.com` (in commercial environments) and `securitycenter.windows.us` (in GCC environments) for threat and vulnerability management features to work.
+> 
+> The TVM Privacy permission approval screen will only appear for Unsupervised and Non-Zero touch enabled devices. Even For Non-Zero touch enabled devices approval is __not required only on supervised devices__ where the `issupervised` key is configured
 
 ## Disable sign out
 
@@ -428,7 +430,7 @@ Defender for Endpoint on iOS enables bulk tagging the mobile devices during onbo
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
 > [!NOTE]
-> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the XDR portal.
+> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the Microsoft Defender portal.
 
 ### Configure device tags using MDM
 
@@ -535,3 +537,4 @@ Use the following steps to configure the option to send feedback data to Microso
 Phishing websites impersonate trustworthy websites by obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

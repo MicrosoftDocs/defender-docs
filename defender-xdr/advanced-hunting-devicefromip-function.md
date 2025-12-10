@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,8 +17,11 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/16/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceFromIP()
@@ -26,8 +29,6 @@ ms.date: 02/16/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]

@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -16,14 +16,14 @@ ms.collection:
   - m365initiative-m365-defender
   - tier1
   - usx-security
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom:
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 11/19/2024
+ms.date: 03/28/2025
 ---
 
 # Work with advanced hunting results containing Microsoft Sentinel data

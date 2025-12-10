@@ -1,31 +1,29 @@
----
+﻿---
 title: Identify internet-facing devices in Microsoft Defender for Endpoint
 description: Identify internet-facing devices in the device inventory list
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
 ms.date: 07/31/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Internet-facing devices
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 As threat actors continuously scan the web to detect exposed devices they can exploit to gain a foothold in internal corporate networks, mapping your organization's external attack surface is a key part of your security posture management. Devices that can be connected to or are approachable from the outside pose a threat to your organization.
 
@@ -168,3 +166,4 @@ You can report an inaccuracy for a device with incorrect internet-facing informa
 - [Device inventory](machines-view-overview.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

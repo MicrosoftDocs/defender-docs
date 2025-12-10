@@ -2,26 +2,22 @@
 title: Onboard Windows devices using Configuration Manager
 description: Use Configuration Manager to deploy the configuration package on devices so that they are onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
-ms.date: 12/13/2024
+ms.topic: install-set-up-deploy
+ms.date: 11/17/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
 
 # Onboard Windows devices using Configuration Manager
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can use Configuration Manager to onboard endpoints to the Microsoft Defender for Endpoint service. 
 
@@ -35,6 +31,7 @@ There are several options you can use to onboard devices using Configuration Man
 
 You can create a detection rule on a Configuration Manager application to continuously check if a device has been onboarded. An application is a different type of object than a package and program. If a device is not yet onboarded (due to pending OOBE completion or any other reason), Configuration Manager reattempts to onboard the device until the rule detects the status change. For more information, see [Configure Detection Methods in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682159\(v=technet.10\)#step-4-configure-detection-methods-to-indicate-the-presence-of-the-deployment-type).
 
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Prerequisites
 
@@ -80,7 +77,7 @@ Within the Microsoft Configuration Manager console, the onboarding process will 
 
 Any system that receives this required configuration maintains that configuration for as long as the Configuration Manager client continues to receive this policy from the management point.
 
-Follow these steps to onboard endpoints using Microsoft Configuration Manager:
+Follow these steps to create a device collection that can be used to onboard endpoints in Microsoft Defender for Endpoint:
 
 1. In the Microsoft Configuration Manager console, navigate to **Assets and Compliance \> Overview \> Device Collections**.
 
@@ -189,9 +186,9 @@ Follow the steps to complete installation of endpoint protection client from the
      > [!NOTE]
      > After the Endpoint Protection client install completes, the client automatically performs a definition update check. If this update check succeeds, you don't have to manually install the latest definition update package.
 
-**Example: install the client with an antimalware policy**
+    **Example: install the client with an antimalware policy**
 
-`scepinstall.exe /policy <full path>\<policy file>`
+    `scepinstall.exe /policy <full path>\<policy file>`
 
 
 ### Verify the Endpoint Protection client installation

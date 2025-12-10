@@ -2,15 +2,15 @@
 title: Configure alert notifications
 description: You can use Microsoft Defender for Endpoint to configure email notification settings for security alerts, based on severity and other criteria.
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: concept-article
+ms.topic: how-to
 search.appverid: met150
 ms.date: 01/17/2025
 appliesto:

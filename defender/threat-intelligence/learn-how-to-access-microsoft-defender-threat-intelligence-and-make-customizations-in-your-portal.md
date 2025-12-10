@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: quickstart
-ms.date: 01/15/2025
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -15,6 +15,9 @@ ms.collection: essentials-get-started
 ---
 
 # Quickstart: Learn how to access Microsoft Defender Threat Intelligence and make customizations
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 This guide walks you through how to access Microsoft Threat Intelligence (Defender TI) from the Microsoft Defender portal, adjust the portal's theme to make it easier on your eyes when using it, and find sources for enrichment so you can see more results when gathering threat intelligence. 
 
@@ -58,14 +61,13 @@ The **Featured threat intelligence articles** widget in the Defender portal home
 
 :::image type="content" source="/defender/threat-intelligence/media/mdti-featured-articles-widget.png" alt-text="Screenshot of Featured threat intelligence articles widget in the Defender portal home page." lightbox="/defender/threat-intelligence/media/mdti-featured-articles-widget.png":::
 
-### Article digest 
+### Article digest
 
 In the **Intel explorer** page, a banner message notifies you of the number of new Defender TI articles that were published since you last accessed the Defender portal. Select **Show me** to open a flyout panel that lists the articles you might have missed, then select any of the listed articles to open it:
 
 :::image type="content" source="/defender/threat-intelligence/media/mdti-article-digest-01.png" alt-text="Screenshot of the Intel explorer article digest banner message notification and flyout panel." lightbox="/defender/threat-intelligence/media/mdti-article-digest-01.png":::
 
 Select the **Clear** button in the flyout panel or close the banner message to clear the article digest:
-
 
 :::image type="content" source="/defender/threat-intelligence/media/mdti-article-digest-02.png" alt-text="Screenshot of the Intel explorer article digest flyout panel with the Clear button highlighted." lightbox="/defender/threat-intelligence/media/mdti-article-digest-02.png":::
 

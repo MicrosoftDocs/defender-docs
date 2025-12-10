@@ -1,32 +1,30 @@
----
+﻿---
 title: Microsoft Defender Offline scan in Windows
 description: You can use Microsoft Defender Offline Scan straight from the Microsoft Defender Antivirus app. You can also manage how it's deployed in your network.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 09/18/2024
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Run and review the results of a Microsoft Defender Offline scan
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 | Applies to | Type  |
 |---|---|
@@ -130,7 +128,7 @@ Starting with Windows 10, version 1607 or newer, and Windows 11, Microsoft Defen
 > [!NOTE]
 > In Windows 10, version 1607, the offline scan can be run from **Windows Settings > Update & security > Windows Defender** or from the Windows Defender client.
 
-1. On your Windows device, open the Windows Security app, and then **Scan options**.
+1. On your Windows device, open the **Windows Security** app. Select **Virus & threat protection**, and then choose **Scan options**.
 
 2. Select the radio button **Microsoft Defender Offline scan** and select **Scan now**.
 
@@ -260,3 +258,4 @@ Windows Defender Antivirus downloaded and configured Windows Defender Offline to
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

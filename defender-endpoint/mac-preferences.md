@@ -1,10 +1,10 @@
----
+﻿---
 title: Set preferences for Microsoft Defender for Endpoint on macOS
 description: Configure Microsoft Defender for Endpoint on macOS in enterprise organizations.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
@@ -15,17 +15,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/16/2025
----
+ms.date: 07/01/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Set preferences for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!IMPORTANT]
 > This article contains instructions for how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations. To configure Microsoft Defender for Endpoint on macOS using the command-line interface, see [Resources](mac-resources.md#configuring-from-the-command-line).
@@ -426,6 +424,30 @@ Determines the number of days after which the last installed security intelligen
 |**Data type**|Integer|
 |**Possible values**|7 (default). Allowed values are integers between 1 and 30|
 
+#### Security intelligence update interval (in seconds)
+
+Specifies the time interval (in seconds) after which security intelligence updates will be checked.
+
+|Section|Value|
+|---|---|
+|**Key**|definitionUpdatesInterval|
+|**Data type**|Integer|
+|**Possible values**|28800 (default, 8 hours). Allowed values are integers between 60 (1 minute) and 86400 (24 hours)|
+|**Comments**|Setting the value too low may lead to repeated or unnecessary security intelligence update checks.|
+
+#### Proxy for Defender for Endpoint communication 
+
+Configure proxy for all Defender for Endpoint cloud communication. If not set, the system-wide proxy is used.
+
+|Section|Value|
+|---|---|
+|**Key**|proxy|
+|**Data type**|String|
+|**Comments**|Format: "http://proxy.server:port" or "https://proxy.server:port".|
+> [!IMPORTANT]
+> - Incorrect proxy configuration can disrupt MDE functionality.
+> - You can run "mdatp connectivity test" on endpoint to test mde connectivity after applying proxy settings.
+
 ### User interface preferences
 
 Manage the preferences for the user interface of Microsoft Defender for Endpoint on macOS.
@@ -534,9 +556,9 @@ EDR Group identifiers
 |**Data type**|String|
 |**Comments**|Group identifier|
 
-### Tamper Protection
+### Tamper protection
 
-Manage the preferences of the Tamper Protection component of Microsoft Defender for Endpoint on macOS.
+Manage the preferences of the tamper protection component of Microsoft Defender for Endpoint on macOS.
 
 |Section|Value|
 |---|---|
@@ -715,7 +737,7 @@ The following configuration profile (or, if there's JAMF, a property list that c
                 <key>PayloadOrganization</key>
                 <string>Microsoft</string>
                 <key>PayloadIdentifier</key>
-                <string>
+                <string/>
                 <key>PayloadDisplayName</key>
                 <string>Microsoft Defender for Endpoint configuration settings</string>
                 <key>PayloadDescription</key>
@@ -971,6 +993,8 @@ The following templates contain entries for all settings described in this docum
                 <dict>
                     <key>enforcementLevel</key>
                     <string>real_time</string>
+                    <key>behaviorMonitoring</key>
+                    <string>enabled</string>
                     <key>scanAfterDefinitionUpdate</key>
                     <true/>
                     <key>scanArchives</key>
@@ -1162,3 +1186,4 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 - [Configuration Profile Reference (Apple developer documentation)](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

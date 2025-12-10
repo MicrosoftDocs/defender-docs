@@ -4,22 +4,22 @@ description: Investigate insider risk threats in the Microsoft Defender portal w
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
 ms.date: 02/17/2025
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-- <a href="https://learn.microsoft.com/unified-secops-platform/" target="_blank">Microsoft's unified security operations platform</a>
+- <a href="https://learn.microsoft.com/unified-secops-platform/" target="_blank">Microsoft Sentinel in the Defender portal</a>
 ---
 # Investigate insider risk threats in the Microsoft Defender portal
 
@@ -132,7 +132,7 @@ The following alert classification mapping is used to sync the alert classificat
 |Microsoft Defender alert classification|Microsoft Purview Insider Risk Management alert classification|
 |:---|:---|
 |True positive </br> Includes multi-staged attack, phishing, etc.|Confirmed|
-|Information, expected activity (benign positive) </br> Includes Ssecurity testing, confirmed activity, etc.|Dismissed|
+|Information, expected activity (benign positive) </br> Includes security testing, confirmed activity, etc.|Dismissed|
 |False positive </br> Includes not malicious, not enough data to validate, etc.|Dismissed|
 
 For more information about alert statuses and classifications in Microsoft Defender XDR, see [Manage alerts in Microsoft Defender](investigate-alerts.md#manage-alerts).
@@ -181,7 +181,7 @@ To access insider risk data in advanced hunting, users must have the following M
 
 ## Integrate insider risk management data with Microsoft Graph security API
 
-Use the [Microsoft Graph security API](/graph/api/resources/security-api-overview) to integrate insider risk management alerts, insights, and indicators with other SIEM tools like like Microsoft Sentinel, ServiceNow, or Splunk. You can also use the security API to integrate insider risk management data to data lakes, ticketing systems, and the like.
+Use the [Microsoft Graph security API](/graph/api/resources/security-api-overview) to integrate insider risk management alerts, insights, and indicators with other SIEM tools like Microsoft Sentinel, ServiceNow, or Splunk. You can also use the security API to integrate insider risk management data to data lakes, ticketing systems, and the like.
 
 To learn how to set up the Microsoft Graph API, see [Use the Microsoft Graph API](/graph/use-the-api).
 

@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/02/2024
-ms.topic: conceptual
-author: emmwalshh
-ms.author: ewalsh
+ms.date: 10/20/2025
+ms.topic: overview
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
@@ -16,25 +16,25 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus in Windows Overview
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint Plans 1 and 2
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 Microsoft Defender Antivirus is available in Windows 10 and Windows 11, and in versions of Windows Server.
 
 Microsoft Defender Antivirus is a major component of your next-generation protection in Microsoft Defender for Endpoint. This protection brings together machine learning, big-data analysis, in-depth threat resistance research, and the Microsoft cloud infrastructure to protect devices (or endpoints) in your organization. Microsoft Defender Antivirus is built into Windows, and it works with Microsoft Defender for Endpoint to provide protection on your device and in the cloud.
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Microsoft Defender Antivirus capabilities
 
@@ -93,7 +93,7 @@ You can use one of several methods, such as the Windows Security app or Windows 
 > Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#platform-and-engine-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it will place it into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature will allow a switch to active mode but not to passive mode.
 > 
 > - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, there will be no change and Defender Antivirus will remain disabled.
-> - To switch Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
+> - To switch Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#manually-set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
 > 
 > Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection will prevent it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
@@ -165,3 +165,4 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

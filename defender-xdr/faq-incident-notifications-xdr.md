@@ -3,15 +3,15 @@ title: FAQs related to Microsoft Defender Experts for XDR incident notifications
 ms.reviewer:
 description: Frequently asked questions related to Defender Experts for XDR incident notifications
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: faq
 ms.custom: 
 - cx-ti
 - cx-dex

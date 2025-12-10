@@ -3,18 +3,18 @@ title: Resources for Microsoft Defender for Endpoint for mobile devices
 description: Learn about the configurations and privacy settings for all the features in Defender for Endpoint on mobile devices.
 ms.service: defender-endpoint
 ms.reviewer: priyankagill
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 10/24/2025
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices
 
@@ -50,12 +50,13 @@ Microsoft Defender for Endpoint provides multiple capabilities on mobile devices
 |-----------|-----------|---------|---------|
 |Anti-phishing (Defender warning)|Informational| URL of malicious connection, connection information, Protocol type; [More information](android-privacy.md#web-page--network-information) | Domain name, IP address of malicious website; [More information](ios-privacy.md#web-page-or-network-information) |
 |Anti-phishing (Defender warning overlooked)|Low |  |  |
-|Anti-malware| Medium | Information about malicious APKs including install source, storage location, time of install, etc.; [More information](android-privacy.md#app-information)
-| |
-|Jailbreak| High | NA |NA |
-|Rogue Wifi | Low |  |  |
-|Open Network detection | Informational | | |
-Suspicious certificates |Informational| | |
+|Anti-malware|Medium | Information about malicious APKs including install source, storage location, time of install, etc.; [More information](android-privacy.md#app-information)||
+| ||||
+|Root Detection (Preview)|High|NA|NA|
+|Jailbreak Detection|High | NA |NA |
+|Rogue Wifi |Low |  |  |
+|Open Network Detection (Migrated from alert to event in the device timeline)|NA (Event)| | |
+|Suspicious Certificates Downloaded/Installed (Migrated from alert to event in the device timeline)|NA (Event)| | |
 
 [Complete privacy information for Android](android-privacy.md)
 
@@ -73,7 +74,7 @@ The Microsoft Defender mobile app is a security app that needs to constantly be 
 
 ### Steps to exclude
 
-1. Create service principal for the apps that needs to be excluded. [Steps to create service principal.](/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0&tabs=powershell#request&preserve-view=true).
+1. Create service principal for the apps that needs to be excluded. [Steps to create service principal.](/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0&tabs=powershell#request&preserve-view=true)
 
 1. While creating the service principal object above, use these app IDs: **MicrosoftDefenderATP XPlat app (a0e84e36-b067-4d5c-ab4a-3db38e598ae2), Microsoft Defender for Mobile TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**. 
 

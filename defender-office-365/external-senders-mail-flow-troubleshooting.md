@@ -2,9 +2,9 @@
 title: Troubleshooting mail sent to Microsoft 365
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: troubleshooting
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ description: This article provides troubleshooting information for issues with s
 ms.service: defender-office-365
 ms.date: 6/15/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -32,11 +32,11 @@ This article provides troubleshooting information for senders who are experienci
 
 ## Are you managing your IP and domain's sending reputation?
 
-[Exchange Online Protection (EOP)](eop-about.md) provides anti-spam protection for Microsoft 365. We also use email authentication technologies like SPF, DKIM, and DMARC to verify that the domain sending the email is authorized to do so. Many factors influence EOP filtering. For example, the sending IP, domain, email authentication, list accuracy, complaint rates, content, and more. One of the principal factors in driving down a sender's reputation and their ability to deliver email is their junk email complaint rate.
+[The default email protections for cloud mailboxes](eop-about.md) provide anti-spam protection. We also use email authentication technologies like SPF, DKIM, and DMARC to verify that the domain sending the email is authorized to do so. Many factors influence Microsoft 365 filtering. For example, the sending IP, domain, email authentication, list accuracy, complaint rates, content, and more. One of the principal factors in driving down a sender's reputation and their ability to deliver email is their junk email complaint rate.
 
 ## Are you sending email from new IP addresses?
 
-IP addresses that have never been used to send email typically don't have any reputation in our systems. As a result, email from new sources are more likely to experience delivery issues. Once the IP address has built a reputation for not sending spam, EOP typically allows for a better email delivery experience.
+IP addresses that have never been used to send email typically don't have any reputation in our systems. As a result, email from new sources are more likely to experience delivery issues. Once the IP address has built a reputation for not sending spam, Microsoft 365 typically allows for a better email delivery experience.
 
 New IPs for domains with existing SPF records typically experience the added benefit of inheriting some of the domain's sending reputation. If your domain has a good sending reputation, new IPs might experience a faster ramp up time. A new IP can expect to be fully ramped within a couple of weeks or less depending on volume, list accuracy, and junk email complaint rates.
 
@@ -46,7 +46,7 @@ For instructions about how to create and maintain DNS records, including the MX 
 
 ## Ensure that you don't advertise yourself as a nonroutable IP
 
-We might not accept email from senders who fail a reverse-DNS lookup. In some cases, legitimate senders advertise themselves incorrectly as a non-internet routable IP when attempting to open a connection to EOP. IP addresses that are reserved for private (nonroutable) networking include:
+We might not accept email from senders who fail a reverse-DNS lookup. In some cases, legitimate senders advertise themselves incorrectly as a non-internet routable IP when attempting to open a connection to Microsoft 365. IP addresses that are reserved for private (nonroutable) networking include:
 
 - 192.168.0.0/16 (or 192.168.0.0 - 192.168.255.255)
 - 10.0.0.0/8 (or 10.0.0.0 - 10.255.255.255)
@@ -66,9 +66,9 @@ To request removal from this list, see [Use the delist portal to remove yourself
 
 ## My email landed in the recipient's Junk Email folder
 
-If a message was incorrectly identified as spam by EOP, you can work with the recipient to submit this false positive message to Microsoft for analysis. For more information, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
+If Microsoft 365 incorrectly identifies a message as spam, you can work with the recipient to submit this false positive message to Microsoft for analysis. For more information, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
-## EOP throttled traffic from my IP address
+## Microsoft 365 throttled traffic from my IP address
 
 You receive the following NDR because suspicious activity was detected from the source IP address. Mail from the source has been temporarily restricted while it's being evaluated.
 
@@ -78,7 +78,7 @@ After we evaluate the messages and determine everything is OK, we remove the res
 
 ## I can't receive email from senders in Microsoft 365
 
-To receive messages from Microsoft 365 senders, make sure your network allows connections from the IP addresses that EOP uses in our datacenters. For more information, see [Exchange Online Protection IP addresses](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+To receive messages from Microsoft 365 senders, make sure your network allows connections from the IP addresses used in Microsoft 365 datacenters. For more information, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 ## Best practices for bulk emailing to Microsoft 365 users
 

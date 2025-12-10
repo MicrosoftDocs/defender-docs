@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 audience: ITPro
 ms.custom: 
@@ -15,7 +15,7 @@ ms.custom:
 ms.collection:
 - essentials-overview
 - tier1
-ms.topic: conceptual
+ms.topic: overview
 adobe-target: true
 ms.date: 08/19/2024
 appliesto:
@@ -29,7 +29,7 @@ manager: deniseb
 
 Microsoft Defender XDR is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Microsoft Defender XDR helps security teams protect and detect their organizations by using information from other Microsoft security products, including:
+Microsoft Defender XDR helps security teams protect their organizations and detect threats by using information from other Microsoft security products, including:
 
 - [**Microsoft Defender for Endpoint**](/defender-endpoint/microsoft-defender-endpoint)
 - [**Microsoft Defender for Office 365**](/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
