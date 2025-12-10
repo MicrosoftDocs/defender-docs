@@ -122,11 +122,11 @@ Learn more about [Serverless protection](serverless-protection.md).
 
 November 26, 2025
 
-We are excited to announce the public preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+Announcing the public preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
 
-This integration empowers organizations to secure code to cloud and accelerate tackling of security issues in their software portfolio using agentic remediation from GitHub Advanced Security’s security campaigns and autofix agent combined with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result: fewer distractions, faster fixes, better collaboration and securing code to cloud. 
+This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security’s security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
 
-This integration bridges the gap between __code and runtime security__, enabling developer and security teams to collaborate seamlessly in their existing workflows.
+This integration connects _code and runtime security_, enabling developer and security teams to collaborate seamlessly in their existing workflows.
 
 **Key Highlights**
 
@@ -174,7 +174,7 @@ This integration bridges the gap between __code and runtime security__, enabling
 
 - Configure runtime risk filters in GHAS for targeted campaigns.
 
-- Explore detailed guidance, [here](github-advanced-security-overview.md) and in our [blog](aka.ms/securecodetocloudblog).
+- Explore detailed guidance in the [GHAS overview](github-advanced-security-overview.md).
 
 ### Kubernetes gated deployment (GA)
 
