@@ -2,7 +2,7 @@
 title: What is Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 12/01/2025
+ms.date: 12/10/2025
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
@@ -85,9 +85,15 @@ Defender for Cloud supports integrations with partner systems for incident manag
 
 - DevOps security posture capabilities such as pull request annotations, code to cloud mapping, attack path analysis, and cloud security explorer are only available through the paid Defender CSPM plan. The free foundational security posture management plan provides Azure DevOps recommendations. Learn more about the features provided by [Azure DevOps security features](devops-support.md#azure-devops).
 
+- Defender CSPM protects all multicloud workloads, but billing applies only on specific resources. The following tables list the billable resources when you enable Defender CSPM on Azure subscriptions, AWS accounts, or GCP projects.
+
 ### Azure
 
-- Defender CSPM protects all multicloud workloads, but billing applies only on specific resources. The following tables list the billable resources when you enable Defender CSPM on Azure subscriptions, AWS accounts, or GCP projects.
+| Service | Resource Types | Exclusions |
+|---|---|---|
+| Compute | Virtual machines, VM scale sets, classic VMs | Deallocated VMs, Databricks VMs |
+| Storage | Storage accounts | Accounts without blob containers or file shares |
+| Databases | SQL servers, PostgreSQL/MySQL/MariaDB servers, Synapse workspaces | – |
 
 ### AWS
 

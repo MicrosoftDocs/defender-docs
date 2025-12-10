@@ -34,7 +34,7 @@ Ensure both "Microsoft Defender XDR" and "Microsoft Defender for Cloud" options 
 
 - Preview features enablement may take up to 24 hours.
 - The enablement introduces new security recommendations in preview in the Azure portal.
-- Once enabled, you can access Defender for Cloud from the left navigation menu under **Cloud infrastructure**.
+- Once enabled, you can access Defender for Cloud from the left navigation menu under **Cloud security**.
 
 ## Next steps
 
