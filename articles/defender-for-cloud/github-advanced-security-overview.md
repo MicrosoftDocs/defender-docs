@@ -25,7 +25,7 @@ This overview explains how the integration works and helps you understand its co
 
 ### Smart code-to-cloud mapping
 
-When you connect your GitHub organization or repo to Microsoft Defender for Cloud (MDC) as explained [here](/azure/defender-for-cloud/quickstart-onboard-github), the system automatically maps source repositories to running cloud workloads. It uses [GitHub's Artifact Attestations](https://docs.github.com/en/actions/concepts/security/artifact-attestations) and MDC proprietary "Code 2 Cloud" methods that ensure every workload is tracked to its repo of origin and vice versa.
+When you connect your GitHub organization or repo to Microsoft Defender for Cloud (MDC) as explained [here](/azure/defender-for-cloud/quickstart-onboard-github), the system automatically maps source repositories to running cloud workloads. It uses MDC proprietary "Code 2 Cloud" methods that ensure every workload is tracked to its repo of origin and vice versa.
 
 This capability gives you instant end-to-end visibility, so you know which code powers each deployed application without time-consuming manual mapping.
 
@@ -41,25 +41,25 @@ Bridge the gap between security and engineering teams with integrated workflows 
 
 Within MDC, security managers can see which security issues the engineering team already knows about and their status by selecting the **View on GitHub** link.
 
- :::image type="content" source="media/ghas/cve-vulnerability-tracking.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE titles, CVSS scores, fix versions, and 'View on GitHub' links for related alerts." lightbox="media/ghas/cve-vulnerability-tracking.jpg":::
+ :::image type="content" source="media/github-advanced-security/cve-vulnerability-tracking.jpg" alt-text="Screenshot of Associated CVEs tab showing CVE titles, CVSS scores, fix versions, and 'View on GitHub' links for related alerts." lightbox="media/github-advanced-security/cve-vulnerability-tracking.jpg":::
 
 They can assign security recommendations for resolution to the relevant engineering teams by generating a GitHub issue assignment.
 
-:::image type="content" source="media/ghas/code-to-runtime-workflow.jpg" alt-text="Screenshot of MDC displaying remediation insights with impacted assets linked to Code and Runtime phases. Runtime phase includes a 'Take Action' button." lightbox="media/ghas/code-to-runtime-workflow.jpg":::
+:::image type="content" source="media/github-advanced-security/code-to-runtime-workflow.jpg" alt-text="Screenshot of MDC displaying remediation insights with impacted assets linked to Code and Runtime phases. Runtime phase includes a 'Take Action' button." lightbox="media/github-advanced-security/code-to-runtime-workflow.jpg":::
 
 The assignment is generated on the repository of origin, providing runtime information and context to facilitate the engineering fix.
 
-:::image type="content" source="media/ghas/github-security-issue-list.jpg" alt-text="Screenshot of GitHub Issues tab showing open issues with labels 'security' and 'vulnerability' highlighted for tracking fixes." lightbox="media/ghas/github-security-issue-list.jpg":::
+:::image type="content" source="media/github-advanced-security/github-security-issue-list.jpg" alt-text="Screenshot of GitHub Issues tab showing open issues with labels 'security' and 'vulnerability' highlighted for tracking fixes." lightbox="media/github-advanced-security/github-security-issue-list.jpg":::
 
-:::image type="content" source="media/ghas/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue interface highlighting security details, risk levels, and actionable insights for engineering teams." lightbox="media/ghas/github-issue-security-details.jpg":::
+:::image type="content" source="media/github-advanced-security/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue interface highlighting security details, risk levels, and actionable insights for engineering teams." lightbox="media/github-advanced-security/github-issue-security-details.jpg":::
 
 Engineering managers can assign the issue to a developer for further resolution, and the assignee can leverage Copilot Coding Agent for AI-powered autofixes.
 
-:::image type="content" source="media/ghas/copilot-ai-autofix-tracking.jpg" alt-text="Screenshot of GitHub pull request details displaying updated Dockerfile base image, CVE links, and Copilot's comments on security fixes." lightbox="media/ghas/copilot-ai-autofix-tracking.jpg":::
+:::image type="content" source="media/github-advanced-security/copilot-ai-autofix-tracking.jpg" alt-text="Screenshot of GitHub pull request details displaying updated Dockerfile base image, CVE links, and Copilot's comments on security fixes." lightbox="media/github-advanced-security/copilot-ai-autofix-tracking.jpg":::
 
 GitHub issue fixes, progress, and campaign advancements are tracked in real time, and the statuses are reflected both in GitHub and in MDC.
 
-:::image type="content" source="media/ghas/github-issue-status-details.jpg" alt-text="Screenshot of GitHub issue details showing repository URL, owner, status, and interactive 'Take Action' button." lightbox="media/ghas/github-issue-status-details.jpg":::
+:::image type="content" source="media/github-advanced-security/github-issue-status-details.jpg" alt-text="Screenshot of GitHub issue details showing repository URL, owner, status, and interactive 'Take Action' button." lightbox="media/github-advanced-security/github-issue-status-details.jpg":::
 
 This approach ensures fixes are delivered rapidly, creates clear accountability, and simplifies collaboration, all inside the tools your teams already use.
 
@@ -72,7 +72,7 @@ This approach ensures fixes are delivered rapidly, creates clear accountability,
 | Cloud Environments | - Available in Commercial Clouds only (not in US Gov, China Gov, or other sovereign clouds) |
 
 > [!NOTE]
-> GHAS and MDC native integration is supported for Containers workloads only for the the current preview release.
+> GHAS and MDC native integration is supported for Containers workloads only for the current preview release.
 
 ## Next steps
 
