@@ -17,7 +17,7 @@ zone_pivot_groups: defender-portal-experience
 > This capability is currently in preview.   
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
-Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP and connected DevOps / registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
+Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP, and connected DevOps/registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
 - Centralized, product-wide security permissions management
 - Granular scoping across heterogeneous cloud environments
 - Persistent filtering across inventory, posture, vulnerabilities, and exposure management
@@ -54,7 +54,7 @@ Cloud scopes are tenant-level logical groupings of heterogeneous cloud environme
 Key properties:
 
 - Multicloud & multi–data source: A single scope can mix Azure + AWS + GCP + DevOps/org registry sources.
-- Non-hierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
+- Nonhierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
 - Many‑to‑many: An environment can belong to multiple scopes; a scope can contain unlimited environments.
 - Manual membership control: Newly connected environments aren’t auto-added—preventing accidental privilege expansion.
 - Consistent filter surface: Once selected, a scope persists as you navigate supported Defender portal experiences.
@@ -118,7 +118,7 @@ Characteristics:
 
 ## 2. Activate cloud scopes (one-time)
 
-Before scopes can be used in role assignments, they must be activated using a wizard. This:
+Before scopes can be used in role assignments, they must be activated using a wizard. Doing so:
 
 * Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
 * Lets you map those roles to chosen cloud scopes
@@ -138,7 +138,7 @@ If no device groups or unified RBAC roles exist yet, the wizard may be skipped u
 
 Guidelines:
 
-- Create at least one scope if none exist
+- Create at least one scope if none exists
 - Review which roles include manage-level permissions (these extend VM-related capabilities)
 - Approve to complete activation
 
