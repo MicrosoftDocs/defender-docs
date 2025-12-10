@@ -24,7 +24,7 @@ Without proper resource identifiers, support teams cannot effectively troublesho
 
 ### Method 1: From Cloud Assets Recommendations
 
-1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
+1. Navigate to **Microsoft Defender portal** > **Exposure Management** > **Recommendations** > **Cloud** tab.
 1. Locate the recommendation containing the asset you need to identify.
 1. Select the **exposed asset** in the recommendation panel.
 1. This opens the asset details page.
@@ -33,7 +33,7 @@ Without proper resource identifiers, support teams cannot effectively troublesho
 
 ### Method 2: From Cloud Infrastructure Asset Inventory
 
-1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud infrastructure**.
+1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud**.
 1. Use filters to locate the specific asset:
    - Filter by environment (Azure, AWS, GCP)
    - Filter by workload type
