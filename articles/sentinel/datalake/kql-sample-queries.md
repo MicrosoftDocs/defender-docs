@@ -21,7 +21,7 @@ This article provides sample KQL queries that you can use interactively or in KQ
 
 ## Out of the box queries
 
-Microsoft Sentinel includes a set of out-of-the-box KQL queries that you can use to explore and analyze data in the data lake. These queries are available in the KQL query editor under the **Sample queries** tab.
+Microsoft Sentinel includes a set of out-of-the-box KQL queries that you can use to explore and analyze data in the data lake. These queries are available in the KQL query editor under the **Queries** tab. For more information, see [Run KQL queries](kql-queries.md#out-of-the-box-queries).
 
 
 ### Anomalous sign-in locations increase
