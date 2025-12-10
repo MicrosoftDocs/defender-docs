@@ -49,6 +49,19 @@ To install a preexisting logic app template:
     - HTTP Trigger Entity Analyzer
 1. Select **Create playbook**.
 
+When you create and run a playbook, insights from the entity analyzer appear as comments within an incident's details:
+
+- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK technqniues](https://attack.mitre.org/).
+
+    :::image type="content" source="media/sentinel-mcp/logic-app-incident-classification.png" alt-text="Screenshot of the entity analyzer tool incident classification and evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-classification.png":::
+
+- The following screenshot further shows the analyzer's evidence, this time listing the set of malicious IP addresses the user signed in from and some of the suspicious user agents the user's activity originated from.
+
+    :::image type="content" source="media/sentinel-mcp/logic-app-incident-evidence.png" alt-text="Screenshot of the entity analyzer tool evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-evidence.png":::
+
+- The following screenshot shows the remaining suspicious agents and a list of anomalous behavior, the corresponding remediations to remediate the account compromise, and a list of data sources the entity analyzer used during analysis.
+
+    :::image type="content" source="media/sentinel-mcp/logic-app-incident-recommendation.png" alt-text="Screenshot of the entity analyzer tool evidence and recommendations added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-recommendation.png":::
 
 ### Add to an existing logic app
 
@@ -82,7 +95,7 @@ To add the entity analyzer tool by using an existing logic app:
 
 The following screenshot is an example output you receive from the action in the logic app:
 
-[Screenshot]
+:::image type="content" source="media/sentinel-mcp/logic-app-output.png" alt-text="Screenshot of a sample output received from the action in the logic app." lightbox="media/sentinel-mcp/logic-app-output.png":::
 
 For more information about the specific input and output in the Connector, see [Microsoft Sentinel MCP](/connectors/sentinelmcp/).
 
