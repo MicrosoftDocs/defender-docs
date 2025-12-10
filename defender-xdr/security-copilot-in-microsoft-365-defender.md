@@ -86,7 +86,7 @@ Investigating devices involved in incidents can be a tasking job. To quickly ass
 
 Copilot helps security teams quickly assess and understand suspicious files with [file analysis](copilot-in-defender-file-analysis.md). Copilot provides a file's summary, including detection information, related file certificates, a list of API calls, and strings found in the file.
 
-:::image type="content" source="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
+:::image type="content" source="media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
 
 #### Investigate identities immediately
 
