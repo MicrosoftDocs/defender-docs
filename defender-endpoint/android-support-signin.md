@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 12/10/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -129,9 +129,9 @@ The Android devices Battery Optimization screen opens automatically as part of t
 
 5. Navigate back to Defender
 
-**Solution 2** (needed in case the Solution 1 does not work):
+**Solution 2** (needed in case the Solution 1 doesn't work):
 
-1. Install MDE app in personal profile. (Sign-in isn't required.)
+1. Install the Microsoft Defender for Endpoint app in personal profile. (Sign-in isn't required.)
 2. Open the Company Portal and tap on Settings.
 3. Go to the Battery Optimization section, tap on the **Turn Off** button, and then select on **Allow** to turn off Battery Optimization for the Company Portal.
 4. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens.
@@ -139,25 +139,25 @@ The Android devices Battery Optimization screen opens automatically as part of t
 6. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
 7. The application shouldn't be uninstalled from personal profile for this to work.
 
-## Unable to use certain 3rd party applications along with MDE app (VPN)
+## Unable to use certain third party applications along with the Microsoft Defender for Endpoint app (VPN)
 
 **Applies to:** (Not limited) Apps handling banking, government services, or handling sensitive personal information
 
-**Cause:** Some applications, such as those used for banking, government services, or handling sensitive personal information, may restrict access if a VPN is detected on your device. These restrictions are determined by the app developer as part of their implementation and even applies all VPNs *including 3rd party) on tyhe device. Microsoft Defender does not control or enforce this behavior through its settings or policies.
+**Cause:** Some applications, such as those used for banking, government services, or handling sensitive personal information, may restrict access if a VPN is detected on your device. These restrictions are determined by the app developer as part of their implementation and even applies all VPNs *including third party) on the device. Microsoft Defender doesn't control or enforce this behavior through its settings or policies.
 
 **Workaround:**
-If an app does not function while a VPN is enabled/present in work profile, you may need to disable the VPN or work profile when using the app. 
+If an app doesn't function while a VPN is enabled or present in the work profile, you might need to disable the VPN or work profile when you use the app. 
 Users should enable VPN when they're no longer using the app to ensure that their devices are protected.
 
 ## Send in-app feedback
 
 If a user faces an issue, which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide **in-app feedback** along with **diagnostic data**. Our team can then investigate the logs to provide the right solution. Users can follow these steps to do the same:
 
-1. Open the **MDE application** on your device and select on the **profile icon** in the top-left corner.
+1. Open the **MDE application** on your device and select the **profile icon** in the top-left corner.
 
     :::image type="content" source="media/select-profile-icon-1.jpg" alt-text="The profile icon in the Microsoft Defender for Endpoint portal" lightbox="media/select-profile-icon-1.jpg":::
 
-2. Select "Help & feedback".
+2. Select **Help & feedback**.
 
     :::image type="content" source="media/selecthelpandfeedback2.png" alt-text="The Help & feedback option that can be selected in the Microsoft Defender for Endpoint portal" lightbox="media/selecthelpandfeedback2.png":::
 
