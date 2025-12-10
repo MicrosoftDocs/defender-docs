@@ -153,7 +153,7 @@ Users should enable VPN when they're no longer using the app to ensure that thei
 
 If a user faces an issue, which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide **in-app feedback** along with **diagnostic data**. Our team can then investigate the logs to provide the right solution. Users can follow these steps to do the same:
 
-1. Open the **MDE application** on your device and select the **profile icon** in the top-left corner.
+1. Open the **Microsoft Defender for Endpoint application** on your device and select the **profile icon** in the top-left corner.
 
     :::image type="content" source="media/select-profile-icon-1.jpg" alt-text="The profile icon in the Microsoft Defender for Endpoint portal" lightbox="media/select-profile-icon-1.jpg":::
 
