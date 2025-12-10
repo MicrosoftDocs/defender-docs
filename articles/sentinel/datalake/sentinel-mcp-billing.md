@@ -46,7 +46,6 @@ The following limits are specific to Sentinel data lake MCP tools:
 
 ### Sentinel entity analyzer tool
 Each tenant can use the entity analyzer MCP tool up to the following limits:
-- Five concurrent runs at a time
 - 100 total runs an hour
 - 250 total runs a day 
 

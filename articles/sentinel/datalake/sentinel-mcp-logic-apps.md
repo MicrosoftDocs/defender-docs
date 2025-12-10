@@ -18,18 +18,12 @@ ms.service: microsoft-sentinel
 
 You can access the value of Microsoft Sentinel's collection of Model Context Protocol (MCP) tools in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md#entity-analyzer-preview). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
 
-The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into pre-existing playbooks.
+The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into preexisting playbooks.
 
 ## Prerequisites to building a logic app
 
 If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analyzer tool.
 
-Each tenant can use the entity analyzer tool up to [five concurrent runs at a time](sentinel-mcp-billing.md#sentinel-entity-analyzer-tool-1). If you're using a **For each** loop in your entity analyzer workflow, turn the **Concurrency control** on, and set the **Degree of parallelism** to `5`. 
-
-:::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
-
-
-For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](../../logic-apps/logic-apps-control-flow-loops.md).
 
 ## Add entity analyzer tool to a logic app
 
@@ -43,9 +37,9 @@ You can use a logic app template for an easy and quick implementation of the ent
 :::image type="content" source="media/sentinel-mcp/logic-app-template.png" alt-text="Screenshot of the entity analyzer tool added to logic app template." lightbox="media/sentinel-mcp/logic-app-template.png":::
 
 >[!IMPORTANT]
-> Make sure that you have the **Sentinel SOAR Essentials** solution installed and up-to-date before installing a pre-existing logic app template for entity analyzer. From the Microsoft Defender portal navigation menu, go to **Microsoft Sentinel** > **Content management** > **Content hub** to check and install or update.
+> Make sure that you have the **Sentinel SOAR Essentials** solution installed and up-to-date before installing a preexisting logic app template for entity analyzer. From the Microsoft Defender portal navigation menu, go to **Microsoft Sentinel** > **Content management** > **Content hub** to check and install or update.
 
-To install a pre-existing logic app template:
+To install a preexisting logic app template:
 
 1. From the Microsoft Defender portal navigation menu, go to **Microsoft Sentinel** > **Configuration** > **Automation**.
 1. Select **Playbook templates**, then search for **Entity Analyzer**.
@@ -94,6 +88,18 @@ For more information about the specific input and output in the Connector, see [
 
 ## Authenticate to the connector
 Every logic app connector requires an authentication connection. This new action type supports Microsoft Entra ID, service principals, and managed identities. As is the case with the MCP server, the logic app's identity requires **Security reader** to operate.
+
+## Additional information
+
+Running multiple instances of the entity analyzer at the same time can increase latency for each run. This issue is especially important when you use a **For each** loop in your entity analyzer logic apps, because it can queue multiple analyses at once (for example, multiple users in an incident, multiple incidents triggered at once). 
+
+To prevent timeouts from too many analyses running at once, turn on the **Concurrency control** in the **For each** action. Start by setting the **Degree of parallelism** to `5`, and then adjust it up or down as needed based on how the analyzer runs in your organization.
+
+:::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
+
+
+For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](../../logic-apps/logic-apps-control-flow-loops.md).
+
  
 ## Related content
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)
