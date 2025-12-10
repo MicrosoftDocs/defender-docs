@@ -193,7 +193,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
 
 1. From the Azure portal, open **Azure Resource Graph Explorer**.
 
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot of launching Azure Resource Graph Explorer recommendation page."  lightbox="media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png":::
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot of launching Azure Resource Graph Explorer recommendation page"  lightbox="media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png":::
 
 1. Enter your Kusto query (using the following examples for guidance).
 
@@ -223,7 +223,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
 
 Defender for Cloud's workbooks page includes a ready-made report for visually tracking the scores of your subscriptions, security controls, and more. Learn more in [Create rich, interactive reports of Defender for Cloud data](custom-dashboards-azure-workbooks.md).
 
-:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="A section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery":::
+:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="Screenshot of a section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery":::
 
 ### Power BI Pro dashboards
 
@@ -238,7 +238,7 @@ The dashboard contains the following two reports to help you analyze your securi
 
 - **Secure Score Summary** - provides summarized data regarding your score progress. Use the "Secure score over time per subscription" chart to view changes in the score. If you notice a dramatic change in your score, check the "detected changes that might affect your secure score" table for possible changes that could have caused the change. This table presents deleted resources, newly deployed resources, or resources that their security status changed for one of the recommendations.
 
-:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="The optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes.":::
+:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="Screenshot of the optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes":::
 
 ## Next steps
 
@@ -266,7 +266,7 @@ The Cloud secure score introduces asset risk factors and asset criticality into 
 
 The Cloud secure score is based on the number and risk level of open recommendations in Defender for cloud. To improve your score, focus on recommendations with higher risk levels, as they contribute the most to your score. 
 
-:::image type="content" source="./media/secure-score-security-controls/cloud-secure-score-flow.png" alt-text="Diagram of the new Cloud secure score calculation flow including asset risk factors and criticality.":::
+:::image type="content" source="./media/secure-score-security-controls/cloud-secure-score-flow.png" alt-text="Diagram of the new Cloud secure score calculation flow including asset risk factors and criticality":::
 
 ## Cloud secure score formula
 

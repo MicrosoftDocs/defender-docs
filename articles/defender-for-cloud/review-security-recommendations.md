@@ -277,7 +277,7 @@ There are separate views for issue types:
 
 - **Misconfigurations**
 - **Vulnerabilities**
-- **Exposed Secrets**.
+- **Exposed Secrets**
 
 For each view you will view the **Cloud Secure Score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
 
