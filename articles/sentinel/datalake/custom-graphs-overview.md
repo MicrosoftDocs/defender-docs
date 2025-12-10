@@ -3,7 +3,7 @@ title: Custom graphs in Microsoft Sentinel- Overview
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 11/17/2025
+ms.date: 12/09/2025
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
