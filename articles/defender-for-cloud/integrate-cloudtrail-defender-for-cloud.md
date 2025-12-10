@@ -84,11 +84,8 @@ Signals may take time to appear depending on CloudTrail delivery frequency and e
 If data isn’t populating:
 
 - Check Amazon SQS queue notifications for new log files.
-
 - Confirm IAM roles and trust policies are applied as expected.
-
 - If using encryption, verify KMS key permissions.
-
 - Validate that CloudTrail is recording **management events** and not limited to data events.
 
 Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).

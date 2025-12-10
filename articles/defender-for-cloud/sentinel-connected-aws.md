@@ -1,9 +1,9 @@
 ---
 title: Connect a Microsoft Sentinel connected AWS account to Defender for Cloud
-description: Troubleshoot deployment issues for your AWS connector withing Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/06/2025
+description: Troubleshoot deployment issues for your AWS connector within Microsoft Defender for Cloud to ensure your resources are connected and protected.
+ms.date: 12/10/2025
 ms.topic: how-to
-#customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and i soperating the way it should be.
+#customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and is operating the way it should be.
 author: Elazark
 ms.author: elkrieger
 ---
@@ -26,13 +26,17 @@ To complete the procedures in this article, you need:
 
 - Contributor level permission for the relevant Azure subscription.
 
+- **SNS fan-out method only:** 
+    - AWS CloudTrail configured to deliver logs to an Amazon S3 bucket.
+    - An existing Microsoft Sentinel AWS connector that ingests CloudTrail logs from that bucket.
+
+
 ## Enable CloudTrail ingestion using SNS fan-out
 
 If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable CloudTrail ingestion for Defender for Cloud by using Amazon SNS as a fan-out mechanism. This configuration allows both services to receive CloudTrail events in parallel.
 
-> [!NOTE]
-> If you are configuring CloudTrail ingestion for Defender for Cloud, return to the feature setup to complete the configuration: [Integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-defender-for-cloud.md).
-
+> [!IMPORTANT]
+> Complete the remaining CloudTrail ingestion steps in [Integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-defender-for-cloud.md).
 
 ### Create an Amazon SNS topic for CloudTrail
 
@@ -92,7 +96,7 @@ After these changes, both Microsoft Sentinel and Defender for Cloud receive Clou
 
 1. Paste the template into a local text editing tool.
 
-1. Search for the **ASCDefendersOIDCIdentityProvider": {** section of the template, and make a separate copy of the entire **ClientIdList**.
+1. Search for the **"ASCDefendersOIDCIdentityProvider": {** section of the template, and make a separate copy of the entire **ClientIdList**.
 
 1. Search for the **ASCDefendersOIDCIdentityProvider** section in the template and delete it.
 
@@ -106,7 +110,7 @@ After these changes, both Microsoft Sentinel and Defender for Cloud receive Clou
 
 1. Select **Actions** > **Add audience**.
 
-1. Paste the **ClientIdList** section you copied in step 3.
+1. Paste the **ClientIdList** section you copied in step 4.
 
 1. Navigate to the Configure access page in Defender for Cloud.
 
@@ -123,6 +127,6 @@ After these changes, both Microsoft Sentinel and Defender for Cloud receive Clou
 - [Integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-defender-for-cloud.md).
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
-- Set up your [on-premises machines](quickstart-onboard-machines.md) and [Google Cloud Platforms (GCP)](quickstart-onboard-gcp.md).
+- Set up your [on-premises machines](quickstart-onboard-machines.md) and [Google Cloud Platform (GCP) environments](quickstart-onboard-gcp.md).
 - Get answers to [common questions](faq-general.yml) about onboarding your AWS account.
 - [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
