@@ -35,9 +35,9 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 
 #### Install Visual Studio Code and the Microsoft Sentinel extension 
 
-Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see[Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
+Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see [Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
   
-During the preview period, select **Auto Update** and select ** Install Pre-Release Versions**.
+During the preview period, select **Auto Update** and select **Install Pre-Release Versions**.
 
 :::image type="content" source="media/custom-graphs/install-pre-release-versions.png" lightbox="media/custom-graphs/install-pre-release-versions.png" alt-text="A screenshot showing the install pre-release versions option in Visual Studio Code.":::
 
