@@ -228,11 +228,11 @@ You have now created an ephemeral graph in the notebook.
     builder.query(query1).show()
     ```
 
-This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
+    This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
    :::image type="content" source="media/custom-graphs/graph-visualization.png" lightbox="media/custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
-The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
+    The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
     ```python
     query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
