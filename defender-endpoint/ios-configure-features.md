@@ -2,8 +2,8 @@
 title: Configure Microsoft Defender for Endpoint on iOS features
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS features.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -430,7 +430,7 @@ Defender for Endpoint on iOS enables bulk tagging the mobile devices during onbo
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
 > [!NOTE]
-> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the XDR portal.
+> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the Microsoft Defender portal.
 
 ### Configure device tags using MDM
 

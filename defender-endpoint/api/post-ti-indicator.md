@@ -2,8 +2,8 @@
 title: Submit or Update Indicator API
 description: Learn how to use the Submit or Update Indicator API to submit or update a new Indicator entity in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,19 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
 
 ---
+
 # Submit or Update Indicator API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -37,8 +33,8 @@ CIDR notation for IPs isn't supported.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
-2. There's a limit of 15,000 active indicators per tenant.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+- There's a limit of 15,000 active indicators per tenant.
 
 ## Permissions
 
@@ -46,7 +42,6 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permission|Permission display name|
 |:---|:---|:---|
-|Application|Ti.ReadWrite|`Read and write Indicators`|
 |Application|Ti.ReadWrite.All|`Read and write All Indicators`|
 |Delegated (work or school account)|Ti.ReadWrite|`Read and write Indicators`|
 
@@ -81,6 +76,7 @@ In the request body, supply a JSON object with the following parameters:
 |rbacGroupNames|String|Comma-separated list of RBAC group names the indicator would be applied to. **Optional**|
 |educateUrl|String|Custom notification/support URL. Supported for Block and Warn action types for URL indicators. **Optional**|
 |generateAlert|Enum|**True** if alert generation is required, **False** if this indicator shouldn't generate an alert.|
+
 ## Response
 
 - If successful, this method returns 200 - OK response code and the created / updated [Indicator](ti-indicator.md) entity in the response body.
@@ -110,9 +106,3 @@ POST https://api.securitycenter.microsoft.com/api/indicators
     "rbacGroupNames": ["group1", "group2"]
 }
 ```
-
-## Related article
-
-- [Manage indicators](../indicators-overview.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

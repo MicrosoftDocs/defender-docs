@@ -39,6 +39,9 @@ For more information, see [Learn more how submissions are processed behind-the-s
 > [!NOTE]
 >
 > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit items to Microsoft for analysis, but the items are analyzed for email authentication and policy hits only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary).
+>
+> - In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+>
 > - AI-powered Submissions Response introduces generative AI explanations for email submissions to Microsoft. These explanations aim to provide enterprise admins with clear, detailed, human-readable explanations for why messages were classified. Currently, this feature is scoped to email submissions only, and AI-generated explanations aren't used for the following types of submissions:
 >   - Files
 >   - URLs

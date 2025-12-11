@@ -4,8 +4,8 @@ description: Use this guide to evaluate and test the protection offered by Micro
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
@@ -231,7 +231,7 @@ Assign the policies to the OU where the test machines are located.
 
 #### Enable Tamper Protection
 
-In the Microsoft XDR portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
+In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
 For more information, see [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 

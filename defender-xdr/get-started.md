@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn what steps you need to take to get started with Microsoft Defender XDR
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

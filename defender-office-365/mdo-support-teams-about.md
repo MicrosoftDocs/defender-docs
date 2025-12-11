@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 09/11/2025
+ms.date: 10/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -57,6 +57,9 @@ Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with
 - **Teams messages in quarantine**: By default, only admins are allowed to manage Teams messages quarantined by ZAP for Teams. This is the same default limitation for email messages identified as malware or high confidence phishing. For more information, see [Manage quarantined Teams messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages).
 
 - **Teams message entity panel**: A single place to store all Teams message metadata for immediate SecOps review. Any threats coming from Teams chats, group chats, meeting chats, and other channels can be found in one place as soon as they're assessed. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+
+  > [!TIP]
+  > To remove users from Teams chats, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
 
 - **Attack simulation training using Teams messages**: To ensure users are resilient to phishing attacks in Microsoft Teams, admins can configure phishing simulations using Teams messages instead of email messages. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
 

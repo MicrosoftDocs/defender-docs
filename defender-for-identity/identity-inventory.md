@@ -4,7 +4,7 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: Identity inventory
-description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in Defender XDR portal.
+description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in the Microsoft Defender portal.
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
@@ -46,7 +46,8 @@ There are several options you can choose from to customize the identities list v
 > [!NOTE]
 > When exporting the identities list to a CSV file, a maximum of 5,000 identities are displayed.
 
-## ![A screenshot of identity inventory page.](media/identity-inventory/inventory11.png)
+:::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
+
 
 ### Identity details 
 
@@ -60,7 +61,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Object ID__ – A unique identifier for the identity in Microsoft Entra ID.
 
-- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Entra ID).
+- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID).
 
 - __Type__ – Specifies if the identity is a user account or service account.
 
@@ -76,7 +77,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Last updated__ – The timestamp of the most recent update to the identity's attributes in Active Directory.
 
-Nondefault columns: Email, Microsoft Entra ID risk level and Cloud ID. 
+Nondefault columns: Email, Microsoft Entra ID risk level, and Cloud ID. 
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -124,7 +125,7 @@ You can use this information to help you prioritize identities for security post
 
 ### Navigate to the Identity inventory page
 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Assets** > **Identities**. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
+In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Assets** > **Identities**. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
 
 ### Related Articles
 

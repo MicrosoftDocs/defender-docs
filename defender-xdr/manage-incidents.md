@@ -4,8 +4,8 @@ description: Learn how to assign, update the status,
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: deniseb
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

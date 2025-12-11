@@ -2,8 +2,8 @@
 title: Deploy and manage device control using JAMF 
 description: Learn how to use device control policies using JAMF.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium

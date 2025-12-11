@@ -4,8 +4,8 @@ description: Enable attack surface reduction rules to protect your devices from 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: paulinbar
-ms.author: painbar
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.subservice: asr
 ms.topic: how-to
@@ -167,6 +167,12 @@ The following procedures for enabling attack surface reduction rules include ins
    `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
    
 1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
+
+> [!NOTE]
+> In the latest Intune interface, **Configuration profiles** is located under  **Devices > Configuration profiles**.  
+> Earlier versions of Intune showed this under **Device configuration > Profiles**.  
+> If you don't see "Configuration Profile" as written in older instructions, look for **Configuration profiles** under the Devices menu.
+
 
 #### Device Configuration Profiles (Alternative 1)
 
@@ -338,6 +344,10 @@ Example:
    > [!WARNING]
    > Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
    > The rule ID shouldn't have any leading or trailing spaces.
+
+> [!NOTE]
+> Microsoft rebranded Windows Defender Antivirus to Microsoft Defender Antivirus beginning with Windows 10 version 20H1.
+> Group Policy paths on earlier Windows versions may still reference Windows Defender Antivirus, while newer builds show Microsoft Defender Antivirus. Both names refer to the same policy location.
 
 ### PowerShell
 

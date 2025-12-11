@@ -2,8 +2,8 @@
 title: Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
 description: Compare permissions and access to Microsoft Defender XDR Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -129,13 +129,40 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 > Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in Microsoft Defender for Cloud Apps, these permissions do not carry over. You need to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
 
 <a name='map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-365-defender-unified-rbac-permissions'></a>
-
 ### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
 
 > [!IMPORTANT]
 > App Governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and does not support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.</br></br>
 > Once you activate the Defender for Cloud Apps integration with Microsoft Defender XDR Unified RBAC, the following roles, configured through [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in Defender for Cloud Apps, will no longer be supported: **App/instance admin**, **User group admin**, **Cloud Discovery global admin**, and **Cloud Discovery report admin**.
 
+|Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
+|---|-----|
+|Local Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (all permissions) </br>Authorization and settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (all permissions)|
+|Local Security operator|Security operations \ Security data \ Security data basics (read) </br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security setting (all permissions) </br>Authorization and settings \ System setting (read)|
+|Local Security reader|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (read) </br>Authorization and settings \ System settings (read)|
+|Local Compliance administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
+
+### Unified RBAC roles in Microsoft Defender for Cloud
+
+Unified Role-Based Access Control (uRBAC) lets you manage permissions across Microsoft Defender for Cloud resources using a consistent model. Roles define what actions users can perform and assign roles carefully to maintain least-privilege access.
+
+The following table lists the available uRBAC roles and their permissions.
+
+| **Role**                | **Permissions**                                                                                              | **Description**                                                                 |
+|-------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Security data basics**: Security operations / Security data / Security data basics (read)   | Read | Access alerts, incidents, investigations, hunting, devices, cloud assets, and reports. Includes cloud inventory and threat protection. |
+| **Alerts**: Security operations / Security data / Alerts (manage) | Manage | Manage alerts, investigations, scans, device tags, and packages. Includes cloud threat protection features. |
+| **Vulnerability Management**: Security posture / Posture management / Vulnerability management (read) | Read | View vulnerability data: software inventory, weaknesses, missing KBs, baselines, hunting, and devices. Includes data lake (Preview). |
+| **Exposure Management**: Security posture / Posture management / Exposure Management (read); Security posture / Posture management / Exposure Management (manage) | Read/Manage  | View or manage exposure insights, including Secure Score, recommendations, initiatives, and metrics.|
+
+> [!NOTE]
+> Roles can be combined for broader access, but always apply least-privilege principles. Some capabilities may require additional permissions or feature enablement.
+
+### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
+
+> [!IMPORTANT]
+> App Governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and does not support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.</br></br>
+> Once you activate the Defender for Cloud Apps integration with Microsoft Defender XDR Unified RBAC, the following roles, configured through [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in Defender for Cloud Apps, will no longer be supported: **App/instance admin**, **User group admin**, **Cloud Discovery global admin**, and **Cloud Discovery report admin**.
 
 |Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
 |---|-----|
