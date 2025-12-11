@@ -36,6 +36,11 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 #### Install Visual Studio Code and the Microsoft Sentinel extension 
 
 Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see[Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
+  
+During the preview period, select **Auto Update** and select ** Install Pre-Release Versions**.
+
+:::image type="content" source="media/custom-graphs/install-pre-release-versions.png" lightbox="media/custom-graphs/install-pre-release-versions.png" alt-text="A screenshot showing the install pre-release versions option in Visual Studio Code.":::
+
 
 ## Create a custom graph 
 
@@ -180,7 +185,7 @@ The following steps walk you through creating your first custom graph by using a
 
         .add_node("Applications") \
             .from_dataframe(AppInfo_df.df) \
-            .with_columns("ResourceId", "AppId", "AppName", "nodeType", key     ="AppId", display="AppId")
+            .with_columns("ResourceId", "AppId", "AppName", "nodeType", key ="AppId", display="AppId")
 
          .add_node("Department") \
             .from_dataframe(Department_df.df) \

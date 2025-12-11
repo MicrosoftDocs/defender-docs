@@ -74,7 +74,6 @@ Define a new node
 
 #Define a new edge type
 
-```python
 my_graph.add_edge("<Edgename>") 
             .from_table(“Tablename”)
             .add_properties("id", "<columnname>", "<columnname>", key="<columnname>", display="<columnname>")
