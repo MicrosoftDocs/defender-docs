@@ -22,10 +22,11 @@ ms.custom: sfi-image-nochange
 Watchlists in Microsoft Sentinel help you correlate data from a data source you provide with the events in your Microsoft Sentinel environment. For example, you might create a watchlist with a list of high value assets, terminated employees, or service accounts in your environment.
 
 You can create a watchlist by using any of the following methods:
-- [Upload a watchlist file](#upload-a-watchlist-from-a-local-folder) from a local folder or from your Azure Storage account
+- [Upload a watchlist file from a local folder](#upload-a-watchlist-from-a-local-folder)
+- [Upload a watchlist file from your Azure Storage account](#create-a-large-watchlist-from-file-in-azure-storage-preview)
 - [Create a watchlist manually](#create-a-watchlist-manually-preview)
 
-You can currently upload local files up to 3.8 MB in size. A file that's over 3.8 MB and up to 500 MB is considered a [large watchlist](#create-a-large-watchlist-from-file-in-azure-storage-preview). To upload a large watchlist, upload the file to an Azure Storage account. Before you create a watchlist, review the [limitations of watchlists](watchlists.md#watchlist-limitations).
+You can currently upload local files up to 3.8 MB in size. A file that's over 3.8 MB and up to 500 MB is considered a large watchlist. To upload a large watchlist, upload the file to an Azure Storage account. Before you create a watchlist, review the [limitations of watchlists](watchlists.md#watchlist-limitations).
 
 Data in the Log Analytics Watchlist table is retained for 28 days.
 
@@ -99,31 +100,6 @@ To create a watchlist from a template you populated:
 1. Select **Next: Review + create**, and then select **Create**. A notification appears once the watchlist is created.
 
 It might take several minutes for the watchlist to be created and the new data to be available in queries.
-
-## Create a watchlist manually (preview)
-
-To create a watchlist from scratch:
-
-1. In the [Defender portal](https://security.microsoft.com/), go to **Microsoft Sentinel** > **Configuration** > **Watchlist**.
-
-1. Select **+ New** to open the **Watchlist wizard**.
-
-1. On the **General** page, enter the name, description, and alias for the watchlist, and then select **Next: Source**.
-
-1. On the **Source** page, choose **Manual (Preview)** as the **Source type**.
-
-1. Add and define the column names for your watchlist. Choose the column that serves as your **Search Key**. This key is the column in your watchlist that you expect to use as a join with other data or a frequent object of searches.
-
-   :::image type="content" source="./media/watchlists-create/create-watchlist-manual.png" alt-text="Screenshot of the option to create a watchlist manually." lightbox="./media/watchlists-create/create-watchlist-manual.png":::
-
-1. Select **Next: Review + create**.
-
-1. Review the information, verify that it's correct, and then select **Create**. A notification appears once the watchlist is created.
-
-It might take several minutes for the watchlist to be created and the new data to be available in queries.
-
->[!NOTE]
->Watchlists you create manually automatically contain a single entry that uses default values. You can update this entry as needed. For more information, see [Manage watchlists](watchlists-manage.md).
 
 ## Create a large watchlist from file in Azure Storage (preview)
 
@@ -204,6 +180,31 @@ For more information, see [CORS support for Azure Storage](/rest/api/storageserv
 1. Review the information, verify that it's correct, and then select **Create**. A notification appears once the watchlist is created.
 
 It might take a while for a large watchlist to be created and for the new data to be available in queries.
+
+## Create a watchlist manually (preview)
+
+To create a watchlist from scratch:
+
+1. In the [Defender portal](https://security.microsoft.com/), go to **Microsoft Sentinel** > **Configuration** > **Watchlist**.
+
+1. Select **+ New** to open the **Watchlist wizard**.
+
+1. On the **General** page, enter the name, description, and alias for the watchlist, and then select **Next: Source**.
+
+1. On the **Source** page, choose **Manual (Preview)** as the **Source type**.
+
+1. Add and define the column names for your watchlist. Choose the column that serves as your **Search Key**. This key is the column in your watchlist that you expect to use as a join with other data or a frequent object of searches.
+
+   :::image type="content" source="./media/watchlists-create/create-watchlist-manual.png" alt-text="Screenshot of the option to create a watchlist manually." lightbox="./media/watchlists-create/create-watchlist-manual.png":::
+
+1. Select **Next: Review + create**.
+
+1. Review the information, verify that it's correct, and then select **Create**. A notification appears once the watchlist is created.
+
+It might take several minutes for the watchlist to be created and the new data to be available in queries.
+
+>[!NOTE]
+>Watchlists you create manually automatically contain a single entry that uses default values. You can update this entry as needed. For more information, see [Manage watchlists](watchlists-manage.md).
 
 ## View watchlist status
 
