@@ -33,7 +33,9 @@ The SIEM Migration experience includes the following features:
 - <a href="https://securitycopilot.microsoft.com/" target="_blank">Security Copilot</a> enabled in your tenant with at least a workspace operator role assigned
 
 > [!NOTE]
-> Though you need [Security Copilot](https://securitycopilot.microsoft.com/) enabled in your tenant, it doesn't consume any SCUs so it doesn't incur additional costs. If you son't have copilot installed, Provision 1 SU and disable overage charges to avoid unexpected costs. User who runs migration tool needs security admin role. To ensure you don't incur any unintentional costs After you set upGo to manage workspace > usage monitoring and set SUs to zero.
+> Though you need [Security Copilot](https://securitycopilot.microsoft.com/) enabled in your tenant, it doesn't consume any SCUs so it doesn't incur additional costs. To ensure you don't incur any unintentional costs, after you set it up, go to manage workspace > usage monitoring and set SCUs to zero, and make sure use overage units is disabled.
+>
+> :::image type="content" source="./media/siem-migration/monitor-usage.png" alt-text="Screenshot of the Security Copilot usage monitoring settings.":::
 
 ## Export detection rules from your current SIEM
 
@@ -81,11 +83,13 @@ After exporting the rules,
 
     The migration tool analyzes the export and identifies the number of data sources and detection rules in the file you provided. Use this information to confirm that you have the right export.
 
-    If the data doesn't look correct, select **Replace file** from the top right corner and upload a new export.
+    If the data doesn't look correct, select **Replace file** from the top right corner and upload a new export. When the correct file is uploaded, select **Next**.
 
     :::image type="content" source="./media/siem-migration/confirm-siem.png" alt-text="Screenshot of the confirmation screen showing the number of data sources and detection rules.":::
 
-1. When the correct file is uploaded, select **Start analyzing**. The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created.
+1. Select a workspace, then select **Next**.
+
+1. Select **Start analyzing** to confirm. The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, they are deleted and replaced by the new ones.
 
     :::image type="content" source="./media/siem-migration/getting-ready.png" alt-text="Screenshot of the migration tool getting ready to analyze the rules.":::
 
@@ -112,21 +116,22 @@ After exporting the rules,
 
     The *detections* tab shows the following information:
 
-    - The detection rules matched to the rules from your SIEM. (1)
-    - Recommendations from the SIEM migration tool. (2)
-    - The current Splunk detection rule from your uploaded file. (3)
-    - The status of the detection rule in Microsoft Sentinel. (4) The status can be:
+    - Recommendations from the SIEM migration tool.
+    - The current Splunk detection rule from your uploaded file.
+    - The status of the detection rule in Microsoft Sentinel. The status can be:
         - *Enabled*: The detection rule is created from the rule template, enabled, and active (from a previous action)
         - *Disabled*: The detection rule is installed from the Content Hub but not enabled in the Sentinel workspace
         - *Not in use*: The detection rule was installed from Content Hub and is available as a template to be enabled
         - *Not installed*: The detection rule wasn't installed from the Content Hub
-    - The required connectors that need to be configured to bring the logs required for the recommended detection rule. (5) If a required connector isn't available, there's a side panel with a wizard to install it from the Content Hub. If all required connectors are connected, a green check mark appears.
+    - The required connectors that need to be configured to bring the logs required for the recommended detection rule. If a required connector isn't available, there's a side panel with a wizard to install it from the Content Hub. If all required connectors are connected, a green check mark appears.
 
     :::image type="content" source="./media/siem-migration/detection.png" alt-text="Screenshot of Microsoft Sentinel detection rules matched to Splunk or QRadar rules.":::
 
-1. Select the rule. This action opens the rules details side panel, where you can view the rules template details.
+## Enable detection rules
 
-    :::image type="content" source="./media/siem-migration/rule-details.png" alt-text="Screenshot of the rule details side panel.":::
+When you select a rule, the rules details side panel opens and you can view the rules template details.
+
+:::image type="content" source="./media/siem-migration/rule-details.png" alt-text="Screenshot of the rule details side panel.":::
 
 - If the associated data connector is installed and configured, select **Enable detection** to enable the detection rule.
 
@@ -155,13 +160,3 @@ The SIEM migration tool doesn't explicitly install any connectors or enable dete
 ## Limitations
 
 - The migration tool maps the rules export to out-of-the-box Microsoft Sentinel data connectors and detection rules.
-
-<!---
-Setup analysis status:
-Select ws for analysis
-
-#8 compare with origin 38 minutes
-
-
-View rule in content hub: Opens content hub page then decide if you want to install it.
---->
