@@ -23,7 +23,7 @@ This article lists the security alerts you might get for Azure App Service from 
 
 [Further details and notes](defender-for-app-service-introduction.md)
 
-## Agentless detection 
+## Cloud native detection
 
 App Services operate at the application layer, enabling web apps to process user interactions and manage request flows. Defender for App Services analyzes patterns in these requests to identify behaviors that may indicate security threats. Critical events in web request logs are captured that indicate potential security threats, such as attempts to execute unauthorized code or manipulate application logic.
 
