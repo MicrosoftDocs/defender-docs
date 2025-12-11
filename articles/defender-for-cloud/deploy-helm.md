@@ -14,12 +14,132 @@ This article describes how to configure and manage the Microsoft Defender for Co
 
 ## Prerequisites
 
-- Defender for Containers plan enabled on your subscription
-- Defender sensor already deployed via Helm on your clusters
-- Helm version 3.8 or later installed
-- Network requirements met as described in [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements)
+All prerequisite requirements for the Defender for Containers sensor must be implemented as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
 
-## Verify Helm deployment
+- Enable Defender for Containers in the target subscription or security connector:
+    - Azure subscription: [Enable Defender for Containers on AKS via portal](defender-for-containers-azure-enable-portal.md)
+    - Amazon Web Services (AWS): [Enable Defender for Containers on AWS (EKS) via portal](defender-for-containers-aws-enable-portal.md)
+    - Google Cloud Project (GCP): [Enable Defender for Containers on GCP (GKE) via portal](defender-for-containers-gcp-enable-portal.md)
+    - Arc-enabled Kubernetes (ARC): [Enable Defender for Containers on Arc-enabled Kubernetes via portal](defender-for-containers-arc-enable-portal.md)
+
+- Ensure the following components of the Defender for containers plan are enabled:
+   - **Defender sensor**
+   - **Security findings**
+   - **Registry access**
+
+       :::image type="content" source="media/deploy-helm/verify-correct-toggles.png" alt-text="Screenshot showing how to verify the correct toggles are enabled." lightbox="media/deploy-helm/verify-correct-toggles.png":::
+
+## Install the sensors Helm chart
+
+Depending on your deployment type, follow the relevant instructions below to install the Defender for Containers sensor using Helm:
+
+- [AKS Automatic](#for-aks-automatic)
+- [AKS](#aks)
+- [EKS/GKE](#eksgke)
+
+### AKS Automatic
+
+Run the following command for AKS Automatic:
+
+```bash
+# Update Azure CLI to the latest version 
+az upgrade 
+
+# If you don't have the AKS preview extension installed yet 
+az extension add --name aks-preview 
+
+# Update the AKS extension specifically 
+az extension update --name aks-preview
+```
+
+### AKS
+
+#### Prerequisites
+
+- Helm >= 3.8 (OCI is supported on the available version)
+- Resource group owner role for the target cluster (AKS) or security connector (EKS or GKE)
+- Azure resource ID for the target cluster
+
+  > [!NOTE]
+  > Use the following command to generate a list of your AKS clusters Azure resource IDs given a `<SUBSCRIPTION_ID>` and `<RESOURCE_GROUP>`:
+  >
+  >```bash
+  >az aks list \
+  >--subscription <SUBSCRIPTION_ID> \
+  >--resource-group <RESOURCE_GROUP> \
+  >--query "[].id" \
+  >-o tsv
+  >```
+
+- Remove any **conflicting policies**. These policy assignments cause the available version of the sensor to be deployed on your cluster. 
+    - Locate The ID for the conflicting policy `64def556-fbad-4622-930e-72d1d5589bf5` in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions). .
+    - Run the [delete_conflicting_policies.sh](https://gist.github.com/matannov/a1830a8333cb7804704ad148edc5c904) to remove conflicting policies using the Azure CLI.
+    - Run the script with the command:
+
+    ```azurecli   
+    delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
+    ```
+    
+    > [!NOTE]
+    > This script removes resource group and subscription level policies for setting up the GA version of Defender for Containers, which can affect clusters other than the one you're configuring.
+
+#### Install on AKS
+
+Install the Defender for Containers sensor and remove any existing deployment, if one exists with the [install_defender_sensor_aks.sh](https://gist.github.com/matannov/8a68d2101bc57af461913f7547891d94)script.
+
+Run the script with the command:
+    
+```azurecli
+install_defender_sensor_aks.sh <CLUSTER_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION>
+```
+
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use `latest` or a specific semantic version.
+
+> [!NOTE]
+> This script sets a new kubeconfig context, and might create a Log Analytics workspace in your Azure account.
+
+### EKS/GKE
+
+The following script installs the Defender for Containers sensor (and removes any existing deployment, if one exists):
+
+[install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678)
+
+Set your kubeconfig context to the target cluster, and run the script with the command:
+
+```bash
+install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
+```
+
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
+For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+
+- Set up a security connector for your AWS or GCP account
+
+  > [!NOTE]
+  > To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. See [Connect your AWS account](quickstart-onboard-aws.md) or [Connect your GCP project](quickstart-onboard-gcp.md).
+
+- Get its Azure resource ID
+
+  > [!NOTE]
+  > To install the Helm chart on an EKS or GKE cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get this value.
+  >
+  >For example:
+  >
+  >```azurecli
+  >az resource show \
+  >  --name <connector-name> \
+  >  --resource-group <resource-group-name> \
+  >  --resource-type "Microsoft.Security/securityConnectors" \
+  >  --subscription <subscription-id> \
+  >  --query id -o tsv
+  >```
+  >
+  >In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
+
+Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use 'latest' or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
+
+> [!NOTE]
+> This script might create a Log Analytics workspace in your Azure account.
 
 Run the following command to check that the installation succeeded:
 
