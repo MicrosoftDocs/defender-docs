@@ -151,7 +151,7 @@ When you select a rule, the rules details side panel opens and you can view the 
     :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
 
 > [!TIP]
-> Instead of creating the rule manually from scratch, it can be faster and simpler to enable the rule from the template and then edit it as needed.
+> Instead of creating rules manually from scratch, it can be faster and simpler to enable the rule from the template and then edit it as needed.
 
 If the data connector isn't installed and configured to stream logs, *Enable detection* is disabled.
 
