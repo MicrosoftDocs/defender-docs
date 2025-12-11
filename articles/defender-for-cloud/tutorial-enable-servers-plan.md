@@ -154,6 +154,9 @@ Enable or disable the plan on specific machines.
 1. In the **Remediation** tab, select **Create a remediation task**.
 1. Edit all details, select **Review + create**, and then select **Create**.
 
+> [!NOTE]
+> Defender for Servers doesn't require a specific tag name or value for onboarding or exclusion. Use any tag your organization chooses and configure your Azure Policy or script to match it.
+
 ### Disable the plan using a script
 
 1. [Download and save this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
