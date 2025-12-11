@@ -65,13 +65,13 @@ You can exclude an analytics rule from correlation using a toggle in the analyti
 
 1. In the **Incident settings** tab, make sure the Enable correlation toggle is set to **Disabled**.
 
-    :::image type="content" source="./media/exclude-analytics-rules-correlation/analytics-rules-wizard-incident-settings.png" alt-text="Screenshot of Incidents settings UI with the Enable correlation toggle set to Disabled.":::
+   :::image type="content" source="./media/exclude-analytics-rules-correlation/analytics-rules-wizard-incident-settings.png" alt-text="Screenshot of Incidents settings UI with the Enable correlation toggle set to Disabled." lightbox="./media/exclude-analytics-rules-correlation/analytics-rules-wizard-incident-settings.png":::
 
 1. Set the toggle to **On** to exclude the rule from correlation.
 
 When you exclude a rule using the UI toggle, the `#DONT_CORR#` tag is automatically added to the beginning of the rule's description. The analytics rules view now includes a column for correlation state so you can easily see which rules are excluded as well as filter the list to see rules in a specific state.
 
-:::image type="content" source="./media/exclude-analytics-rules-correlation/detections-rules.png" alt-text="Screenshot of analytics rules view with Correlation state column.":::
+:::image type="content" source="./media/exclude-analytics-rules-correlation/detections-rules.png" alt-text="Screenshot of analytics rules view with Correlation state column." lightbox="./media/exclude-analytics-rules-correlation/detections-rules.png":::
 
 ## Exclude a rule from correlation manually
 
