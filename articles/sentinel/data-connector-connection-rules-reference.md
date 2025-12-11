@@ -500,7 +500,7 @@ For complex queries, use `QueryParametersTemplate`. This next example sends a `P
 Example:
 
 ```json
-request: {
+"request": {
   "apiEndpoint": "https://graph.microsoft.com/v1.0/me/messages",
   "httpMethod": "POST",
   "queryTimeFormat": "yyyy-MM-ddTHH:mm:ssZ",
@@ -546,7 +546,7 @@ A server response with JSON format is expected, with the requested data in the p
   "format": "json",
   "SuccessStatusJsonPath": "$.status",
   "SuccessStatusValue": "success",
-  "IsGzipCompressed: true
+  "IsGzipCompressed": true
  }
 ```
 
@@ -595,14 +595,14 @@ The most common paging type is when a server data source API provides URLs to th
 Here are some examples:
 
 ```json
-Paging: {
+"paging": {
   "pagingType": "LinkHeader",
   "linkHeaderTokenJsonPath" : "$.metadata.links.next"
 }
 ```
 
 ```json
-Paging: {
+"paging": {
  "pagingType" : "PersistentLinkHeader", 
  "pageSizeParameterName" : "limit", 
  "pageSize" : 500 
@@ -629,7 +629,7 @@ Paging: {
 Example:
 
 ```json
-Paging: {
+"paging": {
  "pagingType" : "NextPageUrl", 
   "nextPageTokenJsonPath" : "$.data.repository.pageInfo.endCursor", 
   "hasNextFlagJsonPath" : "$.data.repository.pageInfo.hasNextPage", 
@@ -659,7 +659,7 @@ Paging: {
 Examples:
 
 ```json
-Paging: {
+"paging": {
  "pagingType" : "NextPageToken", 
  "nextPageRequestHeader" : "ETag", 
  "nextPageTokenResponseHeader" : "ETag" 
@@ -667,7 +667,7 @@ Paging: {
 ```
 
 ```json
-Paging: {
+"paging": {
  "pagingType" : "PersistentToken", 
     "nextPageParaName" : "gta", 
     "nextPageTokenJsonPath" : "$.alerts[-1:]._id" 
@@ -688,7 +688,7 @@ Paging: {
 
 Example:
 ```json
-Paging: {
+"paging": {
   "pagingType": "Offset", 
   "offsetParaName": "offset",
   "pageSize": 50,
@@ -716,7 +716,7 @@ Paging: {
 Example:
 
 ```json
-Paging: {
+"paging": {
  "pagingType" : "CountBasedPaging", 
  "pageNumberParaName" : "page", 
  "pageSize" : 10, 
