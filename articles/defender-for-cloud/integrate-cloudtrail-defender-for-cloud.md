@@ -25,8 +25,7 @@ Before enabling CloudTrail ingestion, ensure that your AWS account has:
 - Access to Amazon SQS queue notifications associated with that bucket.
 - Access to AWS KMS keys if CloudTrail logs are encrypted.
 - Permissions to create or modify CloudTrail trails and required resources if provisioning a new trail.
-
-CloudTrail must record management events to provide identity and configuration telemetry.
+- CloudTrail configured to log **management events**.
 
 > [!NOTE]
 > **Microsoft Sentinel users:** If you already stream AWS CloudTrail logs to Microsoft Sentinel, enabling CloudTrail ingestion in Defender for Cloud may require updates to your Sentinel configuration. Review the updated workflow to avoid ingestion conflicts by following [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
@@ -43,24 +42,24 @@ After your AWS account is connected:
 
 1. Under **Monitoring coverage**, open **Settings**.
 
-1. Enable **AWS CloudTrail ingestion (Preview)**.
+1. Enable **AWS CloudTrail ingestion (Preview)**. This adds CloudTrail configuration options to the setup workflow.
 
-1. Choose whether to integrate with an existing CloudTrail trail or create a new one during setup.
+1. Choose whether to integrate with an existing CloudTrail trail or create a new one during setup:
 
-1. Provide the required Amazon S3 bucket and SQS queue details if using an existing trail.
+    - If you select **Existing trail**:
+        1. Provide the Amazon S3 bucket ARN and SQS queue ARN associated with the existing trail.
+        1. If prompted, deploy or update the CloudFormation stack.
 
-1. If prompted, deploy or update the CloudFormation stack. 
-
-> [!NOTE]
-> If you are connecting an existing trail, you must paste the SQS ARN into the CloudFormation parameter field when requested by the AWS console.
-
-You might be prompted to deploy a CloudFormation template to establish IAM permissions, trust relationships, and resource access needed for Defender for Cloud to retrieve CloudTrail logs.
+    - If you select **Create a new CloudTrail**:
+        1. Deploy the CloudFormation or Terraform template when prompted.
+        1. After the deployment completes, locate the SQS queue ARN in the AWS console.
+        1. Return to Defender for Cloud and enter the SQS ARN in the **SQS ARN** field.
 
 ## How Defender for Cloud uses CloudTrail data
 
-After configuration:
+After you complete the configuration: 
 
-- AWS CloudTrail records management events.
+- AWS CloudTrail records management events from your AWS account.
 - Log files are written to an Amazon S3 bucket.
 - Amazon SQS sends notifications when new logs are available.
 - Defender for Cloud polls the SQS queue to retrieve the log file references.
