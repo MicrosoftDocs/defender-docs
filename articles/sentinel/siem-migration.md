@@ -148,7 +148,7 @@ The SIEM migration tool doesn't explicitly install any connectors or enable dete
 
 - The migration tool maps the rules export to out-of-the-box Microsoft Sentinel data connectors and detection rules.
 
-
+<!---
 Setup analysis status:
 Select ws for analysis
 
@@ -156,3 +156,4 @@ Select ws for analysis
 
 
 View rule in content hub: Opens content hub page then decide if you want to install it.
+--->
