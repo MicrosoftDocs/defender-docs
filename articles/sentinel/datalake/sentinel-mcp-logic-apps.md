@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to set up an Azure Logic App using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools  
 author: poliveria
 ms.topic: how-to
-ms.date: 12/09/2025
+ms.date: 12/11/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -32,7 +32,7 @@ You have two options for adding the entity analyzer tool to your logic app:
 - [Add to an existing logic app](#add-to-an-existing-logic-app)
 
 ### Use an existing logic app template 
-You can use a logic app template for an easy and quick implementation of the entity analyzer tool. The logic app template takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident.
+You can use a logic app template for an easy and quick implementation of the entity analyzer tool. The following screenshot shows how one of the available templates (Incident Trigger Entity Analyzer) takes all users and URLs in an incident, enriches them by using the entity analyzer tool, and sends that analysis as a comment to the original incident:
 
 :::image type="content" source="media/sentinel-mcp/logic-app-template.png" alt-text="Screenshot of the entity analyzer tool added to logic app template." lightbox="media/sentinel-mcp/logic-app-template.png":::
 
@@ -51,17 +51,14 @@ To install a preexisting logic app template:
 
 When you create and run a playbook, insights from the entity analyzer appear as comments within an incident's details:
 
-- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK technqniues](https://attack.mitre.org/).
+- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK technqniues](https://attack.mitre.org/), a list of malicious IP addresses the user signed in from, and a few suspicious user agents the user's activity originated from.
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-classification.png" alt-text="Screenshot of the entity analyzer tool incident classification and evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-classification.png":::
 
-- The following screenshot further shows the analyzer's evidence, this time listing the set of malicious IP addresses the user signed in from and some of the suspicious user agents the user's activity originated from.
-
-    :::image type="content" source="media/sentinel-mcp/logic-app-incident-evidence.png" alt-text="Screenshot of the entity analyzer tool evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-evidence.png":::
-
-- The following screenshot shows the remaining suspicious agents and a list of anomalous behavior, the corresponding remediations to remediate the account compromise, and a list of data sources the entity analyzer used during analysis.
+- The following screenshot shows the rest supporting evidence (the remaining suspicious agents and a list of anomalous behavior). By providing these pieces of evidence, the analyzer can make security analysts, who typically have to query and analyze these themselves, feel more comfortable trusting its classification. The analyzer also gives recommendations to remediate the account compromise, and a list of data sources it used during analysis.
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-recommendation.png" alt-text="Screenshot of the entity analyzer tool evidence and recommendations added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-recommendation.png":::
+
 
 ### Add to an existing logic app
 

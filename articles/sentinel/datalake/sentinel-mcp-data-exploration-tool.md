@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 11/24/2025
+ms.date: 12/11/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -76,7 +76,7 @@ Entity analysis tools might require a few minutes to generate results, so there 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
 | Microsoft Entra object ID or URL| Yes |This parameter takes in the user or URL you want to analyze. |
-| Lookback time| No |This parameter takes in the lookback time. Default is seven days. |
+| Lookback time| Yes |This parameter takes in the lookback time.  |
 | `workspaceId`| No |This parameter takes in a workspace identifier to limit the search to a single connected Microsoft Sentinel data lake workspace. |
 
 These tools return an identifier value that you can provide to the retrieve analysis tool as input.
