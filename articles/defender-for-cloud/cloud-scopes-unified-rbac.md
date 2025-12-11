@@ -96,8 +96,6 @@ Planning guidance:
 
 ## 1. Create cloud scopes
 
-Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Scopes**.
-
 Characteristics:
 
 - Unlimited scopes
@@ -106,6 +104,10 @@ Characteristics:
 - Membership isn't automatic; newly connected environments must be explicitly added
 
 ### Create a scope (wizard)
+
+Follow these steps to create a cloud scope.
+
+Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Scopes**.
 
 1. Select **Add cloud scope**.
    :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Create scope action." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
@@ -167,8 +169,6 @@ Navigation: In the [Defender portal](https://security.microsoft.com/), go to **S
    :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
    :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
-  
-
 1. Review and finish.
 
 ## 4. Use scope and environment filters
@@ -190,7 +190,6 @@ Behavior:
 - Users see only values they are authorized for
 - Device group filtering applies where device-centric data is relevant
 - Mixed experiences apply scope category contextually (for example: Recommendations: device groups affect Devices tab; cloud scopes affect Cloud tab)
-
 
 To access the Scope filter:
 
