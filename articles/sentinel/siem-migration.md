@@ -137,7 +137,7 @@ When you select a rule, the rules details side panel opens and you can view the 
 
 - If the associated data connector is installed and configured, select **Enable detection** to enable the detection rule.
 
-    :::image type="content" source="./media/siem-migration/enable-detection.png" alt-text="Screenshot of the Enable detection button in the rule details side panel.":::
+    :::image type="content" source="./media/siem-migration/enable-detection.png" alt-text="Screenshot of the Enable detection button in the rule details side panel." lightbox="./media/siem-migration/enable-detection.png":::
 
 - Select **More actions** > **Create manually** to open the analytics rules wizard so you can review and edit the rule before enabling it.
 - If the rule is already enabled, select **Edit** to open the analytics rules wizard to review and edit the rule.
