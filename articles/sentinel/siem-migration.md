@@ -127,7 +127,9 @@ After exporting the rules,
     :::image type="content" source="./media/siem-migration/rule-details.png" alt-text="Screenshot of the rule details side panel.":::
 
 - If the associated data connector is installed and configured, select **Enable detection** to enable the detection rule.
-- You can enable several rules at once by selecting the check boxes next to each rule you want to enable
+
+    :::image type="content" source="./media/siem-migration/enable-detection.png" alt-text="Screenshot of the Enable detection button in the rule details side panel.":::
+
 - Select **More actions** > **Create manually** to open the analytics rules wizard so you can review and edit the rule before enabling it.
 - If the rule is already enabled, select **Edit** to open the analytics rules wizard to review and edit the rule.
 
@@ -138,9 +140,13 @@ After exporting the rules,
     :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
 
 > [!TIP]
-> Instead of creating the rule manually from scratch, it can be simpler to enable the rule from the template and then edit it as needed.
+> Instead of creating the rule manually from scratch, it can be faster and simpler to enable the rule from the template and then edit it as needed.
 
 If the data connector isn't installed and configured to stream logs, *Enable detection* is disabled.
+
+- You can enable several rules at once by selecting the check boxes next to each rule you want to enable and then selecting **Enable selected detections** at the top of the page.
+
+    :::image type="content" source="./media/siem-migration/enable-multiple-rules.png" alt-text="Screenshot of the the list of rules in the detection tab with checkboxes next to them.":::
 
 The SIEM migration tool doesn't explicitly install any connectors or enable detection rules.
 
