@@ -67,19 +67,21 @@ After exporting the rules,
 
     :::image type="content" source="./media/siem-migration/set-up-new-siem.png" alt-text="Screenshot of the Setup your new SIEM option in the top right corner of the SOC Optimization screen.":::
 
-1. Select **Migrate from current SIEM**:
+1. Select **Migrate from Splunk**:
 
     :::image type="content" source="./media/siem-migration/migrate.png" alt-text="Screenshot of the Migrate from current SIEM option.":::
 
-1. Select **Migrate from Splunk**.
-
-    :::image type="content" source="./media/siem-migration/other-siem.png" alt-text="Screenshot of the Select Splunk or QRadar option.":::
-
-1. Upload the configuration data that [you exported from your current SIEM](#export-detection-rules-from-your-current-siem) and select **Next**.
+1. Upload the configuration data that [you exported from your current SIEM](#export-detection-rules-from-your-current-siem).
 
     :::image type="content" source="./media/siem-migration/upload-data.png" alt-text="Screenshot of the Upload file button to upload the exported configuration data.":::
 
-    The migration tool analyzes the export and identifies the number of data sources and detection rules in the file you provided. Use this information to confirm that you have the right export. If it doesn't look correct, select **Replace file** from the top right corner and upload a new export.
+1. Select **Next**.
+
+    :::image type="content" source="./media/siem-migration/config-data-loaded.png" alt-text="Screenshot of the Next button after uploading the file.":::
+
+    The migration tool analyzes the export and identifies the number of data sources and detection rules in the file you provided. Use this information to confirm that you have the right export.
+
+    If the data doesn't look correct, select **Replace file** from the top right corner and upload a new export.
 
     :::image type="content" source="./media/siem-migration/confirm-siem.png" alt-text="Screenshot of the confirmation screen showing the number of data sources and detection rules.":::
 
