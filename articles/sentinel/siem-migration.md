@@ -65,7 +65,7 @@ After exporting the rules,
 
 1. Go to `security.microsoft.com`.
 
-1. From the **SOC Optimization** blade, select **Set up your new SIEM**.
+1. From the **SOC Optimization** tab, select **Set up your new SIEM**.
 
     :::image type="content" source="./media/siem-migration/set-up-new-siem.png" alt-text="Screenshot of the Setup your new SIEM option in the top right corner of the SOC Optimization screen.":::
 
@@ -89,7 +89,7 @@ After exporting the rules,
 
 1. Select a workspace, then select **Next**.
 
-1. Select **Start analyzing** to confirm. The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, they are deleted and replaced by the new ones.
+1. Select **Start analyzing** to confirm. The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, they're deleted and replaced by the new ones.
 
     :::image type="content" source="./media/siem-migration/getting-ready.png" alt-text="Screenshot of the migration tool getting ready to analyze the rules.":::
 
