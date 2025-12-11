@@ -128,7 +128,7 @@ This solution includes the **MSBizApps-Configuration** watchlist, and requires u
 - **NetworkAddresses**
 - **TerminatedEmployees**
 
-For more information, see [Watchlists in Microsoft Sentinel](../watchlists.md) and [Create watchlists](../watchlists-create.md#upload-watchlist-created-from-a-template-preview).
+For more information, see [Watchlists in Microsoft Sentinel](../watchlists.md) and [Create watchlists](../watchlists-create.md#upload-a-watchlist-created-from-a-template-preview).
 
 ## Built-in parsers
 

@@ -243,7 +243,7 @@ To download one of the watchlist templates:
 
 1. Populate your local version of the file and save it locally as a CSV file.
 
-1. Follow the steps to [upload watchlist created from a template (Preview)](#upload-watchlist-created-from-a-template-preview).
+1. Follow the steps to [upload watchlist created from a template (Preview)](#upload-a-watchlist-created-from-a-template-preview).
 
 ## Deleted and recreated watchlists in Log Analytics view
 
