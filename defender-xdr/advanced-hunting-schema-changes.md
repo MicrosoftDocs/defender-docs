@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 11/27/2025
+ms.date: 12/10/2025
 ---
 
 # Advanced hunting schema - Naming changes
@@ -38,7 +38,7 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 - Queries that are saved elsewhere outside Microsoft Defender XDR
 
 ## November 2025
-- The Boolean field values in advanced hunting results will change from numeric (`1` and `0`) to textual (`True` and `False`) on January 25, 2026. While your queries and custom detection rules won't be affected by this change, you might want to update your automated processes (for example, scripts, playbooks, or integrations) parsing these values.
+- The Boolean field values in advanced hunting results will change from numeric (`1` and `0`) to textual (`True` and `False`) on February 25, 2026. While your queries and custom detection rules won't be affected by this change, you might want to update your automated processes (for example, scripts, playbooks, or integrations) parsing these values.
 
 
 - The [`AADSignInEventsBeta`](advanced-hunting-aadsignineventsbeta-table.md) and  [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) tables are being replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) and [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md), respectively. These changes are being made to remove the former tables' preview status and to align them with the existing product branding.

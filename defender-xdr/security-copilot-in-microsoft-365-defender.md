@@ -18,7 +18,7 @@ ms.topic: article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 04/28/2025
+ms.date: 12/08/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -90,7 +90,7 @@ Investigating devices involved in incidents can be a tasking job. To quickly ass
 
 Copilot helps security teams quickly assess and understand suspicious files with [file analysis](copilot-in-defender-file-analysis.md). Copilot provides a file's summary, including detection information, related file certificates, a list of API calls, and strings found in the file.
 
-:::image type="content" source="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
+:::image type="content" source="media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
 
 #### Investigate identities immediately
 
@@ -108,9 +108,15 @@ Security operations teams usually write reports to record important information,
 
 Copilot in Defender helps security teams proactively hunt for threats in their network by quickly building appropriate KQL queries.
 
+#### Hunt for threats from natural-language input
+
+The Threat Hunting Agent revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence. Read more about [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md).
+
+:::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
+
 #### Generate KQL queries from natural-language input
 
-Security teams who use advanced hunting to proactively hunt for threats in their network can now use a query assistant that converts any natural-language question, in the context of threat hunting, into a ready-to-run KQL query. The query assistant saves security teams time by generating a KQL query that can then be automatically run or further tweaked according to the analyst needs. Read more about the query assistant in [Security Copilot in advanced hunting](advanced-hunting-security-copilot.md).
+Security teams who use advanced hunting to proactively hunt for threats in their network can now use a query assistant that converts any natural-language question, in the context of threat hunting, into a ready-to-run KQL query. The query assistant saves security teams time by generating a KQL query that can then be automatically run or further tweaked according to the analyst needs. Read more about [Query assistant](advanced-hunting-security-copilot-query-assistant.md).
 
 :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
 
