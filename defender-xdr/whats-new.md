@@ -33,6 +33,7 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## December 2025
+- (Preview) Microsoft Security Copilot in Microsoft Defender now includes the Dynamic Threat Detection Agent, an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. [Learn more](dynamic-threat-detection-agent.md)
 - (GA) The [hunting graph](advanced-hunting-graph.md) in advanced hunting is now generally available. It also now has two new predefined threat scenarios that you can use to render your hunts as interactive graphs.
 - Advanced hunting now supports custom functions that use tabular parameters. With tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. [Learn more](advanced-hunting-custom-functions.md#create-custom-functions-with-tabular-parameters)
 

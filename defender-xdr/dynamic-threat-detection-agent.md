@@ -56,7 +56,8 @@ The Dynamic Threat Detection Agent runs automatically in the background. When it
 To view more details about the alert, select the alert title. The Dynamic Threat Detection Agent provides a summary and recommended actions in the alert page.
  
 >[!IMPORTANT]
->The summary and recommended actions are AI-generated, so make sure to review and verify them for accuracy.
+>- The Dynamic Threat Detection Agent is free to use during public preview. It starts to consume [Security Compute Units (SCUs)](/copilot/security/get-started-security-copilot#security-compute-units) when it becomes generally available.
+>- The summary and recommended actions are AI-generated, so review and verify them for accuracy.
 
 ## Next steps
 
