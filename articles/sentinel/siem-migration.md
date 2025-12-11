@@ -14,14 +14,12 @@ appliesto:
 
 # Migrate to Microsoft Sentinel with the SIEM migration experience
 
-Migrate your SIEM to Microsoft Sentinel for all your security monitoring use cases. Automated assistance from the SIEM Migration experience simplifies your migration.
+The SIEM migration tool analyzes Splunk detections, including custom detections, and recommends best‑fit Sentinel detections rules. It also provides recommendations for data connectors, both Microsoft and third-party connectors available in Content Hub to enable the recommend detections. Customers can track the migration by assigning the right status to each recommendation card.
 
 > [!NOTE]
 > The old migration tool is deprecated. This article describes the current SIEM migration experience.
 
 The SIEM Migration experience includes the following features:
-
-**Splunk**
 
 - The experience focuses on migrating Splunk security monitoring to Microsoft Sentinel and mapping out-of-the-box (OOTB) analytics rules wherever possible.
 - The experience supports migration of Splunk detections to Microsoft Sentinel analytics rules.
