@@ -38,9 +38,9 @@ To learn more about how correlation works in Microsoft Defender XDR, see [Alert 
 
 ## Prerequisites
 
-To exclude analytics rules from correlation, you need one of the following permissions:
+To exclude analytics rules from correlation, you need the following permissions:
 
-- **Microsoft Sentinel Contributor** Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections.
+**Microsoft Sentinel Contributor** Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections.
 
 ## How exclusion works
 
