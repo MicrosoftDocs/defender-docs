@@ -22,7 +22,7 @@ appliesto:
 - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Exclude analytics rules from correlation in Microsoft Defender XDR
+# Exclude analytics rules from correlation in Microsoft Defender XDR (preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -40,11 +40,7 @@ To learn more about how correlation works in Microsoft Defender XDR, see [Alert 
 
 To exclude analytics rules from correlation, you need one of the following permissions:
 
-- **Security settings (manage)** - Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
-- **Security Administrator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-administrator) can manage security settings in the Microsoft Defender portal and other portals and services.
-
-> [!NOTE]
-> Microsoft recommends using roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+- **Microsoft Sentinel Contributor** Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections.
 
 ## How exclusion works
 
@@ -106,8 +102,6 @@ For more information about using the Microsoft Defender XDR API, see [Microsoft 
 ## Important considerations
 
 Keep the following points in mind when using correlation exclusion:
-
-- The `#DONT_CORR#` tag is added to the *rule's* description field. Alert *descriptions* are not affected.
 
 - The correlation state always matches the tag. If you exclude a rule using the UI toggle and then manually remove the `#DONT_CORR#` tag from the description, the rule's correlation state reverts to *Correlation enabled*.
 
