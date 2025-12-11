@@ -100,46 +100,47 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### EKS/GKE
 
-The following script installs the Defender for Containers sensor (and removes any existing deployment, if one exists):
+1. Install the Defender for Containers sensor and remove any existing deployment, if one exists with the [install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678) script.
 
-[install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678)
+2. Set your kubeconfig context to the target cluster, with the command:
 
-Set your kubeconfig context to the target cluster, and run the script with the command:
+    ```azurecli
+    install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
+    ```
 
-```bash
-install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
-```
+    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values.
+    
+    `ARC_CLUSTER_RESOURCE_ID` is an optional parameter and should only be used for existing clusters that use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.
+     
+    For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
-For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+      > [!NOTE]
+      > To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. See [Connect your AWS account](quickstart-onboard-aws.md) or [Connect your GCP project](quickstart-onboard-gcp.md).
 
-- Set up a security connector for your AWS or GCP account
+      Locate your Azure resource ID and copy it.
 
-  > [!NOTE]
-  > To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. See [Connect your AWS account](quickstart-onboard-aws.md) or [Connect your GCP project](quickstart-onboard-gcp.md).
-
-- Get its Azure resource ID
-
-  > [!NOTE]
-  > To install the Helm chart on an EKS or GKE cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get this value.
-  >
-  >For example:
-  >
-  >```azurecli
-  >az resource show \
-  >  --name <connector-name> \
-  >  --resource-group <resource-group-name> \
-  >  --resource-type "Microsoft.Security/securityConnectors" \
-  >  --subscription <subscription-id> \
-  >  --query id -o tsv
-  >```
-  >
-  >In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
-
-Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use 'latest' or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
+      > [!NOTE]
+      > To install the Helm chart on an EKS or GKE cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get this value.
+      >
+      >For example:
+      >
+      >```azurecli
+      >az resource show \
+      >  --name <connector-name> \
+      >  --resource-group <resource-group-name> \
+      >  --resource-type "Microsoft.Security/securityConnectors" \
+      >  --subscription <subscription-id> \
+      >  --query id -o tsv
+      >```
+      >
+      >In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
 
 > [!NOTE]
 > This script might create a Log Analytics workspace in your Azure account.
+
+  Use `public` for the public preview releases (0.9.x). For `<VERSION>`, use 'latest' or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
+
+### Verify the installation
 
 Run the following command to check that the installation succeeded:
 
@@ -149,20 +150,7 @@ helm list --namespace mdc
 
 The STATUS field should read **deployed**.
 
-## Security rules for gated deployment
-
-Define security rules to control what can be deployed into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities.
-
-### Accessing security rules
-
-1. Go to the **Microsoft Defender for Cloud (MDC) Dashboard**.
-1. In the left navigation pane, select **Environment settings**.
-1. Select the **Security rules** tile.
-
-### Configuring vulnerability assessment rules
-
-1. In the Security rules page, go to **Vulnerability assessment** under the **Gated deployment** section.
-1. Create or update your security rules.
+## Configure security rules for gated deployment
 
 > [!IMPORTANT]
 > For Helm installations:
@@ -172,18 +160,26 @@ Define security rules to control what can be deployed into your Kubernetes clust
 >
 > :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
 
+Define security rules to control what can be deployed into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities. 
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Go to the **Defender for Cloud** > **Environment settings**.
+1. Select **Security rules**.
+1. Select **Gated deployment** > **Vulnerability assessment**.
+1. Select a rule to edit it or select **+ Add rule** to create a new one.
+
 ## Handle existing recommendations
 
 > [!NOTE]
 > If you use Helm to set up the sensor, **ignore** the existing recommendations about provisioning the sensor.
 
-**For AKS**:
+### AKS
 
 [Azure Kubernetes Service clusters should have Defender profile enabled - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9/showSecurityCenterCommandBar~/false)
 
 :::image type="content" source="media/deploy-helm/recommendation-aks.png" alt-text="Screenshot of the Azure portal that shows the Defender profile recommendation for AKS. The screenshot highlights the recommendation to enable the Defender profile." lightbox="media/deploy-helm/recommendation-aks.png":::
 
-**For multicloud**:
+### Multicloud
 
 [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6/showSecurityCenterCommandBar~/false)
 
