@@ -42,9 +42,8 @@ Now you're ready to set up the Defender for Containers sensor with Helm.
 ## Step 2: Install the sensors Helm chart
 
 ### For AKS Automatic Only
-For [AKS Automatic](%5Bhttps://learn.microsoft.com/en-us/azure/aks/intro-aks-automatic%5D(/azure/aks/intro-aks-automatic)) you'll need to run the following:
-For AKS Automatic you'll need to run the following:
 
+Run the following command for AKS Automatic:
 
 ```bash
 # Update Azure CLI to the latest version 
