@@ -1,11 +1,11 @@
 ---
-title: Baseline Email Protection for cloud mailboxes
+title: Built-in security features for all cloud mailboxes
 f1.keywords: 
   - NOCSH
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 07/21/2025
+ms.date: 12/10/2025
 audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -15,20 +15,20 @@ ms.localizationpriority: medium
 ms.assetid: 1270a65f-ddc3-4430-b500-4d3a481efb1e
 ms.custom: 
   - seo-marvel-apr2020
-description: Learn how Baseline Email Protection helps protect cloud mailboxes in your Microsoft 365 organization.
+description: Learn how the built-in security features for all cloud mailboxes help protect your organization.
 ms.service: defender-office-365
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Baseline Email Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Baseline Email Protection for cloud mailboxes
+# Built-in security features for all cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Baseline Email Protection in Microsoft 365 protect your organization from spam, malware, phishing and other email threats. These protections are included in all organizations with cloud mailboxes.
+The built-in security features for all cloud mailboxes help protect your Microsoft 365 organization from spam, malware, phishing and other email threats. These protections are included in all organizations with cloud mailboxes.
 
 These protections are on by default via the default threat policies for:
 
@@ -40,18 +40,18 @@ The default threat policies for these features apply to all recipients. You can'
 
 You can customize the security settings in the default threat policies, create custom threat policies, or better yet, turn on and add all recipients to the Standard and/or Strict preset security policies. For complete information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 
-The rest of this article explains how Baseline Email Protection works and the included features.
+The rest of this article describes the built-in security features for all cloud mailboxes and how they work.
 
 > [!TIP]
-> Baseline Email Protection is also available as a separate subscription to protect on-premises email environments (not just Microsoft Exchange). For more information, see [Baseline Email Protection for on-premises organizations](/exchange/standalone-eop/standalone-eop).
+> The built-in security features for all cloud mailboxes are also available in a standalone subscription to protect on-premises email environments (not just Microsoft Exchange). For more information, see [Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
 
 <a name='how-the-default-email-protections-for-cloud-mailboxes-work'></a>
 
-## How Baseline Email Protection works
+## How the built-in security features for all cloud mailboxes work
 
-The following diagram shows how Baseline Email Protection works.
+The following diagram shows how the built-in security features for all cloud mailboxes work.
 
-:::image type="content" source="media/tp_emailprocessingineopt3.png" alt-text="A diagram of email from the internet or Customer feedback entering Microsoft 365 and passing through Baseline Email Protection." lightbox="media/tp_emailprocessingineopt3.png":::
+:::image type="content" source="media/tp_emailprocessingineopt3.png" alt-text="A diagram of email from the internet or Customer feedback entering Microsoft 365 and passing through the built-in security features for all cloud mailboxes." lightbox="media/tp_emailprocessingineopt3.png":::
 
 1. Incoming messages in Microsoft 365 initially pass through connection filtering, which checks the sender's reputation. Most spam is rejected at this point. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).
 
@@ -91,9 +91,9 @@ The following communication channels are available for issues and new features i
 
 <a name='features-in-the-default-email-protections-for-cloud-mailboxes'></a>
 
-### Features in Baseline Email Protection
+### Security features for cloud mailboxes
 
-This section provides a high-level overview of the main features available in Baseline Email Protection.
+This section provides a high-level overview of the main built-in security features for all cloud mailboxes.
 
 For information about requirements, important limits, and feature availability across all subscription plans, see the [Exchange Online Protection service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
 

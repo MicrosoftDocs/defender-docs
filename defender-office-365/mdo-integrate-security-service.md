@@ -14,7 +14,7 @@ search.appverid:
 ms.collection: 
   - tier1
 ms.custom:
-description: Learn about the considerations for integrating non-Microsoft security services with Baseline Email Protection and Microsoft Defender for Office 365.
+description: Learn about the considerations for integrating non-Microsoft security services with the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 07/07/2025
 appliesto:

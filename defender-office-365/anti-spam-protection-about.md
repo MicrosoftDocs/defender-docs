@@ -21,7 +21,7 @@ description: Admins can learn about the anti-spam settings and filters that help
 ms.service: defender-office-365
 ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Baseline Email Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -64,7 +64,7 @@ To configure the default anti-spam policy, and to create, modify, and remove cus
 >   - High confidence phishing messages are still filtered. Other filters in Microsoft 365 aren't affected (for example, messages are always scanned for malware).
 >   - If you need to bypass spam filtering for SecOps mailboxes or phishing simulations, don't use mail flow rules. For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 >
-> - In hybrid environments where Baseline Email Protection provides cloud protection for on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+> - In hybrid environments where the built-in security features for all cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 >
 >   After you manually create the rule in Microsoft 365 to match the rule in on-premises Exchange, the rule replicates in hybrid environments.
 

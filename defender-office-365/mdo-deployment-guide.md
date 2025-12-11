@@ -45,7 +45,7 @@ The steps to configure Defender for Office 365 are described in the following di
 
 ## Requirements
 
-Baseline Email Protection is included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
+The built-in security features are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
 
 ### Roles and permissions
 
@@ -105,7 +105,7 @@ As you can probably imagine, a lot of threat policies for email and collaboratio
   - The Standard preset security policy.
   - Built-in protection.
 
-  The Standard and Strict preset security policies are turned off by default until you turn them on. You specify recipient conditions and exceptions (users, group members, domains, or all recipients) for Baseline Email Protection and protection features in Defender for Office 365 within the Standard and Strict preset security policies.
+  The Standard and Strict preset security policies are turned off by default until you turn them on. You specify recipient conditions and exceptions (users, group members, domains, or all recipients) for the built-in security features for all cloud mailboxes and protection features in Defender for Office 365 within the Standard and Strict preset security policies.
 
   Built-in protection in Defender for Office 365 is on by default to provides basic Safe Attachments and Safe Links protection for all recipients. You can specify recipient exceptions to identify users who don't get the protection.
 
@@ -119,7 +119,7 @@ The previous information and the threat policies involved are summarized in the 
 
 |&nbsp;|Default threat policies|Preset security policies|Custom threat policies|
 |---|:---:|:---:|:---:|
-|**Threat policies in Baseline Email Protection**:||||
+|**Threat policies in the built-in security features for all cloud mailboxes**:||||
 |&nbsp;&nbsp;[Anti-malware](anti-malware-policies-configure.md)|✔|✔|✔|
 |&nbsp;&nbsp;[Anti-spam](anti-spam-policies-configure.md)|✔|✔|✔|
 |&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings)|✔|✔|✔|
@@ -143,7 +143,7 @@ The previous information and the threat policies involved are summarized in the 
 
 ⁴ The Built-in protection preset security policy (Safe Attachments and Safe Links protection in Defender for Office 365) is the only preset security policy that's on by default.
 
-⁵ For the Standard and Strict preset security policies, you can configure separate recipient conditions and optional exceptions for Baseline Email Protection and protections in Defender for Office 365. For Built-in protection in Defender for Office 365, you can only configure recipient exceptions from protection.
+⁵ For the Standard and Strict preset security policies, you can configure separate recipient conditions and optional exceptions for the built-in security features for all cloud mailboxes and protections in Defender for Office 365. For Built-in protection in Defender for Office 365, you can only configure recipient exceptions from protection.
 
 ⁶ The only customizable security settings in preset security policies are the entries and optional exceptions for user impersonation protection and domain impersonation protection in the Standard and Strict preset security policies in Defender for Office 365.
 
