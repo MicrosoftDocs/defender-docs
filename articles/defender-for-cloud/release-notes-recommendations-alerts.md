@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 11/30/2025
+ms.date: 12/11/2025
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -48,7 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
-| December 11, 2025  | Alert          | Upcoming Deprecation | The following alerts are going to be deprecated as part of our ongoing quality and accuracy improvement process: <br>\* AppServices_AnomalousPageAccess<br>\* AppServices_CurlToDisk<br>\* AppServices_WpThemeInjection<br>\* AppServices_SmartScreen<br>\* AppServices_ScanSensitivePage<br>\* AppServices_CommandlineSuspectDomain<br>\* AzureDNS_ThreatIntelSuspectDomain<br>\* AppServices_FilelessAttackBehaviorDetection<br>\* AppServices_FilelessAttackTechniqueDetection<br>\* AppServices_FilelessAttackToolkitDetection<br>\* AppServices_PhishingContent<br>\* AppServices_ProcessWithKnownSuspiciousExtension<br><br>These alerts are being retired as part of a quality improvement process and replaced by newer, more advanced alerts that provide greater accuracy and improved threat detection capabilities. This update ensures enhanced security coverage and reduced noise. |
+| December 11, 2025  | Alert          | Deprecated | The following alerts are now deprecated. <br>\* AppServices_AnomalousPageAccess<br>\* AppServices_CurlToDisk<br>\* AppServices_WpThemeInjection<br>\* AppServices_SmartScreen<br>\* AppServices_ScanSensitivePage<br>\* AppServices_CommandlineSuspectDomain<br>\* AzureDNS_ThreatIntelSuspectDomain<br>\* AppServices_FilelessAttackBehaviorDetection<br>\* AppServices_FilelessAttackTechniqueDetection<br>\* AppServices_FilelessAttackToolkitDetection<br>\* AppServices_PhishingContent<br>\* AppServices_ProcessWithKnownSuspiciousExtension<br><br>These alerts are being retired as part of a quality improvement process and replaced by newer, more advanced alerts that provide greater accuracy and improved threat detection capabilities. This update ensures enhanced security coverage and reduced noise. |
 | December 3, 2025 | Recommendation | Upcoming deprecation (30 day notice) | The following recommendation is set for deprecation 30 days from now: `Microsoft Defender for SQL status should be protected for Arc-enabled SQL Servers` for Defender for SQL Servers on Machines plan. |
 | December 1, 2025  | Recommendation | Preview              | [(Preview) Code Signing should be enabled on Lambda](recommendations-reference-serverless-protection.md#preview-code-signing-should-be-enabled-on-lambda) |
 | December 1, 2025  | Recommendation | Preview              | [(Preview) Security mechanism should be used on lambda function API Gateway](recommendations-reference-serverless-protection.md#preview-security-mechanism-should-be-used-on-lambda-function-api-gateway) |
