@@ -12,7 +12,7 @@ This article provides a list of cloud discovery errors and resolution recommenda
 
 Even after Discovery is set up, customers might continue hardening the Operating System in order to meet compliance standards. However, this action might cause interference with the containerization service itself.
 
-## Microsoft Defender for Endpoint integration
+## Microsoft Defender for Endpoint integration errors
 
 If you integrated Microsoft Defender for Endpoint with Defender for Cloud Apps, and you don't see the results of the integration.
 
@@ -36,6 +36,8 @@ You can track the processing of cloud discovery logs using the governance log. T
 |Unsupported log type|When you select **Data source = Other (unsupported)**, the log isn't parsed. Instead, it's sent for review to the Defender for Cloud Apps technical team.|The Defender for Cloud Apps technical team builds a dedicated parser per each data source. Most popular data sources are [already supported](set-up-cloud-discovery.md). Each upload of an unsupported data source is reviewed and added to the pipeline for new data source parsers. New parser notifications are published as part of the Defender for Cloud Apps [release notes](release-notes.md).|
 
 ## Log collector errors
+
+The [Log collector Diagnostic script](https://github.com/microsoft/Microsoft-Defender-for-Cloud-Apps/tree/main/Sample%20scripts/Log-Collector-Diag-Script) automates the collection and compression of logs and diagnostic data for troubleshooting Log Collector containers on Linux (Docker/Podman) to improve workflow efficiency. If you need to contact support, run the script and share the generated log bundle for faster case resolution.
 
 |Issue|Resolution|
 |----|----|

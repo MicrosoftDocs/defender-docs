@@ -68,14 +68,14 @@ Windows Server 2012 and Windows Server 2012 R2 reached extended end of support o
 |SSL (\*.atp.azure.com)   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|Alternately, [configure access through a proxy](configure-proxy.md).|
 |Internal ports          | | | | |  |
 |DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
-|Netlogon  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|  |
+|Netlogon  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network (DCs, ADFS, ADCS, and Entra Connect)|  |
 |RADIUS         |UDP      |1813|RADIUS         |Defender for Identity sensor      |  |
 |Localhost port    | | | | |Required for the sensor service updater. By default, *localhost* to *localhost* traffic is allowed unless a custom firewall policy blocks it.|
 |SSL|TCP      |444 |Sensor service|Sensor updater service            |   |
 |Network Name Resolution (NNR) ports    | | | | |To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required. |
-|NTLM over RPC |TCP      |Port 135         |Defender for Identity sensor|All devices on network|  |
-|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network|  |
-|RDP      |TCP      |3389 |Defender for Identity sensor|All devices on network|Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|
+|NTLM over RPC |TCP      |Port 135         |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|  |
+|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|  |
+|RDP      |TCP      |3389 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|
 
 If you're working with [multiple forests](multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
 
@@ -106,24 +106,11 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure Windows auditing
+## Configure Windows event auditing
 
-Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
-Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
-
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
-
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-> [!NOTE]
-> The Active Directory PowerShell module is required only when configuring Defender for Identity on domain controllers. It isn’t required on ADCS servers running the Certification Authority Role Service.
-
-For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
- 
+[Configure Windows event auditing](configure-windows-event-collection.md) on your domain controller to support Defender for Identity detections in the Defender portal or using PowerShell.
 
 ## Test your prerequisites
 

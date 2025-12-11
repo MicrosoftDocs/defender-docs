@@ -61,7 +61,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
 ## Use the Microsoft Defender portal to create outbound spam policies
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 2. On the **Anti-spam policies** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create policy** and then select **Outbound** from the dropdown list to start the new outbound spam policy wizard.
 
@@ -87,8 +87,8 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
    You can use a condition only once, but the condition can contain multiple values:
 
-   - Multiple **values** of the **same condition** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). If the recipient matches **any** of the specified values, the policy is applied to them.
-   - Different **types of conditions** use AND logic. The recipient must match **all** of the specified conditions for the policy to apply to them. For example, you configure a condition with the following values:
+   - Multiple **values** of the **same condition** use OR logic (for example, _\<sender1\>_ or _\<sender2\>_). If the recipient matches **any** of the specified values, the policy is applied to them.
+   - Different **types of conditions** use AND logic. The sender must match **all** of the specified conditions for the policy to apply to them. For example, you configure a condition with the following values:
      - Users: `romain@contoso.com`
      - Groups: Executives
 
@@ -98,8 +98,8 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      You can use an exception only once, but the exception can contain multiple values:
 
-     - Multiple **values** of the **same exception** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). If the recipient matches **any** of the specified values, the policy isn't applied to them.
-     - Different **types of exceptions** use OR logic (for example, _\<recipient1\>_ or _\<member of group1\>_ or _\<member of domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
+     - Multiple **values** of the **same exception** use OR logic (for example, _\<sender1\>_ or _\<sender2\>_). If the recipient matches **any** of the specified values, the policy isn't applied to them.
+     - Different **types of exceptions** use OR logic (for example, _\<sender1\>_ or _\<member of group1\>_ or _\<sender domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
 
    When you're finished on the **Users, groups, and domains**, select **Next**.
 
@@ -173,7 +173,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
 ## Use the Microsoft Defender portal to view outbound spam policy details
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 On the **Anti-spam policies** page, the following properties are displayed in the list of policies:
 
@@ -197,7 +197,7 @@ Select an outbound spam policy by clicking anywhere in the row other than the ch
 
 ## Use the Microsoft Defender portal to take action on outbound spam policies
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 On the **Anti-spam policies** page, select the outbound spam policy from the list by clicking anywhere in the row other than the check box next to the name. Some or all following actions are available in the details flyout that opens:
 

@@ -3,8 +3,8 @@ title: Stream Microsoft Defender XDR events to your Storage account
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account.
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
