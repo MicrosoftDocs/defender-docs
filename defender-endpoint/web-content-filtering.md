@@ -75,7 +75,7 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 1. Sign into the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced Features**.
+2. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **General** \> **Advanced Features**.
 
 3. Scroll down until you see **Web content filtering**.
 
@@ -83,7 +83,7 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 ### Configure web content filtering policies
 
-Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Web content filtering** (under **Rules**).
+Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **System** \> **Settings** \> **Endpoints** \> **Web content filtering** (under **Rules**).
 
 Policies can be deployed to block any of the following parent or child categories:
 
@@ -103,7 +103,7 @@ Policies can be deployed to block any of the following parent or child categorie
 
 To add a new policy, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **System** \> **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
 
 2. Specify a name.
 
@@ -137,7 +137,7 @@ It's possible to override the blocked category in web content filtering to allow
 
 To define an Allow indicator, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** \> **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
 
 2. Enter the domain of the site.
 
