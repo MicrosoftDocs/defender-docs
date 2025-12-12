@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to set up an Azure Logic App using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools  
 author: poliveria
 ms.topic: how-to
-ms.date: 12/11/2025
+ms.date: 12/12/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
@@ -51,11 +51,11 @@ To install a preexisting logic app template:
 
 When you create and run a playbook, insights from the entity analyzer appear as comments within an incident's details:
 
-- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK technqniues](https://attack.mitre.org/), a list of malicious IP addresses the user signed in from, and a few suspicious user agents the user's activity originated from.
+- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK techniques](https://attack.mitre.org/), a list of malicious IP addresses the user signed in from, and a few suspicious user agents the user's activity originated from.
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-classification.png" alt-text="Screenshot of the entity analyzer tool incident classification and evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-classification.png":::
 
-- The following screenshot shows the rest supporting evidence (the remaining suspicious agents and a list of anomalous behavior). By providing these pieces of evidence, the analyzer can make security analysts, who typically have to query and analyze these themselves, feel more comfortable trusting its classification. The analyzer also gives recommendations to remediate the account compromise, and a list of data sources it used during analysis.
+- The following screenshot shows the rest of the supporting evidence (the remaining suspicious agents and a list of anomalous behavior). By providing these pieces of evidence, the analyzer can make security analysts, who typically have to query and analyze these themselves, feel more comfortable trusting its classification. The analyzer also gives recommendations to remediate the account compromise, and a list of data sources it used during analysis.
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-recommendation.png" alt-text="Screenshot of the entity analyzer tool evidence and recommendations added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-recommendation.png":::
 
