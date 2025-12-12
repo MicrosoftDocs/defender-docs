@@ -4,8 +4,8 @@ description: Learn about the built-in security content provided by the Microsoft
 author: batamig
 ms.author: bagol
 ms.reviewer: Ankur Kushwaha
-ms.topic: conceptual
-ms.date: 7/7/2025
+ms.topic: article
+ms.date: 12/12/2025
 ms.custom: sfi-ga-nochange
 
 
