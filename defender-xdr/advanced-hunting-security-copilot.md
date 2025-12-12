@@ -49,7 +49,8 @@ You can only use one capability at a time. By default, the Threat Hunting Agent 
 ![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Agent mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
 
 >[!NOTE]
-> Switching between modes resets your conversation with Security Copilot. 
+>- Switching between modes is only available in specific user environments. 
+>- Switching between modes resets your conversation with Security Copilot. 
 
 
 ## Scope of Security Copilot in advanced hunting
