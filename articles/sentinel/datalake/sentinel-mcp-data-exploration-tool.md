@@ -116,7 +116,7 @@ While this tool automatically polls for a few minutes until results are ready, i
 
     If you don't have any of these tables, `analyze_url_entity` generates a response with a disclaimer that lists the tables you didn't onboard, along with links to their corresponding onboarding documentation.
 
-- Running multiple instances of the entity analyzer at the same time can increase latency for each run, and might cause timeouts. 
+- Running multiple instances of the entity analyzer at the same time can increase latency for each run. To prevent timeouts, start by running a maximum of five analyses at once and then adjust this number as needed based on how the analyzer runs in your organization.
 
 ## Sample prompts
 

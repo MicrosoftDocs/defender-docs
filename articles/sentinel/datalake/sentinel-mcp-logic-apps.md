@@ -55,7 +55,7 @@ When you create and run a playbook, insights from the entity analyzer appear as 
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-classification.png" alt-text="Screenshot of the entity analyzer tool incident classification and evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-classification.png":::
 
-- The following screenshot shows the rest of the supporting evidence (the remaining suspicious agents and a list of anomalous behavior). By providing these pieces of evidence, the analyzer can make security analysts, who typically have to query and analyze these themselves, feel more comfortable trusting its classification. The analyzer also gives recommendations to remediate the account compromise, and a list of data sources it used during analysis.
+- The following screenshot shows the rest of the supporting evidence (the remaining suspicious user agents and a list of anomalous behavior). By providing these pieces of evidence, the analyzer can make security analysts, who typically have to query and analyze these themselves, feel more comfortable trusting its classification. The analyzer also gives recommendations to remediate the account compromise, and a list of data sources it used during analysis.
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-recommendation.png" alt-text="Screenshot of the entity analyzer tool evidence and recommendations added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-recommendation.png":::
 
