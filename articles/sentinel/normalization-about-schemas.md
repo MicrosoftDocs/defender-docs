@@ -116,7 +116,7 @@ Each schema field has a type. Some have built-in, Log Analytics types, such as `
 |**SHA512**     |   String      |  128-hex characters.       |
 |**ConfidenceLevel**     |   Integer      |  A confidence level normalized to the range of 0 to a 100.       |
 |**RiskLevel**     |   Integer      |  A risk level normalized to the range of 0 to a 100.       |
-|**SchemaVersion** | String | An ASIM schema version in the format <major>.<minor>.<sub-minor> |
+|**SchemaVersion** | String | An ASIM schema version in the format `<major>.<minor>.<sub-minor>` |
 | **DnsQueryClassName** | String | The [DNS class name](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml).|
 | **Username** | String | A simple or domain qualified username | 
 

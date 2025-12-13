@@ -20,8 +20,6 @@ The network normalization schema can represent any type of an IP network session
 
 For more information about normalization in Microsoft Sentinel, see [Normalization and the Advanced Security Information Model (ASIM)](normalization.md).
 
-This article describes version 0.2.x of the network normalization schema. [Version 0.1](normalization-schema-v1.md) was released before ASIM was available and doesn't align with ASIM in several places. For more information, see [Differences between network normalization schema versions](normalization-schema-v1.md#changes).
-
 ## Parsers
 
 For more information about ASIM parsers, see the [ASIM parsers overview](normalization-parsers-overview.md).
@@ -59,9 +57,9 @@ The following filtering parameters are available:
 | **endtime** | datetime | Filter only network sessions that *started* running at or before this time. |
 | **srcipaddr_has_any_prefix** | dynamic | Filter only network sessions for which the [source IP address field](#srcipaddr) prefix is in one of the listed values. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.|
 | **dstipaddr_has_any_prefix** | dynamic | Filter only network sessions for which the [destination IP address field](#dstipaddr) prefix is in one of the listed values. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.|
-| **ipaddr_has_any_prefix** | dynamic | Filter only network sessions for which the [destination IP address field](#dstipaddr) or [source IP address field](#srcipaddr) prefix is in one of the listed values. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.<br><br>The field [ASimMatchingIpAddr](normalization-common-fields.md#asimmatchingipaddr) is set with the one of the values `SrcIpAddr`, `DstIpAddr`, or `Both` to reflect the matching fields or fields. |
+| **ipaddr_has_any_prefix** | dynamic | Filter only network sessions for which the [destination IP address field](#dstipaddr) or [source IP address field](#srcipaddr) prefix is in one of the listed values. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.<br><br>The field [ASimMatchingIpAddr](#asimmatchingipaddr) is set with the one of the values `SrcIpAddr`, `DstIpAddr`, or `Both` to reflect the matching fields or fields. |
 | **dstportnumber** | Int | Filter only network sessions with the specified destination port number. |
-| **hostname_has_any** | dynamic/string | Filter only network sessions for which the [destination hostname field](#dsthostname) has any of the values listed. The length of the list is limited to 10,000 items.<br><br> The field [ASimMatchingHostname](normalization-common-fields.md#asimmatchinghostname) is set with the one of the values `SrcHostname`, `DstHostname`, or `Both` to reflect the matching fields or fields. |
+| **hostname_has_any** | dynamic/string | Filter only network sessions for which the [destination hostname field](#dsthostname) has any of the values listed. The length of the list is limited to 10,000 items.<br><br> The field [ASimMatchingHostname](#asimmatchinghostname) is set with the one of the values `SrcHostname`, `DstHostname`, or `Both` to reflect the matching fields or fields. |
 | **dvcaction** | dynamic/string | Filter only network sessions for which the [Device Action field](#dvcaction) is any of the values listed. | 
 | **eventresult** | String | Filter only network sessions with a specific **EventResult** value. |
 
