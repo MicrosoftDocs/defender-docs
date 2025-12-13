@@ -118,7 +118,7 @@ The following list mentions fields that have specific guidelines for Web Session
 | **EventResult** | Mandatory | Enumerated | Describes the event result, normalized to one of the following values: <br> - `Success` <br> - `Partial` <br> - `Failure` <br> - `NA` (not applicable) <br><br>For an HTTP session, `Success` is defined as a status code lower than `400`, and `Failure` is defined as a status code higher than `400`. For a list of HTTP status codes, refer to [W3 Org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).<br><br>The source may provide only a value for the [EventResultDetails](#eventresultdetails)  field, which must be analyzed to get the  **EventResult**  value. |
 | <a name="eventresultdetails"></a>**EventResultDetails** | Recommended | Enumerated | The HTTP status code as defined by [The World Wide Web Consortium](https://www.w3.org/Protocols/HTTP/HTRESP.html) <br><br>**Note**: The value may be provided in the source record using different terms, which should be normalized to these values. The original value should be stored in the **EventOriginalResultDetails** field.|
 | **EventSchema** | Mandatory | Enumerated | The name of the schema documented here is `WebSession`. |
-| **EventSchemaVersion**  | Mandatory   | String     | The version of the schema. The version of the schema documented here is `0.2.6`         |
+| **EventSchemaVersion**  | Mandatory   | SchemaVersion (String) | The version of the schema. The version of the schema documented here is `0.2.7`         |
 | **Dvc** fields|        |      | For Web Session events,  device fields refer to the system reporting the Web Session event. This is typically an intermediary device for `HTTPSession` events, and the destination web or application server for `WebServerSession` and `ApiRequest` events. |
 
 
@@ -175,9 +175,18 @@ The following are additional fields that are specific to web sessions:
 | **FileSHA256** | Optional | SHA256 | For HTTP uploads, the SHA256 hash of the uploaded file.<br><br>Example:<br>`e81bb824c4a09a811af17deae22f22dd`<br>`2e1ec8cbb00b22629d2899f7c68da274` |
 | **FileSHA512** | Optional | SHA512 | For HTTP uploads, the SHA512 hash of the uploaded file. |
 | <a name="hash"></a>**Hash** | Alias || Alias to the available Hash field. | 
-| **FileHashType** | Optional | Enumerated | The type of the hash in the [Hash](#hash) field. Possible values include: `MD5`, `SHA1`, `SHA256`, and `SHA512`. |
+| **HashType** | Conditional | Enumerated | The type of the hash in the [Hash](#hash) field. Possible values include: `MD5`, `SHA1`, `SHA256`, and `SHA512`. |
 | **FileSize** | Optional | Long | For HTTP uploads, the size in bytes of the uploaded file. |
 | **FileContentType** | Optional | String | For HTTP uploads, the content type of the uploaded file. |
+| **HttpCookie** | Optional | String | The content of the HTTP cookie header sent from the client to the server, containing name-value pairs of session data.<br><br>Example: `session_id=abc123; user_pref=dark_mode` |
+| **HttpIsProxied** | Optional | Boolean | Indicates whether the HTTP request was sent through a proxy server.<br><br>Example: `true` |
+| **HttpRequestBodyBytes** | Optional | Long | The size of the HTTP request body in bytes, not including headers.<br><br>Example: `1024` |
+| **HttpRequestCacheControl** | Optional | String | The content of the HTTP Cache-Control request header, specifying caching directives from the client.<br><br>Example: `no-cache` |
+| **HttpRequestHeaderCount** | Optional | Integer | The number of HTTP headers included in the request.<br><br>Example: `12` |
+| **HttpResponseBodyBytes** | Optional | Long | The size of the HTTP response body in bytes, not including headers.<br><br>Example: `8192` |
+| **HttpResponseCacheControl** | Optional | String | The content of the HTTP Cache-Control response header, specifying caching directives from the server.<br><br>Example: `max-age=3600, public` |
+| **HttpResponseExpires** | Optional | String | The content of the HTTP Expires response header, indicating when the response content expires.<br><br>Example: `Thu, 01 Dec 2024 16:00:00 GMT` |
+| **HttpResponseHeaderCount** | Optional | Integer | The number of HTTP headers included in the response.<br><br>Example: `15` |
 
 
 ### Other fields
@@ -193,6 +202,9 @@ The following are the changes in version 0.2.5 of the schema:
 
 The following are the changes in version 0.2.6 of the schema:
 - The type of FileSize was changed from Integer to Long.
+
+The following are the changes in version 0.2.7 of the schema:
+- Added the fields `HttpCookie`, `HttpIsProxied`, `HttpRequestBodyBytes`, `HttpRequestCacheControl`, `HttpRequestHeaderCount`, `HttpResponseBodyBytes`, `HttpResponseCacheControl`, `HttpResponseExpires`, and `HttpResponseHeaderCount`.
 
 ## Next steps
 
