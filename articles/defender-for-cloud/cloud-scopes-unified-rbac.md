@@ -138,11 +138,11 @@ If no device groups or unified RBAC roles exist yet, the wizard may be skipped u
 ### Activation & bulk assignment wizard
 
 1. When prompted by a banner, select **Activate cloud scopes** to run the wizard.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Activation wizard start." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Screenshot of the activation wizard start screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
 1. Set permissions for roles assigned through cloud scopes.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Role-to-scope assignment." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Screenshot of the role-to-scope assignment screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
 1. Finish activating cloud scopes assignment.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Screenshot of the activation approval screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
 
 ## 3. Define unified RBAC roles and assignments
 
@@ -155,7 +155,7 @@ Navigation: In the [Defender portal](https://security.microsoft.com/), go to **S
 1. Choose permission groups (select one or both):
    * **Security operations**: incidents, alerts, and cloud inventory
    * **Security posture**: recommendations, vulnerability management, security score, exposure / posture features
-   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Screenshot of the role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
 1. Add an assignment. 
    * Assign users/groups
    * Select data sources: All / MDC / Exposure Management (XSPM)
@@ -166,8 +166,8 @@ Navigation: In the [Defender portal](https://security.microsoft.com/), go to **S
    > [!NOTE]
    > For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
 
-   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
-   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Screenshot of the data source selection screen." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Screenshot of the scope selection screen." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
 1. Review and finish.
 
@@ -217,9 +217,9 @@ To access the Environment filter:
 
 1. Navigate to the [Defender for Cloud Overview dashboard](https://security.microsoft.com/cloud-overview).
 1. Select **Environment filter**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Screenshot of the authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
 1. Apply your desired filters.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Screenshot of the environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
 
 ## 5. Ongoing management
 
