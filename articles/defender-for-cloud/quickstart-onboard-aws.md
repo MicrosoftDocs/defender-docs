@@ -29,7 +29,7 @@ The architecture of the authentication process across clouds includes:
 
 :::image type="content" source="media/quickstart-onboard-aws/architecture-authentication-across-clouds.png" alt-text="Diagram showing architecture of authentication process across clouds.":::
 
-Defender for Cloud CSPM service acquires an Microsoft Entra token with a validity lifetime of one hour, signed by Microsoft Entra ID using the RS256 algorithm.
+Defender for Cloud CSPM service acquires a Microsoft Entra token with a validity lifetime of one hour, signed by Microsoft Entra ID using the RS256 algorithm.
 
 The Microsoft Entra token is exchanged for AWS short-term credentials, and Defender for Cloud's CSPM service assumes the CSPM IAM role (assumed by using web identity).
 
