@@ -803,7 +803,7 @@
         href: configure-real-time-protection-microsoft-defender-antivirus.md
       - name: Configure remediation for Microsoft Defender Antivirus detections
         href: configure-remediation-microsoft-defender-antivirus.md
-      - name: Configure Microsoft Defender Antivirus scans
+      - name: About scheduled Microsoft Defender Antivirus scans
         href: schedule-antivirus-scans.md
         items:
         - name: Schedule scans using Intune
