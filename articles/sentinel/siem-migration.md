@@ -29,7 +29,7 @@ The SIEM Migration experience includes the following features:
 
 - Microsoft Sentinel in Microsoft Defender portal
 - At least Contributor permissions in the Microsoft Sentinel workspace
-- <a href="https://learn.microsoft.com/copilot/security/get-started-security-copilot" target="_blank">Security Copilot</a> enabled in your tenant with at least a [workspace operator role](/copilot/security/authentication#assign-security-copilot-access) assigned
+- <a href="/copilot/security/get-started-security-copilot" target="_blank">Security Copilot</a> enabled in your tenant with at least a [workspace operator role](/copilot/security/authentication#assign-security-copilot-access) assigned
 
 > [!NOTE]
 > Though you need [Security Copilot](https://securitycopilot.microsoft.com/) enabled in your tenant, it doesn't consume any SCUs so it doesn't incur additional costs. To ensure you don't incur any unintentional costs after you set it up, go to **Manage workspace** > **Usage monitoring**, set SCUs to zero, and make sure use overage units is disabled.
