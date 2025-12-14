@@ -81,7 +81,7 @@ To summarize an incident:
 
 1. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
+   :::image type="content" source="media/security-copilot-m365d-incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
 
 ### Manage Copilot incident summaries settings (preview)
 

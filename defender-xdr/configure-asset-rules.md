@@ -2,8 +2,8 @@
 title: Create dynamic rules for devices in asset rule management
 description: Use asset rule management in Microsoft Defender for Endpoint to configure dynamic tagging for devices.
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

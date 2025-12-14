@@ -27,6 +27,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 New ADWS LDAP search activity is now available in the ‘IdentityQueryEvents’ table in Advanced Hunting. This can provides visibility into directory queries performed through ADWS, helping customers track these operations and create custom detection based on this data.
 
+|Version number |Updates |
+|---------|---------|
+|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
 ## November 2025
 
 |Version number |Updates |

@@ -7,8 +7,8 @@ ms.service: defender-experts-for-hunting
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.custom: 
 - cx-ti
 - cx-ean
