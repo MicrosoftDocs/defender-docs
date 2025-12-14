@@ -110,13 +110,13 @@ Follow these steps to create a cloud scope.
 Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Scopes**.
 
 1. Select **Add cloud scope**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Create scope action." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Screenshot of Permissions and Roles page with "Add cloud scope" button highlighted." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
 2. Enter name and description.  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Screenshot of cloud scope creation step, where you input scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
 3. Select environment primitives (individually or via filters).  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-3.png" alt-text="Select environment primitives." lightbox="media/cloud-scopes-unified-rbac/create-scope-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-3.png" alt-text="Screenshot of selecting environment primitives." lightbox="media/cloud-scopes-unified-rbac/create-scope-3.png":::
 4. Review and finish.  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Review scope configuration." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Screenshot of review cloud scope configuration screen." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
 
 ## 2. Activate cloud scopes (one-time)
 
@@ -138,7 +138,7 @@ If no device groups or unified RBAC roles exist yet, the wizard may be skipped u
 ### Activation & bulk assignment wizard
 
 1. When prompted by a banner, select **Activate cloud scopes** to run the wizard.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Screenshot of the activation wizard start screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Screenshot of a banner at the top of the Permissions and roles screen with the 'Activate cloud scopes' button highlighted. Selecting it will launch the wizard." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
 1. Set permissions for roles assigned through cloud scopes.
    :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Screenshot of the role-to-scope assignment screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
 1. Finish activating cloud scopes assignment.
@@ -166,8 +166,8 @@ Navigation: In the [Defender portal](https://security.microsoft.com/), go to **S
    > [!NOTE]
    > For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
 
-   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Screenshot of the data source selection screen." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
-   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Screenshot of the scope selection screen." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Screenshot of the assign users and data source selection screen, with the 'Create assignment' button highlighted." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Screenshot of the scope selection screen, where you can choose which cloud scopes to include." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
 1. Review and finish.
 
@@ -195,9 +195,9 @@ To access the Scope filter:
 
 1. Navigate to the [Defender for Cloud Overview dashboard](https://security.microsoft.com/cloud-overview).
 1. Select **Scope filter**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Screenshot of scope filter UI." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Screenshot of the Defender for Cloud Overview dashboard, with the 'Scope filter' action link highlighted." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
 1. Apply your desired filters.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Screenshot of contextual filtering behavior." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Screenshot of contextual filtering behavior for scopes filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
 
 ### Environment filter
 
@@ -217,9 +217,9 @@ To access the Environment filter:
 
 1. Navigate to the [Defender for Cloud Overview dashboard](https://security.microsoft.com/cloud-overview).
 1. Select **Environment filter**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Screenshot of the authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Screenshot of the Defender for Cloud Overview dashboard, with the 'Environment Filter' action link highlighted." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
 1. Apply your desired filters.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Screenshot of the environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Screenshot of the environments filter selection screen." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
 
 ## 5. Ongoing management
 
