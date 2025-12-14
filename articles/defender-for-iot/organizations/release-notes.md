@@ -85,6 +85,14 @@ To understand whether a feature is supported in your sensor version, check the r
 
 ## Versions 25.2.x
 
+### Version 25.2.1
+
+**Release date**: 12/2025
+
+**Supported until**: 11/2026
+
+This version includes bug fixes for stability improvements.
+
 ### Version 25.2.0
 
 **Release date**: 09/2025
