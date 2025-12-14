@@ -110,7 +110,7 @@ Follow these steps to create a cloud scope.
 Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Scopes**.
 
 1. Select **Add cloud scope**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Screenshot of Permissions and Roles page with "Add cloud scope" button highlighted." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Screenshot of Permissions and Roles page with 'Add cloud scope' button highlighted." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
 2. Enter name and description.  
    :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Screenshot of cloud scope creation step, where you input scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
 3. Select environment primitives (individually or via filters).  
