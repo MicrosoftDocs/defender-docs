@@ -26,7 +26,8 @@ For updates about versions and features released six months ago or earlier, see 
 ## December 2025
 
 ## New properties for 'sensorCandidate' resource type in Graph-API (preview)
-|Property|	Type |	Description|
+|Property|Type|Description|
+|---------|---------|--------|
 |domainName	|String	|The domain name of the sensor.|
 |senseClientVersion	|String	|The version of the Defender for Identity sensor client. Supports $filter (eq).|
 This capability is currently in preview and available in API Beta version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta)
