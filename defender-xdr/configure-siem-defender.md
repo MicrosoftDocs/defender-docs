@@ -3,8 +3,8 @@ title: Integrate your SIEM tools with Microsoft Defender XDR
 description: Learn how to use REST API and configure supported security information and events management tools to receive and pull detections.
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
