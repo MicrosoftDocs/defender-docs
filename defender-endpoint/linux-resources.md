@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/02/2025
+ms.date: 12/14/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -136,7 +136,7 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
 
 ## Quarantine Directory for Microsoft Defender for Endpoint Linux
-`/var/opt/microsoft/mdatp/quarantine` is the default directory for file quarantined by MDATP. For best results, use `MDATP threat quarantine` command to manage quarantined files, rather than moving or modifying files directly in quarantined directory. Direct files operations are not recommended- always use CLI for safe and supported quarantine management.
+The default directory for files quarantined by MDATP is `/var/opt/microsoft/mdatp/quarantine`. For best results, use the command `MDATP threat quarantine` to manage quarantined files, rather than moving or modifying files directly in the quarantine directory. Direct file operations aren't recommended - always use the CLI for safe and supported quarantine management.
 
 ## Uninstall Defender for Endpoint on Linux
 
