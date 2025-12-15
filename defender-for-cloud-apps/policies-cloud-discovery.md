@@ -103,25 +103,6 @@ Configure automatic log upload for continuous cloud discovery reports, as descri
 > [!NOTE]
 > After continuous log upload is established, the anomaly detection engine takes a few days until a baseline (learning period), is established for the expected behavior in your organization. After a baseline is established, you start receiving alerts based on discrepancies from the expected traffic behavior across cloud apps made by users or from IP addresses.
 
-## Detect anomalous cloud discovery behavior in storage apps that aren't sanctioned
-
-Detect anomalous behavior by a user in a cloud storage app that isn't sanctioned.
-
-### Prerequisites
-
-Configure automatic log upload for continuous cloud discovery reports, as described in [Configure automatic log upload for continuous reports](discovery-docker.md) or enable the Defender for Cloud Apps integration with Defender for Endpoint, as described in [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](mde-integration.md).
-
-### Steps
-
-1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new  **Cloud Discovery anomaly detection policy**.
-
-1. Select the filter **App category** equals **Cloud storage**.
-
-1. Select the filter **App tag** does not equal **Sanctioned**.
-
-1. Select the checkbox to **Create an alert for each matching event with the policy's severity**.
-
-1. Configure the actions to take when an alert is triggered.
 
 ## Detect risky OAuth apps
 
