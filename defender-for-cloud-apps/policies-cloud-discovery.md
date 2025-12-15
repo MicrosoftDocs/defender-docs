@@ -1,7 +1,7 @@
 ---
 title: Cloud discovery policies 
 description: This article outlines the steps to configure many cloud discovery policies in Defender for Cloud Apps.
-ms.date: 01/29/2023
+ms.date: 12/15/2025
 ms.topic: how-to
 ms.reviewer: Mravela
 ---
@@ -32,7 +32,7 @@ Configure automatic log upload for continuous cloud discovery reports, as descri
 1. Configure the actions to be taken when an alert is triggered.
 
 > [!NOTE]
-> An alert is generated once for each new app that was not discovered in the last 90 days.
+> An alert is generated once for each new app that wasn't discovered in the last 90 days.
 
 ## Detect new risky or non-compliant app use
 
@@ -54,11 +54,11 @@ Configure automatic log upload for continuous cloud discovery reports, as descri
 
     1. Check the **Trigger a policy match if all the following occur on the same day** checkbox.
 
-    1. Select **Daily traffic** greater than 2000 GB (or other).
+    1. Select **Daily traffic** greater than 2,000 GB (or other).
 
 1. Configure governance actions to be taken when an alert is triggered. Under **Governance**, select **Tag app as unsanctioned.**<br />Access to the app will be automatically blocked when the policy is matched.
 
-1. Optional: Leverage [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
+1. Optional: Apply [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
 
 ## Detect use of unsanctioned business apps
 
@@ -78,7 +78,7 @@ You can detect when your employees continue to use unsanctioned apps as a replac
 
 1. Configure governance actions to be taken when an alert is triggered. Under Governance, select **Tag app as unsanctioned**.<br />Access to the app will be automatically blocked when the policy is matched.
 
-1. Optional: Leverage [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
+1. Optional: Use [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
 
 
 ## Detect risky OAuth apps
@@ -109,4 +109,3 @@ You must have the Google Workspace, Microsoft 365, or Salesforce app connected u
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]
