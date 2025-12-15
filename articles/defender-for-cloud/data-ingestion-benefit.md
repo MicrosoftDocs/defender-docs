@@ -141,10 +141,10 @@ Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
     - Select **Create** to deploy the DCR.
     
 1. Wait a few minutes, then you can run a simple KQL query to verify that data is flowing to the Log Analytics workspace:
-    ```kusto
-    SecurityEvent
-    | take 10
-    ```
+
+```kusto
+SecurityEvent
+| take 10
 
 #### Sample JSON fragment
 
