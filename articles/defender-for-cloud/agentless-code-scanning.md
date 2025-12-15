@@ -151,7 +151,7 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then daily.
 
-1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates.
+1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates. It also creates an SBOM to allow for queryable package management.
 
 1. **Findings processing**: It processes scan findings through Defender for Cloud’s backend to create actionable security recommendations.
 
