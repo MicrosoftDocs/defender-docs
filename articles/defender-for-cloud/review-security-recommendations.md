@@ -205,9 +205,10 @@ Each recommendation in the Defender portal provides comprehensive risk context:
 
 ::: zone-end
 
-1. On the recommendation page, review the following details:
+On the recommendation page, review the following details:
+
    - **Risk level**: The vulnerability and business effect of the underlying security issue, considering the environmental resource context like internet exposure, sensitive data, lateral movement, and more.
-   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influence the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
+   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
    - **Resource**: The name of the affected resource.
    - **Status**: The status of the recommendation, like unassigned, on time, or overdue.
    - **Description**: A brief description of the security issue.

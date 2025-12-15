@@ -223,7 +223,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
 
 Defender for Cloud's workbooks page includes a ready-made report for visually tracking the scores of your subscriptions, security controls, and more. Learn more in [Create rich, interactive reports of Defender for Cloud data](custom-dashboards-azure-workbooks.md).
 
-:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="Screenshot of a section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery":::
+:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="Screenshot of a section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery.":::
 
 ### Power BI Pro dashboards
 
@@ -238,7 +238,7 @@ The dashboard contains the following two reports to help you analyze your securi
 
 - **Secure Score Summary** - provides summarized data regarding your score progress. Use the "Secure score over time per subscription" chart to view changes in the score. If you notice a dramatic change in your score, check the "detected changes that might affect your secure score" table for possible changes that could have caused the change. This table presents deleted resources, newly deployed resources, or resources that their security status changed for one of the recommendations.
 
-:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="Screenshot of the optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes":::
+:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="Screenshot of the optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes.":::
 
 ## Next steps
 
@@ -258,7 +258,7 @@ The dashboard contains the following two reports to help you analyze your securi
 
 ## Cloud secure score in the Defender portal
 
-The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allow you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
+The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allows you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
 
 The Cloud secure score introduces asset risk factors and asset criticality into the calculation, making the score more accurate and enabling smarter prioritization of high risk level recommendations.  
 
@@ -289,7 +289,7 @@ To calculate the environmental score for a given organization at any scope, the 
 
 Secure scores are consolidated into a unified Microsoft Security experience, providing a single entry point to understand posture across identities, devices, cloud apps, data, and infrastructure. The Cloud secure score is the cloud posture component within that broader set.
 
-:::image type="content" source="media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="Screenshot of secure score landing page" lightbox="media/secure-score-defender-portal/secure-score-landing-page.png":::
+:::image type="content" source="media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="Screenshot of secure score landing page." lightbox="media/secure-score-defender-portal/secure-score-landing-page.png":::
 
 **Navigation paths to the Cloud secure score (Cloud initiative)**
 
@@ -319,7 +319,7 @@ Navigate to **Exposure Management** > **Initiatives** for a consolidated cloud s
    - Recommendations summary
    - Most common recommendations by criticality to focus remediation where it drives the largest score and risk reduction impact
 
-:::image type="content" source="media/secure-score-defender-portal/cloud-initiative-homepage.png" alt-text="Screenshot of cloud initiative homepage" lightbox="media/secure-score-defender-portal/cloud-initiative-homepage.png":::
+:::image type="content" source="media/secure-score-defender-portal/cloud-initiative-homepage.png" alt-text="Screenshot of cloud initiative homepage." lightbox="media/secure-score-defender-portal/cloud-initiative-homepage.png":::
 
 > [!NOTE]
 > The previous (classic) secure score is still available in the Azure portal using the classic view of recommendations. Navigation: Azure portal → Microsoft Defender for Cloud → Recommendations → Switch to classic view.
