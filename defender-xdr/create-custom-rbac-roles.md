@@ -2,8 +2,8 @@
 title: Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: bagol
-author: batamig
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro

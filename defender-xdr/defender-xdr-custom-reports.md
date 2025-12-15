@@ -5,8 +5,8 @@ ms.service: defender-xdr
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: dansimp
-ms.author: dansimp
+author: poliveria
+ms.author: pauloliveria
 ms.date: 04/25/2025
 manager: dansimp
 ms.topic: how-to
