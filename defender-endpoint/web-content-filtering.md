@@ -23,11 +23,8 @@ appliesto:
   - Microsoft Defender for Business
 
 ---
+
 # Web content filtering
-
-
-> [!TIP]
-
 
 ## What is web content filtering?
 
@@ -119,10 +116,11 @@ To add a new policy, follow these steps:
 6. Review the summary and save the policy.
 
 > [!NOTE]
-- There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
+>
+> - There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
 > - You can deploy a policy without selecting any categories to block. This action creates an audit-only policy to help you understand user behavior before creating a block policy.
-- If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
-- Blocking the "Uncategorized" category could lead to unexpected and undesired results.
+> - If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
+> - Blocking the "Uncategorized" category could lead to unexpected and undesired results.
 
 ## End-user experience
 
@@ -210,4 +208,3 @@ Use the time range filter at the top left of the page to select a time period. Y
 - [Requirements for Network Protection](web-content-filtering.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
