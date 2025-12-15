@@ -2,12 +2,12 @@
 title: Updates from Microsoft Ignite 2024
 description: Learn about Microsoft's Defender for Cloud's updates from Ignite 2024, including new features and improvements.
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 10/05/2025
 ---
 
 # Updates from Microsoft Ignite 2024
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Oz Wilder joins Yuri Diogenes to talk about the updates released at Microsoft Ignite 2024. Oz explains the main areas of investments, how the product is expanding in different areas and what's the vision for the future of Defender for Cloud.
+**Episode description**: In this episode of Defender for Cloud in the Field, Oz Wilder joins Yuri Diogenes to talk about the updates released at Microsoft Ignite 2024. Oz explains the main areas of investments, how the product is expanding in different areas, and the vision for the future of Defender for Cloud.
   
 
 > [!VIDEO https://aka.ms/docs/player?id=b91ca95c-3aa0-4985-a0aa-8a181e43c9e0]

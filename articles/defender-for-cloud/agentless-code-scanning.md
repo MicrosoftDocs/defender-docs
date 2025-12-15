@@ -1,8 +1,8 @@
 ---
 title: Configure agentless code scanning (Preview)
 description: Discover how agentless code scanning in Microsoft Defender for Cloud identifies vulnerabilities in code and IaC configurations.
-author: dcurwin
-ms.author: dacurwin
+ms.author: elkrieger
+author: Elazark
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 06/10/2025
@@ -12,7 +12,7 @@ ms.custom: references_regions
 
 # Configure agentless code scanning (Preview)
 
-Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. Agentless code scanning automatically scans code and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations without requiring any changes to your build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
+Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. Agentless code scanning automatically scans code, open-source dependencies, and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations without requiring any changes to your build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
 
 You can customize which scanners to run and define exactly which organizations, projects, or repositories to include or exclude from scanning.
 
@@ -22,7 +22,7 @@ You can customize which scanners to run and define exactly which organizations, 
   - [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
   - [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
 
-- [Supported cloud availability](support-matrix-cloud-environment.md).
+- [Supported cloud availability](support-matrix-defender-for-cloud.md).
 
 - **Supported regions**: Australia East, Canada Central, Central US, East Asia, East US, North Europe, Sweden Central, UK South, West Europe.
 
@@ -52,8 +52,10 @@ Some of the key benefits of agentless code scanning in Microsoft Defender for Cl
 
 Agentless code scanning improves security by offering targeted security recommendations for both code and infrastructure-as-code (IaC) templates. This is in addition to the foundational cloud security posture management security recommendations provided through the connector. Key detection capabilities include:
 
-- [Code vulnerabilities](recommendations-reference-devops.md#azure-devops-repositories-should-have-code-scanning-findings-resolved): Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.
-- [Infrastructure-as-Code misconfigurations](recommendations-reference-devops.md#azure-devops-repositories-should-have-infrastructure-as-code-scanning-findings-resolved): Detect security misconfigurations in IaC templates that could lead to insecure deployments. 
+- **Code vulnerabilities**: Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.
+- **Infrastructure-as-Code misconfigurations**: Detect security misconfigurations in IaC templates that could lead to insecure deployments. 
+
+- **Dependency vulnerabilities**: Identify known vulnerabilities in open-source packages and OS packages discovered in repositories. 
 
 Creating the connector enhances security by providing foundational cloud security posture management recommendations for repositories, pipelines, and service connections.
 
@@ -61,12 +63,14 @@ Creating the connector enhances security by providing foundational cloud securit
 
 Agentless code scanning uses various open-source tools to find vulnerabilities and misconfigurations in code and Infrastructure-as-Code (IaC) templates:
 
-| **Tool**              | **Supported IaC/Languages**                                  | **License** |
+| **Tool**              |**Supported IaC/Languages**                                  | **License** |
 | --------------------- | ------------------------------------------------------------ | ----------- |
-| **[Bandit](https://github.com/PyCQA/bandit)**            | Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
-| **[Checkov](https://github.com/bridgecrewio/checkov)**           | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE)  |
-| **[ESLint](https://github.com/eslint/eslint)**            | JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
-| **[Template Analyzer](https://github.com/Azure/template-analyzer)** | ARM IaC templates, Bicep IaC templates                       | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt)         |
+| **[Template Analyzer](https://github.com/Azure/template-analyzer)** |ARM IaC templates, Bicep IaC templates                       | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt)         |
+| **[Checkov](https://github.com/bridgecrewio/checkov)**           |Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE)  |
+| **[Bandit](https://github.com/PyCQA/bandit)**            |Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
+| **[ESLint](https://github.com/eslint/eslint)**            |JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
+| **[Trivy](https://www.github.com/aquasecurity/trivy/)**|Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) |[Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE)|
+
 
 These tools support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.
 
@@ -80,8 +84,9 @@ These tools support a wide range of languages and infrastructure-as-code (IaC) f
 
 #### Programming languages
 
-- Python
-- JavaScript/TypeScript
+- **Static code analysis**: Python; JavaScript/TypeScript.
+
+- **Dependency ecosystems (via Trivy)**: Node.js (npm, yarn), Python (pip, Pipenv, Poetry), Java (Maven, Gradle), .NET (NuGet), Go modules, Ruby (RubyGems), PHP (Composer), Rust (Cargo), and other supported languages and package ecosystems via manifests and lockfiles.
 
 #### Infrastructure-as-Code (IaC) platforms and configurations
 
@@ -140,7 +145,7 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 1. **Repository discovery**: The system automatically identifies all repositories linked through the Azure DevOps and GitHub connector immediately after connector creation and then every 8 hours.
 
-1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then every 3-4 days.
+1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then daily.
 
 1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates.
 
@@ -152,7 +157,8 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 - **Scan frequency**:
     - The security posture of repositories, pipelines, and service connections is assessed when you create the connector and then every eight hours.
-    - The system scans code and infrastructure-as-code (IaC) templates for vulnerabilities after you create the connector and then every 2-4 days. 
+  - The system scans code and infrastructure-as-code (IaC) templates for vulnerabilities after you create the connector and then daily. 
+    
 - **Scan duration**: Scans typically finish within 15 to 60 minutes, depending on the size and complexity of the repository.
 
 ## View and manage scan results
@@ -169,7 +175,9 @@ After the scans finish, you can access security findings within Microsoft Defend
 
    - [Repositories should have infrastructure as code scanning findings resolved](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/6588c4d4-fbbb-4fb8-be45-7c2de7dc1b3b/showSecurityCenterCommandBar~/false) - Flags security misconfigurations in IaC templates.  
      :::image type="content" source="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png" alt-text="Screenshot of recommendation Azure DevOps repositories should have infrastructure as code scanning findings resolved." lightbox="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png":::
-
+   
+   - [Repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved) - Indicates vulnerable open-source packages detected in repositories.
+   
 1. For the full range of recommendations supported for both platforms, see: [Azure DevOps and GitHub security recommendations](recommendations-reference-devops.md).
 
    Recommendations include items such as requiring multi-reviewer approvals, restricting secret access, and enforcing best practices for both Azure DevOps and GitHub environments.
@@ -183,7 +191,7 @@ Agentless code scanning and in-pipeline scanning using the Microsoft Security De
 | **Aspect**                     | **Agentless code scanning**                                | **In-pipeline scanning**                                   |  
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |  
 | **Use case fit**               | Offers broad coverage with minimal disruption to developers  | Provides detailed, pipeline-integrated scans with customizable controls |  
-| **Scan scope and coverage**    | Focuses on Infrastructure-as-Code (IaC) and code vulnerability scanning, scheduled every 2-4 days | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |  
+| **Scan scope and coverage**    | Focuses on Infrastructure-as-Code (IaC), code vulnerabilities, and open-source dependency vulnerabilities on a scheduled basis (daily) | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |  
 | **Setup and configuration**    | Requires no further setup after creating the connector    | Requires manual installation and configuration in each CI/CD pipeline |  
 | **Pipeline integration**       | Runs independently of (CI/CD) pipelines without modifying workflows | Integrates within the CI/CD pipeline, requiring configuration in each pipeline |  
 | **Scanner customization**      | Allows you to select which scanners run             | Allows customization with specific scanners, categories, languages, sensitivity levels, and non-Microsoft tools |  
@@ -210,7 +218,7 @@ These measures ensure a secure, compliant, and efficient code scanning process, 
 During the **public preview** phase, the following limitations apply:  
 
 - **No binary scanning**: Only code (SAST) and IaC scanning tools are executed.  
-- **Scan frequency**: It scans repositories upon enablement, and then after every 2-4 days.  
+- **Scan frequency**: It scans repositories upon enablement, and then daily.  
 
 - **Repository size**: It limits scanning to repositories under 1 GB.
 
@@ -220,4 +228,5 @@ During the **public preview** phase, the following limitations apply:
 ## Related content
 
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
+
 - [Connect Azure DevOps environments to Defender for Cloud](quickstart-onboard-devops.md)

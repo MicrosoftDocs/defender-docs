@@ -2,8 +2,8 @@
 title: Alerts schema
 description: This article describes the different schemas used by Microsoft Defender for Cloud for security alerts.
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 05/18/2025
 ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to understand the different schemas used by Microsoft Defender for Cloud for security alerts so that I can effectively work with the alerts.
@@ -13,7 +13,7 @@ ms.custom: sfi-image-nochange
 
 Defender for Cloud provides alerts that help you identify, understand, and respond to security threats. Alerts are generated when Defender for Cloud detects suspicious activity or a security-related issue in your environment. You can view these alerts in the Defender for Cloud portal, or you can export them to external tools for further analysis and response.
 
-You can view these security alerts in Microsoft Defender for Cloud's pages - [overview dashboard](overview-page.md), [alerts](managing-and-responding-alerts.yml), [resource health pages](investigate-resource-health.md), or [workload protections dashboard](workload-protections-dashboard.md) - and through external tools such as:
+You can view these security alerts in Microsoft Defender for Cloud's pages - [overview dashboard](overview-page.md), [alerts](manage-respond-alerts.md), [resource health pages](investigate-resource-health.md), or [workload protections dashboard](workload-protections-dashboard.md) - and through external tools such as:
 
 - [Microsoft Sentinel](/azure/sentinel/) - Microsoft's cloud-native SIEM. The Sentinel Connector gets alerts from Microsoft Defender for Cloud and sends them to the [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) for Microsoft Sentinel.
 - Third-party SIEMs - Send data to [Azure Event Hubs](/azure/event-hubs/). Then integrate your Event Hubs data with a third-party SIEM. Learn more in [Stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).

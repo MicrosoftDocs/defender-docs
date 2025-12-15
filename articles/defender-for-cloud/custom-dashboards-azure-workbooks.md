@@ -1,10 +1,10 @@
 ---
 title: Azure Monitor workbooks with Defender for Cloud data
 description: Learn how to create rich, interactive reports for your Microsoft Defender for Cloud data by using workbooks from the integrated Azure Monitor workbooks gallery.
-ms.topic: conceptual
-ms.author: dacurwin
-author: dcurwin
-ms.date: 05/18/2025
+ms.topic: concept-article
+ms.author: elkrieger
+author: Elazark
+ms.date: 08/14/2025
 ms.custom: sfi-image-nochange
 ---
 
@@ -23,8 +23,6 @@ For pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/
 ## Prerequisites
 
 **Required roles and permissions**: To save a workbook, you must have at least [Workbook Contributor](/azure/role-based-access-control/built-in-roles#workbook-contributor) permissions for the relevant resource group.
-
-**Cloud availability**: :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds :::image type="icon" source="./media/icons/yes-icon.png"::: National (Azure Government, Microsoft Azure operated by 21Vianet)
 
 <a name="workbooks-gallery-in-microsoft-defender-for-cloud"></a>
 
@@ -130,7 +128,7 @@ The Vulnerability Assessment Findings workbook gathers these findings and organi
 
 ### Compliance Over Time workbook
 
-Microsoft Defender for Cloud continually compares the configuration of your resources with requirements in industry standards, regulations, and benchmarks. Built-in standards include NIST SP 800-53, SWIFT CSP CSCF v2020, Canada Federal PBMM, HIPAA HITRUST, and more. You can select standards that are relevant to your organization by using the regulatory compliance dashboard. Learn more in [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
+Microsoft Defender for Cloud continually compares the configuration of your resources with requirements in industry standards, regulations, and benchmarks. Built-in standards include NIST SP 800-53, SWIFT CSP CSCF v2020, Canada Federal PBMM, HIPAA HITRUST, and more. You can select standards that are relevant to your organization by using the regulatory compliance dashboard. Learn more in [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md).
 
 The Compliance Over Time workbook tracks your compliance status over time by using the various standards that you add to your dashboard.
 

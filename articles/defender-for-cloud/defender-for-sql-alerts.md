@@ -2,8 +2,8 @@
 title: Explore and investigate Defender for SQL security alerts
 description: Learn how to explore and investigate Defender for SQL security alerts in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 07/08/2024
 ---
 
@@ -35,7 +35,7 @@ Alerts are designed to be self-contained, with detailed remediation steps and in
 
 - To improve your security posture, use Defender for Cloud's recommendations for the host machine indicated in each alert to reduce the risks of future attacks.
   
-[Learn more about managing and responding to alerts](managing-and-responding-alerts.yml).
+[Learn more about managing and responding to alerts](manage-respond-alerts.md).
 
 ## Related content
 

@@ -2,7 +2,7 @@
 title: New GCP connector 
 description: Learn all about the new GCP connector in Microsoft Defender for Cloud.
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 10/05/2025
 ---
 
 # New GCP connector in Microsoft Defender for Cloud
@@ -27,7 +27,7 @@ ms.date: 04/27/2023
 
 ## Recommended resources
   
-Learn more how to [Connect your GCP projects to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+Learn more about how to [Connect your GCP projects to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS)
 

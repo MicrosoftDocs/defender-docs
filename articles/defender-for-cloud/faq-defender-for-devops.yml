@@ -4,8 +4,8 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft DevOps Security.
   ms.topic: faq
   ms.service: defender-for-cloud
-  author: dcurwin
-  ms.author: dacurwin
+  author: Elazark
+  ms.author: elkrieger
   ms.date: 05/18/2025
 title: Common questions about DevOps Security
 summary: Get answers to common questions about Microsoft DevOps Security.
@@ -148,7 +148,7 @@ sections:
           - Large number of concurrent builds that peak during work hours.
           - Authorized user is a [Power Platform](/power-platform/) user making extra Azure DevOps API calls, using up the global rate limit quotas.
 
-          Once you have onboarded the Azure DevOps repositories using this account and [configured and ran the Microsoft Security DevOps Azure DevOps extension](azure-devops-extension.yml) in your CI/CD pipeline, then the scanning results will appear near instantaneously in Microsoft Defender for Cloud.
+          Once you have onboarded the Azure DevOps repositories using this account and [configured and ran the Microsoft Security DevOps Azure DevOps extension](configure-azure-devops-extension.md) in your CI/CD pipeline, then the scanning results will appear near instantaneously in Microsoft Defender for Cloud.
 
 
 additionalContent: |

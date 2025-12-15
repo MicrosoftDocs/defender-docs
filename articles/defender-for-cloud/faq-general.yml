@@ -3,17 +3,17 @@ metadata:
   title: Common questions -  General questions
   description: Frequently asked general questions about Microsoft Defender for Cloud, a product that helps you prevent, detect, and respond to threats
   services: defender-for-cloud
-  author: dcurwin
-  ms.author: dacurwin
+  author: Elazark
+  ms.author: elkrieger
   manager: raynew
   ms.topic: faq
-  ms.date: 05/18/2025
+  ms.date: 09/17/2025
   ms.custom: sfi-image-nochange
 title: Common questions - General questions
 summary: |
 
 sections:
-  - name: Ignored
+  - name: General questions
     questions:
       - question: |
           What is Microsoft Defender for Cloud?
@@ -161,6 +161,8 @@ sections:
           - SQL servers should have a Microsoft Entra administrator provisioned
           - Usage of host networking and ports should be restricted
           - Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers
+          - Unused API endpoints should be disabled and removed from Function Apps (Preview)
+          - Unused API endpoints should be disabled and removed from Logic Apps (Preview)
 
       - question: |
           Are there any limitations to Defender for Cloud's identity and access protections?
@@ -330,7 +332,64 @@ sections:
           This feature is available for organizational onboarding only and allows Defender for Cloud to create connectors for newly added accounts. The feature also allows Defender for Cloud to edit all member connectors when the management account is edited, delete all member accounts when the management account is deleted, and remove specific member account if the corresponding account is removed.
 
           A separate stack must be deployed specifically for the management account.
-                
+
+  - name: Agentless
+    questions:
+      - question: |
+          Does Agentless scanning scan deallocated VMs?
+        answer: |
+          No. Agentless scanning doesn't scan deallocated VMs.
+
+      - question: |
+          Does Agentless scanning scan OS Disk and Data Disks?
+        answer: |
+          Yes. Agentless scanning scans both OS Disk and Data Disks.
+
+      - question: |
+          What time of the day my VM is scanned, including start and end time?
+        answer: |
+          The time of the day is dynamic and can change across different account and subscriptions.
+
+      - question: |
+          Is there any telemetry regarding the copied snapshot?
+        answer: |
+          In AWS, the operations on the customer account are traceable through CloudTrail.
+
+      - question: |
+          Which data is collected from snapshots?
+        answer: |
+          Agentless scanning collects data similar to the data an agent collects to perform the same analysis. Raw data, PIIs, or sensitive business data isn't collected, and only metadata results are sent to Defender for Cloud.
+      - question: |
+          Where are the Disk snapshots copied?
+        answer: |
+          The analysis of the snapshots takes place in secure environments managed by Defender for Cloud.
+
+          The environments are regional across multicloud, such that snapshots remain at the same cloud region as the VM they originated from (for example - a snapshot of an EC2 instance in US West are analyzed at the same region, without being copied to another region or cloud).
+
+          The scanning environment where disks are analyzed is volatile, isolated, and highly secure.
+
+      - question: |
+          How is the Disk snapshot handled in Microsoft Account? Can Microsoft share Agentless scanning platform security & privacy principles?
+        answer: |
+          Agentless scanning platform is audited & compliant with Microsoft's strict security and privacy standards.
+          Some of the measures taken are (not a comprehensive list): 
+          - Physical isolation per region, additional isolation per customer and subscription
+          - E2E encryption at rest and transit
+          - Disk snapshots immediately purged after scan
+          - Only metadata (that is, security findings) leaves the isolated scanning environment
+          - The scanning environment is autonomous
+          - All operations are internally audited 
+      - question: |
+          What are the costs related to agentless scanning?
+        answer: |
+          Agentless scanning is included in Defender Cloud Security Posture Management (CSPM) and Defender for Servers P2 plans. No other costs incur to Defender for Cloud when enabling it.
+            > [!NOTE]
+            > AWS charges for retention of disk snapshots. The Defender for Cloud scanning process actively tries to minimize the period during which a snapshot is stored in your account (typically up to a few minutes). AWS might charge an overhead cost for the disk snapshots storage. Check with AWS to see what costs apply to you.
+      - question: |
+          How can I track AWS costs incurred for the disk snapshots created by Defender for Cloud agentless scanning?
+        answer: | 
+          Disk snapshots are created with the `CreatedBy` tag key, and the `Microsoft Defender for Cloud` tag value. The `CreatedBy` tag tracks who created the resource.
+          You need to [activate the tags in the Billing and Cost Management console](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html). It can take up to 24 hours for tags to activate.    
 additionalContent: |
 
   ## Next steps

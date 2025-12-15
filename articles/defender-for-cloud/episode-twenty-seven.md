@@ -1,14 +1,13 @@
 ---
 title: Demystifying Defender for Servers | Defender for Cloud in the field
-
 description: Learn about different deployment options in Defender for Servers
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 10/05/2025
 ---
 
 # Demystifying Defender for Servers | Defender for Cloud in the field
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Tom Janetscheck joins Yuri Diogenes to talk about the different deployment options in Defender for Servers. Tom covers the different agents available and the scenarios that will be most used for each agent, including the agentless feature. Tom also talks about the different vulnerability assessment solutions available, and how to deploy Defender for Servers at scale via policy or custom automation.
+**Episode description**: In this episode of Defender for Cloud in the Field, Tom Janetscheck joins Yuri Diogenes to talk about the different deployment options in Defender for Servers. Tom covers the different agents available and the scenarios that are most common for each agent, including the agentless feature. Tom also talks about the different vulnerability assessment solutions available, and how to deploy Defender for Servers at scale via policy or custom automation.
 
 > [!VIDEO https://aka.ms/docs/player?id=dd9d789d-6685-47f1-9947-d31966aa4372]
 

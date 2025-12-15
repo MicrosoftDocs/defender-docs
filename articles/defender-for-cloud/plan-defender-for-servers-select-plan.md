@@ -2,8 +2,8 @@
 title: Select a Defender for Servers plan
 description: This article helps you understand which Defender for Servers plan to deploy in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 02/23/2025
 #customer intent: As a reader, I want to understand which Defender for Servers plan I want to deploy.
 ---
@@ -74,7 +74,7 @@ Defender for Servers needs a Log Analytics workspace when:
 - You deploy Defender for Servers Plan 2 and you want to take advantage of free daily ingestion for specific data types. [Learn more](data-ingestion-benefit.md).
 - You deploy Defender for Servers Plan 2 and you're using file integrity monitoring. [Learn more](file-integrity-monitoring-overview.md).
 
-## Azure ARC onboarding
+## Azure Arc onboarding
 
 We recommend that you onboard machine in non-Azure clouds and on-premises to Azure as Azure Arc-enabled VMs. Enabling as Azure Arc VMs allows machines to take full advantage of Defender for Servers features. Azure Arc-enabled machines have the Azure Arc Connected Machine agent installed on them.
 

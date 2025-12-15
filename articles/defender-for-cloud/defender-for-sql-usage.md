@@ -4,7 +4,7 @@ description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/27/2025
+ms.date: 09/21/2025
 #customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ---
 
@@ -16,7 +16,7 @@ ms.date: 04/27/2025
 The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL Servers on Machines to protect SQL virtual machines (VM) and Azure Arc SQL Server instances.
 
 > [!IMPORTANT]
-> The Defender for SQL Servers on Machines plan is undergoing a transition to the new agent architecture. For more information, see [Defender for SQL Servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
+> The Defender for SQL Servers on Machines plan is undergoing a transition to the new agent architecture. For more information, see [Defender for SQL Servers on Machines plan transition](release-notes-archive.md#update-to-defender-for-sql-servers-on-machines-plan).
 
 ## Prerequisites
 
@@ -89,7 +89,9 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 ## Enable the plan at the SQL Server resource level
 
-Although we recommend enabling the plan for an entire Azure subscription, you might need to enable Defender for SQL on machines on specific machines only. To do this, [disable the plan on the subscription](disable-sql-on-machines.md) and follow instructions below on the resource level. 
+We recommend enabling the plan on your entire Azure subscription. However, you might need to enable Defender for SQL on machines on specific machines. 
+
+To enable the plan on specific machines, you need to [disable the plan on the subscription](disable-sql-on-machines.md) and apply the following instructions to the relevant machines at the resource level.
 
 1. In the Azure portal, search for and select:
     - **Azure Arc** > **Data services** > **SQL Server instances**.
@@ -118,5 +120,4 @@ Depending on your environment, it can take a few hours to discover and protect S
 
 - [Verify that all machines are protected](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md)
-- [Enable Microsoft Defender for SQL Servers on Machines at scale](enable-defender-sql-at-scale.md)
 - [Disable Defender for SQL Servers on Machines](disable-sql-on-machines.md)

@@ -1,9 +1,9 @@
 ---
 title: Microsoft Defender for Cloud troubleshooting guide
 description: This guide is for IT professionals, security analysts, and cloud admins who need to troubleshoot problems related to Microsoft Defender for Cloud.
-author: dcurwin
-ms.author: dacurwin
-ms.topic: conceptual
+author: Elazark
+ms.author: elkrieger
+ms.topic: concept-article
 ms.date: 05/06/2025
 ---
 
@@ -75,6 +75,6 @@ If you need more assistance, you can open a new support request on the Azure por
 
 ## See also
 
-- Learn how to [manage and respond to security alerts](managing-and-responding-alerts.yml) in Defender for Cloud.
+- Learn how to [manage and respond to security alerts](manage-respond-alerts.md) in Defender for Cloud.
 - Learn about [alert validation](alert-validation.md) in Defender for Cloud.
 - Review [common questions](faq-general.yml) about using Defender for Cloud.

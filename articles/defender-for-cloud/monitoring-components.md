@@ -1,13 +1,15 @@
 ---
 title: Overview of the extensions that collect data from your workloads
 description: Protect your workloads with Microsoft Defender for Cloud by learning about the extensions that collect data from your workloads.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 07/14/2025
+ms.date: 09/11/2025
 ---
 
 # How does Defender for Cloud collect data?
+
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 Defender for Cloud collects data from your Azure virtual machines (VMs), Virtual Machine Scale Sets, IaaS containers, and non-Azure (including on-premises) machines to monitor for security vulnerabilities and threats. Some Defender plans require monitoring components to collect data from your workloads.
 
@@ -103,7 +105,7 @@ By default, the required extensions are enabled when you enable Defender for Con
 | Release state:                                       | • Defender sensor: GA<br> • Azure Policy for Kubernetes: Generally available (GA) | • Defender sensor: Preview<br> • Azure Policy for Kubernetes: Preview |
 | Relevant Defender plan:                              | [Microsoft Defender for Containers](defender-for-containers-introduction.md)           | [Microsoft Defender for Containers](defender-for-containers-introduction.md)                |
 | Required roles and permissions (subscription-level): | [Owner](/azure/role-based-access-control/built-in-roles#owner) or [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)                          | [Owner](/azure/role-based-access-control/built-in-roles#owner) or [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)                               |
-| Supported destinations:                              | The AKS Defender sensor only supports [AKS clusters that have RBAC enabled](/azure/aks/concepts-identity#kubernetes-rbac).                                                                                   | [See Kubernetes distributions supported for Arc-enabled Kubernetes](supported-machines-endpoint-solutions-clouds-containers.md?tabs=azure-aks#kubernetes-distributions-and-configurations)             |
+| Supported destinations:                              | The AKS Defender sensor only supports [AKS clusters that have RBAC enabled](/azure/aks/concepts-identity#kubernetes-rbac).                                                                                   | [See Kubernetes distributions supported for Arc-enabled Kubernetes](support-matrix-defender-for-containers.md)             |
 | Policy-based:                                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                             |
 | Clouds:                                              | **Defender sensor**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet<br>**Azure Policy for Kubernetes**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet|**Defender sensor**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet<br>**Azure Policy for Kubernetes**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet|
 

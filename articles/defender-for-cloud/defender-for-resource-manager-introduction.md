@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Resource Manager - Benefits and Features
 description: Learn about the benefits and features of Microsoft Defender for Resource Manager to protect your Azure resources from potential threats.
-ms.date: 05/13/2025
+ms.date: 08/20/2025
 ms.topic: overview
 #customer intent: As a security operations team, I want to learn about the benefits and features of Microsoft Defender for Resource Manager so that I can protect the resource management layer of my Azure resources.
 ---
@@ -16,11 +16,9 @@ Microsoft Defender for Resource Manager automatically monitors the resource mana
 
 ## Availability
 
-|Aspect|Details|
-|----|:----|
-|Release state:|General availability (GA)|
-|Pricing:|**Microsoft Defender for Resource Manager** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Microsoft Azure operated by 21Vianet|
+**Microsoft Defender for Resource Manager** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+
+For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## What are the benefits of Microsoft Defender for Resource Manager?
 

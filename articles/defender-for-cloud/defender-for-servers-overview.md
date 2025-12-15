@@ -3,8 +3,8 @@ title: Overview of Defender for Servers in Defender for Cloud
 description: Get an overview of the Defender for Servers plan in Microsoft Defender for Cloud, including its features and integration with other Defender services.
 ms.topic: concept-article
 ms.author: elkrieger
-author: elazark
-ms.date: 06/25/2025
+author: Elazark
+ms.date: 09/10/2025
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
 ---
 
@@ -60,6 +60,7 @@ Plan features are summarized in the table.
 | [Regulatory compliance assessment](concept-regulatory-compliance-standards.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Different standards are available for different environments. Learn more about [compliance cloud availability](concept-regulatory-compliance-standards.md#available-compliance-standards). |
 | [Vulnerability scanning (agent-based)](auto-deploy-vulnerability-assessment.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Vulnerability scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
+| [Defender for DNS alerts](defender-for-dns-introduction.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <br><br> Only applicable to machines onboarded with Azure ARC. [Learn more](enable-periodic-system-updates.md). |
 | [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) <sup>[3](#footnote3)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |

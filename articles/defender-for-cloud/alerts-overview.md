@@ -1,9 +1,9 @@
 ---
 title: Security alerts and incidents
 description: Learn how Microsoft Defender for Cloud generates security alerts and correlates them into incidents.
-ms.topic: conceptual
-ms.author: dacurwin
-author: dcurwin
+ms.topic: concept-article
+ms.author: elkrieger
+author: Elazark
 ms.date: 07/14/2025
 ms.custom: fasttrack-edit
 ---
@@ -115,5 +115,5 @@ In this article, you learned about the different types of alerts available in De
 
 - [Security alerts in Azure Activity log](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Security%20Alerts%20in%20Azure%20Activity%20Log/README.md) - In addition to being available in the Azure portal or programmatically, Security alerts and incidents are audited as events in Azure Activity Log
 - [Reference table of Defender for Cloud alerts](alerts-reference.md)
-- [Respond to security alerts](managing-and-responding-alerts.yml#respond-to-a-security-alert)
+- [Respond to security alerts](manage-respond-alerts.md#respond-to-a-security-alert)
 - Learn how to [manage security incidents in Defender for Cloud](incidents.md).

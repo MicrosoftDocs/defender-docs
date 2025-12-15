@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable Defender CSPM on your Azure subscription for Microsoft Defender for Cloud and enhance your security posture.
 ms.topic: install-set-up-deploy
-ms.date: 07/14/2025
+ms.date: 11/25/2025
 ---
 
 # Protect your resources with Defender CSPM
@@ -15,10 +15,10 @@ Defender for Cloud continually assesses your resources, subscriptions, and organ
 
 When you enable Defender for Cloud, you automatically enable the **Foundational CSPM capabilities**. These capabilities are part of the free services offered by Defender for Cloud.
 
-You have the ability to enable the **Defender CSPM** plan, which offers extra protections for your environments such as governance, regulatory compliance, cloud security explorer, attack path analysis, and agentless scanning for machines.
+You can enable the **Defender CSPM** plan, which offers extra protections for your environments such as governance, regulatory compliance, cloud security explorer, attack path analysis, and agentless scanning for machines.
 
 > [!NOTE]
-> Agentless scanning requires the **Subscription Owner** to enable the Defender CSPM plan. Anyone with a lower level of authorization can enable the Defender CSPM plan, but the agentless scanner won't be enabled by default due to a lack of required permissions that are only available to the Subscription Owner. In addition, attack path analysis and security explorer won't populate with vulnerabilities because the agentless scanner is disabled.
+> Agentless scanning requires the **Subscription Owner** to enable the Defender CSPM plan. Anyone with a lower level of authorization can enable the Defender CSPM plan, but the agentless scanner isn't enabled by default due to a lack of required permissions that are only available to the Subscription Owner. In addition, attack path analysis and security explorer don't populate with vulnerabilities because the agentless scanner is disabled.
 
 For availability and to learn more about the features offered by each plan, see the [Defender CSPM plan options](concept-cloud-security-posture-management.md).
 
@@ -30,13 +30,13 @@ You can learn more about Defender CSPM's pricing on [the pricing page](https://a
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS accounts](quickstart-onboard-aws.md) or, [GCP projects](quickstart-onboard-gcp.md).
+- Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS accounts](quickstart-onboard-aws.md), or [GCP projects](quickstart-onboard-gcp.md).
 
-- In order to gain access to all of the features available from the CSPM plan, the plan must be enabled by the **Subscription Owner**.
+- To access all of the features available from the CSPM plan, the **Subscription Owner** must enable the plan.
 
 ## Enable the Defender CSPM plan
 
-When you enable Defender for Cloud, you automatically receive the protections offered by the Foundational CSPM capabilities. In order to gain access to the other features provided by Defender CSPM, you need to enable the Defender CSPM plan on your subscription.
+When you enable Microsoft Defender for Cloud, you automatically get the protections offered by the Foundational CSPM capabilities. To access the other features provided by Defender CSPM, you need to enable the Defender CSPM plan on your subscription.
 
 **To enable the Defender CSPM plan on your subscription**:
 
@@ -56,15 +56,17 @@ When you enable Defender for Cloud, you automatically receive the protections of
 
 Once the Defender CSPM plan is enabled on your subscription, you have the ability to enable the individual components of the Defender CSPM plan:
 
-- **Agentless scanning for machines**: Scans your machines for installed software and vulnerabilities without relying on agents or impacting machine performance. You can disable the agentless scanner or add exclusion tags to your subscription.
+- **[Agentless scanning for machines](concept-agentless-data-collection.md)**: Scans your machines for installed software and vulnerabilities without relying on agents or impacting machine performance. You can disable the agentless scanner or add exclusion tags to your subscription.
 
-- **Agentless discovery for Kubernetes**: API-based discovery of information about Kubernetes cluster architecture, workload objects, and setup. Required for Kubernetes inventory, identity, and network exposure detection, risk hunting as part of the cloud security explorer. This extension is required for attack path analysis (Defender CSPM only).
+- **[Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-azure-work)**: API-based discovery of information about Kubernetes cluster architecture, workload objects, and setup. Required for Kubernetes inventory, identity, and network exposure detection, risk hunting as part of the cloud security explorer. This extension is required for attack path analysis (Defender CSPM only).
 
-- **Agentless container vulnerability assessments**: Provides vulnerability management for images stored in your container registries.
+- **[Agentless container vulnerability assessments](agentless-vulnerability-assessment-azure.md)**: Provides vulnerability management for images stored in your container registries.
 
-- **Sensitive data discovery**: Sensitive data discovery automatically discovers managed cloud data resources containing sensitive data at scale. This feature accesses your data, it's agentless, uses smart sampling scanning, and integrates with Microsoft Purview sensitive information types and labels.
+- **[Sensitive data discovery](concept-data-security-posture-prepare.md)**: Sensitive data discovery automatically discovers managed cloud data resources containing sensitive data at scale. This feature accesses your data, it's agentless, uses smart sampling scanning, and integrates with Microsoft Purview sensitive information types and labels.
 
-- **Permissions management** - Insights into Cloud Infrastructure Entitlement Management (CIEM). CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
+- **[Cloud infrastructure entitlement management (CIEM)](permissions-management.md)** - Insights into Cloud Infrastructure Entitlement Management. CIEM ensures appropriate and secure identities and access rights in cloud environments. It helps understand access permissions to cloud resources and associated risks. Setup and data collection might take up to 24 hours.
+
+- **[Serverless protection](serverless-protection.md)** - Detects and assesses serverless resources such as Azure Web Apps, Azure Functions, and AWS Lambda for security risks without requiring agents to be installed. It identifies misconfigurations, vulnerabilities, and insecure dependencies, providing remediation guidance to improve security posture.
 
 **To enable the components of the Defender CSPM plan**:
 
@@ -84,7 +86,13 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 1. Select **Continue**.
 
-For code to cloud contextualization capabilities and automated developer remediation workflows that come with your Defender CSPM plan at no additional cost, [connect your DevOps environments](defender-for-devops-introduction.md) to Defender for Cloud.
+For code to cloud contextualization capabilities and automated developer remediation workflows that come with your Defender CSPM plan at no extra cost, [connect your DevOps environments](defender-for-devops-introduction.md) to Defender for Cloud.
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 

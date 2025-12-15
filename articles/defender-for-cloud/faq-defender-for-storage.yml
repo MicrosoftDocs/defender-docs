@@ -4,8 +4,8 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft Defender for Storage.
   ms.topic: faq
   ms.service: defender-for-cloud
-  author: dcurwin
-  ms.author: dacurwin
+  author: Elazark
+  ms.author: elkrieger
   ms.date: 05/13/2025
 title: Common questions about Defender for Storage
 summary: Get answers to common questions about Microsoft Defender for Storage.

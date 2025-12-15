@@ -3,8 +3,8 @@ title: Overview of Microsoft Defender for SQL servers on machines
 description: Learn how Microsoft Defender for SQL servers on machines secures your SQL databases. It works on Azure, AWS, GCP, and on-premises. It finds vulnerabilities and detects threats.
 ms.date: 01/26/2025
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 #customer intent: As a security administrator, I want to understand how Microsoft Defender for SQL servers on machines works so that I can protect my SQL databases from potential threats.
 ---
 

@@ -41,6 +41,12 @@ Microsoft Defender for Resource Manager automatically monitors the resource mana
 
 1. Select **Save**.
 
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
+
 ## Next step
 
 [Overview of Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md)

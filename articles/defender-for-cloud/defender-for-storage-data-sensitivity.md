@@ -2,8 +2,8 @@
 title: Sensitive data threat detection in Defender for Storage
 description: Understand how Microsoft Defender for Storage detects and protects sensitive data from exposure, enhancing your organization's data security.
 ms.date: 07/01/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: overview
 #customer intent: As a security professional, I want to understand how Microsoft Defender for Storage detects and protects sensitive data from exposure so that I can enhance my organization's data security.
 
@@ -19,12 +19,23 @@ Learn more about [scope and limitations of sensitive data scanning](concept-data
 
 ## Prerequisites
 
-Sensitive data threat detection is available for Blob storage accounts, including:
+Sensitive data threat detection is available for the following Blob storage account types:
 
-- Standard general-purpose V1
-- Standard general-purpose V2
-- Azure Data Lake Storage Gen2
-- Premium block blobs
+Standard general-purpose v1
+
+Standard general-purpose v2
+
+Azure Data Lake Storage Gen2
+
+Premium block blobs
+
+It is also available for Azure Files (over REST API and SMB), but currently only for customers who have Defender CSPM enabled:
+
+- Files
+
+- Files v2
+
+- Premium Files
 
 To enable sensitive data threat detection at subscription and storage account levels, you need to have the relevant data-related permissions from the **Subscription owner** or **Storage account owner** roles.
 

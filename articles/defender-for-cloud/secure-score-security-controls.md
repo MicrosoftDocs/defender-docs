@@ -1,21 +1,29 @@
 ---
-title: Secure score in Microsoft Defender for Cloud
+title: Cloud secure score in Microsoft Defender for Cloud
 description: Learn about the Microsoft Defender for Cloud secure score, which is part of the Microsoft cloud security benchmark.
 ms.topic: concept-article
-ms.date: 03/12/2025
+author: dlanger
+ms.author: dlanger
+ms.date: 11/17/2025
 ms.custom: sfi-image-nochange
+zone_pivot_groups: defender-portal-experience
 ---
+
+::: zone pivot="azure-portal"
 
 # Secure score in Defender for Cloud
 
-The secure score in Microsoft Defender for Cloud can help you to improve your cloud security posture. The secure score aggregates security findings into a single score so that you can assess, at a glance, your current security situation. The higher the score, the lower the identified risk level is.
+The secure score in Microsoft Defender for Cloud can help you improve your cloud security posture. The secure score aggregates security findings into a single score so that you can assess, at a glance, your current security situation. The higher the score, the lower the identified risk level is.
 
 When you turn on Defender for Cloud in a subscription, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) standard is applied by default in the subscription. Assessment of resources in scope against the MCSB standard begins.
 
 The MCSB issues recommendations based on assessment findings. Only built-in recommendations from the MCSB affect the secure score. Currently, [risk prioritization](risk-prioritization.md) doesn't affect the secure score.
 
 > [!NOTE]
+> **Two Secure Score models**: Microsoft Defender for Cloud now offers two different Secure Score models. The new **Cloud Secure Score (risk-based)** is available in the Microsoft Defender portal and incorporates asset risk factors and criticality for more accurate prioritization. The classic **Secure Score** remains available in the Azure portal. These are completely different models with different calculations and values. For more information about the new model, see the [Defender portal experience](secure-score-security-controls.md?pivots=defender-portal) of this article.
+>
 > Recommendations flagged as **Preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
+> Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
 
 ## View the secure score
 
@@ -52,7 +60,7 @@ Defender for Cloud calculates each control every eight hours for each Azure subs
 
 The following example focuses on secure score recommendations for **Remediate vulnerabilities**.
 
-:::image type="content" source="./media/secure-score-security-controls/remediate-vulnerabilities-control.png" alt-text="Screenshot that shows secure score recommendations for multifactor authentication." lightbox="./media/secure-score-security-controls/remediate-vulnerabilities-control.png":::
+:::image type="content" source="./media/secure-score-security-controls/remediate-vulnerabilities-control.png" alt-text="Screenshot that shows secure score recommendations for the Remediate vulnerabilities control." lightbox="./media/secure-score-security-controls/remediate-vulnerabilities-control.png":::
 
 This example illustrates the following fields in the recommendations.
 
@@ -86,9 +94,6 @@ The equation for determining the secure score for a single subscription or conne
 
 :::image type="content" source="./media/secure-score-security-controls/secure-score-equation-single-sub.png" alt-text="Screenshot of the equation for calculating a subscription's secure score." lightbox="media/secure-score-security-controls/secure-score-equation-single-sub.png":::
 
-In the following example, there's a single subscription or connector with all security controls available (a potential maximum score of 60 points).
-The score shows 29 points out of a possible 60. The remaining 31 points are reflected in the **Potential score increase** figures of the security controls.
-
 :::image type="content" source="./media/secure-score-security-controls/secure-score-example-single-sub.png" alt-text="Screenshot of a single-subscription secure score with all controls enabled." lightbox="media/secure-score-security-controls/secure-score-example-single-sub.png":::
 
 :::image type="content" source="./media/secure-score-security-controls/secure-score-example-single-sub-recs.png" alt-text="Screenshot that shows a list of controls and the potential score increase."lightbox="media/secure-score-security-controls/secure-score-example-single-sub-recs.png":::
@@ -101,13 +106,11 @@ The equation for determining the secure score for multiple subscriptions and con
 
 :::image type="content" source="./media/secure-score-security-controls/secure-score-equation-multiple-subs.png" alt-text="Screenshot that shows the equation for calculating the secure score for multiple subscriptions."lightbox="media/secure-score-security-controls/secure-score-equation-multiple-subs.png":::
 
-The combined score for multiple subscriptions and connectors includes a *weight* for each subscription and connector. Defender for Cloud determines the relative weights for your subscriptions and connectors based on factors such as the number of resources. The current score for each subscription and connector is calculated in the same way as for a single subscription or connector, but then the weight is applied as shown in the equation.
+The combined score for multiple subscriptions and connectors includes a *weight* for each subscription and connector. Defender for Cloud determines the relative weights for your subscriptions and connectors based on a linear weighting model using the combined number of healthy and unhealthy resources per subscription (excluding 'Not applicable' resources). The current score for each subscription and connector is calculated in the same way as for a single subscription or connector, and then its weight is applied (see equation). If a subscription or connector doesn't have any assessments (no healthy or unhealthy resources) for a given control, that control is excluded from the score calculation for that subscription or connector. In that case, neither the control's current nor maximum potential points contribute to that subscription's score. The aggregated secure score shown in the UI is not a simple arithmetic average of per-subscription percentages or per-control counts; it's a weighted sum across subscriptions. Therefore, the per-control resource numbers displayed in the UI can't be used to manually recompute the overall secure score across multiple subscriptions.
 
 When you view multiple subscriptions and connectors, the secure score evaluates all resources within all enabled policies and groups them. Grouping them shows how, together, they affect each security control's maximum score.
 
 :::image type="content" source="./media/secure-score-security-controls/secure-score-example-multiple-subs.png" alt-text="Screenshot that shows a secure score for multiple subscriptions with all controls enabled." lightbox="media/secure-score-security-controls/secure-score-example-multiple-subs.png":::
-
-The combined score is *not* an average. Rather, it's the evaluated posture of the status of all resources across all subscriptions and connectors. If you go to the **Recommendations** page and add up the potential points available, you find that it's the difference between the current score (22) and the maximum score available (58).
 
 ## Improve a secure score
 
@@ -144,6 +147,201 @@ The following table lists the security controls in Microsoft Defender for Cloud.
 0 | **Enable enhanced security features**: Use these recommendations to enable any Defender for Cloud plans.
 0 | **Implement security best practices**: This collection of recommendations is important for your organizational security but doesn't affect your secure score.
 
+## Track your secure score
+
+You can find your overall secure score, and your score per subscription, through the Azure portal or programmatically as described in the following sections:
+
+> [!TIP]
+> For a detailed explanation of how your scores are calculated, see [Calculations - understanding your score](secure-score-security-controls.md).
+
+## Get your secure score from the portal
+
+Defender for Cloud displays your score prominently in the Azure portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
+
+Your secure score is shown in the following locations in Defender for Cloud's Azure portal pages:
+
+- In a tile on Defender for Cloud's **Overview** (main dashboard):
+
+    :::image type="content" source="./media/secure-score-security-controls/score-on-main-dashboard.png" alt-text="The secure score on Defender for Cloud's dashboard":::
+
+- In the dedicated **Secure score** page you can see the secure score for your subscription and your management groups:
+
+    :::image type="content" source="./media/secure-score-security-controls/score-on-dedicated-dashboard.png" alt-text="The secure score for subscriptions on Defender for Cloud's secure score page" lightbox="media/secure-score-security-controls/score-on-dedicated-dashboard.png":::
+
+    :::image type="content" source="./media/secure-score-security-controls/secure-score-management-groups.png" alt-text="The secure score for management groups on Defender for Cloud's secure score page"  lightbox="media/secure-score-security-controls/secure-score-management-groups.png":::
+
+    > [!NOTE]
+    > Any management groups for which you don't have sufficient permissions, will show their score as "Restricted."
+
+- At the top of the **Recommendations** page:
+
+    :::image type="content" source="./media/secure-score-security-controls/score-on-recommendations-page.png" alt-text="The secure score on Defender for Cloud's recommendations page"  lightbox="media/secure-score-security-controls/score-on-recommendations-page.png":::
+
+## Get your secure score from the REST API
+
+You can access your score via the secure score API. The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example, you can use the [Secure Scores API](/rest/api/defenderforcloud-composite/secure-scores?view=rest-defenderforcloud-composite-latest&preserve-view=true) to get the score for a specific subscription. In addition, you can use the [Secure Score Controls API](/rest/api/defenderforcloud-composite/secure-score-controls?view=rest-defenderforcloud-composite-latest&preserve-view=true) to list the security controls and the current score of your subscriptions.
+
+![Retrieving a single secure score via the API.](media/secure-score-security-controls/single-secure-score-via-api.png)
+
+For examples of tools built on top of the secure score API, see [the secure score area of our GitHub community](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score).
+
+## Get your secure score from Azure Resource Graph
+
+Azure Resource Graph provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. It's a quick and efficient way to query information across Azure subscriptions programmatically or from within the Azure portal. [Learn more about Azure Resource Graph](/azure/governance/resource-graph/).
+
+To access the secure score for multiple subscriptions with Azure Resource Graph:
+
+1. From the Azure portal, open **Azure Resource Graph Explorer**.
+
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Launching Azure Resource Graph Explorer recommendation page."  lightbox="media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png":::
+
+1. Enter your Kusto query (using the following examples for guidance).
+
+    - This query returns the subscription ID, the current score in points and as a percentage, and the maximum score for the subscription.
+
+        ```kusto
+        SecurityResources 
+        | where type == 'microsoft.security/securescores' 
+        | extend current = properties.score.current, max = todouble(properties.score.max)
+        | project subscriptionId, current, max, percentage = ((current / max)*100)
+        ```
+
+    - This query returns the status of all the security controls. For each control, you get the number of unhealthy resources, the current score, and the maximum score.
+
+        ```kusto
+        SecurityResources 
+        | where type == 'microsoft.security/securescores/securescorecontrols'
+        | extend SecureControl = properties.displayName, unhealthy = properties.unhealthyResourceCount, currentscore = properties.score.current, maxscore = properties.score.max
+        | project SecureControl , unhealthy, currentscore, maxscore
+        ```
+
+1. Select **Run query**.
+
+## Track your secure score over time
+
+### Secure Score Over Time report in workbooks page
+
+Defender for Cloud's workbooks page includes a ready-made report for visually tracking the scores of your subscriptions, security controls, and more. Learn more in [Create rich, interactive reports of Defender for Cloud data](custom-dashboards-azure-workbooks.md).
+
+:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="A section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery":::
+
+### Power BI Pro dashboards
+
+If you're a Power BI user with a Pro account, you can use the **Secure Score Over Time** Power BI dashboard to track your secure score over time and investigate any changes.
+
+> [!TIP]
+> You can find this dashboard, and other tools for working programmatically with secure score, in the dedicated area of the Microsoft Defender for Cloud community on GitHub: <https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score>
+
+The dashboard contains the following two reports to help you analyze your security status:
+
+- **Resources Summary** - provides summarized data regarding your resources' health.
+
+- **Secure Score Summary** - provides summarized data regarding your score progress. Use the "Secure score over time per subscription" chart to view changes in the score. If you notice a dramatic change in your score, check the "detected changes that might affect your secure score" table for possible changes that could have caused the change. This table presents deleted resources, newly deployed resources, or resources that their security status changed for one of the recommendations.
+
+:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="The optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes.":::
+
 ## Next steps
 
-[Track your secure score](secure-score-access-and-track.md)
+- [Learn about the different elements of a recommendation](review-security-recommendations.md)
+- [Learn how to remediate recommendations](implement-security-recommendations.md)
+- [View the GitHub-based tools for working programmatically with secure score](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score)
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+> [!NOTE]
+> **Two Secure Score models**: Microsoft Defender for Cloud now offers two different Secure Score models. The new **Cloud Secure Score (risk-based)** is available in the Microsoft Defender portal and incorporates asset risk factors and criticality for more accurate prioritization. The classic **Secure Score** remains available in the Azure portal. These are completely different models with different calculations and values. For more information about the classic model, see the [Azure portal experience](secure-score-security-controls.md?pivots=azure-portal) of this article.
+>
+> This capability is currently in preview.
+> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
+
+## Cloud secure score in the Defender portal
+
+The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allow you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
+
+The Cloud secure score introduces asset risk factors and asset criticality into the calculation, making the score more accurate and enabling smarter prioritization of high risk level recommendations.  
+
+## Cloud secure score model
+
+The Cloud secure score is based on the number and risk level of open recommendations in Defender for cloud. To improve your score, focus on recommendations with higher risk levels, as they contribute the most to your score. 
+
+:::image type="content" source="./media/secure-score-security-controls/cloud-secure-score-flow.png" alt-text="Diagram of the new Cloud secure score calculation flow including asset risk factors and criticality.":::
+
+## Cloud secure score formula
+
+The Cloud Secure Score ranges from 0 to 100, with 100 indicating an optimal security posture. The score is an aggregation of the selected assets score. 
+
+To calculate the environmental score for a given organization at any scope, the formula assesses the asset risk (the combination of likelihood and impact). For each asset, the formula calculates a weighted average of the recommendations risk level on this asset, while factoring in the asset’s risk factors (e.g. internet exposure, data sensitivity, etc.), as well as the asset criticality to the organization.  
+
+:::image type="content" source="./media/secure-score-security-controls/cloud-secure-score-formula.png" alt-text="Formula diagram showing Cloud secure score incorporating asset risk factors and asset criticality.":::
+
+**Legend (Cloud Secure Score formula)**  
+
+- n = Number of assets  
+- Criticality = The asset criticality for the organization  
+- Rec. Low = Recommendations with low risk level  
+- Rec. Medium = Recommendations with medium risk level  
+- Rec. High = Recommendations with high risk level  
+- Rec. Critical = Recommendations with critical risk level  
+
+### Access the Cloud secure score (Defender portal)
+
+Secure scores are consolidated into a unified Microsoft Security experience, providing a single entry point to understand posture across identities, devices, cloud apps, data, and infrastructure. The Cloud secure score is the cloud posture component within that broader set.
+
+:::image type="content" source="media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="Screenshot of secure score landing page" lightbox="media/secure-score-defender-portal/secure-score-landing-page.png":::
+
+**Navigation paths to the Cloud secure score (Cloud initiative)**
+
+- **Exposure Management** > **Secure score** > View Cloud initiative  
+- **Exposure Management** > **Initiatives** > View Cloud initiative  
+- **Cloud Infrastructure** > **Overview** > top metrics card or **Security posture** widget > View cloud initiative  
+
+### Initiatives dashboard
+
+Navigate to **Exposure Management** > **Initiatives** for a consolidated cloud security posture view. This dashboard aggregates:
+
+- Top initiatives and their relative status
+- Recent security and exposure score history (14 day trends)
+- Cross-domain insights (SaaS, endpoint, cloud, identity, ransomware protection)
+- Workload-specific posture data to track remediation momentum
+
+**Open the Cloud initiative page**
+
+1. Go to **Exposure Management** > **Initiatives**.
+1. Select **Cloud Security**.
+1. From the side panel, choose **open initiative page**.
+1. Review the overview dashboard elements:
+   - Current Cloud secure score
+   - Secure score over time trend
+   - Secure score by environment (Azure, AWS, GCP) for quick multicloud comparison
+   - Secure score by workload to highlight posture differences across major workload categories
+   - Recommendations summary
+   - Most common recommendations by criticality to focus remediation where it drives the largest score and risk reduction impact
+
+:::image type="content" source="media/secure-score-defender-portal/cloud-initiative-homepage.png" alt-text="Screenshot of cloud initiative homepage" lightbox="media/secure-score-defender-portal/cloud-initiative-homepage.png":::
+
+> [!NOTE]
+> The previous (classic) secure score is still available in the Azure portal using the classic view of recommendations. Navigation: Azure portal → Microsoft Defender for Cloud → Recommendations → Switch to classic view.
+
+## Microsoft Secure Score context
+
+Microsoft secure score is a broader, unified concept spanning multiple security domains. This page focuses on the Cloud secure score (cloud security posture management in Defender for Cloud). Other Microsoft secure scores appear in the Microsoft security portals.
+
+**Secure score types**
+
+| Score type | Scope / domain | Primary source products & data |
+| --- | --- | --- |
+| Microsoft Secure Score | Identity posture | Microsoft Entra (Azure AD) recommendations |
+| Exposure Secure Score | Device / endpoint posture | Microsoft Defender for Endpoint (device configuration, threat protection) |
+| Cloud Secure Score | Cloud posture (multicloud) | Microsoft Defender for Cloud (Azure, AWS, GCP) |
+
+> [!NOTE]
+> Recommendations flagged as **preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
+> Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
+
+## Next steps
+
+- [Learn about the different elements of a recommendation](review-security-recommendations.md)
+
+::: zone-end

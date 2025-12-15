@@ -2,7 +2,7 @@
 title: Agentless container posture management | Defender for Cloud in the field 
 description: Learn about agentless container posture management
 ms.topic: reference
-ms.date: 06/13/2023
+ms.date: 10/05/2025
 ---
 
 # Agentless container posture management

@@ -2,16 +2,16 @@
 title: DevOps Security Capabilities in Defender CSPM | Defender for Cloud in the field
 description: Learn about DevOps security capabilities in Defender for Cloud.
 ms.topic: reference
-ms.date: 04/11/2024
+ms.date: 10/05/2025
 ---
 
 # DevOps security capabilities in Defender CSPM
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Charles Oxyer joins Yuri Diogenes to talk about DevOps security capabilities in Defender CSPM. Charles explains the importance of DevOps security in Microsoft CNAPP solution, what are the free capabilities available as part of Foundational CSPM, and what are the advanced DevOps security features included in Defender CSPM. Charles demonstrates how to improve the DevOps security posture by remediating recommendations, and how to use code to cloud contextualization with Cloud Security Explorer.
+**Episode description**: In this episode of Defender for Cloud in the Field, Charles Oxyer joins Yuri Diogenes to talk about DevOps security capabilities in Defender CSPM. Charles explains the importance of DevOps security in Microsoft CNAPP solution, what free capabilities are available as part of Foundational CSPM, and what advanced DevOps security features are included in Defender CSPM. Charles demonstrates how to improve the DevOps security posture by remediating recommendations, and how to use code to cloud contextualization with Cloud Security Explorer.
 
 > [!VIDEO https://aka.ms/docs/player?id=386a8435-8154-4c1d-90cc-324e8d41b95f]
 
-- [01:47](/shows/mdc-in-the-field/devops-security#time=01m54s) - What role does DevOps Security plays in a CNAPP solution?
+- [01:47](/shows/mdc-in-the-field/devops-security#time=01m54s) - What role does DevOps Security play in a CNAPP solution?
 - [04:40](/shows/mdc-in-the-field/devops-security#time=04m40s) - What's new in Defender for Cloud DevOps Security GA?
 - [07:08](/shows/mdc-in-the-field/devops-security#time=07m08s) - How Defenders for Cloud DevOps Security capabilities help customers to identify risk across devops state?
 - [09:38](/shows/mdc-in-the-field/devops-security#time=09m38s) - Code to cloud contextualization
