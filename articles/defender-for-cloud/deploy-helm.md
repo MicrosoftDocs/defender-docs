@@ -31,13 +31,9 @@ All prerequisite requirements for the Defender for Containers sensor must be imp
 
 ## Install the sensors Helm chart
 
-Depending on your deployment type, follow the relevant instructions below to install the Defender for Containers sensor using Helm:
+Depending on your deployment type, follow the relevant instructions to install the Defender for Containers sensor using Helm:
 
-- [AKS Automatic](#for-aks-automatic)
-- [AKS](#aks)
-- [EKS/GKE](#eksgke)
-
-### AKS Automatic
+### [AKS Automatic](#tab/aks-automatic)
 
 Run the following command for AKS Automatic:
 
@@ -52,7 +48,7 @@ az extension add --name aks-preview
 az extension update --name aks-preview
 ```
 
-### AKS
+### [AKS](#tab/aks)
 
 #### Prerequisites
 
@@ -83,7 +79,7 @@ az extension update --name aks-preview
     > [!NOTE]
     > This script removes resource group and subscription level policies for setting up the GA version of Defender for Containers, which can affect clusters other than the one you're configuring.
 
-#### Install on AKS
+#### Installation
 
 Install the Defender for Containers sensor and remove any existing deployment, if one exists with the [install_defender_sensor_aks.sh](https://gist.github.com/matannov/8a68d2101bc57af461913f7547891d94)script.
 
@@ -98,7 +94,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 > [!NOTE]
 > This script sets a new kubeconfig context, and might create a Log Analytics workspace in your Azure account.
 
-### EKS/GKE
+### [EKS/GKE](#tab/eks-gke)
 
 1. Install the Defender for Containers sensor and remove any existing deployment, if one exists with the [install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678) script.
 
@@ -140,6 +136,8 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
   Use `public` for the public preview releases (0.9.x). For `<VERSION>`, use 'latest' or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
 
+---
+
 ### Verify the installation
 
 Run the following command to check that the installation succeeded:
@@ -148,7 +146,7 @@ Run the following command to check that the installation succeeded:
 helm list --namespace mdc
 ```
 
-The STATUS field should read **deployed**.
+The `STATUS` field should read **deployed**.
 
 ## Configure security rules for gated deployment
 
@@ -173,17 +171,19 @@ Define security rules to control what can be deployed into your Kubernetes clust
 > [!NOTE]
 > If you use Helm to set up the sensor, **ignore** the existing recommendations.
 
-### AKS
+### [AKS](#tab/aks)
 
 [Azure Kubernetes Service clusters should have Defender profile enabled - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9/showSecurityCenterCommandBar~/false)
 
 :::image type="content" source="media/deploy-helm/recommendation-aks.png" alt-text="Screenshot of the Azure portal that shows the Defender profile recommendation for AKS. The screenshot highlights the recommendation to enable the Defender profile." lightbox="media/deploy-helm/recommendation-aks.png":::
 
-### Multicloud
+### [Multicloud](#tab/multicloud)
 
 [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6/showSecurityCenterCommandBar~/false)
 
 :::image type="content" source="media/deploy-helm/recommendation-arc.png" alt-text="Screenshot of the Azure portal that shows the Defender extension recommendation for Arc-enabled Kubernetes clusters. The screenshot highlights the recommendation to install the Defender extension." lightbox="media/deploy-helm/recommendation-arc.png":::
+
+---
 
 ## Upgrade an existing Helm-based deployment
 
