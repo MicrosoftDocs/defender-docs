@@ -60,7 +60,7 @@ Export your QRadar rule data as a CSV file, as explained here Exporting rule
 
 ## Start the SIEM migration experience
 
-After exporting the rules,
+After exporting the rules, do the following:
 
 1. Go to `security.microsoft.com`.
 
