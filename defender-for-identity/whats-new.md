@@ -24,9 +24,23 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## December 2025
+
+## New properties for 'sensorCandidate' resource type in Graph-API (preview)
+|Property|Type|Description|
+|---------|---------|--------|
+|domainName	|String	|The domain name of the sensor.|
+|senseClientVersion	|String	|The version of the Defender for Identity sensor client.|
+
+This capability is currently in preview and available in API Beta version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta)
+
+
+## ADWS LDAP search in Advanced Hunting
+New ADWS LDAP search activity is now available in the ‘IdentityQueryEvents’ table in Advanced Hunting. This can provides visibility into directory queries performed through ADWS, helping customers track these operations and create custom detection based on this data.
+
 |Version number |Updates |
 |---------|---------|
 |2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.253|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ## November 2025
 
