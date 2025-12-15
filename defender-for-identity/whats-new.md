@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## December 2025
 
-## New properties for 'sensorCandidate' resource type in Graph-API (preview)
+### New properties for 'sensorCandidate' resource type in Graph-API (preview)
 |Property|Type|Description|
 |---------|---------|--------|
 |domainName	|String	|The domain name of the sensor.|
@@ -34,7 +34,7 @@ For updates about versions and features released six months ago or earlier, see 
 This capability is currently in preview and available in API Beta version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta)
 
 
-## ADWS LDAP search in Advanced Hunting
+### ADWS LDAP search in Advanced Hunting
 New ADWS LDAP search activity is now available in the ‘IdentityQueryEvents’ table in Advanced Hunting. This can provides visibility into directory queries performed through ADWS, helping customers track these operations and create custom detection based on this data.
 
 |Version number |Updates |
