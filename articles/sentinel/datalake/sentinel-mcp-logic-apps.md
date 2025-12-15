@@ -51,7 +51,7 @@ To install a preexisting logic app template:
 
 When you create and run a playbook, insights from the entity analyzer appear as comments within an incident's details:
 
-- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK techniques](https://attack.mitre.org/), a list of malicious IP addresses the user signed in from, and a few suspicious user agents the user's activity originated from. The IP addresses have been redacted in this screenshot.
+- The following screenshot shows the analyzer's top-level classification that a user account is compromised along with its supporting evidence, starting with the series of alerts and their associated [MITRE ATT&CK techniques](https://attack.mitre.org/), a list of malicious IP addresses the user signed in from, and a few suspicious user agents the user's activity originated from. (The IP addresses have been redacted.)
 
     :::image type="content" source="media/sentinel-mcp/logic-app-incident-classification.png" alt-text="Screenshot of the entity analyzer tool incident classification and evidence added to incident comments." lightbox="media/sentinel-mcp/logic-app-incident-classification.png":::
 
