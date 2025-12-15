@@ -15,7 +15,7 @@ appliesto:
 
 # Migrate to Microsoft Sentinel with the SIEM migration experience
 
-The SIEM migration tool analyzes Splunk detections, including custom detections, and recommends best‑fit Sentinel detections rules. It also provides recommendations for data connectors, both Microsoft and third-party connectors available in Content Hub to enable the recommend detections. Customers can track the migration by assigning the right status to each recommendation card.
+The SIEM migration tool analyzes Splunk detections, including custom detections, and recommends best‑fit Microsoft Sentinel detections rules. It also provides recommendations for data connectors, both Microsoft and third-party connectors available in Content Hub to enable the recommend detections. Customers can track the migration by assigning the right status to each recommendation card.
 
 > [!NOTE]
 > The old migration tool is deprecated. This article describes the current SIEM migration experience.
@@ -84,9 +84,9 @@ After exporting the rules,
 
 1. Select a workspace, then select **Start Analyzing**.
 
-    :::image type="content" source="./media/siem-migration/select-workspace.png" alt-text="Screenshot of the the UI asking the user to select a workspace.":::
+    :::image type="content" source="./media/siem-migration/select-workspace.png" alt-text="Screenshot of the UI asking the user to select a workspace.":::
 
-    The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, they're deleted and replaced by the new ones.
+    The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, the tool deletes and replaces them with new ones.
 
     :::image type="content" source="./media/siem-migration/getting-ready.png" alt-text="Screenshot of the migration tool getting ready to analyze the rules.":::
 
@@ -111,7 +111,7 @@ After exporting the rules,
     :::image type="content" source="./media/siem-migration/recommendation-card.png" alt-text="A screenshot of a recommendation card." lightbox="./media/siem-migration/recommendation-card.png":::
 
     The tool matches the Splunk rules to out-of-box Microsoft Sentinel data connectors and out-of-box Microsoft Sentinel detection rules.
-    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If you want to use a connector that's not connected, connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
+    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If you want to use a connector that's not connected, you can connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
 
     :::image type="content" source="./media/siem-migration/connectors.png" alt-text="Screenshot of Microsoft Sentinel data connectors matched to Splunk or QRadar rules.":::
 
@@ -121,7 +121,7 @@ After exporting the rules,
     - The current Splunk detection rule from your uploaded file.
     - The status of the detection rule in Microsoft Sentinel. The status can be:
         - *Enabled*: The detection rule is created from the rule template, enabled, and active (from a previous action)
-        - *Disabled*: The detection rule is installed from the Content Hub but not enabled in the Sentinel workspace
+        - *Disabled*: The detection rule is installed from the Content Hub but not enabled in the Microsoft Sentinel workspace
         - *Not in use*: The detection rule was installed from Content Hub and is available as a template to be enabled
         - *Not installed*: The detection rule wasn't installed from the Content Hub
     - The required connectors that need to be configured to bring the logs required for the recommended detection rule. If a required connector isn't available, there's a side panel with a wizard to install it from the Content Hub. If all required connectors are connected, a green check mark appears.
