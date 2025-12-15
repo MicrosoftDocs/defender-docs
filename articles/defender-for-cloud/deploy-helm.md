@@ -171,7 +171,7 @@ Define security rules to control what can be deployed into your Kubernetes clust
 > [!NOTE]
 > If you use Helm to set up the sensor, **ignore** the existing recommendations.
 
-### [AKS](#tab/aks)
+### [Azure](#tab/azure)
 
 [Azure Kubernetes Service clusters should have Defender profile enabled - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9/showSecurityCenterCommandBar~/false)
 
