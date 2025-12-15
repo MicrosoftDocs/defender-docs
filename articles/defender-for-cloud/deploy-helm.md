@@ -106,12 +106,12 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
     Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values.
     
-    `ARC_CLUSTER_RESOURCE_ID` is an optional parameter. Use it only for existing clusters that use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.
+    - `ARC_CLUSTER_RESOURCE_ID` is an optional parameter. Use it only for existing clusters that use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.
      
-    For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+    - For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
       > [!NOTE]
-      > To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. See [Connect your AWS account](quickstart-onboard-aws.md) or [Connect your GCP project](quickstart-onboard-gcp.md).
+      > To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
 
       Locate your Azure resource ID and copy it.
 
@@ -140,13 +140,13 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### Verify the installation
 
-Run the following command to check that the installation succeeded:
+Verify that the success of teh installation with the command::
 
 ```bash
 helm list --namespace mdc
 ```
 
-The `STATUS` field should read **deployed**.
+The installation is successful if the `STATUS` field displays **deployed**.
 
 ## Configure security rules for gated deployment
 
