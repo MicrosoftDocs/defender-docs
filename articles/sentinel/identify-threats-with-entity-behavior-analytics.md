@@ -3,7 +3,7 @@ title: Advanced threat detection with User and Entity Behavior Analytics (UEBA) 
 description: Create behavioral baselines for entities (users, hostnames, IP addresses) and use them to detect anomalous behavior and identify zero-day advanced persistent threats (APT).
 author: guywi-ms
 ms.author: guywild
-ms.topic: conceptual
+ms.topic: article
 ms.date: 12/15/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
