@@ -27,8 +27,6 @@ Implement all prerequisite requirements for the Defender for Containers sensor a
    - **Security findings**
    - **Registry access**
 
-       :::image type="content" source="media/deploy-helm/verify-correct-toggles.png" alt-text="Screenshot showing how to verify the correct toggles are enabled." lightbox="media/deploy-helm/verify-correct-toggles.png":::
-
 ## Install the sensors Helm chart
 
 Depending on your deployment type, follow the relevant instructions to install the Defender for Containers sensor by using Helm:
@@ -156,7 +154,7 @@ The installation is successful if the `STATUS` field displays **deployed**.
 > - **Subscription Support Warning**: When creating rules, your selected subscription might show as "not supported for Gated deployment." This status happens because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
 >  - **Skip Auto-Installation**: If you're prompted to enable gating in the third tab of the security rule edit window, make sure to select **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
 > 
-> :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
+> :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window." lightbox="media/deploy-helm/edit-vulnerability-assessment-rule.png":::
 
 Define security rules to control what can be deployed into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities. 
 
