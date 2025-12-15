@@ -129,6 +129,7 @@ The rest of the Teams message entity panel contains the following information, r
 > You can only remove _internal_ users in your organization from a chat.
 >
 > When you remove users from a chat, the sender of the chat isn't blocked, and the removed users can start new chats with the sender.
+
 In the Teams entity panel, you can select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout (often under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions**) to remove users from a Teams chat.
 
 Do the following steps in the **Take action** wizard:
