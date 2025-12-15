@@ -25,7 +25,6 @@ appliesto:
 
 # Attack surface reduction rules overview
 
-
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Why attack surface reduction rules are important
@@ -72,11 +71,11 @@ Use [audit mode](overview-attack-surface-reduction.md) to evaluate how attack su
 
 ### Exclusions
 
-By monitoring audit data and [adding exclusions](attack-surface-reduction-rules-deployment-test.md) for necessary applications, you can deploy attack surface reduction rules without reducing productivity.
+By monitoring audit data and [adding exclusions](attack-surface-reduction-rules-deployment-test.md#add-exclusions) for necessary applications, you can deploy attack surface reduction rules without reducing productivity.
 
 ### Per-rule exclusions
 
-For information about configuring per-rule exclusions, see the section titled **Configure attack surface reduction rules per-rule exclusions** in the article [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md).
+For information about configuring per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 
 ## Warn mode for users
 
@@ -204,7 +203,6 @@ Defender for Endpoint generates the "engine version" that's listed in the event 
 - [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 >
@@ -216,4 +214,3 @@ Defender for Endpoint generates the "engine version" that's listed in the event 
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
