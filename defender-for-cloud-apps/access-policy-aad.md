@@ -5,9 +5,8 @@ ms.date: 05/15/2024
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # Create Microsoft Defender for Cloud Apps access policies
-
-
 
 Microsoft Defender for Cloud Apps access policies use Conditional Access app control to provide real-time monitoring and control over access to cloud apps. Access policies control access based on user, location, device, and app, and are supported for any device.
 
@@ -25,6 +24,8 @@ Before you start, make sure that you have the following prerequisites:
 - A license for Microsoft Entra ID P1, either as stand-alone license or as part of another license.
 
 - If you're using a non-Microsoft IdP, the license required by your identity provider (IdP) solution.
+
+- A Microsoft Entra ID Conditional Access policy configured for Microsoft Defender for Cloud Apps (Conditional Access app control). For more information, see: [Automatically onboard Microsoft Entra ID apps to conditional access app control (preview)](app-onboarding.md#supported-apps)
 
 - The relevant apps onboarded to Conditional Access app control. Microsoft Entra ID apps are automatically onboarded, while non-Microsoft IdP apps must be onboarded manually.
 
