@@ -87,10 +87,9 @@ You can choose from several methods to define exclusions for Microsoft Defender 
 
 ### Use Intune to configure file name, folder, or file extension exclusions
 
-See the following articles:
+See the following article:
 
-- [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure)
-- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
+- [Create a Microsoft Defender Antivirus exclusions policy in Microsoft Intune](configure-exclusions-microsoft-defender-antivirus.md#create-a-new-antivirus-policy-with-exclusions-in-intune)
 
 ### Use Configuration Manager to configure file name, folder, or file extension exclusions
 
