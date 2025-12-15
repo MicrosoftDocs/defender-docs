@@ -125,6 +125,7 @@ This section isn’t required to receive the 500 MB/day ingestion benefit.
                 ```xpath
                 Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
                 ```
+                
     - In **Destination**:
       - Select **+ Add destination**:
       :::image type="content" source="media/data-ingestion-benefit/add-data-source-destination-tab.png" alt-text="Screenshot of the Add data source pane showing the Destination tab, where you click + Add destination." lightbox="media/data-ingestion-benefit/add-data-source-destination-tab.png":::
@@ -143,6 +144,7 @@ This section isn’t required to receive the 500 MB/day ingestion benefit.
 ```kusto
 SecurityEvent
 | take 10
+```
 
 #### Sample JSON fragment
 
