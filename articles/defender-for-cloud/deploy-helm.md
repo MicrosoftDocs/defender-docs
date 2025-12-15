@@ -94,6 +94,25 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### [EKS and GKE](#tab/eks-and-gke)
 
+## Prerequisites
+
+- Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
+
+- Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get the security connector resource ID for the account your cluster belongs to.
+
+    For example:
+     ```azurecli
+        az resource show \
+        --name <connector-name> \
+        --resource-group <resource-group-name> \
+        --resource-type "Microsoft.Security/securityConnectors" \
+        --subscription <subscription-id> \
+        --query id -o tsv
+    ```
+     In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
+
+## Installation
+
 1. Use the [install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678) script to install the Defender for Containers sensor and remove any existing deployment.
 
 1. Set the `kubeconfig` context to the target cluster by using the command:
@@ -106,33 +125,20 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
     
     - `ARC_CLUSTER_RESOURCE_ID` is an optional parameter. Use it only for existing clusters that use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.
      
-    - For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with your Azure resource ID
 
-      > [!NOTE]
-      > To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
+    > [!NOTE]
+    > This script might create a Log Analytics workspace in your Azure account.
 
-      Locate your Azure resource ID and copy it.
+    - Replace `<VERSION>` with:
+        - `public` for the public preview releases (0.9.x).
+          Or,
+        - `latest` for the most recent version
+          Or, 
+        - A specific semantic version.
 
-      > [!NOTE]
-      > To install the Helm chart on an EKS or GKE cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get this value.
-      >
-      > For example:
-      >
-      > ```azurecli
-      > az resource show \
-      >  --name <connector-name> \
-      >  --resource-group <resource-group-name> \
-      >  --resource-type "Microsoft.Security/securityConnectors" \
-      >  --subscription <subscription-id> \
-      >  --query id -o tsv
-      >```
-      >
-      > In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
-
-> [!NOTE]
-> This script might create a Log Analytics workspace in your Azure account.
-
-  Use `public` for the public preview releases (0.9.x). For `<VERSION>`, use `latest` or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
+    - Replace `<DISTRIBUTION>` with: 
+        - `eks` or `gke`.
 
 ---
 
