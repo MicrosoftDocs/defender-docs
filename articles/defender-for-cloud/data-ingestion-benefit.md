@@ -122,9 +122,9 @@ This section isn’t required to receive the 500 MB/day ingestion benefit.
               - Select **Application** or **System** levels if needed. These logs go to the `Event` table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
           - **Custom**:
               - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**, then select **Add**. For example:  
-                ```xpath
-                Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
-                ```
+              ```xpath
+              Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
+              ```
                 
     - In **Destination**:
       - Select **+ Add destination**:
