@@ -1,6 +1,6 @@
 ---
 title: Install Defender for Containers sensor Using Helm
-description: Learn how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters using Helm, including prerequisites, scripts, and troubleshooting steps.
+description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
 ms.date: 12/11/2025
@@ -23,9 +23,9 @@ Implement all prerequisite requirements for the Defender for Containers sensor a
     - Arc-enabled Kubernetes (ARC): [Enable Defender for Containers on Arc-enabled Kubernetes via portal](defender-for-containers-arc-enable-portal.md)
 
 - Ensure the following components of the Defender for containers plan are enabled:
-   - **Defender sensor**
-   - **Security findings**
-   - **Registry access**
+   - Defender sensor
+   - Security findings
+   - Registry access
 
 ## Install the sensors Helm chart
 
@@ -138,7 +138,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### Verify the installation
 
-Verify that the success of teh installation with the command::
+Verify that the success of the installation with the command:
 
 ```bash
 helm list --namespace mdc
@@ -151,8 +151,8 @@ The installation is successful if the `STATUS` field displays **deployed**.
 > [!IMPORTANT]
 > For Helm installations:
 > 
-> - **Subscription Support Warning**: When creating rules, your selected subscription might show as "not supported for Gated deployment." This status happens because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
->  - **Skip Auto-Installation**: If you're prompted to enable gating in the third tab of the security rule edit window, make sure to select **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
+> - **Subscription Support Warning**: When rules are created, your selected subscription might show as "not supported for Gated deployment." This status happens because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
+>  - **Skip Auto-Installation**: If you're prompted to enable gating in the third tab of the security rule edit window, make sure to select **Skip**. This option enables autoinstallation, which conflicts with your existing Helm deployment.
 > 
 > :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window." lightbox="media/deploy-helm/edit-vulnerability-assessment-rule.png":::
 
