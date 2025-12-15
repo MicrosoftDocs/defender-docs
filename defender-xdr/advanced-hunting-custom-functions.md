@@ -49,7 +49,7 @@ Advanced hunting includes three different types of functions:
 
 ### Custom functions imported from Microsoft Sentinel log analytics
 
-Microsoft Sentinel customers can access the custom functions they created and saved previously in their [Log analytics workspace](/azure-monitor/logs/log-analytics-workspace-overview) in the Defender portal, under **Shared functions** > **Sentinel workspace functions**. You can use these functions for workbooks, analytics rules, and running advanced hunting queries in the Defender portal, but not to create custom detection rules.
+Microsoft Sentinel customers can access the custom functions they created and saved previously in their [Log analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) in the Defender portal, under **Shared functions** > **Sentinel workspace functions**. You can use these functions for workbooks, analytics rules, and running advanced hunting queries in the Defender portal, but not to create custom detection rules.
 
 For more information about custom detections in the Defender portal, see [Create custom detection rules](custom-detection-rules.md).
 
