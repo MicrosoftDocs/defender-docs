@@ -68,14 +68,14 @@ Windows Server 2012 and Windows Server 2012 R2 reached extended end of support o
 |SSL (\*.atp.azure.com)   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|Alternately, [configure access through a proxy](configure-proxy.md).|
 |Internal ports          | | | | |  |
 |DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
-|Netlogon  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|  |
+|Netlogon  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network (DCs, ADFS, ADCS, and Entra Connect)|  |
 |RADIUS         |UDP      |1813|RADIUS         |Defender for Identity sensor      |  |
 |Localhost port    | | | | |Required for the sensor service updater. By default, *localhost* to *localhost* traffic is allowed unless a custom firewall policy blocks it.|
 |SSL|TCP      |444 |Sensor service|Sensor updater service            |   |
 |Network Name Resolution (NNR) ports    | | | | |To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required. |
-|NTLM over RPC |TCP      |Port 135         |Defender for Identity sensor|All devices on network|  |
-|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network|  |
-|RDP      |TCP      |3389 |Defender for Identity sensor|All devices on network|Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|
+|NTLM over RPC |TCP      |Port 135         |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|  |
+|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|  |
+|RDP      |TCP      |3389 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|
 
 If you're working with [multiple forests](multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
 
