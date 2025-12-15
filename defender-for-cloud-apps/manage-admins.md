@@ -36,12 +36,9 @@ By default, the following Microsoft 365 and [Microsoft Entra ID](/azure/active-d
 <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 > [!NOTE]
-> Virtually all app governance features are controlled by Microsoft Entra ID roles **only**. App governance doesn't support [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) in Defender for Cloud Apps. The only exception is the [OAuthAppInfo table in advanced hunting](/defender-xdr/advanced-hunting-oauthappinfo-table). [Unified RBAC permissions in Defender for Cloud Apps](/defender-xdr/compare-rbac-roles#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions-preview) grant access to the app governance data in this specific table.
+> Virtually all app governance experiences are controlled by Microsoft Entra ID roles **only**. The only exception is the [OAuthAppInfo table in advanced hunting](/defender-xdr/advanced-hunting-oauthappinfo-table). [Unified RBAC permissions in Defender for Cloud Apps](/defender-xdr/compare-rbac-roles#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions-preview) grant access to the app governance data in this specific table.
 >
-> In the [unified alert experience in Defender for XDR](/defender-xdr/investigate-alerts), access to alert data (wherever it's located in the Microsoft Defender portal) is controlled by the following permission models:
->
-> - **Defender for Cloud Apps alerts**: Unified RBAC is supported.
-> - **App governance alerts**: Microsoft Entra ID **only**.
+> In the [unified alerts and incidents experiences in Defender XDR](/defender-xdr/investigate-alerts), access to app governance data is controlled by Microsoft Entra ID **only**.
 >
 > For more information about permissions in app governance, see [App governance roles](app-governance-get-started.md#roles).
 
