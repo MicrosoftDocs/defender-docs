@@ -2,15 +2,15 @@
 title: Disable Defender for Cloud plans
 description: Learn how to disable Defender for Cloud plans on your connected environments subscription.
 ms.topic: how-to
-ms.date: 09/21/2025
+ms.date: 12/16/2025
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ---
 
 # Disable Defender for Cloud plans
 
-You can disable Microsoft Defender for Cloud plans on your connected environments to manage your security costs. Disabling a plan stops the associated security features, recommendations, and alerts for that plan from appearing in Defender for Cloud.
+You can disable Microsoft Defender for Cloud plans on your connected environments to manage your security costs. When you disable a plan, it stops the associated security features, recommendations, and alerts for that plan from appearing in Defender for Cloud.
 
-Each of Defender for Cloud's plans has different pricing structures that can depend on attached resources or sub plans that are enabled. For additional information, you can review [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+Each of Defender for Cloud's plans has different pricing structures that can depend on attached resources or sub plans that are enabled. For more information, see [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Disable plans on your environment
 
@@ -32,11 +32,11 @@ To continue the disablement process, select the relevant multicloud environment.
 
 ### [Azure](#tab/Azure)
         
-1. Locate the plan, or plans you want to disable and toggle the switch to **Off**.
+1. Find the plans you want to disable and toggle the switch to **Off**.
         
     :::image type="content" source="media/disable-plans/plans-disabled.png" alt-text="Screenshot that shows all of the Defender for Cloud plans toggled to off in an Azure environment." lightbox="media/disable-plans/plans-disabled.png":::
     
-    1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you're able to close the four sub plans of Defender for Databases.
+    1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you can close the four sub plans of Defender for Databases.
         
         :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
     
@@ -46,7 +46,7 @@ To continue the disablement process, select the relevant multicloud environment.
     
 ### [AWS](#tab/AWS)
 
-1. Locate the plan, or plans you want to disable and toggle the switch to **Off**.
+1. Find the plans you want to disable and toggle the switch to **Off**.
     
     :::image type="content" source="media/disable-plans/disable-amazon-plans.png" alt-text="Screenshot that shows the Defender for Cloud plans disabled in an Amazon environment." lightbox="media/disable-plans/disable-amazon-plans.png":::
 
@@ -63,7 +63,7 @@ To continue the disablement process, select the relevant multicloud environment.
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
     
-1. Put a check in the checkbox, confirming you followed the instructions.
+1. Select the checkbox to confirm you followed the instructions.
 
 1. Select **Next: Review and generate**.
         
@@ -71,7 +71,7 @@ To continue the disablement process, select the relevant multicloud environment.
         
 ### [GCP](#tab/GCP)
 
-1. Locate the plan, or plans you want to disable and toggle the switch to **Off**.
+1. Find the plans you want to disable and toggle the switch to **Off**.
   
     :::image type="content" source="media/disable-plans/disable-google-plans.png" alt-text="Screenshot that shows the Defender for Cloud plans disabled in a Google environment." lightbox="media/disable-plans/disable-google-plans.png":::
 
@@ -88,7 +88,7 @@ To continue the disablement process, select the relevant multicloud environment.
 
     :::image type="content" source="media/disable-plans/disable-google-configuration.png" alt-text="Screenshot that shows the Google configure access screen." lightbox="media/disable-plans/disable-google-configuration.png":::
 
-1. Put a check in the checkbox, confirming you followed the instructions.
+1. Select the checkbox to confirm you followed the instructions.
 
 1. Select **Next: Review and generate**.
         
@@ -98,7 +98,9 @@ To continue the disablement process, select the relevant multicloud environment.
 
 Defender for Cloud stops monitoring and onboarding all your resources after you disable all plans in your environment.
 
-If you want to completely cancel your Microsoft Defender for Cloud subscription, you need to go through the subscription cancellation process in addition to disabling the plans. 
+If you want to cancel your Microsoft Defender for Cloud subscription, you need to go through the subscription cancellation process in addition to disabling the plans. 
 
 ## Next step
 
+> [!div class="nextstepaction"]
+> [What is Microsoft Defender for Cloud?](defender-for-cloud-introduction.md)
