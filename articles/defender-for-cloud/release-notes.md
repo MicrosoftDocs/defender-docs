@@ -99,6 +99,7 @@ Learn more about [Serverless protection](serverless-protection.md).
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|November 26, 2025 | Preview | [GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration](#github-advanced-security-ghas-and-microsoft-defender-for-cloud-native-integration)|
 |November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
 |November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 |November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
@@ -115,6 +116,65 @@ Learn more about [Serverless protection](serverless-protection.md).
 |November 10, 2025| GA |[Updates to container image continuous vulnerability rescan policy](#updates-to-container-image-continuous-vulnerability-rescan-policy)|
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
+
+
+### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration
+
+November 26, 2025
+
+Announcing the public preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+
+This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security’s security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
+
+This integration connects _code and runtime security_, enabling developer and security teams to collaborate seamlessly in their existing workflows.
+
+**Key Highlights**
+
+- **Native Integration**
+
+  - MDC runtime context is now surfaced directly in GitHub Advanced Security dashboards.
+    
+  - Developers can view runtime risk factors (e.g., internet exposure, sensitive data) alongside code scanning alerts
+    
+-  **AI-Powered Remediation**
+
+  - Copilot Autofix and GitHub Copilot coding agent provide validated fixes for vulnerabilities.
+    
+  - Multi-fix merge capability allows bundling of fixes into a single PR for efficiency.
+    
+- **Security Campaigns**
+
+  - Security admins can trigger GitHub Security Campaigns from MDC to mobilize developer teams on prioritized issues.
+    
+  - Campaigns leverage runtime context to focus on exploitable vulnerabilities, reducing alert fatigue.
+    
+- **Unified Code-to-Cloud Visibility**
+
+  - Linked artifacts with full traceability from source code to deployed workloads.
+    
+  - Attestation and deployment records automatically populated via MDC APIs.
+    
+**Benefits**
+
+- **Prioritize What Matters**
+
+  - Alerts are ranked based on actual runtime exposure, not theoretical risk.
+  
+- **Accelerate Fixes**
+
+  - AI-driven remediation shortens remediation cycles from days to hours.
+  
+- **Reduce Tool Sprawl**
+
+  - Developers stay in GitHub; security teams remain in Azure—no context switching.
+  
+**How to Get Started**
+
+- Enable integration via Defender for Cloud portal and link your GitHub organization.
+
+- Configure runtime risk filters in GHAS for targeted campaigns.
+
+- Explore detailed guidance in the [GHAS overview](github-advanced-security-overview.md).
 
 ### Kubernetes gated deployment (GA)
 
