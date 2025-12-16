@@ -181,7 +181,7 @@ Your secure score is shown in the following locations in Defender for Cloud's Az
 
 You can access your score via the secure score API. The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example, you can use the [Secure Scores API](/rest/api/defenderforcloud-composite/secure-scores?view=rest-defenderforcloud-composite-latest&preserve-view=true) to get the score for a specific subscription. In addition, you can use the [Secure Score Controls API](/rest/api/defenderforcloud-composite/secure-score-controls?view=rest-defenderforcloud-composite-latest&preserve-view=true) to list the security controls and the current score of your subscriptions.
 
-![Retrieving a single secure score via the API.](media/secure-score-security-controls/single-secure-score-via-api.png)
+![Screenshot that shows retrieving a single secure score via the API.](media/secure-score-security-controls/single-secure-score-via-api.png)
 
 For examples of tools built on top of the secure score API, see [the secure score area of our GitHub community](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score).
 
