@@ -23,7 +23,9 @@ To confirm that your AWS connector is operating correctly:
 
 1. Select the value shown in the **Connectivity status** column to view more details.
 
-The Environment details page shows the current connectivity state and lists any detected configuration or permission issues affecting the connection to the AWS account.
+The Environment details page lists any detected configuration or permission issues affecting the connection to the AWS account.
+
+:::image type="content" source="media/monitor-connected-aws-resources/environment-details-connector-health.png" alt-text="Environment details page in Microsoft Defender for Cloud showing the connectivity status for a connected Amazon Web Services account." lightbox="media/monitor-connected-aws-resources/environment-details-connector-health.png":::
 
 If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
 
@@ -32,6 +34,8 @@ Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors
 ## View AWS recommendations
 
 Open the **Recommendations** page in Defender for Cloud to review findings generated for your AWS resources. Use the **Environment** filter to scope results to AWS.
+
+:::image type="content" source="media/monitor-connected-aws-resources/view-recommendations.png" alt-text="Recommendations page in Microsoft Defender for Cloud showing the environment type filter set to Amazon Web Services accounts and a list of security recommendations." lightbox="media/monitor-connected-aws-resources/view-recommendations.png":::
 
 Recommendations improve security posture by identifying misconfigurations, missing controls, or policy violations. You can investigate:
 

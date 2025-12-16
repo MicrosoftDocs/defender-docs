@@ -46,9 +46,12 @@ After your AWS account is connected:
 
 1. Choose whether to integrate with an existing CloudTrail trail or create a new one during setup:
 
-    - If you select **Existing trail**:
+    - If you select **Existing trail** (recommended):
         1. Provide the Amazon S3 bucket ARN and SQS queue ARN associated with the existing trail.
         1. If prompted, deploy or update the CloudFormation stack.
+
+        > [!NOTE]
+        > When you select **Existing trail**, Defender for Cloud performs a one-time hydration process that collects up to 90 days of historical CloudTrail management events from the trail.
 
     - If you select **Create a new CloudTrail**:
         1. Deploy the CloudFormation or Terraform template when prompted.
