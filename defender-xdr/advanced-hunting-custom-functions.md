@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 12/15/2025
+ms.date: 12/16/2025
 ---
 
 # Use custom functions
@@ -58,7 +58,7 @@ For more information about custom detections in the Defender portal, see [Create
 ## Write your own custom function
 
 > [!IMPORTANT]
-> You can only use the custom functions you create in advanced hunting. They're not available for use in analytics rules or workbooks in Microsoft Sentinel. 
+> You can only use the custom functions you create in advanced hunting. They're not available for use in analytics rules or workbooks. 
 
 To create a function from the current query in the editor:
 

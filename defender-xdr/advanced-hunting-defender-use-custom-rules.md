@@ -23,7 +23,7 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 12/15/2025
+ms.date: 12/16/2025
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
