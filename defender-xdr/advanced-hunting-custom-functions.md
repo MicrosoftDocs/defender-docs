@@ -37,7 +37,7 @@ ms.date: 12/16/2025
 
 A function is a type of query in advanced hunting that you can use in other queries as if it's a command. By creating your own custom functions, you can reuse any query logic when you hunt in your environment.
 
-This article explains the different types of functions available in advanced hunting, and the steps in creating and using custom functions.
+This article explains the different types of functions available in advanced hunting, and the steps for creating and using custom functions.
 
 ## Types of functions
 
@@ -51,14 +51,15 @@ Advanced hunting includes three different types of functions:
 
 ### Custom functions imported from Microsoft Sentinel log analytics
 
-Microsoft Sentinel customers who previously created and saved customs functions in their [Log analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) can access these functions in the Defender portal, under **Shared functions** > **Sentinel workspace functions**. You can use these functions for workbooks, analytics rules, and running advanced hunting queries in the Defender portal, but not in custom detection rules.
+Microsoft Sentinel customers who previously created and saved custom functions in their [Log analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) can access these functions in the Defender portal, under **Shared functions** > **Sentinel workspace functions**. You can use these functions for workbooks, analytics rules, and running advanced hunting queries in the Defender portal, but not in custom detection rules.
 
 For more information about custom detections in the Defender portal, see [Create custom detection rules](custom-detection-rules.md).
 
-## Write your own custom function
+> [!NOTE]
+> When creating a new function in advanced hunting, you can't use the same name as the ones imported and saved in the **Sentinel workspace functions**.
 
-> [!IMPORTANT]
-> You can only use the custom functions you create in advanced hunting. They're not available for use in analytics rules or workbooks. 
+
+## Write your own custom function
 
 To create a function from the current query in the editor:
 
@@ -76,6 +77,8 @@ To create a function from the current query in the editor:
 
 1. Select **Save**.
 
+> [!IMPORTANT]
+> You can use custom functions created in advanced hunting in custom detection rules and advanced hunting queries. They're not supported in workbooks or analytics rules. 
 
 ### Add parameters to your custom function
 
