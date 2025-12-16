@@ -74,6 +74,25 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### November-2025 (Platform: 4.18.25110.6 | Engine: 1.25110.1)
+
+- Security intelligence update version: **1.443.6.0**
+- Release date:  **December 17, 2025 (Engine) / December 11, 2025 (Platform)**
+- Platform: **4.18.25110.6**
+- Engine: **1.1.25110.1**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Performance improvements when querying WMI due to Behavior Monitor detections.
+- Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver.
+- Resolved an application compatibility issue due to a loopback with SMB1 enabled.
+- Fixed issue with ASR path exclusion requiring additional "\" characters to function appropriately.
+- Resolved high I/O issue with NisSrv.exe due to high volume of network logging events.
+- Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM.
+- Improved drive mapping enumeration for devices with many drives which resulted in false positive detections for ASR rules.
+- Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019.
+
 ### October-2025 (Platform: 4.18.25100.9008 | Engine: 1.1.25100.9002)
 
 - Security intelligence update version: **1.441.131.0**
