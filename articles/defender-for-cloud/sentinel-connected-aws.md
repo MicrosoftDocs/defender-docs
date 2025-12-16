@@ -74,7 +74,7 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
        }
      ]
    }
-```
+   ```
 
 ### Create an SQS queue for Defender for Cloud
 
