@@ -19,7 +19,7 @@ During onboarding, the CloudFormation template creates the authentication compon
 
 - One or more **IAM roles** that Defender for Cloud can assume through web identity federation
 
-Depending on the Defender offering you enable, additional AWS resources might be created as part of the onboarding process.
+Depending on the Defender plan you enable, additional AWS resources might be created as part of the onboarding process.
 
 ## Identity provider model
 
@@ -27,13 +27,19 @@ Defender for Cloud authenticates to AWS using OIDC federation with a Microsoft-m
 
 The authentication resources created during onboarding establish the trust relationship required for Defender for Cloud to obtain short-lived AWS credentials through web identity federation.
 
-:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png" alt-text="Screenshot of the AWS CloudFormation identity provider entry created during onboarding." lightbox="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png":::
-
 ## Cross-cloud authentication flow
 
 The following diagram shows how Defender for Cloud authenticates to AWS by exchanging Microsoft Entra tokens for short-lived AWS credentials.
 
 :::image type="content" source="media/concept-authentication-architecture-aws/architecture-authentication-across-clouds.png" alt-text="Diagram showing Microsoft Defender for Cloud obtaining a token from Microsoft Entra ID, which AWS validates and exchanges for temporary security credentials." lightbox="media/concept-authentication-architecture-aws/architecture-authentication-across-clouds.png":::
+
+## Role trust relationships
+
+The IAM role defined by the CloudFormation template includes a trust policy that allows Defender for Cloud to assume the role through web identity federation. AWS only accepts tokens that satisfy this trust policy, which prevents unauthorized principals from assuming the same role.
+
+The permissions granted to Defender for Cloud are controlled separately by the IAM policies attached to each role. These policies can be scoped to follow your organization’s least-privilege requirements, as long as the minimum permissions required for the selected Defender plans are included.
+
+:::image type="content" source="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png" alt-text="Screenshot of the AWS CloudFormation identity provider entry created during onboarding." lightbox="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png":::
 
 ## Token validation conditions
 
@@ -48,12 +54,6 @@ Before AWS issues temporary credentials, it performs several checks:
 - **Role-level conditions** restrict which federated identities can assume the role and prevent other Microsoft identities from using the same role.
 
 AWS grants access only when all validation rules succeed.
-
-## Role trust relationships
-
-The IAM role defined by the CloudFormation template includes a trust policy that allows Defender for Cloud to assume the role through web identity federation. AWS only accepts tokens that satisfy this trust policy, which prevents unauthorized principals from assuming the same role.
-
-The permissions granted to Defender for Cloud are controlled separately by the IAM policies attached to each role. You can adjust these policies to align with your organization’s least-privilege requirements, as long as the minimum permissions for the selected Defender plans are preserved.
 
 ## Related articles
 

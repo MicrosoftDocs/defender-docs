@@ -81,8 +81,6 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
      }
    }
 
-```
-
 ### Subscribe both SQS queues to the SNS topic
 
 1. In **Amazon SNS**, open the topic you created.
@@ -98,6 +96,20 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
    - Paste the **Queue ARN**.
    - Enable **Raw message delivery**.
 
+### Update the Microsoft Sentinel SQS queue access policy
+
+If your AWS account was already connected to Microsoft Sentinel, you must also update the existing Sentinel SQS queue to allow the SNS topic to send messages.
+
+1. In **Amazon SQS**, open the SQS queue used by Microsoft Sentinel.
+
+1. Edit the **Access policy**.
+
+1. Add the same `SQS:SendMessage` statement used for the Defender for Cloud queue, referencing the CloudTrail SNS topic ARN.
+
+1. Save the policy.
+
+If this step is skipped, Microsoft Sentinel will stop receiving CloudTrail notifications after you switch to the SNS fan-out configuration.
+
 ### Update S3 event notifications to publish CloudTrail logs to SNS
 
 1. In **Amazon S3**, open your CloudTrail bucket and go to **Event notifications**.
@@ -108,7 +120,11 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
 1. Set the event type to **Object created (PUT)**.
 
-1. Configure a **prefix filter** so that only CloudTrail log files generate notifications. For example, `AWSLogs/<AccountID>/CloudTrail/`.
+1. Configure a **prefix filter** so that only CloudTrail log files generate notifications.
+
+   Use the full CloudTrail log path format:
+
+   `AWSLogs/<AccountID>/CloudTrail/`
 
 1. Save the configuration.
 

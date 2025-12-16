@@ -11,6 +11,24 @@ ms.date: 11/15/2025
 
 After you [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md), the service continuously assesses your resources for security posture, configuration drift, and threat signals. This article describes where to monitor results, validate connector health, and view coverage.
 
+## Validate connector health
+
+To confirm that your AWS connector is operating correctly:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Environment settings**.
+
+1. Locate the AWS account and review the **Connectivity status** column to see whether the connection is healthy or has issues.
+
+1. Select the value shown in the **Connectivity status** column to view more details.
+
+The Environment details page shows the current connectivity state and lists any detected configuration or permission issues affecting the connection to the AWS account.
+
+If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
+
+Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
+
 ## View AWS recommendations
 
 Open the **Recommendations** page in Defender for Cloud to review findings generated for your AWS resources. Use the **Environment** filter to scope results to AWS.
@@ -32,26 +50,6 @@ To view AWS resources by type, open the **Asset inventory** page in Defender for
 You can group resources by environment, subscription, region, or recommendation state.
 
 Learn more about [working with asset inventory](asset-inventory.md).
-
-## Validate connector health
-
-To confirm that your AWS connector is operating correctly:
-
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Go to **Defender for Cloud** > **Environment settings**.
-
-1. Choose the AWS connector resource.
-
-Connector health reports:
-- Role assumption validation
-- API call success
-- Region scoping
-- Plan enablement state
-
-If the connector encounters permission or configuration issues, Defender for Cloud generates recommendations.
-
-Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
 ## Review coverage with workbooks
 
