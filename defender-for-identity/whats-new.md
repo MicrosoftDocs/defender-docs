@@ -32,7 +32,7 @@ For updates about versions and features released six months ago or earlier, see 
 |domainName|String|The domain name of the sensor.|
 |senseClientVersion|String|The version of the Defender for Identity sensor client.|
 
-This capability is currently in preview and available in API Beta version. Learn more [here](&preserve-view=true)
+This capability is currently in preview and available in API Beta version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
 
 ### ADWS LDAP search in Advanced Hunting
 

@@ -135,7 +135,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - You must [enable auditing in Power BI](/power-bi/admin/service-admin-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 - You must [enable auditing in Dynamics 365](/power-platform/admin/enable-use-comprehensive-auditing#enable-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 
-- You must [enable the service principal](/graph/api/serviceprincipal-get?view=graph-rest-1.0&tabs=http) to get Malware detection and response support (this service API is enabled by default). Once API is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
+- You must [enable the service principal](/graph/api/serviceprincipal-get) to get Malware detection and response support (this service API is enabled by default). Once API is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 
 **To connect Microsoft 365 to Defender for Cloud Apps**:
 
