@@ -708,10 +708,9 @@ When you select multiple quarantined files on the **Files** tab by selecting the
 ## Use the Microsoft Defender portal to manage Microsoft Teams quarantined messages
 
 > [!NOTE]
->
 > Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
 
-Quarantine in Microsoft Teams is available only in organizations with Microsoft Defender for Office 365 and above (add-on licenses or included in subscriptions like Microsoft 365 E5).
+Quarantine in Microsoft Teams is available only in organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5).
 
 When a potentially malicious chat message is detected in Microsoft Teams, zero-hour auto purge (ZAP) removes the message and quarantines it. Admins can view and manage these quarantined Teams messages. The message is quarantined for 30 days. After that the Teams message is permanently removed.
 
@@ -880,7 +879,7 @@ Back on the **Download messages** flyout, select **Done**.
 #### Remove users from quarantined Teams chats
 
 > [!TIP]
-> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change and available only in organizations with Microsoft Defender for Office 365 plan 2.
+> Currently, this feature is in Preview, isn't available in all organizations, is subject to change, and is available only in organizations with Microsoft Defender for Office 365 Plan 2.
 
 1. On the **Teams messages** tab, select the Teams message by clicking anywhere in the row other than the check box next to the first column.
 2. In the details flyout that opens (the Teams message entity panel), select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
