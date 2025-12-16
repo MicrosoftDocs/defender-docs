@@ -127,7 +127,7 @@ ZAP doesn't quarantine messages that are in the process of [Dynamic Delivery](sa
 ## Zero-hour auto purge (ZAP) in Microsoft Teams
 
 > [!TIP]
-> ZAP for Microsoft Teams is available only to customers with Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 subscriptions. To configure ZAP for Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
+> ZAP for Microsoft Teams is available only to customers with Microsoft Defender for Office 365 Plan 1 and above subscriptions. To configure ZAP for Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
 
 ### ZAP in Teams chats
 
