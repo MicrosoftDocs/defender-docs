@@ -24,7 +24,7 @@ The **Networking** features of Defender for Cloud include:
 
 From the [asset inventory page](asset-inventory.md), use the resource type filter to select the networking resources that you want to investigate:
 
-:::image type="content" source="./media/protect-network-resources/network-filters-inventory.png" alt-text="Asset inventory network resource types." lightbox="./media/protect-network-resources/network-filters-inventory.png":::
+:::image type="content" source="./media/protect-network-resources/network-filters-inventory.png" alt-text="Screenshot of asset inventory network resource types." lightbox="./media/protect-network-resources/network-filters-inventory.png":::
 
 ## Network map
 
@@ -36,9 +36,9 @@ To open the Network map:
 
 1. Select **Network map**.
 
-:::image type="content" source="media/protect-network-resources/workload-protection-network-map.png" alt-text="Screenshot showing selection of network map from workload protections." lightbox="media/protect-network-resources/workload-protection-network-map.png":::
-
 1. Select the **Layers** menu choose **Topology**.
+
+:::image type="content" source="media/protect-network-resources/workload-protection-network-map.png" alt-text="Screenshot showing selection of network map from workload protections." lightbox="media/protect-network-resources/workload-protection-network-map.png":::
 
 The default view of the topology map displays:
 
