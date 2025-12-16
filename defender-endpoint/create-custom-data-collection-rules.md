@@ -68,7 +68,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
     :::image type="content" source="media/custom-data-collection/custom-data-collection-main-view.png" alt-text="Screenshot of the main Custom Data Collection page." lightbox="media/custom-data-collection/custom-data-collection-main-view.png":::
 
-1. On the top right, select the Microsoft Sentinel workspace name on the top right, and select your workspace.
+1. On the top right, select the Microsoft Sentinel workspace name, and in the dialog box that opens, select your workspace.
 
     > [!NOTE]
     > You need to select the workspace at this stage, even if you already have a connected Microsoft Sentinel workspace.
