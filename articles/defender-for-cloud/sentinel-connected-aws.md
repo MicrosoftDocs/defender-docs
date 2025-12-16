@@ -54,26 +54,26 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
    Replace `<region>`, `<accountid>`, and `<S3_BUCKET_ARN>` with your values:
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AllowS3ToPublish",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "s3.amazonaws.com"
-      },
-      "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:<region>:<accountid>:CloudTrail-SNS",
-      "Condition": {
-        "StringEquals": {
-          "aws:SourceArn": "<S3_BUCKET_ARN>"
-        }
-      }
-    }
-  ]
-}
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "AllowS3ToPublish",
+         "Effect": "Allow",
+         "Principal": {
+           "Service": "s3.amazonaws.com"
+         },
+         "Action": "SNS:Publish",
+         "Resource": "arn:aws:sns:<region>:<accountid>:CloudTrail-SNS",
+         "Condition": {
+           "StringEquals": {
+             "aws:SourceArn": "<S3_BUCKET_ARN>"
+           }
+         }
+       }
+     ]
+   }
 ```
 
 ### Create an SQS queue for Defender for Cloud
