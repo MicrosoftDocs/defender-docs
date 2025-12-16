@@ -33,8 +33,8 @@ Although your Microsoft 365 organization includes a default level of protection 
 > [!TIP]
 > For information about configuring protection for Microsoft Teams, see the following articles:
 >
-> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
-> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365](mdo-support-teams-quick-configure.md)
 > - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
 The steps to configure Defender for Office 365 are described in the following diagram:
