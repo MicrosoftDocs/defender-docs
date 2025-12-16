@@ -9,7 +9,7 @@ ms.date: 12/09/2025
 
 # Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
 
-Microsoft Defender for Cloud can ingest AWS CloudTrail management events to increase visibility into identity operations, configuration changes, and other control-plane activity across your AWS environments.
+Microsoft Defender for Cloud can collect AWS CloudTrail management events to increase visibility into identity operations, configuration changes, and other control-plane activity across your AWS environments.
 
 CloudTrail ingestion enhances Cloud Infrastructure Entitlement Management (CIEM) by helping identify unused permissions, misconfigured roles, dormant identities, and potential privilege escalation paths. It also provides activity context that strengthens configuration drift detection, security recommendations, and attack path analysis.
 

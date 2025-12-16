@@ -91,7 +91,7 @@ Alerts, recommendations, and inventory data for your EKS clusters are surfaced i
 
 ## View CloudTrail insights (Preview)
 
-If you have enabled **AWS CloudTrail management event ingestion**, Microsoft Defender for Cloud analyzes and links CloudTrail log activity with your configuration and identity context to provide advanced security insights.
+If you have enabled AWS CloudTrail management event ingestion, Microsoft Defender for Cloud analyzes and links CloudTrail log activity with your configuration and identity context to provide advanced security insights.
 
 CloudTrail telemetry enhances security assessments by identifying unused permissions, misconfigured roles, dormant identities, and privilege escalation paths.
 

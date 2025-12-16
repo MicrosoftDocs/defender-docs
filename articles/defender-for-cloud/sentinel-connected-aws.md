@@ -48,8 +48,32 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
 1. Copy the **Topic ARN** for later use.
 
-> [!IMPORTANT]
-> You must update the SNS topic access policy to allow Amazon S3 to publish CloudTrail events. Add a statement that grants the `s3.amazonaws.com` service permission to perform `SNS:Publish` to the topic.
+1. On the topic details page, select **Edit**, and then expand **Access policy**.
+
+1. Add a policy statement that allows the CloudTrail S3 bucket to publish events to the topic.
+
+   Replace `<region>`, `<accountid>`, and `<S3_BUCKET_ARN>` with your values:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowS3ToPublish",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:<region>:<accountid>:CloudTrail-SNS",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceArn": "<S3_BUCKET_ARN>"
+        }
+      }
+    }
+  ]
+}
 
 ### Create an SQS queue for Defender for Cloud
 
