@@ -18,7 +18,7 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 ## Prerequisites
 
-- Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
+Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 

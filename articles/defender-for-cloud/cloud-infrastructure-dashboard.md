@@ -1,6 +1,6 @@
 ---
 title: Cloud overview dashboard in Microsoft Defender for Cloud
-description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multi-cloud environment.
+description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multicloud environment.
 ms.topic: how-to
 ms.date: 11/10/2025
 ms.author: dlanger
