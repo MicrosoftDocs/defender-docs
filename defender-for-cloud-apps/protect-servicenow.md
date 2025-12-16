@@ -8,7 +8,7 @@ ms.reviewer: AmitMishaeli
 
 # How Defender for Cloud Apps helps protect your ServiceNow environment
 
-As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors may gain access to your most sensitive customer-related assets.
+As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
 
 Connecting ServiceNow to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, and information protection detections such as identifying when sensitive customer information is uploaded to the ServiceNow cloud.
 
@@ -121,7 +121,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 > [!TIP]
 > We recommend deploying ServiceNow  using OAuth app tokens, available for Fuji and later releases. For more information, see the relevant [ServiceNow documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
 >
-> For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is available based on user/password. The username/password provided are only used for API token generation and are not saved after the initial connection process.
+> For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is available based on user/password. The username/password provided are only used for API token generation and aren't saved after the initial connection process.
 >
 
 ### How to connect ServiceNow to Defender for Cloud Apps using OAuth
@@ -129,7 +129,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 1. Sign in with an Admin account to your ServiceNow account.
 
    > [!NOTE]
-   > The username/password provided are only used for API token generation and are not saved after the initial connection process.
+   > The username/password provided are only used for API token generation and aren't saved after the initial connection process.
 1. In the **Filter navigator** search bar, type **OAuth** and select **Application Registry**.
 
 1. In the **Application Registries** menu bar, select **New** to create a new OAuth profile.
@@ -157,7 +157,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
     1. In the ServiceNow portal, search for **System OAuth**, and then select **Manage Tokens**.
     1. Select the old token from the list according to the OAuth name and expiration date.
     1. Select **Revoke Access > Revoke**.
-    1. In the Microsoft Defender Portal edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
+    1. In the Microsoft Defender Portal, edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
 
     > [!NOTE]
     > This is a recurring process every 90 days. Without this, the ServiceNow connection will stop working.
