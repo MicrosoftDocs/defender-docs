@@ -40,12 +40,15 @@ To use custom data collection, check that you have the following prerequisites:
 
 - A Microsoft Defender for Endpoint P2 license.
 - A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying. You can currently only connect one Sentinel workspace per Defender for Endpoint tenant for custom data collection.
+    > [!NOTE]
+    > Even if you have a connected Microsoft Sentinel workspace, you still need to select the workspace when creating a custom data collection rule. For more information, see [Create rules](create-custom-data-collection-rules.md#create-rules).
 - Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
 
 ### Supported operating systems
 
 - **Windows 10 and 11** with a minimum Defender for Endpoint client version of 10.8805.
     - Windows 10 requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
+- **Windows Server 2019** and later.
 
 ### Performance and limits
 
