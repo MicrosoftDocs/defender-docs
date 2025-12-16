@@ -64,6 +64,8 @@ Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with
 
 - **Hunting on Teams messages with URLs**: You can hunt for Teams messages containing URL across three new advanced hunting tables: [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table), [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table), and [MessageURLInfo](/defender-xdr/advanced-hunting-messageurlinfo-table).
 
+<a name='configure-zap-for-teams-protection-in-defender-for-office365-plan-2'></a>
+
 ## Configure ZAP for Teams protection in Defender for Office 365 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **Microsoft Teams protection**. Or, to go directly to the **Microsoft Teams protection** page, use <https://security.microsoft.com/securitysettings/teamsProtectionPolicy>.
