@@ -1,5 +1,5 @@
 ---
-title: Protect your Microsoft 365 environment|Microsoft Defender for Cloud Apps
+title: Protect your Microsoft 365 environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Microsoft 365 app to Defender for Cloud Apps using the API connector.
 ms.date: 12/06/2023
 ms.topic: how-to
