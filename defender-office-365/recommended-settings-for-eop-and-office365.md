@@ -364,7 +364,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 ### Microsoft Teams protection settings in Microsoft Defender for Office 365
 
-For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
+For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchangepowershell/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchangepowershell/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
 

@@ -6,7 +6,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
 - MET150
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 description: "Learn about automated remediation in automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2."
-ms.date: 04/07/2025
+ms.date: 12/15/2025
 ms.custom: 
 - air
 ms.service: defender-office-365
@@ -53,11 +53,20 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Se
 The following settings are available on the **Automation settings** page:
 
 - **Message clusters** section: Specifies the types of message clusters that are automatically remediated. Choose one or more of the following options:
-- **Similar files:** When the automated investigation recognizes a malicious file, it creates a cluster around the malicious file. The cluster groups all messages that contain the file into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious file clusters.
-- **Similar URLs:** When the automated investigation recognizes a malicious URL, it creates a cluster around the malicious URL. The cluster groups all messages that contain the URL into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious URL clusters.
+  - **Similar files:** When the automated investigation recognizes a malicious file, it creates a cluster around the malicious file. The cluster groups all messages that contain the file into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious file clusters.
 
-  > [!TIP]
-  > Follow the roadmap to stay informed on when more message clusters are available for automated remediation.
+  - **Similar URLs:** When the automated investigation recognizes a malicious URL, it creates a cluster around the malicious URL. The cluster groups all messages that contain the URL into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious URL clusters.
+
+    > [!TIP]
+    > Follow the roadmap to stay informed on when more message clusters are available for automated remediation.
+
+  - **Multiple similar attributes**: Messages that share various attributes, such as subject or sender IP address. The automated investigation creates queries (clusters) of email using various attributes from the original email: sender values (IP address, sender domain) and contents (subject, cluster ID) to find email that might be related. he following similarity clusters that are created:
+    - BodyFingerprintBin1/SenderIp
+    - BodyFingerprintBin1/P2SenderDomain
+    - Subject/P2SenderDomain
+    - Subject/SenderIp
+
+    Selecting this setting opts your organization into automated remediation if these clusters are found to be malicious.
 
 - **Remediation action** section: Specifies the action to take on message cluster types specified in the **Message clusters** section.
 
