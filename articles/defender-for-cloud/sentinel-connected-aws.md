@@ -36,7 +36,7 @@ To complete the procedures in this article, you need:
 If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable CloudTrail ingestion for Defender for Cloud by using Amazon SNS as a fan-out mechanism. This configuration allows both services to receive CloudTrail events in parallel.
 
 > [!IMPORTANT]
-> These steps configure AWS resources for shared CloudTrail ingestion. To finalize Defender for Cloud setup, [integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-logs.md).
+> These steps configure AWS resources for shared CloudTrail ingestion. To finalize Defender for Cloud setup, [integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-logs.md).
 
 ### Create an Amazon SNS topic for CloudTrail
 
@@ -194,7 +194,7 @@ After these changes, both Microsoft Sentinel and Defender for Cloud receive Clou
 
 ## Next steps
 
-- [Integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-logs.md).
+- [Integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloudtrail-logs.md).
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
 - Set up your [on-premises machines](quickstart-onboard-machines.md) and [Google Cloud Platform (GCP) environments](quickstart-onboard-gcp.md).

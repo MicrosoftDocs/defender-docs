@@ -39,7 +39,7 @@ The IAM role defined by the CloudFormation template includes a trust policy that
 
 The permissions granted to Defender for Cloud are controlled separately by the IAM policies attached to each role. These policies can be scoped to follow your organization’s least-privilege requirements, as long as the minimum permissions required for the selected Defender plans are included.
 
-:::image type="content" source="media/concept-authentication-architecture-aws/configure-access-roles.png" alt-text="Screenshot of the AWS CloudFormation identity provider entry created during onboarding." lightbox="media/concept-authentication-architecture-aws/cloudformation-identity-provider.png":::
+:::image type="content" source="media/concept-authentication-architecture-aws/configure-access-roles.png" alt-text="Screenshot of the AWS CloudFormation identity provider entry created during onboarding." lightbox="media/concept-authentication-architecture-aws/configure-access-roles.png":::
 
 ## Token validation conditions
 
