@@ -135,7 +135,7 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
 |Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
 
-## Quarantine Directory for Microsoft Defender for Endpoint Linux
+## Quarantine directory for Defender for Endpoint Linux
 The default directory for files quarantined by MDATP is `/var/opt/microsoft/mdatp/quarantine`. For best results, use the command `MDATP threat quarantine` to manage quarantined files, rather than moving or modifying files directly in the quarantine directory. Direct file operations aren't recommended - always use the CLI for safe and supported quarantine management.
 
 ## Uninstall Defender for Endpoint on Linux
