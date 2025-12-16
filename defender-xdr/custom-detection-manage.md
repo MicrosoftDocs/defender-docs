@@ -69,6 +69,7 @@ You can also take the following actions on the rule from this page:
 - **Modify query** - allows you to edit the query in advanced hunting
 - **Turn on** / **Turn off** - allows you to enable the rule or stop it from running
 - **Delete** - allows you to turn off the rule and remove it
+- **Exclude from correlation** - allows you to exclude an analytics rule from correlation. This action is in preview and is for analytics rules only. See [Exclude analytics rules from correlation in Microsoft Defender XDR (preview)](exclude-analytics-rules-correlation.md) for more information.
 
 #### View and manage triggered alerts 
 
