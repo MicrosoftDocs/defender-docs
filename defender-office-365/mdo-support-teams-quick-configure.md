@@ -95,7 +95,7 @@ For more information about near real-time warning messages on known bad links in
 
 :::image type="content" source="media/teams-message-url-warning-on-off.png" alt-text="Screenshot of the Scan messages for unsafe links toggle in the Microsoft Teams admin center." lightbox="media/teams-message-url-warning-on-off.png":::
 
-## Step 4: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
+## Step 4: Defender for Office 365 Plan 1 and above: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
 For complete instructions, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
