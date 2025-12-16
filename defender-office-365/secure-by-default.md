@@ -39,7 +39,7 @@ However, security needs to be balanced with productivity. This balance includes:
 All organizations with cloud mailboxes automatically receive email protection. This protection includes:
 
 - Email with suspected malware is automatically quarantined. The quarantine policy used by the anti-malware policy controls whether recipients are notified. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
-- Email identified as high confidence phishing is handled according to the anti-spam policy action. See [Configure anti-spam policies](anti-spam-policies-configure.md).
+- Email identified as high confidence phishing are by default qaurantine
 
 For more information, see [Default email protections for cloud mailboxes](eop-about.md).
 
