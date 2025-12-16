@@ -143,7 +143,7 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 >   For more information about permissions in app governance, see [App governance roles](/defender-cloud-apps/app-governance-get-started#roles).
 >
 > - [Activating Defender for Cloud Apps integration with Defender XDR Unified RBAC](activate-defender-rbac.md) has the following results:
->   - Microsoft Entra ID roles aren't affected, and continue to function as normal.
+>   - Microsoft Entra ID roles continue to function as normal.
 >   - The following [built-in scoped roles in Defender for Cloud Apps](/defender-cloud-apps/manage-admins#roles-and-permissions) are no longer supported:
 >     - **App/instance admin**
 >     - **User group admin**
