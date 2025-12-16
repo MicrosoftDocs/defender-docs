@@ -223,11 +223,16 @@ During the **public preview** phase, the following limitations apply:
 
 - **No binary scanning**: Only code (SAST) and IaC scanning tools are executed.  
 - **Scan frequency**: It scans repositories upon enablement, and then daily.  
-
 - **Repository size**: It limits scanning to repositories under 1 GB.
-
 - **Branch coverage**: Scans cover only the default branch (usually `main`).  
 - **Tool customization**: You can't customize scanning tools.
+
+SBOM currently has the following limitations:
+- Repository needs a lock file otherwise only direct dependencies will be found
+- The SBOM size limitation is restricted to 1MB. If there are a lot of packages identified, our ingestion into the Cloud Map will fail.
+- SBOM enablement is not configurable. An SBOM will be generated on every Agentless scan.
+- Timeout is set to 15 minutes for the SBOM tool to run.
+- Disabling Agentless doesn't delete the SBOM recommendations.
 
 ## Related content
 
