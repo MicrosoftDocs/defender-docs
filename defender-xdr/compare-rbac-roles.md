@@ -135,14 +135,20 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 ### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
 
 > [!IMPORTANT]
-> App governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and doesn't support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.
 >
-> After you activate Defender for Cloud Apps integration with Defender XDR Unified RBAC, the following [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in Defender for Cloud Apps are no longer supported:
+> - Virtually all app governance experiences are controlled by Microsoft Entra ID roles **only**. The only exception is the [OAuthAppInfo table in advanced hunting](advanced-hunting-oauthappinfo-table.md). Unified RBAC permissions in Defender for Cloud Apps grant access to the app governance data in this specific table.
 >
-> - **App/instance admin**
-> - **User group admin**
-> - **Cloud Discovery global admin**
-> - **Cloud Discovery report admin**
+> - In the [unified alerts and incidents experiences in Defender XDR](investigate-alerts.md), access to app governance data is controlled by Microsoft Entra ID **only**.
+>
+>   For more information about permissions in app governance, see [App governance roles](/defender-cloud-apps/app-governance-get-started#roles).
+>
+> - [Activating Defender for Cloud Apps integration with Defender XDR Unified RBAC](activate-defender-rbac.md) has the following results:
+>   - Microsoft Entra ID roles continue to function as normal.
+>   - The following [built-in scoped roles in Defender for Cloud Apps](/defender-cloud-apps/manage-admins#roles-and-permissions) are no longer supported:
+>     - **App/instance admin**
+>     - **User group admin**
+>     - **Cloud Discovery global admin**
+>     - **Cloud Discovery report admin**
 
 |Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
 |---|---|
