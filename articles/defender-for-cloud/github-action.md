@@ -24,7 +24,7 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 ## Prerequisites
 
-- An Azure subscription If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/) before you begin.
+- An Azure subscription If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - [Connect your GitHub repositories](quickstart-onboard-github.md).
 

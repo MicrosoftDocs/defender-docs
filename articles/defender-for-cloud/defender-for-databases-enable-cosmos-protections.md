@@ -1,8 +1,8 @@
 ---
 title: Enable Microsoft Defender for Azure Cosmos DB
 description: Learn how to enable enhanced security features in Microsoft Defender for Azure Cosmos DB.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/30/2025
 ---
@@ -13,7 +13,7 @@ ms.date: 06/30/2025
 
 ## Prerequisites
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 ## Enable database protection at the subscription level
 
@@ -158,4 +158,4 @@ After a few minutes, the alerts will appear in the security alerts page. Alerts 
 In this article, you learned how to enable Microsoft Defender for Azure Cosmos DB, and how to simulate security alerts.
 
 > [!div class="nextstepaction"]
-> [Automate responses to Microsoft Defender for Cloud triggers](workflow-automation.yml).
+> [Automate responses to Microsoft Defender for Cloud triggers](workflow-automations.md).

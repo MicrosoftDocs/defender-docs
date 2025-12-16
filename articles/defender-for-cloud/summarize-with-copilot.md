@@ -4,16 +4,16 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to summarize recommendations with Microsoft Security Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 04/30/2025
+ms.date: 09/25/2025
 ms.custom: sfi-image-nochange
 #customer intent: As a security professional, I want to understand how to use Copilot to summarize recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Summarize recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you summarize a recommendation to understand the risks and vulnerabilities in your environment better.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you summarize a recommendation so you can better understand the risks and vulnerabilities in your environment.
 
-By summarizing a recommendation, you can get a quick overview of the recommendation in natural language. This summary helps you understand the information presented in a recommendation and lets you prioritize your remediation efforts.
+When you summarize a recommendation, you get a quick overview of the recommendation in natural language. This summary helps you understand the information presented in a recommendation and lets you prioritize your remediation efforts.
 
 ## Prerequisites
 
@@ -25,13 +25,13 @@ By summarizing a recommendation, you can get a quick overview of the recommendat
 
 ## Summarize with Copilot
 
-Once a recommendation is selected, you can summarize it with Copilot. By using prompts, you can get a better understanding of the recommendation and decide how best to handle it.
+After you select a recommendation, use Copilot to summarize it. By using prompts, you can get a better understanding of the recommendation and decide how to handle it.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Select a recommendation.
 
@@ -45,7 +45,7 @@ Once a recommendation is selected, you can summarize it with Copilot. By using p
 
     :::image type="content" source="media/summarize-with-copilot/summarize-with-copilot-results.png" alt-text="Screenshot of the Copilot window that shows the summary of the recommendation." lightbox="media/summarize-with-copilot/summarize-with-copilot-results.png":::
 
-Once you understand the recommendation better, you can decide how best to handle it. Copilot remains open and you can enter other prompts as needed.
+When you understand the recommendation, decide how to handle it. Copilot stays open so you can enter other prompts as needed.
 
 ## Next step
 

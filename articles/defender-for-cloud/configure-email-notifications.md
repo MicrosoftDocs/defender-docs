@@ -2,8 +2,8 @@
 title: Configure email notifications for alerts and attack paths
 description: Learn how to fine-tune the Microsoft Defender for Cloud security alert emails to ensure the right people receive timely notifications.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 09/10/2025
 ms.custom: mode-other
 #customer intent: As a user, I want to learn how to customize email notifications for alerts and attack paths in Microsoft Defender for Cloud.
@@ -90,7 +90,7 @@ URI: `https://management.azure.com/subscriptions/<SubscriptionId>/providers/Micr
 ## Related content
 
 - [Security alerts - a reference guide](alerts-reference.md) - Learn about the security alerts you might see in Microsoft Defender for Cloud's Threat Protection module.
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml) - Learn how to manage and respond to security alerts.
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md) - Learn how to manage and respond to security alerts.
 - [Identify and remediate attack paths](how-to-manage-attack-path.md).
 - [Investigating risk with security explorer/attack paths](concept-attack-path.md)
-- [Workflow automation](workflow-automation.yml) - Automate responses to alerts with custom notification logic.
+- [Workflow automation](workflow-automations.md) - Automate responses to alerts with custom notification logic.

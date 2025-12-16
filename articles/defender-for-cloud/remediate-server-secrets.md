@@ -5,12 +5,14 @@ ms.topic: overview
 ms.date: 02/19/2025
 ---
 
-
 # Remediate machine secrets
 
 Microsoft Defender for Cloud can [scan machines and cloud deployments](secrets-scanning.md) for [supported secrets](secrets-scanning.md#secrets-support), to reduce lateral movement risk.
 
 This article helps you to identify and remediate [machine secrets scan](secrets-scanning-servers.md) findings.
+
+> [!NOTE]
+> This page describes the classic Recommendations view in Defender for Cloud. For the latest experience in the Depender portal, see [Review security recommendations](review-security-recommendations.md).
 
 - You can review and remediate findings using [machine secrets recommendations](secrets-scanning-servers.md#machine-secrets-recommendations).
 - View secrets discovered on a specific machine in the [Defender for Cloud inventory](asset-inventory.md)
@@ -25,7 +27,7 @@ It’s important to be able to prioritize secrets and identify which ones need i
 
 ## Prerequisites
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Defender for Cloud](get-started.md) must be available in your Azure subscription.
 - At least one of these plans [must be enabled](enable-enhanced-security.md#enable-defender-plans-to-get-the-enhanced-security-features):
   - [Defender for Servers Plan 2](defender-for-servers-overview.md)

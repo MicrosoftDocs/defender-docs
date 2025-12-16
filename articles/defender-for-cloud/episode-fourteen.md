@@ -3,12 +3,12 @@ title: Defender for Servers deployment in Amazon Web Service and Google Cloud Pl
 
 description: Learn about the capabilities available for Defender for Servers deployment within Amazon Web Service and Google Cloud Platform.
 ms.topic: reference
-ms.date: 08/18/2024
+ms.date: 10/05/2025
 ---
 
 # Defender for Servers deployment in Amazon Web Service and Google Cloud Platform
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Ortal Parpara joins Yuri Diogenes to talk about the options to deploy Defender for Servers in Amazon Web Service (AWS) and Google Cloud Platform (GCP). Ortal talks about the new capability that allows you to select a different Defender for Server plan per connector, demonstrates how to customize the deployment and how this feature helps to deploy Azure Arc.
+**Episode description**: In this episode of Defender for Cloud in the Field, Ortal Parpara joins Yuri Diogenes to talk about the options to deploy Defender for Servers in Amazon Web Service (AWS) and Google Cloud Platform (GCP). Ortal talks about the new capability that allows you to select a different Defender for Server plan per connector, demonstrates how to customize the deployment, and explains how this feature helps to deploy Azure Arc.
 
 > [!VIDEO https://aka.ms/docs/player?id=2426d341-bdb6-4795-bc08-179cfe7b99ba]
 
@@ -16,7 +16,7 @@ ms.date: 08/18/2024
 
 - [01:30](/shows/mdc-in-the-field/defenders-for-servers-deploy-aws-gcp#time=01m30s) - Selecting the appropriate plan for AWS and GCP
 
-- [03:05](/shows/mdc-in-the-field/defenders-for-servers-deploy-aws-gcp#time=03m05s) - Is it necessary to make any action to apply this change?
+- [03:05](/shows/mdc-in-the-field/defenders-for-servers-deploy-aws-gcp#time=03m05s) - Is it necessary to take any action to apply this change?
 
 - [03:23](/shows/mdc-in-the-field/defenders-for-servers-deploy-aws-gcp#time=03m23s) - Supported scenarios
 

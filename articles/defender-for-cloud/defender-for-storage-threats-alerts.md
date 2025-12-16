@@ -2,8 +2,8 @@
 title: Understand Defender for Storage security threats and alerts 
 description: Learn about the security threats and alerts Microsoft Defender for Storage provides to detect and respond to potential security risks.
 ms.date: 07/15/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: concept-article
 #customer intent: As a security professional, I want to understand the security threats and alerts in Microsoft Defender for Storage so that I can better protect my organization's data.
 ---
@@ -43,7 +43,7 @@ For a comparison between malware scanning and hash reputation analysis, see [Und
 ## What kind of security alerts does Microsoft Defender for Storage provide?
 
 > [!TIP]
-> For a comprehensive list of all Defender for Storage alerts, see the [alerts reference guide](alerts-azure-storage.md) page. This is useful for workload owners who want to know what threats can be detected and help SOC teams gain familiarity with detections before investigating them. Learn more about [Defender for Cloud security alerts and how to respond to them](managing-and-responding-alerts.yml).
+> For a comprehensive list of all Defender for Storage alerts, see the [alerts reference guide](alerts-azure-storage.md) page. This is useful for workload owners who want to know what threats can be detected and help SOC teams gain familiarity with detections before investigating them. Learn more about [Defender for Cloud security alerts and how to respond to them](manage-respond-alerts.md).
 
 Security alerts are triggered in the following scenarios:
 
@@ -62,6 +62,10 @@ Security alerts are triggered in the following scenarios:
 | Phishing campaigns | Detection of phishing content hosted on storage accounts and identified as part of a phishing attack impacting Microsoft 365 users |
 
 Security alerts include details of the suspicious activity, relevant investigation steps, remediation actions, and security recommendations. Alerts can be exported to Microsoft Sentinel or any other third-party SIEM/XDR tool. Learn more about [how to stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
+
+## Accelerated threat detection with Storage aggregated logs
+
+Storage aggregated logs in Defender XDR's Avanced Hunting give security teams a powerful way to spot patterns and anomalies across large volumes of storage activity. Instead of analyzing raw events one by one, the new `CloudStorageAggregatedEvents` table delivers summarized insights, such as spikes in failed operations, unusual authentication types, or suspicious access from unexpected locations, helping teams quickly identify potential threats and prioritize investigations. This capability reduces noise, accelerates detection, and strengthens protection for cloud storage at scale. This capability is included only in the new Defender for Storage per-storage account plan. For the full schema and field details, see the [CloudStorageAggregatedEvents reference table.](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table)
 
 ## Related content
 

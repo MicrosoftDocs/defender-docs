@@ -2,12 +2,12 @@
 title: Improvements in Container’s Posture Management
 description: Learn about Microsoft's Defender for Cloud's improvements in Container’s Posture Management.
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 10/05/2025
 ---
 
-# Improvements in Container’s Posture Management
+# Improvements in container posture management
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Tomer Spivak joins Yuri Diogenes. They discuss new improvements in Container's security posture capabilities in Defender Cloud Security Posture Management (CSPM) and Defender for Containers. Tomer explains the different use case scenarios and how the security graph was enriched with more insights. Tomer also demonstrates the use of Security Explorer to perform queries that can easily access these new security insights for containers.
+**Episode description**: In this episode of Defender for Cloud in the Field, Tomer Spivak joins Yuri Diogenes. They discuss new improvements in container security posture capabilities in Defender Cloud Security Posture Management (CSPM) and Defender for Containers. Tomer explains the different use case scenarios and how the security graph was enriched with more insights. Tomer also demonstrates the use of Security Explorer to perform queries that can easily access these new security insights for containers.
   
 
 > [!VIDEO https://aka.ms/docs/player?id=fdea3fe2-2301-4d78-819f-2ff9815b1ed8]

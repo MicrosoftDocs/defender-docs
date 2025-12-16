@@ -1,9 +1,8 @@
 ---
 title: Cloud security explorer and attack path analysis | Defender for Cloud in the Field
-
 description: Learn about cloud security explorer and attack path analysis.
 ms.topic: reference
-ms.date: 08/18/2024
+ms.date: 10/05/2025
 ---
 
 # Cloud security explorer and attack path analysis | Defender for Cloud in the Field

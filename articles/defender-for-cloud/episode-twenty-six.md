@@ -1,14 +1,13 @@
 ---
 title: Governance capability improvements in Defender for Cloud | Defender for Cloud in the field
-
 description: Learn about the need for governance and new at scale governance capability
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 10/05/2025
 ---
 
 # Governance capability improvements in Defender for Cloud | Defender for Cloud in the field
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Lior Arviv joins Yuri Diogenes to talk about the Governance capability improvements in Defender for Cloud. Lior gives a quick recap of the business need for governance and covers the new at scale governance capability. Lior demonstrates how to deploy governance at scale and how to monitor rules assignments and define priorities.
+**Episode description**: In this episode of Defender for Cloud in the Field, Lior Arviv joins Yuri Diogenes to talk about the governance capability improvements in Defender for Cloud. Lior gives a quick recap of the business need for governance and covers the new at scale governance capability. Lior demonstrates how to deploy governance at scale and how to monitor rules assignments and define priorities.
 
 > [!VIDEO https://aka.ms/docs/player?id=b1581d03-6575-4f13-b2ed-5b0c22d80c63]
 

@@ -1,15 +1,14 @@
 ---
-title: Deploy Defender for Servers in Microsoft Defender for Cloud
+title: Protect your servers with Defender for Servers
 description: Learn how to enable the Defender for Servers plan in Microsoft Defender for Cloud to protect your virtual machines and reduce security risks.
 ms.topic: install-set-up-deploy
 ms.author: elkrieger
 author: elazark
-ms.date: 07/23/2025
+ms.date: 09/28/2025
 # customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.
-
 ---
 
-# Deploy Defender for Servers
+# Protect your servers with Defender for Servers
 
 The Defender for Servers plan in Microsoft Defender for Cloud protects Windows and Linux virtual machines (VMs) that run in Azure, Amazon Web Service (AWS), Google Cloud Platform (GCP), and in on-premises environments. Defender for Servers provides recommendations to improve the security posture of machines and protects machines against security threats.
 
@@ -155,6 +154,9 @@ Enable or disable the plan on specific machines.
 1. In the **Remediation** tab, select **Create a remediation task**.
 1. Edit all details, select **Review + create**, and then select **Create**.
 
+> [!NOTE]
+> Defender for Servers doesn't require a specific tag name or value for onboarding or exclusion. Use any tag your organization chooses and configure your Azure Policy or script to match it.
+
 ### Disable the plan using a script
 
 1. [Download and save this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
@@ -180,6 +182,12 @@ Enable or disable the plan on specific machines.
 1. Run the downloaded script.
 1. Customize as needed. Select resources by **tag**.
 1. Follow the rest of the on-screen instructions.
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 

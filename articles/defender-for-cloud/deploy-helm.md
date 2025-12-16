@@ -1,10 +1,10 @@
 ---
 title: Install Defender for Containers sensor Using Helm
 description: Learn how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters using Helm, including prerequisites, scripts, and troubleshooting steps.
-author: dcurwin
+author: Elazark
 ms.topic: how-to
-ms.date: 06/16/2025
-ms.author: dacurwin
+ms.date: 12/11/2025
+ms.author: elkrieger
 ai-usage: ai-assisted
 ---
 
@@ -42,8 +42,8 @@ Now you're ready to set up the Defender for Containers sensor with Helm.
 ## Step 2: Install the sensors Helm chart
 
 ### For AKS Automatic Only
-For AKS Automatic you'll need to run the following:
 
+Run the following command for AKS Automatic:
 
 ```bash
 # Update Azure CLI to the latest version 
@@ -164,7 +164,7 @@ You can define security rules to control what is allowed to be deployed into you
 
 1. Navigate to the **Microsoft Defender for Cloud (MDC) Dashboard**.
 1. In the left navigation pane, select **Environment settings**.
-1. Click on the **Security rules** tile.
+1. Select the **Security rules** tile.
 
 ### Configuring vulnerability assessment rules
 
@@ -207,7 +207,6 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --reuse-values
 ```
 
-
-## Next steps
+## Related content
 
 - [Common questions about protecting containers](faq-defender-for-containers.yml)

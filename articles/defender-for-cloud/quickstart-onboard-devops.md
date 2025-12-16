@@ -16,7 +16,7 @@ By connecting your Azure DevOps environments to Defender for Cloud, you extend t
 
 To complete this quickstart, you need:
 
-- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - Note that API calls that Defender for Cloud performs count against the [Azure DevOps global consumption limit](/azure/devops/integrate/concepts/rate-limits). 
 - Review [common questions about DevOps security in Defender for Cloud](faq-defender-for-devops.yml).
 
@@ -36,6 +36,13 @@ To complete this quickstart, you need:
 
 > [!NOTE]
 > **Security Reader** role can be applied on the Resource Group/Azure DevOps connector scope to avoid setting highly privileged permissions on a Subscription level for read access of DevOps security posture assessments.
+
+> [!NOTE]
+> The Azure DevOps connector is created under the `Microsoft.Security/securityConnectors` resource type.  
+>  
+> Defender for DevOps also uses additional resources under the `Microsoft.Security` resource provider (for example, security assessments).  
+>  
+> For governance scenarios that use tenant-level policy exemptions, scope exemptions to `Microsoft.Security/*` to ensure full Defender for DevOps functionality.
 
 ## Connect your Azure DevOps organization
 

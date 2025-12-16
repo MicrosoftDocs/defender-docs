@@ -4,8 +4,8 @@ description: Learn how to validate security alerts in Microsoft Defender for Clo
 ms.topic: how-to
 ms.custom: linux-related-content
 ms.date: 07/14/2025
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ---
 
 # Validate alerts in Microsoft Defender for Cloud
@@ -16,7 +16,7 @@ This article explains how to validate that your system is properly configured fo
 
 Alerts are notifications that Defender for Cloud generates when it detects threats on your resources. It prioritizes and lists the alerts along with the information needed to quickly investigate the problem. Defender for Cloud also provides recommendations to remediate an attack.
 
-For more information, see [Security alerts in Defender for Cloud](alerts-overview.md) and [Managing and responding to security alerts](managing-and-responding-alerts.yml).
+For more information, see [Security alerts in Defender for Cloud](alerts-overview.md) and [Managing and responding to security alerts](manage-respond-alerts.md).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ To receive all the alerts, your machines and the connected Log Analytics workspa
 
 ## Generate sample security alerts
 
-If you're using the new preview alerts experience as described in [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml), you can create sample alerts from the security alerts page in the Azure portal.
+If you're using the new preview alerts experience as described in [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md), you can create sample alerts from the security alerts page in the Azure portal.
 
 Use sample alerts to:
 
@@ -146,5 +146,5 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 This article introduced you to the alerts validation process. Now that you're familiar with this validation, explore the following articles:
 
 - [Validating Azure Key Vault threat detection in Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/validating-azure-key-vault-threat-detection-in-microsoft/ba-p/1220336)
-- [Managing and responding to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml) - Learn how to manage alerts and respond to security incidents in Defender for Cloud.
+- [Managing and responding to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md) - Learn how to manage alerts and respond to security incidents in Defender for Cloud.
 - [Understanding security alerts in Microsoft Defender for Cloud](./alerts-overview.md)

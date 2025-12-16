@@ -1,10 +1,10 @@
 ---
 title: Manage the Defender for APIs plan
 description: Manage your Defender for APIs deployment in Microsoft Defender for Cloud
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.service: defender-for-cloud
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/15/2025
 ---
 

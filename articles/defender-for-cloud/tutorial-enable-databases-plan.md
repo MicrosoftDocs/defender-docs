@@ -2,7 +2,7 @@
 title: Protect your databases with Defender for Databases
 description: Learn how to enable the Databases plan on your Azure subscription for Microsoft Defender for Cloud to enhance your database security.
 ms.topic: how-to
-ms.date: 09/08/2025
+ms.date: 09/28/2025
 #customer intent: As a database administrator, I want to enable Defender for Databases so that I can enhance the security of my databases.
 ---
 
@@ -50,14 +50,20 @@ Enabling database protection activates all four Defender plans and protects all 
 
 ## Enable and modify specific database plans
 
-Defender for Databases protects different types of supported databases in your subscription. You can enable or disable each subplan to protect the relevant database types. The subplans include:
+Enabling database protection activates the following four Defender plans:
 
-- [Defender for Azure SQL Databases](enable-sql-database-plan.md) protection.
-- [Defender for SQL Servers on Machines](defender-for-sql-usage.md) protection. You can also [enable on a Log Analytics workspace](enable-plan-workspace.md).
-- [Defender for open-source relational databases on Azure](enable-defender-for-databases-azure.md) protection.
-- [Enable Defender for Azure Cosmos DB](defender-for-databases-enable-cosmos-protections.md) protection.
+- [Enable Defender for Azure SQL Databases](enable-sql-database-plan.md)
+- [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md) (You can also [enable on a Log Analytics workspace](enable-plan-workspace.md))
+- [Enable Defender for open-source relational databases on Azure](enable-defender-for-databases-azure.md)
+- [Enable Defender for Azure Cosmos DB](defender-for-databases-enable-cosmos-protections.md)
 
-When all of these plans are enabled, you protect all supported databases types in your subscription. 
+These plans protect all supported databases in your subscription. 
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Related content
 

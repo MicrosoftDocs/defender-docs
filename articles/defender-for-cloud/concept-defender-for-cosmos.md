@@ -2,8 +2,8 @@
 title: Overview of Defender for Azure Cosmos DB
 description: Learn about the benefits, features, and security capabilities of Microsoft Defender for Azure Cosmos DB to help protect your databases.
 ms.topic: concept-article
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 12/24/2024
 #customer intent: As a security administrator, I want to understand the features of Microsoft Defender for Azure Cosmos DB so that I can protect my databases from threats.
 ---
@@ -24,7 +24,7 @@ The following table lists supported and unsupported Azure Cosmos DB APIs in Defe
 |--|--|
 | Azure Cosmos DB for NoSQL |  Azure Cosmos DB for Apache Cassandra <br>  Azure Cosmos DB for MongoDB <br> Azure Cosmos DB for Table <br> Azure Cosmos DB for Apache Gremlin |
 
-For cloud availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md).
+For cloud availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## Benefits
 
@@ -43,7 +43,7 @@ Activities that trigger security alerts enriched with threat intelligence includ
 - **Suspicious database activity**: An example is suspicious key-listing patterns that resemble known malicious lateral movement techniques and data extraction patterns.
 
 > [!TIP]
-> For a comprehensive list of all Defender for Azure Cosmos DB alerts, see [Alerts for Azure Cosmos DB](alerts-azure-cosmos-db.md). This information is useful for workload owners who want to know what threats can be detected. It can also help security operations center (SOC) teams gain familiarity with detections before investigating them. [Learn more about how to manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml).
+> For a comprehensive list of all Defender for Azure Cosmos DB alerts, see [Alerts for Azure Cosmos DB](alerts-azure-cosmos-db.md). This information is useful for workload owners who want to know what threats can be detected. It can also help security operations center (SOC) teams gain familiarity with detections before investigating them. [Learn more about how to manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md).
 
 ## Related content
 

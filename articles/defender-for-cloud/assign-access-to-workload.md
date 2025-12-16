@@ -17,7 +17,7 @@ To assign permissions to users on a specific connector below the parent connecto
 
 ## Prerequisites
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - At least one security connector for [Azure](connect-azure-subscription.md), [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md).
 

@@ -15,7 +15,7 @@ This article helps you to identify and remediate security risks with cloud deplo
 
 ## Prerequisites
 
-- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
+- An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - [Defender for Cloud](get-started.md) must be available in your Azure subscription.
 - The [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) plan.

@@ -9,7 +9,7 @@ ms.date: 07/15/2025
 
 Microsoft Defender for Cloud helps you to meet regulatory compliance requirements by continuously assessing resources against compliance controls, and identifying issues that are blocking you from achieving a particular compliance certification.
 
-In the **Regulatory compliance** dashboard, you manage and interact with compliance standards. You can see which compliance standards are assigned, turn standards on and off for Azure, AWS, and GCP, review the status of assessments against standards, and more.
+In the Regulatory compliance dashboard, you manage and interact with compliance standards. You can see which compliance standards are assigned, turn standards on and off for Azure, AWS, and GCP, review the status of assessments against standards, and more.
 
 ## Integration with Purview
 
@@ -27,7 +27,7 @@ Compliance Manager thus provides improvement actions and status across your clou
 
 ## Assess regulatory compliance
 
-The **Regulatory compliance** dashboard shows which compliance standards are enabled. It shows the controls within each standard, and security assessments for those controls. The status of these assessments reflects your compliance with the standard.
+The Regulatory compliance dashboard shows which compliance standards are enabled. It shows the controls within each standard, and security assessments for those controls. The status of these assessments reflects your compliance with the standard.
 
 The dashboard helps you to focus on gaps in standards, and to monitor compliance over time.
 
@@ -155,7 +155,7 @@ Use continuous export data to an Azure Event Hubs or a Log Analytics workspace:
 
 Defender for Cloud's workflow automation feature can trigger Logic Apps whenever one of your regulatory compliance assessments changes state.
 
-For example, you might want Defender for Cloud to email a specific user when a compliance assessment fails. You need to first create the logic app (using [Azure Logic Apps](/azure/logic-apps/logic-apps-overview))  and then set up the trigger in a new workflow automation as explained in [Automate responses to Defender for Cloud triggers](workflow-automation.yml).
+For example, you might want Defender for Cloud to email a specific user when a compliance assessment fails. You need to first create the logic app (using [Azure Logic Apps](/azure/logic-apps/logic-apps-overview))  and then set up the trigger in a new workflow automation as explained in [Automate responses to Defender for Cloud triggers](workflow-automations.md).
 
 :::image type="content" source="media/release-notes/regulatory-compliance-triggers-workflow-automation.png" alt-text="Screenshot that shows how to use changes to regulatory compliance assessments to trigger a workflow automation." lightbox="media/release-notes/regulatory-compliance-triggers-workflow-automation.png":::
 
@@ -163,6 +163,6 @@ For example, you might want Defender for Cloud to email a specific user when a c
 
 To learn more, see these related pages:
 
-- [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml) - Learn how to select which standards appear in your regulatory compliance dashboard.
+- [Customize the set of standards in your regulatory compliance dashboard](assign-regulatory-compliance-standards.md) - Learn how to select which standards appear in your regulatory compliance dashboard.
 - [Managing security recommendations in Defender for Cloud](review-security-recommendations.md) - Learn how to use recommendations in Defender for Cloud to help protect your multicloud resources.
 - Check out [common questions](faq-regulatory-compliance.yml) about regulatory compliance.
