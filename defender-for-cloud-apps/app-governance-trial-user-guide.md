@@ -34,7 +34,7 @@ Start by using the following steps to get visibility and insights about your app
    > You can also view app governance-related recommendations in [Secure Score](https://security.microsoft.com/securescore?viewid=overview&tid=b5304409-74ae-42bf-a3e3-d62da4845129) to help you holistically manage your posture.
    >
 
-1. **[View your apps](app-governance-visibility-insights-view-apps.md)**: Sort the data on the **App governance** tabs by apps with high data usage or number of consents given, or filter by high privileged apps, apps with unused permissions, or unverified publisher, and more.
+1. **[View your apps](app-governance-visibility-insights-view-apps.md)**: Sort the data on the **App governance** tabs by apps with high data usage or number of consents given, or filter by high privileged apps, unused apps, apps with unused permissions, or unverified publisher, and more.
 
     Use these sorting and filtering options to gain deeper insights into your OAuth apps, including relevant app metadata and usage data.
 
