@@ -354,6 +354,9 @@
         - name: Check the status of your free trial
           displayName: free, trial, status
           href: free-trial.md
+    - name: Disable plans
+      displayName: disable, plans, turn off
+      href: disable-plans.md
 
 - name: Posture management
   items:
