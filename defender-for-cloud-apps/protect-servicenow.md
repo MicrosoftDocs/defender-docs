@@ -8,8 +8,6 @@ ms.reviewer: AmitMishaeli
 
 # How Defender for Cloud Apps helps protect your ServiceNow environment
 
-
-
 As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors may gain access to your most sensitive customer-related assets.
 
 Connecting ServiceNow to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, and information protection detections such as identifying when sensitive customer information is uploaded to the ServiceNow cloud.
@@ -178,8 +176,6 @@ For more information, see the [ServiceNow product documentation](https://docs.se
     ![Screenshot of the ServiceNow App Connector Details Dialog.](media/servicenow-app-connector-details-screenshot.png)
    
    - To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table.
-   
-     ![ServiceNow user ID.](media/servicenow-userid.png)
      
 1. In the **OAuth Details** page, enter your **Client ID** and **Client Secret**. Select **Next**.
 
@@ -197,7 +193,6 @@ To connect ServiceNow with Defender for Cloud Apps, you must have admin-level pe
 
 1. Make sure the REST API plug-in is turned on.
 
-    ![ServiceNow account.](media/servicenow-account.png "ServiceNow account")
    
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
@@ -220,8 +215,8 @@ If you have any problems connecting the app, see [Troubleshooting App Connectors
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+
+
 
