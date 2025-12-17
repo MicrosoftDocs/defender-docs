@@ -21,13 +21,19 @@ CloudTrail ingestion is available for single AWS accounts and AWS Organizations 
 
 Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
-- Defender CSPM plan enabled on the Azure subscription.
+- [Defender CSPM plan enabled](enable-defender-cspm.md) on the Azure subscription.
+
 - Permission to access AWS CloudTrail.
+
 - Access to the Amazon S3 bucket that stores CloudTrail log files.
-- Access to Amazon SQS queue notifications associated with that bucket.
-- Access to AWS KMS keys if CloudTrail logs are encrypted.
-- Permissions to create or modify CloudTrail trail s and required resources if provisioning a new trail.
-- CloudTrail configured to log **management events**.
+
+- Access to the Amazon SQS queue notifications associated with that bucket.
+
+- Access to [AWS KMS keys](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/encrypting-cloudtrail-log-files-with-aws-kms.html) if CloudTrail logs are encrypted.
+
+- Permissions to create or modify CloudTrail trails and required resources if provisioning a new trail.
+
+- CloudTrail configured to log [management events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html).
 
 > [!NOTE]
 > **Microsoft Sentinel users:** If you already stream AWS CloudTrail logs to Microsoft Sentinel, enabling CloudTrail ingestion in Defender for Cloud may require updates to your Sentinel configuration. Review the updated workflow to avoid ingestion conflicts by following [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
