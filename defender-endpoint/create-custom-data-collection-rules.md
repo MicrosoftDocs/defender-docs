@@ -72,7 +72,7 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
     :::image type="content" source="media/create-custom-data-collection-rules/select-workspace.png" alt-text="Screenshot of selecting a Microsoft Sentinel workspace." lightbox="media/create-custom-data-collection-rules/select-workspace.png":::
 
-1. In the **Workspace scope** page, select your workspace.
+1. In the **Workspace scope** page, select your workspace and select **Apply**.
 
     :::image type="content" source="media/create-custom-data-collection-rules/select-workspace-scope.png" alt-text="Screenshot of selecting a Microsoft Sentinel workspace scope.":::
 
