@@ -26,14 +26,6 @@ Check out the availability of [binary drift and blocking](support-matrix-defende
     - **To create and modify drift policies**: Security Admin or higher permissions on the tenant. 
     - **To view drift policies**: Security Reader or higher permissions on the tenant.
 
-## Components
-
-The following components are part of binary drift detection:
-
-- An enhanced sensor capable of detecting binary drift
-- Policy configuration options
-- Binary drift alert
-
 ## Configure drift policies
 
 Create drift policies to define when alerts should be generated. Each policy consists of rules that define the conditions for generating alerts. This structure lets you tailor the feature to your specific needs and reduce false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
