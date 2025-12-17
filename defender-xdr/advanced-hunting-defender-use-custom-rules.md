@@ -103,7 +103,7 @@ To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scro
 - **Open in query editor** – Loads the query in the query editor.
 - **View details** – Opens the query details side pane where you can inspect the query, run the query, or open the query in the editor.
 
-   :::image type="content" source="/defender/media/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-unified-view-details.png":::
+   :::image type="content" source="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png":::
 
 
 For editable queries, more options are available:
@@ -123,7 +123,7 @@ To help discover threats and anomalous behaviors in your environment, you can cr
 
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
+:::image type="content" source="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-rules.png":::
 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
