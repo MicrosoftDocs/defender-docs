@@ -1,10 +1,10 @@
 ---
 title: Cloud asset inventory
 description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
-ms.date: 09/03/2025
+ms.date: 12/03/2025
 ms.topic: how-to
-ms.author: elkrieger
-author: Elazark
+ms.author: dlanger
+author: dlanger
 zone_pivot_groups: defender-portal-experience
 ---
 # Cloud asset inventory
@@ -199,7 +199,7 @@ This article describes how to use the unified cloud asset inventory in Microsoft
 
 The cloud asset inventory provides a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP environments. It categorizes assets by workload, criticality, and coverage status while integrating health data, device actions, and risk signals into a single interface.
 
-:::image type="content" source="media/asset-inventory/cloud-infrastructure.png" alt-text="Screenshot of cloud asset inventory in the Defender portal" lightbox="media/asset-inventory/cloud-infrastructure.png":::
+:::image type="content" source="media/asset-inventory/cloud-infrastructure.png" alt-text="Screenshot of cloud asset inventory in the Defender portal." lightbox="media/asset-inventory/cloud-infrastructure.png":::
 
 ## Key capabilities
 
@@ -355,7 +355,7 @@ Cloud assets connect seamlessly with vulnerability management:
 ### Built-in reporting
 
 - **Coverage reports**: Assess Defender for Cloud deployment across your cloud estate
-- **Risk assessments**: Comprehensive risk analysis across multi-cloud environments  
+- **Risk assessments**: Comprehensive risk analysis across multicloud environments  
 - **Compliance dashboards**: Track regulatory compliance status across all cloud assets
 - **Trend analysis**: Monitor changes in security posture over time
 

@@ -14,7 +14,7 @@ After you've set up continuous export of Microsoft Defender for Cloud security a
 
 ## Prerequisites
 
-- [Setup continuous export in the Azure portal](continuous-export.md) or [setup continuous export with Azure Policy](continuous-export-azure-policy.md) or [setup continuous export with REST API](continuous-export-rest-api.md).
+- [Set up continuous export in the Azure portal](continuous-export.md) or [set up continuous export with Azure Policy](continuous-export-azure-policy.md) or [set up continuous export with REST API](continuous-export-rest-api.md).
 
 ## View exported alerts and recommendations in Azure Monitor
 

@@ -1,10 +1,10 @@
 ---
-title:       Private endpoints with Microsoft Defender
+title: Private endpoints with Microsoft Defender
 description: Learn about using private endpoints with Microsoft Defender for Cloud to ensure secure and private connectivity in your virtual network.
-author:      amih90 # GitHub alias
-ms.author:   amhollan # Microsoft alias
-ms.service:  defender-for-cloud
-ms.topic:    concept-article
+author: 
+ms.author: 
+ms.service: defender-for-cloud
+ms.topic: article
 ms.date: 12/02/2025
 ---
 
@@ -14,7 +14,6 @@ This article provides an overview of using private endpoints with Microsoft Secu
 
 > [!NOTE]
 > For a complete understanding of private endpoints and private links, see [What is a private endpoint?](/azure/private-link/private-endpoint-overview).
-
 ## What is Microsoft Security Private Link?
 
 Microsoft Security Private Link enables you to connect to Microsoft Defender services by using private endpoints, ensuring secure and private connectivity from your virtual network. You can create a Security Private Link resource in your subscription and then create private endpoints in your Azure virtual networks to the Security Private Link. This approach ensures that all security-related traffic from your workloads, including telemetry from Defender agents, sensors, add-ons, and extensions, traverses the Microsoft backbone network without exposure to the public internet. Microsoft Security Private Link simplifies network architecture by securing connections between your applications and Microsoft Defender services, meeting strict regulatory compliance requirements for network isolation.
@@ -30,7 +29,6 @@ When you use private endpoints with Microsoft Security Private Link, you can:
 
 > [!IMPORTANT]
 > For network-isolated workloads, Microsoft Security Private Link replaces the need for Azure Monitor Private Link Scope (AMPLS) and Azure Firewall egress rules.
-
 :::image type="content" source="media/active-user/recommended-owner.png" alt-text="Screenshot of a conceptual diagram showing Security Private Link with customer's.":::
 
 ## Prerequisites
@@ -73,12 +71,9 @@ Setting up Security Private Link involves multiple roles to ensure secure connec
 
 - **Security Administrator**  
   Initiates the creation of private endpoints for Defender services and manages security policies.
-  
+
 - **Network Administrator**  
   Approves private endpoint connections, configures DNS zones, and validates firewall rules.
-  
-- **Subscription Owner**  
-  Provides cross-subscription permissions when resources span multiple subscriptions.
 
 ## Approval workflow
 
@@ -92,7 +87,6 @@ Setting up Security Private Link involves multiple roles to ensure secure connec
 
 > [!NOTE]
 > For details about how to configure your DNS settings for private endpoints, see [Azure Private Endpoint DNS integration](/azure/private-link/private-endpoint-dns).
-
 When you create a private endpoint, a [private DNS zone](/azure/dns/private-dns-overview) is provisioned by default that corresponds to the Microsoft Defender private link subdomain `*.defender.microsoft.com`.
 
 When your workloads connect to Defender service endpoints from within the virtual network with private endpoints configured, the FQDN resolves to the private IP address of the endpoint. Connections from outside the virtual network (if public access is still enabled) resolve to the public endpoint.
@@ -133,3 +127,20 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 ## Next steps
 - Configure private endpoints with Microsoft Security Private Link
 - For more information about Private Link, see the [Azure Private Link](/azure/private-link) documentation.
+
+
+### TODO
+1. Personas content is wrong. 
+    1. [Access to a private-link resource using approval workflow](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview#access-to-a-private-link-resource-using-approval-workflow)
+    1. Azure RBAC - [Security Admin](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#security-admin), [Network Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/networking#network-contributor)
+1. Files to update:
+   1. [What is a private endpoint](/azure/private-link/private-endpoint-overview):
+1. Consider sections:
+   1. Update/remove limitations.
+
+   1. **Implications on cost**
+   Private endpoints or managed private endpoints are resources that incur extra costs. The cost varies depending on the selected solution architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
+
+|Private-link resource name	| Resource type	| Sub-resources |
+|---|---|---|
+| Microsoft Security | Microsoft.Security/privateLinks | containers |
