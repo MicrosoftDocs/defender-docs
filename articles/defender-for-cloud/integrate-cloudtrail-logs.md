@@ -9,7 +9,9 @@ ms.date: 12/09/2025
 
 # Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
 
-Microsoft Defender for Cloud can collect AWS CloudTrail management events to increase visibility into identity operations, configuration changes, and other control-plane activity across your AWS environments.
+Microsoft Defender for Cloud can collect AWS CloudTrail management events to increase visibility into identity operations, permission changes, and other control-plane activity across your AWS environments.
+
+CloudTrail ingestion adds activity-based signals to Defender for Cloud’s CIEM capabilities, allowing identity and permission risk analysis to be based not only on configured identity entitlements, but also on observed usage.
 
 CloudTrail ingestion enhances Cloud Infrastructure Entitlement Management (CIEM) by helping identify unused permissions, misconfigured roles, dormant identities, and potential privilege escalation paths. It also provides activity context that strengthens configuration drift detection, security recommendations, and attack path analysis.
 
@@ -24,7 +26,7 @@ Before enabling CloudTrail ingestion, ensure that your AWS account has:
 - Access to the Amazon S3 bucket that stores CloudTrail log files.
 - Access to Amazon SQS queue notifications associated with that bucket.
 - Access to AWS KMS keys if CloudTrail logs are encrypted.
-- Permissions to create or modify CloudTrail trails and required resources if provisioning a new trail.
+- Permissions to create or modify CloudTrail trail s and required resources if provisioning a new trail.
 - CloudTrail configured to log **management events**.
 
 > [!NOTE]
@@ -44,6 +46,8 @@ After your AWS account is connected:
 
 1. Enable **AWS CloudTrail ingestion (Preview)**. This adds CloudTrail configuration options to the setup workflow.
 
+    :::image type="content" source="media/integrate-cloudtrail-logs/defender-plans-selection.png" alt-text="Screenshot showing the Defender for Cloud plan selection page for an AWS connector." lightbox="media/integrate-cloudtrail-logs/defender-plans-selection.png":::
+
 1. Choose whether to integrate with an existing CloudTrail trail or create a new one during setup:
 
     - If you select **Existing trail** (recommended):
@@ -51,12 +55,15 @@ After your AWS account is connected:
         1. If prompted, deploy or update the CloudFormation stack.
 
         > [!NOTE]
-        > When you select **Existing trail**, Defender for Cloud performs a one-time hydration process that collects up to 90 days of historical CloudTrail management events from the trail.
+        > When you select **Existing trail**, Defender for Cloud performs a one-time collection of up to 90 days of historical CloudTrail management events.
+        > If CloudTrail ingestion is disabled, the historical data collected during this process is removed. Re-enabling CloudTrail ingestion triggers a new historical data collection.
 
     - If you select **Create a new CloudTrail**:
         1. Deploy the CloudFormation or Terraform template when prompted.
         1. After the deployment completes, locate the SQS queue ARN in the AWS console.
         1. Return to Defender for Cloud and enter the SQS ARN in the **SQS ARN** field.
+        
+      :::image type="content" source="media/integrate-cloudtrail-logs/ingestion-settings.png" alt-text="Screenshot showing the AWS CloudTrail ingestion settings for an AWS connector in Defender for Cloud." lightbox="media/integrate-cloudtrail-logs/ingestion-settings.png":::
 
 ## How Defender for Cloud uses CloudTrail data
 
@@ -80,17 +87,6 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 - Review Defender for Cloud recommendations and identity insights after setup.
 
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
-
-## Troubleshoot CloudTrail ingestion
-
-If data isn’t populating:
-
-- Check Amazon SQS queue notifications for new log files.
-- Confirm IAM roles and trust policies are applied as expected.
-- If using encryption, verify KMS key permissions.
-- Validate that CloudTrail is recording **management events** and not limited to data events.
-
-Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
 ## Next steps
 

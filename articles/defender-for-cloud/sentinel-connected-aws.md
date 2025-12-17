@@ -48,6 +48,8 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
 1. Copy the **Topic ARN** for later use.
 
+    :::image type="content" source="media/sentinel-connected-aws/amazon-simple-notification-service-topic-details.png" alt-text="Screenshot showing the Amazon Simple Notification Service topic details page for the CloudTrail notifications topic." lightbox="media/sentinel-connected-aws/amazon-simple-notification-service-topic-details.png":::
+
 1. On the topic details page, select **Edit**, and then expand **Access policy**.
 
 1. Add a policy statement that allows the CloudTrail S3 bucket to publish events to the topic.
@@ -115,6 +117,8 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
    - Your existing **Microsoft Sentinel SQS queue**
    - The new **Defender for Cloud SQS queue**
+
+    :::image type="content" source="media/sentinel-connected-aws/amazon-simple-notification-service-topic-subscriptions.png" alt-text="Screenshot showing the Amazon Simple Notification Service topic subscriptions list including subscriptions for both the Microsoft Sentinel queue and the Defender for Cloud queue." lightbox="media/sentinel-connected-aws/amazon-simple-notification-service-topic-subscriptions.png":::
 
 1. When creating each subscription:
 
