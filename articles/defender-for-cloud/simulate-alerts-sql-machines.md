@@ -25,13 +25,29 @@ The simulation runs locally on the machine through the Custom Script Extension w
 ## Prerequisites
 
 - [Enable SQL Servers on Machines plan for Defender for Databases](defender-for-sql-usage.md).
+- [Verify that the target machine is successfully protected](verify-machine-protection.md).
 - The SQL VM or Arc-connected machines are successfully protected.
 - Must have the following role and permission: 
+    - **Create an ARM deployment and to write VM extensions**: Security Admin or Contributor in the target subscription.
     - Contributor permission and Resource Policy contributor to the resource `Microsoft.Compute/virtualMachines/write` and `Microsoft.Resources/deployments/*`.
 - The SQL Server instance must be configured to allow SQL Authentication for simulation scenarios that require a username and password (some simulation types accept user credentials). 
 
     > [!NOTE]
     > Use an appropriate test SQL username and password rather than a production account.
 
-## 
+## Simulate alerts
+
+The SqlAlertSimulationClient extracts template parameters from the target resource, including subscription, resource group, machine name, location, and the presence of the Defender extension. 
+
+SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that deploys or re-uses a custom script extension on the machine, which runs a PowerShell command that invokes the Defender for SQL simulate helper with the requested attack parameters. The helper generates alert telemetry that flows into Defender for Cloud, triggering alerts that downstream automation and mobilization connectors can consume.
+
+1. Sign in the [Azure portal](https://portal.azure.com/).
+
+1. Search for and select **Azure SQL**.
+
+1. Select the relevant database.
+
+1. Select **Security** > **Microsoft Defender for Cloud**.  
+
+1. Select the  
 
