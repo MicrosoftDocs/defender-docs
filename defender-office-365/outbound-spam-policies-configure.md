@@ -134,6 +134,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      > [!NOTE]
      >
+     > - When Inbox rule–based external forwarding is enabled on Microsoft 365 Groups, and an admin wants to apply a custom outbound spam filter policy to enable or disable the forwarding, they must use the Microsoft 365 Group address in the Users condition instead of the Groups condition. This is because the forwarded email uses the Microsoft 365 Group mailbox as the sender address. If the Group address is added under the Groups condition, the policy applies to members of the group rather than the Group mailbox itself.
      > - Disabling automatic forwarding disables any Inbox rules or [mailbox forwarding](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as _SMTP forwarding_) that redirects messages to external addresses.
      > - Outbound spam policies don't affect the forwarding of messages between internal users.
      > - When automatic forwarding is disabled by an outbound spam policy, non-delivery reports (also known as NDRs or bounce messages) are generated in the following scenarios:
