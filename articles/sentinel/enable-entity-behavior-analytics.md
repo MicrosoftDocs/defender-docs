@@ -131,6 +131,10 @@ To enable UEBA from supported data connectors in Microsoft Defender portal:
 1. On the **Connector details** page, select **Advanced options**.
 1. Under **Configure UEBA**, toggle on the tables you want to enable for UEBA.
 
+    :::image type="content" source="media/enable-entity-behavior-analytics/ueba-data-connector.png" alt-text="Screenshot of UEBA configuration in data connector." lightbox="media/enable-entity-behavior-analytics/ueba-data-connector.png":::
+
+For more information about configuration Microsoft Sentinel data connectors, see [Connect data sources to Microsoft Sentinel by using data connectors](./configure-data-connector.md).
+
 ## Next steps
 
 In this article, you learned how to enable and configure User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel. For more information about UEBA:
