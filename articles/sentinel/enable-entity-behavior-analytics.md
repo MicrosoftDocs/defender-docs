@@ -20,12 +20,14 @@ ms.custom: sfi-image-nochange
 
 User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel analyzes logs and alerts from connected data sources to build baseline behavioral profiles of your organization's entities—such as users, hosts, IP addresses, and applications. Using machine learning, UEBA identifies anomalous activity that may indicate a compromised asset.
 
-You can enable UEBA in two ways, both with the same result:
+You can enable User and Entity Behavior Analytics in two ways, both with the same result:
 
-- **From the Microsoft Sentinel workspace settings**: Enable UEBA globally for your workspace and select which data sources to use.
-- **From supported data connectors**: Enable UEBA when configuring individual data connectors that support UEBA.
+- **From the Microsoft Sentinel workspace settings**: Enable UEBA for your workspace and select which data sources to use in the Microsoft Defender portal or Azure portal.
+- **From supported data connectors**: Enable UEBA when configuring data connectors that support UEBA in the Microsoft Defender portal.
 
-This article shows you how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors. 
+Both methods enable the same UEBA functionality. Choose the approach that fits your workflow—configure UEBA centrally for your workspace, or enable it as you set up each connector.
+
+This article explains how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors. 
 
 For more information about UEBA, see [Identify threats with entity behavior analytics](identify-threats-with-entity-behavior-analytics.md).
 
@@ -53,7 +55,6 @@ To enable or disable this feature (these prerequisites aren't required to use th
 To enable UEBA from your Microsoft Sentinel workspace settings:
 
 1. Go to the **Entity behavior configuration** page.
-
 
     # [Azure portal](#tab/azure)
 
