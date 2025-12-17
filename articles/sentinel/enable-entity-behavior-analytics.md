@@ -18,9 +18,16 @@ ms.custom: sfi-image-nochange
 
 # Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel
 
-In the previous deployment step, you enabled the Microsoft Sentinel security content you need to protect your systems. In this article, you learn how to enable and use the UEBA feature to streamline the analysis process. This article is part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md).
+User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel analyzes logs and alerts from connected data sources to build baseline behavioral profiles of your organization's entities—such as users, hosts, IP addresses, and applications. Using machine learning, UEBA identifies anomalous activity that may indicate a compromised asset.
 
-As Microsoft Sentinel collects logs and alerts from all of its connected data sources, it analyzes them and builds baseline behavioral profiles of your organization’s entities (such as users, hosts, IP addresses, and applications) across time and peer group horizon. Using various techniques and machine learning capabilities, Microsoft Sentinel can then identify anomalous activity and help you determine whether an asset is compromised. Learn more about [UEBA](identify-threats-with-entity-behavior-analytics.md).
+You can enable UEBA in two ways, both with the same result:
+
+- **From the Microsoft Sentinel workspace settings**: Enable UEBA globally for your workspace and select which data sources to use.
+- **From supported data connectors**: Enable UEBA when configuring individual data connectors that support UEBA.
+
+This article shows you how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors. 
+
+For more information about UEBA, see [Identify threats with entity behavior analytics](identify-threats-with-entity-behavior-analytics.md).
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
@@ -41,10 +48,14 @@ To enable or disable this feature (these prerequisites aren't required to use th
 > - No special license is required to add UEBA functionality to Microsoft Sentinel, and there's no extra cost for using it.
 > - However, since UEBA generates new data and stores it in new tables that UEBA creates in your Log Analytics workspace, **additional data storage charges** apply. 
 
-## How to enable User and Entity Behavior Analytics
+## Enable User and Entity Behavior Analytics from workspace settings
 
-- Users of Microsoft Sentinel in the Azure portal, follow the instructions in the **Azure portal** tab.
-- Users of Microsoft Sentinel as part of the Microsoft Defender portal, follow the instructions in the **Defender portal** tab.
+You can enable User and Entity Behavior Analytics in two ways, both with the same result:
+
+- **From the Microsoft Sentinel workspace settings**: Enable UEBA for your workspace and select which data sources to use in the Microsoft Defender portal or Azure portal.
+- **From supported data connectors**: Enable UEBA when configuring data connectors that support UEBA in the Microsoft Defender portal.
+
+Both methods enable the same UEBA functionality. Choose the approach that fits your workflow—configure UEBA centrally for your workspace, or enable it as you set up each connector.
 
 1. Go to the **Entity behavior configuration** page.
 
@@ -110,6 +121,15 @@ To enable or disable this feature (these prerequisites aren't required to use th
     1. Select the workspace you want to configure.
     1. From the workspace configuration page, select **Anomalies** and toggle on **Detect Anomalies**. 
 
+## Enable User and Entity Behavior Analytics from supported connectors
+
+To enable UEBA from supported data connectors in Microsoft Defender portal:
+
+1. From the Microsoft Defender portal navigation menu, select **Microsoft Sentinel > Configuration > Data connectors**.
+1. Select a data connector that supports UEBA.
+1. From the data connector pane, select **Open connector page**.
+1. On the **Connector details** page, select **Advanced options**.
+1. Under **Configure UEBA**, toggle on the tables you want to enable for UEBA.
 
 ## Next steps
 
