@@ -90,6 +90,12 @@ After you configure the data connector, it might take some time for the data to 
 
    :::image type="content" source="media/configure-data-connector/connected-data-connector.png" alt-text="Screenshot of a data connector page with status connected and graph that shows the data received.":::
 
+## Enable User and Entity Behavior Analytics (UEBA) from supported connectors
+
+[User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](identify-threats-with-entity-behavior-analytics.md) analyzes logs and alerts from connected data sources to build baseline behavioral profiles of your organization's entities—such as users, hosts, IP addresses, and applications. Using machine learning, UEBA identifies anomalous activity that may indicate a compromised asset.
+
+To enable UEBA from supported data connectors in Microsoft Defender portal, see [Enable User and Entity Behavior Analytics from supported connectors](enable-entity-behavior-analytics.md#enable-user-and-entity-behavior-analytics-from-supported-connectors).
+
 ## Find your data
 
 After you enable the connector successfully, the connector begins to stream data to the table schemas related to the data types you configured.
