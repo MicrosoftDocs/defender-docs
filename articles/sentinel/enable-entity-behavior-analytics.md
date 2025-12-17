@@ -111,7 +111,7 @@ To enable UEBA from your Microsoft Sentinel workspace settings:
 
 1. Select **Connect**. 
 
-1. Enable anomaly detection in your Sentinel workspace:
+1. Enable anomaly detection in your Microsoft Sentinel workspace:
 
     1. From the Microsoft Defender portal navigation menu, select **Settings** > **Microsoft Sentinel** > **SIEM workspaces**.
     1. Select the workspace you want to configure.
