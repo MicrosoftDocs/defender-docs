@@ -104,6 +104,9 @@ The following table lists example results when you define the **Block upload of 
 
 The following limitations apply only on sessions that are served with Edge in-browser protection.
 
+### Secure Edge session controls are currently not supported for Google Workspace apps. 
+
+Customers can continue to use the native client check for Google Workspace.
 
 ### Deep link is lost when user switches to Edge by clicking 'Continue in Edge'  
 
