@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/25/2025
+ms.date: 12/17/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
@@ -38,7 +38,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- Native Root Detection for Microsoft Defender is now GA 'ed. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
+- Native root detection for Microsoft Defender is now GA. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
 
 |Build|1.0.8321.0101|
 | -------- | -------- |
