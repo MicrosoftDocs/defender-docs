@@ -78,21 +78,6 @@ You can:
 
 Learn more about [alerts in Microsoft Defender XDR](concept-integration-365.md).
 
-## View plan-specific insights
-
-After you enable specific Defender plans, their findings and data are integrated into Defender for Cloud. The insights and data available depend on which Defender plans are enabled for your AWS environment.
-
-### Agentless scanning (CSPM and Servers)
-Agentless scanning results for vulnerabilities and data exposure can take up to 24 hours to initially populate. Findings appear in the **Recommendations** and **Asset inventory** pages. 
-
-Learn more about [agentless data collection and scanning cadence](concept-agentless-data-collection.md).
-
-### Server resources (Defender for Servers)
-Arc-enabled EC2 instances appear in the Asset inventory as Azure Arc resources. Learn more about [how Arc-enabled servers are managed](/azure/azure-arc/servers/overview).
-
-### Kubernetes signals (Defender for Containers)
-Alerts, recommendations, and inventory data for your EKS clusters are surfaced in the **Alerts** page, **Recommendations** page, and **Asset inventory**. Learn more about [protecting Amazon Elastic Kubernetes Service clusters](defender-for-containers-enable.md).
-
 ## View CloudTrail insights (Preview)
 
 If you have enabled AWS CloudTrail management event ingestion, Microsoft Defender for Cloud analyzes and links CloudTrail log activity with your configuration and identity context to provide advanced security insights.
