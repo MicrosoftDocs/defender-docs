@@ -86,7 +86,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
   ![User's image](media/android-whatsnew/image.png)
   
-  #### October 2025
+    #### October 2025
 
 | Build| 1.0.8201.0101|
 | -------- | -------- |
