@@ -52,7 +52,7 @@ Microsoft Defender for Endpoint provides multiple capabilities on mobile devices
 |Anti-phishing (Defender warning overlooked)|Low |  |  |
 |Anti-malware|Medium | Information about malicious APKs including install source, storage location, time of install, etc.; [More information](android-privacy.md#app-information)||
 | ||||
-|Root Detection (Preview)|High|NA|NA|
+|Root Detection|High|NA|NA|
 |Jailbreak Detection|High | NA |NA |
 |Rogue Wifi |Low |  |  |
 |Open Network Detection (Migrated from alert to event in the device timeline)|NA (Event)| | |
