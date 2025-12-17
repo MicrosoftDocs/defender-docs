@@ -14,6 +14,8 @@ Protected users experience a smooth experience with their cloud apps, without la
 
 > [!NOTE]
 > In-browser protection with Microsoft Edge is only available to Microsoft Defender for Cloud Apps commercial tenants.
+> > [!NOTE]
+> Secure Edge session controls are currently not supported for Google Workspace apps. Customers can continue to use the native client check for Google Workspace.
 
 ## In-browser protection requirements
 
