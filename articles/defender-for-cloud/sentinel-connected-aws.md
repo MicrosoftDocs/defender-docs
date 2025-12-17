@@ -48,8 +48,6 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
 1. Copy the **Topic ARN** for later use.
 
-    :::image type="content" source="media/sentinel-connected-aws/amazon-simple-notification-service-topic-details.png" alt-text="Screenshot showing the Amazon Simple Notification Service topic details page for the CloudTrail notifications topic." lightbox="media/sentinel-connected-aws/amazon-simple-notification-service-topic-details.png":::
-
 1. On the topic details page, select **Edit**, and then expand **Access policy**.
 
 1. Add a policy statement that allows the CloudTrail S3 bucket to publish events to the topic.
@@ -86,8 +84,6 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
 1. Update the SQS queue access policy to allow the SNS topic ARN to perform the `SQS:SendMessage` action for this queue.
 
-   Use the following policy statement as a reference when updating the SQS queue access policy.
-
    Apply this policy to each SQS queue that subscribes to the CloudTrail SNS topic. This typically includes:
    - The SQS queue used by Microsoft Sentinel
    - The SQS queue created for Defender for Cloud
@@ -117,8 +113,8 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
    - Your existing **Microsoft Sentinel SQS queue**
    - The new **Defender for Cloud SQS queue**
-
-    :::image type="content" source="media/sentinel-connected-aws/amazon-simple-notification-service-topic-subscriptions.png" alt-text="Screenshot showing the Amazon Simple Notification Service topic subscriptions list including subscriptions for both the Microsoft Sentinel queue and the Defender for Cloud queue." lightbox="media/sentinel-connected-aws/amazon-simple-notification-service-topic-subscriptions.png":::
+  
+     :::image type="content" source="media/sentinel-connected-aws/amazon-simple-notification-service-create-subscription.png" alt-text="Screenshot of the Amazon Simple Notification Service create subscription page showing Amazon Simple Queue Service selected as the protocol and raw message delivery enabled." lightbox="media/sentinel-connected-aws/amazon-simple-notification-service-create-subscription.png":::
 
 1. When creating each subscription:
 
@@ -159,6 +155,8 @@ If this step is skipped, Microsoft Sentinel will stop receiving CloudTrail notif
 1. Save the configuration.
 
 After these changes, both Microsoft Sentinel and Defender for Cloud receive CloudTrail event notifications using the SNS fan-out pattern.
+
+:::image type="content" source="media/sentinel-connected-aws/amazon-simple-notification-service-topic-subscriptions.png" alt-text="Screenshot of the Amazon Simple Notification Service topic subscriptions list showing two Amazon Simple Queue Service subscriptions for Microsoft Sentinel and Defender for Cloud." lightbox="media/sentinel-connected-aws/amazon-simple-notification-service-topic-subscriptions.png":::
 
 ## Resolve OIDC identity provider conflicts
 
