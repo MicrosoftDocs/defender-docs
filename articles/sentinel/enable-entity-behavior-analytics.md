@@ -119,7 +119,7 @@ To enable UEBA from your Microsoft Sentinel workspace settings:
 
 [!INCLUDE [data-connector-behavior-analytics](includes/data-connector-behavior-analytics.md)] 
 
-For more information about configuration Microsoft Sentinel data connectors, see [Connect data sources to Microsoft Sentinel by using data connectors](./configure-data-connector.md).
+For more information about configuring Microsoft Sentinel data connectors, see [Connect data sources to Microsoft Sentinel by using data connectors](./configure-data-connector.md).
 
 ## Next steps
 
