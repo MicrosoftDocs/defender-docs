@@ -230,7 +230,7 @@ For detailed information about choosing preset security policies vs. custom poli
 
 We recommend you begin with the *preset security policies* by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
 
-For example, you could apply a condition for [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) for pilot evaluations if the recipients are *members* of a defined *EOP Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
+For example, you could apply a condition for [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) for pilot evaluations if the recipients are *members* of a defined *Built-in Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
 
 Likewise, a you could apply a Defender for Office 365 condition for pilot evaluations if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
 
