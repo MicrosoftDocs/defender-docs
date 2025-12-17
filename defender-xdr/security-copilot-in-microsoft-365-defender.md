@@ -80,7 +80,7 @@ Most attackers rely on sophisticated malware when launching attacks to avoid det
 
 Investigating devices involved in incidents can be a tasking job. To quickly assess a device, Copilot can [summarize a device's information](copilot-in-defender-device-summary.md), including the device's security posture, any unusual behaviors, a list of vulnerable software, and relevant Microsoft Intune information.
 
-:::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page.png":::
+:::image type="content" source="../media/copilot-in-defender-device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="../media/copilot-in-defender-device-summary/copilot-defender-device-summary-device-page.png":::
 
 #### Analyze files promptly
 
@@ -114,7 +114,7 @@ The Threat Hunting Agent revolutionizes threat hunting by enabling you to invest
 
 Security teams who use advanced hunting to proactively hunt for threats in their network can now use a query assistant that converts any natural-language question, in the context of threat hunting, into a ready-to-run KQL query. The query assistant saves security teams time by generating a KQL query that can then be automatically run or further tweaked according to the analyst needs. Read more about [Query assistant](advanced-hunting-security-copilot-query-assistant.md).
 
-:::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
+:::image type="content" source="media/security-copilot-in-microsoft-365-defender/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="../media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png":::
 
 ### Protect your organization with relevant threat intelligence
 
