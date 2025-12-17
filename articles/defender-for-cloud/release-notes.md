@@ -31,9 +31,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|December 17, 2025| Preview | [AWS CloudTrail ingestion (Preview)](#aws-cloudtrail-ingestion-preview)|
 |December 2, 2025| Upcoming change | [Updated CIEM recommendation logic](#upcoming-change-to-ciem-recommendation-logic)|
 |December 1, 2025| GA | [General availability of the Endor Labs integration](#general-availability-of-the-endor-labs-integration) |
 | December 1, 2025 | Preview | [Cloud posture management adds serverless protection for Azure and AWS (Preview)](#cloud-posture-management-adds-serverless-protection-for-azure-and-aws-preview) |
+
+### AWS CloudTrail ingestion (Preview)
+
+December 17, 2025
+
+AWS CloudTrail management event ingestion is now available in preview in Microsoft Defender for Cloud.
+
+This capability extends Cloud Infrastructure Entitlement Management (CIEM) by incorporating observed AWS management event activity alongside entitlement data. Using real usage signals helps improve the identification of unused permissions, dormant identities, and potential privilege escalation paths. CloudTrail ingestion is supported for single AWS accounts and AWS Organizations that use centralized logging.
+
+Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloudtrail-defender-for-cloud.md).
 
 ### Upcoming change to CIEM recommendation logic
 
@@ -52,7 +63,7 @@ As part of the ongoing [deprecation of the Microsoft Entra Permissions Managemen
 | Cloud | Change |
 |-------|--------|
 | Azure | Inactive identity recommendations now include read-level permission evaluation for improved fidelity. |
-| AWS | - CIEM evaluations now apply to all AWS users and roles whose permissions can be reliably assessed.<br>- SAML and SSO identities require [AWS CloudTrail Logs (Preview)](quickstart-onboard-aws.md) to be enabled within the Defender CSPM plan.<br>- Serverless and compute identities are no longer included in CIEM’s inactivity logic, which may change recommendation counts. |
+| AWS | - CIEM evaluations now apply to all AWS users and roles whose permissions can be reliably assessed.<br>- SAML and SSO identities require [AWS CloudTrail Logs (Preview)](integrate-cloud-trail.md) to be enabled within the Defender CSPM plan.<br>- Serverless and compute identities are no longer included in CIEM’s inactivity logic, which may change recommendation counts. |
 | GCP | CIEM evaluations require [Cloud Logging ingestion (Preview)](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview) to be enabled within the Defender CSPM plan. |
 
 The Permissions Creep Index (PCI) metric is being deprecated and will no longer appear in the Defender for Cloud recommendations. PCI is replaced by the improved activity-based CIEM logic, offering clearer guidance and more consistent identity risk insights.
