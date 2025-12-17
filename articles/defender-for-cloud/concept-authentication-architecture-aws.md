@@ -15,7 +15,7 @@ This article explains how that trust is established and how short-lived credenti
 
 During onboarding, the CloudFormation template creates the authentication components that Defender for Cloud requires to establish trust between Microsoft Entra ID and AWS. These typically include:
 
-- An **OpenID Connect (OIDC) identity provider** bound to a Microsoft-managed Microsoft Entra application 
+- An **OpenID Connect identity provider** bound to a Microsoft-managed Microsoft Entra application 
 
 - One or more **IAM roles** that Defender for Cloud can assume through web identity federation
 
