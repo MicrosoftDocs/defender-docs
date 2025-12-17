@@ -18,7 +18,7 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
-## December 2025
+## January 2026
 
 ### New Entity Behavior Analytics (UEBA) widget in the Defender portal home page (Preview)
 
