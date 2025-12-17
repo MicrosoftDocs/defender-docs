@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/06/2025
+ms.date: 12/17/2025
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
