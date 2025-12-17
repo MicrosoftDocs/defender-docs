@@ -69,7 +69,7 @@ Microsoft provides built-in [alert policies](alert-policies.md) that help identi
 
 Although certain alerts and security policies can trigger automated investigations, *no remediation actions are taken automatically for email and content*. Instead, all remediation actions for email and email content await approval by your security operations team in the [Action center](m365d-action-center.md).
 
-The built-in security features for all cloud mailboxes and Defender for Office 365 help protect email and content. We recommend using the Standard and Strict [preset security policies](/defender-office-365/preset-security-policies#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) to assign protection to users.
+[The built-in security features for all cloud mailboxes](/defender-office-365/eop-about) and Defender for Office 365 help protect email and content. We recommend using the Standard and Strict [preset security policies](/defender-office-365/preset-security-policies#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) to assign protection to users.
 
 If you're using custom policies, use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare your policy settings to the Standard and Strict preset security policy settings. For a detailed listing of all policy settings, see the tables in [Recommended email and collaboration threat policy settings for cloud organizations](/defender-office-365/recommended-settings-for-eop-and-office365).
 

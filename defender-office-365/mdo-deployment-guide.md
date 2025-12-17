@@ -45,7 +45,7 @@ The steps to configure Defender for Office 365 are described in the following di
 
 ## Requirements
 
-The built-in security features are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
+[The built-in security features](eop-about.md) are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
 
 ### Roles and permissions
 

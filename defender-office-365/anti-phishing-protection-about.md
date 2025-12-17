@@ -39,7 +39,7 @@ appliesto:
 
 - **Ransomware** that encrypts your data and demands payment to decrypt it almost always starts in phishing messages. Anti-phishing protection can't help you decrypt encrypted files, but it can help detect the initial phishing messages that are associated with the ransomware campaign. For more information about recovering from a ransomware attack, see [Ransomware incident response playbooks](/security/ransomware/).
 
-With the growing complexity of attacks, it's even difficult for trained users to identify sophisticated phishing messages. Fortunately, the built-in security features for all cloud mailboxes and the additional features in Microsoft Defender for Office 365 can help.
+With the growing complexity of attacks, it's even difficult for trained users to identify sophisticated phishing messages. Fortunately, [the built-in security features for all cloud mailboxes](eop-about.md) and [the additional features in Microsoft Defender for Office 365](/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet) can help.
 
 ## Anti-phishing protection for all cloud mailboxes
 

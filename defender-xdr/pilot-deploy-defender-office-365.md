@@ -94,7 +94,7 @@ The following table describes this illustration.
 | Call-out | Description |
 |---|---|
 | 1 | The host server for the external sender typically performs a public DNS lookup for an MX record, which provides the target server to relay the message. This referral can either be Exchange Online (EXO) directly or an SMTP gateway configured to relay against EXO. |
-| 2 | The built-in security features for all cloud mailboxes negotiate and validate the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required. |
+| 2 | [The built-in security features for all cloud mailboxes](/defender-office-365/eop-about) negotiate and validate the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required. |
 | 3 | Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation. |
 | 4  |A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered. |
 | 5 | Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online. |
@@ -117,7 +117,7 @@ A successful Defender for Office 365 evaluation or production pilot requires the
 
 ## Step 1: Audit and verify the public MX record
 
-To effectively evaluate Microsoft Defender for Office 365, it's important that inbound external email is relayed through the built-in security features for all cloud mailboxes.
+To effectively evaluate Microsoft Defender for Office 365, it's important that inbound external email is relayed through [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about).
 
 1. In the M365 Admin Portal at <https://admin.microsoft.com>, expand *...Show all* if necessary, expand *Settings*, and then select **Domains**. Or, to go directly to the *Domains* page, use <https://admin.microsoft.com/Adminportal/Home#/Domains>.
 2. On the *Domains* page, select your verified email domain by clicking anywhere on the entry other than the check box.
@@ -230,7 +230,7 @@ For detailed information about choosing preset security policies vs. custom poli
 
 We recommend you begin with the *preset security policies* by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
 
-For example, you could apply a condition for the built-in security features for all cloud mailbox for pilot evaluations if the recipients are *members* of a defined *EOP Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
+For example, you could apply a condition for [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) for pilot evaluations if the recipients are *members* of a defined *EOP Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
 
 Likewise, a you could apply a Defender for Office 365 condition for pilot evaluations if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
 

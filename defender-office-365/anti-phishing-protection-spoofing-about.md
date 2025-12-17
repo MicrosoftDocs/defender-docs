@@ -38,7 +38,7 @@ All organizations with cloud mailboxes include features to help protect against 
 
 Anti-spoofing technology in Microsoft 365 specifically examines forgery of the From header in the message body (also known as the `5322.From` address, From address or P2 sender), because email clients show the From header value as the message sender. When Microsoft 365 has high confidence the From header is forged, the message is identified as spoofed.
 
-The following anti-spoofing technologies are available in the built-in security features for all cloud mailboxes:
+The following anti-spoofing technologies are available in [the built-in security features for all cloud mailboxes](eop-about.md):
 
 - **Email authentication**: An integral part of any anti-spoofing effort is the use of email authentication (also known as email validation) by SPF, DKIM, and DMARC records in DNS. You can configure these records for your domains so destination email systems can check the validity of messages that claim to be from senders in your domains. For inbound messages, Microsoft 365 requires email authentication of sender domains. For more information, see [Email authentication](email-authentication-about.md).
 

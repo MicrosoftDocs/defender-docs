@@ -108,7 +108,7 @@ You have now successfully activated (or deactivated) that workload.
 
 ## Deactivate Microsoft Defender XDR Unified RBAC
 
-You can deactivate Microsoft Defender XDR Unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Microsoft Defender for Office 365 (which includes the built-in security features for all cloud mailboxes).
+You can deactivate Microsoft Defender XDR Unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Microsoft Defender for Office 365 (which includes [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about)).
 
 To deactivate the workloads, repeat the steps in the previous section and select the workloads you want to deactivate. The status is set to **Not Active**.
 

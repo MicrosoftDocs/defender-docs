@@ -99,7 +99,7 @@ To make sure that recipients get the protection settings that you want, use the 
 
 ## Appendix
 
-It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in the built-in security features for all cloud mailboxes and in Defender for Office 365 complement or contradict each other.
+It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in [the built-in security features for all cloud mailboxes](eop-about.md) and in Defender for Office 365 complement or contradict each other.
 
 - For information about filtering stacks and how they're combined, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 - After the filtering stack determines a verdict, only then are organization policies and their configured actions evaluated.

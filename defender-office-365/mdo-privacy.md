@@ -77,7 +77,7 @@ Defender for Office 365 operates in the Microsoft Entra datacenters. For the fol
 - United Kingdom
 - United States
 
-In the built-in security features for all cloud mailboxes, the following data is stored at rest in the local region geo:
+In [the built-in security features for all cloud mailboxes](eop-about.md), the following data is stored at rest in the local region geo:
 
 - Alerts
 - Attachments

@@ -33,7 +33,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Although all organizations with cloud mailboxes include built-in security features, Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
+Although all organizations with cloud mailboxes include [built-in security features](eop-about.md), Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
 
 This article explains the _protection ladder_ for email and collaboration. The ladder starts with the built-in security features for all cloud mailboxes, and continues to Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
 

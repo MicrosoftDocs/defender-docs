@@ -52,7 +52,7 @@ The following table summarizes the values of **AuditLogRecordType** that are rel
 
 |Value|Member name|Description|
 |---|---|---|
-|28|ThreatIntelligence|Phishing and malware events from the built-in security features for all cloud mailboxes and from Microsoft Defender for Office 365.|
+|28|ThreatIntelligence|Phishing and malware events from [the built-in security features for all cloud mailboxes](eop-about.md) and from Microsoft Defender for Office 365.|
 |41|ThreatIntelligenceUrl|Safe Links time-of-click and block override events from Microsoft Defender for Office 365.|
 |47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint, OneDrive, and Microsoft Teams, from Microsoft Defender for Office 365.|
 |64|AirInvestigation|Automated investigation and response events, such as investigation details and relevant artifacts, from Microsoft Defender for Office 365 Plan 2.|

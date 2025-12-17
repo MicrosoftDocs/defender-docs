@@ -30,7 +30,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Although all organizations with cloud mailboxes include built-in security features, Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
+Although all organizations with cloud mailboxes include [built-in security features](eop-about.md), Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
 
 We recommend two security levels: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help keep unwanted email out of user mailboxes in most situations.
 
@@ -60,7 +60,7 @@ This article describes the default threat policy settings, and also the recommen
 
 ## Built-in security features for all cloud mailboxes
 
-The built-in security features for all cloud mailboxes described in this section are available in all organizations with cloud mailboxes. We recommend the Standard or Strict configurations as described in the tables in the following subsections.
+The [the built-in security features](eop-about.md) in this section are available in all organizations with cloud mailboxes. We recommend the Standard or Strict configurations as described in the tables in the following subsections.
 
 ### Anti-malware policy settings
 
@@ -186,7 +186,7 @@ For more information about the default sending limits in the service, see [Sendi
 
 ### Anti-phishing policy settings for all cloud mailboxes
 
-The anti-phishing policy settings described in this section are part of the built-in security features included in all organizations with cloud mailboxes. For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
+The anti-phishing policy settings described in this section are part of [the built-in security features](eop-about.md) included in all organizations with cloud mailboxes. For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
 
 The spoof settings are inter-related, but the **Show first contact safety tip** setting has no dependency on spoof settings.
 

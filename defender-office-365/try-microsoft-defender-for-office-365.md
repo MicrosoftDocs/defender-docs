@@ -57,7 +57,7 @@ For pricing information, see [Microsoft Defender for Office 365](https://www.mic
 
 ### Policies
 
-Defender for Office 365 includes the built-in security features for all cloud mailboxes and features exclusive to Defender for Office 365.
+Defender for Office 365 includes [built-in security features for all cloud mailboxes](eop-about.md) and features exclusive to Defender for Office 365.
 
 The email and collaboration protection features of Microsoft 365 are implemented using policies. **Policies exclusive to Defender for Office 365 are created for you as needed**:
 

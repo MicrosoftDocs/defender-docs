@@ -44,7 +44,7 @@ Microsoft 365 offers flexibility in how your messages are routed. The following 
 
 - [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) describes how to configure connectors if your internet mail is routed to a service or device before delivery to Microsoft 365.
 
-- In hybrid environments where the built-in security features for all cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- In environments where the built-in security features for all cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 
   If you don't  want to move messages to each user's Junk Email folder, you can choose another action by editing the default anti-spam policy or custom anti-spam policies. For more information, see [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies).
 
@@ -74,7 +74,7 @@ After you opt in, the source email server must meet both of the following requir
 
   > 450 4.7.26 Service unavailable, message sent over IPv6 [2a01:111:f200:2004::240] must pass either SPF or DKIM validation.
 
-Anonymous email from IPv6 sources goes through the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365.
+Anonymous email from IPv6 sources goes through [the built-in security features for all cloud mailboxes](eop-about.md) and Microsoft Defender for Office 365.
 
 ## Mail flow delivery FAQ
 

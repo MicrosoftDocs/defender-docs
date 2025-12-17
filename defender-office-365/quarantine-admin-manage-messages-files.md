@@ -30,7 +30,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages detected by the built-in security features for all cloud mailboxes. Admins can view, release, and delete all types of quarantined messages and files for all users.
+In all organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages detected by [the built-in security features for all cloud mailboxes](eop-about.md). Admins can view, release, and delete all types of quarantined messages and files for all users.
 
 Admins in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription) can also manage files quarantined by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) and Microsoft Teams messages [quarantined by zero-hour auto purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 

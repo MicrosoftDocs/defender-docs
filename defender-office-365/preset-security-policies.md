@@ -367,7 +367,7 @@ Remember, if you never turned on the Standard preset security policy or the Stri
 
 To turn on or turn off the Standard or Strict preset security policies in PowerShell, enable or disable the rules that are associated with policy. The State property value of the rule shows whether the rule is Enabled or Disabled.
 
-If your organization has the built-in security features for all cloud mailboxes only, you disable or enable the rule for the built-in security features for all cloud mailboxes.
+If your organization has [the built-in security features for all cloud mailboxes](eop-about.md) only, you disable or enable the rule for the built-in security features for all cloud mailboxes.
 
 If your organization has Defender for Office 365, you enable or disable the rule for the built-in security features for all cloud mailboxes **and** the rule for Defender for Office 365 protections (enable or disable both rules).
 
@@ -453,7 +453,7 @@ You can use a recipient condition or exception only once, but the condition or e
 
 For the Built-in protection preset security policy, you can specify only recipient exceptions. If all exception parameter values are empty (`$null`), there are no exceptions to the policy.
 
-For the Standard and Strict preset security policies, you can specify recipient conditions and exceptions for the built-in security features for all cloud mailboxes and protections for Defender for Office 365. If all of conditions and exception parameter values are empty (`$null`), there are no recipient conditions or exceptions to the Standard or Strict preset security policies.
+For the Standard and Strict preset security policies, you can specify recipient conditions and exceptions for [the built-in security features for all cloud mailboxes](eop-about.md) and protections for Defender for Office 365. If all of conditions and exception parameter values are empty (`$null`), there are no recipient conditions or exceptions to the Standard or Strict preset security policies.
 
 - **Built-in protection preset security policy**:
 

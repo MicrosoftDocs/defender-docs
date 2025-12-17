@@ -234,7 +234,7 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
 
 ## DMARC for inbound mail into Microsoft 365
 
-- The following built-in security features for all cloud mailboxes affect DMARC checks on incoming mail:
+- The following [built-in security features for all cloud mailboxes](eop-about.md) affect DMARC checks on incoming mail:
   - Whether [spoof intelligence](anti-phishing-policies-about.md#spoof-settings) is enabled or disabled in the anti-phishing policy that checked the message. Disabling spoof intelligence disables _implicit_ spoofing protection from [composite authentication](email-authentication-about.md#composite-authentication) checks only.
   - Whether the **Honor DMARC record policy when the message is detected as spoof** setting is enabled or disabled in the anti-phishing policy that checked the message, and the specified actions based on the DMARC policy of the source domain (`p=quarantine`, or `p=reject` in the DMARC TXT record).
 
