@@ -21,7 +21,7 @@ CloudTrail ingestion is available for single AWS accounts and AWS Organizations 
 
 Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
-- [Defender CSPM plan enabled](enable-defender-cspm.md) on the Azure subscription.
+- [Defender CSPM plan enabled](tutorial-enable-cspm-plan.md) on the Azure subscription.
 
 - Permission to access AWS CloudTrail.
 
