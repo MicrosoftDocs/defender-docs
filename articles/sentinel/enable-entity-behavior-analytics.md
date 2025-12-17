@@ -48,7 +48,7 @@ To enable or disable this feature (these prerequisites aren't required to use th
 > - No special license is required to add UEBA functionality to Microsoft Sentinel, and there's no extra cost for using it.
 > - However, since UEBA generates new data and stores it in new tables that UEBA creates in your Log Analytics workspace, **additional data storage charges** apply. 
 
-## Enable User and Entity Behavior Analytics from workspace settings
+## Enable UEBA from workspace settings
 
 You can enable User and Entity Behavior Analytics in two ways, both with the same result:
 
@@ -82,7 +82,7 @@ Both methods enable the same UEBA functionality. Choose the approach that fits y
 
 1. On the **Entity behavior configuration** page, toggle on **Turn on UEBA feature**.
 
-    :::image type="content" source="media/enable-entity-behavior-analytics/ueba-configuration.png" alt-text="Screenshot of UEBA configuration settings." lightbox="media/enable-entity-behavior-analytics/ueba-configuration.png":::
+    :::image type="content" source="media/enable-entity-behavior-analytics/entity-behavior-analytics-configuration.png" alt-text="Screenshot of UEBA configuration settings." lightbox="media/enable-entity-behavior-analytics/entity-behavior-analytics-configuration.png":::
 
 1. Select the directory services from which you want to synchronize user entities with Microsoft Sentinel.
 
@@ -121,7 +121,7 @@ Both methods enable the same UEBA functionality. Choose the approach that fits y
     1. Select the workspace you want to configure.
     1. From the workspace configuration page, select **Anomalies** and toggle on **Detect Anomalies**. 
 
-## Enable User and Entity Behavior Analytics from supported connectors
+## Enable UEBA from supported connectors
 
 [!INCLUDE [data-connector-behavior-analytics](includes/data-connector-behavior-analytics.md)] 
 
