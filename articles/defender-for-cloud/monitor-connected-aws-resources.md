@@ -105,7 +105,7 @@ You can view CloudTrail-driven insights in the following areas:
 - **Attack Path Analysis:** Identify potential lateral movement paths that involve AWS identities.
 - **Alerts:** View configuration changes and identity-based anomaly indicators.
 
-Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloudtrail-logs.md).
+Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloud-trail.md).
 
 ## Next steps
 

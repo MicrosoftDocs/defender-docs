@@ -46,7 +46,7 @@ After your AWS account is connected:
 
 1. Enable **AWS CloudTrail ingestion (Preview)**. This adds CloudTrail configuration options to the setup workflow.
 
-    :::image type="content" source="media/integrate-cloudtrail/defender-plans-selection.png" alt-text="Screenshot showing the Defender for Cloud plan selection page for an AWS connector." lightbox="media/integrate-cloudtrail/defender-plans-selection.png":::
+    :::image type="content" source="media/integrate-cloud-trail/defender-plans-selection.png" alt-text="Screenshot showing the Defender for Cloud plan selection page for an AWS connector." lightbox="media/integrate-cloud-trail/defender-plans-selection.png":::
 
 1. Choose whether to integrate with an existing CloudTrail trail or create a new one:
 
@@ -63,7 +63,7 @@ After your AWS account is connected:
         1. After the deployment completes, locate the SQS queue ARN in the AWS console.
         1. Return to Defender for Cloud and enter the SQS ARN in the **SQS ARN** field.
         
-      :::image type="content" source="media/integrate-cloudtrail/ingestion-settings.png" alt-text="Screenshot showing the AWS CloudTrail ingestion settings for an AWS connector in Defender for Cloud." lightbox="media/integrate-cloudtrail/ingestion-settings.png":::
+      :::image type="content" source="media/integrate-cloud-trail/ingestion-settings.png" alt-text="Screenshot showing the AWS CloudTrail ingestion settings for an AWS connector in Defender for Cloud." lightbox="media/integrate-cloud-trail/ingestion-settings.png":::
 
 ## How Defender for Cloud uses CloudTrail data
 

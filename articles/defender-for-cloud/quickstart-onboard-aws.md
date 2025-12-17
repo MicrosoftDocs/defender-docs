@@ -214,7 +214,7 @@ As part of onboarding, deploy the generated CloudFormation template:
 
 AWS CloudTrail management event ingestion can enhance identity and configuration insights by adding context for CIEM assessments, activity-based risk indicators, and configuration change detection.
 
-Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloudtrail-logs.md).
+Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloud-trail.md).
 
 ## Learn more
 
