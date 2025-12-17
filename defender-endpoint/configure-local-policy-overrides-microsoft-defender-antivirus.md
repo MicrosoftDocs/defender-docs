@@ -1,34 +1,38 @@
----
+﻿---
 title: Configure local overrides for Microsoft Defender Antivirus settings
 description: Enable or disable users from locally changing settings in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 07/25/2024
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 By default, Microsoft Defender Antivirus settings that are deployed via a Group Policy Object to the endpoints in your network will prevent users from locally changing the settings. You can change this configuration in some instances. For example, it might be necessary to allow certain user groups, such as security researchers and threat investigators, to have further control over individual settings on the endpoints they use.
+
+
+## Prerequisites 
+
+### Supported operating systems
+
+- Windows
 
 ## Configure local overrides for Microsoft Defender Antivirus settings
 
@@ -63,10 +67,10 @@ To configure these settings:
 | Real-time protection|Configure local setting override to turn on real-time protection|[Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Remediation|Configure local setting override for the time of day to run a scheduled full scan to complete remediation|[Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md) |
 | Scan|Configure local setting override for maximum percentage of CPU utilization|[Configure and run scans](run-scan-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for schedule scan day|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for scheduled quick scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for scheduled scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for the scan type to use for a scheduled scan|[Configure scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for schedule scan day|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled quick scan time|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled scan time|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for the scan type to use for a scheduled scan|[About scheduled scans](schedule-antivirus-scans.md) |
 
 <a id="merge-lists"></a>
 
@@ -117,3 +121,4 @@ By default, lists that have been configured in local group policy and the Window
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
 - [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -4,11 +4,11 @@ description: Resources and sample code to troubleshoot issues with attack surfac
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.date: 04/01/2025
 ms.reviewer:
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to
@@ -21,7 +21,6 @@ search.appverid: met150
 
 # Troubleshoot attack surface reduction rules
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

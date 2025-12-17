@@ -1,11 +1,11 @@
----
+﻿---
 title: Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS
 description: Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,18 +15,13 @@ ms.topic: faq
 ms.subservice: ios
 search.appverid: met150
 ms.date: 01/22/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides troubleshooting information to help you address issues that might arise with Microsoft Defender for Endpoint on iOS.
 
@@ -94,6 +89,9 @@ After onboarding, it takes few hours for device to show up in the Device invento
 > [!NOTE]
 > Sometimes, the device name is not consistent with that in Microsoft Intune admin center. The device name in the Microsoft Defender portal is of the format <username_iPhone/iPad*>. You can also use your Microsoft Entra device ID to identify the device in the Microsoft Defender portal.
 
+> [!Note]
+> Users that manually change the time on their mobile devices risk causing a mismatch in times between the client and the broker service that processes authentication tokens. This can cause unintentional behavior where tokens are viewed as expired. In order to avoid this, ensure end users have the ***Set Automatically*** field enabled under ***Settings > General > Date & time***
+
 ## Data and Privacy
 
 For details about data collected and privacy, see [Privacy Information - Microsoft Defender for Endpoint on iOS](ios-privacy.md).
@@ -148,3 +146,4 @@ If a user faces an issue that isn't already addressed in the above sections or i
    6. Sign back in to the app (applicable if user has signed out).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

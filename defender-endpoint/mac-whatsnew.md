@@ -1,8 +1,8 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 manager: bagol
 ms.localizationpriority: medium
@@ -16,26 +16,21 @@ ms.topic: reference
 ms.subservice: macos
 search.appverid: met150
 ms.reviewer: mavel
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 For more information on Microsoft Defender for Endpoint on other operating systems:
 
+- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
-- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-- [What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
+- [What's new in Microsoft Defender for Endpoint on Android](android-whatsnew.md)
+
 
 > [!TIP]
 > If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
@@ -43,6 +38,8 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
 
 ## Known issues
+
+- In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
 
 - Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
 
@@ -56,15 +53,12 @@ To get the latest features, including preview capabilities (such as endpoint det
   
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
-## Sequoia support
-
-- Microsoft Defender for Endpoint supports version 15.0.1 or newer.
-
 ## macOS Deprecation
 
-- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
+- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur), 12 (Monterey) and 13 (Ventura)
 
 ## Releases for Defender for Endpoint on macOS
+
 
 ### Offline updates for security intelligence updates on macOS is now in public preview
 
@@ -74,13 +68,50 @@ This feature enables organizations to configure offline updates for security int
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
+### Dec-2025 (Build: 101.25102.0019  | Release version: 20.125102.19.0)
+
+| Build:             | **101.25102.0019** |
+|--------------------|--------------------|
+| Release version:   | **20.125102.19.0** |
+| Engine version:    | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0**    |
+
+##### What's new
+
+- [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that may be impacted by this vulnerability.  Please refer to the [blog post](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) for details.
+
+### Nov-2025 (Build: 101.25102.0016 | Release version: 20.125102.16.0)
+
+| Build:             | **101.25102.0016** |
+|--------------------|--------------------|
+| Release version:   | **20.125102.16.0** |
+| Engine version:    | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0**    |
+
+##### What's new
+
+- Bug and performance fixes
+
+
+### Oct-2025 (Build: 101.25082.0006  | Release version: 20.125082.6.0)
+
+| Build:             | **101.25082.0006** |
+|--------------------|--------------------|
+| Release version:   | **20.125082.6.0**  |
+| Engine version:    | **1.1.25070.3000** |
+| Signature version: | **1.437.276.0**    |
+
+##### What's new
+
+- Bug and performance fixes
+
 ### Sep-2025 (Build: 101.25072.0011  | Release version: 20.125072.11.0)
 
-| Build:             | **101.25072.0011**         |
+| Build:             | **101.25072.0011**    |
 |--------------------|-----------------------|
-| Release version:   | **20.125072.11.0** |
-| Engine version:    | **1.1.25060.3000**       |
-| Signature version: | **1.429.309.0**      |
+| Release version:   | **20.125072.11.0**    |
+| Engine version:    | **1.1.25070.3000**    |
+| Signature version: | **1.429.309.0**       |
 
 ##### What's new
 
@@ -718,7 +749,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
+- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
 ### Feb-2022 (Build: 101.59.50 | Release version: 20.122021.15950.0)
 
@@ -1143,3 +1174,4 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Performance improvements & Product improvements
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

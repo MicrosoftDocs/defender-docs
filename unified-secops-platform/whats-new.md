@@ -4,8 +4,8 @@ description: Lists the new features and functionality available for Microsoft un
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 08/20/2025
 manager: orspodek
@@ -20,6 +20,49 @@ ms.topic: concept-article
 # What's new for Microsoft unified security operations
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
+
+## November 2025
+
+
+### Microsoft Threat Intelligence alert enhancements for Microsoft Sentinel customers in the Defender portal
+
+Microsoft Sentinel customers using the Defender portal, or the Azure portal with the Microsoft Sentinel Defender XDR data connector, now also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation-state actors, major ransomware campaigns, and fraudulent operations. To view these alert types, you must have the **Security Administrator** or **Global Administrator** role. The **Service Source**, **Detection Source**, and **Product Name** values for these alerts are listed as *Microsoft Threat Intelligence*. 
+
+For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
+
+### New Entity Behavior Analytics (UEBA) experiences in the Defender portal (Preview)
+
+Microsoft Sentinel introduces new UEBA experiences in the Defender portal, bringing behavioral insights directly into key analyst workflows. These enhancements help analysts prioritize investigations and apply UEBA context more effectively.
+
+#### Anomaly-focused user investigations
+
+In the Defender portal, users with behavioral anomalies are automatically tagged with **UEBA Anomalies**, helping analysts quickly identify which users to prioritize.
+
+Analysts can view the top three anomalies from the past 30 days in a dedicated Top UEBA anomalies section, available in:
+
+- User side panels accessible from various portal locations.
+- The **Overview** tab of user entity pages.
+
+This section also includes direct links to anomaly queries and the Sentinel events timeline, enabling deeper investigation and faster context gathering.
+
+#### Drilldown to user anomalies from incident graphs
+
+Analysts can quickly access all anomalies related to a user by selecting **Go Hunt > All user anomalies** from the incident graph. This built-in query provides immediate UEBA context to support deeper investigation.
+
+#### Enriched advanced hunting and custom detections queries with behavior insights
+
+Advanced hunting and custom detection experiences now include a contextual banner that prompts analysts to join the UEBA Anomalies table to queries that include UEBA data sources.  
+
+All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
+
+For more information, see [UEBA experiences in the Defender portal empower analysts and streamline workflows](/azure/sentinel/identify-threats-with-entity-behavior-analytics#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows).
+
+## September 2025
+
+
+### Manage Incident Workflows with Tasks in Microsoft Defender (Preview)
+
+You can now use tasks in the Microsoft Defender portal to break down incident investigations into actionable steps and assign them across your operations teams. Tasks are displayed alongside Security Copilot insights, guided responses, and reports - giving your team a unified view of progress and next steps. When you onboard Microsoft Sentinel to the Defender portal, tasks you create in Microsoft Sentinel through the Azure portal are automatically synchronized to the Defender portal. For more information, see [Streamline incident response using tasks in the Microsoft Defender portal (Preview)](/defender-xdr/split-incidents-into-tasks?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json).
 
 ## August 2025
 

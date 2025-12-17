@@ -1,12 +1,12 @@
----
+﻿---
 title: Configure advanced features in Microsoft Defender for Endpoint
 description: Turn on advanced features such as block file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,19 +14,13 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 02/25/2025
----
+ms.date: 10/31/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure advanced features in Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Defender for Endpoint with.
 
@@ -171,9 +165,9 @@ For more information about role assignments, see [Create and manage roles](user-
 
 Enabling this feature allows you to run unsigned scripts in a live response session.
 
-## Deception
+## Automatic attack disruption
 
-Deception enables your security team to manage and deploy lures and decoys to catch attackers in your environment. After you turn this on, go to Rules > Deception rules to run deception campaigns. See [Manage the deception capability in Microsoft Defender XDR](/defender-xdr/deception-overview).
+Automatic attack disruption disrupts attacks by automatically containing compromised assets that the attacker is using. It limits lateral movement early on, thereby reducing the overall impact of an attack, both on the associated costs and on  loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online. For more information, see [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption).
 
 ## Share endpoint alerts with Microsoft Compliance Center
 
@@ -219,3 +213,4 @@ For proactive hunting across the full scope of Microsoft Defender XDR, including
 - [Configure alert notifications](/defender-xdr/configure-email-notifications)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

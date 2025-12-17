@@ -1,44 +1,43 @@
----
+﻿---
 title: Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows server 2025Azure Stack HCI OS version 23H2 and later.
+description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016 and later as well as 5Azure Stack HCI OS version 23H2 and later.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.topic: how-to
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
 - m365initiative-defender-endpoint
 - mde-ngp
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus on Windows Server
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
-
-Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
-
-- Windows server 2016 and later
-- Windows Server, version 1803 or later
-- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
-- Azure Stack HCI OS version 23H2 and later
 
 ## Overview
 
 By default, Microsoft Defender Antivirus is installed and functional on Windows Server 2016 and later. For Windows Server 2012 R2, Microsoft Defender Antivirus is installed when the device is onboarded to Defender for Endpoint using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). 
 
 This article describes how to enable the user interface, install or reinstall Microsoft Defender Antivirus, verify that Microsoft Defender Antivirus is running, and update your antimalware security intelligence. This article also describes how to set Microsoft Defender Antivirus to passive mode if you're using a non-Microsoft antivirus/anti-malware solution on Windows Server.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
+- Azure Stack HCI OS version 23H2 and later
 
 ## Enable the user interface on Windows Server
 
@@ -147,3 +146,4 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

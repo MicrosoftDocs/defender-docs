@@ -5,11 +5,11 @@ search.appverid: met150
 ms.service: microsoft-365-zero-trust
 f1.keywords:
   - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 ms.date: 05/10/2024
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -25,7 +25,6 @@ adobe-target: true
 
 # Zero Trust with Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

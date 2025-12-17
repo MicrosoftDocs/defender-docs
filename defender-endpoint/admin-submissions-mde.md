@@ -3,10 +3,12 @@ title: Submit files in Microsoft Defender for Endpoint
 description: Learn how to use the unified submissions feature in Microsoft Defender XDR to submit suspicious emails, URLs, email attachments, and files to Microsoft for scanning.
 search.appverid: met150
 ms.date: 05/06/2024
+appliesto:
+  - Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
-manager: deniseb
+ms.author: kesharab
+author: KesemSharabi
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
@@ -17,15 +19,6 @@ ms.custom: FPFN
 ---
 
 # Submit files in Microsoft Defender for Endpoint
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to**
-
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2146806)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-usewdatp-abovefoldlink).
 
 In Microsoft Defender for Endpoint, admins can use the unified submissions feature to submit files and file hashes (SHAs) to Microsoft for review. The unified submissions experience is a one-stop shop for submitting emails, URLs, email attachments, and files in one, easy-to-use submission experience. Admins can use the Microsoft Defender portal or the Microsoft Defender for Endpoint Alert page to submit suspicious files.
 
@@ -48,7 +41,7 @@ For more information about how you can submit spam, phish, URLs, and email attac
 
 ## Submit a file or file hash to Microsoft from the Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Investigation & response** \> **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **Files** tab.
 
@@ -94,9 +87,9 @@ To view the details of the submission, select the submission by clicking anywher
 
 ## Report items to Microsoft from the Alerts page in the Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, use <https://security.microsoft.com/alerts>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Investigation & response** \> **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, use <https://security.microsoft.com/alerts>.
 
-2. On the **Alerts** page, find the alert that contains the file you want to report. For example, you can select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**, and then select **Service sources** \> **Microsoft Defender for Endpoint**.
+2. On the **Alerts** page, find the alert that contains the file you want to report. For example, you can select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**, and then select **Service/detection sources** \> **Microsoft Defender for Endpoint**.
 
 3. Select the alert from the list by clicking anywhere in the row other than the check box next to the **Alert name** value.
 

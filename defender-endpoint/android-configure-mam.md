@@ -3,9 +3,9 @@ title: Configure Microsoft Defender for Endpoint on Android risk signals using A
 description: Describes how to configure Microsoft Defender for Endpoint risk signals using App Protection policies
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
-manager: deniseb
+ms.author: painbar
+author: paulinbar
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -14,17 +14,14 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 08/26/2024
+ms.date: 12/17/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Microsoft Defender for Endpoint on Android, which already protects enterprise users on Mobile Device Management (MDM) scenarios, now extends support to Mobile App Management (MAM), for devices that aren't enrolled using Intune mobile device management (MDM). It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for mobile application management (MAM). This capability allows you to manage and protect your organization's data within an application.
 
@@ -144,25 +141,27 @@ Web protection helps to secure devices against web threats and protect users fro
 
 1. In the Microsoft Intune admin center, go to **Apps > App configuration policies > Add > Managed apps**.
 
-2. Give the policy a **name**.
+1. Give the policy a **name**.
 
-3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
+1. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-4. In the **Settings** page, under the **General Configuration Settings**, add the following keys and set their value as required.
+1. In the **Settings** page, under the **General Configuration Settings**, add the following keys and set their value as required.
+
    - **antiphishing**
    - **vpn**
-
+   
    To disable web protection, enter 0 for the antiphishing and VPN values.
 
    To disable only the use of VPN by web protection, enter these values:
+
    - 0 for vpn
    - 1 for antiphishing
+   
+   Add the **DefenderMAMConfigs** key and set the value as 1. By default, this key is not set; in this case, the system applies the default values for all capability configurations.
+   
+1. Assign this policy to users. 
 
-   Add **DefenderMAMConfigs** key and set the value as 1.
-
-5. Assign this policy to users. By default, this value is set to false.
-
-6. Review and create the policy.
+1. Review and create the policy.
 
 ## Configure Network Protection
 
@@ -198,8 +197,8 @@ Admins can use the following steps to enable privacy and not collect the domain 
 1. Under the Select Public Apps, choose **Microsoft Defender for Endpoint** as the target app.
 1. On the Settings page, under General Configuration Settings, add **DefenderExcludeURLInReport** and **DefenderExcludeAppInReport** as the keys and value as 1.
 1. Add **DefenderMAMConfigs** key and set the value as 1.
-1. Assign this policy to users. By default, this value is set to 0.
-1. In Settings page, under the General Configuration Settings add **DefenderExcludeURLInReport**, **DefenderExcludeAppInReport** as the keys and value as true.
+1. Assign this policy to users.
+1. On the Settings page, under **General Configuration Settings**, add **DefenderExcludeURLInReport**, **DefenderExcludeAppInReport** as the keys and the value as true.
 1. Add **DefenderMAMConfigs** key and set the value as 1.
 1. Assign this policy to users. By default, this value is set to false.
 1. Review and create the policy.
@@ -217,13 +216,13 @@ Use the following steps to enable Optional permissions for devices.
 1. Select **Microsoft Defender for Endpoint** in public apps.
 1. On the Settings page, select **Use configuration designer** and **DefenderOptionalVPN** or **DefenderOptionalAccessibility** or **both** as the key.
 1. Add **DefenderMAMConfigs** key and set the value as 1.
-1. To enable Optional permissions, enter the value as **1** and assign this policy to users. By default, this value is set to 0.
+1. To enable optional permissions, enter the value as **1** and assign this policy to users.
 
    For users with key set as 1, they will be able to onboard the app without giving these permissions.
 
 1. In Settings page, select **Use configuration designer** and **DefenderOptionalVPN** or **DefenderOptionalAccessibility** or **both** as the key and value type as Boolean.
 1. Add **DefenderMAMConfigs** key and set the value as 1.
-1. To enable Optional permissions, enter value as **true** and assign this policy to users. By default, this value is set to false.
+1. To enable optional permissions, enter the value as **true** and assign this policy to users.
 
    For users with key set as true, the users are able to onboard the app without giving these permissions.
 

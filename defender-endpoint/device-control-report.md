@@ -1,13 +1,13 @@
----
+﻿---
 title: View device control events and information in Microsoft Defender for Endpoint
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/25/2024
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.topic: article
-manager: deniseb
+manager: bagol
 ms.reviewer: joshbregman
 audience: ITPro
 ms.subservice: asr
@@ -16,8 +16,11 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # View device control events and information in Microsoft Defender for Endpoint
 
 Microsoft Defender for Endpoint device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. Your security team can view information about device control events with advanced hunting or by using the device control report.
@@ -34,10 +37,6 @@ Select each tab to learn more about advanced hunting and the device control repo
 
 ## Advanced hunting
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 When a device control policy is triggered, an event is visible with advanced hunting, regardless of whether it was initiated by the system or by the user who signed in. This section includes some example queries you can use in advanced hunting.
 
@@ -75,7 +74,7 @@ DeviceEvents
 
 ## Device control report
 
-**Applies to:** 
+**Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business)
@@ -109,7 +108,7 @@ The page provides a dashboard with aggregated number of events per type and a li
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/Detaileddevicecontrolreport.png" alt-text="The Device Control Report Details page in the Microsoft Defender portal" lightbox="media/Detaileddevicecontrolreport.png":::
 
-When you select an event, a flyout appears that shows you more information:
+When you select an event, an **Event information** details flyout opens to show more information:
 
 - **General details:** Date, Action mode, the policy, and Access of this event.
 - **Media information:** Media information includes Media name, Class name, Class GUID, Device ID, Vendor ID, Serial number, and Bus type.
@@ -118,12 +117,12 @@ When you select an event, a flyout appears that shows you more information:
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/devicecontrolreportfilter.png" alt-text="The Filter On Device Control Report page" lightbox="media/devicecontrolreportfilter.png":::
 
-To see real-time activity for this media across the organization, select the **Open Advanced hunting** button. This includes an embedded, predefined query.
+To see real-time activity for this media across the organization, select :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Open Advanced hunting** at the top of the flyout. This includes an embedded, predefined query.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/Devicecontrolreportquery.png" alt-text="The Query On Device Control Report page" lightbox="media/Devicecontrolreportquery.png":::
 
-To see the security of the device, select the **Open device page** button on the flyout. This button opens the device entity page.
+To see the security of the device, select the **Open device page** button at the bottom of the flyout. This button opens the device entity page.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/Devicesecuritypage.png" alt-text="The Device Entity Page" lightbox="media/Devicesecuritypage.png":::
@@ -134,7 +133,7 @@ There might be a delay of up to six hours from the time a media connection occur
 
 > [!NOTE]
 > When you export data, such as a list of events, from the device control report to Excel, up to 500 events are exported. However, if your organization is using Microsoft Sentinel, you can integrate Defender for Endpoint with Sentinel so that all incidents and alerts are streamed. For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender).
-> 
+
 ---
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

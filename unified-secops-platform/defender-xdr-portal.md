@@ -4,10 +4,10 @@ description: Learn about the services and features available with Microsoft Defe
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 11/18/2024
+ms.date: 10/31/2025
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -45,13 +45,6 @@ Incidents define a complete picture of an attack. Incidents help SOC teams to un
 A [single incident queue](/defender-xdr/incident-queue) in the Defender portal provides full visibility into the latest alerts and incidents, and historical data. You can search and query the incident queue, and prioritize responses based on severity.
 
 :::image type="content" source="media/defender-xdr-portal/incidents-page.png" alt-text="Screenshot of the Incidents page in the Microsoft Defender portal" lightbox="media/defender-xdr-portal/incidents-page.png":::
-
-
-### Detecting lateral movement attacks
-
-Defender for XDR includes [deception capability](/defender-xdr/deception-overview) to detect human-operated lateral movement, which is often used in common attacks such as ransomware and email compromise.
-
-Deception capability generates decoy assets. When attackers interact with these assets, deception capability raises high-confidence alerts that can be viewed on the Alerts page in the portal.
 
 ## Automatically disrupting threats
 

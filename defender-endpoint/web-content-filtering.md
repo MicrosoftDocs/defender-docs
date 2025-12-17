@@ -1,13 +1,13 @@
----
+﻿---
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 08/18/2025
-manager: deniseb
+ms.date: 12/12/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -17,18 +17,14 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+
 ---
 
 # Web content filtering
-
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-
-> [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## What is web content filtering?
 
@@ -51,7 +47,7 @@ Ensure you meet the requirements described in the following table:
 
 | Requirement | Description |
 |:---|:---|
-| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft 365 E5 Security<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
+| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft Defender Suite<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
 | Portal access | You must have access to the [Microsoft Defender portal](https://security.microsoft.com). |
 | Operating system | Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- Windows Server 2019 or later <br/>- For macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
 | Browser | Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
@@ -76,15 +72,15 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 1. Sign into the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced Features**.
+2. In the navigation pane, go to **Settings** \> **Endpoints** \> **General** section \> **Advanced features**.
 
-3. Scroll down until you see **Web content filtering**.
+3. On the **Advanced features** page, find the **Web content filtering** setting.
 
-4. Switch the toggle to **On**, and then select **Save preferences**.
+4. Switch the **Web content filtering** toggle to **On**, and then select **Save preferences**.
 
 ### Configure web content filtering policies
 
-Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Web content filtering** (under **Rules**).
+Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**.
 
 Policies can be deployed to block any of the following parent or child categories:
 
@@ -104,25 +100,27 @@ Policies can be deployed to block any of the following parent or child categorie
 
 To add a new policy, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**.
 
-2. Specify a name.
+2. On the **Web content filtering** page, select **+ Add policy**.
 
-3. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
+3. Specify a name.
 
-4. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
+4. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
+
+5. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
 
    > [!IMPORTANT]
    > If you're using either Microsoft 365 Business Premium or Defender for Business, your web content filtering policy is applied to all users by default. Scoping does not apply.
 
-5. Review the summary and save the policy.
+6. Review the summary and save the policy.
 
 > [!NOTE]
-- There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
+>
+> - There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
 > - You can deploy a policy without selecting any categories to block. This action creates an audit-only policy to help you understand user behavior before creating a block policy.
-- If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
-- Blocking the "Uncategorized" category could lead to unexpected and undesired results.
-
+> - If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
+> - Blocking the "Uncategorized" category could lead to unexpected and undesired results.
 
 ## End-user experience
 
@@ -138,11 +136,13 @@ It's possible to override the blocked category in web content filtering to allow
 
 To define an Allow indicator, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Rules** section \> **Indicators**.
 
-2. Enter the domain of the site.
+2. Select the **URLs/Domains** tab, and on the tab, select **+ Add Item**.
 
-3. Set the policy action to **Allow**.
+3. Enter the domain of the site.
+
+4. Set the policy action to **Allow**.
 
 ### Dispute categories
 

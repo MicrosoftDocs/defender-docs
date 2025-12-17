@@ -4,10 +4,10 @@ description: Learn how to analyze the Microsoft Defender for Endpoint Client Ana
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,13 +16,12 @@ ms.topic: concept-article
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 03/27/2025
+appliesto:
+    - Microsoft Defender for Endpoint Plan 1
+    - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Understand the client analyzer HTML report
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 The client analyzer produces a report in HTML format. Learn how to review the report to identify potential sensor issues so that you can troubleshoot them.
 

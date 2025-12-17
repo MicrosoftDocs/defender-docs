@@ -2,10 +2,10 @@
 title: Troubleshoot Microsoft Defender Antivirus scan issues
 description: Troubleshoot antivirus scan issues, such as scan not finishing or scans affecting device performance. 
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -230,5 +230,5 @@ Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where i
 
 ## See also
 
-- [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
+- [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
 - [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)

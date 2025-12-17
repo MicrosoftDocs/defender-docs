@@ -1,14 +1,14 @@
----
+﻿---
 title: Configure device discovery in Defender for Endpoint
 description: Learn how to configure device discovery in Microsoft Defender XDR using basic or standard discovery
 ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,21 +16,24 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/24/2025
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure device discovery in Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Device discovery can be configured to be on standard or basic mode. Use the standard option to actively find devices in your network, which helps improve the discovery of endpoints and provide richer device classification.
 
-You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability (currently for devices running Windows 10 and later, or Windows Server 2019 and later). Or, you can select a subset of devices by specifying their device tags.
+You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability, or you can select a subset of devices by specifying their device tags.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows 10 and later
+- Windows Server 2019 and later.
 
 ## Set up device discovery
 
@@ -125,3 +128,4 @@ DeviceInfo
 - [Device discovery FAQs](device-discovery-faq.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

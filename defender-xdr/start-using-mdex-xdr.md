@@ -118,7 +118,7 @@ Apart from these one-click actions, you can also receive managed responses from 
 
 > [!IMPORTANT]
 >
->If you notice that any of the buttons on the action cards are grayed out, it could indicate that you don't have the necessary permissions to perform the action. Make sure that you're signed into the Microsoft Defender XDR portal with the appropriate permissions. Most managed response actions require that you have at least the Security Operator access.
+>If you notice that any of the buttons on the action cards are grayed out, it could indicate that you don't have the necessary permissions to perform the action. Make sure that you're signed into the Microsoft Defender portal with the appropriate permissions. Most managed response actions require that you have at least the Security Operator access.
 >
 >If you still encounter this issue even with the appropriate permissions, navigate to **View device details** and complete the steps from there.
 
@@ -179,7 +179,7 @@ Defender Experts for XDR also includes proactive threat hunting offered by [Micr
 
 ## Request advanced threat expertise on demand
 
-Select **Ask Defender Experts** directly inside the Microsoft Defender XDR portal to get swift and accurate responses to all your threat questions. Experts can provide insights to better understand the complex threats your organization might face. Consult an expert to:
+Select **Ask Defender Experts** directly inside the Microsoft Defender portal to get swift and accurate responses to all your threat questions. Experts can provide insights to better understand the complex threats your organization might face. Consult an expert to:
 
 - Gather additional information on alerts and incidents, including root causes and scope.
 - Gain clarity into suspicious devices, alerts, or incidents and get the next steps if faced with an advanced attacker.

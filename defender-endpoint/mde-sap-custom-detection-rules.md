@@ -1,9 +1,9 @@
----
+﻿---
 title: "Custom detection rules with advanced hunting: Protecting SAP external OS commands (SAPXPG)"
 description: Learn how to use advanced hunting with Defender for Endpoint to safeguard the SAPXPG mechanism with SAP systems.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.date: 05/20/2025
 ms.topic: overview
 ms.service: defender-endpoint
@@ -16,14 +16,13 @@ ms.reviewer: cgardin
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Custom detection rules with advanced hunting: Protecting SAP external OS commands (SAPXPG)
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 SAP Systems can execute OS level commands by using `SAPXPG – Transaction Code SM49/SM69`. This article describes how to use advanced hunting with Microsoft Defender for Endpoint to help safeguard the SAPXPG mechanism to protect it from being exploited. The example illustrated in this article features SAP running on Linux; however, the procedure for SAP running on Windows Server is similar.
 
@@ -103,3 +102,4 @@ The SAP BASIS Team and the security team should codevelop the solution. The SAP 
 - To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 - To learn more about custom rules, see [Create custom detection rules](/defender-xdr/custom-detection-rules#2-create-new-rule-and-provide-alert-details).
+

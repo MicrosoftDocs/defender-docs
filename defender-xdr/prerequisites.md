@@ -4,8 +4,8 @@ description: Learn about the licensing, hardware and software requirements, and 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -34,7 +34,7 @@ Microsoft Defender XDR natively correlates Microsoft security products' signals,
 Any of these licenses give you access to Microsoft Defender XDR features via the Microsoft Defender portal without any additional cost:
 
 - Microsoft 365 E5 or A5
-- Microsoft 365 E3 with the Microsoft 365 E5 Security add-on
+- Microsoft 365 E3 with the Microsoft Defender Suite add-on
 - Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on
 - Microsoft 365 A3 with the Microsoft 365 A5 Security add-on
 - Windows 10 Enterprise E5 or A5

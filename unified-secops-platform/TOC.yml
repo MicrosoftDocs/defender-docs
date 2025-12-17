@@ -69,6 +69,8 @@
           href: plan-incident-response.md
         - name: Correlation and merging
           href: /defender-xdr/alerts-incidents-correlation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+        - name: Use tasks to handle incident workflow
+          href: /defender-xdr/split-incidents-into-tasks?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Investigate incidents in Security Copilot
           href: /azure/sentinel/sentinel-security-copilot?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Investigate with Microsoft Copilot in Microsoft Defender
@@ -115,6 +117,8 @@
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution across tenants
               href: mto-distribution-profiles.md
+            - name: Workbooks in multitenant management (preview)
+              href: mto-workbooks.md
             - name: Manage tenants in other Microsoft clouds
               href: mto-cross-cloud.md
             - name: Manage unified role-based access control (URBAC) for multitenant management

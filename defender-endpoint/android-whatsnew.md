@@ -1,9 +1,9 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: denishdonga
@@ -15,20 +15,102 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 05/15/2025
+ms.date: 12/17/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This page is updated frequently with the latest updates in Defender endpoint security for Android devices. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/android-rss`
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ### Releases for Defender for Endpoint on Android
+
+#### December 2025
+
+|Build|1.0.8412.0101|
+| -------- | -------- |
+|Release Date|December 15, 2025|
+
+**What's New**
+
+- Native root detection for Microsoft Defender is now GA. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
+
+|Build|1.0.8321.0101|
+| -------- | -------- |
+|Release Date|December 2, 2025|
+
+**What's New**
+
+- Performance improvement and bug fixes.
+
+#### November 2025
+
+| Build| 1.0.8315.0101|
+| -------- | -------- |
+| Release Date 	| November 17, 2025 |
+
+**What's New**
+
+- Native Root Detection for Microsoft Defender is now in preview. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
+
+- Performance improvement and bug fixes.
+
+| Build| 1.0.8303.0101|
+| -------- | -------- |
+| Release Date |November 4, 2025|
+
+**What's New**
+
+- An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
+
+- Added landscape mode UI support for the Defender app.
+
+- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+
+- Fixed the bug where feedback sending wasn’t disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration.
+
+#### October 2025
+
+| Build| 1.0.8217.0101 |
+| -------- | -------- |
+| Release Date   | October 28   |
+
+**What's New**
+
+- We have refreshed the Defender app with a new icon.
+
+  ![User's image](media/android-whatsnew/image.png)
+  
+    #### October 2025
+
+| Build| 1.0.8201.0101|
+| -------- | -------- |
+| Release Date | October 2, 2025 |
+
+**What's New**
+
+- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux)
+
+- Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.
+
+- Performance Improvement and bug fixes.
+
+#### September 2025
+
+| Build|1.0.8102.0101|
+| -------- | -------- |
+| Release Date| September 4, 2025 |
+
+**What's New**
+
+- Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device, which isn't supported by MDE Mobile, user will be redirected back to the sign-in page.
+
+- Other accessibility bug fixes and performance improvements.
 
 #### August 2025
 
@@ -68,7 +150,7 @@ April 2025
 **Setup a secure environment to test prerelease builds of Defender for Endpoint on Android**. Learn the steps on how to set up your environment for prerelease testing of Defender for Endpoint on Android. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
 - Android Enterprise scenarios
-- Mobile Application Mangement (MAM) enrollment scenarios
+- Mobile Application Management (MAM) enrollment scenarios
 
 For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
 
@@ -260,17 +342,19 @@ Notify your users and help desk (as applicable) that end users must accept the n
 
 1. Tap on the Defender for Endpoint in-app notification or open the Defender for Endpoint app. Users see a screen that lists the permissions needed. A green check mark is missing next to **Storage permission**.
 
-2. Tap **Begin**.
+1. Tap **Begin**.
 
-3. Tap the toggle for **Allow access to manage all files**.
+1. Tap the toggle for **Allow access to manage all files**.
 
    The device is now protected.
-
+   
    > [!NOTE]
+   > 
    > This permission allows Microsoft Defender for Endpoint to access storage on user's device, which helps detect and remove malicious and unwanted apps. Microsoft Defender for Endpoint accesses/scans Android app package file (.apk) only. On devices with a Work Profile, Defender for Endpoint only scans work-related files.
-
+   
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 ## See also
 
 [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+

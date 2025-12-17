@@ -1,10 +1,10 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Windows
 description: Learn about the latest feature releases of Microsoft Defender for Endpoint on Windows Client and Server.
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 06/11/2025
 manager: bagol
@@ -13,17 +13,12 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: reference
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
 # What's new in Microsoft Defender for Endpoint on Windows
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
@@ -226,3 +221,4 @@ All updates contain:
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
