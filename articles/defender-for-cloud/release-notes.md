@@ -42,7 +42,9 @@ December 17, 2025
 
 AWS CloudTrail management event ingestion is now available in preview in Microsoft Defender for Cloud.
 
-This capability extends Cloud Infrastructure Entitlement Management (CIEM) by incorporating observed AWS management event activity alongside entitlement data. Using real usage signals helps improve the identification of unused permissions, dormant identities, and potential privilege escalation paths. CloudTrail ingestion is supported for single AWS accounts and AWS Organizations that use centralized logging.
+When enabled, AWS CloudTrail ingestion enhances Cloud Infrastructure Entitlement Management (CIEM) by incorporating observed AWS management event activity alongside existing entitlement signals such as Access Advisor data. The additional usage context helps improve the accuracy of AWS security recommendations, including identifying unused permissions, dormant identities, and potential privilege escalation paths.
+
+CloudTrail ingestion is supported for single AWS accounts and AWS Organizations that use centralized logging.
 
 Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloud-trail.md).
 
