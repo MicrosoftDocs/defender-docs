@@ -115,8 +115,7 @@ This section isn’t required to receive the 500 MB/day ingestion benefit.
       - For **Data source type**, select **Windows Event Logs**.
       - Choose **Basic** or **Custom**:
 
-        :image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
-
+      :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
           - **Basic**:
               - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table.  
               - Select **Application** or **System** levels if needed. These logs go to the `Event` table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
@@ -125,7 +124,9 @@ This section isn’t required to receive the 500 MB/day ingestion benefit.
               
     - In **Destination**:
       - Select **+ Add destination**:
+
       :::image type="content" source="media/data-ingestion-benefit/add-data-source-destination-tab.png" alt-text="Screenshot of the Add data source pane showing the Destination tab, where you click + Add destination." lightbox="media/data-ingestion-benefit/add-data-source-destination-tab.png":::
+
       - For **Destination type**, choose **Azure Monitor Logs**.
       - Select at least one Log Analytics workspace in the same region as the DCR.
       - Select **Save**.
