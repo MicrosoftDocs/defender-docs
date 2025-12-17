@@ -22,8 +22,8 @@ User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel analyzes logs an
 
 You can enable User and Entity Behavior Analytics in two ways, both with the same result:
 
-- **From the Microsoft Sentinel workspace settings**: Enable UEBA for your workspace and select which data sources to use in the Microsoft Defender portal or Azure portal.
-- **From supported data connectors**: Enable UEBA when configuring data connectors that support UEBA in the Microsoft Defender portal.
+- **From the Microsoft Sentinel workspace settings**: Enable UEBA for your workspace and select which data sources to connect in the Microsoft Defender portal or Azure portal.
+- **From supported data connectors**: Enable UEBA when you configure UEBA supported data connectors in the Microsoft Defender portal.
 
 This article explains how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors. 
 
