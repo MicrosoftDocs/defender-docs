@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 11/24/2025
+ms.date: 12/18/2025
 ---
 
 # Threat analytics in Microsoft Defender
@@ -221,7 +221,7 @@ The **Indicators** tab provides a list of all indicators of compromise (IOCs) as
 ## Stay updated with the latest reports and threat intelligence
 Threat analytics leverages and integrates various Microsoft Defender and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)	features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
 
-### Set up the Threat Intelligence Briefing Agent (preview)
+### Set up the Threat Intelligence Briefing Agent
 
 Set up the Threat Intelligence Briefing Agent to get timely, relevant threat intelligence reports with detailed technical analysis based on the latest threat actor activity and both internal and external vulnerability exposure. The agent correlates Microsoft threat data and customer signals to add critical context to threat information in a matter of minutes, saving analyst teams hours or even days spent on intelligence gathering and correlation.
 
