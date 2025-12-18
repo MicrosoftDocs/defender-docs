@@ -107,7 +107,7 @@ Keep the following points in mind when using correlation exclusion:
 
 - All analytics rules have correlation enabled by default unless explicitly excluded.
 
-- Even when a rule is excluded from correlation, if an analytics rule is defined with a dynamic title, the incident title in the Defender portal is different from Microsoft Sentinel.
+- Even when a rule is excluded from correlation, if an analytics rule is defined with a dynamic title, the incident title in the Defender portal might be different from the title in Microsoft Sentinel. The Microsoft Sentinel title is the title of the first alert, and in Defender it falls back to the common MITRE tactic of all alerts.
 
 - Changing a rule's correlation state doesn't affect alerts that were created before the change. Alerts receive their correlation state when they're created, and this state remains static.
 
