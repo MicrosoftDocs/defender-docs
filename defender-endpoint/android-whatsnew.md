@@ -37,87 +37,37 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## November 2025
 
-| Build| 1.0.8315.0101|
-| -------- | -------- |
-| Release Date 	| November 17, 2025 |
-
-**What's New**
-
-- Native Root Detection for Microsoft Defender is now in preview. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
-
-- Performance improvement and bug fixes.
-
-| Build| 1.0.8303.0101|
-| -------- | -------- |
-| Release Date |November 4, 2025|
-
-**What's New**
-
-- An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.
-
-- Added landscape mode UI support for the Defender app.
-
-- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
-
-- Fixed the bug where feedback sending wasn’t disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration.
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.0.8315.0101 | November 17, 2025 | Native root detection for Microsoft Defender is now in preview. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.<br/><br/>Performance improvement and bug fixes. |
+| 1.0.8303.0101 | November 4, 2025 | An improved user feedback experience: See [Key changes - November 2025](./android-new-ux.md#key-changes---november-2025) for details.<br/><br/>Added landscape mode UI support for the Defender app.<br/><br/>Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.<br/><br/>Fixed the bug where feedback sending wasn't disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration.|
 
 ## October 2025
 
-| Build| 1.0.8217.0101 |
-| -------- | -------- |
-| Release Date   | October 28   |
-
-**What's New**
-
-- We have refreshed the Defender app with a new icon.
-
-  ![User's image](media/android-whatsnew/image.png)
-
-| Build| 1.0.8201.0101|
-| -------- | -------- |
-| Release Date | October 2, 2025 |
-
-**What's New**
-
-- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux)
-
-- Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.
-
-- Performance Improvement and bug fixes.
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.0.8217.0101 | October 28, 2025 | We have refreshed the Defender app with a new icon.<br/><br/>![User's image](media/android-whatsnew/image.png) |
+| 1.0.8201.0101 | October 2, 2025 | Improved UX experience for the onboarding screens, for more details, see [UX Enhancement](./android-new-ux.md).<br/><br/>Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.<br/><br/>Performance Improvement and bug fixes. |
 
 ## September 2025
 
-| Build|1.0.8102.0101|
-| -------- | -------- |
-| Release Date| September 4, 2025 |
-
-**What's New**
-
-- Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device, which isn't supported by MDE Mobile, user will be redirected back to the sign-in page.
-
-- Other accessibility bug fixes and performance improvements.
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.0.8102.0101 | September 4, 2025 | Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device, which isn't supported by MDE Mobile, user will be redirected back to the sign-in page.<br/><br/>Other accessibility bug fixes and performance improvements. |
 
 ## August 2025
 
-| Build|1.0.8018.0103|
-| -------- | -------- |
-| Release Date| August 19, 2025 |
-
-**What's New**
-
-- Performance improvements and bug fixes
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.0.8018.0103 | August 19, 2025 | Performance improvements and bug fixes. |
 
 ## July 2025
 
-|Build|1.0.7901.0101|
-| -------- | -------- |
-|Release Date|July 10, 2025|
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.0.7901.0101 | July 10, 2025 | UX Improvement for home page and tiles screens, for more details see [Android UX Enhancement](/defender-endpoint/android-new-ux) |
 
-**What's New**
-
-UX Improvement for home page and tiles screens, for more details please visit this link - [Android UX Enhancement](/defender-endpoint/android-new-ux)
-
-#### Alerts for activities related to open wireless connection and certificates are now detected as events
+## Alerts for activities related to open wireless connection and certificates are now detected as events
 
 May 2025
 
@@ -128,7 +78,7 @@ Starting May 19, 2025, security operations center (SOC) analysts can now view th
 
 These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
 
-#### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
+## Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
 April 2025
 
@@ -139,7 +89,7 @@ April 2025
 
 For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
 
-#### Defender for Endpoint on Android now supports Android 10 as the minimum version
+## Defender for Endpoint on Android now supports Android 10 as the minimum version
 
 February 2025
 
@@ -155,7 +105,7 @@ After discontinuing support for deprecated versions, Microsoft no longer address
 
 This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
 
-#### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
+## Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
 **February 2025:**
 
