@@ -88,11 +88,7 @@ Microsoft Defender for Cloud expands within the Defender portal to provide incid
 
 **Customers can continue to use Azure Lighthouse for multi-tenant posture management and operations, in parallel with the Defender portal.** This approach ensures that organizations retain full posture management capabilities while benefiting from the unified incident management and response features available in the Defender portal.
 
-<<<<<<< HEAD
 As we build and enhance MTO capabilities in future releases, customers see expanded support for multitenant posture management and additional experiences directly within the Defender portal. 
-=======
-As we build and enhance MTO capabilities in future releases, customers will see expanded support for multitenant posture management and additional experiences directly within the Defender portal. 
->>>>>>> 7c9dbd7dd0a5cb34f24cac6b02152528f6e4e331
 
 ### Synchronization & data consistency
 
@@ -106,11 +102,7 @@ In the short term, security recommendations resolved in the Azure portal will be
 
 #### Will the count of healthy and unhealthy resources be consistent across the Azure and the Defender portal? If not, what explains the difference?
 
-<<<<<<< HEAD
 Customers might notice differences when using Defender for Cloud in the Defender portal. With this expansion, we're exposing customers with the discovery of their complete environment and hence, the count can be different. This applies to the Secure Score, security recommendations, and the number of discovered resources in the environment.  
-=======
-Customers may notice differences when using Defender for Cloud in the Defender portal. With this expansion, we're exposing customers with the discovery of their complete environment and hence, the count can be different. This applies to the Secure Score, security recommendations, and the number of discovered resources in the environment.  
->>>>>>> 7c9dbd7dd0a5cb34f24cac6b02152528f6e4e331
 
 ## Feature availability & roadmap
 
@@ -135,10 +127,7 @@ When working with Microsoft Defender for Cloud support cases, you often need to 
 ### What identifiers do I need for support cases?
 
 You might need to extract the following types of identifiers from the Defender portal:
-<<<<<<< HEAD
-=======
 
->>>>>>> 7c9dbd7dd0a5cb34f24cac6b02152528f6e4e331
 - **Asset IDs** - for specific cloud resources
 - **Vulnerability IDs** - for security vulnerabilities (CVEs, Microsoft vulnerability IDs)
 - **Initiative IDs** - for compliance initiatives and standards

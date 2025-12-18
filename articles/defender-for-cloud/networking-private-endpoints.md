@@ -1,9 +1,8 @@
 ---
 title: Private endpoints with Microsoft Defender
 description: Learn about using private endpoints with Microsoft Defender for Cloud to ensure secure and private connectivity in your virtual network.
-author: 
-ms.author: 
-ms.service: defender-for-cloud
+author: Elazark
+ms.author: elkrieger
 ms.topic: article
 ms.date: 12/02/2025
 ---
