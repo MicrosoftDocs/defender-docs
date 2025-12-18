@@ -43,7 +43,7 @@ Threat analytics is an in-product threat intelligence solution from expert Micro
 
 You can access threat analytics from the upper left-hand side of Microsoft Defender portal's navigation bar, or from a dedicated dashboard card that shows the top threats to your organization, both in terms of known impact and your exposure.
 
-:::image type="content" source="/defender/media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Screenshot of the threat analytics landing page" lightbox="/defender/media/threat-analytics/ta_inlandingpage_mtp.png":::
+:::image type="content" source="media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Screenshot of the threat analytics landing page" lightbox="media/threat-analytics/ta_inlandingpage_mtp.png":::
 
 Getting visibility on active or ongoing campaigns and knowing what to do through threat analytics can help equip your security operations team with informed decisions.
 
@@ -84,7 +84,7 @@ The threat analytics dashboard ([security.microsoft.com/threatanalytics3](https:
 - **High-impact threats**—lists the threats that have the highest impact to your organization. This section lists threats with the highest number of active and resolved alerts first.
 - **Highest exposure threats**—lists threats to which your organization has the highest exposure. Your exposure level to a threat is calculated using two pieces of information: how severe the vulnerabilities associated with the threat are, and how many devices in your organization could be exploited by those vulnerabilities.
 
-:::image type="content" source="/defender/media/threat-analytics/ta_dashboard_mtp.png" alt-text="Screenshot of the threat analytics dashboard," lightbox="/defender/media/threat-analytics/ta_dashboard_mtp.png":::
+:::image type="content" source="media/threat-analytics/ta_dashboard_mtp.png" alt-text="Screenshot of the threat analytics dashboard," lightbox="media/threat-analytics/ta_dashboard_mtp.png":::
 
 Select a threat from the dashboard to view the report for that threat. You can also select the **Search** field to key in a keyword that's related to the threat analytics report that you'd like to read.
 
@@ -107,15 +107,15 @@ These filters assist you in efficiently reviewing the threat report list. For ex
 
 Categories are presented at the top of the threat analytics page. Counters show the number of available reports under each category.
 
-:::image type="content" source="/defender/media/threat-analytics/ta-dashboard-tags.png" alt-text="Screenshot of the threat analytics report types." lightbox="/defender/media/threat-analytics/ta-dashboard-tags.png":::
+:::image type="content" source="media/threat-analytics/ta-dashboard-tags.png" alt-text="Screenshot of the threat analytics report types." lightbox="media/threat-analytics/ta-dashboard-tags.png":::
 
 To add report filter types in your dashboard, select **Filters**, choose from the list, and select **Add**.
 
-:::image type="content" source="/defender/media/threat-analytics/ta-taglist-mtp.png" alt-text="Screenshot of the threat analytics Add filters option." lightbox="/defender/media/threat-analytics/ta-taglist-mtp.png":::
+:::image type="content" source="media/threat-analytics/ta-taglist-mtp.png" alt-text="Screenshot of the threat analytics Add filters option." lightbox="media/threat-analytics/ta-taglist-mtp.png":::
 
 To set the types of reports you want in the list based on the available filters, select a filter type (for example, **Threat tags**), choose from the list, and select **Apply**.
 
-:::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list in Threat tags." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
+:::image type="content" source="media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list in Threat tags." lightbox="media/threat-analytics/ta-threattag-filters-mtp.png":::
 
 ## View a threat analytics report
 
@@ -133,7 +133,7 @@ Each threat analytics report provides information in several sections:
 
 The **Overview** section provides a preview of the detailed analyst report. It also provides charts that highlight the impact of the threat to your organization, and your exposure through misconfigured and unpatched devices.
 
-:::image type="content" source="/defender/media/threat-analytics/ta_overview_mtp.png" alt-text="Screenshot of the overview section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_overview_mtp.png":::
+:::image type="content" source="media/threat-analytics/ta_overview_mtp.png" alt-text="Screenshot of the overview section of a threat analytics report." lightbox="media/threat-analytics/ta_overview_mtp.png":::
 
 #### Understand the threat and its tactics, techniques, and procedures
 Each report includes the following details about a threat, whenever applicable or available, providing you a quick glance of what the threat is and how it might impact your organization:
@@ -171,7 +171,7 @@ In the **Analyst report** section, you can read through the detailed expert writ
 
 The **Related incidents** tab provides the list of all incidents related to the tracked threat. You can assign incidents or manage alerts linked to each incident. 
 
-:::image type="content" source="/defender/media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Screenshot of the related incidents section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_related_incidents_mtp.png":::
+:::image type="content" source="media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Screenshot of the related incidents section of a threat analytics report." lightbox="media/threat-analytics/ta_related_incidents_mtp.png":::
 
 > [!NOTE]
 > Incidents and alerts associated with the threat come from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Cloud.
@@ -190,7 +190,7 @@ Assets are divided into the following categories:
 - Apps
 - Cloud resources
 
-:::image type="content" source="/defender/media/threat-analytics/ta_impacted_assets_mtp.png" alt-text="Screenshot of the impacted assets section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_impacted_assets_mtp.png":::
+:::image type="content" source="media/threat-analytics/ta_impacted_assets_mtp.png" alt-text="Screenshot of the impacted assets section of a threat analytics report." lightbox="media/threat-analytics/ta_impacted_assets_mtp.png":::
 
 ### Endpoints exposure: Know the deployment status of security updates
 
@@ -198,7 +198,7 @@ The **Endpoints exposure** section provides your organization's **Exposure level
 
 This section also provides the deployment status of supported software security updates for vulnerabilities found on onboarded devices. It incorporates data from [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt), which also provides detailed drill-down information from various links in the report.
 
-:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp2.png" alt-text="The Endpoints exposure section of a threat analytics report" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp2.png":::
+:::image type="content" source="media/threat-analytics/ta_mitigations_mtp2.png" alt-text="The Endpoints exposure section of a threat analytics report" lightbox="media/threat-analytics/ta_mitigations_mtp2.png":::
 
 ### Recommended actions: Review list of mitigations and the status of your devices
 
@@ -207,7 +207,7 @@ In the **Recommended actions** tab, review the list of specific actionable recom
   - Potentially unwanted application (PUA) protection
   - Real-time protection
 
-:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
+:::image type="content" source="media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="media/threat-analytics/ta_mitigations_mtp.png":::
 
 ### Indicators: View specific infrastructure and evidence behind the threat (preview)
 
@@ -235,7 +235,7 @@ Once deployed, the Threat Intelligence Briefing Agent appears as a banner at the
 
 Set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-provide-alert-details) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
 
-:::image type="content" source="/defender/media/threat-analytics/ta-custom-detection.png" alt-text="Screenshot of custom detection setup page with Threat analytics option highlighted." lightbox="/defender/media/threat-analytics/ta-custom-detection.png":::
+:::image type="content" source="media/threat-analytics/ta-custom-detection.png" alt-text="Screenshot of custom detection setup page with Threat analytics option highlighted." lightbox="media/threat-analytics/ta-custom-detection.png":::
 
 [Learn more about creating and managing custom detections rules](custom-detection-rules.md)
 
