@@ -47,7 +47,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 | Build| Release Date | What's New |
 | :-------- | :-------- | :-------- |
 | 1.0.8217.0101 | October 28, 2025 | We have refreshed the Defender app with a new icon.<br/><br/>![User's image](media/android-whatsnew/image.png) |
-| 1.0.8201.0101 | October 2, 2025 | Improved UX experience for the onboarding screens, for more details, see [UX Enhancement](./android-new-ux.md).<br/><br/>Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.<br/><br/>Performance Improvement and bug fixes. |
+| 1.0.8201.0101 | October 2, 2025 | Improved UX experience for the onboarding screens. For more details, see [UX Enhancement](./android-new-ux.md).<br/><br/>Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. Users need to install and configure a third-party SSO client.<br/><br/>Performance Improvement and bug fixes. |
 
 ## September 2025
 
@@ -82,7 +82,7 @@ These events can be viewed in the Timeline tab of a device page. For more inform
 
 ### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
-#### Setup a secure environment to test prerelease builds of Defender for Endpoint on Android
+#### Set up a secure environment to test prerelease builds of Defender for Endpoint on Android
 
 Learn the steps on how to set up your environment for prerelease testing of Defender for Endpoint on Android. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
@@ -105,8 +105,6 @@ How does this change affect your organization's users?
 After discontinuing support for deprecated versions, Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running Android version prior to version 10 won't be investigated.
 
 This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
-
-## February 2025
 
 ### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
