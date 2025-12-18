@@ -188,7 +188,7 @@ After you've determined which incident requires the highest priority, select it 
 
 For a limited time during January and July of each year, **Defender Boxed** automatically appears when you first open the incident queue. Defender Boxed highlights your organization's security success, improvements, and response actions during the previous six months or calendar year.
 
-:::image type="content" source="/defender/media/defender-boxed/defender-boxed-recording.gif" alt-text="Defender Boxed as shown in the incident queue.":::
+:::image type="content" source="media/incident-queue/defender-boxed-recording.gif" alt-text="Defender Boxed as shown in the incident queue.":::
 
 > [!NOTE]
 > Defender Boxed is only available to users who performed applicable activities in the Microsoft Defender portal.
@@ -197,19 +197,19 @@ You can do the following actions in the series of cards that appear in Defender 
 
 - Download a detailed summary of your achievements that can be shared with others in your organization.
 
-  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-summary-small.png" alt-text="Screenshot of Defender Boxed slide with the download summary option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-summary.png":::
+  :::image type="content" source="media/incident-queue/defender-boxed-summary-small.png" alt-text="Screenshot of Defender Boxed slide with the download summary option highlighted." lightbox="media/incident-queue/defender-boxed-summary.png":::
 
 - Change the frequency of how often Defender Boxed will appear. You can choose between once (every January) or twice (every January and July) per year.
 
-  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-frequency-small.png" alt-text="Screenshot of Defender Boxed slide with the frequency highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-frequency.png":::
+  :::image type="content" source="media/incident-queue/defender-boxed-frequency-small.png" alt-text="Screenshot of Defender Boxed slide with the frequency highlighted." lightbox="media/incident-queue/defender-boxed-frequency.png":::
 
 - Share your achievement to your social media networks, email, and other forums by saving the slide as an image.
 
-  :::image type="content" source="/defender/media/defender-boxed/defender-boxed-save-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="/defender/media/defender-boxed/defender-boxed-save.png":::
+  :::image type="content" source="media/incident-queue/defender-boxed-save-small.png" alt-text="Screenshot of Defender Boxed slide with the save option highlighted." lightbox="media/incident-queue/defender-boxed-save.png":::
 
 To reopen Defender Boxed, go to the Incidents queue and then select **Your Defender Boxed** on the right side of the pane.
 
-:::image type="content" source="/defender/media/defender-boxed/defender-boxed-incident-small.png" alt-text="Screenshot of the Defender Boxed option highlighted in the Incidents page." lightbox="/defender/media/defender-boxed/defender-boxed-incident.png":::
+:::image type="content" source="media/incident-queue/defender-boxed-incident-small.png" alt-text="Screenshot of the Defender Boxed option highlighted in the Incidents page." lightbox="media/incident-queue/defender-boxed-incident.png":::
 
 ## See also
 

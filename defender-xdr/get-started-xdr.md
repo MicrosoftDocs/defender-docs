@@ -35,7 +35,7 @@ Once the Defender Experts team is ready to onboard your organization, you'll rec
 
 Select the link in the welcome email to directly launch the Defender Experts settings setup in the Microsoft Defender portal. You can also open this setup by going to **Settings** > **Defender Experts** and selecting **Get started**.
 
-:::image type="content" source="/defender/media/xdr/security-team-boost.png" alt-text="Screenshot of the Get started page in Defender for Experts XDR settings step-by-step guide." lightbox="/defender/media/xdr/security-team-boost.png":::
+:::image type="content" source="media/get-started-xdr/security-team-boost.png" alt-text="Screenshot of the Get started page in Defender for Experts XDR settings step-by-step guide." lightbox="media/get-started-xdr/security-team-boost.png":::
 
 ## Grant permissions to our experts
 
@@ -49,7 +49,7 @@ You also need to grant our experts one or both of the following permissions:
 - **Investigate incidents and guide my responses** (default) – This option lets our experts proactively monitor and investigate incidents and guide you through any necessary response actions. (Access level: Security Reader)
 - **Respond directly to active threats** (recommended) – This option lets our experts contain and remediate active threats immediately while investigating, thus reducing the threat's impact, and improving your overall response efficiency. (Access level: Security Operator)
 
-:::image type="content" source="/defender/media/xdr/managed-exclusions.png" alt-text="Screenshot of manage exclusions option while setting up Defender Experts for XDR." lightbox="/defender/media/xdr/managed-exclusions.png":::
+:::image type="content" source="media/get-started-xdr/managed-exclusions.png" alt-text="Screenshot of manage exclusions option while setting up Defender Experts for XDR." lightbox="media/get-started-xdr/managed-exclusions.png":::
 
 > [!IMPORTANT]
 > If you skip providing additional permissions, our experts won't be able to take certain response actions to secure your organization.  
@@ -84,7 +84,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 
 5. Select **Next** to confirm your exclusion list and proceed to [adding contact persons or groups](#tell-us-who-to-contact-for-important-matters). Otherwise, select **Skip**, and all your added exclusions are discarded.
 
-:::image type="content" source="/defender/media/xdr/exclude-device-groups.png" alt-text="Screenshot of option to exclude device groups." lightbox="/defender/media/xdr/exclude-device-groups.png":::
+:::image type="content" source="media/get-started-xdr/exclude-device-groups.png" alt-text="Screenshot of option to exclude device groups." lightbox="media/get-started-xdr/exclude-device-groups.png":::
 
 **To exclude user groups:**
 
@@ -136,7 +136,7 @@ Defender Experts for XDR lets you determine the individuals or groups within you
 
 Once identified, the individuals or groups will receive an email notifying them that they were as a contact for incident notification or service review purposes.
 
-:::image type="content" source="/defender/media/xdr/who-to-contact-for-important-matters.png" alt-text="Screenshot of Incident contacts page in Defender for Experts XDR settings step-by-step guide." lightbox="/defender/media/xdr/who-to-contact-for-important-matters.png":::
+:::image type="content" source="media/get-started-xdr/who-to-contact-for-important-matters.png" alt-text="Screenshot of Incident contacts page in Defender for Experts XDR settings step-by-step guide." lightbox="media/get-started-xdr/who-to-contact-for-important-matters.png":::
 
 **To add notification contacts:**
 
@@ -152,7 +152,7 @@ Once identified, the individuals or groups will receive an email notifying them 
 
 To edit or update your notification contacts after the initial setup, go to **Settings** > **Defender Experts** > **Notification contacts**.
 
-:::image type="content" source="/defender/media/xdr/who-to-contact-for-imp-matters-2.png" alt-text="Screenshot of notification contacts." lightbox="/defender/media/xdr/who-to-contact-for-imp-matters-2.png":::
+:::image type="content" source="media/get-started-xdr/who-to-contact-for-imp-matters-2.png" alt-text="Screenshot of notification contacts." lightbox="media/get-started-xdr/who-to-contact-for-imp-matters-2.png":::
 
 ## Receive managed response notifications and updates in Microsoft Teams
 
@@ -178,7 +178,7 @@ Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-por
 
 To turn on Teams notifications and chat after the initial setup, go to **Settings** > **Defender Experts** > **Teams**.
 
-:::image type="content" source="/defender/media/xdr/Teams-managed-response.png" alt-text="Screenshot of option to activate Teams for receiving managed response." lightbox="/defender/media/xdr/Teams-managed-response.png":::
+:::image type="content" source="media/get-started-xdr/Teams-managed-response.png" alt-text="Screenshot of option to activate Teams for receiving managed response." lightbox="media/get-started-xdr/Teams-managed-response.png":::
 
 
 ## Prepare your environment for the Defender Experts service
@@ -187,7 +187,7 @@ Apart from onboarding service delivery, our expertise on the Microsoft Defender 
 
 The readiness assessment is based on the number of protected devices and identities in your environment, and Defender Experts' policy recommendations. To view the assessment, in your Microsoft Defender portal, go to **Settings** > **Defender Experts** then select **Service status**.
 
-:::image type="content" source="/defender/media/xdr/readiness-assessment-xdr.png" alt-text="Screenshot of readiness assessment environment." lightbox="/defender/media/xdr/readiness-assessment-xdr.png":::
+:::image type="content" source="media/get-started-xdr/readiness-assessment-xdr.png" alt-text="Screenshot of readiness assessment environment." lightbox="media/get-started-xdr/readiness-assessment-xdr.png":::
 
 The readiness assessment has two parts:
 
