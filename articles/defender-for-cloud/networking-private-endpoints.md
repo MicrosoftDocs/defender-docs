@@ -66,7 +66,7 @@ Before you begin, make sure you:
 
 ## Roles and permissions
 
-Access is governed by [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview) and follows the standard [Azure Private Link approval workflow](/azure/private-link/private-endpoint-overview#access-to-a-private-link-resource-using-approval-workflow).
+Access is governed by [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview).
 
 - **Create a private endpoint**: Requires the **Network Contributor** role (or higher) on the virtual network.
 
@@ -76,7 +76,7 @@ Access is governed by [Azure role-based access control (RBAC)](/azure/role-based
 
 ## Approval workflow
 
-Private endpoint connections to Microsoft Security Private Link resources follow the standard Azure Private Link approval process:
+Private endpoint connections to Microsoft Security Private Link resources follow the standard [Azure Private Link approval workflow](/azure/private-link/private-endpoint-overview#access-to-a-private-link-resource-using-approval-workflow).
 
 When a private endpoint is created, a connection request is sent to the owner of the Microsoft Security Private Link resource. The resource owner can approve or reject the request from the **Private endpoint connections** tab in the Azure portal.
 
