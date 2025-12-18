@@ -57,7 +57,7 @@ Otherwise, if an incident is classified as _True Positive_, our experts then ide
 
 You can check the number of incidents that require your action in the Defender Experts banner at the top of the Microsoft Defender homepage.
 
-   :::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
+   :::image type="content" source="media/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="media/view-incidents.png":::
 
 You can view the incidents related to Defender Experts by filtering the incident queue in your Microsoft Defender portal using several filter sets. [Learn more about adding incident queue filters](incident-queue.md#filters-)
 
@@ -86,7 +86,7 @@ Select **View managed response** on the task card or on the top of the portal pa
 
 The **Investigation summary** section provides you with more context about the incident analyzed by our experts to provide you with visibility about its severity and potential impact if not addressed immediately. It could include the device timeline, indicators of attack, and indicators of compromise (IOCs) observed, and other details.
 
-:::image type="content" source="/defender/media/xdr/investigation-summary.png" alt-text="Screenshot of managed response investigation summary." lightbox="/defender/media/xdr/investigation-summary.png":::
+:::image type="content" source="media/investigation-summary.png" alt-text="Screenshot of managed response investigation summary." lightbox="media/investigation-summary.png":::
 
 ### Actions
 
@@ -112,18 +112,18 @@ Apart from these one-click actions, you can also receive managed responses from 
 
 1. Select the arrow buttons in an action card to expand it and read more information about the required action.
 
-   :::image type="content" source="/defender/media/xdr/action-card-1.png" alt-text="Screenshot of managed response action to isolate the device prod server." lightbox="/defender/media/xdr/action-card-1.png":::
+   :::image type="content" source="media/action-card-1.png" alt-text="Screenshot of managed response action to isolate the device prod server." lightbox="media/action-card-1.png":::
 
 2. For cards with one-click response actions, select the required action. The **Action status** in the card changes to **In progress**, then to **Failed** or **Completed**, depending on the action's outcome.
 
-   :::image type="content" source="/defender/media/xdr/action-card-2.png" alt-text="Screenshot of managed response action showing in-progress to isolate the device prod server." lightbox="/defender/media/xdr/action-card-2.png":::
+   :::image type="content" source="media/action-card-2.png" alt-text="Screenshot of managed response action showing in-progress to isolate the device prod server." lightbox="media/action-card-2.png":::
 
 > [!TIP]
 > You can also monitor the status of in-portal response actions in the [Action center](m365d-action-center.md). If a response action fails, try doing it again from the **View device details** page or [initiate a chat](communicate-defender-experts-xdr.md#in-portal-chat) with Defender Experts.
 
 3. For cards with required actions that you need to perform manually, select **I've completed this action** once you've performed them, then select **Yes, I've done it** in the confirmation dialog box that appears.
 
-   :::image type="content" source="/defender/media/xdr/ive-completed-this-action.png" alt-text="Screenshot of managed response action to confirm action completion." lightbox="/defender/media/xdr/ive-completed-this-action.png":::
+   :::image type="content" source="media/ive-completed-this-action.png" alt-text="Screenshot of managed response action to confirm action completion." lightbox="media/ive-completed-this-action.png":::
 
 4. If you don't want to complete a required action right away, select **Skip**, then select **Yes, skip this action** in the confirmation dialog box that appears.
 
