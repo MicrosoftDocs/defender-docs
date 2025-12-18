@@ -25,6 +25,25 @@ CCF Push provide several key benefits:
 - **Template-based provisioning:** Deployment creates ARM templates for DCRs, custom tables, Entra application registration, and client secrets - you receive the connection details to configure in your sending application
 - **Secure authentication:** Uses Microsoft Entra applications with OAuth 2.0 for secure data submission
 
+
+## Prerequisites
+
+- Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
+- Microsoft Entra permissions:
+    - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+    - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
+- Microsoft Azure permissions:
+    - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
+### Prerequisites
+
+- Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
+- Microsoft Entra permissions:
+    - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+    - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
+- Microsoft Azure permissions:
+    - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
+
+
 ## How CCF push works
 
 
@@ -507,7 +526,7 @@ Example:
 
 
 
-## Building Your First Push Connector - a simple example
+## Building Your First Push Connector
 
 In this example, we build a simple push connector that sends security alerts from your application to Sentinel.
 
@@ -526,17 +545,7 @@ Event structure will be sent by your application:
 }
 ```
 
-### Prerequisites
-
-- Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
-- Microsoft Entra permissions:
-    - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
-    - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
-- Microsoft Azure permissions:
-    - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
-
-
-
+### Step-by-step guide to create the push connector
 
 1.  Clone the Azure-Sentinel Repository
 
@@ -1072,7 +1081,7 @@ Event structure will be sent by your application:
 
     **Python Example Application Code:**
 
-    The following example uses placeholder values like <Your-Tenant-ID>. You must replace these with secure references to your actual credentials.
+    The following example uses placeholder values like \<Your-Tenant-ID\>. You must replace these with secure references to your actual credentials.
 
     ```python
     import requests
