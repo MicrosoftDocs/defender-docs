@@ -41,6 +41,8 @@ When you use private endpoints with Microsoft Security Private Link, you can:
 
 Security Private Link uses Azure Private Endpoints to establish secure connectivity between your virtual network and Microsoft Defender services.
 
+Using private endpoints may incur additional Azure costs depending on the number of endpoints and the selected architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
+
 **How it works:**
 
 - You create a private endpoint in your virtual network and assign it an IP address from your VNet range.
@@ -65,23 +67,23 @@ When you create a private endpoint connection for a Security Private Link in you
 
 Workload owners and security administrators can manage consent requests and the private endpoints through the **Private endpoint connections** tab for the Security Private Link in the Azure portal.
 
-## Personas
+## Roles and permissions
 
-Setting up Security Private Link involves multiple roles to ensure secure connectivity and proper governance:
+Access to Microsoft Security Private Link resources and private endpoint connections is governed by Azure role-based access control (RBAC) and follows the standard Azure Private Link approval workflow.
 
-- **Security Administrator**  
-  Initiates the creation of private endpoints for Defender services and manages security policies.
+To create a private endpoint for Microsoft Defender services, you must have sufficient permissions on the virtual network where the private endpoint is created, such as the **Network Contributor** role or higher.
 
-- **Network Administrator**  
-  Approves private endpoint connections, configures DNS zones, and validates firewall rules.
+Approving a private endpoint connection requires **Owner** or **Contributor** permissions on the Microsoft Security Private Link resource. The **Security Administrator** role provides access to Microsoft Defender for Cloud settings but does not, by itself, grant permissions to approve private endpoint connections.
 
 ## Approval workflow
 
-**Approval Process:**
+Private endpoint connections to Microsoft Security Private Link resources follow the standard Azure Private Link approval workflow.
 
-- When you create a private endpoint, the process sends a consent request to the Security Private Link resource owner.
-- If you're also the resource owner, the process auto-approves the request.
-- You can manage all pending and approved connections in the **Private endpoint connections** tab in the Azure portal.
+When a private endpoint is created, a connection request is sent to the owner of the Microsoft Security Private Link resource. The resource owner can approve or reject the request from the **Private endpoint connections** tab in the Azure portal.
+
+If the user creating the private endpoint also has sufficient permissions on the Private Link resource (such as **Owner** or **Contributor**), the connection request is automatically approved.
+
+Approved and pending connections can be managed at any time through the Private Link resource in the Azure portal.
 
 ## DNS configuration
 
@@ -100,13 +102,13 @@ Security Private Link enables your workload to communicate with different Micros
 
 If you're using a custom DNS server, configure delegation or A records to resolve FQDNs to the private endpoint IP address.
 
-## Comparison Table
+## Private endpoint usage comparison
 
-| Feature                     | Without Private Endpoint | With Security Private Link |
-|----------------------------|---------------------------|-----------------------------|
-| Internet Exposure          | Yes                      | No                          |
-| Compliance Alignment       | Limited                  | Strong                      |
-| Multi-Service Integration  | Manual                   | Simplified                 |
+| Feature | Without Private Endpoint | With Security Private Link |
+|--------|--------------------------|----------------------------|
+| Internet exposure | Yes | No |
+| Compliance alignment | Limited | Strong |
+| Multi-service integration | Manual | Simplified |
 
 ## Screenshots and visuals
 
@@ -117,24 +119,6 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 - **Security Private Link resource properties:**  
 `PLACEHOLDER`
 
----
-
 ## Next steps
 - Configure private endpoints with Microsoft Security Private Link
 - For more information about Private Link, see the [Azure Private Link](/azure/private-link) documentation.
-
-
-### TODO
-1. Personas content is wrong. 
-    1. [Access to a private-link resource using approval workflow](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview#access-to-a-private-link-resource-using-approval-workflow)
-    1. Azure RBAC - [Security Admin](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#security-admin), [Network Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/networking#network-contributor)
-1. Files to update:
-   1. [What is a private endpoint](/azure/private-link/private-endpoint-overview):
-   1. This is a different repo ^
-   |Private-link resource name	| Resource type	| Sub-resources |
-   |---|---|---|
-   | Microsoft Security | Microsoft.Security/privateLinks | containers |
-1. Consider sections:
-   1. Update/remove limitations.
-   1. **Implications on cost**
-   Private endpoints or managed private endpoints are resources that incur extra costs. The cost varies depending on the selected solution architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
