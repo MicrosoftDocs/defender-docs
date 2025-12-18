@@ -18,7 +18,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 6/14/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -76,7 +76,7 @@ In [Microsoft Defender for Office 365 Plan 2](mdo-about.md), open the Microsoft 
 
     :::image type="content" source="media/connector-compromise-sender-ip.png" alt-text="Sender IP and your organization's on-prem IP address" lightbox="media/connector-compromise-sender-ip.png":::
 
-In [Microsoft Defender for Office 365](mdo-about.md) or [the default email protections for cloud mailboxes](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
+In [Microsoft Defender for Office 365](mdo-about.md) or [the built-in security features for all cloud mailboxes](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
 
 1. Open the Defender portal at <https://security.microsoft.com> and go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, useOpen **Suspicious connector activity** alert in <https://security.microsoft.com/alerts>.
 

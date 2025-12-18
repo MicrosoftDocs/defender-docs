@@ -18,7 +18,7 @@ ms.custom:
 description: Admins can learn about privacy in Defender for Office 365.
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -77,7 +77,7 @@ Defender for Office 365 operates in the Microsoft Entra datacenters. For the fol
 - United Kingdom
 - United States
 
-In the default email protections for cloud mailboxes, the following data is stored at rest in the local region geo:
+In [the built-in security features for all cloud mailboxes](eop-about.md), the following data is stored at rest in the local region geo:
 
 - Alerts
 - Attachments

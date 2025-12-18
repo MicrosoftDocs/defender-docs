@@ -58,9 +58,9 @@ The key factors that determine which modes are available to you are:
 - Whether or not you currently have Defender for Office 365 (Plan 1 or Plan 2) as described in [Evaluation vs. trial for Defender for Office 365](try-microsoft-defender-for-office-365.md#evaluation-vs-trial-for-defender-for-office-365).
 - How email is delivered to your Microsoft 365 organization as described in the following scenarios:
 
-  - Mail from the internet flows directly into Microsoft 365, but your current subscription has only [the default email protections for cloud mailboxes](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
+  - Mail from the internet flows directly into Microsoft 365, but your current subscription has [the built-in security features for all cloud mailboxes](eop-about.md) only or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
 
-    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with default email protections and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
+    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with the built-in security features for all cloud mailboxes and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
     In these environments, **audit mode** or **blocking mode** are available, [depending on your licensing](try-microsoft-defender-for-office-365.md#evaluation-vs-trial-for-defender-for-office-365).
 

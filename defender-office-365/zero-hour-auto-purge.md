@@ -23,7 +23,7 @@ description: Zero-hour auto purge (ZAP) in all organizations with cloud mailboxe
 ms.service: defender-office-365
 ms.date: 12/16/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -192,7 +192,9 @@ Follow the normal process for [reporting false positives to Microsoft](submissio
 
 ZAP takes action on a message based on the configuration of anti-spam policies as described earlier in this article.
 
-### How is ZAP affected by the exceptions to default email protections for cloud mailboxes and Defender for Office 365?
+<a name='how-is-zap-affected-by-the-exceptions-to-default-email-protections-for-cloud-mailboxes-and-defender-for-office-365'></a>
+
+### How is ZAP affected by the exceptions to the built-in security features for all cloud mailboxes and Defender for Office 365?
 
 The following features might override ZAP actions:
 
