@@ -13,6 +13,7 @@ This article provides an overview of using private endpoints with Microsoft Secu
 
 > [!NOTE]
 > For a complete understanding of private endpoints and private links, see [What is a private endpoint?](/azure/private-link/private-endpoint-overview).
+
 ## What is Microsoft Security Private Link?
 
 Microsoft Security Private Link enables you to connect to Microsoft Defender services by using private endpoints, ensuring secure and private connectivity from your virtual network. You can create a Security Private Link resource in your subscription and then create private endpoints in your Azure virtual networks to the Security Private Link. This approach ensures that all security-related traffic from your workloads, including telemetry from Defender agents, sensors, add-ons, and extensions, traverses the Microsoft backbone network without exposure to the public internet. Microsoft Security Private Link simplifies network architecture by securing connections between your applications and Microsoft Defender services, meeting strict regulatory compliance requirements for network isolation.
@@ -107,11 +108,6 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 | Compliance Alignment       | Limited                  | Strong                      |
 | Multi-Service Integration  | Manual                   | Simplified                 |
 
-## Limitations
-
-- Azure-only support (AWS and GCP aren't supported).
-- Service-specific constraints.
-
 ## Screenshots and visuals
 
 - **Azure Portal – Private Endpoint creation:**  
@@ -134,12 +130,11 @@ If you're using a custom DNS server, configure delegation or A records to resolv
     1. Azure RBAC - [Security Admin](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#security-admin), [Network Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/networking#network-contributor)
 1. Files to update:
    1. [What is a private endpoint](/azure/private-link/private-endpoint-overview):
+   1. This is a different repo ^
+   |Private-link resource name	| Resource type	| Sub-resources |
+   |---|---|---|
+   | Microsoft Security | Microsoft.Security/privateLinks | containers |
 1. Consider sections:
    1. Update/remove limitations.
-
    1. **Implications on cost**
    Private endpoints or managed private endpoints are resources that incur extra costs. The cost varies depending on the selected solution architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
-
-|Private-link resource name	| Resource type	| Sub-resources |
-|---|---|---|
-| Microsoft Security | Microsoft.Security/privateLinks | containers |
