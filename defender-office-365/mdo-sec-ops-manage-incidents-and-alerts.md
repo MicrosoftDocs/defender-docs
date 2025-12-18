@@ -89,7 +89,7 @@ Manage incidents on the **Incidents** page in the Microsoft Defender portal at <
 
 Manage incidents on the **Incidents** page in Microsoft Sentinel at <https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/microsoft.securityinsightsarg%2Fsentinel>:
 
-:::image type="content" source="media/mdo-sec-ops-microsoft-sentinel-incidents.png" alt-text="Incidents page in Microsoft Sentinel." lightbox="media/mdo-sec-ops-microsoft-sentinel-incidents.png":::
+:::image type="content" source="/defender/media/microsoft-sentinel-incidents.png" alt-text="Incidents page in Microsoft Sentinel." lightbox="/defender/media/microsoft-sentinel-incidents.png":::
 
 :::image type="content" source="media/mdo-sec-ops-microsoft-sentinel-incident-details.png" alt-text="Incident details page in Microsoft Sentinel." lightbox="media/mdo-sec-ops-microsoft-sentinel-incident-details.png":::
 
