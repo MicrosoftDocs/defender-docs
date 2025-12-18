@@ -2,7 +2,7 @@
 title: Detect threats by using hunting livestream in Microsoft Sentinel
 description: Detect threats in real time with hunting livestream in Microsoft Sentinel. Set up sessions, receive notifications, and take action fast.
 ms.topic: how-to
-ms.date: 08/06/2025
+ms.date: 12/06/2025
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: Ben Nick
