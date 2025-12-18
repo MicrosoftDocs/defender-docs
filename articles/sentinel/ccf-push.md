@@ -479,7 +479,7 @@ Key properties:
 - `kind`: Must be "Push" for push connectors
 
 Example:
-
+```json
 {
   "name": "ContosoSecurityAlertsPushDCR",
   "apiVersion": "2021-09-01-preview",
@@ -539,6 +539,7 @@ Example:
     "dataCollectionEndpointId": "[concat('/subscriptions/',parameters('subscription'),'/resourceGroups/',parameters('resourceGroupName'),'/providers/Microsoft.Insights/dataCollectionEndpoints/',parameters('workspace'))]"
   }
 }
+```
 
 [!IMPORTANT]
 - The `connectorDefinitionName` must exactly match the connector definition's `id`
@@ -1054,7 +1055,7 @@ Event structure will be sent by your application:
     File Solutions\ContosoSecurityAlerts\Package\mainTemplate.json is a valid Json file!
     File Solutions\ContosoSecurityAlerts\Package\testParameters.json is a valid Json file!
     ```
-    
+
     The packaging succeeded if you see the three JSON validation messages confirming valid files. The `arm-ttk` failure can be ignored for CCF Push connectors.
 
     For more information, see the [Azure-Sentinel Solutions Tools documentation](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Create-Azure-Sentinel-Solution).
