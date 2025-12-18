@@ -31,7 +31,7 @@ ms.date: 03/28/2025
 ## Explore results
 
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-results.png":::
+:::image type="content" source="media/advanced-hunting-defender-results/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-results.png":::
 
 You can also explore the results in-line with the following features:
 
@@ -54,10 +54,10 @@ You can use the link to incident feature to add advanced hunting query results t
 ### Link results to new or existing incidents
 
 1.	In the advanced hunting query pane, enter your query in the query field provided, then select **Run query** to get your results.
-   :::image type="content" source="/defender/media/advanced-hunting-results-link1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link1.png":::
+   :::image type="content" source="media/advanced-hunting-defender-results/advanced-hunting-results-link1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link1.png":::
 
 2.	In the Results page, select the events or records that are related to a new or current investigation you're working on, then select **Link to incident**.
-   :::image type="content" source="/defender/media/advanced-hunting-results-link2.png" alt-text="Screenshot of the link to incident feature in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link2.png":::
+   :::image type="content" source="media/advanced-hunting-defender-results/advanced-hunting-results-link2.png" alt-text="Screenshot of the link to incident feature in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-results-link2.png":::
 
 3.	In the **Alert details** section in the Link to incident pane, select **Create new incident** to convert the events to alerts and group them to a new incident:
 

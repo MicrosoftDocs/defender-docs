@@ -1,6 +1,6 @@
 ---
 title: Defender for Endpoint with Defender Antivirus in passive mode
-ms.topic: conceptual
+ms.topic: article
 description: Understand how Defender Antivirus in passive mode works and when to use it.
 ms.service: defender-endpoint
 author: KesemSharabi
