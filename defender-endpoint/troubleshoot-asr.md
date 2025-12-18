@@ -4,8 +4,8 @@ description: Resources and sample code to troubleshoot issues with attack surfac
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.date: 04/01/2025
 ms.reviewer:
 manager: bagol

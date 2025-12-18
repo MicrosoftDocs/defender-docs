@@ -4,10 +4,10 @@ description: Create your first threat hunting query and learn about common opera
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -176,15 +176,15 @@ You can use the query editor to experiment with multiple queries. To use multipl
 - Separate each query with an empty line.
 - Place the cursor on any part of a query to select that query before running it. This will run only the selected query. To run another query, move the cursor accordingly and select **Run query**.
 
-  :::image type="content" source="/defender/media/multiple-queries.png" alt-text="An example of multiple queries execution in the **New query** page in the Microsoft Defender portal" lightbox="/defender/media/multiple-queries.png":::
+  :::image type="content" source="media/advanced-hunting-query-language/multiple-queries.png" alt-text="An example of multiple queries execution in the **New query** page in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/multiple-queries.png":::
 
   For a more efficient workspace, you can also use multiple tabs in the same hunting page. Select **New query** to open a tab for your new query.
 
-  :::image type="content" source="/defender/media/multitab.png" alt-text="Opening a new tab by selecting Create new in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/multitab.png":::
+  :::image type="content" source="media/advanced-hunting-query-language/multitab.png" alt-text="Opening a new tab by selecting Create new in advanced hunting in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/multitab.png":::
 
   You can then run different queries without ever opening a new browser tab.
 
-  :::image type="content" source="/defender/media/multitab-examples.png" alt-text="Run different queries without ever leaving the advanced hunting page in the Microsoft Defender portal" lightbox="/defender/media/multitab-examples.png":::
+  :::image type="content" source="media/advanced-hunting-query-language/multitab-examples.png" alt-text="Run different queries without ever leaving the advanced hunting page in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/multitab-examples.png":::
 
 > [!NOTE]
 > Using multiple browser tabs with advanced hunting might cause you to lose your unsaved queries. To prevent this from happening, use the tab feature within advanced hunting instead of separate browser tabs.
@@ -193,7 +193,7 @@ You can use the query editor to experiment with multiple queries. To use multipl
 
 The **Get started** section provides a few simple queries using commonly used operators. Try running these queries and making small modifications to them.
 
-:::image type="content" source="/defender/media/get-started-section.png" alt-text="The **Getting started** section in the **Advanced hunting** page in the Microsoft Defender portal" lightbox="/defender/media/get-started-section.png":::
+:::image type="content" source="media/advanced-hunting-query-language/get-started-section.png" alt-text="The **Getting started** section in the **Advanced hunting** page in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/get-started-section.png":::
 
 > [!NOTE]
 > Apart from the basic query samples, you can also access [shared queries](advanced-hunting-shared-queries.md) for specific threat hunting scenarios. Explore the shared queries on the left side of the page or the [GitHub query repository](https://aka.ms/hunting-queries).

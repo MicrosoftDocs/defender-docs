@@ -4,8 +4,8 @@ description: Enable or disable users from locally changing settings in Microsoft
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/20/2025
@@ -67,10 +67,10 @@ To configure these settings:
 | Real-time protection|Configure local setting override to turn on real-time protection|[Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Remediation|Configure local setting override for the time of day to run a scheduled full scan to complete remediation|[Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md) |
 | Scan|Configure local setting override for maximum percentage of CPU utilization|[Configure and run scans](run-scan-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for schedule scan day|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for scheduled quick scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for scheduled scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for the scan type to use for a scheduled scan|[Configure scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for schedule scan day|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled quick scan time|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled scan time|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for the scan type to use for a scheduled scan|[About scheduled scans](schedule-antivirus-scans.md) |
 
 <a id="merge-lists"></a>
 

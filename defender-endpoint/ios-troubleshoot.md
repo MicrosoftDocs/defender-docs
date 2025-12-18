@@ -2,8 +2,8 @@
 title: Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS
 description: Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -88,6 +88,9 @@ After onboarding, it takes few hours for device to show up in the Device invento
 
 > [!NOTE]
 > Sometimes, the device name is not consistent with that in Microsoft Intune admin center. The device name in the Microsoft Defender portal is of the format <username_iPhone/iPad*>. You can also use your Microsoft Entra device ID to identify the device in the Microsoft Defender portal.
+
+> [!Note]
+> Users that manually change the time on their mobile devices risk causing a mismatch in times between the client and the broker service that processes authentication tokens. This can cause unintentional behavior where tokens are viewed as expired. In order to avoid this, ensure end users have the ***Set Automatically*** field enabled under ***Settings > General > Date & time***
 
 ## Data and Privacy
 

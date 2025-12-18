@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 11/17/2025
+ms.date: 12/17/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
@@ -23,9 +23,32 @@ appliesto:
 
 # What's new in Microsoft Defender for Endpoint on Android
 
+<!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
+This page is updated frequently with the latest updates in Defender endpoint security for Android devices. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/android-rss`
+
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ### Releases for Defender for Endpoint on Android
+
+#### December 2025
+
+|Build|1.0.8412.0101|
+| -------- | -------- |
+|Release Date|December 15, 2025|
+
+**What's New**
+
+- Performance improvement and bug fixes.
+
+|Build|1.0.8321.0101|
+| -------- | -------- |
+|Release Date|December 2, 2025|
+
+**What's New**
+
+- Native root detection for Microsoft Defender is now GA. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
+
+- Performance improvement and bug fixes.
 
 #### November 2025
 
@@ -35,9 +58,9 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- Performance improvement and accessibility bug fixes
+- Native Root Detection for Microsoft Defender is now in preview. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
 
-#### November 2025
+- Performance improvement and bug fixes.
 
 | Build| 1.0.8303.0101|
 | -------- | -------- |
@@ -51,6 +74,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
 
+- Fixed the bug where feedback sending wasn’t disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration.
+
 #### October 2025
 
 | Build| 1.0.8217.0101 |
@@ -63,7 +88,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
   ![User's image](media/android-whatsnew/image.png)
   
-- #### October 2025
+#### October 2025
 
 | Build| 1.0.8201.0101|
 | -------- | -------- |
@@ -324,10 +349,11 @@ Notify your users and help desk (as applicable) that end users must accept the n
 1. Tap the toggle for **Allow access to manage all files**.
 
    The device is now protected.
-
+   
    > [!NOTE]
+   > 
    > This permission allows Microsoft Defender for Endpoint to access storage on user's device, which helps detect and remove malicious and unwanted apps. Microsoft Defender for Endpoint accesses/scans Android app package file (.apk) only. On devices with a Work Profile, Defender for Endpoint only scans work-related files.
-
+   
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 ## See also

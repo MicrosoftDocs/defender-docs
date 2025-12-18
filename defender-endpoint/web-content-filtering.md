@@ -2,11 +2,11 @@
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 08/18/2025
+ms.date: 12/12/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -23,11 +23,8 @@ appliesto:
   - Microsoft Defender for Business
 
 ---
+
 # Web content filtering
-
-
-> [!TIP]
-
 
 ## What is web content filtering?
 
@@ -75,15 +72,15 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 1. Sign into the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced Features**.
+2. In the navigation pane, go to **Settings** \> **Endpoints** \> **General** section \> **Advanced features**.
 
-3. Scroll down until you see **Web content filtering**.
+3. On the **Advanced features** page, find the **Web content filtering** setting.
 
-4. Switch the toggle to **On**, and then select **Save preferences**.
+4. Switch the **Web content filtering** toggle to **On**, and then select **Save preferences**.
 
 ### Configure web content filtering policies
 
-Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Web content filtering** (under **Rules**).
+Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**.
 
 Policies can be deployed to block any of the following parent or child categories:
 
@@ -103,25 +100,27 @@ Policies can be deployed to block any of the following parent or child categorie
 
 To add a new policy, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**.
 
-2. Specify a name.
+2. On the **Web content filtering** page, select **+ Add policy**.
 
-3. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
+3. Specify a name.
 
-4. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
+4. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
+
+5. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
 
    > [!IMPORTANT]
    > If you're using either Microsoft 365 Business Premium or Defender for Business, your web content filtering policy is applied to all users by default. Scoping does not apply.
 
-5. Review the summary and save the policy.
+6. Review the summary and save the policy.
 
 > [!NOTE]
-- There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
+>
+> - There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
 > - You can deploy a policy without selecting any categories to block. This action creates an audit-only policy to help you understand user behavior before creating a block policy.
-- If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
-- Blocking the "Uncategorized" category could lead to unexpected and undesired results.
-
+> - If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
+> - Blocking the "Uncategorized" category could lead to unexpected and undesired results.
 
 ## End-user experience
 
@@ -137,11 +136,13 @@ It's possible to override the blocked category in web content filtering to allow
 
 To define an Allow indicator, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Rules** section \> **Indicators**.
 
-2. Enter the domain of the site.
+2. Select the **URLs/Domains** tab, and on the tab, select **+ Add Item**.
 
-3. Set the policy action to **Allow**.
+3. Enter the domain of the site.
+
+4. Set the policy action to **Allow**.
 
 ### Dispute categories
 
@@ -207,4 +208,3 @@ Use the time range filter at the top left of the page to select a time period. Y
 - [Requirements for Network Protection](web-content-filtering.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

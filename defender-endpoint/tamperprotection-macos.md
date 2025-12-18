@@ -2,8 +2,8 @@
 title: Protect macOS security settings with tamper protection
 description: Use tamper protection to prevent malicious apps from changing important macOS security settings.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Linux resources
 ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/02/2025
+ms.date: 12/14/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -134,6 +134,9 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Endpoint Detection and Response|Set group-id|`mdatp edr group-ids --group-id [group-id]`|
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
 |Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
+
+## Quarantine directory for Defender for Endpoint Linux
+The default directory for files quarantined by MDATP is `/var/opt/microsoft/mdatp/quarantine`. For best results, use the command `MDATP threat quarantine` to manage quarantined files, rather than moving or modifying files directly in the quarantine directory. Direct file operations aren't recommended - always use the CLI for safe and supported quarantine management.
 
 ## Uninstall Defender for Endpoint on Linux
 

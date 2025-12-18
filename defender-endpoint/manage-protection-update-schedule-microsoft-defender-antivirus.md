@@ -6,8 +6,8 @@ search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: bagol
@@ -35,7 +35,7 @@ You can schedule updates for your endpoints by:
 - Specifying the interval to check for protection updates
 - Specifying the time to check for protection updates
 
-You can also randomize the times when each endpoint checks and downloads protection updates. See the [Schedule scans](schedule-antivirus-scans.md) topic for more information.
+You can also randomize the times when each endpoint checks and downloads protection updates. For more information, see [About schedule scans](schedule-antivirus-scans.md).
 
 ## Prerequisites
 

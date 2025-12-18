@@ -4,8 +4,8 @@ description: Configure what Microsoft Defender Antivirus should do when it detec
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/20/2025
@@ -39,8 +39,7 @@ When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remov
 >
 > If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid this problem in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
-Also see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
-
+Also see [About regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
 
 ## Prerequisites
 

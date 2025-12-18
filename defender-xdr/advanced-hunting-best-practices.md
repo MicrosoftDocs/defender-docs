@@ -4,10 +4,10 @@ description: Learn how to construct fast, efficient, and error-free threat hunti
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -44,7 +44,7 @@ Depending on its size, each tenant has access to a set amount of CPU resources a
 
 After running your query, you can see the execution time and its resource usage (Low, Medium, High). High indicates that the query took more resources to run and could be improved to return results more efficiently.
 
-:::image type="content" source="/defender/media/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="/defender/media/resource-usage.png":::
+:::image type="content" source="media/advanced-hunting-best-practices/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="media/advanced-hunting-best-practices/resource-usage.png":::
 
 Customers who run multiple queries regularly should track consumption and apply the optimization guidance in this article to minimize disruption resulting from exceeding quotas or usage parameters.
 
@@ -243,7 +243,7 @@ DeviceProcessEvents
 
 Likewise, the query summarizes by both `InitiatingProcessId` and `InitiatingProcessCreationTime` so that it looks at a single process, without mixing multiple processes with the same process ID.
 
-:::image type="content" source="/defender-xdr/media/best-practice-unique-processid-tb.png" alt-text="Screenshot of sample query results for getting unique processes in the Microsoft Defender portal." lightbox="/defender-xdr/media/best-practice-unique-processid.png":::
+:::image type="content" source="media/advanced-hunting-best-practices/best-practice-unique-processid-tb.png" alt-text="Screenshot of sample query results for getting unique processes in the Microsoft Defender portal." lightbox="media/advanced-hunting-best-practices/best-practice-unique-processid.png":::
 
 ### Query command lines
 There are numerous ways to construct a command line to accomplish a task. For example, an attacker could reference an image file without a path, without a file extension, using environment variables, or with quotes. The attacker could also change the order of parameters or add multiple quotes and spaces.

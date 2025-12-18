@@ -151,15 +151,18 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 
 <a name='configure-aad-ip-alert-service'></a>
 
-### Configure Microsoft Entra IP alert service
+### Configure alert service settings
+
+To configure alert service settings in Microsoft Defender XDR:
 
 1. Go to the Microsoft Defender portal ([security.microsoft.com](https://security.microsoft.com)), select **Settings** > **Microsoft Defender XDR**.
 
-2. From the list, select **Alert service settings**, and then configure your **Microsoft Entra ID Protection** alert service.
+1. From the list, select **Alert service settings**, and then configure the alert settings for the service.
 
-   :::image type="content" source="/defender/media/investigate-alerts/alerts-ss-entra-alert.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="/defender/media/investigate-alerts/alerts-ss-entra-alert.png":::
+    > [!IMPORTANT]
+    > Starting December 11, 2025, Microsoft Defender XDR is rolling out enhanced configuration options for Entra ID Protection alerts in public preview. These updates give you more granular control over risk-based alerting. The new default setting is **High-risk detections only**. Change the default setting to **High + Medium** or **All detections** based on your organization’s needs.
 
-By default, only the most relevant alerts for the security operation center are enabled. If you want to get all Microsoft Entra IP risk detections, you can change it in the **Alert service settings** section.
+    :::image type="content" source="/defender/media/investigate-alerts/alert-service-settings-entra.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="/defender/media/investigate-alerts/alert-service-settings-entra.png":::
 
 You can also access **Alert service settings** directly from the **Incidents** page in the Microsoft Defender portal.
 

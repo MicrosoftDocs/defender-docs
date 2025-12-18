@@ -2,8 +2,8 @@
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
-ms.author: painbar
-author: paulinbar
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 ms.date: 11/11/2025
 manager: bagol

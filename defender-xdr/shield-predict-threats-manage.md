@@ -1,6 +1,6 @@
 ---
-title: Manage predictive shielding in Microsoft Defender XDR
-description: Manage the predictive shielding feature in Microsoft Defender XDR.
+title: Manage predictive shielding in Microsoft Defender
+description: Manage the predictive shielding feature in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -24,19 +24,19 @@ appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-# Manage predictive shielding in Microsoft Defender XDR (Preview)
+# Manage predictive shielding in Microsoft Defender (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Microsoft Defender XDR uses predictive shielding (Preview) as a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Learn [how predictive shielding works](shield-predict-threats.md#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
+Microsoft Defender uses predictive shielding (Preview) as a proactive defense strategy designed to anticipate and mitigate threats before they materialize. Learn [how predictive shielding works](shield-predict-threats.md#how-predictive-shielding-works) to dynamically infer risk, anticipate attacker progression, and harden your environment.
 
 This article describes how to manage predictive shielding so that you can enrich your prediction data and understand how predictive shielding actions are applied in your environment.
 
 ## Review predictive shielding details and results
 
-The incident view in Microsoft Defender XDR includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
+The incident view in Microsoft Defender includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
 
 > [!TIP]
 > To enrich your predictive shielding data, we recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. For more information, see [Enrich predictive shielding data](#enrich-predictive-shielding-data).

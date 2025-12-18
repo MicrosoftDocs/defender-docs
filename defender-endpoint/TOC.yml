@@ -803,7 +803,7 @@
         href: configure-real-time-protection-microsoft-defender-antivirus.md
       - name: Configure remediation for Microsoft Defender Antivirus detections
         href: configure-remediation-microsoft-defender-antivirus.md
-      - name: Configure Microsoft Defender Antivirus scans
+      - name: About scheduled Microsoft Defender Antivirus scans
         href: schedule-antivirus-scans.md
         items:
         - name: Schedule scans using Intune
@@ -1207,7 +1207,7 @@
 
           - name: Alert
             items:
-            - name: Alert methods and properties
+            - name: Alert properties
               href: api/alerts.md
             - name: List alerts
               href: api/get-alerts.md
@@ -1245,7 +1245,7 @@
 
           - name: Authenticated scan
             items:
-            - name: Authenticated scan methods and properties
+            - name: Authenticated scan properties
               href: api/get-authenticated-scan-properties.md
             - name: Get all scan definitions
               href: api/get-all-scan-definitions.md
@@ -1269,7 +1269,7 @@
 
           - name: Automated investigation
             items:
-            - name: Investigation methods and properties
+            - name: Investigation properties
               href: api/investigation.md
             - name: List Investigation
               href: api/get-investigation-collection.md
@@ -1301,7 +1301,7 @@
 
           - name: File
             items:
-            - name: File methods and properties
+            - name: File properties
               href: api/files.md
             - name: Get file information
               href: api/get-file-information.md
@@ -1314,12 +1314,12 @@
 
           - name: Indicators
             items:
-            - name: Indicators methods and properties
+            - name: Indicators properties
               href: api/ti-indicator.md
             - name: List Indicators
               href: api/get-ti-indicators-collection.md
             - name: Submit Indicator
-              href: api/ti-indicator.md
+              href: api/post-ti-indicator.md
             - name: Import Indicator
               href: api/import-ti-indicators.md
             - name: Delete Indicator
@@ -1341,7 +1341,7 @@
 
           - name: Live response library
             items:
-            - name: Live response library methods and properties
+            - name: Live response library properties
               href: live-response-library-methods.md
             - name: List library files
               href: api/list-library-files.md
@@ -1352,7 +1352,7 @@
 
           - name: Machine
             items:
-            - name: Machine methods and properties
+            - name: Machine properties
               href: api/machine.md
             - name: List machines
               href: api/get-machines.md
@@ -1387,7 +1387,7 @@
 
           - name: Machine Action
             items:
-            - name: Machine Action methods and properties
+            - name: Machine Action properties
               href: api/machineaction.md
             - name: List Machine Actions
               href: api/get-machineactions-collection.md
@@ -1420,7 +1420,7 @@
 
           - name: Recommendation
             items:
-            - name: Recommendation methods and properties
+            - name: Recommendation properties
               href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
@@ -1435,7 +1435,7 @@
 
           - name: Remediation activity
             items:
-            - name: Remediation activity methods and properties
+            - name: Remediation activity properties
               href: api/get-remediation-methods-properties.md
             - name: Get one remediation activity by ID
               href: api/get-remediation-one-activity.md
@@ -1446,7 +1446,7 @@
 
           - name: Score
             items:
-            - name: Score methods and properties
+            - name: Score properties
               href: api/score.md
             - name: List exposure score by machine group
               href: api/get-machine-group-exposure-score.md
@@ -1466,7 +1466,7 @@
 
           - name: Software
             items:
-            - name: Software methods and properties
+            - name: Software properties
               href: api/software.md
             - name: List software
               href: api/get-software.md
@@ -1482,8 +1482,6 @@
               href: api/get-missing-kbs-software.md
           - name: User
             items:
-            - name: User methods
-              href: api/user.md
             - name: Get user related alerts
               href: api/get-user-related-alerts.md
             - name: Get user related machines
@@ -1491,7 +1489,7 @@
 
           - name: Vulnerability
             items:
-            - name: Vulnerability methods and properties
+            - name: Vulnerability properties
               href: api/vulnerability.md
             - name: List vulnerabilities
               href: api/get-all-vulnerabilities.md

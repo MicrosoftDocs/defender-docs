@@ -4,8 +4,8 @@ description: Define when and how updates should be applied for out of date endpo
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -128,16 +128,16 @@ You can set the number of consecutive scheduled scans that can be missed before 
 
 The process for enabling this feature is:
 
-1. Set up at least one scheduled scan (see the [Scheduled scans](schedule-antivirus-scans.md) article).
+1. Set up at least one scheduled scan.
 
 2. Enable the catch-up scan feature.
 
 3. Define the number of scans that can be skipped before a catch-up scan occurs.
 
-This feature can be enabled for both full and quick scans. 
+This feature can be enabled for both full and quick scans.
 
 > [!TIP]
-> We recommend using quick scans for most situations. To learn more, see [Quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). 
+> We recommend using quick scans for most situations. To learn more, see [About scheduled scans](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
 
 You can use one of several methods to set up catch-up scans:
 
@@ -161,7 +161,7 @@ You can use one of several methods to set up catch-up scans:
     - If you have set up scheduled quick scans, double-click the **Turn on catch-up quick scan** setting and set the option to **Enabled**.
     - If you have set up scheduled full scans, double-click the **Turn on catch-up full scan** setting and set the option to **Enabled**. Select **OK**.
     - Double-click the **Define the number of days after which a catch-up scan is forced** setting and set the option to **Enabled**.
-    - Enter the number of scans that can be missed before a scan will be automatically run when the user next signs in on the endpoint. The type of scan that is run is determined by the **Specify the scan type to use for a scheduled scan** (see the [Schedule scans](schedule-antivirus-scans.md) article). Select **OK**.
+    - Enter the number of scans that can be missed before a scan will be automatically run when the user next signs in on the endpoint. The type of scan that is run is determined by the **Specify the scan type to use for a scheduled scan** (see [About schedule scans](schedule-antivirus-scans.md)). Select **OK**.
 
 > [!NOTE]
 > The Group Policy setting title refers to the number of days. The setting, however, is applied to the number of scans (not days) before the catch-up scan will be run.
