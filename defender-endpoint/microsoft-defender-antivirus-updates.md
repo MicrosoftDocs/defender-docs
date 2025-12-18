@@ -83,7 +83,7 @@ Updates contain:
 - Support phase: **Security and Critical Updates**
 
 > [!NOTE]
-> The delayed ring release is postponed to January 5.
+> The delayed ring for the platform release is postponed to January 5.
 
 #### What's new
 
