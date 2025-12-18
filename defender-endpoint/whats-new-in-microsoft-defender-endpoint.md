@@ -13,7 +13,6 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier1
-ms.topic: whats-new
 #Customer.intent: As a security administrator or IT professional, stay up to date with the latest features, improvements, and changes in Microsoft Defender for Endpoint and related security products, so that you can ensure your organization benefits from new capabilities, stays protected against emerging threats, and takes advantage of enhancements as soon as they become available.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -26,7 +25,7 @@ This article describes Microsoft Defender for Endpoint features that are in prev
 
 Learn more:
 
-- [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services)
+- [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-releases.md)
 - [Preview features](/defender-xdr/preview)
 
 ## December 2025
@@ -101,18 +100,3 @@ Learn more:
 |---------|------------|-------------|
 |Monitor OT devices in the device inventory|Preview|You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery).<br><br>- Added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.<br>- Added **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some filters are only visible on specific tabs and only for customers with a Defender for IoT license. [Learn more](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views).<br>- Added ability to search Mac devices and Mac addresses.<br>- Added a system tag showing the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature, as part of the [device group](/defender-for-iot/set-up-sites#add-device-group).<br><br> **Note**: If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data and a message indicating the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view).|
 |Learning hub resources moved|GA|Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).<br><br>- Access Microsoft Defender XDR Ninja training, learning paths, training modules and more.<br>- Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject.|
-
-## What's new in Defender for Endpoint on other operating systems and services
-
-|Platform/service  |Link  |
-|------------------|------|
-|Windows           |[What's new in Defender for Endpoint on Windows](windows-whatsnew.md)|
-|macOS             |[What's new in Defender for Endpoint on macOS](mac-whatsnew.md)|
-|Linux             |[What's new in Defender for Endpoint on Linux](linux-whatsnew.md)|
-|Android           |[What's new in Defender for Endpoint on Android](android-whatsnew.md)|
-|iOS               |[What's new in Defender for Endpoint on iOS](ios-whatsnew.md)|
-|Microsoft Defender XDR |[What's new in Microsoft Defender XDR](/defender-xdr/whats-new)|
-|Microsoft Defender for Office 365 |[What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)|
-|Microsoft Defender for Identity |[What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)|
-|Microsoft Defender for Cloud Apps |[What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)|
-|Microsoft Defender Vulnerability Management |[What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)|
