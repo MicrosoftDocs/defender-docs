@@ -68,7 +68,7 @@ To summarize an incident:
 
 1. The incident summary card loads on the Copilot pane. Review the generated summary on the card. Review the summary and use the information to guide your investigation and response to the incident.
  
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot that shows the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
+   :::image type="content" source="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot that shows the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
    > [!TIP]
    > You can navigate to a file, IP, or URL page from the Copilot results pane by clicking on the evidence in the results.
@@ -77,7 +77,7 @@ To summarize an incident:
 
    Select a suggested prompt to get more insights about the specific assets involved in the incident, such as device summaries, identity summaries, and related threat intelligence. 
 
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-see-prompts.png" lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-see-prompts-large.png" alt-text="Screenshot that shows the Copilot suggested prompts on the incident summary card.":::
+   :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-defender-incident-summary-see-prompts.png" lightbox="media/security-copilot-m365d-incident-summary/copilot-defender-incident-summary-see-prompts-large.png" alt-text="Screenshot that shows the Copilot suggested prompts on the incident summary card.":::
 
 1. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
 
@@ -125,7 +125,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
 
 ## See also
 
