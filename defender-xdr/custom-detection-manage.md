@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -40,7 +40,7 @@ For users who have onboarded a Microsoft Sentinel workspace to the unified Micro
 
 To view your existing custom detection rules and analytics rules, navigate to **Hunting** > **Custom detection rules**. 
 
-:::image type="content" source="/defender/media/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="/defender/media/unified-custom-det-list.png":::
+:::image type="content" source="media/custom-detection-manage/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="media/custom-detection-manage/unified-custom-det-list.png":::
 
 You can filter for any column by going to **Add filter**, selecting the columns you want to filter for, and selecting **Add**. For each of the chosen columns, select the corresponding pill beside **Filters:**, select the columns, then **Apply**.
 
@@ -59,7 +59,7 @@ The page lists all the rules with the following run information:
 
 To view comprehensive information about a custom detection rule or an analytics rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
 
-:::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="/defender/media/custom-detect-rules-view.png":::
+:::image type="content" source="media/custom-detection-manage/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="media/custom-detection-manage/custom-detect-rules-view.png":::
 
 You can also take the following actions on the rule from this page:
 
@@ -69,6 +69,7 @@ You can also take the following actions on the rule from this page:
 - **Modify query** - allows you to edit the query in advanced hunting
 - **Turn on** / **Turn off** - allows you to enable the rule or stop it from running
 - **Delete** - allows you to turn off the rule and remove it
+- **Exclude from correlation** - allows you to exclude an analytics rule from correlation. This action is in preview and is for analytics rules only. See [Exclude analytics rules from correlation in Microsoft Defender XDR (preview)](exclude-analytics-rules-correlation.md) for more information.
 
 #### View and manage triggered alerts 
 

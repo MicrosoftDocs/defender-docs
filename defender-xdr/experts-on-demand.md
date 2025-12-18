@@ -7,8 +7,8 @@ ms.service: defender-experts-for-hunting
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.custom: 
 - cx-ti
 - cx-ean
@@ -67,19 +67,19 @@ The option to **Ask Defender Experts** is available in several places throughout
 
 - **Device page actions menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/device-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/device-page-actions-menu.png":::
+  :::image type="content" source="media/experts-on-demand/device-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal." lightbox="media/experts-on-demand/device-page-actions-menu.png":::
 
 - **Device inventory page flyout menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png":::
+  :::image type="content" source="media/experts-on-demand/device-inventory-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal." lightbox="media/experts-on-demand/device-inventory-flyout-menu.png":::
 
 - **Alerts page flyout menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/alerts-flyout-menu.png":::
+  :::image type="content" source="media/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal." lightbox="media/alerts-flyout-menu.png":::
 
 - **Incidents page actions menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png":::
+  :::image type="content" source="media/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="media/incidents-page-actions-menu.png":::
 
 ## Where to view responses from Defender Experts
 
