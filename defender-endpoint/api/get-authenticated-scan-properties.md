@@ -51,12 +51,10 @@ scannerAgent|Object|An object representing the scanner agent, contains the machi
 Property|Data type|Description
 :---|:---|:---
 |@odata.type|Enum|The scan type authentication parameters. Possible value is: `#microsoft.windowsDefenderATP.api.SnmpAuthParams` for the `Network` scan type.|
-|type|Enum|The authentication method. Possible values vary based on @odata.type property. <br/> - If @odata.type is `SnmpAuthParams`, possible values are `CommunityString`, `NoAuthNoPriv`, `AuthNoPriv`, `AuthPriv`. <br/> - If `@odata.type` is `WindowsAuthParams` possible values are `Kerberos` or `Negotiate`.|
+|type|Enum|The authentication method. Possible values vary based on @odata.type property. <br/> - If @odata.type is `SnmpAuthParams`, possible values are `CommunityString`, `NoAuthNoPriv`, `AuthNoPriv`, `AuthPriv`. |
 |KeyVaultUrl|String (Optional)|An optional property that specifies from which KeyVault the scanner should retrieve credentials. If KeyVault is specified there's no need to specify username, password.|
 |KeyVaultSecretName|String (Optional)|An optional property that specifies KeyVault secret name from which the scanner should retrieve credentials. If KeyVault is specified there's no need to specify username, password.|
-|Domain|String (Optional)|Domain name when using `WindowsAuthParams`.|
-|Username|String (Optional)|Username when using `WindowsAuthParams` or the username when choosing `SnmpAuthParams` with any type other than `CommunityString`.|
-|IsGMSAUser|Boolean (Optional)|Must be set to true when choosing `WindowsAuthParams`.|
+|Username|String (Optional)|Username when choosing `SnmpAuthParams` with any type other than `CommunityString`.|
 |CommunityString|String (Optional)|Community string to use when choosing `SnmpAuthParams` with `CommunityString`|
 |AuthProtocol|String (Optional)|Auth protocol to use with `SnmpAuthParams` and `AuthNoPriv` or `AuthPriv`. Possible values are `MD5`, `SHA1`.|
 |AuthPassword|String (Optional)|Auth password to use with `SnmpAuthParams` and `AuthNoPriv` or `AuthPriv`.|
