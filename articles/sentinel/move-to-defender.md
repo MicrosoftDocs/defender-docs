@@ -16,6 +16,9 @@ Microsoft Sentinel is available in the Microsoft Defender portal with [Microsoft
 
 This article explains how to transition your Microsoft Sentinel experience from the Azure portal to the Defender portal. If you use Microsoft Sentinel in the Azure portal, transition to Microsoft Defender for unified security operations and the latest features. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md) or watch our [YouTube playlist](https://www.youtube.com/playlist?list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj).
 
+> [!NOTE]
+> Transitioning to the Defender portal, even for non-E5 customers, has no extra cost for the customer. The customer continues to be billed as usual for their consumption on Sentinel only.
+
 ## Prerequisites
 
 Before you start, note:
@@ -66,9 +69,15 @@ For more information, see:
 
 ### Onboarding to the Defender portal with customer-managed keys (CMK)
 
-If you onboard your Microsoft Sentinel-enabled workspace to the Defender portal, ingested workspace data/logs remain encrypted with CMK. Other data isn't encrypted with CMK and uses a Microsoft-managed key.
+If you enabled CMK before onboarding, when you onboard your Microsoft Sentinel-enabled workspace to the Defender portal, all log data in your workspace continues to be encrypted with CMK - including both previously and newly ingested data.
 
-For more information, see [Set up Microsoft Sentinel customer-managed key](customer-managed-keys.md).
+Analytic rules and other Sentinel content, such as automation rules, also continue to be CMK-encrypted. However, alerts and incidents will no longer be CMK-encrypted after onboarding.
+
+For more information about CMK, see [Set up Microsoft Sentinel customer-managed key](customer-managed-keys.md).
+
+> [!IMPORTANT]
+> CMK encryption is not fully supported for data stored in the Microsoft Sentinel data lake. All data ingested into the data lake - such as custom tables or transformed data - is encrypted using Microsoft-managed keys. 
+
 
 ### Configure multi-workspace and multitenant management
 
@@ -94,9 +103,11 @@ For more information, see:
 
 When Microsoft Sentinel is integrated with Microsoft Defender, the fundamental architecture of data collection and telemetry flow remains intact. Existing connectors that were configured in Microsoft Sentinel, whether for Microsoft Defender products or other data sources, continue operating without interruption.
 
-Alerts related to Defender products are streamed directly from the Microsoft Defender XDR data connector to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](connect-microsoft-365-defender.md).
-
 From a Log Analytics perspective, Microsoft Sentinel’s integration into Microsoft Defender introduces no change to the underlying ingestion pipeline or data schema. Despite the front-end unification, the Microsoft Sentinel backend remains fully integrated with Log Analytics for data storage, search, and correlation.
+
+Alerts related to Defender products are streamed directly from the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender XDR connector.
+
+For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](connect-microsoft-365-defender.md).
 
 #### Integrate with Microsoft Defender for Cloud
 
@@ -275,7 +286,7 @@ For more information, see:
 
 Azure workbooks continue to be the primary tool for data visualization and interaction in the Defender portal, functioning as they did in the Azure portal.
 
-To use workbooks with data from Advanced hunting, make sure that you ingest logs into Microsoft Sentinel. While workbooks themselves keep you in the Defender portal, buttons or links that are programmed to open pages or resources in the Azure portal continue to open a separate tab for the Azure portal.
+To use workbooks with data from Advanced hunting, make sure that you ingest logs into Microsoft Sentinel.
 
 For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md).
 
