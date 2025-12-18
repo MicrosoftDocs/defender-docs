@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 08/04/2025
+ms.date: 12/18/2025
 ---
 
 # Use the advanced hunting query resource report
@@ -29,6 +29,10 @@ ms.date: 08/04/2025
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
+
+The query resources report shows your organization's consumption of CPU resources for hunting based on queries that ran in the last 30 days using any of the hunting interfaces.
+
+This report is useful in identifying the most resource-intensive queries and understanding how to prevent throttling due to excessive use.
 
 ## Understand advanced hunting quotas and usage parameters
 
@@ -42,6 +46,7 @@ Refer to the following table to understand existing quotas and usage parameters.
 | Result set | 100,000 rows | Every query | Each query can return up to 100,000 records. |
 | Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it doesn't complete within 10 minutes, the service displays an error.
 | CPU resources | Based on tenant size | Every 15 minutes | The portal displays a warning whenever a query runs and the tenant consumes over 10% of allocated resources. [Queries are blocked](advanced-hunting-errors.md) if the tenant reaches 100% until after the next 15-minute cycle. |
+| Results size limit | 64 MB |  | The limit for overall size of the results data, which doesn't just refer to the number of records. Factors such as the number of columns, data types, and field lengths also contribute to the result size.  |
 
 In the unified Microsoft Defender portal, you are able to run queries over Microsoft Sentinel tables by onboarding a workspace. [Log analytics workspace limits](/azure/azure-monitor/service-limits#log-analytics-workspaces) therefore also apply. 
 
@@ -50,12 +55,8 @@ For advanced hunting in multitenant organizations, see [Quotas in advanced hunti
 > [!NOTE]
 > A separate set of quotas and parameters apply to advanced hunting queries performed through the API. [Read about advanced hunting APIs](./api-advanced-hunting.md) 
 
-## View query resources report to find inefficient queries
 
-The query resources report shows your organization's consumption of CPU resources for hunting based on queries that ran in the last 30 days using any of the hunting interfaces.
-This report is useful in identifying the most resource-intensive queries and understanding how to prevent throttling due to excessive use.
-
-### Access the query resources report
+## Access the query resources report
 
 The report can be accessed in two ways:
 
@@ -76,7 +77,7 @@ All users can access the reports; however, only the Microsoft Entra Global Admin
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-### Query resource report contents
+## Query resource report contents
 
 By default, the report table displays queries from the last day, and is sorted by Resource usage, to help you easily identify which queries consumed the highest amount of CPU resources.
 
@@ -95,7 +96,7 @@ The query resources report contains all queries that ran, including detailed res
 
 :::image type="content" source="./media/advanced-hunting-limits/excessive-usage-sample.png" alt-text="view inefficient queries" lightbox="./media/advanced-hunting-limits/excessive-usage-sample.png":::
 
-### Find resource-heavy queries
+## Find resource-heavy queries
 
 Queries with high resource usage or a long query time can probably be optimized to prevent throttling via this interface.
 
