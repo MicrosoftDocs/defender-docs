@@ -34,12 +34,15 @@ CCF Push provide several key benefits:
     - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
 - Microsoft Azure permissions:
     - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
+
+
 ### Prerequisites
 
 - Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
 - Microsoft Entra permissions:
     - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
     - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
+    - You must have the appropriate role to retrieve tokens from the Microsoft Entra application. These tokens are required for authenticating requests to the Data Collection Endpoint (DCE), which is the endpoint where your connector ultimately pushes its data. 
 - Microsoft Azure permissions:
     - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
 
