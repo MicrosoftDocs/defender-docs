@@ -28,29 +28,14 @@ This page is updated frequently with the latest updates in Defender endpoint sec
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-### Releases for Defender for Endpoint on Android
+## December 2025
 
-#### December 2025
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.0.8412.0101 | December 15, 2025 | Performance improvement and bug fixes. |
+| 1.0.8321.0101 | December 2, 2025 | Native root detection for Microsoft Defender is now GA. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.<br/><br/>Performance improvement and bug fixes. |
 
-|Build|1.0.8412.0101|
-| -------- | -------- |
-|Release Date|December 15, 2025|
-
-**What's New**
-
-- Performance improvement and bug fixes.
-
-|Build|1.0.8321.0101|
-| -------- | -------- |
-|Release Date|December 2, 2025|
-
-**What's New**
-
-- Native root detection for Microsoft Defender is now GA. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
-
-- Performance improvement and bug fixes.
-
-#### November 2025
+## November 2025
 
 | Build| 1.0.8315.0101|
 | -------- | -------- |
@@ -76,7 +61,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - Fixed the bug where feedback sending wasn’t disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration.
 
-#### October 2025
+## October 2025
 
 | Build| 1.0.8217.0101 |
 | -------- | -------- |
@@ -87,8 +72,6 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 - We have refreshed the Defender app with a new icon.
 
   ![User's image](media/android-whatsnew/image.png)
-  
-#### October 2025
 
 | Build| 1.0.8201.0101|
 | -------- | -------- |
@@ -102,7 +85,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - Performance Improvement and bug fixes.
 
-#### September 2025
+## September 2025
 
 | Build|1.0.8102.0101|
 | -------- | -------- |
@@ -114,7 +97,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - Other accessibility bug fixes and performance improvements.
 
-#### August 2025
+## August 2025
 
 | Build|1.0.8018.0103|
 | -------- | -------- |
@@ -124,7 +107,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - Performance improvements and bug fixes
 
-#### July 2025
+## July 2025
 
 |Build|1.0.7901.0101|
 | -------- | -------- |
