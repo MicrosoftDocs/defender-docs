@@ -62,7 +62,7 @@ Data sharing with other security solutions must be turned on in the **Data shari
 
 See [Share alert severity levels with other Microsoft security solutions](/purview/insider-risk-management-settings-dlp-sync#share-alert-severity-levels-with-other-microsoft-security-solutions) for more information.
 
-:::image type="content" source="/defender-xdr/media/insider-risk-alerts/irm-toggle-settings-small.png" alt-text="Highlighting the setting in the Microsoft Purview portal required for insider risk alerts to show in Defender XDR.":::
+:::image type="content" source="media/irm-investigate-alerts-defender/irm-toggle-settings-small.png" alt-text="Highlighting the setting in the Microsoft Purview portal required for insider risk alerts to show in Defender XDR.":::
 
 ## Permissions and roles
 
@@ -107,7 +107,7 @@ More information about integrating data using the Microsoft Graph security API i
 
 Insider risk management alerts related to a user are correlated to a single incident to ensure a holistic approach to incident response. This correlation allows SOC analysts to have a unified view of all alerts about a user coming from Microsoft Purview Insider Risk Management and various Defender products. Unifying all alerts also allows SOC analysts to view the details of devices involved in the alerts.
 
-:::image type="content" source="/defender-xdr/media/insider-risk-alerts/xdr-irm-incident-small.png" alt-text="Sample of an incident with insider risk alerts from Microsoft Purview Insider Risk Management." lightbox="/defender-xdr/media/insider-risk-alerts/xdr-irm-incident.png":::
+:::image type="content" source="media/irm-investigate-alerts-defender/xdr-irm-incident-small.png" alt-text="Sample of an incident with insider risk alerts from Microsoft Purview Insider Risk Management." lightbox="media/irm-investigate-alerts-defender/xdr-irm-incident.png":::
 
 You can filter incidents by choosing Microsoft Purview Insider Risk Management under **Service source**.
 
@@ -117,7 +117,7 @@ All insider risk management alerts are also visible in the Microsoft Defender po
 
 Here's an example of an insider risk management alert in the Microsoft Defender portal:
 
-:::image type="content" source="/defender-xdr/media/insider-risk-alerts/xdr-irm-alert-small.png" alt-text="Sample of an insider risk alerts from Microsoft Purview Insider Risk Management." lightbox="/defender-xdr/media/insider-risk-alerts/xdr-irm-alert.png":::
+:::image type="content" source="media/irm-investigate-alerts-defender/xdr-irm-alert-small.png" alt-text="Sample of an insider risk alerts from Microsoft Purview Insider Risk Management." lightbox="media/irm-investigate-alerts-defender/xdr-irm-alert.png":::
 
 Microsoft Defender XDR and Microsoft Purview Insider Risk Management follow different alert status and classification frameworks. The following alert mapping is used to sync alert statuses between the two solutions:
 
@@ -172,7 +172,7 @@ Use advanced hunting to further investigate insider risk events and behaviors. R
 
 In the example below, we use the **DataSecurityEvents** table to investigate potentially suspicious user behavior. In this case, the user uploaded a file to Google Drive, which can be viewed as suspicious behavior if a company doesn't support file uploads to Google Drive.
 
-:::image type="content" source="/defender-xdr/media/insider-risk-alerts/irm-adv-hunting-small.png" alt-text="Advanced hunting page showing a query using the tables related to insider risk behaviors and events." lightbox="/defender-xdr/media/insider-risk-alerts/irm-adv-hunting.png":::
+:::image type="content" source="media/irm-investigate-alerts-defender/irm-adv-hunting-small.png" alt-text="Advanced hunting page showing a query using the tables related to insider risk behaviors and events." lightbox="media/irm-investigate-alerts-defender/irm-adv-hunting.png":::
 
 To access insider risk data in advanced hunting, users must have the following Microsoft Purview Insider Risk Management roles:
 
