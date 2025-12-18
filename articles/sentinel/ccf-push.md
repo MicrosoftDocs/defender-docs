@@ -1,53 +1,11 @@
 ---
-title: Microsoft Sentinel CCF Push Connectors - Getting Started Guide
-description: Learn how to create and deploy push-based codeless connectors for Microsoft Sentinel that sends data in real-time.
-author: edbaynash
-ms.author: edbaynash
-ms.topic: how-to
-ms.date: 11/21/2025
-#customer intent: As a security engineer or ISV partner, I want to understand how CCF Push connectors work and how to build one so I can send real-time data from my application to Microsoft Sentinel.
----
-
-# Microsoft Sentinel CCF Push Connectors - Getting Started Guide
-
-This guide helps you understand, build, and deploy push-based codeless connectors for Microsoft Sentinel using the Codeless Connector Framework (CCF) Push.
-
-## What is CCF Push?
-
-CCF Push connectors enable your applications to send security events directly to Microsoft Sentinel in real-time. Unlike traditional polling-based connectors that periodically fetch data from APIs, push connectors let you push data to Sentinel as events occur in your system.
-
-CCF Push provide several key benefits:
-
-- **Application-controlled data flow:** Your application controls when and how to send data, enabling intelligent batching strategies and optimized network usage
-- **Real-time ingestion:** Send data immediately as events happen, without waiting for polling intervals
-- **Simplified architecture:** No need to maintain API endpoints for Sentinel to poll
-- **Template-based provisioning:** Deployment creates ARM templates for DCRs, custom tables, Entra application registration, and client secrets - you receive the connection details to configure in your sending application
-- **Secure authentication:** Uses Microsoft Entra applications with OAuth 2.0 for secure data submission
-
-## How CCF push works
-
-
-### The push model vs pull model
-
-Understanding the difference between push and pull data ingestion models helps you choose the right connector type for your scenario.
-
-**CCF pull connectors - Polling-Based:**
-
-In the pull model, Microsoft Sentinel periodically polls your API to retrieve data:
-
-- Microsoft Sentinel initiates connections to your data source API on a configured schedule
-- Data arrives at regular polling intervals (for example, every 5 minutes)
-- You must maintain a publicly accessible API endpoint
-- Sentinel's polling infrastructure manages the data collection process
-
----
 title: Microsoft Sentinel CCF push connectors - Getting started guide
 description: Learn how to create and deploy push-based codeless connectors for Microsoft Sentinel that sends data in real-time.
 author: edbaynash
 ms.author: edbaynash
 ms.topic: how-to
 ms.date: 11/21/2025
-#customer intent: As a security engineer or ISV partner, I want to understand how CCF Push connectors work and how to build one so I can send real-time data from my application to Microsoft Sentinel.
+# customer intent: As a security engineer or ISV partner, I want to understand how CCF Push connectors work and how to build one so I can send real-time data from my application to Microsoft Sentinel.
 ---
 
 # Microsoft Sentinel CCF push connectors - Getting started guide
