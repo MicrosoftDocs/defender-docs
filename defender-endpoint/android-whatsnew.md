@@ -26,7 +26,9 @@ appliesto:
 <!-- Do not change the next line without approval from the Defender for Endpoint documentation team. It is required for proper RSS functionality. -->
 This page is updated frequently with the latest updates in Defender endpoint security for Android devices. To get a notification in your RSS feed whenever the page is updated, copy and paste this URL into your feed reader: `https://aka.ms/mde/android-rss`
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+For news about earlier releases, see [Archive of past updates for Microsoft Defender for Endpoint on Android](./release-notes-archive-android.md).
+
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 ## December 2025
 
