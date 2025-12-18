@@ -64,15 +64,15 @@ You can view the incidents related to Defender Experts by filtering the incident
 - To view the incidents our experts are currently investigating, use the **Incident assignment** filter, select **Assigned To Defender Experts**.
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Incident assignment** filter, choose **Assigned To customer team**.
 
-    :::image type="content" source="media/new-incidents-filter-1.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter-1.png":::
+    :::image type="content" source="media/managed-detection-and-response-xdr/new-incidents-filter-1.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/managed-detection-and-response-xdr/new-incidents-filter-1.png":::
 
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Status** filter, choose **Awaiting Customer Action**.
 
-   :::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/awaiting-customer-action-filter.png":::
+   :::image type="content" source="media/managed-detection-and-response-xdr/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/managed-detection-and-response-xdr/awaiting-customer-action-filter.png":::
 
 - To view the incidents our experts have completed their investigation on (and either directly resolved or assigned to your team for pending remediation actions), using the **Tags** filter, choose **Defender Experts**.
 
-   :::image type="content" source="media/defender-experts-tag.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show the Defender Experts tag." lightbox="media/defender-experts-tag.png":::
+   :::image type="content" source="media/managed-detection-and-response-xdr/defender-experts-tag.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show the Defender Experts tag." lightbox="media/managed-detection-and-response-xdr/defender-experts-tag.png":::
 
 <a name='how-to-use-managed-response-in-microsoft-365-defender'></a>
 
