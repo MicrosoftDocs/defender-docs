@@ -66,13 +66,11 @@ Custom data collection is included with Microsoft Defender for Endpoint P2 licen
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Data Collection**.
 
-    :::image type="content" source="media/custom-data-collection/custom-data-collection-main-view.png" alt-text="Screenshot of the main Custom Data Collection page." lightbox="media/custom-data-collection/custom-data-collection-main-view.png":::
-
 1. To onboard your Microsoft Sentinel workspace, on the top right, select the Microsoft Sentinel workspace name.
 
     :::image type="content" source="media/create-custom-data-collection-rules/select-workspace.png" alt-text="Screenshot of selecting a Microsoft Sentinel workspace." lightbox="media/create-custom-data-collection-rules/select-workspace.png":::
 
-1. In the **Workspace scope** page, select your workspace and select **Apply**.
+1. In the **Workspace scope** page, select your workspace.
 
     :::image type="content" source="media/create-custom-data-collection-rules/select-workspace-scope.png" alt-text="Screenshot of selecting a Microsoft Sentinel workspace scope.":::
 

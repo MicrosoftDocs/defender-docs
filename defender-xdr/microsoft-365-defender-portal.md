@@ -68,7 +68,7 @@ Microsoft Defender XDR [correlates alerts and events](alerts-incidents-correlati
 
 Selecting an incident name displays a page that demonstrates the value of centralizing security information as you get better insights into the full extend of a threat, from email, to identity, to endpoints.
 
-:::image type="content" source="/defender/media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="media/microsoft-365-defender-portal/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="media/microsoft-365-defender-portal/incidents-ss-incident-summary.png":::
 
 Take the time to review the incidents in your environment, drill down into each alert, and practice building an understanding of how to access the information and determine next steps in your analysis.
 
@@ -163,7 +163,7 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 
 |Training:|Mitigate threats using Microsoft Defender XDR|
 |---|---|
-|![Microsoft Defender XDR training icon.](/defender/media/microsoft-365-defender/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
+|![Microsoft Defender XDR training icon.](media/microsoft-365-defender-portal/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
 
 > [!div class="nextstepaction"]
 > [Start >](/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)
