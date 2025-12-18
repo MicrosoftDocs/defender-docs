@@ -82,9 +82,6 @@ Updates contain:
 - Engine: **1.1.25110.1**
 - Support phase: **Security and Critical Updates**
 
-> [!NOTE]
-> The delayed ring for the platform release is postponed to January 5.
-
 #### What's new
 
 - Performance improvements when querying WMI due to Behavior Monitor detections.
