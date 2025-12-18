@@ -53,7 +53,15 @@
           href: connect-azure-subscription.md
         - name: Connect AWS accounts
           displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-          href: quickstart-onboard-aws.md
+          items:
+            - name: Connect your AWS account
+              href: quickstart-onboard-aws.md
+            - name: Authentication architecture for AWS connectors
+              href: concept-authentication-architecture-aws.md
+            - name: Monitor connected AWS resources
+              href: monitor-connected-aws-resources.md
+            - name: Integrate AWS CloudTrail logs (Preview)
+              href: integrate-cloud-trail.md
         - name: Connect GCP projects
           displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
           href: quickstart-onboard-gcp.md
