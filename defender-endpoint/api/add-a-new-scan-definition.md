@@ -73,7 +73,7 @@ In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|`scanType`|Enum|The type of scan. Possible values are: "Windows", "Network".  **Required**.|
+|`scanType`|Enum|The type of scan. Possible value is: "Network".  **Required**.|
 |`scanName`|String|Name of the scan.  **Required**.|
 |`isActive`|Boolean|Status of whether the scan actively running.  **Required**.|
 |`target`|String| A comma separated list of targets to scan, either IP addresses or hostnames. **Required**.|
