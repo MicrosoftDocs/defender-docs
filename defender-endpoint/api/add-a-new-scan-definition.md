@@ -73,7 +73,7 @@ In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|`scanType`|Enum|The type of scan. Possible values are: "Windows", "Network".  **Required**.|
+|`scanType`|Enum|The type of scan. Possible value is: "Network".  **Required**.|
 |`scanName`|String|Name of the scan.  **Required**.|
 |`isActive`|Boolean|Status of whether the scan actively running.  **Required**.|
 |`target`|String| A comma separated list of targets to scan, either IP addresses or hostnames. **Required**.|
@@ -96,21 +96,24 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
 
 ```json
  {
-"scanType": "Windows", 
-"scanName": "Test Windows scan", 
-"isActive": true, 
-"target": "127.0.0.1", 
-"intervalInHours": 1, 
+"scanType": "Network",
+"scanName": "Test Network scan",
+"isActive": true,
+"target": "127.0.0.1",
+"intervalInHours": 1,
 "targetType": "Ip",
 "scannerAgent": {
-    "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77",
+    "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77"
 },
-"scanAuthenticationParams": { 
-    "@odata.type": "#microsoft.windowsDefenderATP.api.WindowsAuthParams", 
-    "type": "Kerberos", 
-    "username": "username", 
-    "domain": "password",
-    "isGmsaUser": true
+"scanAuthenticationParams": {
+    "@odata.type": "#microsoft.windowsDefenderATP.api.SnmpAuthParams",
+    "type": "AuthPriv",
+    "username": "username",
+    "authProtocol": "authProtocol",
+    "authPassword": "authPassword",
+    "privProtocol": "privProtocol",
+    "privPassword": "privPassword",
+    "communityString": "community-string"
     }
 }
 ```
@@ -121,33 +124,33 @@ Here's an example of the response.
 
 ```json
  {
-"@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity",
-    "id": "289224fb-1686-472c-9751-5555960854ca",
-    "scanType": "Windows",
-    "scanName": "Test Windows scan",
-    "isActive": true,
-    "target": "127.0.0.1",
-    "orgId": "0335a792-18d2-424b-aeed-559567054570",
-    "intervalInHours": 1,
-    "createdBy": "username@test.com",
-    "targetType": "Ip",
-    "scanAuthenticationParams": null,
-    "scannerAgent": {
-        "id": "0335a792-18d2-424b-aeed-559567054570_ eb663a27ae9d032f61bc268a79eedf14c4b90f77",
-        "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77",
-        "machineName": "DESKTOP-TEST",
-        "lastSeen": "2023-01-04T09:40:03.2787058Z",
-        "assignedApplicationId": "ae4a5cde-b4a1-4b76-8635-458b2cf15752",
-        "scannerSoftwareVersion": "7.6.0.0",
-        "lastCommandExecutionTimestamp": "2023-01-04T09:33:16Z",
-        "mdeClientVersion": "10.8295.22621.1010"
-    },
-    "latestScan": {
-        "status": null,
-        "failureReason": null,
-        "executionDateTime": null
-    }
-
+  "@odata.context": "https://api-df.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity",
+  "id": "d14cefe1-0301-488c-ad17-a86c428c3727",
+  "scanType": "Network",
+  "scanName": "Test Network scan",
+  "isActive": true,
+  "target": "127.0.0.1",
+  "orgId": "0335a792-18d2-424b-aeed-559567054570",
+  "intervalInHours": 1,
+  "createdBy": "username@test.com",
+  "targetType": "Ip",
+  "scanAuthenticationParams": null,
+  "scannerAgent": {
+    "id": "0335a792-18d2-424b-aeed-559567054570_ eb663a27ae9d032f61bc268a79eedf14c4b90f77",
+    "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77",
+    "machineName": "DESKTOP-TEST",
+    "lastSeen": "2025-12-18T14:04:34.2258259Z",
+    "assignedApplicationId": "f23c76e1-a6b5-4f77-9468-3a57916c910e",
+    "scannerSoftwareVersion": "9.3.15.19",
+    "lastCommandExecutionTimestamp": "2025-12-18T13:29:48Z",
+    "mdeClientVersion": null
+  },
+  "latestScan": {
+    "status": null,
+    "failureReason": null,
+    "executionDateTime": null
+  },
+  "advancedActiveConfiguration": null
 }
 ```
 
@@ -161,20 +164,26 @@ PATCH  https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefin
 
 ```json
 {
-"scanName": "Test Update Windows scan", 
-"isActive": false, 
-"target": "127.0.0.2,127.0.0.3", 
-"intervalInHours": 1, 
+"scanType": "Network",
+"scanName": "Test Network scan",
+"isActive": true,
+"target": "127.0.0.1,127.0.0.2",
+"intervalInHours": 1,
 "targetType": "Ip",
-"scanAuthenticationParams": { 
-    "@odata.type": "#microsoft.windowsDefenderATP.api.WindowsAuthParams", 
-    "type": "Kerberos", 
-    "username": "username", 
-    "domain": "password",
-    "isGmsaUser": true
+"scannerAgent": {
+    "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77"
+},
+"scanAuthenticationParams": {
+    "@odata.type": "#microsoft.windowsDefenderATP.api.SnmpAuthParams",
+    "type": "AuthPriv",
+    "username": "username",
+    "authProtocol": "authProtocol",
+    "authPassword": "authPassword",
+    "privProtocol": "privProtocol",
+    "privPassword": "privPassword",
+    "communityString": "community-string"
     }
- }
-
+}
 ```
 
 ## Response example
@@ -183,32 +192,33 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://localhost:1059/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity",
-    "id": "289224fb-1686-472c-9751-5555960854ca",
-    "scanType": "Windows",
-    "scanName": "Test Update Windows scan",
-    "isActive": false,
-    "target": "127.0.0.2,127.0.0.3",
-    "orgId": "0335a792-18d2-424b-aeed-559567054570",
-    "intervalInHours": 1,
-    "createdBy": "userName@microsoft.com",
-    "targetType": "Ip",
-    "scanAuthenticationParams": null,
-    "scannerAgent": {
-        "id": "0335a792-18d2-424b-aeed-559567054570_eb663a27ae9d032f61bc268a79eedf14c4b90f77",
-        "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77",
-        "machineName": "DESKTOP-TEST",
-        "lastSeen": "2023-01-04T09:40:03.2787058Z",
-        "assignedApplicationId": "ae4a5cde-b4a1-4b76-8635-458b2cf15752",
-        "scannerSoftwareVersion": "7.6.0.0",
-        "lastCommandExecutionTimestamp": "2023-01-04T09:33:16Z",
-        "mdeClientVersion": "10.8295.22621.1010"
-    },
-    "latestScan": {
-        "status": null,
-        "failureReason": null,
-        "executionDateTime": null
-    }
+  "@odata.context": "https://api-df.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity%22",
+  "id": "d14cefe1-0301-488c-ad17-a86c428c3727",
+  "scanType": "Network",
+  "scanName": "Test Network scan",
+  "isActive": true,
+  "target": "127.0.0.1,127.0.0.2",
+  "orgId": "0335a792-18d2-424b-aeed-559567054570",
+  "intervalInHours": 1,
+  "createdBy": "username@test.com",
+  "targetType": "Ip",
+  "scanAuthenticationParams": null,
+  "scannerAgent": {
+    "id": "0335a792-18d2-424b-aeed-559567054570_ eb663a27ae9d032f61bc268a79eedf14c4b90f77",
+    "machineId": "eb663a27ae9d032f61bc268a79eedf14c4b90f77",
+    "machineName": "DESKTOP-TEST",
+    "lastSeen": "2025-12-18T14:34:39.3296383Z",
+    "assignedApplicationId": "f23c76e1-a6b5-4f77-9468-3a57916c910e",
+    "scannerSoftwareVersion": "9.3.15.19",
+    "lastCommandExecutionTimestamp": "2025-12-18T14:33:48Z",
+    "mdeClientVersion": null
+  },
+  "latestScan": {
+    "status": "Fail",
+    "failureReason": null,
+    "executionDateTime": "2025-12-18T14:33:49.413596Z"
+  },
+  "advancedActiveConfiguration": null
 }
 
 ```
