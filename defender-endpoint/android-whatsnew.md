@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/17/2025
+ms.date: 11/25/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
@@ -29,26 +29,6 @@ This page is updated frequently with the latest updates in Defender endpoint sec
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ### Releases for Defender for Endpoint on Android
-
-#### December 2025
-
-|Build|1.0.8412.0101|
-| -------- | -------- |
-|Release Date|December 15, 2025|
-
-**What's New**
-
-- Performance improvement and bug fixes.
-
-|Build|1.0.8321.0101|
-| -------- | -------- |
-|Release Date|December 2, 2025|
-
-**What's New**
-
-- Native root detection for Microsoft Defender is now GA. See the [Blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576) for more details.
-
-- Performance improvement and bug fixes.
 
 #### November 2025
 
@@ -88,7 +68,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
   ![User's image](media/android-whatsnew/image.png)
   
-#### October 2025
+- #### October 2025
 
 | Build| 1.0.8201.0101|
 | -------- | -------- |

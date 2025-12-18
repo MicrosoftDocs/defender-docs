@@ -72,8 +72,6 @@ No, custom data collection rules live side-by-side with the Defender for Endpoin
 
 Yes, you need a connected Microsoft Sentinel workspace to create custom data collection rules. For more information, see the [prerequisites](create-custom-data-collection-rules.md#prerequisites).
 
-You also need to select the Microsoft Sentinel workspace when creating a custom data collection rule. For more information, see [Create rules](create-custom-data-collection-rules.md#create-rules).
-
 ### How can I know if a rule has reached the endpoint?
 
 You can query for events collected by the relevant rule, for the specific endpoint. For example, the following query returns all effective rules on the endpoint (now and in the past), counting the rules' collected events.

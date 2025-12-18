@@ -68,25 +68,13 @@ This feature enables organizations to configure offline updates for security int
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
-### Dec-2025 (Build: 101.25102.0019  | Release version: 20.125102.19.0)
-
-| Build:             | **101.25102.0019** |
-|--------------------|--------------------|
-| Release version:   | **20.125102.19.0** |
-| Engine version:    | **1.1.25090.2000** |
-| Signature version: | **1.435.600.0**    |
-
-##### What's new
-
-- [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that may be impacted by this vulnerability.  Please refer to the [blog post](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) for details.
-
 ### Nov-2025 (Build: 101.25102.0016 | Release version: 20.125102.16.0)
 
-| Build:             | **101.25102.0016** |
-|--------------------|--------------------|
-| Release version:   | **20.125102.16.0** |
-| Engine version:    | **1.1.25090.2000** |
-| Signature version: | **1.435.600.0**    |
+| Build: | **101.25102.0016** |
+|--------------------|-----------------------|
+| Release version: | **20.125102.16.0** |
+| Engine version: | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0** |
 
 ##### What's new
 
@@ -95,11 +83,11 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### Oct-2025 (Build: 101.25082.0006  | Release version: 20.125082.6.0)
 
-| Build:             | **101.25082.0006** |
-|--------------------|--------------------|
-| Release version:   | **20.125082.6.0**  |
-| Engine version:    | **1.1.25070.3000** |
-| Signature version: | **1.437.276.0**    |
+| Build:             | **101.25082.0006**         |
+|--------------------|-----------------------|
+| Release version:   | **20.125082.6.0** |
+| Engine version:    | **1.1.25070.3000**       |
+| Signature version: | **1.437.276.0**      |
 
 ##### What's new
 
@@ -107,11 +95,11 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### Sep-2025 (Build: 101.25072.0011  | Release version: 20.125072.11.0)
 
-| Build:             | **101.25072.0011**    |
+| Build:             | **101.25072.0011**         |
 |--------------------|-----------------------|
-| Release version:   | **20.125072.11.0**    |
-| Engine version:    | **1.1.25070.3000**    |
-| Signature version: | **1.429.309.0**       |
+| Release version:   | **20.125072.11.0** |
+| Engine version:    | **1.1.25070.3000**       |
+| Signature version: | **1.429.309.0**      |
 
 ##### What's new
 

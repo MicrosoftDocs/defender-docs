@@ -19,7 +19,7 @@ ms.collection:
 description: Learn more about the secure by default configuration in all organizations with cloud mailboxes.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -41,7 +41,7 @@ All organizations with cloud mailboxes automatically receive email protection. T
 - Email with suspected malware is automatically quarantined. The quarantine policy used by the anti-malware policy controls whether recipients are notified. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
 - Email identified as high confidence phishing is handled according to the anti-spam policy action. See [Configure anti-spam policies](anti-spam-policies-configure.md).
 
-For more information, see [Built-in security features for all cloud mailboxes](eop-about.md).
+For more information, see [Default email protections for cloud mailboxes](eop-about.md).
 
 Because Microsoft wants to keep our customers secure by default, some organization overrides aren't applied for malware or high confidence phishing. These overrides include:
 

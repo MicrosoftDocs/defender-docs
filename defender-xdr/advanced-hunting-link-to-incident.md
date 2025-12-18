@@ -42,11 +42,11 @@ To link query results to an incident, you need the same permissions required for
 
 1. In the advanced hunting query page, first enter your query in the query field provided then select **Run query** to get your results.
 
-    :::image type="content" source="media/advanced-hunting-link-to-incident/link-to-incident-1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal." lightbox="media/advanced-hunting-link-to-incident/link-to-incident-1.png":::
+    :::image type="content" source="/defender/media/link-to-incident-1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal." lightbox="/defender/media/link-to-incident-1.png":::
 
 2. In the Results page, select the events or records that are related to a new or current investigation you're working on, then select **Link to incident**.
 
-    :::image type="content" source="media/advanced-hunting-link-to-incident/link-to-incident-1b.png" alt-text="Screenshot of the link to incident feature in advanced hunting in the Microsoft Defender portal." lightbox="media/advanced-hunting-link-to-incident/link-to-incident-1b.png":::
+    :::image type="content" source="/defender/media/link-to-incident-1b.png" alt-text="Screenshot of the link to incident feature in advanced hunting in the Microsoft Defender portal." lightbox="/defender/media/link-to-incident-1b.png":::
 
 3. Find the **Alert details** section in the Link to incident pane, then select **Create new incident** to convert the events to alerts and group them to a new incident:
  

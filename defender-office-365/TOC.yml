@@ -6,7 +6,7 @@
      items:
        - name: Microsoft Defender for Office 365 overview
          href: mdo-about.md
-       - name: Overview of the built-in security features for all cloud mailboxes
+       - name: Overview of default email protections for cloud mailboxes
          href: eop-about.md
        - name: What's new in Defender for Office 365
          href: defender-for-office-365-whats-new.md

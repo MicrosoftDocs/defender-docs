@@ -18,7 +18,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 04/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
 ---
 
 # Configure anti-phishing policies for all cloud mailboxes

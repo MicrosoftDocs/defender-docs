@@ -174,7 +174,7 @@ Select the three dots to the right of any column in the **Inspect record** panel
 - Exclude the selected value from the query (`!=`)
 - Get more advanced operators for adding the value to your query, such as `contains`, `starts with`, and `ends with`
 
-:::image type="content" source="media/advanced-hunting-query-results/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="media/advanced-hunting-query-results/work-with-query-tweak-query.png":::
+:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="/defender/media/work-with-query-tweak-query.png":::
 
 ## Add items to Favorites
 
@@ -251,7 +251,7 @@ You can change the chart type of the timeline by selecting a different option fr
 - Column chart
 - Pie chart
 
-:::image type="content" source="media/advanced-hunting-query-results/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="media/advanced-hunting-query-results/advanced-hunting-column-chart.png":::
+:::image type="content" source="/defender/media/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="/defender/media/advanced-hunting-column-chart.png":::
 
 ### Rendering conditions
 
