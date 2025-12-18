@@ -126,7 +126,7 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
 
-Review the default plan selections, as some plans may be enabled automatically depending on your configuration. For example, the Databases plan extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
+  Review the default plan selections, as some plans may be enabled automatically depending on your configuration. For example, the Databases plan extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
