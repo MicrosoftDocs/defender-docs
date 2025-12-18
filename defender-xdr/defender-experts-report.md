@@ -80,7 +80,7 @@ Selecting one of the threat titles opens a side panel with its [hunting summary]
 
 The **Hunts by threat category** section displays hunting activity tiles that are sorted according to their threat categories. This sorting helps you visualize what an activity is trying to achieve in each attack phase so you can plan the corresponding containment and remediation actions.
 
-:::image type="content" source="/defender/media/defender-experts/threat-categories-filter.png" alt-text="Screenshot of the Hunts by threat category section of the Defender Experts for Hunting report showing the dropdown menu." lightbox="/defender/media/defender-experts/threat-categories-filter.png":::
+:::image type="content" source="media/defender-experts-report/threat-categories-filter.png" alt-text="Screenshot of the Hunts by threat category section of the Defender Experts for Hunting report showing the dropdown menu." lightbox="media/defender-experts-report/threat-categories-filter.png":::
 
 You can filter the activities displayed in the table by choosing any of the following options in the dropdown menu:
 
@@ -104,7 +104,7 @@ When you select one of the threat titles in the **Emerging threats** section or 
 
 The **Top trending suspicious activities** section of the report identifies up to 20 suspicious activities that Defender Experts consistently observed in your environment in the last three months, sorted based on their severity rating and frequency of occurrence:
 
-:::image type="content" source="/defender/media/defender-experts/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="/defender/media/defender-experts/top-trending-suspicious-activities.png":::
+:::image type="content" source="media/defender-experts-report/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="media/defender-experts-report/top-trending-suspicious-activities.png":::
 
 By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment.
 
