@@ -41,7 +41,7 @@ Security Private Link uses Azure Private Endpoints to establish private connecti
 
 ### How it works
 
-- You create a private endpoint in your VNet and assign it an IP address from your local range.
+- You create a private endpoint in your virtual network and assign it an IP address from the virtual network address space.
 
 - All traffic between your workloads and Defender services flows through the Microsoft backbone network, never traversing the public internet.
 
