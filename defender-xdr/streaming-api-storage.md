@@ -76,7 +76,7 @@ Once the storage account is created, you need to define the user who is signing 
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="/defender-endpoint/media/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="/defender-endpoint/media/storage-account-event-schema.png":::
+  :::image type="content" source="media/streaming-api-storage/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="media/streaming-api-storage/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 
