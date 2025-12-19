@@ -39,7 +39,7 @@ You can find user entity information in the following views:
 
 Wherever user entities appear in these views, select the entity to view the **User** page, which displays more details about the user. For example, you can see the details of user accounts identified in the alerts of an incident in the Microsoft Defender portal at **Incidents & alerts > Incidents > *incident* > Assets > Users**.
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-assets.png" alt-text="Screenshot of the Users page for an incident in the Microsoft Defender portal.":::
+:::image type="content" source="media/investigate-users/user-incident-assets.png" alt-text="Screenshot of the Users page for an incident in the Microsoft Defender portal.":::
 
 When you investigate a specific user entity, you see the following tabs on its entity page:
 
@@ -123,7 +123,7 @@ When an incident or alert is selected, a fly-out appears. You can manage the inc
 
 To see a full page view of an incident or alert, select its title.
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-alertstab.png" alt-text="Screenshot of the user account's related alerts seen in the Alerts tab in the Microsoft Defender portal." lightbox="/defender/media/investigate-users/user-incident-alertstab.png":::
+:::image type="content" source="media/investigate-users/user-incident-alertstab.png" alt-text="Screenshot of the user account's related alerts seen in the Alerts tab in the Microsoft Defender portal." lightbox="media/investigate-users/user-incident-alertstab.png":::
 
 ## Observed in organization
 
@@ -161,7 +161,7 @@ The map provides a list of other devices or users an attacker can take advantage
 
 The lateral movement path report, which can be viewed by date, is always available to provide information about the potential lateral movement paths discovered and can be customized by time. Select a different date using **View a different date** to view previous lateral movement paths found for an entity. The graph only displays if a potential lateral movement path has been found for an entity in the past two days.
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-observed.png" alt-text="Screenshot of the Observed in organization view showing device, group, location, and lateral movement paths for a user in the Microsoft Defender portal" lightbox="/defender/media/investigate-users/user-incident-observed.png":::
+:::image type="content" source="media/investigate-users/user-incident-observed.png" alt-text="Screenshot of the Observed in organization view showing device, group, location, and lateral movement paths for a user in the Microsoft Defender portal" lightbox="media/investigate-users/user-incident-observed.png":::
 
 ## Timeline
 
@@ -173,7 +173,7 @@ In the unified SOC platform, you can see Microsoft Sentinel alerts from other da
 - **Custom time range picker:** You can choose a timeframe to focus your investigation on the last 24 hours, the last 3 days and so on. Or you can choose a specific timeframe by clicking on **Custom range**. Filtered data older than 30 days is displayed in seven-day intervals.  
 For example:
 
-    :::image type="content" source="/defender/media/image.png" alt-text="Screenshot that shows how to choose time frame." lightbox="/defender/media/image.png":::
+    :::image type="content" source="media/investigate-users/image.png" alt-text="Screenshot that shows how to choose time frame." lightbox="media/investigate-users/image.png":::
 
 - **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that's relevant for the specific user.
 
@@ -181,7 +181,7 @@ For example:
 
 - **Customized columns:** You can choose which columns to expose in the timeline by selecting the **Customize columns** button. For example:
 
-  :::image type="content" source="/defender/media/image2.png" alt-text="Screenshot that shows the user's image." lightbox="/defender/media/image2.png":::
+  :::image type="content" source="media/investigate-users/image2.png" alt-text="Screenshot that shows the user's image." lightbox="media/investigate-users/image2.png":::
 
 ### What data types are available?
 
@@ -210,7 +210,7 @@ The following information is displayed in the timeline:
 
 For example:
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-timeline.png" alt-text="Screenshot of the Timeline tab." lightbox="/defender/media/investigate-users/user-incident-timeline.png":::
+:::image type="content" source="media/investigate-users/user-incident-timeline.png" alt-text="Screenshot of the Timeline tab." lightbox="media/investigate-users/user-incident-timeline.png":::
 
 > [!NOTE]
 > Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
@@ -270,11 +270,11 @@ The insights are based on the following data sources:
 - Heartbeat (Azure Monitor Agent)
 - CommonSecurityLog (Microsoft Sentinel)
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of Microsoft Sentinel events tab in user entity page.":::
+:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of Microsoft Sentinel events tab in user entity page.":::
 
 If you want to further explore any of the insights in this panel, select the link accompanying the insight. The link takes you to the **Advanced hunting** page, where it displays the query underlying the insight, along with its raw results. You can modify the query or drill down into the results to expand your investigation or just satisfy your curiosity.
 
-:::image type="content" source="/defender/media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query.":::
+:::image type="content" source="media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query.":::
 
 ## Remediation actions
 
