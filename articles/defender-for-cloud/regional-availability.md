@@ -35,7 +35,7 @@ Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, 
 **Unsupported regions:**  
 Austria East, Belgium Central, Chile Central, China East 2, China North, China North 2, China North 3, EU SSLV, India West, Indonesia Central, Israel North West, Jio India Central, Jio India West, Malaysia South, Mexico Central, Qatar, South East US 3, South US 2, Sweden South, Taiwan North, Taiwan North West, UAE Central, US DoD Central, US DoD East
 
-****** Supported via API only.*
+****** Supported via API management only.*
 
 ### Defender for Storage (Malware Scanning)
 
@@ -45,7 +45,7 @@ Asia East, Asia Northeast, Australia Central 2, Australia East, Australia Southe
 **Unsupported regions:**  
 Asia Southeast, Austria East, Belgium Central, Central US (EU Access Program), Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, India West, Indonesia Central, Israel North West, Jio India Central, Jio India West, Malaysia South, Mexico Central, Qatar, South East US 3, South US 2,  Sweden South, Taiwan North, Taiwan North West, UAE Central, US DoD Central, US DoD East
 
-****** Supported via API only.*
+****** Supported via API management only.*
 
 ### Defender for APIs
 
