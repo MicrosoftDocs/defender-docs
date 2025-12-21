@@ -123,7 +123,7 @@ To access and manage roles and permissions, without being a Global Administrator
 
     For example:
 
-    :::image type="content" source="/defender/media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="/defender/media/defender/m365-defender-rbac-authorization-role.png":::
+    :::image type="content" source="media/create-custom-rbac-roles/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="media/create-custom-rbac-roles/m365-defender-rbac-authorization-role.png":::
 
 1. Select **Apply** and then **Next** to assign users and data sources.
 
