@@ -1,6 +1,6 @@
 ---
-title: Private endpoints with Microsoft Defender
-description: Learn about using private endpoints with Microsoft Defender for Cloud to ensure secure and private connectivity in your virtual network.
+title: Configure private endpoints with Microsoft Security Private Link
+description: Configure private endpoints with Microsoft Security Private Link to securely connect your virtual network to Microsoft Defender services.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -35,7 +35,7 @@ Before you begin, make sure that:
 
 1. Select **Create private endpoint**.
 
-   :::image type="content" source="media/networking-private-endpoints/private-link-center.png" alt-text="Screenshot of the Private Link Center with Create private endpoint highlighted.":::
+   :::image type="content" source="media/concept-private-endpoints/private-link-center.png" alt-text="Screenshot of the Private Link Center with Create private endpoint highlighted.":::
 
 1. In the **Basics** tab, provide the following information:
 
@@ -113,7 +113,7 @@ PRIVATE_ENDPOINT_NAME=<private-endpoint-name>
 
 ### Disable network policies in subnet
 
-[Disable network policies](../../private-link/disable-private-endpoint-network-policy.md) such as network security groups in the subnet for the private endpoint. Update your subnet configuration with [az network vnet subnet update](/cli/azure/network/vnet/subnet#az-network-vnet-subnet-update):
+[Disable network policies](private-link/disable-private-endpoint-network-policy) such as network security groups in the subnet for the private endpoint. Update your subnet configuration with [az network vnet subnet update](/cli/azure/network/vnet/subnet#az-network-vnet-subnet-update):
 
 ```azurecli
 az network vnet subnet update \
@@ -125,7 +125,7 @@ az network vnet subnet update \
 
 ### Configure the private DNS zone
 
-Create a [private Azure DNS zone](../../dns/private-dns-privatednszone.md) for the private Microsoft Defender service endpoints.
+Create a [private Azure DNS zone](/dns/private-dns-privatednszone) for the private Microsoft Defender service endpoints.
 
 ```azurecli
 az network private-dns zone create \
@@ -289,7 +289,7 @@ Verify that Defender agents and add-ons running on your workloads can successful
 
    Look for successful connection messages and absence of public endpoint connection attempts.
 
-2. **For VMs**: Check that the Microsoft Defender for Endpoint agent is connected:
+1. **For VMs**: Check that the Microsoft Defender for Endpoint agent is connected:
 
    ```bash
    # On Linux
@@ -299,7 +299,7 @@ Verify that Defender agents and add-ons running on your workloads can successful
    Get-MpComputerStatus
    ```
 
-3. **Verify in Azure portal**: Navigate to Microsoft Defender for Cloud and confirm that your workloads are reporting security data and recommendations.
+1. **Verify in Azure portal**: Navigate to Microsoft Defender for Cloud and confirm that your workloads are reporting security data and recommendations.
 
 ## Related content
 
