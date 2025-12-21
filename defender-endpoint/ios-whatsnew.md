@@ -87,7 +87,7 @@ We are pleased to introduce the **Device Protection** feature card for our enter
 
 For more information, see [User Experience in Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-new-ux).
 
-## February
+## February 2025
 
 ### Microsoft Defender for Endpoint: Open Wi-Fi Detection Update
 
