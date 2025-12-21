@@ -242,13 +242,11 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 
 **Description**
 
-
 Accounts with the DCSync permission can initiate domain replication. Attackers can potentially exploit domain replication to gain unauthorized access, manipulate domain data, or compromise the integrity and availability of your Active Directory environment.
 
 It's crucial to carefully manage and restrict the membership of this group to ensure the security and integrity of your domain replication process.
 
 **Implementation**
-
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
@@ -260,6 +258,29 @@ It's crucial to carefully manage and restrict the membership of this group to en
 1. Take appropriate action on those entities by removing their privileged access rights.
 
 To achieve the maximum score, remediate all exposed entities.
+
+**Remove DCSync permissions in Active Directory Users and **Computers**
+
+You can access Active Directory Users and Computers by signing in to your domain controller.
+To remove DCSync permissions from a non-admin account:
+
+1. Open Active Directory Users and Computers.
+
+1. Turn on Advanced Features.
+This is required to display the Security tab on domain objects.
+
+1. Open Domain properties, select your domain name (for example, contoso.local), and then select Properties.
+
+1. Select the Security tab.
+
+1. Select the target user or group and then select the non-admin user or service account that shouldn't have these permissions.
+
+1. Uncheck replication permissions. Scroll through the "Permissions for [User]" list uncheck the following permissions if they are selected:
+
+- Replicating Directory Changes
+- Replicating Directory Changes All
+
+1. Select Apply, and then select OK.
 
 
 ## Ensure privileged accounts are not delegated
