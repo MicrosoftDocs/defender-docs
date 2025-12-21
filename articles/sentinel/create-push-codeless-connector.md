@@ -17,32 +17,21 @@ This guide helps you understand, build, and deploy push-based codeless connector
 
 CCF Push connectors enable your applications to send security events directly to Microsoft Sentinel in real-time. Unlike traditional polling-based connectors that periodically fetch data from APIs, push connectors let you push data to Sentinel as events occur in your system.
 
-CCF Push provide several key benefits:
+CCF Push provides several key benefits:
 
-- **Application-controlled data flow:** Your application controls when and how to send data, enabling intelligent batching strategies and optimized network usage
-- **Real-time ingestion:** Send data immediately as events happen, without waiting for polling intervals
-- **Simplified architecture:** No need to maintain API endpoints for Sentinel to poll
-- **Template-based provisioning:** Deployment creates ARM templates for DCRs, custom tables, Entra application registration, and client secrets - you receive the connection details to configure in your sending application
-- **Secure authentication:** Uses Microsoft Entra applications with OAuth 2.0 for secure data submission
-
-
-## Prerequisites
-
-- Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
-- Microsoft Entra permissions:
-    - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
-    - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
-- Microsoft Azure permissions:
-    - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
-
+- **Application-controlled data flow:** Your application controls when and how to send data, enabling intelligent batching strategies and optimized network usage.
+- **Real-time ingestion:** Send data immediately as events happen, without waiting for polling intervals.
+- **Simplified architecture:** No need to maintain API endpoints for Sentinel to poll.
+- **Template-based provisioning:** Deployment creates ARM templates for DCRs, custom tables, Entra application registration, and client secrets - you receive the connection details to configure in your sending application.
+- **Secure authentication:** Uses Microsoft Entra applications with OAuth 2.0 for secure data submission.
 
 ### Prerequisites
 
 - Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
 - Microsoft Entra permissions:
     - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
-    - Permission to create an application with secrets. Note: The connector fails if Entra applications can't be created with secrets due to security reasons.
-    - You must have the appropriate role to retrieve tokens from the Microsoft Entra application. These tokens are required for authenticating requests to the Data Collection Endpoint (DCE), which is the endpoint where your connector ultimately pushes its data. 
+    - Permission to create an application with secrets. If you don't grant this permission, the connector fails due to security reasons.
+    - The publisher must have the appropriate role to retrieve tokens from the Microsoft Entra application. These tokens are required for authenticating requests to the Data Collection Endpoint (DCE), which is the endpoint where the connector ultimately pushes its data. If the provider can't retrieve tokens, data can't be sent to the DCE.
 - Microsoft Azure permissions:
     - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
 
@@ -58,25 +47,25 @@ Understanding the difference between push and pull data ingestion models helps y
 
 In the pull model, Microsoft Sentinel periodically polls your API to retrieve data:
 
-- Microsoft Sentinel initiates connections to your data source API on a configured schedule
-- Data arrives at regular polling intervals (for example, every 5 minutes)
-- You must maintain a publicly accessible API endpoint
-- Sentinel's polling infrastructure manages the data collection process
+- Microsoft Sentinel initiates connections to your data source API on a configured schedule.
+- Data arrives at regular polling intervals, such as every five minutes.
+- You must maintain a publicly accessible API endpoint.
+- Sentinel's polling infrastructure manages the data collection process.
 
 **CCF push connectors - Event-driven:**
 
 In the push model, your application sends data directly to Microsoft Sentinel:
 
-- Your application initiates data submission when events occur
-- Data arrives in near real-time as events are generated
-- No API endpoint maintenance required on your side
-- Your application controls batching, timing, and data flow optimization
+- Your application initiates data submission when events occur.
+- Data arrives in near real-time as events are generated.
+- You don't need to maintain an API endpoint.
+- Your application controls batching, timing, and data flow optimization.
 
 ### The push data flow
 
-THe CCF Push data flow consists of four main steps:
+The CCF push data flow consists of four main steps:
 
-1. User deploys the connector in Microsoft Sentinel
+1. You deploy the connector in Microsoft Sentinel.
 
 1. Azure automatically creates the following resources:
     - Microsoft Entra application with credentials
@@ -85,7 +74,7 @@ THe CCF Push data flow consists of four main steps:
     - Custom log table - where your data is stored
     - Role assignments - permissions for the Entra app
 
-1. User receives the following connection details:
+1. You receive the following connection details:
     - Tenant ID
     - Application (Client) ID
     - Client Secret
@@ -94,7 +83,7 @@ THe CCF Push data flow consists of four main steps:
     - Stream Name
 
 1. Your application sends the following data:
-    - Gets an OAuth 2.0 token using the CCF generated Entra app credentials. For more information,see [OAuth 2.0 client credentials flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow)
+    - Gets an OAuth 2.0 token using the CCF generated Entra app credentials. For more information, see [OAuth 2.0 client credentials flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow)
     - Formats events as JSON matching your table schema
     - POSTs data to the DCE endpoint
 
@@ -117,11 +106,11 @@ A CCF Push connector solution consists of four main components:
 **What it is:** The schema that defines the structure of your data in Log Analytics.
 
 **Key requirements:**
-- Table name must end with `_CL` (custom log suffix)
-- Must include a `TimeGenerated` column (datetime type)
-- Column types: string, int, long, real, bool, datetime, dynamic, guid
-- Use API version 2021-03-01-privatepreview or later
-- For more information, see [Create a custom table in Azure Monitor Logs](/azure/azure-monitor/logs/create-custom-table)
+- Table name must end with `_CL` (custom log suffix).
+- Must include a `TimeGenerated` column (datetime type).
+- Column types: string, int, long, real, bool, datetime, dynamic, guid.
+- Use API version 2021-03-01-privatepreview or later.
+- For more information, see [Create a custom table in Azure Monitor Logs](/azure/azure-monitor/logs/create-custom-table).
 
 **Example:**
 
@@ -175,7 +164,7 @@ A CCF Push connector solution consists of four main components:
 
 **What it does:**
 - Specifies the input stream name (what your app uses when sending data)
-- Defines optional KQL transformations to shape/enrich data
+- Defines optional KQL transformations to shape and enrich data
 - Routes data to the destination table
 - Links to the Data Collection Endpoint (DCE)
 
@@ -250,18 +239,18 @@ A CCF Push connector solution consists of four main components:
 ```
 
 > [!IMPORTANT]
-> - Stream name must start with `Custom-` prefix
-> - The `transformKql` can be simply `"source"` for pass-through, or include KQL logic for data transformation
-> - `outputStream` must match your table name with `Custom-` prefix and `_CL` suffix
+> - Stream name must start with `Custom-` prefix.
+> - The `transformKql` can be simply `"source"` for pass-through, or include KQL logic for data transformation.
+> - `outputStream` must match your table name with `Custom-` prefix and `_CL` suffix.
 
 ### Connector definition (UI)
 
-The connector definition defines how the connector appears in the Microsoft Sentinel data connector gallery. For more information, see [Data Connector Definitions API reference](/rest/api/securityinsights/data-connector-definitions).
+The connector definition controls how the connector appears in the Microsoft Sentinel data connector gallery. For more information, see [Data Connector Definitions API reference](/rest/api/securityinsights/data-connector-definitions).
 
 The connector definition includes:
 
 - Connector title, description, and branding
-- Prerequisites and permissions required (workspace access, Entra permissions)
+- Prerequisites and permissions required, such as workspace access and Entra permissions
 - Instruction steps for deployment
 - UI controls for displaying connection details to users
 
@@ -438,12 +427,12 @@ Example structure (abbreviated for clarity):
 }
 ```
 > [!IMPORTANT]
-> - The `id` in `connectorUiConfig` must be unique and match references in the data connector configuration
-> - Use `IsConnectedQuery` for production connectors (validates recent data), or `hasDataConnectors` for simpler validation
-> - The `fillWith` parameters in `CopyableLabel` are automatically populated after deployment
-> - Fixed values (like stream name) use the `value` parameter instead of `fillWith`
+> - The `id` in `connectorUiConfig` must be unique and match references in the data connector configuration.
+> - Use `IsConnectedQuery` for production connectors (validates recent data), or `hasDataConnectors` for simpler validation.
+> - The `fillWith` parameters in `CopyableLabel` are automatically populated after deployment.
+> - Fixed values, like stream name, use the `value` parameter instead of `fillWith`.
 
-### Push Connector Configuration
+### Push connector configuration
 
 The push connector configuration is the data connector instance that links the connector definition to deployed resources.
 
@@ -523,19 +512,19 @@ Example:
 ```
 
 [!IMPORTANT]
-- The `connectorDefinitionName` must exactly match the connector definition's `id`
-- The `streamName` must match the stream declared in your DCR
-- This resource is automatically created during deployment when users select the **DeployPushConnector** button
+- The `connectorDefinitionName` must exactly match the connector definition's `id`.
+- The `streamName` must match the stream declared in your DCR.
+- This resource is automatically created during deployment when users select the **DeployPushConnector** button.
 
 
 
-## Building Your First Push Connector
+## Building your first push connector
 
-In this example, we build a simple push connector that sends security alerts from your application to Sentinel.
+In this example, you build a simple push connector that sends security alerts from your application to Sentinel.
 
 **Goal:** Send security alerts from your application to Sentinel in real-time
 
-Event structure will be sent by your application:
+Your application sends the event structure:
 ```json
 {
   "TimeGenerated": "2025-11-21T10:30:00Z",
@@ -929,7 +918,7 @@ Event structure will be sent by your application:
         > - `TemplateSpec`: Always `true` for Content Hub solutions 
         > - `Is1Pconnector`: Set to `false` for partner/custom connectors 
 
-    1.  Create SolutionMetadata.json at Solution Root
+    1.  Create SolutionMetadata.json at solution root
 
         In the ContosoSecurityAlerts folder, create SolutionMetadata.json at the solution root directory (same level as Data folder):
         ```json
@@ -955,7 +944,7 @@ Event structure will be sent by your application:
         }
         ```
 
-        The SolutionMetadata.json file is required for Content Hub packaging:
+        You need the SolutionMetadata.json file for Content Hub packaging:
         - The packaging tool expects this file at the solution root
         - It contains marketplace metadata for Content Hub distribution
 
@@ -1016,7 +1005,7 @@ Event structure will be sent by your application:
 
     **Expected output:**
 
-    The packaging script shows a failed arm-ttk (Azure Resource Manager Template Toolkit) validation. This is expected and normal for CCF Push connectors:
+    The packaging script shows a failed arm-ttk (Azure Resource Manager Template Toolkit) validation. This failure is expected and normal for CCF Push connectors:
 
     ```console
     Failed arm-ttk (Test-AzTemplate): Package
@@ -1027,7 +1016,7 @@ Event structure will be sent by your application:
     File Solutions\ContosoSecurityAlerts\Package\testParameters.json is a valid Json file!
     ```
 
-    The packaging succeeded if you see the three JSON validation messages confirming valid files. The `arm-ttk` failure can be ignored for CCF Push connectors.
+    The packaging succeeded if you see the three JSON validation messages confirming valid files. You can ignore the `arm-ttk` failure for CCF Push connectors.
 
     For more information, see the [Azure-Sentinel Solutions Tools documentation](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Create-Azure-Sentinel-Solution).
 
@@ -1035,7 +1024,7 @@ Event structure will be sent by your application:
 
     Deploy the generated ARM template (Package/mainTemplate.json) to your Azure subscription.
 
-    1. In the Azure Portal, search for **Deploy a custom template**
+    1. In the Azure portal, search for **Deploy a custom template**
     1. Select **Build your own template in the editor**
     1. Select **Load file** and select `Package/mainTemplate.json` from your output folder
     1. Select **Save**
@@ -1054,7 +1043,7 @@ Event structure will be sent by your application:
 
     After deploying the solution package, enable the connector to provision resources and generate credentials.
 
-    1. In the Azure Portal, navigate to your Microsoft Sentinel workspace
+    1. In the Azure portal, navigate to your Microsoft Sentinel workspace
     1. Go to **Configuration** > **Data connectors**
     1. Search for and select **Contoso Security Alerts (Push)**
     1. Select **Open connector page**
@@ -1084,7 +1073,7 @@ Event structure will be sent by your application:
 
     **Python Example Application Code:**
 
-    The following example uses placeholder values like \<Your-Tenant-ID\>. You must replace these with secure references to your actual credentials.
+    The following example uses placeholder values like \<Your-Tenant-ID\>. Replace these values with secure references to your actual credentials.
 
     ```python
     import requests
@@ -1163,50 +1152,50 @@ Event structure will be sent by your application:
 
 ## Next steps
 
-Now that you understand CCF Push connectors:
+Now that you understand CCF Push connectors, take the following steps:
 
-1. **Design your data schema** - Identify the events you want to send and their fields
-1. **Create connector artifacts** - Build the four JSON files (table, DCR, connector definition, data connector)
-1. **Organize solution structure** - Set up Data/ and Data Connectors/ folders with proper naming
-1. **Package your solution** - Use createSolutionV3.ps1 to generate deployment templates
-1. **Deploy and test** - Deploy to your Sentinel workspace and validate data flow
-1. **Integrate with your application** - Add code to send events in real-time
-1. **Create alerts and workbooks** - Use your data for security monitoring
+1. **Design your data schema** - Identify the events you want to send and their fields.
+1. **Create connector artifacts** - Build the four JSON files (table, DCR, connector definition, data connector).
+1. **Organize solution structure** - Set up Data/ and Data Connectors/ folders with proper naming.
+1. **Package your solution** - Use `createSolutionV3.ps1` to generate deployment templates.
+1. **Deploy and test** - Deploy to your Sentinel workspace and validate data flow.
+1. **Integrate with your application** - Add code to send events in real-time.
+1. **Create alerts and workbooks** - Use your data for security monitoring.
 
 ## Additional resources
 
 ### CCF documentation
 
-- [Create a codeless connector (CCF Pull)](/azure/sentinel/create-codeless-connector) - Polling-based connectors
-- [Data Connector Definitions API reference](/rest/api/securityinsights/data-connector-definitions) - UI configuration guide
-- [Data connector connection rules reference](/azure/sentinel/create-codeless-connector) - Connection rules for polling connectors
+- [Create a codeless connector (CCF Pull)](/azure/sentinel/create-codeless-connector) - Polling-based connectors.
+- [Data Connector Definitions API reference](/rest/api/securityinsights/data-connector-definitions) - UI configuration guide.
+- [Data connector connection rules reference](/azure/sentinel/create-codeless-connector) - Connection rules for polling connectors.
 
 ### Azure Monitor and data collection
 
-- [Azure Monitor Logs Ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview) - Core API for sending data
-- [Data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview) - Understanding DCRs
-- [Structure of a data collection rule](/azure/azure-monitor/essentials/data-collection-rule-structure) - DCR structure details
-- [Data collection endpoints in Azure Monitor](/azure/azure-monitor/essentials/data-collection-endpoint-overview) - DCE configuration
-- [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) - Step-by-step tutorial
-- [Create a custom table](/azure/azure-monitor/logs/create-custom-table) - Custom table creation guide
+- [Azure Monitor Logs Ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview) - Core API for sending data.
+- [Data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview) - Understanding DCRs.
+- [Structure of a data collection rule](/azure/azure-monitor/essentials/data-collection-rule-structure) - DCR structure details.
+- [Data collection endpoints in Azure Monitor](/azure/azure-monitor/essentials/data-collection-endpoint-overview) - DCE configuration.
+- [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) - Step-by-step tutorial.
+- [Create a custom table](/azure/azure-monitor/logs/create-custom-table) - Custom table creation guide.
 
 ### Authentication and security
 
-- [OAuth 2.0 client credentials flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow) - How app-to-service authentication works
-- [Microsoft identity platform access tokens](/entra/identity-platform/access-tokens) - Understanding OAuth tokens
-- [Register an application in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) - How to register an application in Microsoft Entra ID
-- [Best practices for Azure AD application registration](/entra/identity-platform/security-best-practices-for-app-registration) - Entra app security
-- [Assign Azure roles using Azure Resource Manager (ARM) templates](/azure/role-based-access-control/role-assignments-template) - Assign roles using templates
-- [ARM template security recommendations](/azure/azure-resource-manager/templates/best-practices#security-recommendations-for-parameters) - Securing deployment templates
-- [Azure Monitor service limits](/azure/azure-monitor/service-limits) - Rate limits and quotas
+- [OAuth 2.0 client credentials flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow) - How app-to-service authentication works.
+- [Microsoft identity platform access tokens](/entra/identity-platform/access-tokens) - Understanding OAuth tokens.
+- [Register an application in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) - How to register an application in Microsoft Entra ID.
+- [Best practices for Azure AD application registration](/entra/identity-platform/security-best-practices-for-app-registration) - Entra app security.
+- [Assign Azure roles using Azure Resource Manager (ARM) templates](/azure/role-based-access-control/role-assignments-template) - Assign roles using templates.
+- [ARM template security recommendations](/azure/azure-resource-manager/templates/best-practices#security-recommendations-for-parameters) - Securing deployment templates.
+- [Azure Monitor service limits](/azure/azure-monitor/service-limits) - Rate limits and quotas.
 
 ### Microsoft Sentinel
 
-- [About Microsoft Sentinel solutions](/azure/sentinel/sentinel-solutions) - Packaging connectors as solutions
-- [Monitor the health of your data connectors](/azure/sentinel/monitor-data-connector-health) - Health monitoring
-- [ARM template reference for data connectors](/rest/api/securityinsights/data-connectors) - Complete API reference
+- [About Microsoft Sentinel solutions](/azure/sentinel/sentinel-solutions) - Packaging connectors as solutions.
+- [Monitor the health of your data connectors](/azure/sentinel/monitor-data-connector-health) - Health monitoring.
+- [ARM template reference for data connectors](/rest/api/securityinsights/data-connectors) - Complete API reference.
 
 ## Getting help
 
 - For ISV partners building integrations, contact: azuresentinelpartner@microsoft.com
-- For technical questions, use [Microsoft Q&A](/answers/topics/azure-sentinel.html) with the tag 'azure-sentinel'
+- For technical questions, use [Microsoft Q&A](/answers/topics/azure-sentinel.html) with the tag 'azure-sentinel'.
