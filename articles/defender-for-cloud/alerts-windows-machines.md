@@ -700,14 +700,6 @@ This resembles a burst attack, in which an attacker performs numerous authentica
 
 **Severity**: Medium
 
-### **Suspicious process name detected**
-
-**Description**: Analysis of host data on %{Compromised Host} detected a process whose name is suspicious, for example corresponding to a known attacker tool or named in a way that is suggestive of attacker tools that try to hide in plain sight. This process could be legitimate activity, or an indication that one of your machines has been compromised.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: -
-
-**Severity**: Medium
-
 ### **Suspicious SQL activity**
 
 **Description**: Machine logs indicate that '%{process name}' was executed by account: %{user name}. This activity is uncommon with this account.
