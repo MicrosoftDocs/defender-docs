@@ -39,7 +39,7 @@ If Microsoft Defender determines that a prompt is suspicious:
      
 :::image type="content" source="media/protect-ai-agents/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-ai-agents/turn-on-real-time-agent-protection.png":::
 
-Once the Power Platform administrator completes the onboarding steps, a green **Connected** status appears in the **Microsoft 365 connector** section in the Defender portal.
+Once the Power Platform administrator completes the onboarding steps, a green **Connected** status appears in the **Real time protection during agent runtime** section in the Defender portal.
 
 ## Related articles
 
