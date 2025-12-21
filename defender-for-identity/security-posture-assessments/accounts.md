@@ -277,8 +277,8 @@ This is required to display the Security tab on domain objects.
 
 1. Uncheck replication permissions. Scroll through the "Permissions for [User]" list uncheck the following permissions if they are selected:
 
-- Replicating Directory Changes
-- Replicating Directory Changes All
+    - Replicating Directory Changes
+    - Replicating Directory Changes All
 
 1. Select Apply, and then select OK.
 
