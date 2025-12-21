@@ -259,7 +259,7 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 To achieve the maximum score, remediate all exposed entities.
 
-**Remove DCSync permissions in Active Directory Users and **Computers**
+**Remove DCSync permissions in Active Directory Users and Computers**
 
 You can access Active Directory Users and Computers by signing in to your domain controller.
 To remove DCSync permissions from a non-admin account:
