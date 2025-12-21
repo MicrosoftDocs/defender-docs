@@ -3,7 +3,7 @@ title: Alerts for Windows machines
 description: This article lists the security alerts visible for Windows machines in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 10/21/2024
+ms.date: 10/29/2025
 ai-usage: ai-assisted
 ---
 
