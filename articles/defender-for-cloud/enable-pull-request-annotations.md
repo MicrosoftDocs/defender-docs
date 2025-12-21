@@ -31,7 +31,7 @@ Users with access to the repository can add annotations, to suggest changes, ask
 - An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Have write access (owner/contributor) to the Azure subscription](/azure/active-directory/privileged-identity-management/pim-how-to-activate-role).
 - [Connect your Azure DevOps repositories to Microsoft Defender for Cloud](quickstart-onboard-devops.md).
-- [Configure the Microsoft Security DevOps Azure DevOps extension](azure-devops-extension.yml).
+- [Configure the Microsoft Security DevOps Azure DevOps extension](configure-azure-devops-extension.md).
 
 ## Enable pull request annotations in GitHub
 

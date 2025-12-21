@@ -1,23 +1,25 @@
 ---
 title: The Microsoft cloud security benchmark in Microsoft Defender for Cloud
 description: Learn about the Microsoft cloud security benchmark in Microsoft Defender for Cloud.
-ms.topic: conceptual
-ms.date: 07/14/2025
+author: dlanger
+ms.author: dlanger
+ms.topic: article
+ms.date: 10/29/2025
 ---
 
 # Microsoft cloud security benchmark in Defender for Cloud
 
-Industry standards, regulatory standards, and benchmarks are represented in Microsoft Defender for Cloud as [security standards](security-policy-concept.md). These standards are assigned to scopes such as Azure subscriptions, AWS accounts, and GCP projects.
+Microsoft Defender for Cloud presents industry standards, regulatory standards, and benchmarks as [security standards](security-policy-concept.md). These standards are assigned to scopes such as Azure subscriptions, AWS accounts, and GCP projects, and are assessed continuously in the [Regulatory compliance dashboard](concept-regulatory-compliance-standards.md#view-compliance-standards).
 
-Defender for Cloud continuously assesses your hybrid cloud environment against these standards, and provides information about compliance in the **Regulatory compliance** dashboard.
+When Defender for Cloud is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) automatically starts assessing resources in scope. This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds.
 
-When you onboard subscriptions and accounts to Defender for Cloud, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) automatically starts to assess resources in scope.
+**MCSB v2 (preview)** is also available and can be enabled from the Regulatory compliance dashboard. This version introduces expanded guidance with additional risk-based controls, expanded Azure Policy mappings, and coverage for emerging workloads such as artificial intelligence (AI).
 
-This benchmark builds on the cloud security principles defined by the Azure Security Benchmark and applies these principles with detailed technical implementation guidance for Azure, for other cloud providers (such as AWS and GCP), and for other Microsoft clouds.
+In addition to MCSB, Defender for Cloud applies additional default benchmarks for AWS and GCP. Learn more about [Default security benchmarks](concept-regulatory-compliance-standards.md#default-compliance-standards).
 
 :::image type="content" source="media/concept-regulatory-compliance/microsoft-security-benchmark.png" alt-text="Image that shows the components that make up the Microsoft cloud security benchmark." lightbox="media/concept-regulatory-compliance/microsoft-security-benchmark.png":::
 
-The compliance dashboard gives you a view of your overall compliance standing. Security for non-Azure platforms follows the same cloud-neutral security principles as Azure. Each control within the benchmark provides the same granularity and scope of technical guidance across Azure and other cloud resources.
+The compliance dashboard provides a dedicated benchmark view to help you monitor resource compliance against benchmark controls. Non-Azure platforms follow the same cloud-neutral security principles as Azure. Each control provides a consistent level of technical implementation guidance across Azure and other cloud resources.
 
 :::image type="content" source="media/concept-regulatory-compliance/compliance-dashboard.png" alt-text="Screenshot of a sample regulatory compliance page in Defender for Cloud." lightbox="media/concept-regulatory-compliance/compliance-dashboard.png":::
 

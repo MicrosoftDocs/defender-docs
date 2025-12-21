@@ -48,8 +48,22 @@ To complete the procedures in this article, you need:
 
 - Contributor level permission for the relevant Azure subscription.
 
-- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
+- If CIEM is enabled as part of Defender for CSPM, the user onboarding the connector also needs [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
 
+- To ingest GCP Cloud Logging with Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice:
+
+   - If you create new Cloud Logging and Pub/Sub resources:
+   
+      - Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
+      
+      - IAM permissions to configure Pub/Sub and manage service accounts.
+      
+   - If you plan to use existing Cloud Logging and Pub/Sub resources:
+   
+      - Access to the existing Cloud Logging and Pub/Sub resources.
+      
+      - Understanding of your organization's existing log retention and Pub/Sub configurations.
+      
 You can learn more about Defender for Cloud pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 When you're connecting GCP projects to specific Azure subscriptions, consider the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail) and these guidelines:
@@ -94,7 +108,7 @@ From here, you can decide which resources you want to protect based on the secur
 
 Once you selected the plans, you want to enable and the resources you want to protect you have to configure access between Defender for Cloud and your GCP project.
 
-:::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access.":::
+:::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png":::
 
 In this step, you can find the GCloud script that needs to be run on the GCP project that is going to onboarded. The GCloud script is generated based on the plans you selected to onboard.
 
@@ -109,7 +123,7 @@ The GCloud script creates all of the required resources on your GCP environment 
 
 The final step for onboarding is to review all of your selections and to create the connector.
 
-:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate.png":::
+:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
 
 > [!NOTE]
 > The following APIs must be enabled in order to discover your GCP resources and allow the authentication process to occur:
@@ -178,7 +192,7 @@ Some of the APIs aren't in direct use with the management project. Instead the A
 
 The final step for onboarding is to review all of your selections and to create the connector.
 
-:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate-organization.png" alt-text="Screenshot of the review and generate screen with all of your selections listed for your organization." lightbox="media/quickstart-onboard-gcp/review-and-generate-organization.png":::
+:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate-organization.png" alt-text="Screenshot of the review and generate screen with all of your selections listed for your organization." lightbox="media/quickstart-onboard-gcp/review-and-generate-organization-big.png":::
 
 > [!NOTE]
 > The following APIs must be enabled in order to discover your GCP resources and allow the authentication process to occur:
@@ -231,11 +245,11 @@ To configure the Defender for Servers plan:
 
 1. On the **Select plans** tab, select **Configure**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender for Servers plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender for Servers plan." lightbox="media/quickstart-onboard-gcp/view-configuration.png":::
 
 1. On the **Auto-provisioning configuration** pane, turn the toggles to **On** or **Off**, depending on your need.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Servers plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Servers plan." lightbox="media/quickstart-onboard-gcp/auto-provision-screen-big.png":::
 
     If **Azure Arc agent** is **Off**, you need to follow the manual installation process mentioned earlier.
 
@@ -255,10 +269,10 @@ To configure the Defender for Databases plan:
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**, depending on your need.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/auto-provision-databases-screen.png" alt-text="Screenshot that shows the toggles for the Defender for Databases plan." lightbox="media/quickstart-onboard-gcp/auto-provision-databases-screen-big.png":::
 
     If the toggle for Azure Arc is **Off**, you need to follow the manual installation process mentioned earlier.
-
+   
 1. Select **Save**.
 
 1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
@@ -269,13 +283,13 @@ Microsoft Defender for Containers brings threat detection and advanced defenses 
 
 > [!NOTE]
 >
-> - If you choose to disable the available configuration options, no agents or components will be deployed to your clusters. [Learn more about feature availability](supported-machines-endpoint-solutions-clouds-containers.md).
+> - If you choose to disable the available configuration options, no agents or components will be deployed to your clusters. [Learn more about feature availability](support-matrix-defender-for-containers.md).
 > - Defender for Containers when deployed on GCP, might incur external costs such as [logging costs](https://cloud.google.com/stackdriver/pricing), [pub/sub costs](https://cloud.google.com/pubsub/pricing) and [egress costs](https://cloud.google.com/vpc/network-pricing#:~:text=Platform%20SKUs%20apply.-%2cInternet%20egress%20rates%2c-Premium%20Tier%20pricing).
 
 - **Kubernetes audit logs to Defender for Cloud**: Enabled by default. This configuration is available at the GCP project level only. It provides agentless collection of the audit log data through [GCP Cloud Logging](https://cloud.google.com/logging/) to the Microsoft Defender for Cloud back end for further analysis. Defender for Containers requires control plane audit logs to provide [runtime threat protection](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters). To send Kubernetes audit logs to Microsoft Defender, toggle the setting to **On**.
 
     > [!NOTE]
-    > If you disable this configuration, then the `Threat detection (control plane)` feature will be disabled. Learn more about [features availability](supported-machines-endpoint-solutions-clouds-containers.md).
+    > If you disable this configuration, then the `Threat detection (control plane)` feature will be disabled. Learn more about [features availability](support-matrix-defender-for-containers.md).
 
 - **Auto provision Defender's sensor for Azure Arc** and **Auto provision Azure Policy extension for Azure Arc**: Enabled by default. You can install Azure Arc-enabled Kubernetes and its extensions on your GKE clusters in three ways:
   - Enable Defender for Containers autoprovisioning at the project level, as explained in the instructions in this section. We recommend this method.
@@ -314,15 +328,76 @@ To configure the Defender CSPM plan:
 
 1. On the **Select plans** tab, select **Configure**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender CSPM plan.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender CSPM plan." lightbox="media/quickstart-onboard-gcp/view-configuration.png":::
 
 1. On the **Plan configuration** pane, turn the toggles to **On** or **Off**. To get the full value of Defender CSPM, we recommend that you turn all toggles to **On**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/cspm-configuration.png" alt-text="Screenshot that shows toggles for Defender CSPM.":::
+    :::image type="content" source="media/quickstart-onboard-gcp/cspm-configuration.png" alt-text="Screenshot that shows toggles for Defender CSPM." lightbox="media/quickstart-onboard-gcp/cspm-configuration.png":::
 
 1. Select **Save**.
 
 1. Continue from step 8 of the [Connect your GCP project](#connect-your-gcp-project) instructions.
+
+## Ingest GCP cloud logging with Pub/Sub (Preview)
+
+Integrating Google Cloud Platform (GCP) Cloud Logging with Microsoft Defender for Cloud allows you to ingest activity logs from GCP, enhancing your ability to monitor, detect, and respond to security events across your Google Cloud environments. You can configure log ingestion either at the project level or centrally at the organization level. Data streamed from GCP Pub/Sub provides the necessary context for Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud, dependent on the log activity, calculated risk-based recommendations, security posture insights, and attack path analysis.
+
+### Deployment options
+
+Select the deployment scenario that meets your requirement:
+
+- __Project-Level__: Configure log ingestion for individual GCP projects.
+
+- __Organization-Level__: Centralize log ingestion across all projects within a GCP organization.
+
+### Deployment steps
+
+To configure GCP Cloud Logging:
+
+1. Follow the [steps to connect your GCP project](#connect-your-gcp-project).
+
+1. On the **Select plans** tab, select **Settings** under the Monitoring coverage column.
+
+1. On the **Plan configuration** pane, turn the relevant toggles to **On**, selecting one of the following methods:
+
+   1. Create a new GCP Cloud Logging configuration and provide a Pub/Sub subscription name.
+
+      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-create-new.png" alt-text="Screenshot with the Create a new GCP Cloud Logging option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-create-new.png":::
+      
+      > [!IMPORTANT]
+      > Selecting this option will incur additional cost. [Learn more about GCP Cloud Logging pricing](https://cloud.google.com/pubsub/pricing)
+      
+   1. Use your existing Cloud Logging configuration by manually providing your existing Pub/Sub subscription name.
+   
+   :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Manually provide GCP Cloud Logging details option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
+
+    > [!NOTE]
+    > Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
+   
+1. Select **Save**.
+
+1. Continue with the next steps to [configure access](#connect-your-gcp-project).
+
+1. Review and generate the GCP connector to complete log ingestion onboarding into Defender for Cloud. 
+
+### How GCP logging ingestion works
+
+Once configured, Defender for Cloud ingests and analyzes activity logs from Google Cloud to discover cloud identity and permissions insights, and CIEM recommendations.
+
+1. Google Cloud records activity logs (including Admin Activity and Data Access logs) in [Cloud Logging](https://cloud.google.com/logging/docs).
+
+1. Logs are exported to the configured **Pub/Sub topic** using a Cloud Logging sink.
+
+1. The **Pub/Sub subscription** streams log messages to Defender for Cloud when new logs arrive.
+
+1. Defender for Cloud pulls the logs from Pub/Sub, processes the activity events, and provides:
+
+    - Identity and permission insights
+    - CIEM posture recommendations
+
+1. Access between GCP and Defender for Cloud is secured via Google Cloud **IAM roles** and **service accounts** to ensure least-privilege operation.
+
+1. Optional: If **IAM Recommender** is enabled in your GCP environment, Defender for Cloud leverages its insights to enhance the accuracy of CIEM recommendations by identifying inactive and over-privileged roles.
 
 ## Monitor your GCP resources
 

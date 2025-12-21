@@ -2,9 +2,9 @@
 title: Prerequisites for Microsoft Defender for Storage
 description: Learn about the prerequisites and permissions required to enable Microsoft Defender for Storage and its features of malware scanning and sensitive-data threat detection.
 ms.topic: reference
-author: dcurwin
-ms.author: dacurwin
-ms.date: 08/21/2023
+author: Elazark
+ms.author: elkrieger
+ms.date: 11/30/2025
 ---
 
 # Prerequisites for Microsoft Defender for Storage
@@ -18,9 +18,14 @@ This article lists the prerequisites and permissions required to [enable Microso
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - The following storage types are supported:
-  - [Azure Blob Storage](https://azure.microsoft.com/products/storage/blobs/) (Standard and Premium v2 storage, including Azure Data Lake Storage Gen2): Activity monitoring, malware scanning, and sensitive-data discovery.
-  - Azure Files (over REST API and SMB): Activity monitoring.
 
+  |Capability | Azure Blob Standard | Azure Blob Standard + Azure Files NFS | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen2 | Azure File Premium Provisioned v1 | Azure File Premium Provisioned v2 |
+  |--|--|--|--|--|--|--|
+  | Activity Monitoring | Supported | Not supported | Supported | Supported | Supported | Supported | Supported |
+  | Sensitive Data Discovery | Supported | Not supported | Supported | Supported  | Supported | Not supported | Not supported |
+  | On-upload Malware Scanning | Supported | Supported only for blobs | Supported only for blobs | Not supported | Supported only for blobs | Not supported | Not supported |
+  | On-demand Malware Scanning | Supported | Supported | Supported | Not supported | Supported | Not supported | Not supported |
+  
 - Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
 ## Permissions
@@ -31,9 +36,9 @@ The following table summarizes the permissions that you need for each scenario. 
 
 | Capability | Subscription level | Storage account level |
 |---------|---------|---------|
-| Activity monitoring | Security Admin or Pricings/read, Pricings/write | Security Admin or Microsoft.Security/defenderforstoragesettings/read, Microsoft.Security/defenderforstoragesettings/write |
-| Malware scanning | Subscription Owner or action set 1 | Action set 2 |
-| Sensitive-data threat detection | Subscription Owner or action set 1 |Action set 2 |
+|Activity monitoring |Security Admin or Pricings/read, Pricings/write |Security Admin or Microsoft.Security/defenderforstoragesettings/read, Microsoft.Security/defenderforstoragesettings/write |
+|Malware scanning |Subscription Owner or action set 1 |Action set 2 |
+|Sensitive-data threat detection |Subscription Owner or action set 1 |Action set 2 |
 
 > [!NOTE]
 > Activity monitoring is always enabled when you enable Defender for Storage.
