@@ -32,11 +32,14 @@ If Microsoft Defender determines that a prompt is suspicious:
 1. Work together with a Power Platform administrator to complete these onboarding steps: [Enable external threat detection and protection for Copilot Studio custom agents](/microsoft-copilot-studio/external-security-provider#step-2-configure-the-threat-detection-system).
     - Share the URL provided in the Defender portal with the Power Platform administrator to help them complete their onboarding steps.
     - Make sure that the Power Platform administrator uses the same App ID as the App ID used in [Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application).
-    - Get the AppID from the Power Platform administrator, and enter it in the **App ID** field in the Defender portal, then select **Save**.
+   - Get the AppID from the Power Platform administrator, and enter it in the **App ID** field in the Defender portal, then select **Save**.
+   
+     > [!NOTE]
+     > If you recently changed the App ID in Power Platform, it can take up to *one minute* for the update to propagate across all portals. If you encounter a validation error when saving the updated value on this page, wait a short time and try again.
+     
+             :::image type="content" source="media/protect-ai-agents/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-ai-agents/turn-on-real-time-agent-protection.png":::
 
-        :::image type="content" source="media/protect-ai-agents/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-ai-agents/turn-on-real-time-agent-protection.png":::
-
-    Once the Power Platform administrator completes the onboarding steps, a green **Connected** status appears in the **Microsoft 365 connector** section in the Defender portal.
+         Once the Power Platform administrator completes the onboarding steps, a green **Connected** status appears in the **Microsoft 365 connector** section in the Defender portal.
 
 ## Related articles
 
