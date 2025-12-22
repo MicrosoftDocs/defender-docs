@@ -28,7 +28,7 @@ This overview explains how the integration works and helps you understand its co
 
 ### Smart code-to-cloud mapping
 
-When you [connect your GitHub organization or repo to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-github), the system automatically maps source repositories to running cloud workloads. It uses Defender for Cloud proprietary code-to-cloud methods to ensure that every workload is tracked to its repo of origin (and vice versa).
+When you [connect your GitHub organization or repository to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-github), the system automatically maps source repositories to running cloud workloads. It uses Defender for Cloud proprietary code-to-cloud methods to ensure that every workload is tracked to its repository of origin (and vice versa).
 
 This capability gives you instant end-to-end visibility, so you know which code powers each deployed application without time-consuming manual mapping.
 
@@ -36,7 +36,7 @@ This capability gives you instant end-to-end visibility, so you know which code 
 
 Cut through noisy security alerts and focus on vulnerabilities that truly matter.
 
-GHAS security findings in GitHub are prioritized by real runtime context from Defender for Cloud. They highlight risk factors like **Internet Exposure**, **Sensitive Data** processing, **Critical Resources**, and **Lateral Movement**. These risks, identified in runtime workloads, are dynamically linked to those workloads' code repositories of origin and the specific build artifacts in GitHub.
+GHAS security findings in GitHub are prioritized by real runtime context from Defender for Cloud. They highlight risk factors like **Internet Exposure**, **Sensitive Data**, **Critical Resources**, and **Lateral Movement**. These risks, identified in runtime workloads, are dynamically linked to those workloads' code repositories of origin and the specific build artifacts in GitHub.
 
 You can filter, triage, and act on only security issues that have actual production impact. This ability helps your team stay efficient and keep your most important applications secure.
 

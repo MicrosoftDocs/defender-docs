@@ -14,7 +14,7 @@ This guide walks you through setup steps and other actions to help you integrate
 
 By following this guide, you:
 
-- Set up your GitHub repo for Defender for Cloud coverage.
+- Set up your GitHub repository for Defender for Cloud coverage.
 - Create a runtime risk factor.
 - Test real use cases in Defender for Cloud.
 - Link code to cloud resources.
@@ -40,7 +40,7 @@ To test the integration, use your own repositories or an example GitHub reposito
 
 - You configure agentless code scanning for your GitHub connector. Follow the steps in [Configure agentless code scanning (preview)](agentless-code-scanning.md).
 
-- The repo that you use for the integration is private.
+- The repository that you use for the integration is private.
 
 If you want to use an example repository, clone the following repository to your GitHub organization: [build25-woodgrove/mdc-customer-playbook](https://github.com/build25-woodgrove/mdc-customer-playbook). This repository is for customers to test integration of Defender for Cloud and GHAS. It has GHAS enabled and is onboarded to an Azure tenant that has Defender CSPM enabled.
 
@@ -48,7 +48,7 @@ In the repository, follow these steps:
 
 1. Go to **Settings**.
 
-1. On the left pane, select **Secrets and Variables** > **Actions**. Then select **New repository secret**.
+1. On the left pane, select **Secrets and variables** > **Actions**. Then select **New repository secret**.
 
    :::image type="content" source="media/github-advanced-security/new-repository-secret-button.jpg" alt-text="Screenshot of selections for creating a new repository secret in GitHub." lightbox="media/github-advanced-security/new-repository-secret-button.jpg":::
 
@@ -63,13 +63,13 @@ In the repository, follow these steps:
    > [!NOTE]
    > The names can be chosen freely and don't need to follow a specific pattern.
 
-You can find this information in the Azure portal by following these steps:
+   You can find this information in the Azure portal by following these steps:
 
-1. Select the container registry that you want to deploy to.
+   1. Select the container registry that you want to deploy to.
 
-1. Under **Settings**, select **Access keys**. The **Access keys** pane shows the keys for the login server, username, and password.
+   1. Under **Settings**, select **Access keys**. The **Access keys** pane shows the keys for the login server, username, and password.
 
-   :::image type="content" source="media/github-advanced-security/acr-access-keys-panel.jpg" alt-text="Screenshot of the pane that lists access keys for a container registry in the Azure portal." lightbox="media/github-advanced-security/acr-access-keys-panel.jpg":::
+      :::image type="content" source="media/github-advanced-security/acr-access-keys-panel.jpg" alt-text="Screenshot of the pane that lists access keys for a container registry in the Azure portal." lightbox="media/github-advanced-security/acr-access-keys-panel.jpg":::
 
 1. In your repository, select **Actions**.
 
@@ -79,7 +79,7 @@ You can find this information in the Azure portal by following these steps:
 
 1. Check that the image was deployed to your container registry.
 
-   For the example repo, the image should be in a registry called **mdc-mock-0001** with the tag **mdc-ghas-integration**.
+   For the example repository, the image should be in a registry called **mdc-mock-0001** with the tag **mdc-ghas-integration**.
 
 1. Deploy the same image as a running container on your cluster.
 One way to complete this step is by connecting to the cluster and using the `kubectl run` command. Here's an example for Azure Kubernetes Service (AKS):
@@ -135,7 +135,7 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 > [!NOTE]
 > It can take up to 24 hours after the previous steps are applied to see the following results.
 
-1. Test that [GitHub agentless scanning](agentless-code-scanning.md) picks up the repo.
+1. Test that [GitHub agentless scanning](agentless-code-scanning.md) picks up the repository.
 
 1. Go to Cloud Security Explorer and perform the query.
 
