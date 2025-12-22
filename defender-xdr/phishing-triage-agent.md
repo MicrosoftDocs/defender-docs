@@ -135,7 +135,7 @@ The required permissions are under the **Security operations** permissions group
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 1. Assign the role to the agent. Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
 
-   :::image type="content" source="media/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="media/phishing-triage/agent-permissions-sources.png":::
+   :::image type="content" source="media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions-sources.png":::
 
 > [!TIP]
 > We recommend creating a role that includes only the minimum permissions the agent requires. 
