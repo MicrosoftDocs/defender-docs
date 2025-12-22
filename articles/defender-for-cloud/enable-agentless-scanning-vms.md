@@ -4,7 +4,7 @@ description: Run agentless scanning on Virtual Machines (VMs) for vulnerabilitie
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/20/2025
+ms.date: 12/22/2025
 ms.custom: sfi-image-nochange
 
 #customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
