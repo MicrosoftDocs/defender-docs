@@ -106,7 +106,7 @@ One way to complete this step is by connecting to the cluster and using the `kub
 
 One of the risk factors that Defender for Cloud detects for this integration is business criticality. Organizations can create rules to label resources as business critical.
 
-1. In the Defender for Cloud portal, go to **Environment Settings** > **Resource Criticality**.
+1. In the Defender for Cloud portal, go to **Environment settings** > **Resource criticality**.
 
 1. On the right pane, select the link to open Microsoft Defender.
 
@@ -160,7 +160,7 @@ Because the workflow deploys an image that creates a running container with one 
 
 1. In GitHub, go to the GitHub organization that you used for the setup testing.
 
-1. Select **Security** > **Campaigns** > **Create a campaign from code scanning filters**.
+1. Select **Security** > **Campaigns** > **Create campaign** > **From code scanning filters**.
 
    :::image type="content" source="media/github-advanced-security/security-campaigns-code-scanning.jpg" alt-text="Screenshot of options in GitHub to create a campaign from code or secret scanning filters." lightbox="media/github-advanced-security/security-campaigns-code-scanning.jpg":::
 
