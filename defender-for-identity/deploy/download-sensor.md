@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Download the Microsoft Defender for Identity classic sensor
 
-This article describes how to download the Microsoft Defender for Identity classic sensor for your domain controllers or AD CS / AD FS and Microsoft Entra Connect servers. 
+This article describes how to download the Microsoft Defender for Identity classic sensor for your domain controllers or Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers. 
 
 ## Add a sensor and download sensor software
 
