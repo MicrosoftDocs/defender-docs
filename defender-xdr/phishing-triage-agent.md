@@ -1,5 +1,5 @@
 ---
-title: Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)
+title: Security Copilot Phishing Triage Agent in Microsoft Defender
 description: Learn about the Security Copilot Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
 ms.service: defender-xdr
 f1.keywords:
@@ -24,13 +24,9 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about the Phishing Triage Agent in Microsoft Defender so that I can triage and classify user-submitted phishing incidents efficiently.
 ---
 
-# Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)
+# Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-> [!IMPORTANT]
-> Microsoft Security Copilot Phishing Triage Agent is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Phishing remains one of the most prevalent and persistent entry points for cyberattacks, and a major operational burden for security operations center (SOC) teams. Every day, analysts are inundated with user-reported suspicious emails, each demanding careful investigation and triage. The sheer volume slows response, drains resources, and increases the risk of real threats slipping through the cracks.
 
@@ -50,17 +46,14 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 - **Transparent rationale:** The agent provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
 - **Learning based on feedback:** The agent continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
-## Permissions required
+The agent uses these tools and capabilities to analyze and investigate phishing attempts:
 
-| Action                        | Permission required                                                                                           |
-|:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| View agent results |To view agent results, you need the same permissions as the agent, or higher permissions:<br>**Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**,  **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal|
-| View agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br>Or **Security Administrator** in Microsoft Entra ID          |
-| View feedback page   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal <br>Or **Security Administrator** in Microsoft Entra ID|
-| Manage agent settings (set up, pause, or remove the agent, and manage agent identity)             | **Security Administrator** in Microsoft Entra ID                                                            |
-|Reject feedback|**Security Administrator** in Microsoft Entra ID|
+- Email content analysis – Detects suspicious patterns and indicators in email bodies.
+- Detonation for files and URLs – Safely executes and analyzes potentially malicious files and links.
+- Screenshot analysis – Reviews visual content from emails, URLs, and certain file types.
+- Threat intelligence tools – Uses Microsoft Threat Intelligence feeds to provide enriched detection context.
+- General Kusto Query Language (KQL) tools – Applies predefined security rule templates  and custom KQL queries to automate detection and investigation across email, file, and URL telemetry.
 
-For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Prerequisites
 
@@ -71,7 +64,6 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed|
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
-
 ### Activate URBAC settings
 
 Activate the Defender for Office 365 workload in the Microsoft Defender XDR settings:
@@ -94,25 +86,61 @@ If you’re using a third-party email reporting tool, review [Options for third-
 
 The Phishing Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
 
+> [!IMPORTANT]
+> The Phishing Triage Agent doesn't classify alerts that are suppressed by [suppression rules](/defender-endpoint/manage-suppression-rules).
+
+## Permissions required
+
+| **User Action**                                              | **Permission required**                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| View  agent results and teach agent through feedback | **Security Copilot (read)**, **Security data basics (read)**, **Alerts  (manage)**, **Email & collaboration metadata (read)**,  and **Email & collaboration content (read)** under the **Security  operations** permissions group in the Defender portal |
+| View  agent settings                                         | **Security  Copilot (read)** and **Security data  basics (read)** under the **Security operations** permissions  group in the Defender portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
+| View  feedback page | **Security  Copilot (read)**, **Security data basics  (read)**, and **Email & collaboration metadata (read)** under  the **Security operations** permissions group in the Defender  portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
+| Manage  agent settings (set up, pause, remove the agent, and manage agent identity) | **Security  Administrator** in Microsoft Entra ID            |
+| Reject  feedback                                             | **Security  Administrator** in Microsoft Entra ID            |
+
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+
+
 ## Set up the Phishing Triage Agent
 
-> [!NOTE]
-> To set up the Phishing Triage Agent, you need the **Security Administrator** role in Microsoft Entra ID. Ensure that all [prerequisites](#prerequisites) are met before setting up the agent.
+Ensure that all [prerequisites](#prerequisites) are met and have the **Security Administrator** role in Microsoft Entra ID. The Phishing Triage Agent setup wizard is grayed-out and inaccessible if you don't have the required role, and setup will fail if you proceed without meeting all prerequisites.  
 
-### Create the agent’s identity and assign permissions
+### Begin setup
 
-The Phishing Triage Agent operates under the identity you assign to it. Before setup, you need to create this identity and ensure it has the appropriate permissions to perform triage actions.
+To open the Phishing Triage Agent setup wizard: 
 
-#### Identity
+1. Find and deploy the agent, as described in [Discover and deploy agents in the Microsoft Defender portal](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
+1. Select **Security Copilot > Agents** in the Microsoft Defender portal.
+1. Select **Set up** on the Phishing Triage Agent card. 
 
-The Phishing Triage Agent currently only operates with existing user accounts. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the the Phishing Triage card in the Agents page in the Defender portal" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
 
-When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
+1. Follow the steps in the setup wizard, as described in the sections below.
+
+### Create an agent role and identity
+
+#### Create a role with all required permissions 
+
+The agent needs these permissions to access emails, analyze their content, and manage alerts:
+
+- **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
+- **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
+- **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
+- **Security Copilot (read):** Used to access Security Copilot capabilities.
+- **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
+
+Before you proceed, make sure you have an existing role with the required permissions.
+
+For information on creating a role, see [Create a custom role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role).
+
+The required permissions are under the **Security operations** permissions group:
+
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png":::
 
 > [!TIP]
-> We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+> We recommend creating a role that includes only the minimum permissions the agent requires. 
 
-The agent's specified user identity isn't compatible with PIM or TAP, as they don't support long-term background operations.
 
 #### Permissions
 
