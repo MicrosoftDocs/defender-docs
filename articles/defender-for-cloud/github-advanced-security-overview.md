@@ -46,11 +46,11 @@ Bridge the gap between security and engineering teams with integrated workflows 
 
 Within Defender for Cloud, security managers can see which security issues the engineering team already knows about, along with the status of those issues. Security managers open this view by selecting the **View on GitHub** link.
 
- :::image type="content" source="media/github-advanced-security/cve-vulnerability-tracking.jpg" alt-text="Screenshot of the Associated CVEs tab in Defender for Cloud, including links for viewing related alerts on GitHub." lightbox="media/github-advanced-security/cve-vulnerability-tracking.jpg":::
+:::image type="content" source="media/github-advanced-security/cve-vulnerability-tracking.jpg" alt-text="Screenshot of the Associated CVEs tab in Defender for Cloud, including links for viewing related alerts on GitHub." lightbox="media/github-advanced-security/cve-vulnerability-tracking.jpg":::
 
 Security managers can assign security recommendations for resolution to the relevant engineering teams by generating a GitHub issue assignment.
 
-:::image type="content" source="media/github-advanced-security/code-to-runtime-workflow.jpg" alt-text="Screenshot of Defender for Cloud that displays remediation insights with affected assets linked to Code and Runtime phases. The Runtime phase includes a Take Action button." lightbox="media/github-advanced-security/code-to-runtime-workflow.jpg":::
+:::image type="content" source="media/github-advanced-security/code-to-runtime-workflow.jpg" alt-text="Screenshot of Defender for Cloud that displays remediation insights with affected assets linked to development phases." lightbox="media/github-advanced-security/code-to-runtime-workflow.jpg":::
 
 The assignment is generated on the repository of origin. It provides runtime information and context to facilitate the engineering fix.
 
@@ -60,11 +60,11 @@ The assignment is generated on the repository of origin. It provides runtime inf
 
 Engineering managers can assign an issue to a developer for further resolution. The assignee can use a Copilot coding agent for AI-powered automatic fixes.
 
-:::image type="content" source="media/github-advanced-security/copilot-ai-autofix-tracking.jpg" alt-text="Screenshot of GitHub pull request details, including updated Dockerfile base image, CVE links, and Copilot comments on security fixes." lightbox="media/github-advanced-security/copilot-ai-autofix-tracking.jpg":::
+:::image type="content" source="media/github-advanced-security/copilot-ai-autofix-tracking.jpg" alt-text="Screenshot of GitHub pull request details, including Copilot comments on security fixes." lightbox="media/github-advanced-security/copilot-ai-autofix-tracking.jpg":::
 
 GitHub issue fixes, progress, and campaign advancements are tracked in real time. The statuses are reflected both in GitHub and in Defender for Cloud.
 
-:::image type="content" source="media/github-advanced-security/github-issue-status-details.jpg" alt-text="Screenshot of GitHub issue details, including repository URL, owner, status, and a Take Action button." lightbox="media/github-advanced-security/github-issue-status-details.jpg":::
+:::image type="content" source="media/github-advanced-security/github-issue-status-details.jpg" alt-text="Screenshot of GitHub issue details, including repository URL, owner, and status." lightbox="media/github-advanced-security/github-issue-status-details.jpg":::
 
 This approach ensures that fixes are delivered rapidly, creates clear accountability, and simplifies collaboration. All these benefits happen inside the tools that your teams already use.
 
