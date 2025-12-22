@@ -38,13 +38,13 @@ By filtering out false alarms, the agent enables analysts to focus on confirmed 
 
 ## How the agent works
 
-The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. The agent’s key capabilities include:
+The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender that enhances the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. The agent’s key capabilities include:
 
 - **Autonomous triage:** Uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
 - **Transparent rationale:** Provides transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. It also provides a visual representation of its reasoning process.
 - **Learning based on feedback:** Analysts can provide feedback on classification outcomes. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up.
 
-To investigate phishing attempts, the agent uses a combination of Defender and Copilot capabilities, including:
+To investigate phishing attempts, the agent uses a combination of Microsoft Defender and Microsoft Security Copilot capabilities, including:
 
 - **Email content analysis** – Detects suspicious patterns and indicators in email bodies.
 - **Detonation for files and URLs** – Safely executes and analyzes potentially malicious files and links.
