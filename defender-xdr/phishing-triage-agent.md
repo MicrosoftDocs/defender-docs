@@ -36,24 +36,21 @@ The Phishing Triage Agent uses advanced LLM-based analysis to perform sophistica
 
 By filtering out false alarms, the agent frees analysts to focus on real threats and high-impact investigations. This shift accelerates detection, sharpens response, and reinforces the organization’s overall security posture.
 
-## Overview
+## How the agent works
 
-Security Copilot brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is integrated into the Microsoft Defender portal to offer security teams advanced tools for investigating and responding to incidents, identifying threats, and protecting their organization using relevant threat intelligence.
+The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. The agent’s key capabilities include:
 
-The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. Some of the agent’s highlights include:
+- **Autonomous triage:** Uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
+- **Transparent rationale:** Provides transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. It also provides a visual representation of its reasoning process.
+- **Learning based on feedback:** Analysts can provide feedback on classification outcomes. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up.
 
-- **Autonomous triage:** The Phishing Triage Agent uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
-- **Transparent rationale:** The agent provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
-- **Learning based on feedback:** The agent continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
+To investigate phishing attempts, the agent uses a combination of Defender and Copilot capabilities, including:
 
-The agent uses these tools and capabilities to analyze and investigate phishing attempts:
-
-- Email content analysis – Detects suspicious patterns and indicators in email bodies.
-- Detonation for files and URLs – Safely executes and analyzes potentially malicious files and links.
-- Screenshot analysis – Reviews visual content from emails, URLs, and certain file types.
-- Threat intelligence tools – Uses Microsoft Threat Intelligence feeds to provide enriched detection context.
-- General Kusto Query Language (KQL) tools – Applies predefined security rule templates  and custom KQL queries to automate detection and investigation across email, file, and URL telemetry.
-
+- **Email content analysis** – Detects suspicious patterns and indicators in email bodies.
+- **Detonation for files and URLs** – Safely executes and analyzes potentially malicious files and links.
+- **Screenshot analysis** – Reviews visual content from emails, URLs, and certain file types.
+- **Threat intelligence tools** – Uses Microsoft Threat Intelligence feeds to provide enriched detection context.
+- **General Kusto Query Language (KQL) tools** – Applies predefined security rule templates  and custom KQL queries to automate detection and investigation across email, file, and URL telemetry.
 
 ## Prerequisites
 
