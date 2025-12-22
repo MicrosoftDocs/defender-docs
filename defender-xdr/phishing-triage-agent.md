@@ -117,9 +117,7 @@ To open the Phishing Triage Agent setup wizard:
 
 1. Follow the steps in the setup wizard, as described in the sections below.
 
-### Create an agent role and identity
-
-#### Create a role with all required permissions 
+### Create a role with all required permissions 
 
 The agent needs these permissions to access emails, analyze their content, and manage alerts:
 
@@ -142,7 +140,7 @@ The required permissions are under the **Security operations** permissions group
 > [!TIP]
 > We recommend creating a role that includes only the minimum permissions the agent requires. 
 
-#### Create the agent identity and assign the agent role
+### Create the agent identity and assign the agent role
 
 Select an agent identity:
 
