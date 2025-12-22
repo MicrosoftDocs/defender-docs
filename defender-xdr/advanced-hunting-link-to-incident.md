@@ -9,7 +9,7 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/28/2025
+ms.date: 12/02/2025
 ---
 
 # Link query results to an incident
@@ -32,17 +32,21 @@ ms.date: 03/28/2025
 
 
 
-You can use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. This feature helps you easily capture records from advanced hunting activities, which enables you to create a richer timeline or context of events regarding an incident. 
+Use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. This feature helps you easily capture records from advanced hunting activities, which enables you to create a richer timeline or context of events regarding an incident. 
+
+## Required permissions for linking incidents 
+
+To link query results to an incident, you need the same permissions required for managing custom detections. For more information, see [Create custom detection rules](custom-detection-rules.md#required-permissions-for-managing-custom-detections).
 
 ## Link results to new or existing incidents
 
 1. In the advanced hunting query page, first enter your query in the query field provided then select **Run query** to get your results.
 
-    :::image type="content" source="/defender/media/link-to-incident-1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal." lightbox="/defender/media/link-to-incident-1.png":::
+    :::image type="content" source="media/advanced-hunting-link-to-incident/link-to-incident-1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal." lightbox="media/advanced-hunting-link-to-incident/link-to-incident-1.png":::
 
 2. In the Results page, select the events or records that are related to a new or current investigation you're working on, then select **Link to incident**.
 
-    :::image type="content" source="/defender/media/link-to-incident-1b.png" alt-text="Screenshot of the link to incident feature in advanced hunting in the Microsoft Defender portal." lightbox="/defender/media/link-to-incident-1b.png":::
+    :::image type="content" source="media/advanced-hunting-link-to-incident/link-to-incident-1b.png" alt-text="Screenshot of the link to incident feature in advanced hunting in the Microsoft Defender portal." lightbox="media/advanced-hunting-link-to-incident/link-to-incident-1b.png":::
 
 3. Find the **Alert details** section in the Link to incident pane, then select **Create new incident** to convert the events to alerts and group them to a new incident:
  
@@ -95,7 +99,7 @@ You can use the link to incident feature to add advanced hunting query results t
 7. Review the details you've provided in the Summary section. 
 8.	Select **Done**.
 
-### View linked records in the incident
+## View linked records in the incident
 
 You can select the generated link from the summary step of the wizard or select the incident name from the incident queue, to view the incident to which the events are linked.
 
@@ -108,7 +112,7 @@ You can also select the event from the timeline view or from the query results v
 
 :::image type="content" source="/defender/media/advanced-hunting-results-link8.png" alt-text="Screenshot of the incident page in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-results-link8.png":::
 
-### Filter for events added using advanced hunting
+## Filter for events added using advanced hunting
 
 You can view which alerts were generated from advanced hunting by filtering incidents and alerts by **Manual** detection source.
 
