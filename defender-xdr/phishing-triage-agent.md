@@ -132,12 +132,12 @@ The agent needs these permissions to access emails, analyze their content, and m
 Before you proceed, make sure you have an existing Defender XDR role with the required permissions.
 The required permissions are under the **Security operations** permissions group:
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png":::
+:::image type="content" source="media/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage/agent-permissions.png":::
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 1. Assign the role to the agent. Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png":::
+   :::image type="content" source="media/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="media/phishing-triage/agent-permissions-sources.png":::
 
 > [!TIP]
 > We recommend creating a role that includes only the minimum permissions the agent requires. 
