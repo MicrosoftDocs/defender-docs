@@ -88,7 +88,9 @@ The Phishing Triage Agent addresses phishing incidents that include alerts with 
 
 ## Permissions required
 
-| **User Action**                                              | **Permission required**                                      |
+This table outlines the permissions required to perform various actions related to the Phishing Triage Agent in the Defender portal.
+
+| **User action**                                              | **Permission required**                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | View  agent results and teach agent through feedback | **Security Copilot (read)**, **Security data basics (read)**, **Alerts  (manage)**, **Email & collaboration metadata (read)**,  and **Email & collaboration content (read)** under the **Security  operations** permissions group in the Defender portal |
 | View  agent settings                                         | **Security  Copilot (read)** and **Security data  basics (read)** under the **Security operations** permissions  group in the Defender portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
@@ -107,11 +109,11 @@ Ensure that all [prerequisites](#prerequisites) are met and have the **Security 
 
 To open the Phishing Triage Agent setup wizard: 
 
-1. Find and deploy the agent, as described in [Discover and deploy agents in the Microsoft Defender portal](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
+1. Find and deploy the agent from the Security Store, as described in [Discover and deploy agents in the Microsoft Defender portal](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 1. Select **Security Copilot > Agents** in the Microsoft Defender portal.
 1. Select **Set up** on the Phishing Triage Agent card. 
 
-      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the the Phishing Triage card in the Agents page in the Defender portal" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
+      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the the Phishing Triage card in the Agents page in the Defender portal" lightbox="/defender/media/agents-in-defender/phishing-triage-agent/phishing-triage-setup.png":::  
 
 1. Follow the steps in the setup wizard, as described in the sections below.
 
@@ -121,7 +123,7 @@ Select an agent identity:
 
 - **Create a new agent identity (recommended)** - Automatically create a new Microsoft Entra agent identity manage role-based access for the agent. The wizard prompts you to select an existing role from a dropdown menu, which only shows roles with all required permissions.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Phishing Triage Agent setup wizard." lightbox="/defender/media/agents-in-defender/phishing-triage/setup-assign-entra-agent-id.PNG":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Phishing Triage Agent setup wizard." lightbox="/defender/media/agents-in-defender/phishing-triage-agent/setup-assign-entra-agent-id.PNG":::
    
    For more information on Microsoft Entra agent identities, see [Automatically create Microsoft Entra agent identities for Copilot Studio agents (preview)](/microsoft-copilot-studio/admin-use-entra-agent-identities).
    
@@ -129,7 +131,7 @@ Select an agent identity:
 
 - **Connect an existing user account** - Use an existing user account as the agent identity and assign it a role with the required permissions.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="/defender/media/agents-in-defender/phishing-triage-agent/setup-assign-user.PNG":::
 
    For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
@@ -145,7 +147,7 @@ Select an agent identity:
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. 
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-complete.png" alt-text="Screenshot of the Phishing Triage Agent setup wizard completion page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-complete.png":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage-agent/phishing-triage-setup-complete.png" alt-text="Screenshot of the Phishing Triage Agent setup wizard completion page." lightbox="/defender/media/agents-in-defender/phishing-triage-agent/phishing-triage-setup-complete.png":::
 ## Enhance incident response with the Phishing Triage Agent
 
 The agent is designed to help security teams manage the overwhelming volume of suspicious emails organizations receive daily. Acting as a force multiplier for SOC teams, the agent offloads time-consuming triage tasks, reduces alert fatigue, and accelerates incident response by autonomously identifying true phishing threats. This enables analysts to cut through the noise and focus their attention on the threats that truly matter.
