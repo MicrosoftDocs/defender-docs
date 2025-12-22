@@ -142,7 +142,7 @@ The following section describes how an incident handled by our experts is update
 1. An incident that our experts have confirmed as a _True Positive_ has a managed response posted in Microsoft Defender XDR, and a **Tag** _Awaiting Customer Action_ and the **Owner** is listed as _Customer_. You need to act on the incident based on using the provided managed response.
 1. Once our experts have concluded their investigation and closed an incident as _False Positive_ or _Informational_, _Expected Activity_, the incident's **Status** is updated to _Resolved_, the **Owner** is updated to _Unassigned_, and a **Reason for closing** is provided.
 
-:::image type="content" source="../defender/media/microsoft-sentinel-incidents.png" alt-text="Screenshot of Microsoft Sentinel incidents." lightbox="../defender/media/microsoft-sentinel-incidents.png":::
+:::image type="content" source="media/microsoft-sentinel-incidents.png" alt-text="Screenshot of Microsoft Sentinel incidents." lightbox="media/microsoft-sentinel-incidents.png":::
 
 ### Other applications
 
