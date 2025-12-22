@@ -22,6 +22,9 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## December 2025
 
+### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified RBAC
+Integration of Microsoft Defender for Cloud Apps permissions with Microsoft Defender XDR Unified RBAC is now available worldwide.
+
 ### Increased availability of App governance unused app insights feature (Preview)
 
 The Microsoft Defender for Cloud Apps app governance unused app insights feature helps administrators identify and manage unused Microsoft 365-connected OAuth apps, enforce policy-based governance, and use advanced hunting queries for better security. This feature is now available for most commercial cloud customers. For more information, see [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md).
