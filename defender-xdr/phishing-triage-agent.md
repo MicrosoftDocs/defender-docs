@@ -117,6 +117,31 @@ To open the Phishing Triage Agent setup wizard:
 
 1. Follow the steps in the setup wizard, as described in the sections below.
 
+### Create an agent role and identity
+
+#### Create a role with all required permissions 
+
+The agent needs these permissions to access emails, analyze their content, and manage alerts:
+
+- **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
+- **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
+- **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
+- **Security Copilot (read):** Used to access Security Copilot capabilities.
+- **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
+
+Before you proceed, make sure you have an existing Defender XDR role with the required permissions.
+The required permissions are under the **Security operations** permissions group:
+
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png":::
+1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
+1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
+1. Assign the role to the agent. Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
+
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png":::
+
+> [!TIP]
+> We recommend creating a role that includes only the minimum permissions the agent requires. 
+
 #### Create the agent identity and assign the agent role
 
 Select an agent identity:
