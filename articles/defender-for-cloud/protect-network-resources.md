@@ -4,7 +4,7 @@ description: This document addresses recommendations in Microsoft Defender for C
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
-ms.date: 02/19/2025
+ms.date: 12/22/2025
 ms.custom: sfi-image-nochange
 ---
 # Protect network resources
