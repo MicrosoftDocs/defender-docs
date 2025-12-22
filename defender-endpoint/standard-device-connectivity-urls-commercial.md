@@ -36,7 +36,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|CRL|80|www.microsoft.com/pki/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|Common|443|events.data.microsoft.com|Used by the Connected User Experiences and Telemetry component and connects to the Microsoft Data Management service|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|WW|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response / Vulnerability assessment for network devices / Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|Yes|Yes|||"Required for Live Response Performance (Direct Connection/Proxy bypass required). Required when using Security Management for Microsoft Defender for Endpoint"|
+|Microsoft Defender for Endpoint|WW|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response / Vulnerability assessment for network devices / Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|Yes|Yes|||Required for Live Response Performance (Direct Connection/Proxy bypass required). Required when using Security Management for Microsoft Defender for Endpoint|
 |Microsoft Defender for Endpoint|WW|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
 |Microsoft Defender for Endpoint|WW|Common|443|settings-win.data.microsoft.com|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Only required for Windows 10 1703 and below. Not required on Windows Server.|
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
@@ -48,9 +48,9 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|\*.blob.core.windows.net/networkscannerstable/*|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Security Management|443|enterpriseregistration.windows.net|Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
 |Microsoft Defender for Endpoint|WW|Security Management|443|*.dm.microsoft.com|Security Management for Microsoft Defender for Endpoint - Enrollment, check-in, and reporting|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
-|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.ods.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|
-|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.oms.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|
-|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.blob.core.windows.net|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.ods.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.oms.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.blob.core.windows.net|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|unitedstates.x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
@@ -87,6 +87,8 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|usseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|EU |Microsoft Defender for Endpoint EU| usseu1westprod.blob.core.windows.net|Malware Sample Submission Storage||Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|unitedkingdom.x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
@@ -111,18 +113,15 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender Antivirus|WW|MU / WU|443|*.update.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|WW|MU / WU|443|*.delivery.mp.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|WW|MU / WU|443|*.windowsupdate.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|WW|MU / WU|443|go.microsoft.com|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes*|Yes|Yes|"*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)
-Required for Mac and Linux platforms"|
-|Microsoft Defender Antivirus|WW|MU / WU|443|definitionupdates.microsoft.com|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes*|Yes|Yes|"*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)
-Required for Mac and Linux platforms"|
-|Microsoft Defender Antivirus|WW|MU / WU|443|https://www.microsoft.com/security/encyclopedia/adlpackages.aspx|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes|Yes|Yes|"*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)
-Required for Mac and Linux platforms"|
+|Microsoft Defender Antivirus|WW|MU / WU|443|go.microsoft.com|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes*|Yes|Yes|*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr) <br> Required for Mac and Linux platforms|
+|Microsoft Defender Antivirus|WW|MU / WU|443|definitionupdates.microsoft.com|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes*|Yes|Yes|*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr) <br> Required for Mac and Linux platforms|
+|Microsoft Defender Antivirus|WW|MU / WU|443|https://www.microsoft.com/security/encyclopedia/adlpackages.aspx|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes|Yes|Yes|*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr) <br> Required for Mac and Linux platforms|
 |Microsoft Defender Antivirus|WW|MU (ADL)|443|*.download.windowsupdate.com|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|WW|MU (ADL)|443|*.download.microsoft.com|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|WW|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|WW|MAPS|443|*.wdcp.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender Antivirus|WW|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|Yes|Yes|Yes|Yes||
-|Microsoft Defender Antivirus|WW|Common|443|*.events.data.microsoft.com|Used by Microsoft Defender Antivirus to send Diagnostic Telemetry for Microsoft Defender Core Service|Required|Yes|No|Yes|No|No|"To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. Alternatively, to wildcard, can allow: us-mobile.events.data.microsoft.com/OneCollector/1.0 eu-mobile.events.data.microsoft.com/OneCollector/1.0 uk-mobile.events.data.microsoft.com/OneCollector/1.0 au-mobile.events.data.microsoft.com/OneCollector/1.0 mobile.events.data.microsoft.com/OneCollector/1.0"|
+|Microsoft Defender Antivirus|WW|Common|443|*.events.data.microsoft.com|Used by Microsoft Defender Antivirus to send Diagnostic Telemetry for Microsoft Defender Core Service|Required|Yes|No|Yes|No|No|To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. Alternatively, to wildcard, can allow: us-mobile.events.data.microsoft.com/OneCollector/1.0 eu-mobile.events.data.microsoft.com/OneCollector/1.0 uk-mobile.events.data.microsoft.com/OneCollector/1.0 au-mobile.events.data.microsoft.com/OneCollector/1.0 mobile.events.data.microsoft.com/OneCollector/1.0|
 |Microsoft Defender Antivirus|WW|Common|443|*.ecs.office.com/config/v1/MicrosoftWindowsDefenderClient|Used by Microsoft Defender Antivirus to download internal feature configurations (ECS) for Microsoft Defender Core service|Required|Yes|No|Yes|No|No|Microsoft Defender Core service is used to enhance stability and performance of Microsoft Defender Antivirus for customers.|
 |Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen-prod.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
 |Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
@@ -132,17 +131,20 @@ Required for Mac and Linux platforms"|
 
 ## Defender portal URLs
 
-|Service|Geography|URL|Comment|
-|---|---|---|---|
-|Microsoft Defender for Endpoint|WW|*.blob.core.windows.net|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|crl.microsoft.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|https://*.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|https://secure.aadcdn.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|https://static2.sharepointonline.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|https://login.microsoftonline.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|https://*.securitycenter.windows.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|https://onboardingpackagescusprd.blob.core.windows.net|Microsoft Defender Security Center Portal URL|
-|Microsoft 365 Defender|WW|https://security.microsoft.com|Microsoft 365 Defender Portal URL|
+|Service|Geography|URL|
+|---|---|---|
+|Microsoft Defender for Endpoint|WW|*.blob.core.windows.net|
+|Microsoft Defender for Endpoint|WW|crl.microsoft.com|
+|Microsoft Defender for Endpoint|WW|https://*.microsoftonline-p.com|
+|Microsoft Defender for Endpoint|WW|https://secure.aadcdn.microsoftonline-p.com|
+|Microsoft Defender for Endpoint|WW|https://static2.sharepointonline.com|
+|Microsoft Defender for Endpoint|WW|https://login.microsoftonline.com|
+|Microsoft Defender for Endpoint|WW|https://*.securitycenter.windows.com|
+|Microsoft Defender for Endpoint|WW|https://onboardingpackagescusprd.blob.core.windows.net|
+|Microsoft 365 Defender|WW|https://security.microsoft.com|
+
+> [!NOTE]
+> Microsoft Defender Security Center Portal URL
 
 ## Microsoft Defender processes
 
