@@ -18,6 +18,9 @@ This article provides an overview of how to use private endpoints with Microsoft
 > [!NOTE]
 > For a complete understanding of private endpoints and private links, see [What is a private endpoint?](/azure/private-link/private-endpoint-overview).
 
+> [!NOTE]
+> Microsoft Security Private Link is not supported in sovereign cloud regions, such as Azure Government and Azure China (21Vianet).
+
 ## Supported scenarios
 
 Use Microsoft Security Private Link to securely connect workloads in your virtual network to Microsoft Defender services. 
