@@ -18,8 +18,10 @@ Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Mic
 
 Before you begin, make sure that:
 
-- Microsoft Defender for Cloud is enabled on your Azure subscription.
+- Microsoft Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+
 - A virtual network and subnet are available for the private endpoint.
+
 - You have reviewed the required [roles and permissions](concept-private-endpoints.md#roles-and-permissions).
 
 ## Create private endpoint (Azure portal)

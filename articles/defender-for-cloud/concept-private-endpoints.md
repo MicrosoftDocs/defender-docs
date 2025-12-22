@@ -11,7 +11,7 @@ ms.date: 12/02/2025
 
 Microsoft Security Private Link enables you to connect to Microsoft Defender services by using private endpoints, ensuring secure and private connectivity from your virtual network. You create a Security Private Link resource in your subscription and then create private endpoints in your Azure virtual networks to connect to that resource.
 
-With this approach, all security-related traffic from your workloads—including telemetry from Defender agents, sensors, add-ons, and extensions—traverses the Microsoft backbone network without exposure to the public internet. This simplifies network architecture while meeting strict regulatory compliance requirements for network isolation.
+With this approach, all security-related traffic from your workloads traverses the Microsoft backbone network without exposure to the public internet. This includes telemetry from Defender agents, sensors, add-ons, and extensions.
 
 This article provides an overview of how to use private endpoints with Microsoft Security Private Link to securely connect your virtual network to Microsoft Defender services.
 
@@ -57,25 +57,22 @@ Security Private Link uses Azure Private Endpoints to establish private connecti
 
 Add diagram when ready.
 
-## Prerequisites
-
-Before you begin, make sure you: 
-
-- Have access to an Azure subscription with Microsoft Defender for Cloud enabled. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-
-- Review the [required roles and permissions](#roles-and-permissions).
-
-- Review the Supported regions. (Insert list or link)
+## Roles and permissions
 
 ## Roles and permissions
 
-Access is governed by [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview).
+Access to Microsoft Security Private Link is governed by [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview). Configuring and managing private endpoints typically involves the following roles:
 
-- **Create a private endpoint**: Requires the **Network Contributor** role (or higher) on the virtual network.
+- **Private Link resource owner**  
+  Owns the Microsoft Security Private Link resource and can approve, reject, or delete private endpoint connection requests.
 
-- **Approve a private endpoint connection**: Requires **Owner** or **Contributor** permissions on the Microsoft Security Private Link resource.
+- **Network Contributor**  
+  Can create private endpoints within a virtual network.
 
-- **Manage Defender for Cloud settings**: Requires the **Security Administrator** role. This role does not grant permissions to approve private endpoint connections.
+- **Security Admin**  
+  Can approve, reject, or delete private endpoint connections but cannot create private endpoints in a virtual network unless additional network permissions are granted.
+
+These roles can be assigned to different users or teams to separate network management from security governance responsibilities.
 
 ## Approval workflow
 
