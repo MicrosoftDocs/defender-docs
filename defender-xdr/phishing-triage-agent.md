@@ -117,14 +117,14 @@ You can access the Phishing Triage Agent setup wizard in two ways:
 
    :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
 
-   > [!NOTE]
-   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can't initiate setup from the **Settings** page, but you can still set up the agent from the incident queue if you have the **Security Administrator** role.
 
 Follow the steps in the setup wizard, which includes:
 
 1. Select the [identity](#identity) type to assign to the agent.
 
-   :::image type="content" source="media/phishing-triage-agent/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage" lightbox="media/phishing-triage-agent/select-identity.png":::
+
+
+
 
 1. Select the user account you created for the agent and follow the prompts.
 
@@ -132,22 +132,38 @@ Follow the steps in the setup wizard, which includes:
 
 ### Assign the agent’s identity and permissions
 
-The Phishing Triage Agent operates under the identity you assign to it. Before setup, you need to create this identity and ensure it has the appropriate permissions to perform triage actions.
+The setup wizard walks you through assigning the agent an identity and the permissions required to do its work. 
 
 #### Identity
 
-The Phishing Triage Agent currently only operates with existing user accounts. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+The agent requires an identity to operate. The wizard prompts you to select one of two identity types:
 
-When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
+   - **Create a new agent identity (recommended)** - Automatically create a new Microsoft Entra Agent ID. Microsoft Entra creates Agent ADs specifically for AI agents. Using Agent IDs keeps access scoped, secure, and easier to manage. For more information, see [What are agent identities?](/entra/agent-id/identity-platform/what-is-agent-id). 
 
-> [!TIP]
-> We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+     :::image type="content" source="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Phishing Triage Agent setup wizard." lightbox="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG":::   
+    
+     OR
 
-The agent's specified user identity isn't compatible with PIM or TAP, as they don't support long-term background operations.
+   - **Connect an existing user account** - Assign an existing user account as the agent identity. The agent inherits the user account's access and permissions. To use this identity option, you need to create the identity yourself before setup and assign it the [permissions the agent requires](#permissions). For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+
+     :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
+ 
+      When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
+
+      > [!TIP]
+      > We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+
+      The agent's specified user identity isn't compatible with PIM or TAP because they don't support long-term background operations.
 
 #### Permissions
 
-The user account you assign the agent needs these permissions to access emails, analyze their content, and manage alerts:
+Grant the agent identity only the permissions required to perform its tasks, following least‑privilege principles, as listed in this section.
+
+If you use an Agent ID, select an existing role in your organization or create a new role with the required permissions.
+
+If you use an existing user account, assign the required permissions to that identity before connecting it during setup.
+
+The agent identity needs these permissions to access emails, analyze their content, and manage alerts:
 
 - **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
 - **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
