@@ -301,7 +301,7 @@ GeneratedTime|String|The time that the export was generated.|2021-05-20T08:00:00
 #### 2.6.1 Request example
 
 ```http
-GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabilitiesExport
+GET https://api-us.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitiesExport
 ```
 
 #### 2.6.2 Response example
