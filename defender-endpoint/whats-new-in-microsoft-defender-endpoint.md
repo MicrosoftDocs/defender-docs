@@ -25,7 +25,7 @@ This article describes Microsoft Defender for Endpoint features that are in prev
 
 Learn more:
 
-- [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-releases.md)
+- [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-versions.md)
 - [Preview features](/defender-xdr/preview)
 
 ## December 2025
