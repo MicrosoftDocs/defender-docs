@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 11/25/2025
+ms.date: 12/19/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -42,6 +42,21 @@ This article is updated frequently to let you know what's new in the latest rele
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## Releases for Defender for Endpoint on Linux
+
+### December-2025 Build: 101.25092.0002 | Release version: 30.125092.0002.0
+
+|Build:             |**101.25092.0002**    |
+|-------------------|----------------------|
+|Released:          |**December 18, 2025**|
+|Published:         |**December 18, 2025**|
+|Expiry:            |**Aug 09, 2026**|
+|Release version:   |**30.125092.0002.0**|
+|Engine version:    |**1.1.25110.3001**|
+|Signature version: |**1.443.189.0**|
+
+What's new
+
+- Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device.
 
 ### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
 
