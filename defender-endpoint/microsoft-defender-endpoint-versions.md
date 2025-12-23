@@ -68,9 +68,9 @@ This table includes supported versions released in for all supported platforms i
 |Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#1079010101---july-2025) |
 |macOS  |101.25062.0005  |July 2025 |- Release version: 20.125062.5.0<br>- Engine version: 1.1.25040.3000<br>- Signature version: 1.427.248.0 |[Release details and updates](#101250620005---july-2025) |
 |Linux  |101.25052.0007  |July 2025 |- Release version: 30.125052.0007.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#101250520007---july-2025) |
+|Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108760276171006---july-2024) |
 |Linux  |101.25042.0003  |June 2025 |- Release version: 30.125042.0003.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#101250420003---june-2025) |
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108797258571000---may-2025) |
-|Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108760276171006---july-2024) |
 
 ## Windows versions
 
