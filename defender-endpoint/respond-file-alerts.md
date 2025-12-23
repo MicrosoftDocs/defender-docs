@@ -194,7 +194,7 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > Download quarantined file requirements:
 >
 > - Your organization uses Microsoft Defender Antivirus in active mode
-> - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
+> - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions)
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
 > - Client devices must be running Windows 11 or Windows 10, version 1703 or later

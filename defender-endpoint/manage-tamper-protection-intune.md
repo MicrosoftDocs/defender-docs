@@ -92,7 +92,7 @@ If your organization has [exclusions defined for Microsoft Defender Antivirus](c
 
 | Condition | Criteria |
 |---|---|
-| Microsoft Defender platform | Devices are running Microsoft Defender platform `4.18.2211.5` or later. For more information, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases). |
+| Microsoft Defender platform | Devices are running Microsoft Defender platform `4.18.2211.5` or later. For more information, see [Monthly platform and engine versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions). |
 | `DisableLocalAdminMerge` setting | This setting is also known as preventing local list merging. `DisableLocalAdminMerge` must be enabled so that settings configured on a device aren't merged with organization policies, such as settings in Intune. For more information, see [DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp). |
 | Device management | Devices are either managed in Intune only, or are managed with Configuration Manager only. Sense must be enabled. |
 | Antivirus exclusions | Microsoft Defender Antivirus exclusions are managed in Microsoft Intune or Configuration Manager. For more information, see [Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices](/mem/intune/protect/antivirus-microsoft-defender-settings-windows). <br/><br/>Functionality to protect Microsoft Defender Antivirus exclusions is enabled on devices. For more information, see [How to determine whether antivirus exclusions are tamper protected on a Windows device](#how-to-determine-whether-antivirus-exclusions-are-tamper-protected-on-a-windows-device). |

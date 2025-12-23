@@ -60,7 +60,7 @@ Understand the following prerequisites before you create indicators for files:
 ### Windows prerequisites
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
-- The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
+- The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions)
 - File hash computation is enabled by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**. Or, you can run the following PowerShell command: `Set-MpPreference -EnableFileHashComputation $true`
 
 > [!NOTE]

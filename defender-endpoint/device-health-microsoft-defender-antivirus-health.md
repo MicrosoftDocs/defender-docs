@@ -316,7 +316,7 @@ The following table lays out the possible values for up to date reports for **An
 | < 7 days (new) | whatever client reports (_Up to date <br/> Out of date <br/> Unknown)_ |
 | > 7 days (old) | `Unknown` |
 
-For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions).
 
 #### Antivirus platform updates card
 
@@ -331,7 +331,7 @@ The following table lays out the possible up to date report values for **Antivir
 | < 7 days (new) | whatever client reports (`Up to date` <br/> `Out of date` <br/> `Unknown)` |
 | > 7 days (old) | `Unknown` |
 
-For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions).
 
 ##### Security intelligence updates card
 
