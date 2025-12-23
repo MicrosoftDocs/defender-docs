@@ -25,6 +25,8 @@ This article is aimed at **Windows** devices, and includes information about the
 
 - [Product updates](#product-updates)
 
+For a list of the latest security intelligence and product versions, see [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-security-intelligence-and-product-updates)
+
 ## Security intelligence updates
 
 Microsoft Defender Antivirus uses [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md), also known as *Microsoft Advanced Protection Service*, or *MAPS*. Defender Antivirus periodically downloads dynamic security [intelligence updates](https://www.microsoft.com/en-us/wdsi/defenderupdates). These updates don't replace regular security intelligence updates. Engine updates are included with security intelligence updates and are released monthly.
