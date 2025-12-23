@@ -74,6 +74,7 @@ We strongly recommend that SecOps teams manage incidents and alerts from Defende
 
 > [!NOTE]
 > Incidents don't just represent static events. They also represent attack stories that happen over time. As the attack progresses, new Defender for Office 365 alerts, AIR investigations, and their data are continuously added to the existing incident.
+> For Microsoft Defender for Office 365 evidences, instead of displaying the full list of individual evidences, the Microsoft Defender portal shows a single evidence cluster.
 
 Manage incidents on the **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents>:
 
