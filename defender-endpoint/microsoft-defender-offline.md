@@ -59,6 +59,8 @@ For more information about Windows 10 and Windows 11 requirements, see the follo
 
 - [Minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
 - [Hardware component guidelines](/windows-hardware/design/component-guidelines/components)
+> [!IMPORTANT]
+> If BitLocker is enabled on the system drive, suspend BitLocker protection before running Microsoft Defender Offline. Otherwise, you may be prompted to enter the BitLocker recovery key when the system restarts into the offline environment. For instructions, see [Suspend BitLocker protection](https://learn.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-management-tools#suspend-bitlocker-protection).
 
 ## Microsoft Defender Offline updates
 
