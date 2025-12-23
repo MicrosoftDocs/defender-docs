@@ -18,7 +18,7 @@ ms.date: 04/29/2025
 
 ## Recommended resources
 
-- [Learn more](/azure/defender-for-cloud/runtime-gated-overview).
+- Learn more about [Gated deployment for Kubernetes container images](/azure/defender-for-cloud/runtime-gated-overview).
 - Learn more about [Microsoft Security](https://msft.it/6002T9HQY).
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS).
 
