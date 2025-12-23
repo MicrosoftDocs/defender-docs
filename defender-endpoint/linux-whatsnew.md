@@ -43,6 +43,21 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
+
+|Build:             |**101.25092.0005**    |
+|-------------------|----------------------|
+|Released:          |**December 22, 2025**|
+|Published:         |**December 22, 2025**|
+|Expiry:            |**Sep 14, 2026**|
+|Release version:   |**30.125092.0005.0**|
+|Engine version:    |**1.1.25110.3001**|
+|Signature version: |**1.443.272.0**|
+
+What's new
+
+- New EDR ETW events to help TVM service detect vulnerable React components.
+
 ### December-2025 Build: 101.25092.0002 | Release version: 30.125092.0002.0
 
 |Build:             |**101.25092.0002**    |
