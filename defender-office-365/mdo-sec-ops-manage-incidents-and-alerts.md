@@ -73,7 +73,7 @@ We strongly recommend that SecOps teams manage incidents and alerts from Defende
   - Malicious files
 
 > [!NOTE]
-> - The Defender portal shows a single evidence cluster for Defender for Office 365 instead of listing individual evidence items.
+> The Defender portal shows a single evidence cluster for Defender for Office 365 instead of listing individual evidence items.
 
 Manage incidents on the **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents>:
 
