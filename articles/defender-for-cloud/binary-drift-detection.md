@@ -4,19 +4,22 @@ description: Learn how binary drift detecting and blocking can help you detect u
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 12/17/2025
+ms.date: 12/23/2025
 #customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
 ---
 
 # Binary drift detection and blocking
 
-Binary drift happens when a container runs an executable that didn't come from the original image. This drift can be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, you should evaluate any processes launched from binaries not included in the original image as suspicious activity and block them to prevent potential security threats.
+Binary drift happens when a container runs an executable that didn't come from the original image. This drift can be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, you should evaluate any processes that start from binaries not included in the original image as suspicious activity and block them to prevent potential security threats.
 
 The binary drift detection feature alerts you when there's a difference between the workload that comes from the image and the workload running in the container. It alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats.
 
-Binary drift blocking, blocks the execution of unauthorized external processes within containers. When enabled, this feature enforces the policies you define, ensuring that only approved processes can run. This proactive approach helps maintain the integrity of your containerized applications and reduces the risk of security breaches.
+Binary drift blocking blocks the execution of unauthorized external processes within containers. When enabled, this feature enforces the policies you define, ensuring that only approved processes can run. This proactive approach helps maintain the integrity of your containerized applications and reduces the risk of security breaches.
 
 Check out the availability of [binary drift and blocking](support-matrix-defender-for-containers.md#runtime-protection-features).
+
+> [!NOTE]
+> Binary drift blocking is currently in preview.
 
 ## Prerequisites
 
@@ -40,7 +43,7 @@ Create drift policies to define when alerts should be generated. Each policy con
 
 1. Select the applicable rule:
     - **Alert on Kube-System namespace** - can be modified like any other rule.
-    - **Default binary drift** - applies to everything if no other rule matches. You can only modify the actions to either **Drift detection alert** or **Ignore drift detection** (default).
+    - **Default binary drift** - applies to everything if no other rule matches. You can only modify the actions to either **Drift detection alert**, **Drift detection blocking**, or **Ignore drift detection** (default).
 
         :::image type="content" source="media/binary-drift-detection/default-rule.png" alt-text="Screenshot of Default rule appears at the bottom of the list of rules." lightbox="media/binary-drift-detection/default-rule.png":::
 
@@ -65,6 +68,7 @@ Binary drift rules define what behavior is considered suspicious, what to alert 
     
     - **Action**: 
         - **Drift detection alert** if the rule should generate an alert.
+        - **Drift detection blocking** if the rule should block the unauthorized process.
         - **Ignore drift detection** to exclude it from alert generation.
         
     - **Scope description**: A description of the scope to which the rule applies.
@@ -85,7 +89,7 @@ Binary drift rules define what behavior is considered suspicious, what to alert 
 
 1. Select **Save**.
 
-Within 30 minutes, the sensors on the protected clusters update with the new policy.
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
 ## Edit a rule
 
@@ -101,7 +105,7 @@ Within 30 minutes, the sensors on the protected clusters update with the new pol
 
 1. Select **Save**.
 
-Within 30 minutes, the sensors on the protected clusters update with the new policy.
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
 ## Duplicate a rule
 
@@ -119,7 +123,7 @@ This option is useful if you want to create a similar rule with only minor chang
 
 1. Select **Save**.
 
-Within 30 minutes, the sensors on the protected clusters update with the new policy.
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
 ## Delete a rule 
 
@@ -135,11 +139,11 @@ Within 30 minutes, the sensors on the protected clusters update with the new pol
 
 1. Select **Save**.
 
-Within 30 minutes, the sensors on the protected clusters update with the new policy.
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
 ## Additional information
 
-Defender for Cloud's alerts notifies you of any binary drifts, so you can maintain the integrity of your container images. If the system detects an unauthorized external process that matches your defined policy conditions, it generates a high-severity alert for you to review. If you configure blocking rules, the system blocks the execution of those unauthorized processes.
+Defender for Cloud's alerts notify you of any binary drifts, so you can maintain the integrity of your container images. If the system detects an unauthorized external process that matches your defined policy conditions, it generates a high-severity alert for you to review. If you configure blocking rules, the system blocks the execution of those unauthorized processes.
 
 Based on the alerts generated and your review of them, you might need to adjust your rules in the binary drift or blocking policy. This adjustment could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift and blocking policies with their rules effectively balance security needs with operational efficiency.
 
