@@ -21,7 +21,7 @@ Keeping Microsoft Defender Antivirus up to date is critical to assure your devic
 
 This article is aimed at **Windows** devices, and includes information about [security intelligence updates](#security-intelligence-updates) and [product updates](#product-updates).
 
-For a list of the latest **security intelligence and product versions**, see [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-security-intelligence-and-product-updates)
+For a list of the latest **security intelligence and product versions**, see [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions)
 
 ## Security intelligence updates
 
