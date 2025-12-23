@@ -24,6 +24,7 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 | OS |Note| Learn more |
 |---------|---------|---------|
 | Windows | This article covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles | - [Windows 11 release information](/windows/release-health/windows11-release-information)<br>- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br> - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br>- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br>- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7) |
+| Windows | Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). | - [Information about Microsoft Defender Antivirus updates and support](microsoft-defender-antivirus-updates.md)<br>- [Microsoft Defender Antivirus supported versions](#microsoft-defender-antivirus-security-intelligence-and-product-versions) |
 | macOS   | To share feedback feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**. | |
 | macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
 | macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
@@ -472,67 +473,96 @@ This table includes supported versions released in for all supported platforms i
 
 ---
 
-## Microsoft Defender Antivirus security intelligence and product updates
+## Microsoft Defender Antivirus versions
+
+For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
 
 ### November-2025 (Platform: 4.18.25110.6 | Engine: 1.25110.1)
 
-- Security intelligence update version: **1.443.6.0**
-- Release date:  **December 11, 2025 (Engine) / December 17, 2025 (Platform)**
-- Platform: **4.18.25110.6**
-- Engine: **1.1.25110.1**
-- Support phase: **Security and Critical Updates**
+# [Versions](#tab/antivirus-versions-nov)
 
-#### What's new
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.25110.6 | December 17, 2025 |
+| Engine | 1.1.25110.1 | December 11, 2025 |
+| Security intelligence | 1.443.6.0 | December 17, 2025 |
+| Support phase | Security and Critical Updates | - |
 
-- Performance improvements when querying WMI due to Behavior Monitor detections.
-- Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver.
-- Resolved an application compatibility issue due to a loopback with SMB1 enabled.
-- Fixed issue with ASR path exclusion requiring additional "\" characters to function appropriately.
-- Resolved high I/O issue with NisSrv.exe due to high volume of network logging events.
-- Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM.
-- Improved drive mapping enumeration for devices with many drives which resulted in false positive detections for ASR rules.
-- Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019.
+# [Enhancements and features](#tab/antivirus-features-nov)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Performance | Performance improvements when querying WMI due to Behavior Monitor detections. |
+| PowerShell compatibility | Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver. |
+| Application compatibility | Resolved an application compatibility issue due to a loopback with SMB1 enabled. |
+| Attack Surface Reduction | Fixed issue with ASR path exclusion requiring additional "\" characters to function appropriately. |
+| Network Inspection | Resolved high I/O issue with NisSrv.exe due to high volume of network logging events. |
+| Threat enumeration | Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM. |
+| Drive mapping | Improved drive mapping enumeration for devices with many drives which resulted in false positive detections for ASR rules. |
+| Service stability | Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019. |
+
+---
 
 ### October-2025 (Platform: 4.18.25100.9008 | Engine: 1.1.25100.9002)
 
-- Security intelligence update version: **1.441.131.0**
-- Release date: **November 6, 2025 (Engine) / November 17, 2025 (Platform)**
-- Platform: **4.18.25100.9008**
-- Engine: **1.1.25100.9002**
-- Support phase: **Security and Critical Updates**
+# [Versions](#tab/antivirus-versions-oct)
 
-#### What's new
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.25100.9008 | November 17, 2025 |
+| Engine | 1.1.25100.9002 | November 6, 2025 |
+| Security intelligence | 1.441.131.0 | November 17, 2025 |
+| Support phase | Security and Critical Updates | - |
 
-- **Fixed Network Inspection Service stability issue**: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state. 
-- **Reduced startup delay for Antimalware Service**: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance.
-- **Fixed crash in Defender settings on x86 devices**: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines.
-- **Fixed Defender startup issue**: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions.
-- **Reduced system resource usage**: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability.
+# [Enhancements and features](#tab/antivirus-features-oct)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Network Inspection Service | Fixed Network Inspection Service stability issue: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state. |
+| Antimalware Service | Reduced startup delay for Antimalware Service: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance. |
+| x86 compatibility | Fixed crash in Defender settings on x86 devices: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines. |
+| Service startup | Fixed Defender startup issue: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions. |
+| System resources | Reduced system resource usage: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability. |
+
+---
 
 ### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
 
-- Security intelligence update version: **1.439.345.0**
-- Release date:  **October 8, 2025 (Engine) / October 21, 2025 (Platform)**
+# [Versions](#tab/antivirus-versions-sep)
 
-- Platform: **4.18.25090.3009**
-- Engine: **1.1.25090.3001**
-- Support phase: **Security and Critical Updates**
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.25090.3009 | October 21, 2025 |
+| Engine | 1.1.25090.3001 | October 8, 2025 |
+| Security intelligence | 1.439.345.0 | October 21, 2025 |
+| Support phase | Security and Critical Updates | - |
 
-#### What's new
+# [Enhancements and features](#tab/antivirus-features-sep)
 
-- **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
-- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
-- **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
-- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
+| Feature area | Update summary |
+|--------------|---------------|
+| Service startup | Improved service startup behavior: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly. |
+| RPC services | Improved stability for RPC services: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability. |
+| Threat exclusion | Fixed threat exclusion handling: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections. |
+| Network file access | Restored performance optimization for network file access: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled. |
+
+---
 
 ### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
 
-- Security intelligence update version: **1.437.1.0**
-- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
-- Platform: **4.18.25080.5**
-- Engine: **1.1.25080.5**
-- Support phase: **Security and Critical Updates**
+# [Versions](#tab/antivirus-versions-aug)
 
-#### What's new
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.25080.5 | September 17, 2025 |
+| Engine | 1.1.25080.5 | September 16, 2025 |
+| Security intelligence | 1.437.1.0 | September 17, 2025 |
+| Support phase | Security and Critical Updates | - |
 
-Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
+# [Enhancements and features](#tab/antivirus-features-aug)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Update reliability | Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements. |
+
+---
