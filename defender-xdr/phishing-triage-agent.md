@@ -231,7 +231,6 @@ Select an agent identity:
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. 
 
-   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-complete.png" alt-text="Screenshot of the Phishing Triage Agent setup wizard completion page." lightbox="media/phishing-triage-agent/phishing-triage-setup-complete.png":::
 ## Enhance incident response with the Phishing Triage Agent
 
 The agent is designed to help security teams manage the overwhelming volume of suspicious emails organizations receive daily. Acting as a force multiplier for SOC teams, the agent offloads time-consuming triage tasks, reduces alert fatigue, and accelerates incident response by autonomously identifying true phishing threats. This enables analysts to cut through the noise and focus their attention on the threats that truly matter.
