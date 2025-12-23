@@ -1144,64 +1144,73 @@ result.show()  # Visual by default
 result.show(format="table")  # Table format
 ```
 
-## Complete example
 
-This example demonstrates building a complete security graph with users, devices, and access relationships:
+## Usage examples
+
+### Building a basic graph
 
 ```python
 from sentinel_graph.builders import GraphSpecBuilder
-from sentinel_graph.core.context import ExecutionContext
 
-# Create execution context
-context = ExecutionContext.default()
+# Start building a graph
+builder = GraphSpecBuilder.start()
 
-# Build graph specification
-graph_spec = (
-    GraphSpecBuilder.start(context)
-    .with_sink_database("security_db")
-    
-    # Define user node
-    .add_node("user")
-    .from_table("SigninLogs")
-    .with_time_range(time_column="TimeGenerated", lookback_hours=24)
-    .with_label("user")
+# Add a user node from a table
+builder.add_node("user") \
+    .from_table("SigninLogs") \
     .with_columns("UserId", "UserName", "Email", key="UserId", display="UserName")
-    
-    # Define device node
-    .add_node("device")
-    .from_table("DeviceInfo")
-    .with_label("device")
-    .with_columns("DeviceId", "DeviceName", "OS", key="DeviceId", display="DeviceName")
-    
-    # Define accessed edge
-    .add_edge("accessed")
-    .from_table("AccessLogs")
-    .with_time_range(time_column="TimeGenerated", lookback_hours=24)
-    .source(id_column="UserId", node_type="user")
+
+# Add a device node
+builder.add_node("device") \
+    .from_table("DeviceInfo") \
+    .with_columns("DeviceId", "DeviceName", key="DeviceId", display="DeviceName")
+
+# Add an edge connecting users to devices
+builder.add_edge("accessed") \
+    .from_table("AccessLogs") \
+    .source(id_column="UserId", node_type="user") \
+    .target(id_column="DeviceId", node_type="device") \
+    .with_columns("AccessId", "Timestamp", key="AccessId", display="Timestamp")
+
+# Finalize the graph specification
+graph_spec = builder.done()
+```
+
+### Querying a graph
+
+```python
+# Query the graph using GQL
+result = graph_spec.query(
+    "MATCH (u:user)-[a:accessed]->(d:device) WHERE u.UserName = 'john.doe' RETURN u, a, d"
+)
+
+# Display results
+result.show()
+
+# Convert to DataFrame for analysis
+df = result.to_dataframe()
+df.show(20)
+```
+
+### Using time ranges
+
+```python
+# Filter nodes by time range
+builder.add_node("user") \
+    .from_table("SigninLogs") \
+    .with_time_range(time_column="TimeGenerated", lookback_hours=24) \
+    .with_columns("UserId", "UserName", key="UserId", display="UserName")
+
+# Filter edges by time range
+builder.add_edge("accessed") \
+    .from_table("AccessLogs") \
+    .with_time_range(
+        time_column="TimeGenerated",
+        start_time="2024-12-01",
+        end_time="2024-12-31"
+    ) \
+    .source(id_column="UserId", node_type="user") \
     .target(id_column="DeviceId", node_type="device")
-    .with_columns("AccessId", "Location", "Status", key="AccessId", display="Location")
-    
-    .done()
-)
-
-# Build graph with data
-result = graph_spec.build_graph_with_data()
-print(f"Build status: {result['status']}")
-
-# Query the graph
-query_result = graph_spec.query(
-    "MATCH (u:user)-[a:accessed]->(d:device) RETURN u, a, d LIMIT 100"
-)
-query_result.show()
-
-# Convert to DataFrame for further analysis
-df = query_result.to_dataframe()
-df.printSchema()
-
-# Convert to GraphFrame for graph algorithms
-gf = graph_spec.to_graphframe()
-pagerank_result = gf.pageRank(resetProbability=0.15, maxIter=10)
-pagerank_result.vertices.select("id", "pagerank").show()
 ```
 
 ## Design patterns
