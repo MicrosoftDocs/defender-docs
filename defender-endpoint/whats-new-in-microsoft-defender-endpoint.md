@@ -90,15 +90,3 @@ Learn more:
 |Android |GA |Build 1.0.7901.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1079010101---july-2025). |
 |macOS |GA |Build 101.25062.0005, Release version 20.125062.5.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250620005---july-2025). |
 |Linux |GA |Build 101.25052.0007, Release version 30.125052.0007.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250520007---july-2025). |
-
-## June 2025
-
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-|Linux |GA |Build 101.25042.0003, Release version 30.125042.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250420003---june-2025). |
-
-## May 2025
-
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|---------|
-|Windows |GA |Version 10.8797.25857.1000 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#108797258571000---may-2025). |
