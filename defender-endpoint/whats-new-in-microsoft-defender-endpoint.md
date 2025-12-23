@@ -41,7 +41,7 @@ Learn more:
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Windows Antivirus |Platform 4.18.25110.6 / Engine 1.1.25110.1 |GA |Platform 4.18.25110.6 and Engine 1.1.25110.1 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--november-2025--platform-418251106--engine-1125110001). |
+|Windows Antivirus |Platform 4.18.25110.6 / Engine 1.1.25110.1 |GA |Platform 4.18.25110.6 and Engine 1.1.25110.1 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--november-2025--platform-418251106--engine-11251101). |
 |Android |Build 1.0.8315.0101 |GA |Build 1.0.8315.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--november-2025--1083150101). |
 |Android |Build 1.0.8303.0101 |GA |Build 1.0.8303.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--november-2025--1083030101). |
 |macOS |Build 101.25102.0016 |GA |Release version 20.125102.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--november-2025--101251020016). |
@@ -87,6 +87,6 @@ Learn more:
 
 |Platform  |Preview/GA  |Features  |
 |---------|------------|---------|
-|Android |GA |Build 1.0.7901.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1079010101---july-2025). |
+|Android |GA |Build 1.0.7901.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--july-2025--1079010101). |
 |macOS |GA |Build 101.25062.0005, Release version 20.125062.5.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--july-2025--101250620005). |
 |Linux |GA |Build 101.25052.0007, Release version 30.125052.0007.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--july-2025--101250520007). |

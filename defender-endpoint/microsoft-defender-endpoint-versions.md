@@ -21,7 +21,7 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 ## Find version information in this article
 
-This article includes information on all supported versions for all supported operating systems in the last 6 months. Find specific information:
+This article includes information on supported versions released for all supported operating systems in the past 6 months. Find specific information:
 
 - [Operating system information](#operating-system-information): General notes about the supported operating systems.
 - [All supported versions](#all-supported-versions): A table of all supported versions released in the past 6 months, with links to detailed release notes for each version.
@@ -47,7 +47,7 @@ This table includes supported versions released in for all supported platforms i
 |Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--1084120101) |
 |Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--1083210101) |
 |macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--101251020019) |
-|Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--platform-418251106--engine-1125110001) |
+|Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--platform-418251106--engine-11251101) |
 |Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--1083150101) |
 |Android |1.0.8303.0101  |November 2025 |- Build: 1.0.8303.0101<br>- Released: November 4, 2025 |[Release details and updates](#android--november-2025--1083030101) |
 |macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--november-2025--101251020016) |
@@ -480,6 +480,10 @@ This table includes supported versions released in for all supported platforms i
 | User experience | UX Improvement for home page and tiles screens. |
 
 ---
+
+## iOS versions
+
+For information about iOS versions, see [What's new in Microsoft Defender for Endpoint on iOS](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/ios-whatsnew).
 
 ## Microsoft Defender Antivirus versions
 
