@@ -47,7 +47,7 @@ This table includes supported versions released in for all supported platforms i
 |Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--1084120101) |
 |Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--1083210101) |
 |macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--101251020019) |
-|Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--418251106) |
+|Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--platform-418251106--engine-1125110001) |
 |Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--1083150101) |
 |Android |1.0.8303.0101  |November 2025 |- Build: 1.0.8303.0101<br>- Released: November 4, 2025 |[Release details and updates](#android--november-2025--1083030101) |
 |macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--november-2025--101251020016) |
@@ -55,7 +55,7 @@ This table includes supported versions released in for all supported platforms i
 |Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--1082010101) |
 |macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--101250820006) |
 |Linux  |101.25092.0001  |October 2025 |- Release version: 30.125092.0001.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.558.0 |[Release details and updates](#linux--october-2025--101250920001) |
-|Windows Antivirus |4.18.25100.9008  |October 2025 |- Platform: 4.18.25100.9008<br>- Engine: 1.1.25100.9002<br>- Security intelligence: 1.441.131.0 |[Release details and updates](#windows-antivirus--october-2025--418251009008) |
+|Windows Antivirus |4.18.25100.9008  |October 2025 |- Platform: 4.18.25100.9008<br>- Engine: 1.1.25100.9002<br>- Security intelligence: 1.441.131.0 |[Release details and updates](#windows-antivirus--october-2025--platform-418251009008--engine-11251009002) |
 |Android |1.0.8102.0101  |September 2025 |- Build: 1.0.8102.0101<br>- Released: September 4, 2025 |[Release details and updates](#android--september-2025--1081020101) |
 |Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#linux--september-2025--101250820003-build-1) |
 |Linux  |101.25072.0003  |September 2025 |- Release version: 30.125072.0003.0<br>- Engine version: 1.1.25060.4000<br>- Signature version: 1.431.4.0 |[Release details and updates](#linux--september-2025--101250720003-build-2) |
@@ -485,7 +485,7 @@ This table includes supported versions released in for all supported platforms i
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
 
-### Windows Antivirus | November 2025 | 4.18.25110.6
+### Windows Antivirus | November 2025 | Platform 4.18.25110.6 | Engine 1.1.25110.1
 
 # [Versions](#tab/antivirus-versions-nov)
 
@@ -511,7 +511,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ---
 
-### Windows Antivirus | October 2025 | 4.18.25100.9008
+### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
 
 # [Versions](#tab/antivirus-versions-oct)
 
@@ -534,7 +534,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ---
 
-### Windows Antivirus | September 2025 | 4.18.25090.3009
+### Windows Antivirus | September 2025 | Platform 4.18.25090.3009 | Engine 1.1.25090.3001
 
 # [Versions](#tab/antivirus-versions-sep)
 
@@ -556,7 +556,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ---
 
-### Windows Antivirus | August 2025 | 4.18.25080.5
+### Windows Antivirus | August 2025 | Platform 4.18.25080.5 | Engine 1.1.25080.5
 
 # [Versions](#tab/antivirus-versions-aug)
 
