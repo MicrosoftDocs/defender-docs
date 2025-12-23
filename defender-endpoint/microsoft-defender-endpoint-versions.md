@@ -27,6 +27,7 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 | macOS   | To share feedback feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**. | |
 | macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
 | macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
+| Linux | Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article in the specific version section. | For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide). |
 
 ## All supported versions
 
@@ -37,6 +38,12 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 |macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#101251020019---december-2025) |
 |macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#101251020016---november-2025) |
 |macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#101250720011---september-2025) |
+|Linux  |101.25092.0001  |October 2025 |- Release version: 30.125092.0001.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.558.0 |[Release details and updates](#101250920001---october-2025) |
+|Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#101250820003---september-2025-build-1) |
+|Linux  |101.25072.0003  |September 2025 |- Release version: 30.125072.0003.0<br>- Engine version: 1.1.25060.4000<br>- Signature version: 1.431.4.0 |[Release details and updates](#101250720003---september-2025-build-2) |
+|Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#101250620003---august-2025) |
+|Linux  |101.25052.0007  |July 2025 |- Release version: 30.125052.0007.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#101250520007---july-2025) |
+|Linux  |101.25042.0003  |June 2025 |- Release version: 30.125042.0003.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#101250420003---june-2025) |
 
 ## Windows versions
 
@@ -134,5 +141,114 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 | Diagnostics | Improved diagnostic capabilities and error reporting. |
 | Data Loss Prevention (DLP) | Performance and diagnostic improvements for endpoint DLP. |
 | General | Bug fixes. |
+
+---
+
+## Linux versions
+
+### 101.25092.0001 - October 2025
+
+# [Versions](#tab/linux-versions-oct)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125092.0001.0 |1.1.25090.6000 |1.439.558.0 |
+
+# [Enhancements and features](#tab/linux-features-oct)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Platform support | Added support for RHEL 10. |
+| Engine resiliency | Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability. |
+| General | Other quality and stability fixes. |
+
+---
+
+### 101.25082.0003 - September 2025 (Build 1)
+
+# [Versions](#tab/linux-versions-sep1)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125082.0003.0 |1.1.25070.4000 |1.435.242.0 |
+
+# [Enhancements and features](#tab/linux-features-sep1)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Vulnerability detection | Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8. |
+| Diagnostics | Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. |
+| General | Other quality and stability fixes. |
+
+---
+
+### 101.25072.0003 - September 2025 (Build 2)
+
+# [Versions](#tab/linux-versions-sep2)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125072.0003.0 |1.1.25060.4000 |1.431.4.0 |
+
+# [Enhancements and features](#tab/linux-features-sep2)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Device management | Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when deploying Microsoft Defender via Golden image. |
+| General | Other stability enhancements and bug fixes. |
+
+---
+
+### 101.25062.0003 - August 2025
+
+# [Versions](#tab/linux-versions-aug)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125062.0003.0 |1.1.25040.4000 |1.429.442.0 |
+
+# [Enhancements and features](#tab/linux-features-aug)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Installation | Defender for Endpoint on Linux now supports installation to a custom location (preview). Support for this feature is being added to the installer script. |
+| Security | The `mdatp threat quarantine add` command now requires superuser (root) privileges. |
+| Configuration | Custom definition path can now be updated without stopping Defender for Endpoint, improving operational efficiency and reducing downtime. |
+| Compatibility | Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus and EDR functionality to operate without conflict. |
+| General | Other stability enhancements and bug fixes. |
+
+---
+
+### 101.25052.0007 - July 2025
+
+# [Versions](#tab/linux-versions-jul)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125052.0007.0 |1.1.25020.4000 |1.427.370.0 |
+
+# [Enhancements and features](#tab/linux-features-jul)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Device management | Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified. |
+| General | Other stability improvements and bug fixes. |
+
+---
+
+### 101.25042.0003 - June 2025
+
+# [Versions](#tab/linux-versions-jun)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125042.0003.0 |1.1.25020.4000 |1.427.370.0 |
+
+# [Enhancements and features](#tab/linux-features-jun)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Package management | Removed external dependency of uuid-runtime from the Defender for Endpoint package. |
+| General | Other stability improvements and bug fixes. |
 
 ---
