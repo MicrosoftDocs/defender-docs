@@ -4,7 +4,7 @@ description: Learn how to migrate from the containerized SAP agent to the agentl
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: mapankra
-ms.topic: conceptual
+ms.topic: article
 ms.date: 10/23/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
