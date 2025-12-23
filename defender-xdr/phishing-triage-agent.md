@@ -135,10 +135,7 @@ The agent requires an identity to operate. The wizard prompts you to select one 
      :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
  
       When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
-
-      > [!TIP]
-      > We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
-
+      
       The agent's specified user identity isn't compatible with PIM or TAP because they don't support long-term background operations.
 
 #### Permissions
