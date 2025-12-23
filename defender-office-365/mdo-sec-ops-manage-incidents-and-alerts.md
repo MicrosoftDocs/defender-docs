@@ -34,7 +34,7 @@ Alerts are created when malicious or suspicious activity affects an entity (for 
 Watch this short video on how to manage Microsoft Defender for Office 365 alerts in the Microsoft Defender portal.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=494596e0-41fe-4861-9df5-076312777b0d]
 
-Defender for Office 365 alerts, investigations, and their data are automatically correlated. When a relationship is determined, the system creates an incident to give security teams visibility for the entire attack.
+Defender for Office 365 alerts, investigations, and their data are automatically correlated. When a relationship is determined, the system creates an incident to give security teams visibility for the entire attack.  Incidents represent more than just static events; they represent attack stories that happen over time. As the attack progresses, new Defender for Office 365 alerts, AIR investigations, and their data are continuously added to the existing incident.
 
 We strongly recommend that SecOps teams manage incidents and alerts from Defender for Office 365 in the Incidents queue at <https://security.microsoft.com/incidents>. This approach has the following benefits:
 
@@ -73,9 +73,7 @@ We strongly recommend that SecOps teams manage incidents and alerts from Defende
   - Malicious files
 
 > [!NOTE]
-> - Incidents don't just represent static events. They also represent attack stories that happen over time. As the attack progresses, new Defender for Office 365 alerts, AIR investigations, and their data are continuously added to the existing incident.
-> 
-> - The Microsoft Defender portal shows a single evidence cluster instead of a full list of individual evidences for Microsoft Defender for Office 365.
+> - The Defender portal shows a single evidence cluster for Defender for Office 365 instead of listing individual evidence items.
 
 Manage incidents on the **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents>:
 
