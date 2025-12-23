@@ -68,6 +68,10 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 After a new package version is released, support for the previous two versions is reduced to technical upgrade support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
 
+## Platform and engine releases
+
+See [Microsoft Defender Antivirus platform and engine support](#microsoft-defender-antivirus-platform-and-engine-support).
+
 ## Microsoft Defender Antivirus platform and engine support
 
 Platform and engine updates are provided on a monthly cadence. To be fully supported, keep current with the latest platform and engine updates. Our support structure is dynamic, evolving into two phases depending on the availability of the latest platform and engine version:
