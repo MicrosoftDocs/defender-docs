@@ -30,7 +30,7 @@ Microsoft 365 F5 Security + Compliance*
 
 * Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3.
 
-You can purchase licenses in the Microsoft 365 portal, or with Cloud Solution Partner (CSP) licensing. (Add links)
+You can purchase licenses in the Microsoft 365 portal, or with Cloud Solution Partner (CSP) licensing.
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
