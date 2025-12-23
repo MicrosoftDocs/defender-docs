@@ -49,18 +49,34 @@ Learn more:
 |----------|---------|------------|-------------|
 |All |[Streamlined connectivity support for US government environments (GCC, GCC High, DoD)](configure-device-connectivity.md) |Preview |Defender for Endpoint now supports streamlined connectivity for US government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For more information, see the [required connectivity settings](gov.md#required-connectivity-settings). |
 |All |Isolation exclusions |GA |The [Isolation exclusions](isolation-exclusions.md) feature is now generally available. Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions continue while limiting broader network exposure. |
+|Linux |Build 101.25092.0001 |GA |Release version 30.125092.0001.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250920001---october-2025). |
 
 ## September 2025
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
 |macOS |[Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md) |GA |Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
+|Linux |Build 101.25082.0003 |GA |Release version 30.125082.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250820003---september-2025-build-1). |
+|Linux |Build 101.25072.0003 |GA |Release version 30.125072.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250720003---september-2025-build-2). |
 
 ## August 2025
 
 |Platform  |Preview/GA  |Features  |
 |---------|------------|---------|
 | macOS | GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system.<br><br>Learn more:<br> - [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md)<br>- [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697) |
+| Linux | GA |Build 101.25062.0003, Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250620003---august-2025). |
+
+## July 2025
+
+|Platform  |Preview/GA  |Features  |
+|---------|------------|---------|
+|Linux |GA |Build 101.25052.0007, Release version 30.125052.0007.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250520007---july-2025). |
+
+## June 2025
+
+|Platform  |Preview/GA  |Features  |
+|---------|------------|---------|
+|Linux |GA |Build 101.25042.0003, Release version 30.125042.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250420003---june-2025). |
 
 ## May 2025
 
