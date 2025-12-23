@@ -34,7 +34,9 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 |---------|---------|---------|---------|---------|
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108797258571000---may-2025) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108760276171006---july-2024) |
-|macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429 |[Release details and updates](#101250720011---september-2025) |
+|macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#101251020019---december-2025) |
+|macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#101251020016---november-2025) |
+|macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#101250720011---september-2025) |
 
 ## Windows versions
 
@@ -83,6 +85,38 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 ---
 
 ## macOS versions
+
+### 101.25102.0019 - December 2025
+
+# [Versions](#tab/macos-versions-dec)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|20.125102.19.0 |1.1.25090.2000 |1.435.600.0 |
+
+# [Enhancements and features](#tab/macos-features-dec)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Vulnerability Management | [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that may be impacted by this vulnerability. |
+
+---
+
+### 101.25102.0016 - November 2025
+
+# [Versions](#tab/macos-versions-nov)
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|20.125102.16.0 |1.1.25090.2000 |1.435.600.0 |
+
+# [Enhancements and features](#tab/macos-features-nov)
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Bug and performance fixes. |
+
+---
 
 ### 101.25072.0011 - September 2025
 
