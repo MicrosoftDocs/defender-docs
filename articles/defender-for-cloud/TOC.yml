@@ -1497,7 +1497,7 @@
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
         - name: Unveiling Kubernetes lateral movement
-          DisplayName: Unveiling Kubernetes lateral movement, Kubernetes RBAC
+          DisplayName: Kubernetes lateral movement, Kubernetes RBAC, attack paths
           href: episode-sixty-one.md
     - name: Microsoft Defender for IoT documentation
       href: /azure/defender-for-iot/
