@@ -34,7 +34,7 @@ A designated Microsoft Defender for Endpoint device is used on each network segm
 Once the network devices are discovered and classified, security administrators are able to receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
 
 > [!NOTE]
-> The Windows authenticated scan is deprecated from December 18,2025. For more information, see [Windows authenticated scan deprecation FAQs](../defender-vulnerability-management/defender-vulnerability-management-faq.md#windows-authenticated-scan-deprecation-faqs).
+> The Windows authenticated scan is deprecated from December 18,2025. For more information, see [Windows authenticated scan deprecation FAQs](../defender-vulnerability-management/defender-vulnerability-management-faq#windows-authenticated-scan-deprecation-faqs).
 
 ## Approach
 
