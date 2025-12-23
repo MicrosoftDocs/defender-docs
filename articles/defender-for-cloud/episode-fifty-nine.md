@@ -31,4 +31,4 @@ ms.date: 10/05/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Code reachability analysis](episode-sixty.md)
