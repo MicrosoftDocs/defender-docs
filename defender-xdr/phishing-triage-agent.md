@@ -100,7 +100,6 @@ This table outlines the permissions required to perform various actions related 
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-
 ## Set up the Phishing Triage Agent
 
 Make sure you have the [permissions required](#permissions-required) and all [prerequisites](#prerequisites) are met before setting up the agent.
@@ -121,9 +120,6 @@ You can access the Phishing Triage Agent setup wizard in two ways:
 Follow the steps in the setup wizard, which includes:
 
 1. Select the [identity](#identity) type to assign to the agent.
-
-
-
 
 
 1. Select the user account you created for the agent and follow the prompts.
@@ -171,7 +167,7 @@ The agent identity needs these permissions to access emails, analyze their conte
 - **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
 - **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
 
-The required permissions are under the **Security operations** permissions group:
+These permissions are under the **Security operations** permissions group:
 
 :::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
 
