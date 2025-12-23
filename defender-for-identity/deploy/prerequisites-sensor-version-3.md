@@ -12,7 +12,7 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 ## Sensor version limitations 
 
-Before activating the Defender for Identity sensor v3.x, keep these limitations in mind before activating the sensor.
+Before activating the Defender for Identity sensor v3.x, keep these considerations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
 - Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
  - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
@@ -23,7 +23,14 @@ The Defender for Identity sensor v3.x:
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
-[!INCLUDE [licenses](../includes/licenses.md)]
+Enterprise Mobility + Security E5 (EMS E5/A5)
+Microsoft 365 E5 (Microsoft E5/A5/G5)
+Microsoft 365 E5/A5/G5/F5* Security
+Microsoft 365 F5 Security + Compliance*
+
+* Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3.
+
+Acquire licenses directly via the Microsoft 365 portal or use the Cloud Solution Partner (CSP) licensing model.
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
