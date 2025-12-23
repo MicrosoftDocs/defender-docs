@@ -1,9 +1,9 @@
 ---
 title: Create access policies | Microsoft Defender for Cloud Apps
 description: Learn how to configure Microsoft Defender for Cloud Apps access policies with Conditional Access app control to control access to cloud apps.
-ms.date: 05/15/2024
+ms.date: 12/23/2025
 ms.topic: how-to
-ms.reviewer: AmitMishaeli
+ms.reviewer: Adipkmic
 ---
 
 # Create Microsoft Defender for Cloud Apps access policies
