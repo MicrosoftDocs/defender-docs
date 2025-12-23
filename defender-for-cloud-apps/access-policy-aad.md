@@ -25,7 +25,7 @@ Before you start, make sure that you have the following prerequisites:
 
 - If you're using a non-Microsoft IdP, the license required by your identity provider (IdP) solution.
 
-- A Microsoft Entra ID Conditional Access policy configured for Microsoft Defender for Cloud Apps (Conditional Access app control). For more information, see: [Automatically onboard Microsoft Entra ID apps to conditional access app control (preview)](app-onboarding.md#supported-apps)
+- A Microsoft Entra ID Conditional Access policy configured for Microsoft Defender for Cloud Apps (Conditional Access app control).This policy creates the permissions required to control traffic. For more information, see: [Automatically onboard Microsoft Entra ID apps to conditional access app control (preview)](app-onboarding.md#supported-apps)
 
 - The relevant apps onboarded to Conditional Access app control. Microsoft Entra ID apps are automatically onboarded, while non-Microsoft IdP apps must be onboarded manually.
 
@@ -34,10 +34,8 @@ Before you start, make sure that you have the following prerequisites:
     - [Onboard non-Microsoft IdP catalog apps for Conditional Access app control](proxy-deployment-featured-idp.md)
     - [Onboard non-Microsoft IdP custom apps for Conditional Access app control](proxy-deployment-any-app-idp.md)
 
-In order for your access policy to work, you must also have a Microsoft Entra ID Conditional Access policy, which creates the permissions to control traffic.
 
 [!INCLUDE [entra-conditional-access-policy](includes/entra-conditional-access-policy.md)]
-
 
 ## Create a Defender for Cloud Apps access policy
 
