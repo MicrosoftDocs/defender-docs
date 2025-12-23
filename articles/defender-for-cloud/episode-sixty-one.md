@@ -5,7 +5,7 @@ ms.topic: reference
 ms.date: 03/17/2025
 ---
 
-# Unveiling Kubernetes lateral movement in Defender for Cloud
+# Unveiling Kubernetes lateral movement
 
 **Episode description**: In this episode of Defender for Cloud in the Field, Hagai Kestenberg joins Yuri Diogenes to talk about how Defender for Cloud can identify lateral movement in Kubernetes environments. Hagai explains how the recent addition of Kubernetes role-based access control (RBAC) into the cloud security graph helps create visibility for potential lateral movement threats in Kubernetes environments. Hagai also demonstrates how these insights appear in the attack path.
 
