@@ -1,6 +1,6 @@
 ---
 title: Cloud overview dashboard in Microsoft Defender for Cloud
-description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multi-cloud environment.
+description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multicloud environment.
 ms.topic: how-to
 ms.date: 11/10/2025
 ms.author: dlanger
@@ -49,7 +49,7 @@ At the top of the dashboard, you’ll find key filters:
 - **Environment Filter**: Pivot the dashboard by the cloud environment you want to view, such as Azure, AWS, GCP.
 - **Time Range**: Select 30 days, 3 months, or 6 months to view trends over time. This applies to all historical graphs and trend indicators.
 
-:::image type="content" source="media/defender-portal-dashboard/top-controls.png" alt-text="Screenshot of filters on cloud overview dashboard":::
+:::image type="content" source="media/defender-portal-dashboard/top-controls.png" alt-text="Screenshot of filters on cloud overview dashboard.":::
 
 ## Dashboard sections
 
@@ -66,7 +66,7 @@ This section gives you a quick snapshot of your current security status:
 
 In addition, all cloud and code environments that are currently connected to Defender for Cloud are presented.
 
-:::image type="content" source="media/defender-portal-dashboard/overview-highlights.png" alt-text="Screenshot of cloud overview dashboard highlights":::
+:::image type="content" source="media/defender-portal-dashboard/overview-highlights.png" alt-text="Screenshot of cloud overview dashboard highlights.":::
 
 ### Top Actions
 
@@ -76,7 +76,7 @@ This section helps you understand where to start and is designed to guide your n
 **High-Severity Incidents**: Investigate active alerts.
 **Attack Paths**: Understand potential lateral movement.
 
-:::image type="content" source="media/defender-portal-dashboard/top-actions.png" alt-text="Screenshot of cloud overview dashboard top actions":::
+:::image type="content" source="media/defender-portal-dashboard/top-actions.png" alt-text="Screenshot of cloud overview dashboard top actions.":::
 
 ### Trends over time
 
@@ -84,11 +84,11 @@ Track how your security posture and threat detection evolve.
 
 **Security Posture**: View over time of the new Cloud Secure Score in addition to recommendations by severity.
 
-:::image type="content" source="media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of cloud overview dashboard security posture trends":::
+:::image type="content" source="media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of cloud overview dashboard security posture trends.":::
 
 **Threat Detection**: View alert trends by severity.
 
-:::image type="content" source="media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of cloud overview dashboard threat detection trends":::
+:::image type="content" source="media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of cloud overview dashboard threat detection trends.":::
 
 Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
 
@@ -107,7 +107,7 @@ Workloads include:
 
 Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views. This helps teams focus on what matters most for each workload.
 
-:::image type="content" source="media/defender-portal-dashboard/workloads.png" alt-text="Screenshot of cloud overview dashboard workload insights" lightbox="media/defender-portal-dashboard/workloads.png":::
+:::image type="content" source="media/defender-portal-dashboard/workloads.png" alt-text="Screenshot of cloud overview dashboard workload insights." lightbox="media/defender-portal-dashboard/workloads.png":::
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: Overview of Defender for Open-Source Relational Databases
 description: Learn about the benefits and features of Microsoft Defender for Open-Source Relational Databases such as PostgreSQL, MySQL, and MariaDB.
-ms.date: 05/13/2025
+ms.date: 11/02/2025
 ms.topic: overview
 ms.author: elkrieger
 author: Elazark
@@ -25,21 +25,13 @@ This plan brings threat protections for the following open-source relational dat
 
 Protected versions of [Azure Database for PostgreSQL](/azure/postgresql/) include:
 
-- Single Server: General Purpose and Memory Optimized pricing tiers. Learn more in [Pricing tiers in Azure Database for PostgreSQL - Single Server](/azure/postgresql/concepts-pricing-tiers).
 - Flexible Server: All pricing tiers.
 
 ### Azure Database for MySQL
 
 Protected versions of [Azure Database for MySQL](/azure/mysql/) include:
 
-- Single Server: General Purpose and Memory Optimized pricing tiers.
 - Flexible Server: All pricing tiers.
-
-### Azure Database for MariaDB
-
-Protected versions of [Azure Database for MariaDB](/azure/mariadb/) include:
-
-- General Purpose and Memory Optimized pricing tiers. Learn more in [Azure Database for MariaDB pricing tiers](/azure/mariadb/concepts-pricing-tiers).
 
 ### Amazon RDS
 
