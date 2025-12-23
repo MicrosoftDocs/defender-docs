@@ -116,16 +116,6 @@ You can access the Phishing Triage Agent setup wizard in two ways:
 
    :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up." lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
 
-
-Follow the steps in the setup wizard, which includes:
-
-1. Select the [identity](#identity) type to assign to the agent.
-
-
-1. Select the user account you created for the agent and follow the prompts.
-
-   :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
-
 ### Assign the agent’s identity and permissions
 
 The setup wizard walks you through assigning the agent an identity and the permissions required to do its work. 
