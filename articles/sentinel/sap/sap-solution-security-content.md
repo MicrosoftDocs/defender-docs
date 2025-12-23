@@ -9,6 +9,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+zone_pivot_groups: sentinel-sap-connection
 #Customer intent: As a security analyst, I want to use built-in workbooks and analytics rules for SAP applications so that I can monitor, detect, and respond to security incidents effectively.
 
 ---
