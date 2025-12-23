@@ -27,11 +27,11 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-An [incident](/defender-xdr/incidents-overview) in Microsoft Defender XDR is a collection of correlated alerts and associated data that define the complete story of an attack. Defender for Office 365 [alerts](/defender-xdr/alert-policies#default-alert-policies), [automated investigation and response (AIR)](air-about.md#the-overall-flow-of-air), and the outcome of the investigations are natively integrated and correlated on the **Incidents** page in Microsoft Defender XDR at <https://security.microsoft.com/incidents>. We refer to this page as the _Incidents_ queue.
+An [incident](/defender-xdr/incidents-overview) in the Microsoft Defender portal is a collection of correlated alerts and associated data that define the complete story of an attack. Defender for Office 365 [alerts](/defender-xdr/alert-policies#default-alert-policies), [automated investigation and response (AIR)](air-about.md#the-overall-flow-of-air), and the outcome of the investigations are natively integrated and correlated on the **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents>. We refer to this page as the _Incidents_ queue.
 
 Alerts are created when malicious or suspicious activity affects an entity (for example, email, users, or mailboxes). Alerts provide valuable insights about in-progress or completed attacks. However, an ongoing attack can affect multiple entities, which results in multiple alerts from different sources. Some built-in alerts automatically trigger AIR playbooks. These playbooks do a series of investigation steps to look for other impacted entities or suspicious activity.
 
-Watch this short video on how to manage Microsoft Defender for Office 365 alerts in Microsoft Defender XDR.
+Watch this short video on how to manage Microsoft Defender for Office 365 alerts in the Microsoft Defender portal.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=494596e0-41fe-4861-9df5-076312777b0d]
 
 Defender for Office 365 alerts, investigations, and their data are automatically correlated. When a relationship is determined, the system creates an incident to give security teams visibility for the entire attack.
@@ -128,6 +128,6 @@ The most effective way to take action is to use the built-in integration with In
 
 You take action on email based on the result of a manual investigation or hunting activity. [Threat Explorer](threat-explorer-real-time-detections-about.md) allows security team members to take action on any email messages that might still exist in cloud mailboxes. They can take action on intra-org messages that were sent between users in your organization. Threat Explorer data is available for the last 30 days.
 
-Watch this short video to learn how Microsoft Defender XDR combines alerts from various detection sources, like Defender for Office 365, into incidents.
+Watch this short video to learn how the Microsoft Defender portal combines alerts from various detection sources, like Defender for Office 365, into incidents.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=6d002a6f-7009-428c-983e-1b5be8e0db36]
