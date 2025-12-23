@@ -68,9 +68,9 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|OS|
 |-|-|-|-|-|-|
-|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/\*<br>www.microsoft.com/pki/\* |Used when creating the SSL connection to MAPS for updating the certificate revocation list (CRL)|Required| |Windows|
-|||ctldl.windowsupdate.com|Expands on the existing automatic root update technology. This service flags certificates that are compromised as untrusted.|Required|
-|||crl.microsoft.com|Certificate Revocation Lists - required to validate certificates|Required|
+|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/\*<br>www.microsoft.com/pki/\* |Used when creating the SSL connection to MAPS for updating the certificate revocation list (CRL)|Required|Windows|
+|Windows operating system certificate validation checks|80|ctldl.windowsupdate.com|Expands on the existing automatic root update technology. This service flags certificates that are compromised as untrusted.|Required|Windows|
+|Windows operating system certificate validation checks|80|crl.microsoft.com|Certificate Revocation Lists - required to validate certificates|Required|Windows|
 
 
 ## Other URLs
