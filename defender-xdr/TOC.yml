@@ -106,6 +106,8 @@
           href: merge-incidents-manually.md
         - name: Investigate alerts
           href: investigate-alerts.md
+        - name: Use Dynamic Threat Detection Agent
+          href: dynamic-threat-detection-agent.md
         - name: Investigate entity pages
           items:
           - name: User
@@ -456,6 +458,8 @@
           href: security-copilot-in-microsoft-365-defender.md
         - name: Summarize incidents
           href: security-copilot-m365d-incident-summary.md
+        - name: Uncover threats
+          href: dynamic-threat-detection-agent.md
         - name: Run script analysis
           href: security-copilot-m365d-script-analysis.md
         - name: Analyze files

@@ -38,7 +38,7 @@ Because the Action center provides a comprehensive view of Microsoft Defender XD
 
 The unified Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
-:::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
+:::image type="content" source="media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="media/m3d-action-center-unified.png":::
 
 The unified Action center brings together remediation actions across Microsoft Defender for Endpoint and Microsoft Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.
 

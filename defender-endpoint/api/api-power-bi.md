@@ -16,16 +16,12 @@ ms.topic: how-to
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 12/14/2025
 appliesto:
   - Microsoft Defender for Endpoint
 
 ---
 # Create custom reports using Power BI
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
 
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
@@ -138,15 +134,11 @@ The only difference from the previous example and this example is the query insi
 
 See the [Power BI report templates](https://github.com/microsoft/MicrosoftDefenderATP-PowerBI).
 
-## Sample reports
 
-View the [Microsoft Defender for Endpoint Power BI report samples](/samples/browse/?products=mdatp).
 
 ## Related articles
 
 - [Defender for Endpoint APIs](apis-intro.md)
 - [Advanced Hunting API](run-advanced-query-api.md)
 - [Using OData Queries](exposed-apis-odata-samples.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
