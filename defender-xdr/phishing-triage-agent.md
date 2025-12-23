@@ -47,10 +47,10 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 To investigate phishing attempts, the agent uses a combination of Microsoft Defender and Microsoft Security Copilot capabilities, including:
 
 - **Email content analysis** – Detects suspicious patterns and indicators in email bodies.
-- **Detonation for files and URLs** – Safely executes and analyzes potentially malicious files and links.
+- **Detonation for files and URLs** – Safely executes and analyzes potentially malicious files and links using Microsoft deep analysis tools.
 - **Screenshot analysis** – Reviews visual content from emails, URLs, and certain file types.
 - **Threat intelligence tools** – Uses Microsoft Threat Intelligence feeds to provide enriched detection context.
-- **General Kusto Query Language (KQL) tools** – Applies predefined security rule templates  and custom KQL queries to automate detection and investigation across email, file, and URL telemetry.
+- **Advanced Hunting tools** – Applies predefined security rule templates and custom KQL queries to automate detection and investigation across email, file, and URL telemetry.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 
 |Components|Details|
 |:---|:---|
-|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed|
+|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed or [Microsoft 365 E5, which now includes Security Copilot](/copilot/security/security-copilot-inclusion)|
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
 ### Activate URBAC settings
@@ -103,19 +103,78 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Phishing Triage Agent
 
-Ensure that all [prerequisites](#prerequisites) are met and have the **Security Administrator** role in Microsoft Entra ID. The Phishing Triage Agent setup wizard is grayed-out and inaccessible if you don't have the required role, and setup will fail if you proceed without meeting all prerequisites.  
+Make sure you have the [permissions required](#permissions-required) and all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
-To open the Phishing Triage Agent setup wizard: 
+You can access the Phishing Triage Agent setup wizard in two ways:
 
-1. Find and deploy the agent from the Security Store, as described in [Discover and deploy agents in the Microsoft Defender portal](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
-1. Select **Security Copilot > Agents** in the Microsoft Defender portal.
-1. Select **Set up** on the Phishing Triage Agent card. 
+- From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
 
-      :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the the Phishing Triage card in the Agents page in the Defender portal" lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
+   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted" lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
 
-1. Follow the steps in the setup wizard, as described in the sections below.
+- Alternatively, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Set up** to start the process.
+
+   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
+
+   > [!NOTE]
+   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can't initiate setup from the **Settings** page, but you can still set up the agent from the incident queue if you have the **Security Administrator** role.
+
+Follow the steps in the setup wizard, which includes:
+
+1. Select the [identity](#identity) type to assign to the agent.
+
+   :::image type="content" source="media/phishing-triage-agent/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage" lightbox="media/phishing-triage-agent/select-identity.png":::
+
+1. Select the user account you created for the agent and follow the prompts.
+
+   :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
+
+### Assign the agent’s identity and permissions
+
+The Phishing Triage Agent operates under the identity you assign to it. Before setup, you need to create this identity and ensure it has the appropriate permissions to perform triage actions.
+
+#### Identity
+
+The Phishing Triage Agent currently only operates with existing user accounts. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+
+When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
+
+> [!TIP]
+> We recommend creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+
+The agent's specified user identity isn't compatible with PIM or TAP, as they don't support long-term background operations.
+
+#### Permissions
+
+The user account you assign the agent needs these permissions to access emails, analyze their content, and manage alerts:
+
+- **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
+- **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
+- **Security Copilot (read):** Used to access Security Copilot capabilities.
+- **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
+- **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
+
+The required permissions are under the **Security operations** permissions group:
+
+:::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
+
+To assign the appropriate permissions to the agent:
+
+1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
+1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
+1. Assign the role to the agent. Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
+
+   :::image type="content" source="media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions-sources.png":::
+
+   > [!TIP]
+   > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
+
+After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
+
+#### Conditional access policies
+
+Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 ### Create a role with all required permissions 
 
