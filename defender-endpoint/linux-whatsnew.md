@@ -56,7 +56,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 What's new
 
-- New EDR ETW events to help TVM service detect vulnerable React components.
+- New EDR ETW events to help TVM service detect vulnerable React components [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r).
 
 ### December-2025 Build: 101.25092.0002 | Release version: 30.125092.0002.0
 
