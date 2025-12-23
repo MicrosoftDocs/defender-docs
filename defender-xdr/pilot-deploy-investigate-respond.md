@@ -368,7 +368,7 @@ This wraps up attack simulations for incident analysis, automated investigation,
 
 You get to the incident queue from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents.png" alt-text="A screenshot of the Incidents & alerts section in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="media/incidents-ss-incidents.png" alt-text="A screenshot of the Incidents & alerts section in the Microsoft Defender portal." lightbox="media/incidents-ss-incidents.png":::
 
 The **Most recent incidents and alerts** section shows a graph of the number of alerts received and incidents created in the last 24 hours.
 
@@ -433,11 +433,11 @@ Depending on how automated investigation and response capabilities are configure
 
 Here's an example.
 
-:::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="A screenshot of the Unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
+:::image type="content" source="media/m3d-action-center-unified.png" alt-text="A screenshot of the Unified Action center in the Microsoft Defender portal." lightbox="media/m3d-action-center-unified.png":::
 
 From the Action center, you can select pending actions and then approve or reject them in the flyout pane. Here's an example.
 
-:::image type="content" source="/defender/media/air-actioncenter-itemselected.png" alt-text="A screenshot of the pane displaying the options to approve or reject an action in the Microsoft Defender portal." lightbox="/defender/media/air-actioncenter-itemselected.png":::
+:::image type="content" source="media/air-actioncenter-itemselected.png" alt-text="A screenshot of the pane displaying the options to approve or reject an action in the Microsoft Defender portal." lightbox="media/air-actioncenter-itemselected.png":::
 
 
 Approve (or reject) pending actions as soon as possible so that your automated investigations can proceed and complete in a timely manner.
