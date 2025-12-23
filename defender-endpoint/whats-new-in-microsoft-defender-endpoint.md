@@ -67,36 +67,3 @@ Learn more:
 |Platform  |Preview/GA  |Features  |
 |---------|------------|---------|---------|
 |**Windows** |GA |Version 10.8797.25857.1000 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#108797258571000---may-2025). |
-
-## April 2025
-
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-| **Windows** | Preview | You can now [contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices). |
-| **Windows** | GA | Two new ASR rules are now generally available:<br>  - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference)<br>  - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference) |
-| **Linux** | GA | - Defender for Endpoint now supports ARM64-based Linux servers on Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux.<br>- All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers.<br><br>[Learn more](microsoft-defender-endpoint-linux.md) |
-
-## February 2025
-
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-| **Windows** | GA | [Aggregated reporting](aggregated-reporting.md) is now generally available. |
-
-## November-December 2024
-
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-| **Windows** | GA | You can now use these new demonstration scenarios:<br>- [AMSI demos](mde-demonstration-amsi.md)<br>- [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)<br>- [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)<br>- [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)<br>- [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation) |
-
-## August 2024
-
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-| **Android** | GA | [Network protection](/defender-endpoint/android-configure#network-protection) is now enabled by default on Android. Users now see a network protection card in the Android app, along with App Protection and Web Protection. |
-
-## July 2024
-
-|Feature  |Preview/GA  |Description  |
-|---------|------------|-------------|
-|Monitor OT devices in the device inventory|Preview|You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery).<br><br>- Added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.<br>- Added **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some filters are only visible on specific tabs and only for customers with a Defender for IoT license. [Learn more](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views).<br>- Added ability to search Mac devices and Mac addresses.<br>- Added a system tag showing the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature, as part of the [device group](/defender-for-iot/set-up-sites#add-device-group).<br><br> **Note**: If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data and a message indicating the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view).|
-|Learning hub resources moved|GA|Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).<br><br>- Access Microsoft Defender XDR Ninja training, learning paths, training modules and more.<br>- Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject.|
