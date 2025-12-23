@@ -163,7 +163,7 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 
 |Training:|Mitigate threats using Microsoft Defender XDR|
 |---|---|
-|![Microsoft Defender XDR training icon.](media/microsoft-365-defender-portal/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
+|:::image type="content" source="media/microsoft-365-defender-portal/m365-defender-secure-organization.png" alt-text="Microsoft Defender XDR training icon.":::|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
 
 > [!div class="nextstepaction"]
 > [Start >](/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)
