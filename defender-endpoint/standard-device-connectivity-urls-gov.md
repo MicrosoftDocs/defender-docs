@@ -76,7 +76,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|DoD|Microsoft Defender for Endpoint DoD|443|ussusd1eastff5.blob.core.usgovcloudapi.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes|
 |Microsoft Defender for Endpoint|DoD|Microsoft Defender for Endpoint DoD|443|ussusd2eastff5.blob.core.usgovcloudapi.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes|
 |Microsoft Defender for Endpoint|DoD|Microsoft Defender for Endpoint DoD|443|wsusd1eastff5.blob.core.usgovcloudapi.net|Malware Sample Submission Storage|Required|Yes|||||
-|Microsoft Defender Antivirus|US Gov|MU / WU|443|*.update.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU / WU|443|*.update.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|US Gov|MU / WU|443|*.delivery.mp.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|US Gov|MU / WU|443|*.windowsupdate.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
