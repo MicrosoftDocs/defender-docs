@@ -50,7 +50,7 @@ Use the tables in the following sections to learn more about how your existing i
 - [Microsoft Defender for Endpoint and Defender Vulnerability Management](#map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-365-defender-rbac-permissions)
 - [Microsoft Defender for Office 365](#map-defender-for-office-365-permissions-to-the-microsoft-365-defender-unified-rbac-permissions)
 - [Microsoft Defender for Identity](#map-microsoft-defender-for-identity-permissions-to-the-microsoft-365-defender-unified-rbac-permissions)
-- [Microsoft Defender for Cloud Apps](#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions-preview)
+- [Microsoft Defender for Cloud Apps](#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions)
 - [Microsoft Defender for Cloud](#unified-rbac-roles-in-microsoft-defender-for-cloud)
 - [Microsoft Entra Global roles access](#azure-active-directory-global-roles-access)
 
@@ -118,7 +118,9 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 <a name='map-microsoft-defender-for-identity-permissions-to-the-microsoft-365-defender-unified-rbac-permissions'></a>
 
-### Map Microsoft Defender for Identity permissions to the Microsoft Defender XDR Unified RBAC permissions
+<a name='map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions-preview'></a>
+
+### Map Microsoft Defender for Identity permissions to the Microsoft Defender XDR Unified RBAC
 
 |Defender for Identity permission|Defender XDR Unified RBAC permission|
 |---|---|
@@ -132,7 +134,7 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 <a name='map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-365-defender-unified-rbac-permissions'></a>
 
-### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
+### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions
 
 > [!IMPORTANT]
 >
