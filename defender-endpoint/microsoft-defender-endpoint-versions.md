@@ -19,6 +19,14 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Find version information in this article
+
+This article includes information on all supported versions for all supported operating systems in the last 6 months. Find specific information:
+
+- [Operating system information](#operating-system-information): General notes about the supported operating systems.
+- [All supported versions](#all-supported-versions): A table of all supported versions released in the past 6 months, with links to detailed release notes for each version.
+- Versions per OS: See specific versions for [Windows](#windows-versions), [macOS](#macos-versions), [Linux](#linux-versions), [Android](#android-versions), [iOS](#ios-versions), and [Microsoft Defender Antivirus](#microsoft-defender-antivirus-versions).
+
 ## Operating system information
 
 | OS |Note| Learn more |

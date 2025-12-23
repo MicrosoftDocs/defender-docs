@@ -41,7 +41,7 @@ Learn more:
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Windows Antivirus |Platform 4.18.25110.6 |GA |Platform 4.18.25110.6 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#november-2025-platform-418251106--engine-1251101). |
+|Windows Antivirus |Platform 4.18.25110.6 / Engine 1.1.25110.1 |GA |Platform 4.18.25110.6 and Engine 1.1.25110.1 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#november-2025-platform-418251106--engine-1251101). |
 |Android |Build 1.0.8315.0101 |GA |Build 1.0.8315.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1083150101---november-2025). |
 |Android |Build 1.0.8303.0101 |GA |Build 1.0.8303.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1083030101---november-2025). |
 |macOS |Build 101.25102.0016 |GA |Release version 20.125102.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101251020016---november-2025). |
@@ -57,7 +57,7 @@ Learn more:
 |Android |Build 1.0.8217.0101 |GA |Build 1.0.8217.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1082170101---october-2025). |
 |Android |Build 1.0.8201.0101 |GA |Build 1.0.8201.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1082010101---october-2025). |
 |macOS |Build 101.25082.0006 |GA |Release version 20.125082.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250820006---october-2025). |
-|Windows Antivirus |Platform 4.18.25100.9008 |GA |Platform 4.18.25100.9008 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#october-2025-platform-418251009008--engine-11251009002). |
+|Windows Antivirus |Platform 4.18.25100.9008 / Engine 1.1.25100.9002 |GA |Platform 4.18.25100.9008 and Engine 1.1.25100.9002 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#october-2025-platform-418251009008--engine-11251009002). |
 |All |[Streamlined connectivity support for US government environments (GCC, GCC High, DoD)](configure-device-connectivity.md) |Preview |Defender for Endpoint now supports streamlined connectivity for US government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For more information, see the [required connectivity settings](gov.md#required-connectivity-settings). |
 |All |Isolation exclusions |GA |The [Isolation exclusions](isolation-exclusions.md) feature is now generally available. Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions continue while limiting broader network exposure. |
 |Linux |Build 101.25092.0001 |GA |Release version 30.125092.0001.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250920001---october-2025). |
@@ -68,7 +68,7 @@ Learn more:
 |----------|---------|------------|-------------|
 |Android |Build 1.0.8102.0101 |GA |Build 1.0.8102.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1081020101---september-2025). |
 |macOS |Build 101.25072.0011 |GA |Release version 20.125072.11.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250720011---september-2025). |
-|Windows Antivirus |Platform 4.18.25090.3009 |GA |Platform 4.18.25090.3009 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#september-2025-platform-418250903009--engine-11250903001). |
+|Windows Antivirus |Platform 4.18.25090.3009 / Engine 1.1.25090.3001 |GA |Platform 4.18.25090.3009 and Engine 1.1.25090.3001 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#september-2025-platform-418250903009--engine-11250903001). |
 |macOS |[Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md) |GA |Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
 |Linux |Build 101.25082.0003 |GA |Release version 30.125082.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250820003---september-2025-build-1). |
 |Linux |Build 101.25072.0003 |GA |Release version 30.125072.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250720003---september-2025-build-2). |
@@ -79,7 +79,7 @@ Learn more:
 |---------|------------|---------|
 |Android |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#1080180103---august-2025). |
 |macOS |GA |Build 101.25062.0006, Release version 20.125062.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250620006---august-2025). |
-|Windows Antivirus |GA |Platform 4.18.25080.5 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#august-2025-platform-418250805--engine-11250805). |
+|Windows Antivirus |GA |Platform 4.18.25080.5 and Engine 1.1.25080.5 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#august-2025-platform-418250805--engine-11250805). |
 | macOS | GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system.<br><br>Learn more:<br> - [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md)<br>- [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697) |
 | Linux | GA |Build 101.25062.0003, Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#101250620003---august-2025). |
 
