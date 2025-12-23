@@ -110,11 +110,11 @@ You can access the Phishing Triage Agent setup wizard in two ways:
 
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
 
-   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted" lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
+   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
 
 - Alternatively, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Set up** to start the process.
 
-   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
+   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up." lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
 
 
 Follow the steps in the setup wizard, which includes:
