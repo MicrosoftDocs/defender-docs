@@ -38,7 +38,7 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 ### URLs used for core functionality
 
 > [!NOTE]
-> To ensure successful onboarding, make sure that your devices meet all component update versions and OS requirements: application or antimalware platform, engine, and Endpoint detection and response (EDR) sensor. Otherwise onboarding may be unsuccessful. You can onboard devices again to switch them to streamlined connectivity if they meet these requirements.
+> To ensure successful onboarding, make sure that your devices meet all component update versions and OS requirements: application or anti-malware platform, engine, and Endpoint detection and response (EDR) sensor. Otherwise onboarding might be unsuccessful. You can onboard devices again to switch them to streamlined connectivity if they meet these requirements.
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
@@ -55,8 +55,8 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 |-|-|-|-|-|-|-|
 |Linux app/platform updates|443|packages.microsoft.com|Official Microsoft repository to download and update the Linux product|Required|Optional if distributing or upgrading Linux installations using a different method|Linux|
 |Mac app or platform updates|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) - product updates for macOS|Required|Optional if distributing or upgrading macOS installations using a different method. Uses the Microsoft AutoUpdate app also used for updating other Microsoft apps such as Office for Mac.|macOS|
-|Windows/Mac/Linux security intelligence updates <br> Windows antimalware platform updates (alternative download location / direct from Defender cloud)|443|go.microsoft.com <br> definitionupdates.microsoft.com <br> https://www.microsoft.com/security/encyclopedia/adlpackages.aspx | Microsoft Defender Antivirus Content Delivery Network (CDN) URLs - Security Intelligence and Windows antimalware platform updates. Linux and macOS clients use this location as the primary download location.|Required| Optional if updates are downloaded and distributed centrally (WSUS/Mirror/ConfigMgr). Windows clients use this location as an alternative - Microsoft Malware Protection Center (MMPC). Otherwise, Windows client uses the location as a fallback when other configured sources fail. The client then retrieves update packages as determined by the redirection logic.|All|
-|Windows security intelligence and antimalware platform updates, product updates to EDR sensors. This applies when you use the Microsoft or Windows update as the source or method. |443|*.update.microsoft.com <br> *.delivery.mp.microsoft.com <br> *.windowsupdate.com <br> *.download.windowsupdate.com <br>*.download.microsoft.com|Security intelligence and antimalware platform updates, when the client is configured to download Defender updates from Windows Update, will be downloaded as they become available.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  EDR sensor updates always come as part of regular Windows update release cadence/cycle. EDR logic updates come directly from Defender cloud (command and control). For Windows Server 2012 R2 and 2016, KB5005292 is the update package used to perform periodic updates to the EDR sensor stack.|Windows|
+|Windows/Mac/Linux security intelligence updates <br> Windows anti-malware platform updates (alternative download location / direct from Defender cloud)|443|go.microsoft.com <br> definitionupdates.microsoft.com <br> https://www.microsoft.com/security/encyclopedia/adlpackages.aspx | Microsoft Defender Antivirus Content Delivery Network (CDN) URLs - Security Intelligence and Windows anti-malware platform updates. Linux and macOS clients use this location as the primary download location.|Required| Optional if updates are downloaded and distributed centrally (WSUS/Mirror/ConfigMgr). Windows clients use this location as an alternative - Microsoft Malware Protection Center (MMPC). Otherwise, Windows client uses the location as a fallback when other configured sources fail. The client then retrieves update packages as determined by the redirection logic.|All|
+|Windows security intelligence and anti-malware platform updates, product updates to EDR sensors. This applies when you use the Microsoft or Windows update as the source or method. |443|*.update.microsoft.com <br> *.delivery.mp.microsoft.com <br> *.windowsupdate.com <br> *.download.windowsupdate.com <br>*.download.microsoft.com|Security intelligence and anti-malware platform updates, when the client is configured to download Defender updates from Windows Update, will be downloaded as they become available.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  EDR sensor updates always come as part of regular Windows update release cadence/cycle. EDR logic updates come directly from Defender cloud (command and control). For Windows Server 2012 R2 and 2016, KB5005292 is the update package used to perform periodic updates to the EDR sensor stack.|Windows|
 
 ## URLs used for certificate validation checks
 
@@ -174,19 +174,19 @@ Lists the URL endpoints required for administrative/security operations access t
 |URL|Comment|
 |---|---|
 |*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages - `https://onboardingpackagescusprd.blob.core.windows.net` and files retrieved from devices.|
-|https://*.microsoftonline-p.com|Used for signing into the portal with Entra ID|
-|https://secure.aadcdn.microsoftonline-p.com|Used for signing into the portal with Entra ID|
-|https://static2.sharepointonline.com|Used for signing into the portal with Entra ID|
-|https://login.microsoftonline.com|Used for signing into the portal with Entra ID|
+|https://*.microsoftonline-p.com|Used for signing into the portal with Microsoft Entra ID|
+|https://secure.aadcdn.microsoftonline-p.com|Used for signing into the portal with Microsoft Entra ID|
+|https://static2.sharepointonline.com|Used for signing into the portal with Microsoft Entra ID|
+|https://login.microsoftonline.com|Used for signing into the portal with Microsoft Entra ID|
 |https://*.securitycenter.windows.com|Microsoft Defender Security Center portal/APIs|
 |https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
 |https://security.microsoft.com|Microsoft Defender XDR admin portal|
 
 ## Microsoft Defender processes
 
-The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list does not account for any other Windows communications requirements. 
+The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list doesn't account for any other Windows communications requirements. 
 For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
-While this list will continue to be updated, Microsoft cannot provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
+While this list will continue to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
 
 ### Windows 11, Windows 10, Windows Server 2022, and Windows Server 2019
 
