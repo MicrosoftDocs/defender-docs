@@ -17,7 +17,7 @@ ms.collection:
 ms.custom:
 description: SecOps personnel can learn how to use the Incidents queue in Microsoft Defender XDR to manage incidents in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 6/15/2023
+ms.date: 12/23/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
