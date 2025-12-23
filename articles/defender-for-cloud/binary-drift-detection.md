@@ -68,7 +68,7 @@ Binary drift rules define what behavior is considered suspicious, what to alert 
     
     - **Action**: 
         - **Drift detection alert** if the rule should generate an alert.
-        - **Drift detection blocking** if the rule should block the unauthorized process.
+        - **Drift detection blocking** if the rule should block the drifted process.
         - **Ignore drift detection** to exclude it from alert generation.
         
     - **Scope description**: A description of the scope to which the rule applies.
