@@ -82,4 +82,4 @@ Learn more:
 
 |Platform  |Preview/GA  |Features  |
 |---------|------------|---------|---------|
-|Windows |GA |Version 10.8797.25857.1000 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#108797258571000---may-2025). |
+|Windows |GA |Version 10.8797.25857.1000 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#108797258571000---may-2025). |
