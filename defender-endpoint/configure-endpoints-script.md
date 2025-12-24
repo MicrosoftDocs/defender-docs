@@ -37,16 +37,15 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-> [!NOTE]
-> If the Endpoints section isn't visible, try accessing other Defender features (such as Incidents or Hunting) or wait a few minutes for the environment to initialize. Also ensure you have the required roles (like Security Administrator) and appropriate licensing.
+    > [!NOTE]
+    > If the Endpoints section isn't visible, try accessing other Defender features (such as Incidents or Hunting) or wait a few minutes for the environment to initialize. Also ensure you have the required roles (like Security Administrator) and appropriate licensing.
 
-    a. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
+1. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
-    a. Select Windows 10 or Windows 11 as the operating system.
+1. Select Windows 10 or Windows 11 as the operating system.
    
-    a. In the **Deployment method** field, select **Local Script**.
-   
-    a. Select **Download package** and save the .zip file.
+1. In the **Deployment method** field, select **Local Script**.
+1. Select **Download package** and save the .zip file.
 
 1. Extract the contents of the configuration package to a location on the device you want to onboard (for example, the Desktop). You should have a file named *WindowsDefenderATPLocalOnboardingScript.cmd*.
 
