@@ -40,31 +40,31 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 > [!NOTE]
 > If the Endpoints section isn't visible, try accessing other Defender features (such as Incidents or Hunting) or wait a few minutes for the environment to initialize. Also ensure you have the required roles (like Security Administrator) and appropriate licensing.
 
-   1. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
+    a. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
-   2. Select Windows 10 or Windows 11 as the operating system.
+    a. Select Windows 10 or Windows 11 as the operating system.
    
-   3. In the **Deployment method** field, select **Local Script**.
+    a. In the **Deployment method** field, select **Local Script**.
    
-   4. Select **Download package** and save the .zip file.
+    a. Select **Download package** and save the .zip file.
 
-2. Extract the contents of the configuration package to a location on the device you want to onboard (for example, the Desktop). You should have a file named *WindowsDefenderATPLocalOnboardingScript.cmd*.
+1. Extract the contents of the configuration package to a location on the device you want to onboard (for example, the Desktop). You should have a file named *WindowsDefenderATPLocalOnboardingScript.cmd*.
 
-3. Open an elevated command-line prompt on the device and run the script:
+1. Open an elevated command-line prompt on the device and run the script:
 
    1. Go to **Start** and type **cmd**.
    
-   2. Right-click **Command prompt** and select **Run as administrator**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
 
     :::image type="content" source="media/run-as-admin.png" alt-text="The Window Start menu pointing to Run as administrator" lightbox="media/run-as-admin.png":::
 
-4. Type the location of the script file. If you copied the file to the desktop, type: `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`
+1. Type the location of the script file. If you copied the file to the desktop, type: `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`
 
-5. Press the **Enter** key or select **OK**.
+1. Press the **Enter** key or select **OK**.
 
-6. Type "Y" and enter when prompted.
+1. Type "Y" and enter when prompted.
 
-7. After the script completes, it will display "Press any key to continue...". Press any key to complete the steps on the device.
+1. After the script completes, it will display "Press any key to continue...". Press any key to complete the steps on the device.
 
 For information on how you can manually validate that the device is compliant and correctly reports sensor data see, [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md).
 
@@ -107,25 +107,24 @@ For security reasons, the package used to offboard devices expires seven days af
 
    1. In the navigation pane, expand the **Security** section, then select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
    
-   2. Select Windows 10 or Windows 11 as the operating system.
+   1. Select Windows 10 or Windows 11 as the operating system.
    
-   3. In the **Deployment method** field, select **Local Script**.
+   1. In the **Deployment method** field, select **Local Script**.
    
-   4. Select **Download package** and save the .zip file.
+   1. Select **Download package** and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that devices can access. You should have a file named `WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd`.
+1. Extract the contents of the .zip file to a shared, read-only location that devices can access. You should have a file named `WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd`.
 
-3. Open an elevated command-line prompt on the device and run the script:
+1. Open an elevated command-line prompt on the device and run the script:
 
    1. Go to **Start** and type **cmd**.
    
-   2. Right-click **Command prompt** and select **Run as administrator**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
 
       :::image type="content" source="media/run-as-admin.png" alt-text="The Windows Start menu pointing to the Run as administrator option" lightbox="media/run-as-admin.png":::
 
-4. Type the location of the script file. If you copied the file to the desktop, type: `%userprofile%\Desktop\WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd`
-
-5. Press the **Enter** key or select **OK**.
+1. Type the location of the script file. If you copied the file to the desktop, type: `%userprofile%\Desktop\WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd`
+1. Press the **Enter** key or select **OK**.
 
 > [!IMPORTANT]
 > Offboarding causes the device to stop sending sensor data to the portal but data from the device, including reference to any alerts it has had will be retained for up to 6 months.
@@ -140,9 +139,9 @@ Monitoring can also be done directly on the portal, or by using the different de
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. Select **Devices inventory**.
+1. Select **Devices inventory**.
 
-3. Verify that devices are appearing.
+1. Verify that devices are appearing.
 
 ## Related articles
 
