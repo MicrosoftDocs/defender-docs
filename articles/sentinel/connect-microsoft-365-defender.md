@@ -4,7 +4,7 @@ description: Learn how to ingest incidents, alerts, and raw event data from Micr
 author: guywi-ms
 ms.author: guywild
 ms.topic: how-to
-ms.date: 05/22/2025
+ms.date: 12/24/2025
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
