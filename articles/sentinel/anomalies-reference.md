@@ -205,7 +205,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Exfiltration                                                       |
 | **MITRE ATT&CK techniques:**     | T1567 - Exfiltration Over Web Service                             |
-| **Activity:**                    | s3.amazonaws.com                                                   |
+| **Activity:**                    | PutObject, CopyObject, UploadPart, UploadPartCopy, CreateJob, CompleteMultipartUpload |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -248,7 +248,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Initial Access, Persistence                                        |
 | **MITRE ATT&CK techniques:**     | T1078 - Valid Accounts, T1550 - Use Alternate Authentication Material |
-| **Activity:**                    | sts.amazonaws.com                                                  |
+| **Activity:**                    | UserAuthentication (EXTERNAL_IDP)                                  |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -262,7 +262,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Privilege Escalation, Persistence                                  |
 | **MITRE ATT&CK techniques:**     | T1136 - Create Account, T1098 - Account Manipulation               |
-| **Activity:**                    | iam.amazonaws.com                                                  |
+| **Activity:**                    | Create*, Add*, Attach*, Delete*, Deactivate*, Put*, Update* operations on iam.amazonaws.com, sso-directory.amazonaws.com |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -276,7 +276,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Initial Access                                                     |
 | **MITRE ATT&CK techniques:**     | T1078 - Valid Accounts                                             |
-| **Activity:**                    | signin.amazonaws.com                                               |
+| **Activity:**                    | ConsoleLogin                                                       |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -334,7 +334,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Credential Access, Collection                                      |
 | **MITRE ATT&CK techniques:**     | T1555 - Credentials from Password Stores                          |
-| **Activity:**                    | secretsmanager.amazonaws.com, kms.amazonaws.com                    |
+| **Activity:**                    | GetSecretValue, BatchGetSecretValue, ListKeys, ListSecrets, PutSecretValue, CreateSecret, UpdateSecret, DeleteSecret, CreateKey, PutKeyPolicy |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -362,7 +362,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Privilege Escalation, Defense Evasion                             |
 | **MITRE ATT&CK techniques:**     | T1548 - Abuse Elevation Control Mechanism, T1078 - Valid Accounts  |
-| **Activity:**                    | sts.amazonaws.com                                                  |
+| **Activity:**                    | AssumeRole, AssumeRoleWithSAML, AssumeRoleWithWebIdentity, AssumeRoot |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
