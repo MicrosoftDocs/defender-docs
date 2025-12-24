@@ -1,5 +1,5 @@
 ---
-title: Stream data from Microsoft Defender XDR to Microsoft Sentinel in the Azure portal using the Defender XDR connector
+title: Stream data from Microsoft Defender XDR to Microsoft Sentinel in the Azure portal
 description: Learn how to ingest incidents, alerts, and raw event data from Microsoft Defender XDR into Microsoft Sentinel in the Azure portal.
 author: guywi-ms
 ms.author: guywild
@@ -13,7 +13,7 @@ ms.collection: usx-security
 
 ---
 
-# Stream data from Microsoft Defender XDR to Microsoft Sentinel in the Azure portal using the Defender XDR connector
+# Stream data from Microsoft Defender XDR to Microsoft Sentinel in the Azure portal 
 
 The Defender XDR connector allows you to stream all Microsoft Defender XDR incidents, alerts, and advanced hunting events into Microsoft Sentinel and keeps incidents synchronized between both portals. This article explains how to configure the Microsoft Defender XDR connector for Microsoft Sentinel in the Azure portal. 
 
