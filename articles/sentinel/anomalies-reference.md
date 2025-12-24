@@ -51,13 +51,18 @@ UEBA detects anomalies based on these anomaly rules:
 - [UEBA Anomalous Authentication (Preview)](#ueba-anomalous-authentication-preview)
 - [UEBA Anomalous Code Execution](#ueba-anomalous-code-execution)
 - [UEBA Anomalous Data Destruction](#ueba-anomalous-data-destruction)
+- [UEBA Anomalous Data Transfer from Amazon S3 (Preview)](#ueba-anomalous-data-transfer-from-amazon-s3-preview)
 - [UEBA Anomalous Defensive Mechanism Modification](#ueba-anomalous-defensive-mechanism-modification)
 - [UEBA Anomalous Failed Sign-in](#ueba-anomalous-failed-sign-in)
+- [UEBA Anomalous Federated or SAML Identity Activity in AwsCloudTrail (Preview)](#ueba-anomalous-federated-or-saml-identity-activity-in-awscloudtrail-preview)
+- [UEBA Anomalous IAM Privilege Modification in AwsCloudTrail (Preview)](#ueba-anomalous-iam-privilege-modification-in-awscloudtrail-preview)
 - [UEBA Anomalous Logon in AwsCloudTrail (Preview)](#ueba-anomalous-logon-in-awscloudtrail-preview)
 - [UEBA Anomalous MFA Failures in Okta_CL (Preview)](#ueba-anomalous-mfa-failures-in-okta_cl-preview)
 - [UEBA Anomalous Password Reset](#ueba-anomalous-password-reset)
 - [UEBA Anomalous Privilege Granted](#ueba-anomalous-privilege-granted)
+- [UEBA Anomalous Secret or KMS Key Access in AwsCloudTrail (Preview)](#ueba-anomalous-secret-or-kms-key-access-in-awscloudtrail-preview)
 - [UEBA Anomalous Sign-in](#ueba-anomalous-sign-in)
+- [UEBA Anomalous STS AssumeRole Behavior in AwsCloudTrail (Preview)](#ueba-anomalous-sts-assumerole-behavior-in-awscloudtrail-preview)
 
 Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA anomalies with a confidence score specific to your tenant and source. 
 
@@ -190,6 +195,20 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
+### UEBA Anomalous Data Transfer from Amazon S3 (Preview)
+
+**Description:** Detects deviations in data access or download patterns from Amazon Simple Storage Service (S3). The anomaly is determined using behavioral baselines for each user, service, and resource, comparing data transfer volume, frequency, and accessed object count against historical norms. Significant deviations — such as first-time bulk access, unusually large data retrievals, or activity from new locations or applications — may indicate potential data exfiltration, policy violations, or misuse of compromised credentials.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | AWS CloudTrail logs                                                |
+| **MITRE ATT&CK tactics:**        | Exfiltration                                                       |
+| **MITRE ATT&CK techniques:**     | T1567 - Exfiltration Over Web Service                             |
+| **Activity:**                    | s3.amazonaws.com                                                   |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
 ### UEBA Anomalous Defensive Mechanism Modification
 
 **Description:** Adversaries may disable security tools to avoid possible detection of their tools and activities.
@@ -216,6 +235,34 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **MITRE ATT&CK tactics:**        | Credential Access                                                  |
 | **MITRE ATT&CK techniques:**     | T1110 - Brute Force                                                |
 | **Activity:**                    | **Microsoft Entra ID:** Sign-in activity<br>**Windows Security:** Failed login (Event ID 4625) |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Federated or SAML Identity Activity in AwsCloudTrail (Preview)
+
+**Description:** Detects unusual activity by federated or SAML-based identities involving first-time actions, unfamiliar geo-locations, or excessive API calls. Such anomalies can reveal session hijacking or misuse of federated credentials.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | AWS CloudTrail logs                                                |
+| **MITRE ATT&CK tactics:**        | Initial Access, Persistence                                        |
+| **MITRE ATT&CK techniques:**     | T1078 - Valid Accounts, T1550 - Use Alternate Authentication Material |
+| **Activity:**                    | sts.amazonaws.com                                                  |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous IAM Privilege Modification in AwsCloudTrail (Preview)
+
+**Description:** Detects deviations in IAM administrative behavior, such as first-time creation, modification, or deletion of roles, users, and groups, or attachment of new inline or managed policies. These may indicate privilege escalation or policy abuse.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | AWS CloudTrail logs                                                |
+| **MITRE ATT&CK tactics:**        | Privilege Escalation, Persistence                                  |
+| **MITRE ATT&CK techniques:**     | T1136 - Create Account, T1098 - Account Manipulation               |
+| **Activity:**                    | iam.amazonaws.com                                                  |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -277,6 +324,20 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
+### UEBA Anomalous Secret or KMS Key Access in AwsCloudTrail (Preview)
+
+**Description:** Detects suspicious access to AWS Secrets Manager, or Key Management Service (KMS) resources. First-time access or unusually high access frequency may indicate credential harvesting or data exfiltration attempts.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | AWS CloudTrail logs                                                |
+| **MITRE ATT&CK tactics:**        | Credential Access, Collection                                      |
+| **MITRE ATT&CK techniques:**     | T1555 - Credentials from Password Stores                          |
+| **Activity:**                    | secretsmanager.amazonaws.com, kms.amazonaws.com                    |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
 ### UEBA Anomalous Sign-in
 
 **Description:** Adversaries may steal the credentials of a specific user or service account using Credential Access techniques or capture credentials earlier in their reconnaissance process through social engineering for means of gaining Persistence.
@@ -288,6 +349,20 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **MITRE ATT&CK tactics:**        | Persistence                                                        |
 | **MITRE ATT&CK techniques:**     | T1078 - Valid Accounts                                             |
 | **Activity:**                    | **Microsoft Entra ID:** Sign-in activity<br>**Windows Security:** Successful login (Event ID 4624) |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous STS AssumeRole Behavior in AwsCloudTrail (Preview)
+
+**Description:** Detects anomalous usage of AWS Security Token Service (STS) AssumeRole actions, especially involving privileged roles or cross-account access. Deviations from typical usage may indicate privilege escalation or identity compromise.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | AWS CloudTrail logs                                                |
+| **MITRE ATT&CK tactics:**        | Privilege Escalation, Defense Evasion                             |
+| **MITRE ATT&CK techniques:**     | T1548 - Abuse Elevation Control Mechanism, T1078 - Valid Accounts  |
+| **Activity:**                    | sts.amazonaws.com                                                  |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
