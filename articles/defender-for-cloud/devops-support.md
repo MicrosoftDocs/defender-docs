@@ -1,7 +1,7 @@
 ---
 title: Support and prerequisites 
 description: Understand support and prerequisites for DevOps security in Microsoft Defender for Cloud
-ms.date: 03/02/2025
+ms.date: 12/24/2025
 ms.topic: article
 ms.custom: ignite-2023, references_regions
 ---
