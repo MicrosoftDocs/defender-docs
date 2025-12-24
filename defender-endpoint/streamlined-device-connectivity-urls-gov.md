@@ -46,9 +46,12 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
 |--------|---------|--------|----|------------|-----------|--------|-------------------------|--------|------------|---|-----|--------|
 |Consolidated Defender for Endpoint services|USGov|Streamlined connectivity URL|443|*.endpoint.security.microsoft.us|Streamlined connectivity URL consolidation and future services|Required|Yes|No|Yes|Yes|Yes||
-|Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
+|Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
+|Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
+
+> [!NOTE]
+> Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators
 
 ### URLs used for updates
 
@@ -57,12 +60,15 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Comments|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|--------|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|
+
+> [!NOTE]
+> Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)
 
 ## URLs used for certificate validation checks
 
@@ -80,28 +86,34 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Comments|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|
-|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
+|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
+|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
+
+> [!NOTE]
+> Required for Live Response Performance (Direct Connection/Proxy bypass required)
 
 ## Security center URLs
 
 |Service|Geography|URL|Comment|
 |-------|---------|---|-------|
-|Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|crl.microsoft.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|https://*.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|https://secure.aadcdn.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|https://static2.sharepointonline.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC|https://login.microsoftonline.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC|https://*.gcc.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC|https://onboardingpckgsusmvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC High|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC High|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC High|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|
+|Microsoft Defender for Endpoint|US Gov|crl.microsoft.com|
+|Microsoft Defender for Endpoint|US Gov|https://*.microsoftonline-p.com|
+|Microsoft Defender for Endpoint|US Gov|https://secure.aadcdn.microsoftonline-p.com|
+|Microsoft Defender for Endpoint|US Gov|https://static2.sharepointonline.com|
+|Microsoft Defender for Endpoint|GCC|https://login.microsoftonline.com|
+|Microsoft Defender for Endpoint|GCC|https://*.gcc.securitycenter.microsoft.us|
+|Microsoft Defender for Endpoint|GCC|https://onboardingpckgsusmvprd.blob.core.usgovcloudapi.net|
+|Microsoft Defender for Endpoint|GCC High|https://login.microsoftonline.us|
+|Microsoft Defender for Endpoint|GCC High|https://*.securitycenter.microsoft.us|
+|Microsoft Defender for Endpoint|GCC High|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 |Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|
+|Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
+
+> [!NOTE]
+> Microsoft Defender Security Center Portal URL
 
 ## Microsoft Defender processes
 
