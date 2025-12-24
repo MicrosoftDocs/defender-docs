@@ -59,8 +59,6 @@ Add diagram when ready.
 
 ## Roles and permissions
 
-## Roles and permissions
-
 Access to Microsoft Security Private Link is governed by [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview). Configuring and managing private endpoints typically involves the following roles:
 
 - **Private Link resource owner**  
