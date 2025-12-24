@@ -31,6 +31,9 @@ DevOps security currently supports the following DevOps platforms:
 * [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud)
 * [GitLab SaaS](https://docs.gitlab.com/ee/subscriptions/gitlab_com/)
 
+> [!NOTE]
+> Defender for DevOps currently doesn't support GitHub Enterprise Cloud instances configured with data residency.
+
 ## Required permissions
 
 DevOps security requires the following permissions:
