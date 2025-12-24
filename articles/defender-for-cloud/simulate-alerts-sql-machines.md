@@ -2,7 +2,7 @@
 title: Simulate alerts for SQL servers on machines
 description: Learn how to simulate alerts for SQL servers on machines in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 12/16/2025
+ms.date: 12/24/2025
 #customer intent: As a security administrator, I want to simulate alerts for SQL servers on machines to test my security monitoring setup.
 ---
 
@@ -49,5 +49,9 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
 1. Select **Security** > **Microsoft Defender for Cloud**.  
 
-1. Select the  
+1. Select **Simulate alert**.
+1. Select **attack type**.
+1. Enter a username, password....
+1. Select **Submit**.
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
 
