@@ -109,7 +109,7 @@ A CCF Push connector solution consists of four main components:
 - Table name must end with `_CL` (custom log suffix).
 - Must include a `TimeGenerated` column (datetime type).
 - Column types: string, int, long, real, bool, datetime, dynamic, guid.
-- Use API version 2021-03-01-privatepreview or later.
+- Use API version `2025-07-01` or later.
 - For more information, see [Create a custom table in Azure Monitor Logs](/azure/azure-monitor/logs/create-custom-table).
 
 **Example:**
@@ -118,7 +118,7 @@ A CCF Push connector solution consists of four main components:
 {
   "name": "ContosoSecurityAlerts_CL",
   "type": "Microsoft.OperationalInsights/workspaces/tables",
-  "apiVersion": "2021-03-01-privatepreview",
+  "apiVersion": "2025-07-01",
   "properties": {
      "schema": {
         "name": "ContosoSecurityAlerts_CL",
@@ -563,7 +563,7 @@ Your application sends the event structure:
     mkdir "Data Connectors"
     mkdir "Data Connectors/ContosoSecurityAlerts_ccf"
     ```
-    Your folder structure should look like:
+    Your folder structure looks like the following:
 
     Azure-Sentinel/  
     &nbsp;└── Solutions/   
@@ -581,7 +581,7 @@ Your application sends the event structure:
     {
       "name": "ContosoSecurityAlerts_CL",
       "type": "Microsoft.OperationalInsights/workspaces/tables",
-      "apiVersion": "2021-03-01-privatepreview",
+      "apiVersion": "2025-07-01",
       "properties": {
         "schema": {
           "name": "ContosoSecurityAlerts_CL",
@@ -1131,7 +1131,7 @@ Your application sends the event structure:
 
 1. Query your data
 
-    After sending alerts (allow 5-10 minutes for first ingestion), query in Sentinel:
+    After sending alerts, query in Sentinel. Allow 5-10 minutes for first ingestion.
 
     ```kusto
     // View all recent alerts
