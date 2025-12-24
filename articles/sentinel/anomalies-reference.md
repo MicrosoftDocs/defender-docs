@@ -147,7 +147,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | Okta Cloud Logs                                                     |
 | **MITRE ATT&CK tactics:**        | Persistence, Privilege Escalation                                   |
 | **MITRE ATT&CK techniques:**     | T1098 - Account Manipulation, T1556 - Modify Authentication Process |
-| **Activity:**                    | 'user.session.impersonation.grant'<br>'user.session.impersonation.initiate'<br>'user.session.start'<br>'app.oauth2.admin.consent.grant_success'<br>'app.oauth2.authorize.code_success'<br>'device.desktop_mfa.recovery_pin.generate'<br>'user.authentication.auth_via_mfa'<br>'user.mfa.attempt_bypass'<br>'user.mfa.factor.deactivate'<br>'user.mfa.factor.reset_all'<br>'user.mfa.factor.suspend'<br>'user.mfa.okta_verify' |
+| **Activity:**                    | user.session.impersonation.grant<br>user.session.impersonation.initiate<br>user.session.start<br>app.oauth2.admin.consent.grant_success<br>app.oauth2.authorize.code_success<br>device.desktop_mfa.recovery_pin.generate<br>user.authentication.auth_via_mfa<br>user.mfa.attempt_bypass<br>user.mfa.factor.deactivate<br>user.mfa.factor.reset_all<br>user.mfa.factor.suspend<br>user.mfa.okta_verify |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -262,7 +262,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Privilege Escalation, Persistence                                  |
 | **MITRE ATT&CK techniques:**     | T1136 - Create Account, T1098 - Account Manipulation               |
-| **Activity:**                    | Create*, Add*, Attach*, Delete*, Deactivate*, Put*, Update* operations on iam.amazonaws.com, sso-directory.amazonaws.com |
+| **Activity:**                    | Create, Add, Attach, Delete, Deactivate, Put, and Update operations on iam.amazonaws.com, sso-directory.amazonaws.com |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -334,7 +334,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Credential Access, Collection                                      |
 | **MITRE ATT&CK techniques:**     | T1555 - Credentials from Password Stores                          |
-| **Activity:**                    | GetSecretValue, BatchGetSecretValue, ListKeys, ListSecrets, PutSecretValue, CreateSecret, UpdateSecret, DeleteSecret, CreateKey, PutKeyPolicy |
+| **Activity:**                    | GetSecretValue<br>BatchGetSecretValue <br>ListKeys<br>ListSecrets<br>PutSecretValue<br>CreateSecret<br>UpdateSecret<br>DeleteSecret<br>CreateKey<br>PutKeyPolicy |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
@@ -362,7 +362,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **Data sources:**                | AWS CloudTrail logs                                                |
 | **MITRE ATT&CK tactics:**        | Privilege Escalation, Defense Evasion                             |
 | **MITRE ATT&CK techniques:**     | T1548 - Abuse Elevation Control Mechanism, T1078 - Valid Accounts  |
-| **Activity:**                    | AssumeRole, AssumeRoleWithSAML, AssumeRoleWithWebIdentity, AssumeRoot |
+| **Activity:**                    | AssumeRole<br>AssumeRoleWithSAML<br>AssumeRoleWithWebIdentity<br>AssumeRoot |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
