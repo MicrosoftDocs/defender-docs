@@ -197,7 +197,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 ### UEBA Anomalous Data Transfer from Amazon S3 (Preview)
 
-**Description:** Detects deviations in data access or download patterns from Amazon Simple Storage Service (S3). The anomaly is determined using behavioral baselines for each user, service, and resource, comparing data transfer volume, frequency, and accessed object count against historical norms. Significant deviations — such as first-time bulk access, unusually large data retrievals, or activity from new locations or applications — may indicate potential data exfiltration, policy violations, or misuse of compromised credentials.
+**Description:** Deviations in data access or download patterns from Amazon Simple Storage Service (S3). The anomaly is determined using behavioral baselines for each user, service, and resource, comparing data transfer volume, frequency, and accessed object count against historical norms. Significant deviations - such as first-time bulk access, unusually large data retrievals, or activity from new locations or applications - might indicate potential data exfiltration, policy violations, or misuse of compromised credentials.
 
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
@@ -240,7 +240,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 ### UEBA Anomalous Federated or SAML Identity Activity in AwsCloudTrail (Preview)
 
-**Description:** Detects unusual activity by federated or SAML-based identities involving first-time actions, unfamiliar geo-locations, or excessive API calls. Such anomalies can reveal session hijacking or misuse of federated credentials.
+**Description:** Unusual activity by federated or Security Assertion Markup Language (SAML)-based identities involving first-time actions, unfamiliar geo-locations, or excessive API calls. Such anomalies can indicate session hijacking or misuse of federated credentials.
 
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
@@ -254,7 +254,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 ### UEBA Anomalous IAM Privilege Modification in AwsCloudTrail (Preview)
 
-**Description:** Detects deviations in IAM administrative behavior, such as first-time creation, modification, or deletion of roles, users, and groups, or attachment of new inline or managed policies. These may indicate privilege escalation or policy abuse.
+**Description:** Deviations in Identity and Access Management (IAM) administrative behavior, such as first-time creation, modification, or deletion of roles, users, and groups, or attachment of new inline or managed policies. These might indicate privilege escalation or policy abuse.
 
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
@@ -326,7 +326,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 ### UEBA Anomalous Secret or KMS Key Access in AwsCloudTrail (Preview)
 
-**Description:** Detects suspicious access to AWS Secrets Manager, or Key Management Service (KMS) resources. First-time access or unusually high access frequency may indicate credential harvesting or data exfiltration attempts.
+**Description:** Suspicious access to AWS Secrets Manager, or Key Management Service (KMS) resources. First-time access or unusually high access frequency might indicate credential harvesting or data exfiltration attempts.
 
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
@@ -354,7 +354,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 ### UEBA Anomalous STS AssumeRole Behavior in AwsCloudTrail (Preview)
 
-**Description:** Detects anomalous usage of AWS Security Token Service (STS) AssumeRole actions, especially involving privileged roles or cross-account access. Deviations from typical usage may indicate privilege escalation or identity compromise.
+**Description:** Anomalous usage of AWS Security Token Service (STS) AssumeRole actions, especially involving privileged roles or cross-account access. Deviations from typical usage might indicate privilege escalation or identity compromise.
 
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
