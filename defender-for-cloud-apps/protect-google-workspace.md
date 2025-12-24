@@ -82,7 +82,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 As a Google Workspace Super Admin,perform these steps to prepare your enviornment. 
 
-1.  Sign in to the [Google Workspace](https://console.cloud.google.com>) as a Super Admin.
+1.  Sign in to the [Google Workspace](https://console.cloud.google.com) as a Super Admin.
 
 1. Create a new project named **Defender for Cloud Apps**,  and copy the **Project number**. You'll need it later.
 
