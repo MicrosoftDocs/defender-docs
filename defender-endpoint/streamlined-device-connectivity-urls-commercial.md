@@ -196,7 +196,7 @@ While this list will continue to be updated, Microsoft can't provide any guarant
 |MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
 |MpDefenderCoreService.exe|C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.xxxxx.x-x\Where 4.18.xxxxx.x-x, if an exclusion is added just use an asterisk (*)|Microsoft Defender Antivirus Core Service|
-|MpDlpService.exe|C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.xxxxx.x-x\|Microsoft Purview Data Loss Prevention Service|
+|MpDlpService.exe|C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.xxxxx.x-x\ | Microsoft Purview Data Loss Prevention Service|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
 |MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
