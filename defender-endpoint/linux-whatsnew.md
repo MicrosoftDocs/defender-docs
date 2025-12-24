@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 12/19/2025
+ms.date: 12/24/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -42,6 +42,21 @@ This article is updated frequently to let you know what's new in the latest rele
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## Releases for Defender for Endpoint on Linux
+
+### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
+
+|Build:             |**101.25092.0005**    |
+|-------------------|----------------------|
+|Released:          |**December 22, 2025**|
+|Published:         |**December 22, 2025**|
+|Expiry:            |**Sep 14, 2026**|
+|Release version:   |**30.125092.0005.0**|
+|Engine version:    |**1.1.25110.3001**|
+|Signature version: |**1.443.272.0**|
+
+What's new
+
+- Enhanced MDVM capability to efficiently detect vulnerable React components [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r).
 
 ### December-2025 Build: 101.25092.0002 | Release version: 30.125092.0002.0
 
