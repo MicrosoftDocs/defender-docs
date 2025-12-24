@@ -112,7 +112,7 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
-2. Type the following cmdlet:
+1. Type the following cmdlet:
 
    ```PowerShell
    Set-MpPreference -EnableControlledFolderAccess Enabled
