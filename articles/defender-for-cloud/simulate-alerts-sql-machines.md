@@ -55,3 +55,8 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 1. Select **Submit**.
 1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
 
+The alert will appear after a few minutes. You can use the alert details to validate your security monitoring setup.
+
+## Next step
+
+
