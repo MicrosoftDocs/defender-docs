@@ -62,10 +62,17 @@
               href: monitor-connected-aws-resources.md
             - name: Integrate AWS CloudTrail logs (Preview)
               href: integrate-cloud-trail.md
-        - name: Connect GCP projects
-          displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+    - name: Connect GCP projects
+      displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+      items:
+        - name: Connect your GCP project
           href: quickstart-onboard-gcp.md
-        - name: Connect individual non-Azure machines
+        - name: Authentication architecture for GCP connectors
+          href: concept-authentication-architecture-gcp.md
+        - name: Monitor connected GCP resources
+          href: monitor-connected-gcp-resources.md
+        - name: Integrate GCP Cloud Logging with Pub/Sub (Preview)
+          href: integrate-gcp-cloud-logging-pubsub.md
           items:
             - name: Connect machines with Defender for Endpoint
               displayName: azure stack, ash, windows, linux, hybrid, defender for endpoint
