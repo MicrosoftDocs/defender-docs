@@ -26,7 +26,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 ## Microsoft Defender URLs
 
-|Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Windows 10/11 / Server 2019 -2022 / Server 2016 (Unified Agent) / Server 2012 R2 (Unified Agent)|Windows 7 / 8.1|Windows Server 2008 R2 / 2012 R2 / 2016 (MMA Based)|Mac|Linux|Comments|
+|Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Windows 10/11 / Server 2019 -2022 / Server 2012 R2/Server 2016 (Unified Agent)|Windows 7 / 8.1|Windows Server 2008 R2 / 2012 R2 / 2016 (MMA Based)|Mac|Linux|Comments|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
 |Microsoft Defender for Endpoint|US Gov|CRL|80|	crl.microsoft.com/pki/crl/*|Certificate Revocation Lists - required to validate certificates / Used by Windows when creating the SSL connection to MAPS for updating the CRL| Required | Yes ||| Yes |Yes|
 |Microsoft Defender for Endpoint|US Gov|CRL|80|	ctldl.windowsupdate.com|Expands on the existing automatic root update mechanism technology to let certificates that are compromised or untrusted be specifically flagged as untrusted|Required|	Yes||||||
