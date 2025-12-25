@@ -53,7 +53,15 @@
           href: connect-azure-subscription.md
         - name: Connect AWS accounts
           displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-          href: quickstart-onboard-aws.md
+          items:
+            - name: Connect your AWS account
+              href: quickstart-onboard-aws.md
+            - name: Authentication architecture for AWS connectors
+              href: concept-authentication-architecture-aws.md
+            - name: Monitor connected AWS resources
+              href: monitor-connected-aws-resources.md
+            - name: Integrate AWS CloudTrail logs (Preview)
+              href: integrate-cloud-trail.md
         - name: Connect GCP projects
           displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
           href: quickstart-onboard-gcp.md
@@ -683,7 +691,6 @@
             href: deploy-vulnerability-assessment-byol-vm.md
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-            href: transition-to-built-in.md
       - name: Machine secrets scanning
         items:
           - name: Overview
@@ -859,20 +866,13 @@
           href: defender-for-sql-scan-results.md
       - name: Investigate and remediate
         items:
-        - name: Investigate Defender for SQL security Alerts, reporting, and queries
+        - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
         - name: Find and remediate vulnerabilities
           href: sql-azure-vulnerability-assessment-find.md
-        - name: Vulnerability assessment rules
-          href: sql-azure-vulnerability-assessment-rules.md
-        - name: SQL vulnerability assessment rules changelog
-          href: sql-azure-vulnerability-assessment-rules-changelog.md
         - name: Consume and export scan results
           href: defender-for-sql-scan-results.md
-        - name: Investigate Defender for SQL security alerts
-          href: defender-for-sql-alerts.md
-
   - name: Defender for App Service
     items:
       - name: Overview
@@ -952,58 +952,6 @@
         displayName: DNS
         href: defender-for-dns-alerts.md
 
-  - name: DevOps security
-    items:
-      - name: DevOps security overview
-        href: defender-for-devops-introduction.md
-      - name: Support and prerequisites
-        href: devops-support.md
-      - name: DevOps environment security posture
-        href: concept-devops-environment-posture-management-overview.md
-      - name: Reliability in Cloud for DevOps security
-        href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
-      - name: Onboard
-        items:
-          - name: Connect Azure DevOps environments
-            href: quickstart-onboard-devops.md
-          - name: Configure agentless code scanning (Preview)
-            href: agentless-code-scanning.md
-          - name: Connect GitHub environments
-            href: quickstart-onboard-github.md
-          - name: Connect GitLab environments
-            href: quickstart-onboard-gitlab.md
-          - name: Configure the Microsoft Security DevOps Azure DevOps extension
-            href: configure-azure-devops-extension.md
-          - name: Configure the Microsoft Security DevOps GitHub action
-            href: github-action.md
-          - name: Defender for Cloud CLI
-            items:
-              - name: Overview
-                href: defender-cli-overview.md
-              - name: Authentication
-                href: defender-cli-authentication.md
-              - name: Syntax
-                href: defender-cli-syntax.md
-              - name: CI/CD in pipeline scanning
-                href: ci-cd-pipeline-scanning-with-defender-cli.md
-              - name: Reviewing results
-                href: defender-cli-reviewing-results.md
-          - name: Configure pull request annotations
-            href: enable-pull-request-annotations.md
-          - name: Map IaC templates from code to cloud
-            href: iac-template-mapping.md
-          - name: Map container images from code to cloud
-            href: container-image-mapping.md
-          - name: Edit DevOps connectors
-            href: edit-devops-connector.md
-      - name: Investigate and remediate
-        items:
-          - name: Discover IaC misconfigurations
-            href: iac-vulnerabilities.md
-          - name: Review pull request annotations
-            href: review-pull-request-annotations.md
-      - name: Common questions about DevOps security
-        href: faq-defender-for-devops.yml
   - name: Defender for AI services
     items:
       - name: Overview
@@ -1023,6 +971,12 @@
       href: concept-devops-environment-posture-management-overview.md
     - name: Reliability in Cloud for DevOps security
       href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
+    - name: GitHub Advanced Security
+      items:
+        - name: Overview
+          href: github-advanced-security-overview.md
+        - name: Deploy GitHub Advanced Security integration
+          href: github-advanced-security-deploy.md
     - name: Onboard
       items:
         - name: Connect Azure DevOps environments

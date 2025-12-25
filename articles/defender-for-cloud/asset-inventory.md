@@ -199,7 +199,7 @@ This article describes how to use the unified cloud asset inventory in Microsoft
 
 The cloud asset inventory provides a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP environments. It categorizes assets by workload, criticality, and coverage status while integrating health data, device actions, and risk signals into a single interface.
 
-:::image type="content" source="media/asset-inventory/cloud-infrastructure.png" alt-text="Screenshot of cloud asset inventory in the Defender portal" lightbox="media/asset-inventory/cloud-infrastructure.png":::
+:::image type="content" source="media/asset-inventory/cloud-infrastructure.png" alt-text="Screenshot of cloud asset inventory in the Defender portal." lightbox="media/asset-inventory/cloud-infrastructure.png":::
 
 ## Key capabilities
 
@@ -264,7 +264,7 @@ Integrated risk indicators provide comprehensive asset context:
 ### Accessing the cloud inventory
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com)
-1. Select **Assets** > **Cloud Infrastructure** from the main navigation
+1. Select **Assets** > **Cloud** from the main navigation
 1. Use workload-specific tabs for focused views:
    - **All Assets**: Comprehensive view across all workload types
    - **VMs**: Virtual machine-specific inventory and insights
@@ -355,7 +355,7 @@ Cloud assets connect seamlessly with vulnerability management:
 ### Built-in reporting
 
 - **Coverage reports**: Assess Defender for Cloud deployment across your cloud estate
-- **Risk assessments**: Comprehensive risk analysis across multi-cloud environments  
+- **Risk assessments**: Comprehensive risk analysis across multicloud environments  
 - **Compliance dashboards**: Track regulatory compliance status across all cloud assets
 - **Trend analysis**: Monitor changes in security posture over time
 
@@ -405,8 +405,8 @@ Some assets may appear outside defined cloud scopes:
 
 ## Review the inventory
 
-1. In the Microsoft Defender portal, navigate to **Assets** > **Cloud Infrastructure**.
-1. Review the unified cloud infrastructure assets overview:
+1. In the Microsoft Defender portal, navigate to **Assets** > **Cloud**.
+1. Review the unified cloud assets overview:
     - **Total resources** across all connected cloud environments
     - **Security posture summary** showing healthy vs. unhealthy resources
     - **Coverage metrics** indicating Defender for Cloud protection status

@@ -2,7 +2,7 @@
 title: Defender for Containers on AWS (EKS) - Overview
 description: Learn about Microsoft Defender for Containers capabilities, architecture, and deployment options for Amazon Elastic Kubernetes Service (EKS).
 ms.topic: overview
-ms.date: 11/27/2025
+ms.date: 12/09/2025
 ai-usage: ai-assisted
 ---
 
@@ -86,6 +86,12 @@ Before deploying Defender for Containers on EKS, ensure you meet these requireme
 ## Pricing
 
 For detailed pricing information and cost optimization strategies, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 

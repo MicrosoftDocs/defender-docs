@@ -21,7 +21,9 @@ You can customize which scanners to run and define exactly which organizations, 
 - **Supported use cases**:
   - [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
   - [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
-
+    
+  - Cloud Security Explorer queries to locate repositories including dependencies resulting from an SBOM.
+    
 - [Supported cloud availability](support-matrix-defender-for-cloud.md).
 
 - **Supported regions**: Australia East, Canada Central, Central US, East Asia, East US, North Europe, Sweden Central, UK South, West Europe.
@@ -47,15 +49,16 @@ Some of the key benefits of agentless code scanning in Microsoft Defender for Cl
 - **Rapid insights for quick remediation**: Receive actionable vulnerability insights right after onboarding. This allows quick fixes and reduces exposure time.  
 - **Developer-friendly and seamless**: Operate independently of continuous integration and continuous deployment (CI/CD) pipelines, without changes or direct developer involvement needed. This allows for continuous security monitoring without disrupting developer productivity or workflows.
 - **Flexible coverage and control:** Choose which scanners run and what gets scanned. You can cover everything by default or customize settings to include or exclude specific organizations, projects, or repositories. This allows you to match security coverage to your risk profile and operational needs, without extra complexity.
+- **Software Bill of Materials (SBOM) creation**: Automatically generating an SBOM on every scan gives teams a precise, queryable inventory of dependencies and versions across their repositories, without additional workflow changes. This enables rapid impact analysis, faster response to newly disclosed vulnerabilities, and confident decision-making when assessing exposure to specific packages or versions.
 
 ## Risks detection capabilities
 
-Agentless code scanning improves security by offering targeted security recommendations for both code and infrastructure-as-code (IaC) templates. This is in addition to the foundational cloud security posture management security recommendations provided through the connector. Key detection capabilities include:
+Agentless code scanning improves security by delivering targeted, actionable recommendations across application code, infrastructure-as-code (IaC) templates, and third-party dependencies. This is in addition to the cloud security posture management security recommendations provided through the connector. Key detection capabilities include:
 
 - **Code vulnerabilities**: Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.
 - **Infrastructure-as-Code misconfigurations**: Detect security misconfigurations in IaC templates that could lead to insecure deployments. 
-
 - **Dependency vulnerabilities**: Identify known vulnerabilities in open-source packages and OS packages discovered in repositories. 
+- **Software Bill of Materials (SBOM)**: Automatically generate a comprehensive, queryable inventory of dependencies and their versions for each repository,
 
 Creating the connector enhances security by providing foundational cloud security posture management recommendations for repositories, pipelines, and service connections.
 
@@ -70,6 +73,7 @@ Agentless code scanning uses various open-source tools to find vulnerabilities a
 | **[Bandit](https://github.com/PyCQA/bandit)**            |Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
 | **[ESLint](https://github.com/eslint/eslint)**            |JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
 | **[Trivy](https://www.github.com/aquasecurity/trivy/)**|Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) |[Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE)|
+| **[Syft](https://github.com/anchore/syft/)**|Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabel, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Apache 2.0](https://github.com/anchore/syft/blob/main/LICENSE)|
 
 
 These tools support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.
@@ -147,7 +151,7 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then daily.
 
-1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates.
+1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates. It also creates an SBOM to allow for queryable package management.
 
 1. **Findings processing**: It processes scan findings through Defender for Cloud’s backend to create actionable security recommendations.
 
@@ -219,11 +223,16 @@ During the **public preview** phase, the following limitations apply:
 
 - **No binary scanning**: Only code (SAST) and IaC scanning tools are executed.  
 - **Scan frequency**: It scans repositories upon enablement, and then daily.  
-
 - **Repository size**: It limits scanning to repositories under 1 GB.
-
 - **Branch coverage**: Scans cover only the default branch (usually `main`).  
 - **Tool customization**: You can't customize scanning tools.
+
+SBOM currently has the following limitations:
+- Repository needs a lock file otherwise only direct dependencies will be found
+- The SBOM size limitation is restricted to 1MB. If there are a lot of packages identified, our ingestion into the Cloud Map will fail.
+- SBOM enablement is not configurable. An SBOM will be generated on every Agentless scan.
+- Timeout is set to 15 minutes for the SBOM tool to run.
+- Disabling Agentless doesn't delete the SBOM recommendations.
 
 ## Related content
 

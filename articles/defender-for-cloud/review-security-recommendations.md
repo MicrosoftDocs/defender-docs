@@ -18,7 +18,7 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 ## Prerequisites
 
-- Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
+Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 
@@ -85,9 +85,9 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
+1. Navigate to **Exposure Management** > **Recommendations** > **Cloud** tab.
 
-   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
+   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal." lightbox="media/defender-portal-recommendations.png":::
 
 1. Apply filters such as:
    - **Exposed asset**: Filter by assets with exposure to threats
@@ -144,7 +144,7 @@ When you select an aggregated recommendation row, a side panel opens displaying:
 - **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
 - Additional tabs may appear for specific recommendations with relevant contextual information
 
-:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
+:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane." lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 Alternative access paths to recommendations:
 
@@ -153,6 +153,7 @@ Alternative access paths to recommendations:
 
 > [!NOTE]
 > **Why you might see different resources between the Azure portal and Defender portal:**
+>
 > - **Deleted resources**: You may notice deleted resources still showing in the Azure portal. This happens because the Azure portal currently shows the last known state of resources. We're working to fix this so that deleted resources no longer appear.
 > - **Azure Policy resources**: Some resources that come from Azure Policy may not show up in the Defender portal. During preview, we only display resources that have security context and contribute to meaningful security insights.
 > - Resources tied to free subscriptions do not currently appear in the Defender portal.
@@ -204,9 +205,10 @@ Each recommendation in the Defender portal provides comprehensive risk context:
 
 ::: zone-end
 
-1. On the recommendation page, review the following details:
+On the recommendation page, review the following details:
+
    - **Risk level**: The vulnerability and business effect of the underlying security issue, considering the environmental resource context like internet exposure, sensitive data, lateral movement, and more.
-   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influence the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
+   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
    - **Resource**: The name of the affected resource.
    - **Status**: The status of the recommendation, like unassigned, on time, or overdue.
    - **Description**: A brief description of the security issue.
@@ -266,7 +268,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 ::: zone pivot="defender-portal"
 
-In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud assets** tab, you can explore detailed information and take action.
+In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud** tab, you can explore detailed information and take action.
 
 Apply filters and filter sets such as **Exposed asset**, **Asset risk factors**, **Environment**, **Workload**, **Recommendation maturity** and others.
 
@@ -276,9 +278,9 @@ There are separate views for issue types:
 
 - **Misconfigurations**
 - **Vulnerabilities**
-- **Exposed Secrets**.
+- **Exposed Secrets**
 
-For each view you will view the **Cloud secure score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
+For each view you will view the **Cloud Secure Score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
 
 > [!NOTE]
 > In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.

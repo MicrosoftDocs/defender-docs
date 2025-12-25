@@ -28,11 +28,11 @@ This article provides a comprehensive overview of Microsoft Defender for Cloud's
 
 ## Overview
 
-Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal at security.microsoft.com and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud-native application protection platform (CNAPP) solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid and code environments - all from one place and eliminates the need to switch between tools and portals.
+Microsoft Defender for Cloud (MDC) is now deeply integrated into the Defender portal at security.microsoft.com and part of the broader Microsoft Security eco-system. With threat protection already deeply embedded into the Defender portal, this integration adds posture management—bringing together a complete cloud-native application protection platform (CNAPP) solution in one unified experience. This native-integration eliminates silos so security teams can see and act on threats across all cloud, hybrid, and code environments - all from one place and eliminates the need to switch between tools and portals.
 
 :::image type="content" source="../media/defender-portal-dashboard/overview-dashboard.png" alt-text="Screenshot of the Defender for Cloud overview dashboard in the Defender portal." lightbox="../media/defender-portal-dashboard/overview-dashboard.png":::
 
-The cloud-agnostic expansion supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multi-cloud organizations seeking comprehensive exposure management too. In the first phase, the journey for new customers still starts in the Azure portal for initial onboarding, connecting environments for protection, and setting policies and configurations. Once this is complete, users can consume the data in the Defender portal. In a later phase, users will also be able to manage and configure settings directly in Defender, enabling them to perform all MDC end-to-end use cases within a single portal. 
+The cloud-agnostic expansion supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multicloud organizations seeking comprehensive exposure management too. In the first phase, the journey for new customers still starts in the Azure portal for initial onboarding, connecting environments for protection, and setting policies and configurations. Once this is complete, users can consume the data in the Defender portal. In a later phase, users will also be able to manage and configure settings directly in Defender, enabling them to perform all MDC end-to-end use cases within a single portal. 
 
 ## Supported experiences in the Defender portal
 
@@ -42,11 +42,11 @@ Cloud security data and signals can be accessed through several experiences. Som
       #### Cloud security
 
       - [Cloud Overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)
-      - [Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)
+      - [Cloud inventory](../asset-inventory.md?pivots=defender-portal)
    :::column-end:::
    :::column span="":::
       #### Posture Management
-      - [Cloud secure score](../secure-score-access-and-track.md?pivots=defender-portal)
+      - [Cloud Secure Score](../secure-score-access-and-track.md?pivots=defender-portal)
       - [Recommendations](../review-security-recommendations.md?pivots=defender-portal)
       - [Attack paths](../how-to-manage-attack-path.md?pivots=defender-portal)
       - [Cloud vulnerabilities](/security-exposure-management/vulnerability-management-integration)
@@ -77,9 +77,9 @@ Cloud security data and signals can be accessed through several experiences. Som
 
 ## Why integrate into the Defender portal? 
 
-The Microsoft Defender portal delivers a unified security operations experience across endpoints, identities, email, and cloud resources. By integrating Defender solutions, such as Defender for Cloud, Defender for Endpoint, and others, it provides comprehensive protection, detection, investigation, and response capabilities in one place. This unified approach streamlines threat detection, correlates insights, and strengthens your organization’s security posture. Powered by advanced AI and Microsoft’s global threat intelligence, it helps identify emerging risks faster and enables proactive defense against sophisticated attacks. 
+The Microsoft Defender portal delivers a unified security operations experience across endpoints, identities, email, and cloud resources. By integrating Defender solutions, such as Defender for Cloud, Defender for Endpoint, and others, it provides comprehensive protection, detection, investigation, and response capabilities in one place. This unified approach streamlines threat detection, correlates insights, and strengthens your organization’s security posture. Powered by advanced AI and Microsoft’s global threat intelligence, it helps identify emerging risks faster and enables proactive defense against sophisticated attacks.
 
-### How to get started? 
+### How to get started?
 
 During the preview phase, Defender for Cloud customers with at any paid plan can access the consumption experiences in the Defender portal. 
 
