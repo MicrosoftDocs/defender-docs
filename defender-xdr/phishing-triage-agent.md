@@ -92,7 +92,7 @@ This table outlines the permissions required to perform various actions related 
 
 | **User action**                                              | **Permission required**                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| View  agent results and teach agent through feedback | **Security Copilot (read)**, **Security data basics (read)**, **Alerts  (manage)**, **Email & collaboration metadata (read)**,  and **Email & collaboration content (read)** under the **Security  operations** permissions group in the Defender portal |
+| View  agent results and teach agent through feedback | **Security Copilot (read)**, **Security data basics (read)**, **Alerts  (manage)**, **Email & collaboration metadata (read)**,  and **Email & collaboration content (read)** under the **Security  operations** permissions group in the Defender portal, scoped to the Microsoft Defender for Office 365 data source. For more information, see [Phishing Triage Agent required permissions](#phishing-triage-agent-required-permissions). |
 | View  agent settings                                         | **Security  Copilot (read)** and **Security data  basics (read)** under the **Security operations** permissions  group in the Defender portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
 | View  feedback page | **Security  Copilot (read)**, **Security data basics  (read)**, and **Email & collaboration metadata (read)** under  the **Security operations** permissions group in the Defender  portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
 | Manage  agent settings (set up, pause, remove the agent, and manage agent identity) | **Security  Administrator** in Microsoft Entra ID            |
@@ -396,16 +396,14 @@ The Phishing Triage Agent operates within a zero-trust environment. The system e
 
 ### I want to try the Phishing Triage Agent - how do I set it up in Microsoft Defender?
 
-To set up the agent, you must have access to **Security Copilot in Microsoft Defender** and meet the necessary [prerequisites](#prerequisites). If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot and meet the agent prerequisites, contact your Microsoft representative to open the setup option for you. 
-
-If you've onboarded to Security Copilot, the agent setup option will appear in the Microsoft Defender portal Security Store. For more information on agent setup options and how they appear in the portal, see [Begin setup](#begin-setup).
+To set up the agent, you must have access to **Security Copilot in Microsoft Defender** and meet the necessary [prerequisites](#prerequisites). If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot, it can take a bit of time for the agent setup option to become available in the Microsoft Defender portal. 
 
  
 ### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
 
 After setup, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
 
-It's important to ensure that your organization has sufficient SCUs for healthy agent operation. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
+It's important to ensure that your organization has sufficient SCUs for healthy agent operation. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring) and check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion). The dashboard shows:
 
 - **Cost per email processed**
 - **Capacity consumption over time**
