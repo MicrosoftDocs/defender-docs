@@ -5,7 +5,6 @@ ms.date: 10/19/2025
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
-ms.custom:
 ---
 
 # Assign security standards
