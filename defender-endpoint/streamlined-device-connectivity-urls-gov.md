@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 10/05/2025
+ms.date: 12/25/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -41,10 +41,10 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 ### General URLs
 
 > [!NOTE]
-> Make sure  your devices meet all component (app/antimalware platform, engine, EDR  sensor) update versions and OS requirements else onboarding may be  unsuccessful. You may re-onboard devices to switch them to streamlined  connectivity if they meet these requirements.
+> Make sure  your devices meet all component (app/antimalware platform, engine, EDR  sensor) update versions and OS requirements else onboarding might be  unsuccessful. You can re-onboard devices to switch them to streamlined  connectivity if they meet these requirements.
 
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
-|--------|---------|--------|----|------------|-----------|--------|-------------------------|--------|------------|---|-----|--------|
+|Service|Geography|Category|Port|Endpoint/URL|Description|Required|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|
+|--------|---------|--------|----|------------|-----------|--------|-------------------------|--------|------------|---|-----|
 |Consolidated Defender for Endpoint services|USGov|Streamlined connectivity URL|443|*.endpoint.security.microsoft.us|Streamlined connectivity URL consolidation and future services|Required|Yes|No|Yes|Yes|Yes||
 |Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 |Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
@@ -56,10 +56,10 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 ### URLs used for updates
 
 > [!NOTE]
-> Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
+> Depending on your environment, you may apply updates from a file share or update server and don't need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
 
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Comments|
-|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|--------|
+|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|
+|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|
 |Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|
 |Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|
 |Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|
@@ -84,7 +84,7 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 ### Other URLs
 
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Comments|
+|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|
 |Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
 |Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
@@ -95,8 +95,8 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 ## Security center URLs
 
-|Service|Geography|URL|Comment|
-|-------|---------|---|-------|
+|Service|Geography|URL|
+|-------|---------|---|
 |Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|
 |Microsoft Defender for Endpoint|US Gov|crl.microsoft.com|
 |Microsoft Defender for Endpoint|US Gov|https://*.microsoftonline-p.com|
@@ -108,7 +108,7 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender for Endpoint|GCC High|https://login.microsoftonline.us|
 |Microsoft Defender for Endpoint|GCC High|https://*.securitycenter.microsoft.us|
 |Microsoft Defender for Endpoint|GCC High|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
-|Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|
 |Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 
