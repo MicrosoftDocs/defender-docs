@@ -138,7 +138,7 @@ Select:
    
    The agent's specified user identity isn't compatible with PIM or TAP because they don't support long-term background operations.
 
-#### Permissions
+#### Assign permissions
 
 In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend granting the agent identity only the permissions required to perform its tasks.
 
@@ -161,6 +161,7 @@ For information on creating a user account, see [Create a new user](/entra/funda
 
    Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
+##### Phishing Triage Agent required permissions
 
 The agent identity needs these permissions to access emails, analyze their content, and manage alerts:
 
