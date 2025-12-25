@@ -164,9 +164,8 @@ This section applies to URL endpoint services required for devices using Defende
 |Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com<br>winatp-gw-eus.microsoft.com<br>winatp-gw-cus3.microsoft.com<br>winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control |
 |Microsoft Monitoring Agent (MMA) / EDR Cyberdata |443 |\*.oms.opinsights.azure.com<br>\*.oms.opinsights.azure.com<br>*.blob.core.windows.net |Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016 |
 
-Comment<sup>1</sup>
-
-<sup>1</sup> Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements).
+> [!NOTE]
+> Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements).
 
 
 ## Defender portal URLs

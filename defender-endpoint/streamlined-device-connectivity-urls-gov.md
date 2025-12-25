@@ -45,7 +45,7 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|
 |--------|---------|--------|----|------------|-----------|--------|-------------------------|--------|------------|---|-----|
-|Consolidated Defender for Endpoint services|USGov|Streamlined connectivity URL|443|*.endpoint.security.microsoft.us|Streamlined connectivity URL consolidation and future services|Required|Yes|No|Yes|Yes|Yes||
+|Consolidated Defender for Endpoint services|USGov|Streamlined connectivity URL|443|*.endpoint.security.microsoft.us|Streamlined connectivity URL consolidation and future services|Required|Yes|No|Yes|Yes|Yes|
 |Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 |Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 |Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
