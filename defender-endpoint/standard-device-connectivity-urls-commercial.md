@@ -143,8 +143,11 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|https://onboardingpackagescusprd.blob.core.windows.net|
 |Microsoft 365 Defender|WW|https://security.microsoft.com|
 
-> [!NOTE]
-> Microsoft Defender Security Center Portal URL
+Comment<sup>1</sup>
+
+<sup>1</sup> Microsoft Defender Security Center Portal URL
+
+
 
 ## Microsoft Defender processes
 
