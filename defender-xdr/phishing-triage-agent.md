@@ -140,7 +140,7 @@ Select:
 
 #### Assign permissions
 
-In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend granting the agent identity only the permissions required to perform its tasks.
+In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend granting the agent identity only [permissions the Phishing Triage Agent requires to perform its tasks](#phishing-triage-agent-required-permissions).
 
 - If you use an Agent ID, select an existing role in your organization or automatically create a new role with the required permissions. The dropdown only displays roles in your organization that have the permissions the agent needs.
 
