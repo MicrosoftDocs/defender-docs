@@ -44,13 +44,13 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 - **Transparent rationale:** Provides transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. It also provides a visual representation of its reasoning process.
 - **Learning based on feedback:** Analysts can provide feedback on classification outcomes. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up.
 
-To investigate phishing attempts, the agent uses a combination of Microsoft Defender and Microsoft Security Copilot capabilities, including:
+To investigate phishing attempts, the agent uses a combination of Microsoft Defender and Microsoft Security Copilot capabilities, along with a set of security tools that continuously evolve as new detection techniques and integrations become available. Current examples include:
 
 - **Email content analysis** – Detects suspicious patterns and indicators in email bodies.
-- **Detonation for files and URLs** – Safely executes and analyzes potentially malicious files and links using Microsoft deep analysis tools.
-- **Screenshot analysis** – Reviews visual content from emails, URLs, and certain file types.
+- **File and URL detonation** – Safely executes and analyzes potentially malicious files and links using Microsoft deep analysis tools.
+- **Screenshot analysis** – Reviews visual content from emails, URLs, and supported file types.
 - **Threat intelligence tools** – Uses Microsoft Threat Intelligence feeds to provide enriched detection context.
-- **Advanced Hunting tools** – Applies predefined security rule templates and custom KQL queries to automate detection and investigation across email, file, and URL telemetry.
+- **Advanced hunting across data source** – Correlates signals across all available security data sources to contextualize suspicious activity and drive informed investigative decisions.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ To run the Phishing Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
-|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) </br> - Microsoft Defender for Office 365 Plan 2 deployed or [Microsoft 365 E5, which now includes Security Copilot](/copilot/security/security-copilot-inclusion)|
+|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - Microsoft Defender for Office 365 Plan 2 deployed or |
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
 ### Activate URBAC settings
@@ -120,7 +120,7 @@ You can access the Phishing Triage Agent setup wizard in two ways:
 
 The setup wizard walks you through assigning the agent an identity and the permissions required to do its work. 
 
-#### Identity
+#### Assign an identity
 
 The agent requires an identity to operate. The wizard prompts you to select one of two identity types.
 
@@ -140,15 +140,26 @@ Select:
 
 #### Permissions
 
-Grant the agent identity only the permissions required to perform its tasks, following least‑privilege principles, as listed in this section.
+In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend granting the agent identity only the permissions required to perform its tasks.
 
-- If you use an Agent ID, select an existing role in your organization or create a new role with the required permissions.
+- If you use an Agent ID, select an existing role in your organization or automatically create a new role with the required permissions. The dropdown only displays roles in your organization that have the permissions the agent needs.
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Phishing Triage Agent setup wizard." lightbox="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG":::   
 
 - If you use an existing user account, you need to assign the required permissions to that identity before assigning the agent identity during setup - you can't to do this from the setup wizard.
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
+
+For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+
+   If you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation. If authentication expires, the agent stops functioning until it’s renewed.
+
+   > [!TIP]
+   > Use a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
+
+   The agent's specified user identity isn't compatible with Privileged Identity Management (PIM) or Temporary Access Pass (TAP) because they don't support long-term background operations.
+
+   Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 
 The agent identity needs these permissions to access emails, analyze their content, and manage alerts:
@@ -162,6 +173,10 @@ The agent identity needs these permissions to access emails, analyze their conte
 These permissions are under the **Security operations** permissions group:
 
 :::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
+
+Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
+
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png":::
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. 
 
