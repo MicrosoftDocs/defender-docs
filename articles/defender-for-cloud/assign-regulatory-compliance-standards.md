@@ -5,18 +5,15 @@ ms.date: 10/19/2025
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
-ms.custom:
 ---
 
-# Assign security standards
+# Assign regulatory compliance standards in Defender for Cloud
 
-Defender for Cloud's regulatory standards and benchmarks are represented as [security standards](security-policy-concept.md). Each standard is defined as an initiative in Azure Policy.
+In Defender for Cloud, regulatory compliance standards are implemented using Azure Policy initiatives and evaluated through the Regulatory compliance dashboard.
 
-In Defender for Cloud, assign security standards to specific scopes such as Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects with Defender for Cloud enabled.
+You can assign regulatory compliance standards to specific scopes such as Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects.
 
-Defender for Cloud continually assesses the scoped environment against the standards. Based on assessments, it shows whether in-scope resources are compliant or noncompliant with the standard and provides remediation recommendations.
-
-This article explains how to add regulatory compliance standards as security standards in an Azure subscription, AWS account, or GCP project.
+Defender for Cloud continually assesses the scoped environment against the standards. Based on these assessments, it shows whether in-scope resources are compliant or noncompliant with the standard and provides remediation recommendations.
 
 ## Prerequisites
 
@@ -33,7 +30,7 @@ If you assign a regulatory standard but don't have any relevant assessed resourc
 
     :::image type="content" source="media/update-regulatory-compliance-packages/manage-compliance.png" alt-text="Screenshot of the regulatory compliance page that shows you where to select the manage compliance policy button." lightbox="media/update-regulatory-compliance-packages/manage-compliance.png":::
 
-1.  Select an account or management account (Azure subscription or management group, AWS account or management account, GCP project or organization) to assign the security standard.
+1.  Select an account or management account (Azure subscription or management group, AWS account or management account, GCP project or organization) to assign the regulatory compliance standard.
 
     > [!NOTE]
     > We recommend selecting the highest scope applicable to the standard so that compliance data is aggregated and tracked for all nested resources.
@@ -52,3 +49,4 @@ If you assign a regulatory standard but don't have any relevant assessed resourc
 -   [Create custom standards for Azure.](custom-security-policies.md)
 -   [Create custom standards for Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects.](create-custom-recommendations.md)
 -   [Improve regulatory compliance.](regulatory-compliance-dashboard.md)
+-   [Regulatory compliance in Defender for Cloud.](concept-regulatory-compliance.md)
