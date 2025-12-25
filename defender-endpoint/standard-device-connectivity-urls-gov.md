@@ -93,8 +93,8 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 ## Security center URLs
 
-|Service|Geography|URL|Comment|
-|---|---|---|---|
+|Service|Geography|URL|
+|---|---|---|
 |Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|
 |Microsoft Defender for Endpoint|US Gov|crl.microsoft.com|
 |Microsoft Defender for Endpoint|US Gov|https://*.microsoftonline-p.com|
