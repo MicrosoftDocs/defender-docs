@@ -9,7 +9,7 @@ ms.date: 04/29/2025
 
 **Episode description**: In this episode of Defender for Cloud in the Field, Beatriss Kovernaig joins Yuri Diogenes to talk about Kubernetes gated deployment in Defender for Cloud. Beatriss explains how this new capability works, the importance of its usage, and the current feature set available in public preview. Beatriss also demonstrates how to create a new gated rule, what to expect from this feature, and how to plan for its adoption.
 
-> [!VIDEO https://aka.ms/docs/player?id=80d2714f-ef62-4679-bf88-26b31f6ef5d8]
+> [!VIDEO https://aka.ms/docs/player?id=6020702e-b2c0-4e72-920c-4fdb94ccb9b7]
 
 - [01:20](/shows/mdc-in-the-field/kubernetes-gated-deployment#time=01m20s) - What is Kubernetes gated deployment?
 - [03:34](/shows/mdc-in-the-field/kubernetes-gated-deployment#time=03m34s) - Audit versus block mode
