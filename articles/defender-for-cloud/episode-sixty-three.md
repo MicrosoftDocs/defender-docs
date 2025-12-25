@@ -10,7 +10,7 @@ ms.date: 07/22/2025
 **Episode description**: In this episode of Defender for Cloud in the Field, Eitan Shteinberg joins Yuri Diogenes to talk about agentless code scanning in Defender for Cloud. Eitan explains how this new capability works, the importance of its usage, and the current feature set available in public preview. Eitan also demonstrates how to enable and use this feature in Defender for Cloud.
   
 
-> [!VIDEO https://aka.ms/docs/player?id=855c3b5c-b4de-492b-89aa-c19283b134a9]
+> [!VIDEO https://aka.ms/docs/player?id=84c5525f-a317-497a-9576-eae347baeacc]
 
 - [02:00](/shows/mdc-in-the-field/cloud-detection-response-experience#time=02m00s) - What is Cloud Detection Response?
 - [03:48](/shows/mdc-in-the-field/cloud-detection-response-experience#time=03m48s) - Cloud Detection Response main components
