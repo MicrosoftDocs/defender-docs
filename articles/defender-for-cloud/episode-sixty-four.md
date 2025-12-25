@@ -10,7 +10,7 @@ ms.date: 09/26/2025
 
 **Episode description**: In this episode of Defender for Cloud in the Field, Lior Tsalovich joins Yuri Diogenes to talk about storage aggregated logs in XDR's Advanced Hunting. Lior explains the new CloudStorageAggregatedEvents table available in Microsoft Defender XDR's Advanced Hunting experience. She explains how aggregated storage activity logs can help SOC Teams during an investigation. Lior also demonstrates how to use Defender XDR advanced hunting to query data using CloudStorageAggregatedEvents table.
 
-> [!VIDEO https://aka.ms/docs/player?id=1145810e-fc14-4d73-8d63-ea861aefb30b]
+> [!VIDEO https://aka.ms/docs/player?id=4720b59c-2c9e-4908-982c-9dab1fe0bca4]
 
 - [01:20](/shows/mdc-in-the-field/storage-aggregated-logs#time=01m20s) - Current challenges faced by SOC Teams and how this feature helps
 - [02:50](/shows/mdc-in-the-field/storage-aggregated-logs#time=02m50s) - Storage investigation gaps addressed by this solution
