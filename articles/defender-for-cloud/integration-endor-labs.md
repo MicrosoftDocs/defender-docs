@@ -1,33 +1,46 @@
 ---
 title: Overview of Endor Labs integration
-description: Learn how to enhance vulnerability analysis and provide comprehensive visibility of critical vulnerabilities by integrating Endor Labs with Microsoft Defender.
+description: Learn how integrating Endor Labs with Microsoft Defender for Cloud enhances vulnerability analysis by identifying exploitable open-source vulnerabilities from code to runtime.
 author: Elazark
 ms.author: elkrieger
 ms.topic: overview
 ms.date: 05/20/2025
 ai-usage: ai-assisted
-#customer intent: As a user, I want to learn about the integration that exists between Endor Labs and Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided when Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
+#customer intent: As a security administrator, I want to understand how the Endor Labs integration enhances vulnerability analysis in Defender for Cloud so that I can prioritize exploitable vulnerabilities from code to runtime.
+
 ---
 
 # Overview of Endor Labs integration
 
-Microsoft Defender for Cloud's integration with Endor Labs improves its vulnerability analysis through reachability-based Software Composition Analysis (SCA). SCA provides a view of exploitable vulnerabilities from code to runtime.
+Microsoft Defender for Cloud integrates with Endor Labs to enhance vulnerability analysis by adding reachability-based Software Composition Analysis (SCA), helping security teams focus on open-source vulnerabilities that are exploitable within an application’s execution flow.
 
-Reachable vulnerabilities are security flaws that exist in open source dependencies that have a direct and exploitable execution path. These vulnerabilities are high risk because they can be actively triggered within the application's current flow and exploited by malicious actors. Addressing these exploitable vulnerabilities is critical in the prevention of potential attacks.
+By correlating signals from source code repositories, build pipelines, and deployed workloads, Defender for Cloud provides visibility into exploitable vulnerabilities across the application lifecycle—from code development to runtime environments.
 
-The integration with Endor Labs identifies vulnerable security combinations, such as exploitable vulnerabilities in open source packages used in internet-exposed workloads. Defender for Cloud users can see full attack paths from code committed in Azure DevOps, GitHub, or GitLab to running workloads on Azure, Amazon Web Services, or Google Cloud Platform. 
+## Reachable vulnerabilities and risk prioritization
+
+Reachable vulnerabilities are security flaws in open-source packages that have a confirmed execution path within an application. Unlike vulnerabilities that exist in unused or inactive code paths, reachable vulnerabilities can be actively triggered and exploited, making them higher risk.
+
+The Endor Labs integration identifies vulnerable security combinations, such as exploitable open-source dependencies used by internet-exposed workloads. This reachability context enables Defender for Cloud to prioritize vulnerabilities based on exploitability rather than severity alone.
+
+## Unified visibility across code and runtime
+
+With this integration, Defender for Cloud correlates vulnerabilities identified in source repositories—such as Azure DevOps, GitHub, and GitLab—with workloads running across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP). Security teams can trace attack paths from a vulnerable code commit through build and deployment pipelines to affected runtime resources.
+
+Reachability analysis findings from Endor Labs surface directly in Defender for Cloud experiences, including:
+- Security recommendations
+- Attack path analysis
+- Security explorer
+
+This unified view helps central security teams understand how open-source risks propagate through their environments and where remediation efforts will have the greatest impact.
 
 ## Benefits of integrating Endor Labs
 
-Endor Labs is a security platform that focuses on the identification and mitigation of vulnerabilities in partner dependencies within software applications. Endor Labs offers advanced reachability analysis that assesses the execution paths of these vulnerabilities, allowing security teams to prioritize and address them effectively.
+Integrating Endor Labs with Microsoft Defender for Cloud enables you to:
 
-Integrating Endor Labs with Microsoft Defender for Cloud gives you the ability to:
-
-- Streamline the discovery and remediation of reachable vulnerabilities.
-- View a comprehensive view list of security risks within an application's code flow.
-- Prevent potential attacks through the identification of high-risk vulnerabilities early in the development lifecycle, thus ensuring robust application security from code to runtime.
-
-With this integration, reachability analysis findings from Endor Labs are accessible within the Defender for Cloud experiences, including recommendations, attack path analysis, and security explorer. The integration provides visibility into the health of the code for central security teams, enabling them to better prioritize and mitigate open-source vulnerabilities from code development to runtime through advanced function-level reachability and exploitability analysis.
+- Prioritize remediation by focusing on vulnerabilities that are actively exploitable.
+- Reduce noise from vulnerabilities that don’t pose immediate risk.
+- Gain code-to-runtime visibility into how open-source dependencies affect deployed workloads.
+- Identify high-risk vulnerabilities earlier in the development lifecycle.
 
 ## Related content
 
