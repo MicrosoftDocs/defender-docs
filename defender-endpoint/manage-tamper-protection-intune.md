@@ -78,13 +78,12 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
    - In the **Platform** list, select **Windows 10, Windows 11, and Windows Server**.
    - In the **Profile** list, select **Windows Security experience**.
 
-2. Create a profile that includes the following setting:
+1. Create a profile that includes the following setting:
 
     - **TamperProtection (Device): On**
 
-3. Finish selecting options and settings for your policy.
-
-4. Deploy the policy to devices.
+1. Finish selecting options and settings for your policy.
+1. Deploy the policy to devices.
 
 ## Tamper protection for antivirus exclusions
 
@@ -108,7 +107,7 @@ You can use a registry key to determine whether the functionality to protect Mic
 
 1. On a Windows device open Registry Editor. (Read-only mode is fine; you're not editing the registry key.)
 
-2. To confirm that the device is managed by Intune only or managed by Configuration Manager only, with Sense enabled, check the following registry key values:
+1. To confirm that the device is managed by Intune only or managed by Configuration Manager only, with Sense enabled, check the following registry key values:
 
    - `ManagedDefenderProductType` (located at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender` or `HKLM\SOFTWARE\Microsoft\Windows Defender`) 
    - `EnrollmentStatus` (located at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SenseCM` or `HKLM\SOFTWARE\Microsoft\SenseCM`)
@@ -122,7 +121,7 @@ You can use a registry key to determine whether the functionality to protect Mic
    | `7` | `3` | The device is co-managed with Configuration Manager and Intune. <br/>(*This isn't supported for exclusions to be tamper protected.*) |
    | A value other than `6` or `7` | (any value) | The device isn't managed by Intune only or Configuration Manager only. <br/>(*Exclusions aren't tamper protected*.) |
 
-4. To confirm that tamper protection is deployed and that exclusions are tamper protected, check the `TPExclusions` registry key (located at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features` or `HKLM\SOFTWARE\Microsoft\Windows Defender\Features`).
+1. To confirm that tamper protection is deployed and that exclusions are tamper protected, check the `TPExclusions` registry key (located at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features` or `HKLM\SOFTWARE\Microsoft\Windows Defender\Features`).
 
    | `TPExclusions` | What the value means |
    |---|---|

@@ -101,11 +101,11 @@ Follow these steps to verify that Microsoft Defender Antivirus is in passive mod
 
 1. Open the Windows Security app.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Who’s protecting me?**, select **Manage providers**.
+1. Under **Who’s protecting me?**, select **Manage providers**.
 
-4. On the *Security providers* page, verify the antivirus provider and state.
+1. On the *Security providers* page, verify the antivirus provider and state.
 
 ## Additional resources
 
