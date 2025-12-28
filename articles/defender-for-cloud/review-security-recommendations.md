@@ -18,7 +18,7 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 ## Prerequisites
 
-- Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
+Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 
@@ -87,7 +87,7 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 
 1. Navigate to **Exposure Management** > **Recommendations** > **Cloud** tab.
 
-   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
+   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal." lightbox="media/defender-portal-recommendations.png":::
 
 1. Apply filters such as:
    - **Exposed asset**: Filter by assets with exposure to threats
@@ -144,7 +144,7 @@ When you select an aggregated recommendation row, a side panel opens displaying:
 - **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
 - Additional tabs may appear for specific recommendations with relevant contextual information
 
-:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
+:::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane." lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 Alternative access paths to recommendations:
 
@@ -205,9 +205,10 @@ Each recommendation in the Defender portal provides comprehensive risk context:
 
 ::: zone-end
 
-1. On the recommendation page, review the following details:
+On the recommendation page, review the following details:
+
    - **Risk level**: The vulnerability and business effect of the underlying security issue, considering the environmental resource context like internet exposure, sensitive data, lateral movement, and more.
-   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influence the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
+   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
    - **Resource**: The name of the affected resource.
    - **Status**: The status of the recommendation, like unassigned, on time, or overdue.
    - **Description**: A brief description of the security issue.
@@ -277,7 +278,7 @@ There are separate views for issue types:
 
 - **Misconfigurations**
 - **Vulnerabilities**
-- **Exposed Secrets**.
+- **Exposed Secrets**
 
 For each view you will view the **Cloud Secure Score**, **Score history**, **Recommendation by risk level** and how the risk is calculated.
 

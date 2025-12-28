@@ -83,10 +83,10 @@ Relationship to unified RBAC:
 
 Planning guidance:
 
-1. Start coarse (major org / region boundaries).
-1. Validate operational ownership and review cadence.
-1. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
-1. Document purpose and owner for each scope to support lifecycle and audit.
+- Start coarse (major org / region boundaries).
+- Validate operational ownership and review cadence.
+- Introduce finer scopes only when risk, confidentiality, or compliance requires it.
+- Document purpose and owner for each scope to support lifecycle and audit.
 
 ## Prerequisites
 
