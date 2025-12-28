@@ -24,8 +24,9 @@ Microsoft Defender for Cloud Command‑Line Interface (Defender for Cloud CLI) l
 * An Azure Subscription with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account).
 * Defender CSPM enabled.
 * One of the following CI/CD pipeline tools: Jenkins, BitBucket Pipelines, Google Cloud Build, Bamboo, CircleCI, Travis CI, TeamCity, Oracle DevOps services, or AWS CodeBuild.
-* Linux terminal (or WSL) for local desktop scans.
-* Security Admin permission to create the client ID and secret tokens if using token‑based authentication, or an Azure DevOps connector established if using connector‑based authentication.
+* Windows or Linux/WSL terminal for local desktop scans.
+
+* Security Admin permission to create the client ID and secret tokens if using token‑based authentication, or an Azure DevOps or GitHub connector established if using connector‑based authentication.
 
 ## Authentication setup
 
@@ -37,7 +38,7 @@ Security admins create tokens in the Microsoft Defender for Cloud (MDC) portal a
 
 ### Connector-based authentication
 
-Connector-based authentication is currently available only for Azure DevOps. When you establish a connector between Azure DevOps and Defender for Cloud, the authentication process happens automatically. You don't need to add tokens to your pipelines.
+Connector-based authentication is currently available for Azure DevOps or GitHub. When you establish a connector between Azure DevOps and Defender for Cloud, the authentication process happens automatically. You don't need to add tokens to your pipelines.
 
 For detailed steps and examples, see:
 

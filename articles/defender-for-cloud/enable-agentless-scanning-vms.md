@@ -4,7 +4,7 @@ description: Run agentless scanning on Virtual Machines (VMs) for vulnerabilitie
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/20/2025
+ms.date: 12/22/2025
 ms.custom: sfi-image-nochange
 
 #customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
@@ -28,7 +28,7 @@ When you turn on Defender for Servers Plan 2 or the Defender Cloud Security Post
 |**Plan** | To use agentless scanning the [Defender CSPM](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.<br/><br/> When you enable agentless scanning on either plan, the setting is enabled for both plans.|
 |**Malware scanning** | Malware scanning is only available when Defender for Servers Plan 2 is enabled.<br/><br/> For malware scanning of Kubernetes node VMs, either Defender for Servers Plan 2 or the Defender for Containers plan is required.|
 | **Supported machines** | You can scan Azure virtual machines (VMs), Amazon Web Services (AWS) Elastic Compute Cloud (EC2) instances, and Google Cloud Platform (GCP) compute instances without installing an agent, if they're connected to [Microsoft Defender for Cloud](/azure/defender-for-cloud/). |
-|**Azure VMs** | Agentless scanning is available on Azure standard VMs with:<br/><br/>-  Maximum total disk size allowed: 4 TB (the sum of all disks)<br/>- Maximum number of disks allowed: 6<br/>- Virtual machine scale set - Flex<br/><br/> Support for disks that are:<br/> - Unencrypted<br/> - Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK))<br/>- Encrypted with customer-managed keys.|
+|**Azure VMs** | Agentless scanning is available on Azure standard VMs with:<br/><br/>- Maximum total disk size id 4TB (sum of all disks). **Note**: If exceeded, only the OS disk is scanned, provided its size is less than 4TB.<br/>- Maximum number of disks allowed: 6<br/>- Virtual machine scale set - Flex<br/><br/> Support for disks that are:<br/> - Unencrypted<br/> - Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK))<br/>- Encrypted with customer-managed keys.|
 |**AWS** | Agentless scanning is available on EC2, Auto Scale instances, and disks that are unencrypted, encrypted (PMK), and encrypted (CMK). AMIs requiring third-party licensing, for example from AWS Marketplace, are not supported.|
 |**GCP** | Agentless scanning is available on compute instances, instance groups (managed and unmanaged), with Google-managed encryption keys, and customer-managed encryption key (CMEK)|
 |**Kubernetes nodes** | Agentless scanning for vulnerabilities and malware in Kubernetes node VMs is available.<br/><br/> For [vulnerability assessment](kubernetes-nodes-va.md) the Defender for Servers Plan 2, or the Defender for Containers plan, or the Defender Cloud Security Posture Management (CSPM) plan is required.<br/><br/> For [malware scanning](kubernetes-nodes-malware.md), Defender for Servers Plan 2 or Defender for Containers is required.|

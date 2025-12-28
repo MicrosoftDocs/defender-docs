@@ -32,7 +32,7 @@ Defender for Cloud reduces risks to cross-cloud AI workloads by:
 > 1. In the Azure portal, go to the Environment Settings page and select the appropriate AWS connector.
 > 1. Select **Configure access**.
 > 1. Ensure the permissions type is set to **Least privilege access**.
-> 1. [Follow steps 5 - 8](quickstart-onboard-aws.md#select-defender-plans) to finish the configuration.
+> 1. [Follow steps 7 - 11](quickstart-onboard-aws.md#connect-your-aws-account) to finish the configuration.
 
 ## Discover generative AI apps
 
