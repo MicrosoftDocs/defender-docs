@@ -4,7 +4,7 @@ description: Learn how binary drift detecting and blocking can help you detect u
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 12/23/2025
+ms.date: 12/28/2025
 #customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
 ---
 
@@ -29,9 +29,9 @@ Check out the availability of [binary drift and blocking](support-matrix-defende
     - **To create and modify drift policies**: Security Admin or higher permissions on the tenant. 
     - **To view drift policies**: Security Reader or higher permissions on the tenant.
 
-## Configure drift policies
+## Configure drift and block policies
 
-Create drift policies to define when alerts should be generated. Each policy consists of rules that define the conditions for generating alerts. This structure lets you tailor the feature to your specific needs and reduce false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
+Create drift and block policies to define when alerts should be generated. Each policy consists of rules that define the conditions for generating alerts. This structure lets you tailor the feature to your specific needs and reduce false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -47,10 +47,9 @@ Create drift policies to define when alerts should be generated. Each policy con
 
         :::image type="content" source="media/binary-drift-detection/default-rule.png" alt-text="Screenshot of Default rule appears at the bottom of the list of rules." lightbox="media/binary-drift-detection/default-rule.png":::
 
-
 ## Add a new rule
 
-Binary drift rules define what behavior is considered suspicious, what to alert on, and what to block. Add a new rule to enforce better control, different enforcement levels, or more granular security behavior for specific workloads.
+Binary drift rules define what behavior is considered suspicious, what to alert on, and what to block. Add a new rule to enforce better control, different enforcement levels, or more granular security behavior for specific workloads. You can also set blocking rules to prevent unauthorized processes from running in your containers.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
