@@ -4,7 +4,7 @@ description: Learn how integrating Endor Labs with Microsoft Defender for Cloud 
 author: Elazark
 ms.author: elkrieger
 ms.topic: overview
-ms.date: 12/25/2025
+ms.date: 12/28/2025
 #customer intent: As a security administrator, I want to understand how the Endor Labs integration enhances vulnerability analysis in Defender for Cloud so that I can prioritize exploitable vulnerabilities from code to runtime.
 
 ---
