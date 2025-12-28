@@ -179,15 +179,15 @@ By enabling this setting, network protection blocks network traffic instead of d
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
+1. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
 
-6. Select **OK**.
+1. Select **OK**.
 
 #### Block experience
 
@@ -316,7 +316,7 @@ Defender for Endpoint provides detailed reporting into events and blocks as part
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
 1. [Create an XML query](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
-2. Select **OK**.
+1. Select **OK**.
 
    This procedure creates a custom view that filters to only show the following events related to network protection:
 
@@ -334,9 +334,9 @@ Here's an example of how that works:
 
 1. Suppose that a user attempts to access a website. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-2. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly.
+1. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly.
 
-3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](/defender-xdr/advanced-hunting-alertevidence-table). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
+1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](/defender-xdr/advanced-hunting-alertevidence-table). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
 
 ## Considerations for Windows virtual desktop running Windows 10 Enterprise Multi-Session
 
@@ -353,7 +353,7 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
-2. Run the following PowerShell commands:
+1. Run the following PowerShell commands:
 
    ```powershell
    Set-MpPreference -EnableNetworkProtection Enabled
@@ -378,13 +378,13 @@ Verify whether network protection is enabled on a local device by using Registry
 
 1. Select the **Start** button in the task bar and type `regedit` to open Registry Editor.
 
-2. Select **HKEY_LOCAL_MACHINE** from the side menu.
+1. Select **HKEY_LOCAL_MACHINE** from the side menu.
 
-3. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
+1. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
    If the key isn't present, navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
-4. Select **EnableNetworkProtection** to see the current state of network protection on the device:
+1. Select **EnableNetworkProtection** to see the current state of network protection on the device:
    - `0` = Off
    - `1` = On (enabled)
    - `2` = Audit mode
@@ -397,7 +397,7 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 
 1. Go to **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Microsoft** > **Windows Defender** > **Windows Defender Exploit Guard** > **Network Protection**.
 
-2. Configure the following keys:
+1. Configure the following keys:
 
    - `AllowNetworkProtectionOnWinServer` (DWORD) set to `1` (hex)
    - `EnableNetworkProtection` (DWORD) set to `1` (hex)
@@ -465,15 +465,15 @@ This procedure enables network protection to improve performance by switching fr
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
+1. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-5. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
+1. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
 
-6. Select **OK**.
+1. Select **OK**.
 
 ### Use Microsoft Defender Antivirus Powershell to enable Turn on asynchronous inspection
 

@@ -147,11 +147,11 @@ After you create this configuration profile, assign it to the devices where you 
 
 1. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**.
 
-2. Select **Upload File** (PLIST file).
+1. Select **Upload File** (PLIST file).
 
-3. Set preference domain to `com.microsoft.wdav`.
+1. Set preference domain to `com.microsoft.wdav`.
 
-4. Upload the following plist file.
+1. Upload the following plist file.
 
    ```xml
    
@@ -181,19 +181,19 @@ After you create this configuration profile, assign it to the devices where you 
 
 1. Open **Manage** > **Device configuration**. Select **Manage** \> **Profiles** \> **Create Profile**.
 
-2. Change **Platform** to **macOS** and **Profile type** to **Settings catalog**. Select **Create**.
+1. Change **Platform** to **macOS** and **Profile type** to **Settings catalog**. Select **Create**.
 
-3. Specify a name for the profile. 
+1. Specify a name for the profile. 
 
-4. On the **Configuration settings** screen, select **Add settings**. Select **Microsoft Defender** > **Network protection**, and tick the **Enforcement level** checkbox.
+1. On the **Configuration settings** screen, select **Add settings**. Select **Microsoft Defender** > **Network protection**, and tick the **Enforcement level** checkbox.
 
-5. Set the enforcement level to **block**. Select **Next**.
+1. Set the enforcement level to **block**. Select **Next**.
 
-6. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
+1. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
 
-7. Select **OK**
+1. Select **OK**
 
-8. Select **Manage** \> **Assignments**. In the **Include** tab, select the devices for which you want to enable network protection.
+1. Select **Manage** \> **Assignments**. In the **Include** tab, select the devices for which you want to enable network protection.
 
 #### Mobileconfig deployment
 
@@ -258,7 +258,7 @@ To deploy the configuration via a `.mobileconfig` file, which can be used with n
    
    ```
 
-2. Verify that the file from the previous step was copied correctly. Using Terminal, run the following command and verify that it outputs OK:
+1. Verify that the file from the previous step was copied correctly. Using Terminal, run the following command and verify that it outputs OK:
 
    ```bash
 
@@ -271,9 +271,9 @@ To deploy the configuration via a `.mobileconfig` file, which can be used with n
 1. Learn how to [Protect your organization against web threats](web-threat-protection.md) using web threat protection.
    - Web threat protection is part of web protection in Microsoft Defender for Endpoint. It uses network protection to secure your devices against web threats.
 
-2. Run through the [Custom Indicators of Compromise](indicator-ip-domain.md) flow to get blocks on the Custom Indicator type.
+1. Run through the [Custom Indicators of Compromise](indicator-ip-domain.md) flow to get blocks on the Custom Indicator type.
 
-3. Explore [Web content filtering](web-content-filtering.md).
+1. Explore [Web content filtering](web-content-filtering.md).
 
    > [!NOTE]
    > If you are removing a policy or changing device groups at the same time, this might cause a delay in policy deployment.
@@ -281,7 +281,7 @@ To deploy the configuration via a `.mobileconfig` file, which can be used with n
    >
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
-4. [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](/defender-cloud-apps/mde-integration) and your network protection-enabled macOS devices have endpoint policy enforcement capabilities.
+1. [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](/defender-cloud-apps/mde-integration) and your network protection-enabled macOS devices have endpoint policy enforcement capabilities.
 
    > [!NOTE]
    > Discovery and other features are currently not supported on these platforms.
@@ -380,11 +380,11 @@ Upon facing an unexpected behavior, users' confusion might be reduced by providi
 
 1. It can take up to two hours (typically less) for app domains to propagate and to be update in the endpoint devices, after it's marked as _Monitored_.
 
-2. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps for all the onboarded endpoints in the organization.
+1. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps for all the onboarded endpoints in the organization.
 
-3. Full URLs are currently not supported and aren't sent from Microsoft Defender for Cloud Apps to Microsoft Defender for Endpoint. If any full URLs are listed under Microsoft Defender for Cloud Apps as monitored apps, users aren't warned when they attempt to access a site. (For example, `google.com/drive` isn't supported, while `drive.google.com` is supported.)
+1. Full URLs are currently not supported and aren't sent from Microsoft Defender for Cloud Apps to Microsoft Defender for Endpoint. If any full URLs are listed under Microsoft Defender for Cloud Apps as monitored apps, users aren't warned when they attempt to access a site. (For example, `google.com/drive` isn't supported, while `drive.google.com` is supported.)
 
-4. Administrators need to ensure that Encrypted Client Hello and QUIC are disabled when testing to ensure sites are blocked correctly. See instructions above.
+1. Administrators need to ensure that Encrypted Client Hello and QUIC are disabled when testing to ensure sites are blocked correctly. See instructions above.
 
 > [!TIP]
 > No end-user notifications are appearing on third party browsers? Ensure you've allowed notifications from Microsoft Defender in **System Settings** > **Notifications**.

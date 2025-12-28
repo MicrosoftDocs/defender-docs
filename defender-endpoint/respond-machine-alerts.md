@@ -90,9 +90,9 @@ To download the package (zipped folder) and investigate the events that occurred
 
 1. Select **Collect investigation package** from the row of response actions at the top of the device page.
 
-2. Specify in the text box why you want to perform this action. Select **Confirm**.
+1. Specify in the text box why you want to perform this action. Select **Confirm**.
 
-3. The zip file downloads.
+1. The zip file downloads.
 
 Or, use this alternate procedure:
 
@@ -285,11 +285,11 @@ Once devices are contained, we recommend investigating and remediating the threa
 
 1. Go to the **Device inventory** page and select the device to contain.
 
-2. Select **Contain device** from the actions menu in the device flyout.
+1. Select **Contain device** from the actions menu in the device flyout.
 
    :::image type="content" alt-text="Screenshot of the contain device popup message." source="/defender/media/defender-endpoint/contain_device.png" lightbox="/defender/media/defender-endpoint/contain_device.png":::
 
-3. On the contain device popup, type a comment, and select **Confirm**.
+1. On the contain device popup, type a comment, and select **Confirm**.
 
    :::image type="content" alt-text="Screenshot of the contain device menu item." source="/defender/media/defender-endpoint/contain_device_popup.png" lightbox="/defender/media/defender-endpoint/contain_device_popup.png":::
 
@@ -319,7 +319,7 @@ You're be able to stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
-2. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
+1. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
 
 ### Contain IP addresses of undiscovered devices
 
@@ -385,7 +385,7 @@ You can release the blocks and containment on a user at any time:
 
 1. Select the **Contain User** action in the **Action Center**. In the side pane select **Undo**.
 
-2. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**.
+1. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**.
 
 This action restores the user's connection to the network.
 

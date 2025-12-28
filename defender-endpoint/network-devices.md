@@ -71,19 +71,19 @@ Your first step is to select a device that performs the authenticated network sc
 
 1. Decide on a Defender for Endpoint onboarded device (client or server) that has a network connection to the management port for the network devices you plan on scanning.
 
-2. SNMP traffic between the Defender for Endpoint scanning device and the targeted network devices must be allowed (for example, by the Firewall).
+1. SNMP traffic between the Defender for Endpoint scanning device and the targeted network devices must be allowed (for example, by the Firewall).
 
-3. Decide which network devices are assessed for vulnerabilities (for example: a Cisco switch or a Palo Alto Networks firewall).
+1. Decide which network devices are assessed for vulnerabilities (for example: a Cisco switch or a Palo Alto Networks firewall).
 
-4. Make sure SNMP read-only is enabled on all configured network devices to allow the Defender for Endpoint scanning device to query the configured network devices. 'SNMP write' isn't needed for the proper functionality of this feature.
+1. Make sure SNMP read-only is enabled on all configured network devices to allow the Defender for Endpoint scanning device to query the configured network devices. 'SNMP write' isn't needed for the proper functionality of this feature.
 
-5. Obtain the IP addresses of the network devices to be scanned (or the subnets where these devices are deployed).
+1. Obtain the IP addresses of the network devices to be scanned (or the subnets where these devices are deployed).
 
-6. Obtain the SNMP credentials of the network devices (for example: Community String, noAuthNoPriv, authNoPriv, authPriv). You're required to provide the credentials when configuring a new scan job.
+1. Obtain the SNMP credentials of the network devices (for example: Community String, noAuthNoPriv, authNoPriv, authPriv). You're required to provide the credentials when configuring a new scan job.
 
-7. Proxy client configuration: No extra configuration is required other than the Defender for Endpoint device proxy requirements.
+1. Proxy client configuration: No extra configuration is required other than the Defender for Endpoint device proxy requirements.
 
-8. To allow the scanner to be authenticated and work properly, it's essential that you add the following domains/URLs:
+1. To allow the scanner to be authenticated and work properly, it's essential that you add the following domains/URLs:
 
     - `*.security.microsoft.com`
     - `login.microsoftonline.com`
@@ -107,7 +107,7 @@ The scanner is supported on Windows 10, version 1903 and Windows Server, version
 
 1. Go to **Microsoft 365 security** \> **Settings** \> **Device discovery** \> **Authenticated scans**.
 
-2. Download the scanner and install it on the designated Defender for Endpoint scanning device.
+1. Download the scanner and install it on the designated Defender for Endpoint scanning device.
 
    :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan-new.png" alt-text="Screenshot of the add new authenticated scan screen." lightbox="/defender/media/defender-endpoint/network-authenticated-scan-new.png":::
 
@@ -125,9 +125,9 @@ To complete the scanner registration process:
    > [!NOTE]
    > You may need to change Command Prompt settings to be able to copy the URL.
 
-2. Enter the code and sign in using a Microsoft account that has the Defender for Endpoint permission called "Manage security settings in Defender."
+1. Enter the code and sign in using a Microsoft account that has the Defender for Endpoint permission called "Manage security settings in Defender."
 
-3. When finished, you should see a message confirming you've signed in.
+1. When finished, you should see a message confirming you've signed in.
 
 ### Updates for scanner
 
@@ -139,21 +139,21 @@ If there's a difference between the two versions, the update process determines 
 
 1. Go to **Settings** \> **Device discovery** \> **Authenticated scans** in the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. Select **Add new scan** and choose **Network device authenticated scan** and select **Next**.
+1. Select **Add new scan** and choose **Network device authenticated scan** and select **Next**.
 
    :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan.png" alt-text="Screenshot of the add new network device authenticated scan screen." lightbox="/defender/media/defender-endpoint/network-authenticated-scan.png":::
 
-3. Choose whether to **Activate scan**.
+1. Choose whether to **Activate scan**.
 
-4. Enter a **Scan name**.
+1. Enter a **Scan name**.
 
-5. Select the **Scanning device:** The onboarded device you use to scan the network devices.
+1. Select the **Scanning device:** The onboarded device you use to scan the network devices.
 
-6. Enter the **Target (range):** The IP address ranges or hostnames you want to scan. You can either enter the addresses or import a CSV file. Importing a file overrides any manually added addresses.
+1. Enter the **Target (range):** The IP address ranges or hostnames you want to scan. You can either enter the addresses or import a CSV file. Importing a file overrides any manually added addresses.
 
-7. Select the **Scan interval:** By default, the scan runs every four hours. You can change the scan interval or have it only run once, by selecting **Don't repeat**.
+1. Select the **Scan interval:** By default, the scan runs every four hours. You can change the scan interval or have it only run once, by selecting **Don't repeat**.
 
-8. Choose your **Authentication method**.
+1. Choose your **Authentication method**.
 
    You can select to **Use azure KeyVault for providing credentials:** If you manage your credentials in Azure KeyVault, you can enter the Azure KeyVault URL and Azure KeyVault secret name to be accessed by the scanning device to provide credentials. The secret value is dependent on the Authenticated Method you choose, as described in the following table:
 
@@ -163,9 +163,9 @@ If there's a difference between the two versions, the update process determines 
    |`AuthNoPriv`|Username;AuthPassword|
    |`CommunityString` |CommunityString|
 
-9. Select **Next** to run or skip the test scan.
+1. Select **Next** to run or skip the test scan.
 
-10. Select **Next** to review the settings and the select **Submit** to create your new network device authenticated scan.
+1. Select **Next** to review the settings and the select **Submit** to create your new network device authenticated scan.
 
 > [!NOTE]
 > To prevent device duplication in the network device inventory, make sure each IP address is configured only once across multiple scanning devices.

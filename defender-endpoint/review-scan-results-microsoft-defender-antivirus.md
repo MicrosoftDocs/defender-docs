@@ -41,7 +41,7 @@ To view the scan results using Microsoft Defender XDR Endpoint, follow the below
 
 1. Sign in to [Microsoft Defender portal](https://security.microsoft.com)
 
-2. Go to **Incidents & alerts** \> **Alerts**.
+1. Go to **Incidents & alerts** \> **Alerts**.
 
    You can view the scanned results under **Alerts**.
 

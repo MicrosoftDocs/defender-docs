@@ -51,20 +51,19 @@ Before you enable Defender for Cloud, it's important to know how to manage antiv
 To enable Defender for Servers for Azure VMs and non-Azure servers connected through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), follow this guidance:
 
 1. If you aren't already using Azure, plan your environment following the [Azure Well-Architected Framework](/azure/architecture/framework/).
+1. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
 
-2. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
+1. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features, like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview).
 
-3. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features, like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview).
-
-4. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one or both of the two opt-in buttons shown in the following image:
+1. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one or both of the two opt-in buttons shown in the following image:
 
    :::image type="content" source="media/mde-integration.png" alt-text="Screenshot that shows how to enable Defender for Endpoint integration." lightbox="media/mde-integration.png":::
 
    If you have either of these buttons in your environment, make sure to enable integration for both. On new subscriptions, both options are enabled by default, and you don't see these buttons in your environment.
 
-5. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected using the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. For help with your planning process, see [Azure Arc deployments](/azure/azure-arc/servers/plan-at-scale-deployment).
+1. If you're planning to use Azure Arc, make sure the connectivity requirements are met. Defender for Cloud requires all on-premises and non-Azure machines to be connected using the Azure Arc agent. In addition, Azure Arc doesn't support all Defender for Endpoint supported operating systems. For help with your planning process, see [Azure Arc deployments](/azure/azure-arc/servers/plan-at-scale-deployment).
 
-6. (*Recommended*) If you want to see vulnerability findings in Defender for Cloud, make sure to enable [vulnerability assessment](/azure/defender-for-cloud/monitoring-components?tabs=autoprovision-va#vulnerability-assessment) in Defender for Cloud.
+1. (*Recommended*) If you want to see vulnerability findings in Defender for Cloud, make sure to enable [vulnerability assessment](/azure/defender-for-cloud/monitoring-components?tabs=autoprovision-va#vulnerability-assessment) in Defender for Cloud.
 
    :::image type="content" source="media/enable-threat-and-vulnerability-management.png" alt-text="Screenshot that shows how to enable vulnerability management." lightbox="media/enable-threat-and-vulnerability-management.png"::: 
 
@@ -87,9 +86,9 @@ If you're using Amazon Web Services (AWS) or Google Cloud Platform (GCP), follow
 
 1. Create a new multicloud connector on your subscription. For more information about this connector, see [AWS accounts](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings) or [GCP projects](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings).
 
-2. On your multicloud connector, enable Defender for Servers on [AWS](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings#prerequisites) or [GCP](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings#configure-the-servers-plan) connectors.
+1. On your multicloud connector, enable Defender for Servers on [AWS](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings#prerequisites) or [GCP](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings#configure-the-servers-plan) connectors.
 
-3. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, and Vulnerability Assessment. For Defender for Servers Plan 2, enable agentless machine scanning.
+1. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, and Vulnerability Assessment. For Defender for Servers Plan 2, enable agentless machine scanning.
 
    :::image type="content" source="media/select-plans-aws-gcp.png" alt-text="Screenshot that shows how to enable autoprovisioning for Azure Arc agent." lightbox="media/select-plans-aws-gcp.png":::
    
