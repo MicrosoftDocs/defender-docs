@@ -278,20 +278,20 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 
    Look for information in the `definitions_update_fail_reason` section.
 
-2. Make sure that `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
+1. Make sure that `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
 
-3. Make sure that `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
+1. Make sure that `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
 
    - `definitions_update_source_uri` is the source from where the signatures were downloaded.
    - `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
 
-4. Try performing the connectivity test to check if mirror server is reachable from the host:
+1. Try performing the connectivity test to check if mirror server is reachable from the host:
 
    ```bash
    mdatp connectivity test
    ```
 
-5. Try to initiate a manual update using the following command:
+1. Try to initiate a manual update using the following command:
 
    ```bash
    mdatp definitions update
