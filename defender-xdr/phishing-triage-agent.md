@@ -179,6 +179,9 @@ To create a role:
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 1. Assign the role to the agent. Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
 
+> [!IMPORTANT]
+> After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
+
 
 ## Enhance incident response with the Phishing Triage Agent
 
