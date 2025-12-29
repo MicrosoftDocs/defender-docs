@@ -54,7 +54,7 @@ This article is updated frequently to let you know what's new in the latest rele
 |Engine version:    |**1.1.25110.3001**|
 |Signature version: |**1.443.272.0**|
 
-What's new
+#### What's new
 
 - Enhanced vulnerability detection for vulnerable React components through deeper component analysis and enhanced telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more complete security coverage for React-based applications.
 
@@ -69,9 +69,28 @@ What's new
 |Engine version:    |**1.1.25110.3001**|
 |Signature version: |**1.443.189.0**|
 
-What's new
+#### What's new
 
 - Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device.
+
+### November-2025 Build: 101.25102.0003 | Release version: 30.125102.0003.0
+
+|Build:             |**101.25102.0003**    |
+|-------------------|----------------------|
+|Released:          |**December 15, 2025**|
+|Published:         |**December 15, 2025**|
+|Expiry:            |**September 06, 2026**|
+|Release version:   |**30.125102.0003.0**|
+|Engine version:    |**1.1.25110.3001**|
+|Signature version: |**1.443.15.0**|
+
+#### What's new
+
+- Openssl library is upgraded to version 3.6.0
+
+- Libcurl library is upgraded to version 8.16.0
+
+- The default engine version has been updated to 1.1.25090.6000, and default signature version to 1.439.338.0.
 
 ### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
 
@@ -84,7 +103,7 @@ What's new
 |Engine version:    |**1.1.25090.6000**|
 |Signature version: |**1.439.558.0**|
 
-What's new
+#### What's new
 
 - Added support for RHEL 10.
 
@@ -103,7 +122,7 @@ What's new
 |Engine version:    |**1.1.25070.4000**|
 |Signature version: |**1.435.242.0**|
 
-What's new
+#### What's new
 - Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8, ensuring comprehensive vulnerability coverage.
 
 - Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. This ensures consistent availability across environments and streamlines troubleshooting for customers by making diagnostic tools readily accessible out-of-the-box.
@@ -121,7 +140,7 @@ What's new
 |Engine version:    |**1.1.25060.4000**|
 |Signature version: |**1.431.4.0**|
 
-What's new
+#### What's new
 - Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Microsoft Defender via Golden image](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images).
 
 - Other stability enhancements and bug fixes.
@@ -136,7 +155,7 @@ What's new
 |Engine version:    |**1.1.25040.4000**    |
 |Signature version: |**1.429.442.0**       |
 
-What's new
+#### What's new
 - Defender for Endpoint on Linux now supports installation to a custom location (preview). For more information, see [Enabling deployment of Microsoft Defender for Endpoint to a custom location (preview)](/defender-endpoint/linux-custom-location-installation). Support for this feature is being added to the installer script.
 - The `mdatp threat quarantine add` command now requires superuser (root) privileges.
 - Custom definition path can now be updated without stopping Defender for Endpoint. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
@@ -153,7 +172,7 @@ What's new
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 - Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified.
 - Other stability improvements and bug fixes.
 
@@ -167,7 +186,7 @@ What's new
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 - The Defender for Endpoint package rollout into production happens gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 - Removed external dependency of uuid-runtime from the Defender for Endpoint package
 - Other stability improvements and bug fixes
@@ -182,7 +201,7 @@ What's new
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 
 - Removed external dependency of MDE Netfilter and libpcre from MDE package
   
@@ -201,7 +220,7 @@ What's new
 |Engine version:    |**1.1.24090.13**      |
 |Signature version: |**1.421.226.0**       |
 
-What's new
+#### What's new
 
 - mdatp diagnostic ebpf-statistics command requires sudo privilege now
 
@@ -221,7 +240,7 @@ What's new
 |Engine version:    | **1.1.24090.13**     |
 |Signature version: | **1.421.226.0**      |
 
-What's new
+#### What's new
 
 - The MDATP package rollout into production will be done gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 
@@ -229,7 +248,7 @@ What's new
 
 - Other stability improvements and bug fixes.
 
-Known Issues
+##### Known Issues
 
 - There's a known issue where MDE is deleting the configuration file located at /etc/systemd/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
 
@@ -276,7 +295,7 @@ Known Issues
 | Engine version:    | **1.1.24090.13**      |
 | Signature version: | **1.421.1681.0**      |
 
-What's new
+#### What's new
 
 - Fixed a bug that incorrectly reported the DefenderEngineVersion to the security portal.
 - The MDATP package `101.24112.0003` is rolling out gradually for each distribution.
