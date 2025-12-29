@@ -4,7 +4,7 @@ description: Learn how to review security recommendations in Microsoft Defender 
 ms.topic: how-to
 author: dlanger
 ms.author: dlanger
-ms.date: 12/03/2025
+ms.date: 12/29/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -391,7 +391,20 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 ## How are recommendations classified?
 
-Every security recommendation from Defender for Cloud is given one of three severity ratings.
+Every security recommendation from Defender for Cloud is given a severity ratings.
+
+### Critical severity
+
+We recommend that you address these recommendations immediately and without delay. Critical‑severity recommendations indicate an urgent and highly exploitable security vulnerability that poses an immediate threat to your environment.
+
+Critical‑severity recommendations require immediate remediation. They highlight severe, easily exploitable vulnerabilities that could allow attackers to gain privileged access, compromise sensitive data, or move laterally across your environment.
+
+Examples of critical severity recommendations include:
+
+- Exposure of highly sensitive or privileged secrets that, if compromised, could grant full administrative access across systems.
+- Internet‑exposed resources that allow unauthenticated access to critical workloads, management interfaces, or sensitive data stores.
+- Critical CVSS 9.0+ vulnerabilities discovered on machines or containers that allow remote code execution, privilege escalation, or full system takeover.
+- Misconfigurations enabling direct lateral movement to high‑value assets, such as domain controllers or production databases.
 
 ### High severity
 
