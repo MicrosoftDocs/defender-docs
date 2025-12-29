@@ -198,6 +198,7 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 
 |Component|Component enforcement|File indicator Action|Result|
 |---|---|---|---|
+|Antivirus protection|Block|Allow|Allow|
 |Attack surface reduction file path exclusion|Allow|Block|Block|
 |Attack surface reduction rule|Block|Allow|Allow|
 |Windows Defender Application Control|Allow|Block|Allow|
