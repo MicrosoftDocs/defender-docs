@@ -12,35 +12,30 @@ ms.service: microsoft-sentinel
 
 # Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
 
-**Sentinel behaviors** uses AI to translate raw security telemetry into easy-to-understand behavioral patterns that answer the questions *"What happened?* and *Who did what to whom?"*. 
+Microsoft Sentinel behaviors uses AI to translate raw security telemetry into easy-to-understand behavioral patterns that answer the questions *"What happened?* and *Who did what to whom?"*. 
 
 Instead of analyzing individual AWS CloudTrail events or firewall logs, analysts see a behavior - like "**Inbound remote management session from external address**" - that summarizes multiple raw events and maps them to known tactics, techniques, and procedures (TTPs). This abstraction layer enables faster threat detection, investigation, and response across your security operations. 
 
-This article explains how the Sentinel behaviors works, how to enable it, and how to use Sentinel behaviors to enhance security operations.  
+This article explains how Microsoft Sentinel behaviors works, how to enable it, and how to use behaviors to enhance security operations.  
 
-## How Sentinel behaviors works
+## How Microsoft Sentinel behaviors works
 
-Sentinel behaviors:
+Microsoft Sentinel behaviors uses AI-powered correlation logic to process raw security telemetry in near real-time and generate two types of behavioral patterns:
 
-- **Explains events in context:** It adds security context and narrative to sequences of raw logs, making them easier to understand (for example, who did *what* to *whom*, and *why it matters*).
+- **Aggregated behaviors** detect volume-based patterns by collecting related events over time windows. Examples include "User accessed 50+ resources in 1 hour" or "Login attempts from 10+ different IP addresses." These behaviors excel at identifying unusual activity levels and converting high-volume logs into actionable security insights.
 
-- **Unifies schemas:** Behaviors are represented in a single, unified schema across different products and data types, so analysts no longer need to mentally translate between different log formats or join high volume tables.
+- **Sequenced behaviors** identify multi-step patterns or complex attack chains  - for example, credential theft followed by lateral movement - that are not obvious when you look at individual events.
 
-- **Maps to MITRE ATT&CK:** Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance.
+Each behavior record includes:
 
-- **Works with anomalous *and* normal events:** It's not limited to anomalies. Sentinel behaviors surfaces *all kinds of activities* (normal or malicious) in a structured way.
+- **A simple, contextual description**: A natural language explanation of what happened in security-relevant terms - for example, who did *what* to *whom*, and *why it matters*.
+- **Unified schema and references to the underlying raw logs**: All behaviors use a consistent data structure across different products and log types, so analysts don't need to translate different log formats or join high-volume tables.
+- **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance.
+- **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
-- **Integrates into Sentinel:** Behaviors are stored in your Log Analytics workspace as special tables. You can query them with KQL, use them in detection rules, or view them alongside incidents, just like any other log data in Sentinel.
 
-- **Near real-time availability:** Behaviors are aggregated and sequenced behaviors based on a time window, tailored to each logic. Once the time window closes or the pattern is identified, the behavior log is created immediately.
+[Microsoft Sentinel behaviors stores behavior records in two dedicated tables](#behaviorinfo-and-behaviorentities-schemas) in your Microsoft Sentinel workspace, integrating seamlessly with your existing Sentinel workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. Microsoft Sentinel behaviors generates nsights based on tailored time windows specific to each behavior's logic, creating behavior records immediately when it identifies patterns or when the time windows close.
 
-Behaviors can be aggregations or sequencing of raw logs:
-
-- **Aggregation Behaviors**: Detect volume-based patterns (for example, "User accessed 50+ resources in 1 hour" or "Login from 10+ different IP addresses"). These are great for spotting unusual activity levels and turning high volume logs into security insights.
-
-- **Sequencing behaviors**: Detect multistep patterns that surface complex chains that wouldn't be obvious from individual events.
-
-Generative AI capabilities power Sentinel behaviors to create and scale the insights that behaviors provide on top of the raw logs. The AI is used to create the behaviors’ logic, entities mapping, MITRE mapping, and explainability, as well as for quality guardrails. Each behavior maps to the raw logs, so you can always see which events are part of the logic described in the behavior. You can find the originating eventIDs in the **"additional fields"**.
 
 <!-- [\[link to RAI FAQ\]](#_10._RAI_FAQ) -->
 
