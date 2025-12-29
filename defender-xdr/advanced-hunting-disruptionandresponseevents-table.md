@@ -28,7 +28,7 @@ ms.date: 06/11/2025
 > [!IMPORTANT]
 > Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) and [predictive shielding](/defender-endpoint/predictive-shielding) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads.
+The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) and [predictive shielding](shield-predict-threats.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads.
 
 Users can use this table to increase their visibility and awareness of active, complex attacks disrupted by automatic attack disruption. Understanding the scope of even complex attacks, their context, impact, and why disruption actions were taken, can help users make better and faster decisions and allocate resources more efficiently.
 
