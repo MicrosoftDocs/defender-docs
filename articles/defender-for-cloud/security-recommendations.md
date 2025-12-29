@@ -30,13 +30,15 @@ Microsoft Defender for Cloud proactively utilizes a dynamic engine that assesses
 
 When Defender for Cloud performs a risk assessment of your security problems, the engine identifies the most significant security risks and distinguishes them from less risky problems. The engine sorts the recommendations based on their risk level. You can address the security problems that pose immediate threats with the greatest potential of being exploited in your environment.
 
+Learn more about [risk prioritization](risk-prioritization.md).
+
 ## Risk levels and calculation
 
 Defender for Cloud uses a context-aware risk-prioritization engine to calculate the risk level of each security recommendation. The risk level comes from the risk factors of each resource, such as its configuration, network connections, and security posture. The risk level is calculated based on the potential impact of the security problem, the categories of risk, and the attack path that the security problem is part of.
 
 Recommendations are classified into five categories based on their risk level:
 
-- **Critical**: Recommendations that indicate a critical security vulnerability a bad actor can exploit to gain unauthorized access to your systems or data.
+- **Critical**: Recommendations that require immediate action due to their significant potential impact on your organization's security posture.
 - **High**: Recommendations that indicate a potential security risk that should be addressed in a timely manner, but might not require immediate attention.
 - **Medium**: Recommendations that indicate a relatively minor security problem that you can address at your convenience.
 - **Low**: Recommendations that indicate a relatively minor security problem that you can address at your convenience.
