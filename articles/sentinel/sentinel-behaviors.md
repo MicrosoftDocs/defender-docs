@@ -64,8 +64,6 @@ To use Sentinel behaviors, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
 - Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier.  
-- Existing UEBA capabilities aren't a prerequisite.
-- No additional license is required.
 
 ## Permissions required 
 
