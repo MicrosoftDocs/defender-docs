@@ -40,7 +40,7 @@ Defender for Cloud continuously discovers APIs across Azure API Management, Func
 
 ## Prioritize and implement API security best practices
 
-Assess and secure your APIs against high-risk issues such as lack of encryption and anonymous access with broken or weak authentication. Gain insights into inactive APIs and those exposed directly to the internet. Defender for Cloud scans for API risks, considering potential exploitability and business impact. [Security recommendations](review-security-recommendations.md#understanding-risk-prioritization) are prioritized based on these factors, allowing you to fix critical vulnerabilities first.
+Assess and secure your APIs against high-risk issues such as lack of encryption and anonymous access with broken or weak authentication. Gain insights into inactive APIs and those exposed directly to the internet. Defender for Cloud scans for API risks, considering potential exploitability and business impact. [Security recommendations](security-recommendations.md#understanding-risk-prioritization) are prioritized based on these factors, allowing you to fix critical vulnerabilities first.
 
 ## Classify APIs exposing sensitive data
 
