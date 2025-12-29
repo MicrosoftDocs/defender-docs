@@ -4,7 +4,7 @@ description: This article explains how to view and create scheduled analytics ru
 author: guywi-ms
 ms.author: guywild
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 12/29/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
