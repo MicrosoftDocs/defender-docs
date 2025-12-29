@@ -37,7 +37,7 @@ Users can use this table to increase their visibility and awareness of active, c
 The `DisruptionAndResponseEvents` table:
 
 - Is populated by records from various Microsoft security services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return complete results. For more information about how to deploy supported services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
-- Doesn't contain the actual execution of actions like contain user or disable user, rather, only reflects the outcomes of those actions, such as blocked logon attempts or policy applications. For the full context of these actions, the Action Center logs all events. For more information, see [View and manage automatic attack disruption actions in the Action Center](autoad-results.md#track-the-actions-in-the-action-center).
+- Doesn't contain the execution of actions like contain user or disable user. The table only reflects the outcomes of these actions, such as blocked logon attempts or policy applications. For the full context of these actions, the Action Center logs all events. For more information, see [View and manage automatic attack disruption actions in the Action Center](autoad-results.md#track-the-actions-in-the-action-center).
 - Exposes only Defender for Endpoint-based controls.
 
 ## Schema reference
