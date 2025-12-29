@@ -73,6 +73,25 @@ What's new
 
 - Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device.
 
+### November-2025 Build: 101.25102.0003 | Release version: 30.125102.0003.0
+
+|Build:             |**101.25102.0003**    |
+|-------------------|----------------------|
+|Released:          |**December 15, 2025**|
+|Published:         |**December 15, 2025**|
+|Expiry:            |**September 06, 2026**|
+|Release version:   |**30.125102.0003.0**|
+|Engine version:    |**1.1.25110.3001**|
+|Signature version: |**1.443.15.0**|
+
+What's new
+
+- Openssl library is upgraded to version 3.6.0
+
+- Libcurl library is upgraded to version 8.16.0
+
+- The default engine version has been updated to 1.1.25090.6000, and default signature version to 1.439.338.0.
+
 ### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
 
 |Build:             |**101.25092.0001**    |
