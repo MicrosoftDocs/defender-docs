@@ -1,5 +1,5 @@
 ---
-title: Extract behavioral insights from raw security logs using Microsoft Sentinel behaviors (Preview)
+title: Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
 description: Explore Sentinel behaviors that converts security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
 author: guywi-ms
 ms.author: guywild
@@ -10,7 +10,7 @@ ms.service: microsoft-sentinel
 #Customer intent: As a security analyst, I want to use Sentinel behaviors to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
 ---
 
-# Extract behavioral insights from raw security logs using MicrosoftSentinel behaviors (Preview)
+# Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
 
 **Sentinel behaviors** uses AI to translate raw security telemetry into easy-to-understand behavioral patterns that answer the questions *"What happened?* and *Who did what to whom?"*. 
 
