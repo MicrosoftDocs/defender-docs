@@ -53,7 +53,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the event was recorded |
-| `ActionType` | `string` | Type of disruption action taken. For more information, see [ActionType values](#actiontype-values).   |
+| `ActionType` | `string` | Type of disruption action taken<br>**Tip**: For more information, see [ActionType values](#actiontype-values).   |
 | `DeviceId` | `string` | Unique identifier for the device that reported the event; the reporting device can be the one that blocked the access, the compromised device itself, or even a different device that is aware of the attack |
 | `SourceDeviceId` | `string` | Unique identifier for the device that the attack originated from  |
 | `TargetDeviceId` | `string` | Unique identifier for the device that was targeted or attacked |
@@ -95,19 +95,20 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 | Action | Description | Defense strategy |
 |-------|-------------|------------------|
-| ContainedRestrictedUserSmbFileOpenBlocked | Logs an event when a user who is a member of a restricted user group attempts to open a specific SMB shared file and the action is blocked. |Automatic attack disruption |
-| ContainedUserLogonBlocked | Logs an event when a contained user's logon attempt is blocked. |Automatic attack disruption |
-| ContainedUserLogonBlockedByDomainController | Logs an event when a user's logon attempt to a device in the domain is blocked by the Domain Controller due to containment policies. |Automatic attack disruption |
-| ContainedUserRemoteDesktopSessionDisconnected | Logs an event when a contained user's remote desktop session is forcibly disconnected using WTSDisconnectSession. |Automatic attack disruption |
-| ContainedUserRemoteDesktopSessionStopped | Logs an event when a contained user's remote desktop session is stopped using WTSLogoffSession. |Automatic attack disruption |
-| ContainedUserRpcAccessBlocked | Logs an event when a contained user's attempt to access a resource via RPC is blocked. |Automatic attack disruption |
-| ContainedUserSmbFileOpenBlocked | Logs an event when a contained user attempts to open an SMB shared file and the attempt is blocked. |Automatic attack disruption |
-| ContainedUserSmbFileOpenBlockedAggregation | Same as ContainedUserSmbFileOpenBlocked, but aggregated for cases where the same contained user accesses more than 10 files within a one-minute window. |Automatic attack disruption |
-| ContainedUserSmbSessionStopped | Logs an event when an SMB session initiated by a contained user is forcibly ended. |Automatic attack disruption |
-| GroupPolicyAccessBlocked | Blocks access to the SYSVOL directory, preventing the device from pulling group policy updates. |Predictive shielding |
-| SafeBootBlocked | Prevents the device from being rebooted into safe mode. |Predictive shielding |
+| `ContainedRestrictedUserSmbFileOpenBlocked` | Logs an event when a user who is a member of a restricted user group attempts to open a specific Server Message Block (SMB) shared file and the action is blocked. |Automatic attack disruption |
+| `ContainedUserLogonBlocked` | Logs an event when a contained user's logon attempt is blocked. |Automatic attack disruption |
+| `ContainedUserLogonBlockedByDomainController` | Logs an event when a user's logon attempt to a device in the domain is blocked by the Domain Controller due to containment policies. |Automatic attack disruption |
+| `ContainedUserRemoteDesktopSessionDisconnected` | Logs an event when a contained user's remote desktop session is forcibly disconnected using `WTSDisconnectSession`. |Automatic attack disruption |
+| `ContainedUserRemoteDesktopSessionStopped` | Logs an event when a contained user's remote desktop session is stopped using `WTSLogoffSession`. |Automatic attack disruption |
+| `ContainedUserRpcAccessBlocked` | Logs an event when a contained user's attempt to access a resource via RPC is blocked. |Automatic attack disruption |
+| `ContainedUserSmbFileOpenBlocked` | Logs an event when a contained user attempts to open an SMB shared file and the attempt is blocked. |Automatic attack disruption |
+| `ContainedUserSmbFileOpenBlockedAggregation` | Same as `ContainedUserSmbFileOpenBlocked`, but aggregated for cases where the same contained user accesses more than 10 files within a one-minute window. |Automatic attack disruption |
+| `ContainedUserSmbSessionStopped` | Logs an event when an SMB session initiated by a contained user is forcibly ended. |Automatic attack disruption |
+| `GroupPolicyAccessBlocked` | Blocks access to the **SYSVOL** directory, preventing the device from pulling group policy updates. |Predictive shielding |
+| `SafeBootBlocked` | Prevents the device from being rebooted into safe mode. |Predictive shielding |
 
 ## Related topics
+
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Use shared queries](advanced-hunting-shared-queries.md)
