@@ -201,7 +201,7 @@ This article is updated frequently to let you know what's new in the latest rele
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 
 - Removed external dependency of MDE Netfilter and libpcre from MDE package
   
@@ -220,7 +220,7 @@ What's new
 |Engine version:    |**1.1.24090.13**      |
 |Signature version: |**1.421.226.0**       |
 
-What's new
+#### What's new
 
 - mdatp diagnostic ebpf-statistics command requires sudo privilege now
 
@@ -240,7 +240,7 @@ What's new
 |Engine version:    | **1.1.24090.13**     |
 |Signature version: | **1.421.226.0**      |
 
-What's new
+#### What's new
 
 - The MDATP package rollout into production will be done gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 
@@ -248,7 +248,7 @@ What's new
 
 - Other stability improvements and bug fixes.
 
-Known Issues
+##### Known Issues
 
 - There's a known issue where MDE is deleting the configuration file located at /etc/systemd/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
 
@@ -295,7 +295,7 @@ Known Issues
 | Engine version:    | **1.1.24090.13**      |
 | Signature version: | **1.421.1681.0**      |
 
-What's new
+#### What's new
 
 - Fixed a bug that incorrectly reported the DefenderEngineVersion to the security portal.
 - The MDATP package `101.24112.0003` is rolling out gradually for each distribution.
