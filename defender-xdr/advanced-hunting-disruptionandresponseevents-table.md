@@ -45,7 +45,7 @@ The table exposes only Defender for Endpoint-based controls.
 Use this reference to construct queries that return information from this table.
 
 > [!TIP]
-> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+> For detailed information about the events types (`ActionType` values) supported by this table, see [ActionType values](#actiontype-values).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -53,7 +53,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the event was recorded |
-| `ActionType` | `string` | Type of disruption action taken, for example: ContainedUserLogonBlocked, ContainedUserSmbFileOpenBlocked, SafeBootGuardApplied   |
+| `ActionType` | `string` | Type of disruption action taken. For more information, see [ActionType values](#actiontype-values).   |
 | `DeviceId` | `string` | Unique identifier for the device that reported the event; the reporting device can be the one that blocked the access, the compromised device itself, or even a different device that is aware of the attack |
 | `SourceDeviceId` | `string` | Unique identifier for the device that the attack originated from  |
 | `TargetDeviceId` | `string` | Unique identifier for the device that was targeted or attacked |
