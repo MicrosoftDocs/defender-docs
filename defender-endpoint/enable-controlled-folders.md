@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 12/16/2025
+ms.date: 12/29/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -35,7 +35,14 @@ You can enable controlled folder access by using any of these methods:
   - [Microsoft Configuration Manager](#microsoft-configuration-manager)
   - [Group Policy](#group-policy)
   - [PowerShell](#powershell)
-  
+
+> [!TIP]
+> Exclusions don't work if you're using [data loss prevention (DLP)](/purview/dlp-learn-about-dlp). Do the following steps to investigate:
+>
+> 1. Download and install the [Defender for Endpoint client analyzer](run-analyzer-windows.md).
+> 2. Run a trace for at least five minutes.
+> 3. In the resulting `MDEClientAnalyzerResult.zip` output file, extract the contents of the `EventLogs` folder, and search for instances of `DLP EA` in the available `.evtx` log files.
+
 ## Prerequisites
 
 ### Supported operating systems
