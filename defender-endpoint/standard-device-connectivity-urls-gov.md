@@ -93,6 +93,9 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 ## Security center URLs
 
+> [!NOTE]
+> All URLS in this table are required to have access to the Microsoft Defender Security Center Portal URL.
+
 |Service|Geography|URL|
 |---|---|---|
 |Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|
@@ -108,9 +111,6 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|GCC High|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 |Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
-
-> [!NOTE]
-> Microsoft Defender Security Center Portal URL.
 
 
 ## Microsoft Defender processes

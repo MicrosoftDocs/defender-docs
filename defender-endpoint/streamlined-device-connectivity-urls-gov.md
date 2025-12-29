@@ -50,13 +50,14 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 |Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 
-> [!NOTE]
-> Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators
+
 
 ### URLs used for updates
 
 > [!NOTE]
 > Depending on your environment, you may apply updates from a file share or update server and don't need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
+>
+> This table lists URL endpoints used by Microsoft Defender Antivirus. These endpoints are optional when updates are managed internally using WSUS, Configuration Manager, or a file share.
 
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|
@@ -66,9 +67,6 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|
-
-> [!NOTE]
-> Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)
 
 ## URLs used for certificate validation checks
 
@@ -84,16 +82,20 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 ### Other URLs
 
+> [!NOTE]
+> The URLs in this table are required for Live Response Performance (Direct Connection/Proxy bypass required)
+
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|
 |Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
 |Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
 |Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
 
-> [!NOTE]
-> Required for Live Response Performance (Direct Connection/Proxy bypass required)
 
 ## Security center URLs
+
+> [!NOTE]
+> The following table lists the required URL endpoints for accessing the Microsoft Defender Security Center portal.
 
 |Service|Geography|URL|
 |-------|---------|---|
@@ -112,8 +114,7 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 
-> [!NOTE]
-> Microsoft Defender Security Center Portal URL
+
 
 ## Microsoft Defender processes
 
