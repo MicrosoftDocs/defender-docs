@@ -28,12 +28,6 @@ Identify your architecture and your requirements, and then use the table below t
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |[Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
-> [!NOTE]
-> The Defender for Identity sensor version 3.x is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
-> The Defender for Identity sensor v3.x:
-> - Requires that Defender for Endpoint is deployed
-> - Doesn't currently support VPN integration
-> - Doesn't currently support ExpressRoute
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 
