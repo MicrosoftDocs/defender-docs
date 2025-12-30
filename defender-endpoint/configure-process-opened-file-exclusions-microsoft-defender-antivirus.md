@@ -104,16 +104,16 @@ See [How to create and deploy anti-malware policies: Exclusion settings](/config
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components \> Microsoft Defender Antivirus \> Exclusions**.
+1. Expand the tree to **Windows components \> Microsoft Defender Antivirus \> Exclusions**.
 
-4. Double-click **Process Exclusions** and add the exclusions:
+1. Double-click **Process Exclusions** and add the exclusions:
     1. Set the option to **Enabled**.
-    2. Under the **Options** section, select **Show...**.
-    3. Enter each process on its own line under the **Value name** column. See the example table for the different types of process exclusions. Enter **0** in the **Value** column for all processes.
+    1. Under the **Options** section, select **Show...**.
+    1. Enter each process on its own line under the **Value name** column. See the example table for the different types of process exclusions. Enter **0** in the **Value** column for all processes.
 
-5. Select **OK**.
+1. Select **OK**.
 
 ### Use PowerShell cmdlets to exclude files that have been opened by specified processes from scans
 

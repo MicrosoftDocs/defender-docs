@@ -68,15 +68,15 @@ To assign these permissions:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
-3. Select the role you'd like to edit, and then select **Edit**.
+1. Select the role you'd like to edit, and then select **Edit**.
 
-4. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
+1. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
 
-5. In **Description**, type a brief summary of the role.
+1. In **Description**, type a brief summary of the role.
 
-6. In **Permissions**, select **View Data**, and under **View Data** select **Security operations**.
+1. In **Permissions**, select **View Data**, and under **View Data** select **Security operations**.
 
 <a name='navigate-to-the-attack-surface-reduction-rules-report></a>
 
@@ -131,9 +131,9 @@ To enable the three standard protection rules:
 
 1. Select **Protect devices**. The main **Configuration** tab opens.
 
-2. On the **Configuration** tab, **Basic rules** automatically toggles from **All rules** to **Standard protection rules** enabled.
+1. On the **Configuration** tab, **Basic rules** automatically toggles from **All rules** to **Standard protection rules** enabled.
 
-3. In the **Devices** list, select the devices for which you want the standard protection rules to apply, and then select **Save**.
+1. In the **Devices** list, select the devices for which you want the standard protection rules to apply, and then select **Save**.
 
 This card has two other navigation buttons:
 
@@ -264,7 +264,7 @@ To enable ASR rules:
 
 1. Under **Device**, select the device or devices for which you want to apply ASR rules.
 
-2. In the flyout window, verify your selections and then select **Add to policy**. The **Configuration** tab and **add rule** flyout are shown in the following image.
+1. In the flyout window, verify your selections and then select **Add to policy**. The **Configuration** tab and **add rule** flyout are shown in the following image.
 
    :::image type="content" source="media/attack-surface-reduction-rules-report-configuration-add-to-policy.png" alt-text="Shows the ASR rules fly-out to add ASR rules to devices" lightbox="media/attack-surface-reduction-rules-report-configuration-add-to-policy.png":::
 

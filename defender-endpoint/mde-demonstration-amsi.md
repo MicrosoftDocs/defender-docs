@@ -157,9 +157,9 @@ You can view detected threats by using the Event log or PowerShell.
 
 1. Go to **Start**, and search for `EventVwr.msc`. Open Event Viewer in the list of results.
 
-2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender operational events**.
+1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender operational events**.
 
-3. Look for `event ID 1116`. You should see the following information:
+1. Look for `event ID 1116`. You should see the following information:
 
     ```powershell
     

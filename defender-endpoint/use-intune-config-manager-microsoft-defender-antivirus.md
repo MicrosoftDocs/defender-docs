@@ -36,17 +36,17 @@ You can use the Microsoft Intune family of products to configure Microsoft Defen
 
 1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), and sign in.
 
-2. Navigate to **Endpoint Security**.
+1. Navigate to **Endpoint Security**.
 
-3. Under **Manage**, choose **Antivirus**.
+1. Under **Manage**, choose **Antivirus**.
 
-4. Click **Create Policy**, choose **Windows** as the platform and **Microsoft Defender Antivirus** for the profile type then select on **Create**.
+1. Click **Create Policy**, choose **Windows** as the platform and **Microsoft Defender Antivirus** for the profile type then select on **Create**.
 
-5. Enter a **Name** for the policy and optionally a description and select **Next** to go to **Configuration settings**.
+1. Enter a **Name** for the policy and optionally a description and select **Next** to go to **Configuration settings**.
 
-6. Edit your Microsoft Defender Antivirus settings.
+1. Edit your Microsoft Defender Antivirus settings.
 
-7. Choose **Review + save**.
+1. Choose **Review + save**.
 
 You can explore the list of settings that can be configured in a **Microsoft Defender Antivirus** policy within Intune.
 

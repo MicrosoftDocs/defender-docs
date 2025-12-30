@@ -51,21 +51,21 @@ You can enable controlled folder access by using any of these methods:
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** \> **Attack surface reduction**. Or, to go directly to the **Endpoint security \| Attack surface reduction** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/asr>.
 
-2. On the **Policies** tab of the **Endpoint security \| Attack surface reduction** page, select **Create policy**.
+1. On the **Policies** tab of the **Endpoint security \| Attack surface reduction** page, select **Create policy**.
 
-3. On the **Create a profile** flyout that opens, configure the following settings:
+1. On the **Create a profile** flyout that opens, configure the following settings:
    - **Platform**: Select **Windows**.
    - **Profile**: Select **Attack surface reduction rules**.
 
    Select **Create**.
 
-4. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
+1. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the policy.
    - **Description**: Enter an optional description.
 
    Select **Next**.
 
-5. On the **Configuration settings** tab, scroll down to the **Enable Controlled Folder Access** section and configured the following settings:
+1. On the **Configuration settings** tab, scroll down to the **Enable Controlled Folder Access** section and configured the following settings:
    - In the box that says **Not configured**, select **Audit Mode**.
   
      We recommend enabling controlled folder access in audit mode first to see how it works in your organization. You can set it to another mode, such as **Enabled**, later.
@@ -76,11 +76,11 @@ You can enable controlled folder access by using any of these methods:
 
    When you're finished on the **Configuration settings** tab, select **Next**.
 
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
+1. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
 
-7. On the **Assignments** tab, click in the box, select **All users**, click in the box again, and then select select **All Devices**. Verify the **Target type** value is **Include** for both, and then select **Next**.
+1. On the **Assignments** tab, click in the box, select **All users**, click in the box again, and then select select **All Devices**. Verify the **Target type** value is **Include** for both, and then select **Next**.
 
-8. On the **Review + create** tab, verify the settings, and then select **Save**.
+1. On the **Review + create** tab, verify the settings, and then select **Save**.
 
 > [!NOTE]
 > Wildcards are supported for applications, but not for folders. Allowed apps continue to trigger events until they're restarted.
@@ -133,7 +133,7 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
-2. Run the following command:
+1. Run the following command:
 
    ```powershell
    Set-MpPreference -EnableControlledFolderAccess Enabled

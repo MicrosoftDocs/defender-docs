@@ -43,15 +43,15 @@ The default period that the file is [blocked](configure-block-at-first-sight-mic
 To specify the cloud block time out period with Microsoft Defender for Endpoint Security settings management:
 
 1. Go to the Microsoft Defender for Endpoint portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
-2. Select **Endpoints** > **Configuration management** > **Endpoint security policies**.
-3. Select **Create new Policy**.
-4. Under **Select Platform** choose: "Windows 10, Windows 11, and Windows Server".
-5. Under **Select Template** choose: "Microsoft Defender Antivirus".
-6. Select **Create policy**.
-7. Enter a name and description and select **Next**.
-8. From the Defender dropdown, go to **Cloud Extended Timeout** and toggle it on.
-9. Specify the extended time, in seconds, from 1 second to 50 seconds. Whatever you specify is added to the default 10 seconds.
-10. Select **Next** and **Save** to finish configuring your policy.
+1. Select **Endpoints** > **Configuration management** > **Endpoint security policies**.
+1. Select **Create new Policy**.
+1. Under **Select Platform** choose: "Windows 10, Windows 11, and Windows Server".
+1. Under **Select Template** choose: "Microsoft Defender Antivirus".
+1. Select **Create policy**.
+1. Enter a name and description and select **Next**.
+1. From the Defender dropdown, go to **Cloud Extended Timeout** and toggle it on.
+1. Specify the extended time, in seconds, from 1 second to 50 seconds. Whatever you specify is added to the default 10 seconds.
+1. Select **Next** and **Save** to finish configuring your policy.
 
 ## Specify the extended time out period using Microsoft Intune
 
@@ -59,15 +59,15 @@ You can specify the cloud block time out period with an [endpoint security polic
 
 1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)) and sign in.
 
-2. Select **Endpoint security**, and then under **Manage**, choose **Antivirus**.
+1. Select **Endpoint security**, and then under **Manage**, choose **Antivirus**.
 
-3. Select (or create) an antivirus policy.
+1. Select (or create) an antivirus policy.
 
-4. In the **Configuration settings** section, scroll down to **Cloud Extended Timeout** and specify the time out, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
+1. In the **Configuration settings** section, scroll down to **Cloud Extended Timeout** and specify the time out, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
 
-5. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows).)
+1. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows).)
 
-6. Choose **Next**, and finish configuring your policy.
+1. Choose **Next**, and finish configuring your policy.
 
 ## Specify the extended time out period using Group Policy
 
@@ -75,17 +75,17 @@ You can use Group Policy to specify an extended time out for cloud checks.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11))
 
-2. Right-click the Group Policy Object you want to configure and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure and then select **Edit**.
 
-3. In the **Group Policy Management Editor**, go to **Computer configuration**, and then select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**, and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **MpEngine**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **MpEngine**.
 
-4. Double-click **Configure extended cloud check** and ensure the option is enabled. 
+1. Double-click **Configure extended cloud check** and ensure the option is enabled. 
 
    Specify the extra amount of time to prevent the file from running while waiting for a cloud determination. Specify the extra time, in seconds, from 1 second to 50 seconds. Whatever you specify is added to the default 10 seconds.
 
-5. Select **OK**.
+1. Select **OK**.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
