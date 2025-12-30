@@ -32,18 +32,18 @@ You can view a list of all the suppression rules and manage them in one place. Y
 
 1. Sign in to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global Administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Alert suppression**. The list of suppression rules that users in your organization have created is displayed.
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Alert suppression**. The list of suppression rules that users in your organization have created is displayed.
 
-2. Select a rule by clicking on the check-box beside the rule name.
+1. Select a rule by clicking on the check-box beside the rule name.
 
-3. Click **Turn rule on**, **Edit rule**, or  **Delete rule**. When making changes to a rule, you can choose to release alerts that it has already suppressed, regardless whether or not these alerts match the new criteria. 
+1. Click **Turn rule on**, **Edit rule**, or  **Delete rule**. When making changes to a rule, you can choose to release alerts that it has already suppressed, regardless whether or not these alerts match the new criteria. 
 
 
 ## View details of a suppression rule
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Alert suppression**. The list of suppression rules that users in your organization have created is displayed.
 
-2. Select a rule name. Details of the rule is displayed. You'll see the rule details such as  status, scope, action, number of matching alerts, created by, and date when the rule was created. You can also view associated alerts and the rule conditions.
+1. Select a rule name. Details of the rule is displayed. You'll see the rule details such as  status, scope, action, number of matching alerts, created by, and date when the rule was created. You can also view associated alerts and the rule conditions.
 
 ## Related topics
 
