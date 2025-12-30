@@ -43,7 +43,7 @@ Navigate to **Settings** > **Device discovery**
 
 1. If you want to configure Basic as the discovery mode to use on your onboarded devices, select **Basic** and then select **Save**.
 
-2. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
+1. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
 
 > [!NOTE]
 > Standard discovery uses various PowerShell scripts to actively probe devices in the network. Those PowerShell scripts are Microsoft signed and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
@@ -81,13 +81,13 @@ Choosing the initial discovery classification means to apply the default system-
 
 1. Select **Settings > Device discovery**.
 
-2. Select **Monitored networks**.
+1. Select **Monitored networks**.
 
-3. View the list of networks.
+1. View the list of networks.
 
-4. Select the three dots next to the network name.
+1. Select the three dots next to the network name.
 
-5. Choose whether you want to monitor, ignore, or use the initial discovery classification.
+1. Choose whether you want to monitor, ignore, or use the initial discovery classification.
 
    > [!WARNING]
    >
@@ -95,7 +95,7 @@ Choosing the initial discovery classification means to apply the default system-
    > - Choosing to ignore a network stops monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but are no longer updated, and details are retained until the data retention period of the Defender for Endpoint expires.
    > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
 
-6. Confirm that you want to make the change.
+1. Confirm that you want to make the change.
 
 ## Explore devices in the network
 

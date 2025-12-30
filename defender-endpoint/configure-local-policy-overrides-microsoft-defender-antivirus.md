@@ -46,13 +46,13 @@ To configure these settings:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** and then the **Location** specified in the [table of settings section](#table-of-settings) (in this article).
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** and then the **Location** specified in the [table of settings section](#table-of-settings) (in this article).
 
-4. Double-click the policy **Setting** as specified in the table below, and set the option to your desired configuration. Select **OK**, and repeat for any other settings.
+1. Double-click the policy **Setting** as specified in the table below, and set the option to your desired configuration. Select **OK**, and repeat for any other settings.
 
-5. Deploy the Group Policy Object as usual.
+1. Deploy the Group Policy Object as usual.
 
 ## Table of settings
 
@@ -84,11 +84,11 @@ By default, lists that have been configured in local group policy and the Window
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and click **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
-4. Double-click **Configure local administrator merge behavior for lists** and set the option to **Disabled**. Then select **OK**.
+1. Double-click **Configure local administrator merge behavior for lists** and set the option to **Disabled**. Then select **OK**.
 
 > [!NOTE]
 > For "Administrative Templates (.admx) for Windows 11 2022 Update (22H2)" and "Administrative Templates (.admx) for Windows 10 November 2021 Update (21H2)" templates, set **Configure local administrator merge behavior for lists** to **Enabled** to disable the local administrator merge behavior.
@@ -97,9 +97,9 @@ By default, lists that have been configured in local group policy and the Window
 
 1. In the [Microsoft Intune admin center](https://intune.microsoft.com), select **Endpoint security** > **Antivirus**.
 
-2. Choose **Create Policy**, or modify an existing Microsoft Defender Antivirus policy.
+1. Choose **Create Policy**, or modify an existing Microsoft Defender Antivirus policy.
 
-3. Under the **Configuration settings**, select the drop-down next to **Disable Local Admin Merge** and select **Disable Local Admin Merge**.
+1. Under the **Configuration settings**, select the drop-down next to **Disable Local Admin Merge** and select **Disable Local Admin Merge**.
 
 > [!NOTE]
 > If you disable local list merging, it will override controlled folder access settings. It also overrides any protected folders or allowed apps set by the local administrator. For more information about controlled folder access settings, see [Allow a blocked app in Windows Security](https://support.microsoft.com/help/4046851/windows-10-allow-blocked-app-windows-security).

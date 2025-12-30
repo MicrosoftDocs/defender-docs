@@ -64,9 +64,9 @@ appliesto:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Choose **Settings** \> **Endpoints**.
+1. Choose **Settings** \> **Endpoints**.
 
-3. Go to **General** \> **Advanced features**, and then turn tamper protection on.
+1. Go to **General** \> **Advanced features**, and then turn tamper protection on.
 
 ## Important points to keep in mind
 
