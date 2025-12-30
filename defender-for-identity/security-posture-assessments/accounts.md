@@ -163,7 +163,8 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 
 > [!NOTE]
 > The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. 
-> The [Microsoft-provided script.](https://github.com/microsoft/New-KrbtgtKeys.ps1) references two scripts. You only need to run one script. When resetting the password twice, wait at least 10 hours between resets to avoid Kerberos authentication issues. This wait time is enforced by the script and aligns with best practices.
+> You can use [one of these scripts](https://github.com/microsoft/New-KrbtgtKeys.ps1)to reset the password. 
+Reset the password twice, waiting at least 10 hours between resets. This wait time is enforced by the script and aligns with best practices to avoid Kerberos authentication issues.
 
 ## Change password for on-prem account with potentially leaked credentials (Preview)
 
