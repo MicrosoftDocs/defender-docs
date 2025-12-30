@@ -89,7 +89,7 @@ For more information, see [Network devices](network-devices.md).
 
 ## Device discovery integration
 
-To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint now supports the following integration:
+To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint supports the following integration:
 
 - **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal to secure:
 
