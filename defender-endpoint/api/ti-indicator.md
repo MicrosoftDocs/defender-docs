@@ -62,9 +62,6 @@ The indicator action types supported by the API are:
 
 For more information on the description of the response action types, see [Create indicators](../indicators-overview.md).
 
-> [!NOTE]
->
-> The prior response actions (AlertAndBlock, and Alert) will be supported until January 2022. After this date, all customers must be use one of the action types listed in this section.
 
 ## Json representation
 

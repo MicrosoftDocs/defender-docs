@@ -234,7 +234,7 @@ Prevent further propagation of an attack in your organization by banning potenti
 > - This feature is available if your organization uses Microsoft Defender Antivirus and Cloud-delivered protection is enabled. For more information, see [Manage cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 >
 > - The Antimalware client version must be 4.18.1901.x or later.
-> - This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It currently supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
+> - This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
 > - This response action is available for devices on Windows 10, version 1703 or later, and Windows 11.
 > - The allow or block function cannot be done on files if the file's classification exists on the device's cache prior to the allow or block action.
 
@@ -277,7 +277,7 @@ All other related details are also shown, such as submission date/time, submitti
 Cyber security investigations are typically triggered by an alert. Alerts are related to one or more observed files that are often new or unknown. Selecting a file takes you to the file view where you can see the file's metadata. To enrich the data related to the file, you can submit the file for deep analysis.
 
 The Deep analysis feature executes a file in a secure, fully instrumented cloud environment. Deep analysis results show the file's activities, observed behaviors, and associated artifacts, such as dropped files, registry modifications, and communication with IPs.
-Deep analysis currently supports extensive analysis of portable executable (PE) files (including _.exe_ and _.dll_ files).
+Deep analysis supports extensive analysis of portable executable (PE) files (including _.exe_ and _.dll_ files).
 
 Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab updates to display a summary and the date and time of the latest available results.
 

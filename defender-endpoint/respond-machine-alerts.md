@@ -353,7 +353,7 @@ When a critical asset is compromised and used to spread threats within an organi
 
 Through automatic attack disruption, Defender for Endpoint incriminates a malicious device, identifies the role of the device to apply a matching policy to automatically contain a critical asset. The granular containment is done by blocking only specific ports and communication directions.
 
-You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment currently supports critical asset types like domain controllers, DNS servers, and DHCP servers.
+You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment supports critical asset types like domain controllers, DNS servers, and DHCP servers.
 
 ## Contain user from the network
 
