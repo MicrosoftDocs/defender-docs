@@ -1,5 +1,5 @@
 ---
-title: Steps to set up the Standard or Strict preset security policies for Microsoft Defender for Office 365
+title: Set up the Standard or Strict preset security policies for Microsoft Defender for Office 365
 description: Step to set up preset security policies in Microsoft Defender for Office 365 so you have the security recommended by the product. Preset policies set a security profile of either *Standard* or *Strict*. Set these and Microsoft Defender for Office 365 will manage and maintain these security controls for you.
 ms.service: defender-office-365
 f1.keywords: 
@@ -15,18 +15,16 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 8/21/2023
+ms.date: 12/30/2025
 ---
 
 # Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365
 
-Does Microsoft Defender for Office 365 gave you a way to apply threat policies that it would then maintain?
+When a best practice for a security control changes due to the evolving threat landscape, or as new controls are added, security control settings are automatically updated for accounts assigned to the Standard or Strict preset security policy.
 
-Did you know that when a best practice for a security control changes due to the evolving threat landscape, or as new controls are added, Microsoft *automatically* updates security control settings for users assigned to a *Standard* or *Strict* preset security policy?
+Standard and Strict preset security policies apply predefined security control settings that reflect recommended best practices and are maintained by the service.
 
-By using preset security policies (*Standard* or *Strict*), you'll always have Microsoft's *recommended, best practice, configuration* for your users.
-
-**Use the steps below** to apply preset security policies and have Microsoft Defender for Office 365 manage and maintain security controls *for you*.
+Use the steps below to assign accounts to a Standard or Strict preset security policy and allow Defender for Office 365 to manage ongoing security control updates.
 
 ## What you will need
 
@@ -73,6 +71,6 @@ Once you've chosen between the Standard and Strict security preset policies for 
 Use config analyzer to determine if your users are configured per Microsoft's best practices.
 
 > [!TIP]
-> Configuration analyzer allows admins to find and fix threat policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out more about Configuration analyzer [in this article](../configuration-analyzer-for-security-policies.md).
+> Configuration analyzer allows admins to find and fix threat policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out mout Configuration analyzer [in this article](../configuration-analyzer-for-security-policies.md).
 
-We always recommend preset security policies because they *ensure* admins are exercising Microsoft best practices. However, customized configurations are required is some cases. Learn about the reasons to use custom threat policies [in this article](../mdo-deployment-guide.md#determine-your-protection-policy-strategy).
+We recommend preset security policies because they *ensure* admins are exercising Microsoft best practices. However, customized configurations are required is some cases. Learn about the reasons to use custom threat policies [in this article](../mdo-deployment-guide.md#determine-your-protection-policy-strategy).
