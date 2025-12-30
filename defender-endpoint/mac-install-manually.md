@@ -69,13 +69,13 @@ Download the installation and onboarding packages from Microsoft Defender portal
 
 To complete this process, you must have admin privileges on the device.
 
-1. Do one of the following steps:
+Do one of the following steps:
 
 - Navigate to the downloaded *wdav.pkg* in **Finder** and open it.
 
    Or
 
-   - You can download the *wdav.pkg*- from **Terminal**.
+- You can download the *wdav.pkg*- from **Terminal**.
    
      ```console
      sudo installer -pkg /Users/admin/Downloads/wdav.pkg -target /
