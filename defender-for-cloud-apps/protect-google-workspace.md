@@ -85,7 +85,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure Google Workspace
 
-As a Google Workspace Super Admin,perform these steps to prepare your enviornment. 
+As a Google Workspace Super Admin, perform these steps to prepare your environment.
 
 1.  Sign in to the [Google Workspace](https://console.cloud.google.com) as a Super Admin.
 
@@ -109,11 +109,11 @@ As a Google Workspace Super Admin,perform these steps to prepare your enviornmen
 
     1. Email
     
-1. Create a new key.Download and save the fiule and the password required to sue the file.
+1. Create a new key. Download and save the file and the password required to sue the file.
 
 1. In the API controls, add a new Client ID in the Domain Wide Delegation, using the Client ID you copied above.
 
-1. Add the following authorizations.Enter the following list of required scopes (copy the text and paste it in the **OAuth Scopes** box):
+1. Add the following authorizations. Enter the following list of required scopes (copy the text and paste it in the **OAuth Scopes** box):
 
      ```txt
 
