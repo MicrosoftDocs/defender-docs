@@ -73,22 +73,22 @@ Device configuration management monitors baseline compliance only of Windows 10 
    > [!TIP]
    > Alternatively, you can navigate to the Defender for Endpoint security baseline in the Microsoft Azure portal from **All services > Intune > Device security > Security baselines > Microsoft Defender ATP baseline**.
 
-2. Create a new profile.
+1. Create a new profile.
 
    :::image type="content" source="media/secconmgmt-baseline-intuneprofile1.png" alt-text="The Create profile tab in the Microsoft Defender for Endpoint security baseline overview on Intune" lightbox="media/secconmgmt-baseline-intuneprofile1.png":::<br>
    *Microsoft Defender for Endpoint security baseline overview on Intune*
 
-3. During profile creation, you can review and adjust specific settings on the baseline.
+1. During profile creation, you can review and adjust specific settings on the baseline.
 
    :::image type="content" source="media/secconmgmt-baseline-intuneprofile2.png" alt-text="The Security baseline options during profile creation on Intune" lightbox="media/secconmgmt-baseline-intuneprofile2.png":::<br>
    *Security baseline options during profile creation on Intune*
 
-4. Assign the profile to the appropriate device group.
+1. Assign the profile to the appropriate device group.
 
    :::image type="content" source="media/secconmgmt-baseline-intuneprofile3.png" alt-text="The Security baseline profiles on Intune" lightbox="media/secconmgmt-baseline-intuneprofile3.png":::<br>
    *Assigning the security baseline profile on Intune*
 
-5. Create the profile to save it and deploy it to the assigned device group.
+1. Create the profile to save it and deploy it to the assigned device group.
 
    :::image type="content" source="media/secconmgmt-baseline-intuneprofile4.png" alt-text="Assigning the security baseline on Intune" lightbox="media/secconmgmt-baseline-intuneprofile4.png":::<br>
    *Creating the security baseline profile on Intune*

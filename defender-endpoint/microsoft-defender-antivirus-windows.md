@@ -101,9 +101,9 @@ You can use one of several methods, such as the Windows Security app or Windows 
 
 1. On your Windows device, select the **Start** menu, and begin typing `Security`. Then open the Windows Security app in the results.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Who's protecting me?**, choose **Manage Providers**.
+1. Under **Who's protecting me?**, choose **Manage Providers**.
 
 You'll see the name of your antivirus/antimalware solution on the security providers page.
 
@@ -111,9 +111,9 @@ You'll see the name of your antivirus/antimalware solution on the security provi
 
 1. Select the **Start** menu, and begin typing `PowerShell`. Then open Windows PowerShell in the results.
 
-2. Type `Get-MpComputerStatus`.
+1. Type `Get-MpComputerStatus`.
 
-3. In the list of results, look at the **AMRunningMode** row.
+1. In the list of results, look at the **AMRunningMode** row.
 
    - **Normal** means Microsoft Defender Antivirus is running in active mode.
 

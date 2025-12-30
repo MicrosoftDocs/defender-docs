@@ -62,8 +62,8 @@ The **Prevalence** section displays how many devices have connected to this IP a
 **Investigate an external IP:**
 
 1. Enter the IP address in the **Search** field.
-2. Select the IP suggestion box and open the IP side panel.
-3. Select **Enter**.
+1. Select the IP suggestion box and open the IP side panel.
+1. Select **Enter**.
 
 Details about the IP address are displayed, including: registration details (if available), prevalence of devices in the organization that communicated with this IP Address (during selectable time period), and the devices in the organization that were observed communicating with this IP address.
 
