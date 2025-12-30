@@ -10,8 +10,6 @@ ms.date: 12/15/2025
 
 # Use a custom Data Collection Rule (DCR) for Defender for Servers ingestion
 
-You can use a custom Data Collection Rule (DCR) to customize how security events are collected and sent to Log Analytics for Defender for Servers. 
-
 You can use a custom Data Collection Rule (DCR) to control which Windows Security events are sent to Log Analytics for Defender for Servers. This can help reduce ingestion volume by filtering out events you don’t need.
 
 With a custom DCR, you can:
@@ -24,7 +22,7 @@ With a custom DCR, you can:
 
 Before you create a custom DCR, make sure:
 
-- Azure Monitor Agent (AMA) is installed on the machines that will send data to Log Analytics.
+- Azure Monitor Agent (AMA) is installed on the machines that send data to Log Analytics.
 
 - A Log Analytics workspace exists in the same region as the DCR.
 
