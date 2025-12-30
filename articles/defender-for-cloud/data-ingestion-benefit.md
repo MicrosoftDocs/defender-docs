@@ -24,10 +24,11 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 When Defender for Servers Plan 2 is enabled on a Log Analytics workspace, the 500 MB/day data ingestion benefit is applied automatically to eligible security tables when data is ingested into them.
 
 > [!NOTE]
-> The 500 MB/day benefit depends on the workspace billing model:
+> The 500 MB/day benefit is applied based on the workspace billing model:
 >
-> - **Microsoft Sentinel classic meters**: Applies only to Log Analytics ingestion.
-> - **Microsoft Sentinel simplified (unified) meters**: There’s no separate Log Analytics ingestion meter, so the benefit applies to Sentinel ingestion.
+> - **Microsoft Sentinel classic meters**: Applies to Log Analytics ingestion only.
+> - **Microsoft Sentinel simplified (unified) meters**: The benefit applies to Sentinel ingestion.
+
 
 ## Prerequisites
 
