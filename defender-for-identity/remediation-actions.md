@@ -60,7 +60,7 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 | Deactivate | N\A | N\A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator
 | Set identity risk to High/Medium/Low  | N\A | N\A | A custom role defined with permissions for Response (manage) or One of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator
 
-> [!NOTE]  Microsoft Entra ID Remediation actions have restrictions on performing certain actions on other roles. Please refer to this [link](https://learn.microsoft.com/en-us/graph/api/resources/users?view=graph-rest-1.0#who-can-perform-sensitive-actions) for more information 
+> [!NOTE]  There are some limitations for Microsoft Entra ID when performing certain actions on other roles. See [here](https://learn.microsoft.com/graph/api/resources/users?view=graph-rest-1.0#who-can-perform-sensitive-actions) for more information.
 
 ## Related videos
 
