@@ -60,7 +60,7 @@ On at least two devices that are experiencing the same issue, obtain the `.cab` 
    mpcmdrun.exe -GetFiles
    ```
 
-4. A `.cab` file is generated that contains various diagnostic logs. The location of the file is specified in the output in the command prompt. By default, the location is `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
+1. A `.cab` file is generated that contains various diagnostic logs. The location of the file is specified in the output in the command prompt. By default, the location is `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
 
    > [!NOTE]
    > To redirect the cab file to a different path or UNC share, use the following command:
@@ -103,7 +103,7 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 
 1. Open the Local Group Policy Editor and find the SupportLogLocation GPO at: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SupportLogLocation`.
 
-2. Select **Define the directory path to copy support log files**.
+1. Select **Define the directory path to copy support log files**.
 
    :::image type="content" source="media/GPO1-SupportLogLocationDefender.png" alt-text="The local group policy editor" lightbox="media/GPO1-SupportLogLocationDefender.png":::
 
@@ -113,14 +113,13 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
         
    :::image type="content" source="media/GPO2-SupportLogLocationGPPage.png" alt-text="The define path for configuring the log files setting" lightbox="media/GPO2-SupportLogLocationGPPage.png":::
  
-3. Inside the policy editor, select **Enabled**.
+1. Inside the policy editor, select **Enabled**.
 
-4. Specify the directory path where you want to copy the support log files in the **Options** field.
+1. Specify the directory path where you want to copy the support log files in the **Options** field.
    
    :::image type="content" source="media/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="Screenshot showing the enabled directory path custom setting." lightbox="media/GPO3-SupportLogLocationGPPageEnabledExample.png":::
 
-5. Select **OK** or **Apply**.
-
+1. Select **OK** or **Apply**.
 ## See also
 
 - [Troubleshoot Microsoft Defender Antivirus reporting](/mem/intune/protect/advanced-threat-protection-configure)

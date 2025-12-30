@@ -47,16 +47,16 @@ Using Configuration Manager with tenant attach, you can turn on (or off) the tam
 
 1. Set up tenant attach. To learn more, see [Get started: Create and deploy endpoint security policies from the admin center](/mem/configmgr/tenant-attach/endpoint-security-get-started).
 
-2. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** \> **Antivirus**, and then choose **+ Create Policy**.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** \> **Antivirus**, and then choose **+ Create Policy**.
 
    - In the **Platform** list, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
    - In the **Profile** list, select **Windows Security experience (preview)**.
 
-3. On the **Configuration settings** step, under **Windows Security**, set **Enable tamper protection to prevent Microsoft Defender from being disabled** to **Enabled**.
+1. On the **Configuration settings** step, under **Windows Security**, set **Enable tamper protection to prevent Microsoft Defender from being disabled** to **Enabled**.
 
-4. Finish selecting options and settings for your policy.
+1. Finish selecting options and settings for your policy.
 
-5. Deploy the policy to your devices.
+1. Deploy the policy to your devices.
 
     :::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
 

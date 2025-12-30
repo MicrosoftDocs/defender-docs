@@ -348,11 +348,11 @@ You can disable the automatic exclusion lists with Group Policy, PowerShell cmdl
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)). Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration**, and then select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration**, and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
 
-4. Double-click **Turn off Auto Exclusions**, and set the option to **Enabled**. Then select **OK**.
+1. Double-click **Turn off Auto Exclusions**, and set the option to **Enabled**. Then select **OK**.
 
 ### Use PowerShell cmdlets to disable the auto-exclusions list on Windows Server
 
