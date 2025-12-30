@@ -198,7 +198,7 @@ You can filter the information on the tab by selecting **Add filter**, and then 
   - **Block abuse of exploited vulnerable signed drivers**
 
   > [!TIP]
-  > To view all rules triggered, use the [DeviceEvents table in advanced hunting](../defender-xdr/advanced-hunting-deviceevents-table.md).
+  > To view all rules triggered, use the [DeviceEvents table in advanced hunting](/defender-xdr/advanced-hunting-deviceevents-table).
   >
   > Currently, the number of individual _detected_ items listed in the details table is limited to 200 rules. Use **Export** to save the full list of detections to a CSV file.
 
