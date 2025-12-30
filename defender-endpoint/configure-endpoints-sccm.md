@@ -110,6 +110,7 @@ Follow these steps to create a device collection that can be used to onboard end
     :::image type="content" source="media/configmgr-membership-rules.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard8.":::
 
 1. Select **Next**.
+
     :::image type="content" source="media/configmgr-confirm.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard9.":::
 
 After completing this task you have a device collection with all the Windows endpoints in the environment.
