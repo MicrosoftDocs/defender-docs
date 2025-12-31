@@ -50,7 +50,7 @@ Our Strict preset security policy has more aggressive limits and settings for se
 Once you've chosen between the Standard and Strict security preset policies for your users, it takes a few further steps to assign users to each preset.
 
 1. Identify the users, groups, or domains you would like to include in Standard and Strict security presets.
-1. Log in to the Microsoft Security portal at <https://security.microsoft.com>.
+1. Sign in to the Microsoft Security portal at <https://security.microsoft.com>.
 1. On the left nav, under **Email & collaboration**, select **Policies & rules**.
 1. Select **Threat policies**.
 1. Select **Preset Security Policies** underneath the **Templated policies** heading
@@ -71,6 +71,6 @@ Once you've chosen between the Standard and Strict security preset policies for 
 Use config analyzer to determine if your users are configured per Microsoft's best practices.
 
 > [!TIP]
-> Configuration analyzer allows admins to find and fix threat policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out mout Configuration analyzer [in this article](../configuration-analyzer-for-security-policies.md).
+> Configuration analyzer allows admins to find and fix threat policies where the settings are below the Standard or Strict protection profile settings in preset security policies. For more information, see [Configuration analyzer for threat policies in cloud organizations](../configuration-analyzer-for-security-policies.md).
 
 We recommend preset security policies because they *ensure* admins are exercising Microsoft best practices. However, customized configurations are required is some cases. Learn about the reasons to use custom threat policies [in this article](../mdo-deployment-guide.md#determine-your-protection-policy-strategy).
