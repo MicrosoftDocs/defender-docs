@@ -1,42 +1,14 @@
 ---
 title: Network requirements 
 description: This article describes the IP addresses and ports you need to open to work with Defender for Cloud Apps.
-ms.date: 04/06/2025
+ms.date: 12/17/2025
 ms.topic: reference
 author: AbbyMSFT
 ms.author: abbyweisberg
+ms.reviewer: Naama-Goldbart
 ---
 
 # Network requirements
-
->[!IMPORTANT]
-> **Important notice for GCC and Gov customers**
->
-> To prevent service disruption in Microsoft Defender for Cloud Apps, take immediate action by August 25, 2025.
-> Update your firewall configuration as follows:
->
-> Allow outbound traffic on port 443 to the following IP ranges:
->
-> - `51.54.53.136/29`
-> - `51.54.114.160/29`
-> - `62.11.173.176/29`
->
-> For all Gov US1 customers, allow outbound traffic on port 443 to the following IP ranges:
->
-> - `62.11.165.44`
-> - `20.140.131.96`
->
-> For all GCC customers, allow outbound traffic on port 443 to the following IP ranges:
->
-> - `62.11.165.45`
-> - `52.227.23.181`
->
-> If you use Azure service tags for outbound traffic, add the Azure Gov service tag `AzureFrontDoor.MicrosoftSecurity` tag to your firewall allowlist.
->
-> Add the following endpoint to your firewall allowlist on port 443:
-> - `discoveryresources-cdn-prod.cloudappsecurity.com`
->
-> For the full list of required IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
 
 This article provides a list of ports and IP addresses you need to allow and allowlist to work with Microsoft Defender for Cloud Apps.
 
@@ -61,8 +33,6 @@ To see which data center you're connecting to, do the following steps:
 1. In the **About** screen, you can see the region and the data center.
 
     ![View your data center.](media/data-center.png)
-
-
    
 ## Portal access
 
@@ -104,7 +74,7 @@ Access and session control regions help provide a faster user experience and inc
 
 Users are likely to be served from the closest region. For example, a user with a UK IP address is probably to be served by the UK West region.
 
-When there's a high load or outage, the user may be served from a different region.
+When there's a high load or outage, the user might be served from a different region.
 
 Configure your firewall for Conditional Access app control using the settings relevant to your environment. Microsoft Edge users benefit from in-browser protection. Access and session controls are applied in other browsers using a reverse proxy.
 
@@ -188,10 +158,10 @@ To enable Defender for Cloud Apps to connect to your SIEM, add **outbound port 4
 
 ## App connector
 
-For some third-party apps to be accessed by Defender for Cloud Apps, these IP addresses may be used. The IP addresses enable Defender for Cloud Apps to collect logs and provide access for the Defender for Cloud Apps console.
+For some third-party apps to be accessed by Defender for Cloud Apps, these IP addresses might be used. The IP addresses enable Defender for Cloud Apps to collect logs and provide access for the Defender for Cloud Apps console.
 
 > [!NOTE]
-> You may see these IP addresses in activity logs from the vendor because Defender for Cloud Apps performs governance actions and scans from these IP addresses.
+> You might see these IP addresses in activity logs from the vendor because Defender for Cloud Apps performs governance actions and scans from these IP addresses.
 
 To connect to third-party apps, enable Defender for Cloud Apps to connect from these IP addresses:
 
@@ -241,7 +211,6 @@ To enable cloud discovery features using a log collector and detect Shadow IT in
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Best practices for protecting your organization](best-practices.md)
+- [Best practices for protecting your organization](best-practices.md)
 
 [!INCLUDE [Open support ticket](includes/support.md)]

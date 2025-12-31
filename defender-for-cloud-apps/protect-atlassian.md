@@ -69,6 +69,10 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 > [!NOTE]
 > The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
+### API key scopes 
+> read:jira-work – to read Jira issues and projects
+> read:confluence-content.all – to read Confluence content
+> read:confluence-space.summary – to access Confluence space metadata
 
 ### Prerequisites
 

@@ -62,6 +62,15 @@ Empty
 
 If successful, this method returns 200 OK with the list of vulnerabilities in the body.
 
+The possible values for the `status` field are:
+
+- RemediationRequired
+- NoActionRequired 
+- UnderException 
+- PartialException
+
+This field is supported for [CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#cve-exceptions-preview).
+
 ## Example
 
 ### Request example
@@ -98,7 +107,8 @@ Here's an example of the response.
             "exploitUris": [],
             "cveSupportability": "Supported",
             "tags": [],
-            "epss": 0.632
+            "epss": 0.632,
+            "status": "RemediationRequired",
         }
     ]
 
