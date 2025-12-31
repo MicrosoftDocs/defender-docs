@@ -10,7 +10,7 @@ ms.reviewer: AmitMishaeli
 
 As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
 
-Connecting ServiceNow to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, and information protection detections such as identifying when sensitive customer information is uploaded to the ServiceNow cloud.
+Connecting ServiceNow to Defender for Cloud Apps improves insights into your users' activities. It also helps detect threats using machine-learning anomaly detection and information protection, such as identifying when sensitive customer data is uploaded to ServiceNow.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -141,17 +141,10 @@ For more information, see the [ServiceNow product documentation](https://docs.se
    - Increase the **Access Token Lifespan** to at least 3,600.
       
  
-1. Update the lifespan of the refresh token:
-
-   
-   1. Select the name of the OAuth that was defined, and change **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
-   
+1. Select the name of the OAuth that was defined, and change the **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
    
 1. Establish an internal procedure to ensure that the connection remains active.
-    1. Before the expected expiration of the refresh token, revoke the old refresh token.
-    1. In the ServiceNow portal, search for **System OAuth**, and then select **Manage Tokens**.
-    1. Select the old token from the list according to the OAuth name and expiration date.
-    1. Select **Revoke Access > Revoke**.
+    1. Before the expected expiration of the refresh token, make sure to revoke the old refresh token.
     1. In the Microsoft Defender Portal, edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
 
     > [!NOTE]
