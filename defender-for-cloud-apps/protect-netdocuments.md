@@ -78,7 +78,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Copy your repository ID. You'll need it later.
 
-1. Record the URL of your account (it should be one of URLs in the following list). You'll need this information later.
+1. Record your account URL. It must match one of the URLs listed in the table below. You'll need this information later.
 
     | Location       |              URL            |
     | -------------- | --------------------------- |
