@@ -4,8 +4,8 @@ description: Provides an overview of features and functionality in the Microsoft
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 11/15/2024
 audience: ITPro

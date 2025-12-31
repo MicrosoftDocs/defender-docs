@@ -4,8 +4,8 @@ description: Investigate incidents on various assets from correlated signals of 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: edbaynash
-author: EdB-MSFT
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -89,7 +89,7 @@ The ***go hunt*** action takes advantage of the [advanced hunting](advanced-hunt
   - Related Alerts – the query searches for and returns all security alerts involving a specific entity, ensuring you don't miss any information.
   - All User anomalies (Preview) – the query returns all anomalies associated with the user from the past 30 days, helping you identify unusual behavior that might be relevant to the incident. Available only for user entities if you have enabled [Microsoft Sentinel User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
 
-:::image type="content" source="./media/investigate-incidents/gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="./media/investigate-incidents/gohunt-attackstory.png":::
+:::image type="content" source="./media/investigate-incidents/gohunt-attackstory.png" alt-text="Screenshot where the Go Hunt option is selected on a device in an attack story." lightbox="./media/investigate-incidents/gohunt-attackstory.png":::
 
 The resulting logs or alerts can be linked to an incident by selecting a result and then selecting *Link to incident*.
 
@@ -98,7 +98,7 @@ The resulting logs or alerts can be linked to an incident by selecting a result 
 If the incident or related alerts were the result of an analytics rule you've set, you can also select ***Run query*** to see other related results.
 
 > [!IMPORTANT]
-> Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Some information in this article relates to a pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ### Blast radius analysis
 
@@ -110,6 +110,7 @@ Blast radius analysis is an advanced graph visualization integrated into inciden
 The blast radius graph provides a unique unified view of both prebreach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, the blast radius graph helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
 
 The following prerequisites are required to use the blast radius graph:
+
 +	You must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
 +	Exposure management (read) permission or higher. For more information, see [Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)](/security-exposure-management/prerequisites#manage-permissions-with-microsoft-defender-xdr-unified-role-based-access-control-rbac).
 > [!IMPORTANT]
@@ -132,14 +133,14 @@ Select a node to open the context menu, then select **View blast radius**.  To v
 
 :::image type="content" source="./media/investigate-incidents/blast-radius.png" lightbox="./media/investigate-incidents/blast-radius.png" alt-text="Screenshot showing the blast radius context menu item." :::
 
-A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius list** above the graph. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target.  Some nodes may not have paths associated with them.
+A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius list** above the graph. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target. Some nodes may not have paths associated with them.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-graph.png" lightbox="./media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
 
 For an explanation of the icons used for nodes and edges in the blast radius graph, see [Understanding graphs and visualizations in Microsoft Defender](understand-graph-icons.md).
 
 
-Select **View blast radius list** to see a list of target assets.  Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
+Select **View blast radius list** to see a list of target assets. Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
 
 When paths lead to grouped targets of the same types, to view discrete paths to targets, select the grouped icons. A right-side panel opens showing all the targets in the group. Selecting the check box on the left and selecting the **Expand** button on top displays each target and its paths separately.
 

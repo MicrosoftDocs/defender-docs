@@ -103,18 +103,18 @@ The Clicks tab provides a detailed view of all the clicks to the URL or domain o
 
 1. Select **URL** from the **Search bar** drop-down menu.
 
-2. Enter the URL in the **Search** field. Alternatively, you can navigate to the URL or domain from the **Incident attack story tab**, from the **device timeline**, through **advanced hunting**, or from the **email side panel and page**.
+1. Enter the URL in the **Search** field. Alternatively, you can navigate to the URL or domain from the **Incident attack story tab**, from the **device timeline**, through **advanced hunting**, or from the **email side panel and page**.
 
-3. Click the search icon or press **Enter**. Details about the URL are displayed.
+1. Click the search icon or press **Enter**. Details about the URL are displayed.
 
    > [!NOTE]
    > Search results will only be returned for URLs observed in communications from devices in the organization.
 
-4. Use the search filters to define the search criteria. You can also use the timeline search box to filter the displayed results of all devices in the organization observed communicating with the URL, the file associated with the communication and the last date observed.
+1. Use the search filters to define the search criteria. You can also use the timeline search box to filter the displayed results of all devices in the organization observed communicating with the URL, the file associated with the communication and the last date observed.
 
-5. Clicking any of the device names will take you to that device's view, where you can continue to investigate reported alerts, behaviors, and events.
+1. Clicking any of the device names will take you to that device's view, where you can continue to investigate reported alerts, behaviors, and events.
 **
-6. If you disagree with the verdict of a URL or domain, you can report it to Microsoft as *clean*, *phishing*, or *malicious* by selecting **Submit to Microsoft for analysis.
+1. If you disagree with the verdict of a URL or domain, you can report it to Microsoft as *clean*, *phishing*, or *malicious* by selecting **Submit to Microsoft for analysis.
 
 :::image type="content" source="/defender/media/investigate-urls/investigate-url-submission.png" alt-text="Submit for analysis option in the URL/domain page" lightbox="/defender/media/investigate-urls/investigate-url-submission.png":::
 

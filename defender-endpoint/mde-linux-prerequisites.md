@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/11/2025
+ms.date: 12/10/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -75,11 +75,15 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Red Hat Enterprise Linux 10.x
 - CentOS 7.2 and higher, excluding CentOS Stream
 - CentOS 8.x
+- CentOS Stream 8.x
+- CentOS Stream 9.x
+- CentOS Stream 10.x
 - Ubuntu 16.04 LTS
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
+- Ubuntu Pro
 - Debian 9 - 12
 - SUSE Linux Enterprise Server 12.x
 - SUSE Linux Enterprise Server 15.x
@@ -97,9 +101,13 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 **The following Linux server distributions on ARM64 are now GA:**
 
-- Ubuntu 20.04 ARM64
-- Ubuntu 22.04 ARM64
-- Ubuntu 24.04 ARM64
+- Ubuntu 20.04 LTS ARM64
+- Ubuntu 22.04 LTS ARM64
+- Ubuntu 24.04 LTS ARM64
+- Ubuntu Pro ARM64
+- CentOS Stream 8.x ARM64
+- CentOS Stream 9.x ARM64
+- CentOS Stream 10.x ARM64
 - Debian 11, 12 ARM64
 - Amazon Linux 2 ARM64
 - Amazon Linux 2023 ARM64
@@ -117,9 +125,10 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > [!WARNING]
 > Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
 > If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
-> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).> **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
+> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+> **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
 >
->
+
 
 ## Supported filesystems for real-time protection and quick, full, and custom scans
 
@@ -149,12 +158,12 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
 
-2. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
+1. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
 
    - Transparent proxy
    - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration)
 
-3. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
+1. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE]
 > Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
@@ -166,7 +175,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
 > Adding your interception certificate to the global store doesn't enable interception.
 
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
 
 ## External package dependency
 

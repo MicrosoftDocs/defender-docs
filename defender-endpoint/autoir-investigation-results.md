@@ -45,9 +45,9 @@ You can open the investigation details view by using one of the following method
 The improved [Action center](auto-investigation-action-center.md) brings together [remediation actions](manage-auto-investigation.md#remediation-actions) across your devices, email & collaboration content, and identities. Listed actions include remediation actions that were taken automatically or manually. In the Action center, you can view actions that are awaiting approval and actions that were already approved or completed. You can also navigate to more details, such as an investigation page.
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and sign in.
-2. In the navigation pane, choose **Action center**.
-3. On either the **Pending** or **History** tab, select an item. Its flyout pane opens.
-4. Review the information in the flyout pane, and then take one of the following steps:
+1. In the navigation pane, choose **Action center**.
+1. On either the **Pending** or **History** tab, select an item. Its flyout pane opens.
+1. Review the information in the flyout pane, and then take one of the following steps:
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
    - Select **Reject** to prevent a pending action from being taken.
@@ -58,10 +58,10 @@ The improved [Action center](auto-investigation-action-center.md) brings togethe
 Use an incident details page to view detailed information about an incident, including alerts that were triggered information about any affected devices, user accounts, or mailboxes.
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and sign in.
-2. In the navigation pane, choose **Incidents & alerts** \> **Incidents**.
-3. Select an item in the list, and then choose **Open incident page**.
-4. Select the **Investigations** tab, and then select an investigation in the list. Its flyout pane opens.
-5. Select **Open investigation page**.
+1. In the navigation pane, choose **Incidents & alerts** \> **Incidents**.
+1. Select an item in the list, and then choose **Open incident page**.
+1. Select the **Investigations** tab, and then select an investigation in the list. Its flyout pane opens.
+1. Select **Open investigation page**.
 
 ## Investigation details
 
