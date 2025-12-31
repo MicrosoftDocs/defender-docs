@@ -174,6 +174,18 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
 After connecting ServiceNow, you'll receive events for 1 hour prior to connection.
 
+### Legacy ServiceNow connection
+
+To connect ServiceNow with Defender for Cloud Apps, you must have admin-level permissions and make sure the ServiceNow instance supports API access.
+
+1. Sign in with an Admin account to your ServiceNow account.
+
+1. Create a new service account for Defender for Cloud Apps and attach the Admin role to the newly created account.
+
+1. Make sure the REST API plug-in is turned on.
+
+1. Follow the steps in the [Connect ServiceNow to Microsoft Defender for Cloud Apps](#connect-servicenow-to-microsoft-defender-for-cloud-apps) section above.
+
    
 ## Next steps
 
