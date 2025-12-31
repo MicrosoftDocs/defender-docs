@@ -82,7 +82,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Sign in to the Atlassian Admin portal with an admin account.
 
-1. Go to **Settings -> API keys** > **Create API key**. For more information, see:[Manage an organization with the admin APIs](https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/).
+1. **Create an API key**. For more information, see:[Manage an organization with the admin APIs](https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/).
 
 
 1. Give the following values to the API key:
