@@ -44,7 +44,7 @@ These analytics rules detect suspicious activity using SAP BTP audit logs. The r
 
 **Data sources**: SAPBTPAuditLog_CL
 
-### SAP Cloud Integration
+### SAP Cloud Integration - Integration Suite
 
 | Rule name | Description | Source action | Tactics |
 | --------- | --------- | --------- | --------- |
@@ -54,7 +54,7 @@ These analytics rules detect suspicious activity using SAP BTP audit logs. The r
 | **BTP - Cloud Integration package import or transport** | Detects potentially malicious package imports that could introduce backdoors, supply chain compromises, or unauthorized code into the integration environment. | Import or transport integration packages/artifacts in SAP Cloud Integration. | Initial Access, Persistence |
 | **BTP - Cloud Integration tampering with security material** | Detects unauthorized access to credentials, certificates, and encryption keys that could enable attackers to compromise external systems or intercept encrypted communications. | Create, update, or delete credentials, X.509 certificates, or PGP keys in SAP Cloud Integration. | Credential Access, Defense Evasion |
 
-### SAP Cloud Identity Service
+### SAP Cloud Identity Service - Identity Authentication
 
 | Rule name | Description | Source action | Tactics |
 | --------- | --------- | --------- | --------- |
