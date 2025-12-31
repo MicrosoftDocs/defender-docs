@@ -18,6 +18,9 @@ Microsoft Defender for IoT alerts enhance your network security and operations w
 
     For more information, see [Securing IoT devices in the enterprise](concept-enterprise.md) and the [Alerts queue in Microsoft Defender XDR](/microsoft-365/security/defender-endpoint/alerts-queue-endpoint-detection-response).
 
+> [!TIP]
+> You can use different areas in Defender for IoT to investigate alerts, and drill down into device and network details, violations, and more. For more information, see [Investigate alerts](alerts.md#investigate-alerts).
+
 ## Prerequisites
 
 - **To have alerts in Defender for IoT**, you must have an [OT](onboard-sensors.md) onboarded, and network data streaming into Defender for IoT.
