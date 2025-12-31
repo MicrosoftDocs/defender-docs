@@ -30,7 +30,7 @@ As part of the integration, you can create and monitor tickets in ServiceNow dir
 
 As part of the governance capabilities within Defender for Cloud, you can enable a bi-directional integration between ServiceNow and Defender for Cloud, for the creation of ITSM incidents, changes or problem tickets.
 
-Tickets can be initiated manually or automatically by leveraging governance automation rules.
+Tickets can be initiated manually or automatically by leveraging governance automation rules. When using governance automation rules with the ServiceNow integration, the selected owner must resolve to a ServiceNow user or assignment group.
 
 > [!NOTE]
 > Synchronization occurs every 24 hrs.
