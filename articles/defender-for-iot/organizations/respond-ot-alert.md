@@ -51,6 +51,8 @@ After updating the status, check the alert details page for the following detail
 
 - **Download PCAP**. At the top of the page, select **Download PCAP** to [download the raw traffic files](how-to-manage-cloud-alerts.md#access-alert-pcap-data) for the selected alert.
 
+- **Sensor information**. Review the **Sensor**, **SiteDisplayName**, and **SensorZone** fields and other sensor information to provide context about the sensor that triggered the alert. To investigate alerts that don't correlate with specific sensors, see [Investigate alerts in multi-sensor environments](#investigate-alerts-in-multi-sensor-environments).
+
 ## Investigate related alerts on the Azure portal
 
 Look for other alerts triggered by the same source or destination device. Correlations between multiple alerts may indicate that the device is at risk and can be exploited.
@@ -66,6 +68,14 @@ For example, a device that attempted to connect to a malicious IP, together with
 1. On the device details page, select the **Alerts** tab to view all alerts for that device. For example:
 
     :::image type="content" source="media/iot-solution/device-details-alerts.png" alt-text="Screenshot of the Alerts tab on a device details page.":::
+
+### Investigate alerts that don't correlate with specific sensors
+
+In some cases, alerts in the Azure portal might not correlate with specific sensors. This can happen in environments where multiple sensors are deployed in the same zone, and the alert is triggered by traffic that only one of the sensors detects. The alert may be triggered by a specific sensor's configuration (like a device marked as a scanner in one sensor but not in another), leading to alerts that only appear in specific contexts.
+
+In this case, the sensor that generates the alert may not have full information about the configuration in other sensors, so the alert is valid for that sensor's context but may not reflect the overall environment.
+
+To investigate alerts in this scenario, see the **Sensor**, **SiteDisplayName**, and **SensorZone** fields in the alert's **Alert details** tab to identify the sensor that generated the alert. You can then review that sensor's configuration and context to understand why the alert was triggered.
 
 ## Investigate alert details on the OT sensor
 
