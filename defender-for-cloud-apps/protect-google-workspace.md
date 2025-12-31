@@ -90,7 +90,6 @@ As a Google Workspace Super Admin, perform these steps to prepare your environme
 1. Copy the **Project number**. You'll need it later.
 
 1. Enable the following APIs:
-
     - Admin SDK API
     - Google Drive API
 
@@ -105,6 +104,7 @@ As a Google Workspace Super Admin, perform these steps to prepare your environme
 1. Copy the following information of the service account. You'll need it later
 
     1. Email
+    2. Client ID
     
 1. Create a new key. Download and save the file and the password required to sue the file.
 
