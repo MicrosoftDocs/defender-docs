@@ -40,13 +40,49 @@ For more information, see [Tutorial: Visualize and monitor your data](../monitor
 
 ## Built-in analytics rules
 
+These analytics rules detect suspicious activity using SAP BTP audit logs. The rules are organized by SAP service or product area. For more information about security events logged by SAP BTP services, see [Security Events Logged by Cloud Foundry Services](https://help.sap.com/docs/btp/sap-business-technology-platform/security-events-logged-by-cf-services?version=Cloud).
+
+**Data sources**: SAPBTPAuditLog_CL
+
+### SAP Cloud Integration
+
 | Rule name | Description | Source action | Tactics |
 | --------- | --------- | --------- | --------- |
-| **BTP - Failed access attempts across multiple BAS subaccounts** |Identifies failed Business Application Studio (BAS) access attempts over a predefined number of subaccounts.<br>Default threshold: 3 | Run failed sign-in attempts to BAS over the defined threshold number of subaccounts. <br><br>**Data sources**: SAPBTPAuditLog_CL | Discovery, Reconnaissance |
-| **BTP - Malware detected in BAS dev space** |Identifies instances of malware detected by the SAP internal malware agent within BAS developer spaces. | Copy or create a malware file in a BAS developer space. <br><br>**Data sources**: SAPBTPAuditLog_CL| Execution, Persistence, Resource Development |
-| **BTP - User added to sensitive privileged role collection** |Identifies identity management actions where a user is added to a set of monitored privileged role collections. | Assign one of the following role collections to a user: <br>- `Subaccount Service Administrator`<br>- `Subaccount Administrator`<br>- `Connectivity and Destination Administrator`<br>- `Destination Administrator`<br>- `Cloud Connector Administrator` <br><br>**Data sources**: SAPBTPAuditLog_CL | Lateral Movement, Privilege Escalation |
-| **BTP - Trust and authorization Identity Provider monitor** |Identifies create, read, update, and delete (CRUD) operations on Identity Provider settings within a subaccount. | Change, read, update, or delete any of the identity provider settings within a subaccount. <br><br>**Data sources**: SAPBTPAuditLog_CL | Credential Access, Privilege Escalation |
-| **BTP - Mass user deletion in a subaccount** |Identifies user account deletion activity where the number of deleted users exceeds a predefined threshold.<br>Default threshold: 10 | Delete count of user accounts over the defined threshold. <br><br>**Data sources**: SAPBTPAuditLog_CL | Impact |
+| **BTP - Cloud Integration access policy tampering** | Identifies changes to access policies controlling authorization for integration artifacts in SAP Cloud Integration. | Create, change, or delete access policies or artifact references in SAP Cloud Integration. | Defense Evasion, Privilege Escalation |
+| **BTP - Cloud Integration artifact deployment** | Identifies deployment and undeployment of integration artifacts (flows) in SAP Cloud Integration. | Deploy or undeploy integration artifacts in SAP Cloud Integration. | Execution, Persistence |
+| **BTP - Cloud Integration JDBC data source changes** | Identifies deployment/undeployment of JDBC data source configurations containing database credentials in SAP Cloud Integration. | Deploy or undeploy JDBC data sources in SAP Cloud Integration. | Credential Access, Lateral Movement |
+| **BTP - Cloud Integration package import or transport** | Identifies import and transport operations for integration packages and artifacts in SAP Cloud Integration. | Import or transport integration packages/artifacts in SAP Cloud Integration. | Initial Access, Persistence |
+| **BTP - Cloud Integration tampering with security material** | Identifies operations on security material (credentials, certificates, keys) in SAP Cloud Integration. | Create, update, or delete credentials, X.509 certificates, or PGP keys in SAP Cloud Integration. | Credential Access, Defense Evasion |
+
+### SAP Cloud Identity Service
+
+| Rule name | Description | Source action | Tactics |
+| --------- | --------- | --------- | --------- |
+| **BTP - Cloud Identity Service application configuration monitor** | Identifies CRUD operations on application (SAML/OIDC) configurations in SAP Cloud Identity Service. | Create, update, or delete SSO domain/service provider configurations in SAP Cloud Identity Service. | Credential Access, Privilege Escalation |
+| **BTP - Mass user deletion in Cloud Identity Service** | Identifies mass user deletion activity in SAP Cloud Identity Service where the number of deleted users exceeds a predefined threshold.<br>Default threshold: 10 | Delete count of user accounts over the defined threshold in SAP Cloud Identity Service. | Impact |
+| **BTP - User added to privileged Administrators list** | Identifies users granted privileged administrator permissions (ManageIdP, ManageSP, ManageUsers, etc.) in SAP Cloud Identity Service. | Grant privileged administrator permissions to a user in SAP Cloud Identity Service. | Lateral Movement, Privilege Escalation |
+
+### SAP Business Application Studio (BAS)
+
+| Rule name | Description | Source action | Tactics |
+| --------- | --------- | --------- | --------- |
+| **BTP - Failed access attempts across multiple BAS subaccounts** | Identifies failed SAP Business Application Studio (BAS) access attempts over a predefined number of subaccounts.<br>Default threshold: 3 | Run failed sign-in attempts to BAS over the defined threshold number of subaccounts. | Discovery, Reconnaissance |
+| **BTP - Malware detected in BAS dev space** | Identifies instances of malware detected by the SAP internal malware agent within BAS developer spaces. | Copy or create a malware file in a BAS developer space. | Execution, Persistence, Resource Development |
+
+### SAP Build Work Zone
+
+| Rule name | Description | Source action | Tactics |
+| --------- | --------- | --------- | --------- |
+| **BTP - Build Work Zone unauthorized access and role tampering** | Identifies unauthorized OData access attempts and mass role/user deletions in SAP Build Work Zone Standard Edition. | Detect unauthorized OData service access or mass deletion of roles/users in SAP Build Work Zone. | Initial Access, Persistence, Defense Evasion |
+
+### SAP BTP platform and subaccounts
+
+| Rule name | Description | Source action | Tactics |
+| --------- | --------- | --------- | --------- |
+| **BTP - Audit log service unavailable** | Identifies SAP BTP subaccounts with no audit logs for an unusual period, indicating potential service tampering or availability issues. | Subaccount fails to report audit logs exceeding configured threshold (default: 60 minutes). | Defense Evasion |
+| **BTP - Mass user deletion in a subaccount** | Identifies user account deletion activity where the number of deleted users exceeds a predefined threshold.<br>Default threshold: 10 | Delete count of user accounts over the defined threshold. | Impact |
+| **BTP - Trust and authorization Identity Provider monitor** | Identifies create, read, update, and delete (CRUD) operations on Identity Provider settings within a subaccount. | Change, read, update, or delete any of the identity provider settings within a subaccount. | Credential Access, Privilege Escalation |
+| **BTP - User added to sensitive privileged role collection** | Identifies identity management actions where a user is added to a set of monitored privileged role collections. | Assign one of the following role collections to a user: <br>- `Subaccount Service Administrator`<br>- `Subaccount Administrator`<br>- `Connectivity and Destination Administrator`<br>- `Destination Administrator`<br>- `Cloud Connector Administrator` | Lateral Movement, Privilege Escalation |
 
 ## Next steps
 
