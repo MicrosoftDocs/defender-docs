@@ -55,7 +55,7 @@ Alert fatigue caused by a high number of identical alerts could lead to your tea
 You download the aggregated alert violation data, that lists each alert with the relevant parameters and functions, as a CSV file in the **Violations** tab of the alert details. This data can help teams to identify patterns, assess impact and prioritize responses more effectively based on the remediation suggestions in the **Take action** tab. Only alerts that have the same remediation process are aggregated into a single alert. However, individual violation events can still be viewed separately within their respective devices, providing additional clarity.
 
 > [!NOTE]
-> An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert (with the **Learn** option in the alert's **Take action** tab), the same alert might be triggered again. This can happen if the new alert has different violation parameters. To check which violations exist for an alert: 
+> After you learn an alert (with the **Learn** option in the alert's **Take action** tab), the same alert might be triggered again. This can happen if the new alert has different violation parameters than the original alert. To check which violations exist for an alert: 
 > - In the Azure portal, in the alert's **Violations** tab, select **Export**. 
 > - In the OT sensor console, in the alert's **Violations** tab, select **Download CSV**.
 
@@ -149,9 +149,11 @@ Use learning mode to perform an initial triage on the alerts in your network, *l
 
 For more information, see [Create a learned baseline of OT alerts](ot-deploy/create-learned-baseline.md).
 
-## Investigate alerts
+## Alert investigation and remediation
 
-Investigate alerts to understand the context of the alert, including the sensor that triggered the alert, the source and destination devices, and related activity on your OT network.
+Alert investigation allows you to understand the context of the alert, including the sensor that triggered the alert, the source and destination devices, and related activity on your OT network.
+
+After you triage and investigate an alert, you can take remediation actions to resolve any issues identified during your investigation.
 
 For more information, see [Investigate and respond to an OT network alert](respond-ot-alert.md).
 

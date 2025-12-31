@@ -19,7 +19,7 @@ Microsoft Defender for IoT alerts enhance your network security and operations w
     For more information, see [Securing IoT devices in the enterprise](concept-enterprise.md) and the [Alerts queue in Microsoft Defender XDR](/microsoft-365/security/defender-endpoint/alerts-queue-endpoint-detection-response).
 
 > [!TIP]
-> You can use different areas in Defender for IoT to investigate alerts, and drill down into device and network details, violations, and more. For more information, see [Investigate alerts](alerts.md#investigate-alerts).
+> You can use different areas in Defender for IoT to investigate alerts, and drill down into device and network details, violations, and more. For more information, see [Investigate and respond to and OT network alert](respond-ot-alert.md).
 
 ## Prerequisites
 
@@ -171,7 +171,7 @@ To reduce alert fatigue, multiple versions of the same alert violation with iden
 1. Select **Learn**, if needed. For more information, see [learning an alert](alerts.md#alert-statuses-and-triaging-options).
 
 > [!NOTE]
-> An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the CSV file you downloaded in step 3.
+> After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the CSV file you downloaded in step 3.
 
 ## Next steps
 
