@@ -261,7 +261,7 @@ Most functionalities of User and Entity Behavior Analytics (UEBA) remain the sam
 - After onboarding Microsoft Sentinel to the Defender portal, the `IdentityInfo` table used in the Defender portal includes unified fields from both Defender XDR and Microsoft Sentinel. Some fields that existed when used in the Azure portal are either renamed in the Defender portal, or aren't supported at all. We recommend that you check your queries for any references to these fields and update them as needed. For more information, see [IdentityInfo table](ueba-reference.md?tabs=unified-table#identityinfo-table).
 
 > [!IMPORTANT]
-> When you transition to the Defender portal, the `IdentityInfo` table becomes a native Defender table that doesn't support table-level RBAC (Role-Based Access Control). If your organization uses table-level RBAC to restrict access to the `IdentityInfo` table in the Azure portal, this access control will no longer be available after you transition to the Defender portal.
+> When you transition to the Defender portal, the `IdentityInfo` table becomes a native Defender table that doesn't support table-level role-based access control (RBAC). If your organization uses table-level RBAC to restrict access to the `IdentityInfo` table in the Azure portal, this access control will no longer be available after you transition to the Defender portal.
 
 ### Update investigation processes to use Microsoft Defender threat intelligence
 
