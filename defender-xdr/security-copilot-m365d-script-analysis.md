@@ -60,7 +60,7 @@ To begin analysis, perform the following steps:
 
 1. Open an incident page then select an item on the left pane to open the attack story below the incident graph. Within the attack story, select an event with a script or command line that you want to analyze. Click **Analyze** to start the analysis.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident-small.png" alt-text="Screenshot that shows the script analysis button in the attack story view." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident.png":::
+   :::image type="content" source="media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident-small.png" alt-text="Screenshot that shows the script analysis button in the attack story view." lightbox="media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident.png":::
 
    Alternately, you can select an event to inspect in the device timeline view. On the file details pane, select **Analyze** to run the script analysis capability.
 
@@ -91,7 +91,7 @@ In the Security Copilot standalone portal, you can use the following prompt iden
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
 
 ## See also
 

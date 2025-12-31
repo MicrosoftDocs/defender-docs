@@ -47,9 +47,9 @@ Suppose that migrating from a non-Microsoft antivirus product, and when you try 
 To remove policy conflicts, here's our current, recommended process:
 
 1. Understand the order of precedence.
-2. Determine where Microsoft Defender Antivirus settings are configured.
-3. Identify policies and settings.
-4. Work with your security team to remove or revise conflicting policies.
+1. Determine where Microsoft Defender Antivirus settings are configured.
+1. Identify policies and settings.
+1. Work with your security team to remove or revise conflicting policies.
 
 ## Step 1: Understand the order of precedence
 
