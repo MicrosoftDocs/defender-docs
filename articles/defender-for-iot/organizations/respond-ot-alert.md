@@ -51,7 +51,7 @@ After updating the status, check the alert details page for the following detail
 
 - **Download PCAP**. At the top of the page, select **Download PCAP** to [download the raw traffic files](how-to-manage-cloud-alerts.md#access-alert-pcap-data) for the selected alert.
 
-- **Sensor information**. Review the **Sensor**, **SiteDisplayName**, and **SensorZone** fields and other sensor information to provide context about the sensor that triggered the alert. To investigate alerts that don't correlate with specific sensors, see [Investigate alerts in multi-sensor environments](#investigate-alerts-in-multi-sensor-environments).
+- **Sensor information**. Review the **Sensor**, **SiteDisplayName**, and **SensorZone** fields and other sensor information to provide context about the sensor that triggered the alert. To investigate alerts that don't correlate with specific sensors, see [Investigate alerts that don't correlate with specific sensors](#investigate-alerts-that-dont-correlate-with-specific-sensors).
 
 ## Investigate related alerts on the Azure portal
 
