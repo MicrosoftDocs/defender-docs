@@ -25,7 +25,7 @@ This article describes how to download the Microsoft Defender for Identity class
 
     - The configuration setting file with the required information to connect to the Defender for Identity cloud service
 
-    - [Npcap OEM version 1.0](https://npcap.com/), is automatically installed by the sensor installation if it's not found to be already installed
+    - [Npcap OEM version 1.0](https://npcap.com/), automatically installed during the sensor installation
 
      :::image type="content" source="../media/download-sensor/continue-with-classic-sensor.png" alt-text="Screenshot that shows how to install the classic sensor.":::
 
