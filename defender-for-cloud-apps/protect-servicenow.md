@@ -130,6 +130,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
    > [!NOTE]
    > The username/password provided are only used for API token generation and aren't saved after the initial connection process.
+
 1. Create a new OAuth profile and then select  **Create an OAuth API endpoint for external clients**.
 1. Fill in the following **Application Registries New record** fields:
    1. Enter a name for your OAuth profile, for example, CloudAppSecurity.
@@ -172,16 +173,6 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 After connecting ServiceNow, you'll receive events for 1 hour prior to connection.
-
-### Legacy ServiceNow connection
-
-To connect ServiceNow with Defender for Cloud Apps, you must have admin-level permissions and make sure the ServiceNow instance supports API access.
-
-1. Sign in with an Admin account to your ServiceNow account.
-
-1. Create a new service account for Defender for Cloud Apps and attach the Admin role to the newly created account.
-
-1. Make sure the REST API plug-in is turned on.
 
    
 ## Next steps
