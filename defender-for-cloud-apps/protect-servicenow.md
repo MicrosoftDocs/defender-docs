@@ -177,7 +177,7 @@ To connect ServiceNow with Defender for Cloud Apps, you must have admin-level pe
 
 1. Make sure the REST API plug-in is turned on.
 
-1. Follow the steps in the [Connect ServiceNow to Microsoft Defender for Cloud Apps](#connect-servicenow-to-microsoft-defender-for-cloud-apps) section above.
+1. Follow the steps in the [Connect ServiceNow to Microsoft Defender for Cloud Apps (1)](#connect-servicenow-to-microsoft-defender-for-cloud-apps-1) section above.
 
    
 ## Next steps
