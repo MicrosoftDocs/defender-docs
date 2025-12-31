@@ -26,6 +26,9 @@ For more information, see [On-premises users and roles for OT monitoring with De
 
 ## View alerts on an OT sensor
 
+> [!NOTE]
+> When you view alerts in the Azure portal **Alerts** page, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-specific-sensors).
+
 1. Sign into your OT sensor console and select the **Alerts** page on the left.
 
     By default, the following details are shown in the grid:
