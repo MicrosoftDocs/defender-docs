@@ -32,61 +32,70 @@ You can customize the list of devices that are used to perform standard discover
 
 ### Supported operating systems
 
+- Windows 10 and later
+- Windows Server 2019 and later.
 
+## Set up device discovery
 
-## Analyze and hunt on discovered devices
+To set up device discovery, take the following configuration steps in the [Microsoft Defender portal](https://security.microsoft.com):
 
-You can assess vulnerabilities and perform advanced analysis on discovered devices using Defender for Endpoint's vulnerability management and advanced hunting capabilities.
+Navigate to **Settings** > **Device discovery**
 
-### Vulnerability assessment on discovered devices
-Vulnerabilities and risks on your devices as well as other discovered unmanaged devices in the network are part of the current Defender Vulnerability Management flows under "Security Recommendations" and represented in entity pages across the portal. Search for "SSH" related security recommendations to find SSH vulnerabilities that are related for unmanaged and managed devices.
+1. If you want to configure Basic as the discovery mode to use on your onboarded devices, select **Basic** and then select **Save**.
 
-:::image type="content" source="media/1156c82ffadd356ce329d1cf551e806c.png" alt-text="The security recommendations dashboard" lightbox="media/1156c82ffadd356ce329d1cf551e806c.png":::
+1. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
 
-### Use advanced hunting on discovered devices
-You can use advanced hunting queries to gain visibility on discovered devices. Find details about discovered devices in the DeviceInfo table, or network-related information about those devices, in the DeviceNetworkInfo table.
+> [!NOTE]
+> Standard discovery uses various PowerShell scripts to actively probe devices in the network. Those PowerShell scripts are Microsoft signed and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
 
-:::image type="content" source="media/f48ba1779eddee9872f167453c24e5c9.png" alt-text="The Advanced hunting page on which queries can be used" lightbox="media/f48ba1779eddee9872f167453c24e5c9.png":::
+## Exclude devices from being actively probed in standard discovery
 
-#### Query discovered devices details
-Run this query on the DeviceInfo table to return all discovered devices along with the most up-to-date details for each device:
+If there are devices on your network that shouldn't be actively scanned (for example, devices used as honeypots for another security tool), you can also define a list of exclusions to prevent them from being scanned. Devices can still be discovered using Basic discovery mode and can also be discovered through multicast discovery attempts. Those devices are passively discovered but won't be actively probed.
 
-```kusto
-DeviceInfo
-| summarize arg_max(Timestamp, *) by DeviceId  // Get latest known good per device Id
-| where isempty(MergedToDeviceId) // Remove invalidated/merged devices
-| where OnboardingStatus != "Onboarded"
-```
+You can configure the devices to exclude in the **Exclusions** page.
 
-By invoking the **SeenBy** function, in your advanced hunting query, you can get detail on which onboarded device a discovered device was seen by. This information can help determine the network location of each discovered device and subsequently, help to identify it in the network.
+## Select networks to monitor
 
-```kusto
-DeviceInfo
-| where OnboardingStatus != "Onboarded"
-| summarize arg_max(Timestamp, *) by DeviceId 
-| where isempty(MergedToDeviceId) 
-| limit 100
-| invoke SeenBy()
-| project DeviceId, DeviceName, DeviceType, SeenBy
-```
+Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a noncorporate network that can be ignored. To identify a network as corporate, we correlate network identifiers across all tenant's clients and if most devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, we assume that this is a corporate network. Corporate networks are typically chosen to be monitored. However, you can override this decision by choosing to monitor noncorporate networks where onboarded devices are found.
 
-For more information, see the [SeenBy()](/defender-xdr/advanced-hunting-seenby-function) function.
+You can configure where device discovery can be performed by specifying which networks to monitor. When a network is monitored, device discovery can be performed on it.
 
-#### Query network related information
-Device discovery leverages Defender for Endpoint onboarded devices as a network data source to attribute activities to non-onboarded devices. The network sensor on the Defender for Endpoint onboarded device identifies two new connection types:
+A list of networks where device discovery can be performed is shown in the **Monitored networks** page.
 
-- ConnectionAttempt - An attempt to establish a TCP connection (syn)
-- ConnectionAcknowledged - An acknowledgment that a TCP connection was accepted (syn\ack)
+> [!NOTE]
+> The list shows networks that were identified as corporate networks. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
 
-This means that when a non-onboarded device attempts to communicate with an onboarded Defender for Endpoint device, the attempt generates a DeviceNetworkEvent and the non-onboarded device activities can be seen on the onboarded device timeline, and through the Advanced hunting DeviceNetworkEvents table.
+The list of monitored networks is sorted based upon the total number of devices seen on the network in the last seven days.
 
-You can try this example query:
+You can apply a filter to view any of the following network discovery states:
 
-```kusto
-DeviceNetworkEvents
-| where ActionType == "ConnectionAcknowledged" or ActionType == "ConnectionAttempt"
-| take 10
-```
+- **Monitored networks** - Networks where device discovery is performed.
+- **Ignored networks** - This network is ignored and device discovery isn't performed on it.
+- **All** - Both monitored and ignored networks are displayed.
+
+### Configure the network monitor state
+
+You control where device discovery takes place. Monitored networks are where device discovery is performed and are typically corporate networks. You can also choose to ignore networks or select the initial discovery classification after modifying a state.
+
+Choosing the initial discovery classification means to apply the default system-made network monitor state. Selecting the default system-made network monitor state means that networks that were identified to be corporate, are monitored, and ones identified as noncorporate, are ignored automatically.
+
+1. Select **Settings > Device discovery**.
+
+1. Select **Monitored networks**.
+
+1. View the list of networks.
+
+1. Select the three dots next to the network name.
+
+1. Choose whether you want to monitor, ignore, or use the initial discovery classification.
+
+   > [!WARNING]
+   >
+   > - Choosing to monitor a network that wasn't identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and can, therefore, detect home or other noncorporate devices.
+   > - Choosing to ignore a network stops monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but are no longer updated, and details are retained until the data retention period of the Defender for Endpoint expires.
+   > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
+
+1. Confirm that you want to make the change.
 
 ## Explore devices in the network
 
@@ -113,63 +122,7 @@ DeviceInfo
 | summarize arg_max(Timestamp, *) by DeviceId
 ```
 
-
-## Vulnerability assessment on discovered devices
-
-Vulnerabilities and risks on your devices as well as other discovered unmanaged devices in the network are part of the current Defender Vulnerability Management flows under "Security Recommendations" and represented in entity pages across the portal.
-Search for "SSH" related security recommendations to find SSH vulnerabilities that are related for unmanaged and managed devices.
-
-:::image type="content" source="media/1156c82ffadd356ce329d1cf551e806c.png" alt-text="The security recommendations dashboard" lightbox="media/1156c82ffadd356ce329d1cf551e806c.png":::
-
-## Use advanced hunting on discovered devices
-
-You can use advanced hunting queries to gain visibility on discovered devices. Find details about discovered devices in the DeviceInfo table, or network-related information about those devices, in the DeviceNetworkInfo table.
-
-:::image type="content" source="media/f48ba1779eddee9872f167453c24e5c9.png" alt-text="The Advanced hunting page on which queries can be used" lightbox="media/f48ba1779eddee9872f167453c24e5c9.png":::
-
-### Query discovered devices details
-
-Run this query on the DeviceInfo table to return all discovered devices along with the most up-to-date details for each device:
-
-```kusto
-DeviceInfo
-| summarize arg_max(Timestamp, *) by DeviceId  // Get latest known good per device Id
-| where isempty(MergedToDeviceId) // Remove invalidated/merged devices
-| where OnboardingStatus != "Onboarded"
-```
-
-By invoking the **SeenBy** function, in your advanced hunting query, you can get detail on which onboarded device a discovered device was seen by. This information can help determine the network location of each discovered device and subsequently, help to identify it in the network.
-
-```kusto
-DeviceInfo
-| where OnboardingStatus != "Onboarded"
-| summarize arg_max(Timestamp, *) by DeviceId 
-| where isempty(MergedToDeviceId) 
-| limit 100
-| invoke SeenBy()
-| project DeviceId, DeviceName, DeviceType, SeenBy
-```
-
-For more information, see the [SeenBy()](/defender-xdr/advanced-hunting-seenby-function) function.
-
-### Query network related information
-
-Device discovery leverages Defender for Endpoint onboarded devices as a network data source to attribute activities to non-onboarded devices. The network sensor on the Defender for Endpoint onboarded device identifies two new connection types:
-
-- ConnectionAttempt - An attempt to establish a TCP connection (syn)
-- ConnectionAcknowledged - An acknowledgment that a TCP connection was accepted (syn\ack)
-
-This means that when a non-onboarded device attempts to communicate with an onboarded Defender for Endpoint device, the attempt generates a DeviceNetworkEvent and the  non-onboarded device activities can be seen on the onboarded device timeline, and through the Advanced hunting DeviceNetworkEvents table.
-
-You can try this example query:
-
-```kusto
-DeviceNetworkEvents
-| where ActionType == "ConnectionAcknowledged" or ActionType == "ConnectionAttempt"
-| take 10
-```
-
----
+## See also
 
 - [Device discovery overview](device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
