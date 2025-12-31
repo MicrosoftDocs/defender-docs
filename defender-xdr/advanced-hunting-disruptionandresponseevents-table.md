@@ -106,10 +106,10 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ContainedUserSmbSessionStopped` | Logs an event when an SMB session initiated by a contained user is forcibly ended. |Automatic attack disruption |
 | `GroupPolicyAccessBlocked` | Blocks access to the **SYSVOL** directory, preventing the device from pulling group policy updates. |Predictive shielding |
 | `SafeBootBlocked` | Prevents the device from being rebooted into safe mode. |Predictive shielding |
-| `SafeBootGuardPolicyApplied` | Applies the Safe Boot Guard policy to the device. |Automatic attack disruption |
-| `SafeBootGuardPolicyRemoved` | Removes the Safe Boot Guard policy from the device. |Automatic attack disruption |
-| `GroupPolicyHardeningPolicyApplied` | Applies the Group Policy Hardening policy to the device. |Automatic attack disruption |
-| `GroupPolicyHardeningPolicyRemoved` | Removes the Group Policy Hardening policy from the device. |Automatic attack disruption |
+| `SafeBootGuardPolicyApplied` | Applies the Safe Boot Guard policy to the device. |Predictive shielding |
+| `SafeBootGuardPolicyRemoved` | Removes the Safe Boot Guard policy from the device. |Predictive shielding |
+| `GroupPolicyHardeningPolicyApplied` | Applies the Group Policy Hardening policy to the device. |Predictive shielding |
+| `GroupPolicyHardeningPolicyRemoved` | Removes the Group Policy Hardening policy from the device. |Predictive shielding |
 
 ## Related topics
 
