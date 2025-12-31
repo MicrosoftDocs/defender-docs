@@ -132,13 +132,13 @@ For more information, see the [ServiceNow product documentation](https://docs.se
    > The username/password provided are only used for API token generation and aren't saved after the initial connection process.
 1. Create a new OAuth profile and then select  **Create an OAuth API endpoint for external clients**.
 1. Fill in the following **Application Registries New record** fields:
-   - **Name** : Enter a name for your OAuth profile, for example, CloudAppSecurity.
+   1. Enter a name for your OAuth profile, for example, CloudAppSecurity.
       
-   - Copy the **Client ID**, you need to paste it into Defender for Cloud Apps to complete connection.
+   1. Copy the **Client ID**. You'll need to paste it into Defender for Cloud Apps to complete the connection.
       
-   - In the **Client Secret** field, enter a string. If left empty, a random Secret is generated automatically. Copy and save it for later.
+   1. In the **Client Secret** field, enter a string. If left empty, a random secret is generated automatically. Copy and save it for later.
       
-   - Increase the **Access Token Lifespan** to at least 3,600.
+   1. Increase the **Access Token Lifespan** to at least 3,600.
       
  
 1. Select the name of the OAuth that was defined, and change the **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
