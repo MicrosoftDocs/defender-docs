@@ -58,9 +58,9 @@ Alert fatigue caused by a high number of identical alerts could lead to your tea
 You download the aggregated alert violation data, that lists each alert with the relevant parameters and functions, as a CSV file in the **Violations** tab of the alert details. This data can help teams to identify patterns, assess impact and prioritize responses more effectively based on the remediation suggestions in the **Take action** tab. Only alerts that have the same remediation process are aggregated into a single alert. However, individual violation events can still be viewed separately within their respective devices, providing additional clarity.
 
 > [!NOTE]
-> An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert (with the **Learn** option in the alert's **Take action** tab), the same alert might be triggered again. This can happen if the new alert has different violation parameters. To check which violations exist for an alert, in the alert's **Violations** tab, select **Export**.
-
-The alerts that can be aggregated are listed in the [Alert reference](alert-engine-messages.md#policy-engine-alerts) policy engine alerts tables under the **Aggregarted** heading.
+> An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert (with the **Learn** option in the alert's **Take action** tab), the same alert might be triggered again. This can happen if the new alert has different violation parameters. To check which violations exist for an alert: 
+> - In the Azure portal, in the alert's **Violations** tab, select **Export**. 
+> - In the OT sensor console, in the alert's **Violations** tab, select **Download CSV**.
 
 Alert grouping appears in both the OT sensor console and the Azure portal. For more information, see [remediate aggregated alerts in Sensor console](how-to-view-alerts.md#remediate-aggregated-alert-violations) and [remediate aggregated alerts in Azure portal](how-to-manage-cloud-alerts.md#remediate-aggregated-alert-violations).
 
