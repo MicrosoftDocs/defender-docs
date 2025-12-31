@@ -196,6 +196,9 @@ To reduce alert fatigue, multiple versions of the same alert violation with iden
 
 1. Select **Learn**, if needed. For more information, see [learning an alert](alerts.md#alert-statuses-and-triaging-options).
 
+> [!NOTE]
+> An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the CSV file you downloaded in step 3.
+
 ## Next steps
 
 > [!div class="nextstepaction"]
