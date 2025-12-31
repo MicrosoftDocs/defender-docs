@@ -26,181 +26,129 @@ appliesto:
 # Device discovery overview
 
 
-Protecting your environment requires taking inventory of the devices that are in your network. However, mapping devices in a network can often be expensive, challenging, and time-consuming.
 
-Microsoft Defender for Endpoint provides a device discovery capability that helps you find unmanaged devices connected to your corporate network without the need for extra appliances or cumbersome process changes. Device discovery uses onboarded endpoints, in your network to collect, probe, or scan your network to discover unmanaged devices. The device discovery capability allows you to discover:
+Microsoft Defender for Endpoint device discovery helps you automatically find unmanaged devices connected to your corporate network—without extra appliances or complex setup. By leveraging onboarded endpoints, Defender for Endpoint can passively observe network traffic and actively probe the environment to identify endpoints, network devices, and IoT assets that may not be managed or protected.
 
-- Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
-- Network devices like routers and switches
-- IoT devices like printers and cameras
-
-Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls. Once devices are discovered, you can:
+Device discovery is designed to reduce blind spots in your environment, making it easier to identify, assess, and secure devices that could otherwise introduce risk. The feature works out-of-the-box for most organizations, with advanced configuration available for deeper insights and custom scenarios.
 
 
-- Onboard unmanaged endpoints to the service, increasing the security visibility on them.
-- Reduce the attack surface by identifying and assessing vulnerabilities, and detecting configuration gaps.
+## What you get out-of-the-box and further configuration
 
-## How device discovery works
+Device discovery is enabled by default for all customers. Most organizations will immediately benefit from passive discovery, which identifies devices based on observed network traffic. For deeper insights, you can enable active (standard) discovery, which uses protocol-based probes to gather more information about devices—especially those without agents installed.
 
-Device discovery in Defender for Endpoint uses both passive and active mechanisms:
+Out-of-the-box, you get:
+- Automatic detection of unmanaged endpoints, network devices, and IoT assets
+- Visibility into devices seen by onboarded endpoints
+- Integration with device inventory for unified management
 
-- **Passive discovery** listens to network traffic observed by onboarded endpoints to identify devices. This method is always enabled by default and is non-intrusive, making it suitable for sensitive or legacy environments.
-- **Active discovery** sends protocol-based probes to devices to gather more detailed information. Active scanning can be enabled for deeper insights, especially for devices without agents installed. By default, most device discovery is passive, but active scanning ("standard" mode) is recommended for broader visibility.
+Further configuration options include:
+- Switching between passive (basic) and active (standard) discovery modes
+- Defining scan targets (IP ranges) and scan frequency
+- Excluding specific IPs or device groups from scanning
+- Assigning scanners per subnet or segment
+- Enabling authenticated scanning for advanced scenarios (deprecated)
 
-Authentication configuration is only required for specific scenarios, such as enabling advanced scanning capabilities or restricting certain device functionalities. Advanced authenticated scanning (using a separate scanner and credentials) is available for more detailed probing, but is being deprecated due to low usage and maintenance challenges.
+Unknown and unmanaged devices introduce significant risks to your network—such as unpatched printers, misconfigured network devices, or servers with no security controls. Device discovery enables you to:
 
-Watch this video for a quick overview of how to assess and onboard unmanaged devices that Defender for Endpoint discovered.
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a101261e-87ab-4aa6-a1e1-c1463e797ca2]
-
-With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
-
-## Discovery methods
-
-You can choose the discovery mode to be used by your onboarded devices. The mode controls the level of visibility you can get for unmanaged devices in your corporate network.
-
-There are two modes of discovery available:
-
-- **Basic discovery**: In this mode, endpoints passively collect events in your network and extract device information from them. Basic discovery uses the SenseNDR.exe binary for passive network data collection and no network traffic is initiated. Endpoints extract data from all network traffic seen by an onboarded device. With basic discovery, you only gain limited visibility of unmanaged endpoints in your network.
-
-- **Standard discovery** (recommended): This mode allows endpoints to actively find devices in your network to enrich collected data and discover more devices - helping you build a reliable and coherent device inventory. In addition to devices that were observed using the passive method, standard mode also uses common discovery protocols that use multicast queries in the network to find even more devices. Standard mode uses smart, active probing to discover additional information about observed devices to enrich existing device information. When Standard mode is enabled, minimal and negligible network activity generated by the discovery sensor might be observed by network monitoring tools in your organization.
+- Build a complete inventory of all devices, including those not yet onboarded to Defender for Endpoint
+- Identify and onboard unmanaged endpoints to increase security visibility
+- Reduce the attack surface by detecting vulnerabilities and configuration gaps
+- Monitor for rogue or unauthorized devices that could be used for lateral movement or attacks
 
 
-### Scan modes and use cases
+## How device discovery works and discovery modes
 
-- **Standard mode** (default): Uses both passive and active scanning for comprehensive discovery. Recommended for most environments.
-- **Basic mode**: Passive-only, does not actively scan devices. Suitable for sensitive or legacy networks where active scanning could disrupt the network.
+Device discovery uses two main mechanisms, which map directly to the available discovery modes:
 
-Passive mode is recommended for sensitive networks or older devices that may not tolerate active scans. You can change and customize your discovery settings, including scan targets (IP ranges), scan frequency (e.g., daily, weekly), and exclusions for specific IPs or device groups. Scanners are assigned per subnet; each subnet within a VLAN currently requires its own scanner for full coverage. (VLAN-wide scanning is planned for the future.)
+| Mode (UI)         | Mechanism         | Default | Description                                                                 | Use cases / Recommendations                |
+|-------------------|-------------------|---------|-----------------------------------------------------------------------------|--------------------------------------------|
+| Basic (Passive)   | Passive           | No      | Listens to network traffic, no probes sent.                                 | Sensitive/legacy networks, minimal impact. |
+| Standard (Active) | Passive + Active  | Yes     | Listens to traffic and sends protocol-based probes for deeper identification.| Most environments, recommended.            |
 
-Device segmentation is typically based on VLANs and subnets, and customers often align scanner deployment with their network segmentation. The system maintains a list of all detected networks, and users can choose to monitor or ignore specific networks (such as home or public Wi-Fi) to avoid unnecessary scanning. New networks are automatically detected and typically set to "ignore" to prevent scanning non-corporate environments.
+**Passive discovery** is always enabled and non-intrusive. **Active discovery** (standard mode) adds protocol-based probes for more detailed device identification. You can switch between modes and further customize scan targets, frequency, and exclusions.
+
+> [!IMPORTANT]
+> Standard (active) discovery is the default for all customers. You can change to basic (passive) mode in settings if needed.
+
+Authentication configuration is only required for advanced scenarios, such as enabling authenticated scanning (deprecated) or restricting certain device functionalities.
 
 For more information, see [Configure device discovery](configure-device-discovery.md).
 
-> [!IMPORTANT]
-> Standard discovery is the default mode for all customers starting July 19, 2021. You can choose to change this configuration to basic through the settings page. If you choose basic mode, you'll only gain limited visibility of unmanaged endpoints in your network.
-
 The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks won't be discovered or listed in the device inventory.
 
-## Device inventory
 
-Devices that were discovered but aren't onboarded to and secured by Defender for Endpoint are listed in the device inventory.
+## Device discovery and device inventory in the user journey
 
-To assess these devices, you can use a filter in the device inventory list called **Onboarding status**, which can have any of the following values:
+All devices discovered—whether onboarded or not—are surfaced in the device inventory. This unified view allows you to:
+- See both managed (onboarded) and unmanaged (discovered) devices in one place
+- Filter and assess devices by onboarding status, OS, and other attributes
+- Take action to onboard, investigate, or exclude devices as needed
 
-- **Onboarded**: The endpoint is onboarded to Defender for Endpoint.
-- **Can be onboarded**: The endpoint was discovered in the network and the Operating System was identified as one that is supported by Defender for Endpoint, but it isn't currently onboarded. We highly recommend onboarding these devices.
-- **Unsupported**: The endpoint was discovered in the network but isn't supported by Defender for Endpoint.
-- **Insufficient info**: The system couldn't determine the supportability of the device. Enabling standard discovery on more devices in the network can enrich the discovered attributes.
+The inventory experience is central to the device discovery journey, providing visibility, context, and management for all tracked devices. For more information, see [Device inventory](machines-view-overview.md).
 
 :::image type="content" source="media/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="The device inventory dashboard" lightbox="media/2b62255cd3a9dd42f3219e437b956fb9.png":::
 
-> [!TIP]
-> You can always apply filters to exclude unmanaged devices from the device inventory list. You can also use the onboarding status column on API queries to filter out unmanaged devices.
 
-For more information, see [Device inventory](machines-view-overview.md).
+## Network scans and advanced discovery
 
-## Network device discovery
+In addition to out-of-the-box passive and active discovery, Defender for Endpoint supports network scans for deeper visibility into network devices (such as switches, routers, firewalls, and IoT assets). These scans are agentless and use a designated onboarded device to periodically probe preconfigured network devices using supported protocols.
 
-The large number of unmanaged network devices deployed in an organization creates a large surface area of attack, and represents a significant risk to the entire enterprise. Defender for Endpoint network discovery capabilities helps you ensure network devices are discovered, accurately classified, and added to the asset inventory.
+Network scans allow you to:
+- Discover and classify network infrastructure devices that cannot be onboarded
+- Perform authenticated scans (using credentials) for more detailed information (feature being deprecated)
+- Schedule scans and define scan targets beyond the default subnet
 
-Network devices aren't managed as standard endpoints, as Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. To do this, a designated Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Defender for Endpoint's vulnerability management capabilities provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
-
-
-## Discovery scanner configuration and management
-
-- **Exclusions**: Users can exclude specific IP addresses or device groups from being scanned, which is useful for protecting sensitive devices or segments.
-- **Scanner assignment**: Scanners are assigned per subnet; currently, each subnet within a VLAN requires its own scanner for full coverage. There is ongoing work to allow a scanner to cover an entire VLAN, but this is not yet available.
-- **Segmentation**: Device segmentation is typically based on VLANs and subnets, and customers often align scanner deployment with their network segmentation.
-
-## Network monitoring and management
-
-- **Network list**: The system maintains a list of all detected networks. Users can choose to monitor or ignore specific networks, such as home or public Wi-Fi, to avoid unnecessary scanning.
-- **Automatic handling**: New networks (e.g., connecting to a café Wi-Fi) are automatically detected and typically set to "ignore" to prevent scanning non-corporate environments.
-
-## Device discovery integration
-
-To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint now supports the following integration:
-
-- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal to secure:
-
-    - OT devices, such as servers or packaging systems. For more information, see [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started).
-    - Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs). For more information, see [Get started with Enterprise IoT security](/defender-for-iot/enterprise-iot-get-started).
+This additional layer of scanning helps ensure that critical network infrastructure is visible and included in your asset inventory, supporting vulnerability management and security workflows.
 
 
-## Licensing and feature availability
 
-- Some features are controlled by toggles and may be off by default, depending on the customer's license. Enabling these features may change the data shown in the inventory.
-- The system's behavior and available features can change based on the customer's license (e.g., Defender for IoT, E5, etc.), affecting what is visible and configurable in the UI.
+## Capabilities
 
-## Vulnerability assessment on discovered devices
+The following table summarizes key device discovery capabilities and where to configure them:
 
-Vulnerabilities and risks on your devices as well as other discovered unmanaged devices in the network are part of the current Defender Vulnerability Management flows under "Security Recommendations" and represented in entity pages across the portal.
-Search for "SSH" related security recommendations to find SSH vulnerabilities that are related for unmanaged and managed devices.
-
-:::image type="content" source="media/1156c82ffadd356ce329d1cf551e806c.png" alt-text="The security recommendations dashboard" lightbox="media/1156c82ffadd356ce329d1cf551e806c.png":::
-
-## Use advanced hunting on discovered devices
-
-You can use advanced hunting queries to gain visibility on discovered devices. Find details about discovered devices in the DeviceInfo table, or network-related information about those devices, in the DeviceNetworkInfo table.
-
-:::image type="content" source="media/f48ba1779eddee9872f167453c24e5c9.png" alt-text="The Advanced hunting page on which queries can be used" lightbox="media/f48ba1779eddee9872f167453c24e5c9.png":::
-
-### Query discovered devices details
-
-Run this query on the DeviceInfo table to return all discovered devices along with the most up-to-date details for each device:
-
-```query
-DeviceInfo
-| summarize arg_max(Timestamp, *) by DeviceId  // Get latest known good per device Id
-| where isempty(MergedToDeviceId) // Remove invalidated/merged devices
-| where OnboardingStatus != "Onboarded"
-```
-
-By invoking the **SeenBy** function, in your advanced hunting query, you can get detail on which onboarded device a discovered device was seen by. This information can help determine the network location of each discovered device and subsequently, help to identify it in the network.
-
-```query
-DeviceInfo
-| where OnboardingStatus != "Onboarded"
-| summarize arg_max(Timestamp, *) by DeviceId 
-| where isempty(MergedToDeviceId) 
-| limit 100
-| invoke SeenBy()
-| project DeviceId, DeviceName, DeviceType, SeenBy
-```
-
-For more information, see the [SeenBy()](/defender-xdr/advanced-hunting-seenby-function) function.
-
-### Query network related information
-
-Device discovery leverages Defender for Endpoint onboarded devices as a network data source to attribute activities to non-onboarded devices. The network sensor on the Defender for Endpoint onboarded device identifies two new connection types:
-
-- ConnectionAttempt - An attempt to establish a TCP connection (syn)
-- ConnectionAcknowledged - An acknowledgment that a TCP connection was accepted (syn\ack)
-
-This means that when a non-onboarded device attempts to communicate with an onboarded Defender for Endpoint device, the attempt generates a DeviceNetworkEvent and the  non-onboarded device activities can be seen on the onboarded device timeline, and through the Advanced hunting DeviceNetworkEvents table.
-
-You can try this example query:
-
-```text
-DeviceNetworkEvents
-| where ActionType == "ConnectionAcknowledged" or ActionType == "ConnectionAttempt"
-| take 10
-```
+| Capability                | Description                                                                 | Where to configure                |
+|---------------------------|-----------------------------------------------------------------------------|-----------------------------------|
+| Exclusions                | Exclude specific IPs or device groups from scanning                         | Device discovery settings         |
+| Scanner assignment        | Assign scanners per subnet or segment                                       | Device discovery settings         |
+| Segmentation              | Align scanner deployment with VLANs/subnets                                 | Device discovery settings         |
+| Network list management   | Monitor or ignore specific networks (e.g., home/public Wi-Fi)               | Device discovery settings         |
+| Automatic network handling| New networks are auto-detected and set to ignore by default                 | Device discovery (auto)           |
 
 
-## Technical limitations and roadmap
-- Scanning is currently limited to within subnets; cross-subnet or VLAN-wide scanning is a planned enhancement.
-- The list of supported scanning protocols is maintained and updated, but some protocols (especially for OT devices) are intentionally excluded from active scans to avoid network disruption.
-- The team is working on expanding scanning capabilities and improving documentation, with a focus on user experience and clarity.
+## OT/IoT device discovery
 
-## Customer journey and configuration timing
-- Most customers can use the default configuration without changes, but advanced options are available for those with specific needs.
-- Customers can adjust configuration at onboarding or later, as their network or requirements change.
+Defender for Endpoint integrates with Microsoft Defender for IoT to provide comprehensive discovery and security for:
+- OT devices (e.g., industrial servers, packaging systems)
+- Enterprise IoT devices (e.g., VoIP phones, printers, smart TVs)
 
-## Documentation and UI feedback
-- There are missing or unclear documentation areas, especially regarding configuration options, scan modes, and the relationship between discovery and inventory.
-- Some UI elements (e.g., toggles, network status labels) may be confusing or inconsistent, and there is a need to update both the UI and documentation to reflect current functionality.
-- Suggestions include mapping out what users see in different licensing scenarios, clarifying configuration steps, and ensuring documentation covers both the technical setup and user journey.
+This integration enables unified visibility and management of both IT and OT/IoT assets in the Microsoft Defender portal.
+
+For more information, see [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) and [Get started with Enterprise IoT security](/defender-for-iot/enterprise-iot-get-started).
+
+
+
+## Licensing
+
+The following table summarizes device discovery features by license:
+
+| License                        | Device discovery | Network scans | OT/IoT integration | Vulnerability management | Advanced hunting |
+|---------------------------------|------------------|---------------|--------------------|-------------------------|------------------|
+| Defender for Endpoint Plan 2    | Yes              | Yes           | No                 | Yes                     | Yes              |
+| Defender for Endpoint Plan 2 + IoT | Yes           | Yes           | Yes                | Yes                     | Yes              |
+| Defender for IoT only           | No               | No            | Yes                | Yes                     | No               |
+
+Some features (such as enterprise IoT vulnerability display) are controlled by toggles and may be off by default, depending on your license. Enabling these features may change the data shown in the inventory and UI.
+
+
+## Configuration, management, and analysis
+
+You can further configure, manage, and analyze device discovery to fit your organization's needs. Actions include:
+- Adjusting discovery modes and scan settings
+- Managing exclusions, scanner assignments, and network lists
+- Integrating with OT/IoT discovery
+- Reviewing and acting on device inventory
+
+For advanced analysis, vulnerability assessment, and hunting queries, see [Configure device discovery](configure-device-discovery.md).
 
 ## Next steps
 
