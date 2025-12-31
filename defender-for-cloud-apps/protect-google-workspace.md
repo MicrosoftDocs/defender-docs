@@ -106,7 +106,7 @@ As a Google Workspace Super Admin, perform these steps to prepare your environme
    - Email
    - Client ID
     
-1. Create a new key. Download and save the file and the password required to sue the file.
+1. Create a new key. Download and save the file and the password required to use the file.
 
 1. In the API controls, add a new Client ID in the Domain Wide Delegation, using the Client ID you copied above.
 
