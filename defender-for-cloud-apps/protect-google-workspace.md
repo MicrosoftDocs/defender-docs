@@ -75,13 +75,10 @@ Review our best practices for [securing and collaborating with external users](b
 
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Google Workspace account using the connector APIs. This connection gives you visibility into and control over Google Workspace use. 
 
-
-
+The steps in this section must be completed by a Google Workspace admin. For detailed information about the configuration steps in Google Workspace, see the Google Workspace documentation. [Develop on Google Workspace |Google for Developers](https://developers.google.com/workspace/guides/get-started)
 
 > [!NOTE]
 >Defender for Cloud Apps doesn’t display file download activities for Google Workspace. 
->
->The steps in this section must be completed by a Google Workspace admin. For detailed information about the configuration steps in Google Workspace, see the Google Workspace documentation. [Develop on Google Workspace |Google for Developers](https://developers.google.com/workspace/guides/get-started)
 
 ### Configure Google Workspace
 
