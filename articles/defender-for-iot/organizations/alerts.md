@@ -152,6 +152,22 @@ Use learning mode to perform an initial triage on the alerts in your network, *l
 
 For more information, see [Create a learned baseline of OT alerts](ot-deploy/create-learned-baseline.md).
 
+### Investigate alerts
+
+When investigating an alert, use the following resources to help you understand the alert context and take remediation actions:
+- **Alert details page**. Use the alert details page to review the alert context, including the list of violations that triggered the alert, related devices, and recommended remediation actions. For more information, see [View alert details](alerts.md#view-alert-details).
+    - **Review sensor information**. Review the **Sensor**, **SiteDisplayName**, and **SensorZone** fields and other sensor information in the alert details to provide context about the sensor that triggered the alert. To investigate alerts that don't correlate with specific sensors, see [Investigate alerts in multi-sensor environments](#investigate-alerts-in-multi-sensor-environments).  
+- **Device map**. Use the device map to visualize the source and destination of the alert on your OT network. For more information, see [View alert source and destination on the device map](how-to-view-alerts.md#view-alert-source-and-destination-on-the-device-map).
+- **Event timeline**. Use the event timeline to view related events that occurred before and after the alert was triggered. For more information, see [View related events on the event timeline](how-to-view-alerts.md#view-related-events-on-the-event-timeline).
+
+#### Investigate alerts that don't correlate with specific sensors
+
+In some cases, alerts in the Azure portal might not correlate with specific sensors. This can happen in environments where multiple sensors are deployed in the same zone, and the alert is triggered by traffic that only one of the sensors detects. The alert may be triggered by a specific sensor's configuration (like a device marked as a scanner in one sensor but not in another), leading to alerts that only appear in specific contexts.
+
+In this case, the sensor that generates the alert may not have full information about the configuration in other sensors, so the alert is valid for that sensor's context but may not reflect the overall environment.
+
+To investigate alerts in this scenario, see the **Sensor**, **SiteDisplayName**, and **SensorZone** fields in the alert's **Alert details** tab to identify the sensor that generated the alert. You can then review that sensor's configuration and context to understand why the alert was triggered.
+
 ## Next steps
 
 Review alert types and messages to help you understand and plan remediation actions and playbook integrations. For more information, see [OT monitoring alert types and descriptions](alert-engine-messages.md).
