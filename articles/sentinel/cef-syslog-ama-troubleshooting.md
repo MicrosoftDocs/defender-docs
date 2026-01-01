@@ -5,6 +5,8 @@ author: edbaynash
 ms.author: edbaynash
 ms.topic: troubleshooting
 ms.date: 01/01/2026
+
+
 ---
 
 # Troubleshoot CEF and Syslog via AMA connectors
@@ -23,9 +25,8 @@ Before you begin troubleshooting, familiarize yourself with the following docume
 
 Understanding the data flow helps identify where issues might occur:
 
-```
 [Log Source] --Port 514--> [RSyslog Service] --Port 28330--> [Azure Monitor Agent] --> [Log Analytics Workspace]
-```
+
 
 Key components:
 - **RSyslog/Syslog-ng**: Receives logs on port 514 and forwards them to AMA
@@ -307,6 +308,45 @@ Review specific facility logs:
 ```bash
 grep local0.info /var/opt/microsoft/azuremonitoragent/log/mdsd.info
 ```
+
+### Verify successful log processing
+
+When trace flags are enabled, you can verify that logs are being processed correctly by examining the debug output.
+
+#### ASA log ingestion example
+
+For Cisco ASA logs, successful processing appears in the logs as:
+
+```
+2022-01-18T22:00:14.8650520Z: virtual bool Pipe::SyslogCiscoASAPipeStage::PreProcess(std::shared_ptr<CanonicalEntity>) (.../mdsd/PipeStages.cc +604) [PipeStage] Processing CiscoASA event '%ASA-1-105003: (Primary) Monitoring on 123'
+
+2022-01-18T22:00:14.8651330Z: virtual void ODSUploader::execute(const MdsTime&) (.../mdsd/ODSUploader.cc +325) Uploading 1 SECURITY_CISCO_ASA_BLOB rows to ODS.
+
+2022-01-18T22:00:14.8653090Z: int ODSUploader::UploadFixedTypeLogs(const string&, const string&, const std::function<void(bool, long unsigned int, int, long unsigned int)>&, int, uint64_t) (.../mdsd/ODSUploader.cc +691) Uploading to ODS with request 3333-44dd-555555eeeeee Host https://00001111-aaaa-2222-bbbb-3333cccc4444.ods.opinsights.azure.com for datatype SECURITY_CISCO_ASA_BLOB. Payload: {"DataType":"SECURITY_CISCO_ASA_BLOB","IPName":"SecurityInsights","ManagementGroupId":"00000000-0000-0000-0000-000000000002","sourceHealthServiceId":"2c2c2c2c-3333-dddd-4444-5e5e5e5e5e5e","type":"JsonData","DataItems":[{"Facility":"local0","SeverityNumber":"6","Timestamp":"2022-01-14T23:28:49.775619Z","HostIP":"127.0.0.1","Message":" (Primary) Monitoring on 123","ProcessId":"","Severity":"info","Host":"localhost","ident":"%ASA-1-105003"}]}. Uncompressed size: 443. Request size: 322
+```
+
+Key indicators of successful processing:
+- The event is recognized as a CiscoASA event
+- The log is uploaded to ODS (Operations Data Service)
+- A request ID is generated for tracking
+- The payload contains properly formatted JSON data
+
+#### CEF log ingestion example
+
+For CEF logs, successful processing appears as:
+
+```
+2022-01-14T23:09:13.9087860Z: int ODSUploader::UploadFixedTypeLogs(const string&, const string&, const std::function<void(bool, long unsigned int, int, long unsigned int)>&, int, uint64_t) (.../mdsd/ODSUploader.cc +691) Uploading to ODS with request 3333-44dd-555555eeeeee Host https://00001111-aaaa-2222-bbbb-3333cccc4444.ods.opinsights.azure.com for datatype SECURITY_CEF_BLOB. Payload: {"DataType":"SECURITY_CEF_BLOB","IPName":"SecurityInsights","ManagementGroupId":"00000000-0000-0000-0000-000000000002","sourceHealthServiceId":"2c2c2c2c-3333-dddd-4444-5e5e5e5e5e5e","type":"JsonData","DataItems":[{"Facility":"local0","SeverityNumber":"6","Timestamp":"2022-01-14T23:08:49.731862Z","HostIP":"127.0.0.1","Message":"0|device1|PAN-OS|8.0.0|general|SYSTEM|3|rt=Nov 04 2018 07:15:46 GMTcs3Label=Virtual","ProcessId":"","Severity":"info","Host":"localhost","ident":"CEF"}]}. Uncompressed size: 482. Request size: 350
+```
+
+Key indicators of successful CEF processing:
+- The datatype is SECURITY_CEF_BLOB
+- The upload request includes a valid endpoint
+- The CEF message structure is preserved in the payload
+- Compression metrics show the data is being optimized for transfer
+
+> [!IMPORTANT]
+> Remember to disable trace flags after completing your investigation to prevent excessive disk usage.
 
 ## Collect diagnostic information
 
