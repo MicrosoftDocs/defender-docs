@@ -23,6 +23,22 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## January 2026
+
+### Security posture assessment: Identify service accounts in privileged groups
+
+Identify Active Directory service accounts that are members of privileged groups, including direct and nested membership. Use this assessment to review service accounts with elevated access and reduce exposure from long-lived or unmanaged credentials.
+
+For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
+
+
+### Security posture assessment: Locate accounts in built-in Operator Groups
+
+Identify Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. Use this assessment to review legacy or unnecessary operator access and reduce the risk of privilege abuse or lateral movement.
+
+For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
+
+
 ## December 2025
 
 ### New properties for 'sensorCandidate' resource type in Graph-API (preview)
