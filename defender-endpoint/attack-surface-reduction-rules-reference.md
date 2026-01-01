@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 11/01/2025
+ms.date: 12/31/2025
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -51,7 +51,7 @@ This article provides information about Microsoft Defender for Endpoint attack s
 
 Attack surface reduction rules are categorized as one of two types:
 
-- **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the effect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable impact on the end user.
+- **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the effect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable affect on the end user.
 
 - **Other rules**: Rules that require some measure of following the documented deployment steps [Plan > Test (audit) > Enable (block/warn modes)], as documented in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
@@ -83,7 +83,7 @@ For the easiest method to enable the standard protection rules, see [Simplified 
 
 ² This ASR rule doesn't honor Microsoft Defender for Endpoint Indicators of Compromise (IOC) for files or certificates.
 
-³ Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods (for example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
+³ Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue.
 
 ⁴ This ASR rule doesn't honor Microsoft Defender for Endpoint Indicators of Compromise (IOC) for certificates.
 
@@ -117,7 +117,7 @@ The following table lists the supported operating systems for rules that are cur
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros)|Y|N|N|
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware)|Y <br/> Windows 10 version 1803 or later|Y|Y|
 
-<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods (for example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
+<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
 
 > [!NOTE]
 >
@@ -132,7 +132,7 @@ Links to information about configuration management system versions referenced i
 |---|:---:|:---:|:---:|:---:|
 |[Block abuse of exploited vulnerable signed drivers](#block-abuse-of-exploited-vulnerable-signed-drivers)|Y||Y|Y|
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes)|Y||Y|Y|
-|[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes)|Y|Y <br/><br/> CB 1710|Y|Y|
+|[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes)|Y|Y <br/><br/> Current Branch (CB) 1710|Y|Y|
 |[Block credential stealing from the Windows local security authority subsystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)|Y|Y <br/><br/>CB 1802|Y|Y|
 |[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail)|Y|Y <br/><br/> CB 1710|Y||
 |[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)<sup>\*</sup>|Y|Y <br/><br/> CB 1802|Y|Y|
@@ -152,7 +152,7 @@ Links to information about configuration management system versions referenced i
 
 (<a id="fn1">1</a>) You can configure attack surface reduction rules on a per-rule basis by using any rule's GUID.
 
-<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods (for example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
+<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
 
 - [Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
 - [Configuration Manager CB 1802](/configmgr/core/servers/manage/updates)
@@ -167,7 +167,7 @@ For rules with the "Rule State" specified:
 
 - ASR rules with `\ASR Rule, Rule State\` combinations are used to surface alerts (toast notifications) on Microsoft Defender for Endpoint only for devices set at the cloud block level `High`.
 - Devices that aren't set at the cloud block level `High` don't generate alerts for any `ASR Rule, Rule State` combinations.
-- EDR alerts are generated for ASR rules in the specified states, for devices set at the cloud block level `High+`.
+- Endpoint Detection and Response (EDR) alerts are generated for ASR rules in the specified states, for devices set at the cloud block level `High+`.
 - Toast notifications occur in block mode only and for devices set at the cloud block level `High`.
 
 |Rule name|Rule state|EDR alerts|Toast notifications|
@@ -192,7 +192,7 @@ For rules with the "Rule State" specified:
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros)||N|Y|
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware)||Y|Y (in block mode)|
 
-<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods (for example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
+<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
 
 ## ASR rule to GUID matrix
 
@@ -218,20 +218,22 @@ For rules with the "Rule State" specified:
 |Block Win32 API calls from Office macros|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|
 |Use advanced protection against ransomware|c1db55ab-c21a-4637-bb3f-a12568109d35|
 
-<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods (for example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
+<sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
 
 ## ASR rule modes
 
-- **Not configured** or **Disable**: The state in which the ASR rule isn't enabled or is disabled. The code for this state = 0.
-- **Block**: The state in which the ASR rule is enabled. The code for this state is 1.
-- **Audit**: The state in which the ASR rule is evaluated for the effect it would have on the organization or environment if enabled (set to block or warn). The code for this state is 2.
-- **Warn**: The state in which the ASR rule is enabled and presents a notification to the end-user, but permits the end-user to bypass the block. The code for this state is 6.
+|Rule mode|Code|Description|
+|---|:---:|---|
+|**Not configured** or **Disabled**|0|The ASR rule isn't enabled or is disabled.|
+|**Block**|1|The ASR rule is enabled in block mode.|
+|**Audit**|2|The ASR rule is evaluated for the effect on the environment if enabled in Block or Warn mode.|
+|**Warn**|6|The ASR rule is enabled and presents a notification to the user, but the user can bypass the block.|
 
-  _Warn mode_ is a block-mode type that alerts users about potentially risky actions. Users can choose to bypass the block warning message and allow the underlying action. Users can select **OK** to enforce the block, or select the bypass option - **Unblock** - through the end-user pop-up toast notification that is generated at the time of the block. After the warning is unblocked, the operation is allowed until the next time the warning message occurs, at which time the end-user will need to reperform the action.
+**Warn** is a type of block that alerts users to potentially risky actions via a warning pop-up. Users can select **OK** to enforce the block, or select **Unblock** to bypass the block for the next 24 hours. After 24 hours, the user needs to allow the block again.
 
-  When the allow button is clicked, the block is suppressed for 24 hours. After 24 hours, the end-user will need to allow the block again. The warn mode for ASR rules is only supported for RS5+ (1809+) devices. If bypass is assigned to ASR rules on devices with older versions, the rule is in blocked mode.
+Warn mode for ASR rules is supported only in Windows 10 version 1809 or later. Older versions of Windows 10 with a Warn mode rule assigned are effectively in Block mode.
 
-  You can also set a rule in warn mode via PowerShell by specifying the `AttackSurfaceReductionRules_Actions` as "Warn". For example:
+In PowerShell, you can create an ASR rule in warn mode by specifying the _AttackSurfaceReductionRules_Actions_ parameter with the value `Warn`. For example:
 
   ```powershell
   Add-MpPreference -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules_Actions Warn
@@ -242,13 +244,13 @@ For rules with the "Rule State" specified:
 ### Block abuse of exploited vulnerable signed drivers
 
 > [!NOTE]
-> To protect your environment from vulnerable drivers, you should first implement these:
-> For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
-> For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
-> For Windows 11 or later, and Windows Server core 1809 or later, or Windows Server 2019 or later, you should also enable [Microsoft Windows vulnerable driver blocklist](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), 
-> Then as another layer of defense, you should enable this attack surface reduction rule.
+> To protect your environment from vulnerable drivers, you should first implement these methods:
+>
+> - For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
+> - For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
+> - For Windows 11 or later, and Windows Server core 1809 or later, or Windows Server 2019 or later, you should also enable [Microsoft Windows vulnerable driver block list](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules). Then, as another layer of defense, you should enable this attack surface reduction rule.
 
-This rule prevents an application from writing a vulnerable signed driver to disk. In-the-wild, vulnerable signed drivers can be exploited by local applications \- _that have sufficient privileges_ \- to gain access to the kernel. Vulnerable signed drivers enable attackers to disable or circumvent security solutions, eventually leading to system compromise.
+This rule prevents an application from writing a vulnerable signed driver to disk. In-the-wild, local applications _with sufficient privileges_ can exploit vulnerable signed drivers to gain access to the kernel. Vulnerable signed drivers enable attackers to disable or circumvent security solutions, eventually leading to system compromise.
 
 The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a driver already existing on the system from being loaded.
 
@@ -257,7 +259,7 @@ The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a 
 > You can also configure this rule using [PowerShell](enable-attack-surface-reduction.md#powershell).
 > To have a driver examined, use this Web site to [Submit a driver for analysis](https://www.microsoft.com/en-us/wdsi/driversubmission).
 
-<!--The above link is the 'only link' that exists for having drivers examined. The 'en-us' component is required to make the link work. Any alterations to this link will result in a 404.
+<!--The above link is the 'only link' that exists for having drivers examined. The 'en-us' component is required to make the link work. Any alterations to this link result in a 404.
 -->
 
 Intune Name: `Block abuse of exploited vulnerable signed drivers`
@@ -279,7 +281,7 @@ Dependencies: none provided by engineering
 
 This rule prevents attacks by blocking Adobe Reader from creating processes.
 
-Malware can download and launch payloads and break out of Adobe Reader through social engineering or exploits. By blocking child processes from being generated by Adobe Reader, malware attempting to use Adobe Reader as an attack vector are prevented from spreading.
+Malware can download and launch payloads and break out of Adobe Reader through social engineering or exploits. By blocking Adobe Reader from generating child processes, malware attempting to use Adobe Reader as an attack vector are prevented from spreading.
 
 Intune name: `Process creation from Adobe Reader (beta)`
 
@@ -298,7 +300,7 @@ Dependencies: Microsoft Defender Antivirus
 
 This rule blocks Office apps from creating child processes. Office apps include Word, Excel, PowerPoint, OneNote, and Access.
 
-Creating malicious child processes is a common malware strategy. Malware that abuses Office as a vector often runs VBA macros and exploit code to download and attempt to run more payloads. However, some legitimate line-of-business applications might also generate child processes for benign purposes; such as spawning a command prompt or using PowerShell to configure registry settings.
+Creating malicious child processes is a common malware strategy. Malware that abuses Office as a vector often runs VBA macros and exploit code to download and attempt to run more payloads. However, some legitimate line-of-business applications might also generate child processes for benign purposes. For example, spawning a Command Prompt or using PowerShell to configure registry settings.
 
 Intune name: `Office apps launching child processes`
 
@@ -322,24 +324,25 @@ Dependencies: Microsoft Defender Antivirus
 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
-LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
+LSASS authenticates users who sign in on a Windows computer. Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
 
-By default the state of this rule is set to *not configured* (disabled). In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, such as when the initial block from the ASR rule results in a subsequent call for a lesser privilege which then succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
+By default the state of this rule is set to *not configured* (disabled). In most cases, many processes make calls to LSASS for access rights that aren't needed. For example, when the initial block from the ASR rule results in a subsequent call for a lesser privilege that succeeds. For information about the types of rights that are typically requested in process calls to LSASS, see [Process Security and Access Rights](/windows/win32/procthread/process-security-and-access-rights).
 
-Enabling this rule doesn't provide additional protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, when LSA protection can't be enabled, this rule can be configured to provide equivalent protection against malware that target `lsass.exe`.
+Enabling this rule doesn't provide extra protection if you have LSA protection enabled since the ASR rule and LSA protection work similarly. However, if you can't enable LSA protection, you can configure this rule to provide equivalent protection against malware that targets `lsass.exe`.
 
 > [!TIP]
-> 1. ASR audit events don't generate toast notifications. However, since the LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode, you can choose to skip the audit mode evaluation and proceed to block mode deployment, beginning with a small set of devices and gradually expanding to cover the rest.
-> 2. The rule is designed to suppress block reports/toasts for friendly processes. It's also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
-> 3. ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
-> 4. This rule is designed to block the processes from accessing LSASS.EXE process memory. It doesn't block them from running.  If you see processes like svchost.exe being blocked, it's only blocking from accessing LSASS process memory.  Thus, svchost.exe and other processes can be safely ignored.  The one exception is in the known issues below. 
+>
+> - ASR audit events don't generate toast notifications. The LSASS ASR rule produces large volume of audit events, almost all of which are safe to ignore when the rule is enabled in block mode. You can choose to skip the audit mode evaluation and proceed to block mode deployment. We recommend starting with a small set of devices and gradually expanding to cover the rest.
+> - The rule is designed to suppress block reports/toasts for friendly processes. It's also designed to drop reports for duplicate blocks. As such, the rule is well suited to be enabled in block mode, irrespective of whether toast notifications are enabled or disabled.
+> - ASR in warn mode is designed to present users with a block toast notification that includes an "Unblock" button. Due to the "safe to ignore" nature of LSASS ASR blocks and their large volume, WARN mode isn't advisable for this rule (irrespective of whether toast notifications are enabled or disabled).
+> - This rule is designed to block the processes from accessing LSASS.EXE process memory. It doesn't block them from running. If you see processes like svchost.exe being blocked, it's only blocking from accessing LSASS process memory. Thus, svchost.exe and other processes can be safely ignored. The one exception is in the following known issues.
 
 > [!NOTE]
 > In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal.
 >
 > The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support warn mode.
 >
-> In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
+> In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real effect in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
 Intune name: `Flag credential stealing from the Windows local security authority subsystem`
 
 Configuration Manager name: `Block credential stealing from the Windows local security authority subsystem`
@@ -359,7 +362,7 @@ Known issues: These applications and "Block credential stealing from the Windows
 |--------|--------|
 |Quest Dirsync Password Sync|[Dirsync Password Sync isn't working when Windows Defender is installed, error: "VirtualAllocEx failed: 5" (4253914)](https://support.quest.com/kb/4253914/dirsync-password-sync-isn-t-working-when-windows-defender-is-installed-error-virtualallocex-failed-5)|
 
-For technical support, contact the software vendor.
+For technical support, contact the software publisher.
 
 ### Block executable content from email client and webmail
 
@@ -393,7 +396,7 @@ Dependencies: Microsoft Defender Antivirus
 ### Block executable files from running unless they meet a prevalence, age, or trusted list criterion
 
 > [!TIP]
-> <sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods (for example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
+> <sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
 
 This rule blocks executable files, such as .exe, .dll, or .scr, from launching. Thus, launching untrusted or unknown executable files can be risky, as it might not be initially clear if the files are malicious.
 
@@ -508,7 +511,7 @@ Known issues: These applications and "Block Office applications from injecting c
 |Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](/defender-endpoint/microsoft-defender-antivirus-updates).|
 |Heimdal security|n/a|
 
-For technical support, contact the software vendor.
+For technical support, contact the software publisher.
 
 ### Block Office communication application from creating child processes
 
@@ -534,9 +537,8 @@ This rule prevents malware from abusing WMI to attain persistence on a device.
 Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 
 > [!NOTE]
-> If you're utilizing Configuration Manager (CM, previously known as MEMCM or SCCM) with CcmExec.exe` (SCCM Agent), we recommend running it in audit mode for at least 60 days. 
+> If you're utilizing Configuration Manager (CM, previously known as MEMCM or SCCM) with `CcmExec.exe` (SCCM Agent), we recommend running it in audit mode for at least 60 days. 
 > Once you're prepared to switch to block mode, ensure you deploy the appropriate ASR rules, considering any necessary rule exclusions.
-
 
 Intune name: `Persistence through WMI event subscription`
 
@@ -573,9 +575,9 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block rebooting machine in Safe Mode
 
-This rule prevents the execution of certain commands to restart machines in Safe Mode. In Windows' Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such abuse of Safe Mode by preventing commonly abused commands like `bcdedit` and `bootcfg` from restarting machines in Safe Mode. Safe Mode is still accessible manually from the Windows Recovery Environment.
+This rule prevents the execution of certain commands to restart machines in Safe Mode. In Safe Mode, many security products are either disabled or operate in a limited capacity. This effect allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks abuse of Safe Mode by preventing commonly abused commands like `bcdedit` and `bootcfg` from restarting machines in Safe Mode. Safe Mode is still accessible manually from the Windows Recovery Environment.
 
-Intune Name: ` Block rebooting machine in Safe Mode`
+Intune Name: `Block rebooting machine in Safe Mode`
 
 Configuration Manager name: Not yet available
 
@@ -590,14 +592,14 @@ Advanced hunting action type:
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
+> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
 
 ### Block untrusted and unsigned processes that run from USB
 
 With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards. Blocked file types include executable files (such as .exe, .dll, or .scr)
 
 > [!IMPORTANT]
-> Files copied from the USB to the disk drive are blocked by this rule if and when it's about to be executed on the disk drive.
+> This rule blocks files copied from the USB to the disk drive if and when it's about to be executed on the disk drive.
 
 Intune name: `Untrusted and unsigned processes that run from USB`
 
@@ -614,7 +616,7 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block use of copied or impersonated system tools
 
-This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
+This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines.
 
 Intune Name: `Block use of copied or impersonated system tools`
 
@@ -633,7 +635,7 @@ Advanced hunting action type:
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
+> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
 
 ### Block Webshell creation for Servers
 
@@ -648,7 +650,9 @@ GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management. This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
+> When you manage ASR rules using Microsoft Defender for Endpoint security settings management, you need to configure the **Block Webshell creation for Servers** setting as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
+>
+> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
 
 ### Block Win32 API calls from Office macros
 
