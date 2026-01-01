@@ -12,7 +12,7 @@ ms.service: microsoft-sentinel
 
 # Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
 
-Microsoft Sentinel behaviors translate raw logs into clear, plain-language summaries of security actions, explaining “who did what to whom” in a structured way enriched with MITRE ATT&CK mappings and entity roles.
+Microsoft Sentinel behaviors summarize high-volume raw logs into clear, plain-language patterns of security actions, explaining “who did what to whom” in a structured way enriched with MITRE ATT&CK mappings and entity roles.
 
 Unlike alerts or anomalies, behaviors don’t indicate risk - they optimize your data for investigations, hunting, and detection by enhancing:
 
@@ -27,7 +27,7 @@ This article explains how Microsoft Sentinel behaviors work, how to enable behav
 
 ## How Microsoft Sentinel behaviors work
 
-When you enable behaviors, Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarize two types of behavioral patterns:
+When you enable behaviors, Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
 
 - **Aggregated behaviors** detect volume-based patterns by collecting related events over time windows. Examples include "User accessed 50+ resources in 1 hour" or "Login attempts from 10+ different IP addresses." These behaviors excel at identifying unusual activity levels and converting high-volume logs into actionable security insights.
 
@@ -39,27 +39,12 @@ Each behavior record includes:
 
 - **A simple, contextual description**: A natural language explanation of what happened in security-relevant terms - for example, who did *what* to *whom*, and *why it matters*.
 - **Unified schema and references to the underlying raw logs**: All behaviors use a consistent data structure across different products and log types, so analysts don't need to translate different log formats or join high-volume tables.
-- **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance.
+- **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
 [Microsoft Sentinel behaviors stores behavior records in two dedicated tables](#behaviorinfo-and-behaviorentities-schemas) in your Sentinel workspace, integrating seamlessly with your existing Sentinel workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. 
 
-
 <!-- [\[link to RAI FAQ\]](#_10._RAI_FAQ) -->
-
-## Value proposition
-
-Sentinel behaviors brings several key benefits to Security Operations teams, helping them work faster and smarter with high-volume data. In summary, it provides:
-
-- **Clarity:** Translates low-level, noisy logs into clear, human-readable summaries of activity. Analysts see **what happened in plain language**, without wading through raw event syntax. For example, instead of 100 individual log lines about port scans, a behavior might say "Port scanning activity detected from host X targeting Y." This clarity improves understanding and onboarding for junior analysts.
-
-- **Context:** Strings related events together into meaningful patterns, enriched with contextual info. Each behavior is tagged with relevant MITRE ATT&CK tactics and techniques and includes roles of entities (such as actor versus target). This approach gives instant security context – you don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
-
-- **Prioritization:** By working at the behavior level, analysts can focus on higher-level signals rather than disparate low-level events. Behaviors help highlight what matters – they naturally aggregate minor events into bigger stories, so important patterns stand out. This approach also aids **incident prioritization**: seeing multiple related behaviors can indicate a concentrated attack sequence, versus isolated benign events.
-
-- **Efficiency:** Reduces investigation and hunting time by **stitching events into cohesive stories.** For the behaviors logic already in the system, analysts no longer need to manually join data from multiple sources or pivot across numerous tables. Those behaviors rules expand over time. For example, if investigating a suspected breach, an analyst can query the Behaviors table for an entity (user, host, and so on) and get an immediate timeline of that entity's actions (across AWS, on-prem firewall, and so on) instead of querying each log source separately. This approach speeds up MTTR (Mean Time to Respond) significantly.
-
-- There's no full coverage of the originating table to behaviors.<!-- The number of rules and insights will expand over time. -->
 
 ## Prerequisites
 
