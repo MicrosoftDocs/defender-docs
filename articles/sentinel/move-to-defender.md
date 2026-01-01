@@ -4,7 +4,7 @@ description: Move Microsoft Sentinel operations from the Azure portal to the Mic
 author: guywi-ms
 ms.author: guywild
 ms.topic: how-to #Required; leave this attribute/value as-is
-ms.date: 07/29/2025
+ms.date: 01/01/2026
 ms.collection: usx-security
 
 #Customer intent: As a security operations team member, I want to understand the process involved in moving our Microsoft Sentinel experience from the Azure portal to the Defender portal so that I can benefit from unified security operations across my entire environment.
