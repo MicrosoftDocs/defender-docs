@@ -123,15 +123,6 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Wait for the deployment to complete.
 
----
-
-### Approve the private endpoint connection
-
-When the private endpoint is created, a connection request is sent to the Security Private Link resource.
-
-- If the requester is an **Owner** of the Security Private Link resource, the connection is approved automatically.
-
-- Otherwise, an **Owner** must approve the connection from **Private endpoint connections** in the Azure portal.
 
 ## Approve the private endpoint connection
 
