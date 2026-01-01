@@ -39,7 +39,7 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 
 1. In Microsoft Defender portal, select **Incidents & alerts** \> **Incidents**.
 
-2. Scroll over to see the **Data sensitivity** column. This column reflects sensitivity labels that are observed on devices related to the incidents providing an indication of whether sensitive files are impacted by the incident.
+1. Scroll over to see the **Data sensitivity** column. This column reflects sensitivity labels that are observed on devices related to the incidents providing an indication of whether sensitive files are impacted by the incident.
 
    :::image type="content" source="media/data-sensitivity-column.png" alt-text="The Highly confidential option in the data sensitivity column" lightbox="media/data-sensitivity-column.png":::
 
@@ -47,15 +47,15 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 
     :::image type="content" source="media/data-sensitivity-filter.png" alt-text="The data sensitivity filter" lightbox="media/data-sensitivity-filter.png":::
 
-3. Open the incident page to further investigate.
+1. Open the incident page to further investigate.
 
    :::image type="content" source="media/incident-page.png" alt-text="The incident page details" lightbox="media/incident-page.png":::
 
-4. Select the **Devices** tab to identify devices storing files with sensitivity labels.
+1. Select the **Devices** tab to identify devices storing files with sensitivity labels.
 
    :::image type="content" source="media/investigate-devices-tab.png" alt-text="The Device tab" lightbox="media/investigate-devices-tab.png":::
 
-5. Select the devices that store sensitive data and search through the timeline to identify which files might be impacted then take appropriate action to ensure that data is protected.
+1. Select the devices that store sensitive data and search through the timeline to identify which files might be impacted then take appropriate action to ensure that data is protected.
 
    You can narrow down the events shown on the device timeline by searching for data sensitivity labels. Doing this shows only events associated with files that the label name.
 

@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 12/29/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -25,9 +25,7 @@ appliesto:
 
 # Enable controlled folder access
 
-
 [Controlled folder access](controlled-folders.md) helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is included with Windows 10, Windows 11, and Windows Server 2019. Controlled folder access is also included as part of the [modern, unified solution for Windows Server 2012R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-
 
 You can enable controlled folder access by using any of these methods:
 
@@ -37,29 +35,52 @@ You can enable controlled folder access by using any of these methods:
   - [Microsoft Configuration Manager](#microsoft-configuration-manager)
   - [Group Policy](#group-policy)
   - [PowerShell](#powershell)
-  
+
+> [!TIP]
+> Exclusions don't work if you're using [data loss prevention (DLP)](/purview/dlp-learn-about-dlp). Do the following steps to investigate:
+>
+> 1. Download and install the [Defender for Endpoint client analyzer](run-analyzer-windows.md).
+> 2. Run a trace for at least five minutes.
+> 3. In the resulting `MDEClientAnalyzerResult.zip` output file, extract the contents of the `EventLogs` folder, and search for instances of `DLP EA` in the available `.evtx` log files.
+
 ## Prerequisites
 
 ### Supported operating systems
 
-- Windows
+**Windows**:
 
+1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** \> **Attack surface reduction**. Or, to go directly to the **Endpoint security \| Attack surface reduction** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/asr>.
 
-1. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
+1. On the **Policies** tab of the **Endpoint security \| Attack surface reduction** page, select **Create policy**.
 
-1. Name the policy and add a description. Select **Next**.
+1. On the **Create a profile** flyout that opens, configure the following settings:
+   - **Platform**: Select **Windows**.
+   - **Profile**: Select **Attack surface reduction rules**.
 
-1. Scroll down, and in the **Enable Controlled Folder Access** drop-down, select an option, such as **Audit Mode**.   
+   Select **Create**.
+
+1. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
+   - **Name**: Enter a unique, descriptive name for the policy.
+   - **Description**: Enter an optional description.
+
+   Select **Next**.
+
+1. On the **Configuration settings** tab, scroll down to the **Enable Controlled Folder Access** section and configured the following settings:
+   - In the box that says **Not configured**, select **Audit Mode**.
   
-   We recommend enabling controlled folder access in audit mode first to see how it works in your organization. You can set it to another mode, such as **Enabled**, later.
+     We recommend enabling controlled folder access in audit mode first to see how it works in your organization. You can set it to another mode, such as **Enabled**, later.
 
-1. To optionally add folders that should be protected, select **Controlled Folder Access Protected Folders** and then add folders. Files in these folders can't be modified or deleted by untrusted applications. Keep in mind that your default system folders are automatically protected. You can view the list of default system folders in the Windows Security app on a Windows device. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender?#controlledfolderaccessprotectedfolders).
+   - **Controlled Folder Access Protected Folders**: Optionally add folders that are protected. Files in these folders can't be modified or deleted by untrusted applications. Default system folders are automatically protected. You can view the list of default system folders in the Windows Security app on a Windows device. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender?#controlledfolderaccessprotectedfolders).
 
-1. To optionally add applications that should be trusted, select **Controlled Folder Access Allowed Applications** and then add the apps can access protected folders. Microsoft Defender Antivirus automatically determines which applications should be trusted. Only use this setting to specify additional applications. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessallowedapplications).
+   - **Controlled Folder Access Allowed Applications**: Optionally add applications that are trusted to access protected folders. Microsoft Defender Antivirus automatically determines which applications are trusted. Only use this setting to specify more applications. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessallowedapplications).
 
-1. Select the profile **Assignments**, assign to **All Users & All Devices**, and select **Save**.
+   When you're finished on the **Configuration settings** tab, select **Next**.
 
-1. Select **Next** to save each open blade and then **Create**.
+1. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
+
+1. On the **Assignments** tab, click in the box, select **All users**, click in the box again, and then select select **All Devices**. Verify the **Target type** value is **Include** for both, and then select **Next**.
+
+1. On the **Review + create** tab, verify the settings, and then select **Save**.
 
 > [!NOTE]
 > Wildcards are supported for applications, but not for folders. Allowed apps continue to trigger events until they're restarted.
@@ -80,7 +101,7 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
    > [!NOTE]
    > Wildcard is supported for applications, but not for folders. Allowed apps continue to trigger events until they're restarted.
-   
+
 1. Review the settings and select **Next** to create the policy.
 
 1. After the policy is created, **Close**.
@@ -104,7 +125,7 @@ For more information about Microsoft Configuration Manager and Controlled Folder
    - **Audit disk modification only** - Only attempts to write to protected disk sectors are recorded in the Windows event log (under **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender** > **Operational** > **ID 1124**). Attempts to modify or delete files in protected folders won't be recorded.
 
    :::image type="content" source="/defender/media/cfa-gp-enable.png" alt-text="Screenshot shows the group policy option enabled and Audit Mode selected." lightbox="/defender/media/cfa-gp-enable.png":::
-   
+
 > [!IMPORTANT]
 > To fully enable controlled folder access, you must set the Group Policy option to **Enabled** and select **Block** in the options drop-down menu.
 
@@ -112,13 +133,15 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
-2. Type the following cmdlet:
+1. Run the following command:
 
-   ```PowerShell
+   ```powershell
    Set-MpPreference -EnableControlledFolderAccess Enabled
    ```
 
    You can enable the feature in audit mode by specifying `AuditMode` instead of `Enabled`. Use `Disabled` to turn off the feature.
+
+For detailed syntax and parameter information, see [EnableControlledFolderAccess](/powershell/module/defender/set-mppreference#-enablecontrolledfolderaccess).
 
 ## See also
 
@@ -127,4 +150,3 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

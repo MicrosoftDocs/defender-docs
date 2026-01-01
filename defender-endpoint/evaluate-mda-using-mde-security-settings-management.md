@@ -169,9 +169,9 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
 1. Select **Next**.
-2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
-3. Select **Next**.
-4. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. Select **Next**.
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 #### Enable Tamper Protection
 

@@ -17,7 +17,6 @@ This article describes how to work with security recommendations in the new unif
 
 - Learn about the [unified recommendations catalog](exposure-insights-overview.md#working-with-recommendations) before you start.
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
-- Understand that all recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one unified view in the Defender portal.
 
 ## Overview of the unified recommendations catalog
 
@@ -36,7 +35,7 @@ You can explore the full breadth of Microsoft's security recommendations without
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management > Recommendations** to open the unified [Recommendations](https://security.microsoft.com/exposure-recommendations) page.
 
-    :::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window." lightbox="./media/recommendations-navigation.png":::
+:::image type="content" source="media/security-recommendations/recommendations-landing-page.png" alt-text="Screenshot of recommendations landing page" lightbox="media/security-recommendations/recommendations-landing-page.png":::
 
 ### Navigate the new unified recommendations interface
 
@@ -58,7 +57,7 @@ Apply advanced filtering using the **Add filter** option to narrow down recommen
 
 #### Devices
 
-The Devices tab provides a unified view of device-related security recommendations, combining misconfigurations and vulnerabilities into a single location for easier management.
+The Devices tab provides a unified view of device-related security recommendations.
 
 There are separate views for issue types:
 
@@ -69,7 +68,7 @@ This separation recognizes that misconfigurations and vulnerabilities often repr
 
 ## Cloud assets
 
-This tab provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
+This tab provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities, misconfigurations, and exposed secrets. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
 
 Apply filters and filter sets such as **Exposed asset**, **Asset risk factors**, **Environment**, **Workload**, **Recommendation maturity** and others.
 
@@ -111,29 +110,18 @@ These tabs provide recommendations specific to SaaS applications, identity secur
 
 The recommendations summary on these tabs includes:
 
-- Their unique secure score
+- Their unique Microsoft Secure Score
 - Score history
 - Recommendation by status
 - Score comparison
-
-1. Select a recommendation to view and review details.
-
-You can also review recommendations on the **Recommendations** tab in a specific security initiative page in **Initiatives** to access [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/).
 
 ## Remediate recommendations
 
 1. To remediate a recommendation, select a specific recommendation and browse to the **Remediation steps** tab.
 
 1. Review the remediation steps and select **Manage** to follow the steps in the originating workload. The unified experience directs you to the appropriate service:
-   - Microsoft Defender for Cloud for cloud recommendations
-   - Microsoft Defender Vulnerability Management for device vulnerabilities  
-   - Microsoft Secure Score for Microsoft 365 recommendations
-   - Other Microsoft workloads as appropriate
-
-1. **Note on unified workflow**: All recommendations, including those from Azure security center, are now visible in Exposure Management, so you can manage your entire security posture from the unified portal without needing to navigate to separate Azure portals for cloud recommendations.
 
 ## Next steps
 
 - Review other ways to [improve security insights with exposure insights](exposure-insights-overview.md)
-- Learn how to [Explore security events](security-events.md)
-- [Investigate initiative metrics](security-metrics.md)
+- [Investigate initiatives and metrics](security-metrics.md)

@@ -73,9 +73,9 @@ Although potentially unwanted application protection in Microsoft Edge (Chromium
 
 1. In your Microsoft Edge browser, select the ellipses, and then choose **Settings**.
 
-2. Select **Privacy, search, and services**.
+1. Select **Privacy, search, and services**.
 
-3. Under the **Security** section, turn on **Block potentially unwanted apps**.
+1. Under the **Security** section, turn on **Block potentially unwanted apps**.
 
 > [!TIP]
 > If you're running Microsoft Edge (Chromium-based), you can safely explore the URL-blocking feature of PUA protection by testing it out on one of our [Microsoft Defender SmartScreen demo pages](https://demo.smartscreen.msft.net/).
@@ -156,19 +156,19 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 
 1. Download and install [the latest Administrative templates for Windows 11](https://www.bing.com/search?q=administrative+template+download+windows+11&FORM=R5FD)
 
-2. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-3. Select the Group Policy Object you want to configure, and then choose **Edit**.
+1. Select the Group Policy Object you want to configure, and then choose **Edit**.
 
-4. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-5. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus**.
 
-6. Double-click **Configure detection for potentially unwanted applications**, and set it to **Enabled**.
+1. Double-click **Configure detection for potentially unwanted applications**, and set it to **Enabled**.
 
-7. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
+1. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
 
-8. Deploy your Group Policy object as you usually do.
+1. Deploy your Group Policy object as you usually do.
 
 ### Use PowerShell cmdlets to configure PUA protection
 

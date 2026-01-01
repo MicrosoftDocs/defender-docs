@@ -36,15 +36,12 @@ sections:
      - question: How do I view a Microsoft Defender Antivirus event?
        answer: |
 
-          1. Open **Event Viewer**.
+          Events are available in **Windows Defender** \> **Operational** in the **Applications and Services Logs** in **Event Viewer**:
 
-          2. In the console tree, expand **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender**.
-
-          3. Double-click on **Operational**.
-
-          4. In the details pane, view the list of individual events to find your event.
-
-          5. Select the event to see specific details about an event in the lower pane, under the **General** and **Details** tabs.
+          1. Open **Event Viewer** by pressing the Windows logo key + R, typing `eventvwr.msc`, and then selecting **OK**.
+          2. Go to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
+          3. Find the event in the list. **Find** and **Filter are available in the **Actions** pane.
+          4. Select the event from the list. The details pane contains the **General** and **Details** tabs.
 
      - question: Event ID 1000
        answer: |
