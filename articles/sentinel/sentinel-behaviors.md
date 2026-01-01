@@ -12,7 +12,7 @@ ms.service: microsoft-sentinel
 
 # Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
 
-Microsoft Sentinel behaviors uses AI to translate raw security telemetry into easy-to-understand behavioral patterns that answer the questions *"What happened?* and *Who did what to whom?"*. 
+Microsoft Sentinel behaviors translates low-level, noisy logs into clear plain-language summaries of behavioral patterns that explain *"What happened?* and *Who did what to whom?"*. 
 
 Instead of analyzing individual AWS CloudTrail events or firewall logs, analysts see a behavior - like "**Inbound remote management session from external address**" - that summarizes multiple raw events and maps them to known tactics, techniques, and procedures (TTPs). This abstraction layer enables faster threat detection, investigation, and response across your security operations. 
 
