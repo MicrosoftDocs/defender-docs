@@ -14,7 +14,7 @@ ms.date: 12/02/2025
 Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link to allow workloads in your private network to access Microsoft Defender services over [Azure Private Link](/azure/private-link/private-link-overview).
 
 > [!NOTE]
-> Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet (21Vianet).
+> Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Before you begin, make sure that:
 
 - Microsoft Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- A [virtual network and subnet](../../virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint will be created.
+- A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the privat e endpoint will be created.
 
 - You reviewed the required [roles and permissions](concept-private-endpoints.md#roles-and-permissions).
 
@@ -36,7 +36,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Select **Create a resource**.
 
-1. Search for **Security Private Link**, then select **Security Private Link** and select **Create**.
+1. Search for **Security Private Link**, then under **Security Private Link** select **Create**.
 
    :::image type="content" source="media/networking-private-endpoints/marketplace-create-security-private-link.png" alt-text="Screenshot of Azure Marketplace search results for Private link, showing the Security Private Link tile and the Create button." lightbox="media/networking-private-endpoints/marketplace-create-security-private-link.png":::
 
@@ -45,23 +45,25 @@ When you create a Security Private Link resource, you can create a private endpo
     - Select a subscription.
 
     - Choose an existing resource group or create a new one.
+    
+    - Optionally, add a resource group location.
 
     - Enter a name for the Security Private Link resource.
 
 1. Select **Next: Networking**.
 
-   :::image type="content" source="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png" alt-text="Screenshot of the Create Security Private Link wizard on the Networking tab, showing the Create a private endpoint pane with sub-resource and Private DNS integration." lightbox="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png":::
-
     > [!NOTE]
-    > Microsoft Security Private Link currently supports the **containers** subresource, which is used by the Defender for Containers plan.
+    > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
 
 1. On the **Networking** tab:
 
     - Select **Create a private endpoint**.
 
+      :::image type="content" source="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png" alt-text="Screenshot of the Create Security Private Link wizard on the Networking tab, showing the Create a private endpoint pane with sub-resource and Private DNS integration." lightbox="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png":::
+
     - Enter a name and location for the private endpoint.
 
-    - Select **containers** as the target subresource.
+    - Select **containers** as the target sub-resource.
 
     - Select the virtual network and subnet.
 
@@ -73,6 +75,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Wait for the deployment to complete.
 
+After deployment, verify that workloads continue to report data in Microsoft Defender for Cloud.
 
 ## Create a private endpoint for an existing Security Private Link resource (Azure portal)
 
@@ -92,24 +95,28 @@ If you already have a Security Private Link resource, you can create a private e
 
     - Choose an existing resource group or create a new one.
 
-    - Enter a name and region for the private endpoint.
+    - Enter a name and network interface name, and select a region.
 
 1. Select **Next: Resource**.
 
     > [!NOTE]
-    > Microsoft Security Private Link currently supports the **containers** subresource, which is used by the Defender for Containers plan.
+    > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
 
 1. On the **Resource** tab:
 
     - Select **Connect to an Azure resource in my directory**.
 
-    - Choose **Microsoft.Security/privateLinks** as the resource type.
+    - Choose a subscription.
+
+    -  Select **Microsoft.Security/privateLinks** as the resource type.
 
     - Select the Security Private Link resource for Defender services.
 
-    - Select **containers** as the target subresource.
+    - Select **containers** as the target sub-resource.
 
 1. Select **Next: Virtual Network**.
+
+1. On the **Virtual Network** tab:
 
     - Select the virtual network.
 
@@ -119,7 +126,7 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select **Next: DNS**.
 
-    - Enable **Private DNS integration**.
+    - Enable **Integrate with private DNS zone**.
 
     - Verify that the private DNS zone is populated automatically.
 
@@ -129,17 +136,17 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Wait for the deployment to complete.
 
+After deployment, verify that workloads continue to report data in Microsoft Defender for Cloud.
 
 ## Approve the private endpoint connection
 
 When the private endpoint is created, a connection request is sent to the Security Private Link resource.
 
 - If the requester is an **Owner**, the connection is approved automatically.
+
 - Otherwise, an **Owner** must approve the request from **Private endpoint connections** in the Azure portal.
 
 ## Validate the private endpoint connection
-
-### Verify DNS resolution
 
 From a workload in the virtual network, run:
 
@@ -148,11 +155,6 @@ nslookup api.cloud.defender.microsoft.com
 ```
 
 The FQDN should resolve to a private IP address under `privatelink.cloud.defender.microsoft.com`.
-
-### Verify Defender connectivity
-
-- **For AKS**: Confirm that the Defender for Containers add-on is running.
-- **In the Azure portal**: Verify that workloads are reporting data in Microsoft Defender for Cloud.
 
 ## Related content
 
