@@ -8,9 +8,9 @@ ms.reviewer: AmitMishaeli
 
 # How Defender for Cloud Apps helps protect your Amazon Web Services (AWS) environment
 
-Amazon Web Services is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
+Amazon Web Services is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of using infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
 
-Connecting AWS to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, unusual deletions of VMs, and publicly exposed storage buckets.
+Connecting AWS to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, unusual deletions of virtual machines (VMs), and publicly exposed storage buckets.
 
 ## Main threats
 
@@ -60,10 +60,10 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
 
 ### Step 1: Configure Amazon Web Services auditing
 
-1. In your [Amazon Web Services console](https://aws.amazon.com/console/), go to **IAM** add a new user for Defender for Cloud Apps with **Programmatic access**.
+1. Sign in to the [Amazon Web Services console](https://aws.amazon.com/console/)
+1. Add a new user for Defender for Cloud Apps, and give the user **Programmatic access**.
 
-   
-1. Select **Attach existing policies directly**, and then select **Create policy**.
+1. Select **Create policy** and enter a name for your new policy.
 
    
 1. Select the **JSON** tab and paste the following script:
@@ -93,17 +93,13 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
      }
     ```
 
-1. Enter a name for your policy and select **Create policy**.
-
-1. Select **Create user**.
-   
-1. Select **Download .csv** to save a copy of the new user's credentials. You'll need these later.
+1. Select **Download .csv** to save a copy of the new user's credentials. You'll need them later.
 
    
    > [!NOTE]
-    > After connecting AWS, you'll receive events for seven days prior to connection. If you just enabled CloudTrail, you'll receive events from the time you enabled CloudTrail.
+    > After connecting AWS, you'll receive events for seven days prior to connection. If you just enabled CloudTrail, you receive events from the time you enabled CloudTrail.
 
-### Step 2: Connect Amazon Web Services auditing to Defender for Cloud Apps
+### Connect Amazon Web Services auditing to Defender for Cloud Apps
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
@@ -112,18 +108,19 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
     **For a new connector**  
 
    1. Select the **+Connect an app**, followed by **Amazon Web Services**.
+
+   :::image type="content" source="media/connect-aws.png" alt-text="Screenshot that shows where to find the +Connect an app button in the Microsoft Defender portal." lightbox="media/connect-aws.png":::
    
-       ![connect AWS auditing.](media/connect-aws.png "connect AWS")
       
     1. In the next window, provide a name for the connector, and then select **Next**.
 
-        ![AWS auditing connector name.](media/connect-aws-name.png)
+    :::image type="content" source="media/connect-aws-name.png" alt-text="Screenshot that shows how to add the instance name for your new AWS connector. " lightbox="media/connect-aws-name.png":::
 
     1. On the **Connect Amazon Web Services** page, select **Security auditing**, and then select **Next**.
 
     1. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
 
-        ![Connect AWS app security auditing for new connector.](media/aws-connect-app-audit.png "Connect AWS app security auditing")
+    :::image type="content" source="media/aws-connect-app-audit.png" alt-text="Screenshot that shows the AWS app security auditing page and where to enter the access key and secret key." lightbox="media/aws-connect-app-audit.png":::
 
     **For an existing connector**
 
@@ -132,7 +129,8 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
       
    1. On the **Instance name** and **Connect Amazon Web Services** pages, select **Next**. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
    
-       ![Connect AWS app security auditing for existing connector.](media/aws-connect-app-audit.png "Connect AWS app security auditing")
+       
+    :::image type="content" source="media/aws-connect-app-audit.png" alt-text="Screenshot that shows the AWS app security auditing page and where to enter the access key and secret key." lightbox="media/aws-connect-app-audit.png":::
       
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
