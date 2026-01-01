@@ -7,7 +7,7 @@ author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - mde-macos
@@ -15,8 +15,8 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/30/2025
-appliesto: 
+ms.date: 12/31/2025
+appliesto:
     - Microsoft Defender for Endpoint Plan 2
     - Microsoft Defender for Business
 
@@ -33,33 +33,46 @@ appliesto:
 
 Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. You can run an EDR detection test to verify that the device is properly onboarded and reporting to the service. This article describes how to run an EDR detection test on a newly onboarded device.
 
-### Windows
+### Windows client
 
-1. Open a Command Prompt window.
+In PowerShell, run the following commands:
 
-1. At the prompt, copy and run the following command. The Command Prompt window closes automatically.
+```powershell
+Set-Content -Path "$env:TEMP\eicar.txt" -Value "X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"
 
-   ```powershell
-   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
-   ```
+Rename-Item "$env:TEMP\eicar.txt" "eicar.com"
+```
 
-1. If successful, the detection test is marked as completed and a new alert appears within a few minutes.
+If successful, a new alert appears within a few minutes.
+
+### Windows server
+
+> [!TIP]
+> The server must be listening for requests on TCP port 80 for the following commands to work. You can verify by running the following PowerShell command: `Test-NetConnection 127.0.0.1 -Port 80`.
+
+In a Command Prompt window, run the following commands:
+
+```dos
+powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference='silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
+```
+
+If successful, the detection test is marked as completed and a new alert appears within a few minutes.
 
 ### Linux
 
-1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server. 
+1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
 
    ```bash
    curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
    ```
 
-1. Extract the zipped folder. 
+1. Extract the zipped folder.
 
    ```bash
    unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
    ```
 
-1. Run the following command to give the script executable permission: 
+1. Run the following command to give the script executable permission:
 
    ```bash
    chmod +x ./mde_linux_edr_diy.sh
@@ -72,7 +85,7 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
    ```
 
    After a few minutes, a detection should be raised in the [Microsoft Defender portal](https://security.microsoft.com). Look at the alert details, machine timeline, and perform your typical investigation steps.
- 
+
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP macOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract the zipped folder.
@@ -122,7 +135,6 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
     :::image type="content" source="media/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="Screenshot that shows a macOS EDR test alert that shows severity, category, detection source, and a collapsed menu of actions":::
 
     The macOS EDR test alert shows severity, category, detection source, and a collapsed menu of actions. Look at the alert details and the device timeline, and perform the regular investigation steps.
-
 
 ## Next steps
 
