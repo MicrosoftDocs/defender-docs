@@ -19,7 +19,7 @@ appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
 search.appverid: met150
-ms.date: 12/26/2025
+ms.date: 12/31/2025
 ---
 
 # Enable attack surface reduction rules
@@ -106,7 +106,7 @@ When adding exclusions, keep these points in mind:
 
 - Exclusions are typically based on individual files or folders (using folder paths or the full path of the file to be excluded).
 - Exclusion paths can use environment variables and wildcards. See [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
-- When deployed through group policy or PowerShell, exclusions apply to all attack surface reduction rules. Using Intune, it's possible to configure an exclusion for a specific attack surface reduction rule. See [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+- When deployed through group policy, PowerShell, or Intune, you can configure exclusions for specific attack surface reduction rules. For Intune instructions, see [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 - Exclusions can be added based on certificate and file hashes, by allowing specified Defender for Endpoint file and certificate indicators. See [Overview of indicators](indicators-overview.md).
 
 ### How policy conflicts are handled
