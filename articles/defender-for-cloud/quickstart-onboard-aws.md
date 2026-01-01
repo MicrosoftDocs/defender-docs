@@ -221,7 +221,7 @@ This table helps you determine whether you need to update the CloudFormation tem
 | 3 | Did Microsoft release a new version of the template? (For example, support new features, fix bugs, or update runtime) | Update the CloudFormation Stack with the latest template. | Go to Step 4. |
 | 4 | Are you experiencing deployment errors<sup>[1](#footnote1)</sup> (for example, Access Denied error, Entity already exist, Lambda runtime)? | Update the CloudFormation Stack with the latest template. | No update of CloudFormation template needed. |
 
-<sup><a name="footnote1"></a>1</sup>If you're receiving specific errors, or errors with the CloudFormation template deployment, refer to the [CloudFormation error resolution table](troubleshoot-connectors.md#cloudformation-error-resolution-table). Locate the error section, review the Microsoft documentation, and then contact Microsoft Support with logs and details.
+<sup><a name="footnote1"></a>1</sup> If you're receiving specific errors, or errors with the CloudFormation template deployment, refer to the [CloudFormation error resolution table](troubleshoot-connectors.md#cloudformation-error-resolution-table).
 
 ## Enable AWS CloudTrail log ingestion (Preview)
 
