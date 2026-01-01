@@ -4,7 +4,7 @@ description: This guide is for IT professionals, security analysts, and cloud ad
 author: Elazark
 ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 12/28/2025
+ms.date: 01/01/2026
 ---
 
 # Troubleshoot connectors guide
@@ -36,7 +36,7 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
 - Make sure that EKS clusters are successfully connected to Azure Arc-enabled Kubernetes.
 - If you don't see AWS data in Defender for Cloud, make sure that the required AWS resources for sending data to Defender for Cloud exist in the AWS account.
 
-### CloudFormation error resolution flowchart
+### CloudFormation error resolution table
 
 If you see an error when deploying the CloudFormation template, use the following flowchart to help identify and resolve the issue.
 
@@ -48,7 +48,7 @@ If you see an error when deploying the CloudFormation template, use the followin
 | 4 | No Updates to be performed? | No changes detected.<br>• Confirm you're using the new template.<br>• If not, get the current template.<br>• If yes and no changes needed, no action. | Go to Step 5. |
 | 5 | StackSet won't start in portal and hangs? | Deployment orchestration issue.<br> • Enable Org trusted access for CFN.<br>• Try manual StackSet update via AWS console or CLI.<br>• Use browser dev tools to catch hidden errors. | Go to Step 6. |
 | 6 | Azure Connector Error? | Azure or AWS config mismatch.<br>• Verify CloudFormation stack name and settings.<br>• Ensure management and member stacks deployed.<br>• Align names, then retry in portal. | Go to Step 7. |
-| 7 | Other / Not sure / Still failing? | Seek further help.<br> • Review Microsoft documentation for known issues.<br>• Contact Microsoft Support with logs and details. | Contact Microsoft Support with logs and details. |
+| 7 | Other / Not sure / Still failing? | Seek further help.<br> • Contact Microsoft Support with logs and details. | N/A |
 
 ### Connected to Sentinel first
 

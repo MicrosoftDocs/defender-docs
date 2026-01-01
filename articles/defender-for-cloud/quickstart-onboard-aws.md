@@ -4,7 +4,7 @@ description: Defend your AWS resources with Microsoft Defender for Cloud, a guid
 author: ElazarK
 ms.author: elkrieger
 ms.topic: install-set-up-deploy
-ms.date: 12/14/2025
+ms.date: 01/01/2026
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -212,6 +212,8 @@ As part of onboarding, deploy the generated CloudFormation template:
 
 ### Do you need to update the CloudFormation template?
 
+This table helps you determine whether you need to update the CloudFormation template deployed in your AWS account.
+
 | Step | Question | If YES | If NO |
 |--|--|--|--|
 | 1 | Did you enable a new Defender plan (for example, CSPM, Databases, Defender for Containers)? | Update the CloudFormation Stack with the latest template. | Go to Step 2. |
@@ -219,9 +221,7 @@ As part of onboarding, deploy the generated CloudFormation template:
 | 3 | Did Microsoft release a new version of the template? (For example, support new features, fix bugs, or update runtime) | Update the CloudFormation Stack with the latest template. | Go to Step 4. |
 | 4 | Are you experiencing deployment errors<sup>[1](#footnote1)</sup> (for example, Access Denied error, Entity already exist, Lambda runtime)? | Update the CloudFormation Stack with the latest template. | No update of CloudFormation template needed. |
 
-<sup><a name="footnote1"></a>1</sup>If you're receiving specific errors, refer to the [CloudFormation error resolution flowchart](#cloudformation-error-resolution-flowchart). Locate the error section, review the Microsoft documentation, and then contact Microsoft Support with logs and details.
-
-If you're experiencing errors with the CloudFormation template deployment, check out the [CloudFormation error resolution flowchart](troubleshoot-connectors.md#cloudformation-error-resolution-flowchart).
+<sup><a name="footnote1"></a>1</sup>If you're receiving specific errors, or errors with the CloudFormation template deployment, refer to the [CloudFormation error resolution table](troubleshoot-connectors.md#cloudformation-error-resolution-table). Locate the error section, review the Microsoft documentation, and then contact Microsoft Support with logs and details.
 
 ## Enable AWS CloudTrail log ingestion (Preview)
 
