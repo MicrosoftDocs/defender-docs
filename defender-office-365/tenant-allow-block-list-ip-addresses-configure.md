@@ -31,7 +31,8 @@ In all organizations with cloud mailboxes, admins can create and manage entries 
 This article describes how admins can manage entries for IPv6 addresses in the Microsoft Defender portal and in Exchange Online PowerShell.
 
 > [!NOTE]
-> IPv4 ranges aren't supported yet. Admins can create and manage entries for IPv4 addresses in the [default connection filter policy](connection-filter-policies-configure.md).
+> IPv4 addresses (both single addresses and ranges) aren't supported in the Tenant Allow/Block List for this feature. Only IPv6 addresses are supported here.
+> To allow or block IPv4 addresses, use the [default connection filter policy](connection-filter-policies-configure.md) instead.
 
 ## What do you need to know before you begin?
 
