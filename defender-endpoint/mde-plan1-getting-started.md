@@ -119,9 +119,9 @@ In Defender for Endpoint Plan 1, several reports are available in the Microsoft 
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. In the navigation bar, choose **Reports**.
+1. In the navigation bar, choose **Reports**.
 
-3. Select a report in the list. Reports include:
+1. Select a report in the list. Reports include:
 
    - Threat protection report
    - Device health report

@@ -4,7 +4,7 @@ description: Office 365, which includes OneDrive, goes together wonderfully with
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 author: KesemSharabi
 ms.author: kesharab
 ms.custom: 

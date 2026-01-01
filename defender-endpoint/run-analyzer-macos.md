@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 05/24/2025
+ms.date: 12/31/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -17,7 +17,7 @@ ms.collection:
 - mde-macos
 search.appverid: met150
 audience: ITPro
-f1.keywords: NOCSH 
+f1.keywords: NOCSH
 ---
 
 # Run the client analyzer on macOS
@@ -32,7 +32,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 
 ## Use the binary version of the client analyzer
 
-1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the macOS machine you need to investigate. 
+1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the macOS machine you need to investigate.
 
    If you're using a terminal, download the tool by running the following command:
 
@@ -45,8 +45,8 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    ```bash
    echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
-   
-3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
+
+3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
 
    If you're using a terminal, extract the files by running the following command:
 
@@ -65,16 +65,16 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    - `SupportToolLinuxBinary.zip`: For all Linux devices
    - `SupportToolMacOSBinary.zip`: For Mac devices
 
-6. Unzip the SupportToolMacOSBinary.zip. 
+6. Unzip the SupportToolMacOSBinary.zip.
 
    ```bash
     unzip -q SupportToolMacOSBinary.zip
    ```
-   
+
 7. Run the tool as root to generate your diagnostic package:
 
    ```bash
-   sudo ./MDESupportTool -d
+   sudo ./MDESupportTool -d --mdatp-log debug
    ```
 
 ## Use the Python-based client analyzer
@@ -89,62 +89,68 @@ The tool currently requires Python version 3 or later to be installed on your de
 1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool to the Mac machine you're investigating.
 
    If you're using a terminal, download the tool by running the following command:
-   
-      ```bash
-   wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
-      ```
-      
-2. Verify the download. 
 
-   | OS | Command |
-   |--|--|
-   | Linux | `echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| sha256sum -c` |
-   | macOS | `echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| shasum -a 256 -c` |
-   
-3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine. 
+   ```bash
+   wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
+   ```
+
+2. Verify the download by running one of the following commands:
+   - **Linux**:
+
+     ```bash
+     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| sha256sum -c`
+     ```
+
+   - **macOS**:
+
+     ```bash
+     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| shasum -a 256 -c`
+     ```
+
+3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.
 
    If you're using a terminal, extract the files by using the following command:
-   
+
    ```bash
    unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
    ```
-   
+
 4. Change directory to the extracted location.
 
    ```bash
    cd XMDEClientAnalyzer
    ```
-   
+
 5. Give the tool executable permission:
 
    ```bash
    chmod a+x mde_support_tool.sh
    ```
-   
+
 6. Run as a nonroot user to install required dependencies:
 
    ```bash
    ./mde_support_tool.sh
    ```
-   
+
 7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you'll want to remove this extended attribute:
 
    ```bash
    xattr -c MDESupportTools
    ```
-   
+
    Otherwise you might get the following warning:
-   
-      "You might get a "MDESupportTool" Not Opened
-   
-      Apple couldn't verify "MDESupportTool" is free of malware that might harm your Mac or compromise your privacy"
-   
+
+   "You might get a "MDESupportTool" Not Opened
+
+   Apple couldn't verify "MDESupportTool" is free of malware that might harm your Mac or compromise your privacy"
+
 8. To collect actual diagnostic package and generate the result archive file, run again as root:
 
    ```bash
-   sudo ./mde_support_tool.sh -d
+   sudo ./mde_support_tool.sh -d --mdatp-log debug
    ```
-   
+
 > [!TIP]
 > Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
 
@@ -172,7 +178,7 @@ Use the following command to get the machine diagnostic.
                       Maximum log file size in MB before rotating(Will restart mdatp)
 ```
 
-Usage example: `sudo ./MDESupportTool -d`
+Usage example: `sudo ./MDESupportTool -d --mdatp-log debug`
 
 > [!NOTE]
 > The log level autoreset feature is only available in 2405 or newer client version.
@@ -213,17 +219,17 @@ Usage example `./mde_support_tool.sh trace --length 5`
 
 ## Result package contents on macOS
 
-| File | Description |
+|File|Description|
 |---|---|
-| `report.html` | The main HTML output file that contains the findings and guidance from running the client analyzer tool on the device. This file is only generated when running the Python-based version of the client analyzer tool. |
-| `mde_diagnostic.zip` | Same diagnostic output that gets generated when running `mdatp diagnostic create` on [macOS](mac-resources.md#collecting-diagnostic-information). |
-| `mde.xml` | XML output that is generated while running and is used to build the html report file. |
-| `Processes_information.txt` | Contains the details of the running Microsoft Defender for Endpoint related processes on the system. |
-| `Log.txt` | Contains the same log messages written on screen during the data collection. |
-| `Health.txt` | The same basic health output that is shown when running *mdatp health* command. |
-| `Events.xml` | Another XML file used by the analyzer when building the HTML report. |
-| `Audited_info.txt` | Details on audited service and related components for [Linux](linux-resources.md) OS. |
-| `perf_benchmark.tar.gz` | The performance test reports. You see this file only if you're using the performance parameter. |
+|`report.html`|The main HTML output file that contains the findings and guidance from running the client analyzer tool on the device. This file is only generated when running the Python-based version of the client analyzer tool.|
+|`mde_diagnostic.zip`|Same diagnostic output that gets generated when running `mdatp diagnostic create` on [macOS](mac-resources.md#collecting-diagnostic-information).|
+|`mde.xml`|XML output that is generated while running and is used to build the html report file.|
+|`Processes_information.txt`|Contains the details of the running Microsoft Defender for Endpoint related processes on the system.|
+|`Log.txt`|Contains the same log messages written on screen during the data collection.|
+|`Health.txt`|The same basic health output that is shown when running *mdatp health* command.|
+|`Events.xml`|Another XML file used by the analyzer when building the HTML report.|
+|`Audited_info.txt`|Details on audited service and related components for [Linux](linux-resources.md) OS.|
+|`perf_benchmark.tar.gz`|The performance test reports. You see this file only if you're using the performance parameter.|
 
 ## See also
 

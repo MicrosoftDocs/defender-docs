@@ -43,18 +43,18 @@ You can control the following attributes about the folder that you'd like to be 
 
 1. Sign in to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
 
-2. Select **New folder exclusion**.
+1. Select **New folder exclusion**.
 
-3. Enter the folder details:
+1. Enter the folder details:
 
     - Folder
     - Extensions
     - File names
     - Description
 
-4. Select **Save**.
+1. Select **Save**.
 
 > [!NOTE]
 > Live Response commands to collect or examine excluded files will fail with error: "File is excluded". In addition, automated investigations will ignore the excluded items.
@@ -63,15 +63,15 @@ You can control the following attributes about the folder that you'd like to be 
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
 
-2. Select **Edit** on the folder exclusion.
+1. Select **Edit** on the folder exclusion.
 
-3. Update the details of the rule and click **Save**.
+1. Update the details of the rule and click **Save**.
 
 ## Remove an automation folder exclusion
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
 
-2. Select **Remove exclusion**.
+1. Select **Remove exclusion**.
 
 ## Related articles
 
