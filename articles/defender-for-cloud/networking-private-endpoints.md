@@ -14,7 +14,7 @@ ms.date: 12/02/2025
 Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link to allow workloads in your private network to access Microsoft Defender services over [Azure Private Link](/azure/private-link/private-link-overview).
 
 > [!NOTE]
-> Microsoft Security Private Link is not supported in sovereign cloud regions, such as Azure Government and Azure China (21Vianet).
+> Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet (21Vianet).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Before you begin, make sure that:
 
 - A [virtual network and subnet](../../virtual-network/quick-create-portal.md) where your workloads are deployed. This is where the private endpoint will be created.
 
-- You have reviewed the required [roles and permissions](concept-private-endpoints.md#roles-and-permissions).
+- You reviewed the required [roles and permissions](concept-private-endpoints.md#roles-and-permissions).
 
 ## Create a private endpoint using a Security Private Link resource (Azure portal)
 
@@ -49,7 +49,7 @@ When you create a Security Private Link resource, you can create a private endpo
 1. Select **Next: Networking**.
 
     > [!NOTE]
-    > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
+    > Microsoft Security Private Link currently supports the **containers** subresource, which is used by the Defender for Containers plan.
 
 1. On the **Networking** tab:
 
@@ -57,7 +57,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
     - Enter a name and location for the private endpoint.
 
-    - Select **containers** as the target sub-resource.
+    - Select **containers** as the target subresource.
 
     - Select the virtual network and subnet.
 
@@ -91,7 +91,7 @@ If you already have a Security Private Link resource, you can create a private e
 1. Select **Next: Resource**.
 
     > [!NOTE]
-    > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
+    > Microsoft Security Private Link currently supports the **containers** subresource, which is used by the Defender for Containers plan.
 
 1. On the **Resource** tab:
 
@@ -101,7 +101,7 @@ If you already have a Security Private Link resource, you can create a private e
 
     - Select the Security Private Link resource for Defender services.
 
-    - Select **containers** as the target sub-resource.
+    - Select **containers** as the target subresource.
 
 1. Select **Next: Virtual Network**.
 

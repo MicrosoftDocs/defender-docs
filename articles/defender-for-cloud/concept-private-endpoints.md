@@ -19,7 +19,7 @@ This article provides an overview of how to use private endpoints with Microsoft
 > For a complete understanding of private endpoints and private links, see [What is a private endpoint?](/azure/private-link/private-endpoint-overview).
 
 > [!NOTE]
-> Microsoft Security Private Link is not supported in sovereign cloud regions, such as Azure Government and Azure China (21Vianet).
+> Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet (21Vianet).
 
 ## Supported scenarios
 
@@ -51,7 +51,7 @@ Security Private Link uses Azure Private Endpoints to establish private connecti
 - Multiple Defender services can share a single Security Private Link resource, simplifying network architecture.
 
 > [!NOTE]
-> Using private endpoints may incur additional Azure costs depending on the number of endpoints and the selected architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
+> Using private endpoints might incur additional Azure costs depending on the number of endpoints and the selected architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 
 ### Diagram 
 
@@ -59,7 +59,7 @@ Add diagram when ready.
 
 ## Roles and permissions
 
-Access to Microsoft Security Private Link is governed by [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview). Configuring and managing private endpoints typically involves the following roles:
+Microsoft Security Private Link uses [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview). Configuring and managing private endpoints typically involves the following roles:
 
 - **Private Link resource owner**  
   Owns the Microsoft Security Private Link resource and can approve, reject, or delete private endpoint connection requests.
@@ -68,7 +68,7 @@ Access to Microsoft Security Private Link is governed by [Azure role-based acces
   Can create private endpoints within a virtual network.
 
 - **Security Admin**  
-  Can approve, reject, or delete private endpoint connections but cannot create private endpoints in a virtual network unless additional network permissions are granted.
+  Can approve, reject, or delete private endpoint connections but can't create private endpoints in a virtual network unless extra network permissions are granted.
 
 These roles can be assigned to different users or teams to separate network management from security governance responsibilities.
 
