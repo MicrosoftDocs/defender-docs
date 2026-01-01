@@ -38,7 +38,7 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
 
 ### CloudFormation error resolution table
 
-If you see an error when deploying the CloudFormation template, use the following flowchart to help identify and resolve the issue.
+If you see an error when deploying the CloudFormation template, use the following table to help identify and resolve the issue.
 
 | Step | Error Type | If YES | If NO |
 |--|--|--|--|
