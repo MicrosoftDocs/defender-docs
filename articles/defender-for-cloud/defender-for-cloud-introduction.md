@@ -46,7 +46,7 @@ In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI secu
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
 
-After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments. Defender for Cloud uses the data to give insights, recommendations, and actions that help you protect your cloud workloads and resources. You can increase your cloud workloads protection and coverage by enabling additional plans that are listed below.
+After you enable the [Defender for Cloud solution](connect-azure-subscription.md) on your Azure subscription, the system collects security data from your multicloud and DevOps environments. Defender for Cloud uses the data to provide insights, recommendations, and actions that help you protect your cloud workloads and resources. You can increase your cloud workloads protection and coverage by enabling additional plans that are listed in the following section.
 
 Defender for Cloud's available plans and their CNAPP benefits include:
 
@@ -69,16 +69,16 @@ You can also check out the E-book ["From plan to deployment: Implementing a Clou
 
 The security of your cloud and on-premises resources relies on proper configuration and deployment. Defenders for Cloud recommendations identify steps to secure your environment.
 
-Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced CSPM capabilities with the Defender CSPM plan.
+Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced CSPM capabilities by using the Defender CSPM plan.
 
 > [!NOTE]
-> Defender CSPM provides broad recommendation coverage across Defender for Cloud, while a limited number of recommendations remain plan‑specific. To access those, enable the appropriate CWPP plans.
+> Defender CSPM provides broad recommendation coverage in Microsoft Defender for Cloud. Some recommendations are specific to certain plans. To access those recommendations, enable the related Cloud Workload Protection Platform (CWPP) plans.
 
 | Capability | What problem does it solve? | Get started | Defender plan |
 |--|--|--|--|
 | [Centralized policy management](security-policy-concept.md) | Define the security conditions that you want to maintain across your environment. The policy translates to recommendations that identify resource configurations that violate your security policy. The [Microsoft cloud security benchmark](concept-regulatory-compliance.md) is a built-in standard that applies security principles with detailed technical implementation guidance for Azure and other cloud providers (such as Amazon Web Services (AWS) and Google Cloud Platform (GCP). | [Customize a security policy](create-custom-recommendations.md) | Foundational CSPM (Free) |
 | [Secure score](secure-score-security-controls.md) | Summarize your security posture based on the security recommendations. As you remediate recommendations, your secure score improves. | [Track your secure score](secure-score-access-and-track.md) | Foundational CSPM (Free) |
-| [Multicloud coverage](plan-multicloud-security-get-started.md) | Connect to your multicloud environments with agentless methods for CSPM insight and CWPP protection. | Connect your [Amazon AWS](quickstart-onboard-aws.md) and [Google GCP](quickstart-onboard-gcp.md) cloud resources to Defender for Cloud | Foundational CSPM (Free) |
+| [Multicloud coverage](plan-multicloud-security-get-started.md) | Connect to your multicloud environments by using agentless methods for CSPM insight and CWPP protection. | Connect your [Amazon AWS](quickstart-onboard-aws.md) and [Google GCP](quickstart-onboard-gcp.md) cloud resources to Defender for Cloud | Foundational CSPM (Free) |
 | [Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) | Use the dashboard to see weaknesses in your security posture. | [Enable CSPM tools](enable-enhanced-security.md) | Foundational CSPM (Free) |
 | [Advanced Cloud Security Posture Management](concept-cloud-security-posture-management.md) | Get advanced tools to identify weaknesses in your security posture, including:</br>- Governance to drive actions to improve your security posture</br>- Regulatory compliance to verify compliance with security standards</br>- Cloud security explorer to build a comprehensive view of your environment | [Enable CSPM tools](enable-enhanced-security.md) | Defender CSPM |
 | [Data Security Posture Management](concept-data-security-posture.md) | Data security posture management automatically discovers datastores containing sensitive data, and helps reduce risk of data breaches. | [Enable data security posture management](data-security-posture-enable.md) | Defender CSPM or Defender for Storage |
@@ -89,7 +89,7 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 
 ## Development security operations (DevSecOps)
 
-Defender for Cloud adds security to the start of development. It lets you secure code pipelines and environments, and monitor your security posture from one place. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
+Defender for Cloud adds security to the start of development. It helps you secure code pipelines and environments, and monitor your security posture from one place. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
 
 Applications require security awareness at the code, infrastructure, and runtime levels to ensure that deployed applications are hardened against attacks.
 
@@ -106,7 +106,7 @@ When your environment is threatened, security alerts immediately indicate the na
 | Capability | What problem does it solve? | Get started | Defender plan |
 | ---------- | --------------------------- | ----------- | ------------------------- |
 | Protect cloud servers | Provide server protections through Microsoft Defender for Endpoint or extended protection with just-in-time network access, file integrity monitoring, vulnerability assessment, and more. | [Secure your multicloud and on-premises servers](defender-for-servers-introduction.md) | Defender for Servers |
-| Identify threats to your storage resources | Detect unusual and potentially harmful attempts to access or exploit your storage accounts using advanced threat detection capabilities and Microsoft Threat Intelligence data to provide contextual security alerts. | [Protect your cloud storage resources](defender-for-storage-introduction.md) | Defender for Storage |
+| Identify threats to your storage resources | Detect unusual and potentially harmful attempts to access or exploit your storage accounts by using advanced threat detection capabilities and Microsoft Threat Intelligence data to provide contextual security alerts. | [Protect your cloud storage resources](defender-for-storage-introduction.md) | Defender for Storage |
 | Protect cloud databases | Protect your entire database estate with attack detection and threat response for the most popular database types in Azure to protect the database engines and data types, according to their attack surface and security risks. | [Deploy specialized protections for cloud and on-premises databases](quickstart-enable-database-protections.md) | - Defender for Azure SQL Databases</br>- Defender for SQL servers on machines</br>- Defender for Open-source relational databases</br>- Defender for Azure Cosmos DB |
 | Protect containers | Secure your containers so you can improve, monitor, and maintain the security of your clusters, containers, and their applications with environment hardening, vulnerability assessments, and run-time protection. | [Find security risks in your containers](defender-for-containers-introduction.md) | Defender for Containers |
 | [Infrastructure service insights](asset-inventory.md) | Diagnose weaknesses in your application infrastructure that can leave your environment susceptible to attack. | - [Identify attacks targeting applications running over App Service](defender-for-app-service-introduction.md)</br>- [Detect attempts to exploit Key Vault accounts](defender-for-key-vault-introduction.md)</br>- [Get alerted on suspicious Resource Manager operations](defender-for-resource-manager-introduction.md)</br>- [Expose anomalous Domain Name System (DNS) activities](defender-for-dns-introduction.md) | - Defender for App Service</br>- Defender for Key Vault</br>- Defender for Resource Manager</br>- Defender for DNS |
@@ -121,7 +121,7 @@ Microsoft Defender for Cloud provides AI security posture management and AI thre
 
 | Type of AI security | Description | Relevant links |
 |--|--|--|
-| AI security posture management (SPM) | Helps you discover generative AI applications, identify vulnerabilities, and reduce risks using built-in recommendations and attack path analysis. | Learn more about [AI security posture management](ai-security-posture.md) |
+| AI security posture management (SPM) | Helps you discover generative AI applications, identify vulnerabilities, and reduce risks by using built-in recommendations and attack path analysis. | Learn more about [AI security posture management](ai-security-posture.md) |
 | AI threat protection | Uses advanced threat detection techniques to identify and respond to threats targeting your generative AI workloads. | [AI threat protection](ai-threat-protection.md) |
 
 Defender for Cloud also includes a Data and AI security dashboard. This dashboard gives you a central place to monitor and manage your data and AI resources, track risks, and check protection status.
@@ -134,7 +134,7 @@ For more information about Defender for Cloud and how it works, see:
 - An interview about Defender for Cloud with an expert in cybersecurity in [Lessons Learned from the Field](episode-six.md)
 - [Microsoft Defender for Cloud - Use cases](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-use-cases/ba-p/2953619)
 - [Microsoft Defender for Cloud PoC Series - Microsoft Defender for Containers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-poc-series-microsoft-defender-for/ba-p/3064644)
-- Learn how [Microsoft Defender for Cloud provides data security](data-security.md)
+- Learn how [Microsoft Defender for Cloud provides data security](data-security.md).
 
 ## Next steps
 
