@@ -93,7 +93,3 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 - Review Defender for Cloud recommendations and identity insights after setup.
 
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
-
-## Next steps
-
-- Learn more about [monitoring connected AWS resources](monitor-connected-aws-resources.md).
