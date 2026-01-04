@@ -40,9 +40,9 @@ If you're a home user, or you aren't subject to settings managed by a security t
 
 1. On a Windows device, select **Start**, and start typing *Security*. In the search results, select **Windows Security**.
 
-2. Select **Virus & threat protection** \> **Virus & threat protection settings**.
+1. Select **Virus & threat protection** \> **Virus & threat protection settings**.
 
-3. Set **Tamper Protection** to **On** or **Off**.
+1. Set **Tamper Protection** to **On** or **Off**.
 
     Here's what you see in the Windows Security app:
     
