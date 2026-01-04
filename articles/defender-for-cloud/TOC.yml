@@ -509,6 +509,9 @@
               href: detect-exposed-ip-addresses.md
         - name: Review security recommendations
           items:
+            - name: Security recommendations
+              displayName: security, recommendations, overview, posture, management
+              href: security-recommendations.md
             - name: Review security recommendations
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
@@ -866,20 +869,13 @@
           href: defender-for-sql-scan-results.md
       - name: Investigate and remediate
         items:
-        - name: Investigate Defender for SQL security Alerts, reporting, and queries
+        - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
         - name: Find and remediate vulnerabilities
           href: sql-azure-vulnerability-assessment-find.md
-        - name: Vulnerability assessment rules
-          href: sql-azure-vulnerability-assessment-rules.md
-        - name: SQL vulnerability assessment rules changelog
-          href: sql-azure-vulnerability-assessment-rules-changelog.md
         - name: Consume and export scan results
           href: defender-for-sql-scan-results.md
-        - name: Investigate Defender for SQL security alerts
-          href: defender-for-sql-alerts.md
-
   - name: Defender for App Service
     items:
       - name: Overview
