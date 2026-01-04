@@ -116,6 +116,7 @@ The following table shows feature support for AWS and GCP machines.
 |--|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ | ✔ |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ |
+| Control plane security alerts | - | - |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
