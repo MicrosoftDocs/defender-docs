@@ -49,7 +49,7 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
 ### To connect Asana:
 
-1. Sign into [Asana](https://app.asana.com/) portal with an admin account.
+1. Sign in to [Asana](https://app.asana.com/) with an admin account.
 1. Copy the service account Token. You might have to **Reset and generate new token** to copy the token if you have an existing service account. 
 
 1. Copy the workspace ID from the URL and save it for future reference.
