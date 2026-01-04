@@ -55,8 +55,7 @@ This diagram illustrates how Sentinel behaviors transform raw logs into structur
 To use Sentinel behaviors, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
-- Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier.  
-
+- Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
 ## Permissions required 
 
 To enable and use Sentinel behaviors, you need these permissions:
@@ -83,29 +82,10 @@ During public preview, Sentinel behaviors focuses on non-Microsoft data sources 
 | Data source | Supported vendors and services | Sentinel connector |
 |-------------|---------------------------|-------|
 | [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
-| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |  |
+| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>Amazon Web Services</li><li>Amazon Web Services S3</li></ul>For more information about these connectors, see [Sentinel data connectors](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector) |
 
 > [!IMPORTANT]
 > These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
-
-**What happens after enabling:** After you enable the feature, two new tables ("BehaviorInfo" and "BehaviorEntities") start to populate in your Log Analytics workspace as data comes in. Within a few minutes, you should be able to run log queries to see behaviors derived from recent events.
-
-**Verification:** Verify it's working by running a simple KQL query in Defender's Advanced Hunting. If the customer has the behaviorInfo table because they have MDA and MDC, the query is on the same table, and a union happens behind the scenes. For example:
-
-```kusto
-BehaviorInfo
-| summarize count() by Title
-```
-
-This should return a breakdown of different behavior types being generated (Title is the field representing the kind of behavior). If you see results here, Sentinel behaviors is active. You can also join the two tables:
-
-```kusto
-BehaviorInfo
-| join kind=inner BehaviorEntities on BehaviorId
-| take 10
-```
-
-to see sample behaviors with their associated entities. In the description of the behavior, you can see the full explainability of what happened with the associated entities and their roles.
 
 ## Use cases and examples
 
