@@ -183,7 +183,7 @@ To confirm that your AWS connector is operating correctly:
 
 The Environment details page lists any detected configuration or permission issues affecting the connection to the AWS account.
 
-:::image type="content" source="media/quickstart-onboard-aws/environment-details-connector-health.png" alt-text="Environment details page in Microsoft Defender for Cloud showing the connectivity status for a connected Amazon Web Services account." lightbox="media/quickstart-onboard-aws/environment-details-connector-health.png":::
+:::image type="content" source="media/quickstart-onboard-aws/environment-details-connector-health.png" alt-text="Screenshot of the environment details page in Microsoft Defender for Cloud showing the connectivity status for a connected Amazon Web Services account." lightbox="media/quickstart-onboard-aws/environment-details-connector-health.png":::
 
 If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
 
