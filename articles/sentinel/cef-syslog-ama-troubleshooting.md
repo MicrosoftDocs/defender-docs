@@ -11,11 +11,9 @@ ms.date: 01/01/2026
 
 # Troubleshoot CEF and Syslog via AMA connectors
 
-This article provides troubleshooting guidance for Common Event Format (CEF) and Syslog data collection using the Azure Monitor Agent (AMA) in Microsoft Sentinel. Use this guide to diagnose and resolve ingestion issues with your log forwarder machines.
+This article provides troubleshooting guidance for Common Event Format (CEF) and Syslog data collection using the Azure Monitor Agent (AMA) in Microsoft Sentinel. Use this guide to diagnose and resolve ingestion issues with your log forwarder machines. The commands and configurations should be run on the log forwarder machines where AMA and RSyslog/Syslog-ng are installed.
 
-## Prerequisites
-
-Before you begin troubleshooting, familiarize yourself with the following documentation:
+Before you begin troubleshooting, familiarize yourself with the following articles:
 
 - [Ingest syslog and CEF messages to Microsoft Sentinel with the Azure Monitor Agent](connect-cef-syslog-ama.md)
 - [CEF via AMA data connector - Configure specific appliance or device](cef-syslog-ama-overview.md)
@@ -23,9 +21,8 @@ Before you begin troubleshooting, familiarize yourself with the following docume
 
 ## Architecture overview
 
-Understanding the data flow helps identify where issues might occur:
-
-[Log Source] --Port 514--> [RSyslog Service] --Port 28330--> [Azure Monitor Agent] --> [Log Analytics Workspace]
+The following diagram illustrates the data flow from log sources to Microsoft Sentinel/log anlaytics workspaces via RSyslog and the Azure Monitor Agent.
+:::image source="./media/cef-syslog-ama-troubleshooting/ama-flow.png" lightbox="./media/cef-syslog-ama-troubleshooting/ama-flow.png" alt="Diagram showing data flow from source to Log Analytics via RSyslog and AMA.":::
 
 
 Key components:
@@ -69,25 +66,12 @@ Logs may take up to 20 minutes to appear in Microsoft Sentinel after configurati
 
 ## Agent-level troubleshooting
 
-### Check service status
-
-Check the AMA service status on your log forwarder:
-
+Make sure that the agent and RSyslog services are running.
 ```bash
-sudo systemctl status azuremonitoragent.service
-```
-
-Check the rsyslog service status:
-
-```bash
-sudo systemctl status rsyslog.service
-```
-
-For syslog-ng environments, check:
-
-```bash
-sudo systemctl status syslog-ng.service
-```
+sudo systemctl status azuremonitoragent
+sudo systemctl status rsyslog
+sudo systemctl status syslog-ng.service # If using Syslog-ng
+```   
 
 ### Verify RSyslog configuration
 
@@ -177,53 +161,6 @@ For initial troubleshooting:
 4. If available, enable collection of messages with no facility or severity.
 
 For more information, see [Select facilities and severities](connect-cef-syslog-ama.md).
-
-## Test log ingestion
-
-### Send test messages
-
-Test CEF ingestion:
-
-```bash
-echo -n "<164>CEF:0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time" | nc -u -w0 localhost 514
-```
-
-Test Cisco ASA ingestion:
-
-```bash
-echo -n "<164>%ASA-7-106010: Deny inbound TCP src inet:1.1.1.1 dst inet:2.2.2.2" | nc -u -w0 localhost 514
-```
-
-### Monitor log flow
-
-While sending test messages, monitor with tcpdump:
-
-```bash
-sudo tcpdump -i any port 514 or 28330 -A -vv
-```
-
-You should see messages arrive on port 514 and forward to port 28330.
-
-### Verify logs in Log Analytics
-
-After sending test messages, query your Log Analytics workspace.
-
-For CEF logs:
-
-```kusto
-CommonSecurityLog
-| where TimeGenerated > ago(1d)
-| where DeviceProduct == "MOCK"
-```
-
-For Cisco ASA logs:
-
-```kusto
-CommonSecurityLog
-| where TimeGenerated > ago(1d)
-| where DeviceVendor == "Cisco"
-| where DeviceProduct == "ASA"
-```
 
 ## Common Event Format (CEF) validation
 
@@ -354,11 +291,17 @@ Before opening a support case, collect the following information:
 
 ### Run the AMA troubleshooter
 
-```bash
-sudo wget -O Sentinel_AMA_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/Syslog/Sentinel_AMA_troubleshoot.py && sudo python3 Sentinel_AMA_troubleshoot.py
-```
+The script can be run with specific flags for different log types.
+- `--cef`: For Common Event Format logs
+- `--asa`: For Cisco ASA logs 
+- `--ftd`: For Cisco Firepower Threat Defense logs
 
 The output is saved to `/tmp/troubleshooter_output_file.log`.
+
+```bash
+sudo wget -O Sentinel_AMA_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/Syslog/Sentinel_AMA_troubleshoot.py && sudo python3 Sentinel_AMA_troubleshoot.py [--cef | --asa | --ftd]
+```
+
 
 ### Collect detailed logs
 

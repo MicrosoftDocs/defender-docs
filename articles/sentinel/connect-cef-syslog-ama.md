@@ -373,6 +373,22 @@ If you're using a log forwarder, configure the syslog daemon to listen for messa
     > To avoid [Full Disk scenarios](/azure/azure-monitor/agents/azure-monitor-agent-troubleshoot-linux-vm-rsyslog) where the agent can't function, we recommend that you set the `syslog-ng` or `rsyslog` configuration not to store unneeded logs. A Full Disk scenario disrupts the function of the installed AMA.
     > For more information, see [RSyslog](https://www.rsyslog.com/doc/master/configuration/actions.html) or [Syslog-ng](https://syslog-ng.github.io/).
 
+
+1. Check the service status
+
+    Check the AMA service status on your log forwarder:
+    ```bash
+    sudo systemctl status azuremonitoragent.service
+    ```
+    Check the rsyslog service status:
+    ```bash
+    sudo systemctl status rsyslog.service
+    ```
+    For syslog-ng environments, check:
+    ```bash
+    sudo systemctl status syslog-ng.service
+    ```
+
 ## Configure the security device or appliance
 
 Get specific instructions to configure your security device or appliance by going to one of the following articles:
@@ -397,40 +413,60 @@ Verify that logs messages from your linux machine or security devices and applia
 1. To capture messages sent from a logger or a connected device, run this command in the background:
 
     ```
-    tcpdump -i any port 514 -A -vv &
+    sudo tcpdump -i any port 514 or 28330 -A -vv &
     ```
 1. After you complete the validation, we recommend that you stop the `tcpdump`: Type `fg` and then select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
-1. To send demo messages, complete of the following steps: 
-    - Use the netcat utility. In this example, the utility reads data posted through the `echo` command with the newline switch turned off. The utility then writes the data to UDP port `514` on the localhost with no timeout. To execute the netcat utility, you might need to install another package.
+
+
+
+### Send test messages
+
+To send demo messages, complete of the following steps: 
+
+1. Use the `nc` netcat utility. In this example, the utility reads data posted through the `echo` command with the newline switch turned off. The utility then writes the data to UDP port `514` on the localhost with no timeout. To execute the netcat utility, you might need to install another package.
     
-        ```
-        echo -n "<164>CEF:0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time" | nc -u -w0 localhost 514
-        ```
-    - Use the logger. This example writes the message to the `local 4` facility, at severity level `Warning`, to port `514`, on the local host, in the CEF RFC format. The `-t` and `--rfc3164` flags are used to comply with the expected RFC format.
+      ```
+      echo -n "<164>CEF:0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time" | nc -u -w0 localhost 514
+      ```
+    
+1. Use the `logger` command. This example writes the message to the `local 4` facility, at severity level `Warning`, to port `514`, on the local host, in the CEF RFC format. The `-t` and `--rfc3164` flags are used to comply with the expected RFC format.
     
         ```
         logger -p local4.warn -P 514 -n 127.0.0.1 --rfc3164 -t CEF "0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time"
         ```    
 
-1. To verify that the connector is installed correctly, run the troubleshooting script with one of these commands:
+Test Cisco ASA ingestion using the following command:
 
-    - For CEF logs, run:
-        
-        ```python
-         sudo wget -O Sentinel_AMA_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/Syslog/Sentinel_AMA_troubleshoot.py&&sudo python Sentinel_AMA_troubleshoot.py --cef
-        ```
+```bash
+echo -n "<164>%ASA-7-106010: Deny inbound TCP src inet:1.1.1.1 dst inet:2.2.2.2" | nc -u -w0 localhost 514
 
-    - For Cisco Adaptive Security Appliance (ASA) logs, run:
+```
 
-        ```python
-        sudo wget -O Sentinel_AMA_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/Syslog/Sentinel_AMA_troubleshoot.py&&sudo python Sentinel_AMA_troubleshoot.py --asa
-        ```
- 
-    - For Cisco Firepower Threat Defense (FTD) logs, run:
-    
-        ```python
-        sudo wget -O Sentinel_AMA_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/Syslog/Sentinel_AMA_troubleshoot.py&&sudo python Sentinel_AMA_troubleshoot.py --ftd
-        ```
+After execute these commands, you should see messages arrive on port 514 and forward to port 28330.
+
+After sending test messages, query your Log Analytics workspace. Logs may take up to 20 minutes to appear in your workspace.
+
+For CEF logs:
+
+```kusto
+CommonSecurityLog
+| where TimeGenerated > ago(1d)
+| where DeviceProduct == "MOCK"
+```
+
+For Cisco ASA logs:
+
+```kusto
+CommonSecurityLog
+| where TimeGenerated > ago(1d)
+| where DeviceVendor == "Cisco"
+| where DeviceProduct == "ASA"
+``` 
+
+## Additional troubleshooting
+
+If you aren't seeing any traffic on port 514 or your test messages aren't ingested, see [Troubleshoot Syslog and CEF via AMA connectors for Microsoft Sentinel](cef-syslog-ama-troubleshooting.md) for help troubleshooting.
+
 
 ## Related content
 
@@ -438,3 +474,4 @@ Verify that logs messages from your linux machine or security devices and applia
 - [Data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview)
 - [CEF via AMA data connector - Configure specific appliance or device for Microsoft Sentinel data ingestion](unified-connector-cef-device.md)
 - [Syslog via AMA data connector - Configure specific appliance or device for the Microsoft Sentinel data ingestion](unified-connector-syslog-device.md)
+- [Troubleshoot Syslog and CEF via AMA connectors for Microsoft Sentinel](cef-syslog-ama-troubleshooting.md)
