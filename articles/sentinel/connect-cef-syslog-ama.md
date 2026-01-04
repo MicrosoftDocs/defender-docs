@@ -431,20 +431,20 @@ To send demo messages, complete of the following steps:
     
 1. Use the `logger` command. This example writes the message to the `local 4` facility, at severity level `Warning`, to port `514`, on the local host, in the CEF RFC format. The `-t` and `--rfc3164` flags are used to comply with the expected RFC format.
     
-        ```
-        logger -p local4.warn -P 514 -n 127.0.0.1 --rfc3164 -t CEF "0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time"
-        ```    
+    ```
+    logger -p local4.warn -P 514 -n 127.0.0.1 --rfc3164 -t CEF "0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|rt=$common=event-formatted-receive_time"
+    ```    
 
-Test Cisco ASA ingestion using the following command:
+    Test Cisco ASA ingestion using the following command:
 
-```bash
-echo -n "<164>%ASA-7-106010: Deny inbound TCP src inet:1.1.1.1 dst inet:2.2.2.2" | nc -u -w0 localhost 514
+    ```bash
+    echo -n "<164>%ASA-7-106010: Deny inbound TCP src inet:1.1.1.1 dst inet:2.2.2.2" | nc -u -w0 localhost 514
+    ```
 
-```
+    After execute these commands, you should see messages arrive on port 514 and forward to port 28330.
 
-After execute these commands, you should see messages arrive on port 514 and forward to port 28330.
 
-After sending test messages, query your Log Analytics workspace. Logs may take up to 20 minutes to appear in your workspace.
+1. After sending test messages, query your Log Analytics workspace. Logs may take up to 20 minutes to appear in your workspace.
 
 For CEF logs:
 

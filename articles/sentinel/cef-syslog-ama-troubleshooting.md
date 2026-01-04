@@ -22,7 +22,8 @@ Before you begin troubleshooting, familiarize yourself with the following articl
 ## Architecture overview
 
 The following diagram illustrates the data flow from log sources to Microsoft Sentinel/log anlaytics workspaces via RSyslog and the Azure Monitor Agent.
-  :::image type="content"source="./media/cef-syslog-ama-troubleshooting/ama-flow.png" lightbox="./media/cef-syslog-ama-troubleshooting/ama-flow.png" alt-text=="Diagram showing data flow from source to Log Analytics via RSyslog and AMA.":::
+
+:::image type="content"source="./media/cef-syslog-ama-troubleshooting/ama-flow.png" lightbox="./media/cef-syslog-ama-troubleshooting/ama-flow.png" alt-text="Diagram showing data flow from source to Log Analytics via RSyslog and AMA.":::
 
 Key components:
 - **RSyslog/Syslog-ng**: Receives logs on port 514 and forwards them to AMA
