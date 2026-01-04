@@ -18,6 +18,18 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 > [!IMPORTANT]
 > If your AWS account is already connected to Microsoft Sentinel, connecting it to Defender for Cloud may require additional configuration to avoid deployment or ingestion issues. Follow the guidance in [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
+## Architecture and data flow
+
+The AWS connector deploys a set of AWS resources and Azure components that collect configuration, security, and activity signals from your AWS account and send them to Microsoft Defender for Cloud for analysis.
+
+For an overview of the connector architecture, data flow, and monitoring components, see [AWS connector architecture and monitoring resources](monitoring-components.md).
+
+## Authentication architecture
+
+When you connect an AWS account, Microsoft Defender for Cloud authenticates to AWS using federated trust and short-lived credentials, without storing long-lived secrets.
+
+Learn more about [how authentication is established between Microsoft Entra ID and AWS](concept-authentication-architecture-aws.md), including the IAM roles and trust relationships created during onboarding.
+
 ## Prerequisites
 
 Before you connect your AWS account, make sure you have:
