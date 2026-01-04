@@ -1,7 +1,7 @@
 ---
 title: Protect your Zendesk | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Zendesk app to Defender for Cloud Apps using the API connector.
-ms.date: 11/27/2025
+ms.date: 01/04/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -81,7 +81,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure Zendesk
 
-1. Navigate to **Admin** -> **Apps and integrations** -> **APIs** -> **Zendesk API** -> **OAuth Client** and select **Add OAuth client**.
+1. Select **Add OAuth client**.
 
 1. Select **New Credential**. Fill out the following fields:
 
@@ -110,7 +110,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. In the next window, give the connector a descriptive name, and select **Next**.
 
-    ![Connect Zendesk.](media/connect-zendesk.png)
+    :::image type="content" source="media/connect-zendesk.png" alt-text="Screenshot that shows where to add the instance name in the Defender portal." lightbox="media/connect-zendesk.png":::
 
 1. In the **Enter details** page, enter the following fields, and then select **Next**.
 
