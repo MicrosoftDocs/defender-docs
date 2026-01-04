@@ -44,6 +44,10 @@ Each behavior record includes:
 
 [Microsoft Sentinel behaviors stores behavior records in two dedicated tables](#behaviorinfo-and-behaviorentities-schemas) in your Sentinel workspace, integrating seamlessly with your existing Sentinel workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. 
 
+This diagram illustrates how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations:
+
+:::image type="content" source="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" alt-text="Diagram that shows how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations." lightbox="media/sentinel-solution-deprecation/navigate-to-solution.png" ::: 
+
 <!-- [\[link to RAI FAQ\]](#_10._RAI_FAQ) -->
 
 ## Prerequisites
