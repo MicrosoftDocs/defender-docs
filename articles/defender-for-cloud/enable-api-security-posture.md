@@ -66,7 +66,7 @@ API types | Support only for REST APIs.
 
 1. Select **Save**.
 
-You see a notification message confirming that the settings were saved successfully. Once enabled, APIs start onboarding and appear in your Defender for Cloud Inventory within a few hours.  
+A notification message confirming that the settings were saved successfully appears. Once enabled, APIs start onboarding and appear in your Defender for Cloud Inventory within a few hours.  
 
 ## View API inventory
 
