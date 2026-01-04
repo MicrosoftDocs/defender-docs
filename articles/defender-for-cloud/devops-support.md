@@ -1,7 +1,7 @@
 ---
 title: Support and prerequisites 
 description: Understand support and prerequisites for DevOps security in Microsoft Defender for Cloud
-ms.date: 03/02/2025
+ms.date: 01/04/2025
 ms.topic: article
 ms.custom: ignite-2023, references_regions
 ---
@@ -30,6 +30,9 @@ DevOps security currently supports the following DevOps platforms:
 * [Azure DevOps Services](https://azure.microsoft.com/products/devops/)
 * [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/overview/about-github-enterprise-cloud)
 * [GitLab SaaS](https://docs.gitlab.com/ee/subscriptions/gitlab_com/)
+
+> [!NOTE]
+> Defender for DevOps currently doesn't support GitHub Enterprise Cloud instances configured with data residency.
 
 ## Required permissions
 
