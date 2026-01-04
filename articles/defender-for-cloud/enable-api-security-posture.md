@@ -4,8 +4,7 @@ description: Learn how to enable API security posture management in Microsoft De
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
-
-ms.date: 04/25/2025
+ms.date: 01/04/2026
 ms.custom: sfi-image-nochange, references_regions
 #customer intent: As a cloud administrator, I want to learn how to enable API security posture management to protect my APIs in Azure API Management, Function Apps, and Logic Apps.
 ---
@@ -46,23 +45,28 @@ Review the latest cloud support information for Defender for Cloud plans and fea
 
 **Feature** | **Supported**
 --- | ---
-Availability | **Azure API Management:** This feature is available in the Premium, Standard, Basic, and Developer tiers of Azure API Management. Does not support APIs that are exposed using the API Management [self-hosted gateway](/azure/api-management/self-hosted-gateway-overview), or managed using API Management [workspaces](/azure/api-management/workspaces-overview). <br/><br/>**Azure App Services:** Supported Azure Function App hosting tiers include Premium, Elastic Premium, Dedicated (App Service), and App Service Environment (ASE). For Azure Logic Apps, supported tiers include Standard (Single-Tenant) and App Service Environment (ASE). Consumption tier Function Apps, Consumption tier Logic Apps, and Azure Arc-enabled Logic Apps are not supported.
+Availability | **Azure API Management:** This feature is available in the Premium, Standard, Basic, and Developer tiers of Azure API Management. It doesn't support APIs that are exposed through the API Management [self-hosted gateway](/azure/api-management/self-hosted-gateway-overview) or managed through API Management [workspaces](/azure/api-management/workspaces-overview). <br/><br/>**Azure App Services:** Supported Azure Function App hosting tiers include Premium, Elastic Premium, Dedicated (App Service), and App Service Environment (ASE). For Azure Logic Apps, supported tiers include Standard (Single-Tenant) and App Service Environment (ASE). Consumption tier Function Apps, Consumption tier Logic Apps, and Azure Arc-enabled Logic Apps aren't supported.
 API types | Support only for REST APIs.
 
 ## Enable API security posture management extension
   
 1. Sign in to the [Azure portal](https://portal.azure.com/).  
-1. Search for and select **Microsoft Defender for Cloud**.  
-1. Navigate to **Environment settings**.  
-1. Select the relevant subscription in scope.  
-1. Go to the Defender CSPM plan and select **Settings**.  
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.  
+
+1. Select the relevant subscription.  
+
+1. Locate the Defender CSPM plan and select **Settings**.  
+
 1. Enable **API security posture management**.  
 
    :::image type="content" source="media/enable-api-security-posture/enable-api-security-posture-management.png" alt-text="Screenshot of Enable API security posture management." lightbox="media/enable-api-security-posture/enable-api-security-posture-management.png":::
 
-1. Select **Save**.  
+1. Select **Continue**.
 
-You'll see a notification message confirming that the settings were saved successfully. Once enabled, APIs start onboarding and appear in your Defender for Cloud Inventory within a few hours.  
+1. Select **Save**.
+
+You see a notification message confirming that the settings were saved successfully. Once enabled, APIs start onboarding and appear in your Defender for Cloud Inventory within a few hours.  
 
 ## View API inventory
 
@@ -72,12 +76,15 @@ APIs onboarded to the Defender CSPM plan appear in the API security dashboard un
 
    :::image type="content" source="media/enable-api-security-posture/select-api-security.png" alt-text="Screenshot of the API security dashboard." lightbox="media/enable-api-security-posture/select-api-security.png":::
 
-1. The dashboard shows the number of onboarded APIs, broken down by API collections, endpoints, and Azure API Management services. It includes a summary of APIs onboarded for threat detection security coverage with Defender for APIs workload protections plan.  
-1. To see APIs onboarded to the Defender CSPM plan for posture protection, apply the filter **Defender plan == Defender CSPM**.  
+1. The dashboard shows the number of onboarded APIs, broken down by API collections, endpoints, and Azure API Management services. It includes a summary of APIs onboarded for threat detection security coverage by using the Defender for APIs workload protections plan.  
+
+1.  Apply the filter **Defender plan == Defender CSPM** to view the APIs onboarded to the Defender CSPM plan.  
 
    :::image type="content" source="media/enable-api-security-posture/filter-defender-cspm.png" alt-text="Screenshot of filtered APIs for Defender CSPM plan for posture." lightbox="media/enable-api-security-posture/filter-defender-cspm.png":::
 
-1. Drill down into the **API collection details** page to review security findings for specific API operations. These are visible in the side context pane when you select an API operation of interest.  
+1. Select **OK**.
+
+1. Select an API operation of interest to review the security findings for specific API operations.  
 
    :::image type="content" source="media/enable-api-security-posture/api-collection-details.png" alt-text="Screenshot of API collection details page." lightbox="media/enable-api-security-posture/api-collection-details.png":::
 
@@ -85,31 +92,35 @@ APIs onboarded to the Defender CSPM plan appear in the API security dashboard un
 
 1. **Sensitive Information Type**: Provides details on the sensitive information exposed in API URL paths, query parameters, request bodies, and response bodies based on supported data types, along with the source of the information type found. 
 
-1. **Additional Information**: In the case of API response bodies, this shows which HTTP response codes contained sensitive information (such as 2xx, 3xx, 4xx).  
+1. **Additional Information**: In the case of API response bodies, this field shows which HTTP response codes contained sensitive information (such as 2xx, 3xx, 4xx).  
 
 Review API security posture findings along with your API inventory in the Microsoft Defender for Cloud Inventory experience.  
 
 > [!NOTE]
-> Sensitive data exposure won't be scanned if the [sensitive data discovery extension](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) is turned off. Enable sensitive data discovery to scan for sensitive information in your APIs. This setting only affects APIs onboarded to the Defender CSPM plan. If you have the Defender for APIs workload protection plan enabled on the same APIs, they will still be scanned for sensitive data.
+> Sensitive data exposure isn't scanned if the sensitive data discovery extension isn't enabled. To scan for sensitive information in your APIs, you must [enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan). This setting only affects APIs onboarded to the Defender CSPM plan. If you enable the Defender for APIs workload protection plan on the same APIs, they are scanned for sensitive data.
 
 ## Investigate API security recommendations
 
-API endpoints are continuously assessed for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. Security recommendations are generated with associated risk factors like external exposure and data sensitivity risks. The importance of the security recommendations is calculated based on these risk factors. Learn more about [risk-based security recommendations](security-recommendations.md#understanding-risk-prioritization).
+Defender for Cloud continuously assesses API endpoints for misconfigurations and vulnerabilities, including authentication flaws and inactive APIs. It generates security recommendations with associated risk factors like external exposure and data sensitivity risks. Defender for Cloud calculates the importance of the security recommendations based on these risk factors. Learn more about [risk-based security recommendations](security-recommendations.md#understanding-risk-prioritization).
 
 To investigate your API security posture recommendations:
 
-1. Navigate to the Defender for Cloud main menu and select **Recommendations**.
-1. Use the **Group by Title** toggle to organize recommendations.
-1. Apply filters to narrow down API-related recommendations. Filter by **Resource Type** (e.g., **API Management Operation** or **API Endpoint**), or filter by **Recommendation Name** to target specific API security issues.
+1. Go to the Defender for Cloud main menu and select **Recommendations**.
 
-To explore the full list of API-related recommendations, see the [APIs section](recommendations-reference-api.md) in the Defender for Cloud recommendation reference guide.
+1. Select the **Group by Title** toggle to organize recommendations.
+
+1. Filter by **Resource Type** (for example, **API Management Operation** or **API Endpoint**), or filter by **Recommendation Name** to narrow down API-related recommendations to target specific API security problems.
+
+Check out the [APIs section](recommendations-reference-api.md) in the Defender for Cloud recommendation reference guide, for the full list of API-related recommendations.
 
 ## Explore API risks and remediate with attack path analysis
 
 The [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) helps you identify potential security risks in your cloud environment by querying the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).  
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).  
-1. Navigate to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.  
+
+1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.  
+
 1. Use the built-in query template to quickly identify APIs with security insights.  
 
    :::image type="content" source="media/enable-api-security-posture/cloud-security-explorer.png" alt-text="Screenshot of Cloud Security Explorer with API security insights query template." lightbox="media/enable-api-security-posture/cloud-security-explorer.png":::
@@ -118,9 +129,10 @@ The [cloud security explorer](concept-attack-path.md#what-is-cloud-security-expl
 
    :::image type="content" source="media/enable-api-security-posture/custom-query.png" alt-text="Screenshot of custom query in Cloud Security Explorer." lightbox="media/enable-api-security-posture/custom-query.png":::
 
-Attack path analysis in Defender for Cloud addresses security issues that pose immediate threats to your cloud applications and environments. [Identify and remediate API-led attack paths](how-to-manage-attack-path.md) to address your most critical API risks that can significantly threaten your organization.  
+Attack path analysis in Defender for Cloud addresses security problems that pose immediate threats to your cloud applications and environments. [Identify and remediate API-led attack paths](how-to-manage-attack-path.md) to address your most critical API risks that can significantly threaten your organization.  
 
 1. In the Defender for Cloud menu, go to **Attack path analysis**.  
+
 1. Filter by resource type **API Management operation** to investigate API-related attack paths.  
 
    :::image type="content" source="media/enable-api-security-posture/filter-resource-type.png" alt-text="Screenshot of Attack path analysis filtered by API Management operation." lightbox="media/enable-api-security-posture/filter-resource-type.png":::
@@ -131,10 +143,12 @@ Attack path analysis in Defender for Cloud addresses security issues that pose i
 
 ## Offboard API security posture protection
 
-APIs that are part of the Defender CSPM plan can't be offboarded individually. If you want to offboard all APIs from the Defender CSPM plan, go to the Defender CSPM Plan Settings page and disable the API posture extension.  
+You can't offboard individual APIs that are part of the Defender CSPM plan. To offboard all APIs from the Defender CSPM plan, go to the Defender CSPM Plan Settings page and disable the API posture extension.  
 
 :::image type="content" source="media/enable-api-security-posture/offboard-api-security-posture.png" alt-text="Screenshot of Disable API security posture management." lightbox="media/enable-api-security-posture/offboard-api-security-posture.png":::
 
+Select **Continue** and then **Save** to confirm. This action offboards all APIs from the Defender CSPM plan, and API security posture management is disabled.
+
 ## Related content
 
-- Monitor for API threats using [Defender for APIs Workload Protection](defender-for-apis-deploy.md).
+- Monitor for API threats by using [Defender for APIs Workload Protection](defender-for-apis-deploy.md).
