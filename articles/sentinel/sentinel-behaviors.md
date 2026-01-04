@@ -46,7 +46,7 @@ Each behavior record includes:
 
 This diagram illustrates how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations:
 
-:::image type="content" source="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" alt-text="Diagram that shows how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations." lightbox="media/sentinel-solution-deprecation/navigate-to-solution.png" ::: 
+:::image type="content" source="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" alt-text="Diagram that shows how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations." lightbox="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" ::: 
 
 <!-- [\[link to RAI FAQ\]](#_10._RAI_FAQ) -->
 
