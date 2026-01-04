@@ -96,7 +96,7 @@ This query is editable and can be customized to a specific resource, set of find
 
 1. Go to **Security** > **Microsoft Defender for Cloud**.
 
-1. Under **Recommendations**, select the relevant finding.
+1. Select the relevant recommendation finding.
 
 1. Select **Open Query**.
 
