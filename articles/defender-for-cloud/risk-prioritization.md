@@ -25,7 +25,7 @@ If your environment isn't protected by the Defender CSPM plan, the columns with 
 
 To learn how to use risk prioritization effectively in your security operations, including detailed explanations of risk factors, risk calculation methodology, and risk levels, see:
 
-- **For Azure portal users**: [Review security recommendations - Understanding risk prioritization](review-security-recommendations.md?pivots=azure-portal#understanding-risk-prioritization)
+- **For Azure portal users**: [Review security recommendations - Understanding risk prioritization](security-recommendations.md?pivots=azure-portal#understanding-risk-prioritization)
 - **For Defender portal users**: [Review security recommendations - Understanding risk prioritization in Defender portal](review-security-recommendations.md?pivots=defender-portal#understanding-risk-prioritization-in-defender-portal)
 
 These comprehensive guides include:
