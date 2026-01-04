@@ -94,7 +94,7 @@ This query is editable and can be customized to a specific resource, set of find
 
 1. Select the name of `Your SQL database` to open its Overview page.
 
-1. On the left under **Security**, select **Microsoft Defender for Cloud**.
+1. Go to **Security** > **Microsoft Defender for Cloud**.
 
 1. Under **Recommendations**, select the relevant finding.
 
