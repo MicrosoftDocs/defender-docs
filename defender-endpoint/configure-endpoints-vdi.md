@@ -64,13 +64,13 @@ The following steps guide you through onboarding VDI devices and highlight steps
 
     1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
-    2. Select the operating system.
+    1. Select the operating system.
 
-    3.  In the **Deployment method** field, select **VDI onboarding scripts for non-persistent endpoints**.
+    1.  In the **Deployment method** field, select **VDI onboarding scripts for non-persistent endpoints**.
 
-    4. Select **Download package** and save the file.
+    1. Select **Download package** and save the file.
 
-2. Copy the files from the `WindowsDefenderATPOnboardingPackage` folder extracted from the zipped folder into the golden/primary image under the path `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
+1. Copy the files from the `WindowsDefenderATPOnboardingPackage` folder extracted from the zipped folder into the golden/primary image under the path `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
 
     - If you're implementing multiple entries for each device - one for each session, copy `WindowsDefenderATPOnboardingScript.cmd`.
 
@@ -79,12 +79,12 @@ The following steps guide you through onboarding VDI devices and highlight steps
    > [!NOTE]
    > If you don't see the `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` folder, it might be hidden. You'll need to choose the **Show hidden files and folders** option from File Explorer.
 
-3. Open a Local Group Policy Editor window and navigate to **Computer Configuration** \> **Windows Settings** \> **Scripts** \> **Startup**.
+1. Open a Local Group Policy Editor window and navigate to **Computer Configuration** \> **Windows Settings** \> **Scripts** \> **Startup**.
 
    > [!NOTE]
    > Domain Group Policy may also be used for onboarding non-persistent VDI devices.
 
-4. Depending on the method you'd like to implement, follow the appropriate steps:
+1. Depending on the method you'd like to implement, follow the appropriate steps:
 
    | Method | Steps |
    |---|---|
@@ -96,24 +96,24 @@ The following steps guide you through onboarding VDI devices and highlight steps
    > For example, if your VDI provisioning process includes multiple reboots or configuration stages after the VM is cloned from a master image, delay the script execution until the last reboot is complete and final machine name is assigned.<br> Running the script too early may result in duplicate device entries or inconsistent onboarding to Microsoft Defender for Endpoint.
    > The script `Onboard-NonPersistentMachine.ps1` is not signed, and administrators will need to use an approved method to run this in a restricted environment if PowerShell's execution policy is restricted. Example "-ExecutionPolicy Bypass". 
 
-5. Test your solution by following these steps:
+1. Test your solution by following these steps:
 
    1. Create a pool with one device.
 
-   2. Sign into device.
+   1. Sign into device.
    
-   3. Sign out on the device.
+   1. Sign out on the device.
    
-   4. Sign into the device using another account.
+   1. Sign into the device using another account.
    
-   5. Depending on the method you'd like to implement, follow the appropriate steps:
+   1. Depending on the method you'd like to implement, follow the appropriate steps:
    
       - For single entry for each device: Check for only one entry in the [Microsoft Defender portal](https://security.microsoft.com).
       - For multiple entries for each device: Check multiple entries in the [Microsoft Defender portal](https://security.microsoft.com).
 
-6. In the navigation pane, select **Devices list**.
+1. In the navigation pane, select **Devices list**.
 
-7. Use the search function by entering the device name and select **Device** as search type.
+1. Use the search function by entering the device name and select **Device** as search type.
 
 ## For downlevel SKUs (Windows Server 2008 R2)
 
@@ -139,7 +139,7 @@ The following registry is relevant only when the aim is to achieve a single entr
 
    ```
 
-2. Follow the [server onboarding process](onboard-server.md). 
+1. Follow the [server onboarding process](onboard-server.md). 
 
 ## Updating virtual desktop infrastructure (VDI) images (persistent or non-persistent)
 
@@ -149,7 +149,7 @@ If you have onboarded the primary image of your VDI environment (SENSE service i
 
 1. [Offboard the machine](offboard-machines.md).
 
-2. Ensure the sensor is stopped by running the following command in a CMD window:
+1. Ensure the sensor is stopped by running the following command in a CMD window:
 
    ```console
 
@@ -157,7 +157,7 @@ If you have onboarded the primary image of your VDI environment (SENSE service i
 
    ```
 
-3. Run the following commands in a CMD window::
+1. Run the following commands in a CMD window::
 
    ```console
 

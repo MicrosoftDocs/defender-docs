@@ -86,15 +86,15 @@ DeviceFileEvents
 
 1. Plug in the media.
 
-2. Open Device Manager. 
+1. Open Device Manager. 
 
    ![Screenshot of Device Manager.](https://user-images.githubusercontent.com/81826151/181859412-affd6aa1-09ad-44bf-9541-330499cc2c87.png)
 
-3. Locate the media in the Device Manager, right-click, and then select **Properties**.
+1. Locate the media in the Device Manager, right-click, and then select **Properties**.
 
    :::image type="content" alt-text="Screenshot of media in the Device Manager." source="https://user-images.githubusercontent.com/81826151/181859700-62a6f704-b12e-41e3-a048-7d63432654a4.png":::
 
-4. Open **Details**, and then select **Properties**.
+1. Open **Details**, and then select **Properties**.
 
    :::image type="content" alt-text="Screenshot of right-click menu for disk drives in Device Manager." source="https://user-images.githubusercontent.com/81826151/181859852-00bc8b11-8ee5-4d46-9770-fa29f894d13f.png":::
  
@@ -118,7 +118,7 @@ Creating an empty folder will not be blocked even if **File system level access*
 ## Why is my USB still blocked with an allow-ready policy?
 Some specific USB devices require more than Read access, the following list shows some examples:
 1. To Read access some Kingston encrypted USBs requires Execute access for its CDROM.
-2. To Read access some WD My Passport USBs requires Disk level Write access. For this case, if you want to deny Write access, you should use the **File system level access**
+1. To Read access some WD My Passport USBs requires Disk level Write access. For this case, if you want to deny Write access, you should use the **File system level access**
 
 The best way to understand this is to check the event on the Advanced hunting which will clearly show what accessMask is required.
 

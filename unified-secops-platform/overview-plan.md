@@ -1,8 +1,8 @@
 ---
 title: Planning Guidance for Unified Security Operations in the Microsoft Defender Portal
 description: Plan to deploy unified security operations in the Microsoft Defender portal, including Microsoft Sentinel and other Microsoft Defender services.
-author: batamig
-ms.author: bagol
+author: guywi-ms
+ms.author: guywild
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
 ms.topic: concept-article #Don't change.
