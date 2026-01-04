@@ -36,7 +36,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 1. Open the GP configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
 
    1. Select the operating system.
 
@@ -44,27 +44,27 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
    1. Select **Download package** and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
+1. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
 
-3. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and click **New**. Enter the name of the new GPO in the dialog box that is displayed and click **OK**.
+1. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and click **New**. Enter the name of the new GPO in the dialog box that is displayed and click **OK**.
 
-4. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
+1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
 
-5. In the **Group Policy Management Editor**, go to **Computer configuration**, then **Preferences**, and then **Control panel settings**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**, then **Preferences**, and then **Control panel settings**.
 
-6. Right-click **Scheduled tasks**, point to **New**, and then click **Immediate Task (At least Windows 7)**.
+1. Right-click **Scheduled tasks**, point to **New**, and then click **Immediate Task (At least Windows 7)**.
 
-7. In the **Task** window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM and then click **Check Names** then **OK**. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
+1. In the **Task** window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM and then click **Check Names** then **OK**. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
 
-8. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
+1. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
 
-9. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
+1. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
 
-10. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *WindowsDefenderATPOnboardingScript.cmd* file.
+1. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *WindowsDefenderATPOnboardingScript.cmd* file.
 
-11. Select **OK** and close any open GPMC windows.
+1. Select **OK** and close any open GPMC windows.
 
-12. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialog box that is displayed, select the Group Policy Object that you wish to link. Click **OK**.
+1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialog box that is displayed, select the Group Policy Object that you wish to link. Click **OK**.
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that the device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md).
@@ -91,15 +91,15 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 
    - Copy `AtpConfiguration.adml` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions\en-US`.
 
-2. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the GPO you want to configure and click **Edit**.
+1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the GPO you want to configure and click **Edit**.
 
-3. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-4. Click **Policies**, then **Administrative templates**.
+1. Click **Policies**, then **Administrative templates**.
 
-5. Click **Windows components** and then **Windows Defender ATP**.
+1. Click **Windows components** and then **Windows Defender ATP**.
 
-6. Choose to enable or disable sample sharing from your devices.
+1. Choose to enable or disable sample sharing from your devices.
 
 > [!NOTE]
 > If you don't set a value, the default value is to enable sample collection.
@@ -179,7 +179,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
    1. Select the operating system.
     

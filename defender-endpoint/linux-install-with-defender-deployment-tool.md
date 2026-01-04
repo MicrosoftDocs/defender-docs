@@ -95,27 +95,27 @@ The Defender deployment tool enforces the following set of prerequisites checks,
 
    :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png" alt-text="Screenshot showing the help command output." lightbox="./media/linux-install-with-defender-deployment-tool/deployment-tool-help.png":::
 
-The following table provides examples of commands for useful scenarios.
-
-| **Scenario** | **Command** |
-|:-------------|:------------|
-| Check for unmet non-blocking prerequisites | `sudo ./defender_deployment_tool.sh --pre-req-non-blocking` |
-| Run the connectivity test | `sudo ./defender_deployment_tool.sh --connectivity-test` |
-| Deploy to a custom location | `sudo ./defender_deployment_tool.sh --install-path /usr/microsoft/` |
-| Deploy from the insider-slow channel | `sudo ./defender_deployment_tool.sh --channel insiders-slow` |
-| Deploy using a proxy | `sudo ./defender_deployment_tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
-| Deploy a specific agent version | `sudo ./defender_deployment_tool.sh --mdatp 101.25042.0003 --channel prod` |
-| Upgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --upgrade --mdatp 101.24082.0004` |
-| Downgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --downgrade --mdatp 101.24082.0004` |
-| Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` |
-| Only onboard if Defender is already installed | `sudo ./defender_deployment_tool.sh --only-onboard` |
-| Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender portal)* |
+   The following table provides examples of commands for useful scenarios.
+    
+   | **Scenario** | **Command** |
+   |:-------------|:------------|
+   | Check for unmet non-blocking prerequisites | `sudo ./defender_deployment_tool.sh --pre-req-non-blocking` |
+   | Run the connectivity test | `sudo ./defender_deployment_tool.sh --connectivity-test` |
+   | Deploy to a custom location | `sudo ./defender_deployment_tool.sh --install-path /usr/microsoft/` |
+   | Deploy from the insider-slow channel | `sudo ./defender_deployment_tool.sh --channel insiders-slow` |
+   | Deploy using a proxy | `sudo ./defender_deployment_tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
+   | Deploy a specific agent version | `sudo ./defender_deployment_tool.sh --mdatp 101.25042.0003 --channel prod` |
+   | Upgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --upgrade --mdatp 101.24082.0004` |
+   | Downgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --downgrade --mdatp 101.24082.0004` |
+   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` |
+   | Only onboard if Defender is already installed | `sudo ./defender_deployment_tool.sh --only-onboard` |
+   | Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender portal)* |
 
 ## Verify deployment status
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
-2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
     1. Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
@@ -204,11 +204,11 @@ Defender for Endpoint on Linux can be deployed from one of the following channel
 - insiders-slow
 - prod (production)
 
-Each of these channels corresponds to a Linux software repository. The channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
+Each of these channels corresponds to a Linux software repository. The channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
 
 By default, the deployment tool configures your device to use the prod channel. You can use the configuration options described in this document to deploy from a different channel.
 
-To preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either insiders-fast or insiders-slow. If you've already deployed Defender for Endpoint on Linux from a channel and want to switch to a different channel (from prod to insiders-fast, for example), you must first remove the current channel, then delete the current channel repo, and then finally install Defender from the new channel, as illustrated in the following example, where the channel is changed from insiders-fast to prod:
+To preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either insiders-fast or insiders-slow. If you've already deployed Defender for Endpoint on Linux from a channel and want to switch to a different channel (from prod to insiders-fast, for example), you must first remove the current channel, then delete the current channel repo, and then finally install Defender from the new channel, as illustrated in the following example, where the channel is changed from insiders-fast to prod:
 
 1. Remove the insiders-fast channel version of Defender for Endpoint on Linux..
 
@@ -225,7 +225,7 @@ To preview new features and provide early feedback, it's recommended that you co
 1. Install Microsoft Defender for Endpoint on Linux using the production channel.
 
    ```bash
-   sudo ./defender_deployment_tool.sh --install --channel prod
+   sudo ./defender_deployment_tool.sh --channel prod
    ```
 
 ## Related content

@@ -56,20 +56,20 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Endpoint Security** > **Attack surface reduction**.
+1. Go to **Endpoint Security** > **Attack surface reduction**.
 
-3. Select **Create Policy**.
+1. Select **Create Policy**.
 
-4. In **Platform**, select **Windows 10, Windows 11, and Windows Server**, and in **Profile**, select **Attack surface reduction rules**.
+1. In **Platform**, select **Windows 10, Windows 11, and Windows Server**, and in **Profile**, select **Attack surface reduction rules**.
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/asr-mem-create-profile.png" alt-text="The profile creation page for ASR rules" lightbox="media/asr-mem-create-profile.png":::
 
-5. Select **Create**.
+1. Select **Create**.
 
-6. In the **Basics** tab of the **Create profile** pane, in **Name** add a name for your policy. In **Description** add a description for your attack surface reduction rules policy.
+1. In the **Basics** tab of the **Create profile** pane, in **Name** add a name for your policy. In **Description** add a description for your attack surface reduction rules policy.
 
-7. In the **Configuration settings** tab, under **Attack Surface Reduction Rules**, set all rules to **Audit mode**.
+1. In the **Configuration settings** tab, under **Attack Surface Reduction Rules**, set all rules to **Audit mode**.
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/asr-mem-configuration-settings.png" alt-text="The configuration of attack surface reduction rules to Audit mode" lightbox="media/asr-mem-configuration-settings.png":::
@@ -77,14 +77,14 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
    > [!NOTE]
    > There are variations in some attack surface reduction rules mode listings; _Blocked_ and _Enabled_ provide the same functionality.
 
-8. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
+1. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
 
-9. In the **Assignments** pane, you can deploy or assign the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
+1. In the **Assignments** pane, you can deploy or assign the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
 
    > [!NOTE]
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
-10. Review your settings in the **Review + create** pane. Select **Create** to apply the rules.
+1. Review your settings in the **Review + create** pane. Select **Create** to apply the rules.
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/asr-mem-review-create.png" alt-text="The Create profile page" lightbox="media/asr-mem-review-create.png":::
@@ -204,13 +204,13 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and navigate to **Home** > **Endpoint security** > **Attack surface reduction**.
 
-2. If it isn't already configured, set the rule for which you want to configure exclusions to **Audit** or **Block**.
+1. If it isn't already configured, set the rule for which you want to configure exclusions to **Audit** or **Block**.
 
-3. In **ASR Only Per Rule Exclusion**, select the toggle to change from **Not configured** to **Configured.**
+1. In **ASR Only Per Rule Exclusion**, select the toggle to change from **Not configured** to **Configured.**
 
-4. Enter the names of the files or application that you want to exclude.
+1. Enter the names of the files or application that you want to exclude.
 
-5. At the bottom of the **Create profile** wizard, select **Next**, and then follow the wizard instructions.
+1. At the bottom of the **Create profile** wizard, select **Next**, and then follow the wizard instructions.
 
 >:::image type="content" source="media/attack-surface-reduction-rules-report-per-rule-exclusion.png" alt-text="Screenshot that shows the configuration settings for adding ASR per-rule exclusions." lightbox="media/attack-surface-reduction-rules-report-per-rule-exclusion.png":::
 

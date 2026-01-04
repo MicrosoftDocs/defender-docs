@@ -5,8 +5,8 @@ description: The Microsoft Virus Initiative (MVI) helps organizations that make 
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
 ms.localizationpriority: medium
-ms.author: dansimp
-author: dansimp
+ms.author: pauloliveria
+author: poliveria
 manager: dansimp
 audience: ITPro
 ms.collection: 
