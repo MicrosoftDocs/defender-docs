@@ -18,12 +18,6 @@ You can learn more by watching the [New AWS connector in Defender for Cloud](epi
 > [!IMPORTANT]
 > If your AWS account is already connected to Microsoft Sentinel, connecting it to Defender for Cloud may require additional configuration to avoid deployment or ingestion issues. Follow the guidance in [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
-## Architecture and data flow
-
-The AWS connector deploys a set of AWS resources and Azure components that collect configuration, security, and activity signals from your AWS account and send them to Microsoft Defender for Cloud for analysis.
-
-For an overview of the connector architecture, data flow, and monitoring components, see [AWS connector architecture and monitoring resources](monitoring-components.md).
-
 ## Authentication architecture
 
 When you connect an AWS account, Microsoft Defender for Cloud authenticates to AWS using federated trust and short-lived credentials, without storing long-lived secrets.
@@ -174,6 +168,26 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 1. Select **Create**.
 
 Defender for Cloud begins scanning your AWS resources. Security recommendations appear within a few hours. You can monitor AWS posture, alerts, and resource inventory in Defender for Cloud after onboarding. Learn more about [monitoring connected AWS resources](monitor-connected-aws-resources.md).
+
+## Validate connector health
+
+To confirm that your AWS connector is operating correctly:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Environment settings**.
+
+1. Locate the AWS account and review the **Connectivity status** column to see whether the connection is healthy or has issues.
+
+1. Select the value shown in the **Connectivity status** column to view more details.
+
+The Environment details page lists any detected configuration or permission issues affecting the connection to the AWS account.
+
+:::image type="content" source="media/quickstart-onboard-aws/environment-details-connector-health.png" alt-text="Environment details page in Microsoft Defender for Cloud showing the connectivity status for a connected Amazon Web Services account." lightbox="media/quickstart-onboard-aws/environment-details-connector-health.png":::
+
+If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
+
+Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
 ## Deploy a CloudFormation template to your AWS account
 
