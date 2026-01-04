@@ -105,7 +105,7 @@ The following table lists example results when you define the **Block upload of 
 
 The following limitations apply only on sessions that are served with Edge in-browser protection.
 
-### Google Workspace is not supported with in-browser protection in the Enterprise Edge browser
+### Secure Edge Session Controls cannot be used with Google Workspace in Enterprise Edge browsers
 Google Workspace is not supported with in-browser protection in the Enterprise Edge browser. As a result, realtime DLP file scans in Google Workspaces are not supported. As a result, the fallback authentication of suffixes are used instead of secure edge for Google Workspace in browser sessions in Enterprise Edge. 
 
 ### Deep link is lost when user switches to Edge by clicking 'Continue in Edge'  
