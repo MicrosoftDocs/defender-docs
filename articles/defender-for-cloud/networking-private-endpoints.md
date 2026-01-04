@@ -22,7 +22,7 @@ Before you begin, make sure that:
 
 - Microsoft Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the privat e endpoint will be created.
+- A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint will be created.
 
 - You reviewed the required [roles and permissions](concept-private-endpoints.md#roles-and-permissions).
 
@@ -40,34 +40,24 @@ When you create a Security Private Link resource, you can create a private endpo
 
    :::image type="content" source="media/networking-private-endpoints/marketplace-create-security-private-link.png" alt-text="Screenshot of Azure Marketplace search results for Private link, showing the Security Private Link tile and the Create button." lightbox="media/networking-private-endpoints/marketplace-create-security-private-link.png":::
 
-1. On the **Basics** tab:
+1. Select a subscription, then select an existing resource group, or create a new one.
 
-    - Select a subscription.
+1. If needed, update the resource group location.
 
-    - Choose an existing resource group or create a new one.
-    
-    - Optionally, add a resource group location.
-
-    - Enter a name for the Security Private Link resource.
-
-1. Select **Next: Networking**.
+1. Enter a name, then select **Next: Networking**.
 
     > [!NOTE]
     > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
 
-1. On the **Networking** tab:
-
-    - Select **Create a private endpoint**.
+1. Select **Create a private endpoint** and enter a name and a location.
 
       :::image type="content" source="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png" alt-text="Screenshot of the Create Security Private Link wizard on the Networking tab, showing the Create a private endpoint pane with sub-resource and Private DNS integration." lightbox="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png":::
 
-    - Enter a name and location for the private endpoint.
+1. Select **containers** as the target sub-resource.
 
-    - Select **containers** as the target sub-resource.
+1. Select the virtual network and subnet.
 
-    - Select the virtual network and subnet.
-
-    - Enable **Private DNS integration** to create a private DNS zone automatically.
+1. Enable **Private DNS integration** to create a private DNS zone automatically.
 
 1. Select **Next: Tags** and add any required tags.
 
@@ -89,46 +79,28 @@ If you already have a Security Private Link resource, you can create a private e
 
    :::image type="content" source="media/networking-private-endpoints/network-foundation-create-private-endpoint.png" alt-text="Screenshot of the Network foundation Private endpoints page, showing the Create button." lightbox="media/networking-private-endpoints/network-foundation-create-private-endpoint.png":::
 
-1. On the **Basics** tab:
+1. Select a subscription, then select an existing resource group, or create a new one.
 
-    - Select a subscription.
-
-    - Choose an existing resource group or create a new one.
-
-    - Enter a name and network interface name, and select a region.
+1. Enter a name and network interface name, and select a region.
 
 1. Select **Next: Resource**.
 
     > [!NOTE]
     > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
 
-1. On the **Resource** tab:
+1. Select **Connect to an Azure resource in my directory**.
 
-    - Select **Connect to an Azure resource in my directory**.
+1. Select a subscription and **Microsoft.Security/privateLinks** as the resource type.
 
-    - Choose a subscription.
+1. Select the Security Private Link resource for Defender services.
 
-    -  Select **Microsoft.Security/privateLinks** as the resource type.
+1. Select **containers** as the target sub-resource, then select **Next: Virtual Network**.
 
-    - Select the Security Private Link resource for Defender services.
+1. Select the virtual network and the subnet.
 
-    - Select **containers** as the target sub-resource.
+1. Leave the private IP address allocation set to **Dynamic**, then select **Next: DNS**.
 
-1. Select **Next: Virtual Network**.
-
-1. On the **Virtual Network** tab:
-
-    - Select the virtual network.
-
-    - Select the subnet.
-
-    - Leave the private IP address allocation set to **Dynamic**.
-
-1. Select **Next: DNS**.
-
-    - Enable **Integrate with private DNS zone**.
-
-    - Verify that the private DNS zone is populated automatically.
+1. Enable **Integrate with private DNS zone** and verify that the private DNS zone is populated automatically.
 
 1. Select **Next: Tags** and add any required tags.
 
@@ -148,7 +120,7 @@ When the private endpoint is created, a connection request is sent to the Securi
 
 ## Validate the private endpoint connection
 
-From a workload in the virtual network, run:
+From a workload connected to the virtual network, run:
 
 ```bash
 nslookup api.cloud.defender.microsoft.com
