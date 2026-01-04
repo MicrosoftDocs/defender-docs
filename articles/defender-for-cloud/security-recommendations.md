@@ -10,7 +10,7 @@ ms.date: 12/29/2025
 
 # Security recommendations
 
-Security recommendations in Microsoft Defender for Cloud are actionable guidance that help you secure your resources and improve your security posture. Each recommendation provides detailed steps to address specific security issues identified in your cloud environments.
+Security recommendations in Microsoft Defender for Cloud contain actionable guidance that helps you secure your resources and improve your security posture. Each recommendation provides detailed steps to address specific security issues identified in your cloud environments.
 
 Security recommendations are generated based on continuous assessment of your resources against security policies and compliance standards. They provide clear remediation steps, prioritization based on risk, and guidance to help you strengthen your defenses against potential threats.
 
