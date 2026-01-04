@@ -1,7 +1,7 @@
 ---
 title: Protect your Asana environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Asana app to Defender for Cloud Apps using the API connector.
-ms.date: 11/26/2025
+ms.date: 01/04/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -49,8 +49,7 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
 ### To connect Asana:
 
-1. Sign into [Asana](https://app.asana.com/) portal with an admin account and navigate to **Admin Console > Apps > Service accounts**.
-
+1. Sign into [Asana](https://app.asana.com/) portal with an admin account.
 1. Copy the service account Token. You might have to **Reset and generate new token** to copy the token if you have an existing service account. 
 
 1. Copy the workspace ID from the URL and save it for future reference.
