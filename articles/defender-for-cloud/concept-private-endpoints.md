@@ -51,11 +51,7 @@ Security Private Link uses Azure Private Endpoints to establish private connecti
 > [!NOTE]
 > Using private endpoints might incur additional Azure costs depending on the number of endpoints and the selected architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 
-:::image type="content"
-source="media/concept-private-endpoints/security-private-link-diagram.png"
-alt-text="Diagram showing a Defender sensor in a virtual network connecting through a private endpoint to a Security Private Link resource, which routes traffic privately to Microsoft Defender services using a private DNS zone."
-lightbox="media/concept-private-endpoints/security-private-link-diagram.png"
-:::
+:::image type="content" source="media/concept-private-endpoints/security-private-link-diagram.png" alt-text="Diagram showing how Microsoft Defender for Cloud connects to protected resources through private endpoints." lightbox="media/concept-private-endpoints/security-private-link-diagram.png":::
 
 ## Roles and permissions
 
