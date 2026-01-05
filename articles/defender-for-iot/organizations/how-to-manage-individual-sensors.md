@@ -193,7 +193,7 @@ When you're done, use the following procedures to validate your certificate file
 
 ## Update the OT sensor network configuration
 
-You'd configured your OT sensor network configuring during [installation](ot-deploy/install-software-ot-sensor.md). You might need to make changes as part of OT sensor maintenance, such as to modify network values or setting up a proxy configuration.
+After configuring your OT sensor network configuring during [installation](ot-deploy/install-software-ot-sensor.md),you might need to make changes as part of OT sensor maintenance, such as to modifying network values or setting up a proxy configuration.
 
 **To update the OT sensor configuration:**
 
