@@ -4,7 +4,7 @@ description: Configure private endpoints with Microsoft Security Private Link to
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 12/02/2025
+ms.date: 01/05/2025
 #customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender so that Defender traffic stays within my private network.
 
 ---
