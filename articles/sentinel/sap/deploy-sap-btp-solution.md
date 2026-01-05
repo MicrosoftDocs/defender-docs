@@ -24,7 +24,7 @@ Before you begin, verify that:
 - You have a defined Microsoft Sentinel workspace, and you have read and write permissions to the workspace.
 - Your organization uses SAP BTP (in a Cloud Foundry environment) to streamline interactions with SAP applications and other business applications.
 - You have an SAP BTP Subaccount (which supports BTP Subaccounts in the Cloud Foundry environment). You can also use a [SAP BTP trial account](https://cockpit.hanatrial.ondemand.com/).
-- You have the SAP BTP auditlog-management service and service key (see [Set up the BTP Subaccount and solution](#set-up-the-btp-account-and-solution)).
+- You have the SAP BTP auditlog-management service and service key (see [Set up the BTP Subaccount and solution](#set-up-the-btp-subaccount-and-solution)).
 - You have the Microsoft Sentinel Contributor role on the target Microsoft Sentinel workspace.
 
 ## Set up the BTP subaccount and solution
