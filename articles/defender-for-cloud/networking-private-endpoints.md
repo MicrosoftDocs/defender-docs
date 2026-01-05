@@ -37,8 +37,7 @@ When you create a Security Private Link resource, you can create a private endpo
 1. Select **Create a resource**.
 
 1. Search for **Security Private Link**, then under **Security Private Link** select **Create**.
-
-   :::image type="content" source="media/networking-private-endpoints/marketplace-create-security-private-link.png" alt-text="Screenshot of Azure Marketplace search results for Private link, showing the Security Private Link tile and the Create button." lightbox="media/networking-private-endpoints/marketplace-create-security-private-link.png":::
+.
 
 1. Select a subscription, then select an existing resource group, or create a new one.
 
