@@ -32,7 +32,7 @@ appliesto:
 
 You can enable controlled folder access by using any of the following methods described in this article:
 
-- [Enable controlled folder access](#enable-controlled-folder-access)
+- [Enable controlled folder access in the Microsoft Intune admin center](#enable-controlled-folder-access-in-the-microsoft-intune-admin-center)
   - [Mobile Device Management (MDM)](#mobile-device-management-mdm)
   - [Microsoft Configuration Manager](#microsoft-configuration-manager)
   - [Group Policy](#group-policy)
@@ -49,7 +49,9 @@ You can enable controlled folder access by using any of the following methods de
 
 ### Supported operating systems
 
-**Windows**:
+- Windows
+
+## Enable controlled folder access in the Microsoft Intune admin center
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** \> **Attack surface reduction**. Or, to go directly to the **Endpoint security \| Attack surface reduction** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/asr>.
 
