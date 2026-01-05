@@ -61,17 +61,17 @@ For security reasons, the package used to Offboard devices expires seven days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com) as follows:
 
-   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
+    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
 
-   2. Select **Windows 10 or Windows 11** as the operating system.
+    1. Select **Windows 10 or Windows 11** as the operating system.
 
-   3. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
+    1. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
 
-   4. Select **Download package**, and save the .zip file.
+    1. Select **Download package**, and save the .zip file.
 
-2. Extract the contents of the `.zip` file to a shared, read-only location that can be accessed by the network administrators who'll deploy the package. You should have a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`.
+1. Extract the contents of the `.zip` file to a shared, read-only location that can be accessed by the network administrators who'll deploy the package. You should have a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`.
 
-3. In the [Microsoft Intune admin center](https://intune.microsoft.com), you can use a custom configuration policy or an EDR policy.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com), you can use a custom configuration policy or an EDR policy.
 
    | Method | Procedure |
    |---|---|

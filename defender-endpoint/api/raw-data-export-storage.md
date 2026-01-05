@@ -62,7 +62,7 @@ appliesto:
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="../media/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="../media/storage-account-event-schema.png":::
+  :::image type="content" source="/defender-xdr/media/streaming-api-storage/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="/defender-xdr/media/streaming-api-storage/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 

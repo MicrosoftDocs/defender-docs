@@ -123,13 +123,13 @@ The dashboard also gives you access to:
 
 1. Sign in to [Microsoft Defender portal](https://security.microsoft.com).
 
-2. Navigate to **Endpoints** > **Device inventory** and select a device to investigate. The devices page opens.
+1. Navigate to **Endpoints** > **Device inventory** and select a device to investigate. The devices page opens.
 
-3. Launch the live response session by selecting **Initiate live response session**. A command console is displayed. Wait while the session connects to the device.
+1. Launch the live response session by selecting **Initiate live response session**. A command console is displayed. Wait while the session connects to the device.
 
-4. Use the built-in commands to do investigative work. For more information, see [Live response commands](#live-response-commands).
+1. Use the built-in commands to do investigative work. For more information, see [Live response commands](#live-response-commands).
 
-5. After completing your investigation, select **Disconnect session**, then select **Confirm**.
+1. After completing your investigation, select **Disconnect session**, then select **Confirm**.
 
 ## Live response commands
 
@@ -237,17 +237,17 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 1. Select **Upload file to library**.
 
-2. Select **Browse** and select the file.
+1. Select **Browse** and select the file.
 
-3. Provide a brief description.
+1. Provide a brief description.
 
-4. Specify if you'd like to overwrite a file with the same name.
+1. Specify if you'd like to overwrite a file with the same name.
 
-5. If you'd like to be,  know what parameters are needed for the script, select the script parameters check box. In the text field, enter an example and a description.
+1. If you'd like to be,  know what parameters are needed for the script, select the script parameters check box. In the text field, enter an example and a description.
 
-6. Select **Confirm**.
+1. Select **Confirm**.
 
-7. (Optional) To verify that the file was uploaded to the library, run the `library` command.
+1. (Optional) To verify that the file was uploaded to the library, run the `library` command.
 
 ### Cancel a command
 

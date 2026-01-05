@@ -72,7 +72,7 @@ To use guided responses, perform the following steps:
 
 1. Open an incident page. Copilot automatically generates guided responses upon opening an incident page. The Copilot pane appears on the right side of the incident page, showing the guided response cards.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/guided-response/copilot-defender-guided-response-small.png" alt-text="Screenshot that shows the Copilot pane with the guided responses in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/guided-response/copilot-defender-guided-response.png":::
+   :::image type="content" source="media/copilot-in-defender/guided-response/copilot-defender-guided-response-small.png" alt-text="Screenshot that shows the Copilot pane with the guided responses in the Microsoft Defender incident page." lightbox="media/copilot-in-defender/guided-response/copilot-defender-guided-response.png":::
 
 2. Review each card before applying the recommendations. Select the More actions ellipsis (...) on top of a response card to view the options available for each recommendation. Here are some examples.
 
@@ -84,7 +84,7 @@ To use guided responses, perform the following steps:
 
    :::image type="content" source="media/security-copilot-m365d-guided-response/copilot-defender-guided-response-actions-small.png" alt-text="Screenshot that shows the guided response cards in the Copilot pane in Microsoft Defender." lightbox="media/security-copilot-m365d-guided-response/copilot-defender-guided-response-actions.png":::
 
-4. You can provide feedback to each response card to continuously enhance future responses from Copilot. To provide feedback, select the feedback icon ![Screenshot that shows the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom right of each card.
+4. You can provide feedback to each response card to continuously enhance future responses from Copilot. To provide feedback, select the feedback icon ![Screenshot that shows the feedback icon for Copilot in Defender cards](media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom right of each card.
 
 > [!NOTE]
 > Grayed out action buttons mean these actions are limited by your permission. [Refer to the unified role-based access (RBAC) permissions](manage-rbac.md) page for more information.
@@ -110,7 +110,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](media/copilot-in-defender/create-report/copilot-defender-feedback.png).
 
 ## See also
 

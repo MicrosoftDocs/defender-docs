@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 author: KesemSharabi
 ms.author: kesharab
 ms.custom: 

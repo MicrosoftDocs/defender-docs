@@ -85,17 +85,17 @@ Understand the following prerequisites before you create indicators for files:
 
 1. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the **File hashes** tab.
+1. Select the **File hashes** tab.
 
-3. Select **Add item**.
+1. Select **Add item**.
 
-4. Specify the following details:
+1. Specify the following details:
 
    - Indicator: Specify the entity details and define the expiration of the indicator.
    - Action: Specify the action to be taken and provide a description.
    - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
 
-5. Review the details in the Summary tab, then select **Save**.
+1. Review the details in the Summary tab, then select **Save**.
 
 ## Create a contextual indicator from the file details page
 
@@ -117,9 +117,9 @@ The current supported actions for file IOC are allow, audit and block, and remed
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Indicators** > **Add New File Hash**.
 
-2. Choose to block and remediate the file.
+1. Choose to block and remediate the file.
 
-3. Specify whether to generate an alert on the file block event and define the alerts settings:
+1. Specify whether to generate an alert on the file block event and define the alerts settings:
 
    - The alert title
    - The alert severity
@@ -172,17 +172,17 @@ Cert and File IoC policy handling conflicts follow this order:
 
 1. If the file isn't allowed by Windows Defender Application Control and AppLocker enforce mode policies, then **Block**.
 
-2. Else, if the file is allowed by the Microsoft Defender Antivirus exclusions, then **Allow**.
+1. Else, if the file is allowed by the Microsoft Defender Antivirus exclusions, then **Allow**.
 
-3. Else, if the file is blocked or warned by a block or warn file IoCs, then **Block/Warn**.
+1. Else, if the file is blocked or warned by a block or warn file IoCs, then **Block/Warn**.
 
-4. Else, if the file is blocked by SmartScreen, then **Block**.
+1. Else, if the file is blocked by SmartScreen, then **Block**.
 
-5. Else, if the file is allowed by an allow file IoC policy, then **Allow**.
+1. Else, if the file is allowed by an allow file IoC policy, then **Allow**.
 
-6. Else, if the file is blocked by attack surface reduction rules, controlled folder access, or antivirus protection, then **Block**.
+1. Else, if the file is blocked by attack surface reduction rules, controlled folder access, or antivirus protection, then **Block**.
 
-7. Else, **Allow** (passes Windows Defender Application Control & AppLocker policy, no IoC rules apply to it).
+1. Else, **Allow** (passes Windows Defender Application Control & AppLocker policy, no IoC rules apply to it).
 
 > [!NOTE]
 > In situations when Microsoft Defender Antivirus is set to **Block**, but Defender for Endpoint indicators for file hash or certificates are set to **Allow**, the policy defaults to **Allow**.
@@ -198,6 +198,7 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 
 |Component|Component enforcement|File indicator Action|Result|
 |---|---|---|---|
+|Antivirus protection|Block|Allow|Allow|
 |Attack surface reduction file path exclusion|Allow|Block|Block|
 |Attack surface reduction rule|Block|Allow|Allow|
 |Windows Defender Application Control|Allow|Block|Allow|

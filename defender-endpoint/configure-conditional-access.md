@@ -59,50 +59,50 @@ Take the following steps to enable Conditional Access:
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Microsoft Intune connection**.
 
-2. Toggle the Microsoft Intune setting to **On**.
+1. Toggle the Microsoft Intune setting to **On**.
 
-3. Click **Save preferences**.
+1. Click **Save preferences**.
 
 ### Step 2: Turn on the Defender for Endpoint integration in Intune
 
 1. Sign in to the [Intune portal](https://intune.microsoft.com)
 
-2. Select **Endpoint Security** \> **Microsoft Defender for Endpoint**.
+1. Select **Endpoint Security** \> **Microsoft Defender for Endpoint**.
 
-3. Set **Connect Windows 10.0.15063+ devices to Microsoft Defender Advanced Threat Protection** to **On**.
+1. Set **Connect Windows 10.0.15063+ devices to Microsoft Defender Advanced Threat Protection** to **On**.
 
-4. Click **Save**.
+1. Click **Save**.
 
 ### Step 3: Create the compliance policy in Intune
 
 1. In the [Azure portal](https://portal.azure.com), select **All services**, filter on **Intune**, and select **Microsoft Intune**.
 
-2. Select **Device compliance** \> **Policies** \> **Create policy**.
+1. Select **Device compliance** \> **Policies** \> **Create policy**.
 
-3. Enter a **Name** and **Description**.
+1. Enter a **Name** and **Description**.
 
-4. In **Platform**, select **Windows 10 and later**.
+1. In **Platform**, select **Windows 10 and later**.
 
-5. In the **Device Health** settings, set **Require the device to be at or under the Device Threat Level** to your preferred level:
+1. In the **Device Health** settings, set **Require the device to be at or under the Device Threat Level** to your preferred level:
 
    - **Secured**: This level is the most secure. The device cannot have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant.
    - **Low**: The device is compliant if only low-level threats exist. Devices with medium or high threat levels are not compliant.
    - **Medium**: The device is compliant if the threats found on the device are low or medium. If high-level threats are detected, the device is determined as noncompliant.
    - **High**: This level is the least secure, and allows all threat levels. So devices that with high, medium or low threat levels are considered compliant.
 
-6. Select **OK**, and **Create** to save your changes (and create the policy).
+1. Select **OK**, and **Create** to save your changes (and create the policy).
 
 ### Step 4: Assign the policy
 
 1. In the [Azure portal](https://portal.azure.com), select **All services**, filter on **Intune**, and select **Microsoft Intune**.
 
-2. Select **Device compliance** \> **Policies**> select your Microsoft Defender for Endpoint compliance policy.
+1. Select **Device compliance** \> **Policies**> select your Microsoft Defender for Endpoint compliance policy.
 
-3. Select **Assignments**.
+1. Select **Assignments**.
 
-4. Include or exclude your Microsoft Entra groups to assign them the policy.
+1. Include or exclude your Microsoft Entra groups to assign them the policy.
 
-5. To deploy the policy to the groups, select **Save**. The user devices targeted by the policy are evaluated for compliance.
+1. To deploy the policy to the groups, select **Save**. The user devices targeted by the policy are evaluated for compliance.
 
 <a name='step-5-create-an-azure-ad-conditional-access-policy'></a>
 
@@ -132,7 +132,4 @@ After confirming your settings using [policy impact or report-only mode](/entra/
 
 For more information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](/mem/intune/protect/advanced-threat-protection).
 
-
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

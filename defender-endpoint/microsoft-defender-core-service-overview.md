@@ -111,10 +111,10 @@ You can enforce it by using any of these management tools:
 Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
 
 1. Open the Microsoft Configuration Manager console.
-2. Select **Software Library > Scripts > Create Script**.
-3. Enter the **Script name**, for example, Microsoft Defender Core service enforcement and **Description**, for example, Demo configuration to enable Microsoft Defender Core service settings.
-4. Set the **Language** to PowerShell and the **Timeout seconds** to 180
-5. Paste in the following "Microsoft Defender Core service enforcement" script example to use as a template:
+1. Select **Software Library > Scripts > Create Script**.
+1. Enter the **Script name**, for example, Microsoft Defender Core service enforcement and **Description**, for example, Demo configuration to enable Microsoft Defender Core service settings.
+1. Set the **Language** to PowerShell and the **Timeout seconds** to 180
+1. Paste in the following "Microsoft Defender Core service enforcement" script example to use as a template:
 
 ```powershell
 ######
@@ -170,32 +170,32 @@ On the script page of the Run Script wizard, choose your script from the list (M
 #### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
 
 1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
-2. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+1. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
    > [!NOTE]
    > Copy the .admx, and separately the .adml to the En-US folder.
 
-3. Start, GPMC.msc (e.g. Domain Controller or) or GPEdit.msc   
-4. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
+1. Start, GPMC.msc (e.g. Domain Controller or) or GPEdit.msc   
+1. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
   
-5. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service
+1. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service
    - **Not configured or enabled (default)**: the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
    - **Disabled**: the Microsoft Defender core service will stop using ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered through Microsoft Update, Microsoft Update Catalog or WSUS.
 
-6. Turn on telemetry for Defender core service
+1. Turn on telemetry for Defender core service
    - **Not configured or enabled (default)**: the Microsoft Defender Core service will collect telemetry from Microsoft Defender Antivirus and other Defender software
    - **Disabled**: the Microsoft Defender Core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
 
 #### Use PowerShell to update the policies for Microsoft Defender Core service.
 
 1. Go to **Start**, and run PowerShell as an administrator.
-2. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration` $true or $false command, where `$false` = enabled and `$true` = disabled. For example:
+1. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration` $true or $false command, where `$false` = enabled and `$true` = disabled. For example:
 
    ```powershell
    Set-MpPreference -DisableCoreServiceECSIntegration $false 
    ```
 
-3. Use the `Set-MpPreference -DisableCoreServiceTelemetry` $true or $false command, for example: 
+1. Use the `Set-MpPreference -DisableCoreServiceTelemetry` $true or $false command, for example: 
 
    ```powershell
    Set-MpPreference -DisableCoreServiceTelemetry $true
@@ -206,7 +206,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
 1. Select **Start**, and then open Regedit.exe as an administrator.
 1. Go to `HKLM\Software\Policies\Microsoft\Windows Defender\Features`
 
-3. Set the values:
+1. Set the values:
 
    `DisableCoreService1DSTelemetry` (dword) 0 (hex)  
    `0` = Not configured, enabled (default)  

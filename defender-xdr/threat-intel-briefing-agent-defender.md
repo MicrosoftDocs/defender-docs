@@ -1,5 +1,5 @@
 ---
-title: Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender (preview)
+title: Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender 
 description: Learn about the Security Copilot Threat Intelligence Briefing Agent, including requirements for setup and providing feedback to the agent
 ms.service: defender-xdr
 f1.keywords:
@@ -16,19 +16,15 @@ ms.collection:
 ms.topic: how-to
 search.appverid:
 - MET150
-ms.date: 11/18/2025
+ms.date: 12/18/2025
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a security analyst, I want to learn about the Threat Intelligence Briefing Agent in Microsoft Defender so that I can generate threat intelligence briefings efficiently.
 ---
 
-# Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender (preview)
+# Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-> [!IMPORTANT]
-> Microsoft Security Copilot Threat Intelligence Briefing Agent is currently in preview.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 >[!NOTE]
 > This article discusses the Threat Intelligence Briefing Agent embedded experience in Microsoft Defender portal. To learn more about the standalone experience in Security Copilot, read [Threat Intelligence Briefing Agent (standalone experience)](/copilot/security/threat-intel-briefing-agent)

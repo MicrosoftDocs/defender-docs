@@ -182,22 +182,22 @@ Use the following procedure to enable network protection on domain-joined comput
 
 1. Open the Configuration Manager console.
 
-2. Go to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender Exploit Guard**.
+1. Go to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender Exploit Guard**.
 
-3. Select **Create Exploit Guard Policy** from the ribbon to create a new policy.
-   - To edit an existing policy, select the policy, then select **Properties** from either the ribbon or the right-click menu. Edit the **Configure network protection** option from the **Network Protection** tab.  
+1. Select **Create Exploit Guard Policy** from the ribbon to create a new policy.
+1. To edit an existing policy, select the policy, then select **Properties** from either the ribbon or the right-click menu. Edit the **Configure network protection** option from the **Network Protection** tab.  
 
-4. On the **General** page, specify a name for the new policy and verify the **Network protection** option is enabled.
+1. On the **General** page, specify a name for the new policy and verify the **Network protection** option is enabled.
 
-5. On the **Network protection** page, select one of the following settings for the **Configure network protection** option:
+1. On the **Network protection** page, select one of the following settings for the **Configure network protection** option:
 
    - **Block**
    - **Audit**
    - **Disabled**
 
-6. Complete the rest of the steps, and save the policy.
+1. Complete the rest of the steps, and save the policy.
 
-7. From the ribbon, select **Deploy** to deploy the policy to a collection.
+1. From the ribbon, select **Deploy** to deploy the policy to a collection.
 
 ### PowerShell
 
@@ -234,13 +234,13 @@ You can use Registry Editor to check the status of network protection.
 
 1. Select the **Start** button in the task bar and type `regedit`. In the list of results, select Registry editor to open it.
 
-2. Choose **HKEY_LOCAL_MACHINE** from the side menu.
+1. Choose **HKEY_LOCAL_MACHINE** from the side menu.
 
-3. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Policy Manager**.
+1. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Policy Manager**.
 
    If the key is missing, navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
-4. Select **EnableNetworkProtection** to see the current state of network protection on the device:
+1. Select **EnableNetworkProtection** to see the current state of network protection on the device:
 
    - **0**, or **Off**
    - **1**, or **On**
