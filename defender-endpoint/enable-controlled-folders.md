@@ -15,21 +15,23 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 12/29/2025
+ms.date: 01/05/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
 
 # Enable controlled folder access
 
-[Controlled folder access](controlled-folders.md) helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is included with Windows 10, Windows 11, and Windows Server 2019. Controlled folder access is also included as part of the [modern, unified solution for Windows Server 2012R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+[Controlled folder access](controlled-folders.md) helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is available in the following operating systems:
 
-You can enable controlled folder access by using any of these methods:
+- Included in Windows 10 or later.
+- Included in Windows Server 2019 or later.
+- Available in Windows Server 2016 and Windows Server 2012 R2 as part of the [modern, unified Microsoft Defender for Endpoint solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
-- [Enable controlled folder access](#enable-controlled-folder-access)
+You can enable controlled folder access by using any of the following methods described in this article:
+
 - [Enable controlled folder access](#enable-controlled-folder-access)
   - [Mobile Device Management (MDM)](#mobile-device-management-mdm)
   - [Microsoft Configuration Manager](#microsoft-configuration-manager)
