@@ -34,6 +34,8 @@ The Microsoft Defender Portal delivers unique advantages for MSSPs, including:
 
 **Continuous improvement insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
+# Step 1 - Prepere your environmnet
+
 ## Onboard your customers to the Microsoft Defender portal
 
 Successfully transitioning customers to the Microsoft Defender portal requires careful planning and coordination. The transition process involves migrating Microsoft Sentinel workspaces and ensuring continuity of security operations.
