@@ -185,6 +185,7 @@ When you're done, use the following procedures to validate your certificate file
 
 1. Select **Save** to save your certificate settings.
 
+---
 
 ### Troubleshoot certificate upload errors
 
