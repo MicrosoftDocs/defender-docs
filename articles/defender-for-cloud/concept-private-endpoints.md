@@ -35,8 +35,6 @@ This is especially useful for:
 
 > [!IMPORTANT]
 > For network-isolated workloads, Microsoft Security Private Link replaces the need for Azure Monitor Private Link Scope (AMPLS) and Azure Firewall egress rules.
->
-> :::image type="content" source="media/concept-private-endpoints/recommended-owner.png" alt-text="Screenshot of a conceptual diagram showing Security Private Link with customer's.":::
 
 ## Connectivity architecture
 
