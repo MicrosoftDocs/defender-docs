@@ -57,13 +57,13 @@ In earlier versions of Windows 10, the setting hides the Windows Defender client
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/desktop/gpmc/group-policy-management-console-portal), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components > Microsoft Defender Antivirus > Client interface**.
+1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Client interface**.
 
-5. Double-click the **Enable headless UI mode** setting and set the option to **Enabled**. Select **OK**.
+1. Double-click the **Enable headless UI mode** setting and set the option to **Enabled**. Select **OK**.
 
 See [Prevent users from locally modifying policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) for more options on preventing users from modifying protection on their PCs.
 
@@ -78,13 +78,13 @@ You can prevent users from pausing scans, which can be helpful to ensure schedul
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/desktop/gpmc/group-policy-management-console-portal), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Scan**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Scan**.
 
-5. Double-click the **Allow users to pause scan** setting and set the option to **Disabled**. Select **OK**.
+1. Double-click the **Allow users to pause scan** setting and set the option to **Disabled**. Select **OK**.
 
 ## UI Lockdown mode
 

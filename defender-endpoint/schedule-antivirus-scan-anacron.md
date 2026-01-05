@@ -47,13 +47,13 @@ Use the following steps to schedule scans:
 
 1. Connect to the RedHat server using PuTTY.
 
-2. Edit the anacron file as follows:
+1. Edit the anacron file as follows:
 
    ```shell
    vi /etc/anacron
    ```
 
-3. Review and edit your Anacron file, which contains the following information:
+1. Review and edit your Anacron file, which contains the following information:
 
    ```shell
    # /etc/anacrontab: configuration file for anacron
@@ -73,7 +73,7 @@ Use the following steps to schedule scans:
    - **START_HOURS_RANGE** describes the time range to run the job.
    - **cron.daily** describes `1` as the period of days required for the frequency of job executions. `5 is the delay in minutes that anacron waits after the device restarts.
 
-4. Review your anacron jobs by using the following command:
+1. Review your anacron jobs by using the following command:
 
    ```shell
    ls -lh /etc/cron*
@@ -124,7 +124,7 @@ Use the following steps to schedule scans:
 
    Ignore the `/etc/cron.d` directory; instead, review `/etc/cron.daily, hourly, monthly, and weekly`.
 
-5. To schedule a weekly antivirus scan, you can create a file (Job) under the ```/etc/cron.weekly``` directory.
+1. To schedule a weekly antivirus scan, you can create a file (Job) under the ```/etc/cron.weekly``` directory.
 
    ```shell
    cd /etc/cron.weekly
@@ -150,7 +150,7 @@ Use the following steps to schedule scans:
    Type: wq!
    ```
 
-6. Change the file permissions to allow the file to be executed by using this command: 
+1. Change the file permissions to allow the file to be executed by using this command: 
 
    ```shell
    Chmod 755 mdavfullscan
@@ -173,13 +173,13 @@ Use the following steps to schedule scans:
    [root@redhat7 cron.weekly] #
    ```
 
-7. Use the following command to test the weekly anacron job:
+1. Use the following command to test the weekly anacron job:
 
    ```shell
    ./mdavfullscan
    ```
 
-8. Use the following command to verify the job ran successfully:
+1. Use the following command to verify the job ran successfully:
 
    ```shell
    cat /logs/mdav_avacron_full_scan.log
