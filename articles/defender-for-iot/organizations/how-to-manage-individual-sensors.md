@@ -63,7 +63,7 @@ Take action by selecting the **Learn more** option under :::image type="icon" so
 
 ## Download software for OT sensors
 
-You may need to download software for your OT sensor if you're [installing Defender for IoT software](ot-deploy/install-software-ot-sensor.md) on your own appliances, or [updating software versions](update-ot-software.md).
+You might need to download software for your OT sensor if you're [installing Defender for IoT software](ot-deploy/install-software-ot-sensor.md) on your own appliances, or [updating software versions](update-ot-software.md).
 
 In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) in the Azure portal, use one of the following options:
 
@@ -185,7 +185,6 @@ When you're done, use the following procedures to validate your certificate file
 
 1. Select **Save** to save your certificate settings.
 
----
 
 ### Troubleshoot certificate upload errors
 
