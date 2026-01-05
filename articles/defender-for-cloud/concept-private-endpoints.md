@@ -108,4 +108,4 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 
 - [Configure private endpoints with Microsoft Security Private Link](networking-private-endpoints.md)
 
-- Learn about [Azure Private Link](/azure/private-link) documentation.
+- Learn more about [Azure Private Link](/azure/private-link).
