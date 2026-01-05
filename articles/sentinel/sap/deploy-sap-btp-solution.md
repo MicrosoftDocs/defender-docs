@@ -109,6 +109,10 @@ You also can retrieve the logs via the UI:
 1. In the new instance, create a service key.
 1. View the service key and retrieve the required parameters from step 4 of the configuration instructions in the data connector UI (**url**, **uaa.url**, **uaa.clientid**, and **uaa.clientsecret**).
 
+## Mass-Onboard SAP BTP subaccounts at scale
+
+To onboard SAP BTP subaccounts at scale, API and CLI based approaches are recommended. Get started with [this script library](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20BTP/Tools/).
+
 ## Rotate the BTP client secret
 
 We recommend that you periodically rotate the BTP subaccount client secrets. For an automated, platform-based approach, see our [Automatic SAP BTP trust store certificate renewal with Azure Key Vault – or how to stop thinking about expiry dates once and for all](https://community.sap.com/t5/technology-blogs-by-members/automatic-sap-btp-trust-store-certificate-renewal-with-azure-key-vault-or/ba-p/13565138) (SAP blog).
