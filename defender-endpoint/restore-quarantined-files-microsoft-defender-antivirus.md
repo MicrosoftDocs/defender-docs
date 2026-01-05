@@ -37,11 +37,11 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
 
 1. On your Windows device, open **Windows Security**.
 
-2. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
+1. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
 
-3. If you have a list of items, you can filter on **Quarantined Items**.
+1. If you have a list of items, you can filter on **Quarantined Items**.
 
-4. Select an item you want to keep, and choose an action, such as **Restore**.
+1. Select an item you want to keep, and choose an action, such as **Restore**.
 
 ## Using the MpCmdRun command line
 
@@ -51,7 +51,7 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -ListAll
    ```
 
-2. In the same elevated Command Prompt window, use the following syntax to restore a quarantined file:
+1. In the same elevated Command Prompt window, use the following syntax to restore a quarantined file:
 
    ```dos
    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name <filename>

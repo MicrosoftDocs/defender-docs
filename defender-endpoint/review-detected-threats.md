@@ -43,7 +43,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
     You can select **View Details** for more information.
 
-2. Once remediated, you see the following text being displayed:
+1. Once remediated, you see the following text being displayed:
 
     *Malware found on your devices have been remediated successfully*.
 
@@ -53,11 +53,11 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 1. Go to the Microsoft Intune admin center at [intune.microsoft.com](https://intune.microsoft.com) and sign-in.
 
-2. In the navigation pane, select **Endpoint security**.
+1. In the navigation pane, select **Endpoint security**.
 
-3. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
+1. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
 
-4. Review the information on the available tabs, and then take action as necessary.
+1. Review the information on the available tabs, and then take action as necessary.
 
     For example, when you can select a device that is listed under the **Active malware** tab, you can choose one action from the list of actions provided:
      - Restart
@@ -74,11 +74,11 @@ To see when the malware was detected, you can take the following steps:
 
 1. Since this is an integration with Intune, visit [**Intune portal**](https://intune.microsoft.com) and select **Antivirus** and then select **Active malware** tab.
 
-2. Select **Export**.
+1. Select **Export**.
 
-3. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
+1. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
 
-4. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
+1. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
 
 #### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
 

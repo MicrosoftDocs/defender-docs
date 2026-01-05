@@ -41,15 +41,15 @@ To facilitate upgrades when Microsoft Endpoint Configuration Manager isn't yet a
 
 1. Remove the OMS workspace for Defender for Endpoint (OPTIONAL).
 
-2. Remove System Center Endpoint Protection (SCEP) client if installed.
+1. Remove System Center Endpoint Protection (SCEP) client if installed.
 
-3. Review the [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2).
+1. Review the [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2).
 
-4. Enable and update the Microsoft Defender Antivirus feature on Windows Server 2016.
+1. Enable and update the Microsoft Defender Antivirus feature on Windows Server 2016.
 
-5. Install Defender for Endpoint.
+1. Install Defender for Endpoint.
 
-6. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
+1. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
    To use the script, download it to an installation directory where you have also placed the installation and onboarding packages (see [Onboard servers](onboard-server.md)).
 
@@ -68,17 +68,17 @@ For instructions on how to migrate using Configuration Manager older than versio
 
 1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) are met.
 
-2. Ensure your non-Microsoft antivirus management solution no longer pushes antivirus agents to these machines.
+1. Ensure your non-Microsoft antivirus management solution no longer pushes antivirus agents to these machines.
 
-3. Author your policies for the protection capabilities in Defender for Endpoint and target those to the machine in the tool of your choice.
+1. Author your policies for the protection capabilities in Defender for Endpoint and target those to the machine in the tool of your choice.
 
-4. Install the Defender for Endpoint package for Windows Server 2012 R2 and Windows Server 2016, and set it to passive mode. 
+1. Install the Defender for Endpoint package for Windows Server 2012 R2 and Windows Server 2016, and set it to passive mode. 
 
-5. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
+1. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
-6. Apply updates.
+1. Apply updates.
 
-7. Remove your non-Microsoft antivirus software by either using the non-Microsoft antivirus console or by using Configuration Manager as appropriate. Make sure to remove passive mode configuration.
+1. Remove your non-Microsoft antivirus software by either using the non-Microsoft antivirus console or by using Configuration Manager as appropriate. Make sure to remove passive mode configuration.
 
    To move a machine out of passive mode, set the following key:
 
@@ -96,15 +96,15 @@ In the preceding procedure, steps 2 and 7 apply only if you intend to replace yo
 
 1. Fully update the device, including Microsoft Defender Antivirus (on Windows Server 2016) ensuring [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) are met.
 
-2. Create and apply policies using Group Policy, PowerShell, or a non-Microsoft management solution.
+1. Create and apply policies using Group Policy, PowerShell, or a non-Microsoft management solution.
 
-3. Uninstall System Center Endpoint Protection (Windows Server 2012 R2).
+1. Uninstall System Center Endpoint Protection (Windows Server 2012 R2).
 
-4. Install Microsoft Defender for Endpoint (see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md))
+1. Install Microsoft Defender for Endpoint (see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md))
 
-5. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
+1. Apply the onboarding script **for use with Group Policy** downloaded from the [Microsoft Defender portal](https://security.microsoft.com).
 
-6. Apply updates.
+1. Apply updates.
 
 > [!TIP]
 > You can use the installer script to automate the steps in the preceding procedure.
