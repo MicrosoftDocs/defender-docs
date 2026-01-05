@@ -32,55 +32,46 @@ Before you create a custom DCR, make sure:
 
 1. Go to ▸ **Monitor** ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
 
-1. On the **Basics** tab:
+1. Enter a name and a subscription.
 
-    - Enter a name and a subscription.
+1. Choose or create a resource group.
 
-    - Choose or create a resource group.
+1. Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
 
-    - Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
+  - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
 
-    - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
+  - Under **Data Collection Endpoint**, leave **\<none\>** unless you're using a Data Collection Endpoint for Private Link or another advanced network setup.
 
-    - Under **Data Collection Endpoint**, leave **\<none\>** unless you're using a Data Collection Endpoint for Private Link or another advanced network setup.
+1. Select **Next : Resources >**.
 
-1. On the **Resources** tab:
+1. Select **+ Add resources** and choose the resources that will send data.
 
-    - Select **+ Add resources** and choose the resources for this rule.
+1. If your environment requires a Data Collection Endpoint (for example, when using Private Link), select **+ Create endpoint** and create it in the same region as the DCR.
 
-    - If you are using Private Links or advanced network setups, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint.
+1. Select **Next : Collect and deliver >** tab, then **+ Add data source**.
 
-1. On the **Collect and deliver** tab:
+1. For **Data source type**, select **Windows Event Logs** and choose **Basic** or **Custom**:        
+  - **Basic:**
+    - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table. 
+    - Optionally, select **Application** or **System** event logs to collect additional events. These events are sent to the `Event` table and are billed as regular ingestion. They aren’t covered by the Defender for Servers ingestion benefit.
+  - **Custom**:
+    - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**, then select **Add**. For example, `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]`.
 
-    - Select **+ Add data source**.
+      :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
 
-    - In **Data source**:
-      - For **Data source type**, select **Windows Event Logs**.
-      - Choose **Basic** or **Custom**:        
-        - **Basic:**
-          - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table. 
-          - Select **Application** or **System** levels if needed. These logs go to the `Event` table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
-        - **Custom**:
-          - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**, then select **Add**. For example, `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]`.
+1. Select **Next : Destination >**, then **+ Add destination**:
 
-        :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
+   :::image type="content" source="media/data-ingestion-benefit/add-data-source-destination-tab.png" alt-text="Screenshot of the Add data source pane showing the Destination tab, where you click + Add destination." lightbox="media/data-ingestion-benefit/add-data-source-destination-tab.png":::
 
-    - In **Destination**:
-      - Select **+ Add destination**:
+1. For **Destination type**, choose **Azure Monitor Logs**.
 
-      :::image type="content" source="media/data-ingestion-benefit/add-data-source-destination-tab.png" alt-text="Screenshot of the Add data source pane showing the Destination tab, where you click + Add destination." lightbox="media/data-ingestion-benefit/add-data-source-destination-tab.png":::
+1. Select at least one Log Analytics workspace in the same region as the DCR, then click **Save**.
 
-      - For **Destination type**, choose **Azure Monitor Logs**.
-      - Select at least one Log Analytics workspace in the same region as the DCR.
-      - Select **Save**.
+1. Select **Next : Tags >** and add any tags you need for resource organization or cost management.
 
-1. On the **Tags** tab add any tags you need for resource organization or cost management.
-
-1. On the **Review + create** tab:
-    - Review the settings.
-    - Select **Create** to deploy the DCR.
+1. Select **Next : Review + create >** and **Create** to deploy the DCR.
     
-1. Wait a few minutes, then you can run a simple KQL query to verify that data is flowing to the Log Analytics workspace:
+1. Wait a few minutes, then run the following KQL query to verify that data is flowing to the Log Analytics workspace:
 
 ```kusto
 SecurityEvent
@@ -115,7 +106,6 @@ The following example shows a DCR configuration that collects selected Windows S
 ## Deploy at scale
 
 For large environments, you can use Azure Policy to automatically create and assign Data Collection Rules (DCRs) for security events across multiple subscriptions by using the [Deploy AMA DCR for Security Events collection](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection) initiative.
-
 
 ## Related content
 
