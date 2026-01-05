@@ -3,7 +3,7 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/08/2025
+ms.date: 12/31/2025
 audience: ITPro
 author: paulinbar
 ms.author: painbar
@@ -19,11 +19,11 @@ ms.collection:
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
-
 ---
+
 # Network protection for macOS
 
-### Prerequisites
+## Prerequisites
 
 - Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.
 - Onboarded Machines: macOS version: Big Sur (11) or later, with product version 101.94.13 or later.
@@ -61,24 +61,18 @@ To roll out Network Protection for macOS, we recommend the following actions:
 - Custom Indicators of Compromise on Domains and IPs.
 
 - Web Content Filtering supports the following actions:
-
-   - Block website categories scoped to device groups through policies created in the Microsoft Defender portal.
-   
-   - Policies are applied to browsers, including Microsoft Edge for macOS. 
+  - Block website categories scoped to device groups through policies created in the Microsoft Defender portal.
+  - Policies are applied to browsers, including Microsoft Edge for macOS. 
 
 - Advanced Hunting - Network Events are reflected in the Machine Timeline, and queryable in Advanced Hunting to aid security investigations.
 
 - Microsoft Defender for Cloud Apps:
-   
-   - Shadow IT discovery - Identify which apps are being used in your organization.
-   
-   - Block applications - Block entire applications (such as Slack and Facebook) from being used in your organization.
+  - Shadow IT discovery - Identify which apps are being used in your organization.
+  - Block applications - Block entire applications (such as Slack and Facebook) from being used in your organization.
 
 - Corporate VPN in tandem or side-by-side with Network Protection: 
-   
-   - Currently, no VPN conflicts are identified. 
-   
-   - If you do experience conflicts, you can provide feedback through the feedback channel listed at the bottom of this page.
+  - Currently, no VPN conflicts are identified. 
+  - If you do experience conflicts, you can provide feedback through the feedback channel listed at the bottom of this page.
 
 ### Known issues
 
@@ -145,7 +139,7 @@ After you create this configuration profile, assign it to the devices where you 
 > [!NOTE]
 > If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed in this section, and then redeploy it from JAMF.
 
-1. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**.
+1. In **Computers** \> **Configuration Profiles**, select **Options** \> **Applications & Custom Settings**.
 
 1. Select **Upload File** (PLIST file).
 
@@ -154,7 +148,6 @@ After you create this configuration profile, assign it to the devices where you 
 1. Upload the following plist file.
 
    ```xml
-   
    <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
    <plist version="1.0">
@@ -166,43 +159,59 @@ After you create this configuration profile, assign it to the devices where you 
        </dict>
    </dict>
    </plist>
-   
    ```
 
-#### Intune deployment
+### Intune deployment
 
-A successful Intune deployment requires a configuration profile to set the enforcement level of network protection.
-After you create this configuration profile, assign it to the devices where you want to enable network protection.
+A successful Intune deployment requires a configuration profile to set the enforcement level of network protection. After you create this configuration profile, assign it to the devices where you want to enable network protection.
 
-##### Configure the enforcement level using Intune
+#### Configure the enforcement level using Intune
 
 > [!NOTE]
 > If you've already configured Microsoft Defender for Endpoint on Mac using the previous instructions (with an XML file), then remove the previous Custom configuration policy and replace it with the following instructions:
 
-1. Open **Manage** > **Device configuration**. Select **Manage** \> **Profiles** \> **Create Profile**.
+1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Devices** \> **Manage devices** section \> **Configuration**. Or, to go directly to the **Devices | Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
 
-1. Change **Platform** to **macOS** and **Profile type** to **Settings catalog**. Select **Create**.
+1. On the **Policies** tab of the **Devices | Configuration** page, select **Create** \> **New policy**.
 
-1. Specify a name for the profile. 
+1. On the **Create a profile** flyout that opens, configure the following settings:
+   - **Platform**: Select **macOS**.
+   - **Profile**: Select **Settings catalog**.
 
-1. On the **Configuration settings** screen, select **Add settings**. Select **Microsoft Defender** > **Network protection**, and tick the **Enforcement level** checkbox.
+   Select **Create**.
 
-1. Set the enforcement level to **block**. Select **Next**.
+1. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
+   - **Name**: Enter a unique, descriptive name for the policy.
+   - **Description**: Enter an optional description.
 
-1. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
+   Select **Next**.
 
-1. Select **OK**
+1. On the **Configuration settings** tab, select **Add settings**. In the **Settings picker** flyout that opens, scroll down and select **Microsoft Defender** \> **Network protection**. In the settings list that appears, select **Enforcement level**, and then close the **Settings picker** flyout.
 
-1. Select **Manage** \> **Assignments**. In the **Include** tab, select the devices for which you want to enable network protection.
+   Back on the **Configuration settings** tab, change **Enforcement level** to **block**.
 
-#### Mobileconfig deployment
+   Select **Next**.
+
+1. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
+
+1. On the **Assignments** tab, configure the following settings:
+   - **Included groups** section: Select one of the following options:
+     - **Add groups**: Select one or more groups to include.
+     - **Add all users**
+     - **Add all devices**
+   - **Excluded groups**: Select **Add groups** to specify groups to exclude.
+
+   When you're finished on the **Create profile** tab, select **Next**.
+
+1. On the **Review + create** tab, verify the settings, and then select **Create**.
+
+### Mobileconfig deployment
 
 To deploy the configuration via a `.mobileconfig` file, which can be used with non-Microsoft MDM solutions or distributed to devices directly, follow these steps:
 
 1. Save the following payload as `com.microsoft.wdav.xml.mobileconfig`.
-   
-   ```xml
 
+   ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
    <plist version="1">
@@ -255,15 +264,12 @@ To deploy the configuration via a `.mobileconfig` file, which can be used with n
            </array>
        </dict>
    </plist>
-   
    ```
 
 1. Verify that the file from the previous step was copied correctly. Using Terminal, run the following command and verify that it outputs OK:
 
    ```bash
-
    plutil -lint com.microsoft.wdav.xml
-   
    ```
 
 ## How to explore the features
@@ -400,6 +406,4 @@ Upon facing an unexpected behavior, users' confusion might be reduced by providi
 - [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 
-
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

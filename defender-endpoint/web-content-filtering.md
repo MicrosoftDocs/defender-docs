@@ -72,11 +72,11 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 1. Sign into the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. In the navigation pane, go to **Settings** \> **Endpoints** \> **General** section \> **Advanced features**.
+1. In the navigation pane, go to **Settings** \> **Endpoints** \> **General** section \> **Advanced features**.
 
-3. On the **Advanced features** page, find the **Web content filtering** setting.
+1. On the **Advanced features** page, find the **Web content filtering** setting.
 
-4. Switch the **Web content filtering** toggle to **On**, and then select **Save preferences**.
+1. Switch the **Web content filtering** toggle to **On**, and then select **Save preferences**.
 
 ### Configure web content filtering policies
 
@@ -102,18 +102,18 @@ To add a new policy, follow these steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**.
 
-2. On the **Web content filtering** page, select **+ Add policy**.
+1. On the **Web content filtering** page, select **+ Add policy**.
 
-3. Specify a name.
+1. Specify a name.
 
-4. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
+1. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
 
-5. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
+1. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
 
    > [!IMPORTANT]
    > If you're using either Microsoft 365 Business Premium or Defender for Business, your web content filtering policy is applied to all users by default. Scoping does not apply.
 
-6. Review the summary and save the policy.
+1. Review the summary and save the policy.
 
 > [!NOTE]
 >
@@ -138,11 +138,11 @@ To define an Allow indicator, follow these steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Rules** section \> **Indicators**.
 
-2. Select the **URLs/Domains** tab, and on the tab, select **+ Add Item**.
+1. Select the **URLs/Domains** tab, and on the tab, select **+ Add Item**.
 
-3. Enter the domain of the site.
+1. Enter the domain of the site.
 
-4. Set the policy action to **Allow**.
+1. Set the policy action to **Allow**.
 
 ### Dispute categories
 
