@@ -38,7 +38,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 
 1. On the device, open Command Prompt as an administrator. 
 
-2. At the prompt, copy and run the following command:
+1. At the prompt, copy and run the following command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
