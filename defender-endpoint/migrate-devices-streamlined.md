@@ -54,7 +54,7 @@ Depending on the OS, migrations might require a device reboot or service restart
 - Windows: reboot the device
 - macOS: Reboot the device or restart the Defender for Endpoint service by running:
   1. `sudo launchctl unload /Library/LaunchDaemons/com.microsoft.fresno.plist`
-  2. `sudo launchctl load /Library/LaunchDaemons/com.microsoft.fresno.plist`
+  1. `sudo launchctl load /Library/LaunchDaemons/com.microsoft.fresno.plist`
 
 - Linux: Restart the Defender for Endpoint service by running: `sudo systemctl restart mdatp`
 
@@ -133,24 +133,24 @@ After completing the steps, you must either reboot the device or restart the ser
 
 1. In Microsoft Intune, create a new onboarding policy using Custom Configuration profile. Don't assign it yet. Follow the instructions under [Intune-based deployment for Microsoft Defender for Endpoint on Mac](mac-install-with-intune.md).
 
-2. Exclude the macOS device you're reonboarding from its existing onboarding policy. To learn more about excluding groups from policy assignments, see [Exclude groups from a policy assignment](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-policy-assignment).
+1. Exclude the macOS device you're reonboarding from its existing onboarding policy. To learn more about excluding groups from policy assignments, see [Exclude groups from a policy assignment](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-policy-assignment).
 
-3. Add the assignment of the policy using streamlined onboarding package.
+1. Add the assignment of the policy using streamlined onboarding package.
 
-4. Reboot the device.
+1. Reboot the device.
 
 ### JAMF Pro
 
 1. Exclude device from any existing 'onboarding' policies in JAMF Pro.
 
-2. Create a new onboarding policy for the streamlined connectivity approach.
+1. Create a new onboarding policy for the streamlined connectivity approach.
 
-3. Include device in the new streamlined onboarding policy.
+1. Include device in the new streamlined onboarding policy.
 
-4. Reboot device if previously onboarded to Defender for Endpoint. Alternatively, you can restart the service using the following commands:
+1. Reboot device if previously onboarded to Defender for Endpoint. Alternatively, you can restart the service using the following commands:
 
     1. `sudo launchctl unload /Library/LaunchDaemons/com.microsoft.fresno.plist`
-    2. `sudo launchctl load /Library/LaunchDaemons/com.microsoft.fresno.plist`
+    1. `sudo launchctl load /Library/LaunchDaemons/com.microsoft.fresno.plist`
 
 For more JAMF guidelines, see [Deploying Microsoft Defender for Endpoint on macOS with JAMF Pro](mac-install-with-jamf.md).
 
@@ -229,13 +229,13 @@ Open the Defender for Endpoint service event log using the following steps:
 
 1. On the Windows menu, select **Start**, then type **Event Viewer**. Then select **Event Viewer**.
 
-2. In the log list, under **Log Summary**, scroll down until you see **Microsoft-Windows-SENSE/Operational**. Double-click the item to open the log.
+1. In the log list, under **Log Summary**, scroll down until you see **Microsoft-Windows-SENSE/Operational**. Double-click the item to open the log.
 
    :::image type="content" source="media/log-summary-event-viewer.png" alt-text="Screenshot of Event Viewer with log summary section":::
 
    You can also access the log by expanding**Applications and Services Logs>Microsoft>Windows>SENSE** and select **Operational**.
 
-3. Event ID 4 tracks successful connections with Defender for Endpoint Command & Control channel. Verify successful connections with updated URL. For example:
+1. Event ID 4 tracks successful connections with Defender for Endpoint Command & Control channel. Verify successful connections with updated URL. For example:
 
    ```
    Contacted server 6 times, all succeeded, URI: <region>.<geo>.endpoint.security.microsoft.com.
@@ -245,9 +245,9 @@ Open the Defender for Endpoint service event log using the following steps:
    </EventData>
    ```
 
-4. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
+1. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
 
-5. Event ID 5 tracks errors if applicable.
+1. Event ID 5 tracks errors if applicable.
 
 > [!NOTE]
 > SENSE is the internal name used to refer to the behavioral sensor that powers Microsoft Defender for Endpoint. <br>
@@ -276,9 +276,9 @@ For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluation
 
 1. Open a Command Prompt as an administrator.
 
-2. Right-click the item in the Start menu, select **Run as administrator** then select **Yes** at the permissions prompt.
+1. Right-click the item in the Start menu, select **Run as administrator** then select **Yes** at the permissions prompt.
 
-3. Use the following argument with the Microsoft Defender Antivirus command-line utility (mpcmdrun.exe) to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+1. Use the following argument with the Microsoft Defender Antivirus command-line utility (mpcmdrun.exe) to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
 
    ```dos
    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -ValidateMapsConnection
@@ -300,9 +300,9 @@ Follow instructions in [Microsoft Defender SmartScreen Demo (msft.net)](https://
 
 1. On the Windows device, create a folder: `C:\test-MDATP-test`.
 
-2. Open Command Prompt as an administrator.
+1. Open Command Prompt as an administrator.
 
-3. In the Command Prompt window, run the following PowerShell command:
+1. In the Command Prompt window, run the following PowerShell command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
@@ -354,5 +354,5 @@ Download and run the client analyzer for macOS or Linux. For more information, s
 
 1. Run `mdeclientanalyzer.cmd -o <path to cmd file>` from within the MDEClientAnalyzer folder. The command uses parameters from the onboarding package to test connectivity.
 
-2. Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` (where parameter is of GW_US, GW_EU, GW_UK). GW refers to the streamlined option. Run with applicable tenant geo.
+1. Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` (where parameter is of GW_US, GW_EU, GW_UK). GW refers to the streamlined option. Run with applicable tenant geo.
 

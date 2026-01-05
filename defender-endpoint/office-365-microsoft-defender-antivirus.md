@@ -37,7 +37,7 @@ You might already know that:
 
  1. [You get ransomware protection and recovery](#ransomware-protection-and-recovery).
 
- 2. [Integration means better protection](#integration-means-better-protection).
+ 1. [Integration means better protection](#integration-means-better-protection).
 
 Read the following sections to learn more.
 
@@ -53,9 +53,9 @@ When you save your files to [OneDrive](/onedrive), and [Microsoft Defender Antiv
 
 1. **You are told about the threat**. (If your organization is using [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), your security operations team is notified, too.)
 
-2. **Microsoft Defender Antivirus helps you (and your organization's security team) remove the ransomware** from your device(s). (If your organization is using Microsoft Defender for Endpoint, your security operations team can determine whether other devices are infected and take appropriate action, too.)
+1. **Microsoft Defender Antivirus helps you (and your organization's security team) remove the ransomware** from your device(s). (If your organization is using Microsoft Defender for Endpoint, your security operations team can determine whether other devices are infected and take appropriate action, too.)
 
-3. **You get the option to recover your files in OneDrive**. With the OneDrive Files Restore feature, you can recover your files in OneDrive to the state they were in before the ransomware attack occurred. See [Ransomware detection and recovering your files](https://support.office.com/article/0d90ec50-6bfd-40f4-acc7-b8c12c73637f).
+1. **You get the option to recover your files in OneDrive**. With the OneDrive Files Restore feature, you can recover your files in OneDrive to the state they were in before the ransomware attack occurred. See [Ransomware detection and recovering your files](https://support.office.com/article/0d90ec50-6bfd-40f4-acc7-b8c12c73637f).
 
 Think of the time and hassle this can save. 
 
