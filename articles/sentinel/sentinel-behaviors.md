@@ -230,8 +230,8 @@ These limitations apply during the public preview of Sentinel behaviors:
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
 - **I see fewer behaviors than expected**: Coverage is partial and growing; check the supported behavior types list; verify that the log volume meets minimum thresholds. <!-- ??? -->
-- **Understanding behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
-- **Understanding the BehaviorInfo and BehaviorEntities tables** – The `BehaviorInfo` table contains one record per behavior event to explain “what happened” . Th `BehaviorEntities` table lists the entities involved in each behavior. For more information about each of the columns in these tables, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
+- **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
+- **BehaviorInfo and BehaviorEntities tables** – The `BehaviorInfo` table contains one record per behavior event to explain “what happened” . The `BehaviorEntities` table lists the entities involved in each behavior. For more information about each of the columns in these tables, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
     - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
     - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
