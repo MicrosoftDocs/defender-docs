@@ -119,7 +119,7 @@ Use the following process to prevent automatic updates for built-in, source-spec
 
 ## Configure the sources relevant to a source-specific parser
 
-Some parsers requires you to update the list of sources that are relevant to the parser. For example, a parser that uses Syslog data, may not be able to determine what Syslog events are relevant to the parser. Such a parser may use the `Sources_by_SourceType` watchlist to determine which sources send information relevant to the parser. For such parses add a record for each relevant source to the watchlist:
+Some parsers require you to update the list of sources that are relevant to the parser. For example, a parser that uses Syslog data, may not be able to determine what Syslog events are relevant to the parser. Such a parser may use the `Sources_by_SourceType` watchlist to determine which sources send information relevant to the parser. For such parses add a record for each relevant source to the watchlist:
 - Set the `SourceType` field to the parser specific value specified in the parser documentation. 
 - Set the `Source` field to the identifier of the source used in the events. You may need to query the original table, such as Syslog, to determine the correct value.
 
