@@ -24,7 +24,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified RBAC
 [Integration of Microsoft Defender for Cloud Apps permissions with Microsoft Defender XDR Unified RBAC](https://learn.microsoft.com/defender-xdr/whats-new-in-microsoft-defender-urbac#microsoft-defender-for-cloud-apps-permissions-are-now-integrated-with-microsoft-defender-xdr-unified-rbac) is now available worldwide. 
-For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](https://learn.microsoft.com/defender-xdr/compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions). To activate the Defender for Cloud Apps workload, see [Activate Microsoft Defender XDR Unified RBAC](https://learn.microsoft.com/defender-xdr/activate-defender-rbac.md).
+For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](https://learn.microsoft.com/en-us/defender-xdr/compare-rbac-roles#map-microsoft-defender-xdr-unified-rbac-permissions-to-existing-rbac-permissions). To activate the Defender for Cloud Apps workload, see [Activate Microsoft Defender XDR Unified RBAC](https://learn.microsoft.com/defender-xdr/activate-defender-rbac).
 
 
 ### Increased availability of App governance unused app insights feature (Preview)
