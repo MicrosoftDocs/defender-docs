@@ -1,6 +1,6 @@
 ---
-title: Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
-description: Explore Sentinel behaviors that converts security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
+title: Translate raw security logs to behavioral insights using Microsoft Sentinel behaviors (Preview)
+description: Sentinel behaviors translates security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
 author: guywi-ms
 ms.author: guywild
 ms.reviewer: mshechter
@@ -10,7 +10,7 @@ ms.service: microsoft-sentinel
 #Customer intent: As a security analyst, I want to use Sentinel behaviors to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
 ---
 
-# Extract behavioral patterns from raw security logs using Microsoft Sentinel behaviors (Preview)
+# Translate raw security logs to behavioral insights using Microsoft Sentinel behaviors (Preview)
 
 Microsoft Sentinel behaviors summarize high-volume raw logs into clear, plain-language patterns of security actions, explaining “who did what to whom” in a structured way enriched with MITRE ATT&CK mappings and entity roles.
 
@@ -226,41 +226,26 @@ These limitations apply during the public preview of Sentinel behaviors:
 - Behaviors aim to reduce noise by aggregating and sequencing events, but you might still see too many behavior records. We welcome your feedback on specific behavior types to help improve coverage and relevance.
 - Behaviors are not alerts or anomalies. They're neutral observations, not classified as malicious or benign. The presence of a behavior means “this happened,” not “this is a threat.” Anomaly detection remains separate in UEBA. Use judgment or combine behaviors with UEBA anomaly data to identify noteworthy patterns.
 
-## Troubleshoot behavior issues
+## Best practices and troubleshooting tips for using behaviors
 
-- **If behaviors don't get generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
+- **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
 - **I see fewer behaviors than expected**: Coverage is partial and growing; check the supported behavior types list; verify that the log volume meets minimum thresholds. <!-- ??? -->
 - **Understanding behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
+- **Understanding the BehaviorInfo and BehaviorEntities tables** – The `BehaviorInfo` table contains one record per behavior event to explain “what happened” . Th `BehaviorEntities` table lists the entities involved in each behavior. For more information about each of the columns in these tables, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
+    - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
+    - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
+      For example:
 
-## BehaviorInfo and BehaviorEntities schemas
+      ```kusto
+      BehaviorInfo
+      | join kind=inner BehaviorEntities on BehaviorId
+      | where TimeGenerated >= ago(1d)
+      | project TimeGenerated, Title, Description, EntityType, EntityRole, EntityId
+      ```
 
-The system stores behaviors data in **two interrelated log tables** in your Log Analytics workspace: **BehaviorInfo** and **BehaviorEntities**. These tables are Azure Monitor Logs tables (just like any other Sentinel table). You can find their full reference schemas on Microsoft Learn:
+      This gives you each behavior and each entity involved in it. The `EntityId` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
 
-- **BehaviorInfo** table – This table contains one record per behavior event. Each record represents a specific observed behavior or pattern. Key fields include a unique **BehaviorId**, **TimeGenerated**, a **Title**, data source (table), a contextual dynamic **Description**, **Categories** (MITRE TTPs), and various other properties or an AdditionalFields JSON with more details (such as the row event IDs). Essentially, BehaviorInfo is where you find the “what happened” description and classification of the behavior.
+For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).      
 
-- **BehaviorEntities** table – This table lists the entities involved in each behavior. There might be multiple records in BehaviorEntities for one BehaviorId (for example, one behavior might involve a source IP, a user account, and a host, each as separate entity entries). Fields include the same **BehaviorId** (to join back to BehaviorInfo), **EntityType** (user, host, file, and more), **EntityRole** (whether that entity was an “Actor”, “Target”, or “Other” in that behavior), and more. BehaviorEntities essentially answers “who or what was involved in that behavior?”.
-
-- **Tracing back to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
-
-Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
-
-For example:
-
-```kusto
-BehaviorInfo
-| join kind=inner BehaviorEntities on BehaviorId
-| where TimeGenerated >= ago(1d)
-| project TimeGenerated, Title, Description, EntityType, EntityRole, EntityId
-```
-
-This will give you each behavior and each entity involved in it. The EntityId or identifying info for the entity is in BehaviorEntities, whereas BehaviorInfo might just say “User” or “Host” in text.
-
-The schema reference pages linked in the following section provide the full list of columns in each table, along with their definitions and examples of values. It's a good idea for detection engineers to familiarize themselves with the schema, especially fields like ActionType (the normalized name of the behavior) and the various entity role fields.
-
-For detailed schema information, refer to the official documentation here:
-
-- [Definitions of all BehaviorInfo columns and usage notes](/azure/azure-monitor/reference/tables/behaviorinfo)
-
-- [Definitions of all BehaviorEntities columns](/azure/azure-monitor/reference/tables/behaviorentities)
 
