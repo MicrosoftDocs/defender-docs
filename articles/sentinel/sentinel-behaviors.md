@@ -51,51 +51,6 @@ This diagram illustrates how Sentinel behaviors transform raw logs into structur
 > [!IMPORTANT]
 > Microsoft designed the Behaviors feature based on **privacy and responsible AI principles** to ensure transparency and explainability. Behaviors don't introduce new compliance risks or opaque "black box" analytics into your SOC. For details about how AI is applied in this feature and Microsoft’s approach to responsible AI, see [Responsible AI FAQ for the Microsoft Sentinel behaviors layer](https://aka.ms/miscrosoftsentinelbehaviors).
 
-## Prerequisites
-
-To use Sentinel behaviors, you need:
-
-- A Microsoft Sentinel workspace that's onboarded to the Defender portal.
-- Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
-
-## Permissions required 
-
-To enable and use Sentinel behaviors, you need these permissions:
-
-| **User action**                                              | **Permission required**                                      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Enable behaviors | **Global Administrator** or **Security Administrator** role in Microsoft Entra ID. |
-| Query behaviors tables                                         | <ul><li>Read access to BehaviorInfo and BehaviorEntities tables in the Log Analytics workspace</li><li>Advanced Hunting query permissions in Microsoft 365 Defender portal</li><li>Read access to source tables (e.g., AWSCloudTrail, CommonSecurityLog) for tracing back to raw events</li></ul> |
-
-For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
-
-## Enable Sentinel behaviors 
-
-To enable Sentinel behaviors in your workspace:
-
-1. In the Defender portal, select **System > Settings > Microsoft Sentinel > SIEM workspaces**.
-1. Select the Sentinel workspace where you want to enable Sentinel behaviors.
-1. Select **Enable behavior analytics > Configure UEBA > New! Sentinel Behaviors**.
-1. Toggle on **Enable Sentinel Behaviors**.
-
-  > [!IMPORTANT]
-  > This feature currently works **on a single workspace in your tenant**.
-
-## Supported data sources
-
-The list of supported data sources and vendors or services that send logs to these data sources is evolving.
-Sentinel behaviors automatically aggregates insights for all supported vendors based on the logs you collect.
-
-During public preview, Sentinel behaviors focuses on non-Microsoft data sources that traditionally lack easy behavioral context in Sentinel. 
-
-| Data source | Supported vendors and services | Sentinel connector |
-|-------------|---------------------------|-------|
-| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
-| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services-s3)</li></ul> |
-
-> [!IMPORTANT]
-> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
-
 ## Use cases and examples
 
 Sentinel behaviors enhance several SOC workflows by transforming raw logs into clear, contextualized activity summaries. Here's how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
@@ -201,6 +156,51 @@ Behaviors simplify rule logic by providing normalized, high‑quality signals wi
 
   Behaviors also serve as reliable triggers for automation. Instead of creating alerts for non-risky activities, use behaviors to trigger automation - for example, to send an email or initiate verification.
 
+## Prerequisites
+
+To use Sentinel behaviors, you need:
+
+- A Microsoft Sentinel workspace that's onboarded to the Defender portal.
+- Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
+
+## Permissions required 
+
+To enable and use Sentinel behaviors, you need these permissions:
+
+| **User action**                                              | **Permission required**                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Enable behaviors | **Global Administrator** or **Security Administrator** role in Microsoft Entra ID. |
+| Query behaviors tables                                         | <ul><li>Read access to BehaviorInfo and BehaviorEntities tables in the Log Analytics workspace</li><li>Advanced Hunting query permissions in Microsoft 365 Defender portal</li><li>Read access to source tables (e.g., AWSCloudTrail, CommonSecurityLog) for tracing back to raw events</li></ul> |
+
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+
+## Enable Sentinel behaviors 
+
+To enable Sentinel behaviors in your workspace:
+
+1. In the Defender portal, select **System > Settings > Microsoft Sentinel > SIEM workspaces**.
+1. Select the Sentinel workspace where you want to enable Sentinel behaviors.
+1. Select **Enable behavior analytics > Configure UEBA > New! Sentinel Behaviors**.
+1. Toggle on **Enable Sentinel Behaviors**.
+
+  > [!IMPORTANT]
+  > This feature currently works **on a single workspace in your tenant**.
+
+## Supported data sources
+
+The list of supported data sources and vendors or services that send logs to these data sources is evolving.
+Sentinel behaviors automatically aggregates insights for all supported vendors based on the logs you collect.
+
+During public preview, Sentinel behaviors focuses on non-Microsoft data sources that traditionally lack easy behavioral context in Sentinel. 
+
+| Data source | Supported vendors and services | Sentinel connector |
+|-------------|---------------------------|-------|
+| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
+| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services-s3)</li></ul> |
+
+> [!IMPORTANT]
+> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
+
 ## Pricing model
 
 Using Sentinel behaviors results in the following costs:
@@ -208,16 +208,6 @@ Using Sentinel behaviors results in the following costs:
 - **No extra license cost:** Behaviors are included as part of Microsoft Sentinel (currently in preview). You don’t need a separate SKU, UEBA add‑on, or additional licensing. If your workspace is connected to Sentinel and onboarded to the Defender portal, you can use behaviors at no additional feature cost.
 
 - **Log data ingestion charges:** Behavior records are stored in the `BehaviorInfo` and `BehaviorEntities` tables in your Sentinel workspace. Each behavior contributes to your workspace’s data ingestion volume and is billed at your existing Log Analytics/Sentinel ingestion rate. Behaviors are additive - they don’t replace your existing raw logs.
-
-## Limitations in public preview 
-
-These limitations apply during the public preview of Sentinel behaviors:
-
-- You can enable behaviors on a single Sentinel workspace per tenant.
-- Sentinel generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources). 
-- Sentinel does not currently capture every possible action or attack technique, even for supported sources. Some events might not produce corresponding behaviors. Don't assume that the absence of a behavior means no activity occurred. Always review raw logs if you suspect something might be missing. 
-- Behaviors aim to reduce noise by aggregating and sequencing events, but you might still see too many behavior records. We welcome your feedback on specific behavior types to help improve coverage and relevance.
-- Behaviors are not alerts or anomalies. They're neutral observations, not classified as malicious or benign. The presence of a behavior means “this happened,” not “this is a threat.” Anomaly detection remains separate in UEBA. Use judgment or combine behaviors with UEBA anomaly data to identify noteworthy patterns.
 
 ## Best practices and troubleshooting tips for using behaviors
 
@@ -241,4 +231,12 @@ These limitations apply during the public preview of Sentinel behaviors:
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).      
 
+## Limitations in public preview 
 
+These limitations apply during the public preview of Sentinel behaviors:
+
+- You can enable behaviors on a single Sentinel workspace per tenant.
+- Sentinel generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources). 
+- Sentinel does not currently capture every possible action or attack technique, even for supported sources. Some events might not produce corresponding behaviors. Don't assume that the absence of a behavior means no activity occurred. Always review raw logs if you suspect something might be missing. 
+- Behaviors aim to reduce noise by aggregating and sequencing events, but you might still see too many behavior records. We welcome your feedback on specific behavior types to help improve coverage and relevance.
+- Behaviors are not alerts or anomalies. They're neutral observations, not classified as malicious or benign. The presence of a behavior means “this happened,” not “this is a threat.” Anomaly detection remains separate in UEBA. Use judgment or combine behaviors with UEBA anomaly data to identify noteworthy patterns.
