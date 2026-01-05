@@ -202,11 +202,11 @@ Behaviors simplify rule logic by providing normalized, high‑quality signals wi
 
 ## Pricing model
 
-Sentinel behaviors introduces new log data into your Sentinel workspace, which affects cost and licensing. Consider the following points:
+Using Sentinel behaviors results in the following costs:
 
-- **No extra license cost:** The Behaviors feature is part of the Sentinel solution (currently in preview) – you don't pay extra to turn it on. If you enable Sentinel on a workspace and onboard to the Defender portal, you can use behaviors. There's no need for a separate SKU or add-on license, nor a prerequisite to enable other UEBA capabilities.
+- **No extra license cost:** Behaviors are included as part of Microsoft Sentinel (currently in preview). You don’t need a separate SKU, UEBA add‑on, or additional licensing. If your workspace is connected to Sentinel and onboarded to the Defender portal, you can use behaviors at no additional feature cost.
 
-- **Log data ingestion charges:** Behaviors are stored as records in Azure Monitor (Log Analytics) like any other log. Specifically, behaviors reside in two tables (BehaviorInfo and BehaviorEntities) within your Log Analytics workspace. This storage means that **each behavior record adds to your data volume** and you pay according to your Sentinel/Log Analytics data ingestion rates.
+- **Log data ingestion charges:** Behavior records are stored in the `BehaviorInfo` and `BehaviorEntities` tables in your Sentinel workspace. Each behavior contributes to your workspace’s data ingestion volume and is billed at your existing Log Analytics/Sentinel ingestion rate. Behaviors are additive - they don’t replace your existing raw logs.
 
 ## Privacy and responsible AI considerations
 
