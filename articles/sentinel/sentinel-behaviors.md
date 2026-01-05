@@ -56,9 +56,17 @@ To use Sentinel behaviors, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
 - Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
+
 ## Permissions required 
 
 To enable and use Sentinel behaviors, you need these permissions:
+
+| **User action**                                              | **Permission required**                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Enable behaviors | **Global Administrator** or **Security Administrator** role in Microsoft Entra ID. |
+| Query behaviors tables                                         | <ul><li>Read access to BehaviorInfo and BehaviorEntities tables in the Log Analytics workspace</li><li>Advanced Hunting query permissions in Microsoft 365 Defender portal</li><li>Read access to source tables (e.g., AWSCloudTrail, CommonSecurityLog) for tracing back to raw events</li></ul> |
+
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Enable Sentinel behaviors 
 
