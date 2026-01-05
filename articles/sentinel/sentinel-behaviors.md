@@ -156,6 +156,22 @@ Behaviors simplify rule logic by providing normalized, high‑quality signals wi
 
   Behaviors also serve as reliable triggers for automation. Instead of creating alerts for non-risky activities, use behaviors to trigger automation - for example, to send an email or initiate verification.
 
+## Supported data sources
+
+The list of supported data sources and vendors or services that send logs to these data sources is evolving.
+Sentinel behaviors automatically aggregates insights for all supported vendors based on the logs you collect.
+
+During public preview, Sentinel behaviors focuses on non-Microsoft data sources that traditionally lack easy behavioral context in Sentinel. 
+
+| Data source | Supported vendors and services | Sentinel connector |
+|-------------|---------------------------|-------|
+| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
+| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services-s3)</li></ul> |
+
+> [!IMPORTANT]
+> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
+
+
 ## Prerequisites
 
 To use Sentinel behaviors, you need:
@@ -185,21 +201,6 @@ To enable Sentinel behaviors in your workspace:
 
   > [!IMPORTANT]
   > This feature currently works **on a single workspace in your tenant**.
-
-## Supported data sources
-
-The list of supported data sources and vendors or services that send logs to these data sources is evolving.
-Sentinel behaviors automatically aggregates insights for all supported vendors based on the logs you collect.
-
-During public preview, Sentinel behaviors focuses on non-Microsoft data sources that traditionally lack easy behavioral context in Sentinel. 
-
-| Data source | Supported vendors and services | Sentinel connector |
-|-------------|---------------------------|-------|
-| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
-| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services-s3)</li></ul> |
-
-> [!IMPORTANT]
-> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
 
 ## Pricing model
 
