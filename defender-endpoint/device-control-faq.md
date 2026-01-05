@@ -14,7 +14,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 ms.topic: faq
-ms.date: 03/10/2025
+ms.date: 01/05/2026
 ms.reviewer: tewchen, joshbregman
 search.appverid: met150
 appliesto:
@@ -60,9 +60,9 @@ If the policy still isn't working, contact support, and share your support cab. 
 "%programfiles%\Windows Defender\MpCmdRun.exe" -GetFiles
 ```
 
-## Why is there no configuration UX for some policy groups? 
+## Why is there no configuration UX for some policy groups?
 
-There is no configuration UX for **Define device control policy groups** and **Define device control policy rules** on your Group Policy. But, you can still get the related `.adml` and `.admx` files by selecting **Raw** and **Save as** at the [WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/WindowsDefender.adml) and [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/WindowsDefender.admx) files.
+There's no configuration UX for **Define device control policy groups** and **Define device control policy rules** on your Group Policy. But, you can still get the related `.adml` and `.admx` files from [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677).
 
 ## How do I confirm that the latest policy has been deployed to the target machine?
 
