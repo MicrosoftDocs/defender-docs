@@ -135,7 +135,7 @@ Behaviors allow hunters to search on TTPs and activity summaries, rather than wr
     | order by Count asc
     ```
 
-### Detection engineering and automation
+### Alerting and automation
 
 Behaviors simplify rule logic by providing normalized, high‑quality signals with built‑in context, and enable new correlation possibilities.
 
