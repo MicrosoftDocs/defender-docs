@@ -302,23 +302,6 @@ The output is saved to `/tmp/troubleshooter_output_file.log`.
 sudo wget -O Sentinel_AMA_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/Syslog/Sentinel_AMA_troubleshoot.py && sudo python3 Sentinel_AMA_troubleshoot.py [--cef | --asa | --ftd]
 ```
 
-
-### Collect detailed logs
-
-1. Enable trace flags as described in [Enable diagnostic tracing](#enable-diagnostic-tracing).
-2. Reproduce the issue by sending test messages.
-3. Wait a few minutes for logs to be generated.
-4. Remove trace flags and restart the agent.
-5. Create an archive of `/var/opt/microsoft/azuremonitoragent/log/`.
-
-### Information to include
-
-- All troubleshooting steps performed
-- Screenshots of configuration and errors
-- Output from the AMA troubleshooter script
-- Agent logs with trace flags enabled
-- Sample log messages from your source system
-
 ## Related content
 
 - [Ingest syslog and CEF messages with Azure Monitor Agent](connect-cef-syslog-ama.md)
