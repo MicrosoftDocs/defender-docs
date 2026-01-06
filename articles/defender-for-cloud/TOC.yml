@@ -309,9 +309,8 @@
             - name: Private endpoints with Microsoft Defender (Preview)
               displayName: private endpoints, private link, security private link, networking, connectivity, VPN, ExpressRoute
               href: concept-private-links.md
-              items:
-                - name: Configure private endpoints with Microsoft Security Private Link (Preview)
-                  href: configure-private-endpoints.md
+            - name: Configure private endpoints with Microsoft Security Private Link (Preview)
+              href: configure-private-endpoints.md
     - name: Frequently asked questions
       items:
         - name: Common questions about Defender for Cloud
