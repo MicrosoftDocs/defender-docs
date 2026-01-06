@@ -108,13 +108,13 @@ To set up an agent identity:
    
    Run the following Azure CLI commands as a tenant admin to create the service principal in your tenant:
 
-   ```
+   ```Azure CLI
    TOKEN=$(az account get-access-token \
       --tenant <your tenant ID> \
       --resource-type ms-graph \
       --query accessToken -o tsv)
    ```
-   ```
+   ```Azure CLI
    curl -X POST https://graph.microsoft.com/v1.0/servicePrincipals \
       -H "Authorization: Bearer $TOKEN" \
       -H "Content-Type: application/json" \
@@ -123,7 +123,7 @@ To set up an agent identity:
       }'
    ```
    **Optional:** Validate that the service principal was created:
-   ```
+   ```Azure CLI
    curl -X GET "https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '43d7b169-1d9e-4d32-8cd8-06c5974ed90c'" \
      -H "Authorization: Bearer $TOKEN"
    ```
