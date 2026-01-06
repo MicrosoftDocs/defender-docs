@@ -7,7 +7,7 @@ ms.author: kesharab
 author: KesemSharabi
 ms.reviewer: jesquive
 ms.localizationpriority: medium
-ms.date: 05/30/2025
+ms.date: 01/05/2026
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -102,13 +102,12 @@ The following OS versions are supported:
 > [!NOTE]
 >
 > 1. The patch must be deployed before device onboarding in order to configure Defender for Endpoint to the correct environment.
-> 2. Learn about the [unified modern solution for Windows 2016 and 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). If you previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
-> 3. When using the [Microsoft Monitoring Agent](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) make sure to choose `Azure US Government` under **Azure Cloud** if using the [setup wizard](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard). If you're using a [command line](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line) or a [script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation), set the `OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE` parameter to `1`. The minimum MMA supported version is `10.20.18029` (March 2020).
+> 1. Learn about the [unified modern solution for Windows 2016 and 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). If you previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
+> 1. When using the [Microsoft Monitoring Agent](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) make sure to choose `Azure US Government` under **Azure Cloud** if using the [setup wizard](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard). If you're using a [command line](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line) or a [script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation), set the `OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE` parameter to `1`. The minimum MMA supported version is `10.20.18029` (March 2020).
 
 ### OS versions when using Microsoft Defender for servers
 
 The following OS versions are supported when using [Microsoft Defender for servers](/azure/security-center/security-center-wdatp):
-
 
 |OS version|GCC|GCC High|DoD|
 |:---|:---:|:---:|:---:|
@@ -127,11 +126,10 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 
 The following downloadable spreadsheet lists the services and their associated URLs your network must be able to connect to. Verify there are no firewall or network-filtering rules that would deny access to these URLs, or create an *allow* rule specifically for them.
 
-
-| Spreadsheet of domains list  | Description  |
-|---------|---------|
-| Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview) | List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md). |
-| Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
+|Spreadsheet of domains list|Description|
+|---|---|
+|Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview)|List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md).|
+|Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD|Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls)|
 
 For more information, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
@@ -142,8 +140,7 @@ For more information, see [Configure device proxy and Internet connectivity sett
 
 ## API
 
-Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you need to use the following URIs:
-
+Instead of the public URIs listed in our [API documentation](api/exposed-apis-list.md), you need to use the following URIs:
 
 |Endpoint type|GCC|GCC High & DoD|
 |---|---|---|
@@ -162,7 +159,6 @@ These are the known gaps:
 |Microsoft Threat Experts|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|
 |Microsoft Defender for Endpoint Security Configuration Management|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|
 |Microsoft Defender for IoT enterprise IoT security|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|
-
 
 > [!NOTE]
 > While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
@@ -189,4 +185,3 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 > - Request CVE support
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

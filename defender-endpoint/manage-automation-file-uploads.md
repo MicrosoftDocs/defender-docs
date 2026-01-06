@@ -39,11 +39,11 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 
 1. Sign in to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation uploads**.
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation uploads**.
 
-2. Toggle the content analysis setting between **On** and **Off**.
+1. Toggle the content analysis setting between **On** and **Off**.
 
-3. Configure the following extension names and separate extension names with a comma:
+1. Configure the following extension names and separate extension names with a comma:
 
    - **File extension names** - Suspicious files except email attachments will be submitted for additional inspection
 

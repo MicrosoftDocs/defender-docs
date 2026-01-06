@@ -19,8 +19,8 @@ ms.date: 03/10/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Controlled folder access (CFA) demonstration test tool (block script)
 
 
@@ -70,13 +70,13 @@ You can perform these manual steps instead:
   Set-MpPreference -EnableControlledFolderAccess Enabled
   ```
 
-2. Download the CFA [test tool](https://demo.wd.microsoft.com/Content/CFAtool.exe)
-3. Execute the PowerShell commands above
+1. Download the CFA [test tool](https://demo.wd.microsoft.com/Content/CFAtool.exe)
+1. Execute the PowerShell commands above
 
 ## Scenario: Use the CFA test tool to simulate an untrusted process writing to a protected folder
 
 1. Launch CFA test tool
-2. Select the desired folder and create file
+1. Select the desired folder and create file
 - You can find more information [here](evaluate-controlled-folder-access.md).
 
 ## Clean-up

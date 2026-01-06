@@ -123,13 +123,13 @@ Set-ExecutionPolicy Unrestricted
 You can perform these manual steps instead:
 
 1. Create a folder under c: named demo, "c:\demo"
-2. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) into c:\demo.
-3. Enable all rules using the PowerShell command.
+1. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) into c:\demo.
+1. Enable all rules using the PowerShell command.
 
 ### Scenario 1: Attack surface reduction blocks a test file with multiple vulnerabilities
 
 1. Enable all rules in block mode using the PowerShell commands (you can copy paste all)
-2. Download and open any of the test file/documents, and enable editing and content, if prompted.
+1. Download and open any of the test file/documents, and enable editing and content, if prompted.
 
 #### Scenario 1 expected results
 
@@ -141,7 +141,7 @@ You should immediately see an "Action blocked" notification.
 
    Example: `Add-MpPreference -AttackSurfaceReductionRules_Ids D4F940AB-401B-4EfC-AADC-AD5F3C50688A -AttackSurfaceReductionRules_Actions Enabled`
 
-2. Download and open the test file/document for the rule you want to test, and enable editing and content, if prompted.
+1. Download and open the test file/document for the rule you want to test, and enable editing and content, if prompted.
 
    Example: [Block Office applications from creating child processes](https://demo.wd.microsoft.com/Content/ransomware_testfile_doc.docm) D4F940AB-401B-4EFC-AADC-AD5F3C50688A
 
@@ -167,7 +167,7 @@ You should immediately see an "Action blocked" notification.
 
 1. Turn off all attack surface reduction rules using PowerShell commands in the cleanup section.
 
-2. Download any test file/document, and enable editing and content, if prompted.
+1. Download any test file/document, and enable editing and content, if prompted.
 
 #### Scenario 4 expected results
 

@@ -59,7 +59,7 @@ Microsoft Defender for Endpoint utilized `audit` framework from linux to track n
             └─16671 /opt/microsoft/mdatp/sbin/mdatp_audisp_plugin -d
     ```
 
-2. If `auditd` is marked as stopped, start it.
+1. If `auditd` is marked as stopped, start it.
 
     ```bash
     service auditd start

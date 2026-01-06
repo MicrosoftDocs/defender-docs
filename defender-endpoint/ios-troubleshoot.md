@@ -39,9 +39,9 @@ While enabled by default, there might be some cases that require you to disable 
 
 1. On your iOS device, open the **Settings** app, select **General**, and then select **VPN**.
 
-2. Select the **i** button for Defender for Endpoint.
+1. Select the **i** button for Defender for Endpoint.
 
-3. Toggle off **Connect On Demand** to disable VPN.
+1. Toggle off **Connect On Demand** to disable VPN.
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
@@ -125,25 +125,25 @@ If a user faces an issue that isn't already addressed in the above sections or i
 
    1. Open the MS Defender app on the iOS/iPadOS device.
    
-   2. Select the menu (profile icon) on the top-left corner, and then select **Help and Feedback**.
+   1. Select the menu (profile icon) on the top-left corner, and then select **Help and Feedback**.
    
-   3. Choose from the given options. Under troubleshooting, select **Send Logs to Microsoft**.
+   1. Choose from the given options. Under troubleshooting, select **Send Logs to Microsoft**.
 
-   4. Share Incident ID to your support engineer.
+   1. Share Incident ID to your support engineer.
 
-2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
+1. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
 
    1. Sign out of the MS Defender app (applicable when Send Feedback option is disabled).
 
-   2. Select **Sign in with a different account**.
+   1. Select **Sign in with a different account**.
 
-   3. Select **Get help signing in**.
+   1. Select **Get help signing in**.
 
-   4. Select **Report a problem**, and provide details about the issue you are facing. Don't include personal information, such as your email account.
+   1. Select **Report a problem**, and provide details about the issue you are facing. Don't include personal information, such as your email account.
 
-   5. Select the toggle to include diagnostic data, and submit your feedback. 
+   1. Select the toggle to include diagnostic data, and submit your feedback. 
    
-   6. Sign back in to the app (applicable if user has signed out).
+   1. Sign back in to the app (applicable if user has signed out).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

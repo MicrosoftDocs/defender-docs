@@ -51,25 +51,25 @@ Also see [About regular quick and full scans with Microsoft Defender Antivirus](
 
 1. As a global or security administrator, go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
 
-2. Under **Manage**, choose **Antivirus**.
+1. Under **Manage**, choose **Antivirus**.
 
-3. Either create a new policy, or edit an existing policy using the following settings:
+1. Either create a new policy, or edit an existing policy using the following settings:
 
    - Platform: **Windows 10, Windows 11, and Windows Server**
    - Profile: **Microsoft Defender Antivirus**
 
-4. For configuration settings, expand **Defender**, scroll down to **Allow On Access Protection**. and set it to **Allowed**.
+1. For configuration settings, expand **Defender**, scroll down to **Allow On Access Protection**. and set it to **Allowed**.
 
-5. Under **Allow On Access Protection**, select a remediation action for each level:
+1. Under **Allow On Access Protection**, select a remediation action for each level:
 
    - High severity threats
    - Severe threats
    - Moderate severity threats
    - Low severity threats
 
-6. Specify the device groups that should receive this policy (such as **All Devices**).
+1. Specify the device groups that should receive this policy (such as **All Devices**).
 
-7. Review your settings, and then choose **Save**.
+1. Review your settings, and then choose **Save**.
 
 For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
 
@@ -84,11 +84,11 @@ If you're using Configuration Manager, see the following articles:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), and edit the Group Policy Object you want to configure.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and then select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
 
-4. Using the following table, edit the policy as needed.
+1. Using the following table, edit the policy as needed.
 
    |Setting|Description|Default setting (if not configured)|
    |---|---|---|
@@ -99,7 +99,7 @@ If you're using Configuration Manager, see the following articles:
    |Threats<br/>Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level (low, medium, high, or severe). You can use this setting to define how all threats for each of the threat levels should be remediated (quarantined, removed, or ignored). |Not applicable|
    |Threats<br/>Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|Not applicable|
 
-5. Select **OK**.
+1. Select **OK**.
 
 ## Configure remediation options using PowerShell or WMI
 

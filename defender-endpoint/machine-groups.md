@@ -56,9 +56,9 @@ As part of the process of creating a device group, you'll:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Permissions** section \> **Device groups**. Or, to go directly to the device groups tab, use <https://security.microsoft.com/securitysettings/endpoints/machine_groups>.
 
-2. On the device groups tab, select **Add device group**.
+1. On the device groups tab, select **Add device group**.
 
-3. The **Add device group** wizard opens. On the **General** page, configure the following settings:
+1. The **Add device group** wizard opens. On the **General** page, configure the following settings:
    - **Device group name**: Enter a unique, descriptive name for the device group.
    - **Remediation level**: Select one of the following values:
      - **No automated response**
@@ -70,16 +70,16 @@ As part of the process of creating a device group, you'll:
 
    Select **Next**
 
-4. On the **Devices** page, configure the matching rule that determines which devices belong to the group. For instructions, see [How the automated investigation starts](automated-investigations.md#how-the-automated-investigation-starts).
+1. On the **Devices** page, configure the matching rule that determines which devices belong to the group. For instructions, see [How the automated investigation starts](automated-investigations.md#how-the-automated-investigation-starts).
 
    > [!TIP]
    > To use tagging for grouping devices, see [Create and manage device tags](machine-tags.md).
 
    Select **Next**.
 
-5. On the **Preview devices** page, select **Show preview** to show up to 10 devices that match the device rule you configured on the previous page. If you're satisfied with the results, select **Next**.
+1. On the **Preview devices** page, select **Show preview** to show up to 10 devices that match the device rule you configured on the previous page. If you're satisfied with the results, select **Next**.
 
-6. On the **User access** page, assign the user groups that can access the device group you created.
+1. On the **User access** page, assign the user groups that can access the device group you created.
 
     > [!NOTE]
     > You can only grant access to Microsoft Entra user groups that have been assigned to RBAC roles.
@@ -105,8 +105,8 @@ Devices that aren't matched to any groups are added to Ungrouped devices (defaul
 Device group definitions can also include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
 
 1. Create a new device group, then select **Devices** tab.
-2. Add the first value for one of the conditions.
-3. Select `+` to add more rows of the same property type.
+1. Add the first value for one of the conditions.
+1. Select `+` to add more rows of the same property type.
 
 > [!TIP]
 > Use the 'OR' operator between rows of the same condition type, which allows multiple values per property.

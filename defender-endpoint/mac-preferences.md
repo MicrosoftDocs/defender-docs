@@ -1165,17 +1165,17 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 
 1. Open **Devices** \> **Configuration Profiles**. Select **Create Profile**.
 
-2. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
+1. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
 
-3. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
+1. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
 
-4. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
+1. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
 
-5. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
+1. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
 
-6. Select **OK**.
+1. Select **OK**.
 
-7. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
+1. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
 
 > [!CAUTION]
 > You must enter the correct custom configuration profile name; otherwise, these preferences won't be recognized by Microsoft Defender for Endpoint.

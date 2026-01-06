@@ -33,19 +33,19 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
 
 1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
 
-2. Go to **Endpoint security** \> **Attack surface reduction**.
+1. Go to **Endpoint security** \> **Attack surface reduction**.
 
-3. On the **Policies** tab of the **Attack surface reduction** page, eselect **+ Create Policy** to set up a new policy with the following settings:
+1. On the **Policies** tab of the **Attack surface reduction** page, eselect **+ Create Policy** to set up a new policy with the following settings:
    - **Platform**: Select **Windows**. Currently, device control isn't supported on Windows Server, even though **This policy applies to** shows it.
    - **Profile**: Select **Device Control**.
 
    Select **Create**.
 
-4. The **Create Policy** wizard opens. On the **Basics** tab, configure the following settings:
+1. The **Create Policy** wizard opens. On the **Basics** tab, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the policy.
    - **Description**: Enter an optional description.
 
-5. On the **Configuration settings** tab, configure some or all of the following settings:
+1. On the **Configuration settings** tab, configure some or all of the following settings:
    - **Defender**: See [Allow Full Scan Removable Drive Scanning](/windows/client-management/mdm/policy-csp-defender#allowfullscanremovabledrivescanning) settings.
    - **Device Control**: Configure custom policies with reusable settings. See the [Device control profiles](#device-control-profiles) section later in this article and [Device control overview: Rules](device-control-policies.md#rules)..
    - **Device Installation Restrictions**: See [Device Installation](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx) settings.
@@ -62,12 +62,11 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
 
    :::image type="content" source="media/intune-device-control-policy-create-config-settings.png" alt-text="Screenshot of Intune user interface for device control policies." lightbox="media/intune-device-control-policy-create-config-settings.png":::
 
-6. On the **Scope tags** tab, where you can specify [scope tags](/mem/intune/fundamentals/scope-tags) for the policy.
+1. On the **Scope tags** tab, where you can specify [scope tags](/mem/intune/fundamentals/scope-tags) for the policy.
 
-7. On the **Assignments** tab, specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/mem/intune/configuration/device-profile-assign).
+1. On the **Assignments** tab, specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/mem/intune/configuration/device-profile-assign).
 
-8. On the **Review + create** tab, review your settings, and make any needed changes.
-
+1. On the **Review + create** tab, review your settings, and make any needed changes.
    When you're ready, select **Create** to create your device control policy.
 
 ## Device control profiles
@@ -140,17 +139,17 @@ In the **Add Row** pane, specify the following settings:
 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
-2. Choose **Devices** > **Configuration profiles**. The **Configuration profiles** page appears. 
+1. Choose **Devices** > **Configuration profiles**. The **Configuration profiles** page appears. 
 
-3. Under the **Policies** tab (selected by default), select **+ Create**, and choose **+ New policy** from the drop-down that appears. The **Create a profile** page appears.
+1. Under the **Policies** tab (selected by default), select **+ Create**, and choose **+ New policy** from the drop-down that appears. The **Create a profile** page appears.
 
-4. In the **Platform** list, select **Windows 10, Windows 11, and Windows Server** from the **Platform** drop-down list, and choose **Templates** from the **Profile type** drop-down list.
+1. In the **Platform** list, select **Windows 10, Windows 11, and Windows Server** from the **Platform** drop-down list, and choose **Templates** from the **Profile type** drop-down list.
 
-   Once you choose **Templates** from the **Profile type** drop-down list, the **Template name** pane is displayed, along with a search box (to search the profile name).
+1. Once you choose **Templates** from the **Profile type** drop-down list, the **Template name** pane is displayed, along with a search box (to search the profile name).
 
-5. Select **Custom** from the **Template name** pane, and select **Create**.
+1. Select **Custom** from the **Template name** pane, and select **Create**.
 
-6. Create a row for each setting, group, or policy by implementing Steps 1-5.
+1. Create a row for each setting, group, or policy by implementing Steps 1-5.
 
 ## View device control groups (Reusable settings)
 
@@ -158,9 +157,9 @@ In Intune, device control groups appear as reusable settings.
 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
-2. Go to **Endpoint Security** > **Attack Surface Reduction**. 
+1. Go to **Endpoint Security** > **Attack Surface Reduction**. 
 
-3. Select the **Reusable Settings** tab.
+1. Select the **Reusable Settings** tab.
 
 ## See also
 
