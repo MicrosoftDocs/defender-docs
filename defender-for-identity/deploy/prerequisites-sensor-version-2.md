@@ -62,6 +62,8 @@ Windows Server 2012 and Windows Server 2012 R2 reached extended end of support o
 
 ### Required ports
 
+To access Defender for Identity, allow traffic to the sensor URL in the following format: `*<your-workspace-name>*sensorapi.atp.azure.com`. For example, if your workspace name is "Contoso", allow traffic to `*contoso-corp*sensorapi.atp.azure.com`.
+
 |Protocol   |Transport         |Port         |From       |To   |Notes|
 |------------|---------|---------|-------|--------------|------|
 |Internet ports       | | | | |  |
