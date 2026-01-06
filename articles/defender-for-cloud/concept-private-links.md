@@ -73,7 +73,7 @@ Approved and pending connections can be managed at any time through the Private 
 
 ## DNS configuration
 
-When you create a private endpoint, a [private DNS zone](/azure/dns/private-dns-overview) is provisioned by default that corresponds to the Defender for Cloud private link subdomain `*.defender.microsoft.com`.
+When you create a private endpoint, a [private DNS zone](/azure/dns/private-dns-overview) is provisioned by default that corresponds to the Defender for Cloud private Link subdomain `*.defender.microsoft.com`.
 
 > [!NOTE]
 > For details about how to configure DNS for private endpoints, see [Azure Private Endpoint DNS integration](/azure/private-link/private-endpoint-dns).
@@ -89,7 +89,7 @@ Each Microsoft Defender service uses specific domain endpoints. For example:
 
 If you're using a custom DNS server, configure delegation or A records to resolve FQDNs to the private endpoint IP address.
 
-## Security Private Link usage comparison
+## Connectivity comparison with Microsoft Security Private Link
 
 | Feature | Without Private Endpoint | With Security Private Link |
 |--------|--------------------------|----------------------------|
