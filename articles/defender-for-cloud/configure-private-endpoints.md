@@ -102,7 +102,9 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select **Next: Tags** and add any required tags.
 
-1. Select **Review + create**, then select **Create**.
+1. Select **Review + create**.
+
+ 1. Select **Create**.
 
 
 After deployment, verify that workloads continue to report data in Defender for Cloud.
