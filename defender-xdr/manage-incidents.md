@@ -280,19 +280,35 @@ To edit the incident name, take the following steps:
 
 ### View the activity log of an incident
 
-When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view, you can access the **Activities** tab from the bottom of the activity log.
+When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view of all activities, access the [Activities tab](./investigate-incidents.md#activities) from the bottom of the activity log.
+
+With the activity log, analysts can:
+
+#### Triage
+- View all actions performed on the incident in a single place
+- Identify key steps taken by automated systems and humans
+- Verify recent changes (such as tags, merges, severity updates)
+- Review comments and handovers
+
+#### Investigation
+- Trace the full sequence of actions
+- Inspect detailed metadata in side panels
+- Narrow activity lists to only relevant action types
+- Follow automated workflows launched by automation rules, playbooks, or agents
+
+#### To access the activity log
 
 1. Open the incident's activity log. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
 
-    :::image type="content" source="media/manage-incidents/activity-log.png" alt-text="Screenshot highlighting selecting the Activities option from the three-dot menu on the incidents page of the Microsoft Defender portal." lightbox="media/manage-incidents/activity-log.png":::
+    :::image type="content" source="./media/manage-incidents/activity-log.png" alt-text="Screenshot highlighting selecting the Activities option from the three-dot menu on the incidents page of the Microsoft Defender portal." lightbox="./media/manage-incidents/activity-log.png":::
 
 1. You can filter the activities in the activity log by origin, category, provider, trigger, activity status, policy status, type, target name, target type, or performed by. Go to **Add filter**, select your desired filters, and select **Add**.
 
-    :::image type="content" source="media/manage-incidents/activity-log-add-filters.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="media/manage-incidents/activity-log-add-filters.png":::
+    :::image type="content" source="./media/manage-incidents/activity-log-add-filters.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/activity-log-add-filters.png":::
 
 1. Go to each filter's dropdown, select filter criteria, and select **Apply**. Here's an example.
 
-    :::image type="content" source="media/manage-incidents/activity-log-filter-example.png" alt-text="Example of selecting a filter's dropdown menu, selecting criteria, and applying." lightbox="media/manage-incidents/activity-log-filter-example.png":::
+    :::image type="content" source="./media/manage-incidents/activity-log-filter-example.png" alt-text="Example of selecting a filter's dropdown menu, selecting criteria, and applying." lightbox="./media/manage-incidents/activity-log-filter-example.png":::
 
 You can also [add your own comments](#add-comments-to-an-incident) by selecting **Add comment** at the top of the Activities panel. The comment box accepts text and formatting, links, and images.
 

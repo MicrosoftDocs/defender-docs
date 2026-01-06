@@ -204,38 +204,35 @@ Learn how to use the alert queue and alert pages in [investigate alerts](investi
 
 ## Activities
 
-The **Activities** tab provides a unified timeline of all actions taken within the context of an incident. The renovated Activity Log is now aligned with the Activities Tab, using the same data model, categories, and filtering capabilities.
+The **Activities** tab provides a unified timeline of all actions taken within the context of an incident. The renovated activity log is now aligned with the Activities tab, using the same data model, categories, and filtering capabilities.
 
 :::image type="content" source="./media/investigate-incidents/incident-activities-tab.png" alt-text="Screenshot of an incident with the Activities tab opened." lightbox="./media/investigate-incidents/incident-activities-tab.png":::
 
-All activities are represented using a consistent schema. Each row in the Activities tab contains:
+Each row in the Activities tab contains:
 
-- Time: Timestamp when the activity occurred
+- **Time**: Timestamp when the activity occurred
 
-- Title: Short description of the action
+- **Title**: Short description of the action
 
-- Type: Specific action type (e.g., Disable user, Comment, Tag change, AIR action, Agent step)
+- **Type**: Specific action type (e.g., Disable user, Comment, Tag change, AIR action, Agent step)
 
-- Category: High‑level grouping (Incident Management, Response, Automation, Agents, Correlations, Comments)
+- **Category**: High‑level grouping (Incident Management, Response, Automation, Agents, Correlations, Comments)
 
-- Target: Entity the action applies to (user, device, email, etc.)
+- **Target**: Entity the action applies to (user, device, email, etc.)
 
-- Triggered Alert: the alert that triggered the activity
+- **Triggered Alert**: the alert that triggered the activity
 
-- Trigger: Manual or Automated
+- **Trigger**: Manual or automated
 
-- Provider: Source system (e.g., AutoIR, Copilot Agent, etc.)
+- **Provider**: Source system (e.g., AutoIR, Copilot Agent, etc.)
 
-- Performed by: Actor who executed or approved the activity
+- **Performed by**: Actor who executed or approved the activity
 
-- Status: Started, Pending, Failed, Completed
+- **Status**: Started, Pending, Failed, Completed
 
-- Policy Status: for MDE policies involved activities
+- **Policy Status**: For activities involving Microsoft Defender for Endpoint policies
 
-This unified modeling allows consistent interpretation and enables precise filtering.
-Comments are modeled as activity types as well, including distinctions between comment categories when relevant.
-
-### Activity Types
+### Activity types
 
 The following activity types are supported:
 
@@ -249,7 +246,7 @@ The following activity types are supported:
 
 - Copilot agent actions (including Triage Agent)
 
-Existing Activity Families:
+Existing activity families:
 
 - Assignments
 
@@ -271,9 +268,7 @@ All activity types are displayed together in the same timeline.
 
 ### Timeline view
 
-The timeline presents all activities in chronological order. Color coding differentiates categories for quick recognition. Columns can be reordered or shown/hidden.
-
-Selecting an activity opens a side panel containing details about the activity.
+The timeline presents all activities in chronological order. Color coding differentiates categories for quick recognition. Columns can be reordered or shown/hidden. Selecting an activity opens a side panel containing details about the activity.
 
 ### Filtering and search
 
@@ -294,10 +289,6 @@ The Activities tab supports granular filtering across:
 - Target name and type
 
 - Log origin (for merged incidents)
-
-Search returns activities matching keywords in the title or target fields.
-
-Saved filter sets are supported per user.
 
 ## Assets
 
