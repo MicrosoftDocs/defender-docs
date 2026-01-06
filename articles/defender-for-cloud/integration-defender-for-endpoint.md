@@ -41,6 +41,14 @@ Defender for Endpoint stores collected data in the tenant's geo-location as iden
 - After you configure the location, you can't change it.
 - If you have your own license for Defender for Endpoint and need to move your data to another location, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to reset the tenant.
 
+### Resource discovery and onboarding status
+
+Defender for Cloud can discover machines independently of Microsoft Defender for Endpoint onboarding.
+
+Machines that exist in Azure, Azure Arc–enabled environments, or connected multicloud accounts (AWS, GCP) are identified by Defender for Cloud through its native resource discovery processes. These machines can appear in the Defender for Endpoint device inventory even before the Defender for Endpoint sensor is installed and reporting.
+
+In this state, devices may show Defender for Cloud as the discovery source and a status of **Can be onboarded**, indicating that the machine is known to Defender for Cloud but isn’t yet onboarded to Defender for Endpoint. Onboarding occurs only after the Defender for Endpoint sensor is deployed and successfully reports to the service.
+
 ## Move between subscriptions
 
 You can move Defender for Endpoint for servers between subscriptions in the same tenant or between different tenants.
