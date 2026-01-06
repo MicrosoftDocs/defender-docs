@@ -27,6 +27,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## January 2026
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|January 6, 2026| Preview | [Cloud Software Inventory in Vulnerability Management (Preview)](#aws-cloudtrail-ingestion-preview)|
+
+### Cloud Software Inventory in Vulnerability Management (Preview)
+
+January 6, 2026
+
+Cloud Software Inventory is now available in public preview as part of Vulnerability Management in the Defender portal.
+This new capability provides centralized visibility into software deployed across your cloud environment, including application versions, the assets on which each software is installed, and associated vulnerabilities. The software inventory serves as a foundational source for understanding exposure, identifying vulnerable software, and supporting informed vulnerability assessment and prioritization.
+
 ## December 2025
 
 |Date | Category | Update|
