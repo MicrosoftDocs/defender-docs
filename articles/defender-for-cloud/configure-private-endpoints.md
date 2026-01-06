@@ -36,18 +36,24 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Select **Create a resource**.
 
-1. Search for **Security Private Link**, then under **Security Private Link** select **Create**.
+1. Search for **Security Private Link**.
+
+1. Under **Security Private Link** select **Create**.
 
 1. Select a subscription and an existing resource group, or create a new one.
 
 1. If needed, update the resource group location.
 
-1. Enter a name, then select **Next: Networking**.
+1. Enter a name.
+
+1. Select **Next: Networking**.
 
     > [!NOTE]
     > Microsoft Security Private Link currently supports the **containers** sub-resource, which is used by the Defender for Containers plan.
 
-1. Select **Create a private endpoint** and enter a name and a location.
+1. Select **Create a private endpoint**.
+
+1. Enter a name and a location.
 
       :::image type="content" source="media/configure-private-endpoints/create-private-endpoint-blade-networking-tab.png" alt-text="Screenshot of the Create Security Private Link wizard on the Networking tab, showing the Create a private endpoint pane with sub-resource and Private DNS integration." lightbox="media/configure-private-endpoints/create-private-endpoint-blade-networking-tab.png":::
 
@@ -57,11 +63,13 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Enable **Private DNS integration** to create a private DNS zone automatically.
 
+1. Select **Add**.
+
 1. Select **Next: Tags** and add any required tags.
 
-1. Select **Review + create**, then select **Create**.
+1. Select **Review + create**
 
-1. Wait for the deployment to complete.
+1.  Select **Create**.
 
 After deployment, verify that workloads continue to report data in Defender for Cloud.
 
@@ -71,7 +79,7 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Network foundation** ▸ **Private Link** ▸ **Private endpoints**.
+1. Navigate to **Network foundation** > **Private Link** > **Private endpoints**.  
 
 1. Select **Create**.
 
@@ -88,7 +96,9 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select **Connect to an Azure resource in my directory**.
 
-1. Select a subscription and **Microsoft.Security/privateLinks** as the resource type.
+1. Select a subscription.
+
+1. Select **Microsoft.Security/privateLinks** as the resource type.
 
 1. Select the Security Private Link resource for Defender for Cloud.
 
@@ -100,11 +110,11 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Enable **Integrate with private DNS zone** and verify that the private DNS zone is populated automatically.
 
-1. Select **Next: Tags** and add any required tags.
+1. Select **Next: Tags**.
+
+1. Add any required tags.
 
 1. Select **Review + create**, then select **Create**.
-
-1. Wait for the deployment to complete.
 
 After deployment, verify that workloads continue to report data in Defender for Cloud.
 
