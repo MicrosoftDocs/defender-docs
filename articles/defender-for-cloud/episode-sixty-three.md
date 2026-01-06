@@ -8,7 +8,6 @@ ms.date: 07/22/2025
 # Agentless code scanning
 
 **Episode description**: In this episode of Defender for Cloud in the Field, Eitan Shteinberg joins Yuri Diogenes to talk about agentless code scanning in Defender for Cloud. Eitan explains how this new capability works, the importance of its usage, and the current feature set available in public preview. Eitan also demonstrates how to enable and use this feature in Defender for Cloud.
-  
 
 > [!VIDEO https://aka.ms/docs/player?id=84c5525f-a317-497a-9576-eae347baeacc]
 
