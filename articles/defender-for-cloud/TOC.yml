@@ -1496,7 +1496,7 @@
         - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
-        - name: Storage aggregated logs in XDR's Advanced Hunting
+        - name: Storage aggregated logs
           DisplayName: Storage aggregated logs, Advanced Hunting, CloudStorageAggregatedEvents
           href: episode-sixty-four.md
     - name: Microsoft Defender for IoT documentation

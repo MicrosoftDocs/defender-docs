@@ -1,12 +1,12 @@
 ---
-title: Storage aggregated logs in XDR's Advanced Hunting 
+title: Storage aggregated logs
 
 description: Learn about storage aggregated logs and how to investigate storage activity in XDR Advanced Hunting.
 ms.topic: reference
 ms.date: 09/26/2025
 ---
 
-# Storage aggregated logs in XDR's Advanced Hunting
+# Storage aggregated logs
 
 **Episode description**: In this episode of Defender for Cloud in the Field, Lior Tsalovich joins Yuri Diogenes to talk about storage aggregated logs in XDR's Advanced Hunting. Lior explains the new CloudStorageAggregatedEvents table available in Microsoft Defender XDR's Advanced Hunting experience. She explains how aggregated storage activity logs can help SOC Teams during an investigation. Lior also demonstrates how to use Defender XDR advanced hunting to query data using CloudStorageAggregatedEvents table.
 
@@ -20,10 +20,10 @@ ms.date: 09/26/2025
 
 ## Recommended resources
 
-- Learn more about [managing security policies](tutorial-security-policy.md)
-- Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS)
-- Join our [Tech Community](https://aka.ms/SecurityTechCommunity)
-- For more about [Microsoft Security](https://msft.it/6002T9HQY)
+- Learn more about [managing security policies](tutorial-security-policy.md).
+- Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS).
+- Join our [Tech Community](https://aka.ms/SecurityTechCommunity).
+- For more about [Microsoft Security](https://msft.it/6002T9HQY).
 
 - Follow us on social media:
 
