@@ -98,7 +98,7 @@ This table includes supported versions released in for all supported platforms i
 
 ### Windows | July 2024 | 10.8760.27617.1006
 
-# [Versions](#tab/versions-06)
+#### Versions
 
 | OS | KB |
 | -------- | -------- |
@@ -110,7 +110,7 @@ This table includes supported versions released in for all supported platforms i
 | Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
 | Windows Server 2016, Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
-# [Enhancements and features](#tab/features-06)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |-------------|---------------|
@@ -122,13 +122,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### macOS | December 2025 | 101.25102.0019
 
-# [Versions](#tab/macos-versions-dec)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125102.19.0 |1.1.25090.2000 |1.435.600.0 |
 
-# [Enhancements and features](#tab/macos-features-dec)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -138,13 +138,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### macOS | November 2025 | 101.25102.0016
 
-# [Versions](#tab/macos-versions-nov)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125102.16.0 |1.1.25090.2000 |1.435.600.0 |
 
-# [Enhancements and features](#tab/macos-features-nov)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -154,13 +154,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### macOS | October 2025 | 101.25082.0006
 
-# [Versions](#tab/macos-versions-oct)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125082.6.0 |1.1.25070.3000 |1.437.276.0 |
 
-# [Enhancements and features](#tab/macos-features-oct)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -170,13 +170,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### macOS | September 2025 | 101.25072.0011
 
-# [Versions](#tab/macos-versions)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
 
-# [Enhancements and features](#tab/macos-features)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -189,13 +189,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### macOS | August 2025 | 101.25062.0006
 
-# [Versions](#tab/macos-versions-aug)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125062.6.0 |1.1.25070.3000 |1.435.357.0 |
 
-# [Enhancements and features](#tab/macos-features-aug)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -205,13 +205,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### macOS | July 2025 | 101.25062.0005
 
-# [Versions](#tab/macos-versions-jul)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125062.5.0 |1.1.25040.3000 |1.427.248.0 |
 
-# [Enhancements and features](#tab/macos-features-jul)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -223,13 +223,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Linux | October 2025 | 101.25092.0001
 
-# [Versions](#tab/linux-versions-oct)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.125092.0001.0 |1.1.25090.6000 |1.439.558.0 |
 
-# [Enhancements and features](#tab/linux-features-oct)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -241,13 +241,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Linux | September 2025 | 101.25082.0003 (Build 1)
 
-# [Versions](#tab/linux-versions-sep1)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.125082.0003.0 |1.1.25070.4000 |1.435.242.0 |
 
-# [Enhancements and features](#tab/linux-features-sep1)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -259,13 +259,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Linux | September 2025 | 101.25072.0003 (Build 2)
 
-# [Versions](#tab/linux-versions-sep2)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.125072.0003.0 |1.1.25060.4000 |1.431.4.0 |
 
-# [Enhancements and features](#tab/linux-features-sep2)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -276,13 +276,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Linux | August 2025 | 101.25062.0003
 
-# [Versions](#tab/linux-versions-aug)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.125062.0003.0 |1.1.25040.4000 |1.429.442.0 |
 
-# [Enhancements and features](#tab/linux-features-aug)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -296,13 +296,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Linux | July 2025 | 101.25052.0007
 
-# [Versions](#tab/linux-versions-jul)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.125052.0007.0 |1.1.25020.4000 |1.427.370.0 |
 
-# [Enhancements and features](#tab/linux-features-jul)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -313,13 +313,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Linux | June 2025 | 101.25042.0003
 
-# [Versions](#tab/linux-versions-jun)
+#### Versions
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.125042.0003.0 |1.1.25020.4000 |1.427.370.0 |
 
-# [Enhancements and features](#tab/linux-features-jun)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -332,13 +332,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | December 2025 | 1.0.8412.0101
 
-# [Versions](#tab/android-versions-dec-2)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8412.0101 |December 15, 2025 |
 
-# [Enhancements and features](#tab/android-features-dec-2)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -348,13 +348,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | December 2025 | 1.0.8321.0101
 
-# [Versions](#tab/android-versions-dec-1)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8321.0101 |December 2, 2025 |
 
-# [Enhancements and features](#tab/android-features-dec-1)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -365,13 +365,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | November 2025 | 1.0.8315.0101
 
-# [Versions](#tab/android-versions-nov-2)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8315.0101 |November 17, 2025 |
 
-# [Enhancements and features](#tab/android-features-nov-2)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -382,13 +382,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | November 2025 | 1.0.8303.0101
 
-# [Versions](#tab/android-versions-nov-1)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8303.0101 |November 4, 2025 |
 
-# [Enhancements and features](#tab/android-features-nov-1)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -400,13 +400,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | October 2025 | 1.0.8217.0101
 
-# [Versions](#tab/android-versions-oct-2)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8217.0101 |October 28, 2025 |
 
-# [Enhancements and features](#tab/android-features-oct-2)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -416,13 +416,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | October 2025 | 1.0.8201.0101
 
-# [Versions](#tab/android-versions-oct-1)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8201.0101 |October 2, 2025 |
 
-# [Enhancements and features](#tab/android-features-oct-1)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -434,13 +434,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | September 2025 | 1.0.8102.0101
 
-# [Versions](#tab/android-versions-sep)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8102.0101 |September 4, 2025 |
 
-# [Enhancements and features](#tab/android-features-sep)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -451,13 +451,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | August 2025 | 1.0.8018.0103
 
-# [Versions](#tab/android-versions-aug)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.8018.0103 |August 19, 2025 |
 
-# [Enhancements and features](#tab/android-features-aug)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -467,13 +467,13 @@ This table includes supported versions released in for all supported platforms i
 
 ### Android | July 2025 | 1.0.7901.0101
 
-# [Versions](#tab/android-versions-jul)
+#### Versions
 
 | Build | Release Date |
 | -------- | -------- |
 |1.0.7901.0101 |July 10, 2025 |
 
-# [Enhancements and features](#tab/android-features-jul)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -491,7 +491,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ### Windows Antivirus | November 2025 | Platform 4.18.25110.6 | Engine 1.1.25110.1
 
-# [Versions](#tab/antivirus-versions-nov)
+#### Versions
 
 | Component | Version | Date |
 | -------- | -------- | -------- |
@@ -500,7 +500,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Security intelligence | 1.443.6.0 | December 17, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-# [Enhancements and features](#tab/antivirus-features-nov)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -517,7 +517,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
 
-# [Versions](#tab/antivirus-versions-oct)
+#### Versions
 
 | Component | Version | Date |
 | -------- | -------- | -------- |
@@ -526,7 +526,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Security intelligence | 1.441.131.0 | November 17, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-# [Enhancements and features](#tab/antivirus-features-oct)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -540,7 +540,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ### Windows Antivirus | September 2025 | Platform 4.18.25090.3009 | Engine 1.1.25090.3001
 
-# [Versions](#tab/antivirus-versions-sep)
+#### Versions
 
 | Component | Version | Date |
 | -------- | -------- | -------- |
@@ -549,7 +549,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Security intelligence | 1.439.345.0 | October 21, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-# [Enhancements and features](#tab/antivirus-features-sep)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -562,7 +562,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ### Windows Antivirus | August 2025 | Platform 4.18.25080.5 | Engine 1.1.25080.5
 
-# [Versions](#tab/antivirus-versions-aug)
+#### Versions
 
 | Component | Version | Date |
 | -------- | -------- | -------- |
@@ -571,7 +571,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Security intelligence | 1.437.1.0 | September 17, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-# [Enhancements and features](#tab/antivirus-features-aug)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
