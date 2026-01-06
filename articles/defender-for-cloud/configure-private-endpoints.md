@@ -40,7 +40,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Select a subscription and an existing resource group, or create a new one.
 
-1. If needed, update the resource group location.
+1. (Optional) Select a resource group location.
 
 1. Enter a name, then select **Next: Networking**.
 
