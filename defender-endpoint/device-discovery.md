@@ -25,9 +25,40 @@ appliesto:
 ---
 # Device discovery overview
 
-Microsoft Defender for Endpoint device discovery helps you automatically find unmanaged devices connected to your corporate network, without extra appliances or complex setup. By leveraging onboarded endpoints, Defender for Endpoint can passively observe network traffic and actively probe the environment to identify endpoints, network devices, and IoT assets that may not be managed or protected.
+To protect your environment, you need to take inventory of the devices in your network. However, mapping devices in a network can often be expensive, challenging, and time-consuming.
+
+Microsoft Defender for Endpoint device discovery helps you automatically find unmanaged devices connected to your corporate network, without extra appliances or complex setup.
+
+This article explains how device discovery works, describes the supported capabilities, and provides information on scanning and discovered assets.
+
+## How device discovery works
+
+Defender for Endpoint uses onboarded endpoints to passively observe network traffic and actively probe the environment to identify endpoints, network devices, and IoT assets that may not be managed or protected.
 
 Device discovery is designed to reduce blind spots in your environment, making it easier to identify, assess, and secure devices that could otherwise introduce risk. The feature works as an out-of-the-box Defender for Endpoint capability, with advanced configuration available for deeper insights and custom scenarios.
+
+Watch this video for a quick overview of how to assess and onboard unmanaged devices that Defender for Endpoint discovered.
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=a101261e-87ab-4aa6-a1e1-c1463e797ca2]
+
+With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
+
+### Device discovery modes
+
+
+Device discovery uses two main discovery modes:
+
+| Mode (UI)         | Description                                                                | Use cases / Recommendations                |
+|:------------------|:---------------------------------------------------------------------------|:-------------------------------------------|
+| Basic (Passive)   | Listens to network traffic, no probes sent.                                | Sensitive/legacy networks, minimal impact. |
+| Standard (Active) | Listens to traffic and sends protocol-based probes for deeper identification. | Most environments, recommended.            |
+
+**Passive discovery** is always enabled and non-intrusive. **Active discovery** (standard mode) adds protocol-based probes for more detailed device identification. You can switch between modes and further customize scan targets, frequency, and exclusions.
+
+Authentication configuration is only required for advanced scenarios, such as restricting certain device functionalities.
+
+The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks won't be discovered or listed in the device inventory.
+
 
 ## Capabilities
 
@@ -47,21 +78,6 @@ The table below summarizes what is provided by default (out-of-the-box), what ea
 | Network scans               | No              | --                                                                            | Enable deeper scanning of network devices (switches, routers, etc.) | Device discovery > Network scans        |
 
 Out-of-the-box, most organizations benefit from passive and active discovery, device inventory integration, and automatic network handling. Additional configuration options allow for more granular control, targeting, and exclusions as needed for your environment.
-
-## Device discovery modes
-
-Device discovery uses two main mechanisms, which map directly to the available discovery modes:
-
-| Mode (UI)         | Mechanism         | Default | Description                                                                 | Use cases / Recommendations                |
-|-------------------|-------------------|---------|-----------------------------------------------------------------------------|--------------------------------------------|
-| Basic (Passive)   | Passive           | No      | Listens to network traffic, no probes sent.                                 | Sensitive/legacy networks, minimal impact. |
-| Standard (Active) | Passive + Active  | Yes     | Listens to traffic and sends protocol-based probes for deeper identification.| Most environments, recommended.            |
-
-**Passive discovery** is always enabled and non-intrusive. **Active discovery** (standard mode) adds protocol-based probes for more detailed device identification. You can switch between modes and further customize scan targets, frequency, and exclusions.
-
-Authentication configuration is only required for advanced scenarios, such as restricting certain device functionalities.
-
-The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks won't be discovered or listed in the device inventory.
 
 ## Network scans and advanced discovery
 
