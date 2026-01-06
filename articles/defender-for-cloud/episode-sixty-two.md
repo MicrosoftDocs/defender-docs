@@ -32,4 +32,4 @@ ms.date: 04/29/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Agentless code scanning](episode-sixty-three.md)
