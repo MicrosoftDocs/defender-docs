@@ -52,8 +52,8 @@ This table includes supported versions released in for all supported platforms i
 |Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--1083150101) |
 |Android |1.0.8303.0101  |November 2025 |- Build: 1.0.8303.0101<br>- Released: November 4, 2025 |[Release details and updates](#android--november-2025--1083030101) |
 |macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--november-2025--101251020016) |
-|iOS |1.1.70230101  |October 2025 |- Build: 1.1.70230101<br>- Released: October 26, 2025 |[Release details and updates](#ios--october-2025--1170230101) |
-|iOS |1.1.69250104  |October 2025 |- Build: 1.1.69250104<br>- Released: October 7, 2025 |[Release details and updates](#ios--october-2025--1169250104) |
+|iOS |1.1.70230101  |October 2025 |- Build: 1.1.70230101<br>- Released: October 26, 2025 |[Release details and updates](#ios--october-2025--1170230101-1169250104) |
+|iOS |1.1.69250104  |October 2025 |- Build: 1.1.69250104<br>- Released: October 7, 2025 |[Release details and updates](#ios--october-2025--1170230101-1169250104) |
 |Android |1.0.8217.0101  |October 2025 |- Build: 1.0.8217.0101<br>- Released: October 28, 2025 |[Release details and updates](#android--october-2025--1082170101) |
 |Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--1082010101) |
 |macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--101250820006) |
@@ -77,7 +77,6 @@ This table includes supported versions released in for all supported platforms i
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--108760276171006) |
 |Linux  |101.25042.0003  |June 2025 |- Release version: 30.125042.0003.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#linux--june-2025--101250420003) |
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--108797258571000) |
-|iOS |Event detection update |May 2025 |Alerts for activities related to open wireless connections are now detected as events. Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline. For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection). |[Release details and updates](#ios--may-2025) |
 |Android |1.0.8217.0101  |October 2025 |- Build: 1.0.8217.0101<br>- Released: October 28, 2025 |[Release details and updates](#android--october-2025--1082170101) |
 |Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--1082010101) |
 |macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--101250820006) |
