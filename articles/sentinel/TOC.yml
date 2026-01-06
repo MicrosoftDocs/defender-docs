@@ -721,7 +721,7 @@
             - name: Syslog - configure security device
               href: unified-connector-syslog-device.md
             - name: Troubleshoot CEF and Syslog via AMA
-              href: cef-syslog-ama-troubleshoot.md  
+              href: cef-syslog-ama-troubleshooting.md  
         - name: Custom log sources (text files)
           items:
             - name: Collect logs from text files via AMA
