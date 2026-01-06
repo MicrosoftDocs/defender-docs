@@ -58,8 +58,6 @@
               href: quickstart-onboard-aws.md
             - name: Authentication architecture for AWS connectors
               href: concept-authentication-architecture-aws.md
-            - name: Monitor connected AWS resources
-              href: monitor-connected-aws-resources.md
             - name: Integrate AWS CloudTrail logs (Preview)
               href: integrate-cloud-trail.md
         - name: Connect GCP projects
