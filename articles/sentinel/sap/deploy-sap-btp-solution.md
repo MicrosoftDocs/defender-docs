@@ -16,6 +16,9 @@ ms.date: 07/17/2024
 
 This article describes how to deploy the Microsoft Sentinel solution for SAP Business Technology Platform (BTP) system. The Microsoft Sentinel solution for SAP BTP monitors and protects your SAP BTP system. It collects audit logs and activity logs from the BTP infrastructure and BTP-based apps, and then detects threats, suspicious activities, illegitimate activities, and more. [Read more about the solution](sap-btp-solution-overview.md).
 
+> [!IMPORTANT]
+> An architectural shift in the data connector v3.0.11 to cater for delayed SAP BTP logs requires re-onboarding of SAP subaccounts added prior to that change. See the [release notes](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20BTP/ReleaseNotes.md) for more details. Consider the [mass onboarding tools](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SAP%20BTP/Tools) for convenience.
+
 ## Prerequisites
 
 Before you begin, verify that:
