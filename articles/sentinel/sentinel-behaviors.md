@@ -1,5 +1,5 @@
 ---
-title: Translate raw security logs to behavioral insights using Microsoft Sentinel's UEBA behaviors layer (Preview)
+title: Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)
 description: The Microsoft Sentinel UEBA behaviors layer translates security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
 author: guywi-ms
 ms.author: guywild
@@ -10,9 +10,9 @@ ms.service: microsoft-sentinel
 #Customer intent: As a security analyst, I want to use the UEBA behaviors layer to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
 ---
 
-# Translate raw security logs to behavioral insights using Microsoft Sentinel's UEBA behaviors layer (Preview)
+# Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)
 
-Microsoft Sentinel's User and Entity Behavior Analytics (UEBA) behavior layer aggregates and summarizes high-volume raw logs into clear, plain-language patterns of security actions, explaining “who did what to whom” in a structured way.
+The User and Entity Behavior Analytics (UEBA) behavior layer in Microsoft Sentinel aggregates and summarizes high-volume raw logs into clear, plain-language patterns of security actions, explaining “who did what to whom” in a structured way.
 
 Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they create an abstraction layer that optimizes your data for investigations, hunting, and detection by enhancing:
 
