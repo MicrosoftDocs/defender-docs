@@ -81,7 +81,7 @@ Understand the following prerequisites before you create indicators for files:
 - Behavior monitoring enabled is preferred, but this feature works with any other scan (RTP or Custom).
 
 > [!NOTE]
-> On Linux, file indicators support script files and ELF files.
+> On Linux, file indicators support script files (.sh files) and ELF files.
 
 ## Create an indicator for files from the settings page
 
