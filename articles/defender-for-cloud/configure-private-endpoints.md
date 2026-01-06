@@ -20,7 +20,7 @@ Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Mic
 
 Before you begin, make sure that:
 
-- Microsoft Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint will be created.
 
@@ -63,7 +63,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Wait for the deployment to complete.
 
-After deployment, verify that workloads continue to report data in Microsoft Defender for Cloud.
+After deployment, verify that workloads continue to report data in Defender for Cloud.
 
 ## Create a private endpoint for an existing Security Private Link resource (Azure portal)
 
@@ -106,7 +106,7 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Wait for the deployment to complete.
 
-After deployment, verify that workloads continue to report data in Microsoft Defender for Cloud.
+After deployment, verify that workloads continue to report data in Defender for Cloud.
 
 ## Approve the private endpoint connection
 
@@ -128,4 +128,4 @@ The FQDN should resolve to a private IP address under `privatelink.cloud.defende
 
 ## Related content
 
-- Learn more about [Private endpoints with Microsoft Defender](concept-private-links.md).
+- Learn more about [Microsoft Security Private Link for Microsoft Defender for Cloud](concept-private-links.md).

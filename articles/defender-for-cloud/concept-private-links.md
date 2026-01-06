@@ -9,7 +9,7 @@ ms.date: 12/02/2025
 
 # Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)
 
-Microsoft Security Private Link allows you to connect to Microsoft Defender for Cloud by using private endpoints. This connection is made by creating a Security Private Link resource in your subscription and private endpoints in your Azure virtual networks that connect to it.
+Microsoft Security Private Link allows workloads in your virtual network to connect to Microsoft Defender for Cloud. You enable this connection by creating a Security Private Link resource in your subscription and private endpoints in your Azure virtual networks that connect to it.
 
 With private endpoints, all security-related traffic from your workloads traverses the Microsoft backbone network without exposure to the public internet. This includes telemetry from Defender agents, sensors, add-ons, and extensions.
 
@@ -24,14 +24,14 @@ Microsoft Security Private Link supports the following scenarios:
   Protect workloads in isolated or restricted networks where outbound internet access is limited or not permitted.
 
 - **Hybrid and on-premises connectivity**  
-  Securely connect on-premises or hybrid environments to Microsoft Defender services by using [VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways) or [ExpressRoute](/azure/expressroute/expressroute-locations) with private peering.
+  Securely connect on-premises or hybrid environments to Microsoft Defender for Cloud by using [VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways) or [ExpressRoute](/azure/expressroute/expressroute-locations) with private peering.
 
 > [!IMPORTANT]
 > For network-isolated workloads, Microsoft Security Private Link replaces the need for Azure Monitor Private Link Scope (AMPLS) and Azure Firewall egress rules.
 
 ## Connectivity architecture
 
-Microsoft Security Private Link uses Azure Private Endpoints to establish private connectivity between your virtual network and Defender for Cloud. This allows workloads to connect to Microsoft Defender for Cloud endpoints using their existing fully qualified domain names (FQDNs) and authorization model.
+Microsoft Security Private Link uses Azure Private Endpoints to establish private connectivity between your virtual network and Defender for Cloud. This allows workloads to connect to Defender for Cloud endpoints using their existing fully qualified domain names (FQDNs) and authorization model.
 
 ### How it works
 
@@ -80,7 +80,7 @@ When you create a private endpoint, a [private DNS zone](/azure/dns/private-dns-
 
 When workloads connect to Defender service endpoints from within the virtual network with private endpoints configured, the FQDN resolves to the private IP address of the endpoint. Connections from outside the virtual network (if public access is still enabled) resolve to the public endpoint.
 
-Each Microsoft Defender service uses specific domain endpoints. For example:
+Each Microsoft Defender for Cloud service uses specific domain endpoints. For example:
 
 | Service | Name | Type | Value | Port |
 |---------|------|------|-------|------|
