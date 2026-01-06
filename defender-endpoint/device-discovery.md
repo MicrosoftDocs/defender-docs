@@ -37,38 +37,49 @@ Defender for Endpoint uses onboarded endpoints to passively observe network traf
 
 Device discovery is designed to reduce blind spots in your environment, making it easier to identify, assess, and secure devices that could otherwise introduce risk. The feature works as an out-of-the-box Defender for Endpoint capability, with advanced configuration available for deeper insights and custom scenarios.
 
+The device discovery capability allows you to discover:
+
+- Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
+Network devices like routers and switches
+- IoT devices like printers and cameras
+- Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls. 
+
+Once devices are discovered, you can:
+
+- Onboard unmanaged endpoints to the service, increasing the security visibility on them.
+- Reduce the attack surface by identifying and assessing vulnerabilities, and detecting configuration gaps.
+
 Watch this video for a quick overview of how to assess and onboard unmanaged devices that Defender for Endpoint discovered.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=a101261e-87ab-4aa6-a1e1-c1463e797ca2]
 
 With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
 
-### Device discovery modes
+### Discovery modes and scans
 
+Device discovery uses two main discovery modes. The mode controls the level of visibility you can get for unmanaged devices in your corporate network. You select the device discovery mode in the **System** > **Settings** > **Device discovery** > **Discovery mode** section.
 
-Device discovery uses two main discovery modes:
-
-| Mode (UI)         | Description                                                                | Use cases / Recommendations                |
+| Mode         | Description                                                                | Use cases and recommendations                |
 |:------------------|:---------------------------------------------------------------------------|:-------------------------------------------|
-| Basic (Passive)   | Listens to network traffic, no probes sent.                                | Sensitive/legacy networks, minimal impact. |
-| Standard (Active) | Listens to traffic and sends protocol-based probes for deeper identification. | Most environments, recommended.            |
+| Basic scan   | - Endpoints passively collect events in your network and extract device information from them.<br> - Uses the **SenseNDR.exe** binary for passive network data collection and no network traffic is initiated.<br>- Endpoints extract data from all network traffic seen by an onboarded device.<br> - Limited visibility of unmanaged endpoints in your network. | Sensitive/legacy networks, minimal impact. |
+| Standard scan (default) | - Allows endpoints to actively find devices in your network to enrich collected data and discover more devices<br>- Uses common discovery protocols that use multicast queries in the network to find more devices.<br>- Uses smart, active probing to discover additional information about observed devices, and helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
 
-**Passive discovery** is always enabled and non-intrusive. **Active discovery** (standard mode) adds protocol-based probes for more detailed device identification. You can switch between modes and further customize scan targets, frequency, and exclusions.
+As an additional layer of discovery, authenticated network scans use designated onboarded devices to perform agentless network scans of preconfigured network devices using supported protocols. These scans are recommended for environments that need deeper visibility into network infrastructure devices.
 
-Authentication configuration is only required for advanced scenarios, such as restricting certain device functionalities.
+## Discovered assets
 
-The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks won't be discovered or listed in the device inventory.
+The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
 
+## Capabilities and configuration options
 
-## Capabilities
+Out-of-the-box, most organizations benefit from passive and active discovery, device inventory integration, and automatic network handling. Additional configuration options allow for more granular control, targeting, and exclusions as needed for your environment.
 
-
-The table below summarizes what is provided by default (out-of-the-box), what each additional configuration option enables, and where you can change configurable options in the UI:
+The table below summarizes what is provided by default (out-of-the-box), what each additional configuration option enables, and where you can change configurable options in the UI.
 
 | Feature/Option              | Default         | What it includes/enables                                                      | Additional configuration options/notes                  | Where to configure in UI                |
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|--------------------------------------------------------|-----------------------------------------|
-| Passive discovery (basic)   | Yes             | Detects unmanaged endpoints, network devices, IoT assets via traffic          | Can be set to passive-only (basic mode) for sensitive/legacy networks | Device discovery settings               |
-| Active discovery (standard) | Yes (default)   | Adds protocol-based probes for deeper device identification and richer inventory | Can be disabled (switch to passive-only)               | Device discovery settings               |
+| Passive discovery   | Yes             | Detects unmanaged endpoints, network devices, IoT assets via traffic          | Can be set to passive-only (basic mode) for sensitive/legacy networks | Device discovery settings               |
+| Active discovery | Yes (default)   | Adds protocol-based probes for deeper device identification and richer inventory | Can be disabled (switch to passive-only)               | Device discovery settings               |
 | Device inventory integration| Yes             | Unified view of onboarded and discovered devices                              | Filter, assess, and take action in inventory           | Device inventory                        |
 | Network list management     | Yes             | Monitors corporate networks, ignores non-corporate by default                 | Can override to monitor/ignore specific networks        | Device discovery > Monitored networks   |
 | Exclusions                  | No              | --                                                                            | Exclude specific IPs or device groups from scanning     | Device discovery > Exclusions           |
@@ -76,8 +87,6 @@ The table below summarizes what is provided by default (out-of-the-box), what ea
 | Segmentation                | No              | --                                                                            | Align scanner deployment with VLANs/subnets             | Device discovery settings               |
 | Scan targets & frequency    | No              | --                                                                            | Define scan targets (IP ranges) and scan frequency      | Device discovery settings               |
 | Network scans               | No              | --                                                                            | Enable deeper scanning of network devices (switches, routers, etc.) | Device discovery > Network scans        |
-
-Out-of-the-box, most organizations benefit from passive and active discovery, device inventory integration, and automatic network handling. Additional configuration options allow for more granular control, targeting, and exclusions as needed for your environment.
 
 ## Network scans and advanced discovery
 
