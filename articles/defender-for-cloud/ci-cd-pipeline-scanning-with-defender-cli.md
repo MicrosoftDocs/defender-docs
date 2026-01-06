@@ -32,8 +32,8 @@ Microsoft Defender for Cloud Command‑Line Interface (Defender for Cloud CLI) l
 
 Defender for Cloud CLI supports two authentication methods to align with enterprise security practices. Connector-based authentication is currently available and the preferred method of authentication for Azure DevOps and GitHub. 
 
-1. [Connector-based authentication](defender-cli-authentication.md#connector-based-ado-and-github.md)
-2. [Token‑based authentication](defender-cli-authenticationmd#token-based)
+1. [Connector-based authentication](defender-cli-authentication.md#connector-based-ado-and-github)
+2. [Token‑based authentication](defender-cli-authentication.md#token-based)
  
 ## Configure your CI/CD pipeline
 
