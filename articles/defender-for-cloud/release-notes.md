@@ -43,7 +43,7 @@ You can use Microsoft Security Private Link to connect Defender for Cloud servic
 
 Private endpoints are currently supported for the Defender for Containers plan.
 
-Learn more about [private endpoints with Microsoft Defender for Cloud](concept-private-endpoints.md).
+Learn more about [private endpoints with Microsoft Defender for Cloud](concept-private-links.md).
 
 ## December 2025
 

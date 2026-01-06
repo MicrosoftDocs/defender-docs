@@ -44,7 +44,7 @@ Microsoft Security Private Link uses Azure Private Endpoints to establish privat
 > [!NOTE]
 > Using private endpoints might incur additional Azure costs depending on the number of endpoints and the selected architecture. For more information, see [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 
-:::image type="content" source="media/concept-private-endpoints/security-private-link-diagram.png" alt-text="Diagram showing how Microsoft Defender for Cloud connects to protected resources through private endpoints." lightbox="media/concept-private-endpoints/security-private-link-diagram.png":::
+:::image type="content" source="media/concept-private-links/security-private-link-diagram.png" alt-text="Diagram showing how Microsoft Defender for Cloud connects to protected resources through private endpoints." lightbox="media/concept-private-links/security-private-link-diagram.png":::
 
 ## Roles and permissions
 
@@ -99,6 +99,6 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 
 ## Next steps
 
-- [Configure private endpoints with Microsoft Security Private Link](networking-private-endpoints.md)
+- [Configure private endpoints with Microsoft Security Private Link](configure-private-endpoints.md)
 
 - Learn more about [Azure Private Link](/azure/private-link).

@@ -24,7 +24,7 @@ Before you begin, make sure that:
 
 - A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint will be created.
 
-- You reviewed the required [roles and permissions](concept-private-endpoints.md#roles-and-permissions).
+- You reviewed the required [roles and permissions](concept-private-links.md#roles-and-permissions).
 
 ## Create a private endpoint using a Security Private Link resource (Azure portal)
 
@@ -49,7 +49,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Select **Create a private endpoint** and enter a name and a location.
 
-      :::image type="content" source="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png" alt-text="Screenshot of the Create Security Private Link wizard on the Networking tab, showing the Create a private endpoint pane with sub-resource and Private DNS integration." lightbox="media/networking-private-endpoints/create-private-endpoint-blade-networking-tab.png":::
+      :::image type="content" source="media/configure-private-endpoints/create-private-endpoint-blade-networking-tab.png" alt-text="Screenshot of the Create Security Private Link wizard on the Networking tab, showing the Create a private endpoint pane with sub-resource and Private DNS integration." lightbox="media/configure-private-endpoints/create-private-endpoint-blade-networking-tab.png":::
 
 1. Select **containers** as the target sub-resource.
 
@@ -75,7 +75,7 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select **Create**.
 
-   :::image type="content" source="media/networking-private-endpoints/network-foundation-create-private-endpoint.png" alt-text="Screenshot of the Network foundation Private endpoints page, showing the Create button." lightbox="media/networking-private-endpoints/network-foundation-create-private-endpoint.png":::
+   :::image type="content" source="media/configure-private-endpoints/network-foundation-create-private-endpoint.png" alt-text="Screenshot of the Network foundation Private endpoints page, showing the Create button." lightbox="media/configure-private-endpoints/network-foundation-create-private-endpoint.png":::
 
 1. Select a subscription and an existing resource group, or create a new one.
 
@@ -128,4 +128,4 @@ The FQDN should resolve to a private IP address under `privatelink.cloud.defende
 
 ## Related content
 
-- Learn more about [Private endpoints with Microsoft Defender](concept-private-endpoints.md).
+- Learn more about [Private endpoints with Microsoft Defender](concept-private-links.md).
