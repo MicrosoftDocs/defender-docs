@@ -31,21 +31,23 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
 
 ## Configure and manage device control in Intune
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
+1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** section \> **Attack surface reduction**. Or, to go directly to the **Endpoint security \| Attack surface reduction** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/asr>.
 
-1. Go to **Endpoint security** \> **Attack surface reduction**.
+2. On the **Policies** tab of the **Endpoint security \| Attack surface reduction** page, select **Create policy**.
 
-1. On the **Policies** tab of the **Attack surface reduction** page, eselect **+ Create Policy** to set up a new policy with the following settings:
+3. On the **Create a profile** flyout that opens, configure the following settings:
    - **Platform**: Select **Windows**. Currently, device control isn't supported on Windows Server, even though **This policy applies to** shows it.
    - **Profile**: Select **Device Control**.
 
-   Select **Create**.
+   When you're finished on the **Endpoint security \| Attack surface reduction** page, select **Create.
 
-1. The **Create Policy** wizard opens. On the **Basics** tab, configure the following settings:
+4. The **Create Policy** wizard opens. On the **Basics** tab, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the policy.
    - **Description**: Enter an optional description.
 
-1. On the **Configuration settings** tab, configure some or all of the following settings:
+   Select **Next**.
+
+5. On the **Configuration settings** tab, configure some or all of the following settings:
    - **Defender**: See [Allow Full Scan Removable Drive Scanning](/windows/client-management/mdm/policy-csp-defender#allowfullscanremovabledrivescanning) settings.
    - **Device Control**: Configure custom policies with reusable settings. See the [Device control profiles](#device-control-profiles) section later in this article and [Device control overview: Rules](device-control-policies.md#rules)..
    - **Device Installation Restrictions**: See [Device Installation](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx) settings.
@@ -62,11 +64,13 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
 
    :::image type="content" source="media/intune-device-control-policy-create-config-settings.png" alt-text="Screenshot of Intune user interface for device control policies." lightbox="media/intune-device-control-policy-create-config-settings.png":::
 
-1. On the **Scope tags** tab, where you can specify [scope tags](/mem/intune/fundamentals/scope-tags) for the policy.
+   When you'r finished on the **Configuration settings** tab, select **Next**.
 
-1. On the **Assignments** tab, specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/mem/intune/configuration/device-profile-assign).
+6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
 
-1. On the **Review + create** tab, review your settings, and make any needed changes.
+7. On the **Assignments** tab, specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/mem/intune/configuration/device-profile-assign).
+
+8. On the **Review + create** tab, review your settings, and make any needed changes.
    When you're ready, select **Create** to create your device control policy.
 
 ## Device control profiles
