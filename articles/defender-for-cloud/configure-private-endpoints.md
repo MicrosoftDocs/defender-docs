@@ -104,7 +104,6 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select **Review + create**, then select **Create**.
 
-1. Wait for the deployment to complete.
 
 After deployment, verify that workloads continue to report data in Defender for Cloud.
 
