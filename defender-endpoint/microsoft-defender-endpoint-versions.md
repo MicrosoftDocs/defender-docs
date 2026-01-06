@@ -94,8 +94,6 @@ This table includes supported versions released in for all supported platforms i
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
----
-
 ### Windows | July 2024 | 10.8760.27617.1006
 
 #### Versions
@@ -116,8 +114,6 @@ This table includes supported versions released in for all supported platforms i
 |-------------|---------------|
 | Data Loss Prevention (DLP) | Scoped classification (Know Your Data policy) and activity events across workloads; device group discovery and scoping for custom policy; OCR URL caching for improved image classification performance. |
 
----
-
 ## macOS versions
 
 ### macOS | December 2025 | 101.25102.0019
@@ -134,8 +130,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | Vulnerability Management | [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that may be impacted by this vulnerability. |
 
----
-
 ### macOS | November 2025 | 101.25102.0016
 
 #### Versions
@@ -150,8 +144,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
----
-
 ### macOS | October 2025 | 101.25082.0006
 
 #### Versions
@@ -165,8 +157,6 @@ This table includes supported versions released in for all supported platforms i
 | Feature area | Update summary |
 |--------------|---------------|
 | General | Bug and performance fixes. |
-
----
 
 ### macOS | September 2025 | 101.25072.0011
 
@@ -185,8 +175,6 @@ This table includes supported versions released in for all supported platforms i
 | Data Loss Prevention (DLP) | Performance and diagnostic improvements for endpoint DLP. |
 | General | Bug fixes. |
 
----
-
 ### macOS | August 2025 | 101.25062.0006
 
 #### Versions
@@ -201,8 +189,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
----
-
 ### macOS | July 2025 | 101.25062.0005
 
 #### Versions
@@ -216,8 +202,6 @@ This table includes supported versions released in for all supported platforms i
 | Feature area | Update summary |
 |--------------|---------------|
 | General | Bug and performance fixes. |
-
----
 
 ## Linux versions
 
@@ -237,8 +221,6 @@ This table includes supported versions released in for all supported platforms i
 | Engine resiliency | Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability. |
 | General | Other quality and stability fixes. |
 
----
-
 ### Linux | September 2025 | 101.25082.0003 (Build 1)
 
 #### Versions
@@ -255,8 +237,6 @@ This table includes supported versions released in for all supported platforms i
 | Diagnostics | Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. |
 | General | Other quality and stability fixes. |
 
----
-
 ### Linux | September 2025 | 101.25072.0003 (Build 2)
 
 #### Versions
@@ -271,8 +251,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | Device management | Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when deploying Microsoft Defender via Golden image. |
 | General | Other stability enhancements and bug fixes. |
-
----
 
 ### Linux | August 2025 | 101.25062.0003
 
@@ -292,8 +270,6 @@ This table includes supported versions released in for all supported platforms i
 | Compatibility | Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus and EDR functionality to operate without conflict. |
 | General | Other stability enhancements and bug fixes. |
 
----
-
 ### Linux | July 2025 | 101.25052.0007
 
 #### Versions
@@ -309,8 +285,6 @@ This table includes supported versions released in for all supported platforms i
 | Device management | Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified. |
 | General | Other stability improvements and bug fixes. |
 
----
-
 ### Linux | June 2025 | 101.25042.0003
 
 #### Versions
@@ -325,8 +299,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | Package management | Removed external dependency of uuid-runtime from the Defender for Endpoint package. |
 | General | Other stability improvements and bug fixes. |
-
----
 
 ## Android versions
 
@@ -344,8 +316,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | General | Performance improvement and bug fixes. |
 
----
-
 ### Android | December 2025 | 1.0.8321.0101
 
 #### Versions
@@ -361,8 +331,6 @@ This table includes supported versions released in for all supported platforms i
 | Root detection | Native root detection for Microsoft Defender is now GA. |
 | General | Performance improvement and bug fixes. |
 
----
-
 ### Android | November 2025 | 1.0.8315.0101
 
 #### Versions
@@ -377,8 +345,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | Root detection | Native root detection for Microsoft Defender is now in preview. |
 | General | Performance improvement and bug fixes. |
-
----
 
 ### Android | November 2025 | 1.0.8303.0101
 
@@ -396,8 +362,6 @@ This table includes supported versions released in for all supported platforms i
 | Telemetry | Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 | Configuration | Fixed the bug where feedback sending wasn't disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration. |
 
----
-
 ### Android | October 2025 | 1.0.8217.0101
 
 #### Versions
@@ -411,8 +375,6 @@ This table includes supported versions released in for all supported platforms i
 | Feature area | Update summary |
 |--------------|---------------|
 | User interface | Refreshed the Defender app with a new icon. |
-
----
 
 ### Android | October 2025 | 1.0.8201.0101
 
@@ -430,8 +392,6 @@ This table includes supported versions released in for all supported platforms i
 | Global Secure Access | Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. Users need to install and configure a third-party SSO client. |
 | General | Performance Improvement and bug fixes. |
 
----
-
 ### Android | September 2025 | 1.0.8102.0101
 
 #### Versions
@@ -447,8 +407,6 @@ This table includes supported versions released in for all supported platforms i
 | Authentication | Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device, which isn't supported by MDE Mobile, user will be redirected back to the sign-in page. |
 | Accessibility | Other accessibility bug fixes and performance improvements. |
 
----
-
 ### Android | August 2025 | 1.0.8018.0103
 
 #### Versions
@@ -463,8 +421,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | General | Performance improvements and bug fixes. |
 
----
-
 ### Android | July 2025 | 1.0.7901.0101
 
 #### Versions
@@ -478,8 +434,6 @@ This table includes supported versions released in for all supported platforms i
 | Feature area | Update summary |
 |--------------|---------------|
 | User experience | UX Improvement for home page and tiles screens. |
-
----
 
 ## iOS versions
 
@@ -513,8 +467,6 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Drive mapping | Improved drive mapping enumeration for devices with many drives which resulted in false positive detections for ASR rules. |
 | Service stability | Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019. |
 
----
-
 ### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
 
 #### Versions
@@ -536,8 +488,6 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Service startup | Fixed Defender startup issue: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions. |
 | System resources | Reduced system resource usage: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability. |
 
----
-
 ### Windows Antivirus | September 2025 | Platform 4.18.25090.3009 | Engine 1.1.25090.3001
 
 #### Versions
@@ -558,8 +508,6 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Threat exclusion | Fixed threat exclusion handling: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections. |
 | Network file access | Restored performance optimization for network file access: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled. |
 
----
-
 ### Windows Antivirus | August 2025 | Platform 4.18.25080.5 | Engine 1.1.25080.5
 
 #### Versions
@@ -576,5 +524,3 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Feature area | Update summary |
 |--------------|---------------|
 | Update reliability | Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements. |
-
----
