@@ -84,7 +84,7 @@ If you didn't approve the system extension during the deployment/installation of
 
 You notice that both Microsoft Defender for Endpoint on macOS extensions is in the **[activated waiting for user]** state.
 
-2. In the terminal, run the following command:
+1. In the terminal, run the following command:
 
    ```BashCopy
    mdatp health --details system_extensions
@@ -183,7 +183,7 @@ For example,
        - **Other MDM**: Yes
        - **Manual**: Must approve the extension by going to **Security Preferences or System Preferences > Security & Privacy** and then selecting **Allow**.
 
-2. 
+1. 
    - **Function**: [Network Filter](mac-install-with-intune.md)
    - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/netfilter.mobileconfig
    - **Applicable to**:
@@ -192,7 +192,7 @@ For example,
        - **Other MDM**: Yes
        - **Manual**: Must approve the extension by going to **Security Preferences or System Preferences > Security & Privacy** and then selecting **Allow**.
 
-3. 
+1. 
    - **Function**: [Privacy Preference Policy Controls (PPPC, aka TCC (Transparency, Consent & Control), Full Disk Access (FDA))](mac-install-with-intune.md)
    - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig
    - **Applicable to**:
@@ -203,7 +203,7 @@ For example,
            - **Microsoft Defender**
            - **Microsoft Defender Security Extension**
 
-4. 
+1. 
    - **Function**: Running in background
    - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/background_services.mobileconfig
    - **Applicable to**:
@@ -212,7 +212,7 @@ For example,
        - **Other MDM**: Yes
        - **Manual**: Not applicable
 
-5. 
+1. 
    - **Function**: Sending notifications
    - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/notif.mobileconfig
    - **Applicable to**:
@@ -221,7 +221,7 @@ For example,
        - **Other MDM**: Yes
        - **Manual**: Not applicable
 
-6. 
+1. 
    - **Function**: Accessibility
    - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig
    - **Applicable to**:
@@ -240,7 +240,7 @@ For example,
    curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py
 ```
 
-4. Run the profile analyzer python3 script without any parameters by executing the following command in terminal:
+1. Run the profile analyzer python3 script without any parameters by executing the following command in terminal:
 
 ```BashCopy
    cd /Downloads  
@@ -252,7 +252,7 @@ For example,
 
 OR
 
-5. Run the script directly from the Web by executing the following command:
+1. Run the script directly from the Web by executing the following command:
 
 ```BashCopy
    sudo curl https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py        

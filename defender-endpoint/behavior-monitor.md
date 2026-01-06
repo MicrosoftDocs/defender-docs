@@ -30,7 +30,7 @@ Monitors process behavior to detect and analyze potential threats based on the b
    - Continuously observe processes, file system activities, and interactions within the system.
    - Defender Antivirus can identify patterns associated with malware or other threats. For example, it looks for processes making unusual changes to existing files, modifying or creating automatic startup registry (ASEP) keys, and other alterations to the file system or structure.
 
-2. Dynamic Approach:
+1. Dynamic Approach:
 
 - Unlike static, signature-based detection, behavior monitoring adapts to new and evolving threats.
 

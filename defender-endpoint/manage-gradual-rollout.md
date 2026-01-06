@@ -52,9 +52,9 @@ The following gradual rollout model is followed for monthly Defender updates:
 
 1. The first release goes out to Beta channel subscribers.
 
-2. After validation, feedback, and fixes, we start the gradual rollout process in a throttled way and to Preview channel subscribers first.
+1. After validation, feedback, and fixes, we start the gradual rollout process in a throttled way and to Preview channel subscribers first.
 
-3. We then proceed to release the update to the rest of the global population, scaling out from 10-100%.
+1. We then proceed to release the update to the rest of the global population, scaling out from 10-100%.
 
 Our engineers continuously monitor impact and escalate any issues to create a fix as needed.
 
@@ -109,12 +109,11 @@ For environments where there's a need for a more controlled gradual rollout of a
 
 1. Participate in the Windows Insider program or assign a group of devices to the Beta Channel.
 
-2. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
+1. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
 
-3. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
+1. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
 
-4. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
-
+1. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
 For the remainder of devices, the default setting is to receive new updates as they arrive during the Microsoft gradual rollout process and no further configuration is required.
 
 Adopting this model:
