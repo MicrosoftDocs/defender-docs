@@ -27,6 +27,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## January 2026
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|January 6, 2026| Preview | [Private endpoints with Microsoft Defender for Cloud (Preview)](#private-endpoints-with-microsoft-defender-for-cloud-preview) |
+
+## Private endpoints with Microsoft Defender for Cloud (Preview)
+
+January 6, 2026
+
+Private endpoints are now available in preview in Microsoft Defender for Cloud.
+
+You can use Microsoft Security Private Link to connect Defender for Cloud services to workloads in your virtual network through private endpoints, so Defender traffic does not traverse the public internet.
+
+Private endpoints are currently supported for the Defender for Containers plan.
+
+Learn more about [private endpoints with Microsoft Defender for Cloud](concept-private-endpoints.md).
+
 ## December 2025
 
 |Date | Category | Update|
