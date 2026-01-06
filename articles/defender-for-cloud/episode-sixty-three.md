@@ -12,11 +12,6 @@ ms.date: 07/22/2025
 
 > [!VIDEO https://aka.ms/docs/player?id=84c5525f-a317-497a-9576-eae347baeacc]
 
-- [02:00](/shows/mdc-in-the-field/cloud-detection-response-experience#time=02m00s) - What is Cloud Detection Response?
-- [03:48](/shows/mdc-in-the-field/cloud-detection-response-experience#time=03m48s) - Cloud Detection Response main components
-- [09:15](/shows/mdc-in-the-field/cloud-detection-response-experience#time=09m15s) - How the new events enhance the investigation?
-- [11:10](/shows/mdc-in-the-field/cloud-detection-response-experience#time=11m10s) - Demonstration
-
 ## Recommended resources
 
 - Learn more about [agentless code scanning](/azure/defender-for-cloud/agentless-code-scanning).
