@@ -42,7 +42,7 @@ The device discovery capability allows you to discover:
 - Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
 Network devices like routers and switches
 - IoT devices like printers and cameras
-- Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls. 
+- Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
 
 Once devices are discovered, you can:
 
@@ -72,33 +72,18 @@ The discovery engine distinguishes between network events that are received in t
 
 ## Capabilities and configuration options
 
-Out-of-the-box, most organizations benefit from passive and active discovery, device inventory integration, and automatic network handling. Additional configuration options allow for more granular control, targeting, and exclusions as needed for your environment.
+Most organizations benefit from the out-of-the-box active discovery, device inventory integration, and automatic network handling. You can use additional configuration options for more granular control, targeting, and exclusions as needed for your environment.
 
-The table below summarizes what is provided by default (out-of-the-box), what each additional configuration option enables, and where you can change configurable options in the UI.
+This table summarizes which capabilities device discovery provides out-of-the-box, what each additional configuration option enables, and where you can change configurable options in the UI.
 
-| Feature/Option              | Default         | What it includes/enables                                                      | Additional configuration options/notes                  | Where to configure in UI                |
+| Feature/option | Default | What it includes or enables | Additional configuration options/notes    | Where to configure in the Defender portal  |
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|--------------------------------------------------------|-----------------------------------------|
-| Passive discovery   | Yes             | Detects unmanaged endpoints, network devices, IoT assets via traffic          | Can be set to passive-only (basic mode) for sensitive/legacy networks | Device discovery settings               |
-| Active discovery | Yes (default)   | Adds protocol-based probes for deeper device identification and richer inventory | Can be disabled (switch to passive-only)               | Device discovery settings               |
-| Device inventory integration| Yes             | Unified view of onboarded and discovered devices                              | Filter, assess, and take action in inventory           | Device inventory                        |
-| Network list management     | Yes             | Monitors corporate networks, ignores non-corporate by default                 | Can override to monitor/ignore specific networks        | Device discovery > Monitored networks   |
-| Exclusions                  | No              | --                                                                            | Exclude specific IPs or device groups from scanning     | Device discovery > Exclusions           |
-| Scanner assignment          | No              | --                                                                            | Assign scanners per subnet or segment                   | Device discovery settings               |
-| Segmentation                | No              | --                                                                            | Align scanner deployment with VLANs/subnets             | Device discovery settings               |
-| Scan targets & frequency    | No              | --                                                                            | Define scan targets (IP ranges) and scan frequency      | Device discovery settings               |
-| Network scans               | No              | --                                                                            | Enable deeper scanning of network devices (switches, routers, etc.) | Device discovery > Network scans        |
-
-## Network scans and advanced discovery
-
-In addition to out-of-the-box passive and active discovery, Defender for Endpoint supports network scans for deeper visibility into network devices (such as switches, routers, firewalls, and IoT assets). These scans are agentless and use a designated onboarded device to periodically probe preconfigured network devices using supported protocols.
-
-Network scans allow you to:
-
-- Discover and classify network infrastructure devices that cannot be onboarded
-- Perform authenticated scans (using credentials) for more detailed information (feature being deprecated)
-- Schedule scans and define scan targets beyond the default subnet
-
-This additional layer of scanning helps ensure that critical network infrastructure is visible and included in your asset inventory, supporting vulnerability management and security workflows.
+| Basic discovery   | No   | Detects unmanaged endpoints, network devices, IoT assets via traffic   | Can be used for sensitive/legacy networks (see [Discovery modes and scans](#discovery-modes-and-scans)) | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Basic**      |
+| Standard discovery | Yes  | Adds protocol-based probes for deeper device identification and richer inventory | Can be disabled (switch to **Basic** mode)               | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Standard discovery (recommended)**          |
+| Device inventory integration | Yes   | Unified view of onboarded and discovered devices | Filter, assess, and take action in inventory (see [Device discovery and the device inventory](#device-discovery-and-the-device-inventory))  | **Device inventory** |
+| Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default  | Can monitor/ignore specific networks | **System** > **Settings** > **Device discovery** > **Monitored networks**   |
+| Exclusions  | No  | Exclude IPs or device groups from scanning. |     | **System** > **Settings** > **Device discovery** > **Exclusions** |
+| Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded<br>- Schedule scans and define scan targets beyond the default subnet | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |
 
 ## Device discovery and the device inventory
 
