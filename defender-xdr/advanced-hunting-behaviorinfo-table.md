@@ -40,12 +40,12 @@ The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md)
 Behaviors are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. [Read more about behaviors](/defender-cloud-apps/behaviors)
 
 
-This advanced hunting table is populated by records from Microsoft Defender for Cloud Apps. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+Microsoft Defender for Cloud Apps populates this advanced hunting table with records. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
-To make sure the `BehaviorInfo` table is populated by Microsoft Defender for Cloud Apps data:
+To make sure Microsoft Defender for Cloud Apps data populates the `BehaviorInfo` table:
 1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
-2.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
- For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+1.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
+ For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

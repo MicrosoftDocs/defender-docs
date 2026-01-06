@@ -107,27 +107,6 @@ You can also get product updates and important notifications through the [messag
     - The [MessageEvents](advanced-hunting-messageevents-table.md) table contains details about messages sent and received within your organization at the time of delivery
     - The [MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md) table contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization
     - The [MessageUrlInfo](advanced-hunting-messageurlinfo-table.md) table contains information about URLs sent through Microsoft Teams messages in your organization
-     
-    
-## April 2025
-
-- (Preview) You can now create data security investigations in the Microsoft Defender portal with the integration of Microsoft Purview Data Security Investigations (preview) and Microsoft Defender XDR. This integration allows security operations center (SOC) teams to enhance their investigation and response to potential data security incidents like data breaches or data leaks. For more information, see [Create data security investigations in the Microsoft Defender portal](create-dsi-in-defender.md).
-
-- (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or aren't onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](automatic-attack-disruption.md#automated-response-actions) for more information.
-
-- (Preview) The [OAuthAppInfo](advanced-hunting-oauthappinfo-table.md) table is now available for preview in advanced hunting. The table contains information about Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability.
-
-- The `OnboardingStatus` and `NetworkAdapterDnsSuffix` columns are now available in the [`DeviceNetworkInfo`](advanced-hunting-devicenetworkinfo-table.md) table in advanced hunting.
-
-
-
-## March 2025
-
-- (Preview) The incident description moved within the incident page. The incident description now appears after the incident details. For more information, see [Incident details](investigate-incidents.md#incident-details).
-
-- You can now manage the Microsoft 365 alert policies only in the Microsoft Defender portal. For more information, see [Alert policies in Microsoft 365](alert-policies.md).
-
-- You can now link Threat analytics reports when setting up custom detections. [Learn more](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports)
 
 
 
