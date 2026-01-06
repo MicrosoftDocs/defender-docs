@@ -27,4 +27,4 @@ ms.date: 07/22/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Improvements in Container’s Posture Management](episode-fifty-six.md)
+> [Storage aggregated logs](episode-sixty-four.md)
