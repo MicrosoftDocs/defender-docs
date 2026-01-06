@@ -204,7 +204,7 @@ Learn how to use the alert queue and alert pages in [investigate alerts](investi
 
 ## Activities
 
-The **Activities** tab provides a unified timeline of all actions taken within the context of an incident. The renovated activity log is now aligned with the Activities tab, using the same data model, categories, and filtering capabilities.
+The **Activities** tab provides a unified timeline of all actions taken within the context of an incident. For a condensed view of the same information as a side panel, access the [activity log](./manage-incidents.md#view-the-activity-log-of-an-incident).
 
 :::image type="content" source="./media/investigate-incidents/incident-activities-tab.png" alt-text="Screenshot of an incident with the Activities tab opened." lightbox="./media/investigate-incidents/incident-activities-tab.png":::
 

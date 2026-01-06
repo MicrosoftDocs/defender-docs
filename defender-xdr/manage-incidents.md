@@ -284,13 +284,13 @@ When doing a postmortem of an incident, view the incident's **Activity log** to 
 
 With the activity log, analysts can:
 
-#### Triage
+**Triage**
 - View all actions performed on the incident in a single place
 - Identify key steps taken by automated systems and humans
 - Verify recent changes (such as tags, merges, severity updates)
 - Review comments and handovers
 
-#### Investigation
+**Investigation**
 - Trace the full sequence of actions
 - Inspect detailed metadata in side panels
 - Narrow activity lists to only relevant action types
