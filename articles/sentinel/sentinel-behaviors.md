@@ -209,7 +209,7 @@ To enable the UEBA behaviors layer in your workspace:
 1. Select **Connect**.
 
   > [!IMPORTANT]
-  > During public preview, you can only enable UEBA behaviors layer on a single workspace in your tenant.
+  > During public preview, you can only enable behaviors in a single workspace in your tenant.
 
 ## Pricing model
 
@@ -245,6 +245,7 @@ The UEBA behaviors layer stores behaviors in two related tables in your Sentinel
   This gives you each behavior and each entity involved in it. The `EntityId` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
+
 For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
 
 ### Troubleshooting 
