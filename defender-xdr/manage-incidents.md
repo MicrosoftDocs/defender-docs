@@ -290,7 +290,7 @@ With the activity log, analysts can:
 - Verify recent changes (such as tags, merges, severity updates)
 - Review comments and handovers
 
-**Investigation**
+**Investigate**
 - Trace the full sequence of actions
 - Inspect detailed metadata in side panels
 - Narrow activity lists to only relevant action types
