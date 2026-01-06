@@ -33,4 +33,4 @@ ms.date: 09/26/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector](episode-one.md)
+> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
