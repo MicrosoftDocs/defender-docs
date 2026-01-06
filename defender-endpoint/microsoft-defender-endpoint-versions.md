@@ -509,14 +509,6 @@ This table includes supported versions released in for all supported platforms i
 |--------------|---------------|
 | UX | UX Improvement. For more information, see [iOS UX Experience](/defender-endpoint/ios-new-ux). |
 
-### iOS | May 2025
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| Network protection | Alerts for activities related to open wireless connections are now detected as events. Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline. For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection). |
-
 ## Microsoft Defender Antivirus versions
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
