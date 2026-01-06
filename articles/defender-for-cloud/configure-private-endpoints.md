@@ -1,17 +1,17 @@
 ---
 title: Configure private endpoints with Microsoft Security Private Link
-description: Configure private endpoints with Microsoft Security Private Link to securely connect your virtual network to Microsoft Defender services.
+description: Configure private endpoints with Microsoft Security Private Link to securely connect your virtual network to Microsoft Defender for Cloud.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 01/05/2025
-#customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender so that Defender traffic stays within my private network.
+#customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender for Cloud so that Defender traffic stays within my private network.
 
 ---
 
 # Configure private endpoints with Microsoft Security Private Link (Preview)
 
-Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link to allow workloads in your private network to access Microsoft Defender services over [Azure Private Link](/azure/private-link/private-link-overview).
+Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link to connect workloads in your private network to Microsoft Defender for Cloud over [Azure Private Link](/azure/private-link/private-link-overview).
 
 > [!NOTE]
 > Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet.
@@ -37,9 +37,8 @@ When you create a Security Private Link resource, you can create a private endpo
 1. Select **Create a resource**.
 
 1. Search for **Security Private Link**, then under **Security Private Link** select **Create**.
-.
 
-1. Select a subscription, then select an existing resource group, or create a new one.
+1. Select a subscription and an existing resource group, or create a new one.
 
 1. If needed, update the resource group location.
 
@@ -78,7 +77,7 @@ If you already have a Security Private Link resource, you can create a private e
 
    :::image type="content" source="media/networking-private-endpoints/network-foundation-create-private-endpoint.png" alt-text="Screenshot of the Network foundation Private endpoints page, showing the Create button." lightbox="media/networking-private-endpoints/network-foundation-create-private-endpoint.png":::
 
-1. Select a subscription, then select an existing resource group, or create a new one.
+1. Select a subscription and an existing resource group, or create a new one.
 
 1. Enter a name and network interface name, and select a region.
 
@@ -91,7 +90,7 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select a subscription and **Microsoft.Security/privateLinks** as the resource type.
 
-1. Select the Security Private Link resource for Defender services.
+1. Select the Security Private Link resource for Defender for Cloud.
 
 1. Select **containers** as the target sub-resource, then select **Next: Virtual Network**.
 
