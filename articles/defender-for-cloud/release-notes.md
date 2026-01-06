@@ -39,7 +39,7 @@ January 6, 2026
 
 Microsoft Defender for Cloud is announcing Microsoft Security Private Link in Preview.
 
-Microsoft Security Private Link enables private connectivity between Defender for Cloud and workloads in your virtual network. The connection is established by creating private endpoints in your virtual network, allowing Defender for Cloud traffic to remain on the Microsoft backbone network and avoid exposure to the public internet.
+Microsoft Security Private Link enables private connectivity between Defender for Cloud and your workloads. The connection is established by creating private endpoints in your virtual network, allowing Defender for Cloud traffic to remain on the Microsoft backbone network and avoid exposure to the public internet.
 
 Private endpoints are currently supported for the Defender for Containers plan.
 
