@@ -44,9 +44,9 @@ You can use Intune to configure antivirus policies, and then apply those policie
 
 1. Go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
 
-2. In the navigation pane, choose **Endpoint security** and then, under **Manage**, choose **Antivirus**.
+1. In the navigation pane, choose **Endpoint security** and then, under **Manage**, choose **Antivirus**.
 
-3. Select an existing policy, or choose **+ Create Policy** to create a new policy. 
+1. Select an existing policy, or choose **+ Create Policy** to create a new policy. 
 
    | Task | What to do |
    |---|---|
@@ -72,37 +72,37 @@ You can use **Local Group Policy Editor** to enable and configure Microsoft Defe
 
     1. In your Windows 10 or Windows 11 taskbar search box, type **gpedit**.
 
-    2. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
+    1. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
     
        :::image type="content" source="media/gpedit-search.png" alt-text="The GPEdit taskbar search result in the Control panel" lightbox="media/gpedit-search.png":::
 
-2. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus**.
+1. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus**.
 
-3. Configure the Microsoft Defender Antivirus antimalware service policy setting.
+1. Configure the Microsoft Defender Antivirus antimalware service policy setting.
 
    In the **Microsoft Defender Antivirus** details pane on right, double-click **Allow antimalware service to start up with normal priority**, and set it to **Enabled**.
 
    Then select **OK**.
 
-4. Configure the Microsoft Defender Antivirus real-time protection policy settings, as follows:
+1. Configure the Microsoft Defender Antivirus real-time protection policy settings, as follows:
 
     1. In the **Microsoft Defender Antivirus** details pane, double-click **Real-time Protection**. Or, from the **Microsoft Defender Antivirus** tree on left pane, select **Real-time Protection**.
 
-    2. In the **Real-time Protection** details pane on right, double-click the policy setting as specified in [Real-time protection policy settings](#real-time-protection-policy-settings) (later in this article).
+    1. In the **Real-time Protection** details pane on right, double-click the policy setting as specified in [Real-time protection policy settings](#real-time-protection-policy-settings) (later in this article).
 
-    3. Configure the setting as appropriate, and select **OK**.
+    1. Configure the setting as appropriate, and select **OK**.
 
-    4. Repeat the previous steps for each setting in the table.
+    1. Repeat the previous steps for each setting in the table.
 
-5. Configure the Microsoft Defender Antivirus scanning policy setting, as follows:
+1. Configure the Microsoft Defender Antivirus scanning policy setting, as follows:
 
     1. From the **Microsoft Defender Antivirus** tree on left pane, select **Scan**.
     
-   2. In the **Scan** details pane on right, double-click **Turn on heuristics**, and set it to **Enabled**. 
+   1. In the **Scan** details pane on right, double-click **Turn on heuristics**, and set it to **Enabled**. 
 
-   3. Select **OK**.
+   1. Select **OK**.
 
-6. Close **Local Group Policy Editor**.
+1. Close **Local Group Policy Editor**.
 
 ### Real-time protection policy settings
 
@@ -117,17 +117,17 @@ For the most current settings, get the latest ADMX files in your central store. 
 
    1. In your Windows 10 or Windows 11 taskbar search box, type `gpedit`.
 
-   2. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
+   1. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
 
-2. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Real-time Protection**.
+1. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Real-time Protection**.
 
-3. In the **Real-time Protection** details pane on right, double-click **Turn off real-time protection**.
+1. In the **Real-time Protection** details pane on right, double-click **Turn off real-time protection**.
 
-4. In the **Turn off real-time protection** setting window, set the option to **Enabled**.
+1. In the **Turn off real-time protection** setting window, set the option to **Enabled**.
    
-5. select **OK**.
+1. select **OK**.
 
-6. Close **Local Group Policy Editor**.
+1. Close **Local Group Policy Editor**.
 
 ## See also
 

@@ -46,15 +46,15 @@ In general, you can use the following procedure to configure or change some sett
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
 
-5. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
-6. [Deploy the updated GPO as you normally do](/windows/win32/srvnodes/group-policy).
+1. [Deploy the updated GPO as you normally do](/windows/win32/srvnodes/group-policy).
 
 ## Group Policy settings and resources
 

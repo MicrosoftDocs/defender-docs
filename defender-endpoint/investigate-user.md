@@ -76,8 +76,8 @@ Selecting an item on the Observed in organization table expands the item, reveal
 ## Search for specific user accounts
 
 1. Select **User** from the **Search bar** drop-down menu.
-2. Enter the user account in the **Search** field.
-3. Click the search icon or press **Enter**.
+1. Enter the user account in the **Search** field.
+1. Click the search icon or press **Enter**.
 
 A list of users matching the query text is displayed. You can see the user account's domain and name, when the user account was last seen, and the total number of devices it was observed logged on to in the last 30 days.
 

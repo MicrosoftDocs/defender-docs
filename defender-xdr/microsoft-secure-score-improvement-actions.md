@@ -37,7 +37,7 @@ To help you find the information you need more quickly, Microsoft recommended ac
 
 In the Microsoft Secure Score overview page, view how points are split between these groups and what points are available. You can also get an all-up view of the total score, historical trend of your secure score with benchmark comparisons, and prioritized recommended actions that can be taken to improve your score.
 
-:::image type="content" source="/defender/media/secure-score/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-home-page.png":::
+:::image type="content" source="media/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="media/secure-score-home-page.png":::
 
 ## Check your current score
 

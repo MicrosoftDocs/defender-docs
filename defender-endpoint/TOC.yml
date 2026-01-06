@@ -615,13 +615,8 @@
       - name: Device discovery FAQ
         href: device-discovery-faq.md  
 
-    - name: Authenticated scans
-      items:
-      - name: Network devices
-        href: network-devices.md
-      - name: Windows authenticated scan
-        href: /defender-vulnerability-management/windows-authenticated-scan
-
+    - name: Authenticated network scans
+      href: network-devices.md
     - name: Devices
       items:
       - name: Device inventory

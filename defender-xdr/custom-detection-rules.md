@@ -169,12 +169,12 @@ Setting a custom detection to run in Continuous (NRT) frequency increases your o
 
 From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency with a single button, **Migrate now**:
 
-:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
+:::image type="content" source="media/custom-detection-rules/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-rules/custom-detection-migrate-now.png":::
 
 
 Selecting **Migrate now** gives you a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only according to your preferences:
 
-:::image type="content" source="media/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-compatible-queries.png":::
+:::image type="content" source="media/custom-detection-rules/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-rules/custom-detection-compatible-queries.png":::
 
 Once you select **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
 
@@ -351,8 +351,8 @@ For more information on user actions, see [Remediation actions in Microsoft Defe
 
 - If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to  a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
-   :::image type="content" source="media/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/advanced-hunting-custom-quarantine-results.png":::
-  :::image type="content" source="media/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/advanced-hunting-custom-quarantine-results.png":::
+   :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
+  :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
 
 - Alternatively, you can select **Delete email** and then choose to either move the emails to Deleted Items (**Soft delete**) or delete the selected emails permanently (**Hard delete**).
 

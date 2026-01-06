@@ -138,14 +138,14 @@ While navigating the device timeline, you can search and filter for specific eve
 
 1. Find the event that you want to flag.
 
-2. Select the flag icon in the Flag column. 
+1. Select the flag icon in the Flag column. 
 
 :::image type="content" source="media/device-flags.png" alt-text="The device timeline flag" lightbox="media/device-flags.png":::
 
 ## View flagged events
 
 1. In the timeline **Filters** section, enable **Flagged events**.
-2. Select **Apply**. Only flagged events are displayed.
+1. Select **Apply**. Only flagged events are displayed.
 
 You can apply more filters by clicking on the time bar. This will only show events prior to the flagged event.  
 
