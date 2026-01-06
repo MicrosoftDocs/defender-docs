@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 12/22/2025
-manager: deniseb
+ms.date: 01/12/2026
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -31,6 +31,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Purview](/purview/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## January 2026
+
+- (Preview) The [`BehaviorInfo`](advanced-hunting-behaviorinfo-table.md) and [`BehaviorEntities`](advanced-hunting-behaviorentities-table.md) tables in advanced hunting now include additional columns that could help provide more information and insight on the relationships between identified behaviors and entities.
 
 ## December 2025
 - (Preview) Microsoft Security Copilot in Microsoft Defender now includes the Dynamic Threat Detection Agent, an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. [Learn more](dynamic-threat-detection-agent.md)

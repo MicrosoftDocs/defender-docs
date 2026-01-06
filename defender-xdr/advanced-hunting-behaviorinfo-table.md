@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 01/12/2026
 ---
 
 # BehaviorInfo (Preview)
@@ -55,7 +55,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `BehaviorId` | `string` | Unique identifier for the behavior|
 | `ActionType` | `string` | Type of behavior |
 | `Description` | `string` | Description of the behavior |
-| `Categories` | `string` | Type of threat indicator or  breach activity identified by the behavior|
+| `Categories` | `string` | Type of threat indicator or breach activity identified by the behavior, as defined by the MITRE ATT&CK framework |
 | `AttackTechniques` | `string` | MITRE ATT&CK techniques associated with the activity that triggered the behavior |
 | `ServiceSource` | `string` | Product or service that identified the behavior |
 | `DetectionSource` | `string` | Detection technology or sensor that identified the notable component or activity |
@@ -66,6 +66,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `StartTime` | `datetime` | Date and time of the first activity related to the behavior|
 | `EndTime` | `datetime` | Date and time of the last activity related to the behavior|
 | `AdditionalFields` | `string` | Additional information about the behavior|
+| `Title` | `string` | Title of the behavior|
 
 
 
