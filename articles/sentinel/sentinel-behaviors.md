@@ -202,9 +202,9 @@ To enable the UEBA behaviors layer in your workspace:
 1. Toggle on **Enable Behaviors layer**.
 1. Select **Connect all data sources** or select the specific data sources from the list.
 
-  If you haven't yet connected any supported data sources to your Sentinel workspace, select **Go to Content Hub** to find and connect the relevant connectors.
+    If you haven't yet connected any supported data sources to your Sentinel workspace, select **Go to Content Hub** to find and connect the relevant connectors.
 
-  :::image type="content" source="media/sentinel-behaviors/ueba-behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/sentinel-behaviors/ueba-behaviors-enable.png" ::: 
+    :::image type="content" source="media/sentinel-behaviors/ueba-behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/sentinel-behaviors/ueba-behaviors-enable.png" ::: 
 
 1. Select **Connect**.
 
@@ -250,7 +250,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 ### Troubleshooting 
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information about supported behavior types, see [TBD](). Sentinel might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
+- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information about supported behavior types, see [TBD](). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
      
 ## Limitations in public preview 
@@ -258,7 +258,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 These limitations apply during the public preview of the UEBA behaviors layer:
 
 - You can enable behaviors on a single Sentinel workspace per tenant.
-- Sentinel generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources). 
-- Sentinel does not currently capture every possible action or attack technique, even for supported sources. Some events might not produce corresponding behaviors. Don't assume that the absence of a behavior means no activity occurred. Always review raw logs if you suspect something might be missing. 
+- The UEBA behaviors layer generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources). 
+- The UEBA behaviors layer doesn't currently capture every possible action or attack technique, even for supported sources. Some events might not produce corresponding behaviors. Don't assume that the absence of a behavior means no activity occurred. Always review raw logs if you suspect something might be missing. 
 - Behaviors aim to reduce noise by aggregating and sequencing events, but you might still see too many behavior records. We welcome your feedback on specific behavior types to help improve coverage and relevance.
-- Behaviors are not alerts or anomalies. They're neutral observations, not classified as malicious or benign. The presence of a behavior means “this happened,” not “this is a threat.” Anomaly detection remains separate in UEBA. Use judgment or combine behaviors with UEBA anomaly data to identify noteworthy patterns.
+- Behaviors aren't alerts or anomalies. They're neutral observations, not classified as malicious or benign. The presence of a behavior means “this happened,” not “this is a threat.” Anomaly detection remains separate in UEBA. Use judgment or combine behaviors with UEBA anomaly data to identify noteworthy patterns.
