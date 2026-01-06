@@ -1496,7 +1496,7 @@
         - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
-        - name: Unveiling Kubernetes lateral movement
+        - name: Kubernetes lateral movement
           DisplayName: Kubernetes lateral movement, Kubernetes RBAC, attack paths
           href: episode-sixty-one.md
     - name: Microsoft Defender for IoT documentation
