@@ -33,4 +33,4 @@ ms.date: 09/26/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New Custom Recommendations for AWS and GCP in Defender for Cloud](episode-thirty.md)
+> [New AWS connector](episode-one.md)
