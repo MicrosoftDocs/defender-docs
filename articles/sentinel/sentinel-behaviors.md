@@ -1,13 +1,13 @@
 ---
 title: Translate raw security logs to behavioral insights using Microsoft Sentinel's UEBA behaviors layer (Preview)
-description: Sentinel behaviors translates security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
+description: The Microsoft Sentinel UEBA behaviors layer translates security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
 author: guywi-ms
 ms.author: guywild
 ms.reviewer: mshechter
 ms.date: 12/29/2025
 ms.topic: how-to
 ms.service: microsoft-sentinel
-#Customer intent: As a security analyst, I want to use Sentinel behaviors to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
+#Customer intent: As a security analyst, I want to use the UEBA behaviors layer to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
 ---
 
 # Translate raw security logs to behavioral insights using Microsoft Sentinel's UEBA behaviors layer (Preview)
@@ -33,7 +33,7 @@ When you [enable the UEBA behaviors layer](#enable-sentinel-behaviors), Microsof
 
 - **Aggregated behaviors** detect volume-based patterns by collecting related events over time windows. Examples include "User accessed 50+ resources in 1 hour" or "Login attempts from 10+ different IP addresses." These behaviors excel at identifying unusual activity levels and converting high-volume logs into actionable security insights.
 
-- **Sequenced behaviors** identify multi-step patterns or complex attack chains  - for example, access key created > used from new IP > privileged API calls - that are not obvious when you look at individual events.
+- **Sequenced behaviors** identify multi-step patterns or complex attack chains  - for example, access key created > used from new IP > privileged API calls - that aren't obvious when you look at individual events.
 
 The UEBA behaviors layer summarizes behaviors at tailored time intervals specific to each behavior's logic, creating behavior records immediately when it identifies patterns or when the time windows close.
 
@@ -44,18 +44,18 @@ Each behavior record includes:
 - **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
-The UEBA behaviors layer stores behavior records in two dedicated tables - BehaviorInfo and BehaviorEntities - in your Sentinel workspace, integrating seamlessly with your existing Sentinel workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For more information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
+The UEBA behaviors layer stores behavior records in two dedicated tables - BehaviorInfo and BehaviorEntities - in your Sentinel workspace, integrating seamlessly with your existing workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For more information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
 
-This diagram illustrates how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations:
+This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
-:::image type="content" source="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" alt-text="Diagram that shows how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations." lightbox="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" ::: 
+:::image type="content" source="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" alt-text="Diagram that shows how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations." lightbox="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" ::: 
  
 > [!IMPORTANT]
-> Generative AI powers the UEBA Behaviors layer to create and scale the insights it provides. Microsoft designed the Behaviors feature based on **privacy and responsible AI principles** to ensure transparency and explainability. Behaviors don't introduce new compliance risks or opaque "black box" analytics into your SOC. For details about how AI is applied in this feature and Microsoft’s approach to responsible AI, see [Responsible AI FAQ for the Microsoft Sentinel behaviors layer](https://aka.ms/miscrosoftsentinelbehaviors).
+> Generative AI powers the UEBA Behaviors layer to create and scale the insights it provides. Microsoft designed the Behaviors feature based on **privacy and responsible AI principles** to ensure transparency and explainability. Behaviors don't introduce new compliance risks or opaque "black box" analytics into your SOC. For details about how AI is applied in this feature and Microsoft’s approach to responsible AI, see [Responsible AI FAQ for the Microsoft UEBA behaviors layer](https://aka.ms/miscrosoftsentinelbehaviors).
 
 ## Use cases and examples
 
-Sentinel behaviors enhance several SOC workflows by transforming raw logs into clear, contextualized activity summaries. Here's how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
+The UEBA behaviors layer enhance several SOC workflows by transforming raw logs into clear, contextualized activity summaries. Here's how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
 
 ### Investigation and incident enrichment
 
@@ -65,15 +65,15 @@ Behaviors give SOC analysts immediate clarity about what happened around an aler
 
   *Example*: An alert fires on a suspicious AWS activity. The analyst queries the `AWSCloudTrail` table, then pivots to firewall data to understand what the user or host did. This requires knowledge of each schema and slows triage.
 
-- **Workflow with behaviors:** Sentinel automatically aggregates related events into behavior entries that can be attached to an incident or queried on demand.
+- **Workflow with behaviors:** The UEBA behaviors layer automatically aggregates related events into behavior entries that can be attached to an incident or queried on demand.
 
-  *Example:* An alert indicates possible credential exfiltration. In the `BehaviorInfo` table, the analyst sees the behavior **Suspicious mass secret access via AWS IAM by User123** mapped to **MITRE Technique T1552 (Unsecured Credentials)**. Sentinel generated this behavior by aggregating 20 AWS log entries. The analyst immediately understands that User123 accessed many secrets – crucial context to escalate the incident – without manually reviewing all 20 log entries.
+  *Example:* An alert indicates possible credential exfiltration. In the `BehaviorInfo` table, the analyst sees the behavior **Suspicious mass secret access via AWS IAM by User123** mapped to **MITRE Technique T1552 (Unsecured Credentials)**. The UEBA behaviors layer generated this behavior by aggregating 20 AWS log entries. The analyst immediately understands that User123 accessed many secrets – crucial context to escalate the incident – without manually reviewing all 20 log entries.
 
 ### Threat hunting
 
 Behaviors allow hunters to search on TTPs and activity summaries, rather than writing complex joins or normalizing raw logs by themselves.
 
-- **Workflow without behaviors:** Hunts require complex KQL, table joins, and familiarity with every data source format. Important activity may be buried in large datasets with little built‑in security context. 
+- **Workflow without behaviors:** Hunts require complex KQL, table joins, and familiarity with every data source format. Important activity might be buried in large datasets with little built‑in security context. 
 
   *Example:* Hunting for signs of reconnaissance might require scanning `AWSCloudTrail` events *and* certain firewall connection patterns separately. Context exists mostly in incidents and alerts, making proactive hunting harder.
 
@@ -154,18 +154,18 @@ Behaviors simplify rule logic by providing normalized, high‑quality signals wi
   
   *Example:* To alert on a potential key compromise and privilege escalation sequence, a detection engineer writes a detection rule using this logic: *"Alert if a user has a 'Creation of new AWS access key' behavior followed by an 'Elevation of privileges in AWS' behavior within 1 hour."* 
   
-  Without Sentinel behaviors, this rule would require stitching together raw `AWSCloudTrail` events and interpreting them in the rule logic. With behaviors, it's straightforward and resilient to log schema changes because the schema is unified.
+  Without the UEBA behaviors layer, this rule would require stitching together raw `AWSCloudTrail` events and interpreting them in the rule logic. With behaviors, it's straightforward and resilient to log schema changes because the schema is unified.
 
   Behaviors also serve as reliable triggers for automation. Instead of creating alerts for non-risky activities, use behaviors to trigger automation - for example, to send an email or initiate verification.
 
 ## Supported data sources
 
 The list of supported data sources and vendors or services that send logs to these data sources is evolving.
-Sentinel behaviors automatically aggregates insights for all supported vendors based on the logs you collect.
+The UEBA behaviors layer automatically aggregates insights for all supported vendors based on the logs you collect.
 
-During public preview, Sentinel behaviors focuses on non-Microsoft data sources that traditionally lack easy behavioral context in Sentinel. 
+During public preview, the UEBA behaviors layer focuses on these non-Microsoft data sources that traditionally lack easy behavioral context in Microsoft Sentinel: 
 
-| Data source | Supported vendors and services | Sentinel connector |
+| Data source | Supported vendors and services | Connector |
 |-------------|---------------------------|-------|
 | [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
 | [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services-s3)</li></ul> |
@@ -176,14 +176,14 @@ During public preview, Sentinel behaviors focuses on non-Microsoft data sources 
 
 ## Prerequisites
 
-To use Sentinel behaviors, you need:
+To use the UEBA behaviors layer, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
 - Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
 
 ## Permissions required 
 
-To enable and use Sentinel behaviors, you need these permissions:
+To enable and use the UEBA behaviors layer, you need these permissions:
 
 | **User action**                                              | **Permission required**                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -192,9 +192,9 @@ To enable and use Sentinel behaviors, you need these permissions:
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-## Enable Sentinel behaviors 
+## Enable the UEBA behaviors layer 
 
-To enable Sentinel behaviors in your workspace:
+To enable the UEBA behaviors layer in your workspace:
 
 1. In the Defender portal, select **System > Settings > Microsoft Sentinel > SIEM workspaces**.
 1. Select the Sentinel workspace where you want to enable the UEBA behaviors layer.
@@ -202,7 +202,7 @@ To enable Sentinel behaviors in your workspace:
 1. Toggle on **Enable Behaviors layer**.
 1. Select **Connect all data sources** or select the specific data sources from the list.
 
-  If you haven't yet connected any supported data sources to your Sentinel workspace, selectg **Go to Content Hub** to find and connect the relevant connectors.
+  If you haven't yet connected any supported data sources to your Sentinel workspace, select **Go to Content Hub** to find and connect the relevant connectors.
 
   :::image type="content" source="media/sentinel-behaviors/ueba-behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/sentinel-behaviors/ueba-behaviors-enable.png" ::: 
 
@@ -213,15 +213,15 @@ To enable Sentinel behaviors in your workspace:
 
 ## Pricing model
 
-Using Sentinel behaviors results in the following costs:
+Using the UEBA behaviors layer results in the following costs:
 
-- **No extra license cost:** Behaviors are included as part of Microsoft Sentinel (currently in preview). You don’t need a separate SKU, UEBA add‑on, or additional licensing. If your workspace is connected to Sentinel and onboarded to the Defender portal, you can use behaviors at no additional feature cost.
+- **No extra license cost:** Behaviors are included as part of Microsoft Sentinel (currently in preview). You don’t need a separate SKU, UEBA add‑on, or additional licensing. If your workspace is connected to Sentinel and onboarded to the Defender portal, you can use behaviors at no extra feature cost.
 
 - **Log data ingestion charges:** Behavior records are stored in the `BehaviorInfo` and `BehaviorEntities` tables in your Sentinel workspace. Each behavior contributes to your workspace’s data ingestion volume and is billed at your existing Log Analytics/Sentinel ingestion rate. Behaviors are additive - they don’t replace your existing raw logs.
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-Microsoft Sentinel stores behaviors in two related tables in your Sentinel workspace - `BehaviorInfo` and `BehaviorEntities`.
+The UEBA behaviors layer stores behaviors in two related tables in your Sentinel workspace - `BehaviorInfo` and `BehaviorEntities`.
 
 - **Understand the BehaviorInfo and BehaviorEntities table schemas**:
 
@@ -255,7 +255,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
      
 ## Limitations in public preview 
 
-These limitations apply during the public preview of Sentinel behaviors:
+These limitations apply during the public preview of the UEBA behaviors layer:
 
 - You can enable behaviors on a single Sentinel workspace per tenant.
 - Sentinel generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources). 
