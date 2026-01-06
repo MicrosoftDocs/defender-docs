@@ -306,7 +306,7 @@ With the activity log, analysts can:
 
     :::image type="content" source="./media/manage-incidents/activity-log-add-filters.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/activity-log-add-filters.png":::
 
-1. Go to each filter's dropdown, select filter criteria, and select **Apply**. Here's an example.
+1. Go to each filter's dropdown, select filter criteria, and select **Apply**.
 
     :::image type="content" source="./media/manage-incidents/activity-log-filter-example.png" alt-text="Example of selecting a filter's dropdown menu, selecting criteria, and applying." lightbox="./media/manage-incidents/activity-log-filter-example.png":::
 
