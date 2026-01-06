@@ -43,7 +43,7 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
 1. Sign in the [Azure portal](https://portal.azure.com/).
 
-1. Search for and select **Azure SQL**.
+1. Search for and select either **Azure SQL VM** or **ARC SQL**.
 
 1. Select the relevant database.
 
@@ -51,9 +51,9 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
 1. Select **Simulate alert**.
 
-1. Select **attack type**.
+1. Select an **attack type**.
 
-1. Enter a username, password....
+1. Enter the required information for the selected attack type, such as username and password for login attacks.
 
 1. Select **Submit**.
 
