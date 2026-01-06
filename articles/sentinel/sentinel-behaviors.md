@@ -214,25 +214,37 @@ Using Sentinel behaviors results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
+Microsoft Sentinel stores behaviors in two related tables in your Sentinel workspace - `BehaviorInfo` and `BehaviorEntities`.
+
+- **Understand the BehaviorInfo and BehaviorEntities table schemas**:
+
+  - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”.
+  - The `BehaviorEntities` table lists the entities involved in each behavior. 
+
+  For more information about these table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
+
+- **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
+- **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
+
+  For example:
+
+  ```kusto
+  BehaviorInfo
+  | join kind=inner BehaviorEntities on BehaviorId
+  | where TimeGenerated >= ago(1d)
+  | project TimeGenerated, Title, Description, EntityType, EntityRole, EntityId
+  ```
+
+  This gives you each behavior and each entity involved in it. The `EntityId` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
+
+For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
+
+### Troubleshooting 
+
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Coverage is partial and growing; check the supported behavior types list; verify that the log volume meets minimum thresholds. <!-- ??? -->
+- **I see fewer behaviors than expected**: Coverage of supported behavior types is partial and growing. For more information about supported behavior types, see [TBD](). Sentinel might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
-- **BehaviorInfo and BehaviorEntities tables** – The `BehaviorInfo` table contains one record per behavior event to explain “what happened” . The `BehaviorEntities` table lists the entities involved in each behavior. For more information about each of the columns in these tables, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
-    - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
-    - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
-
-      For example:
-
-      ```kusto
-      BehaviorInfo
-      | join kind=inner BehaviorEntities on BehaviorId
-      | where TimeGenerated >= ago(1d)
-      | project TimeGenerated, Title, Description, EntityType, EntityRole, EntityId
-      ```
-
-      This gives you each behavior and each entity involved in it. The `EntityId` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
-
-For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).      
+     
 
 ## Limitations in public preview 
 
