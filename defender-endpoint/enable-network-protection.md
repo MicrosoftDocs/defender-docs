@@ -155,7 +155,7 @@ To enable network protection, you can use any of the methods described in this a
      - **Add all devices**
    - **Excluded groups**: Select **Add groups** to specify groups to exclude.
 
-   When you're finished on the **Create profile** tab, select **Next**.
+   When you're finished on the **Assignments** tab, select **Next**.
 
 9. On the **Review + create** tab, review the settings, and then select **Create**.
 
