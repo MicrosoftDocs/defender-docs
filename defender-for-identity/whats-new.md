@@ -23,6 +23,27 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## January 2026
+
+### New security posture assessment: Identify service accounts in privileged groups
+
+This identity security posture assessment lists Active Directory service accounts with direct or nested membership in privileged groups.
+
+You can use this assessment to identify service accounts with elevated permissions and take action when privileged access isn’t required.
+
+For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
+
+
+### New security posture assessment: Locate accounts in built-in Operator Groups
+
+
+This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
+
+You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn’t required.
+
+For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
+
+
 ## December 2025
 
 ### New properties for 'sensorCandidate' resource type in Graph-API (preview)
@@ -51,7 +72,7 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
 
-Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you will be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API.
+Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you'll be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API.
 
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
