@@ -29,7 +29,7 @@ This article explains how Microsoft Sentinel behaviors work, how to enable behav
 
 Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations.
 
-When you enable behaviors, Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
+When you [enable Sentinel behaviors](#enable-sentinel-behaviors), Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
 
 - **Aggregated behaviors** detect volume-based patterns by collecting related events over time windows. Examples include "User accessed 50+ resources in 1 hour" or "Login attempts from 10+ different IP addresses." These behaviors excel at identifying unusual activity levels and converting high-volume logs into actionable security insights.
 
@@ -44,7 +44,7 @@ Each behavior record includes:
 - **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
-[Microsoft Sentinel stores behavior records in two dedicated tables](#behaviorinfo-and-behaviorentities-schemas) in your Sentinel workspace, integrating seamlessly with your existing Sentinel workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. 
+Microsoft Sentinel stores behavior records in two dedicated tables - BehaviorInfo and BehaviorEntities - in your Sentinel workspace, integrating seamlessly with your existing Sentinel workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For more information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
 
 This diagram illustrates how Sentinel behaviors transform raw logs into structured behavior records that enhance security operations:
 
@@ -212,7 +212,7 @@ Using Sentinel behaviors results in the following costs:
 
 - **Log data ingestion charges:** Behavior records are stored in the `BehaviorInfo` and `BehaviorEntities` tables in your Sentinel workspace. Each behavior contributes to your workspace’s data ingestion volume and is billed at your existing Log Analytics/Sentinel ingestion rate. Behaviors are additive - they don’t replace your existing raw logs.
 
-## Best practices and troubleshooting tips for using behaviors
+## Best practices and troubleshooting tips for querying behaviors
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
 - **I see fewer behaviors than expected**: Coverage is partial and growing; check the supported behavior types list; verify that the log volume meets minimum thresholds. <!-- ??? -->
