@@ -22,7 +22,7 @@ Before you begin, make sure that:
 
 - Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint will be created.
+- A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint is created.
 
 - You reviewed the required [roles and permissions](concept-private-links.md#roles-and-permissions).
 
