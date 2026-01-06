@@ -4,7 +4,7 @@ description: Defend your AWS resources with Microsoft Defender for Cloud, a guid
 author: ElazarK
 ms.author: elkrieger
 ms.topic: install-set-up-deploy
-ms.date: 01/01/2026
+ms.date: 01/06/2026
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud

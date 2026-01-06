@@ -4,7 +4,7 @@ description: This guide is for IT professionals, security analysts, and cloud ad
 author: Elazark
 ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 01/01/2026
+ms.date: 01/06/2026
 ---
 
 # Troubleshoot connectors guide
