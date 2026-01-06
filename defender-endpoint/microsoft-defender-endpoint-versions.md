@@ -76,7 +76,7 @@ This table includes supported versions released in for all supported platforms i
 
 ### Windows | May 2025 | 10.8797.25857.1000
 
-# [Versions](#tab/versions)
+#### Versions
 
 | OS | KB |
 | -------- | -------- |
@@ -84,7 +84,7 @@ This table includes supported versions released in for all supported platforms i
 | Windows 11 23H2 | [KB5058502](https://support.microsoft.com/en-us/topic/may-27-2025-kb5058502-os-22621-5413-and-22631-5413-preview-6291789c-1eea-4227-9740-a701af6de688) |
 | Windows 10 22/H2 | [KB5058481](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058481-os-build-19045-5917-preview-7698d6e7-dd65-494d-b523-aa4c6aa913a2) |
 
-# [Enhancements and features](#tab/features)
+#### Enhancements and features
 
 | Feature area | Update summary |
 |-------------|---------------|
