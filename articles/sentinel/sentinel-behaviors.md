@@ -187,8 +187,8 @@ To enable and use Sentinel behaviors, you need these permissions:
 
 | **User action**                                              | **Permission required**                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Enable behaviors | **Global Administrator** or **Security Administrator** role in Microsoft Entra ID. |
-| Query behaviors tables                                         | <ul><li>Read access to BehaviorInfo and BehaviorEntities tables in the Log Analytics workspace</li><li>Advanced Hunting query permissions in Microsoft 365 Defender portal</li><li>Read access to source tables (e.g., AWSCloudTrail, CommonSecurityLog) for tracing back to raw events</li></ul> |
+| Enable behaviors | At least the **Security Administrator** role in Microsoft Entra ID. |
+| Query behaviors tables                                         | <ul><li>**Security Reader** or **Security Operator** role in Microsoft Entra ID to run Advanced Hunting queries in the Defender portal</li><li>`Read` access to the `BehaviorInfo` and `BehaviorEntities` tables in your Sentinel workspace</li><li>`Read` access to source tables to drill down to raw events</li></ul> |
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
@@ -242,10 +242,9 @@ For more practical examples of using behaviors, see [Use cases and examples](#us
 ### Troubleshooting 
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Coverage of supported behavior types is partial and growing. For more information about supported behavior types, see [TBD](). Sentinel might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
+- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information about supported behavior types, see [TBD](). Sentinel might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
      
-
 ## Limitations in public preview 
 
 These limitations apply during the public preview of Sentinel behaviors:
