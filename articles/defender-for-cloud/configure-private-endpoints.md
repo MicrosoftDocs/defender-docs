@@ -40,9 +40,11 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Under **Security Private Link** select **Create**.
 
+   :::image type="content"source="media/networking-private-endpoints/marketplace-create-security-private-link.png"alt-text="Screenshot of the Azure Marketplace showing the Security Private Link tile with the Create button."lightbox="media/networking-private-endpoints/marketplace-create-security-private-link.png":::
+
 1. Select a subscription and an existing resource group, or create a new one.
 
-1. If needed, update the resource group location.
+1. (Optional) Select a resource group location.
 
 1. Enter a name.
 
@@ -114,8 +116,14 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Add any required tags.
 
-1. Select **Review + create**, then select **Create**.
+1. Select **Review + create**.
 
+ 1. Select **Create**.
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6a6e9ad44a2c18ec7cb5ec48a8e61b579cb0a6a
 After deployment, verify that workloads continue to report data in Defender for Cloud.
 
 ## Approve the private endpoint connection
