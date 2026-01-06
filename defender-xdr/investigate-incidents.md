@@ -202,13 +202,110 @@ Learn how to use the alert queue and alert pages in [investigate alerts](investi
 > [!NOTE]
 > If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
+## Activities
+
+The **Activities** tab provides a unified timeline of all actions taken within the context of an incident. The renovated Activity Log is now aligned with the Activities Tab, using the same data model, categories, and filtering capabilities.
+
+:::image type="content" source="./media/investigate-incidents/incident-activities-tab.png" alt-text="Screenshot of an incident with the Activities tab opened." lightbox="./media/investigate-incidents/incident-activities-tab.png":::
+
+All activities are represented using a consistent schema. Each row in the Activities tab contains:
+
+- Time: Timestamp when the activity occurred
+
+- Title: Short description of the action
+
+- Type: Specific action type (e.g., Disable user, Comment, Tag change, AIR action, Agent step)
+
+- Category: High‑level grouping (Incident Management, Response, Automation, Agents, Correlations, Comments)
+
+- Target: Entity the action applies to (user, device, email, etc.)
+
+- Triggered Alert: the alert that triggered the activity
+
+- Trigger: Manual or Automated
+
+- Provider: Source system (e.g., AutoIR, Copilot Agent, etc.)
+
+- Performed by: Actor who executed or approved the activity
+
+- Status: Started, Pending, Failed, Completed
+
+- Policy Status: for MDE policies involved activities
+
+This unified modeling allows consistent interpretation and enables precise filtering.
+Comments are modeled as activity types as well, including distinctions between comment categories when relevant.
+
+### Activity Types
+
+The following activity types are supported:
+
+- Newly Modeled Activities
+
+- Tag changes
+
+- AIR actions
+
+- Disruption actions
+
+- Copilot agent actions (including Triage Agent)
+
+Existing Activity Families:
+
+- Assignments
+
+- Severity and status changes
+
+- Title and description changes
+
+- Classification and determination
+
+- Merges
+
+- Alert additions
+
+- Playbook and automation‑rule executions
+
+- Comments
+
+All activity types are displayed together in the same timeline.
+
+### Timeline view
+
+The timeline presents all activities in chronological order. Color coding differentiates categories for quick recognition. Columns can be reordered or shown/hidden.
+
+Selecting an activity opens a side panel containing details about the activity.
+
+### Filtering and search
+
+The Activities tab supports granular filtering across:
+
+- Category
+
+- Type
+
+- Trigger (manual or automated)
+
+- Provider
+
+- Status
+
+- Timeframe (default one week)
+
+- Target name and type
+
+- Log origin (for merged incidents)
+
+Search returns activities matching keywords in the title or target fields.
+
+Saved filter sets are supported per user.
+
 ## Assets
 
-Easily view and manage all your assets in one place with the new **Assets** tab. This unified view includes Devices, Users, Mailboxes and Apps. 
+Easily view and manage all your assets in one place with the new **Assets** tab. This unified view includes Devices, Users, Mailboxes and Apps.
 
 The Assets tab displays the total number of assets beside its name. A list of different categories with the number of assets within that category is presented when selecting the Assets tab.
 
-:::image type="content" source="./media/investigate-incidents/incident-assetstab-small.png" alt-text="The Assets page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-assetstab.png":::
+:::image type="content" source="./media/investigate-incidents/incident-assets-tab-small.png" alt-text="The Assets page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-assets-tab.png":::
 
 ### Devices
 
