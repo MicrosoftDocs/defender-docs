@@ -180,12 +180,14 @@ The _landing page_ in the simulation is where users go when they open the payloa
 _End user notifications_ in the simulation send periodic reminders to users (for example, training assignment and reminder notifications). You can select from built-in notifications, custom notifications that you already created, or you can create new notifications to use during the creation of the simulation. To create notifications, see [End-user notifications for Attack simulation training](attack-simulation-training-end-user-notifications.md).
 
 > [!TIP]
-> _Simulation automations_ provide the following improvements over traditional simulations:
 >
-> - Simulation automations can include multiple social engineering techniques and related payloads (simulations contain only one).
-> - Simulation automations support automated scheduling options (more than just the start date and end date in simulations).
+> - _Simulation automations_ provide the following improvements over traditional simulations:
+>   - Simulation automations can include multiple social engineering techniques and related payloads (simulations contain only one).
+>   - Simulation automations support automated scheduling options (more than just the start date and end date in simulations).
 >
-> For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
+>   For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
+>
+> - To see which departments are more vulnerable to phishing simulations, create identical simulations or simulation automations scoped by department, and then use the [available reports](#reports-and-insights) to compare the results.
 
 ### Payloads
 
@@ -205,7 +207,7 @@ After you create and launch the simulation, you need to see how it's going. For 
 - Who did what to the simulated phishing message and the payload within it (delete, report, open the payload, enter credentials, etc.).
 - Who completed the assigned training.
 
-The available reports and insights for Attack simulation training are described in [Insights and reports for Attack simulation training](attack-simulation-training-insights.md).
+The available reports and insights for Attack simulation training are described in [Reports for Attack simulation training](attack-simulation-training-insights.md).
 
 ### Predicted compromise rate
 
