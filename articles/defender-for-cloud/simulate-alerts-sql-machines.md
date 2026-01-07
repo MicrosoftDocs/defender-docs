@@ -43,13 +43,19 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
 1. Sign in the [Azure portal](https://portal.azure.com/).
 
-1. Search for and select either **Azure SQL VM** or **ARC SQL**.
+1. Search for and select **Azure SQL**.
+
+1. Select **SQL Server on Azure VMS** or **SQL Server instances (Azure Arc)**.
+
+    :::image type="content" source="media/simulate-alerts-sql-machines/select-sql-database.png" alt-text="Screenshot that shows how to navigate to your SQL virtual machine." lightbox="media/simulate-alerts-sql-machines/select-sql-database.png":::
 
 1. Select the relevant database.
 
 1. Select **Security** > **Microsoft Defender for Cloud**.  
 
 1. Select **Simulate alert**.
+
+    :::image type="content" source="media/simulate-alerts-sql-machines/simulate-alert.png" alt-text="Screenshot that shows where the simulate alert button is located." lightbox="media/simulate-alerts-sql-machines/simulate-alert.png":::
 
 1. Select an **attack type**.
 
@@ -60,6 +66,10 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
 
 The alert will appear after a few minutes. You can use the alert details to validate your security monitoring setup.
+
+## Verify that the alert was generated
+
+Once you have simulated the alert, you can verify that it was generated successfully.
 
 ## Next step
 
