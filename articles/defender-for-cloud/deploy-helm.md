@@ -100,7 +100,7 @@ Run the script with the command:
 install_defender_sensor_aks.sh <CLUSTER_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION>
 ```
 
-In the following command, replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. For the value of RELEASE_TRAIN, use 'public' for the public preview releases (0.9.x) or 'private' for the private preview releases (0.10.x). For `<VERSION>`, use 'latest' or a specific semantic version.
+In the following command, replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. For `<RELEASE_TRAIN>`, use 'public' for the preview release (0.9.x), or 'private' for the preview release (0.10.x). For `<VERSION>`, use 'latest' or a specific semantic version.
 
 > [!NOTE]
 > This script sets a new kubeconfig context, and might create a Log Analytics workspace in your Azure account.
