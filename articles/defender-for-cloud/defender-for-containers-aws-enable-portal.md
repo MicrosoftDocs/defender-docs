@@ -8,18 +8,7 @@ ai-usage: ai-assisted
 
 # Enable Defender for Containers on AWS (EKS) via portal
 
-This article shows you how to enable Microsoft Defender for Containers on your Amazon EKS clusters through the Azure portal. You can choose to enable all security features at once for comprehensive protection, or selectively deploy specific components based on your requirements.
-
-## When to use this guide
-
-Use this guide if you want to:
-
-- Set up Defender for Containers on AWS for the first time
-- Enable all security features for comprehensive protection
-- Selectively deploy specific components
-- Fix or add missing components to an existing deployment
-- Deploy using a controlled, selective approach
-- Exclude certain clusters from protection
+This article explains how to enable Microsoft Defender for Containers for Amazon Elastic Kubernetes Service (EKS) clusters by using the Azure portal. You can enable all supported components or selectively enable specific components based on your requirements.
 
 ## Prerequisites
 
@@ -27,11 +16,9 @@ Use this guide if you want to:
 
 AWS-specific requirements:
 
-- AWS account with appropriate permissions
-- Active EKS clusters (version 1.19+)
-- Container images in Amazon ECR
-- AWS CLI installed and configured
-- Outbound HTTPS connectivity from EKS to Azure
+- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks
+- One or more Amazon EKS clusters running Kubernetes version 1.19 or later
+- Container images stored in Amazon ECR
 
 ## Create AWS connector
 
@@ -45,96 +32,65 @@ AWS-specific requirements:
 
     :::image type="content" source="media/defender-for-kubernetes-intro/add-aws-environment.png" alt-text="Screenshot of selections for adding an AWS environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/add-aws-environment.png":::
 
-## Configure connector details
+1. Enter a **Connector name**.
 
-1. In the **Account details** section, enter:
-   - **Account alias**: A descriptive name for your AWS account
-   - **AWS account ID**: Your 12-digit AWS account identifier
-   - **Resource group**: Select or create a resource group
+1. Select whether to onboard a **Management account** or **Single account**.
+
+1. Select the **AWS regions** to include.
+
+1. Select a subscription and an existing resource group, or create a new one.
+
+1. Select a **Location**.
+
+1. If needed, configure the **Scan interval**.
+
+1. Enter your **AWS account ID**.
 
     :::image type="content" source="media/defender-for-kubernetes-intro/add-aws-account-details.png" alt-text="Screenshot of the form to fill in the account details for an AWS environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/add-aws-account-details.png":::
 
-1. Select **Next: Select plans**.
-
-## Enable Defender for Containers features
+1. Select **Next : Select plans >**.
 
 1. In **Select plans**, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/defender-for-kubernetes-intro/select-aws-connector.png" alt-text="Screenshot of an AWS connector in the Defender for Cloud environment settings." lightbox="media/defender-for-kubernetes-intro/select-aws-connector.png":::
+1. In **Monitoring coverage** select **Settings** to access the plan configuration options.
 
-1. Select **Settings** to access the plan configuration options.
+1. Toggle **On** the relevant Defender for Containers components:
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
+   - **Agentless threat protection**: Enables control plane threat detection based on Kubernetes audit logs.
 
-1. Choose your deployment approach:
-
-   **Option A: Enable all components (recommended)**
-
-   For comprehensive protection, enable all features:
-   - Set all toggles to **On**
-   - This setting provides complete security coverage for your EKS environment
-
-   **Option B: Enable specific components**
-
-   Select only the components you need based on your requirements:
-
-1. Configure the available components based on your chosen approach:
-
-   - **Agentless threat protection**: Provides runtime protection to your cluster containers by sending Kubernetes audit logs to Microsoft Defender.
-     - Set the toggle to **On** to enable
-     - Configure the retention period for your audit logs
-     - Discovers all EKS clusters in your AWS account
      > [!NOTE]
-     > If you disable this configuration, control plane threat detection is disabled. Learn more about [feature availability](support-matrix-defender-for-containers.md).
+     > If you disable this setting, control plane threat detection is disabled.
 
-   - **Kubernetes API access** (Agentless discovery for Kubernetes): Sets permissions to allow API-based discovery of your Kubernetes clusters.
-     - Set the toggle to **On** to enable
-     - Provides inventory and security posture assessment
+   - **Auto provision Defender’s sensor for Azure Arc**: Deploys the Defender sensor for runtime threat detection. When this setting is enabled, you can also toggle on **Enable Defender Security Gating** for.
 
-   - **Registry access** (Agentless container vulnerability assessment): Sets permissions to allow vulnerability assessment of images stored in ECR.
-     - Set the toggle to **On** to enable
-     - Scans container images for known vulnerabilities
+   - **Auto provision Azure Policy extension for Azure Arc**: Enables configuration and posture assessment for Kubernetes clusters and workloads.
 
-   - **Auto provision Defender's sensor for Azure Arc** (Defender DaemonSet): Automatically deploys the Defender sensor on Arc-enabled clusters for runtime threat detection.
-     - Set the toggle to **On** to enable
-     - Provides real-time security alerts for workload protection
+   - **Kubernetes API access**: Enables API-based access required for cluster discovery and posture assessment.
 
-    :::image type="content" source="media/defender-for-kubernetes-intro/enable-sensor-for-azure-arc.png" alt-text="Screenshot of selections for enabling the Defender sensor for Azure Arc in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/enable-sensor-for-azure-arc.png":::
+   - **Registry access**: Enables vulnerability assessment for container images stored in Amazon ECR.
 
-   > [!TIP]
-   > - For production environments, we recommend enabling all components.
-   > - For testing or gradual rollout, start with specific components and add more later.
-   > - Azure Policy for Kubernetes is automatically deployed with the Defender sensor.
+1. Select **Save**.
 
-1. Select **Continue** and **Next: Configure access**.
-
-## Set up AWS permissions
-
-1. Follow the instructions on the **Configure access** page.
-
-    :::image type="content" source="media/defender-for-kubernetes-intro/configure-access.png" alt-text="Screenshot of the page for configuring access for an AWS environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/configure-access.png":::
+1. Select **Next : Configure access >**.
 
 1. Download the CloudFormation template from the portal.
 
 1. Deploy the CloudFormation stack in AWS:
    1. Open AWS CloudFormation console
-   1. Create a new stack with the downloaded template
+   1. Create a new stack and upload the downloaded template.
    1. Review and create the stack
 
-1. After stack creation completes, copy the role ARN from the stack outputs.
+1. After the stack creation completes, copy the ARN of the Amazon SQS queue created for CloudTrail log collection from the stack outputs.
 
-1. Return to Azure portal and paste the role ARN.
+1. Return to the Azure portal and paste the  in **CloudTrail SQS ARN**.
 
-1. Select **Next: Review and create**.
+1. Select **Next : Review and generate >**.
 
 1. Review your configuration and select **Create**.
 
-## Deploy all components
+## Deploy Defender for Containers components
 
-> [!NOTE]
-> If you selected to enable all components in the previous section, follow all the steps in this section. If you chose specific components, complete only the steps relevant to your selected features.
-
-Follow these steps to enable protection based on your configuration:
+Deploy the Defender for Containers components you enabled when creating the AWS connector. Complete only the steps that apply to your configuration.
 
 ### Grant control plane permissions
 
