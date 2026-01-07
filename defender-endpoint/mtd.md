@@ -52,6 +52,32 @@ Deployment of Microsoft Defender for Endpoint on mobile can be done via Microsof
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=c944a31c-0017-4707-a1bc-afff9e2f2e00]
 
+### Onboarding devices already enrolled in Intune
+
+Devices that are already enrolled in Microsoft Intune can be onboarded to Microsoft Defender for Endpoint without requiring re-enrollment. Once the Defender app and required configuration profiles are assigned, the device automatically completes onboarding.
+
+#### Android (Intune-enrolled devices)
+1. Ensure the device is already enrolled in Intune under one of the supported Android Enterprise scenarios.
+2. Deploy the Microsoft Defender for Endpoint app through Intune.
+3. Assign the Microsoft Defender for Endpoint configuration profile:
+   - Web protection
+   - Network protection
+   - App protection (if applicable)
+4. The device will automatically onboard when the Defender app receives the configuration.
+5. If needed, use Conditional Access to enforce user onboarding.
+
+#### iOS/iPadOS (Intune-enrolled devices)
+1. Ensure the device is enrolled using ADE, Apple Configurator, device enrollment, or user enrollment.
+2. Deploy Microsoft Defender for Endpoint through Intune.
+3. Assign the Defender for Endpoint configuration policies for:
+   - Web protection  
+   - Network protection  
+   - Zero-touch onboarding (for supervised devices)
+4. Once assigned, the app automatically configures and onboards without user interaction (for supervised ADE or Apple Configurator enrollments).
+
+> [!NOTE]
+> Existing Intune-enrolled devices do *not* need to be re-enrolled. Onboarding occurs automatically after the Defender app and MTD configuration policies are delivered to the device.
+
 ### Deploy
 
 The following table summarizes how to deploy Microsoft Defender for Endpoint on Android and iOS. For detailed documentation, see the following articles:
