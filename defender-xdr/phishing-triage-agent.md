@@ -335,16 +335,6 @@ To manage the agent’s identity and role:
 1. Select **Identity and role > Select a new identity**.
 1. Select a new identity, as described in the [Create the agent identity and assign the agent role](#create-an-agent-role-and-identity).  
 
-
-### Remove the agent
-
-When you remove the agent, triage and classification of new incidents stop, and all feedback is deleted. However, the history of previously triaged incidents is retained for your reference.
-
-To remove the agent: 
-
-1. Select **Security Copilot > Agents**, look for the Phishing Triage Agent under **Agents in use** and select **Go to agent**. 
-1. Select the ellipsis (...) at the top right corner of the page, and then select **Remove**. 
-
 ### View and manage feedback to the agent
 
 The Phishing Triage Agent learns from user-submitted feedback and improves its performance over time. It stores applicable feedback in its memory as lessons. You can view and manage feedback for the Phishing Triage Agent on the **Agent feedback** page.
@@ -384,6 +374,16 @@ To view and manage user-submitted feedback:
 
    > [!NOTE]
    > To reject feedback provided, you need the **Security Administrator** role in Microsoft Entra ID.
+
+
+### Remove the agent
+
+When you remove the agent, triage and classification of new incidents stop, and all feedback is deleted. However, the history of previously triaged incidents is retained for your reference.
+
+To remove the agent: 
+
+1. Select **Security Copilot > Agents**, look for the Phishing Triage Agent under **Agents in use** and select **Go to agent**. 
+1. Select the ellipsis (...) at the top right corner of the page, and then select **Remove**. 
 
 ## Frequently asked questions
 
