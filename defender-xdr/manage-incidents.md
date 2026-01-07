@@ -240,7 +240,7 @@ Classifying incidents and specifying their status and type helps tune Microsoft 
 
 Over the course of investigating and incident, add comments to record your activities, insights, and conclusions.
 
-1. Open the incident's activity log. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
+1. Open the incident's activity log: from the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
 
     :::image type="content" source="media/manage-incidents/activity-log.png" alt-text="Screenshot showing how to access an incident's activity log." lightbox="media/manage-incidents/activity-log.png":::
 
@@ -257,7 +257,7 @@ All comments are added to the historical events of the incident. You can see the
 The following management tasks can be associated with auditing and reporting on incident investigations, though they can be performed at any time.
 
 - [Edit the incident name](#edit-the-incident-name)
-- Assess the activity audit and add comments in the [Activity log](#view-the-activity-log-of-an-incident)
+- Assess the activity audit and add comments in the [activity log](#view-the-activity-log-of-an-incident)
 - [Export incident data to PDF](#export-incident-data-to-pdf)
 
 ### Edit the incident name
@@ -282,7 +282,7 @@ To edit the incident name, take the following steps:
 
 When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view of all activities, access the [Activities tab](./investigate-incidents.md#activities) from the bottom of the activity log.
 
-####  Open an incident's activity log
+#### Open an incident's activity log
 
 1. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
 
