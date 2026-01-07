@@ -37,13 +37,15 @@ The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md)
 > [!IMPORTANT]
 > The `BehaviorInfo` table is in preview and is not available for GCC. The information here may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. Have feedback to share? Fill out our [feedback form](https://forms.office.com/r/x0mX5hBkGu).
 
-Behaviors are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. [Read more about behaviors](/defender-cloud-apps/behaviors)
+**Behaviors** are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. For more information, see the following articles:
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
+- [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](/azure/sentinel/sentinel-behaviors)
 
-Defender for Cloud Apps and UEBA add records to this advanced hunting table. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from both Defender for Cloud Apps and UEBA. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
-To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorInfo` table, follow the instructions in the following pages:
+To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorInfo` table, follow the instructions in the following articles:
 - [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
-- [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/enable-entity-behavior-analytics)
+- [Enable the UEBA behaviors layer](/azure/sentinel/sentinel-behaviors#enable-the-ueba-behaviors-layer)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -51,7 +53,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the record was generated |
 | `BehaviorId` | `string` | Unique identifier for the behavior|
-| `ActionType` | `string` | Type of behavior |
+| `Title` | `string` | Title of the behavior|
 | `Description` | `string` | Description of the behavior |
 | `Categories` | `string` | Type of threat indicator or breach activity identified by the behavior, as defined by the MITRE ATT&CK framework |
 | `AttackTechniques` | `string` | MITRE ATT&CK techniques associated with the activity that triggered the behavior |
@@ -64,7 +66,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `StartTime` | `datetime` | Date and time of the first activity related to the behavior|
 | `EndTime` | `datetime` | Date and time of the last activity related to the behavior|
 | `AdditionalFields` | `string` | Additional information about the behavior|
-| `Title` | `string` | Title of the behavior|
+| `ActionType` | `string` | Type of behavior |
 
 
 
