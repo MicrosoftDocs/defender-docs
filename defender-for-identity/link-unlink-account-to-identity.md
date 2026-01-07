@@ -1,115 +1,99 @@
 ---
 title: Link/Unlink an account to an identity
-description: This article explains how to link or unlink an account to an identity in Microsoft Defender for Identity.
-ms.date: 09/01/2025
+description: This article explains how to link or unlink accounts to identities in Microsoft Defender for Identity, including legacy, orphaned, or unused accounts.
+ms.date: 01/07/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
-#customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity’s footprint across the organization and validate accounts correlated are correct. 
+#customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization and validate accounts correlated are correct.
 ---
 
-# Link or Unlink an Account to an Identity (Preview)
+# Manage related identities and accounts in Microsoft Defender for Identity (Preview)
 
-## Overview
+> [!NOTE]
+> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
 
-In enterprise environments, identity data is often fragmented. A single user might have multiple accounts across systems, including personal, privileged, legacy, or cloud-based accounts. These accounts can cover on-premises Active Directory, Microsoft Entra ID, or third-party identity providers such as Okta and Ping. Users may also maintain multiple accounts within the same system, such as a standard business account (john@acme.com) and a privileged administrative account (john_adm@acme.com). This fragmentation makes it difficult to maintain a unified view of identity across the organization. The **Manual link or unlink accounts** feature in Microsoft Defender for Identity helps you correlate accounts with identities to build a complete identity footprint.
+In enterprise environments, identities are often fragmented. A single user might have multiple accounts across systems, including personal, privileged, legacy, cloud-based, or orphaned accounts. These accounts can cover on-premises Active Directory, Microsoft Entra ID, or non-Microsoft identity providers such as Okta and Ping.
 
-Consider a user named John Doe who has an Azure Active Directory account, an Okta account, and a Ping account. By manually linking these accounts to John’s identity in Microsoft Defender for Identity, you can create a consolidated view that supports identity-centric protection and investigation.
+Fragmentation makes it difficult to maintain a unified view of identity across the organization. Manually linking or unlinking related accounts in Microsoft Defender for Identity helps you:
 
-## Why use manual linking
+- Correlate identity components across different systems.
+- Improve protection by creating a complete identity context.
+- Support investigations and response actions with unified identity views.
 
-Manual linking helps organizations:
+For example:
 
-- Correlate identity components across different systems
-- Improve protection by creating a complete identity context
-- Support investigations and response actions with unified identity views
+- **Personal and privileged accounts**: A user might have two accounts, one for everyday work and another with elevated permissions for administrative tasks. For example:
+  - `rick.hofer@contoso.onmicrosoft.com` (regular account)
+  - `rhofer@contoso.onmicrosoft.com` (privileged account)
+- **Multiple domains**: Large organizations often manage several domains. Linking accounts across these domains provides full visibility into a user's activity. For example:
+  - `chris@fabrikam.com`
+  - `chris@contoso.com`
+- **Personal and service accounts**: A user might have both a personal account and a service account they own or manage. Linking those accounts helps connect ownership and responsibility to the same identity. For example:
+  - `valeria.barrios@contoso.com`
+  - `backup.service@contoso.com`
+- **Legacy accounts**: A user might still have an active account in a legacy system. Linking accounts ensures the legacy account is monitored and tied back to the correct identity. For example:
+  - `gabriela.laureano@contoso.com`
+  - `glaureano@contosolegacy.local`
+- **Accounts in multiple services**: A user might have a Microsoft Entra ID account, an Okta account, and a Ping account. Manually linking these accounts to the user's identity creates a consolidated view that supports identity-centric protection and investigation.
 
-### Scenarios and examples 
-
-- **Personal and privileged accounts**: A user might have two accounts, one for everyday work and another with elevated permissions for administrative tasks.  
-  **Example**  
-  - john.smith@company.com (regular account)  
-  - john.smith.admin@company.com (privileged account)  
-
-- **Multiple domains**: Large organizations often manage several domains. Linking accounts across these domains provides full visibility into a user’s activity.  
-  **Example**  
-  - user@acme.com  
-  - user@contoso.com  
-
-- **Personal and service accounts**: A user may have both a personal account and a service account they own or manage. Linking them helps connect ownership and responsibility to the same identity.  
-  **Example**  
-  - david.lee@company.com (personal account)  
-  - backup.service@company.com (service account)  
-
-- **Legacy accounts**: A user might still have an active account in a legacy system. Linking it ensures the account is monitored and tied back to the correct identity.  
-  **Example**  
-  - sarah.jones@company.com (current account)  
-  - sjones@oldsystem.local (legacy account)  
-
-
+Use the procedures in this article to manually link or unlink accounts to identities in Defender for Identity.
 
 ## Prerequisites
 
-- You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage)
+- You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage).
 
-## How to Manually Link or Unlink Accounts to an Identity
+## Manually link accounts to an identity in Defender for Identity
 
-Follow these steps to manually link accounts to a selected identity.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Identities**. Or, to go directly to the **Identity Inventory** page, use <https://security.microsoft.com/identity-inventory>.
 
-1. Navigate to **Assets** > **Identity Inventory**.
-1. Select an **Identity** from the list.
+   :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/inventory-page.png":::
 
-      :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/inventory-page.png":::
+1. On the **Identities** tab of the **Identity Inventory** page, select an identity from the list by clicking on the **Display name** value.
 
-1. Select the **Observed in organization** tab.
-1. Open the **Accounts** tab.
+1. On the identity details page that opens, select the **Observed in organization** tab, and verify the **Accounts** tab is selected.
 
     :::image type="content" source="media/link-unlink-account-to-identity/accounts-observed-in-organization.png" alt-text="Screenshot that shows the accounts observed in an organization." lightbox="media/link-unlink-account-to-identity/accounts-observed-in-organization.png":::
 
-1. Select the **Link** button.
-1. You can search by:
-    - Display name
-    - User principal name (UPN)
-    - Security identifier (SID)
-    - Source provider account
-1. Select one account from the table.
+1. On the **Accounts** tab, select :::image type="icon" source="media/m365-cc-sc-link-accounts.png" border="false"::: **Link**.
 
-    :::image type="content" source="media/link-unlink-account-to-identity/select-accounts.png" alt-text="Screenshot that shows a list of accounts that you can link. " lightbox="media/link-unlink-account-to-identity/select-accounts.png":::
+1. The **Link accounts** wizard opens. On the **Select accounts** page, use the search box to find an account. You can search by:
+   - Display name
+   - User principal name (UPN)
+   - Security identifier (SID)
+   - Source provider account
 
-1. Select **Next**.
-1. Enter a short justification comment explaining why you're linking these accounts.
-1. Your justification must:
-    - Be between 1 and 50 characters
-    - Use only letters, numbers, spaces, @, and _
-    - If your input includes invalid characters or exceeds the limit, an error message will appear.
+   Select one account by selecting the check box next to the **Display name** column, and then select **Next**.
 
-    :::image type="content" source="media/link-unlink-account-to-identity/enter-justification.png" alt-text="Screenshot that shows where to enter the justification for why you are linking the accounts." lightbox="media/link-unlink-account-to-identity/enter-justification.png":::
+   :::image type="content" source="media/link-unlink-account-to-identity/select-accounts.png" alt-text="Screenshot that shows a list of accounts that you can link. " lightbox="media/link-unlink-account-to-identity/select-accounts.png":::
 
-1. Select **Next**.
-1. Review the selected accounts and your justification.
+1. On the **Enter justification** page, enter a short explanation why you're linking these accounts. A valid explanation includes:
+   - Up to 50 characters.
+   - Letters, numbers, spaces, `@`, or `_`.
+
+   Select **Next**.
+
+   :::image type="content" source="media/link-unlink-account-to-identity/enter-justification.png" alt-text="Screenshot that shows where to enter the justification for why you're linking the accounts." lightbox="media/link-unlink-account-to-identity/enter-justification.png":::
+
+1. On the **Review and finish** page, review the information, and select **Back** to make changes. When you're finished, select **Submit**.
 
     :::image type="content" source="media/link-unlink-account-to-identity/review-and-finish.png" alt-text="Screenshot that shows the review of the selected accounts and the justification." lightbox="media/link-unlink-account-to-identity/review-and-finish.png":::
 
-1. Confirm that the accounts listed are correct.
-1. The account list refreshes automatically.
+   After the account is successfully linked, select **Done**
 
-## Unlink accounts from an identity
+## Manually unlink accounts from an identity in Defender for Identity
 
-Follow these steps to manually unlink accounts from a selected identity.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Identities**. Or, to go directly to the **Identity Inventory** page, use <https://security.microsoft.com/identity-inventory>.
+1. On the **Identities** tab of the **Identity Inventory** page, select an **Identity** from the list by clicking on the **Display name** value.
+1. On the identity details page that opens, select the **Observed in organization** tab, and verify the **Accounts** tab is selected.
+1. On the **Accounts** tab, select the account you want to unlink from the identity by selecting the check box next to the **Display name** column, and then select :::image type="icon" source="media/m365-cc-sc-unlink-accounts.png" border="false"::: **Unlink**.
+1. In the **Unlink accounts from ...** confirmation dialog that opens, read the information, and then select **Unlink accounts**.
 
-1. Go to **Identity Inventory > Observed in organization**.
-1. Open the **Accounts** tab.
-1. Select one account set from the table.
-1. Select **Unlink account**.
-1. A confirmation dialog appears with the identity name.
-1. Review the message and select **Unlink accounts** to confirm.
-
-
-## What to expect after linking or unlinking an account
+## What to expect after linking or unlinking an account in Defender for Identity
 
 - The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.
-- All actions are recorded in the unified audit system, including the justification and the user who performed the action.
+- All actions are recorded in the [unified audit system](/purview/audit-solutions-overview), including the justification and the user who did the linking or unlinking.
 
 ## See also
 
