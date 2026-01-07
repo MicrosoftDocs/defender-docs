@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 12/04/2025
+ms.date: 01/12/2026
 ---
 
 # Understand the advanced hunting schema
