@@ -1,7 +1,7 @@
 ---
 title: Protect your Slack Enterprise
 description: Learn how about connecting your Slack Enterprise app to Defender for Cloud Apps using the API connector.
-ms.date: 07/01/2026
+ms.date: 01/07/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
