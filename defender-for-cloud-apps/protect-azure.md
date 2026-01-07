@@ -1,7 +1,7 @@
 ---
 title: Protect your Azure environment
 description: Learn how about connecting your Azure app to Defender for Cloud Apps using the API connector.
-ms.date: 01/07/2025
+ms.date: 01/07/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
