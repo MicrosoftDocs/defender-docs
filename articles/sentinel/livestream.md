@@ -23,7 +23,7 @@ ms.custom:
 Use hunting livestream to create interactive sessions that let you test newly created queries as events occur, get notifications from the sessions when a match is found, and launch investigations if necessary. You can quickly create a livestream session using any Log Analytics query.
 
 > [!NOTE]
->Microsoft Sentinel Livestream is scheduled for deprecation and will be removed from the UI as early as mid-March 2026. For ongoing or future needs, consider using [KQL jobs](./datalake/kql-jobs.md) for reoccurring queries with persisted results and [Logic Apps](./automation/logic-apps-playbooks.md) for enabling notifications. For managing threat hunting activity all up, consider using [case management](/unified-secops/cases-overview). These features can be used together to create a more complete solution for hunting and tracking threat actors in your environment.
+>Microsoft Sentinel livestreams will no longer be available from mid-March 2026. To automate queries and notifications, use [KQL jobs](./datalake/kql-jobs.md), [analytics rules](./threat-detection.md), or [playbooks](./automation/automate-responses-with-playbooks.md). These alternatives offer persistent query results and support for various messaging platforms. [Learn more about livestream retirement](https://techcommunity.microsoft.com/t5/microsoft-sentinel/microsoft-sentinel-livestream-retirement/ba-p/3811364).
 
 This article is about **Hunting** in Microsoft Sentinel, which also exists in Defender. For **Advanced hunting** in Microsoft Defender, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
