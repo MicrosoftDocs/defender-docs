@@ -47,11 +47,11 @@ Restrictions are typically applied by adding the restriction type to the file or
 |:---|:---|:---|
 | File/folder  | `PathType`  | `file` <br/> `folder` |
 | Scan type | `ScanType` | `quick` <br/> `full` |
-| Scan trigger | `ScanTrigger` | `OnDemand` <br/> `OnAccess` <br/> Behavior monitoring |
+| Scan trigger | `ScanTrigger` | `OnDemand` <br/> `OnAccess` <br/> `BM` (Behavior monitoring)|
 | Process | `Process` | `<path>` |
 
 > [!IMPORTANT]
-> Note that TypeName is case sensitive.
+> TypeName and value keywords are case sensitive.
 
 ### Requirements
 
