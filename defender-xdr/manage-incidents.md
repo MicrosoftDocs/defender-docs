@@ -282,20 +282,6 @@ To edit the incident name, take the following steps:
 
 When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view of all activities, access the [Activities tab](./investigate-incidents.md#activities) from the bottom of the activity log.
 
-With the activity log, analysts can:
-
-**Triage**
-- View all actions performed on the incident in a single place
-- Identify key steps taken by automated systems and humans
-- Verify recent changes (such as tags, merges, severity updates)
-- Review comments and handovers
-
-**Investigate**
-- Trace the full sequence of actions
-- Inspect detailed metadata in side panels
-- Narrow activity lists to only relevant action types
-- Follow automated workflows launched by automation rules, playbooks, or agents
-
 #### To access the activity log
 
 1. Open the incident's activity log. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
