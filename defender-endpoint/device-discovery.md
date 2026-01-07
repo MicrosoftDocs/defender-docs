@@ -41,7 +41,7 @@ Here's a high level flow that describes how device discovery works:
 
 1. Defender for Endpoint scans your environment and identifies unmanaged devices by analyzing network traffic and using active probing techniques.
 1. Defender for Endpoint classifies the discovered devices and adds them to the device inventory, which provides visibility for devices that aren't onboarded.
-1. You can now onboard the discovered devices, which increases your security posture and reduces risk.
+1. You can view devices that aren't onboarded in the device inventory, and onboard these devices to increase your security posture and reduce risk.
 1. You can also configure the device discovery capability: Change the scan mode, add exclusions and trusted networks, enable network scans and more. For more information, see [Configure device discovery](configure-device-discovery.md).
 
 Watch this video for a quick overview of how to assess and onboard unmanaged devices that Defender for Endpoint discovered.
@@ -52,12 +52,13 @@ With this capability, a security recommendation to onboard devices to Defender f
 
 ## Discovered assets
 
-Device discovery discovers:
+Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
+
+With device discovery, Defender for Endpoint discovers:
 
 - Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
-Network devices like routers and switches
-- IoT devices like printers and cameras
-- Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
+- Network devices like routers and switches
+- IoT devices like printers and cameras 
 
 The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
 
@@ -65,7 +66,7 @@ The discovery engine distinguishes between network events that are received in t
 
 Device discovery uses two main discovery modes. The mode controls the level of visibility you can get for unmanaged devices in your corporate network. You select the device discovery mode in the **System** > **Settings** > **Device discovery** > **Discovery mode** section.
 
-| Mode         | Description                                                                | Use cases and recommendations                |
+| Mode | Description   | Use cases and recommendations  |
 |:------------------|:---------------------------------------------------------------------------|:-------------------------------------------|
 | Basic scan   | - Endpoints passively collect events in your network and extract device information from them.<br> - Uses the **SenseNDR.exe** binary for passive network data collection and no network traffic is initiated.<br>- Endpoints extract data from all network traffic seen by an onboarded device.<br> - Limited visibility of unmanaged endpoints in your network. | Sensitive/legacy networks, minimal impact. |
 | Standard scan (default) | - Allows endpoints to actively find devices in your network to enrich collected data and discover more devices<br>- Uses common discovery protocols that use multicast queries in the network to find more devices.<br>- Uses smart, active probing to discover additional information about observed devices, and helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
