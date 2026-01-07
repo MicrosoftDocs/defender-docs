@@ -57,9 +57,11 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
     :::image type="content" source="media/simulate-alerts-sql-machines/simulate-alert.png" alt-text="Screenshot that shows where the simulate alert button is located." lightbox="media/simulate-alerts-sql-machines/simulate-alert.png":::
 
-1. Select an **attack type**.
+1. Select an alert type.
 
-1. Enter the required information for the selected attack type, such as username and password for login attacks.
+    :::image type="content" source="media/simulate-alerts-sql-machines/select-alert-type.png" alt-text="Screenshot that shows the different types of alerts that can be selected." lightbox="media/simulate-alerts-sql-machines/select-alert-type.png":::
+
+1. Enter the required information for the selected alert type. For example, username and password for login attacks.
 
 1. Select **Submit**.
 
