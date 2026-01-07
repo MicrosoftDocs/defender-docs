@@ -38,7 +38,7 @@ The `BehaviorEntities` table in the [advanced hunting](advanced-hunting-overview
 
 Behaviors are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. [Read more about behaviors](/defender-cloud-apps/behaviors)
 
-Defender for Cloud Apps and UEBA populate this advanced hunting table with records. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
+Defender for Cloud Apps and UEBA add records to this advanced hunting table. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
 To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorEntities` table, follow the instructions in the following pages:
 - [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
