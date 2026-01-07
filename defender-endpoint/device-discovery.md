@@ -60,8 +60,6 @@ Defender for Endpoint discovers:
 - Network devices like routers and switches
 - IoT devices like printers and cameras 
 
-The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
-
 ### Discovery modes and scans
 
 Device discovery uses two main discovery modes. The mode controls the level of visibility you can get for unmanaged devices in your corporate network. You select the device discovery mode in the **System** > **Settings** > **Device discovery** > **Discovery mode** section.
@@ -78,6 +76,14 @@ As an additional layer of discovery, [authenticated network scans](network-devic
 Network devices aren't managed as standard endpoints, as Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. To do this, a designated Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Defender for Endpoint's vulnerability management capabilities provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
 
 For more information, see [Network devices](network-devices.md).
+
+### Monitored networks
+
+Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a non-corporate network that can be ignored. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
+
+To identify a network as corporate, Defender for Endpoint correlates network identifiers across all of the tenant's clients. If most of the devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, Defender for Endpoint assumes that the network is a corporate network. 
+
+To override this setting, you can add networks to the monitored list. For more information, see [Select networks to monitor](configure-device-discovery.md#select-networks-to-monitor).
 
 ## Capabilities and configuration options
 

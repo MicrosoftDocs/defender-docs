@@ -68,22 +68,24 @@ The exclusion is visible in the **Exclusions** list. You can select an exclusion
 
 ## Select networks to monitor
 
-Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a noncorporate network that can be ignored. To identify a network as corporate, we correlate network identifiers across all tenant's clients and if most devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, we assume that this is a corporate network. Corporate networks are typically chosen to be monitored. However, you can override this decision by choosing to monitor noncorporate networks where onboarded devices are found.
-
-You can configure where device discovery can be performed by specifying which networks to monitor. When a network is monitored, device discovery can be performed on it.
-
-A list of networks where device discovery can be performed is shown in the **Monitored networks** page.
+The **Monitored networks** page shows a list of networks where device discovery is active.
 
 > [!NOTE]
-> The list shows networks that were identified as corporate networks. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
+>
+> - The list shows networks that were identified as corporate networks. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
+> - The list of monitored networks is sorted based on the total number of devices seen on the network in the last seven days.
 
-The list of monitored networks is sorted based upon the total number of devices seen on the network in the last seven days.
+You might want to add a network to the list, for example, if you have a new corporate office or a remote site that needs to be monitored. For more information, see [Monitored networks](device-discovery.md#monitored-networks).
 
-You can apply a filter to view any of the following network discovery states:
+To manage monitored networks, in the device discovery settings, select **Monitored networks**.
 
-- **Monitored networks** - Networks where device discovery is performed.
-- **Ignored networks** - This network is ignored and device discovery isn't performed on it.
-- **All** - Both monitored and ignored networks are displayed.
+- To monitor a network, select the three dots next to the name of the network you want to monitor, and select **Monitor this network**.
+- To ignore a monitored network, select the three dots next to the name of the network you want to ignore, and select **Ignore this network from monitoring**.
+- To automatically monitor a network, select the three dots next to the name of the network you want to set to initial discovery classification, and select **Automatically monitor**.
+- To filter the view, select **Filter**, add the **Network monitor state** filter, and select one of the states:
+    - **Monitored networks** - Networks where device discovery is performed.
+    - **Ignored networks** - This network is ignored and device discovery isn't performed on it.
+    - **All** - Both monitored and ignored networks are displayed.
 
 ### Configure the network monitor state
 
