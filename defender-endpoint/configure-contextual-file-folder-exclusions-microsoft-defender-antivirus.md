@@ -50,6 +50,9 @@ Restrictions are typically applied by adding the restriction type to the file or
 | Scan trigger | `ScanTrigger` | `OnDemand` <br/> `OnAccess` <br/> Behavior monitoring |
 | Process | `Process` | `<path>` |
 
+> [!IMPORTANT]
+> Note that TypeName is case sensitive.
+
 ### Requirements
 
 This capability requires Microsoft Defender Antivirus. 
