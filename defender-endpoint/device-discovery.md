@@ -25,9 +25,9 @@ appliesto:
 ---
 # Device discovery overview
 
-To protect your environment, you need to take inventory of the devices in your network. However, mapping devices in a network can often be expensive, challenging, and time-consuming.
+In today’s dynamic IT environments, organizations find it challenging to maintain complete visibility over all devices connected to their networks. Challenges include the large number and diversity of devices, shadow IT, remote work, and the rapid pace of technological change. Without effective device discovery, organizations risk leaving blind spots that adversaries can exploit, making comprehensive discovery an essential foundation for a strong security posture.
 
-Microsoft Defender for Endpoint device discovery helps you automatically find unmanaged devices connected to your corporate network, without extra appliances or complex setup.
+To provide this visibility and allow for proactive risk management, Microsoft Defender for Endpoint device discovery helps you automatically find unmanaged devices connected to your corporate network, without extra appliances or complex setup.
 
 This article explains how device discovery works, describes the supported capabilities, and provides information on scanning and discovered assets.
 
