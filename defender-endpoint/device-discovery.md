@@ -85,6 +85,8 @@ Most organizations benefit from the out-of-the-box active discovery, device inve
 
 This table summarizes which capabilities device discovery provides out-of-the-box, what each additional configuration option enables, and where you can change configurable options in the UI.
 
+For advanced analysis, vulnerability assessment, and hunting queries, see [Configure device discovery](configure-device-discovery.md).
+
 | Feature/option | Default | What it includes or enables | Where to configure in the Defender portal  | More information |
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|-----------------------------------------|------------------|
 | Basic discovery   | No   | Detects unmanaged endpoints, network devices, IoT assets via traffic. Can be used for sensitive/legacy networks. | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Basic**      | [Discovery modes and scans](#discovery-modes-and-scans) |
@@ -101,23 +103,13 @@ This table summarizes which capabilities device discovery provides out-of-the-bo
 
 The following table summarizes device discovery capabilities by license:
 
-| License                        | Device discovery | Network scans | OT/IoT integration | Vulnerability management | Advanced hunting |
+| License                        | Device discovery | Network scans | Enterprise IoT/OT integration | Vulnerability management | Advanced hunting |
 |---------------------------------|------------------|---------------|--------------------|-------------------------|------------------|
 | Defender for Endpoint Plan 2    | Yes              | Yes           | No                 | Yes                     | Yes              |
 | Defender for Endpoint Plan 2 + IoT | Yes           | Yes           | Yes                | Yes                     | Yes              |
 | Defender for IoT only           | No               | No            | Yes                | Yes                     | No               |
 
 Some features (such as enterprise IoT vulnerability display) are controlled by toggles and may be off by default, depending on your license. Enabling these features may change the data shown in the inventory and UI.
-
-## Configuration, management, and analysis
-
-You can further configure, manage, and analyze device discovery to fit your organization's needs. Actions include:
-- Adjusting discovery modes and scan settings
-- Managing exclusions, scanner assignments, and network lists
-- Integrating with OT/IoT discovery
-- Reviewing and acting on device inventory
-
-For advanced analysis, vulnerability assessment, and hunting queries, see [Configure device discovery](configure-device-discovery.md).
 
 ## Next steps
 
