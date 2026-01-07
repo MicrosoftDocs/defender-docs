@@ -64,14 +64,14 @@ You can activate your workloads in two ways from the Permissions and roles page:
     1. Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
     2. You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload. For Microsoft Sentinel, select **Manage workspaces** to activate each workspace individually.
 
-:::image type="content" source="media/activate-defender-rbac/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
+   :::image type="content" source="media/activate-defender-rbac/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
 
-      > [!NOTE]
-      > The **Activate workloads** button is only available when there's at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
-      > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
-      > Defender XDR Unified RBAC is automatically active for Exposure Management access. Once a custom role with one of the Exposure Management permissions is created, it has an immediate impact on assigned users. There's no need to activate it.
-      >
-      > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active.
+   > [!NOTE]
+   > The **Activate workloads** button is only available when there's at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
+   > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
+   > Defender XDR Unified RBAC is automatically active for Exposure Management access. Once a custom role with one of the Exposure Management permissions is created, it has an immediate impact on assigned users. There's no need to activate it.
+   >
+   > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active.
 
 2. **Workload settings**
 

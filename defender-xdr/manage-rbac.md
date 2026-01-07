@@ -70,7 +70,7 @@ This section provides useful information on what you need to know before you sta
 
 ### Permissions prerequisites
 
-- You must be a Global Administrator or Security Administrator in Microsoft Entra ID to:
+- You must be at least a Security Administrator in Microsoft Entra ID to:
   - Gain initial access to [Permissions and roles](https://security.microsoft.com/mtp_roles) in the Microsoft Defender portal.
 
   - Manage roles and permissions in Microsoft Defender XDR Unified RBAC.
