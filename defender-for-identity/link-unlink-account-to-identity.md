@@ -5,7 +5,7 @@ ms.date: 01/07/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
-#customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization and validate accounts correlated are correct.
+#customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization, validate accounts correlated are correct, and remove any unused, legacy, or orphaned accounts from the identity.
 ---
 
 # Manage related identities and accounts in Microsoft Defender for Identity (Preview)
