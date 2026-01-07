@@ -23,10 +23,9 @@ appliesto:
 ---
 # Configure device discovery in Defender for Endpoint
 
+[Device discovery](device-discovery.md) allows you to improve your visibility into unmanaged devices, assess their security posture, and take appropriate actions to secure them.
 
-Device discovery can be configured to be on standard or basic mode. Use the standard option to actively find devices in your network, which helps improve the discovery of endpoints and provide richer device classification.
-
-You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability, or you can select a subset of devices by specifying their device tags.
+This article describes how to set up and configure device discovery in Microsoft Defender for Endpoint. You also learn how to get data on devices that aren't onboarded to Defender for Endpoint, and how to query data on discovered devices.
 
 ## Prerequisites
 
@@ -37,16 +36,20 @@ You can customize the list of devices that are used to perform standard discover
 
 ## Set up device discovery
 
-To set up device discovery, take the following configuration steps in the [Microsoft Defender portal](https://security.microsoft.com):
+To set up device discovery:
 
-Navigate to **Settings** > **Device discovery**
+1. In the Microsoft Defender portal, navigate to **Settings** > **Device discovery**.
 
-1. If you want to configure Basic as the discovery mode to use on your onboarded devices, select **Basic** and then select **Save**.
+1. If you've selected to use standard discovery, select which devices to use for active probing:
+    - Select **all devices (recommended)** to scan all devices.
+    - Select **Select tags** to scan by device tags, and in the **Tags** page, select the tags. This option is useful to scan devices on a specific subnet.
 
-1. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
+> [!TIP] While standard is the recommended mode, you can change to the basic mode if needed. For more information, see [Discovery modes and scans](device-discovery.md#discovery-modes-and-scans).
+
+1. Select **Save**.
 
 > [!NOTE]
-> Standard discovery uses various PowerShell scripts to actively probe devices in the network. Those PowerShell scripts are Microsoft signed and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
+> Standard discovery uses various PowerShell scripts to actively probe devices in the network. These PowerShell scripts are signed by Microsoft, and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
 
 ## Exclude devices from being actively probed in standard discovery
 
