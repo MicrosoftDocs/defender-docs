@@ -178,15 +178,15 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 
 1. To get the new package, in Microsoft Defender XDR, select **Settings > Endpoints > Device management> Onboarding**.
 
-2. Select the applicable operating system and choose "Streamlined" from the Connectivity type dropdown menu.
+1. Select the applicable operating system and choose "Streamlined" from the Connectivity type dropdown menu.
 
-3. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
+1. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
 
    - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
    - [Onboard client devices running Windows or macOS](onboard-client.md)
    - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
    - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
 
-4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
+1. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
 For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.

@@ -25,19 +25,22 @@ By default, the following Microsoft 365 and [Microsoft Entra ID](/azure/active-d
 
 |Role name|Description|
 |---|---|
-|**Global administrator and Security administrator**|Administrators with **Full access** have full permissions in Defender for Cloud Apps. They can add admins, add policies and settings, upload logs and perform governance actions, access and manage SIEM agents.|
+|**Global administrator**<sup>\*</sup> and **Security administrator**|Administrators with **Full access** have full permissions in Defender for Cloud Apps. They can add admins, add policies and settings, upload logs and perform governance actions, access and manage SIEM agents.|
 |**Cloud App Security administrator**|Allows full access and permissions in Defender for Cloud Apps. This role grants full permissions to Defender for Cloud Apps, like the Microsoft Entra ID **Global administrator** role. However, this role is scoped to Defender for Cloud Apps and doesn't grant full permissions across other Microsoft security products.|
 |**Compliance administrator**|Has read-only permissions and can manage alerts. Can't access Security recommendations for cloud platforms. Can create and modify file policies, allow file governance actions, and view all the built-in reports under Data Management.|
 |**Compliance data administrator**|Has read-only permissions, can create and modify file policies, allow file governance actions, and view all discovery reports. Can't access Security recommendations for cloud platforms.|
-|**Security operator**|Has read-only permissions and can manage alerts. These admins are restricted from doing the following actions: <ul><li>Create policies or edit and change existing ones<li> Performing any governance actions<li>Uploading discovery logs<li> Banning or approving non-Microsoft apps<li> Accessing and viewing the IP address range settings page<li> Accessing and viewing any system settings pages<li> Accessing and viewing the Discovery settings<li> Accessing and viewing the App connectors page<li> Accessing and viewing the Governance log<li>Accessing and viewing the Manage snapshot reports page     </ul>|
-|**Security reader**|Has read-only permissions and can create API access tokens. These admins are restricted from doing the following actions: <ul></li>Create policies or edit and change existing ones<li>Performing any governance actions<li>Uploading discovery logs<li>Banning or approving non-Microsoft apps<li> Accessing and viewing the IP address range settings page<li> Accessing and viewing any system settings pages<li> Accessing and viewing the Discovery settings<li> Accessing and viewing the App connectors page<li> Accessing and viewing the Governance log<li>Accessing and viewing the Manage snapshot reports page   </ul>|
+|**Security operator**|Has read-only permissions and can manage alerts. These admins are restricted from doing the following actions: <ul><li>Create policies or edit and change existing ones<li> Performing any governance actions<li>Uploading discovery logs<li> Banning or approving non-Microsoft apps<li> Accessing and viewing the IP address range settings page<li> Accessing and viewing any system settings pages<li> Accessing and viewing the Discovery settings<li> Accessing and viewing the App connectors page<li> Accessing and viewing the Governance log<li>Accessing and viewing the Manage snapshot reports page</ul>|
+|**Security reader**|Has read-only permissions and can create API access tokens. These admins are restricted from doing the following actions: <ul></li>Create policies or edit and change existing ones<li>Performing any governance actions<li>Uploading discovery logs<li>Banning or approving non-Microsoft apps<li> Accessing and viewing the IP address range settings page<li> Accessing and viewing any system settings pages<li> Accessing and viewing the Discovery settings<li> Accessing and viewing the App connectors page<li> Accessing and viewing the Governance log<li>Accessing and viewing the Manage snapshot reports page</ul>|
 |**Global reader**|Has full read-only access to all aspects of Defender for Cloud Apps. Can't change any settings or take any actions.|
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+<sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 > [!NOTE]
-> App governance features are controlled by Microsoft Entra ID roles only. For more information, see [App governance roles](app-governance-get-started.md#roles).
+> Virtually all app governance experiences are controlled by Microsoft Entra ID roles **only**. The only exception is the [OAuthAppInfo table in advanced hunting](/defender-xdr/advanced-hunting-oauthappinfo-table). [Unified RBAC permissions in Defender for Cloud Apps](/defender-xdr/compare-rbac-roles#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions-preview) grant access to the app governance data in this specific table.
+>
+> In the [unified alerts and incidents experiences in Defender XDR](/defender-xdr/investigate-alerts), access to app governance data is controlled by Microsoft Entra ID **only**.
+>
+> For more information about permissions in app governance, see [App governance roles](app-governance-get-started.md#roles).
 
 ### Roles and permissions
 

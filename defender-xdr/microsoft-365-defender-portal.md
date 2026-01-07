@@ -64,11 +64,11 @@ The Microsoft Defender portal emphasizes *unity, clarity, and common goals*. Sea
 
 Microsoft Defender XDR [correlates alerts and events](alerts-incidents-correlation.md) from all Microsoft security solutions across all assets in your entire organization into incidents. **Incidents** are a collection of alerts that are related to a single threat or attack. Incidents are prioritized based on the severity of the threat and the potential impact on your organization.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="media/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="media/incidents-ss-incidents.png":::
 
 Selecting an incident name displays a page that demonstrates the value of centralizing security information as you get better insights into the full extend of a threat, from email, to identity, to endpoints.
 
-:::image type="content" source="/defender/media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="media/microsoft-365-defender-portal/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="media/microsoft-365-defender-portal/incidents-ss-incident-summary.png":::
 
 Take the time to review the incidents in your environment, drill down into each alert, and practice building an understanding of how to access the information and determine next steps in your analysis.
 
@@ -163,7 +163,7 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 
 |Training:|Mitigate threats using Microsoft Defender XDR|
 |---|---|
-|![Microsoft Defender XDR training icon.](/defender/media/microsoft-365-defender/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
+|:::image type="content" source="media/microsoft-365-defender-portal/m365-defender-secure-organization.png" alt-text="Microsoft Defender XDR training icon.":::|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
 
 > [!div class="nextstepaction"]
 > [Start >](/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)

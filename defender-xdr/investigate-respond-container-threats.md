@@ -91,36 +91,36 @@ To investigate container threats in the Microsoft Defender portal:
 
 1. Select **Investigation & response > Incidents and alerts** in the left-hand navigation menu to open the incident or alert queues.
 2. In the queue, select **Filter** and choose **Microsoft Defender for Cloud > Microsoft Defender for Containers** under Service source.
-   :::image type="content" source="/defender/media/defender-containers/incident-queue-small.png" alt-text="Incident queue filtered to show container-related incidents." lightbox="/defender/media/defender-containers/incident-queue.png":::
+   :::image type="content" source="media/investigate-respond-container-threats/incident-queue-small.png" alt-text="Incident queue filtered to show container-related incidents." lightbox="media/investigate-respond-container-threats/incident-queue.png":::
 3. In the incident graph, select the pod/service/cluster entity you need to investigate. Select **Kubernetes service details**, **Kubernetes pod details**, **Kubernetes cluster details**, or **Container registry details** to view relevant information about the service, pod, or registry.
 
 Using [Threat analytics](threat-analytics.md) reports, analysts can utilize threat intelligence from expert Microsoft security researchers to learn about active threat actors and campaigns exploiting containers, new attack techniques that might affect containers, and prevalent threats that affect containers.
 
 Access threat analytics reports from **Threat intelligence > Threat analytics**. You can also open a specific report from the incident page by selecting **View threat analytics report** under **Related threats** on the incident side pane.
 
-:::image type="content" source="/defender/media/defender-containers/view-threat-analytics-small.png" alt-text="Highlighting how to view threat analytics reports from the incident page." lightbox="/defender/media/defender-containers/view-threat-analytics.png":::
+:::image type="content" source="media/investigate-respond-container-threats/view-threat-analytics-small.png" alt-text="Highlighting how to view threat analytics reports from the incident page." lightbox="media/investigate-respond-container-threats/view-threat-analytics.png":::
 
 Threat analytics reports also contain relevant mitigation, recovery, and prevention methods that analysts can assess and apply to their environment. Using the information in threat analytics reports helps SOC teams defend and protect their environment from container attacks. Here's an example of an analyst report about a container attack.
 
-:::image type="content" source="/defender/media/defender-containers/threat-analytics-sample-small.png" alt-text="Sample page of a container attack threat analytics report." lightbox="/defender/media/defender-containers/threat-analytics-sample.png":::
+:::image type="content" source="media/investigate-respond-container-threats/threat-analytics-sample-small.png" alt-text="Sample page of a container attack threat analytics report." lightbox="media/investigate-respond-container-threats/threat-analytics-sample.png":::
 
 ## Respond to container threats
 
 You can **isolate**, **restrict access to**, or **terminate** a pod once you determine that a pod is compromised or malicious. In the incident graph, select the pod then go to **Actions** to view the available response actions. You can also find these response actions on the entity side pane.
 
-:::image type="content" source="/defender/media/defender-containers/container-actions.png" alt-text="Highlighting the cloud response actions in an incident." lightbox="/defender/media/defender-containers/container-actions.png":::
+:::image type="content" source="media/investigate-respond-container-threats/container-actions.png" alt-text="Highlighting the cloud response actions in an incident." lightbox="media/investigate-respond-container-threats/container-actions.png":::
 
 You can release a pod from isolation with the **release from isolation** action once your investigation is complete. This option appears on the side pane for isolated pods.
 
 Details of all response actions can be viewed in the [Action center](m365d-action-center.md). In the Action center page, select the response action you want to inspect to view more information about the action like which entity was acted on, when the action was done, and view the comments on the action. For isolated pods, the **release from isolation** action is also available in the Action center details pane.
 
-:::image type="content" source="/defender/media/defender-containers/action-center-sample-small.png" alt-text="Sample of cloud response actions listed in the Action center." lightbox="/defender/media/defender-containers/action-center-sample.png":::
+:::image type="content" source="media/investigate-respond-container-threats/action-center-sample-small.png" alt-text="Sample of cloud response actions listed in the Action center." lightbox="media/investigate-respond-container-threats/action-center-sample.png":::
 
 ## Hunt for container-related activities
 
 To determine the full scope of a container attack, you can deepen your investigation with the **Go hunt** action available in the incident graph. You can immediately view all process events and activities related to container-related incidents from the incident graph.
 
-:::image type="content" source="/defender/media/defender-containers/azure-go-hunt-small.png" alt-text="Highlighting the go hunt action in the incident graph." lightbox="/defender/media/defender-containers/azure-go-hunt.png":::
+:::image type="content" source="media/investigate-respond-container-threats/azure-go-hunt-small.png" alt-text="Highlighting the go hunt action in the incident graph." lightbox="media/investigate-respond-container-threats/azure-go-hunt.png":::
 
 In the [Advanced hunting](advanced-hunting-overview.md) page, you can extend your search for container-related activities using the **CloudProcessEvents** and **CloudAuditEvents** tables.
 

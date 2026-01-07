@@ -66,11 +66,11 @@ Device tagging is supported on the following operating systems:
 
      You can also get to the alert page through the file and IP views.
 
-2. Select **Manage tags** from the row of Response actions.
+1. Select **Manage tags** from the row of Response actions.
 
     :::image type="content" source="media/manage-tags-option.png" alt-text="Image of manage tags button" lightbox="media/manage-tags-option.png":::
 
-3. Type to find or create tags
+1. Type to find or create tags
 
     :::image type="content" source="media/create-new-tag.png" alt-text="Adding tags on device1" lightbox="media/create-new-tag.png":::
 

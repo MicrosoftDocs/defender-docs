@@ -53,17 +53,17 @@ To view and manage tasks:
 1. Select an incident from the queue.
 1. Select **Tasks** to open the **Tasks** side panel, which lists all of the tasks and Security Copilot insights associated with the incident.
 
-   :::image type="content" source="media/manage-incidents-using-tasks/task-pane-defender-portal.png" alt-text="Screenshot showing the Tasks side panel and incident details in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/task-pane-defender-portal.png":::  
+   :::image type="content" source="media/split-incidents-into-tasks/task-pane-defender-portal.png" alt-text="Screenshot showing the Tasks side panel and incident details in Microsoft Defender portal." lightbox="media/split-incidents-into-tasks/task-pane-defender-portal.png":::  
 
 1. To create a new task, select **Add task**.
 
-    :::image type="content" source="media/manage-incidents-using-tasks/add-task-page-defender-portal.png" alt-text="Screenshot showing the Add task pane in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/add-task-page-defender-portal.png":::
+    :::image type="content" source="media/split-incidents-into-tasks/add-task-page-defender-portal.png" alt-text="Screenshot showing the Add task pane in Microsoft Defender portal." lightbox="media/split-incidents-into-tasks/add-task-page-defender-portal.png":::
 
     Fill in the task details and select **Save**.
 
 1. To update a task's status, select a status from the **Status** dropdown on task preview card.
 
-   :::image type="content" source="media/manage-incidents-using-tasks/update-task-status-defender-portal.png" alt-text="Screenshot showing the Update task status dropdown in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/update-task-status-defender-portal.png":::
+   :::image type="content" source="media/split-incidents-into-tasks/update-task-status-defender-portal.png" alt-text="Screenshot showing the Update task status dropdown in Microsoft Defender portal." lightbox="media/split-incidents-into-tasks/update-task-status-defender-portal.png":::
 
 1. To edit or delete a task, select the ellipsis (**...**) > **Edit** or **Delete**.
 

@@ -69,23 +69,23 @@ Review the prerequisites [here](/mem/intune/protect/mde-security-integration).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using an account with at least the Security Administrator role assigned.
 
-2. Select **Endpoints** > **Configuration management** > **Endpoint security policies** and then select **Create new Policy**. 
+1. Select **Endpoints** > **Configuration management** > **Endpoint security policies** and then select **Create new Policy**. 
 
-3. Select a platform from the dropdown list.
+1. Select a platform from the dropdown list.
 
-4. Select a template, then select **Create policy**.
+1. Select a template, then select **Create policy**.
 
-5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
+1. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the groups that receive this profile.
+1. On the **Assignments** page, select the groups that receive this profile.
 
-   Select **Next**.
+1. Select **Next**.
 
-8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
+1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 > [!NOTE]
 > To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -94,14 +94,14 @@ Review the prerequisites [here](/mem/intune/protect/mde-security-integration).
 
 1. Select the new policy, and then select **Edit**.
  
-2. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
+1. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
 
-3. To modify the policy, select **Edit** for each category where you want to make a change:
+1. To modify the policy, select **Edit** for each category where you want to make a change:
    - Basics
    - Settings
    - Assignments
 
-4. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to more categories.
+1. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to more categories.
 
 ## Verify endpoint security policies
 
@@ -300,31 +300,30 @@ For more information, see [Use network protection to help prevent connections to
 
 1. When you're done configuring settings, select **Next**.
 
-2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 
-3. Select **Next**.
+1. Select **Next**.
 
-4. On the **Review + create** tab, review your policy settings, and then select **Save**.
-
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 ### Attack Surface Reduction rules
 
 To enable Attack Surface Reduction (ASR) rules using the endpoint security policies, perform the following steps:
 
 1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
 
-2. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
+1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 
-3. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
+1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
 
-4. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
+1. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
 
-5. Select **Create policy**.
+1. Select **Create policy**.
 
-6. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
+1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
 
-7. On the **Configuration settings** page, expand the groups of settings and configure the settings that you want to manage with this profile.
+1. On the **Configuration settings** page, expand the groups of settings and configure the settings that you want to manage with this profile.
 
-8. Set the policies based on the following recommended settings:
+1. Set the policies based on the following recommended settings:
 
    |Description|Setting|
    |---|---|
@@ -354,36 +353,36 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
    For more information, see [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment).
 
-9. Select **Next**.
+1. Select **Next**.
 
-10. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 
-11. Select **Next**.
+1. Select **Next**.
 
-12. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 
 #### Enable Tamper Protection
 
 1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
 
-2. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
+1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 
-3. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
+1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
 
-4. Select **Security Experience** from the **Select Template** drop-down list.
+1. Select **Security Experience** from the **Select Template** drop-down list.
 
-5. Select **Create policy**. The **Create a new policy** page appears.
+1. Select **Create policy**. The **Create a new policy** page appears.
 
-6. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
+1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
 
-7. Select **Next**.
+1. Select **Next**.
 
-8. On the **Configuration settings** page, expand the groups of settings.
+1. On the **Configuration settings** page, expand the groups of settings.
 
-9. From these groups, select the settings that you want to manage with this profile.
+1. From these groups, select the settings that you want to manage with this profile.
 
-10. Set the policies for the chosen groups of settings by configuring them as described in the following table:
+1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
      |Description| Setting|
      | -------- | -------- |

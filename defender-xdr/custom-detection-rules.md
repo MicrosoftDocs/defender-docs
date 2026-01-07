@@ -169,12 +169,12 @@ Setting a custom detection to run in Continuous (NRT) frequency increases your o
 
 From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency with a single button, **Migrate now**:
 
-:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
+:::image type="content" source="media/custom-detection-rules/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-rules/custom-detection-migrate-now.png":::
 
 
 Selecting **Migrate now** gives you a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only according to your preferences:
 
-:::image type="content" source="media/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-compatible-queries.png":::
+:::image type="content" source="media/custom-detection-rules/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-rules/custom-detection-compatible-queries.png":::
 
 Once you select **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
 
@@ -223,7 +223,7 @@ When you select this frequency option, the **Run query every input** component a
 1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback is 80 minutes.  
 1.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every three days, the lookback is 30 days  
 
-:::image type="content" source="/defender/media/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-frequency.png":::
+:::image type="content" source="media/custom-detection-rules/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="media/custom-detection-rules/ah-custom-frequency.png":::
 
 > [!IMPORTANT]
 >When you select a custom frequency, we fetch your data from Microsoft Sentinel. This means that: 
@@ -246,7 +246,7 @@ For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
 >[!NOTE]
 >The number of columns you can reference in each field is limited to three.
 
-:::image type="content" source="/defender/media/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections wizard." lightbox="/defender/media/ah-dynamic-alert.png":::
+:::image type="content" source="media/custom-detection-rules/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections wizard." lightbox="media/custom-detection-rules/ah-dynamic-alert.png":::
 
 To help you decide on the exact column names you want to reference, you can select **Explore query and results**, which opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
 
@@ -258,11 +258,11 @@ In the **Custom details** section, add key-value pairs corresponding to the de
 - In the **Key** field, enter a name of your choosing that appears as the field name in alerts. 
 - In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list is populated by values corresponding to the column names that your KQL query outputs. 
   
-:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections wizard." lightbox="/defender/media/ah-custom-details.png":::
+:::image type="content" source="media/custom-detection-rules/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections wizard." lightbox="media/custom-detection-rules/ah-custom-details.png":::
 
 The following screenshot shows how the custom details are surfaced in the alert side panel: 
 
-:::image type="content" source="/defender/media/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="/defender/media/ah-custom-details-panel.png":::
+:::image type="content" source="media/custom-detection-rules/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="media/custom-detection-rules/ah-custom-details-panel.png":::
 
 >[!IMPORTANT]
 >Custom details have the following limitations: 
@@ -308,7 +308,7 @@ There are two sections under the expanded **Entity mapping** section for which y
 >[!NOTE] 
 >Currently, you can only map assets as impacted entities.
 
-:::image type="content" source="/defender/media/ah-link-entities.png" alt-text="Screenshot that shows the entity mapping options in the Custom detections wizard." lightbox="/defender/media/ah-link-entities.png":::
+:::image type="content" source="media/custom-detection-rules/ah-link-entities.png" alt-text="Screenshot that shows the entity mapping options in the Custom detections wizard." lightbox="media/custom-detection-rules/ah-link-entities.png":::
 
 After you select an entity type, select an identifier type that exists in the selected query results so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as shown in the relevant dropdown menu. Read the description displayed when hovering on each identifier to better understand it. 
 
@@ -319,7 +319,7 @@ After selecting the identifier, select a column from the query results that cont
 
 If your custom detection rule uses Defender XDR data, it can automatically take actions on devices, files, users, or emails that the query returns.
 
-:::image type="content" source="/defender/media/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="/defender/media/ah-custom-actions.png":::
+:::image type="content" source="media/custom-detection-rules/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/ah-custom-actions.png":::
 
 #### Actions on devices
 
@@ -351,8 +351,8 @@ For more information on user actions, see [Remediation actions in Microsoft Defe
 
 - If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to  a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
-   :::image type="content" source="media/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/advanced-hunting-custom-quarantine-results.png":::
-  :::image type="content" source="media/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/advanced-hunting-custom-quarantine-results.png":::
+   :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
+  :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
 
 - Alternatively, you can select **Delete email** and then choose to either move the emails to Deleted Items (**Soft delete**) or delete the selected emails permanently (**Hard delete**).
 
