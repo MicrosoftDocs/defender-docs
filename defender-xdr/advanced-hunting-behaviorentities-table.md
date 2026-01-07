@@ -30,7 +30,7 @@ ms.date: 01/12/2026
 
 
 
-The `BehaviorEntities` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about behaviors in Microsoft Defender for Cloud Apps. Use this reference to construct queries that return information from this table.
+The `BehaviorEntities` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about behaviors in [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps?toc=%2Fdefender-xdr%2Ftoc.json&bc=%2Fdefender-xdr%2Fbreadcrumb%2Ftoc.json) and [User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics). Use this reference to construct queries that return information from this table.
 
 
 > [!IMPORTANT]
@@ -38,12 +38,11 @@ The `BehaviorEntities` table in the [advanced hunting](advanced-hunting-overview
 
 Behaviors are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. [Read more about behaviors](/defender-cloud-apps/behaviors)
 
-Microsoft Defender for Cloud Apps populates this advanced hunting table with records. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
+Defender for Cloud Apps and UEBA populate this advanced hunting table with records. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
-To make sure Microsoft Defender for Cloud Apps data populates the `BehaviorEntities` table:
-1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
-1.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
- For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites).
+To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorEntities` table, follow the instructions in the following pages:
+- [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+- [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/enable-entity-behavior-analytics)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -71,10 +70,10 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`AccountDomain`|`string` |Domain of the account |
 |`AccountSid`|`string` |Security Identifier (SID) of the account |
 | `AccountObjectId` | `string` | Unique identifier for the account in Microsoft Entra ID |
-| `CloudPlatform ` | `string` | The cloud provider where the resource resides  |
-| `CloudResourceType ` | `string` | Category or type of cloud resource involved in the behavior |
-| `CloudResourceId` | `string` | Unique identifier of the specific cloud resource referenced in the behavior |
-| `CloudSubscriptionId ` | `string` | The subscription or account identifier where the cloud resource is provisioned |
+| `CloudPlatform ` | `string` | The cloud platform that the resource belongs to, can be Azure, Amazon Web Services, or Google Cloud Platform  |
+| `CloudResourceType ` | `string` | Type of cloud resource |
+| `CloudResourceId` | `string` | Unique identifier of the cloud resource accessed |
+| `CloudSubscriptionId ` | `string` | Unique identifier of the cloud service subscription |
 | `AccountUpn` | `string` | User principal name (UPN) of the account |
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 |`DeviceName`|`string` | Fully qualified domain name (FQDN) of the device |

@@ -32,7 +32,7 @@ ms.date: 01/12/2026
 
 
 
-The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about alerts from Microsoft Defender for Cloud Apps. Use this reference to construct queries that return information from this table.
+The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about behaviors in [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps?toc=%2Fdefender-xdr%2Ftoc.json&bc=%2Fdefender-xdr%2Fbreadcrumb%2Ftoc.json) and [User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics). Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > The `BehaviorInfo` table is in preview and is not available for GCC. The information here may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. Have feedback to share? Fill out our [feedback form](https://forms.office.com/r/x0mX5hBkGu).
@@ -40,12 +40,11 @@ The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md)
 Behaviors are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. [Read more about behaviors](/defender-cloud-apps/behaviors)
 
 
-Microsoft Defender for Cloud Apps populates this advanced hunting table with records. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
+Defender for Cloud Apps and UEBA populate this advanced hunting table with records. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
-To make sure Microsoft Defender for Cloud Apps data populates the `BehaviorInfo` table:
-1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
-1.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
- For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites).
+To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorInfo` table, follow the instructions in the following pages:
+- [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+- [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/enable-entity-behavior-analytics)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
