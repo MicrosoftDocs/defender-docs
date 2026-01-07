@@ -83,38 +83,15 @@ This table summarizes which capabilities device discovery provides out-of-the-bo
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|-----------------------------------------|------------------|
 | Basic discovery   | No   | Detects unmanaged endpoints, network devices, IoT assets via traffic. Can be used for sensitive/legacy networks. | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Basic**      | [Discovery modes and scans](#discovery-modes-and-scans) |
 | Standard discovery | Yes  | Adds protocol-based probes for deeper device identification and richer inventory. Can be disabled (switch to **Basic** mode). | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Standard discovery (recommended)**          |[Discovery modes and scans](#discovery-modes-and-scans)  |
-| Device inventory integration | Yes   | Unified view of onboarded and discovered devices. Filter, assess, and take action in inventory. | **Assets** > **Devices** | [Device discovery and the device inventory](#device-discovery-and-the-device-inventory) |
+| Device inventory integration | Yes   | Unified view of onboarded and discovered devices. Filter, assess, and take action in inventory. | **Assets** > **Devices** | [Review devices that aren't onboarded](configure-device-discovery.md#review-devices-that-arent-onboarded-to-defender-for-endpoint) |
 | Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default. Can monitor/ignore specific networks. | **System** > **Settings** > **Device discovery** > **Monitored networks**   |[Network list management](configure-device-discovery.md#select-networks-to-monitor)  |
 | Exclusions  | No  | Exclude IPs or device groups from scans. | **System** > **Settings** > **Device discovery** > **Exclusions** |[Exclude devices](configure-device-discovery.md#exclude-devices-from-being-actively-probed-in-standard-discovery)  |
 | Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Network device discovery and vulnerability management](network-devices.md)  |
+| OT/IoT device discovery | No | Integrate with Defender for IoT to discover OT and enterprise IoT devices. | **System** > **Settings** > **Device discovery** > **OT/IoT integration** | [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) |
 
-## Device discovery and the device inventory
+## Device discovery capabilities by license
 
-All discovered devices are displayed in the device inventory.
-
-This unified view allows you to:
-
-- See both managed (onboarded) and unmanaged (discovered) devices in one place
-- Filter and assess devices by onboarding status, OS, and other attributes
-- Take action to onboard, investigate, or exclude devices as needed
-
-The device inventory experience is central to the device discovery journey, providing visibility, context, and management for all tracked devices. For more information, see [Device inventory](machines-view-overview.md).
-
-:::image type="content" source="media/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="The device inventory dashboard" lightbox="media/2b62255cd3a9dd42f3219e437b956fb9.png":::
-
-## OT/IoT device discovery
-
-Defender for Endpoint integrates with Microsoft Defender for IoT to provide comprehensive discovery and security for:
-- OT devices (e.g., industrial servers, packaging systems)
-- Enterprise IoT devices (e.g., VoIP phones, printers, smart TVs)
-
-This integration enables unified visibility and management of both IT and OT/IoT assets in the Microsoft Defender portal.
-
-For more information, see [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) and [Get started with Enterprise IoT security](/defender-for-iot/enterprise-iot-get-started).
-
-## Licensing
-
-The following table summarizes device discovery features by license:
+The following table summarizes device discovery capabilities by license:
 
 | License                        | Device discovery | Network scans | OT/IoT integration | Vulnerability management | Advanced hunting |
 |---------------------------------|------------------|---------------|--------------------|-------------------------|------------------|
