@@ -143,6 +143,9 @@ Select:
 
    **Set conditional access policies for Security Copilot** to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
+> [!NOTE]
+> You can change the agent identity after setup as described in [Change the agent identity](#change-the-agent-identity). 
+
 #### Assign permissions
 
 In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend assigning the agent identity only the [permissions the Phishing Triage Agent requires to perform its tasks](#phishing-triage-agent-required-permissions).
