@@ -25,17 +25,17 @@ appliesto:
 ---
 # Device discovery overview
 
-In today’s dynamic IT environments, organizations find it challenging to maintain complete visibility over all devices connected to their networks. Challenges include the large number and diversity of devices, shadow IT, remote work, and the rapid pace of technological change. Without effective device discovery, organizations risk leaving blind spots that adversaries can exploit, making comprehensive discovery an essential foundation for a strong security posture.
+In today's dynamic IT environments, many organizations struggle to get full visibility of all of their devices and assets. Device diversity, shadow IT, remote work, and rapid change create gaps that expose organizations to security risks.
 
-To provide this visibility and allow for proactive risk management, Microsoft Defender for Endpoint device discovery helps you automatically find unmanaged devices connected to your corporate network, without extra appliances or complex setup.
+Microsoft Defender for Endpoint device discovery gives you direct insight into unmanaged devices on your network. You can identify risks and act quickly, without extra appliances or complex setup.
+
+Device discovery is designed to reduce blind spots in your environment, making it easier to identify, assess, and secure devices that could otherwise introduce risk. The feature works as an out-of-the-box Defender for Endpoint capability, with advanced configuration available for deeper insights and custom scenarios.
 
 This article explains how device discovery works, describes the supported capabilities, and provides information on scanning and discovered assets.
 
 ## How device discovery works
 
 Defender for Endpoint uses onboarded endpoints to passively observe network traffic and actively probe the environment to identify endpoints, network devices, and IoT assets that may not be managed or protected.
-
-Device discovery is designed to reduce blind spots in your environment, making it easier to identify, assess, and secure devices that could otherwise introduce risk. The feature works as an out-of-the-box Defender for Endpoint capability, with advanced configuration available for deeper insights and custom scenarios.
 
 The device discovery capability allows you to discover:
 
