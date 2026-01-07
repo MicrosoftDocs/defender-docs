@@ -51,11 +51,20 @@ To set up device discovery:
 > [!NOTE]
 > Standard discovery uses various PowerShell scripts to actively probe devices in the network. These PowerShell scripts are signed by Microsoft, and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
 
-## Exclude devices from being actively probed in standard discovery
+## Exclude devices from standard discovery
 
-If there are devices on your network that shouldn't be actively scanned (for example, devices used as honeypots for another security tool), you can also define a list of exclusions to prevent them from being scanned. Devices can still be discovered using Basic discovery mode and can also be discovered through multicast discovery attempts. Those devices are passively discovered but won't be actively probed.
+You might want to exclude specific devices in your network from active scans, for example, devices used as honeypots for another security tool.
 
-You can configure the devices to exclude in the **Exclusions** page.
+Excluded devices might still be discovered by basic discovery, or through multicast discovery attempts. Defender for Endpoint passively discovers these devices, but doesn't actively probe them.
+
+To exclude a device:
+
+1. In the device discovery settings, select **Exclusions**.
+1. Select **Add exclusion** and in the **Add exclusion** page, add IP addresses or subnets to exclude from standard scans.
+1. (Optional)Add a description for the exclusion.
+1. Select **Save**.
+
+The exclusion is visible in the **Exclusions** list. You can select an exclusion in the list to view the exclusion details, edit, or delete the exclusion.
 
 ## Select networks to monitor
 
