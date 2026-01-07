@@ -44,7 +44,8 @@ To set up device discovery:
     - Select **all devices (recommended)** to scan all devices.
     - Select **Select tags** to scan by device tags, and in the **Tags** page, select the tags. This option is useful to scan devices on a specific subnet.
 
-> [!TIP] While standard is the recommended mode, you can change to the basic mode if needed. For more information, see [Discovery modes and scans](device-discovery.md#discovery-modes-and-scans).
+> [!TIP] 
+> While standard is the recommended mode, you can change to the basic mode if needed. For more information, see [Discovery modes and scans](device-discovery.md#discovery-modes-and-scans).
 
 1. Select **Save**.
 
