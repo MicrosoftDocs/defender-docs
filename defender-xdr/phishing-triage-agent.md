@@ -144,7 +144,7 @@ Select:
    **Set conditional access policies for Security Copilot** to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 > [!NOTE]
-> You can change the agent identity after setup as described in [Change the agent identity](#change-the-agent-identity). 
+> You can change the agent identity after setup as described in [Change the agent’s identity and role](#change-the-agents-identity-and-role). 
 
 #### Assign permissions
 
@@ -298,17 +298,24 @@ To view agent metrics and manage the agent, go to the Phishing Triage Agent card
 
 - To open the **Phishing Triage Agent** page directly, select **Security Copilot > Agents**, look for the Phishing Triage Agent under **Agents in use** and select **Go to agent**.
 
-   The **Overview** tab provides details about the agent’s current status, identity, role, and recent activity. 
+   This page consists of two tabs: **Overview** and **Performance**.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page-overview.png" alt-text="Screenshot of the Overview tab on the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page-overview.png":::
+   - The **Overview** tab provides details about the agent’s current status, identity, role, and recent activity. 
 
-   Select an activity from the **Recent activity** list to view details about the agent's investigation and the agent full workflow.
+      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page-overview.png" alt-text="Screenshot of the Overview tab on the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page-overview.png":::
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-activity-details.png" alt-text="Screenshot of the activity details pane that opens from the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-activity-details.png":::
+      Select an activity from the **Recent activity** list to view details about the agent's investigation and the agent full workflow.
 
-   Select **See full agent workflow** to view a graphical representation of the agent’s decision-making process for that specific activity.
+      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-activity-details.png" alt-text="Screenshot of the activity details pane that opens from the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-activity-details.png":::
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-workflow.png" alt-text="Screenshot of the full agent workflow page that opens from the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-workflow.png":::
+      Select **See full agent workflow** to view a graphical representation of the agent’s decision-making process for that specific activity.
+
+      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-workflow.png" alt-text="Screenshot of the full agent workflow page that opens from the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-workflow.png":::
+
+
+   - The **Performance** tab displays key metrics about the agent’s activity over time, including daily activity, mean time to triage (MTTT), and SCU consumption. 
+
+      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page.png" alt-text="Screenshot of the Performance tab on the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page.png":::
 
    Select the ellipsis (...) at the top right corner of the page to access management options for the agent, as described in the sections below.
 
@@ -329,6 +336,7 @@ To view agent metrics and manage the agent, go to the Phishing Triage Agent card
 
    Select **Manage agent** on the card to open the **Phishing Triage Agent** page, which has more performance metrics and management options.
 
+
 ### Change the agent’s identity and role
 
 To manage the agent’s identity and role: 
@@ -336,7 +344,7 @@ To manage the agent’s identity and role:
 1. Select **Security Copilot > Agents**, look for the Phishing Triage Agent under **Agents in use** and select **Go to agent**. 
 1. Select the **ellipsis (...) > Edit agent** at the top right corner of the page. This opens the **Edit agent** page. 
 1. Select **Identity and role > Select a new identity**.
-1. Select a new identity, as described in the [Create the agent identity and assign the agent role](#create-an-agent-role-and-identity).  
+1.  Select a new identity, as described in the [Assign the agent's identity and permissions](#assign-the-agents-identity-and-permissions). 
 
 ### View and manage feedback to the agent
 
