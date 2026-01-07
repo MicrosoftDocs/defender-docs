@@ -71,7 +71,13 @@ Device discovery uses two main discovery modes. The mode controls the level of v
 | Basic scan   | - Passively collects events in your network and extract device information.<br>- Extracts data from all network traffic seen by an onboarded device.<br>- Uses the **SenseNDR.exe** binary for passive network data collection; no network traffic is initiated.<br>- Provides limited visibility of unmanaged endpoints in your network. | Sensitive/legacy networks, minimal impact. |
 | Standard scan (default) | - Actively finds devices in your network to enrich collected data and discover more devices.<br>- Uses common discovery protocols and runs multicast queries in the network to find more devices.<br>- Uses active probing to discover more information about observed devices.<br>- Helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
 
+#### Authenticated network scans
+
 As an additional layer of discovery, [authenticated network scans](network-devices.md) use designated onboarded devices to perform agentless network scans of preconfigured network devices using supported protocols. These scans are recommended for environments that need deeper visibility into network infrastructure devices.
+
+Network devices aren't managed as standard endpoints, as Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. To do this, a designated Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Defender for Endpoint's vulnerability management capabilities provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
+
+For more information, see [Network devices](network-devices.md).
 
 ## Capabilities and configuration options
 
@@ -87,7 +93,9 @@ This table summarizes which capabilities device discovery provides out-of-the-bo
 | Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default. Can monitor/ignore specific networks. | **System** > **Settings** > **Device discovery** > **Monitored networks**   |[Network list management](configure-device-discovery.md#select-networks-to-monitor)  |
 | Exclusions  | No  | Exclude IPs or device groups from scans. | **System** > **Settings** > **Device discovery** > **Exclusions** |[Exclude devices](configure-device-discovery.md#exclude-devices-from-being-actively-probed-in-standard-discovery)  |
 | Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Network device discovery and vulnerability management](network-devices.md)  |
-| OT/IoT device discovery | No | Integrate with Defender for IoT to discover OT and enterprise IoT devices. | **System** > **Settings** > **Device discovery** > **OT/IoT integration** | [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) |
+| OT/IoT device discovery | No | Integrate with Defender for IoT to discover OT and enterprise IoT devices. | **System** > **Settings** > **Device discovery** > **Enterprise IoT** | [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) |
+| Vulnerability assessment | Yes | Assess vulnerabilities on discovered devices and get remediation guidance. For example, search for **SSH** to find recommendations on SSH vulnerabilities related to unmanaged devices. | **Exposure management > Recommendations** | [Vulnerability management overview](../vulnerability-management/vulnerability-management-overview.md) |
+| Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](configure-device-discovery.md#use-advanced-hunting-on-discovered-devices) |
 
 ## Device discovery capabilities by license
 
