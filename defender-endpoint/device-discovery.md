@@ -37,23 +37,29 @@ This article explains how device discovery works, describes the supported capabi
 
 Defender for Endpoint uses onboarded endpoints to passively observe network traffic and actively probe the environment to identify endpoints, network devices, and IoT assets that may not be managed or protected.
 
-The device discovery capability allows you to discover:
+Here's a high level flow that describes how device discovery works:
 
-- Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
-Network devices like routers and switches
-- IoT devices like printers and cameras
-- Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
-
-Once devices are discovered, you can:
-
-- Onboard unmanaged endpoints to the service, increasing the security visibility on them.
-- Reduce the attack surface by identifying and assessing vulnerabilities, and detecting configuration gaps.
+1. Defender for Endpoint scans your environment and identifies unmanaged devices by analyzing network traffic and using active probing techniques.
+1. Defender for Endpoint classifies the discovered devices and adds them to the device inventory, which provides visibility for devices that aren't onboarded.
+1. You can now onboard the discovered devices, which increases your security posture and reduces risk.
+1. You can also configure the device discovery capability: Change the scan mode, add exclusions and trusted networks, enable network scans and more. For more information, see [Configure device discovery](configure-device-discovery.md).
 
 Watch this video for a quick overview of how to assess and onboard unmanaged devices that Defender for Endpoint discovered.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=a101261e-87ab-4aa6-a1e1-c1463e797ca2]
 
 With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
+
+## Discovered assets
+
+Device discovery discovers:
+
+- Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
+Network devices like routers and switches
+- IoT devices like printers and cameras
+- Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
+
+The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
 
 ### Discovery modes and scans
 
@@ -65,10 +71,6 @@ Device discovery uses two main discovery modes. The mode controls the level of v
 | Standard scan (default) | - Allows endpoints to actively find devices in your network to enrich collected data and discover more devices<br>- Uses common discovery protocols that use multicast queries in the network to find more devices.<br>- Uses smart, active probing to discover additional information about observed devices, and helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
 
 As an additional layer of discovery, authenticated network scans use designated onboarded devices to perform agentless network scans of preconfigured network devices using supported protocols. These scans are recommended for environments that need deeper visibility into network infrastructure devices.
-
-## Discovered assets
-
-The discovery engine distinguishes between network events that are received in the corporate network versus outside of the corporate network. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
 
 ## Capabilities and configuration options
 
