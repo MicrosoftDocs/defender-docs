@@ -117,7 +117,7 @@ Set your kubeconfig context to the target cluster, and run the script with the c
 install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
 ```
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension, and causes the arc-managed deployment to be removed (necessary to prevent two competing deployments).
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension, which will cause the arc-managed deployment to be removed preventing 2 conflicting deployments from being enabled at the same time.
 
 For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
