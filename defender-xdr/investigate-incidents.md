@@ -198,27 +198,15 @@ Learn how to use the alert queue and alert pages in [investigate alerts](investi
 
 ## Activities
 
-The new **Activities** tab displays a unified timeline of all manual and automated actions that occur within an incident. You can filter by origin, category, provider, trigger, activity status, policy status, type, target name, target type, or performed by. For a condensed view of the same information as a side panel, access the [activity log](./manage-incidents.md#view-the-activity-log-of-an-incident).
+The **Activities** tab displays a unified timeline of all manual and automated actions that occur within an incident. You can filter by _origin_, _category_, _provider_, _trigger_, _activity status_, _policy status_, _type_, _target name_, _target type_, or _performed by_. You can also access this information as a side panel in the [activity log](./manage-incidents.md#view-the-activity-log-of-an-incident).
 
-With both the Activities tab and activity log, analysts can:
-
-**Triage**
-- View all actions performed on the incident in a single place
-- Identify key steps taken by automated systems and humans
-- Verify recent changes (such as tags, merges, severity updates)
-- Review comments and handovers
-
-**Investigate**
-- Trace the full sequence of actions
-- Inspect detailed metadata in side panels
-- Narrow activity lists to only relevant action types
-- Follow automated workflows launched by automation rules, playbooks, or agents
+With the Activities tab, analysts can triage and investigate incidents. This includes identifing key steps taken by humans and automated systems, verifying recent changes (such as tags, merges, severity updates), reviewing comments and handovers, as well as inspecting detailed metadata in side panels and following automated workflows launched by automation rules, playbooks, or agents.
 
 :::image type="content" source="./media/investigate-incidents/incident-activities-tab.png" alt-text="Screenshot of an incident with the Activities tab opened." lightbox="./media/investigate-incidents/incident-activities-tab.png":::
 
 ## Assets
 
-Easily view and manage all your assets in one place with the new **Assets** tab. This unified view includes Devices, Users, Mailboxes and Apps.
+Easily view and manage all your assets in one place with the **Assets** tab. This unified view includes Devices, Users, Mailboxes and Apps.
 
 The Assets tab displays the total number of assets beside its name. A list of different categories with the number of assets within that category is presented when selecting the Assets tab.
 
