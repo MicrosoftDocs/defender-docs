@@ -4,7 +4,7 @@ description: Learn how Microsoft Security Private Link provides secure, private 
 author: Elazark
 ms.author: elkrieger
 ms.topic: article
-ms.date: 12/02/2025
+ms.date: 01/07/2025
 ---
 
 # Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)

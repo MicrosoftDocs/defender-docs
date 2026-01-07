@@ -4,7 +4,7 @@ description: Configure private endpoints with Microsoft Security Private Link to
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 01/05/2025
+ms.date: 01/07/2025
 #customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender for Cloud so that Defender traffic stays within my private network.
 
 ---
@@ -44,7 +44,7 @@ When you create a Security Private Link resource, you can create a private endpo
 
 1. Select a subscription and an existing resource group, or create a new one.
 
-1. (Optional) Select a resource group location.
+1. If needed, select a resource group location.
 
 1. Enter a name.
 
@@ -72,8 +72,6 @@ When you create a Security Private Link resource, you can create a private endpo
 1. Select **Review + create**
 
 1.  Select **Create**.
-
-After deployment, verify that workloads continue to report data in Defender for Cloud.
 
 ## Create a private endpoint for an existing Security Private Link resource (Azure portal)
 
@@ -119,8 +117,6 @@ If you already have a Security Private Link resource, you can create a private e
 1. Select **Review + create**.
 
  1. Select **Create**.
-
-After deployment, verify that workloads continue to report data in Defender for Cloud.
 
 ## Approve the private endpoint connection
 
