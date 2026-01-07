@@ -54,22 +54,22 @@ Watch this short video to learn more about Attack simulation training.
     - **Global Administrator**¹
     - **Security Administrator**
     - **Attack Simulation Administrator**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
-    - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
+    - **Attack Payload Author**³: Create attack payloads that an admin can initiate later.
+    - **Security Operator and Security Reader**⁴: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
     > ¹ Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
     >
     > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
     >
-    > Members of Attack Payload Author have the following limitations in attack simulation training:
+    > ³ Members of Attack Payload Author have the following limitations in attack simulation training:
     >
     > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
     > - They can't change global settings.
     > - They can't change content (for example, notifications), but they can change payloads.
     > - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
     >
-    > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
+    > ⁴ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
     >
     > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
     > - They can't change global settings.
