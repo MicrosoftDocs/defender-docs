@@ -50,11 +50,11 @@ Watch this video for a quick overview of how to assess and onboard unmanaged dev
 
 With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
 
-## Discovered assets
+### Discovered assets
 
 Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
 
-With device discovery, Defender for Endpoint discovers:
+Defender for Endpoint discovers:
 
 - Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
 - Network devices like routers and switches
@@ -68,8 +68,8 @@ Device discovery uses two main discovery modes. The mode controls the level of v
 
 | Mode | Description   | Use cases and recommendations  |
 |:------------------|:---------------------------------------------------------------------------|:-------------------------------------------|
-| Basic scan   | - Endpoints passively collect events in your network and extract device information from them.<br> - Uses the **SenseNDR.exe** binary for passive network data collection and no network traffic is initiated.<br>- Endpoints extract data from all network traffic seen by an onboarded device.<br> - Limited visibility of unmanaged endpoints in your network. | Sensitive/legacy networks, minimal impact. |
-| Standard scan (default) | - Allows endpoints to actively find devices in your network to enrich collected data and discover more devices<br>- Uses common discovery protocols that use multicast queries in the network to find more devices.<br>- Uses smart, active probing to discover additional information about observed devices, and helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
+| Basic scan   | - Passively collects events in your network and extract device information.<br>- Extracts data from all network traffic seen by an onboarded device.<br>- Uses the **SenseNDR.exe** binary for passive network data collection; no network traffic is initiated.<br>- Provides limited visibility of unmanaged endpoints in your network. | Sensitive/legacy networks, minimal impact. |
+| Standard scan (default) | - Actively finds devices in your network to enrich collected data and discover more devices.<br>- Uses common discovery protocols and runs multicast queries in the network to find more devices.<br>- Uses active probing to discover more information about observed devices.<br>- Helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
 
 As an additional layer of discovery, authenticated network scans use designated onboarded devices to perform agentless network scans of preconfigured network devices using supported protocols. These scans are recommended for environments that need deeper visibility into network infrastructure devices.
 
