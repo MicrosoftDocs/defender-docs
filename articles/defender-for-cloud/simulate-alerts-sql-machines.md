@@ -83,8 +83,9 @@ Once you have simulated an alert, you can verify that it was generated successfu
 
     :::image type="content" source="media/simulate-alerts-sql-machines/check-alerts.png" alt-text="Screenshot that shows where to locate the Check for alerts on this resource in Microsoft Defender for Cloud button is located." lightbox="media/simulate-alerts-sql-machines/check-alerts.png":::
 
-Verify that the simulated alert appears in the list of alerts for the resource and 
+Verify that the simulated alert appears in the list of alerts for the resource and [manage and respond to the security alert](manage-respond-alerts.md).
 
 ## Next step
 
-
+> [div class="nextstepaction"
+> [Manage and respond to security alerts](manage-respond-alerts.md)]

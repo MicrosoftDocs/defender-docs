@@ -1130,6 +1130,9 @@
       items:
         - name: About security alerts and incidents
           href: alerts-overview.md
+        - name: Manage and respond to security alerts
+          displayName: manage, respond, security, alerts
+          href: manage-respond-alerts.md
         - name: Alerts and incidents in Microsoft Defender XDR
           href: concept-integration-365.md
         - name: Security alerts
