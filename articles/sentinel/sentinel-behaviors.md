@@ -272,7 +272,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
 - **Where is behavior data stored in my Sentinel workspace?**: 
   - In your Sentinel workspace, behavior data is stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables.
-  - When monitoring data usage, look for the table names `SentinelBehaviorInfo` and `SentinelBehaviorEntities` in the `Usage` table.
+  - To monitor data usage, look for the table names `SentinelBehaviorInfo` and `SentinelBehaviorEntities` in the `Usage` table.
 
 ### Troubleshooting 
 
