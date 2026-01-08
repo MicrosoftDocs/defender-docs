@@ -21,7 +21,7 @@ Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they c
 - **Context**: Add MITRE ATT&CK mapping and entity roles for instant security relevance.
 - **Consistency**: Provide a unified schema across diverse log sources.
 
-Instead of analyzing individual AWS CloudTrail events or firewall logs, analysts see a behavior - like "**Inbound remote management session from external address**" - that summarizes multiple raw events and maps them to known tactics, techniques, and procedures (TTPs). This abstraction layer enables faster threat detection, investigation, and response across your security operations, without requiring deep familiarity with every log source. 
+This abstraction layer enables faster threat detection, investigation, and response across your security operations, without requiring deep familiarity with every log source. 
 
 This article explains how the UEBA behaviors layer works, how to enable the behaviors layer, and how to use behaviors to enhance security operations.  
 
