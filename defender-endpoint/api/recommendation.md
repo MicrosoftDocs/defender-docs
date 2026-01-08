@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,11 +19,9 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Recommendation resource type
-
 
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
@@ -58,6 +56,3 @@ appliesto:
 |nonProductivityImpactedAssets|Long|Number of devices that aren't affected|
 |relatedComponent|String|Related software component|
 |exposedCriticalDevices|Numeric|The sum of critical devices in all levels of criticality except "not critical" for a particular recommendation|
-
-
-

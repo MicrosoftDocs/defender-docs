@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,10 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
-# Software resource type
 
+# Software resource type
 
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
@@ -39,6 +38,3 @@ appliesto:
 |activeAlert|Boolean|Active alert is associated with this software|
 |exposedMachines|Long|Number of exposed devices|
 |impactScore|Double|Exposure score impact of this software|
-
-
-

@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,11 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
-# Update machine 
-
+# Update machine
 
 ## API description
 
@@ -34,7 +32,7 @@ Updatable properties are: `machineTags` and `deviceValue`.
 
 ## Limitations
 
-- You can update machines that are available in the API. 
+- You can update machines that are available in the API.
 - Update machine only appends tags to the tag collection. If tags exist, they must be included in the tags collection in the body.
 - Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
@@ -47,10 +45,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see: [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.ReadWrite.All|'Read and write machine information for all machines'
-Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|'Read and write machine information for all machines'|
+|Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'|
 
 ## HTTP request
 
@@ -60,10 +58,10 @@ PATCH /api/machines/{machineId}
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|String|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|String|application/json. **Required**.|
 
 ## Request body
 
@@ -73,10 +71,10 @@ Existing properties that aren't included in the request body will maintain their
 
 For best performance, you shouldn't include existing values that haven't change.
 
-Property|Type|Description
-:---|:---|:---
-machineTags|String collection|Set of [machine](machine.md) tags.
-deviceValue|Nullable Enum|The [value of the device](/defender-vulnerability-management/tvm-assign-device-value). Possible values are: 'Normal', 'Low' and 'High'.
+|Property|Type|Description|
+|---|---|---|
+|machineTags|String collection|Set of [machine](machine.md) tags.|
+|deviceValue|Nullable Enum|The [value of the device](/defender-vulnerability-management/tvm-assign-device-value). Possible values are: 'Normal', 'Low' and 'High'.|
 
 ## Response
 
