@@ -247,8 +247,10 @@ Using the UEBA behaviors layer results in the following costs:
 
     :::image type="content" source="media/sentinel-behaviors/query-ueba-behaviors-filter-microsoft-sentinel.png" alt-text="Screenshot of BehaviorInfo table filtered by ServiceSource column to the Microsoft Sentinel value." lightbox="media/sentinel-behaviors/query-ueba-behaviors-filter-microsoft-sentinel.png":::
 
-    :::image type="content" source="media/sentinel-behaviors/query-ueba-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/sentinel-behaviors/query-ueba-behaviors-drill-down-raw-logs.png":::
+
 - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs in the `SupportingEvidence` field.
+
+    :::image type="content" source="media/sentinel-behaviors/query-ueba-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/sentinel-behaviors/query-ueba-behaviors-drill-down-raw-logs.png":::
 
   Run a query on the `SupportingEvidence` field value to find the raw logs that contributed to a behavior. 
 
