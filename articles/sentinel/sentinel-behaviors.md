@@ -27,17 +27,14 @@ This article explains how the UEBA behaviors layer works, how to enable the beha
 
 ## How the UEBA behaviors layer works
 
-Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. 
-
-This table compares behaviors to anomalies and alerts:
+Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. This table compares behaviors to anomalies and alerts:
 
 
-| **Feature**   | **What it represents** | **Purpose** |
+| **Capability**   | **What it represents** | **Purpose** |
 |---------------|-------------------------|-------------|
-| **Behaviors** | Neutral, structured summaries of activity - normal or abnormal- based on time windows or triggers, enriched with MITRE ATT&CK mappings and entity roles | Provide context for investigations, hunting, and detection |
-| **Anomalies** | Patterns that deviate from established baselines | Highlight unusual or suspicious activity |
-| **Alerts**    | Specific threats or breaches | Trigger incident response workflows |
-
+| **Anomaly** | Pattern that deviates from established baselines | Highlights unusual or suspicious activity |
+| **Alert**    | Signals a potential security issue requiring attention | Triggers an incident response workflows |
+| **Behavior** | Neutral, structured summary of activity - normal or abnormal- based on time windows or triggers, enriched with MITRE ATT&CK mappings and entity roles | Provides context and clarity for investigations, hunting, and detection |
 
 When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
 
