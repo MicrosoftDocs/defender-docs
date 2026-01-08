@@ -57,3 +57,9 @@ If you're using the legacy Microsoft Security DevOps (MSDO) CLI, consider moving
 * Enhanced user developer experience (run locally and in CI with command line options).
 
 * A future‑proof path as new scanners are orchestrated by Defender for Cloud CLI. MSDO CLI remains in maintenance support.
+
+## Next steps
+
+- [Install the Defender for Cloud CLI](install-defender-for-cloud-cli.md)
+
+- [Configure Defender for Cloud CLI authentication](defender-cli-authentication.md)
