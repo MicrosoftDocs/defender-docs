@@ -38,7 +38,7 @@ This article explains how to discover and deploy AI agents in Microsoft Defender
 
 ## Prerequisites
 
-To purchase and deploy agents from Security Store, you need: 
+To purchase, deploy, and use agents from Security Store, you need: 
 
 - [Access to a Security Copilot workspace provisioned with SCU capacity](/copilot/security/get-started-security-copilot).
 - For partner-published agents, you need the [Azure subscription contributor or owner role](/marketplace/roles-permissions).
