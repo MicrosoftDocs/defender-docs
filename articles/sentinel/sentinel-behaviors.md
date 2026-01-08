@@ -245,7 +245,7 @@ Using the UEBA behaviors layer results in the following costs:
     | where ServiceSource == "Microsoft Sentinel"
     ```
 
-- **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
+- **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs in the `SupportingEvidence` field.
 - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
   For example:
