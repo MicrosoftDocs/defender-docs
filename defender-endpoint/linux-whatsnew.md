@@ -66,8 +66,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 22, 2025**|
 |Expiry:            |**Sep 14, 2026**|
 |Release version:   |**30.125092.0005.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.272.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
@@ -81,8 +81,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 18, 2025**|
 |Expiry:            |**Aug 09, 2026**|
 |Release version:   |**30.125092.0002.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.189.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
@@ -115,8 +115,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**November 05, 2025**|
 |Expiry:            |**July 10, 2026**|
 |Release version:   |**30.125092.0001.0**|
-|Engine version:    |**1.1.25090.6000**|
-|Signature version: |**1.439.558.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
