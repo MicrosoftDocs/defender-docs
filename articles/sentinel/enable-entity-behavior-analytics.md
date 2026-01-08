@@ -110,6 +110,11 @@ To enable or disable this feature (these prerequisites aren't required to use th
     1. Select the workspace you want to configure.
     1. From the workspace configuration page, select **Anomalies** and toggle on **Detect Anomalies**. 
 
+## Enable the UEBA behaviors layer (Preview)
+
+The UEBA behaviors layer generates enriched summaries of activity observed across multiple data sources. Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they create an abstraction layer that optimizes your data for investigations, hunting, and detection by enhancing
+
+For more information about the UEBA behaviors layer and how to enable it, see [Enable the UEBA behaviors layer in Microsoft Sentinel](./enable-ueba-behaviors-layer.md). 
 
 ## Next steps
 
