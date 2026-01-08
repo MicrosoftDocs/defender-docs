@@ -10,7 +10,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -25,18 +25,16 @@ appliesto:
 
 # Get live response results
 
-
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
-
 
 ## Prerequisites
 
-Devices must be running one of the following versions of Windows: 
+Devices must be running one of the following versions of Windows:
 
 ### Supported operating systems
 
   - Windows 11
-  
+
   - Windows 10
     - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
     - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
@@ -60,8 +58,6 @@ Retrieves a specific live response command result by its index.
 
 Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
-
-
 
 ## Permissions
 
@@ -139,5 +135,3 @@ C:\\windows\\TEMP\\OfficeClickToRun.dmp.zip\n51 MB\n\u0000\u0000\u0000",
     "script_errors":""
 }
 ```
-
-

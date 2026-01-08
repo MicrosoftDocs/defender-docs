@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,24 +19,28 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # List MachineActions API
-
 
 ## API description
 
 Retrieves a collection of [Machine Actions](machineaction.md).
 
-Supports [OData V4 queries](https://www.odata.org/documentation/).
+Supports [OData V4 queries](https://www.odata.org/documentation/).  OData supported operators:
 
-The OData's `$filter` query is supported on: `id`, `status`, `machineId`, `type`, `requestor`, and `creationDateTimeUtc` properties.
+- `$filter` on the following properties:
+  - `id`
+  - `status`
+  - `machineId`
+  - `type`
+  - `requestor`
+  - `creationDateTimeUtc`
 
-`$stop` with max value of 10,000
+- `$stop` with max value of 10,000.
+- `$skip`
 
-`$skip`
-
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Limitations
 
@@ -47,15 +51,14 @@ The OData's `$filter` query is supported on: `id`, `status`, `machineId`, `type`
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'View Data'. For more information, see: [Create and manage roles](../user-roles.md). 
+- The user needs to have at least the following role permission: 'View Data'. For more information, see: [Create and manage roles](../user-roles.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.ReadWrite.All|'Read and write all machine information'
-Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|'Read and write all machine information'|
+|Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'|
 
 ## HTTP request
 
@@ -65,9 +68,9 @@ GET https://api.securitycenter.microsoft.com/api/machineactions
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 

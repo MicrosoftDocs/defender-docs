@@ -24,7 +24,6 @@ appliesto:
 
 # List devices by software
 
-
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieve a list of device references that has this software installed.
@@ -33,10 +32,10 @@ Retrieve a list of device references that has this software installed.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'|
 
 ## HTTP request
 
@@ -46,9 +45,9 @@ GET /api/Software/{Id}/machineReferences
 
 ## Request headers
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
-|Authorization|String|Bearer {token}.**Required**.
+|Authorization|String|Bearer {token}.**Required**.|
 
 ## Request body
 
