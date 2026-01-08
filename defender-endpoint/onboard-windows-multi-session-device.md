@@ -79,22 +79,21 @@ This scenario uses a centrally located script and runs it using a domain-based g
     1. In the **Deployment method** field, select VDI onboarding scripts for non-persistent endpoints.
     1. Click **Download package** and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called **OptionalParamsPolicy** and the files **WindowsDefenderATPOnboardingScript.cmd** and **Onboard-NonPersistentMachine.ps1**.
+1. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called **OptionalParamsPolicy** and the files **WindowsDefenderATPOnboardingScript.cmd** and **Onboard-NonPersistentMachine.ps1**.
 
 ##### Use Group Policy management console to run the script when the virtual machine starts
 
 1. Open the Group Policy Management Console (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
 
-2. In the Group Policy Management Editor, go to **Computer configuration** \> **Preferences** \> **Control panel settings**.
+1. In the Group Policy Management Editor, go to **Computer configuration** \> **Preferences** \> **Control panel settings**.
 
-3. Right-click **Scheduled tasks**, click **New**, and then click **Immediate Task** (At least Windows 7).
+1. Right-click **Scheduled tasks**, click **New**, and then click **Immediate Task** (At least Windows 7).
 
-4. In the Task window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM. Click **Check Names** and then click OK. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
+1. In the Task window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM. Click **Check Names** and then click OK. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
 
-5. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
+1. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
 
-6. Go to the **Actions** tab and click **New**. Ensure that **Start a program** is selected in the Action field. Enter the following:
-
+1. Go to the **Actions** tab and click **New**. Ensure that **Start a program** is selected in the Action field. Enter the following:
    `Action = "Start a program"`
 
    `Program/Script = C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe`

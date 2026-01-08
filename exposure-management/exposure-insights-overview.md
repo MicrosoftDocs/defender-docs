@@ -103,8 +103,6 @@ Security Exposure Management ingests security recommendations from multiple sour
 - **New unified Recommendations page**: All recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one catalog view in the Defender portal
 - **Organized by attack surface**: Recommendations are organized by tabs for different domains - Devices, Cloud, Identity, SaaS, and Data
 - **Categorized by issue type**: Recommendations are separated by type - misconfigurations vs vulnerabilities vs secrets. For example, on the Devices tab, you'll find separate views for Misconfigurations and Vulnerabilities, aligning with different remediation workflows
-- **Risk-based prioritization**: Combines vulnerability data from endpoints and cloud environments into a unified, actionable view, including contextual risk-based Secure Score.
-- **Unified remediation flow**: Side-by-side visibility into device and cloud weaknesses enabling security teams to efficiently track posture improvements, remediate vulnerabilities, and understand attack paths in real time through a streamlined interface.
 
 ### Recommendation management
 
@@ -113,16 +111,15 @@ Security Exposure Management ingests security recommendations from multiple sour
 - Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics
 - Use the new filtering capabilities to focus on specific domains (Cloud, Devices, etc.) or issue types (misconfigurations, vulnerabilities, etc.)
 
-### Secure Score integration
+### Secure score integration
 
-[Microsoft Secure Score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional Secure Score and new Cloud secure scores side-by-side for comprehensive posture management.
+Secure score helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional **Microsoft Secure Score** and new **Cloud Secure Score** side-by-side for comprehensive posture management.
 
-#### Unified Secure Score experience
+#### Unified secure score experience
 
-- **Traditional Secure Score**: Covers Microsoft 365 assets and remains as in Microsoft Defender Vulnerability Management (MDVM)
-- **Cloud Security Score**: A new score (sometimes called "Cloud Security Initiative") for Azure, AWS, and GCP resources, providing cloud-specific posture metrics
+- **[Microsoft Secure Score](/defender-xdr/microsoft-secure-score)**: A score that covers device, identities, SaaS apps, and data, providing an overall organizational posture metric
+- **[Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls?pivots=defender-portal)**: A score for Azure, AWS, and GCP resources, providing cloud-specific posture metric
 - **Side-by-side visibility**: Both scores are now accessible within MSEM, giving a combined view of organizational posture across different domains
-- **Integrated recommendations**: Secure Score recommendations are integrated into the unified Recommendations Catalog alongside cloud and other security recommendations
 
 #### How Security Exposure Management uses Secure Score
 

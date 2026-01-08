@@ -8,7 +8,7 @@ manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/22/2025
+ms.date: 12/05/2025
 search.appverid:
 - MET150
 ms.collection:
@@ -37,7 +37,7 @@ The Tenant Allow/Block list is available in the Microsoft Defender portal at <ht
 For usage and configuration instructions, see the following articles:
 
 - **Domains and email addresses** and **spoofed senders**: [Allow or block emails using the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
-  - Entries apply to the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender), not the From address (also known as the `5322.From` address or P2 sender). For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
+  - Entries apply to the From address (also known as the `5322.From` address or P2 sender), not the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender). For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
   - Entries apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios.
   - Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 - **Files**: [Allow or block files using the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)

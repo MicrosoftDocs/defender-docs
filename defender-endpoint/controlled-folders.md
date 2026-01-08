@@ -118,13 +118,13 @@ You can review the Windows event log to see events that are created when control
 
 1. Download the [Evaluation Package](https://aka.ms/mp7z2w) and extract the file *cfa-events.xml* to an easily accessible location on the device.
 
-2. Type **Event viewer** in the Start menu to open the Windows Event Viewer.
+1. Type **Event viewer** in the Start menu to open the Windows Event Viewer.
 
-3. On the left panel, under **Actions**, select **Import custom view...**.
+1. On the left panel, under **Actions**, select **Import custom view...**.
 
-4. Navigate to where you extracted *cfa-events.xml* and select it. Alternatively, [copy the XML directly](overview-attack-surface-reduction.md).
+1. Navigate to where you extracted *cfa-events.xml* and select it. Alternatively, [copy the XML directly](overview-attack-surface-reduction.md).
 
-5. Select **OK**.
+1. Select **OK**.
 
    The following table shows events related to controlled folder access:
 
@@ -162,13 +162,13 @@ You can use the Windows Security app to view the list of folders that are protec
 
 1. On your Windows 10 or Windows 11 device, open the Windows Security app.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Ransomware protection**, select **Manage ransomware protection**.
+1. Under **Ransomware protection**, select **Manage ransomware protection**.
 
-4. If controlled folder access is turned off, you need to turn it on. Select **protected folders**.
+1. If controlled folder access is turned off, you need to turn it on. Select **protected folders**.
 
-5. Take one of the following steps:
+1. Take one of the following steps:
 
    - To add a folder, select **+ Add a protected folder**.
    - To remove a folder, select it, and then select **Remove**.
