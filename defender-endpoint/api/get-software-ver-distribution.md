@@ -26,7 +26,7 @@ appliesto:
 
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a list of your organization's software version distribution.
 

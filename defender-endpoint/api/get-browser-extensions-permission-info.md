@@ -26,7 +26,7 @@ appliesto:
 # Get browser extensions permission information
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 

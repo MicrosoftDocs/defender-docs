@@ -26,7 +26,7 @@ appliesto:
 # Get live response results
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 
 ## Prerequisites

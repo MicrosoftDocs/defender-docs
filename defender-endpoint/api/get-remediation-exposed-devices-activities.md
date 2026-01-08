@@ -24,7 +24,7 @@ appliesto:
 
 # List exposed devices of one remediation activity
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API Description
 

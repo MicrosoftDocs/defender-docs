@@ -24,7 +24,7 @@ appliesto:
 
 # List devices by recommendation
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a list of devices associated with the security recommendation.
 

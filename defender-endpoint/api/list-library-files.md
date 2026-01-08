@@ -24,7 +24,7 @@ appliesto:
 
 #  List library files 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 

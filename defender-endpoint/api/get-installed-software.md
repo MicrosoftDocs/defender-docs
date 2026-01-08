@@ -26,7 +26,7 @@ appliesto:
 # Get installed software
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a collection of installed software related to a given device ID.
 

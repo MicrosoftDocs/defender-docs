@@ -24,7 +24,7 @@ appliesto:
 # List vulnerabilities by software
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieve a list of vulnerabilities in the installed software.
 
