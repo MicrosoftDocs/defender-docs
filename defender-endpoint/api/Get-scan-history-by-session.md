@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,13 +21,11 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
   - Microsoft Defender for Business
-
 ---
 
 # Get scan history by session
 
-
-[!Include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -40,16 +38,15 @@ Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 ## Permissions
 
 When obtaining a token using user credentials:
- - To view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData`. For more information, see [Create and manage roles](../user-roles.md).
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
+- To view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData`. For more information, see [Create and manage roles](../user-roles.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Read.All| Read all scan information.
-Delegated (work or school account)|Machine.Read.All|Read all scan information.
+- One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Read.All| Read all scan information.|
+|Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
 ## HTTP request
 
@@ -59,18 +56,18 @@ POST /api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|string|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|string|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-SessionIds |String|The session Id. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|SessionIds|String|The session Id. **Required**.|
 
 ## Response
 
@@ -132,5 +129,3 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
   ]
 }
 ```
-
-

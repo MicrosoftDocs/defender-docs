@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -24,18 +24,25 @@ appliesto:
 
 # List all security baselines assessment profiles
 
-
 ## 1. Get security baselines assessment profiles
 
 This API retrieves a list of all security baselines assessment profiles created by the organization.
 
 ### 1.1 Parameters
 
-- Supports OData V4 queries.
-- OData supported operators:
-  - $filter on : id,name, operatingSystem, operatingSystemVersion, status, settingsNumber, passedDevices, totalDevices
-  - $top with max value of 10,000.
-  - $skip.
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
+
+- `$filter` on the following properties:
+  - `id`
+  - `name`
+  - `operatingSystem`
+  - `operatingSystemVersion`
+  - `status`
+  - `settingsNumber`
+  - `passedDevices`
+  - `totalDevices`
+- `$top` with max value of 10,000.
+- `$skip`
 
 ### 1.2 HTTP request
 
@@ -45,30 +52,30 @@ GET:/api/baselineProfiles
 
 ### 1.3 Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ### 1.4 Properties
 
-|Property | Type | Description |
-|:---|:---|:---|
-|Id | String | Unique identifier for the specific baseline profile.
-|name | String | The profile name.
-|description | String | The profile description.
-|benchmark | String | The profile benchmark.
-|version | String | The profile version.
-|operatingSystem|String|The profile applicable operating system.
-|operatingSystemVersion|String|The profile applicable operating system version.
-|status|Boolean|Indicates whether the profile is active or not
-|complianceLevel|String|The compliance level chosen for the profile.
-|settingsNumber|Int|Number of selected configurations in the profile.
-|createdBy|String|The user that created this profile.
-|lastUpdatedBy|DateTime|The last user to modify this profile.
-|createdOnTimeOffset|DateTime|The date and time the profile was created.
-|lastUpdateTimeOffset|DateTime|The date and time the profile was last updated.
-|passedDevices|Int|The number of devices applicable to this profile that are compliant with all of the profile configurations.
-|totalDevices|Int|Number of devices applicable to this profile.
+|Property|Type|Description|
+|---|---|---|
+|Id|String|Unique identifier for the specific baseline profile.|
+|name|String|The profile name.|
+|description|String|The profile description.|
+|benchmark|String|The profile benchmark.|
+|version|String|The profile version.|
+|operatingSystem|String|The profile applicable operating system.|
+|operatingSystemVersion|String|The profile applicable operating system version.|
+|status|Boolean|Indicates whether the profile is active or not|
+|complianceLevel|String|The compliance level chosen for the profile.|
+|settingsNumber|Int|Number of selected configurations in the profile.|
+|createdBy|String|The user that created this profile.|
+|lastUpdatedBy|DateTime|The last user to modify this profile.|
+|createdOnTimeOffset|DateTime|The date and time the profile was created.|
+|lastUpdateTimeOffset|DateTime|The date and time the profile was last updated.|
+|passedDevices|Int|The number of devices applicable to this profile that are compliant with all of the profile configurations.|
+|totalDevices|Int|Number of devices applicable to this profile.|
 
 ## 1.5 Example
 
@@ -106,4 +113,3 @@ GET https://api.securitycenter.microsoft.com/api/baselineProfiles
      ]
 }
 ```
-
