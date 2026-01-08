@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,11 +19,9 @@ ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get alert-related IPs' information API
-
 
 ## API description
 
@@ -43,12 +41,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Ip.Read.All|'Read IP address profiles'
-Delegated (work or school account)|Ip.Read.All|'Read IP address profiles'
-
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Ip.Read.All|'Read IP address profiles'|
+|Delegated (work or school account)|Ip.Read.All|'Read IP address profiles'|
 
 ## HTTP request
 
@@ -58,9 +54,9 @@ GET /api/alerts/{id}/ips
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 

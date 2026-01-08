@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -23,17 +23,16 @@ appliesto:
 
 # Get device secure score
 
-
 Retrieves your [Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices). A higher Microsoft Secure Score for Devices means your endpoints are more resilient from cybersecurity threat attacks.
 
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Score.Read.All|'Read Threat and Vulnerability Management score'
-Delegated (work or school account)|Score.Read|'Read Threat and Vulnerability Management score'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Score.Read.All|'Read Threat and Vulnerability Management score'|
+|Delegated (work or school account)|Score.Read|'Read Threat and Vulnerability Management score'|
 
 ## HTTP request
 
@@ -43,9 +42,9 @@ GET /api/configurationScore
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -76,4 +75,3 @@ Here's an example of the shortned response list.
     "score": 340
 }
 ```
-
