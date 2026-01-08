@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,10 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
-# Get alert related user information API
 
+# Get alert related user information API
 
 ## API description
 
@@ -43,12 +42,10 @@ Retrieves the User related to a specific alert.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|User.Read.All|'Read user profiles'
-Delegated (work or school account)|User.Read.All|'Read user profiles'
-
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|User.Read.All|'Read user profiles'|
+|Delegated (work or school account)|User.Read.All|'Read user profiles'|
 
 ## HTTP request
 
@@ -58,9 +55,9 @@ GET /api/alerts/{id}/user
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -101,5 +98,3 @@ Here is an example of the response.
     "isOnlyNetworkUser": false
 }
 ```
-
-

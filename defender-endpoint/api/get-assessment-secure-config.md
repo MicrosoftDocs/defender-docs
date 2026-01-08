@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,11 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # Export secure configuration assessment per device
-
 
 Returns all of the configurations and their status, on a per-device basis. Unless indicated otherwise, all export assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
 
@@ -39,7 +37,6 @@ There are different API calls to get different types of data. Because the amount
   - Download all the files using the download URLs and process the data as you like.
 
 Data that is collected (using either _JSON response_ or _via files_) is the current snapshot of the current state, and does not contain historic data. In order to collect historic data, customers must save the data in their own data storages.
-
 
 ## 1. Export secure configuration assessment (JSON response)
 
@@ -57,10 +54,10 @@ This API response contains the Secure Configuration Assessment on your exposed d
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Vulnerability.Read.All|\'Read Threat and Vulnerability Management vulnerability information\'
-Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerability Management vulnerability information\'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management vulnerability information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management vulnerability information'|
 
 ### 1.3 URL
 
@@ -78,27 +75,22 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
 - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
 
-<br>
-
-****
-
-Property (ID)|Data type|Description|Example of a returned value
----|---|---|---
-ConfigurationCategory|string|Category or grouping to which the configuration belongs: Application, OS, Network, Accounts, Security controls|Security controls
-ConfigurationId|string|Unique identifier for a specific configuration|scid-10000
-ConfigurationImpact|string|Rated impact of the configuration to the overall configuration score (1-10)|9
-ConfigurationName|string|Display name of the configuration|Onboard devices to Microsoft Defender for Endpoint
-ConfigurationSubcategory|string|Subcategory or subgrouping to which the configuration belongs. In many cases, this describes specific capabilities or features.|Onboard Devices
-DeviceId|string|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
-DeviceName|string|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com
-IsApplicable|bool|Indicates whether the configuration or policy is applicable|true
-IsCompliant|bool|Indicates whether the configuration or policy is properly configured|false
-IsExpectedUserImpact|bool|Indicates whether there will be user impact if the configuration will be applied|true
-OSPlatform|string|Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management (MDVM) supported operating systems and platforms for details.|Windows10 and Windows 11
-RbacGroupName|string|The role-based access control (RBAC) group. If this device is not assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|Servers
-RecommendationReference|string|A reference to the recommendation ID related to this software.|sca-_-scid-20000
-Timestamp|string|Last time the configuration was seen on the device|2020-11-03 10:13:34.8476880
-|
+|Property (ID)|Data type|Description|Example of a returned value|
+|---|---|---|---|
+ConfigurationCategory|string|Category or grouping to which the configuration belongs: Application, OS, Network, Accounts, Security controls|Security controls|
+ConfigurationId|string|Unique identifier for a specific configuration|scid-10000|
+ConfigurationImpact|string|Rated impact of the configuration to the overall configuration score (1-10)|9|
+ConfigurationName|string|Display name of the configuration|Onboard devices to Microsoft Defender for Endpoint|
+ConfigurationSubcategory|string|Subcategory or subgrouping to which the configuration belongs. In many cases, this describes specific capabilities or features.|Onboard Devices|
+DeviceId|string|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1|
+DeviceName|string|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com|
+IsApplicable|bool|Indicates whether the configuration or policy is applicable|true|
+IsCompliant|bool|Indicates whether the configuration or policy is properly configured|false|
+IsExpectedUserImpact|bool|Indicates whether there will be user impact if the configuration will be applied|true|
+OSPlatform|string|Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management (MDVM) supported operating systems and platforms for details.|Windows10 and Windows 11|
+RbacGroupName|string|The role-based access control (RBAC) group. If this device is not assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|Servers|
+RecommendationReference|string|A reference to the recommendation ID related to this software.|sca-_-scid-20000|
+Timestamp|string|Last time the configuration was seen on the device|2020-11-03 10:13:34.8476880|
 
 ### 1.6 Examples
 
@@ -218,10 +210,10 @@ Rate limitations for this API are 5 calls per minute and 20 calls per hour.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Vulnerability.Read.All|\'Read Threat and Vulnerability Management vulnerability information\'
-Delegated (work or school account)|Vulnerability.Read|\'Read Threat and Vulnerability Management vulnerability information\'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management vulnerability information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management vulnerability information'|
 
 ### 2.3 URL
 
@@ -239,16 +231,10 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 - For maximum download speed of your data, you can make sure you are downloading from the same Azure region in which your data resides.
 
-
-<br>
-
-****
-
-Property (ID)|Data type|Description|Example of a returned value
----|---|---|---
-Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
-GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z
-|
+|Property (ID)|Data type|Description|Example of a returned value|
+|---|---|---|---|
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]|
+GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00Z|
 
 ### 2.6 Examples
 

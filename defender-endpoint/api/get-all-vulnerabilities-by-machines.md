@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,7 +19,6 @@ ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # List vulnerabilities by machine and software
@@ -29,20 +28,29 @@ Retrieves a list of all the vulnerabilities affecting the organization per [mach
 This API can be used for [Power BI integration](api-power-bi.md).
 
 - If the vulnerability has a fixing KB, it will appear in the response.
-- Supports [OData V4 queries](https://www.odata.org/documentation/).
-- The OData's `$filter` query is supported on: `id`, `cveId`, `machineId`, `fixingKbId`, `productName`, `productVersion`, `severity`, and `productVendor` properties.
-<br>```$stop``` with max value of 10,000 
-<br>```$skip```
+- Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
+  - `$filter`is supported on the following properties:
+    - `id`
+    - `cveId`
+    - `machineId`
+    - `fixingKbId`
+    - `productName`
+    - `productVersion`
+    - `severity`
+    - `productVendor`
+  - `$stop` with max value of 10,000.
+  - `$skip`
 
+  See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management vulnerability information'
-Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management vulnerability information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management vulnerability information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management vulnerability information'|
 
 ## HTTP request
 
@@ -52,9 +60,9 @@ GET /api/vulnerabilities/machinesVulnerabilities
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -107,4 +115,3 @@ Here's an example of the response.
 
 }
 ```
-
