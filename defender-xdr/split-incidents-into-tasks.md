@@ -71,6 +71,9 @@ To view and manage tasks:
 
 When you onboard Microsoft Sentinel to the Defender portal, the Defender portal automatically synchronizes tasks you create in Sentinel using the Azure portal. 
 
+> [!IMPORTANT]
+> Synchronization is one-way - tasks you create in the Defender portal aren't synchronized back to the Azure portal.
+
 The Defender portal doesn't yet support automatic task creation, but you can continue to use [task automation rules](/azure/sentinel/create-tasks-automation-rule), [Logic App playbooks](/azure/sentinel/automation/create-tasks-playbook), or the [Incident Tasks REST API](/rest/api/securityinsights/incident-tasks) in Azure to create tasks, which are synchronized to the Defender portal.
 
 ## Related content
