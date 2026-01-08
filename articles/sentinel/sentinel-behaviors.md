@@ -118,8 +118,10 @@ Behaviors allow hunters to search on TTPs and activity summaries, rather than wr
     ```kusto
     // Find behaviors by MITRE technique
     BehaviorInfo
-    | where MitreTechniques has "T1078" // Valid Accounts
-    | project TimeGenerated, Title, Description, SourceTable
+    | where AttackTechniques has "T1078" // Valid Accounts
+    | extend AF = parse_json(AdditionalFields)
+    | extend TableName = tostring(AF.TableName)
+    | project TimeGenerated, Title, Description, TableName
     ```
 
   - Specific user:
@@ -129,7 +131,7 @@ Behaviors allow hunters to search on TTPs and activity summaries, rather than wr
     BehaviorInfo
     | join kind=inner BehaviorEntities on BehaviorId
     | where TimeGenerated >= ago(7d)
-    | where EntityType == "User" and EntityId == "user@domain.com"
+    | where EntityType == "User" and AccountUpn == "user@domain.com"
     | project TimeGenerated, Title, Description, Categories
     | order by TimeGenerated desc
     ```
@@ -266,10 +268,10 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
   BehaviorInfo
   | join kind=inner BehaviorEntities on BehaviorId
   | where TimeGenerated >= ago(1d)
-  | project TimeGenerated, Title, Description, EntityType, EntityRole, EntityId
+  | project TimeGenerated, Title, Description, EntityType, EntityRole, AccountUpn
   ```
 
-  This gives you each behavior and each entity involved in it. The `EntityId` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
+  This gives you each behavior and each entity involved in it. The `AccountUpn` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
 
 - **Where is behavior data stored in my Sentinel workspace?**: 
   - In your Sentinel workspace, behavior data is stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables.
