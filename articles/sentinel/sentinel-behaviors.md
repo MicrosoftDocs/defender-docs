@@ -27,7 +27,17 @@ This article explains how the UEBA behaviors layer works, how to enable the beha
 
 ## How the UEBA behaviors layer works
 
-Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. While UEBA anomalies indicate unusual patterns that deviate from normal behavior, behaviors provide a comprehensive view of *all* activity, both normal and abnormal, in a structured format.
+Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. 
+
+This table compares behaviors to anomalies and alerts:
+
+
+| **Feature**   | **What it represents** | **Purpose** |
+|---------------|-------------------------|-------------|
+| **Behaviors** | Neutral, structured summaries of activity - normal or abnormal- based on time windows or triggers, enriched with MITRE ATT&CK mappings and entity roles | Provide context for investigations, hunting, and detection |
+| **Anomalies** | Patterns that deviate from established baselines | Highlight unusual or suspicious activity |
+| **Alerts**    | Specific threats or breaches | Trigger incident response workflows |
+
 
 When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
 
@@ -44,7 +54,7 @@ Each behavior record includes:
 - **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
-The UEBA behaviors layer stores behavior records in two dedicated tables - BehaviorInfo and BehaviorEntities - in your Sentinel workspace, integrating seamlessly with your existing workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For more information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
+The UEBA behaviors layer stores behavior records in two dedicated tables in your Sentinel workspace, integrating seamlessly with your existing workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
 
 This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
@@ -217,11 +227,11 @@ Using the UEBA behaviors layer results in the following costs:
 
 - **No extra license cost:** Behaviors are included as part of Microsoft Sentinel (currently in preview). You don’t need a separate SKU, UEBA add‑on, or additional licensing. If your workspace is connected to Sentinel and onboarded to the Defender portal, you can use behaviors at no extra feature cost.
 
-- **Log data ingestion charges:** Behavior records are stored in the `BehaviorInfo` and `BehaviorEntities` tables in your Sentinel workspace. Each behavior contributes to your workspace’s data ingestion volume and is billed at your existing Log Analytics/Sentinel ingestion rate. Behaviors are additive - they don’t replace your existing raw logs.
+- **Log data ingestion charges:** Behavior records are stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables in your Sentinel workspace. Each behavior contributes to your workspace’s data ingestion volume and is billed at your existing Log Analytics/Sentinel ingestion rate. Behaviors are additive - they don’t replace your existing raw logs.
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-The UEBA behaviors layer stores behaviors in two related tables in your Sentinel workspace - `BehaviorInfo` and `BehaviorEntities`.
+The UEBA behaviors layer physical stores behaviors in two related tables in your Sentinel workspace - `SentinelBehaviorInfo` and `SentinelBehaviorEntities`.
 
 - **Understand the BehaviorInfo and BehaviorEntities table schemas**:
 
@@ -229,6 +239,11 @@ The UEBA behaviors layer stores behaviors in two related tables in your Sentinel
   - The `BehaviorEntities` table lists the entities involved in each behavior. 
 
   For more information about these table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
+
+- **Where is behavior data stored?**: 
+  - In your Sentinel workspace, behavior data is stored as `SentinelBehaviorInfo` and `SentinelBehaviorEntities`
+  - When querying, use `BehaviorInfo` and `BehaviorEntities` - these provide unified results from both Microsoft Defender XDR and Sentinel sources
+  - If you already use Defender behaviors (such as Microsoft Defender for Cloud Apps), the same `BehaviorInfo`/`BehaviorEntities` queries will show results from all sources
 
 - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
 - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
