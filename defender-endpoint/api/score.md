@@ -25,7 +25,7 @@ appliesto:
 # Score resource type
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 
 ## Properties

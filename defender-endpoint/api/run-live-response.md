@@ -25,7 +25,7 @@ appliesto:
 # Run live response commands on a device
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 
 ## Prerequisites

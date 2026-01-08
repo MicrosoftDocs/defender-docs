@@ -25,7 +25,7 @@ appliesto:
 # Export device antivirus health details API methods and properties
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Export device antivirus health details API description
 

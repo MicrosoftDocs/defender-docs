@@ -25,7 +25,7 @@ appliesto:
 # Get recommendation by ID
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a security recommendation by its ID.
 
