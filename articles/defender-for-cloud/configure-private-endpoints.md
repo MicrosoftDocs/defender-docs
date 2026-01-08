@@ -28,9 +28,9 @@ Before you begin, make sure that:
 
 ## Create a private endpoint using a Security Private Link resource (Azure portal)
 
-A Security Private Link resource must belong to a resource group.
+You can create a private endpoint while creating a Security Private Link resource in the Azure portal.
 
-When you create a Security Private Link resource, you can create a private endpoint as part of the same workflow.
+If you already have a Security Private Link resource, [create a private endpoint for an existing Security Private Link resource](#create-a-private-endpoint-for-an-existing-security-private-link-resource-azure-portal).
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -87,7 +87,9 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select a subscription and an existing resource group, or create a new one.
 
-1. Enter a name and network interface name, and select a region.
+1. Enter a name and network interface name.
+
+1. Select a region.
 
 1. Select **Next: Resource**.
 
@@ -102,11 +104,15 @@ If you already have a Security Private Link resource, you can create a private e
 
 1. Select the Security Private Link resource for Defender for Cloud.
 
-1. Select **containers** as the target sub-resource, then select **Next: Virtual Network**.
+1. Select **containers** as the target sub-resource.
+
+1. Select **Next: Virtual Network**.
 
 1. Select the virtual network and the subnet.
 
-1. Leave the private IP address allocation set to **Dynamic**, then select **Next: DNS**.
+1. Leave the private IP address allocation set to **Dynamic**.
+
+1. Select **Next: DNS**.
 
 1. Enable **Integrate with private DNS zone** and verify that the private DNS zone is populated automatically.
 
