@@ -214,7 +214,7 @@ To enable the UEBA behaviors layer in your workspace:
 
     If you haven't yet connected any supported data sources to your Sentinel workspace, select **Go to Content Hub** to find and connect the relevant connectors.
 
-    :::image type="content" source="media/sentinel-behaviors/ueba-behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/sentinel-behaviors/ueba-behaviors-enable.png" ::: 
+    :::image type="content" source="media/sentinel-behaviors/behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/sentinel-behaviors/behaviors-enable.png":::
 
 1. Select **Connect**.
 
@@ -245,16 +245,16 @@ Using the UEBA behaviors layer results in the following costs:
     | where ServiceSource == "Microsoft Sentinel"
     ```
 
-    :::image type="content" source="media/sentinel-behaviors/query-ueba-behaviors-filter-microsoft-sentinel.png" alt-text="Screenshot of BehaviorInfo table filtered by ServiceSource column to the Microsoft Sentinel value." lightbox="media/sentinel-behaviors/query-ueba-behaviors-filter-microsoft-sentinel.png":::
+    :::image type="content" source="media/sentinel-behaviors/query-behaviors-filter-microsoft-sentinel.png" alt-text="Screenshot of BehaviorInfo table filtered by ServiceSource column to the Microsoft Sentinel value." lightbox="media/sentinel-behaviors/query-behaviors-filter-microsoft-sentinel.png":::
 
 
 - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs in the `SupportingEvidence` field.
 
-    :::image type="content" source="media/sentinel-behaviors/query-ueba-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/sentinel-behaviors/query-ueba-behaviors-drill-down-raw-logs.png":::
+    :::image type="content" source="media/sentinel-behaviors/query-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/sentinel-behaviors/query-behaviors-drill-down-raw-logs.png":::
 
   Run a query on the `SupportingEvidence` field value to find the raw logs that contributed to a behavior. 
 
-  :::image type="content" source="media/sentinel-behaviors/query-ueba-behaviors-supportingevidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/sentinel-behaviors/query-ueba-behaviors-supportingevidence.png":::
+  :::image type="content" source="media/sentinel-behaviors/query-behaviors-supportingevidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/sentinel-behaviors/query-behaviors-supportingevidence.png":::
 
 - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
