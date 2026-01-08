@@ -877,6 +877,9 @@
         - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
+        - name: Simulate alerts for SQL servers on machines
+          displayName: SQL, SQL servers, defender, machines
+          href: simulate-alerts-sql-machines.md
         - name: Find and remediate vulnerabilities
           href: sql-azure-vulnerability-assessment-find.md
         - name: Consume and export scan results
@@ -1130,9 +1133,6 @@
       items:
         - name: About security alerts and incidents
           href: alerts-overview.md
-        - name: Manage and respond to security alerts
-          displayName: manage, respond, security, alerts
-          href: manage-respond-alerts.md
         - name: Alerts and incidents in Microsoft Defender XDR
           href: concept-integration-365.md
         - name: Security alerts
