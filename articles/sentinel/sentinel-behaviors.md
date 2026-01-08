@@ -231,19 +231,19 @@ Using the UEBA behaviors layer results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-The UEBA behaviors layer physical stores behaviors in two related tables in your Sentinel workspace - `SentinelBehaviorInfo` and `SentinelBehaviorEntities`.
+- **Access behavior data in the Defender portal by querying BehaviorInfo and BehaviorEntities**
 
-- **Understand the BehaviorInfo and BehaviorEntities table schemas**:
+  - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”. For more information about the table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table).
+  - The `BehaviorEntities` table lists the entities involved in each behavior. For more information about the table schema, [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
 
-  - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”.
-  - The `BehaviorEntities` table lists the entities involved in each behavior. 
+  - **Unified view**: The `BehaviorInfo` and `BehaviorEntities` tables include all UEBA behaviors and might also include behaviors from Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud, if you're collecting behaviors from these services.
 
-  For more information about these table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table) and [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
+    To filter for behaviors from the Microsoft Sentinel UEBA behaviors layer, use the `ServiceSource` column. For example:
 
-- **Where is behavior data stored?**: 
-  - In your Sentinel workspace, behavior data is stored as `SentinelBehaviorInfo` and `SentinelBehaviorEntities`
-  - When querying, use `BehaviorInfo` and `BehaviorEntities` - these provide unified results from both Microsoft Defender XDR and Sentinel sources
-  - If you already use Defender behaviors (such as Microsoft Defender for Cloud Apps), the same `BehaviorInfo`/`BehaviorEntities` queries will show results from all sources
+    ```kusto 
+    BehaviorInfo
+    | where ServiceSource == "Microsoft Sentinel"
+    ```
 
 - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs.
 - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
@@ -262,6 +262,12 @@ The UEBA behaviors layer physical stores behaviors in two related tables in your
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
 
 For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
+
+- **Where is behavior data stored?**: 
+  - In your Sentinel workspace, behavior data is stored as `SentinelBehaviorInfo` and `SentinelBehaviorEntities`
+  - When querying, use `BehaviorInfo` and `BehaviorEntities` - these provide unified results from both Microsoft Defender XDR and Sentinel sources
+  - If you already use Defender behaviors (such as Microsoft Defender for Cloud Apps), the same `BehaviorInfo`/`BehaviorEntities` queries will show results from all sources
+
 
 ### Troubleshooting 
 
