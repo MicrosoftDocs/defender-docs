@@ -48,7 +48,7 @@ One of the following permissions is required to call this API. TFor more informa
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/investigations/{id}
+GET https://api.security.microsoft.com/api/investigations/{id}
 ```
 
 ## Request headers

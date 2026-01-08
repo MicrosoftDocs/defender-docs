@@ -46,7 +46,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators
+POST https://api.security.microsoft.com/api/indicators
 ```
 
 ## Request headers
@@ -87,7 +87,7 @@ In the request body, supply a JSON object with the following parameters:
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators
+POST https://api.security.microsoft.com/api/indicators
 ```
 
 ```json

@@ -68,7 +68,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
+POST https://api.security.microsoft.com/api/advancedqueries/run
 ```
 
 ## Request headers
@@ -97,7 +97,7 @@ If successful, this method returns 200 OK, and _QueryResponse_ object in the res
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
+POST https://api.security.microsoft.com/api/advancedqueries/run
 ```
 
 ```json

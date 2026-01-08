@@ -79,5 +79,5 @@ If domain doesn't exist:
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/domains/api.securitycenter.microsoft.com/machines
+GET https://api.security.microsoft.com/api/domains/api.security.microsoft.com/machines
 ```

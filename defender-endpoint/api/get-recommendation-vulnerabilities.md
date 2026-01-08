@@ -63,7 +63,7 @@ If successful, this method returns 200 OK, with the list of vulnerabilities asso
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/vulnerabilities
+GET https://api.security.microsoft.com/api/recommendations/va-_-google-_-chrome/vulnerabilities
 ```
 
 ### Response example
@@ -72,7 +72,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Collection(Analytics.Contracts.PublicAPI.PublicVulnerabilityDto)",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Collection(Analytics.Contracts.PublicAPI.PublicVulnerabilityDto)",
     "value": [
         {
             "id": "CVE-2019-13748",

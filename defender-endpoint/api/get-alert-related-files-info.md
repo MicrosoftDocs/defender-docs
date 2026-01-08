@@ -74,7 +74,7 @@ If successful and alert and files exist - 200 OK. If alert not found - 404 Not F
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts/636688558380765161_2136280442/files
+GET https://api.security.microsoft.com/api/alerts/636688558380765161_2136280442/files
 ```
 
 ### Response example
@@ -83,7 +83,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Files",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Files",
     "value": [
         {
             "sha1": "f2a00fd2f2de1be0214b8529f1e9f67096c1aa70",

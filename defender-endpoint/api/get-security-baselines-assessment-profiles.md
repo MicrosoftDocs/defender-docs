@@ -82,14 +82,14 @@ GET:/api/baselineProfiles
 ### 1.5.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/baselineProfiles
+GET https://api.security.microsoft.com/api/baselineProfiles
 ```
 
 ### 1.6.2 Response example
 
 ```json
 {
-    "@odata.context": "https:// api.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicBaselineProfileDto)",
+    "@odata.context": "https:// api.security.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicBaselineProfileDto)",
     "value":
     [
         {

@@ -76,5 +76,5 @@ If successful and user exists - 200 OK. If the user doesn't exist - 200 OK with 
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/users/user1/alerts
+GET https://api.security.microsoft.com/api/users/user1/alerts
 ```

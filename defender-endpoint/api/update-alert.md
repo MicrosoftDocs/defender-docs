@@ -94,7 +94,7 @@ If successful, this method returns 200 OK, and the [alert](alerts.md) entity in 
 Here's an example of the request.
 
 ```http
-PATCH https://api.securitycenter.microsoft.com/api/alerts/121688558380765161_2136280442
+PATCH https://api.security.microsoft.com/api/alerts/121688558380765161_2136280442
 ```
 
 ```json

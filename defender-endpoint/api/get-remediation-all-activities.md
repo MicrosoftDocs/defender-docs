@@ -92,14 +92,14 @@ One of the following permissions is required to call this API. To learn more, in
 ### Request example
 
 ```http
-GET https://api.securitycenter.windows.com/api/remediationtasks/
+GET https://api.security.microsoft.com/api/remediationtasks/
 ```
 
 ### Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.windows.com/api/$metadata#RemediationTasks",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#RemediationTasks",
     "value": [
         {
             "id": "03942ef5-aewb-4w6e-b555-d6a97013844w",

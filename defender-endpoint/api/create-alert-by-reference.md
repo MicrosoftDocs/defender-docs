@@ -55,7 +55,7 @@ One of the following permissions is required to call this API. For more informat
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/alerts/CreateAlertByReference
+POST https://api.security.microsoft.com/api/alerts/CreateAlertByReference
 ```
 
 ## Request headers
@@ -91,7 +91,7 @@ If successful, this method returns 200 OK, and a new [alert](alerts.md) object i
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/alerts/CreateAlertByReference
+POST https://api.security.microsoft.com/api/alerts/CreateAlertByReference
 ```
 
 ```json

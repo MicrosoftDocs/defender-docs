@@ -83,7 +83,7 @@ To remove machine tags, set the Action to 'Remove' instead of 'Add' in the reque
 Here's an example of a request that adds a tag to multiple machines.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/AddOrRemoveTagForMultipleMachines
+POST https://api.security.microsoft.com/api/machines/AddOrRemoveTagForMultipleMachines
 ```
 
 ```json

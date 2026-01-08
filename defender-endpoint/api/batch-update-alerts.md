@@ -95,7 +95,7 @@ If successful, this method returns 200 OK, with an empty response body.
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/alerts/batchUpdate
+POST https://api.security.microsoft.com/api/alerts/batchUpdate
 ```
 
 ```json

@@ -64,7 +64,7 @@ If successful, this method returns 200 OK with the installed software informatio
 Here is an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf44207c4006ed7cc4501/software
+GET https://api.security.microsoft.com/api/machines/ac233fa6208e1579620bf44207c4006ed7cc4501/software
 ```
 
 ### Response example
@@ -73,7 +73,7 @@ Here's an example of the response.
 
 ```json
 {
-"@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Software",
+"@odata.context": "https://api.security.microsoft.com/api/$metadata#Software",
 "value": [
         {
 "id": "microsoft-_-internet_explorer",

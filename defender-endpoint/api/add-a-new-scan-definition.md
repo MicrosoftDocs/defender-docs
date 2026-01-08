@@ -52,7 +52,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions
+POST https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions
 ```
 
 ## Request headers
@@ -86,7 +86,7 @@ If successful, this method returns 200 - Ok response code and the new or updated
 Here's an example of a request that adds a new scan.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions
+POST https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions
 ```
 
 ```json
@@ -119,7 +119,7 @@ Here's an example of the response.
 
 ```json
  {
-  "@odata.context": "https://api-df.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity",
+  "@odata.context": "https://api.security.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity",
   "id": "d14cefe1-0301-488c-ad17-a86c428c3727",
   "scanType": "Network",
   "scanName": "Test Network scan",
@@ -154,7 +154,7 @@ Here's an example of the response.
 Here's an example of a request that updates a scan.
 
 ```http
-PATCH  https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/289224fb-1686-472c-9751-5555960854ca
+PATCH  https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/289224fb-1686-472c-9751-5555960854ca
 ```
 
 ```json
@@ -187,7 +187,7 @@ Here's an example of the response.
 
 ```json
 {
-  "@odata.context": "https://api-df.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity%22",
+  "@odata.context": "https://api.security.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions/$entity%22",
   "id": "d14cefe1-0301-488c-ad17-a86c428c3727",
   "scanType": "Network",
   "scanName": "Test Network scan",
@@ -223,7 +223,7 @@ Here's an example of the response.
 Here's an example of a request that deletes scans.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/BatchDelete
+POST https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/BatchDelete
 ```
 
 ```json

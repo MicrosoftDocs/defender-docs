@@ -50,7 +50,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/{id}/tags
+POST https://api.security.microsoft.com/api/machines/{id}/tags
 ```
 
 ## Request headers
@@ -80,7 +80,7 @@ If successful, this method returns 200 - Ok response code and the updated Machin
 Here is an example of a request that adds a machine tag.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/tags
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/tags
 ```
 
 ```json

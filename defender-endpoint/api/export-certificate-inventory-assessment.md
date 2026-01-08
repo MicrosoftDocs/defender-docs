@@ -100,7 +100,7 @@ The properties defined in the following table are listed alphabetically by prope
 ### 1.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/CertificateAssessmentByMachine
+GET https://api.security.microsoft.com/api/machines/CertificateAssessmentByMachine
 ```
 
 ### 1.6.2 Response example
@@ -182,7 +182,7 @@ GET /api/machines/certificateAssessmentExport
 ### 2.6.1 Request example
 
 ```http
-GET https://api.securitycenter.contoso.com/api/machines/certificateAssessmentExport
+GET https://api.security.contoso.com/api/machines/certificateAssessmentExport
 ```
 
 ### 2.6.2 Response example
