@@ -11,7 +11,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -22,14 +22,11 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Cancel machine action API
 
-
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
-
 
 ## API description
 
@@ -88,5 +85,3 @@ https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-a
     "Comment": "Machine action was canceled by automation"
 }
 ```
-
-
