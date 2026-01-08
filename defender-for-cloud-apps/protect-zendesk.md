@@ -55,7 +55,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 [Connect Zendesk](#connect-zendesk-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for Zendesk in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Zendesk**. For example, recommendations for Zendesk include:
 
-- *Enable multi-factor authentication (MFA)*
+- *Enable multifactor authentication (MFA)*
 - *Enable session timeout for users*
 - *Enable IP restrictions*
 - *Block admins to set passwords.*
@@ -132,7 +132,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 The default rate limit is 200 requests per minute. To increase the rate limit, [open a support ticket](/defender-xdr/contact-defender-support).
 
-For more information about the maximum rate limit for every subscription, see:[Zendesk Suite plan limits](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).
+For more information about the maximum rate limit for every subscription, see: [Zendesk Suite plan limits](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).
 
 ## Next steps
 
