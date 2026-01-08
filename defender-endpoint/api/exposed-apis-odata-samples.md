@@ -27,11 +27,8 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
 > [!IMPORTANT]
-> Advanced hunting capabilities aren't included in Defender for Business. 
-
-
+> Advanced hunting capabilities aren't included in Microsoft Defender for Business.
 
 [!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -195,7 +192,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=ev
 
 ### Example 2
 
-Get all the alerts last updated after 2019-11-22 00:00:00:
+Get all the alerts last updated after November 22, 2019 00:00:00:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$filter=lastUpdateTime+ge+2019-11-22T00:00:00Z
@@ -363,7 +360,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthSt
 
 ### Example 5
 
-Get all the devices that last seen after 2018-10-20:
+Get all the devices that last seen after October 20, 2018:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen gt 2018-08-01Z
@@ -462,7 +459,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa4
 
 ### Example 8
 
-Get all the devices with 'computerDnsName' starting with 'mymachine':
+Get all the devices with 'computerDnsName' starting with `mymachine`:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=startswith(computerDnsName,'mymachine')
@@ -517,4 +514,3 @@ json{
 
 [Microsoft Defender for Endpoint APIs](apis-intro.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-
