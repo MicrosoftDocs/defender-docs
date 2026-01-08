@@ -40,7 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 ## January 2026
-- **Block communication from sender email address and domains in Teams**: Admins can directly block malicious domains and email addresses from within the Microsoft Defender portal, seamlessly adding targeted entries to the Teams Admin Center (TAC) blocked domains and users list. This capability enables near real-time protection—when suspicious or abusive external organizations are identified, SOC teams can immediately block them, effectively halting new external chat messages, invites, and channel communications from those domains and senders while deleting existing ones. 
+
+- **Block communication from sender email address and domains in Teams**: Admins can directly block malicious domains and email addresses from within the Microsoft Defender portal, seamlessly adding targeted entries to the Teams Admin Center (TAC) blocked domains and users list. This capability enables near real-time protection. When suspicious or abusive external organizations are identified, SOC teams can immediately block them, effectively halting new external chat messages, invites, and channel communications from those domains and senders while deleting existing ones.
 
 - **Expanding ZAP and Teams Admin quarantine to Plan 1**: Zero-hour-auto-purge (ZAP) and Teams Admin quarantine is available to Microsoft Defender for Plan 1 by default, bringing post-delivery protection layer.  
 
