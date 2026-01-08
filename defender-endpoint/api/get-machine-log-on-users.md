@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,15 +19,16 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Get machine logon users API
 
-
 ## API description
+
 Retrieves a collection of logged on users on a specific device.
 
 ## Limitations
+
 - You can query on alerts last updated according to your configured retention period.
 - Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
@@ -40,10 +41,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application |User.Read.All |'Read user profiles'
-Delegated (work or school account) | User.Read.All | 'Read user profiles'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|User.Read.All|'Read user profiles'|
+|Delegated (work or school account)|User.Read.All|'Read user profiles'|
 
 ## HTTP request
 
@@ -53,9 +54,9 @@ GET /api/machines/{id}/logonusers
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -99,5 +100,3 @@ Content-type: application/json
     ]
 }
 ```
-
-
