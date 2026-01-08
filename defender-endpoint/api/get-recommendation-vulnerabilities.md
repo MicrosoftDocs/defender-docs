@@ -25,7 +25,7 @@ appliesto:
 # List vulnerabilities by recommendation
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a list of vulnerabilities associated with the security recommendation.
 

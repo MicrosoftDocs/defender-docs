@@ -28,7 +28,7 @@ appliesto:
 # Cancel machine action API
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 
 ## API description

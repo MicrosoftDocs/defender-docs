@@ -24,7 +24,7 @@ appliesto:
 
 # Get exposure score
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves the organizational exposure score.
 

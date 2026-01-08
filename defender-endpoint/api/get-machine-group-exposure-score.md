@@ -25,7 +25,7 @@ appliesto:
 # List exposure score by device group
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves the exposure score for each machine group.
 

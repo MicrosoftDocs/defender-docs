@@ -24,7 +24,7 @@ appliesto:
 # Get software by ID
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves software details by ID.
 

@@ -26,7 +26,7 @@ appliesto:
 # Get security recommendations
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a collection of security recommendations related to a given device ID.
 

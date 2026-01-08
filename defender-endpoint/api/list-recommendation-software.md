@@ -24,7 +24,7 @@ appliesto:
 # List software by recommendation
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a security recommendation related to a specific software.
 

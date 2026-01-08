@@ -25,7 +25,7 @@ appliesto:
 # List devices by software
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieve a list of device references that has this software installed.
 

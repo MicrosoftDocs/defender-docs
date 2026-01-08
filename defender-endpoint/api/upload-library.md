@@ -26,7 +26,7 @@ appliesto:
 # Upload files to the live response library
 
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
