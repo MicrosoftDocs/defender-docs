@@ -137,8 +137,6 @@ The following procedure assumes that Curl for Windows is already installed on yo
 
    ```console
     {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
-
-
 ---
 
 ## Validate the token

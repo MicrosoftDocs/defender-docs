@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,12 +20,11 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
+
 # Export Hardware and firmware assessment inventory per device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
 
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
@@ -57,13 +56,12 @@ Returns all hardware and firmware assessments for all devices, on a per-device b
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management software information'|
 
 ### 1.3 URL
-
 
 ```http
 GET api/machines/HardwareFirmwareInventoryByMachine
@@ -83,22 +81,21 @@ GET api/machines/HardwareFirmwareInventoryByMachine
 >
 > The properties defined in the following table are listed alphabetically by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
 
-Property (ID)|Data type|Description
-:---|:---|:---
-deviceId|String|Unique identifier for the device in the service.
-|rbacGroupId|Int|The role-based access control (RBAC) group Id. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
-|rbacGroupName|String|The role-based access control (RBAC) group. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
-|deviceName|String|Fully qualified domain name (FQDN) of the device.
-|componentType|String|Type of hardware or firmware component.
-|manufacturer|String|Manufacturer of a specific hardware or firmware component.
-|componentName|String|Name of a specific hardware or firmware component.
-|componentVersion|String|Version of a specific hardware or firmware component.
-|additionalFields|String|Additional information about the components in JSON array format.
+|Property (ID)|Data type|Description|
+|---|---|---|
+|deviceId|String|Unique identifier for the device in the service.|
+|rbacGroupId|Int|The role-based access control (RBAC) group Id. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|
+|rbacGroupName|String|The role-based access control (RBAC) group. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|
+|deviceName|String|Fully qualified domain name (FQDN) of the device.|
+|componentType|String|Type of hardware or firmware component.|
+|manufacturer|String|Manufacturer of a specific hardware or firmware component.|
+|componentName|String|Name of a specific hardware or firmware component.|
+|componentVersion|String|Version of a specific hardware or firmware component.|
+|additionalFields|String|Additional information about the components in JSON array format.|
 
 ## 1.6 Example
 
 ### 1.6.1 Request example
-
 
 ```http
 GET https://api.security.microsoft.com/api/machines/HardwareFirmwareInventoryByMachine
@@ -120,10 +117,9 @@ GET https://api.security.microsoft.com/api/machines/HardwareFirmwareInventoryByM
             "componentName": "blade_15_advanced_model_(mid_2021)_-_rz09-0409",
             "componentVersion": "7.04",
             "additionalFields": "{\"SystemSKU\":\"RZ09-0409CE53\",\"BaseBoardManufacturer\":\"Razer\",\"BaseBoardProduct\":\"CH570\",\"BaseBoardVersion\":\"4\",\"DeviceFamily\":\"Workstation\"}"
-          }  
-        ]  
+          }
+        ]
       },
-    
 ```
 
 ## 2. Export hardware and firmware assessment (via files)
@@ -140,10 +136,10 @@ Returns all hardware and firmware assessments for all devices, on a per-device b
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management software information'|
 
 ### 2.3 URL
 
@@ -165,11 +161,10 @@ GET /api/machines/HardwareFirmwareInventoryExport
 > - Each record is approximately 1KB of data. You should take this into account when choosing the pageSize parameter that works for you.
 > - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
-Property (ID)|Data type|Description
-:---|:---|:---
-|Export files|String[array]|A list of download URLs for files holding the current snapshot of the organization.
-|GeneratedTime|DateTime|The time the export was generated.
-
+|Property (ID)|Data type|Description|
+|---|---|---|
+|Export files|String[array]|A list of download URLs for files holding the current snapshot of the organization.|
+|GeneratedTime|DateTime|The time the export was generated.|
 
 ## 2.6 Examples
 
@@ -193,4 +188,3 @@ GET https://api.security.microsoft.com/api/machines/HardwareFirmwareInventoryExp
 
    }
 ```
-

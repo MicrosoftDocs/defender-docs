@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,11 +19,9 @@ ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get alert related files information API
-
 
 ## API description
 
@@ -44,10 +42,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|File.Read.All|'Read file profiles'
-Delegated (work or school account)|File.Read.All|'Read file profiles'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|File.Read.All|'Read file profiles'|
+|Delegated (work or school account)|File.Read.All|'Read file profiles'|
 
 ## HTTP request
 
@@ -57,9 +55,9 @@ GET /api/alerts/{id}/files
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 

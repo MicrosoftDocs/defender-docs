@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.date: 05/20/2025
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,8 +21,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # OData queries with Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
@@ -310,7 +310,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScor
 Get top 100 devices with 'HealthStatus' not equals to 'Active':
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthStatus+ne+'Active'&$top=100 
+HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthStatus+ne+'Active'&$top=100
 ```
 
 #### Response

@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,16 +19,14 @@ ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # File resource type
 
-
 ## Properties
 
 |Property | Type | Description |
-|:---|:---|:---|
+|---|---|---|
 |sha1 | String | Sha1 hash of the file content |
 |sha256 | String | Sha256 hash of the file content |
 |globalPrevalence | Nullable long | File prevalence across organization |
@@ -68,5 +66,3 @@ appliesto:
     "determinationValue": "PUA:Win32/FusionCore"
 }
 ```
-
-

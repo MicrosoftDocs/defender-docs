@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,14 +19,11 @@ ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # Add, update, or delete a scan definition
 
-
-[!Include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -45,14 +42,12 @@ When obtaining a token using user credentials:
 - To view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` . For more information, see: [Create and manage roles](../user-roles.md)
 - To edit data, the user needs to have at least the following role permission: `ManageSecurity` . For more information, see: [Create and manage roles](../user-roles.md)
 
-
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.ReadWrite.All| Read and write all scan information.
-Delegated (work or school account)|Machine.Read.Write|Read and write all scan information.
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|Read and write all scan information.|
+|Delegated (work or school account)|Machine.Read.Write|Read and write all scan information.|
 
 ## HTTP request
 
@@ -62,22 +57,22 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
-|:---|:---|:---|
-|`scanType`|Enum|The type of scan. Possible value is: "Network".  **Required**.|
-|`scanName`|String|Name of the scan.  **Required**.|
-|`isActive`|Boolean|Status of whether the scan actively running.  **Required**.|
-|`target`|String| A comma separated list of targets to scan, either IP addresses or hostnames. **Required**.|
-|`intervalInHours`|Int|The interval at which the scan runs.  **Required**.|
+|---|---|---|
+|`scanType`|Enum|The type of scan. Possible value is: "Network". **Required**.|
+|`scanName`|String|Name of the scan. **Required**.|
+|`isActive`|Boolean|Status of whether the scan actively running. **Required**.|
+|`target`|String|A comma separated list of targets to scan, either IP addresses or hostnames. **Required**.|
+|`intervalInHours`|Int|The interval at which the scan runs. **Required**.|
 |`targetType`|String|The target type in the target field. Possible types are "IP Address" or "Hostname". Default value is IP Address. **Required**.|
 |`scannerAgent`|Object|machine Id. **Required**.|
 |`scanAuthenticationParams`|Object|An object representing the authentication parameters, see [Authentication parameters object properties](./get-authenticated-scan-properties.md#authentication-parameters-object-properties) for expected fields. This property is mandatory when creating a new scan and is optional when updating a scan.|
@@ -159,7 +154,7 @@ Here's an example of the response.
 Here's an example of a request that updates a scan.
 
 ```http
-PATCH  https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/289224fb-1686-472c-9751-5555960854ca 
+PATCH  https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/289224fb-1686-472c-9751-5555960854ca
 ```
 
 ```json
@@ -236,4 +231,3 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
   "ScanDefinitionIds": ["td32f17af-5cc2-4e4e-964a-4c4ef7d216e2", "ab32g20af-5dd2-4a5e-954a-4c4ef7d216e2"],
 }
 ```
-

@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,25 +21,21 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
   - Microsoft Defender for Business
-
 ---
 
 # Get scan history by definition
 
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
-[!Include[Prerelease information](../../includes/prerelease.md)]
-
-
-
-## API description
+## API description 
 
 Retrieves a list of the scan history by definitions.
 
-- Supports OData operations.
-- OData supported operators:
-   - $top with max value of 4096. Returns the number of sessions specified in the request.
-   - $skip with a default value of 0. Skips the number of sessions specified in the request.
- 
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
+
+- `$top` with max value of 10,000.
+- `$skip`
+
 For an example of OData operation usage, see [example $top request](#example-top-request).
 
 ## Limitations
@@ -53,11 +49,9 @@ When obtaining a token using user credentials, to view data, the user needs to h
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type|Permission|Permission display name|
-|:---|:---|:---|
+|---|---|---|
 |Application|Machine.Read.All| Read all scan information.|
 |Delegated (work or school account)|Machine.Read.All|Read all scan information.|
-
-
 
 ## HTTP request
 
@@ -67,18 +61,18 @@ POST api/DeviceAuthenticatedScanDefinitions/GetScanHistoryByScanDefinitionId
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-ScanDefinitionIds |String|The scan Id. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|ScanDefinitionIds|String|The scan Id. **Required**.|
 
 ## Response
 
@@ -124,8 +118,8 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
     },
    ]
 }
-
 ```
+
 ## Example $top request
 
 Here's an example of a request that returns only 1 session.
@@ -148,5 +142,4 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
     },
  ]
 }
-
 ```

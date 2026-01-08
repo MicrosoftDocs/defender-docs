@@ -19,11 +19,9 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Import Indicators API
-
 
 ## API description
 
@@ -136,5 +134,3 @@ Here's an example of the response.
     ]
 }
 ```
-
-

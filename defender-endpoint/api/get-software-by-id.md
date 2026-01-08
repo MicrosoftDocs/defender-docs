@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -23,7 +23,6 @@ appliesto:
 
 # Get software by ID
 
-
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves software details by ID.
@@ -32,10 +31,10 @@ Retrieves software details by ID.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'|
 
 ## HTTP request
 
@@ -45,9 +44,9 @@ GET /api/Software/{Id}
 
 ## Request headers
 
-Name|Type|Description
----|---|---
-Authorization|String|Bearer {token}.**Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}.**Required**.|
 
 ## Request body
 

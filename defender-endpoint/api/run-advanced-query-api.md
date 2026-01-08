@@ -8,7 +8,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,8 +19,8 @@ search.appverid: met150
 ms.date: 08/18/2025
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
+
 # Advanced hunting API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
@@ -63,7 +63,7 @@ One of the following permissions is required to call this API. To learn more, in
 > - The user needs to have the `View Data` role assigned in Microsoft Entra ID.
 > - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
 >
->   Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+>   Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 
