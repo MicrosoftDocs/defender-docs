@@ -51,8 +51,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**January 7, 2026**|
 |Expiry:            |**Sep 14, 2026**|
 |Release version:   |**30.125102.0005.0**|
-|Engine version:    |**1.1.25110.3002**|
-|Signature version: |**1.443.541.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
 
 #### What's new
 
@@ -96,8 +96,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 15, 2025**|
 |Expiry:            |**September 06, 2026**|
 |Release version:   |**30.125102.0003.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.15.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
 
 #### What's new
 
