@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 11/11/2025
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,10 +19,9 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
-# Export device antivirus health report
 
+# Export device antivirus health report
 
 This API has two methods to retrieve Microsoft Defender Antivirus device antivirus health details:
 
@@ -39,7 +38,6 @@ For information about using the **Device health and antivirus compliance** repor
 ### Prerequisites
 
 For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-
 
 ## 1 Export health reporting (JSON response)
 
@@ -58,21 +56,40 @@ This API retrieves a list of Microsoft Defender Antivirus device antivirus healt
 - maximum page size is 200,000
 - Rate limitations for this API are 30 calls per minute and 1000 calls per hour.
 
-#### OData supported operators
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-- `$filter` on: `machineId`, `computerDnsName`, `osKind`, `osPlatform`, `osVersion`, `avMode`, `avSignatureVersion`, `avEngineVersion`, `avPlatformVersion`, `quickScanResult`, `quickScanError`, `fullScanResult`, `fullScanError`, `avIsSignatureUpToDate`, `avIsEngineUpToDate`, `avIsPlatformUpToDate`, `rbacGroupId`
+- `$filter` on the following properties:
+  - `machineId`
+  - `computerDnsName`
+  - `osKind`
+  - `osPlatform`
+  - `osVersion`
+  - `avMode`
+  - `avSignatureVersion`
+  - `avEngineVersion`
+  - `avPlatformVersion`
+  - `quickScanResult`
+  - `quickScanError`
+  - `fullScanResult`
+  - `fullScanError`
+  - `avIsSignatureUpToDate`
+  - `avIsEngineUpToDate`
+  - `avIsPlatformUpToDate`
+  - `rbacGroupId`
 - `$top` with max value of 10,000.
 - `$skip`
 
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
+
 > [!IMPORTANT]
-> Note that **rbacgroupname** and **Id** are not supported filter operators.
+> `rbacgroupname` and `Id` aren't supported filter operators.
 
 ### 1.2 Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see Use Microsoft Defender for Endpoint APIs for details.
 
 | Permission type | Permission | Permission display name |
-|:---|:---|:---|
+|---|---|---|
 | Application | Machine.Read.All | 'Read all machine profiles' |
 |Delegated (work or school account) | Machine.Read | 'Read machine information' |
 
@@ -85,7 +102,7 @@ URL: GET: /api/deviceavinfo
 #### 1.3.1 Request headers
 
 | Name | Type | Description |
-|:---|:---|:---|
+|---|---|---|
 | Authorization | String | Bearer {token}. Required. |
 
 #### 1.3.2 Request body
@@ -216,7 +233,7 @@ This API response contains all the data of Antivirus health and status per devic
 One of the following permissions is required to call this API.
 
 | Permission type | Permission | Permission display name |
-|:---|:---|:---|
+|---|---|---|
 | Application | Vulnerability.Read.All | 'Read "threat and vulnerability management" vulnerability information' |
 | Delegated (work or school account) | Vulnerability.Read | 'Read "threat and vulnerability management" vulnerability information' |
 
@@ -263,9 +280,7 @@ Here's an example response:
 
    ],
 
-
    "generatedTime": "2022-08-02T22:01:00Z"
-
 
 }
 ```
@@ -284,8 +299,6 @@ Here's an example response:
 >   - top scans per file
 >   - top scans per file per process
 >
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
+> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](../tune-performance-defender-antivirus.md).
 >
-
-

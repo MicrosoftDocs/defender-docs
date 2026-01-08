@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -35,9 +35,9 @@ Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Get started](apis-intro.md).
 
-| Permission type | Permission | Permission display name |
-| :---|:---|:---|
-| Application | Ti.ReadWrite.All | 'Read and write Indicators' |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Ti.ReadWrite.All|'Read and write Indicators'|
 
 ## HTTP request
 
@@ -47,9 +47,9 @@ Delete https://api.securitycenter.microsoft.com/api/indicators/{id}
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -70,5 +70,3 @@ Here's an example of the request.
 ```http
 DELETE https://api.securitycenter.microsoft.com/api/indicators/995
 ```
-
-

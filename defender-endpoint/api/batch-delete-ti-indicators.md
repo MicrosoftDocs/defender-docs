@@ -8,7 +8,7 @@ ms.author: kesharab
 author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -22,7 +22,6 @@ appliesto:
 ---
 
 # Batch Delete Indicators
-
 
 ## API description
 
@@ -51,7 +50,7 @@ POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
 ## Request headers
 
 |Name|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |Authorization | String | Bearer {token}. **Required**.|
 
 ## Request body
@@ -59,7 +58,7 @@ POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
 In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |IndicatorIds|List *String* |A list of the IDs of the indicators to be removed. **Required**|
 
 ## Response
@@ -89,4 +88,3 @@ POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
     "IndicatorIds": [ "1", "2", "5" ]
 }
 ```
-
