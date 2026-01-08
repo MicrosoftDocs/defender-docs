@@ -40,8 +40,8 @@ When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Mi
 
 | **Behavior Type** | **Description** | **Examples** | **Use case** |
 |-------------------|-----------------|--------------|--------------|
-| **Aggregated behaviors** | Detect volume-based patterns by collecting related events over time windows | <ul><li>User accessed 50+ resources in 1 hour</li><li>Login attempts from 10+ different IP addresses</li></ul> | <ul><li>Convert high-volume logs into actionable security insights</li><li>Excel at identify unusual activity levels</li></ul> |
-| **Sequenced behaviors** | Identify multi-step patterns or complex attack chains that aren't obvious when you look at individual events | Access key created > used from new IP > privileged API calls | Detect sophisticated attack sequences and multi-stage threats |
+| **Aggregated behaviors** | Detect volume-based patterns by collecting related events over time windows | <ul><li>User accessed 50+ resources in 1 hour</li><li>Login attempts from 10+ different IP addresses</li></ul> | Convert high-volume logs into actionable security insights. This behavior type excels at identifying unusual activity levels. |
+| **Sequenced behaviors** | Identify multi-step patterns or complex attack chains that aren't obvious when you look at individual events | Access key created > used from new IP > privileged API calls | Detect sophisticated attack sequences and multi-stage threats. |
 
 The UEBA behaviors layer summarizes behaviors at tailored time intervals specific to each behavior's logic, creating behavior records immediately when it identifies patterns or when the time windows close.
 
