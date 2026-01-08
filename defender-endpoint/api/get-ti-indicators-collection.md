@@ -64,7 +64,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/indicators
+GET https://api.security.microsoft.com/api/indicators
 ```
 
 ## Request headers
@@ -90,7 +90,7 @@ If the Application has `Ti.ReadWrite.All` permission, it will be exposed to all 
 Here's an example of a request that gets all indicators.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/indicators
+GET https://api.security.microsoft.com/api/indicators
 ```
 
 ### Example 1 response
@@ -101,7 +101,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Indicators",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Indicators",
     "value": [
         {
             "id": "995",
@@ -153,7 +153,7 @@ Content-type: application/json
 Here's an example of a request that gets all Indicators with `AlertAndBlock` action.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/indicators?$filter=action+eq+'AlertAndBlock'
+GET https://api.security.microsoft.com/api/indicators?$filter=action+eq+'AlertAndBlock'
 ```
 
 ### Example 2 response
@@ -164,7 +164,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Indicators",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Indicators",
     "value": [
         {
             "id": "997",

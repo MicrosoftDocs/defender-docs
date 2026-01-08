@@ -83,14 +83,14 @@ One of the following permissions is required to call this API. To learn more, in
 ### Request example
 
 ```http
-GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c
+GET https://api.security.microsoft.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c
 ```
 
 ### Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.windows.com/api/$metadata#RemediationTasks/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#RemediationTasks/$entity",
     "id": "03942ef5-aecb-4c6e-b555-d6a97013844c",
     "title": "Update Microsoft Silverlight",
     "createdOn": "2021-02-10T13:20:36.4718166Z",

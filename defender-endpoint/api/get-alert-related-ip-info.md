@@ -73,7 +73,7 @@ If successful and alert and an IP exist - 200 OK. If alert not found - 404 Not F
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/alerts/636688558380765161_2136280442/ips
+GET https://api.security.microsoft.com/alerts/636688558380765161_2136280442/ips
 ```
 
 ### Response example
@@ -82,7 +82,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/$metadata#Ips",
+    "@odata.context": "https://api.security.microsoft.com/$metadata#Ips",
     "value": [
                 {
                     "id": "104.80.104.128"

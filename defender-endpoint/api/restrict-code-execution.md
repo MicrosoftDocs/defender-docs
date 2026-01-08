@@ -54,7 +54,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/{id}/restrictCodeExecution
+POST https://api.security.microsoft.com/api/machines/{id}/restrictCodeExecution
 ```
 
 ## Request headers
@@ -85,7 +85,7 @@ If you send multiple API calls to restrict app execution for the same device, it
 Here is an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/restrictCodeExecution
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/restrictCodeExecution
 ```
 
 ```json

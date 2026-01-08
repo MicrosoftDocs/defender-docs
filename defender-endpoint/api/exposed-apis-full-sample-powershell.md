@@ -71,7 +71,7 @@ $appId = '11111111-1111-1111-1111-111111111111' # Paste your own app ID here
 $appSecret = '22222222-2222-2222-2222-222222222222' # Paste your own app secret here
 $suspiciousUrl = 'www.suspiciousUrl.com' # Paste your own URL here
 
-$resourceAppIdUri = 'https://securitycenter.onmicrosoft.com/windowsatpservice'
+$resourceAppIdUri = 'https://api.security.microsoft.com'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $authBody = [Ordered] @{
     resource = "$resourceAppIdUri"
@@ -83,7 +83,7 @@ $authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -E
 $aadToken = $authResponse.access_token
 
 #Get latest alert
-$alertUrl = "https://api.securitycenter.microsoft.com/api/alerts?`$top=10"
+$alertUrl = "https://api.security.microsoft.com/api/alerts?`$top=10"
 $headers = @{
     'Content-Type' = 'application/json'
     Accept = 'application/json'
@@ -116,7 +116,7 @@ $query = "NetworkCommunicationEvents
 | where RemoteUrl  == `"$suspiciousUrl`"
 | summarize ConnectionsCount = count() by MachineId"
 
-$queryUrl = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
+$queryUrl = "https://api.security.microsoft.com/api/advancedqueries/run"
 
 $queryBody = ConvertTo-Json -InputObject @{ 'Query' = $query }
 $queryResponse = Invoke-WebRequest -Method Post -Uri $queryUrl -Headers $headers -Body $queryBody -ErrorAction Stop

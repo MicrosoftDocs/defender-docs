@@ -78,7 +78,7 @@ If successful, this method returns 200 - OK response code with a list of the sca
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId
+POST https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId
 ```
 
 ```json
@@ -91,7 +91,7 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
 
 ```json
 {
- "@odata.context": "https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId",
+ "@odata.context": "https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId",
     "value": [
     {
      "orgId": "asdf781a0c-792d-46d3-bbea-a93dbc0bfcaa",

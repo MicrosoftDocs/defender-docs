@@ -71,7 +71,7 @@ If successful, this method returns 200 - OK response code with a list of authent
 Here's an example of the request.
 
 ```http
-https://api-us.securitycenter.microsoft.com/api/DeviceAuthenticatedScanAgents
+https://api.security.microsoft.com/api/DeviceAuthenticatedScanAgents
 ```
 
 ### Response example
@@ -80,7 +80,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api-us.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanAgents",
+    "@odata.context": "https://api..security.microsoft.com/api/$metadata#DeviceAuthenticatedScanAgents",
     "value": [
         {
             "id": "47df41a0c-asad-4fd6d3-bbea-a93dbc0bfcaa_4edd75b2407a5b64d704b4e53d74f15",

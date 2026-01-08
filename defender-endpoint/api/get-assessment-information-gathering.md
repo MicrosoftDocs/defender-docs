@@ -81,14 +81,14 @@ GET /api/Machines/InfoGatheringExport
 #### 1.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$sasValidHours=1
+GET https://api.security.microsoft.com/api/machines/InfoGatheringExport?$sasValidHours=1
 ```
 
 #### 1.6.2 Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
     "exportFiles": [
         "https://tvmexportexternalprdcanc.blob.core.windows.net/temp-43b2fdb7-c985-4f14-bed5-ae66959a95a5/2022-07-26/1001/InfoGatheringExport/json/OrgId=47d41a0c-188d-46d3-bbea-a93dbc0bfcaa/_RbacGroupId=0/part-00001-42240b35-4a40-45f7-9b46-96a5ce6d23b8.c000.json.gz?sv=2020-08-04&st=2022-07-26T13%3A36%3A30Z&se=2022-07-26T16%3A36%3A30Z&sr=b&sp=r&sig=9GVFFNbgkLc69u32nO944SosmcTUj0usPJqkJwx5iow%3D",
         "https://tvmexportexternalprdcanc.blob.core.windows.net/temp-43b2fdb7-c985-4f14-bed5-ae66959a95a5/2022-07-26/1001/InfoGatheringExport/json/OrgId=47d41a0c-188d-46d3-bbea-a93dbc0bfcaa/_RbacGroupId=1/part-00002-42240b35-4a40-45f7-9b46-96a5ce6d23b8.c000.json.gz?sv=2020-08-04&st=2022-07-26T13%3A36%3A30Z&se=2022-07-26T16%3A36%3A30Z&sr=b&sp=r&sig=BJ3SfwcyI7JnoTVhHAgiyvqWviA%2BUKdF80KeVIUc%2FIU%3D",

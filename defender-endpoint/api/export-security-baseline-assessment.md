@@ -101,14 +101,14 @@ GET /api/machines/baselineComplianceAssessmentByMachine
 ### 1.7.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentByMachine
+GET https://api.security.microsoft.com/api/machines/BaselineComplianceAssessmentByMachine
 ```
 
 ### 1.7.2 Response example
 
 ```json
 {
-"@odata.context": " https://api.securitycenter.microsoft.com /api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetBaselineAssessment)",
+"@odata.context": " https://api.security.microsoft.com /api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetBaselineAssessment)",
 "value": [
 {
     "id": "0000682575d5d473e82ed4d8680425d152411251_9e1b90be-e83e-485b-a5ec-4a429412e734_1.1.1",
@@ -174,14 +174,14 @@ GET /api/machines/BaselineComplianceAssessmentExport
 ### 2.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentExport
+GET https://api.security.microsoft.com/api/machines/BaselineComplianceAssessmentExport
 ```
 
 ### 2.6.2 Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter. contoso.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
     "exportFiles":
     [
     "https://tvmexportexternalstgeus.blob.core.windows.net/temp-1ebd3d09-d06a-4aad-ab80-ebc536cec61c/2021-12-22/0500/BaselineAssessmentExport/json/OrgId= OrgId=<Org Id>/_RbacGroupId=<Rbac Group Id>/part-00000-c09dfd00-2278-4735-b23a-71733751fcbc.c000.json.gz?sv=ABCD",

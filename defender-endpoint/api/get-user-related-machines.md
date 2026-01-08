@@ -74,5 +74,5 @@ If successful and user exists - 200 OK with list of [machine](machine.md) entiti
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/users/user1/machines
+GET https://api.security.microsoft.com/api/users/user1/machines
 ```

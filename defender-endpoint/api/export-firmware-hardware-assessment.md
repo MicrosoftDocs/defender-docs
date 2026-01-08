@@ -105,7 +105,7 @@ GET https://api.security.microsoft.com/api/machines/HardwareFirmwareInventoryByM
 
 ```json
       {
-        "@odata.context": "https://api-df.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetHardwareFirmware)",
+        "@odata.context": "https://api.security.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetHardwareFirmware)",
         "value":[
         {
             "deviceId": "49126b9e4a5473b5229c73799e9e55c48668101b",
@@ -178,7 +178,7 @@ GET https://api.security.microsoft.com/api/machines/HardwareFirmwareInventoryExp
 
 ```json
     {
-        "@odata.context":"https://api-df.securitycenter.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+        "@odata.context":"https://api.security.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
     "exportFiles": [
         "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=3837d1f5-0d51-40cb-a99d-69ebedc9dcc8/_RbacGroupId=39/part-00999-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=muN8Sq6rVN6bFMtR0u3S5Wzh3D9qNPgN5vpU7lWvULg%3D",
         "https://tvmexportstrprdcane.blob.core.windows.net/tvm-firmware-export/2022-07-11/1101/FirmwareHardwareExport/json/OrgId=3837d1f5-0d51-40cb-a99d-69ebedc9dcc8/_RbacGroupId=9/part-00968-71eea973-1bb1-4d0a-829d-80cb07aff5d8.c000.json.gz?sv=2020-08-04&st=2022-07-11T13%3A10%3A06Z&se=2022-07-11T16%3A10%3A06Z&sr=b&sp=r&sig=%2BA0%2B4qOOBCS5E4UenJPbMdLM%2FkbXHnz%2F1pvfSOCq%2F2s%3D",

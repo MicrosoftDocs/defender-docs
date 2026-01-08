@@ -62,7 +62,7 @@ If successful, this method returns 200 OK with the software associated with the 
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/software
+GET https://api.security.microsoft.com/api/recommendations/va-_-google-_-chrome/software
 ```
 
 ### Response example
@@ -71,7 +71,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Analytics.Contracts.PublicAPI.PublicProductDto",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Analytics.Contracts.PublicAPI.PublicProductDto",
     "id": "google-_-chrome",
     "name": "chrome",
     "vendor": "google",

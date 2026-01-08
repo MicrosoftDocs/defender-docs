@@ -63,7 +63,7 @@ If successful, this method returns 200 OK with the list of devices associated wi
 Here is an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/machineReferences
+GET https://api.security.microsoft.com/api/recommendations/va-_-google-_-chrome/machineReferences
 ```
 
 ### Response example
@@ -72,7 +72,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineReferences",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineReferences",
     "value": [
         {
             "id": "e058770379bc199a9c179ce52a23e16fd44fd2ee",

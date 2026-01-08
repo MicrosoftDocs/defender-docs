@@ -75,5 +75,5 @@ If the IP address is invalid, it returns HTTP 400.
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/ips/10.209.67.177/alerts
+GET https://api.security.microsoft.com/api/ips/10.209.67.177/alerts
 ```

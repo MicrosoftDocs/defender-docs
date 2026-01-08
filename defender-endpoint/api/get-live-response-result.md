@@ -72,7 +72,7 @@ Application|Machine.ReadWrite.All|Read and write all machine information
 ## HTTP request
 
 ```HTTP
-GET https://api.securitycenter.microsoft.com/api/machineactions/{machine action
+GET https://api.security.microsoft.com/api/machineactions/{machine action
 id}/GetLiveResponseResultDownloadLink(index={command-index})
 ```
 
@@ -106,7 +106,7 @@ If successful, this method returns 200, Ok response code with object that holds 
 Here's an example of the request.
 
 ```HTTP
-GET https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/GetLiveResponseResultDownloadLink(index=0)
+GET https://api.security.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/GetLiveResponseResultDownloadLink(index=0)
 ```
 
 ### Response example
@@ -119,7 +119,7 @@ Content-type: application/json
 
 ```JSON
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Edm.String",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Edm.String",
     "value": "https://core.windows.net/investigation-actions-data/ID/CustomPlaybookCommandOutput/4ed5e7807ad1fe59b00b664fe06a0f07?se=2021-02-04T16%3A13%3A50Z&sp=r&sv=2019-07-07&sr=b&sig=1dYGe9rPvUlXBPvYSmr6/OLXPY98m8qWqfIQCBbyZTY%3D"
 }
 ```

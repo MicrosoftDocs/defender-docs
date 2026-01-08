@@ -63,7 +63,7 @@ If successful, this method returns 200 OK with the security recommendations in t
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome
+GET https://api.security.microsoft.com/api/recommendations/va-_-google-_-chrome
 ```
 
 ### Response example
@@ -72,7 +72,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Recommendations/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Recommendations/$entity",
     "id": "va-_-google-_-chrome",
     "productName": "chrome",
     "recommendationName": "Update Chrome",

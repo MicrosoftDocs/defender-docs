@@ -49,7 +49,7 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API, 
        let
            AdvancedHuntingQuery = "DeviceEvents | where ActionType contains 'Anti' | limit 20",
 
-           HuntingUrl = "https://api.securitycenter.microsoft.com/api/advancedqueries",
+           HuntingUrl = "https://api.security.microsoft.com/api/advancedqueries",
 
            Response = Json.Document(Web.Contents(HuntingUrl, [Query=[key=AdvancedHuntingQuery]])),
 
@@ -122,7 +122,7 @@ The only difference from the previous example and this example is the query insi
 
            Query = "MachineActions",
 
-           Source = OData.Feed("https://api.securitycenter.microsoft.com/api/" & Query, null, [Implementation="2.0", MoreColumns=true])
+           Source = OData.Feed("https://api.security.microsoft.com/api/" & Query, null, [Implementation="2.0", MoreColumns=true])
        in
            Source
    ```

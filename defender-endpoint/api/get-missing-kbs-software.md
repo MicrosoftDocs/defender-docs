@@ -61,7 +61,7 @@ If successful, this method returns 200 OK, with the specified software missing k
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/getmissingkbs
+GET https://api.security.microsoft.com/api/Software/microsoft-_-edge/getmissingkbs
 ```
 
 ### Response
@@ -70,7 +70,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicProductFixDto)",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicProductFixDto)",
     "value": [
          {
             "id": "4540673",

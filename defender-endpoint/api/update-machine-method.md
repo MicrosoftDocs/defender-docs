@@ -91,7 +91,7 @@ If machine with the specified ID wasn't found - 404 Not Found.
 Here's an example of the request.
 
 ```http
-PATCH https://api.securitycenter.microsoft.com/api/machines/{machineId}
+PATCH https://api.security.microsoft.com/api/machines/{machineId}
 ```
 
 ```json

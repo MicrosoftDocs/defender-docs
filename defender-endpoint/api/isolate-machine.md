@@ -60,7 +60,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/{id}/isolate
+POST https://api.security.microsoft.com/api/machines/{id}/isolate
 ```
 
 ## Request headers
@@ -96,7 +96,7 @@ If successful, this method returns 201 - Created response code and [Machine Acti
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/isolate
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/isolate
 ```
 
 ```json

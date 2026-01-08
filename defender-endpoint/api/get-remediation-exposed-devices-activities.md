@@ -58,14 +58,14 @@ One of the following permissions is required to call this API. To learn more, in
 ### Request example
 
 ```http
-GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c/machinereferences
+GET https://api.security.microsoft.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c/machinereferences
 ```
 
 ### Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.windows.com/api/$metadata#MachineReferences",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineReferences",
     "value": [
         {
             "id": "3cb5df6bb3640a2d37ad09fcd357b182d684fafc",

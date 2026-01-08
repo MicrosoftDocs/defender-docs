@@ -50,7 +50,7 @@ appSecret = '22222222-2222-2222-2222-222222222222' # Paste your own app secret h
 
 url = "https://login.microsoftonline.com/%s/oauth2/token" % (tenantId)
 
-resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
+resourceAppIdUri = 'https://api.security.microsoft.com'
 
 body = {
     'resource' : resourceAppIdUri,
@@ -80,7 +80,7 @@ Run the following query:
 ```python
 query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
-url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
+url = "https://api.security.microsoft.com/api/advancedqueries/run"
 headers = {
     'Content-Type' : 'application/json',
     'Accept' : 'application/json',

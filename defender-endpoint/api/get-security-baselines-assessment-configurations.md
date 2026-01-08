@@ -82,14 +82,14 @@ If successful, this method returns 200 OK with the list of baseline configuratio
 ### 1.5.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/baselineConfigurations
+GET https://api.security.microsoft.com/api/baselineConfigurations
 ```
 
 ### 1.6.2 Response example
 
 ```json
 {
-    "@odata.context": " https://api-df.securitycenter.microsoft.com/api/$metadata#BaselineConfigurations ",
+    "@odata.context": " https://api.security.microsoft.com/api/$metadata#BaselineConfigurations ",
     "value": [
         {
             "id": "9.3.9",

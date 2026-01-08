@@ -42,7 +42,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-Delete https://api.securitycenter.microsoft.com/api/indicators/{id}
+Delete https://api.security.microsoft.com/api/indicators/{id}
 ```
 
 ## Request headers
@@ -68,5 +68,5 @@ If Indicator with the specified ID wasn't found - 404 Not Found.
 Here's an example of the request.
 
 ```http
-DELETE https://api.securitycenter.microsoft.com/api/indicators/995
+DELETE https://api.security.microsoft.com/api/indicators/995
 ```

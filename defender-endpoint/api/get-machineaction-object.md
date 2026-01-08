@@ -47,7 +47,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machineactions/{id}
+GET https://api.security.microsoft.com/api/machineactions/{id}
 ```
 
 ## Request headers
@@ -71,7 +71,7 @@ If successful, this method returns 200, Ok response code with a [Machine Action]
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machineactions/2e9da30d-27f6-4208-81f2-9cd3d67893ba
+GET https://api.security.microsoft.com/api/machineactions/2e9da30d-27f6-4208-81f2-9cd3d67893ba
 ```
 
 ### Response example
@@ -82,7 +82,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineActions/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineActions/$entity",
     "id": "5382f7ea-7557-4ab7-9782-d50480024a4e",
     "type": "Isolate",
     "scope": "Selective",

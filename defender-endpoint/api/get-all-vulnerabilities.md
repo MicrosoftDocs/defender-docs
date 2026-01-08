@@ -87,7 +87,7 @@ This field is supported for [CVE exceptions](/defender-vulnerability-management/
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Vulnerabilities
+GET https://api.security.microsoft.com/api/Vulnerabilities
 ```
 
 ### Response example
@@ -96,7 +96,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Vulnerabilities",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Vulnerabilities",
     "value": [
         {
             "id": "CVE-2024-7256",

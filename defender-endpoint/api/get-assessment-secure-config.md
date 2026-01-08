@@ -97,14 +97,14 @@ Timestamp|string|Last time the configuration was seen on the device|2020-11-03 1
 #### 1.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentByMachine?pageSize=5
+GET https://api.security.microsoft.com/api/machines/SecureConfigurationsAssessmentByMachine?pageSize=5
 ```
 
 #### 1.6.2 Response example
 
 ```json
 {
-    "@odata.context": "api.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetConfiguration)",
+    "@odata.context": "api.security.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetConfiguration)",
     "value": [
         {
             "deviceId": "00013ee62c6b12345b10214e1801b217b50ab455c293d",
@@ -192,7 +192,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
             "recommendationReference": "sca-_-scid-6093"
         }
     ],
-    "@odata.nextLink": "https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentByMachine?pagesize=5&$skiptoken=eyJFeHBvcnREZWZpbml0aW9uIjp7IlRpbWVQYXRoIjoiMjAyMS0wMS0xMS8xMTAxLyJ9LCJFeHBvcnRGaWxlSW5kZXgiOjAsIkxpbmVTdG9wcGVkQXQiOjV9"
+    "@odata.nextLink": "https://api.security.microsoft.com/api/machines/SecureConfigurationsAssessmentByMachine?pagesize=5&$skiptoken=eyJFeHBvcnREZWZpbml0aW9uIjp7IlRpbWVQYXRoIjoiMjAyMS0wMS0xMS8xMTAxLyJ9LCJFeHBvcnRGaWxlSW5kZXgiOjAsIkxpbmVTdG9wcGVkQXQiOjV9"
 }
 ```
 
@@ -241,14 +241,14 @@ GeneratedTime|string|The time that the export was generated.|2021-05-20T08:00:00
 #### 2.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentExport
+GET https://api.security.microsoft.com/api/machines/SecureConfigurationsAssessmentExport
 ```
 
 #### 2.6.2 Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#contoso.windowsDefenderATP.api.ExportFilesResponse",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#contoso.windowsDefenderATP.api.ExportFilesResponse",
     "exportFiles": [
         "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export/2021-01-11/1101/ScaExport/json/OrgId=12345678-195f-4223-9c7a-99fb420fd000/part-00393-e423630d-4c69-4490-8769-a4f5468c4f25.c000.json.gz?sv=2019-12-12&st=2021-01-11T11%3A55%3A51Z&se=2021-01-11T14%3A55%3A51Z&sr=b&sp=r&sig=...",
         "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export/2021-01-11/1101/ScaExport/json/OrgId=12345678-195f-4223-9c7a-99fb420fd000/part-00394-e423630d-4c69-4490-8769-a4f5468c4f25.c000.json.gz?sv=2019-12-12&st=2021-01-11T11%3A55%3A51Z&se=2021-01-11T14%3A55%3A51Z&sr=b&sp=r&sig=...",

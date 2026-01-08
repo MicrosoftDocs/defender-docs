@@ -98,7 +98,7 @@ If successful, this method returns 200 OK, and a list of [alert](alerts.md) obje
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts
+GET https://api.security.microsoft.com/api/alerts
 ```
 
 ### Response
@@ -107,7 +107,7 @@ The response list shown here has been shortened. The call returns the full set o
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Alerts",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Alerts",
     "value": [
         {
             "id": "da637308392288907382_-880718168",
@@ -164,7 +164,7 @@ The response list shown here has been shortened. The call returns the full set o
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=evidence
+GET https://api.security.microsoft.com/api/alerts?$top=10&$expand=evidence
 ```
 
 ### Response
@@ -173,7 +173,7 @@ The response list shown here has been shortened. The call returns the full set o
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Alerts",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Alerts",
     "value": [
         {
             "id": "da637472900382838869_1364969609",

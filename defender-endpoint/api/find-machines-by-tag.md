@@ -82,5 +82,5 @@ If successful - 200 OK with list of the machines in the response body.
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/findbytag?tag=testTag&useStartsWithFilter=true
+GET https://api.security.microsoft.com/api/machines/findbytag?tag=testTag&useStartsWithFilter=true
 ```
