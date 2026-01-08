@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,11 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # Get security recommendations
-
 
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
@@ -34,10 +32,10 @@ Retrieves a collection of security recommendations related to a given device ID.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|SecurityRecommendation.Read.All|'Read Threat and Vulnerability Management security recommendation information'
-Delegated (work or school account)|SecurityRecommendation.Read|'Read Threat and Vulnerability Management security recommendation information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|SecurityRecommendation.Read.All|'Read Threat and Vulnerability Management security recommendation information'|
+|Delegated (work or school account)|SecurityRecommendation.Read|'Read Threat and Vulnerability Management security recommendation information'|
 
 ## HTTP request
 
@@ -47,9 +45,9 @@ GET /api/machines/{machineId}/recommendations
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -102,4 +100,3 @@ Here is an example of the response.
 ...
 }
 ```
-

@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,27 +19,37 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # List Indicators API
-
 
 ## API description
 
 Retrieves a collection of all active [Indicators](ti-indicator.md).
 
-Supports [OData V4 queries](https://www.odata.org/documentation/).
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-The OData's `$filter` query is supported on: `application`, `createdByDisplayName`, `expirationTime`, `generateAlert`, `title`, `rbacGroupNames`, `rbacGroupIds`, `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc`, `createdBy`, `action`, and `severity` properties.
-<br>```$stop``` with max value of 10,000. 
-<br>```$skip```.
+- `$filter` on the following operators: `application`
+  - `createdByDisplayName`
+  - `expirationTime`
+  - `generateAlert`
+  - `title`
+  - `rbacGroupNames`
+  - `rbacGroupIds`
+  - `indicatorValue`
+  - `indicatorType`
+  - `creationTimeDateTimeUtc`
+  - `createdBy`
+  - `action`
+  - `severity`
+- `$stop` with max value of 10,000.
+- `$skip`
 
 See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Limitations
 
-Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -179,4 +189,3 @@ Content-type: application/json
     ]
 }
 ```
-
