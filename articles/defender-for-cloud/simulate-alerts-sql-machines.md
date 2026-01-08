@@ -68,7 +68,7 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
 The alert appears after a few minutes and you can use it to validate your security monitoring setup.
 
-## Verify that the alert was generated
+## Verify that the alert is generated
 
 Once an alert is simulated, you can verify that it was generated successfully.
 
@@ -88,5 +88,5 @@ Verify that the simulated alert appears in the list of alerts for the resource a
 
 ## Next step
 
-> [div class="nextstepaction"
+> [!div class="nextstepaction"]
 > [Manage and respond to security alerts](manage-respond-alerts.md)]
