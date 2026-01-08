@@ -52,7 +52,7 @@ Each behavior record includes:
 - **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
-The UEBA behaviors layer stores behavior records in two dedicated tables in your Sentinel workspace, integrating seamlessly with your existing workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
+The UEBA behaviors layer stores behavior records in two dedicated tables, integrating seamlessly with your existing workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
 
 This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
@@ -63,7 +63,7 @@ This diagram illustrates how the UEBA behaviors layer transform raw logs into st
 
 ## Use cases and examples
 
-The UEBA behaviors layer enhance several SOC workflows by transforming raw logs into clear, contextualized activity summaries. Here's how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
+Here's how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
 
 ### Investigation and incident enrichment
 
@@ -229,6 +229,10 @@ Using the UEBA behaviors layer results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
+This section provides best practices and troubleshooting tips for querying behaviors in the Defender portal and in your Sentinel workspace. For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
+
+For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
+
 - **Access behavior data in the Defender portal by querying BehaviorInfo and BehaviorEntities**
 
   - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”. For more information about the table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table).
@@ -266,10 +270,6 @@ Using the UEBA behaviors layer results in the following costs:
   ```
 
   This gives you each behavior and each entity involved in it. The `EntityId` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
-
-For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
-
-For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
 
 - **Where is behavior data stored in my Sentinel workspace?**: 
   - In your Sentinel workspace, behavior data is stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables.
