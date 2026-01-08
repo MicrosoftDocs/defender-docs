@@ -31,11 +31,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|January 7, 2026| Preview | [Microsoft Security Private Link (Preview)](#microsoft-security-private-link-preview) |
+|January 8, 2026| Preview | [Microsoft Security Private Link (Preview)](#microsoft-security-private-link-preview) |
 
 ## Microsoft Security Private Link (Preview)
 
-January 7, 2026
+January 8, 2026
 
 Microsoft Defender for Cloud is announcing Microsoft Security Private Link in Preview.
 
