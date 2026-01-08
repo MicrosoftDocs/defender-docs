@@ -36,18 +36,15 @@ The Microsoft Defender portal is a unified security operations platform that bri
 
 **Continuous improvement insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
-There are 5 steps to build Security Operations on the Microsoft Defender Portal:
+There are 3 steps to build Security Operations on the Microsoft Defender Portal:
 
-1. Step 1 - Prepare your environment: This step focused on getting your MSSP environment ready to onboard customers.
-2. Step 2 - Onboard your Customers: This step focused on onboarding your customers to a multi-tenant configuration
-3. Step 3 - Content Management: Build security content once and deploy it across all customer tenants efficiently.
-4. Step 4 - Multi-Tenant operations: Run daily incident response, threat hunting, and investigations across customer tenants.
-5. Step 5 - Monitor and Audit: Track performance and maintain compliance across your multitenant operations.
+1. Step 1 - Prepare your environment: This step focused on getting your MSSP environment ready and onboarding your customers to a multi-tenant configuration
 
-# Step 1 - Prepere your environmnet
+2. Step 2 - Content Management: Build security content once and deploy it across all customer tenants efficiently.
 
+3. Step 4 - Multi-Tenant operations: Run daily incident response, threat hunting, and investigations across customer tenants.
 
-# Step 2 - Onborad your customers
+# Step 1 - Prepre and onborad your customers
 
 ## Prerequisite - Onboard your customers to the Microsoft Defender portal
 
@@ -62,18 +59,7 @@ Successfully transitioning customers to the Microsoft Defender portal requires c
 
 ## Set up access to multiple customer tenants
 
-The default way to connect to other customer tenants in Defender is using [GDAP (Granular Delegated Admin Privileges) (preferred)](/partner-center/customers/gdap-introduction).
-
-There are some scenarios where GDAP is not supported. In those cases, [Azure Lighthouse](/azure/lighthouse/) is recommended. These scenarios include:
-
-  - CSP partners with Sentinel workloads (partner center???)
-  - [Non-CSP partners (Azure RBAC)](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal)
-  - [B2B collaboration](/entra/external-id/what-is-b2b) (Entra RBAC) to manage Defender customers.
-  - [Service principal delegation across tenants](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890)
-  - [Workbooks querying data across multiple tenants](/azure/sentinel/multiple-tenants-service-providers)
-  - [Cross-workspace analytics rules](/azure/sentinel/multiple-workspace-view)
-    - When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
-    - To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
+MSSPs can delegate access to customer tenants through several methods. [Learn more about delegated access options](https://learn.microsoft.com/en-us/partner-center/customers/gdap-introduction) to choose the approach that best fits your organization's needs and customer requirements.
 
     >[!NOTE]
     > It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
@@ -81,6 +67,22 @@ There are some scenarios where GDAP is not supported. In those cases, [Azure Lig
   - Advanced automation rule/playbook scenario
 
     Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
+
+#### Unified RBAC
+When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
+- [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles.md#email--collaboration-permissions-mapping)
+- [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles.md#exchange-online-permissions-mapping)
+
+   >[!NOTE]
+   >GDAP isn't currently supported for managing Defender for Office 365.
+
+#### Azure B2B 
+Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, this creates limitations for actions performed in Defender for Office 365. This can result in B2B guest admins getting errors when attempting to perform certain actions, such as:
+- Managing spam and phishing policies
+- Managing TABL
+- Cannot release emails from quarantine
+- Missing Threat Explorer in navigation pane
+
 
 ## Manage entitlement
 
@@ -190,7 +192,7 @@ Please refer here: [Import roles to Microsoft Defender XDR Unified role-based ac
 --->
 For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
 
-# Step 3 - Content Management
+# Step 2 - Content Management
 
 ## Manage and distribute content
 
@@ -248,7 +250,7 @@ To prevent such conflicts, we recommend:
 - Centralized management only - Restrict permissions so only MSSP users can create and update content.
 - Shared management with clear markers - Prefix MSSP-managed items with a naming convention. This allows local updates but reduces errors.
 
-# Step 4 - Multi-Tenant Security Operations
+# Step 3 - Multi-Tenant Security Operations
 
 ## Manage security operations across tenants
 The Microsoft Defender portal provides all relevant information so you don't have to switch to another portal or page. Its unified incident queue and the ability to correlate events and alerts can reveal a larger, potentially more comprehensive attack, providing a complete attack story. It also lets you view the detection source and product names, and apply and share filters for these, making incident and alert triaging more efficient.
@@ -279,7 +281,6 @@ Advanced hunting lets you proactively hunt for intrusion attempts and breach act
 
 For more information, see [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md).
 
-
 ## Manage workloads across tenants
 
 This sections explores the various actions you can take and methods you can use for managing specific workloads, either through MTO or other available means.
@@ -305,21 +306,6 @@ Once the tenants are onboarded to multitenant management in Defender (MTO), endp
 ### Email and collaboration tools 
 
 When managing email and collaboration tools in the unified portal, there are some important distinctions to note around capabilities as they relate to managing customers through B2B and Granular Delegated Admin Privileges (GDAP).
-
-#### Unified RBAC
-When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
-- [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles.md#email--collaboration-permissions-mapping)
-- [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles.md#exchange-online-permissions-mapping)
-
-#### GDAP
-GDAP isn't currently supported for managing Defender for Office 365.
-
-#### Azure B2B 
-Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, this creates limitations for actions performed in Defender for Office 365. This can result in B2B guest admins getting errors when attempting to perform certain actions, such as:
-- Managing spam and phishing policies
-- Managing TABL
-- Cannot release emails from quarantine
-- Missing Threat Explorer in navigation pane
 
 ### Identities
 The multitenant view in the Defender portal provides complex organizations with means to segregate regions and business units into individual tenants, without losing access to those tenant data.
