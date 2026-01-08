@@ -78,7 +78,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure Okta
 
-1. In the Okta console, create a token for the API. Copy the token value, you will need it later.
+In the Okta console, create a token for the API. Copy the token value, you will need it later.
 
 ### Configure Defender for Cloud Apps
 
