@@ -102,3 +102,12 @@ The [Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md
 | Role-based access | The **Security Administrator** role is required to set up and manage the agent.<br><br>Users with the same permissions as the Threat Intelligence Briefing Agent can view the agent's activity and results. |
 | Trigger | Runs at the set time interval that you configured during setup, or manually when you want to run it |
 
+### Threat Hunting Agent
+
+The [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
+
+:::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
+
+### Dynamic Threat Detection Agent
+
+The [Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md) in the Defender portal is an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. It uses AI to identify gaps and uncover false negatives by correlating alerts, events, anomalies, and threat intelligence. When the agent identifies a gap, it generates a dynamic alert with the full context in the alert details, including natural language explanations, mapped [MITRE ATT&CK techniques](https://attack.mitre.org/), and tailored remediation steps.
