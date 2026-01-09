@@ -1,5 +1,5 @@
 ---
-title: Block domains in Microsoft Teams using the Tenant Allow/Block List
+title: Block domains and addresses in Microsoft Teams using the Tenant Allow/Block List
 f1.keywords:
   - NOCSH
 author: chrisda
@@ -26,15 +26,17 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with Microsoft Teams and cloud mailboxes, admins can create and manage block entries for domains and email addresses in Microsoft Teams using the Tenant Allow/Block List. 
+In all organizations with Microsoft Teams and cloud mailboxes, admins can create and manage block entries for domains and email addresses in Microsoft Teams using the Tenant Allow/Block List.
 
-These blocked domain entries also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications> in the **Allow or block external domains** section:
+These entries also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>:
 
-:::image type="content" source="media/tenant-allow-block-list-teams-domains.png" alt-text="Screenshot of the External access page in the Microsoft Teams admin center showing blocked domains." lightbox="media/tenant-allow-block-list-teams-domains.png":::
+- **Blocked domains**: Entries are in the **Allow or block external domains** section:
 
-These blocked addresses similarly appears **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications> in the **Block specific users from communicating with people in my organization** section:
+  :::image type="content" source="media/tenant-allow-block-list-teams-domains.png" alt-text="Screenshot of the External access page in the Microsoft Teams admin center showing blocked domains." lightbox="media/tenant-allow-block-list-teams-domains.png":::
 
-:::image type="content" source="media/tenant-allow-block-list-teams-senders.png" alt-text="Screenshot of the External access page in the Microsoft Teams admin center showing blocked users." lightbox="media/tenant-allow-block-list-teams-senders.png":::
+- **Blocked email addresses**: Entries are in the **Block specific users from communicating with people in my organization** section:
+
+  :::image type="content" source="media/tenant-allow-block-list-teams-senders.png" alt-text="Screenshot of the External access page in the Microsoft Teams admin center showing blocked users." lightbox="media/tenant-allow-block-list-teams-senders.png":::
 
 For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -70,7 +72,7 @@ This article describes how security admins can manage entries for blocked domain
 ## Create block entries for domains and addresses in Teams in the Tenant Allow/Block List
 
    > [!TIP]
-   > See the requirements in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section to managed blocked domains and senders in Teams in the Tenant Allow/Block list. You will get an error while adding domains or senders in **Teams senders** tab on the **Tenant Allow/Block Lists** page if you don't meet the pre-requisites.
+   > See the requirements in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section to managed blocked domains and senders in Teams in the Tenant Allow/Block list. If you don't meet the prerequisites, you get errors adding domains or senders on **Teams senders** tab of the **Tenant Allow/Block Lists** page.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
