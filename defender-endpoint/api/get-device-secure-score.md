@@ -61,7 +61,7 @@ If successful, this method returns 200 OK, with the device secure score data in 
 Here is an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/configurationScore
+GET https://api.security.microsoft.com/api/configurationScore
 ```
 
 ### Response example
@@ -70,7 +70,7 @@ Here's an example of the shortned response list.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#ConfigurationScore/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#ConfigurationScore/$entity",
     "time": "2019-12-03T09:15:58.1665846Z",
     "score": 340
 }

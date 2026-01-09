@@ -72,5 +72,5 @@ If successful and domain exists - 200 OK with list of [alert](alerts.md) entitie
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/domains/client.wns.windows.com/alerts
+GET https://api.security.microsoft.com/api/domains/client.wns.windows.com/alerts
 ```

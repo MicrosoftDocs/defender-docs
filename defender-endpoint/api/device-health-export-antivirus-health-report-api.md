@@ -35,7 +35,7 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 
 For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
 
-### Prerequisites
+## Prerequisites
 
 For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
@@ -88,10 +88,10 @@ See examples at [OData queries with Microsoft Defender for Endpoint](exposed-api
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see Use Microsoft Defender for Endpoint APIs for details.
 
-| Permission type | Permission | Permission display name |
+|Permission type|Permission|Permission display name|
 |---|---|---|
-| Application | Machine.Read.All | 'Read all machine profiles' |
-|Delegated (work or school account) | Machine.Read | 'Read machine information' |
+|Application|Machine.Read.All|'Read all machine profiles'|
+|Delegated (work or school account)|Machine.Read|'Read machine information'|
 
 ### 1.3 URL (HTTP request)
 
@@ -101,9 +101,9 @@ URL: GET: /api/deviceavinfo
 
 #### 1.3.1 Request headers
 
-| Name | Type | Description |
+|Name|Type|Description|
 |---|---|---|
-| Authorization | String | Bearer {token}. Required. |
+|Authorization|String|Bearer {token}. **Required**.|
 
 #### 1.3.2 Request body
 
@@ -131,7 +131,7 @@ Supports [OData V4 queries](https://www.odata.org/documentation/).
 Here's an example request:
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/deviceavinfo
+GET https://api.security.microsoft.com/api/deviceavinfo
 ```
 
 #### Response example
@@ -141,7 +141,7 @@ Here's an example response:
 ```json
 {
 
-    @odata.context: "https://api.securitycenter.microsoft.com/api/$metadata#DeviceAvInfo",
+    @odata.context: "https://api.security.microsoft.com/api/$metadata#DeviceAvInfo",
 
 "value": [{
 
@@ -232,10 +232,10 @@ This API response contains all the data of Antivirus health and status per devic
 
 One of the following permissions is required to call this API.
 
-| Permission type | Permission | Permission display name |
+|Permission type|Permission|Permission display name|
 |---|---|---|
-| Application | Vulnerability.Read.All | 'Read "threat and vulnerability management" vulnerability information' |
-| Delegated (work or school account) | Vulnerability.Read | 'Read "threat and vulnerability management" vulnerability information' |
+|Application|Vulnerability.Read.All|'Read "threat and vulnerability management" vulnerability information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read "threat and vulnerability management" vulnerability information'|
 
 To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details](apis-intro.md).
 
@@ -260,7 +260,7 @@ See: [1.4 Export device antivirus health details API properties \(via files\)](d
 Here's an example request:
 
 ```HTTP
-GET https://api-us.securitycenter.windows.com/api/machines/InfoGatheringExport
+GET https://api.security.windows.com/api/machines/InfoGatheringExport
 ```
 
 #### 2.6.2 Response example
@@ -270,7 +270,7 @@ Here's an example response:
 ```json
 {
 
-   "@odata.context": "https://api-us.securitycenter.windows.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+   "@odata.context": "https://api.security.windows.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
 
    "exportFiles": [
 
@@ -301,4 +301,3 @@ Here's an example response:
 >
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](../tune-performance-defender-antivirus.md).
->

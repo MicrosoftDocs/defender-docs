@@ -63,7 +63,7 @@ If successful, this method returns 200 OK with a list of software distributions 
 Here is an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/distributions
+GET https://api.security.microsoft.com/api/Software/microsoft-_-edge/distributions
 ```
 
 ### Response example
@@ -73,7 +73,7 @@ Here's an example of the response.
 ```json
 
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Distributions",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Distributions",
     "value": [
         {
             "version": "11.0.17134.1039",

@@ -63,7 +63,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machineactions
+GET https://api.security.microsoft.com/api/machineactions
 ```
 
 ## Request headers
@@ -87,7 +87,7 @@ If successful, this method returns 200, Ok response code with a collection of [m
 Here's an example of the request on an organization that has three MachineActions.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machineactions
+GET https://api.security.microsoft.com/api/machineactions
 ```
 
 ### Example 1 response
@@ -98,7 +98,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineActions",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineActions",
     "value": [
         {
             "id": "69dc3630-1ccc-4342-acf3-35286eec741d",
@@ -153,7 +153,7 @@ Content-type: application/json
 Here's an example of a request that filters the MachineActions by machine ID and shows the latest two MachineActions.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machineactions?$filter=machineId eq 'f46b9bb259ed4a7fb9981b73510e3cc7aa81ec1f'&$top=2
+GET https://api.security.microsoft.com/api/machineactions?$filter=machineId eq 'f46b9bb259ed4a7fb9981b73510e3cc7aa81ec1f'&$top=2
 ```
 
 ### Example 2 response
@@ -164,7 +164,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineActions",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineActions",
     "value": [
         {
             "id": "69dc3630-1ccc-4342-acf3-35286eec741d",

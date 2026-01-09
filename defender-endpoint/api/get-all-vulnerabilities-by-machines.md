@@ -79,7 +79,7 @@ If successful, this method returns 200 OK with the list of vulnerabilities in th
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/vulnerabilities/machinesVulnerabilities
+GET https://api.security.microsoft.com/api/vulnerabilities/machinesVulnerabilities
 ```
 
 ### Response example
@@ -88,7 +88,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicAssetVulnerabilityDto)",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicAssetVulnerabilityDto)",
     "value": [
         {
             "id": "5afa3afc92a7c63d4b70129e0a6f33f63a427e21-_-CVE-2020-6494-_-microsoft-_-edge_chromium-based-_-81.0.416.77-_-",

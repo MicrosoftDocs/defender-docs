@@ -61,7 +61,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/investigations
+GET https://api.security.microsoft.com/api/investigations
 ```
 
 ## Request headers
@@ -85,7 +85,7 @@ If successful, this method returns 200, Ok response code with a collection of [I
 Here's an example of a request to get all investigations:
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/investigations
+GET https://api.security.microsoft.com/api/investigations
 ```
 
 ### Response example
@@ -94,7 +94,7 @@ Here's an example of the response:
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Investigations",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Investigations",
     "value": [
         {
             "id": "63017",

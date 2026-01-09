@@ -65,7 +65,7 @@ For the full available Alerts API experience across all Microsoft Defenders' pro
 ### Response example for getting single alert:
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts/da637472900382838869_1364969609
+GET https://api.security.microsoft.com/api/alerts/da637472900382838869_1364969609
 ```
 
 ```json

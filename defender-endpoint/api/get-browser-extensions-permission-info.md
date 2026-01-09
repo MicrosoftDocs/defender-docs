@@ -83,7 +83,7 @@ If successful, this method returns 200 OK with the list of all permissions reque
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/browserextensions/permissionsinfo
+GET https://api.security.microsoft.com/api/browserextensions/permissionsinfo
 ```
 
 ### Response example
@@ -92,7 +92,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#BrowserExtension",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#BrowserExtension",
     "value": [
 {
   "value": [

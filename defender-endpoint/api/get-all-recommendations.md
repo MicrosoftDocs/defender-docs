@@ -86,7 +86,7 @@ If successful, this method returns 200 OK with the list of security recommendati
 Here is an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations
+GET https://api.security.microsoft.com/api/recommendations
 ```
 
 ### Response
@@ -95,7 +95,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Recommendations",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Recommendations",
     "value": [
         {
             "id": "va-_-microsoft-_-edge_chromium-based",

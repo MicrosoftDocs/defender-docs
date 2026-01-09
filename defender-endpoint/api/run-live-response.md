@@ -93,7 +93,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```HTTP
-POST https://api.securitycenter.microsoft.com/API/machines/{machine_id}/runliveresponse
+POST https://api.security.microsoft.com/API/machines/{machine_id}/runliveresponse
 ```
 
 ## Request headers
@@ -131,7 +131,7 @@ POST https://api.securitycenter.microsoft.com/API/machines/{machine_id}/runliver
 Here's an example of the request.
 
 ```HTTP
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/runliveresponse
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/runliveresponse
 
 ```JSON
 {
@@ -178,7 +178,7 @@ Content-type: application/json
 
 ```JSON
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineActions/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineActions/$entity",
     "id": "{machine_action_id}",
     "type": "LiveResponse",
     "requestor": "analyst@microsoft.com",
