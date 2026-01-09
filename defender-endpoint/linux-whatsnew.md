@@ -56,7 +56,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 #### What's new
 
-- Enhanced vulnerability detection for vulnerable React components through deeper component analysis and enhanced telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more complete security coverage for React-based applications.
+- Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications.
 
 ### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
 
