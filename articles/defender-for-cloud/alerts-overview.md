@@ -39,7 +39,7 @@ Alerts have a severity level assigned to help prioritize how to attend to each a
 
 ## What are security incidents?
 
-**A security incident** is a collection of related alerts.
+A **security incident** is a collection of related alerts.
 
 Incidents provide you with a single view of an attack and its related alerts, so that you can quickly understand the actions an attacker took, and the affected resources.
 
