@@ -71,6 +71,13 @@
             - name: Connect machines with Azure Arc
               displayName: azure stack, ash, windows, linux, hybrid, arc, on-premises, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
               href: quickstart-onboard-machines.md
+    - name: Networking and connectivity
+      items:
+      - name: Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)
+        displayName: private endpoints, private link, security private link, networking, connectivity, VPN, ExpressRoute
+        href: concept-private-links.md
+      - name: Configure private endpoints with Microsoft Security Private Link (Preview)
+        href: configure-private-endpoints.md
     - name: Enable specific plans
       expanded: false
       items:
@@ -1493,6 +1500,15 @@
         - name: Code reachability analysis
           DisplayName: Code reachability analysis, reachable vulnerabilities
           href: episode-sixty.md
+        - name: Kubernetes lateral movement
+          DisplayName: Kubernetes lateral movement, Kubernetes RBAC, attack paths
+          href: episode-sixty-one.md
+        - name: Kubernetes gated deployment
+          DisplayName: Kubernetes gated deployment, gated rules
+          href: episode-sixty-two.md
+        - name: Agentless code scanning
+          DisplayName: Agentless code scanning
+          href: episode-sixty-three.md
         - name: Storage aggregated logs
           DisplayName: Storage aggregated logs, Advanced Hunting, CloudStorageAggregatedEvents
           href: episode-sixty-four.md
