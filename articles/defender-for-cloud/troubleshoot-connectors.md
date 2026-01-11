@@ -40,7 +40,7 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
 
 If you see an error when deploying the CloudFormation template, use the following table to help identify and resolve the issue.
 
-| Error Type | Suggested fix |
+| Error | Suggested fix |
 |--|--|
 | Access Denied? | Ensure AWS user or role has proper IAM role.<br>• Check StackSet trust (Org access).<br>• Run script with proper IAM role. |
 | Already Exists/Duplicate Resource? | Deploy template in one region first.<br>• Skip or conditionally create globals in others.<br>• Remove any leftover duplicate instances, then retry. |
