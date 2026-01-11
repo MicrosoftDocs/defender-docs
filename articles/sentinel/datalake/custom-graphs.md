@@ -4,7 +4,7 @@ description: Learn how to create and manage custom graphs in Microsoft Sentinel 
 author: EdB-MSFT
 ms.author: edbaynash
 ms.date: 12/01/2025
-ms.topic: how-to
+ms.topic: how-to 
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
 
@@ -293,16 +293,14 @@ After you create an ephemeral graph, you can persist it by storing the graph in 
 1. Paste the following sample GQL query to retrieve all user nodes in the graph:
 
     ```gql
-    MATCH (u: user)-[s:sign_in]->(d: device) 
-    RETURN u,s,d LIMIT 10
+    MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
+            WHERE d.Org in ["Customer XP"]
+            RETURN *
+            LIMIT 30
     ```
 :::image type="content" source="media/custom-graphs/graph-query.png" lightbox="media/custom-graphs/graph-query.png" alt-text="A screenshot of the graph query tab.":::
 
 For more information on GQL, see [GQL language guide](/kusto/query/graph-query-language-reference?view=microsoft-fabric).
-
-
-
-
 
 ## Related articles
 
