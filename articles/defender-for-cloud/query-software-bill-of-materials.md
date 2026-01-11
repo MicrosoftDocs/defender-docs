@@ -74,17 +74,7 @@ To add a filter that searches for a specific package version, continue building 
 
 The query runs and all repositories containing the specified package and version are presented. Select a repository from the findings to view further details about the installed software and its security posture.
 
-### Example Query
+## Next step
 
-The following configuration finds all GitHub repositories containing the package `log4j` with version `2.14.1`:
-
-![Example Query](example.png)
-
-> **Graph query:**
-> `GitHub repositories` **where** `Has Installed Software` (**where** `Name` == 'log4j' **and** `Version` == '2.14.1')
-
-## Analyze the results
-
-Once the search completes, the results list will display all repositories matching your criteria. You can select a specific repository to view further details about the installed software and its security posture.
-
-For more general information on building queries, see [Manage the Cloud Security Explorer](https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-cloud-security-explorer).
+> [!div class="nextstepaction"]
+> [Common questions about DevOps Security](faq-defender-for-devops.yml)
