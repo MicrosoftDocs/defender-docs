@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -28,11 +28,9 @@ appliesto:
 Retrieves specific [Investigation](investigation.md) by its ID.
 <br> ID can be the investigation ID or the investigation triggering alert ID.
 
-
 ## Limitations
 
 Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-
 
 ## Permissions
 
@@ -42,22 +40,22 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 One of the following permissions is required to call this API. TFor more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Alert.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/investigations/{id}
+GET https://api.security.microsoft.com/api/investigations/{id}
 ```
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -66,5 +64,3 @@ Empty
 ## Response
 
 If successful, this method returns 200, Ok response code with an [Investigations](investigation.md) entity.
-
-

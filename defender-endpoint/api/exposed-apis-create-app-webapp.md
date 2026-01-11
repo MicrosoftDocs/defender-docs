@@ -100,7 +100,7 @@ $tenantId = '' ### Paste your tenant ID here
 $appId = '' ### Paste your Application ID here
 $appSecret = '' ### Paste your Application key here
 
-$sourceAppIdUri = 'https://api.securitycenter.microsoft.com/.default'
+$sourceAppIdUri = 'https://api.security.microsoft.com/.default'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
 $authBody = [Ordered] @{
     scope = "$sourceAppIdUri"
@@ -130,16 +130,14 @@ The following procedure assumes that Curl for Windows is already installed on yo
 4. Run the following command:
 
    ```console
-   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.security.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
    The answer resembles the following code snippet:
 
    ```console
     {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
-
-
----
+   ```
 
 ## Validate the token
 
@@ -161,7 +159,7 @@ This example sends a request to get a list of alerts using C#.
 
 ```csharp
 var httpClient = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter.microsoft.com/api/alerts");
+var request = new HttpRequestMessage(HttpMethod.Get, "https://api.security.microsoft.com/api/alerts");
 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
 ```
