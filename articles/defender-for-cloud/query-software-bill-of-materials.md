@@ -20,22 +20,39 @@ Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cl
 
 ## Build a package query
 
-Use the following steps to filter for specific installed software across your DevOps environment.
+Using the cloud security explorer, you can build a query to find repositories that include specific packages (dependencies) and versions.
 
-1. In the Microsoft Defender for Cloud portal, navigate to **Cloud Security Explorer**.
-2. In the query builder, select the drop-down for **Resource Type** and choose **DevOps**.
-3. Select the specific **Code Repository** type you wish to filter on (for example, **GitHub repositories**).
-4. To define the dependency, select the **(+)** button to add a condition.
-5. Navigate to **Application** and select **Has Installed Software**.
-6. To specify the package name:
-   * Click the **(+)** button next to "Has Installed Software."
-   * Select **Name**.
-   * Choose the operator (e.g., **equals**) and enter the package name (e.g., `log4j`, `express`, `newtonsoft.json`).
-7. *(Optional)* To specify a version:
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.
+
+1. Select **Resource Type** > **DevOps**.
+
+    :::image type="content" source="media/query-software-bill-of-materials/code-repository.png" alt-text="Screenshot that shows the cloud security explorer and where to select code repositories." lightbox="media/query-software-bill-of-materials/code-repository.png":::
+
+1. Select the specific code repository type you wish to filter on (for example, GitHub repositories).
+
+1. Select **Done**.
+
+1. (Optional) Select search to view all repositories ingested into the cloud security graph, or continue to add dependency filters.
+
+1. Select **(+)**.
+
+1. Select **Application** > **Has installed software**.
+
+    :::image type="content" source="media/query-software-bill-of-materials/has-installed-software.png" alt-text="Screenshot that shows how to apply the dependency, has installed software." lightbox="media/query-software-bill-of-materials/has-installed-software.png":::
+
+1. Select the **(+)** next to Has installed software.
+
+1. Select **Name** > **Equals**.
+
+1. Enter the package name. For example, `log4j`, `express` or `newtonsoft.json`.
+
+1. (Optional) Specify a version:
    * Click the **(+)** button again to add another sub-condition.
    * Select **Version**.
    * Enter the specific version number you are hunting for.
-8. Select **Search** to run the query.
+1. Select **Search** to run the query.
 
 ### Example Query
 
