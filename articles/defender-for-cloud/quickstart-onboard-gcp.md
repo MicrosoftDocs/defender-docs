@@ -8,33 +8,17 @@ ms.custom: sfi-image-nochange
 
 # Connect your GCP project to Microsoft Defender for Cloud
 
-Workloads commonly span multiple cloud platforms. Cloud security services must do the same. Microsoft Defender for Cloud helps protect workloads in Google Cloud Platform (GCP), but you need to set up the connection between them and Defender for Cloud.
+Microsoft Defender for Cloud provides security posture management and threat protection for workloads running in Google Cloud Platform (GCP).
 
-This screenshot shows GCP accounts displayed in the Defender for Cloud [overview dashboard](overview-page.md).
+This article shows you how to connect a GCP project or organization to Microsoft Defender for Cloud so Microsoft Defender for Cloud can discover resources, assess security posture, and surface security recommendations and alerts.
 
-:::image type="content" source="./media/quickstart-onboard-gcp/gcp-account-in-overview.png" alt-text="Screenshot that shows GCP projects listed on the overview dashboard in Defender for Cloud." lightbox="media/quickstart-onboard-gcp/gcp-account-in-overview.png":::
+## Authentication architecture
 
-## GCP authorization design
+Microsoft Defender for Cloud uses federated authentication to securely access GCP APIs without storing long-lived credentials.
 
-The authentication process between Microsoft Defender for Cloud and GCP is a federated authentication process.  
+During onboarding, Defender for Cloud establishes trust with Google Cloud using workload identity federation and service account impersonation. Access is scoped to the connected project or organization and limited to the permissions required by the enabled Defender plans.
 
-When you onboard to Defender for Cloud, the GCloud template is used to create the following resources as part of the authentication process:
-
-- Workload identity pool and providers
-
-- Service accounts and policy bindings
-
-The authentication process works as follows:
-
-:::image type="content" source="media/quickstart-onboard-gcp/authentication-process.png" alt-text="A diagram of the Defender for Cloud GCP connector authentication process." lightbox="media/quickstart-onboard-gcp/authentication-process.png":::
-
-1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. Microsoft Entra ID signs the token using the RS256 algorithm and is valid for 1 hour.
-
-1. The Microsoft Entra token is exchanged with Google's STS token.
-
-1. Google STS validates the token with the workload identity provider. The Microsoft Entra token is sent to Google's STS that validates the token with the workload identity provider. Audience validation then occurs and the token is signed. A Google STS token is then returned to Defender for Cloud's CSPM service.
-
-1. Defender for Cloud's CSPM service uses the Google STS token to impersonate the service account. Defender for Cloud's CSPM receives service account credentials that are used to scan the project.
+Learn more about [authentication architecture for GCP connectors](concept-authentication-architecture-gcp.md).
 
 ## Prerequisites
 
@@ -112,12 +96,7 @@ Once you selected the plans, you want to enable and the resources you want to pr
 
 In this step, you can find the GCloud script that needs to be run on the GCP project that is going to onboarded. The GCloud script is generated based on the plans you selected to onboard.
 
-The GCloud script creates all of the required resources on your GCP environment so that Defender for Cloud can operate and provide the following security values:
-
-- Workload identity pool
-- Workload identity provider (per plan)
-- Service accounts
-- Project level policy bindings (service account has access only to the specific project)
+The GCloud script creates the required authentication and access resources in your GCP environment. Learn more about [authentication architecture for GCP connectors](concept-authentication-architecture-gcp.md).
 
 ### Review and generate the connector for your project
 

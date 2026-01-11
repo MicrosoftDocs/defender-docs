@@ -69,8 +69,6 @@
           href: quickstart-onboard-gcp.md
         - name: Authentication architecture for GCP connectors
           href: concept-authentication-architecture-gcp.md
-        - name: Monitor connected GCP resources
-          href: monitor-connected-gcp-resources.md
         - name: Integrate GCP Cloud Logging with Pub/Sub (Preview)
           href: integrate-gcp-cloud-logging-pubsub.md
           items:
