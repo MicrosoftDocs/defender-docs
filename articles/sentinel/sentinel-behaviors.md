@@ -274,13 +274,18 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
   This gives you each behavior and each entity involved in it. The `AccountUpn` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
 
 - **Where is behavior data stored in my Sentinel workspace?**: 
-  - In your Sentinel workspace, behavior data is stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables.
+  - In your Sentinel workspace, behavior data is stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables. For more information about the table schemas, see [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo) and [SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities).
   - To monitor data usage, look for the table names `SentinelBehaviorInfo` and `SentinelBehaviorEntities` in the `Usage` table.
+
+- **Create automation, workbooks, and detection rules based on behaviors**: 
+  - Use the `BehaviorInfo` table as a data source for detection rules or automation playbooks in the Defender portal. For example, create a scheduled query rule that triggers when a specific behavior appears.
+  - For [Azure Monitor workbooks](../sentinel/monitor-your-data.md) and any artifacts built directly on your Sentinel workspace, make sure to query the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables in your Sentinel workspace.
+
 
 ### Troubleshooting 
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information about supported behavior types, see [TBD](). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
+- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
      
 ## Limitations in public preview 
