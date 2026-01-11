@@ -83,7 +83,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
-- Ubuntu Pro
+- Ubuntu Pro 22.04
+- Ubuntu Pro 24.04
 - Debian 9 - 12
 - SUSE Linux Enterprise Server 12.x
 - SUSE Linux Enterprise Server 15.x
@@ -104,7 +105,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Ubuntu 20.04 LTS ARM64
 - Ubuntu 22.04 LTS ARM64
 - Ubuntu 24.04 LTS ARM64
-- Ubuntu Pro ARM64
+- Ubuntu Pro 22.04 ARM64
+- Ubuntu Pro 24.04 ARM64
 - CentOS Stream 8.x ARM64
 - CentOS Stream 9.x ARM64
 - CentOS Stream 10.x ARM64
