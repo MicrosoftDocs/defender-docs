@@ -18,6 +18,27 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## January 2026
+
+### UEBA behaviors layer (Preview)
+
+Microsoft Sentinel introduces a new UEBA behaviors layer that transforms high-volume, low-level security logs into clear, human-readable behavioral insights in the Defender portal. This AI-powered capability aggregates and sequences raw events from supported data sources into normalized behaviors that explain "who did what to whom" with MITRE ATT&CK context.
+
+The UEBA behaviors layer bridges the gap between alerts and raw logs. While raw logs are noisy, uncorrelated, and difficult to interpret, and alerts indicate a potential issue that requires action, the UEBA behaviors abstraction layer summarizes behavior patterns - normal or abnormal - and optimizes data for investigations, hunting, and detection. For example, instead of analyzing individual AWS CloudTrail events or firewall logs, analysts see a behavior - like "**Inbound remote management session from external address**" - that summarizes multiple raw events and maps them to known tactics, techniques, and procedures (TTPs).
+
+UEBA behaviors:
+
+- **Transform noisy telemetry into actionable insights**: Convert fragmented, high-volume logs into clear, human-readable behavioral observations, making it easier to understand security events.
+- **Ensure explainability**: Map to MITRE ATT&CK tactics, entity roles, and raw logs for traceability and clarity.
+- **Accelerate investigations**: Enable faster incident response by aggregating and sequencing behaviors, allowing analysts to focus on meaningful actions rather than sifting through thousands of events.
+- **Empower all SOC personas**: Enhance workflows for SOC analysts, threat hunters, and detection engineers by providing unified, contextual views and building blocks for detection rules and automation.
+
+Behaviors are stored in the `BehaviorInfo` and `BehaviorEntities` tables accessible through Advanced Hunting in the Defender portal. 
+
+**Supported data sources (Preview):** AWS CloudTrail, CommonSecurityLog (CyberArk Vault, Palo Alto Threats)
+
+For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/sentinel-behaviors.md).
+
 ## November 2025
 
 ### New Entity Behavior Analytics (UEBA) experiences in the Defender portal (Preview)
