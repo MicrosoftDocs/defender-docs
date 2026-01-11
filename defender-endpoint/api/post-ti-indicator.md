@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,11 +19,9 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Submit or Update Indicator API
-
 
 ## API description
 
@@ -41,29 +39,29 @@ CIDR notation for IPs isn't supported.
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Get started](apis-intro.md).
 
 |Permission type|Permission|Permission display name|
-|:---|:---|:---|
+|---|---|---|
 |Application|Ti.ReadWrite.All|`Read and write All Indicators`|
 |Delegated (work or school account)|Ti.ReadWrite|`Read and write Indicators`|
 
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators
+POST https://api.security.microsoft.com/api/indicators
 ```
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |indicatorValue|String|Identity of the [Indicator](ti-indicator.md) entity. **Required**|
 |indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileMd5`, `CertificateThumbprint`, `FileSha256`, `IpAddress`, `DomainName`, and `Url`. **Required**|
 |action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Alert`, `Warn`, `Block`, `Audit`, `BlockAndRemediate`, `AlertAndBlock`, and `Allowed`. **Required**. The `GenerateAlert` parameter must be set to `TRUE` when creating an action with `Audit`.|
@@ -89,7 +87,7 @@ In the request body, supply a JSON object with the following parameters:
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators
+POST https://api.security.microsoft.com/api/indicators
 ```
 
 ```json

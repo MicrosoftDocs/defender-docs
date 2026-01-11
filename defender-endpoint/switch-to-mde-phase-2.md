@@ -35,9 +35,9 @@ appliesto:
 **Welcome to the Setup phase of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. This phase includes the following steps:
 
 1. Reinstall/enable Microsoft Defender Antivirus on your endpoints.
-2. Add Defender for Endpoint to the exclusion list for your existing solution.
-3. Configure Defender for Endpoint Plan 1 or Plan 2.
-4. Set up your device groups, device collections, and organizational units.
+1. Add Defender for Endpoint to the exclusion list for your existing solution.
+1. Configure Defender for Endpoint Plan 1 or Plan 2.
+1. Set up your device groups, device collections, and organizational units.
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -135,37 +135,35 @@ This article describes how to configure your Defender for Endpoint capabilities 
    | :::image type="content" source="media/mde-hangon-provisioning.png" alt-text="Screenshot showing message that says hang on because MDE isn't provisioned yet." lightbox="media/mde-hangon-provisioning.png"::: | Defender for Endpoint isn't finished provisioning yet. You might have to wait a little while for the process to finish. |
    | :::image type="content" source="media/device-inventory-empty.png" alt-text="Screenshot showing device inventory page with no device onboarded yet." lightbox="media/device-inventory-empty.png"::: | Defender for Endpoint is provisioned. In this case, proceed to the next step. |
 
-2. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
+1. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
 
    1. In the Microsoft Defender portal, choose **Settings** > **Endpoints**.
 
-   2. Go to **General** > **Advanced features**, and then set the toggle for tamper protection to **On**.
+   1. Go to **General** > **Advanced features**, and then set the toggle for tamper protection to **On**.
 
-   3. Select **Save**.
+   1. Select **Save**.
 
    [Learn more about tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
 
-3. If you're using either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
+1. If you're using either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
 
-   1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
+    1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
 
-   2. Under **Setup**, choose **Microsoft Defender for Endpoint**.
+    1. Under **Setup**, choose **Microsoft Defender for Endpoint**.
 
-   3. Under **Endpoint Security Profile Settings**, set the toggle for **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
+    1. Under **Endpoint Security Profile Settings**, set the toggle for **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
+    1. Near the top of the screen, select **Save**.
 
-   4. Near the top of the screen, select **Save**.
+    1. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), choose **Settings** > **Endpoints**.
 
-   5. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), choose **Settings** > **Endpoints**.
+    1. Scroll down to **Configuration management**, and select **Enforcement scope**. 
 
-   6. Scroll down to **Configuration management**, and select **Enforcement scope**. 
+    1. Set the toggle for **Use MDE to enforce security configuration settings from MEM** to **On**, and then select the options for both Windows client and Windows Server devices. 
 
-   7. Set the toggle for **Use MDE to enforce security configuration settings from MEM** to **On**, and then select the options for both Windows client and Windows Server devices. 
+    1. If you're planning to use Configuration Manager, set the toggle for **Manage Security settings using Configuration Manager** to **On**. (If you need help with this step, see [Coexistence with Microsoft Endpoint Configuration Manager](/mem/intune/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager).)
+    1. Scroll down and select **Save**.
 
-   8. If you're planning to use Configuration Manager, set the toggle for **Manage Security settings using Configuration Manager** to **On**. (If you need help with this step, see [Coexistence with Microsoft Endpoint Configuration Manager](/mem/intune/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager).)
-
-   9. Scroll down and select **Save**.
-
-4. Configure your initial [attack surface reduction capabilities](overview-attack-surface-reduction.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
+1. Configure your initial [attack surface reduction capabilities](overview-attack-surface-reduction.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
 
    | Standard protection rules | Configuration methods |
    |:---|:---|
@@ -173,7 +171,7 @@ This article describes how to configure your Defender for Endpoint capabilities 
 
    [Learn more about attack surface reduction capabilities](overview-attack-surface-reduction.md).
 
-5. Configure your [next-generation protection capabilities](next-generation-protection.md).
+1. Configure your [next-generation protection capabilities](next-generation-protection.md).
 
    | Capability | Configuration methods |
    |---|---|
@@ -184,9 +182,9 @@ This article describes how to configure your Defender for Endpoint capabilities 
 
    *If you have Defender for Endpoint Plan 1, your initial setup and configuration is complete. If you have Defender for Endpoint Plan 2, continue through steps 6-7.*
 
-6. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)). To get help with this task, see [Create EDR policies](/mem/intune/protect/endpoint-security-edr-policy#create-edr-policies).
+1. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)). To get help with this task, see [Create EDR policies](/mem/intune/protect/endpoint-security-edr-policy#create-edr-policies).
 
-7. Configure your automated investigation and remediation capabilities in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
+1. Configure your automated investigation and remediation capabilities in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
 
    *At this point, initial setup and configuration of Defender for Endpoint Plan 2 is complete.*
 
