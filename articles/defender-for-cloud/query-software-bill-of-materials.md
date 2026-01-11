@@ -9,9 +9,9 @@ ms.date: 01/11/2026
 
 # Query software bill of materials
 
-Microsoft Defender for Cloud’s DevOps Security agentless scanning capabilities automatically generate a Software Bill of Materials (SBOM) for your connected code repositories. After a scan completes, the repository and identified packages are published to the Cloud Security Graph.
+Microsoft Defender for Cloud’s DevOps Security agentless scanning capabilities automatically generate a Software Bill of Materials (SBOM) for connected code repositories. Once a scan completes, the repository and identified packages are published to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).
 
-You can use the **Cloud Security Explorer** to query this data, allowing you to locate specific packages (dependencies) and identify exactly which repositories are using them. This is critical for identifying the impact radius of a vulnerable package version across your organization.
+Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) can be used to query this data. The cloud security explorer can be used to locate specific packages (dependencies) and identify exactly which repositories use them. This information can be used to identify the impact radius of a vulnerable package version across your organization.
 
 ## Prerequisites
 
