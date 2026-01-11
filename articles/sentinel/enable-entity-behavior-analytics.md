@@ -125,7 +125,7 @@ For more information about configuring Microsoft Sentinel data connectors, see [
 
 The UEBA behaviors layer generates enriched summaries of activity observed across multiple data sources. Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they create an abstraction layer that optimizes your data for investigations, hunting, and detection by enhancing
 
-For more information about the UEBA behaviors layer and how to enable it, see [Enable the UEBA behaviors layer in Microsoft Sentinel](./enable-ueba-behaviors-layer.md). 
+For more information about the UEBA behaviors layer and how to enable it, see [Enable the UEBA behaviors layer in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md). 
 
 ## Next steps
 

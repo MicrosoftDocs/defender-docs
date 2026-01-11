@@ -12,7 +12,7 @@ ms.reviewer: mschechter
 
 # Responsible AI FAQ for the Microsoft Sentinel UEBA behaviors layer
 
-These frequently asked questions (FAQ) describe the AI impact of the [UEBA behaviors layer](../sentinel/sentinel-behaviors.md) feature in Microsoft Sentinel.
+These frequently asked questions (FAQ) describe the AI impact of the [UEBA behaviors layer](../sentinel/entity-behaviors-layer.md) feature in Microsoft Sentinel.
 
 
 ## What is the UEBA behaviors layer?
@@ -65,4 +65,4 @@ The AI-generated rules are then validated in various ways to ensure that:
 
 ## See also
 
-- [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)](../sentinel/sentinel-behaviors.md)  
+- [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)](../sentinel/entity-behaviors-layer.md)  
