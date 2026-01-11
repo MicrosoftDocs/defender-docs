@@ -9,9 +9,9 @@ ms.date: 01/11/2026
 
 # Query software bill of materials
 
-Microsoft Defender for Cloud’s DevOps Security agentless scanning capabilities automatically generate a Software Bill of Materials (SBOM) for connected code repositories. Once a scan completes, the repository and identified packages are published to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).
+Microsoft Defender for Cloud’s DevOps Security agentless scanning capabilities automatically generate a Software Bill of Materials (SBOM) for connected code repositories. When a scan finishes, the process publishes the repository and identified packages to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).
 
-Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) can be used to query this data. The cloud security explorer can be used to locate specific packages (dependencies) and identify exactly which repositories use them. This information can be used to identify the impact radius of a vulnerable package version across your organization.
+You can use Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) to query this data. By using the cloud security explorer, you can locate specific packages (dependencies) and identify exactly which repositories use them. You can use this information to identify the impact radius of a vulnerable package version across your organization.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cl
 
 ## Build a package query
 
-Using the cloud security explorer, you can build a query to find repositories that include specific packages (dependencies) and versions.
+By using the cloud security explorer, you can build a query to find repositories that include specific packages (dependencies) and versions.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -30,13 +30,13 @@ Using the cloud security explorer, you can build a query to find repositories th
 
     :::image type="content" source="media/query-software-bill-of-materials/code-repository.png" alt-text="Screenshot that shows the cloud security explorer and where to select code repositories." lightbox="media/query-software-bill-of-materials/code-repository.png":::
 
-1. Select the specific code repository type you wish to filter on (for example, GitHub repositories).
+1. Select the specific code repository type you want to filter for. For example, GitHub repositories.
 
 1. Select **Done**.
 
 1. Select **Search**. 
 
-The query runs and all code repositories are presented. Select a repository from the findings to view further details about the installed software and its security posture.
+The query runs and returns all code repositories. Select a repository from the results to view more details about the installed software and its security posture.
 
 ### Add a dependency filter
 
@@ -52,11 +52,11 @@ To add a filter that searches for repositories containing specific packages (dep
 
 1. Select **Name** > **Equals**.
 
-1. Enter the package name. For example, `log4j`, `express` or `newtonsoft.json`.
+1. Enter the package name. For example, `log4j`, `express`, or `newtonsoft.json`.
 
 1. Select **Search**. 
 
-The query runs and all repositories containing the specified package are presented. Select a repository from the findings to view further details about the installed software and its security posture.
+The query runs and all repositories containing the specified package are presented. Select a repository from the results to view further details about the installed software and its security posture.
 
 ### Specify a version
 
@@ -72,7 +72,7 @@ To add a filter that searches for a specific package version, continue building 
 
 1. Select **Search** to run the query.
 
-The query runs and all repositories containing the specified package and version are presented. Select a repository from the findings to view further details about the installed software and its security posture.
+The query runs and all repositories containing the specified package and version are presented. Select a repository from the results to view further details about the installed software and its security posture.
 
 ## Next step
 
