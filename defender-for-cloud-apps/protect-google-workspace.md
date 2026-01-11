@@ -1,13 +1,12 @@
 ---
 title: Protect your Google Workspace environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Google Workspace app to Defender for Cloud Apps using the API connector.
-ms.date: 10/06/2025
+ms.date: 12/15/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
 ---
+
 # How Defender for Cloud Apps helps protect your Google Workspace environment
-
-
 
 As a cloud file storage and collaboration tool, Google Workspace enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Google Workspace might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees. Google Workspace also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
 
@@ -74,108 +73,60 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Google Workspace to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Google Workspace account using the connector APIs. This connection gives you visibility into and control over Google Workspace use. For information about how Defender for Cloud Apps protects Google Workspace, see [Protect Google Workspace](protect-google-workspace.md).
+This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Google Workspace account using the connector APIs. This connection gives you visibility into and control over Google Workspace use. 
+
+The steps in this section must be completed by a Google Workspace admin. For detailed information about the configuration steps in Google Workspace, see the Google Workspace documentation. [Develop on Google Workspace |Google for Developers](https://developers.google.com/workspace/guides/get-started)
 
 > [!NOTE]
-> File download activities for Google Workspace aren't displayed in Defender for Cloud Apps.
+>Defender for Cloud Apps doesn’t display file download activities for Google Workspace. 
 
 ### Configure Google Workspace
 
-1. As a Google Workspace Super Admin, sign in to <https://console.cloud.google.com>.
+As a Google Workspace Super Admin, perform these steps to prepare your environment.
 
-1. Select the project dropdown in the top ribbon and then select **New Project** to start a new project.
+1.  Sign in to the [Google Workspace](https://console.cloud.google.com) as a Super Admin.
 
-    :::image type="content" source="media/connect-google-workspace/new-project.png" alt-text="Screenshot that shows where to select a new project inside of your Google Workspace." lightbox="media/connect-google-workspace/new-project.png":::
+1. Create a new project named **Defender for Cloud Apps**.
+1. Copy the **Project number**. You'll need it later.
 
-
-1. In the **New project** page, name your project as follows: **Defender for Cloud Apps** and select **Create**.
-
-   :::image type="content" source="media/connect-google-workspace/name-your-project.jpg" alt-text="Screenshot that shows where to name your project inside of your Google Workspace." lightbox="media/connect-google-workspace/name-your-project.jpg":::
-
-1. After the project is created, select the created project from the top ribbon. Copy the **Project number**, you'll need it later.
-
-   :::image type="content" source="media/connect-google-workspace/copy-project-number.jpg" alt-text="Screenshot that shows where to copy the project number inside of your Google Workspace." lightbox="media/connect-google-workspace/copy-project-number.jpg":::
-
-1. In the navigation menu, go to **APIs & Services** > **Library**.
-    Enable the following APIs (use the search bar if the API isn't listed):
-
+1. Enable the following APIs:
     - Admin SDK API
     - Google Drive API
 
-1. In the navigation menu, go to **APIs & Services** > **Credentials** and do the following steps:
+1. Create Credentials for a service account with the following details:
 
-   1. Select **CREATE CREDENTIALS**.
+   1. Name: *Defender for Cloud Apps*
 
-       :::image type="content" source="media/connect-google-workspace/select-create-credentials.jpg" alt-text="Screenshot that shows where to select create credentials inside of your Google Workspace." lightbox="media/connect-google-workspace/select-create-credentials.jpg":::
+   1. Description: *API connector from Defender for Cloud Apps to a Google workspace account*.
 
-   1. Select **Service Account**.
-
-   1. **Service account details**: Provide the name as *Defender for Cloud Apps* and description as *API connector from Defender for Cloud Apps to a Google workspace account*.
-
-       :::image type="content" source="media/connect-google-workspace/enter-service-account-details.jpg" alt-text="Screenshot that shows where to provide service account details inside of your Google Workspace." lightbox="media/connect-google-workspace/enter-service-account-details.jpg":::
-
-   1. Select **CREATE AND CONTINUE**.
-
-   1. Under **Grant this service account access to project**, for **Role** select **Project > Editor**, and then select **Done**.
-
-       :::image type="content" source="media/connect-google-workspace/grant-service-account-access.jpg" alt-text="Screenshot that shows where to grant this service account access to project inside of your Google Workspace." lightbox="media/connect-google-workspace/grant-service-account-access.jpg":::
-
-   1. In the navigation menu, return to **APIs & Services** > **Credentials**.
-
-   1. Under **Service Accounts**, locate and edit the service account you created earlier by selecting the pencil icon.
+1. Grant this service account access to the project.
    
-       :::image type="content" source="media/connect-google-workspace/edit-service-accounts.jpg" alt-text="Screenshot that shows where to select the service account inside of your Google Workspace." lightbox="media/connect-google-workspace/edit-service-accounts.jpg":::
+1. Copy the following information of the service account. You'll need it later
 
-   1. Copy the email address. You'll need it later.
+   - Email
+   - Client ID
+    
+1. Create a new key. Download and save the file and the password required to use the file.
 
-   1. Navigate to **KEYS** from the top ribbon.
+1. In the API controls, add a new Client ID in the Domain Wide Delegation, using the Client ID you copied above.
 
-       :::image type="content" source="media/connect-google-workspace/keys-tab.jpg" alt-text="Screenshot that shows where to navigate to keys inside of your Google Workspace." lightbox="media/connect-google-workspace/keys-tab.jpg":::
-
-   1. From the **ADD KEY** menu, select **Create new key**.
-
-   1. Select **P12**, and then select **CREATE**. Save the downloaded file and the password required to use the file.
-
-       :::image type="content" source="media/connect-google-workspace/create-private-key.jpg" alt-text="Screenshot that shows where to create a key inside of your Google Workspace." lightbox="media/connect-google-workspace/create-private-key.jpg":::
-
-1. In the navigation menu, go to **IAM & Admin** > **Service accounts**. Copy the **Client ID** assigned to the service account you created - you'll need it later.
-
-
-    :::image type="content" source="media/connect-google-workspace/service-accounts-list.jpg" alt-text="Screenshot that shows where to copy the client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/service-accounts-list.jpg":::
-
-1. Go to [admin.google.com](https://admin.google.com/) and in the navigation menu, go to **Security** > **Access and data control** > **API Controls**. Then do the following:
-
-1. Under **Domain wide delegation**, select **MANAGE DOMAIN WIDE DELEGATION**.
-
-   :::image type="content" source="media/connect-google-workspace/manage-domain-wide-delegation.jpg" alt-text="Screenshot that shows where to manage domain wide delegation inside of your Google Workspace." lightbox="media/connect-google-workspace/manage-domain-wide-delegation.jpg":::
-
-
-1. Select **Add new**.
-
-    1. In the **Client ID** box, enter the **Client ID** that you copied earlier.
-    1. In the **OAuth Scopes** box, enter the following list of required scopes (copy the text and paste it in the box):
+1. Add the following authorizations. Enter the following list of required scopes (copy the text and paste it in the **OAuth Scopes** box):
 
      ```txt
 
    https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/drive,https://www.googleapis.com/auth/drive.appdata,https://www.googleapis.com/auth/drive.apps.readonly,https://www.googleapis.com/auth/drive.file,https://www.googleapis.com/auth/drive.metadata.readonly,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/drive.scripts,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/admin.directory.user.alias,https://www.googleapis.com/auth/admin.directory.orgunit,https://www.googleapis.com/auth/admin.directory.notifications,https://www.googleapis.com/auth/admin.directory.group.member,https://www.googleapis.com/auth/admin.directory.group,https://www.googleapis.com/auth/admin.directory.device.mobile.action,https://www.googleapis.com/auth/admin.directory.device.mobile,https://www.googleapis.com/auth/admin.directory.user   ```
         
 
-1. Select **AUTHORIZE**.
+In the Google admin console, enable the service status for  Google Drive for the Super Admin user that will be used for the connector. We recommend that you enable the service status for all users. 
 
-    :::image type="content" source="media/connect-google-workspace/google-workspace-authorize-new-client-id.png" alt-text="Screenshot that shows where to authorize a new client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/google-workspace-authorize-new-client-id.png":::
-
-
->[!IMPORTANT]
-> In order for the Google connector to function correctly, enable **Google Drive** for the Super Admin user that will be used for the connector.
-> 1. Navigate to admin.google.com
-> 1. Select apps -> Google Workspace -> Drive and Docs
-> 1. Turn on Service status for the Super Admin user used to onboard the connector. We recommended enabling Service status for all users.
-
-   
 
 ### Configure Defender for Cloud Apps
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
+
+1. Select +**Connect an app** and then select **Google Workspace** from the list of apps.
+
+    :::image type="content" source="media/connect-google-workspace/connect-google-workspace.png" alt-text="Screenshot that shows where to find the Google Workspace app connector in the Microsoft Defender portal. " lightbox="media/connect-google-workspace/connect-google-workspace.png":::
 
 1. To provide the Google Workspace connection details, under **App connectors**, do one of the following:
 
@@ -218,7 +169,4 @@ If you have any problems connecting the app, see [Troubleshooting App Connectors
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)

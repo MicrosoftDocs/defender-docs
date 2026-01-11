@@ -8,7 +8,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,11 +21,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # Find device information by internal IP API
-
 
 Find a device by internal IP.
 
@@ -35,9 +33,9 @@ The timestamp must be within the last 30 days.
 
 The following permission is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.ReadWrite.All|'Read and write all machine information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|'Read and write all machine information'|
 
 ## HTTP request
 
@@ -47,9 +45,9 @@ GET /api/machines/find(timestamp={time},key={IP})
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -91,5 +89,3 @@ Content-type: application/json
 ...
 }
 ```
-
-

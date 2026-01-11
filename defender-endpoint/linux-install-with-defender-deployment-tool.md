@@ -115,7 +115,7 @@ The Defender deployment tool enforces the following set of prerequisites checks,
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
-2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
     1. Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
