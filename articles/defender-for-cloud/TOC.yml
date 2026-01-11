@@ -58,8 +58,6 @@
               href: quickstart-onboard-aws.md
             - name: Authentication architecture for AWS connectors
               href: concept-authentication-architecture-aws.md
-            - name: Monitor connected AWS resources
-              href: monitor-connected-aws-resources.md
             - name: Integrate AWS CloudTrail logs (Preview)
               href: integrate-cloud-trail.md
         - name: Connect GCP projects
@@ -73,6 +71,13 @@
             - name: Connect machines with Azure Arc
               displayName: azure stack, ash, windows, linux, hybrid, arc, on-premises, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
               href: quickstart-onboard-machines.md
+    - name: Networking and connectivity
+      items:
+      - name: Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)
+        displayName: private endpoints, private link, security private link, networking, connectivity, VPN, ExpressRoute
+        href: concept-private-links.md
+      - name: Configure private endpoints with Microsoft Security Private Link (Preview)
+        href: configure-private-endpoints.md
     - name: Enable specific plans
       expanded: false
       items:
@@ -509,6 +514,9 @@
               href: detect-exposed-ip-addresses.md
         - name: Review security recommendations
           items:
+            - name: Security recommendations
+              displayName: security, recommendations, overview, posture, management
+              href: security-recommendations.md
             - name: Review security recommendations
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
@@ -1489,6 +1497,12 @@
         - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
+        - name: Agentless code scanning
+          DisplayName: Agentless code scanning
+          href: episode-sixty-three.md
+        - name: Storage aggregated logs
+          DisplayName: Storage aggregated logs, Advanced Hunting, CloudStorageAggregatedEvents
+          href: episode-sixty-four.md
     - name: Microsoft Defender for IoT documentation
       href: /azure/defender-for-iot/
     - name: Azure security documentation
