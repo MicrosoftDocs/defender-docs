@@ -30,7 +30,7 @@ The following built-in Azure roles are used for Microsoft Sentinel SIEM and gran
 
 | Role | SIEM support | Data lake support |
 |------|----------------------|------------------|
-| [**Microsoft Sentinel Reader**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) | View data, incidents, workbooks, and other resources | Access advanced analytics and run interactive queries on workspaces only. |
+| [**Microsoft Sentinel Reader**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) | View data, incidents, workbooks, recommendations and other resources | Access advanced analytics and run interactive queries on workspaces only. |
 | [**Microsoft Sentinel Responder**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-responder) | All Reader permissions, plus manage incidents | N/A |
 | [**Microsoft Sentinel Contributor**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) | All Responder permissions, plus install/update solutions, create/edit resources | Access advanced analytics and run interactive queries on workspaces only. |
 | [**Microsoft Sentinel Playbook Operator**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-playbook-operator) | List, view, and manually run playbooks | N/A |
@@ -38,7 +38,7 @@ The following built-in Azure roles are used for Microsoft Sentinel SIEM and gran
 
 For example, the following table shows examples of tasks that each role can perform in Microsoft Sentinel:
 
-| Role | Run playbooks | Create/edit playbooks | Create/edit analytics rules, workbooks, etc. | Manage incidents | View data, incidents, workbooks | Manage content hub |
+| Role | Run playbooks | Create/edit playbooks | Create/edit analytics rules, workbooks, etc. | Manage incidents | View data, incidents, workbooks, recommendations | Manage content hub |
 |------|--------------|----------------------|----------------------------------------------|------------------|-------------------------------|-------------------|
 | [**Microsoft Sentinel Reader**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) | -- | -- | --* | -- | ✓ | -- |
 | [**Microsoft Sentinel Responder**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-responder) | -- | -- | --* | ✓ | ✓ | -- |
