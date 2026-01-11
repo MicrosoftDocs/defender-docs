@@ -304,7 +304,7 @@ aws eks update-cluster-config \
 
 1. Go to **Inventory**.
 
-1. Filter by **Environment** = **AWS**.
+Use the **Environment** filter to show resources from **AWS**.
 
 1. Make sure you see:
    - All EKS clusters (or only selected ones if deployed selectively)
@@ -325,8 +325,7 @@ kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "echo tes
 
 Check for the alert in Defender for Cloud within 5 to 10 minutes.
 
-
-## Troubleshooting
+## Troubleshooting - move to new page?
 
 ### Deployment issues
 
@@ -384,7 +383,7 @@ az k8s-extension delete \
 - **No alerts**: Verify audit logging is enabled.
 - **Scan failures**: Check ECR permissions and network access.
 
-## Best practices
+## Best practices - move to overview?
 
 1. **Start with non-production**: Test on dev/test clusters first for selective deployment.
 1. **Regular reviews**: Check the dashboard weekly.
@@ -396,7 +395,7 @@ az k8s-extension delete \
 1. **Deploy incrementally**: When using selective deployment, add one component at a time.
 1. **Monitor each step**: Verify each component before proceeding to the next.
 
-## Clean up resources
+## Clean up resources - seperate offboarding page?
 
 To disable Defender for Containers, complete the following steps:
 
