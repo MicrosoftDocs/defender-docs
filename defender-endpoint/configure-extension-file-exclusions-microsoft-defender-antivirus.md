@@ -1,34 +1,29 @@
----
+﻿---
 title: Configure and validate exclusions based on extension, name, or location
 description: Exclude files from Microsoft Defender Antivirus scans based on their file extension, file name, or location.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 09/10/2024
-author: denisebmsft
-ms.author: deniseb
-ms.topic: conceptual
+ms.date: 10/20/2025
+author: KesemSharabi
+ms.author: kesharab
+ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure and validate exclusions based on file extension and folder location
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 You can define exclusions for Microsoft Defender Antivirus that apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [always-on, real-time protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md). **Generally, you don't need to apply exclusions**. If you do need to apply exclusions, then you can choose from the following types:
 
@@ -36,9 +31,15 @@ You can define exclusions for Microsoft Defender Antivirus that apply to [schedu
 - [Exclusions for files that are opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus exclusions do apply to some Microsoft Defender for Endpoint capabilities, such as [attack surface reduction rules](attack-surface-reduction.md). Some Microsoft Defender Antivirus exclusions are applicable to some ASR rule exclusions. See [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and ASR rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
-> Files that you exclude using the methods described in this article can still trigger Endpoint Detection and Response (EDR) alerts and other detections.
-> To exclude files broadly, add them to the Microsoft Defender for Endpoint [custom indicators](manage-indicators.md).
+> - Microsoft Defender Antivirus exclusions do apply to some Microsoft Defender for Endpoint capabilities, such as [attack surface reduction rules](attack-surface-reduction.md). Some Microsoft Defender Antivirus exclusions are applicable to some ASR rule exclusions. See [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and ASR rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
+> - Files that you exclude using the methods described in this article can still trigger Endpoint Detection and Response (EDR) alerts and other detections. To exclude files broadly, add them to the Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
+> - Variables, such as `%USERPROFILE%` aren't interpreted in exclusion settings. We recommend using an explicit path format.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Before you begin
 
@@ -57,7 +58,7 @@ The following table lists some examples of exclusions based on file extension an
 |Exclusion|Examples|Exclusion list|
 |---|---|---|
 |Any file with a specific extension|All files with the specified extension, anywhere on the machine. <br/><br/> Valid syntax: `.test` and `test`|Extension exclusions|
-|Any file under a specific folder|All files under the `c:\test\sample` folder|File and folder exclusions|
+|Any file or folder under a specific folder|All files and folders under the `c:\test\sample` folder|File and folder exclusions|
 |A specific file in a specific folder|The file `c:\sample\sample.test` only|File and folder exclusions|
 |A specific process|The executable file `c:\test\process.exe`|File and folder exclusions|
 
@@ -74,7 +75,7 @@ The following table lists some examples of exclusions based on file extension an
 
 - Folders that are reparse points are created after the Microsoft Defender Antivirus service starts, and those that were added to the exclusion list aren't included. Restart the service by restarting Windows for new reparse points to be recognized as a valid exclusion target.
 
-- Exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), but not across all Defender for Endpoint capabilities. To define exclusions across Defender for Endpoint, use [custom indicators](manage-indicators.md).
+- Exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), but not across all Defender for Endpoint capabilities. To define exclusions across Defender for Endpoint, use [custom indicators](indicators-overview.md).
 
 - By default, local changes made to the lists (by users with administrator privileges, including changes made with PowerShell and WMI) are merged with the lists as defined (and deployed) by Group Policy, Configuration Manager, or Intune. The Group Policy lists take precedence when there are conflicts. In addition, exclusion list changes made with Group Policy are visible in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
 
@@ -102,35 +103,34 @@ See [How to create and deploy antimalware policies: Exclusion settings](/configm
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration**, and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration**, and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
 
-4. Open the **Path Exclusions** setting for editing, and add your exclusions.
-
-    1. Set the option to **Enabled**.
-
-    2. Under the **Options** section, select **Show**.
-    
-    3. Specify each folder on its own line under the **Value name** column.
-    
-    4. If you're specifying a file, ensure that you enter a fully qualified path to the file, including the drive letter, folder path, file name, and extension.
-    
-    5. Enter **0** in the **Value** column.
-
-    6. Choose **OK**.
-
-5. Open the **Extension Exclusions** setting for editing and add your exclusions.
+1. Open the **Path Exclusions** setting for editing, and add your exclusions.
 
     1. Set the option to **Enabled**.
-    
-    2. Under the **Options** section, select **Show**.
-    
-    3. Enter each file extension on its own line under the **Value name** column.
-    
-    4. Enter **0** in the **Value** column.
 
-    5. Choose **OK**.
+    1. Under the **Options** section, select **Show**.
+    
+    1. Specify each folder on its own line under the **Value name** column.
+    
+    1. If you're specifying a file, ensure that you enter a fully qualified path to the file, including the drive letter, folder path, file name, and extension.
+    
+    1. Enter **0** in the **Value** column.
+
+    1. Choose **OK**.
+
+    1. Open the **Extension Exclusions** setting for editing and add your exclusions.
+
+    1. Set the option to **Enabled**.
+    
+    1. Under the **Options** section, select **Show**.
+    
+    1. Enter each file extension on its own line under the **Value name** column.
+    
+    1. Enter **0** in the **Value** column.
+    1. Choose **OK**.
 
 <a id="ps"></a>
 
@@ -388,3 +388,4 @@ You can also copy the string into a blank text file and attempt to save it with 
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

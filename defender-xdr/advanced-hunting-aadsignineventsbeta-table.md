@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,22 +17,30 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 04/03/2024
+ms.date: 11/04/2025
 ---
 
 # AADSignInEventsBeta
 
-**Applies to:**
 
-- Microsoft Defender XDR
 
 > [!IMPORTANT]
-> The `AADSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. All sign-in schema information will eventually move to the `IdentityLogonEvents` table.
+> On December 9, 2025, the `AADSignInEventsBeta` table will be replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding. 
+>
+>The `EntraIdSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSignInEventsBeta` table to use `EntraIdSignInEvents` before the previously mentioned date. 
+
+>[!IMPORTANT]
+> The `AADSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
 The `AADSignInEventsBeta` table in the advanced hunting schema contains information about Microsoft Entra interactive and non-interactive sign-ins. Learn more about sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
 
-Use this reference to construct queries that return information from the table. For information on other tables in the advanced hunting schema, see the [advanced hunting reference](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
+Use this reference to construct queries that return information from the table. 
+
+For information on other tables in the advanced hunting schema, see the [advanced hunting reference](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
 
 <br>
 
@@ -45,7 +53,7 @@ Use this reference to construct queries that return information from the table. 
 |`ApplicationId`|`string`|Unique identifier for the application|
 |`LogonType`|`string`|Type of logon session, specifically interactive, remote interactive (RDP), network, batch, and service|
 |`ErrorCode`|`int`|Contains the error code if a sign-in error occurs. To find a description of a specific error code, visit <https://aka.ms/AADsigninsErrorCodes>.|
-|`CorrelationId`|`string`|Unique identifier of the sign-in event|
+|`CorrelationId`|`string`|Identifier of the sign-in event|
 |`SessionId`|`string`|Unique number assigned to a user by a website's server for the duration of the visit or session|
 |`AccountDisplayName`|`string`|Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user.|
 |`AccountObjectId`|`string`|Unique identifier for the account in Microsoft Entra ID|
@@ -58,7 +66,8 @@ Use this reference to construct queries that return information from the table. 
 |`ResourceId`|`string`|Unique identifier of the resource accessed|
 |`ResourceTenantId`|`string`|Unique identifier of the tenant of the resource accessed|
 |`DeviceName`|`string`|Fully qualified domain name (FQDN) of the device|
-|`AadDeviceId`|`string`|Unique identifier for the device in Microsoft Entra ID|
+|`AadDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID. This is the legacy device identifier column, which is being replaced by `EntraIdDeviceId`.|
+|`EntraIdDeviceId`|`string`|Unique identifier of the device in Microsoft Entra ID.|
 |`OSPlatform`|`string`|Platform of the operating system running on the device. Indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10, and Windows 7.|
 |`DeviceTrustType`|`string`|Indicates the trust type of the device that signed in. For managed device scenarios only. Possible values are Workplace, AzureAd, and ServerAd.|
 |`IsManaged`|`int`|Indicates whether the device that initiated the sign-in is a managed device (1) or not a managed device (0)|
@@ -83,6 +92,7 @@ Use this reference to construct queries that return information from the table. 
 |`NetworkLocationDetails`|`string`|Network location details of the authentication processor of the sign-in event|
 |`RequestId`|`string`|Unique identifier of the request|
 |`ReportId`|`string`|Unique identifier for the event|
+|`EndpointCall`|`string`|Information about the Microsoft Entra ID endpoint that the request was sent to and the type of request sent during sign in.|
 
 ## Related articles
 

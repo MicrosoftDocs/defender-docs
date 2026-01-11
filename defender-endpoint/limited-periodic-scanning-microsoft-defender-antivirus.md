@@ -1,54 +1,51 @@
----
+﻿---
 title: Enable the limited periodic Microsoft Defender Antivirus scanning feature
 description: Limited periodic scanning lets you use Microsoft Defender Antivirus in addition to your other installed AV providers
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.topic: how-to
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
-ms.date: 02/18/2024
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+  - Microsoft Defender for Individual
+
 ---
-
-
 # Use limited periodic scanning in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-- Microsoft Defender for Individual
-
-**Platforms**
-- Windows
 
 > [!NOTE]  
-> **Microsoft does not support using this feature in Enterprise environments.** This feature only uses a limited subset of the Microsoft Defender Antivirus capabilities to detect malware, and can't detect most malware and potentially unwanted software. Management of the feature is not supported, the feature cannot be enabled or disabled through policies, and reporting capabilities are extremely limited. Microsoft recommends that enterprise organizations choose a primary antivirus/antimalware solution, and use it exclusively. 
+> **Microsoft does not support using this feature in Enterprise environments.** This feature only uses a limited subset of the Microsoft Defender Antivirus capabilities to detect malware, and can't detect most malware and potentially unwanted software. Management of the feature isn't supported, the feature can't be enabled or disabled through policies, and reporting capabilities are limited. Microsoft recommends that enterprise organizations choose a primary antivirus/antimalware solution, and use it exclusively. 
 
 Limited periodic scanning is a special type of threat detection and remediation that can be enabled when another antivirus product is installed on a Windows 10 or Windows 11 device. It can only be enabled in certain situations. For more information about limited periodic scanning and how Microsoft Defender Antivirus works with other antivirus products, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+
 ## How to enable limited periodic scanning
 
-By default, Microsoft Defender Antivirus enables itself on a Windows 10 or a Windows 11 device if there is no other antivirus product installed, or if the other product is out-of-date, expired, or not working correctly. If Microsoft Defender Antivirus is enabled, the usual options to configure it are available on that device:
+By default, Microsoft Defender Antivirus enables itself on a Windows 10 or a Windows 11 device if there's no other antivirus product installed, or if the other product is out-of-date, expired, or not working correctly. If Microsoft Defender Antivirus is enabled, the usual options to configure it are available on that device:
 
 :::image type="content" source="media/vtp-wdav.png" alt-text="The Windows Security app showing Microsoft Defender Antivirus options, including scan options, settings, and update options" lightbox="media/vtp-wdav.png":::
 
 If another antivirus product is installed and working correctly, Microsoft Defender Antivirus disables itself. In this case, the Windows Security app changes the **Virus & threat protection** section to show status about the antivirus product, and provides a link to the product's configuration options. 
 
-Underneath the name of a non-Microsoft antivirus product, a link appears as **Microsoft Defender Antivirus options**. Select this link to show the toggle that enables limited periodic scanning. Note that the limited periodic option is a toggle to enable or disable periodic scanning. Sliding the switch to **On** shows the standard Microsoft Defender Antivirus options underneath the non-Microsoft antivirus product. The limited periodic scanning option will appear at the bottom of the page.
+Underneath the name of a non-Microsoft antivirus product, a link appears as **Microsoft Defender Antivirus options**. Select this link to show the toggle that enables limited periodic scanning. The limited periodic option is a toggle to enable or disable periodic scanning. Sliding the switch to **On** shows the standard Microsoft Defender Antivirus options underneath the non-Microsoft antivirus product. The limited periodic scanning option appears at the bottom of the page.
 
 ## Related articles
 
@@ -65,3 +62,4 @@ Underneath the name of a non-Microsoft antivirus product, a link appears as **Mi
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

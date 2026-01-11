@@ -3,11 +3,11 @@ title: Overview of next-generation protection in Microsoft Defender for Endpoint
 description: Get an overview of next-generation protection in Microsoft Defender for Endpoint. Reinforce the security perimeter of your network by using next-generation protection designed to catch all types of emerging threats.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+ms.topic: concept-article
+author: batamig
+ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
@@ -15,17 +15,15 @@ ms.collection:
 - tier1
 - mde-ngp
 search.appverid: met150
-ms.date: 02/28/2024
+ms.date: 03/26/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 ---
 
 # Next-generation protection overview
 
-**Applies to**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 Microsoft Defender for Endpoint includes next-generation protection to catch and block all types of emerging threats. The majority of modern malware is polymorphic, meaning it constantly mutates to evade detection. As soon as one variant is identified, another takes its place. This rapid evolution underscores the need for agile and innovative security solutions.
 

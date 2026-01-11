@@ -1,11 +1,11 @@
 ---
-title: Exchange Online Protection (EOP) overview
+title: Default email protections for cloud mailboxes
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 10/3/2023
+ms.author: chrisda
+manager: bagol
+ms.date: 07/21/2025
 audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -15,112 +15,117 @@ ms.localizationpriority: medium
 ms.assetid: 1270a65f-ddc3-4430-b500-4d3a481efb1e
 ms.custom: 
   - seo-marvel-apr2020
-description: Learn how Exchange Online Protection (EOP) can help protect your on-premises email organization in standalone and hybrid environments.
+description: Learn how the default email protections for cloud mailboxes can help protect your on-premises email organization in standalone and hybrid environments.
 ms.service: defender-office-365
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Exchange Online Protection overview
+# Default email protections for cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Exchange Online Protection (EOP) is the cloud-based filtering service that protects your organization against spam, malware, phishing and other email threats. EOP is included in all Microsoft 365 organizations that have Exchange Online mailboxes.
+The default email protections in Microsoft 365 protect your organization from spam, malware, phishing and other email threats. These protections are included in all organizations with cloud mailboxes.
 
-> [!TIP]
-> EOP is also available by itself to protect on-premises mailboxes and in hybrid environments to protect on-premises Exchange mailboxes. For more information, see [Standalone Exchange Online Protection](/exchange/standalone-eop/standalone-eop).
-
-You can sign up for an EOP trial and get pricing information at the [Exchange Online Protection home page](https://products.office.com/exchange/exchange-email-security-spam-protection).
-
-EOP protection is on by default thanks to the default policies for:
+These protections are on by default via the default threat policies for:
 
 - [Anti-malware protection](anti-malware-protection-about.md)
 - [Anti-spam protection](anti-spam-protection-about.md)
-- [Anti-phishing (spoof) protection](anti-phishing-protection-about.md#anti-phishing-protection-in-eop)
+- [Anti-phishing (spoofing) protection](anti-phishing-protection-about.md#anti-phishing-protection-for-all-cloud-mailboxes)
 
-These default policies apply to all recipients by default and can't be turned off, but they can be overridden by [preset security policies](preset-security-policies.md) or custom policies that you create.
+The default threat policies for these features apply to all recipients. You can't turn them off, but you can override them by turning on and configuring [preset security policies](preset-security-policies.md) or creating custom threat policies.
 
-You can customize the security settings in the default policies, create custom policies, or better yet, turn on and add all recipients to the Standard and/or Strict preset security policies. For complete information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+You can customize the security settings in the default threat policies, create custom threat policies, or better yet, turn on and add all recipients to the Standard and/or Strict preset security policies. For complete information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 
-The rest of this article explains how EOP works and the features that are available in EOP.
+The rest of this article explains how the default email protections for cloud mailboxes work and the features they contain.
 
-## How EOP works
+> [!TIP]
+> The default email protections for cloud mailboxes are also available as a separate subscription to protect on-premises email environments (not just Microsoft Exchange). For more information, see [Exchange Online Protection for on-premises organizations](/exchange/standalone-eop/standalone-eop).
 
-To understand how EOP works, it helps to see how it processes incoming email:
+## How the default email protections for cloud mailboxes work
 
-:::image type="content" source="media/tp_emailprocessingineopt3.png" alt-text="Graphic of email from the internet or Customer feedback passing into EOP and through the Connection, Anti-malware, Mailflow Rules-slash-Policy Filtering, and Content Filtering, before the verdict of either junk mail or quarantine, or end user mail delivery" lightbox="media/tp_emailprocessingineopt3.png":::
+The following diagram shows how the default email protections for cloud mailboxes work.
 
-1. When an incoming message enters EOP, it initially passes through connection filtering, which checks the sender's reputation. Most spam is stopped at this point and rejected by EOP. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).
+:::image type="content" source="media/tp_emailprocessingineopt3.png" alt-text="A diagram of email from the internet or Customer feedback entering Microsoft 365 and passing through the default email protections for cloud mailboxes." lightbox="media/tp_emailprocessingineopt3.png":::
 
-2. Then the message is inspected for malware. If malware is found in the message or a message attachment, the message is delivered to quarantine. By default, only admins can view and interact with malware quarantined messages. But, admins can create and use [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to specify what users are allowed to do to quarantined messages. To learn more about malware protection, see [Anti-malware protection in EOP](anti-malware-protection-about.md).
+1. Incoming messages in Microsoft 365 initially pass through connection filtering, which checks the sender's reputation. Most spam is rejected at this point. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).
 
-3. The message continues through policy filtering, where it's evaluated against any mail flow rules (also known as transport rules) that you've created. For example, a rule can send a notification to a manager when a message arrives from a specific sender.
+2. If malware is found in the message or a message attachment, the message is delivered to quarantine. By default, only admins can view and interact with malware quarantined messages. But, admins can create and use [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to specify what users are allowed to do to quarantined messages. To learn more about malware protection, see [Anti-malware protection](anti-malware-protection-about.md).
 
-   In on-premises organization with Exchange Enterprise CAL with Services licenses, [Microsoft Purview Data Loss Prevention (DLP)](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) checks in EOP also happen at this point.
+3. Policy filtering evaluates the message against any [Exchange mail flow rules (also known as transport rules)](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) configured to act on messages. For example, a rule can notify a manager about messages from a specific sender.
 
-4. The message passes through content filtering (anti-spam and anti-spoofing) where harmful messages are identified as spam, high confidence spam, phishing, high confidence phishing, or bulk (anti-spam policies) or spoofing (spoof settings in anti-phishing policies). You can configure the action to take on the message based on the filtering verdict (quarantine, move to the Junk Email folder, etc.), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md).
+   In on-premises organizations with Exchange Enterprise CAL with Services licenses, [data loss prevention (DLP)](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) checks also happen at this point.
+
+4. The message passes through content filtering, which includes anti-spam and anti-phishing filtering:
+   - Anti-spam policies identify messages as bulk, spam, high confidence spam, phishing, or high confidence phishing.
+
+     High confidence phishing messages are always delivered to quarantine. By default, only admins can view and interact with high confidence phishing messages.
+
+   - Anti-phishing policies identify messages as spoofing.
+
+   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
 
 A message that successfully passes all of these protection layers is delivered to the recipients.
 
 For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
 
-### EOP datacenters
+### Microsoft 365 datacenters
 
-EOP runs on a worldwide network of datacenters that are designed to provide the best availability. For example, if a datacenter becomes unavailable, email messages are automatically routed to another datacenter without any interruption in service. Servers in each datacenter accept messages on your behalf, providing a layer of separation between your organization and the internet, thereby reducing load on your servers. Through this highly available network, Microsoft can ensure that email reaches your organization in a timely manner.
+Microsoft 365 runs on a worldwide network of datacenters that are designed to provide the best availability. For example, if a datacenter becomes unavailable, email messages are automatically routed to another datacenter without any interruption in service. Servers in each datacenter accept messages on your behalf, providing a layer of separation between the servers that host your organization and the internet. Through this highly available network, Microsoft can ensure that email reaches your organization in a timely manner.
 
-EOP performs load balancing between datacenters but only within a region. If you're provisioned in one region, all of your messages are processed using the mail routing for that region.
+Microsoft load balances between datacenters _within the same region only_. If you're provisioned in one region, all of your messages are processed using the mail routing for that region.
 
-### EOP communications
+### Microsoft 365 communications
 
-The following communication channels are available for issues and new features in EOP:
+The following communication channels are available for issues and new features in Microsoft 365:
 
-- If you're affected by a Service Level Event, you should see a communication alert (typically accompanied by a bell icon) in the Microsoft 365 admin center at <https://admin.microsoft.com>. We recommend that you read and act on any items as appropriate.
+- When a Service Level Event affects you, a communication alert (typically accompanied by a bell icon) will appear in the Microsoft 365 admin center at <https://admin.microsoft.com>. We recommend that you read and act on any items as appropriate.
 - The Microsoft 365 Message center at <https://admin.microsoft.com/Adminportal/Home?#/MessageCenter> also contains information about new and updated features. For more information, see [Track new and changed features in the Microsoft 365 Message center](/microsoft-365/admin/manage/message-center).
 - The [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=exchange%2Conline%2Cprotection) is a good resource for finding out information about upcoming new features.
-- We also posting blog articles about new features to the [Microsoft 365 Blogs](https://www.microsoft.com/microsoft-365/blog/) website.
+- We also post blog articles about new features to the [Microsoft 365 Blogs](https://www.microsoft.com/microsoft-365/blog/) website.
 
-### EOP features
+### Features in the default email protections for cloud mailboxes
 
-This section provides a high-level overview of the main features that are available in EOP.
+This section provides a high-level overview of the main features that are available in the default email protections for cloud mailboxes.
 
-For information about requirements, important limits, and feature availability across all EOP subscription plans, see the [Exchange Online Protection service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
+For information about requirements, important limits, and feature availability across all subscription plans, see the [Exchange Online Protection service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
 
-**Notes**:
-
-- EOP uses several URL block lists that help detect known malicious links within messages.
-- EOP uses a vast list of domains that are known to send spam.
-- EOP inspects the active payload in the message body and all message attachments for malware.
+> [!TIP]
+>
+> - Microsoft 365 uses several URL blocklists that help detect known malicious links within messages.
+> - Microsoft 365 uses a vast list of domains that are known to send spam.
+> - Microsoft 365 inspects the active payload in the message body and all message attachments for malware.
 
 |Feature|Comments|
 |---|---|
 |**Protection**||
-|Preset security policies|[Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md) <p> [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)|
-|Anti-malware|[Anti-malware protection in EOP](anti-malware-protection-about.md) <p> [Anti-malware protection FAQ](anti-malware-protection-faq.yml) <p> [Configure anti-malware policies in EOP](anti-malware-policies-configure.md)|
-|Inbound anti-spam|[Anti-spam protection in EOP](anti-spam-protection-about.md) <p> [Anti-spam protection FAQ](anti-spam-protection-faq.yml) <p> [Configure anti-spam policies in EOP](anti-spam-policies-configure.md)|
-|Outbound anti-spam|[Outbound spam protection in EOP](outbound-spam-protection-about.md) <p> [Configure outbound spam filtering in EOP](outbound-spam-policies-configure.md) <p> [Control automatic external email forwarding in Microsoft 365](outbound-spam-policies-external-email-forwarding.md)|
+|Preset security policies|[Preset security policies](preset-security-policies.md) <br/><br/> [Configuration analyzer](configuration-analyzer-for-security-policies.md)|
+|Anti-malware|[Anti-malware protection](anti-malware-protection-about.md) <br/><br/> [Frequently asked questions: Anti-malware protection](anti-malware-protection-faq.yml) <br/><br/> [Configure anti-malware policies](anti-malware-policies-configure.md)|
+|Inbound anti-spam|[Anti-spam protection](anti-spam-protection-about.md) <br/><br/> [Frequently asked questions: Anti-spam protection](anti-spam-protection-faq.yml) <br/><br/> [Configure anti-spam policies](anti-spam-policies-configure.md)|
+|Outbound anti-spam|[Outbound spam protection](outbound-spam-protection-about.md) <br/><br/> [Configure outbound spam filtering](outbound-spam-policies-configure.md) <br/><br/> [Control automatic external email forwarding](outbound-spam-policies-external-email-forwarding.md)|
 |Connection filtering|[Configure connection filtering](connection-filter-policies-configure.md)|
-|Anti-phishing|[Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md) <p> [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md)|
-|Anti-spoofing protection|[Spoof intelligence insight in EOP](anti-spoofing-spoof-intelligence.md) <p> [Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
+|Anti-phishing|[Anti-phishing policies](anti-phishing-policies-about.md) <br/><br/> [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md)|
+|Anti-spoofing protection|[Spoof intelligence insight](anti-spoofing-spoof-intelligence.md) <br/><br/> [Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
 |Zero-hour auto purge (ZAP) for delivered malware, spam, and phishing messages|[ZAP in Exchange Online](zero-hour-auto-purge.md)|
 |Tenant Allow/Block List|[Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
-|Block lists for message senders|[Create blocked sender lists in EOP](create-block-sender-lists-in-office-365.md)|
-|Allow lists for message senders|[Create safe sender lists in EOP](create-safe-sender-lists-in-office-365.md)|
+|Blocklists for message senders|[Create sender blocklists](create-block-sender-lists-in-office-365.md)|
+|Allowlists for message senders|[Create sender allowlists](create-safe-sender-lists-in-office-365.md)|
 |Directory Based Edge Blocking (DBEB)|[Use Directory Based Edge Blocking to reject messages sent to invalid recipients](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking)|
 |**Quarantine and submissions**||
 |Admin submission|[Use Admin submission to submit suspected spam, phish, URLs, and files to Microsoft](submissions-admin.md)|
 |User reported message settings|[User reported settings](submissions-user-reported-messages-custom-mailbox.md)|
-|Quarantine - admins|[Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md) <p> [Quarantined messages FAQ](quarantine-faq.yml) <p> [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md) <p> [Anti-spam message headers in Microsoft 365](message-headers-eop-mdo.md) <p> You can analyze the message headers of quarantined messages using the [Message Header Analyzer at](https://mha.azurewebsites.net/).|
-|Quarantine - end-users|[Find and release quarantined messages as a user in EOP](quarantine-end-user.md) <p> [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md) <p> [Quarantine policies](quarantine-policies.md)|
+|Quarantine - admins|[Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md) <br/><br/> [Frequently asked questions: Quarantined messages](quarantine-faq.yml) <br/><br/> [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md) <br/><br/> [Anti-spam message headers](message-headers-eop-mdo.md) <br/><br/> You can analyze the message headers of quarantined messages using the [Message Header Analyzer at](https://mha.azurewebsites.net/).|
+|Quarantine - end-users|[Find and release quarantined messages as a user](quarantine-end-user.md) <br/><br/> [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md) <br/><br/> [Quarantine policies](quarantine-policies.md)|
 |**Mail flow**||
-|Mail flow rules|[Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <p> [Mail flow rule conditions and exceptions (predicates) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <p> [Mail flow rule actions in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <p> [Manage mail flow rules in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <p> [Mail flow rule procedures in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
+|Mail flow rules|[Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <br/><br/> [Mail flow rule conditions and exceptions (predicates) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <br/><br/> [Mail flow rule actions in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <br/><br/> [Manage mail flow rules in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <br/><br/> [Mail flow rule procedures in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
 |Accepted domains|[Manage accepted domains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)|
 |Connectors|[Configure mail flow using connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow)|
 |Enhanced Filtering for Connectors|[Enhanced filtering for connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)|
 |**Monitoring**||
-|Message trace|[Message trace](message-trace-defender-portal.md) <p> [Message trace in the Exchange admin center](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac)|
+|Message trace|[Message trace](message-trace-defender-portal.md) <br/><br/> [Message trace in the Exchange admin center](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac)|
 |Email & collaboration reports|[View email security reports](reports-email-security.md)|
 |Mail flow reports|[Mail flow reports in the Exchange admin center](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
 |Mail flow insights|[Mail flow insights in the Exchange admin center](/exchange/monitoring/mail-flow-insights/mail-flow-insights)|
@@ -132,6 +137,6 @@ For information about requirements, important limits, and feature availability a
 |Monthly uptime SLA|99.999%|
 |Phone and web technical support 24 hours a day, seven days a week|[Get support for Microsoft 365 for business](/microsoft-365/admin/get-help-support).|
 |**Other features**||
-|A geo-redundant global network of servers|EOP runs on a worldwide network of datacenters that are designed to help provide the best availability. For more information, see the [EOP datacenters](#eop-datacenters) section earlier in this article.|
+|A geo-redundant global network of servers|Microsoft 365 runs on a worldwide network of datacenters that are designed to help provide the best availability. For more information, see the [Microsoft 365 datacenters](#microsoft-365-datacenters) section earlier in this article.|
 |Message queuing when the on-premises server can't accept mail|Messages in deferral remain in our queues for one day. Message retry attempts are based on the error we get back from the recipient's mail system. On average, messages are retried every 5 minutes. For more information, see the [Mail flow delivery FAQ](mail-flow-about.md#mail-flow-delivery-faq).|
 |Office 365 Message Encryption available as an add-on|For more information, see [Encryption in Office 365](/purview/encryption).|

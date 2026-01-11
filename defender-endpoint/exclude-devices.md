@@ -1,31 +1,25 @@
----
+﻿---
 title: Exclude devices in Microsoft Defender for Endpoint
 description: Exclude devices from the device inventory list
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
-ms.date: 02/16/2022
----
+ms.date: 03/27/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Exclude devices
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
 ## Exclude devices from vulnerability management
 
@@ -42,11 +36,11 @@ You can choose to exclude a single device or multiple devices at the same time.
 ### Exclude a single device
 
 1. Go to the **Device inventory** page and select the device to exclude.
-2. Select **Exclude** from the action bar on the device inventory page or from the actions menu in the device flyout.
+1. Select **Exclude** from the action bar on the device inventory page or from the actions menu in the device flyout.
 
    ![Image of exclude device menu option.](media/exclude-devices-menu.png)
 
-3. Select a justification:
+1. Select a justification:
 
     - Inactive device
     - Duplicate device
@@ -54,14 +48,14 @@ You can choose to exclude a single device or multiple devices at the same time.
     - Out of scope
     - Other
 
-4. Type a note and select **Exclude device**.
+1. Type a note and select **Exclude device**.
 
 ![Image of exclude device.](media/exclude-device.png)
 
 You can also exclude a device from its device page.
 
 > [!NOTE]
-> Excluding active devices is not recommended, since it is especially risky to not have visibility into their vulnerability info. If a device is active and you try to exclude it, you'll get a warning message and a confirmation pop-up asking if you are sure you want to exclude an active device.
+> Excluding active devices isn't recommended, since it's especially risky to not have visibility into their vulnerability info. If a device is active and you try to exclude it, you'll get a warning message and a confirmation pop-up asking if you're sure you want to exclude an active device.
 
 It can take up to 10 hours for a device to be fully excluded from vulnerability management views and data.
 
@@ -78,9 +72,9 @@ You can also choose to exclude multiple devices at the same time:
 
 1. Go to the **Device inventory** page and select the devices to exclude.
 
-2. From the actions bar, select **Exclude**.
+1. From the actions bar, select **Exclude**.
 
-3. Choose a justification and select **Exclude device**.
+1. Choose a justification and select **Exclude device**.
 
 If you select multiple devices in the device list with different exclusion statuses, the exclude selected devices flyout will provide you details on how many of the selected devices are already excluded. You can exclude the devices again, but the justification and notes will be overridden.
 
@@ -93,7 +87,7 @@ Once a device is excluded, if you go to the device page of an excluded device, y
 You'll be able to stop excluding a device at any time. Once devices are no longer excluded, their vulnerability data will be visible in vulnerability management pages, reports, and in advanced hunting. It may take up to 8 hours for the changes to take effect.
 
 1. Go to the Device inventory, select the excluded device to open the flyout, and then select **Exclusion details**
-2. Select **Stop exclusion**
+1. Select **Stop exclusion**
 
 ![Image of exclusion details](media/exclusion-details.png)
 
@@ -101,3 +95,4 @@ You'll be able to stop excluding a device at any time. Once devices are no longe
 
 - [Device inventory](machines-view-overview.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

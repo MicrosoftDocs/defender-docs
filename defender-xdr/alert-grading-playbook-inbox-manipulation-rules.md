@@ -4,8 +4,8 @@ description: Alert classification for suspicious inbox manipulation rules to rev
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -13,19 +13,19 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 04/05/2023
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to review and classify suspicious inbox manipulation rules alerts so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification for suspicious inbox manipulation rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat actors can use compromised user accounts for many malicious purposes including reading emails in a user's inbox, creating inbox rules to forward emails to external accounts, deleting traces, and sending phishing mails. Malicious inbox rules are common during business email compromise (BEC) and phishing campaigns and it's important to monitor for them consistently.
 
@@ -53,7 +53,7 @@ For example, the inbox rule might be set to look for keywords like "invoice," "p
 
 Here's the workflow to identify suspicious inbox manipulation rule activities.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-workflow.png" alt-text="Alert investigation workflow for inbox manipulation rules" lightbox="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-workflow.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-workflow.png" alt-text="Alert investigation workflow for inbox manipulation rules" lightbox="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-workflow.png":::
 
 ## Investigation steps
 
@@ -63,11 +63,11 @@ This section contains detailed step-by-step guidance to respond to the incident 
 
 Here's an example of an inbox manipulation rule alert in the alert queue.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-queue.png" alt-text="Example of an inbox manipulation rule" lightbox="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-queue.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-queue.png" alt-text="Example of an inbox manipulation rule" lightbox="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-queue.png":::
 
 Here's an example of the details of an alert that was triggered by a malicious inbox manipulation rule.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-description.png" alt-text="Details of alert that was triggered by a malicious inbox manipulation rule" lightbox="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-description.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-description.png" alt-text="Details of alert that was triggered by a malicious inbox manipulation rule" lightbox="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-alert-description.png":::
 
 ### 2. Investigate inbox manipulation rule parameters
 
@@ -91,7 +91,7 @@ Determine if the rules look suspicious according to the following rule parameter
 
 Here's an example of a "delete all incoming emails" rule configuration (as seen on RawEventData.Parameters) of the relevant event log.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-delete-log.png" alt-text="Example of a delete all incoming emails rule configuration" lightbox="/defender/media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-delete-log.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-delete-log.png" alt-text="Example of a delete all incoming emails rule configuration" lightbox="media/alert-grading-playbook-inbox-manipulation-rules/alert-grading-playbook-inbox-manipulation-rules-delete-log.png":::
 
 ### 3. Investigate the IP address
 

@@ -14,7 +14,7 @@ ms.collection:
     - m365solution-getstarted
     - highpri
     - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 search.appverid: 
   - MOE150
   - MET150
@@ -99,7 +99,7 @@ Once the service is provisioned, it adds:
 - [Advanced hunting](advanced-hunting-overview.md) capabilities
 - Threat analytics
 
-:::image type="content" source="/defender/media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="/defender/media/overview-incident.png":::
+:::image type="content" source="media/m365d-enable/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="media/m365d-enable/overview-incident.png":::
 *Microsoft Defender portal with incidents management and other capabilities*
 
 ### Getting Microsoft Defender for Identity data 

@@ -1,16 +1,16 @@
----
+﻿---
 title: Microsoft Defender for Endpoint attack surface reduction rules deployment overview
 description: Provides overview and prerequisite guidance about deploying Microsoft Defender for Endpoint attack surface reduction rules. Links to articles that show how to plan and ASR deployment, test ASR rules, configure ASR rules, and enable ASR rules.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar
-manager: deniseb
+manager: bagol
 ms.custom: asr
-ms.topic: conceptual
+ms.topic: concept-article
 ms.collection:  
  - m365-security
  - m365solution-asr-rules
@@ -19,14 +19,13 @@ ms.collection:
  - mde-asr
 ms.date: 07/25/2024
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Attack surface reduction rules deployment overview
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Attack surfaces are all the places where your organization is vulnerable to cyberthreats and attacks. Reducing your attack surface means protecting your organization's devices and network, which leaves attackers with fewer ways to attack. Configuring Microsoft Defender for Endpoint attack surface reduction rules can help.
 
@@ -208,3 +207,4 @@ Some rules don't work well if unsigned, internally developed application and scr
 [Attack surface reduction rules exclusions](https://security.microsoft.com/asr?viewid=exclusions)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

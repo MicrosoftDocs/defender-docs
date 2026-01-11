@@ -2,12 +2,12 @@
 title: Campaigns in Microsoft Defender for Office 365 Plan
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.reviewer: mcostea
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Learn about Campaigns in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 2/20/2024
+ms.date: 06/19/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -37,7 +37,7 @@ The campaigns feature lets you see the overall picture of an email attack faster
 
 Watch this short video on how campaigns in Microsoft Defender for Office 365 help you understand coordinated email attacks that target your organization.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGBL8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0ed63ec3-48b1-4a6b-88d3-d3bb27b22c55]
 
 ## What is a campaign?
 
@@ -61,7 +61,7 @@ A campaign might be short-lived, or could span several days, weeks, or months wi
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Campaigns page in the Microsoft Defender portal
 
@@ -174,7 +174,7 @@ The available properties and their associated values are described in the follow
 |Delivery action|Select one or more values¹: <ul><li>**Blocked**</li><li>**Delivered**</li><li>**Delivered to junk**</li><li>**Replaced**</li></ul>|
 |Additional action|Select one or more values¹: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|
 |Directionality|Select one or more values¹: <ul><li>**Inbound**</li><li>**Intra-irg**</li><li>**Outbound**</li></ul>|
-|Detection technology|Select one or more values¹: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li><li>**URL detonation reputation**</li><li>**URL malicious reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li></ul>|
+|Detection technology|Select one or more values¹: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li<li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|
 |Original delivery location|Select one or more values¹: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|
 |Latest delivery location|Same values as **Original delivery location**</li></ul>|
 |System overrides|Select one or more values¹: <ul><li>**Allowed by user policy**</li><li>**Blocked by user policy**</li><li>**Allowed by organization policy**</li><li>**Blocked by organization policy**</li><li>**File extension blocked by organization policy**</li><li>**None**</li></ul>|
@@ -183,7 +183,7 @@ The available properties and their associated values are described in the follow
 |Internet Message ID|Text. Separate multiple values by commas. <br/><br/> Available in the **Message-ID** header field in the message header. An example value is `<08f1e0f6806a47b4ac103961109ae6ef@server.domain>` (note the angle brackets).|
 |Network Message ID|Text. Separate multiple values by commas. <br/><br/> A GUID value that's available in the **X-MS-Exchange-Organization-Network-Message-Id** header field in the message header.|
 |Sender IP|Text. Separate multiple values by commas.|
-|Attachment SHA256|Text. Separate multiple values by commas. <br/><br/> To find the SHA256 hash value of a file in Windows, run the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`.|
+|Attachment SHA256|Text. Separate multiple values by commas. <br/><br/> To find the SHA256 hash value of a file, run the following command in PowerShell: `Get-FileHash -Path "<Path>\<Filename>" -Algorithm SHA256`.|
 |Cluster ID|Text. Separate multiple values by commas.|
 |Alert ID|Text. Separate multiple values by commas.|
 |Alert Policy ID|Text. Separate multiple values by commas.|
@@ -280,7 +280,7 @@ The diagram contains the following information:
 
   ² Review your anti-spam policies, because these messages should be quarantined, not delivered.
 
-- **Message destinations**: Investigate messages that were delivered to recipients (either to the Inbox or the Junk Email folder), even if users didn't select the payload URL in the message. You can also remove the quarantined messages from quarantine. For more information, see [Quarantined email messages in EOP](quarantine-about.md).
+- **Message destinations**: Investigate messages that were delivered to recipients (either to the Inbox or the Junk Email folder), even if users didn't select the payload URL in the message. You can also remove the quarantined messages from quarantine. For more information, see [Quarantine](quarantine-about.md).
   - **Deleted folder**
   - **Dropped**
   - **External**: The recipient is located in your on-premises email organization in hybrid environments.
@@ -329,7 +329,7 @@ The tabs in the campaign details flyout allow you to further investigate the cam
   - **SPF passed**: The sender was authenticated by the [Sender Policy Framework (SPF)](email-authentication-spf-configure.md). A sender that doesn't pass SPF validation indicates an unauthenticated sender, or the message is spoofing a legitimate sender.
 
 - **Senders**
-  - **Sender**: This is the actual sender address in the SMTP **MAIL FROM** command, which isn't necessarily the **From:** email address that users see in their email clients.
+  - **Sender**: This address is the actual sender address in the SMTP **MAIL FROM** command, which isn't necessarily the **From:** email address that users see in their email clients.
   - **Total count**
   - **Inboxed**
   - **Not Inboxed**

@@ -1,12 +1,12 @@
 ---
-title: ASF settings in EOP
+title: ASF settings in anti-spam policies
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
@@ -16,18 +16,18 @@ ms.collection:
   - tier2
 ms.custom: 
   - seo-marvel-apr2020
-description: Admins can learn about the Advanced Spam Filter (ASF) settings that are available in anti-spam policies in Exchange Online Protection (EOP).
+description: Admins can learn about the Advanced Spam Filter (ASF) settings that are available in anti-spam policies in all organizations with cloud mailboxes.
 ms.service: defender-office-365
 ms.date: 08/26/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Advanced Spam Filter (ASF) settings in EOP
+# Advanced Spam Filter (ASF) settings in anti-spam policies
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, Advanced Spam Filter (ASF) settings in anti-spam policies allow admins to mark messages as spam based on specific message properties. ASF specifically targets these properties because they're commonly found in spam. Depending on the property, ASF detections mark the message as **Spam** or **High confidence spam**.
+In all organizations with cloud mailboxes, Advanced Spam Filter (ASF) settings in anti-spam policies allow admins to mark messages as spam based on specific message properties. ASF specifically targets these properties because they're commonly found in spam. Depending on the property, ASF detections mark the message as **Spam** or **High confidence spam**.
 
 > [!NOTE]
 > Enabling one or more of the ASF settings is an aggressive approach to spam filtering. You can't report messages that are filtered by ASF as false positives to Microsoft. You can identify messages that were filtered by ASF by:
@@ -38,10 +38,12 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 >
 > ASF adds `X-CustomSpam:` X-header fields to messages _after_ the messages have been processed by Exchange mail flow rules (also known as transport rules), so you can't use mail flow rules to identify and act on messages that were filtered by ASF. You can use [Inbox rules](https://support.microsoft.com/office/8400435c-f14e-4272-9004-1548bb1848f2) in mailboxes to affect the delivery of the message.
 
-The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in Exchange Online PowerShell or standalone EOP PowerShell ([New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy)). For more information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ([New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy)).
+
+For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 > [!TIP]
-> ASF settings aren't enabled in [Standard or Strict preset security policies](preset-security-policies.md), so you can configure ASF settings in the default anti-spam policy or custom anti-spam policies only. For more information about using protection policies, see [Determine your protection policy strategy](mdo-deployment-guide.md#determine-your-protection-policy-strategy).
+> ASF settings aren't enabled in [Standard or Strict preset security policies](preset-security-policies.md), so you can configure ASF settings in the default anti-spam policy or custom anti-spam policies only. For more information about using threat policies, see [Determine your threat policy strategy](mdo-deployment-guide.md#determine-your-threat-policy-strategy).
 
 ## Enable, disable, or test ASF settings
 
@@ -50,9 +52,9 @@ For each ASF setting, the following options are available in anti-spam policies:
 - **On**: ASF adds the corresponding X-header field to the message:
   - For [Increase spam score settings](#increase-spam-score-settings), the message has a higher chance of being marked as**Spam**.
   - For [Mark as spam settings](#mark-as-spam-settings), the message is marked as **Spam** or **High confidence spam**.
-- **Off**: The ASF setting is disabled. This is the default value.
+- **Off**: The ASF setting is disabled. This value is the default.
 - **Test**: The ASF setting is in Test Mode. What happens to the message is determined by the **Test mode** (_TestModeAction_) value:
-  - **None**: Message delivery is unaffected by the ASF detection. The message is still subject to other types of filtering and rules in EOP and Defender for Office 365.
+  - **None**: Message delivery is unaffected by the ASF detection. The message is still subject to other types of filtering and rules.
   - **Add default X-header text** (_AddXHeader_): The X-header value `X-CustomSpam: This message was filtered by the custom spam filter option` is added to the message. You can use this value in Inbox rules (not mail flow rules) to affect the delivery of the message.
   - **Send Bcc message** (_BccMessage_): The specified email addresses (the _TestModeBccToRecipients_ parameter value in PowerShell) are added to the Bcc field of the message, and the message is delivered to the additional Bcc recipients. In the Microsoft Defender portal, you separate multiple email addresses by semicolons (;). In PowerShell, you separate multiple email addresses by commas.
 
@@ -96,4 +98,4 @@ The following **Mark as spam** ASF settings set the SCL of detected messages to 
 |Anti-spam policy setting|Description|X-header added|
 |---|---|---|
 |**Sender ID filtering hard fail** (_MarkAsSpamFromAddressAuthFail_)|Messages that hard fail a conditional Sender ID check are marked as spam. <br/><br/> This setting combines an SPF check with a Sender ID check to help protect against message headers that contain forged senders. <br/><br/> Test mode isn't available for this setting.|`X-CustomSpam: SPF From Record Fail`|
-|**Backscatter** (_MarkAsSpamNdrBackscatter_)|_Backscatter_ is useless non-delivery reports (also known as NDRs or bounce messages) caused by forged senders in email messages. For more information, see [Backscatter messages and EOP](anti-spam-backscatter-about.md). <br/><br/> You don't need to configure this setting in the following environments, because legitimate NDRs are delivered and backscatter is marked as spam: <ul><li>Microsoft 365 organizations with Exchange Online mailboxes.</li><li>On-premises email organizations where you route _outbound_ email through EOP.</li></ul> <br/><br/> In standalone EOP environments that protect inbound email to on-premises mailboxes, turning this setting on or off has the following result: <ul><li> **On**: Legitimate NDRs are delivered, and backscatter is marked as spam.</li><li>**Off**: Legitimate NDRs and backscatter go through normal spam filtering. Most legitimate NDRs are delivered to the original message sender. Some, but not all backscatter is marked as spam. By definition, backscatter can be delivered only to the spoofed sender, not to the original sender.</li></ul> <br/><br/> Test mode isn't available for this setting.|`X-CustomSpam: Backscatter NDR`|
+|**Backscatter** (_MarkAsSpamNdrBackscatter_)|_Backscatter_ is useless non-delivery reports (also known as NDRs or bounce messages) caused by forged senders in email messages. For more information, see [Backscatter messages](anti-spam-backscatter-about.md). <br/><br/> You don't need to configure this setting in the following environments, because legitimate NDRs are delivered and backscatter is marked as spam: <ul><li>Microsoft 365 organizations with Exchange Online mailboxes.</li><li>On-premises email organizations where you route _outbound_ email through Microsoft 365.</li></ul> <br/><br/> In Microsoft 365 environments that protect inbound email to on-premises mailboxes, turning this setting on or off has the following result: <ul><li> **On**: Legitimate NDRs are delivered, and backscatter is marked as spam.</li><li>**Off**: Legitimate NDRs and backscatter go through normal spam filtering. Most legitimate NDRs are delivered to the original message sender. Some, but not all backscatter is marked as spam. By definition, backscatter can be delivered only to the spoofed sender, not to the original sender.</li></ul> <br/><br/> Test mode isn't available for this setting.|`X-CustomSpam: Backscatter NDR`|

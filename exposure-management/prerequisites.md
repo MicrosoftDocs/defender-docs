@@ -3,40 +3,93 @@ title: Prerequisites and support in Microsoft Security Exposure Management
 description: Review the prerequisites for Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 09/16/2024
+ms.date: 07/30/2025
+
 ---
 
 # Prerequisites and support
 
-This article describes the requirements and prerequisites for using Microsoft Security Exposure Management.
+This article describes the requirements and prerequisites for using Microsoft Security Exposure Management in the unified Microsoft Defender XDR portal.
 
-Security Exposure Management is currently in public preview.
+## Portal access and setup
 
-[!INCLUDE [prerelease](../includes/prerelease.md)]
+Microsoft Security Exposure Management is integrated into the Microsoft Defender XDR portal at [security.microsoft.com](https://security.microsoft.com). There's no separate installation required - all Exposure Management features are accessible through the **Exposure Management** section in the unified portal.
+
+### Licensing requirements
+
+Microsoft Security Exposure Management features are available with the following license plans:
+- Microsoft 365 E5
+- Microsoft 365 E3 with certain add-ons
+- Microsoft Defender suite licenses
+- Other qualifying licenses as specified in the integration and licensing documentation
+
+### External data connectors (Preview)
+External data connectors are currently in public preview with separate consumption-based pricing. During the preview phase, use of data connectors is free. Once generally available, there will be consumption-based costs for each non-Microsoft data connector based on the number of assets retrieved from connected security tools.
+
+### Regional and tenant requirements
+All data is processed within the Microsoft Defender XDR portal infrastructure. Ensure your tenant meets the standard requirements for Defender portal access.
 
 ## Permissions
 
-Permissions are based on [Microsoft Entra ID Roles](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- For full Security Exposure Management access, user roles need access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
-- Users who have access restricted to some of the organization's device groups (and not to all), can:
-    - Access global exposure insights data.
-    - View affected assets under metrics, recommendations, events, and initiatives history only within users' scope
-    - View devices in attack paths that are within the users' scope
-    - Access the Security Exposure Management attack surface map and advanced hunting schemas (ExposureGraphNodes and ExposureGraphEdges) for the device groups to which they have access
+## Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)
 
-### Permissions for Security Exposure Management tasks
+[Microsoft Defender XDR Unified role-based access control(RBAC)](/defender-xdr/manage-rbac) allows you to create custom roles with specific permissions for Exposure Management. These permissions are located under the **Security posture** category in Defender XDR Unified RBAC permissions model and are named:
+
+- **Exposure Management (read)** for read-only access 
+- **Exposure Management (manage)** for access to manage Exposure Management experiences
+
+For more sensitive actions in Exposure Management, users need the **Core security settings (manage)** permission that is located under the **Authorization and settings** category.
+
+To access Exposure Management data and actions, a custom role in Defender XDR Unified RBAC with any of the permissions mentioned here, shall be assigned to the **Microsoft Security Exposure Management** data source.
+
+To learn more about using Microsoft Defender XDR Unified RBAC to manage your Secure Score permissions, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+
+The following table highlights what a user can access or perform with each of the permissions:
+
+|Permission name|Actions|
+| -------- | -------- |
+|**Exposure Management (read)** |Access to all Exposure Management experiences and read access to all available data|
+|**Exposure Management (manage)**|In addition to the read access, the user can set initiative target score and edit metric values, as long as the user has access to all Defender for Endpoint [device groups](/microsoft-365/security//defender-endpoint/machine-groups).|
+|**Core security settings (manage)**|Connect or change vendor to the External Attack Surface Management initiative|
+
+For full Microsoft Security Exposure Management access, user roles need access to all Defender for Endpoint [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
+Users with restricted access to some of the organization's device groups can:
+
+- Access global exposure insights data.
+- View affected assets under metrics, recommendations, events, and initiatives history only within their scope.
+- View devices in attack paths that are within their scope.
+- Access the Security Exposure Management attack surface map and advanced hunting schemas (ExposureGraphNodes and ExposureGraphEdges) for the device groups they have access to.
+
+> [!NOTE]
+> Access with manage permissions to **Critical asset management**, under **System> Settings> Microsoft Defender XDR** requires users to have access to all Defender for Endpoint device groups.
+
+## Access with Microsoft Entra ID roles
+
+An alternative to managing access with Microsoft Defender XDR Unified RBAC permissions, access to Microsoft Security Exposure Management data and actions is also possible with [Microsoft Entra ID Roles](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
 For full access, users need one of the following Microsoft Entra ID roles:
 
 - **Global Admin** (read and write permissions)
-- **Global Reader** (read permissions)
 - **Security Admin** (read and write permissions)
 - **Security Operator** (read and limited write permissions)
+- **Global Reader** (read permissions)
 - **Security Reader** (read permissions)
+
+- **Service Support** Administrator (read permissions)
+
+- **User Administrator** (read permissions)
+
+- **Helpdesk Administrator** (read permissions)
+
+- **Exchange Administrator** (read and write permissions)
+
+- **SharePoint Administrator** (read and write permissions)
 
 Permission levels are summarized in the table.
 
@@ -60,6 +113,8 @@ Permission levels are summarized in the table.
 |  **Create criticality rule**  | ✔       |    -    |   ✔      | - | - |
 |  **Turn criticality rule on/off**  | ✔       |    -    |   ✔      | ✔ | - |
 |  **Run a query on exposure graph data**  |    ✔    |   ✔     |  ✔       | ✔ | ✔ |
+| **Configure data connectors** |  ✔    |      |   ✔   |    ✔  |      |
+| **View data connectors**     |  ✔   |   ✔   |  ✔    |     ✔ |   ✔   |
 
 ## Browser requirements
 
@@ -73,13 +128,28 @@ You can access Security Exposure Management in the Microsoft Defender portal usi
 
     You can check which sensor version a device is running as follows:
 
-    - On a specific device, browse to the MsSense.exe file in
+  - On a specific device, browse to the MsSense.exe file in
 C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file, and select **Properties**. On the **Details** tab, check the file version.
-    - For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
+  - For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
 
-        ``` DeviceInfo | project DeviceName, ClientVersion ```
+    ``` DeviceInfo | project DeviceName, ClientVersion ```
 
+## Data freshness, retention, and related functionality
 
+We currently ingest and process supported data from first-party Microsoft products, making it available within the enterprise exposure graph and applicable Microsoft Security Exposure Management experiences built on top of graph data within 72 hours of its production at the source product.
+
+Microsoft product data is retained for no less than 14 days in the enterprise exposure graph and/or Microsoft Security Exposure Management. Only the latest data snapshot received from Microsoft products is retained; we do not store historical data.
+
+Some enterprise exposure graph and/or Microsoft Security Exposure Management experiences data is available for querying via Advanced Hunting and is subject to Advanced Hunting service limitations.
+
+We reserve the right to modify some or all of these parameters in the future, including:
+
+- Data ingestion frequency and freshness: We might increase the current 72-hour latency (decrease the frequency of data ingestion) for some or all Microsoft data sources.
+- Data retention period: We might decrease the current 14-day data retention period.
+- Service features and functionality: We might alter, limit, or discontinue specific features, capabilities, or functionalities of the service built on top of the enterprise exposure graph and/or Microsoft Security Exposure Management data.
+- Data query limits: We might impose limitations on the number, frequency, or type of data queries that can be performed against enterprise exposure graph or Microsoft Security Exposure Management data.
+
+ We will make reasonable efforts to provide advance notice of any significant changes to the service. However, you acknowledge and agree that you are solely responsible for monitoring any such notifications.
 
 ## Getting support
 

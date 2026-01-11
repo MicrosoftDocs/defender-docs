@@ -3,29 +3,24 @@ title: Check the device health at Microsoft Defender for Endpoint
 description: Check the sensor health on devices to identify which ones are misconfigured, inactive, or aren't reporting sensor data.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
-ms.date: 05/16/2023
+ms.topic: concept-article
+ms.date: 03/26/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 search.appverid: met150
 ---
 
 # Check service health at Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-checksensor-abovefoldlink)
 
 The **Device health** tile provides information on the individual device's ability to provide sensor data and communicate with the Defender for Endpoint service. It reports how many devices require attention and helps you identify problematic devices and take action to correct known issues.
 
@@ -56,8 +51,6 @@ You can view the device details when you click on a misconfigured or inactive de
 
 - [Fix unhealthy sensors in Defender for Endpoint](fix-unhealthy-sensors.md)
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
 - [Run the client analyzer on Windows](run-analyzer-windows.md)
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

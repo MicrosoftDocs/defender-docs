@@ -1,0 +1,89 @@
+---
+title: Configuring the data connectors in Microsoft Security Exposure Management
+description: Learn about configuring the data connectors in Microsoft Security Exposure Management.
+ms.author: dlanger
+author: dlanger
+manager: rayne-wiselman
+ms.topic: overview
+ms.service: exposure-management
+ms.date: 09/21/2025
+---
+
+# Configure your data connectors
+
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) consolidates security posture data from all your digital assets, enabling you to map your attack surface and focus your security efforts on areas at greatest risk. Data from Microsoft Security products like Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Cloud, Microsoft Entra ID, and others are automatically ingested and consolidated within Exposure Management. You can further enrich and extend this data by connecting to a range of external data sources.
+
+## Prerequisites
+
+The following prerequisites are required to integrate external data connecters to Microsoft Security Exposure Management.
+
+### Roles & permissions
+
+For full access to connect and disconnect the data connectors you need one of the following Microsoft Entra ID roles:
+
+- Global Admin (read and write permissions)
+- Security Admin (read and write permissions)
+- Security Operator (read and limited write permissions)
+
+To view the status of the connectors, you can use one of the following roles:
+
+- Global Reader (read permissions)
+- Security Reader (read permissions)
+
+You can also use [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) with the following permissions:
+    - **Exposure Management (read)** for read-only access to Exposure Management experiences
+    - **Exposure Management (manage)** for full access to manage Exposure Management experiences
+    - **Core security settings (manage)** for connecting or changing vendor configurations (located under Authorization and settings category)
+
+You can find more details about the permission levels here, [Prerequisites, and support](prerequisites.md).
+
+## Establish a connection
+
+To establish a connection with any of the supported external products, follow these steps:
+
+1. Complete the applicable prerequisite steps for your external data connectors.
+   Each of the connectors have explicit instructions for setting up valid credentials and creating the connection.
+     - [ServiceNow CMDB](ServiceNow-data-connector.md)
+     - [Qualys VM](Qualys-data-connector.md)
+     - [Rapid7 VM](Rapid7-data-connector.md)
+     - [Tenable](Tenable-data-connector.md)
+     - [Wiz](wiz-data-connector.md)
+     - [Palo Alto Prisma](palo-alto-prisma-data-connector.md)
+
+2. Go to **Data Connectors** in the Exposure Management navigation.
+3. Select **Connect** on the selected data connector from the external connectors catalog.
+4. A side pane opens with the relevant connectivity details. Fill in the required fields and select **Connect**.
+5. The data connector is now connected and will start ingesting data from the external source.
+
+> [!Note]
+> It may take several hours for the connectors data to propagate to all experiences after the data connector is configured.
+
+## Allowlist IP addresses
+
+To ensure successful connections between Exposure Management and external products, you may need to allowlist specific Microsoft IP addresses. Follow these steps to obtain the required IP addresses and configure it with the external products:
+
+1. Identify the IP addresses:
+   1. Obtain and copy the list of the IPs for your allowlist from the IP ranges under "Scuba" in the public IP ranges reference here: [Download Azure IP Ranges and Service Tags – Public Cloud from Official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=56519)
+2. Access the external product's configuration settings:
+   1. Log in to the external product's administration or configuration portal.
+   2. Navigate to the section where you can manage network settings or security settings.
+3. Add the IP addresses to the allowlist:
+   1. Locate the allowlist.
+   2. Enter the IP addresses that you obtained in step 1.
+   3. Save the changes to update the allowlist.
+4. Verify the connection:
+   1. After updating the allowlist, verify that the connection between the external product and our system is successful.
+   2. Check for any error messages or connection issues and ensure that the allowlisted IP addresses are correctly configured.
+5. Troubleshooting:
+   1. If you encounter any issues, double-check the IP addresses and ensure they are correctly entered.
+   2. Refer to the external product's documentation for additional troubleshooting steps or contact their support team for assistance.
+
+For specific instructions on allowlisting IP addresses for each external product, please refer to their respective documentation or support resources.
+
+## Next steps
+
+Select the external data connector you want to configure and follow the steps to connect it to Exposure Management.
+
+- [CMDB data connectors](ServiceNow-data-connector.md)
+- [Vulnerability management data connectors](Qualys-data-connector.md)
+- [Cloud security data connectors](wiz-data-connector.md)

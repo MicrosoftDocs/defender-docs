@@ -5,21 +5,20 @@ metadata:
   ms.service: defender-endpoint
   ms.localizationpriority: medium
   ms.topic: faq
-  author: denisebmsft
-  ms.author: deniseb
+  author: batamig
+  ms.author: bagol
   ms.custom: nextgen
-  ms.reviewer:
-  manager: deniseb
+  ms.reviewer: yonghree
+  manager: bagol
   ms.subservice: ngp
   ms.collection: 
   - m365-security
   - tier1
   - mde-ngp
   search.appverid: met150
-  ms.date: 03/24/2023
+  ms.date: 03/26/2025
 title: Troubleshoot Microsoft Defender Antivirus while migrating from a non-Microsoft solution
 summary: |
-  [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
   **Applies to:**
   - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)

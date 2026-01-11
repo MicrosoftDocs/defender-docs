@@ -1,39 +1,34 @@
----
+﻿---
 title: Technological partners of Microsoft Defender XDR
 ms.reviewer:
-description: View technological partners of Microsoft 365 Defender to enhance detection, investigation, and threat intelligence capabilities of the platform.
+description: View technological partners of Microsoft Defender XDR to enhance detection, investigation, and threat intelligence capabilities of the platform.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
-ms.date: 08/03/2023
----
+ms.date: 06/03/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
+---
 # Technological partners of Microsoft Defender XDR
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Vulnerability Management
-- Microsoft Defender for Office 365
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
-Microsoft Defender XDR supports third-party integrations to help secure users with effective threat protection, detection, investigation, and response, in various security fields of endpoints, vulnerability management, email, identities, cloud apps.
+Microsoft Defender XDR supports non-Microsoft software integration to help secure users with effective threat protection, detection, investigation, and response, in various security fields of endpoints, vulnerability management, email, identities, cloud apps.
 
 The following are the solution's categories:
 
@@ -55,18 +50,18 @@ The following are the solution's categories:
 
 |Product name|Vendor|Description|
 |---|---|---|
-|[Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)|Microsoft|Microsoft Sentinel is a scalable, cloud-native, security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response.|
+|[Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)|Microsoft|Microsoft Sentinel is a scalable, cloud-native, security information, and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response.|
 |[Splunk](https://go.microsoft.com/fwlink/?linkid=2201963)|Splunk|The Microsoft Defender for Endpoint Add-on allows Splunk users to ingest all of the alerts and supporting information to their Splunk.|
 |[ArcSight](https://go.microsoft.com/fwlink/?linkid=2202142)|Micro Focus|ArcSight allows multiple analytics capabilities for correlation, search, UEBA, enhanced and automated response, and log management.|
 |[Elastic Security](https://go.microsoft.com/fwlink/?linkid=2201772)|Elastic|Elastic Security combines SIEM threat detection features with endpoint prevention and response capabilities in one solution.|
-|[IBM Security QRadar SIEM](https://go.microsoft.com/fwlink/?linkid=2201876)|IBM|IBM Security QRadar SIEM enables centralized visibility and intelligent security analytics to detect, investigate and respond to your critical cybersecurity threats.|
+|[IBM Security QRadar SIEM](https://go.microsoft.com/fwlink/?linkid=2201876)|IBM|IBM Security QRadar SIEM enables centralized visibility and intelligent security analytics to detect, investigate, and respond to your critical cybersecurity threats.|
 |[AttackIQ Platform](https://go.microsoft.com/fwlink/?linkid=2201971)|AttackIQ|AttackIQ Platform validates whether MDE is configured properly by launching continuous attacks safely on production assets.|
 
 ### Security orchestration, automation, and response (SOAR)
 
 |Product name|Vendor|Description|
 |---|---|---|
-|[Microsoft Sentinel](https://go.microsoft.com/fwlink/?linkid=2201962)|Microsoft|Microsoft Sentinel is a scalable, cloud-native, security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response.|
+|[Microsoft Sentinel](https://go.microsoft.com/fwlink/?linkid=2201962)|Microsoft|Microsoft Sentinel is a scalable, cloud-native, security information, and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response.|
 |[ArcSight](https://go.microsoft.com/fwlink/?linkid=2202142)|Micro Focus|ArcSight provides multiple analytics capabilities for correlation, search, UEBA, enhanced and automated response, and log management.|
 |[Splunk SOAR](https://go.microsoft.com/fwlink/?linkid=2201773)|Splunk|Splunk SOAR orchestrates workflows and automates tasks in seconds to work smarter and respond faster.|
 |[Security Incident Response](https://go.microsoft.com/fwlink/?linkid=2201874)|ServiceNow|The ServiceNow&reg; Security Incident Response application tracks the progress of security incidents from discovery and initial analysis, through containment, eradication, and recovery, and into the final post-incident review, knowledge base article creation, and closure.|
@@ -99,8 +94,8 @@ The following are the solution's categories:
 |---|---|---|
 |[Aruba ClearPass Policy Manager](https://go.microsoft.com/fwlink/?linkid=2201878)|Aruba, a Hewlett Packard Enterprise company|Network Access Control applies consistent policies and granular security controls to wired and wireless networks|
 |[Vectra Network Detection and Response (NDR)](https://go.microsoft.com/fwlink/?linkid=2201969)|Vectra|Vectra applies AI & security research to detect and respond to cyber-attacks in real time.|
-|[Blue Hexagon for Network](https://go.microsoft.com/fwlink/?linkid=2201780)|Blue Hexagon|Blue Hexagon built the industry's first real-time deep learning platform for network threat protection.|
-|[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2201880)|CyberMDX|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Microsoft Defender for Endpoint environment.|
+|Blue Hexagon for Network|Blue Hexagon|Blue Hexagon built the industry's first real-time deep learning platform for network threat protection.|
+|[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2201880)|CyberMDX|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention, and response into your Microsoft Defender for Endpoint environment.|
 |[HYAS Protect](https://www.hyas.com/hyas-protect)|HYAS|HYAS Protect utilizes authoritative knowledge of attacker infrastructure to proactively protect MDE endpoints from cyber attacks.|
 |[Better Mobile Security Platform](https://go.microsoft.com/fwlink/?linkid=2202043)|Better Mobile Security Inc.|Provides solution for Threat, Phishing, and Privacy Protection and Simulation.|
 |[Vulnerability Control](https://go.microsoft.com/fwlink/?linkid=2201965)|Skybox security|Global security posture management leader with solutions for vulnerability management and network security policy management.|
@@ -129,7 +124,7 @@ The following are the solution's categories:
 |[Azure](https://go.microsoft.com/fwlink/?linkid=2202040)|Microsoft|Microsoft Azure provides tools and services to help you reach and scale to a global audience with cloud gaming services.|
 |[AWS](https://go.microsoft.com/fwlink/?linkid=2202041)|Amazon|Amazon Web Services provides information technology infrastructure services to businesses in the form of web services.|
 |[Box](https://go.microsoft.com/fwlink/?linkid=2202042)|Box|Box is an online file sharing and cloud content management service offering unlimited storage, custom branding, and administrative controls.|
-|[DocuSign](https://go.microsoft.com/fwlink/?linkid=2201767)|DocuSign|DocuSign is an Electronic Signature and Agreement Cloud enabling employees to securely send, sign and manage agreements.|
+|[DocuSign](https://go.microsoft.com/fwlink/?linkid=2201767)|DocuSign|DocuSign is an Electronic Signature and Agreement Cloud enabling employees to securely send, sign, and manage agreements.|
 |[Dropbox](https://go.microsoft.com/fwlink/?linkid=2202139)|Dropbox|Dropbox is a smart workspace company that provides secure file sharing, collaboration, and storage solutions.|
 |[Egnyte](https://go.microsoft.com/fwlink/?linkid=2201956)|Egnyte|Egnyte delivers secure content collaboration, compliant data protection and simple infrastructure modernization.|
 |[GITHUB](https://go.microsoft.com/fwlink/?linkid=2201957)|Microsoft|GitHub is a code hosting platform for collaboration and version control. It allows developers to work together on their projects right from planning and coding to shipping the software.|
@@ -159,13 +154,13 @@ The following are the solution's categories:
 |[Vulcan Cyber risk management platform](https://go.microsoft.com/fwlink/?linkid=2201770)|Vulcan Cyber|Vulcan Cyber gives you the tools to effectively manage the vulnerability and risk lifecycle for all your cyber assets, including application, cloud, and infrastructure.|
 |[Extended Security Posture Management (XSPM)](https://go.microsoft.com/fwlink/?linkid=2201771)|Cymulate|Cymulate's Extended Security Posture Management enables companies to challenge, assess, and optimize their cybersecurity posture.|
 |[Illusive Platform](https://go.microsoft.com/fwlink/?linkid=2201778)|Illusive Networks|Illusive continuously discovers and automatically remediates identity vulnerabilities, and it detects attacks using deceptive controls.|
-|[ServiceNow vulnerability response](https://go.microsoft.com/fwlink/?linkid=2243580)| ServiceNow |  Use the Microsoft Threat and vulnerability management integration to import third-party scanner data about your assets and vulnerabilities. You can then view reports about vulnerabilities and vulnerable items on the Vulnerability Response dashboards.
+|[ServiceNow vulnerability response](https://go.microsoft.com/fwlink/?linkid=2243580)| ServiceNow |  Use the Microsoft Threat and vulnerability management integration to import non-Microsoft scanner data about your assets and vulnerabilities. You can then view reports about vulnerabilities and vulnerable items on the Vulnerability Response dashboards.
 
 ### Secure service edge
 
 |Product name|Vendor|Description|
 |---|---|---|
-|[Zscaler Internet Access](https://go.microsoft.com/fwlink/?linkid=2201779)|Zscaler|Zscaler Internet Access is a cloud native security service edge (SSE) solution that builds on a decade of secure web gateway leadership. Offered as a scalable SaaS platform from the world's largest security cloud, it replaces legacy network security solutions to stop advanced attacks and prevent data loss with a comprehensive zero trust approach.|
+|[Zscaler Internet Access](https://go.microsoft.com/fwlink/?linkid=2201779)|Zscaler|Zscaler Internet Access is a cloud native security service edge (SSE) solution that builds on a decade of secure web gateway leadership. Offered as a scalable SaaS platform from the world's largest security cloud, it replaces legacy network security solutions to stop advanced attacks and prevent data loss with a comprehensive Zero Trust approach.|
 
 ### Additional integrations
 
@@ -181,3 +176,4 @@ The following are the solution's categories:
 - [Connect apps to get visibility and control|Microsoft Docs](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
 - [Partner applications in Microsoft Defender for Endpoint|Microsoft Docs](partner-applications.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

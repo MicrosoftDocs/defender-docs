@@ -1,33 +1,28 @@
----
+﻿---
 title: Optimize ASR rule deployment and detections
 description: Optimize your attack surface reduction rules to identify and prevent typical malware exploits.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: asr
 search.appverid: met150
-ms.date: 12/18/2023
----
+ms.date: 03/27/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Optimize ASR rule deployment and detections
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
 
 [Attack surface reduction rules](./attack-surface-reduction.md) identify and prevent typical malware exploits. They control when and how potentially malicious code can run. For example, they can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, and block processes that run from USB drives.
 
@@ -35,7 +30,7 @@ ms.date: 12/18/2023
 
 > *Attack surface management card*
 
-The *Attack surface management card* is an entry point to tools in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> that you can use to:
+The *Attack surface management card* is an entry point to tools in the [Microsoft Defender portal](https://security.microsoft.com) that you can use to:
 
 - Understand how ASR rules are currently deployed in your organization.
 - Review ASR detections and identify possible incorrect detections.
@@ -50,7 +45,7 @@ Select **Go to attack surface management** \> **Reports** \> **Attack surface re
 > [!NOTE]
 > To access Microsoft Defender portal, you need a Microsoft 365 E3 or E5 license and an account that has certain roles on Microsoft Entra ID. [Read about required licenses and permissions](/defender-xdr/prerequisites).
 
-For more information about ASR rule deployment in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, see [Optimize ASR rule deployment and detections](configure-machines-asr.md).
+For more information about ASR rule deployment in the [Microsoft Defender portal](https://security.microsoft.com), see [Optimize ASR rule deployment and detections](configure-machines-asr.md).
 
 ## Related topics
 
@@ -58,3 +53,4 @@ For more information about ASR rule deployment in <a href="https://go.microsoft.
 - [Get devices onboarded to Microsoft Defender for Endpoint](configure-machines-onboarding.md)
 - [Monitor compliance to the Microsoft Defender for Endpoint security baseline](configure-machines-security-baseline.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

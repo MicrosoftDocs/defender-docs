@@ -1,32 +1,27 @@
----
+﻿---
 title: Monitoring web browsing security in Microsoft Defender for Endpoint
 description: Use web protection in Microsoft Defender for Endpoint to monitor web browsing security
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
-ms.date: 12/18/2020
----
+ms.date: 09/21/2024
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Monitor web browsing security
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
 Web protection lets you monitor your organization's web browsing security through reports under **Reports > Web protection** in the Microsoft Defender portal. The report contains cards that provide web threat detection statistics.
 
@@ -47,7 +42,7 @@ Web protection categorizes malicious and unwanted websites as:
 
 - **Phishing** - websites that contain spoofed web forms and other phishing mechanisms designed to trick users into divulging credentials and other sensitive information
 - **Malicious** - websites that host malware and exploit code
-- **Custom indicator** - websites whose URLs or domains you've added to your [custom indicator list](manage-indicators.md) for blocking
+- **Custom indicator** - websites whose URLs or domains you've added to your [custom indicator list](indicators-overview.md) for blocking
 
 ## View the domain list
 
@@ -68,3 +63,4 @@ Select a domain to view the list of devices that have attempted to access URLs i
 - [Web threat protection](web-threat-protection.md)
 - [Respond to web threats](web-protection-response.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

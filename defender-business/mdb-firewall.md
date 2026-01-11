@@ -4,7 +4,7 @@ description: Learn about Windows Defender Firewall settings in Defender for Busi
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -56,7 +56,7 @@ Depending on whether you're using the Microsoft Defender portal or Intune to man
 
 2. Select **Endpoint security**.
 
-3. Select **Firewall** to view your policies in that category. Custom rules that are defined for firewall protection are listed as separate policies. To get help with managing your security settings in Intune, start with [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).
+3. Select **Firewall** to view your policies in that category. Custom rules that are defined for firewall protection are listed as separate policies. To get help with managing your security settings in Intune, start with [Manage endpoint security in Microsoft Intune](/intune/intune-service/protect/endpoint-security).
 
 ## Manage your custom rules for firewall policies in Microsoft Defender for Business
 

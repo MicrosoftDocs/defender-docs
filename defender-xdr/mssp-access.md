@@ -1,22 +1,25 @@
 ---
 title: Provide managed security service provider (MSSP) access
-description: Learn about changes from the Microsoft Defender Security Center to the Microsoft Defender portal
+description: Learn about changes from the Microsoft Defender Security Center to the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
 - MOE150
 - MET150
 ms.collection: 
 - m365-security
 - tier2 
-ms.date: 06/21/2024
+ms.date: 11/19/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Defender for Endpoint
 ---
 
 # Provide managed security service provider (MSSP) access 
@@ -25,10 +28,8 @@ ms.date: 06/21/2024
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+> [!IMPORTANT]
+> Procedures in this article use features that require at a minimum Microsoft Entra ID P2 [for each user under scope of management](/entra/id-governance/licensing-fundamentals#how-can-i-license-usage-of-microsoft-entra-id-governance-features-for-business-guests).
 
 To implement a multitenant delegated access solution, take the following steps:
 
@@ -54,7 +55,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
     To enable RBAC in the customer Microsoft Defender portal, access **Permissions >  Endpoints roles & groups > Roles** with a user account with Security Administrator rights.
 
-    :::image type="content" source="/defender/media/mssp-access.png" alt-text="The details of the MSSP access in the Microsoft Defender portal" lightbox="/defender/media/mssp-access.png":::
+    :::image type="content" source="media/mssp-access/mssp-access.png" alt-text="The details of the MSSP access in the Microsoft Defender portal" lightbox="media/mssp-access/mssp-access.png":::
 
     Then, create RBAC roles to meet MSSP SOC Tier needs. Link these roles to the created user groups via "Assigned user groups".
 
@@ -82,7 +83,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
     To do so, in the customer AD tenant,  access Identity Governance: Catalogs, and add **New Catalog**. In our example, we'll call it **MSSP Accesses**.
 
-    :::image type="content" source="/defender/media/goverance-catalog.png" alt-text="A new catalog in the Microsoft Defender portal" lightbox="/defender/media/goverance-catalog.png":::
+    :::image type="content" source="media/mssp-access/goverance-catalog.png" alt-text="A new catalog in the Microsoft Defender portal" lightbox="media/mssp-access/goverance-catalog.png":::
 
 
     Further more information, see [Create a catalog of resources](/azure/active-directory/governance/entitlement-management-catalog-create).
@@ -98,7 +99,7 @@ To implement a multitenant delegated access solution, take the following steps:
     - Can only be requested by users in the MSSP SOC Tenant
     - Access auto expires after 365 days
 
-    :::image type="content" source="/defender/media/new-access-package.png" alt-text="The details of a new access package in the Microsoft Defender portal" lightbox="/defender/media/new-access-package.png":::
+    :::image type="content" source="media/mssp-access/new-access-package.png" alt-text="The details of a new access package in the Microsoft Defender portal" lightbox="media/mssp-access/new-access-package.png":::
 
     For more information, see [Create a new access package](/azure/active-directory/governance/entitlement-management-access-package-create).
 
@@ -106,7 +107,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
     The My Access portal link is used by MSSP SOC analysts to request access via the access packages created. The link is durable, meaning the same link might be used over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
 
-    :::image type="content" source="/defender/media/access-properties.png" alt-text="The access properties in the Microsoft Defender portal" lightbox="/defender/media/access-properties.png":::
+    :::image type="content" source="media/mssp-access/access-properties.png" alt-text="The access properties in the Microsoft Defender portal" lightbox="media/mssp-access/access-properties.png":::
 
     The link is located on the overview page of each access package.
 
@@ -125,4 +126,5 @@ To implement a multitenant delegated access solution, take the following steps:
      At this point, analyst access has been provisioned, and each analyst should be able to access the customer's Microsoft Defender portal:
 
     `https://security.microsoft.com/?tid=<CustomerTenantId>` with the permissions and roles they were assigned.
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

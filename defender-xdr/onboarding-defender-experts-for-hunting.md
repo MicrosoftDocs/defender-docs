@@ -2,8 +2,7 @@
 title: How to subscribe to Microsoft Defender Experts for Hunting
 ms.reviewer:
 description: If you're new to Microsoft Defender XDR and Defender Experts for Hunting, this is how you onboard, receive, and set up Defender experts notifications.
-ms.service: defender-experts
-ms.subservice: dex-hunting
+ms.service: defender-experts-for-hunting
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
@@ -13,7 +12,7 @@ ms.collection:
   - m365-security
   - tier1
   - essentials-get-started
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 - cx-ti
 - cx-ean
@@ -38,7 +37,7 @@ If you're new to Microsoft Defender XDR and Defender Experts for Hunting:
 3. The Microsoft Defender XDR quick tour gets you familiar with the security suite, where the capabilities are and how important they are. Select **Take a quick tour**.
 4. Read the short descriptions about what the Microsoft Defender Experts service is and the capabilities it provides. Select **Next**. You see the welcome page:
 
-![Screenshot of the Microsoft Defender XDR welcome page with a card for the Defender Experts for Hunting service.](/defender/media/mte/defenderexperts/start-using-defender-experts-for-hunting.png)
+    ![Screenshot of the Microsoft Defender XDR welcome page with a card for the Defender Experts for Hunting service.](./media/onboarding-defender-experts-for-hunting/start-using-defender-experts-for-hunting.png)
 
 ## Receive Defender Experts Notifications
 
@@ -51,7 +50,7 @@ The Defender Experts Notifications service includes:
 
 Refer to the following screenshot to see a sample Defender Experts Notification:
 
-![Screenshot of a Defender Experts Notification in Microsoft Defender XDR. A Defender Expert Notification includes a title that describes the threat or activity observed, an executive summary, and list of recommendations.](/defender/media/mte/defenderexperts/receive-defender-experts-notification.png)
+![Screenshot of a Defender Experts Notification in Microsoft Defender XDR. A Defender Expert Notification includes a title that describes the threat or activity observed, an executive summary, and list of recommendations.](./media/onboarding-defender-experts-for-hunting/receive-defender-experts-notification.png)
 
 ### Where to find Defender Experts Notifications
 
@@ -67,18 +66,18 @@ You can receive Defender Experts Notifications from Defender Experts through the
 
 You can filter your incidents and alerts if you want to only see the Defender Experts Notifications among the many alerts. To do so:
 
-1. On the navigation menu, go to **Incidents & alerts** > **Incidents** > select the ![Filter icon](/defender/media/mte/defenderexperts/filter.png) icon.
+1. On the navigation menu, go to **Incidents & alerts** > **Incidents** > select the ![Filter icon](./media/onboarding-defender-experts-for-hunting/filter.png) icon.
 2. Scroll down to **Service/detection sources** then select the **Microsoft Defender Experts** checkboxes under *Microsoft Defender for Endpoint* and *Microsoft Defender XDR*.
 3. Select **Apply**.
 
 ### Set up Defender Experts email notifications
 
-You can set up Microsoft Defender XDR to notify you or your staff with an email about new incidents or updates to existing incidents, including those observed by Microsoft Defender Experts. [Learn more about getting incident notifications by email](incidents-overview.md#incident-notifications-by-email)
+You can set up Microsoft Defender XDR to notify you or your staff with an email about new incidents or updates to existing incidents, including those observed by Microsoft Defender Experts. [Learn more about getting incident notifications by email](m365d-notifications-incidents.md).
 
 1. In the Microsoft Defender XDR navigation pane, select **Settings** > **Microsoft Defender XDR** > **Email notifications** > **Incidents**.
 2. Update your existing email notification rules or create a new one. For more information, see [Auditing](auditing.md).
 3. On the rule's **Notification settings** page, make sure to configure the following:
-    - **Source** – Choose **Microsoft Defender Experts** under **Microsoft Defender XDR** and **Microsoft Defender for Endpoint**
+    - **Source** – Choose **Microsoft Defender Experts** under **Microsoft Defender XDR** and **Microsoft Defender for Endpoint**.
     - **Alert severity** – Choose the alert severities that will trigger an incident notification. For example, if you only want to be informed about high-severity incidents, select High.
 
 ### Generate sample Defender Experts Notifications
@@ -87,7 +86,7 @@ You can generate a sample Defender Experts Notification to start experiencing th
 
 A sample Defender Experts Notification shows up in your **Incidents** page with the title _Defender Experts: Test Notification from Microsoft Defender Experts_. The [contents](#receive-defender-experts-notifications) of the notification are placeholder texts, while the other elements such as alerts are randomly generated from events present in your tenant and aren't actually impacted.
 
-:::image type="content" source="/defender/media/mte/defenderexperts/sample-den-dexh.png" alt-text="Screenshot of Sample DEN in Defender Experts for Hunting." lightbox="/defender/media/mte/defenderexperts/sample-den-dexh.png":::
+:::image type="content" source="./media/onboarding-defender-experts-for-hunting/sample-den-dexh.png" alt-text="Screenshot of Sample DEN in Defender Experts for Hunting." lightbox="./media/onboarding-defender-experts-for-hunting/sample-den-dexh.png":::
 
 **To generate a sample notification:**
 
@@ -95,7 +94,7 @@ A sample Defender Experts Notification shows up in your **Incidents** page with 
 2. Select **Generate a sample notification**. A green status message appears, confirming that your sample notification is ready for review.
 3. Under **Recently generated Defender Experts Notification**, select a link from the list to view its corresponding generated sample notification. The most recent sample appears on the top of the list. Selecting a link redirects you to the **Incidents** page.
 
-:::image type="content" source="/defender/media/mte/defenderexperts/sample-den-links-dexh.png" alt-text="Screenshot of Sample DEN links." lightbox="/defender/media/mte/defenderexperts/sample-den-links-dexh.png":::
+    :::image type="content" source="./media/onboarding-defender-experts-for-hunting/sample-den-links-dexh.png" alt-text="Screenshot of Sample DEN links." lightbox="./media/onboarding-defender-experts-for-hunting/sample-den-links-dexh.png":::
 
 ### Next step
 

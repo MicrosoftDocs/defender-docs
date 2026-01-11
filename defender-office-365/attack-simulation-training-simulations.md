@@ -1,8 +1,8 @@
 ---
 title: Simulate a phishing attack with Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 10/22/2024
+ms.date: 10/23/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -199,7 +199,7 @@ When you're finished on  the **Configure OAuth payload** page, select **Next**.
 
 On the **Target users** page, select who receives the simulation. Use the following options to select users:
 
-- **Include all users in your organization**: The unmodifiable list of users is show in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
+- **Include all users in your organization**: The unmodifiable list of users is shown in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
 
   > [!TIP]
   > Although you can't remove users from the list on this page, you can use the next **Exclude users** page to exclude specific users.
@@ -210,6 +210,9 @@ On the **Target users** page, select who receives the simulation. Use the follow
     - Microsoft 365 Groups (static and dynamic)
     - Distribution groups (static only)
     - Mail-enabled Security group (static only)
+
+    > [!TIP]
+    > Currently, hidden membership groups aren't supported.
 
     The following search tools are available:
 
@@ -303,12 +306,12 @@ Use the following options on the page to assign trainings as part of the simulat
 
 - **Preferences** section: In **Select training content preference**, choose one of the following options in the dropdown list:
 
-  - **Microsoft training experience (Recommended)**: This is the default value. This value has the following associated options to configure on the page:
+  - **Microsoft training experience (Recommended)**: This value is the default. This value has the following associated options to configure on the page:
     - Select one of the following values:
-      - **Assign training for me (Recommended)**: This is the default value. We assign training based on a user's previous simulation and training results.
+      - **Assign training for me (Recommended)**: This value is the default. We assign training based on a user's previous simulation and training results.
       - **Select training courses and modules myself**: If you select this value, the next step in the wizard is **Training assignment** where you find and select trainings. The steps are described in the [Training assignment](#training-assignment) subsection.
     - **Due date** section: In **Select a training due date**, choose one of the following values:
-      - **30 days after simulation ends** (this is the default value)
+      - **30 days after simulation ends** (this value is the default)
       - **15 days after simulation ends**
       - **7 days after simulation ends**
 
@@ -318,7 +321,7 @@ Use the following options on the page to assign trainings as part of the simulat
     - **Custom training description**
     - **Custom training duration (in minutes)**: The default value is 0, which means there's no specified duration for the training.
     - **Due date** section: In **Select a training due date**, choose one of the following values:
-      - **30 days after simulation ends** (this is the default value)
+      - **30 days after simulation ends** (this value is the default)
       - **15 days after simulation ends**
       - **7 days after simulation ends**
 
@@ -381,7 +384,7 @@ Select one of the following options:
 
   - **Global landing pages** tab: Contains the built-in landing pages. When you select a built-in landing page to use by selecting the check box next to name, an **Edit layout** section appears with the following options:
     - **Add logo**: Select **Browse logo image** to find and select a .png, .jpeg, or .gif file. The logo size should be a maximum of 210 x 70 to avoid distortion. To remove the logo, select **Remove uploaded logo image**.
-    - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese, or **Russian**.
+    - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese**, or **Russian**.
 
   - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Phish landing pages** \> **Tenant landing pages** tab. For instructions, see [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
 
@@ -427,7 +430,7 @@ On the **Select end user notification** page, select from the following notifica
 - **Do not deliver notifications**: No other configuration options are available on the page. Users don't receive **Training assignment notifications**, **Training reminder notifications** or **Positive reinforcement notifications** from the simulation. Select **Proceed** in the warning dialog.
 
 - **Microsoft default notification (recommended)**: The notifications that users receive are shown on the page:
-  - **Microsoft default positive reinforcement notification** (for the **How-to Guide** [social engineering technique](#select-a-social-engineering-technique), this is the only available notification)
+  - **Microsoft default positive reinforcement notification** (for the **How-to Guide** [social engineering technique](#select-a-social-engineering-technique), this notification is the only available notification)
   - **Microsoft default training assignment notification**
   - **Microsoft default training reminder notification**
 

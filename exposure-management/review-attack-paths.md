@@ -1,29 +1,27 @@
 ---
 title: Review attack paths in Microsoft Security Exposure Management
-description: Learn about to review and explore attack paths in Microsoft Security Exposure Management.
+description: Learn how to review and explore attack paths in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 08/20/2024
+ms.date: 10/15/2025
+
 ---
 
 # Review attack paths
 
-Attack paths in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) help you to proactively identify and visualize potential routes that attackers can exploit using vulnerabilities, gaps, and misconfigurations. Simulated attack paths allow you to proactively investigate and remediate potential threats.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes/prerelease.md)]
+Attack paths in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) help you to proactively identify and visualize potential routes that attackers can exploit using vulnerabilities, gaps, and misconfigurations across endpoints, cloud environments, and hybrid infrastructures. With the integration of Defender for Cloud in the Defender portal, attack paths include hybrid scenarios that span on-premises and cloud contexts, providing comprehensive visibility into cross-environment attack vectors. Simulated attack paths allow you to proactively investigate and remediate potential threats across your entire digital estate.
 
 ## Prerequisites
 
 - [Read about attack paths](work-attack-paths-overview.md) before you start.
--- [Review required permissions](prerequisites.md#permissions) for working with attack paths.
+- [Review required permissions](prerequisites.md#permissions) for working with attack paths.
 - The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative:
   - If you don't have licenses defined for workloads integrated and represented in the attack path.
   - If you don't fully define critical assets.
+- You may see an empty Cloud Attack Path page, as attack paths focus on real, externally-driven and exploitable threats rather than exploratory scenarios. This helps reduce noise and prioritize imminent risks.
 
 ### Attack path dashboard
 
@@ -54,7 +52,7 @@ Select **Group** to group by **Attack path name**, **Entry point**,**Entry point
 ### View choke points and blast radius
 
 1. Go the choke points tab to view a list of choke points on the attack path dashboard. By focusing on these choke points, you can reduce risk by addressing high-impact assets, thus preventing attackers from progressing through various paths.
-1. Select a choke point to open the side panel, select **View blast radius** and explore the attack paths from a choke point. The blast radius provides a detailed visualization showing how the compromise of one asset could affect others. This enables security teams to assess the broader implications of an attack and prioritize mitigation strategies more effectively.
+1. Select a choke point to open the side panel, select **View blast radius**, and explore the attack paths from a choke point. The blast radius provides a detailed visualization showing how the compromise of one asset could affect others. This enables security teams to assess the broader implications of an attack and prioritize mitigation strategies more effectively.
  
 :::image type="content" source="media/review-attack-paths/choke points and blast radius.png" alt-text="Screenshot of choke point and blast radius " lightbox="media/review-attack-paths/choke points and blast radius.png":::
 
@@ -64,7 +62,7 @@ Select **Group** to group by **Attack path name**, **Entry point**,**Entry point
 
 1. Select a specific attack path to examine it further for potential exploitable vulnerabilities.
 
-1. In the **Attack Path** graph, hover over a node or edge (connector) icon to see additional information about how the attack path is built.
+1. In the **Attack Path** graph, hover over a node or edge (connector) icon to see additional information about how the attack path is built. With the integration of Defender for Cloud in the Defender portal, you might see attack paths that span multiple environments - for example, an attack path that starts from a compromised cloud VM, pivots through an associated identity, and reaches an on-premises domain controller. The portal displays these hybrid paths in the graph view, and you can select each node for details and follow remediation steps for each exposure along the path.
 
 :::image type="content" source="media/review-attack-paths/attack-path-graph-details.png" alt-text="Screenshot of an Attack path graph detail screen." lightbox="media/review-attack-paths/attack-path-graph-details.png":::
 

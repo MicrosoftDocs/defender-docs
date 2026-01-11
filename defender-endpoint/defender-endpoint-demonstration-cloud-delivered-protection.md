@@ -1,12 +1,13 @@
----
+﻿---
 title: Microsoft Defender for Endpoint Cloud-delivered protection demonstration
 description: See how Cloud-delivered protection can automatically detect and delete malicious files. 
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -14,42 +15,47 @@ ms.collection:
 - demo
 ms.topic: article
 ms.subservice: ngp
-ms.date: 10/21/2022
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Cloud-delivered protection demonstration
 
-**Applies to:**
-
-- 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as Microsoft Advanced Protection Service (MAPS), provides you with strong, fast protection in addition to our standard real-time protection.
 
-## Scenario requirements and setup
+## Prerequisites 
 
-- Windows 11, Windows 10, Windows 8.1, and Windows 7 SP1
 - Microsoft Defender Real-time protection is enabled
 - Cloud-delivered protection is enabled by default, however you may need to re-enable it if it has been disabled as part of previous organizational policies. For more information, see [Enable cloud-delivered protection in Microsoft Defender Antivirus](/windows/threat-protection/windows-defender-antivirus/enable-cloud-protection-windows-defender-antivirus?ocid=wd-av-demo-cloud-middle).
 - You can also download and use the [PowerShell script](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings/) to enable this setting and others on Windows 10 and Windows 11.
 
+### Supported operating systems 
+
+- Windows 11
+-  Windows 10
+-  Windows 8.1
+-  Windows 7 SP1
+
 ### Scenario
 
-1. Download the [test file](https://aka.ms/ioavtest). Important: The test file isn't malicious, it's just a harmless file simulating a virus.
+1. Download and extract the [zipped folder that contains the test file](https://go.microsoft.com/fwlink/?linkid=2298135). The password is *infected*.
 
-2. If you see file blocked by Microsoft Defender SmartScreen, select on "View downloads" button.
+   > [!IMPORTANT]
+   > The test file isn't malicious, it's just a harmless file simulating a virus.
+
+1. If you see file blocked by Microsoft Defender SmartScreen, select on "View downloads" button.
 
    :::image type="content" source="media/cloud-delivered-protection-smartscreen-block.png" alt-text="SmartScreen blocks an unsafe download, and provides a button to select to view the **Downloads** list details.":::
 
-3. In Downloads menu right select on the blocked file and select on **Download unsafe file**.
+1. In Downloads menu right select on the blocked file and select on **Download unsafe file**.
 
    :::image type="content" source="media/cloud-delivered-protection-smartscreen-block-view-downloads.png" alt-text="Lists the download as unsafe, but provides an option to proceed with the download":::
 
-4. You should see that "Microsoft Defender Antivirus" found a virus and deleted it.
+1. Navigate to the location where the file was downloaded. Attempt to open or execute the file by double clicking it. You should see that Microsoft Defender Antivirus found a virus and deleted the file.
 
    > [!NOTE]
    >
@@ -57,7 +63,7 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
    :::image type="content" source="media/cloud-delivered-protection-smartscreen-threat-found-notification.png" alt-text="Microsoft Defender Antivirus Threats found notification provides options to get details":::
 
-5. If the file executes, or if you see that it was blocked by Microsoft Defender SmartScreen,  cloud-delivered protection isn't working. For more information, see [Configure and validate network connections for Microsoft Defender Antivirus](/windows/threat-protection/windows-defender-antivirus/configure-network-connections-windows-defender-antivirus?ocid=wd-av-demo-cloud-middle).
+1. If the file executes, or if you see that it was blocked by Microsoft Defender SmartScreen,  cloud-delivered protection isn't working. For more information, see [Configure and validate network connections for Microsoft Defender Antivirus](/windows/threat-protection/windows-defender-antivirus/configure-network-connections-windows-defender-antivirus?ocid=wd-av-demo-cloud-middle).
 
 ## See also
 
@@ -65,3 +71,4 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

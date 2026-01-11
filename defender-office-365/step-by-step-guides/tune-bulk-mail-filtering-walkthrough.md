@@ -4,10 +4,10 @@ description: Tune bulk filtering settings within Exchange Online and Microsoft D
 ms.service: defender-office-365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: MSFTBen
+ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -41,10 +41,9 @@ Bulk mail is typically advertising emails or marketing messages. These emails ca
 1. On the **left nav**, under **Email & collaboration**, select **Policies & rules**.
 1. Select **Threat policies** and then **Anti-Spam**.
 1. When the page loads, the next action you'll take depends on the type of policy you're using:
-   1. Preset Policies can't be edited. The threshold is 6 in standard, 5 in strict.
-   1. The default (inbuilt) policy is 7.
-   1. Custom policies are set to 7 by default unless another value is provided.
-1. **Edit** (or create a custom policy) to set the BCL threshold that meets your needs. For example, if most of the messages you collected (which were all unwanted) have a BCL value of 4 or higher, setting the BCL value to 4 in the policy would filter out these messages for your end users.
+   - You can't edit the Standard and Strict preset security policies. The BCL threshold is 6 in standard, 5 in strict.
+   - The default anti-spam policy and custom anti-spam policies use the BCL threshold 7 by default, but you can change it.
+1. **Edit** (or create a custom anti-spam policy) to set the BCL threshold that meets your needs. For example, if most of the messages you collected (which were all unwanted) have a BCL value of 4 or higher, setting the BCL value to 4 in the policy would filter out these messages for your end users.
 1. Within that policy, under the **"Edit actions"** section, select the **"bulk message action"** and select what to do when the threshold is exceeded. For example, you could select Quarantine if you would like to keep all bulk out of the mailbox or use the Junk email folder for a less aggressive stance.
 1. If you receive complaints from users about too many bulk emails being blocked, you can adjust this threshold, or alternatively, submit the message to us, which will also add the sender to the Tenant Allow/Block List.
 
@@ -62,7 +61,7 @@ See [Use mail flow rules to filter bulk email in Exchange Online | Microsoft Lea
 
 ## For customers with Microsoft Defender for Office 365
 
-- Customers with Microsoft Defender for Office 365 Plan 1 or higher can use the [email entity page](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-the-email-entity-page-in-microsoft-defender-for/ba-p/2275420) to discover the BCL value of messages instead of interrogating headers.
+- Customers with Microsoft Defender for Office 365 Plan 1 or higher can use the [email entity page](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/introducing-the-email-entity-page-in-microsoft-defender-for-office-365/2275420) to discover the BCL value of messages instead of interrogating headers.
 
 - Customers with Microsoft Defender for Office 365 Plan 2 can interrogate bulk values at scale using [advanced hunting](../anti-spam-spam-vs-bulk-about.md#how-to-tune-bulk-email).
 
@@ -70,6 +69,6 @@ See [Use mail flow rules to filter bulk email in Exchange Online | Microsoft Lea
 
 ## More Information
 
-[Email Protection Basics in Microsoft 365: Bulk Email - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/email-protection-basics-in-microsoft-365-bulk-email/ba-p/3445337)
+[Microsoft Defender for Office 365 Blog - Email Protection Basics in Microsoft 365: Bulk Email](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/email-protection-basics-in-microsoft-365-bulk-email/3445337)
 
 [What's the difference between junk email and bulk email?](../anti-spam-spam-vs-bulk-about.md)

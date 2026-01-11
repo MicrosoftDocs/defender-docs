@@ -1,72 +1,75 @@
----
+﻿---
 title: Configure remediation for Microsoft Defender Antivirus detections
 description: Configure what Microsoft Defender Antivirus should do when it detects a threat, and how long quarantined files should be retained in the quarantine folder
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
-ms.topic: conceptual
+author: KesemSharabi
+ms.author: kesharab
+ms.topic: how-to
 ms.custom: nextgen
-ms.date: 09/15/2023
-ms.reviewer:
-manager: deniseb
+ms.date: 10/20/2025
+ms.reviewer: yongrhee
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure remediation for Microsoft Defender Antivirus detections
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
 When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices. You can choose from several methods, such as:
 
-- [Microsoft Intune](#configure-remediation-options-using-intune)
-- [Microsoft Configuration Manager](#configure-remediation-options-using-configuration-manager)
-- [Group Policy](#configure-remediation-options-using-group-policy)
-- [PowerShell or Windows Management Instrumentation (WMI)](#configure-remediation-options-using-powershell-or-wmi)
+- [Configure remediation for Microsoft Defender Antivirus detections](#configure-remediation-for-microsoft-defender-antivirus-detections)
+  - [Configure remediation options using Intune](#configure-remediation-options-using-intune)
+  - [Configure remediation options using Configuration Manager](#configure-remediation-options-using-configuration-manager)
+  - [Configure remediation options using Group Policy](#configure-remediation-options-using-group-policy)
+  - [Configure remediation options using PowerShell or WMI](#configure-remediation-options-using-powershell-or-wmi)
+  - [See also](#see-also)
 
 > [!IMPORTANT]
 > Microsoft Defender Antivirus detects and remediates files based on many factors. Sometimes, completing a remediation requires a reboot. Even if the detection is later determined to be a false positive, the reboot must be completed to ensure all additional remediation steps have been completed.
 >
 > If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid this problem in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
-Also see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
+Also see [About regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Configure remediation options using Intune
 
 1. As a global or security administrator, go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
 
-2. Under **Manage**, choose **Antivirus**.
+1. Under **Manage**, choose **Antivirus**.
 
-3. Either create a new policy, or edit an existing policy using the following settings:
+1. Either create a new policy, or edit an existing policy using the following settings:
 
    - Platform: **Windows 10, Windows 11, and Windows Server**
    - Profile: **Microsoft Defender Antivirus**
 
-4. For configuration settings, expand **Defender**, scroll down to **Allow On Access Protection**. and set it to **Allowed**.
+1. For configuration settings, expand **Defender**, scroll down to **Allow On Access Protection**. and set it to **Allowed**.
 
-5. Under **Allow On Access Protection**, select a remediation action for each level:
+1. Under **Allow On Access Protection**, select a remediation action for each level:
 
    - High severity threats
    - Severe threats
    - Moderate severity threats
    - Low severity threats
 
-6. Specify the device groups that should receive this policy (such as **All Devices**).
+1. Specify the device groups that should receive this policy (such as **All Devices**).
 
-7. Review your settings, and then choose **Save**.
+1. Review your settings, and then choose **Save**.
 
 For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
 
@@ -81,11 +84,11 @@ If you're using Configuration Manager, see the following articles:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), and edit the Group Policy Object you want to configure.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and then select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
 
-4. Using the following table, edit the policy as needed.
+1. Using the following table, edit the policy as needed.
 
    |Setting|Description|Default setting (if not configured)|
    |---|---|---|
@@ -96,7 +99,7 @@ If you're using Configuration Manager, see the following articles:
    |Threats<br/>Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level (low, medium, high, or severe). You can use this setting to define how all threats for each of the threat levels should be remediated (quarantined, removed, or ignored). |Not applicable|
    |Threats<br/>Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|Not applicable|
 
-5. Select **OK**.
+1. Select **OK**.
 
 ## Configure remediation options using PowerShell or WMI
 
@@ -110,3 +113,4 @@ You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/d
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

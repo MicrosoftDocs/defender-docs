@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,8 +17,11 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 03/28/2025
 ---
 
 # UrlClickEvents
@@ -26,11 +29,12 @@ ms.date: 01/16/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
 
 The `UrlClickEvents` table in the advanced hunting schema contains information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
+
+This advanced hunting table is populated by records from Microsoft Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -49,6 +53,8 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `UrlChain` | `string` | For scenarios involving redirections, it includes URLs present in the redirection chain|
 | `ReportId` | `string` | The unique identifier for a click event. For clickthrough scenarios, report ID would have same value, and therefore it should be used to correlate a click event.|
 
+> [!NOTE]
+> For clicks originating from email in Drafts and Sent items folders, email metadata is either not available or `NetworkMessageId` is assigned by default. In this case, `UrlClickEvents` can't be joined with `Email*` tables like `EmailEvents`, `EmailPostDeliveryEvents`, and others, using `NetworkMessageId`. 
 
 You can try this example query that uses the `UrlClickEvents` table to return a list of links where a user was allowed to proceed: 
 

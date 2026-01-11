@@ -3,12 +3,12 @@ title: Investigate malicious email that was delivered in Microsoft 365, find and
 keywords: TIMailData-Inline, Security Incident, incident, Microsoft Defender for Endpoint PowerShell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers,special actions
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.date: 2/27/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 
 ms.localizationpriority: medium
 search.appverid:
@@ -27,7 +27,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Investigate malicious email that was delivered in Microsoft 365
+# Investigate malicious email that was delivered in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -123,13 +123,13 @@ This article explains how to use Threat Explorer and Real-time detections to fin
      - **Admin initiated time travel**
      - **Antimalware policy block by file type**: [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies)
      - **Antispam policy settings**
-     - **Connection policy**: [Configure connection filtering](connection-filter-policies-configure.md)
+     - **Connection policy**: [Connection filtering](connection-filter-policies-configure.md)
      - **Exchange transport rule** (mail flow rule)
      - **Exclusive mode (User override)**: The **Only trust email from addresses in my Safe senders and domains list and Safe mailing lists** setting in the [safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
      - **Filtering skipped due to on-prem organization**
      - **IP region filter from policy**: The **From these countries** filter in [anti-spam policies](anti-spam-protection-about.md#spam-properties-in-anti-spam-policies).
      - **Language filter from policy**: The **Contains specific languages** filter in [anti-spam policies](anti-spam-protection-about.md#spam-properties-in-anti-spam-policies).
-     - **Phishing Simulation**: [Configure third-party phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy)
+     - **Phishing Simulation**: [Configure non-Microsoft phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy)
      - **Quarantine release**: [Release quarantined email](quarantine-admin-manage-messages-files.md#release-quarantined-email)
      - **SecOps Mailbox**: [Configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
      - **Sender address list (Admin Override)**: The allowed senders list or blocked senders list in [anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
@@ -166,7 +166,7 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 
 ## Remediate malicious email that was delivered
 
-After you identify the malicious email messages that were delivered, you can remove them from recipient mailboxes. For instructions, see [Remediate malicious email delivered in Microsoft 365](remediate-malicious-email-delivered-office-365.md).
+After you identify the malicious email messages that were delivered, you can remove them from recipient mailboxes. For instructions, see [Remediate malicious email delivered](remediate-malicious-email-delivered-office-365.md).
 
 ## Related articles
 

@@ -1,30 +1,26 @@
----
+﻿---
 title: Investigate incidents in Microsoft Defender for Endpoint
 description: See associated alerts, manage the incident, and see alert metadata to help you investigate an incident
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-edr
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: edr
 ms.date: 06/05/2024
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
 # Investigate incidents in Microsoft Defender for Endpoint
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 Investigate incidents that affect your network, understand what they mean, and collate evidence to resolve them.
@@ -35,7 +31,7 @@ When you investigate an incident, you'll see:
 - Incident comments and actions
 - Tabs (alerts, devices, investigations, evidence, graph)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUV]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=46fe6a58-ea33-4f79-a1ec-26ae86d68033]
 
 ## Analyze incident details
 
@@ -98,3 +94,4 @@ You can click the circles on the incident graph to view the details of the malic
 - [Investigate incidents in Microsoft Defender for Endpoint](investigate-incidents.md)
 - [Manage Microsoft Defender for Endpoint incidents](manage-incidents.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

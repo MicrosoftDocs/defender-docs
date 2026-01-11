@@ -2,9 +2,9 @@
 title: Find and release quarantined messages as a user
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Consumer/IW
 ms.topic: how-to
 ms.localizationpriority: high
@@ -17,21 +17,22 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-description: Users can learn how to view and manage quarantined messages in Exchange Online Protection (EOP) that should have been delivered to them.
+description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 09/11/2024
+ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent:  As an end user who receives email in Microsoft 365, I want clear, step‑by‑step guidance to find, view, and manage messages and files placed in quarantine (view, preview, release, request release, delete, and allow/block senders) so I can recover legitimate messages and keep my mailbox secure. 
 ---
 
 # Manage quarantined messages and files as a user
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantine in EOP](quarantine-about.md).
+In all organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantine](quarantine-about.md).
 
 As an ordinary user (not an admin), the **default** capabilities that are available to you as a recipient of a quarantined message are described in the following table:
 
@@ -44,40 +45,40 @@ As an ordinary user (not an admin), the **default** capabilities that are availa
 |&nbsp;&nbsp;&nbsp;Phishing|✔|✔|✔|
 |&nbsp;&nbsp;&nbsp;High confidence phishing||||
 |**Anti-phishing policies**||||
-|&nbsp;&nbsp;&nbsp;Spoof intelligence protection in EOP|✔|✔|✔|
+|&nbsp;&nbsp;&nbsp;Spoof intelligence protection in anti-phishing protection for all cloud mailboxes|✔|✔|✔|
 |&nbsp;&nbsp;&nbsp;Impersonated user protection in Defender for Office 365|✔|✔|✔|
 |&nbsp;&nbsp;&nbsp;Impersonated domain protection in Defender for Office 365|✔|✔|✔|
 |&nbsp;&nbsp;&nbsp;Mailbox intelligence impersonation protection in Defender for Office 365|✔|✔|✔|
 |**Anti-malware policies**||||
 |&nbsp;&nbsp;&nbsp;Email messages with attachments that are quarantined as malware.||||
 |**Safe Attachments in Defender for Office 365**||||
-|&nbsp;&nbsp;&nbsp;Safe Attachments policies that quarantine email messages with malicious attachments as malware.||||
+|&nbsp;&nbsp;&nbsp;Safe Attachments policies that quarantine email messages with malicious attachments as malware or phishing.||||
 |&nbsp;&nbsp;&nbsp;Safe Attachments for SharePoint, OneDrive, and Microsoft Teams that quarantines malicious files as malware.||||
 |**Mail flow rules (transport rules)**||||
 |&nbsp;&nbsp;&nbsp;Mail flow rules that quarantine email messages (directly, not by marking them as spam).||||
 
 In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the previous table. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
-You view and manage your quarantined messages in the Microsoft Defender portal or (if an admin has set this up) quarantine notifications from quarantine policies.
+You view and manage your quarantined messages in the Microsoft Defender portal or (if an admin set it up) quarantine notifications from quarantine policies.
 
 ## What do you need to know before you begin?
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
-- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages that have expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
-- By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md).
+- By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md).
 
-- For information about the order of precedence for user allows and blocks and organization allows and blocks, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
+- For information about the order of precedence for user allows and blocks and organization allows and blocks, see [When user and organization settings conflict](how-policies-and-protections-are-combined.md#when-user-and-organization-settings-conflict).
 
 - All actions taken by admins or users on quarantined messages are audited. For more information about audited quarantine events, see [Quarantine schema in the Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-schema#quarantine-schema).
 
-## Manage quarantined messages in EOP
+## Manage quarantined messages in Microsoft 365
 
 ### View your quarantined messages
 
 > [!NOTE]
-> Your ability to view quarantined messages is controlled by the quarantine policy that applies to the reason why the message was quarantined (which might be the default quarantine policy as described in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md)).
+> The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
@@ -128,7 +129,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
-  - **Malware**: Anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
+  - **Malware**: Anti-malware policies in the default email protections for cloud mailboxes or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
 - **Blocked sender**: One of the following values:
@@ -144,7 +145,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Denied**
   - **Release requested**
   - **Released**
-- **Policy Type**: Filter messages by what type of protection policy quarantined the message. Select one or more of the following values:
+- **Policy Type**: Filter messages by what type of threat policy quarantined the message. Select one or more of the following values:
   - **Anti-malware policy**
   - **Safe Attachments policy**
   - **Anti-phishing policy**
@@ -163,7 +164,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 - Sender email address
 - Subject. Use the entire subject of the message. The search isn't case-sensitive.
 
-After you've entered the search criteria, press the enter ENTER key to filter the results.
+After you enter the search criteria, press the ENTER key to filter the results.
 
 > [!NOTE]
 > The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
@@ -187,16 +188,19 @@ In the details flyout that opens, the following information is available:
   - **Received**: The date/time when the message was received.
   - **Expires**: The date/time when the message is automatically and permanently deleted from quarantine.
   - **Subject**
-  - **Quarantine reason**: Shows if a message has been identified as **Spam**, **Bulk**, **Phish**, matched a mail flow rule (**Transport rule**), or was identified as containing **Malware**.
+  - **Quarantine reason**:
+    - The message was identified as **Spam**, **Bulk**, or **Phish**.
+    - The message matched a mail flow rule (**Transport rule**).
+    - The message was identified as **Malware**.
   - **Policy type**
   - **Recipient count**
   - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
   - **Sender override reason**
   - **Released by**:
-    - If the user released their message, the user's email address is shown.
-    - If the message was released by an admin, the value **Admin** is shown.
-    - if the release is carried out by the system, the value **System** is shown
-    - if the release is not carried out by user, Admin, or system, it defaults to **Admin**.
+    - User released: The user's email address is shown.
+    - Admin released: The value **Admin** is shown.
+    - System released: The value **System** is shown.
+    - Other: The default value is **Admin**.
 - **Email details** section:
   - **Sender address**
   - **Time received**
@@ -242,13 +246,13 @@ After you select the quarantined message, the available actions are described in
 #### Release quarantined email
 
 > [!NOTE]
-> Your ability to release quarantined messages is controlled by the quarantine policy for the protection feature that quarantined the message (which might be a default quarantine policy as described in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md)).
+> The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
 
-This action isn't available for email messages that have already been released (the **Release status** value is **Released**).
+This action isn't available for released email messages (the **Release status** value is **Released**).
 
-If you don't release or remove a message, it's automatically deleted from quarantine after the date shown in the **Expires** column.
+Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
 After you select the message, use either of the following methods to release it (deliver it to your mailbox):
 
@@ -268,13 +272,13 @@ The message is delivered to your Inbox (or some other folder, depending on any [
 #### Request the release of quarantined email
 
 > [!NOTE]
-> Your ability to request the release of quarantined messages is controlled by the quarantine policy for the protection feature that quarantined the message.
+> The quarantine policy for the protection feature that quarantined the message controls your ability to request the release of quarantined messages.
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
 
 This action isn't available for email messages where you already requested release (the **Release status** value is **Released requested**).
 
-If you don't release or remove a message, it's automatically deleted from quarantine after the date shown in the **Expires** column.
+Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
 After you select the message, use either of the following methods to request its release:
 
@@ -283,13 +287,13 @@ After you select the message, use either of the following methods to request its
 
 In the **Request release** flyout that opens, review the information, select **Request release**. In the **Release requested** flyout that opens, select **Done**.
 
-Back on the **Quarantine page**, the **Release status** value of the message is **Release requested**. An admin will review your request and approve it or deny it.
+Back on the **Quarantine page**, the **Release status** value of the message is **Release requested**. An admin reviews your request and approves it or denies it.
 
 #### Delete email from quarantine
 
 When you delete an email message from quarantine, the message is removed and isn't sent to the original recipients.
 
-If you don't release or remove a message, it's automatically deleted from quarantine after the date shown in the **Expires** column.
+Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
 After you select the message, use either of the following methods to remove it:
 
@@ -385,6 +389,9 @@ When you select multiple quarantined messages on the **Email** tab by selecting 
 
 ## Manage quarantined messages in Microsoft Teams
 
+> [!NOTE]
+> Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
+
 When a potentially malicious chat message is detected in Microsoft Teams, zero-hour auto purge (ZAP) removes the message and quarantines it. Users can now view and manage these quarantined Teams messages in the Microsoft Defender portal. Quarantine notifications aren't supported for quarantined Teams messages.
 
 ### View your quarantined messages in Microsoft Teams
@@ -451,4 +458,4 @@ On the **Teams messages** tab, select the quarantined message by selecting the c
 - **Delete**: You can request to delete the message from the list of quarantined messages.
 - **Preview message**: You can view the details of the message you selected.
 
-If you don't release or remove a message, it's automatically deleted from quarantine after the date shown in the **Expires** column.
+Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.

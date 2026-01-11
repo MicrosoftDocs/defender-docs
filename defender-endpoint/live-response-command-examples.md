@@ -1,33 +1,26 @@
----
+﻿---
 title: Live response command examples
 description: Learn to run basic or advanced live response commands for Microsoft Defender for Endpoint, and see examples on how they're used.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
-ms.topic: conceptual
+ms.topic: reference
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2024
----
+ms.date: 01/24/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Live response command examples
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 Learn about common commands used in live response and see examples on how they're typically used.
 
@@ -93,28 +86,28 @@ fileinfo C:\Windows\notepad.exe
 findfile test.txt
 ```
 
-## `getfile`
+## `get`
 
 ```console
 # Download a file from a machine
-getfile c:\Users\user\Desktop\work.txt
+get c:\Users\user\Desktop\work.txt
 ```
 
 ```console
 # Download a file from a machine, automatically run prerequisite commands
-getfile c:\Users\user\Desktop\work.txt -auto
+get c:\Users\user\Desktop\work.txt -auto
 ```
 
 > [!NOTE]
 >
-> The following file types *cannot* be downloaded using this command from within Live Response:
+> The following file types *can't* be downloaded using this command from within Live Response:
 >
 > - [Reparse point files](/windows-hardware/drivers/ifs/reparse-points)
 > - [Sparse files](/windows-server/administration/windows-commands/fsutil-sparse)
 > - Empty files
-> - Virtual files, or files that are not fully present locally
+> - Virtual files, or files that aren't fully present locally
 >
-> These file types *are* supported by [PowerShell](/powershell/scripting/overview).
+> [PowerShell](/powershell/scripting/overview) supports these file types.
 >
 > Use PowerShell as an alternative, if you have problems using this command from within Live Response.
 
@@ -199,6 +192,9 @@ remediate process 7960
 remediate list
 ```
 
+> [!NOTE]
+> Currently, `HKEY_USERS` reg hive isn't supported for `remediate`. This is a known issue, and we're looking into it. 
+
 ## `run`
 
 ```console
@@ -213,10 +209,10 @@ run get-process-by-name.ps1 -parameters "-processName Registry"
 
 > [!NOTE]
 >
-> For long running commands such as '**run**' or '**getfile**', you may want to use the '**&**' symbol at the end of the command to perform that action in the background.
-> This will allow you to continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
+> For long running commands such as '**run**' or '**getfile**', you might want to use the '**&**' symbol at the end of the command to perform that action in the background.
+> If you use the '**g**' symbol, you can continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
 >
-> When passing parameters to a live response script, do not include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
+> When passing parameters to a live response script, don't include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
 
 ## `scheduledtask`
 
@@ -251,6 +247,5 @@ undo scheduledtask Microsoft\Windows\Subscription\LicenseAcquisition
 # Restore remediated file
 undo file c:\Users\user\Desktop\malware.exe
 ```
-
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -1,32 +1,27 @@
----
+﻿---
 title: Fix unhealthy sensors in Microsoft Defender for Endpoint
 description: Fix device sensors that are reporting as misconfigured or inactive so that the service receives data from the device.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - ngp
-ms.topic: conceptual
-ms.date: 04/03/2024
+ms.topic: article
+ms.date: 03/25/2025
 ms.subservice: onboard
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Fix unhealthy sensors in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-fixsensor-abovefoldlink)
 
 Devices can be categorized as misconfigured or inactive are flagged for different reasons. This article provides information about why a device might be categorized as inactive or misconfigured.
 
@@ -97,9 +92,7 @@ If you took corrective actions and the device status is still misconfigured, [op
 
 - [Check sensor health state in Microsoft Defender for Endpoint](check-sensor-status.md)
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

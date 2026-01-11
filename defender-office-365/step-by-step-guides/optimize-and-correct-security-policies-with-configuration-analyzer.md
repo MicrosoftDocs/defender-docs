@@ -1,11 +1,11 @@
 ---
-title: Optimize and correct security policies with configuration analyzer
-description: The steps to optimize and correct security policies with configuration analyzer. Configuration analyzer is a central location and single pane of glass for administering and viewing the email security policies you have configured in your tenant.
+title: Optimize and correct threat policies with configuration analyzer
+description: The steps to optimize and correct threat policies with configuration analyzer. Configuration analyzer is a central location and single pane of glass for administering and viewing the email threat policies you have configured in your tenant.
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -16,13 +16,13 @@ search.appverid: met150
 ms.date: 01/31/2023
 ---
 
-# Optimize and correct security policies with configuration analyzer
+# Optimize and correct threat policies with configuration analyzer
 
-Configuration analyzer is a central location and single pane of glass for administering and viewing the email security policies you have configured in your tenant. You can perform a side-to-side comparison of your settings to our Standard and Strict recommended settings, apply recommendations and view historical changes that affected your posture.
+Configuration analyzer is a central location and single pane of glass for administering and viewing the email threat policies you have configured in your tenant. You can perform a side-to-side comparison of your settings to our Standard and Strict recommended settings, apply recommendations and view historical changes that affected your posture.
 
 ## What you'll need
 
-- Exchange Online Protection
+- A Microsoft 365 organization with cloud mailboxes.
 - Sufficient permissions (Security Administrator role)
 - 5 minutes to perform the steps below.
 
@@ -39,6 +39,6 @@ Configuration analyzer is a central location and single pane of glass for admini
 
 While in **Configuration analyzer** you can select **Configuration drift analysis and history** from the top menu bar.
 
-The page which loads will show you the modifications to your security policies in the timeframe selected by the filters, along with data about the change and if it increased or decreased your overall posture.
+The page which loads will show you the modifications to your threat policies in the timeframe selected by the filters, along with data about the change and if it increased or decreased your overall posture.
 
-To learn more details about Configuration Analyzer, see [Configuration analyzer for security policies - Office 365 | Microsoft Docs](../configuration-analyzer-for-security-policies.md).
+To learn more details about Configuration Analyzer, see [Configuration analyzer](../configuration-analyzer-for-security-policies.md).

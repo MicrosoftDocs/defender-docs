@@ -2,11 +2,11 @@
 title: "Migrate to Microsoft Defender for Office 365 Phase 3: Onboard"
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
@@ -17,7 +17,7 @@ ms.collection:
   - highpri
   - tier1
 ms.custom: migrationguides
-description: "Complete the steps for migrating from a third-party protection service or device to Microsoft Defender for Office 365 protection."
+description: "Complete the steps for migrating from a non-Microsoft protection service or device to Microsoft Defender for Office 365 protection."
 ms.service: defender-office-365
 ms.date: 6/15/2023
 appliesto:
@@ -74,7 +74,7 @@ If your organization doesn't have a security response team or existing process f
 Permissions in Defender for Office 365 are based on role-based access control (RBAC) and is explained in Permissions in the [Microsoft Defender portal](mdo-portal-permissions.md). Here are the important points to keep in mind:
 
 - Microsoft Entra roles give permissions to **all** workloads in Microsoft 365. For example, if you add a user to the Security Administrator in the Azure portal, they have Security Administrator permissions everywhere.
-- Email & collaboration roles in the Microsoft Defender portal give permissions to the Microsoft Defender portal and the Microsoft Purview compliance portal. For example, if you add a user to Security Administrator in the Microsoft Defender portal, they have Security Administrator access **only** in the Microsoft Defender portal and the Microsoft Purview compliance portal.
+- Email & collaboration roles in the Microsoft Defender portal give permissions to the Microsoft Defender portal and the Microsoft Purview portal. For example, if you add a user to Security Administrator in the Microsoft Defender portal, they have Security Administrator access **only** in the Microsoft Defender portal and the Microsoft Purview portal.
 - Many features in the Microsoft Defender portal are based on Exchange Online PowerShell cmdlets and therefore require role group membership in the corresponding roles (technically, role groups) in Exchange Online (in particular, for access to the corresponding Exchange Online PowerShell cmdlets).
 - There are Email & collaboration roles in the Microsoft Defender portal that have no equivalent to Microsoft Entra roles, and are important for security operations (for example the Preview role and the Search and Purge role).
 
@@ -159,7 +159,7 @@ Use the following features to monitor and iterate on the protection settings in 
 - [Mail flow insights](/exchange/monitoring/mail-flow-insights/mail-flow-insights)
 - [Mail flow reports](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 
-If your organization uses a third-party service for user reported messages, you can integrate that data into your feedback loop.
+If your organization uses a non-Microsoft service for user reported messages, you can integrate that data into your feedback loop.
 
 ## Step 6: (Optional) Add more users to your pilot and iterate
 
@@ -179,7 +179,7 @@ As you find and fix issues, you can add more users to the pilot groups (and corr
 Do the steps in this section when you're ready to switch your MX records to point to Microsoft 365.
 
 1. Extend the pilot policies to the entire organization. Fundamentally, there are different ways to extend the policies:
-   - Use [preset security](preset-security-policies.md) policies and divide your users between the Standard protection profile and the Strict protection profile (make sure everyone is covered). Preset security policies are applied before any custom policies that you've created or any default policies. You can turn off your individual pilot policies without deleting them.
+   - Use [preset security](preset-security-policies.md) policies and divide your users between the Standard protection profile and the Strict protection profile (make sure everyone is covered). Preset security policies are applied before any custom threat policies or the default threat policies. You can turn off your individual pilot policies without deleting them.
 
      The drawback to preset security policies is you can't change many of the important settings after you've created them.
 
@@ -215,6 +215,6 @@ Congratulations! You have completed your [migration to Microsoft Defender for Of
 
 Now you begin the normal operation and maintenance of Defender for Office 365. Monitor and watch for issues that are similar to what you experienced during the pilot, but on a larger scale. The [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) and the [impersonation insight](anti-phishing-mdo-impersonation-insight.md) are most helpful, but consider making the following activities a regular occurrence:
 
-- Review user reported messages, especially [user-reported phishing messages](air-examples.md)
+- Review user reported messages, especially [user-reported phishing messages](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook)
 - Review overrides in the [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 - Use [Advanced Hunting](/defender-xdr/advanced-hunting-email-threats) queries to look for tuning opportunities and risky messages.

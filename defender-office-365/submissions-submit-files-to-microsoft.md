@@ -2,9 +2,9 @@
 title: Submit malware and good files to Microsoft for analysis
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ description: Admins and end-users can learn about submitting undetected malware 
 ms.service: defender-office-365
 ms.date: 6/20/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -40,7 +40,7 @@ But what can you do if you receive a message with a suspicious attachment or hav
 
 ## What do you need to know before you begin?
 
-- All Microsoft 365 organizations that send or receive email include anti-malware protection that's automatically enabled. For more information, see [Anti-malware protection in EOP](anti-malware-protection-about.md).
+- All Microsoft 365 organizations that send or receive email include anti-malware protection that's automatically enabled. For more information, see [Anti-malware protection](anti-malware-protection-about.md).
 
 - Messages with attachments that contain scripts or other malicious executables are considered malware, and you can use the procedures in this article to report them.
 

@@ -4,7 +4,7 @@ description: Microsoft Defender for Business is a cybersecurity solution for sma
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.service: defender-business

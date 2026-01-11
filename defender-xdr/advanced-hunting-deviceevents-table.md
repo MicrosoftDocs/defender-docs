@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,22 +17,25 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 09/06/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
+
 
 The miscellaneous device events or `DeviceEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about various event types, including events triggered by security controls, such as Microsoft Defender Antivirus and exploit protection. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
 > For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+
+This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Endpoint in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -97,12 +100,14 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `string` | Additional information about the event in JSON array format |
 | `InitiatingProcessSessionId` | `long` |  Windows session ID of the initiating process  |
 | `IsInitiatingProcessRemoteSession` | `bool` |   Indicates whether the initiating process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
-| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process’s RDP session was initiated |
-| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process’s RDP session was initiated |
+| `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process's RDP session was initiated |
+| `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process's RDP session was initiated |
 | `CreatedProcessSessionId` | `long` | Windows session ID of the created process |
 |`IsProcessRemoteSession` | `bool` | Indicates whether the created process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
-| `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process’s RDP session was initiated |
-| `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process’s RDP session was initiated |
+| `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process's RDP session was initiated |
+| `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process's RDP session was initiated |
+| `ProcessUniqueId` | `string` | Unique identifier of the process; this is equal to the Process Start Key in Windows devices |
+| `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
 
 
 

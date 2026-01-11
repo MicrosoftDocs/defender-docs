@@ -4,8 +4,8 @@ description: Alert classification for suspicious inbox forwarding rules to revie
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -13,23 +13,21 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
   - MOE150
   - met150
-ms.date: 07/26/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to review and classify suspicious inbox forwarding rules alerts so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification for suspicious inbox forwarding rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
-
-Threat actors can use compromised user accounts for several malicious purposes including reading emails in a user's inbox, creating inbox rules to forward emails to external accounts, sending phishing mails, among others. Malicious inbox rules are widely common during business email compromise (BEC) and phishing campaigns, and it important to monitor them consistently.
-
-This playbook helps you investigate alerts for suspicious inbox forwarding rules and quickly grade them as either a true positive (TP) or a false positive (FP). You can then take recommended actions for the TP alerts to remediate the attack.
+Threat actors can use compromised user accounts for several malicious purposes including reading emails in a user's inbox, creating inbox rules to forward emails to external accounts, sending phishing mails, among others. Malicious inbox rules are widely common during business email compromise (BEC) and phishing campaigns, and it important to monitor them consistently. This playbook helps you investigate alerts for suspicious inbox forwarding rules and quickly grade them as either a true positive (TP) or a false positive (FP). You can then take recommended actions for the TP alerts to remediate the attack.
 
 For an overview of alert classification for Microsoft Defender for Office 365 and Microsoft Defender for Cloud Apps, see the [introduction article](alert-classification-playbooks.md).
 
@@ -57,7 +55,7 @@ Suspicious inbox forwarding rules might be difficult to detect because maintenan
 
 Here's the workflow to identify suspicious email forwarding rules.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png" alt-text="Alert investigation workflow for inbox forwarding rules" lightbox="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png" alt-text="Alert investigation workflow for inbox forwarding rules" lightbox="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png":::
 
 ## Investigation steps
 
@@ -67,11 +65,11 @@ This section contains detailed step-by-step guidance to respond to the incident 
 
 Here's an example of an inbox forwarding rule alert in the alert queue.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png" alt-text="Example of a notification in the alert queue" lightbox="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png" alt-text="Example of a notification in the alert queue" lightbox="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png":::
 
 Here's an example of the details of alert that was triggered by a malicious inbox forwarding rule.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png" alt-text="Details of alert that was triggered by a malicious inbox forwarding rule" lightbox="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png" alt-text="Details of alert that was triggered by a malicious inbox forwarding rule" lightbox="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png":::
 
 ### Investigate rule parameters
 

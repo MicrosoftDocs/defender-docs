@@ -1,8 +1,8 @@
 ---
 title: View and release quarantined messages from shared mailboxes
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.reviewer: 
 audience: ITPro
 ms.topic: how-to
@@ -17,7 +17,7 @@ description: Users can learn how to view and act on quarantined messages that we
 ms.service: defender-office-365
 ms.date: 7/24/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -26,7 +26,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Users can manage quarantined messages where they're one of the recipients as described in [Find and release quarantined messages as a user in EOP](quarantine-end-user.md). But what about **shared mailboxes** where the user has Full Access and Send As or Send on Behalf permissions to the mailbox as described in [Shared mailboxes in Exchange Online](/exchange/collaboration-exo/shared-mailboxes)?
+Users can manage quarantined messages where they're one of the recipients as described in [Find and release quarantined messages as a user](quarantine-end-user.md). But what about **shared mailboxes** where the user has Full Access and Send As or Send on Behalf permissions to the mailbox as described in [Shared mailboxes in Exchange Online](/exchange/collaboration-exo/shared-mailboxes)?
 
 Previously, the ability for users to manage quarantined messages sent to a shared mailbox required admins to leave automapping enabled for the shared mailbox (it's enabled by default when an admin gives a user access to another mailbox). However, depending on the size and number of mailboxes that the user has access to, performance can suffer as Outlooks tries to open _all_ mailboxes that the user has access to. For this reason, many admins choose to [remove automapping for shared mailboxes](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
 
@@ -43,7 +43,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
 ## Things to keep in mind
 
-- In Microsoft 365 operated by 21Vianet, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
+- In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 
 - _Quarantine policies_ define what users are allowed to do or not do to quarantined messages based on why the message was quarantined for [supported features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). Default quarantine policies enforce the historical capabilities for the security feature that quarantined the message as described in the table [here](quarantine-end-user.md). Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Create quarantine policies](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
@@ -57,7 +57,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
 - As of July 2022, users with primary SMTP addresses that are different from their user principal names (UPNs) should be able to access quarantined messages for the shared mailbox.
 
-- To manage quarantined messages for the shared mailbox in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), the user needs to use the [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) cmdlet with shared mailbox email address for the value of the _RecipientAddress_ parameter to identify the messages. For example:
+- To manage quarantined messages for the shared mailbox in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), the user needs to use the [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage) cmdlet with shared mailbox email address for the value of the _RecipientAddress_ parameter to identify the messages. For example:
 
   ```powershell
   Get-QuarantineMessage -RecipientAddress officeparty@contoso.com
@@ -75,7 +75,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
   For detailed syntax and parameter information, see the following articles:
 
-  - [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)
-  - [Get-QuarantineMessageHeader](/powershell/module/exchange/get-quarantinemessageheader)
-  - [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage)
-  - [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage)
+  - [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage)
+  - [Get-QuarantineMessageHeader](/powershell/module/exchangepowershell/get-quarantinemessageheader)
+  - [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage)
+  - [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)

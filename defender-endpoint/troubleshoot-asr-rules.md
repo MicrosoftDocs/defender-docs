@@ -1,38 +1,34 @@
----
+﻿---
 title: Report and troubleshoot Microsoft Defender for Endpoint attack surface reduction rules
 description: This article describes how to report and troubleshoot Microsoft Defender for Endpoint attack surface reduction rules
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
-ms.reviewer:
-manager: deniseb
+author: limwainstein
+ms.author: lwainstein
+ms.reviewer: yongrhee
+manager: bagol
 ms.custom: 
 - mde-asr
 - admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier3
 search.appverid: met150
-ms.date: 07/18/2023
----
+ms.date: 03/10/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Report and troubleshoot Defender for Endpoint attack surface reduction rules
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
+The [Microsoft Defender portal](https://security.microsoft.com) is the new interface for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure. Here you can easily view the security health of your organization, act to configure devices, users, and apps, and get alerts for suspicious activity. The Microsoft Defender portal is intended for security admins and security operations teams to better manage and protect their organization. Visit the Microsoft Defender portal at<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a>.
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-The <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> is the new interface for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure. Here you can easily view the security health of your organization, act to configure devices, users, and apps, and get alerts for suspicious activity. The Microsoft Defender portal is intended for security admins and security operations teams to better manage and protect their organization. Visit the Microsoft Defender portal at<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a>.
-
-In <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, we offer you a complete look at the current attack surface reduction rules configuration and events in your estate. Your devices must be onboarded into the Microsoft Defender for Endpoint service for these reports to be populated.
+In the [Microsoft Defender portal](https://security.microsoft.com), we offer you a complete look at the current attack surface reduction rules configuration and events in your estate. Your devices must be onboarded into the Microsoft Defender for Endpoint service for these reports to be populated.
 Here's a screenshot from the Microsoft Defender portal (under **Reports** \> **Devices** \> **Attack surface reduction**). At the device level, select **Configuration** from the **Attack surface reduction rules** pane. The following screen is displayed, where you can select a specific device and check its individual attack surface reduction rule configuration.
 
 :::image type="content" source="media/asrrulesnew.png" alt-text="The attack surface reduction rules page" lightbox="media/asrrulesnew.png":::
@@ -68,63 +64,16 @@ The following screenshot shows the Timeline view of these events on a given endp
 
 ## How to troubleshoot attack surface reduction rules?
 
-The first and most immediate way is to check locally, on a Windows device, which attack surface reduction rules are enabled (and their configuration) is by using the PowerShell cmdlets.
+Review [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
-Here are a few other sources of information that Windows offers, to troubleshoot attack surface reduction rules' impact and operation.
+## Related articles
 
-### Querying which rules are active
+- [Attack surface reduction rules](attack-surface-reduction.md)
+- [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
+- [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 
-One of the easiest ways to determine if attack surface reduction rules are already enabled is through a PowerShell cmdlet, Get-MpPreference.
+- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
-Here's an example:
-
-:::image type="content" source="media/getmpreferencescriptnew.png" alt-text="The get mppreference script" lightbox="media/getmpreferencescriptnew.png":::
-
-There are multiple attack surface reduction rules active, with different configured actions.
-
-To expand the above information on attack surface reduction rules, you can use the properties **AttackSurfaceReductionRules_Ids** and/or **AttackSurfaceReductionRules_Actions**.
-
-Example:
-
-```powershell
-Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Ids
-```
-
-:::image type="content" source="media/getmpref-examplenew.png" alt-text="The get mpreference example" lightbox="media/getmpref-examplenew.png":::
-
-The above shows all the IDs for attack surface reduction rules that have a setting different from 0 (Not Configured).
-
-The next step is then to list the actual actions (Block or Audit) that each rule is configured with.
-
-```powershell
-Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Actions
-```
-
-:::image type="content" source="media/getmpref-example2new.png" alt-text="The get mppreference example2" lightbox="media/getmpref-example2new.png":::
-
-### Querying blocking and auditing events
-
-attack surface reduction rule events can be viewed within the Windows Defender log.
-
-To access it, open Windows Event Viewer, and browse to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
-
-:::image type="content" source="media/eventviewerscrnew.png" alt-text="The Event Viewer page" lightbox="media/eventviewerscrnew.png":::
-
-## Microsoft Defender Antimalware Protection Logs
-
-You can also view rule events through the Microsoft Defender Antivirus dedicated command-line tool, called `*mpcmdrun.exe*`, that can be used to manage and configure, and automate tasks if needed.
-
-You can find this utility in *%ProgramFiles%\Windows Defender\MpCmdRun.exe*. You must run it from an elevated command prompt (that is, run as Admin).
-
-To generate the support information, type *MpCmdRun.exe -getfiles*. After a while, several logs will be packaged into an archive (MpSupportFiles.cab) and made available in *C:\ProgramData\Microsoft\Windows Defender\Support*.
-
-:::image type="content" source="media/malware-prot-logsnew.png" alt-text="The malware protection logs" lightbox="media/malware-prot-logsnew.png":::
-
-Extract that archive and you'll have many files available for troubleshooting purposes.
-
-The most relevant files are as follows:
-
-- **MPOperationalEvents.txt**: This file contains same level of information found in Event Viewer for Windows Defender's Operational log.
-- **MPRegistry.txt**: In this file you can analyze all the current Windows Defender configurations, from the moment the support logs were captured.
-- **MPLog.txt**: This log contains more verbose information about all the actions/operations of the Windows Defender.
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

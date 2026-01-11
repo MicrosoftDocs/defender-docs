@@ -6,8 +6,8 @@ f1.keywords:
  - NOCSH
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -30,16 +30,16 @@ Providing security admins and users with a simple way to manage false positive f
 - Sufficient permissions (Security Administrator role)
 - 5 minutes to perform the following procedures.
 
-## Deciding between built-in or custom quarantine policies.
+## Deciding between built-in or custom quarantine policies
 
-Our custom policies give admins the ability to decide what items their users can triage in the ***False positive*** folder with an extended ability of allowing the user to request the *release* of those items from the folder.
+Custom quarantine policies give admins the ability to decide what items their users can triage in the ***False positive*** folder with an extended ability of allowing the user to request the *release* of those items from the folder.
 
 1. Decide what verdicts category (bulk, spam, phish, high confidence phish, or malware) of items you want your user to triage and not triage.
 1. For those categories that you don't want the users to triage, assign the items to the **AdminOnlyPolicy**. As for the category you want users to triage with limited access, you can *create a custom policy* with a request release access and assign users to that category.
 1. It's **strongly recommended** that malware and high confidence phish items be assigned to **AdminOnlyPolicy**, regular confidence phish items be assigned *limited access with request release*, while bulk and spam can be left as full access for users.
 
 > [!IMPORTANT]
-> For more information on how granular custom policies can be created, see [Quarantine policies - Office 365 | Microsoft Docs](../quarantine-policies.md).
+> For more information on how to create granular custom quarantine policies, see [Quarantine policies](../quarantine-policies.md).
 
 ## Assigning quarantine policies and enabling notification with organization branding
 
@@ -57,7 +57,12 @@ When your security team has decided on which categories of items that users can 
 1. Repeat these same steps for the other policies: **Anti-phishing policy**, **Anti-Malware policy**, and **Safe Attachment policy**.
 
 > [!TIP]
-> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](../anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](../anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](../anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](../safe-attachments-policies-configure.md)
+> For more detailed information on what you've learned so far, see:
+>
+> - [Configure spam filter policies](../anti-spam-policies-configure.md)
+> - [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](../anti-phishing-policies-eop-configure.md)
+> - [Configure anti-phishing policies in Microsoft Defender for Office 365](../anti-phishing-policies-mdo-configure.md)
+> - [Set up Safe Attachments policies in Microsoft Defender for Office 365](../safe-attachments-policies-configure.md)
 
 ## Next Steps
 

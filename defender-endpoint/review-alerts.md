@@ -1,50 +1,44 @@
----
+﻿---
 title: Review alerts in Microsoft Defender for Endpoint
 description: Review alert information, including a visualized alert story and details for each step of the chain.
 ms.service: defender-endpoint
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - mde-edr
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 5/1/2020
 ms.subservice: edr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Review alerts in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-managealerts-abovefoldlink)
 
 The alert page in Microsoft Defender for Endpoint provides full context to the alert, by combining attack signals and alerts related to the selected alert, to construct a detailed alert story.
 
 Quickly triage, investigate, and take effective action on alerts that affect your organization. Understand why they were triggered, and their impact from one location. Learn more in this overview.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4yiO5]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=8a9c08a6-558c-47a8-a336-d748acbdaa80]
 
 ## Getting started with an alert
 
 Selecting an alert's name in Defender for Endpoint will land you on its alert page. On the alert page, all the information will be shown in context of the selected alert. Each alert page consists of 4 sections:
 
 1. **The alert title** shows the alert's name and is there to remind you which alert started your current investigation regardless of what you have selected on the page.
-2. [**Affected assets**](#review-affected-assets) lists cards of devices and users affected by this alert that are clickable for further information and actions.
-3. The **alert story** displays all entities related to the alert, interconnected by a tree view. The alert in the title will be the one in focus when you first land on your selected alert's page. Entities in the alert story are expandable and clickable, to provide additional information and expedite response by allowing you to take actions right in the context of the alert page. Use the alert story to start your investigation. Learn how in [Investigate alerts in Microsoft Defender for Endpoint](investigate-alerts.md).
-4. The **details pane** will show the details of the selected alert at first, with details and actions related to this alert. If you select any of the affected assets or entities in the alert story, the details pane will change to provide contextual information and actions for the selected object.
+1. [**Affected assets**](#review-affected-assets) lists cards of devices and users affected by this alert that are clickable for further information and actions.
+1. The **alert story** displays all entities related to the alert, interconnected by a tree view. The alert in the title will be the one in focus when you first land on your selected alert's page. Entities in the alert story are expandable and clickable, to provide additional information and expedite response by allowing you to take actions right in the context of the alert page. Use the alert story to start your investigation. Learn how in [Investigate alerts in Microsoft Defender for Endpoint](investigate-alerts.md).
+1. The **details pane** will show the details of the selected alert at first, with details and actions related to this alert. If you select any of the affected assets or entities in the alert story, the details pane will change to provide contextual information and actions for the selected object.
 
 Note the detection status for your alert.
 
@@ -87,3 +81,4 @@ Selecting a device or a user card in the affected assets sections will switch to
 - [Investigate incidents](investigate-incidents.md)
 - [Manage incidents](manage-incidents.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

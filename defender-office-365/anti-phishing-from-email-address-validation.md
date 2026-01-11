@@ -1,12 +1,12 @@
 ---
-title: How EOP validates the From address to prevent phishing
+title: How Microsoft 365 validates the From address to prevent phishing
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.localizationpriority: medium
 search.appverid: 
   - OWC150
@@ -15,21 +15,21 @@ ms.assetid: eef8408b-54d3-4d7d-9cf7-ad2af10b2e0e
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn how Exchange Online Protection (EOP) and Outlook.com enforce email address syntax to help prevent phishing.
+description: Admins can learn how Microsoft 365 enforces email address syntax to help prevent phishing.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
 ms.date: 3/28/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# How EOP validates the From address to prevent phishing
+# How Microsoft 365 validates the From address to prevent phishing
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Phishing attacks are a constant threat to any email organization. In addition to using [spoofed (forged) sender email addresses](anti-phishing-protection-spoofing-about.md), attackers often use values in the From address that violate internet standards. To help prevent this type of phishing, Exchange Online Protection (EOP) and Outlook.com require inbound messages to include an RFC-compliant From address as described in this article.
+Phishing attacks are a constant threat to any email organization. In addition to using [spoofed (forged) sender email addresses](anti-phishing-protection-spoofing-about.md), attackers often use values in the From address that violate internet standards. To help prevent this type of phishing, Microsoft 365 requires inbound messages to include an RFC-compliant From address as described in this article.
 
 - If you regularly receive email from organizations that have malformed From addresses as described in this article, encourage these organizations to update their email servers to comply with modern security standards.
 
@@ -105,10 +105,10 @@ For more information about publishing a null MX, see [RFC 7505](https://tools.ie
 
 ## Override From address enforcement
 
-To bypass the From address requirements for inbound email, you can use the IP Allow List (connection filtering) or mail flow rules (also known as transport rules) as described in [Create safe sender lists in Microsoft 365](create-safe-sender-lists-in-office-365.md). Outlook.com doesn't allow overrides of any kind, even through support requests.
+To bypass the From address requirements for inbound email, you can use the IP Allow List (connection filtering) or mail flow rules (also known as transport rules) as described in [Create sender allowlists](create-safe-sender-lists-in-office-365.md). Outlook.com doesn't allow overrides of any kind, even through support requests.
 
 You can't override the From address requirements for outbound email that you send from Microsoft 365 or Outlook.com.
 
 ## Other ways to prevent and protect against cybercrimes in Microsoft 365
 
-For more information on how to strengthen your organization against phishing, spam, data breaches, and other threats, see [Best practices for securing Microsoft 365 for business plans](/microsoft-365/business-premium/secure-your-business-data).
+For more information on how to strengthen your organization against phishing, spam, data breaches, and other threats, see [Best practices for securing Microsoft 365 for business plans](/microsoft-365/admin/security-and-compliance/m365b-security-best-practices).

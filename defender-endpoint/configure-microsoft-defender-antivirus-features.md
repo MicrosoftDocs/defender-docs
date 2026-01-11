@@ -1,34 +1,33 @@
----
+﻿---
 title: Configure Microsoft Defender Antivirus features
 description: You can configure Microsoft Defender Antivirus features with Intune, Microsoft Configuration Manager, Group Policy, and PowerShell.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: denisebmsft
-ms.author: deniseb
-ms.topic: conceptual
+author: KesemSharabi
+ms.author: kesharab
+ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/18/2024
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure Microsoft Defender Antivirus features
 
+## Prerequisites
 
-**Applies to:**
+### Supported operating systems
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
 - Windows
 
 You can configure Microsoft Defender Antivirus with a number of tools, such as:
@@ -41,6 +40,7 @@ You can configure Microsoft Defender Antivirus with a number of tools, such as:
 - [Group Policy](use-group-policy-microsoft-defender-antivirus.md)
 - [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md)
+
 The following broad categories of features can be configured:
 
 - Cloud-delivered protection. See [Cloud-delivered protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
@@ -76,8 +76,7 @@ The following broad categories of features can be configured:
 >   - top scans per file
 >   - top scans per file per process
 >
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
-> See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
->
+> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

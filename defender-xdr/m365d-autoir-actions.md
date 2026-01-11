@@ -1,15 +1,15 @@
 ---
 title: View and manage actions in the Action center
-description: Use the Action center to view and manage remediation actions
+description: Use the Action center in the Microsoft Defender portal to view and manage remediation actions for affected assets.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 08/11/2023
-manager: dansimp
+ms.date: 04/28/2025
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -19,12 +19,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand how to view and manage remediation actions in the Action center
 ---
 
 # View and manage actions in the Action center
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat protection features in Microsoft Defender XDR can result in certain remediation actions. Here are some examples:
 
@@ -50,7 +50,7 @@ It's important to approve (or reject) pending actions as soon as possible so tha
 
 3. In the Action center, on the **Pending** tab, select an item in the list. Its flyout pane opens. Here's an example.
 
-   :::image type="content" source="/defender/media/air-actioncenter-itemselected.png" alt-text="The options to approve or reject an action" lightbox="/defender/media/air-actioncenter-itemselected.png":::
+   :::image type="content" source="media/air-actioncenter-itemselected.png" alt-text="The options to approve or reject an action" lightbox="media/air-actioncenter-itemselected.png":::
 
 4. Review the information in the flyout pane, and then take one of the following steps:
    - Select **Open investigation page** to view more details about the investigation.
@@ -67,7 +67,10 @@ If you've determined that a device or a file is not a threat, you can undo remed
 
 | Action source | Supported Actions |
 |:---|:---|
-| - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
+| - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Contain device <br/>- Contain user <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
+
+> [!NOTE]
+> Only Security Administrators and Global Administrators are allowed access to undo operations such as File Quarantine.
 
 ### Undo one remediation action
 

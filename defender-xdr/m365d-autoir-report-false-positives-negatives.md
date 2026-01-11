@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -19,14 +19,13 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 ms.date: 07/14/2023
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Address false positives or false negatives in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 False positives or negatives can occasionally occur with any threat protection solution. If [automated investigation and response capabilities](m365d-autoir.md) in Microsoft Defender XDR missed or wrongly detected something, there are steps your security operations team can take:
 
@@ -47,7 +46,7 @@ The following sections describe how to perform these tasks.
 
 |Scenario |Service |What to do |
 |--------|--------|--------|
-|- An alert is triggered by legitimate use <br/>- An alert is inaccurate    |[Microsoft Defender for Cloud Apps](/cloud-app-security)<br/> or <br/>[Azure threat protection](/azure/security/fundamentals/threat-detection)         |[Manage alerts in the Defender for Cloud Apps portal](/cloud-app-security/managing-alerts)         |
+|- An alert is triggered by legitimate use <br/>- An alert is inaccurate    |[Microsoft Defender for Cloud Apps](/cloud-app-security)<br/> or <br/>[Azure threat protection](/azure/security/fundamentals/threat-detection)         |[Manage alerts in Defender for Cloud Apps](/cloud-app-security/managing-alerts)         |
 |A file, IP address, URL, or domain is treated as malware on a device, even though it's safe|[Microsoft Defender for Endpoint](/windows/security/threat-protection) |[Create a custom indicator with an "Allow" action](/windows/security/threat-protection/microsoft-defender-atp/manage-indicators) |
 
 ## Undo a remediation action that was taken on a device

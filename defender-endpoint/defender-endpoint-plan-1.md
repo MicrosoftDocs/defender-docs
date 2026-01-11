@@ -2,15 +2,17 @@
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol 
 audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 11/30/2023
+ms.date: 05/02/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
@@ -21,11 +23,8 @@ ms.custom: intro-overview
 
 # Overview of Microsoft Defender for Endpoint Plan 1
 
-**Applies to**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
-Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations like yours to prevent, detect, investigate, and respond to advanced threats. We are pleased to announce that Defender for Endpoint is now available in two plans: 
+Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations to prevent, detect, investigate, and respond to advanced threats. Defender for Endpoint is now available in two plans: 
 
 - **Defender for Endpoint Plan 1**, described in this article; and 
 - **[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)**, generally available, and formerly known as [Defender for Endpoint](microsoft-defender-endpoint.md).
@@ -41,6 +40,8 @@ Use this guide to:
 - [Get started using the Microsoft Defender portal, where you can view incidents and alerts, manage devices, and use reports about detected threats](mde-plan1-getting-started.md)
 - [Get an overview of maintenance and operations](preferences-setup.md)
 
+For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](/defender-endpoint/minimum-requirements).
+
 ## Defender for Endpoint Plan 1 capabilities
 
 Defender for Endpoint Plan 1 includes the following capabilities:
@@ -49,7 +50,6 @@ Defender for Endpoint Plan 1 includes the following capabilities:
 - **[Manual response actions](#manual-response-actions)**, such as sending a file to quarantine, that your security team can take on devices or files when threats are detected
 - **[Attack surface reduction capabilities](#attack-surface-reduction)** that harden devices, prevent zero-day attacks, and offer granular control over endpoint access and behaviors
 - **[Centralized configuration and management](#centralized-management)** with the Microsoft Defender portal and integration with Microsoft Intune
-- **[Protection for a variety of platforms](#cross-platform-support)**, including Windows, macOS, iOS, and Android devices
 
 The following sections provide more details about these capabilities. 
 
@@ -86,7 +86,7 @@ Your organization's attack surfaces are all the places where you're vulnerable t
 - [Ransomware mitigation](#ransomware-mitigation)
 - [Device control](#device-control)
 - [Web protection](#web-protection)
-- [Network protection](#web-protection)
+- [Network protection](#network-protection)
 - [Network firewall](#network-firewall)
 - [Application control](#application-control)
 
@@ -159,6 +159,10 @@ Using role-based access control (RBAC), your security administrator can create r
 
 To learn more, see [Manage portal access using role-based access control](rbac.md).
 
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+
 ### Reporting
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) provides easy access to information about detected threats and actions to address those threats. 
@@ -176,29 +180,17 @@ With the Defender for Endpoint APIs, you can automate workflows and integrate wi
 
 To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
 
-## Cross-platform support
-
-Most organizations use various devices and operating systems. Defender for Endpoint Plan 1 supports the following operating systems:
-
-- Windows 10 and 11
-- Windows 7 ([ESU required](/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq)) Pro or Enterprise 
-- Windows 8.1 Pro, Enterprise, and Pro Education 
-- macOS (the three most recent releases are supported)
-- iOS
-- Android OS
-
-Servers require an additional license, such as:
-
-- **Microsoft Defender for Servers Plan 1 or Plan 2** (*recommended for enterprise customers*) as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering. To learn more. see [Overview of Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
-- **Microsoft Defender for Endpoint for Servers** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
-- **Microsoft Defender for Business servers** (*for small and medium-sized businesses who have [Microsoft Defender for Business](/defender-business/mdb-overview)*). To learn more, see [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers).
-
-See [Microsoft licensing and product terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).
-
 ## Next steps
 
 - [Set up and configure Defender for Endpoint Plan 1](mde-p1-setup-configuration.md)
+
+## Related content
+
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 - [Manage Defender for Endpoint Plan 1](preferences-setup.md)
 - [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+- [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

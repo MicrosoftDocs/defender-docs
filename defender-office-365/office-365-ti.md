@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 ms.date: 10/10/2023
 audience: Admin
 ms.topic: overview
@@ -31,7 +31,7 @@ appliesto:
 Threat investigation and response capabilities in [Microsoft Defender for Office 365](mdo-about.md) help security analysts and administrators protect their organization's Microsoft 365 for business users by:
 
 - Making it easy to identify, monitor, and understand cyberattacks.
-- Helping to quickly address threats in Exchange Online, SharePoint Online, OneDrive for Business and Microsoft Teams.
+- Helping to quickly address threats in Exchange Online, SharePoint, OneDrive and Microsoft Teams.
 - Providing insights and knowledge to help security operations prevent cyberattacks against their organization.
 - Employing [automated investigation and response in Office 365](air-about.md) for critical email-based threats.
 
@@ -76,7 +76,7 @@ To view and use this feature in the Microsoft Defender portal at <https://securi
 
 ### Automated investigation and response
 
-Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [automated investigation and response in Office 365](air-examples.md).
+Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md).
 
 ## Threat intelligence widgets
 
@@ -97,17 +97,20 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 >
 > - [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 > - [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
+> - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 
 |Activity|Roles and permissions|
 |---|---|
 |Use the Microsoft Defender Vulnerability Management dashboard <br/><br/> View information about recent or current threats|One of the following: <ul><li>**Global Administrator**<sup>\*</sup></li><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
 |Use [Explorer (and real-time detections)](threat-explorer-real-time-detections-about.md) to analyze threats|One of the following: <ul><li>**Global Administrator**<sup>\*</sup></li><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
 |View Incidents (also referred to as Investigations) <br/><br/> Add email messages to an incident|One of the following: <ul><li>**Global Administrator**<sup>\*</sup></li><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
-|Trigger email actions in an incident <br/><br/> Find and delete suspicious email messages|One of the following: <ul><li>**Global Administrator**<sup>\*</sup></li><li>**Security Administrator** plus the **Search and Purge** role</li></ul> <br/> The **Global Administrator**<sup>\*</sup> and **Security Administrator** roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>). <br/><br/> The **Search and Purge** role must be assigned in the **Email & collaboration roles** in the Microsoft 36 Defender portal (<https://security.microsoft.com>).|
+|Trigger email actions in an incident <br/><br/> Find and delete suspicious email messages|One of the following: <ul><li>**Global Administrator**<sup>\*</sup></li><li>**Security Administrator** plus the **Search and Purge** role</li></ul> <br/> The **Global Administrator**<sup>\*</sup> and **Security Administrator** roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>). <br/><br/> The **Search and Purge** role must be assigned in the **Email & collaboration roles** in the Microsoft 365 Defender portal (<https://security.microsoft.com>).|
 |Integrate Microsoft Defender for Office 365 Plan 2 with Microsoft Defender for Endpoint <br/><br/> Integrate Microsoft Defender for Office 365 Plan 2 with a SIEM server|Either the **Global Administrator**<sup>\*</sup> or the **Security Administrator** role assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>). <br/><br/> --- **plus** --- <br/><br/> An appropriate role assigned in additional applications (such as [Microsoft Defender Security Center](/windows/security/threat-protection/microsoft-defender-atp/user-roles) or your SIEM server).|
+|View email preview/download .eml of Quarantined emails (view/download only Quarantined emails)|One of the following: <ul><li>**Global Administrator**<sup>\*</sup></li><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
+|View email preview/download .eml of ANY email in Explorer|One of the following: <ul><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Next steps
 

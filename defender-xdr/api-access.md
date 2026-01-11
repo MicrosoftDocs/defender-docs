@@ -4,8 +4,8 @@ description: Learn how to access the Microsoft Defender XDR APIs
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -18,16 +18,14 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2024
+ms.date: 04/15/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Access the Microsoft Defender XDR APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).

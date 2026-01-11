@@ -2,12 +2,12 @@
 title: Threat hunting in Threat Explorer and Real-time detections
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
-ms.date: 10/01/2024
+ms.topic: how-to
+ms.date: 05/19/2025
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -38,7 +38,7 @@ Threat Explorer or Real-time detections allow you to take the following actions:
 
 Watch this short video to learn how to hunt and investigate email and collaboration-based threats using Defender for Office 365.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWyPRU]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=62857c41-a1ad-41cb-a2b2-5bfe2cb4be77]
 
 > [!TIP]
 > Advanced hunting in Microsoft Defender XDR supports an easy-to-use query builder that doesn't use the Kusto Query Language (KQL). For more information, see [Build queries using guided mode](/defender-xdr/advanced-hunting-query-builder).
@@ -53,7 +53,7 @@ The following information is available in this article:
 > For email scenarios using Threat Explorer and Real-time detections, see the following articles:
 >
 > - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
-> - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+> - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 >
 > If you're hunting for attacks based on malicious URLs embedded within QR codes, the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in Threat Explorer or Real-time detections allows you to search for email message with URLs extracted from QR codes.
 
@@ -154,7 +154,7 @@ After you determine that an email message is a threat, the next step is remediat
 
 - Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
 
-  :::image type="content" source="../defender-office-365/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active.":::
+  :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
   > [!TIP]
   > **Take action** replaces the **Message actions** drop down list.
@@ -183,7 +183,7 @@ Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" b
 |**Initiate automated investigation**|✔||
 |**Propose remediation**|✔||
 
-¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
+¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md) or the **Security operations/Security data/Email & collaboration advanced actions (manage)** permission in [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac). By default, the **Search and Purge** role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
 ² This option is available for quarantined messages when you select **Inbox** as the move location.
 
@@ -301,6 +301,8 @@ The **Take action** wizard is described in the following list:
    When you're finished on the **Review and submit** page, select **Submit**.
 
 > [!TIP]
+> In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also, the action logs are available only at <https://security.microsoft.com/threatincidents>, not in the **Action Center** at <https://security.microsoft.com/action-center>.
+>
 > The actions might take time for to appear on the related pages, but the speed of the remediation isn't affected.
 
 ## The threat hunting experience using Threat Explorer and Real-time detections
@@ -432,7 +434,7 @@ The **Email** tab (view) for the details area of the **All email**, **Malware**,
 For specific scenarios, see the following articles:
 
 - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
-- [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+- [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
 ### More ways to use Threat Explorer and Real-time detections
 

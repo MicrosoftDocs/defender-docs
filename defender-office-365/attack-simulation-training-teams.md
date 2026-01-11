@@ -1,8 +1,8 @@
 ---
 title: Microsoft Teams in Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -10,9 +10,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-description: Admins can learn about the addition of Microsoft Teams in delivering simulated phishing attacks in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
+description: Admins can learn about the addition in Microsoft Defender for Office 365 Plan 2 of delivering simulated phishing attacks in Attack simulation training to Microsoft Teams.
 search.appverid: met150
-ms.date: 3/15/2024
+ms.date: 3/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -20,7 +20,7 @@ appliesto:
 # Microsoft Teams in Attack simulation training
 
 > [!IMPORTANT]
-> Currently, Microsoft Teams in Attack simulation training is in Private Preview. The information in this article is subject to change.
+> Microsoft Teams' Attack simulation training is currently in Private Preview and the intake for this preview is now closed. The information in this article is subject to change.
 
 In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can now use Attack simulation training to deliver simulated phishing messages in Microsoft Teams. For more information about attack simulation training, see [Get started using Attack simulation training in Defender for Office 365](attack-simulation-training-get-started.md).
 
@@ -41,10 +41,10 @@ The addition of Teams in Attack simulation training affects the following featur
 
 In addition to having user reporting for Teams messages turned on as described in [User reported message settings in Microsoft Teams](submissions-teams.md), you also need to configure the Teams accounts that can be used as sources for simulation messages in Attack simulation training. To configure the accounts, do the following steps:
 
-1. Identify or create a user who's a member of the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)<sup>\*</sup>, [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator), or [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) roles in Microsoft Entra ID. Assign a Microsoft 365, Office 365, Microsoft Teams Essentials, Microsoft 365 Business Basic, or a Microsoft 365 Business Standard license for [Microsoft Teams](/office365/servicedescriptions/teams-service-description). You need to know the password.
+1. Identify or create a user who's a member of the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator), [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator), or [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) roles in Microsoft Entra ID. Assign a Microsoft 365, Office 365, Microsoft Teams Essentials, Microsoft 365 Business Basic, or a Microsoft 365 Business Standard license for [Microsoft Teams](/office365/servicedescriptions/teams-service-description). You need to know the password.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 2. Using the account from Step 1, open the Microsoft Defender portal at <https://security.microsoft.com> and go to **Email & collaboration** \> **Attack simulation training** \> **Settings** tab. Or, to go directly to the **Settings** tab, use <https://security.microsoft.com/attacksimulator?viewid=setting>.
 3. On the **Settings** tab, select **Manager user accounts** in the **Teams simulation configuration** section.
@@ -93,7 +93,7 @@ Whether you create a payload on the **Payloads** page of the **Content library**
 
 - If you select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create a payload** on the **Tenant payload** tab to create a payload, the first page of the new payload wizard is **Select type** where you can select **Teams**. Selecting **Teams** introduces the following changes to the rest of the new payload wizard:
 
-  - On the **[Select technique](attack-simulation-training-payloads.md#create-payloads)** page, the **Malware Attachment** and **Link in Attachment** social engineering techniques aren't available for Teams.
+  - On the **[Select technique](attack-simulation-training-payloads.md#create-payloads)** page, the **Malware Attachment**, **Link in Attachment**, and **How-to Guide** techniques aren't available for Teams.
 
   - The **Configure payload** page has the following changes for Teams:
     - **Sender details** section: The only available setting for Teams is **Chat topic** where you enter a tile for the Teams message.

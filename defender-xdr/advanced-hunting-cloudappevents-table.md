@@ -4,10 +4,10 @@ description: Learn about events from cloud apps and services in the CloudAppEven
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -17,19 +17,32 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 06/09/2024
+ms.date: 05/15/2025
 ---
 
 # CloudAppEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about events involving accounts and objects in Office 365 and other [cloud apps and services](#apps-and-services-covered). Use this reference to construct queries that return information from this table.
 
+## Prerequisites
+This advanced hunting table is populated by records from Microsoft Defender for Cloud Apps. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Cloud Apps in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+
+
+To make sure the `CloudAppEvents` table is populated:
+
+1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
+
+1.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
+
+ For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -39,13 +52,13 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ActionType` | `string` | Type of activity that triggered the event |
 | `Application` | `string` | Application that performed the recorded action |
 | `ApplicationId` | `int` | Unique identifier for the application |
-| `AppInstanceId` | `int` | Unique identifier for the instance of an application. To convert this to Microsoft Defender for Cloud Apps App-connector-ID, use `CloudAppEvents | distinct ApplicationId,AppInstanceId,binary_or(binary_shift_left(AppInstanceId,20),ApplicationId |order by ApplicationId,AppInstanceId` |
+| `AppInstanceId` | `int` | Unique identifier for the instance of an application. To convert this to Microsoft Defender for Cloud Apps App-connector-ID, use `CloudAppEvents| distinct ApplicationId,AppInstanceId,binary_or(binary_shift_left(AppInstanceId,20),Application|order by ApplicationId,AppInstanceId` |
 | `AccountObjectId` | `string` | Unique identifier for the account in Microsoft Entra ID |
 | `AccountId` | `string` | An identifier for the account as found by Microsoft Defender for Cloud Apps. Could be Microsoft Entra ID, user principal name, or other identifiers. |
 | `AccountDisplayName` | `string` | Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user. |
 | `IsAdminOperation` | `bool` | Indicates whether the activity was performed by an administrator |
 | `DeviceType` | `string` | Type of device based on purpose and functionality, such as network device, workstation, server, mobile, gaming console, or printer |
-| `OSPlatform` | `string` | Platform of the operating system running on the device. This column indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10 and Windows 7. |
+| `OSPlatform` | `string` | Platform of the operating system running on the device. This column indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10, and Windows 7. |
 | `IPAddress` | `string` | IP address assigned to the device during communication |
 | `IsAnonymousProxy` | `boolean` | Indicates whether the IP address belongs to a known anonymous proxy |
 | `CountryCode` | `string` | Two-letter code indicating the country where the client IP address is geolocated |
@@ -66,11 +79,11 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `UserAgentTags` | `dynamic` | More information provided by Microsoft Defender for Cloud Apps in a tag in the user agent field. Can have any of the following values: Native client, Outdated browser, Outdated operating system, Robot |
 | `RawEventData` | `dynamic` | Raw event information from the source application or service in JSON format |
 | `AdditionalFields` | `dynamic` | Additional information about the entity or event |
-| `LastSeenForUser` | `string` | Shows how many days back the attribute was recently in use by the user in days (i.e. ISP, ActionType etc.)  |
-| `UncommonForUser` | `string` | Lists the attributes in the event that are uncommon for the user, using this data to help rule out false positives and find out anomalies |
-| `AuditSource` | `string` | Audit data source, including one of the following: <br>- Defender for Cloud Apps access control <br>- Defender for Cloud Apps session control <br>- Defender for Cloud Apps app connector |
-| `SessionData` |`dynamic` | The Defender for Cloud Apps session ID for access or session control. For example: `{InLineSessionId:"232342"}` |
-|`OAuthAppId`|`string`| A unique identifier that's assigned to an application when it’s registered to Entra with OAuth 2.0 |
+| `LastSeenForUser` | `dynamic`|Indicates the number of days since a specific attribute was last seen for the user. A value of 0 means the attribute was seen today, a negative value indicates the attribute is being seen for the first time, and a positive value represents the number of days since the attribute was last seen. For example: `{"ActionType":"0","OSPlatform":"4","ISP":"-1"}`|
+| `UncommonForUser` | `dynamic`|Lists the attributes in the event that are uncommon for the user, helping to rule out false positives and find anomalies. For example: `["ActivityType","ActionType"].` To filter out nonanomalous results: events with low or insignificant security value won't go through enrichment processes and will have a value of "", while high-value events will go through enrichment processes and, if no anomalies are found, will have a value of "[]".|
+| `AuditSource` | `string` |Audit data source. Possible values are one of the following: <br>- Defender for Cloud Apps access control <br>- Defender for Cloud Apps session control <br> - Defender for Cloud Apps app connector |
+| `SessionData` |`dynamic` |The Defender for Cloud Apps session ID for access or session control. For example: `{InLineSessionId:"232342"}` |
+|`OAuthAppId`|`string`|A unique identifier that is assigned to an application when it's registered to Microsoft Entra with OAuth 2.0 protocol.|
 
 ## Apps and services covered
 
@@ -91,7 +104,7 @@ The __CloudAppEvents__ table contains enriched logs from all SaaS applications c
 
 Connect supported cloud apps for instant, out-of-the-box protection, deep visibility into the app's user and device activities, and more. For more information, see [Protect connected apps using cloud service provider APIs](/defender-cloud-apps/protect-connected-apps).
 
-## Related topics
+## Related articles
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

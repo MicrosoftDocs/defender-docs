@@ -2,10 +2,10 @@
 title: Reduce the attack surface for Microsoft Teams
 description: Configuration which can be used to reduce the attack surface in Microsoft Teams, including enabling Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.author: chrisda
 author: MSFTBen
+ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-guidance-templates
@@ -60,16 +60,18 @@ An attacker could email channels directly if they discover the channel email add
 4. If you have allowed users to send emails to a channel email address in the previous step, enter the specific domains you wish to accept mail from in the **Accept channel email from these SMTP domains** box. (for example, an alert provider, or trusted supplier).
 5. Press **Save** at the bottom of the page.
 
-## Managing third party storage options
+## Managing non-Microsoft storage options
 
-Users can store their files in potentially unsupported third party storage providers. If you don't use these providers, you can disable this setting to reduce data leakage risk.
+Users can store their files in potentially unsupported non-Microsoft storage providers. If you don't use these providers, you can disable this setting to reduce data leakage risk.
 
 1. **Login** to the Teams admin center at: <https://admin.teams.microsoft.com/>.
 2. On the left-hand navigation, expand **Teams** and then choose **Teams settings**.
 3. Under the **Files** heading, choose which storage providers you want to be available for use within the files tab.
 4. Press **Save** at the bottom of the page.
 
-## Disabling Third-party & custom apps
+<a name='disabling-third-party--custom-apps'></a>
+
+## Disabling non-Microsoft and custom apps
 
 Applications are a very useful part of Microsoft Teams, but it's recommended to maintain a list of allowed apps rather than allowing all apps by default.
 
@@ -78,7 +80,7 @@ Applications are a very useful part of Microsoft Teams, but it's recommended to 
 3. If you have custom permission policies, you'll need to do these steps for each of them if appropriate, otherwise select **Global (Org-wide default)**.
 4. Select the appropriate settings for your organization, a recommended starting point is:
    - Microsoft apps – set to **Allow all apps** (default).
-   - Third-party apps – set to **Allow specific apps and block all others** (if you already have third party apps to then select for allowing) otherwise select **Block all apps**.
+   - Non-Microsoft apps – set to **Allow specific apps and block all others** (if you already have non-Microsoft apps to then select for allowing) otherwise select **Block all apps**.
    - Custom apps – set to **Allow specific apps and block all others** (if you already have custom apps to then select for allowing) otherwise select **Block all apps**.
 5. Press **Save**.
 6. You need to change this setting for each policy (if you've multiple).

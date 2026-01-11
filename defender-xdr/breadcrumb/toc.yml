@@ -9,6 +9,18 @@
   - name: Microsoft Defender XDR
     tocHref: /defender-for-identity/
     topicHref: /defender-xdr/index
+  - name: Microsoft Defender XDR
+    tocHref: /unified-secops-platform/
+    topicHref: /defender-xdr/index
+  - name: Microsoft Defender XDR
+    tocHref: /defender-for-endpoint/
+    topicHref: /defender-xdr/index
+  - name: Microsoft Defender XDR
+    tocHref: /defender-office-365/
+    topicHref: /defender-xdr/index
+  - name: Microsoft Defender XDR
+    tocHref: /defender-cloud-apps/
+    topicHref: /defender-xdr/index  
     
 ## Azure override
 - name: 'Microsoft Defender'
@@ -18,4 +30,3 @@
   - name: 'Microsoft Defender XDR'
     tocHref: /azure/sentinel/
     topicHref: /defender-xdr/index
-

@@ -2,11 +2,11 @@
 title: View Defender for Office 365 reports
 f1.keywords:
   - CSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -19,7 +19,7 @@ description: Admins can learn how to find and use the Defender for Office 365 re
 ms.custom:
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 3/7/2024
+ms.date: 6/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -37,31 +37,33 @@ Summary information for each report is available on the page. Identify the repor
 
 The rest of this article describes the reports that are exclusive to Defender for Office 365.
 
-> [!NOTE]
+> [!TIP]
+>
+> An Overview dashboard for Microsoft 365 is available at **Email & collaboration** \> **Overview** or directly at <https://security.microsoft.com/emailandcollaborationoverviewreport>. For more information, see [The Microsoft Defender for Office 365 Overview dashboard](reports-mdo-email-collaboration-dashboard.md).
 >
 > Email security reports that don't require Defender for Office 365 are described in [View email security reports in the Microsoft Defender portal](reports-email-security.md).
 >
-> For reports that have been deprecated or replaced, see the table in [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
+> For deprecated or replaced reports, see the table in [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
 >
-> Reports that are related to mail flow are now in the Exchange admin center (EAC). For more information about these reports, see [Mail flow reports in the new Exchange admin center](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
+> Reports related to mail flow are now in the Exchange admin center (EAC). For more information about these reports, see [Mail flow reports in the new Exchange admin center](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
 
 Watch this short video to learn how you can use reports to understand the effectiveness of Defender for Office 365 in your organization.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWBkxB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=44f1f230-ca91-46e1-b1d0-5015936751d3]
 
 ## Safe Attachments file types report
 
 > [!NOTE]
-> This report has been deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
+> This report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
 
 ## Safe Attachments message disposition report
 
 > [!NOTE]
-> This report has been deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
+> This report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
 
 ## Mail latency report
 
-The **Mail latency report** shows you an aggregate view of the mail delivery and detonation latency experienced within your Defender for Office 365 organization. Mail delivery times in the service are affected by many factors, and the absolute delivery time in seconds is often not a good indicator of success or a problem. A slow delivery time on one day might be considered an average delivery time on another day, or vice-versa. This report tries to qualify message delivery based on statistical data about the observed delivery times of other messages.
+The **Mail latency report** shows you an aggregate view of the mail delivery and detonation latency experienced within your Defender for Office 365 organization. Many factors affect mail delivery times in the service, and the absolute delivery time in seconds is often not a good indicator of success or a problem. A slow delivery time on one day might be considered an average delivery time on another day, or vice-versa. This report tries to qualify message delivery based on statistical data about the observed delivery times of other messages.
 
 Client-side latency and network latency aren't included in the results.
 
@@ -96,10 +98,10 @@ In the details table below the chart, the following information is available:
 Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**
-- **Message view**: Select one of tne of the following values:
+- **Message view**: Select one of the following values:
   - **All email**
   - **Detonated email**: After you select this value, select one of the following values that appears:
-    - **Inline detonation**: Links and attachments in messages are fully tested by Safe Links and Safe Attachments before delivery.
+    - **Inline detonation**: Safe Links and Safe Attachments fully test links and attachments in messages before delivery.
     - **Asynchronous detonation**: [Dynamic delivery](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies) of attachments by Safe Attachments and links in email tested by Safe Links after delivery.
 
 When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
@@ -112,16 +114,16 @@ The **Post-delivery activities** report shows information about email messages t
 
 The report shows real-time information with updated threat information.
 
-On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Post-delivery activities**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/ZapReport>.
+On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Post-delivery activities**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/PostDeliveryActivities>.
 
 :::image type="content" source="media/post-delivery-activities-widget.png" alt-text="The Post-delivery activities widget on the Email & collaboration reports page." lightbox="media/post-delivery-activities-widget.png":::
 
 On the **Post-delivery activities** page, the chart shows the following information for the specified date range:
 
 - **No threat**: The number of unique delivered messages that were found to be not spam by ZAP.
-- **Spam**: The number of unique messages that were removed from mailboxes by ZAP for spam.
-- **Phishing**: The number of unique messages that were removed from mailboxes by ZAP for phishing.
-- **Malware**: The number of unique messages that were removed from mailboxes by ZAP for phishing.
+- **Spam**: The number of unique messages removed from mailboxes by ZAP for spam.
+- **Phishing**: The number of unique messages removed from mailboxes by ZAP for phishing.
+- **Malware**: The number of unique messages removed from mailboxes by ZAP for phishing.
 
 The details table below the graph shows the following information:
 
@@ -145,7 +147,7 @@ The details table below the graph shows the following information:
 Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
-- **Updated threat**: Select one ore mor of the following values:
+- **Updated threat**: Select one ore more of the following values:
   - **No threat**
   - **Spam**
   - **Phishing**
@@ -159,11 +161,11 @@ On the **Post delivery activities** page, the :::image type="icon" source="media
 
 ## Threat protection status report
 
-The **Threat protection status** report is a single view that brings together information about malicious content and malicious email detected and blocked by [Exchange Online Protection](eop-about.md) (EOP) and Defender for Office 365. For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
+The **Threat protection status** report is a single view that brings together information about malicious content and malicious email detected and blocked by the [default email protections for cloud mailboxes](eop-about.md) and [Defender for Office 365](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet). For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
 ## Top senders and recipients report
 
-The **Top senders and recipients** report show the top recipients for EOP and Defender for Office 365 protection features. For more information, see [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report).
+The **Top senders and recipients** report show the top recipients for email and collaboration protection features. For more information, see [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report).
 
 ## URL protection report
 
@@ -186,11 +188,11 @@ The **View data by URL click protection action** view shows the number of URL cl
 - **Blocked**: Click blocked.
 - **Blocked by tenant admin**: The Clicks blocked in Safe Links policies.
 - **Blocked and clicked through**: Blocked clicks where users click through to the blocked URL.
-- **Blocked by tenant admin and clicked through**: Admin has blocked the link, but the user clicked through.
+- **Blocked by tenant admin and clicked through**: An admin blocked the link, but the user clicked through.
 - **Clicked through during scan**: Clicks where users click through the pending scan page to the URL.
 - **Pending scan**: Clicks on URLs that are pending a scan verdict.
 
-A click indicates that the user has clicked through the block page to the malicious website (admins can disable click through in Safe Links policies).
+A click indicates the user clicked through the block page to the malicious website (admins can disable click through in Safe Links policies).
 
 The details table below the chart provides the following near-real-time view of all clicks that happened within the organization for the last 30 days:
 
@@ -219,7 +221,7 @@ On the **URL threat protection** page, the :::image type="icon" source="media/m3
 :::image type="content" source="media/url-threat-protection-report-url-click-by-application-view.png" alt-text="The URL click protection action view in the URL protection report" lightbox="media/url-threat-protection-report-url-click-by-application-view.png":::
 
 > [!TIP]
-> URL clicks by guest users are available in the report. Guest user accounts might be compromised or access malicious content inside the organization.
+> URL clicks by guests are available in the report. Guest accounts might be compromised or access malicious content inside the organization.
 
 The **View data by URL click by application** view shows the number of URL clicks by apps that support Safe Links:
 
@@ -250,7 +252,7 @@ When you're finished configuring the filters, select **Apply**, **Cancel**, or :
 
 On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
-## Additional reports to view
+## Other reports to view
 
 In addition to the reports described in this article, the following tables describe other available reports that are available:
 
@@ -264,15 +266,15 @@ PowerShell reporting cmdlets:
 
 |Report|Article|
 |---|---|
-|Top senders and recipients|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
-|Top malware|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
-|Threat protection status|[Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|
-|Safe Links|[Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|
-|Compromised users|[Get-CompromisedUserAggregateReport](/powershell/module/exchange/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchange/get-compromiseduserdetailreport)|
-|Mail flow status|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
-|Spoofed users|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
-|Post delivery activity summary|[Get-AggregateZapReport](/powershell/module/exchange/get-aggregatezapreport)|
-|Post delivery activity details|[Get-DetailZapReport](/powershell/module/exchange/get-detailzapreport)|
+|Top senders and recipients|[Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport)|
+|Top malware|[Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport)|
+|Threat protection status|[Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|
+|Safe Links|[Get-SafeLinksAggregateReport](/powershell/module/exchangepowershell/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchangepowershell/get-safelinksdetailreport)|
+|Compromised users|[Get-CompromisedUserAggregateReport](/powershell/module/exchangepowershell/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchangepowershell/get-compromiseduserdetailreport)|
+|Mail flow status|[Get-MailflowStatusReport](/powershell/module/exchangepowershell/get-mailflowstatusreport)|
+|Spoofed users|[Get-SpoofMailReport](/powershell/module/exchangepowershell/get-spoofmailreport)|
+|Post delivery activity summary|[Get-AggregateZapReport](/powershell/module/exchangepowershell/get-aggregatezapreport)|
+|Post delivery activity details|[Get-DetailZapReport](/powershell/module/exchangepowershell/get-detailzapreport)|
 
 ## What permissions are needed to view the Defender for Office 365 reports?
 
@@ -280,9 +282,9 @@ See [What permissions are needed to view these reports?](reports-email-security.
 
 ## What if the reports aren't showing data?
 
-If you don't see data in the reports, check the report filters and double-check that your policies are set up correctly. Safe Links policies and Safe Attachments policies from Built-in protection, preset security policies, or custom policies need to be in effect and acting on messages. For more information, see the following articles:
+If you don't see data in the reports, check the report filters and double-check that your policies are set up correctly. Safe Links policies and Safe Attachments policies from Built-in protection, preset security policies, or custom threat policies need to be in effect and acting on messages. For more information, see the following articles:
 
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
-- [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)
+- [Preset security policies](preset-security-policies.md)
+- [Configuration analyzer](configuration-analyzer-for-security-policies.md)
 - [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md)
 - [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md)
