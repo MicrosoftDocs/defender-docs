@@ -97,28 +97,6 @@ EdgeBuilderInitial: Edge builder in initial state
 builder.add_edge("accessed")
 ```
 
-#### with_sink_database
-
-```python
-def with_sink_database(database: str) -> GraphSpecBuilder
-```
-
-Configure the sink database for graph tables.
-
-**Parameters:**
-
-- `database` (str): Database name where graph tables will be created
-
-**Returns:**
-
-GraphSpecBuilder: Self for method chaining
-
-**Example:**
-
-```python
-builder.with_sink_database("my_database")
-```
-
 #### done
 
 ```python
@@ -262,18 +240,6 @@ Get the graph schema.
 **Returns:**
 
 GraphSchema: Graph schema definition
-
-#### get_pipeline
-
-```python
-def get_pipeline() -> Optional[ETLPipeline]
-```
-
-Get the ETL pipeline (None for remote graphs).
-
-**Returns:**
-
-ETLPipeline or None: ETL pipeline if available
 
 #### to_graphframe
 
@@ -548,28 +514,6 @@ ValueError: If table not found or multiple conflicting tables found
 
 ```python
 builder.add_node("user").from_table("SigninLogs", database="security_db")
-```
-
-#### from_query
-
-```python
-def from_query(query: str) -> NodeBuilderSourceSet
-```
-
-Set SQL query as data source.
-
-**Parameters:**
-
-- `query` (str): SQL query string
-
-**Returns:**
-
-NodeBuilderSourceSet: Builder for further configuration
-
-**Example:**
-
-```python
-builder.add_node("user").from_query("SELECT * FROM users WHERE active = true")
 ```
 
 #### from_dataframe
@@ -1260,6 +1204,133 @@ DataFrames and resources are loaded lazily and cached for performance:
 - `graph_spec.nodes` and `graph_spec.edges` are loaded on first access
 - Query results create DataFrames only when requested
 - This approach minimizes resource usage and improves performance
+
+
+## Graph REST APIs 
+
+The Graph Builder API also provides REST endpoints for managing and querying custom graphs in your Microsoft Sentinel tenant.
+
+### List graphs
+List all custom graphs available from your tenant.
+
+**HTTP Method**: GET 
+**URL**: https://api.securityplatform.microsoft.com/graphs/custom-graph-instances 
+
+
+**Request Body**
+No request body required. 
+
+**Sample Response**
+
+```json
+{   
+  "value": [   
+    {   
+      "name": "custom_graph_10",   
+      "mapFileName": "custom_graph_10",   
+      "mapFileVersion": "1.0.0",   
+      "graphDefinitionName": "custom_graph_10",   
+      "graphDefinitionVersion": "1.0.0",   
+      "refreshFrequency": "00:00:00",   
+      "createTime": "11/04/2025 22:32:43",   
+      "lastUpdateTime": "11/04/2025 22:32:43",   
+      "lastSnapshotTime": "2025-11-04T22:34:04.7105015+00:00",   
+      "lastSnapshotRequestTime": "2025-11-04T22:32:52.0187838+00:00",   
+      "instanceStatus": "Ready",   
+      "realizeGraph": **true**   
+    },   
+    {   
+      "name": "notebook_graph_5",   
+      "mapFileName": **null**,   
+      "mapFileVersion": **null**,   
+      "graphDefinitionName": "notebook_graph_5",   
+      "graphDefinitionVersion": "1.0.0",   
+      "refreshFrequency": "00:00:00",   
+      "createTime": "11/04/2025 20:15:22",   
+      "lastUpdateTime": "11/04/2025 20:15:22",   
+      "lastSnapshotTime": **null**,   
+      "lastSnapshotRequestTime": **null**,   
+      "instanceStatus": "Creating",   
+      "realizeGraph": **true**   
+    }   
+  ]   
+} 
+```
+**Response Status Code**
+
+- **200 OK** - List retrieved successfully 
+
+ 
+
+## Query a graph
+
+Query a custom graph from your tenant using GQL query language.  
+For more information on GQL, see [GQL language guide](/fabric/graph/gql-language-guide).
+  
+> [!NOTE] 
+> `{graphName}` refers to the "name" of a graph returned from the preceding list or get operation.
+
+**HTTP Method:** *POST*   
+**URL:** *<u>https://{endpoint}/graphs/custom-graph-instances/{graphName}/query</u>* 
+
+*  
+Request Body Format *
+```json
+{   
+  "query": "string",   
+  "queryLanguage": "GQL"   
+} 
+```
+*Sample Request Body *  
+  `https://{endpoint}/graphs/custom-graph-instances/{graphName}/query`
+```json
+{   
+  "query": "MATCH (u)-[v]->(w) RETURN * LIMIT 2",   
+  "queryLanguage": "GQL"   
+} 
+
+*Sample Response *
+
+{   
+  "Graph": {   
+    "Nodes": [],   
+    "Edges": []   
+  },   
+  "RawData": {   
+    "Rows": [   
+      {   
+        "Cols": [   
+          {   
+            "Value": "{ _id: sharepointsystemn}",   
+            "Metadata": {},   
+            "Path": **null**   
+          },   
+          {   
+            "Value": "{ lastSeen: 2025-10-17T04:42:18.0000000Z, firstSeen: 2025-10-17T04:42:18.0000000Z, _sourceId: sharepointsystem, _targetId: fea4797a-89d9-4095-8a08-b821d6bfcd8e, _label: Deleted, _sourceLabel: ENTRAUSER, _targetLabel: ONLINEFILEn}",   
+            "Metadata": {},   
+            "Path": **null**   
+          },   
+          {   
+            "Value": "{ tenantId: 536279f6-15cc-45f2-be2d-61e352b51eef, _id: fea4797a-89d9-4095-8a08-b821d6bfcd8e, _label: ONLINEFILE, displayName: 0c8a8c07-a918-4540-ac1d-a78bf7c81a84_LThumb.jpgn}",   
+            "Metadata": {},   
+            "Path": **null**   
+          }   
+        ]   
+      }   
+    ],   
+    "ColumnNames": [   
+      "u",   
+      "v",    
+      "w"   
+    ]   
+  }  
+}  
+```
+
+*Response Status Code *
+
+- **200 OK** - Query executed successfully 
+
 
 ## Related content
 
