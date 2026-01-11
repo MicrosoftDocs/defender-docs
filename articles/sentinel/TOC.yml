@@ -326,13 +326,13 @@
             - name: User and entity behavior analytics (UEBA)
               href: identify-threats-with-entity-behavior-analytics.md
             - name: Aggregate behavioral insights from raw logs 
-              href: sentinel-behaviors.md
+              href: entity-behaviors-layer.md 
             - name: Create custom entity activities
               href: customize-entity-activities.md
         - name: Watchlists
           items:
             - name: Overview
-              href: watchlists.md
+              href: watchlists.md 
             - name: Create watchlists
               href: watchlists-create.md
             - name: Build queries or rules
@@ -1044,7 +1044,7 @@
 - name: Responsible AI
   items:
     - name: Responsible AI FAQ for UEBA behaviors layer
-      href: sentinel-behaviors-rai-faqs.md
+      href: entity-behaviors-layer-rai-faqs.md
     - name: Responsible AI FAQ for Microsoft Sentinel MCP
       href: datalake/sentinel-mcp-responsible-ai-faq.md
 - name: Microsoft Sentinel blog
