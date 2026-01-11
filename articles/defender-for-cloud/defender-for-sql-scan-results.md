@@ -90,9 +90,7 @@ This query is editable and can be customized to a specific resource, set of find
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Azure SQL Database**. 
-
-1. Select the name of `Your SQL database` to open its Overview page.
+1. Navigate to the relevant SQL database.
 
 1. Go to **Security** > **Microsoft Defender for Cloud**.
 
