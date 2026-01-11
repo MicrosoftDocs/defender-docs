@@ -56,7 +56,7 @@ The UEBA behaviors layer stores behavior records in two dedicated tables, integr
 
 This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
-:::image type="content" source="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" alt-text="Diagram that shows how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations." lightbox="media/sentinel-behaviors/sentinel-behaviors-data-flow.svg" ::: 
+:::image type="content" source="media/entity-behaviors-layer/entity-behaviors-layer-data-flow.svg" alt-text="Diagram that shows how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations." lightbox="media/entity-behaviors-layer/entity-behaviors-layer-data-flow.svg" ::: 
  
 > [!IMPORTANT]
 > Generative AI powers the UEBA Behaviors layer to create and scale the insights it provides. Microsoft designed the Behaviors feature based on **privacy and responsible AI principles** to ensure transparency and explainability. Behaviors don't introduce new compliance risks or opaque "black box" analytics into your SOC. For details about how AI is applied in this feature and Microsoft’s approach to responsible AI, see [Responsible AI FAQ for the Microsoft UEBA behaviors layer](https://aka.ms/miscrosoftsentinelbehaviors).
@@ -214,7 +214,7 @@ To enable the UEBA behaviors layer in your workspace:
 
     If you haven't yet connected any supported data sources to your Sentinel workspace, select **Go to Content Hub** to find and connect the relevant connectors.
 
-    :::image type="content" source="media/sentinel-behaviors/behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/sentinel-behaviors/behaviors-enable.png":::
+    :::image type="content" source="media/entity-behaviors-layer/behaviors-enable.png" alt-text="Screenshot that shows the Enable Behaviors layer page in the Defender portal." lightbox="media/entity-behaviors-layer/behaviors-enable.png":::
 
 1. Select **Connect**.
 
@@ -249,16 +249,16 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
     | where ServiceSource == "Microsoft Sentinel"
     ```
 
-    :::image type="content" source="media/sentinel-behaviors/query-behaviors-filter-microsoft-sentinel.png" alt-text="Screenshot of BehaviorInfo table filtered by ServiceSource column to the Microsoft Sentinel value." lightbox="media/sentinel-behaviors/query-behaviors-filter-microsoft-sentinel.png":::
+    :::image type="content" source="media/entity-behaviors-layer/query-behaviors-filter-microsoft-sentinel.png" alt-text="Screenshot of BehaviorInfo table filtered by ServiceSource column to the Microsoft Sentinel value." lightbox="media/entity-behaviors-layer/query-behaviors-filter-microsoft-sentinel.png":::
 
 
 - **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs in the `SupportingEvidence` field.
 
-    :::image type="content" source="media/sentinel-behaviors/query-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/sentinel-behaviors/query-behaviors-drill-down-raw-logs.png":::
+    :::image type="content" source="media/entity-behaviors-layer/query-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/entity-behaviors-layer/query-behaviors-drill-down-raw-logs.png":::
 
   Run a query on the `SupportingEvidence` field value to find the raw logs that contributed to a behavior. 
 
-  :::image type="content" source="media/sentinel-behaviors/query-behaviors-supporting-evidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/sentinel-behaviors/query-behaviors-supporting-evidence.png":::
+  :::image type="content" source="media/entity-behaviors-layer/query-behaviors-supporting-evidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/entity-behaviors-layer/query-behaviors-supporting-evidence.png":::
 
 - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
