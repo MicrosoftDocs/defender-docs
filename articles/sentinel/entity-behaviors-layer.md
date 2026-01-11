@@ -56,7 +56,7 @@ The UEBA behaviors layer stores behavior records in two dedicated tables, integr
 
 This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
-:::image type="content" source="media/entity-behaviors-layer/entity-behaviors-layer-data-flow.svg" alt-text="Diagram that shows how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations." lightbox="media/entity-behaviors-layer/entity-behaviors-layer-data-flow.svg" ::: 
+:::image type="content" source="media/entity-behaviors-layer/entity-behaviors-data-flow.svg" alt-text="Diagram that shows how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations." lightbox="media/entity-behaviors-layer/entity-behaviors-data-flow.svg" ::: 
  
 > [!IMPORTANT]
 > Generative AI powers the UEBA Behaviors layer to create and scale the insights it provides. Microsoft designed the Behaviors feature based on **privacy and responsible AI principles** to ensure transparency and explainability. Behaviors don't introduce new compliance risks or opaque "black box" analytics into your SOC. For details about how AI is applied in this feature and Microsoft’s approach to responsible AI, see [Responsible AI FAQ for the Microsoft UEBA behaviors layer](https://aka.ms/miscrosoftsentinelbehaviors).
