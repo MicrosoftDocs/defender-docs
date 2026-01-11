@@ -756,28 +756,6 @@ ValueError: If table not found or multiple conflicting tables found
 builder.add_edge("accessed").from_table("AccessLogs")
 ```
 
-#### from_query
-
-```python
-def from_query(query: str) -> EdgeBuilderSourceSet
-```
-
-Set SQL query as data source.
-
-**Parameters:**
-
-- `query` (str): SQL query string
-
-**Returns:**
-
-EdgeBuilderSourceSet: Builder for further configuration
-
-**Example:**
-
-```python
-builder.add_edge("accessed").from_query("SELECT * FROM access_logs")
-```
-
 #### from_dataframe
 
 ```python
@@ -1327,7 +1305,7 @@ Request Body Format *
 }  
 ```
 
-*Response Status Code *
+**Response Status Code**
 
 - **200 OK** - Query executed successfully 
 
