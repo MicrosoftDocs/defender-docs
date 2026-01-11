@@ -258,7 +258,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
   Run a query on the `SupportingEvidence` field value to find the raw logs that contributed to a behavior. 
 
-  :::image type="content" source="media/sentinel-behaviors/query-behaviors-supportingevidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/sentinel-behaviors/query-behaviors-supportingevidence.png":::
+  :::image type="content" source="media/sentinel-behaviors/query-behaviors-supporting-evidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/sentinel-behaviors/query-behaviors-supporting-evidence.png":::
 
 - **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 

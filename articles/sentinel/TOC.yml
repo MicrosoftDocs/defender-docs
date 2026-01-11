@@ -1041,6 +1041,12 @@
           href: stix-objects-api.md
         - name: Legacy upload indicator API reference
           href: upload-indicators-api.md
+- name: Responsible AI
+  items:
+    - name: Responsible AI FAQ for UEBA behaviors layer
+      href: sentinel-behaviors-rai-faqs.md
+    - name: Responsible AI FAQ for Microsoft Sentinel MCP
+      href: datalake/sentinel-mcp-responsible-ai-faq.md
 - name: Microsoft Sentinel blog
   href: https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/bg-p/MicrosoftSentinelBlog
 - name: Pricing
