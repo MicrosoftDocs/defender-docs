@@ -39,7 +39,7 @@ This article describes several ways to consume and export your scan results.
 
 1. Select **Run query**.
 
-1. Select **Download as CSV**, to export your results to a CSV file.
+1. Select **Download as CSV**.
 
 These queries are editable and can be customized to a specific resource, set of findings, findings status or more.
 
@@ -78,7 +78,7 @@ These queries are editable and can be customized to a specific resource, set of 
 
 1. Select **Run query**.
 
-1. Select **Download as CSV**, to export your results to a CSV file.
+1. Select **Download as CSV**.
 
     :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot that shows you where the run query button and the download as csv button are located." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
@@ -102,7 +102,7 @@ This query is editable and can be customized to a specific resource, set of find
 
 1. Select **Run query**.
 
-1. Select **Download as CSV**, to export your results to a CSV file.
+1. Select **Download as CSV**.
 
     :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot that shows you where the run query button and the download  as csv button are located." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
