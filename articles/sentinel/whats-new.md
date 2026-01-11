@@ -20,22 +20,22 @@ The listed features were released in the last six months. For information about 
 
 ## January 2026
 
-### UEBA behaviors layer (Preview)
+### UEBA behaviors layer aggregates actionable insights from raw logs in near-real time (Preview)
 
-Microsoft Sentinel introduces a new UEBA behaviors layer that transforms high-volume, low-level security logs into clear, human-readable behavioral insights in the Defender portal. This AI-powered capability aggregates and sequences raw events from supported data sources into normalized behaviors that explain "who did what to whom" with MITRE ATT&CK context.
+Microsoft Sentinel introduces a UEBA behaviors layer that transforms high-volume, low-level security logs into clear, human-readable behavioral insights in the Defender portal. This AI-powered capability aggregates and sequences raw events from supported data sources into normalized behaviors that explain "who did what to whom" with MITRE ATT&CK context.
 
-The UEBA behaviors layer bridges the gap between alerts and raw logs. While raw logs are noisy, uncorrelated, and difficult to interpret, and alerts indicate a potential issue that requires action, the UEBA behaviors abstraction layer summarizes behavior patterns - normal or abnormal - and optimizes data for investigations, hunting, and detection. For example, instead of analyzing individual AWS CloudTrail events or firewall logs, analysts see a behavior - like "**Inbound remote management session from external address**" - that summarizes multiple raw events and maps them to known tactics, techniques, and procedures (TTPs).
+**How behaviors bridge the gap between alerts and raw logs**
+
+While incoming raw logs are noisy, uncorrelated, and difficult to interpret, and alerts call analysts to take action on potential issues, UEBA behaviors summarize behavior patterns - normal or abnormal - ingested from supported data sources. This creates an abstraction layer that optimizes data for investigations, hunting, and detection. For example, instead of analyzing individual AWS CloudTrail events or firewall logs, analysts see a behavior - like "**Inbound remote management session from external address**" - that summarizes multiple raw events and maps them to known tactics, techniques, and procedures (TTPs).
 
 UEBA behaviors:
 
-- **Transform noisy telemetry into actionable insights**: Convert fragmented, high-volume logs into clear, human-readable behavioral observations, making it easier to understand security events.
-- **Ensure explainability**: Map to MITRE ATT&CK tactics, entity roles, and raw logs for traceability and clarity.
 - **Accelerate investigations**: Enable faster incident response by aggregating and sequencing behaviors, allowing analysts to focus on meaningful actions rather than sifting through thousands of events.
+- **Transform noisy telemetry into actionable insights**: Convert fragmented, high-volume logs into clear, human-readable behavioral observations, making it easier to understand security events.
 - **Empower all SOC personas**: Enhance workflows for SOC analysts, threat hunters, and detection engineers by providing unified, contextual views and building blocks for detection rules and automation.
+- **Ensure explainability**: Map to MITRE ATT&CK tactics, entity roles, and raw logs for traceability and clarity.
 
-Behaviors are stored in the `BehaviorInfo` and `BehaviorEntities` tables accessible through Advanced Hunting in the Defender portal. 
-
-**Supported data sources (Preview):** AWS CloudTrail, CommonSecurityLog (CyberArk Vault, Palo Alto Threats)
+UEBA behaviors can be enabled independently from UEBA anomaly detection. 
 
 For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/sentinel-behaviors.md).
 
