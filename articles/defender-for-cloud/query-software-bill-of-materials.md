@@ -34,7 +34,13 @@ Using the cloud security explorer, you can build a query to find repositories th
 
 1. Select **Done**.
 
-1. (Optional) Select search to view all repositories ingested into the cloud security graph, or continue to add dependency filters.
+1. Select **Search**. 
+
+The query runs and all code repositories are presented. Select a repository from the findings to view further details about the installed software and its security posture.
+
+### Add a dependency filter
+
+To add a filter that searches for repositories containing specific packages (dependencies), continue building the query as follows. 
 
 1. Select **(+)**.
 
@@ -42,17 +48,31 @@ Using the cloud security explorer, you can build a query to find repositories th
 
     :::image type="content" source="media/query-software-bill-of-materials/has-installed-software.png" alt-text="Screenshot that shows how to apply the dependency, has installed software." lightbox="media/query-software-bill-of-materials/has-installed-software.png":::
 
-1. Select the **(+)** next to Has installed software.
+1. Select **(+)** next to `Has installed software`.
 
 1. Select **Name** > **Equals**.
 
 1. Enter the package name. For example, `log4j`, `express` or `newtonsoft.json`.
 
-1. (Optional) Specify a version:
-   * Click the **(+)** button again to add another sub-condition.
-   * Select **Version**.
-   * Enter the specific version number you are hunting for.
+1. Select **Search**. 
+
+The query runs and all repositories containing the specified package are presented. Select a repository from the findings to view further details about the installed software and its security posture.
+
+### Specify a version
+
+To add a filter that searches for a specific package version, continue building the query as follows.
+
+1. Select **(+)** next to `Has installed software`.
+
+1. Select **Version**.
+
+    :::image type="content" source="media/query-software-bill-of-materials/version.png" alt-text="A screenshot that shows where to navigate to, to select version." lightbox="media/query-software-bill-of-materials/version.png":::
+
+1. Enter a version number. For example, `2.14.1`.
+
 1. Select **Search** to run the query.
+
+The query runs and all repositories containing the specified package and version are presented. Select a repository from the findings to view further details about the installed software and its security posture.
 
 ### Example Query
 
