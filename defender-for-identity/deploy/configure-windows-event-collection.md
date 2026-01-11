@@ -8,19 +8,37 @@ ms.reviewer: rlitinsky
 
 # Configure audit policies for Windows event logs
 
-Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications. 
-This article describes how to configure the advanced audit policy settings to avoid gaps in the event logs and incomplete Defender for Identity coverage.
+Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+
+This article describes how to configure the advanced audit policy settings to avoid gaps in the event logs leading to incomplete Defender for Identity coverage.
+
+## Configure Windows event auditing with the Defender for Identity sensor v3.x
+
+Defender for Identity sensor v3.x offers preview feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones.
+
+To turn on automatic windows auditing:
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**. 
+1. In the **General** section, select **Advanced features**.
+1. Turn on **Automatic Windows auditing configuration**.​
+
+If you do not select automatic Windows auditing configuration, you must manually configure Windows event auditing in the Defender portal or using PowerShell.
+
+## Configure Windows event auditing with the Defender for Identity sensor v2.x
+
+Configure Windows event auditing on your domain controllers to support Defender for Identity detections. 
+Defender for Identity generates health issues for each of these scenarios if they're detected. For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md).
+
 
 Defender for Identity generates health alerts when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
-## Prerequisites
+### Prerequisites
 
-If you are using the Active Directory PowerShell module to configure a domain controller, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/). 
+Before you run Defender for Identity PowerShell commands, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
 > [!NOTE]
 > The Active Directory PowerShell module is only required when configuring Defender for Identity on domain controllers. It isn’t required on AD CS servers running the Certification Authority Role Service.
 
-## Generate a report of current configurations using PowerShell
+### Generate a report of current configurations using PowerShell
 
 Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
@@ -62,7 +80,7 @@ You can configure auditing on the domain controllers either in the portal or usi
 
 ### Configure Advanced Audit Policy settings in the Defender portal
 
-This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity via the UI.
+This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity in the Defender portal.
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -167,7 +185,7 @@ For more information, see the following [DefenderForIdentity PowerShell referenc
 When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data. This section describes the extra configuration steps that you need for auditing Windows event 8004.
 
 > [!NOTE]
-> - Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
+> Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
 
 To configure NTLM auditing:
 
@@ -185,7 +203,7 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 :::image type="content" source="../media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the audit configuration for outgoing NTLM traffic to remote servers." border="false":::
 
-## Configure domain object auditing
+### Configure domain object auditing
 
 To collect events for object changes, such as for event 4662, you must also configure object auditing on the user, group, computer, and other objects. The following procedure describes how to enable auditing in the Active Directory domain.
 
@@ -240,7 +258,7 @@ To configure domain object auditing:
    - **Descendant msDS-DelegatedManagedServiceAccount Objects** <sup>2</sup>
 
 > [!NOTE]
-> - You could also assign auditing permissions on **All descendant objects**, using only the object types detailed in the last step.
+> - You can also assign auditing permissions on **All descendant objects**, using only the object types detailed in the last step.
 > - The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
 ## Configure auditing on AD FS
