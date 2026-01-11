@@ -4,6 +4,7 @@ description: Implementation guide for partners and SOC architects implementing M
 author: guywi-ms
 ms.author: guywild
 ms.date: 11/20/2025
+ms.service: unified-security-operation
 ms.topic: concept-article
 ---
 # Microsoft Defender portal implementation guide for MSSPs
@@ -34,7 +35,7 @@ The Microsoft Defender portal is a unified security operations platform that bri
 
 - **Scalable multitenant management**: Get aggregate views of your tenants' alerts, incidents, and assets, hunt over all your tenants' data, and maintain a consistent security baseline across your tenants using [content management and distribution features](#manage-and-distribute-content) for custom detection rules, endpoint security policies, analytics rules, automation rules, and more.
 
-- **Continuous improvement insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
+- **Continuous improvement insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
 There are 3 steps to build Security Operations on the Microsoft Defender Portal:
 
@@ -42,7 +43,7 @@ There are 3 steps to build Security Operations on the Microsoft Defender Portal:
 
 2. Step 2 - Content Management: Build security content once and deploy it across all customer tenants efficiently.
 
-3. Step 4 - Multi-Tenant operations: Run daily incident response, threat hunting, and investigations across customer tenants.
+3. Step 3 - Multi-Tenant operations: Run daily incident response, threat hunting, and investigations across customer tenants.
 
 ## Prerequisite - Onboard your customers to the Microsoft Defender portal
 
@@ -59,7 +60,7 @@ Successfully transitioning customers to the Microsoft Defender portal requires c
 
 ### Set up access to multiple customer tenants
 
-MSSPs can delegate access to customer tenants through several methods. [Learn more about delegated access options](https://learn.microsoft.com/en-us/partner-center/customers/gdap-introduction) so you can choose the approach that best fits your organization's needs and customer requirements.
+MSSPs can delegate access to customer tenants through several methods. [Learn more about delegated access options](partner-center/customers/gdap-introduction) so you can choose the approach that best fits your organization's needs and customer requirements.
 
 >[!NOTE]
 > It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
@@ -219,7 +220,7 @@ A key consideration with multi-customer CI/CD pipelines is choosing the best str
 - Each customer workspace connects to both repositories
 - Optimal for MSSPs with balanced common and tailored content needs
 
-  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
+  :::image type="content" source="./media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
 
 #### **Pattern 2: Single repository with custom folders**
 - All content in one repository
@@ -227,7 +228,7 @@ A key consideration with multi-customer CI/CD pipelines is choosing the best str
 - Deployment pipelines customized per customer connection
 - Requires more initial setup but simplifies repository management
 
-  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
+  :::image type="content" source="./media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
 
 #### **Pattern 3: One repository per customer**
 - Complete content separation across customers
