@@ -178,7 +178,7 @@ During public preview, the UEBA behaviors layer focuses on these non-Microsoft d
 | Data source | Supported vendors and services | Connector |
 |-------------|---------------------------|-------|
 | [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
-| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#find-your-microsoft-sentinel-data-connector#amazon-web-services-s3)</li></ul> |
+| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> |
 
 > [!IMPORTANT]
 > These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
