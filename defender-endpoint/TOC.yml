@@ -596,22 +596,16 @@
 
   - name: Detect threats and protect endpoints
     items:
-    - name: Microsoft Defender Vulnerability Management
+    - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Device discovery
+    - name: Discover devices
       items:
-      - name: Device discovery overview
+      - name: Overview
         href: device-discovery.md
-      - name: Configure device discovery
+      - name: Manage device discovery
         href: configure-device-discovery.md
-      - name: Enterprise IoT security
-        items:
-        - name: Securing IoT devices in the enterprise
-          href: /azure/defender-for-iot/organizations/concept-enterprise/
-        - name: Enable Enterprise IoT security with Defender for Endpoint
-          href: /azure/defender-for-iot/organizations/eiot-defender-for-endpoint/
-        - name: Manage Defender for IoT plans
-          href: /azure/defender-for-iot/organizations/manage-subscriptions-enterprise/
+      - name: Review and assess devices
+        href: assess-devices.md
       - name: Device discovery FAQ
         href: device-discovery-faq.md  
 
