@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.topic: reference
@@ -18,13 +18,11 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # MachineAction resource type
 
 - For more information, see [Response Actions](../respond-machine-alerts.md).
-
 
 ## Properties
 
@@ -66,4 +64,3 @@ appliesto:
         "relatedFileInfo": null
 }
 ```
-
