@@ -31,15 +31,15 @@ Set up the device groups similar to Group policy  organizational unite (OUs), Mi
 
 1. Navigate to **Static Computer Groups**.
 
-2. Select **New**. 
+1. Select **New**. 
 
    :::image type="content" source="media/jamf-pro-static-group.png" alt-text="The Jamf Pro1 page" lightbox="media/jamf-pro-static-group.png":::
 
-3. Provide a display name and select **Save**.
+1. Provide a display name and select **Save**.
 
    :::image type="content" source="media/jamfpro-machine-group.png" alt-text="The Jamf Pro2 page" lightbox="media/jamfpro-machine-group.png":::
 
-4. Now you see the **Contoso's Machine Group** under **Static Computer Groups**.
+1. Now you see the **Contoso's Machine Group** under **Static Computer Groups**.
 
    :::image type="content" source="media/contoso-machine-group.png" alt-text="The Jamf Pro3 page" lightbox="media/contoso-machine-group.png":::
 

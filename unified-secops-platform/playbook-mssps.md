@@ -4,6 +4,7 @@ description: Implementation guide for partners and SOC architects implementing M
 author: guywi-ms
 ms.author: guywild
 ms.date: 11/20/2025
+ms.service: unified-security-operation
 ms.topic: concept-article
 ---
 # Microsoft Defender portal implementation guide for MSSPs
@@ -14,48 +15,75 @@ The Microsoft Defender portal's multitenant management features enable MSSPs to 
 
 This guide focuses on practical implementation - from initial setup and customer onboarding through advanced operational workflows. Use this guide to transform the multitenant management features into an efficient, scalable security operations practice for your MSSP organization.
 
-## Why Microsoft Defender Portal for MSSPs
+## What is Microsoft Defender Portal for MSSPs?
 
-The Microsoft Defender Portal delivers unique advantages that make it the premier choice for MSSPs seeking to provide world-class security operations across multiple customer tenants:
+The Microsoft Defender portal is a unified security operations platform that brings together incident management, threat hunting, and workload management across multiple customer tenants. This guide focuses on practical implementation from initial setup and customer onboarding through advanced operational workflows for MSSPs.
 
-**Unified incident management with comprehensive visibility**: A single unified incidents queue includes data from Microsoft Sentinel, Defender, and third-party sources, giving your analysts complete visibility into the threat landscape across all customers without portal switching. See [Managing Security Operations across tenants](#managing-security-operations-across-tenants) for implementation details.
+### Key Capabilities & Differentiators
 
-**Cross-platform threat hunting**: Unified hunting capabilities cover both Microsoft Sentinel and Defender data, eliminating the need to switch between portals and allowing analysts to easily locate the data they need across your entire customer base. Learn more in [How advanced hunting works across different tenants](#how-advanced-hunting-works-across-different-tenants).
+- **Unified incident management**: A single unified incidents queue includes data from Microsoft Sentinel, Microsoft Defender, and third-party sources. For more information, see [Manage Security Operations across tenants](#manage-security-operations-across-tenants)
 
-**Proactive attack disruption**: Attack Disruption is a core differentiator of the Microsoft Defender platform, delivering proactive protection by stopping attacks in progress—not just on Defender native technologies, but across third-party environments such as SAP, AWS, Proofpoint and Okta where Sentinel is deployed on top of XDR. By automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds, Defender reduces dwell time and prevents lateral movement.
+- **Cross-platform threat hunting**: Unified hunting capabilities across security data, eliminating the need to switch between portals and allowing analysts to easily locate the data they need across your entire customer base. For more information, see [Advanced hunting](#advanced-hunting).
 
-**Attack path analysis and exposure visualization**: Analyze attack paths and reduce exposure by visualizing how cyber attackers could exploit vulnerabilities to move laterally across exposed assets in customer environments. This feature provides guided recommendations on reducing exposure and helps prioritize actions based on each exposure's potential impact. See [Microsoft Security Exposure Management](#microsoft-security-exposure-management) for complete capabilities.
+- **Proactive attack disruption**: Attack Disruption is a core differentiator of the Microsoft Defender portal, delivering proactive protection by stopping attacks in progress — not just on native Microsoft Defender technologies, but also across third-party environments, such as SAP, AWS, Proofpoint, and Okta. By automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds, Microsoft Defender reduces dwell time and prevents lateral movement.
 
-**Enhanced detection accuracy**: Detect and investigate faster and more accurately by combining the depth of XDR signals from Defender with the flexibility of log sources from Microsoft Sentinel, resulting in an improved signal-to-noise ratio and enhanced alert correlation.
+- **Attack path analysis and exposure visualization**: Analyze attack paths and reduce exposure by visualizing how cyber attackers could exploit vulnerabilities to move laterally across exposed assets in customer environments. This feature provides guided recommendations on reducing exposure and helps prioritize actions based on each exposure's potential impact. For more information, see [Microsoft Security Exposure Management](#exposure-management).
 
-**AI-powered security operations**: Take advantage of Security Copilot for incident summaries and reports, guided investigation, autogenerated Microsoft Teams messages, code analysis, and more—accelerating analyst productivity and reducing time-to-resolution. Explore implementation options in [Agentic AI](#agentic-ai).
+- **Enhanced detection accuracy**: Detect and investigate faster and more accurately by combining the depth of signals Microsoft Defender with the flexibility of log sources from Microsoft Sentinel, resulting in an improved signal-to-noise ratio and enhanced alert correlation.
 
-**Scalable multitenant management**: Leverage a comprehensive set of [multitenant capabilities](#managing-security-operations-across-tenants) that allow you to see aggregate views of your tenants' alerts, incidents, assets, and more, as well as hunt over all your tenants' data. Maintain a consistent security baseline across your tenants using [content distribution features](#content-and-configuration-management) for custom detection rules, endpoint security policies, analytics rules, automation rules, and more.
+- **AI-powered security operations**: Take advantage of Microsoft Security Copilot for incident summaries and reports, guided investigation, autogenerated Microsoft Teams messages, code analysis, and more. For more information, see [Get started with agentic AI](#get-started-with-agentic-ai).
 
-**Continuous improvement through AI insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#microsoft-security-exposure-management) initiatives to automatically improve readiness scores as actions are completed.
+- **Scalable multitenant management**: Get aggregate views of your tenants' alerts, incidents, and assets, hunt over all your tenants' data, and maintain a consistent security baseline across your tenants using [content management and distribution features](#manage-and-distribute-content) for custom detection rules, endpoint security policies, analytics rules, automation rules, and more.
 
-## Set up access to multiple customer tenants
+- **Continuous improvement insights**: Receive tailored, post-incident recommendations on preventing similar or repeat cyberattacks, which tie directly into [Microsoft Security Exposure Management](#exposure-management) initiatives to automatically improve readiness scores as actions are completed.
 
-There are two ways available to connect to other customer tenants.
+There are 3 steps to build Security Operations on the Microsoft Defender Portal:
 
-- [GDAP (Granular Delegated Admin Privileges) (preferred)](/partner-center/customers/gdap-introduction)
-- [Azure Lighthouse](/azure/lighthouse/) for scenarios where GDAP is not supported. Some scenarios include:
+1. Step 1 - Prepare your environment: This step focused on getting your MSSP environment ready and onboarding your customers to a multi-tenant configuration
 
-  - CSP partners with Sentinel workloads (partner center???)
-  - [Non-CSP partners (Azure RBAC)](/azure/lighthouse/how-to/onboard-customer?tabs=azure-portal)
-  - [B2B collaboration](/entra/external-id/what-is-b2b) (Entra RBAC) to manage Defender customers.
-  - [Service principal delegation across tenants](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/combining-azure-lighthouse-with-microsoft-sentinel%E2%80%99s-devops-capabilities/1210966/replies/1803890)
-  - [Workbooks querying data across multiple tenants](/azure/sentinel/multiple-tenants-service-providers)
-  - [Cross-workspace analytics rules](/azure/sentinel/multiple-workspace-view)
-    - When the analytics rule needs to correlate data stored in multiple workspaces. For example, detect a password spray across tenants.
-    - To protect the Intellectual Property created as part of an analytics rule (MSSP scenario described later in this article)
+2. Step 2 - Content Management: Build security content once and deploy it across all customer tenants efficiently.
 
-    >[!NOTE]
-    > It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
+3. Step 3 - Multi-Tenant operations: Run daily incident response, threat hunting, and investigations across customer tenants.
 
-  - Advanced automation rule/playbook scenario
+## Prerequisite - Onboard your customers to the Microsoft Defender portal
 
-    Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
+Successfully transitioning customers to the Microsoft Defender portal requires careful planning and coordination. The transition process involves migrating Microsoft Sentinel workspaces and ensuring continuity of security operations.
+
+**Start with the transition guide**: See [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md) for the technical migration process.
+
+**MSSP-specific considerations**:
+- **Customer communication**: Establish clear timelines and expectations with customers before beginning the transition
+- **Permission planning**: Review the multitenant access requirements and ensure proper delegation is configured for each customer tenant
+- **Workspace strategy**: Determine the optimal workspace configuration (primary vs. secondary) based on each customer's environment and compliance requirements
+
+## Step 1 - Prepare and onborad your customers
+
+### Set up access to multiple customer tenants
+
+MSSPs can delegate access to customer tenants through several methods. [Learn more about delegated access options](partner-center/customers/gdap-introduction) so you can choose the approach that best fits your organization's needs and customer requirements.
+
+>[!NOTE]
+> It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
+
+#### Advanced automation rule/playbook scenario
+
+Some advanced scenarios using automation rules and playbooks might still require using Azure Lighthouse. For example, to protect the intellectual property of a playbook hosted in the partner tenant when the playbook needs to execute actions in the customer tenant. Another example is described in [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded#permissions-in-a-multitenant-architecture)
+
+#### Unified RBAC
+When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
+- [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles.md#email--collaboration-permissions-mapping)
+- [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles.md#exchange-online-permissions-mapping)
+
+   >[!NOTE]
+   >GDAP isn't currently supported for managing Defender for Office 365.
+
+#### Azure B2B 
+Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, this creates limitations for actions performed in Defender for Office 365. This can result in B2B guest admins getting errors when attempting to perform certain actions, such as:
+- Managing spam and phishing policies
+- Managing TABL
+- Cannot release emails from quarantine
+- Missing Threat Explorer in navigation pane
+
 
 ## Manage entitlement
 
@@ -165,10 +193,70 @@ Please refer here: [Import roles to Microsoft Defender XDR Unified role-based ac
 --->
 For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
 
-## Manage security operations across tenants
+## Step 2 - Content Management
+
+### Manage and distribute content
+
+In Microsoft Sentinel, content refers to the building blocks that enable security operations - such as analytics rules, data connectors, hunting queries, parsers, playbooks, watchlists, and workbooks. [Microsoft Sentinel provides out-of-the-box content](/azure/sentinel/sentinel-solutions) that you can use as-is or customize. You can also create and distribute custom content to meet unique requirements. Effective content management and distribution ensures consistent security baselines, rapid threat response, and scalable operations across customer tenants. 
+
+MSSPs working in the Microsoft Defender portal have several tools for managing and distributing security content at scale:
+
+| **Option**                               | **Best for**                                                   | **Technical details**                                                                                                      | **Key capabilities**                                                                                           | **Learn more**                                                                                     |
+|------------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **Native multitenant content distribution** | Quick deployment of standard content across many tenants | Uses Defender portal's built-in multitenant management. Ideal for OOB content or lightly customized content.              | <ul><li>Create once, deploy everywhere across multiple tenants</li><li>Execute content on target scopes (devices, workspaces)</li><li>Centralized tracking to reduce duplication and errors</li></ul> | [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles) |
+| **Microsoft Sentinel repositories (content as code)** | Structured DevOps processes and moderate customization needs | Enables advanced governance and lifecycle management. Quick configuration and reduction in human error. | <ul><li>Manage SIEM content using automation</li><li>Apply CI/CD practices for version control, testing, and deployment</li><li>Supports hybrid workflows combining native distribution and DevOps</li></ul> | [Manage content as code with Microsoft Sentinel repositories (public preview)](https://aka.ms/microsoft-sentinel-repos) |
+| **Custom CI/CD pipelines**              | Maximum customization and automation across tenants | Built using Azure DevOps or GitHub Actions. Requires custom scripts and configuration files. Current method for advanced content types. | <ul><li>Full flexibility for complex workflows</li><li>Custom testing and integration</li></ul> | [Customize repository deployments (public preview)](/azure/sentinel/ci-cd-custom-deploy) |
+
+>[!TIP]
+> We recommend a hybrid approach, combining native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
+
+### Common repository architecture patterns for MSSPs
+
+A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
+
+#### **Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
+- One central repository for common content deployed to all customers
+- Individual repositories for customer-specific customizations
+- Each customer workspace connects to both repositories
+- Optimal for MSSPs with balanced common and tailored content needs
+
+  :::image type="content" source="./media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
+
+#### **Pattern 2: Single repository with custom folders**
+- All content in one repository
+- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
+- Deployment pipelines customized per customer connection
+- Requires more initial setup but simplifies repository management
+
+  :::image type="content" source="./media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
+
+#### **Pattern 3: One repository per customer**
+- Complete content separation across customers
+- Full customization flexibility for each customer
+- Best for customers with unique content requirements
+- Higher management overhead but maximum isolation
+
+  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
+
+To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
+
+For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
+
+### Shared content management considerations
+
+When MSSPs and customers both manage content, conflicts can occur, especially if you're using both content-as-code and the portal for content management because updates you make in your content-as-code repositories overwrite any changes made to that content through the portal. 
+
+To prevent such conflicts, we recommend:
+
+- Centralized management only - Restrict permissions so only MSSP users can create and update content.
+- Shared management with clear markers - Prefix MSSP-managed items with a naming convention. This allows local updates but reduces errors.
+
+## Step 3 - Multi-Tenant Security Operations
+
+### Manage security operations across tenants
 The Microsoft Defender portal provides all relevant information so you don't have to switch to another portal or page. Its unified incident queue and the ability to correlate events and alerts can reveal a larger, potentially more comprehensive attack, providing a complete attack story. It also lets you view the detection source and product names, and apply and share filters for these, making incident and alert triaging more efficient.
 
-### Manage incidents and alerts
+#### Manage incidents and alerts
 
 - **Incident triage:** Triaging incidents is a core activity in a SOC, starting with the Investigation and response section in the Defender portal. The Microsoft Sentinel incident and alert integration with Defender consolidates all relevant information in one place, eliminating the need to switch between portals or pages. This streamlined workflow might require some analyst retraining and updates to existing SOC processes.
   
@@ -189,17 +277,16 @@ The Microsoft Defender portal provides all relevant information so you don't hav
 
   For more information, see [Configure APIs](/azure/sentinel/move-to-defender?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json&branch=main#configure-apis).
 
-### Advanced hunting
+#### Advanced hunting
 Advanced hunting lets you proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time, in a single place. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal (MTO), you can query Microsoft Sentinel with data from all your workspaces, running queries across multiple workspaces and tenants using the workspace operator in your query.
 
 For more information, see [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md).
 
-
-## Manage workloads across tenants
+### Manage workloads across tenants
 
 This sections explores the various actions you can take and methods you can use for managing specific workloads, either through MTO or other available means.
 
-### Endpoints
+#### Endpoints
 
 The multitenant view in the Defender portal provides security administrators a consolidated view of all security policies across their entire organization, including all tenants' policies, without needing to switch portals. To access this page, go to **Endpoints** > **Configuration Management** > **Endpoint Security Policies**.
 
@@ -217,48 +304,35 @@ Once the tenants are onboarded to multitenant management in Defender (MTO), endp
 > Multitenant management in Defender (MTO) doesn't support Microsoft Defender for Business tenants.
 
 
-### Email and collaboration tools 
+#### Email and collaboration tools 
 
 When managing email and collaboration tools in the unified portal, there are some important distinctions to note around capabilities as they relate to managing customers through B2B and Granular Delegated Admin Privileges (GDAP).
 
-#### Unified RBAC
-When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
-- [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles.md#email--collaboration-permissions-mapping)
-- [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles.md#exchange-online-permissions-mapping)
-
-#### GDAP
-GDAP isn't currently supported for managing Defender for Office 365.
-
-#### Azure B2B 
-Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, this creates limitations for actions performed in Defender for Office 365. This can result in B2B guest admins getting errors when attempting to perform certain actions, such as:
-- Managing spam and phishing policies
-- Managing TABL
-- Cannot release emails from quarantine
-- Missing Threat Explorer in navigation pane
-
-### Identities
+#### Identities
 The multitenant view in the Defender portal provides complex organizations with means to segregate regions and business units into individual tenants, without losing access to those tenant data.
 
 Once the tenants are onboarded to multitenant management in Defender (MTO), identities across all onboarded tenants can be managed through the Identities page. For more information, see [Multitenant identities](multitenant-identities-inventory.md).
 
-### Cloud applications
+#### Cloud applications
+
 **Microsoft Defender for Cloud Apps** is a software-as-a-service (SaaS) security solution that's included with relevant licenses and has a compliance boundary of the tenant where the license is provisioned. Due to this architecture, only Microsoft 365 and Azure connectors ingest activities and trigger alerts for users within those tenants. However, you may still connect multiple third-party connectors.
 
 Defender for Cloud Apps is natively integrated with Microsoft Defender and follows the same multitenancy capabilities. While connectors are limited to a specific tenant, the data that's ingested from each tenant in the `CloudAppEvents` table and incidents or alerts are available through MTO. You can hunt for events across tenants and triage incidents or that originate from Defender for Cloud Apps signals.
 
 For more information, see [Microsoft Defender for Cloud Apps overview](/defender-cloud-apps/what-is-defender-for-cloud-apps).
 
-### Cloud
+#### Cloud
 **Microsoft Defender for Cloud** is integrated with Microsoft Defender. This integration lets you access Defender for Cloud alerts and incidents within the Defender portal, and provides you with richer context to investigations that span cloud resources, devices, and identities. It allows security teams to get the complete picture of an attack, including suspicious and malicious events that happen in their cloud environment.
 
 For more information, see [What is Microsoft Defender for Cloud?](/defender-for-cloud/defender-for-cloud-introduction).
 
-### Exposure management
+#### Exposure management
+
 **Microsoft Security Exposure Management** is a security solution that provides a unified view of security posture across company assets and workloads. It enriches asset information with security context that helps you to proactively manage attack surfaces, protect critical assets, and explore and mitigate exposure risk. 
 
 For more information, see [What is Microsoft Security Exposure Management?](/security-exposure-management/microsoft-security-exposure-management).
 
-### Data 
+#### Data 
 **Microsoft Purview** data security solutions provide unified data discovery, classification, and protection across clouds, SaaS, and on premises data stores. They complement Defender and Sentinel by turning data risk into actionable security signals, helping you understand what sensitive data exists, where it lives, and how it is being accessed or shared. For more information, see [Microsoft Purview data security solutions](/purview/purview-security).
 
 Key integrations include:
@@ -267,92 +341,16 @@ Key integrations include:
 -	**Hunting and investigations (advanced hunting):** Microsoft Purview events, such as data loss prevention (DLP) hits, file access anomalies, and label changes are available in Defender advanced hunting schema. You can run cross-tenant queries in the MTO portal to hunt for patterns that span data, identity, and endpoint signals. For example, a surge of high-sensitivity file downloads from a single user, followed by anomalous sign-in behavior.
 -	**Context enrichment:** Purview's data inventory and classification enrich the Security Exposure Management story by mapping critical data assets to exposure insights and attack paths. This helps prioritize mitigations based on the business impact of exposed data.
 
-
-## Manage and distribute content
-
-In Microsoft Sentinel, content refers to the building blocks that enable security operations - such as analytics rules, data connectors, hunting queries, parsers, playbooks, watchlists, and workbooks. [Microsoft Sentinel provides out-of-the-box content](/azure/sentinel/sentinel-solutions) that you can use as-is or customize. You can also create and distribute custom content to meet unique requirements. Effective content management and distribution ensures consistent security baselines, rapid threat response, and scalable operations across customer tenants. 
-
-MSSPs working in the Microsoft Defender portal have several tools for managing and distributing security content at scale:
-
-
-| **Option**                               | **Best For**                                                   | **Key Capabilities**                                                                                           | **Technical Details**                                                                                                      | **Learn More**                                                                                     |
-|------------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| **Native multitenant content distribution** | Quick deployment of standard content across many tenants | - Create once, deploy everywhere across multiple tenants <br> - Execute content on target scopes (devices, workspaces) <br> - Centralized tracking to reduce duplication and errors | Uses Defender portal’s built-in multitenant management. Ideal for OOB content or lightly customized content.              | [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles) |
-| **Microsoft Sentinel repositories (Content as Code)** | Structured DevOps processes and moderate customization needs | - Manage SIEM content using automation <br> - Apply CI/CD practices for version control, testing, and deployment <br> - Supports hybrid workflows combining native distribution and DevOps | Implemented via Sentinel repositories. Enables advanced governance and lifecycle management. Comprehensive CI/CD guidance. | [Manage content as code with Microsoft Sentinel repositories (public preview)](/azure/sentinel/ci-cd-custom-content) |
-| **Custom CI/CD pipelines**              | Maximum customization and automation across tenants | - Full flexibility for complex workflows <br> - Custom testing and integration with existing DevOps practices <br> - Supports additional content types (custom detections, summary rules, AI agents) | Built using Azure DevOps or GitHub Actions. Requires custom scripts and configuration files. Current method for advanced content types.
-
-
-- **Native multitenant content distribution capabilities**: Deploy security content at scale across customer tenants without repeatedly creating or switching between tenants. 
-
-  Multitenant content distribution lets you:
-
-  - **Create once, deploy everywhere**: Author content in one tenant and distribute to groups of tenants.
-  - **Run seamlessly**: Execute distributed content on the target tenant’s scope - including devices, workspaces, and so on.
-  - **Save time and reduce errors**: Avoid manual duplication and track all content from a single place.
-
-  For more information, see [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles).
-
-- **Microsoft Sentinel repositories for managing content as code**: Manage SIEM content using automation and CI/CD practices for advanced version control, testing, and deployment workflows. For comprehensive implementation guidance, including Microsoft Sentinel Repositories and custom CI/CD pipelines, see [Microsoft Sentinel CI/CD custom content](/azure/sentinel/ci-cd-custom-content). 
-
-- **Custom CI/CD pipelines**: Build your own CI/CD pipelines using tools like Azure DevOps or GitHub Actions to automate content deployment across multiple customer tenants. This approach provides maximum flexibility for complex workflows, custom testing, and integration with existing DevOps practices. Currently, additional content types such as custom detections, summary rules, and AI agents can be managed using the second approach—building your own CI/CD pipeline.
-
-- **Hybrid approaches**: Combine native multitenant management content distribution capabilities for immediate deployment needs with CI/CD workflows for custom content development, testing, and advanced automation scenarios.
-
-### MSSP repository architecture patterns
-
-A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
-
-**Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
-- One central repository for common content deployed to all customers
-- Individual repositories for customer-specific customizations
-- Each customer workspace connects to both repositories
-- Optimal for MSSPs with balanced common and tailored content needs
-
-  :::image type="content" source="media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
-
-**Pattern 2: Single repository with custom folders**
-- All content in one repository
-- Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
-- Deployment pipelines customized per customer connection
-- Requires more initial setup but simplifies repository management
-
-  :::image type="content" source="media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
-
-**Pattern 3: One repository per customer**
-- Complete content separation across customers
-- Full customization flexibility for each customer
-- Best for customers with unique content requirements
-- Higher management overhead but maximum isolation
-
-  :::image type="content" source="media/playbook-mssps/ci-cd-pipeline-diagram.png" alt-text="Individual repository architecture per customer tenant":::
-
-To customize your CI/CD pipelines, use configuration files in each repository branch to prioritize deployment of high-priority content, exclude content you don’t want to deploy, and map parameter files to their corresponding content files. For more information, see [Customize your connection configuration](/azure/sentinel/ci-cd-custom-deploy#customize-your-connection-configuration).
-
-For more information about how to use Azure DevOps in multitenant scenarios, see [Use Azure DevOps to manage Sentinel for MSSPs and Multi-tenant Environments](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/use-azure-devops-to-manage-sentinel-for-mssps-and-multi-tenant-environments/4008109).
-
-### Multi-Tenancy Considerations
-
-**Platform Constraints**: GitHub repositories support connections from different tenants, enabling all architecture patterns above. Azure DevOps repositories must be in the same tenant as the workspace, limiting deployment to single-repository-per-customer patterns.
-
-**Intellectual Property Protection**: Implement clear content management governance to prevent conflicts between MSSP and customer modifications:
-- Use centralized content management with restricted permissions
-- Apply naming conventions (e.g., prefixes) to identify MSSP-managed content
-- Establish clear ownership boundaries for custom content
-
-**Content Lifecycle Management**: Maintain consistent security baselines across customer tenants while supporting individual customization needs. Balance rapid deployment capabilities with proper testing and validation processes.
-
-For workload-specific configuration management, see [Workload management](#workload-management).
-
-## Manage cases
+### Manage cases
 
 The unified security operations portal provides native case management to eliminate reliance on external ticketing systems and maintain security context within the Defender portal.
 For complete guidance on case features, workflows, linking incidents and IoCs, RBAC requirements, and customization options, see [Cases overview](cases-overview.md). For multi-tenant case management, see [Manage cases in MTO](./mto-manage-cases.md).
 
 **Note:** Case management supports custom workflows, task assignments, rich collaboration, and evidence linking.
 
-## Get started with Microsoft Sentinel data lake
+### Get started with Microsoft Sentinel data lake
 
-Microsoft has expanded its industry-leading SIEM solution, Microsoft Sentinel, to include a unified, security data lake, designed to help optimize costs, simplify data management, and accelerate the adoption of AI in security operations. This modern data lake serves as the foundation for the Microsoft Sentinel platform. It has a cloud-native architecture and is purpose-built for security, bringing together all security data for greater visibility, deeper security analysis and contextual awareness. It provides affordable, long-term retention allowing organizations to maintain robust security while not compromising on costs. For more information, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datalake/sentinel-lake-overview).
+Microsoft has expanded its industry-leading SIEM solution, Microsoft Sentinel, to include a unified, security data lake, designed to help optimize costs, simplify data management, and accelerate the adoption of AI in security operations. This modern data lake serves as the foundation for the Microsoft Sentinel platform. It has a cloud-native architecture and is purpose-built for security, bringing together all security data for greater visibility, deeper security analysis and contextual awareness. It provides affordable, long-term retention allowing organizations to maintain robust security while not compromising on costs. 
 
 The Sentinel platform lets you to expand your MSSP offerings through professional services, managed services, and agentic solutions:
 -	Offer advisory, consulting, and strategic guidance on lake architectures, with high-value opportunities in deployment, configuration, and cost optimization.
@@ -360,48 +358,33 @@ The Sentinel platform lets you to expand your MSSP offerings through professiona
 -	Provide ongoing management of Sentinel data lake platforms and SOC operations, helping your customers lower data ingestion and retention costs while expanding recurring revenue streams through enhanced security protection opportunities.
 -	Differentiate by developing AI agentic solutions for automated threat enrichment and response, building analytics, and evolving SOAR to agent-based workflows, positioning yourselves as innovators in AI-driven security services.
 
-### Additional information
--	**Prerequisites:** Before onboarding to Microsoft Sentinel data lake, make sure that you've onboarded your Microsoft Sentinel experience to the Defender portal. For more information, see:
-    -	[Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
-    - [Onboard to Microsoft Sentinel data lake from the Defender portal](/azure/sentinel/datalake/sentinel-lake-onboard-defender)
--	**Regional support:** For supported regions, see [Geographical availability and data residency in Microsoft Sentinel](/azure/sentinel/geographical-availability-data-residency).
-
--	**Ingesting data into the data lake:** To ingest data into the Sentinel data lake, you can use existing Sentinel data connectors or custom connectors that bring data from Microsoft and third-party sources. Data retention is configured in table management. For more information, see [Set up connectors for the Microsoft Sentinel data lake](/azure/sentinel/datalake/sentinel-lake-connectors). 
-
-    You can also bring asset data from Microsoft services like Microsoft Entra, Azure resource graph, and Microsoft 365 into the data lake, but certain tables don't support data lake-only ingestion through either API or data connector UI.
-
--	**Data lake integration with existing Microsoft Security products:** The Sentinel data lake seamlessly integrates with Microsoft Security products by consolidating security data across the Security ecosystem. Once ingested, this unified data powers graph-based experiences in both Defender and Purview. It also lays the foundation for AI agents to accelerate and enhance threat detection and response. 
--	**Difference between the analytics and data lake tiers:** Microsoft Sentinel offers flexible, built-in data tiering to effectively meet diverse business use cases and achieve cost optimization goals. The analytics tier in Microsoft Sentinel supports all log types, providing full analytics, alerts, and query capabilities. This tier is suitable for high-value security data that indicates the status, usage, security posture, and performance of your environment. 
-
-    Data in the analytics tier is best monitored proactively with scheduled alerts and scheduled analytics to enable security detections. The Sentinel data lake enables low-cost storage, full KQL queries, Spark Notebooks, and scheduled jobs (both KQL and Notebook) using a single copy of their data kept in the data lake for long term retention. You can also promote data from the data lake tier to the analytics tier. For more information, see [How data tiers and retention work](/azure/sentinel/manage-data-overview#how-data-tiers-and-retention-work).
--	**KQL Queries:** The KQL queries page under **Data Lake exploration** lets you edit and run KQL queries on data lake resources. You can also create jobs to promote data from the data lake to the analytics tier or create aggregate tables in the data lake tier. For more information, see:
-    -	[Run KQL queries against the Microsoft Sentinel data lake](/azure/sentinel/datalake/kql-queries)
-    -	[Create jobs in the Microsoft Sentinel data lake](/azure/sentinel/datalake/kql-jobs)
-
--	**Auxiliary logs:** When you enable the Microsoft Sentinel data lake and you have the Auxiliary logs feature/plan, all auxiliary log tables are automatically available in the Sentinel data lake tier for use with the Sentinel data lake experiences. Logs that are ingested into existing analytics tier automatically get mirrored to lake at no additional cost. To ingest low-fidelity, high-volume, verbose log data at low cost into the Sentinel data lake, you can set the table tier to data lake tier. You can use existing first-party data connectors to enable access to their Microsoft Security product data from the Microsoft Sentinel data lake.
--	**Microsoft Defender data:** By default, Microsoft Defender retains threat hunting data in the **XDR default tier** for 30 days. This data isn't ingested into the analytics or data lake tiers by default. Supported XDR tables can be ingested into the analytics and data lake tiers by increasing the retention period to more than 30 days. For more information, see [Manage XDR data in Microsoft Sentinel](/azure/sentinel/manage-data-overview#manage-xdr-data-in-microsoft-sentinel).
+For more information, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datalake/sentinel-lake-overview).
 
 
-## Get started with agentic AI
+### Get started with agentic AI
 
 You have multiple opportunities to engage with your customers and diversify your MSSP offerings when it comes to agentic AI scenarios within the Microsoft Defender portal. We break down these benefits into **Sell**, **Build**, and **Use** buckets.
 
-### Sell
-You can engage with your customers to sell consulting services that educate, enable, configure, and implement agentic solutions, such as:
--	**Partner-developed consulting services** - These services are available through the [Microsoft Marketplace](https://marketplace.microsoft.com/) and are your traditional consulting services. You can provide training workshops, implementation engagements, and assessments, proof-of-concepts, or proof-of-value deliveries. These services are great opportunities to improve your customer environment's security maturity, increase their staff's skilling and readiness, and showcase product return on investment with real-world use case scenarios.
+#### Sell
 
--	**Partner-developed security services** – These services are available in the [Microsoft Security Store](https://securitystore.microsoft.com/) and are your traditional security service offerings like partner-managed security services, partner-managed XDR solutions, and other partner-developed security services.
--	**Microsoft-developed Security Copilot agents** - These are [Microsoft-developed Security Copilot agents](https://www.microsoft.com/en-us/security/blog/2025/03/24/microsoft-unveils-microsoft-security-copilot-agents-and-new-protections-for-ai/?msockid=34642c80b7816cec21673fa0b62a6d20) that span across Microsoft Defender, Microsoft Sentinel, and other security solutions available within the Defender portal. Two examples are the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent.md) and the [Threat Intelligence Briefing Agent](/defender-xdr/threat-intel-briefing-agent-defender.md). For more information, see [Microsoft Security Copilot agents](/copilot/security/agents-security-copilot).
+You can engage with your customers to sell consulting services that educate, enable, configure, and implement agentic solutions, such as:
+-	**Partner-developed consulting services** - These services are available through the [Microsoft Marketplace](/partner-center/marketplace-offers/overview) and are your traditional consulting services. You can provide training workshops, implementation engagements, and assessments, proof-of-concepts, or proof-of-value deliveries. These services are great opportunities to improve your customer environment's security maturity, increase their staff's skilling and readiness, and showcase product return on investment with real-world use case scenarios. 
+
+-	**Partner-developed security services** – These services are available in the [Microsoft Security Store](/security/store/what-is-security-store) and are your traditional security service offerings like partner-managed security services, partner-managed XDR solutions, and other partner-developed security services.
+
+-	**Microsoft-developed Security Copilot agents** - These are [Microsoft-developed Security Copilot agents](/copilot/security/agents-security-copilot) that span across Microsoft Defender, Microsoft Sentinel, and other security solutions available within the Defender portal. 
 
 -	**Partner-developed Security Copilot agents** - These agents are available for purchase and deployment through the Microsoft Security Store. You can integrate your own published Security Copilot agents or other partner agents into your customers' Microsoft Defender environment. For more information, see [Partner agents](/copilot/security/agents-other).
 
-### Build
+#### Build
 Develop Security Copilot agents that can be monetized through the Microsoft Security Store. The agents can be a one-time purchase, subscription-based model for recurring agent updates, or provided at no cost. Partner-developed agent types include:
 -	**Role/Persona-based agents** - Designed with skills to perform a specific type of persona or role like an L1 SOC Analyst
 -	**Scenario-based agents** - Designed with skills for a specific type of scenario like phishing, insider threat, or advanced persistent threats (APTs)
 -	**Product-based agents** - Designed with skills to integrate with a specific product/solution like Microsoft Defender or a third-party security vendors
 
-### Use
+For more information, see [Microsoft Security Copilot agent development overview](/copilot/security/developer/custom-agent-overview).
+
+#### Use
 You can use the investment your customers have made with Microsoft and partner developed agents within their Microsoft Defender environment as part of their [partner managed SOC offering](https://www.microsoft.com/security/business/find-a-partner). This includes acting on behalf of your customer within their tenant as an augmentation of their internal team, or performing SOC activities from their tenant and leveraging multitenancy capabilities of Microsoft Defender through delegated access.
 
 
@@ -422,26 +405,6 @@ You can use the investment your customers have made with Microsoft and partner d
 - What's new: [What's new in the Microsoft's unified SecOps platform](/unified-secops-platform/) ​
 
 - [Transitioning Microsoft Sentinel into Microsoft Defender ](https://www.youtube.com/playlist?list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj)– 10 video series:
-
-  1. [Onboarding Microsoft Sentinel workspaces into Microsoft Defender](https://www.youtube.com/watch?v=Hgcz87XdJx0&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=1)
-
-  1. [Discover and manage Microsoft Sentinel content in Microsoft Defender](https://www.youtube.com/watch?v=HQ4JxM8-v5g&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=2)
-
-  1. [Creating Microsoft Sentinel automations and workbooks in Microsoft Defender](https://www.youtube.com/watch?v=Lc0T_hPTug4&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=3)
-
-  1. [Alert correlation in Microsoft Defender](https://www.youtube.com/watch?v=GIIxN1dMJTc&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=4)
-
-  1. [Incident investigation in Microsoft Defender](https://www.youtube.com/watch?v=BnZBVm8ZGsY&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=5)
-
-  1. [Case Management in Microsoft Defender](https://www.youtube.com/watch?v=TxLz-NsxcrM&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=6)
-
-  1. [Managing connectors in Defender](https://www.youtube.com/watch?v=IW9WOhhLbmY&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=7)
-
-  1. [Advanced hunting in Microsoft Defender](https://www.youtube.com/watch?v=06ukKCHMkeY&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=8)
-
-  1. [Managing unified RBAC in Microsoft Defender](https://www.youtube.com/watch?v=0xvPy1zWIfg&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=9)
-
-  1. [SOC optimizations in Microsoft Defender](https://www.youtube.com/watch?v=-Cv5K8A4kfY&list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj&index=10)
 
 - Recorded Webinars:
 

@@ -59,7 +59,7 @@ Follow these steps to manually link accounts to a selected identity.
 1. Navigate to **Assets** > **Identity Inventory**.
 1. Select an **Identity** from the list.
 
-    :::image type="content" source="media/identity-inventory/inventory11.png" alt-text="Screenshot of the Identity Inventory page in the Defender portal. " lightbox="media/identity-inventory/inventory11.png":::
+      :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/inventory-page.png":::
 
 1. Select the **Observed in organization** tab.
 1. Open the **Accounts** tab.
@@ -73,14 +73,23 @@ Follow these steps to manually link accounts to a selected identity.
     - Security identifier (SID)
     - Source provider account
 1. Select one account from the table.
+
+    :::image type="content" source="media/link-unlink-account-to-identity/select-accounts.png" alt-text="Screenshot that shows a list of accounts that you can link. " lightbox="media/link-unlink-account-to-identity/select-accounts.png":::
+
 1. Select **Next**.
 1. Enter a short justification comment explaining why you're linking these accounts.
 1. Your justification must:
     - Be between 1 and 50 characters
     - Use only letters, numbers, spaces, @, and _
     - If your input includes invalid characters or exceeds the limit, an error message will appear.
+
+    :::image type="content" source="media/link-unlink-account-to-identity/enter-justification.png" alt-text="Screenshot that shows where to enter the justification for why you are linking the accounts." lightbox="media/link-unlink-account-to-identity/enter-justification.png":::
+
 1. Select **Next**.
 1. Review the selected accounts and your justification.
+
+    :::image type="content" source="media/link-unlink-account-to-identity/review-and-finish.png" alt-text="Screenshot that shows the review of the selected accounts and the justification." lightbox="media/link-unlink-account-to-identity/review-and-finish.png":::
+
 1. Confirm that the accounts listed are correct.
 1. The account list refreshes automatically.
 
@@ -88,7 +97,7 @@ Follow these steps to manually link accounts to a selected identity.
 
 Follow these steps to manually unlink accounts from a selected identity.
 
-1. Go to **Identity Inventory > Observed in organization**
+1. Go to **Identity Inventory > Observed in organization**.
 1. Open the **Accounts** tab.
 1. Select one account set from the table.
 1. Select **Unlink account**.

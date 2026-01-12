@@ -67,9 +67,9 @@ If the onboarding completed successfully but the devices aren't showing up in th
 
 1. Click **Start**, type **Event Viewer**, and press **Enter**.
 
-2. Go to **Windows Logs** \> **Application**.
+1. Go to **Windows Logs** \> **Application**.
 
-3. Look for an event from **WDATPOnboarding** event source.
+1. Look for an event from **WDATPOnboarding** event source.
 
 If the script fails and the event is an error, you can check the event ID in the following table to help you troubleshoot the issue.
 
@@ -149,20 +149,20 @@ If the deployment tools used do not indicate an error in the onboarding process,
 
 1. Click **Start**, type **Event Viewer**, and press **Enter**.
 
-2. In the **Event Viewer (Local)** pane, expand **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **SENSE**.
+1. In the **Event Viewer (Local)** pane, expand **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **SENSE**.
 
    > [!NOTE]
    > SENSE is the internal name used to refer to the behavioral sensor that powers Microsoft Defender for Endpoint.
 
-3. Select **Operational** to load the log.
+1. Select **Operational** to load the log.
 
-4. In the **Action** pane, click **Filter Current log**.
+1. In the **Action** pane, click **Filter Current log**.
 
-5. On the **Filter** tab, under **Event level:** select **Critical**, **Warning**, and **Error**, and click **OK**.
+1. On the **Filter** tab, under **Event level:** select **Critical**, **Warning**, and **Error**, and click **OK**.
 
    :::image type="content" source="media/filter-log.png" alt-text="The Event Viewer log filter" lightbox="media/filter-log.png":::
 
-6. Events which can indicate issues appear in the **Operational** pane. You can attempt to troubleshoot them based on the solutions in the following table:
+1. Events which can indicate issues appear in the **Operational** pane. You can attempt to troubleshoot them based on the solutions in the following table:
 
    |Event ID|Message|Resolution steps|
    |:---:|---|---|
@@ -208,7 +208,7 @@ First, you should check that the service is set to start automatically when Wind
 
    b. Right-click **Command prompt** and select **Run as administrator**.
 
-2. Enter the following command, and press **Enter**:
+1. Enter the following command, and press **Enter**:
 
    ```console
    sc qc diagtrack
@@ -228,19 +228,19 @@ First, you should check that the service is set to start automatically when Wind
 
    b. Right-click **Command prompt** and select **Run as administrator**.
 
-2. Enter the following command, and press **Enter**:
+1. Enter the following command, and press **Enter**:
 
    ```console
    sc config diagtrack start=auto
    ```
 
-3. A success message is displayed. Verify the change by entering the following command, and press **Enter**:
+1. A success message is displayed. Verify the change by entering the following command, and press **Enter**:
 
    ```console
    sc qc diagtrack
    ```
 
-4. Start the service. In the command prompt, type the following command and press **Enter**:
+1. Start the service. In the command prompt, type the following command and press **Enter**:
 
    ```console
    sc start diagtrack
@@ -348,117 +348,114 @@ The steps in this article provide guidance for the following scenario:
 
    :::image type="content" source="media/mecm-1.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-1" lightbox="media/mecm-1.png":::
 
-2. Select **Manually specify the application information**.
+1. Select **Manually specify the application information**.
 
    :::image type="content" source="media/mecm-2.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-2" lightbox="media/mecm-2.png":::
 
-3. Specify information about the application, then select **Next**.
+1. Specify information about the application, then select **Next**.
 
    :::image type="content" source="media/mecm-3.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-3" lightbox="media/mecm-3.png":::
 
-4. Specify information about the software center, then select **Next**.
+1. Specify information about the software center, then select **Next**.
 
    :::image type="content" source="media/mecm-4.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-4" lightbox="media/mecm-4.png":::
 
-5. In **Deployment types** select **Add**.
+1. In **Deployment types** select **Add**.
 
    :::image type="content" source="media/mecm-5.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-5" lightbox="media/mecm-5.png":::
 
-6. Select **Manually specify the deployment type information**, then select **Next**.
+1. Select **Manually specify the deployment type information**, then select **Next**.
 
    :::image type="content" source="media/mecm-6.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-6" lightbox="media/mecm-6.png":::
 
-7. Specify information about the deployment type, then select **Next**.
+1. Specify information about the deployment type, then select **Next**.
 
    :::image type="content" source="media/mecm-7.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-7" lightbox="media/mecm-7.png":::
 
-8. In **Content** \> **Installation program** specify the command: `net start sense`.
+1. In **Content** \> **Installation program** specify the command: `net start sense`.
 
    :::image type="content" source="media/mecm-8.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-8" lightbox="media/mecm-8.png":::
 
-9. In **Detection method**, select **Configure rules to detect the presence of this deployment type**, then select **Add Clause**.
+1. In **Detection method**, select **Configure rules to detect the presence of this deployment type**, then select **Add Clause**.
 
    :::image type="content" source="media/mecm-9.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-9" lightbox="media/mecm-9.png":::
 
-10. Specify the following detection rule details, then select **OK**:
+1. Specify the following detection rule details, then select **OK**:
 
     :::image type="content" source="media/mecm-10.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-10" lightbox="media/mecm-10.png":::
 
-11. In **Detection method** select **Next**.
+1. In **Detection method** select **Next**.
 
     :::image type="content" source="media/mecm-11.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-11" lightbox="media/mecm-11.png":::
 
-12. In **User Experience**, specify the following information, then select **Next**:
+1. In **User Experience**, specify the following information, then select **Next**:
 
     :::image type="content" source="media/mecm-12.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-12" lightbox="media/mecm-12.png":::
 
-13. In **Requirements**, select **Next**.
+1. In **Requirements**, select **Next**.
 
     :::image type="content" source="media/mecm-13.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-13" lightbox="media/mecm-13.png":::
 
-14. In **Dependencies**, select **Next**.
+1. In **Dependencies**, select **Next**.
 
     :::image type="content" source="media/mecm-14.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-14" lightbox="media/mecm-14.png":::
 
-15. In **Summary**, select **Next**.
+1. In **Summary**, select **Next**.
 
     :::image type="content" source="media/mecm-15.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-15" lightbox="media/mecm-15.png":::
 
-16. In **Completion**, select **Close**.
+1. In **Completion**, select **Close**.
 
     :::image type="content" source="media/mecm-16.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-16" lightbox="media/mecm-16.png":::
 
-17. In **Deployment types**, select **Next**.
+1. In **Deployment types**, select **Next**.
 
     :::image type="content" source="media/mecm-17.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-17" lightbox="media/mecm-17.png":::
 
-18. In **Summary**, select **Next**.
+1. In **Summary**, select **Next**.
 
     :::image type="content" source="media/mecm-18.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-18" lightbox="media/mecm-18.png":::
 
     The status is then displayed:
     :::image type="content" source="media/mecm-19.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-19" lightbox="media/mecm-19.png":::
 
-19. In **Completion**, select **Close**.
+1. In **Completion**, select **Close**.
 
     :::image type="content" source="media/mecm-20.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-20" lightbox="media/mecm-20.png":::
 
-20. You can now deploy the application by right-clicking the app and selecting **Deploy**.
+1. You can now deploy the application by right-clicking the app and selecting **Deploy**.
 
     :::image type="content" source="media/mecm-21.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-21" lightbox="media/mecm-21.png":::
 
-21. In **General** select **Automatically distribute content for dependencies** and **Browse**.
+1. In **General** select **Automatically distribute content for dependencies** and **Browse**.
 
     :::image type="content" source="media/mecm-22.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-22" lightbox="media/mecm-22.png":::
 
-22. In **Content** select **Next**.
-
+1. In **Content** select **Next**.
     :::image type="content" source="media/mecm-23.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-23" lightbox="media/mecm-23.png":::
 
-23. In **Deployment settings**, select **Next**.
+1. In **Deployment settings**, select **Next**.
 
     :::image type="content" source="media/mecm-24.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-24" lightbox="media/mecm-24.png":::
 
-24. In **Scheduling** select **As soon as possible after the available time**, then select **Next**.
+1. In **Scheduling** select **As soon as possible after the available time**, then select **Next**.
 
     :::image type="content" source="media/mecm-25.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-25" lightbox="media/mecm-25.png":::
 
-25. In **User experience**, select **Commit changes at deadline or during a maintenance window (requires restarts)**, then select **Next**.
-
+1. In **User experience**, select **Commit changes at deadline or during a maintenance window (requires restarts)**, then select **Next**.
     :::image type="content" source="media/mecm-26.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-26" lightbox="media/mecm-26.png":::
 
-26. In **Alerts** select **Next**.
+1. In **Alerts** select **Next**.
 
     :::image type="content" source="media/mecm-27.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-27" lightbox="media/mecm-27.png":::
 
-27. In **Summary**, select **Next**.
-
+1. In **Summary**, select **Next**.
     :::image type="content" source="media/mecm-28.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-28" lightbox="media/mecm-28.png":::
       
     The status is then displayed
     :::image type="content" source="media/mecm-29.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-29" lightbox="media/mecm-29.png":::
 
-28. In **Completion**, select **Close**.
+1. In **Completion**, select **Close**.
 
     :::image type="content" source="media/mecm-30.png" alt-text="The Microsoft Endpoint Configuration Manager configuration-30" lightbox="media/mecm-30.png":::
 

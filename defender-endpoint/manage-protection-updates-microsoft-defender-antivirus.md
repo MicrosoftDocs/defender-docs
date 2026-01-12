@@ -99,29 +99,29 @@ The procedures in this article first describe how to set the order, and then how
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-2. Select **Policies** then **Administrative templates**.
+1. Select **Policies** then **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
+1. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
 
    > [!NOTE]
    > - For Windows 10, versions 1703 up to and including 1809, the policy path is **Windows Components > Microsoft Defender Antivirus > Signature Updates**
    > - For Windows 10, version 1903, the policy path is **Windows Components > Microsoft Defender Antivirus > Security Intelligence Updates**
 
-4. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
+1. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
       
-5. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
+1. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
 
    :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
 
-6. Select **OK**. This action sets the order of protection update sources.
+1. Select **OK**. This action sets the order of protection update sources.
 
-7. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
+1. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
 
 1. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\WindowsFileServer\share-name\object-name|\\host-name2\share-name\object-name`. 
 
    If you don't enter any paths, then this source is skipped when the VM downloads updates.
    
-9. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
+1. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
 
 
 ## Use Microsoft Endpoint Configuration Manager to manage the update location
@@ -183,24 +183,24 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
     MD C:\Tool\PS-Scripts\
     ```
 
-2. Create a folder for signature updates.
+1. Create a folder for signature updates.
 
     ```cmd
     MD C:\Temp\TempSigs\x64
     MD C:\Temp\TempSigs\x86
     ```
 
-3. Download the PowerShell script from [www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4).
+1. Download the PowerShell script from [www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4).
 
-4. Select **Manual Download**.
+1. Select **Manual Download**.
 
-5. Select **Download the raw nupkg file**.
+1. Select **Download the raw nupkg file**.
 
-6. Extract the file.
+1. Extract the file.
 
-7. Copy the file `SignatureDownloadCustomTask.ps1` to the folder you previously created, `C:\Tool\PS-Scripts\` .
+1. Copy the file `SignatureDownloadCustomTask.ps1` to the folder you previously created, `C:\Tool\PS-Scripts\` .
 
-8. Use the command line to set up the scheduled task.
+1. Use the command line to set up the scheduled task.
 
    > [!NOTE]
    > There are two types of updates: full and delta.
@@ -248,7 +248,7 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
    > [!NOTE]
    > When the scheduled tasks are created, you can find these in the Task Scheduler under `Microsoft\Windows\Windows Defender`.
 
-9. Run each task manually and verify that you have data (`mpam-d.exe`, `mpam-fe.exe`, and `nis_full.exe`) in the following folders (you might use different locations):
+1. Run each task manually and verify that you have data (`mpam-d.exe`, `mpam-fe.exe`, and `nis_full.exe`) in the following folders (you might use different locations):
 
    - `C:\Temp\TempSigs\x86`
    - `C:\Temp\TempSigs\x64`
@@ -265,12 +265,12 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x86 -isDelta $True -destDir C:\Temp\TempSigs\x86"
     ```
 
-10. Create a share pointing to `C:\Temp\TempSigs` (for example, `\\server\updates`).
+1. Create a share pointing to `C:\Temp\TempSigs` (for example, `\\server\updates`).
 
     > [!NOTE]
     > At a minimum, authenticated users must have "Read" access. This requirement also applies to domain computers, the share, and NTFS (security).
 
-11. Set the share location in the policy to the share.
+1. Set the share location in the policy to the share.
 
     > [!NOTE]
     > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.

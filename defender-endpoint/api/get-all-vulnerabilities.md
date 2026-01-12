@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -26,21 +26,30 @@ appliesto:
 ## API description
 
 Retrieves a list of all vulnerabilities.
-<br>Supports [OData V4 queries](https://www.odata.org/documentation/).
-<br>OData supported operators:
-<br>```$filter``` on:  ```id```, ```name```, ```description```, ```cvssV3```, ```publishedOn```, ```severity```, and ```updatedOn``` properties.
-<br>```$top``` with max value of 8,000.
-<br>```$skip```.
-<br>See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
+
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
+
+- `$filter` on the following properties:
+  - `id`
+  - `name`
+  - `description`
+  - `cvssV3`
+  - `publishedOn`
+  - `severity`
+  - `updatedOn`
+- `$top` with max value of 8,000.
+- `$skip`
+
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management vulnerability information'
-Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management vulnerability information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management vulnerability information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management vulnerability information'|
 
 ## HTTP request
 
@@ -50,9 +59,9 @@ GET /api/vulnerabilities
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -62,6 +71,15 @@ Empty
 
 If successful, this method returns 200 OK with the list of vulnerabilities in the body.
 
+The possible values for the `status` field are:
+
+- RemediationRequired
+- NoActionRequired
+- UnderException
+- PartialException
+
+This field is supported for [CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#cve-exceptions-preview).
+
 ## Example
 
 ### Request example
@@ -69,7 +87,7 @@ If successful, this method returns 200 OK with the list of vulnerabilities in th
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Vulnerabilities
+GET https://api.security.microsoft.com/api/Vulnerabilities
 ```
 
 ### Response example
@@ -78,7 +96,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Vulnerabilities",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Vulnerabilities",
     "value": [
         {
             "id": "CVE-2024-7256",
@@ -98,10 +116,10 @@ Here's an example of the response.
             "exploitUris": [],
             "cveSupportability": "Supported",
             "tags": [],
-            "epss": 0.632
+            "epss": 0.632,
+            "status": "RemediationRequired",
         }
     ]
 
 }
 ```
-

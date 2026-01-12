@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn what steps you need to take to get started with Defender Threat Intelligence in Microsoft Defender XDR
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: dansimp
-author: dansimp
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

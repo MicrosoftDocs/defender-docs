@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 11/25/2025
+ms.date: 12/21/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -29,91 +29,48 @@ This page is updated frequently with the latest updates in Defender endpoint sec
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-## Releases for Defender for Endpoint on iOS
+## November 2025
 
-#### November 2025
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.1.70290103 | November 6, 2025 | An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details.<br/><br/>Added Landscape mode UI support for the Defender app.<br/><br/>Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 
-| Build| 1.1.70290103|
-| -------- | -------- |
-| Release Date   |November 6, 2025|
+## October 2025
 
-**What's New**
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.1.70230101 | October 26, 2025 | Simplified return to compliance experience in iOS/iPadOS. See the [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more information.<br/><br/>We have refreshed the Defender app with a new icon.<br/><br/>![User's image](media/ios-whatsnew/image.png) |
+  | 1.1.69250104 | October 7, 2025  | Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile. See [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).<br/><br/>Performance Improvement and Bug fixes. |
 
-- An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details.
+## September 2025
 
-- Added Landscape mode UI support for the Defender app.
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.1.68200103 | September 4, 2025  | [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads. |
 
-- Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts.
+## August 2025
 
-#### October 2025
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.1.68140102 | August 19, 2025  | Fixed push notification bug to ensure heartbeat signals are sent reliably<br/><br/>Performance improvements and bug fixes. |
 
-| Build| 1.1.70230101|
-| -------- | -------- |
-| Release Date   |October 26, 2025|
+## July-2025 
 
-**What's New**
+| Build| Release Date | What's New |
+| :-------- | :-------- | :-------- |
+| 1.1.67040101 | July 8, 2025  | UX Improvement. For more information, see [iOS UX Experience](/defender-endpoint/ios-new-ux). |
 
-- Simplified return to compliance experience in iOS/iPadOS - please refer to this [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more details.
+## May 2025
 
-- We have refreshed the Defender app with a new icon.
-
-  ![User's image](media/ios-whatsnew/image.png)
-  
-#### October 2025
-
-| Build | 1.1.69250104|
-| -------- | -------- |
-| Release Date | October 7, 2025  |
-
-**What's New**
-
-- Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile, refer - [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).
-
-- Performance Improvement and Bug fixes.
-
-#### September 2025
-
-| Build| 1.1.68200103 |
-| -------- | -------- |
-| Release Date | September 4, 2025   |
-
-**What's New**
-
-- [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads.
-
-#### August 2025
-
-| Build| 1.1.68140102|
-| -------- | -------- |
-| Release Date| August 19, 2025|
-
-**What's New**
-
-- Fixed push notification bug to ensure heartbeat signals are sent reliably
-
-- Performance improvements and bug fixes
-
-### July-2025 
-
-| Build| 1.1.67040101|
-| -------- | -------- |
-| Release Date| July 8, 2025|
-
-**What's New**
-
-- UX Improvement, please visit the attached link for more details - [iOS UX Experience](/defender-endpoint/ios-new-ux)
-
-#### Alerts for activities related to open wireless connections are now detected as events
-
-**May 2025**
+### Alerts for activities related to open wireless connections are now detected as events
 
 Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline.
 
 For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection).
 
-#### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
+## March 2025
 
-**March 2025**
+### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
 As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of the Defender for Endpoint mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
 
@@ -130,9 +87,9 @@ We are pleased to introduce the **Device Protection** feature card for our enter
 
 For more information, see [User Experience in Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-new-ux).
 
-#### Microsoft Defender for Endpoint: Open Wi-Fi Detection Update
+## February 2025
 
-**February 2025:**
+### Microsoft Defender for Endpoint: Open Wi-Fi Detection Update
 
 As part of our Microsoft Defender application, we offer open Wi-Fi detection within the network protection feature set. When enabled, this feature raises an alert in the Microsoft Defender portal. Currently, the alert is informational and doesn't require any action by the SOC analyst or admin. It serves as a key piece of information that helps with triaging incidents involving mobile devices.
 
@@ -150,9 +107,9 @@ Based on our research insights and inputs from Microsoft and other SOC teams, we
 
 Note that if a user connects to a different open Wi-Fi network, an alert is immediately generated, and there's no change to that behavior.
 
-## Upgrading your experience: UX enhancements you should know about
+## January 2025
 
-**January 2025**:
+### Upgrading your experience: UX enhancements you should know about
 
 **Key changes**:
 

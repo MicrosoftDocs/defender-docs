@@ -51,7 +51,7 @@ Investigation and response capabilities in the Microsoft Defender portal help yo
 
 Devices involved in incidents are shown in an incident's page [attack story](investigate-incidents.md#attack-story), incident graph, and [assets](investigate-incidents.md#assets) tab. You can view the details of the incident, including the devices involved, the alerts that triggered the incident, and the actions taken. You can apply actions to the incident, like isolating devices, collecting investigation packages, and more.
 
-:::image type="content" source="/defender/media/portal/mde-in-portal/incident-assets-devices-small.png" alt-text="Screenshot of the Assets tab highlighting the devices involved in an incident." lightbox="/defender/media/portal/mde-in-portal/incident-assets-devices.png":::
+:::image type="content" source="media/microsoft-365-security-center-mde/incident-assets-devices-small.png" alt-text="Screenshot of the Assets tab highlighting the devices involved in an incident." lightbox="media/microsoft-365-security-center-mde/incident-assets-devices.png":::
 
 Individual alerts are shown in the Alerts page. You can view the details of the alert, including the devices involved, the incident that the alert is part of, and the actions taken. You can also apply actions to the alert in the alert page.
 
@@ -65,7 +65,7 @@ Proactively search for threats, malware, and malicious activity across your endp
 
 The [Action center](m365d-action-center.md) shows you the investigations created by automated investigation and response capabilities. This automated self-healing in the Microsoft Defender portal can help security teams by automatically responding to specific events. You can view actions applied to devices, the status of the actions, and approve or reject the automated actions. Navigate to the Action center page under **Investigation & response > Actions & submissions > Action center**.
 
-:::image type="content" source="/defender/media/portal/mde-in-portal/action-center-mde-small.png" alt-text="Screenshot of the Action center in the Microsoft Defender portal." lightbox="/defender/media/portal/mde-in-portal/action-center-mde.png":::
+:::image type="content" source="media/microsoft-365-security-center-mde/action-center-mde-small.png" alt-text="Screenshot of the Action center in the Microsoft Defender portal." lightbox="media/microsoft-365-security-center-mde/action-center-mde.png":::
 
 You can submit files, email attachments, and URLs to Microsoft Defender for analysis in the [Submission portal](/defender-endpoint/admin-submissions-mde). You can also view the status of the submissions and the results of the analysis. Navigate to the submissions page under **Investigation & response > Actions & submissions > Submissions**.
 
@@ -79,7 +79,7 @@ Navigate to the threat analytics page under **Threat intelligence > Threat analy
 
 The **Assets > Devices** page contains the [device inventory](/defender-endpoint/machines-view-overview), which lists all the devices in your organization where alerts were generated. You can view the details of the devices, including the IP address, criticality level, device category, and device type.
 
-:::image type="content" source="/defender/media/portal/mde-in-portal/device-inventory-mde-small.png" alt-text="Screenshot of the Device inventory page in the Microsoft Defender portal." lightbox="/defender/media/portal/mde-in-portal/device-inventory-mde.png":::
+:::image type="content" source="media/microsoft-365-security-center-mde/device-inventory-mde-small.png" alt-text="Screenshot of the Device inventory page in the Microsoft Defender portal." lightbox="media/microsoft-365-security-center-mde/device-inventory-mde.png":::
 
 ### Microsoft Defender for Vulnerability Management and endpoint configuration management
 
@@ -93,7 +93,7 @@ Security administrators can deploy endpoint security policies to devices in your
 
 You can view device health, vulnerable devices, monthly security summary, web protection, firewall, device control, and attack surface reduction rules reports in the **Reports** page.
 
-:::image type="content" source="/defender/media/portal/mde-in-portal/reports-mde-small.png" alt-text="Screenshot of the Reports page highlighting the endpoint-related reports in the Microsoft Defender portal." lightbox="/defender/media/portal/mde-in-portal/reports-mde.png":::
+:::image type="content" source="media/microsoft-365-security-center-mde/reports-mde-small.png" alt-text="Screenshot of the Reports page highlighting the endpoint-related reports in the Microsoft Defender portal." lightbox="media/microsoft-365-security-center-mde/reports-mde.png":::
 
 ### General settings
 
@@ -101,13 +101,13 @@ You can view device health, vulnerable devices, monthly security summary, web pr
 
 In the **Settings > Device discovery** page, you can configure device discovery settings, including the discovery method, exclusions, enabling Enterprise IOT (access dependent), and configure authenticated scan schedules. For more information, see [Device discovery](/defender-endpoint/device-discovery).
 
-:::image type="content" source="/defender/media/portal/mde-in-portal/device-discovery-mde-small.png" alt-text="Screenshot of the Device discovery page in the Microsoft Defender portal." lightbox="/defender/media/portal/mde-in-portal/device-discovery-mde.png":::
+:::image type="content" source="media/microsoft-365-security-center-mde/device-discovery-mde-small.png" alt-text="Screenshot of the Device discovery page in the Microsoft Defender portal." lightbox="media/microsoft-365-security-center-mde/device-discovery-mde.png":::
 
 #### Endpoint settings
 
 Navigate to the **Settings > Endpoints** page to configure settings for Microsoft Defender for Endpoint, including [advanced features](/defender-endpoint/advanced-features), email notifications, permissions, and more.
 
-:::image type="content" source="/defender/media/portal/mde-in-portal/settings-mde-small.png" alt-text="Screenshot of the Settings page in the Microsoft Defender portal where endpoint settings are highlighted." lightbox="/defender/media/portal/mde-in-portal/settings-mde.png":::
+:::image type="content" source="media/microsoft-365-security-center-mde/settings-mde-small.png" alt-text="Screenshot of the Settings page in the Microsoft Defender portal where endpoint settings are highlighted." lightbox="media/microsoft-365-security-center-mde/settings-mde.png":::
 
 #### Email notifications
 
