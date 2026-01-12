@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,10 +19,9 @@ ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Get domain statistics API
 
+# Get domain statistics API
 
 ## API description
 
@@ -41,11 +40,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|URL.Read.All|'Read URLs'
-Delegated (work or school account)|URL.Read.All|'Read URLs'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|URL.Read.All|'Read URLs'|
+|Delegated (work or school account)|URL.Read.All|'Read URLs'|
 
 ## HTTP request
 
@@ -55,15 +53,15 @@ GET /api/domains/{domain}/stats
 
 ## Request headers
 
-Header|Value
-:---|:---
-Authorization|Bearer {token}. **Required**.
+|Header|Value|
+|---|---|
+|Authorization|Bearer {token}. **Required**.|
 
 ## Request URI parameters
 
-Name|Type|Description
-:---|:---|:---
-lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.
+|Name|Type|Description|
+|---|---|---|
+|lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.|
 
 ## Request body
 
@@ -96,4 +94,3 @@ Here's an example of the response.
     "orgLastSeen": "2017-08-29T13:09:05Z"
 }
 ```
-

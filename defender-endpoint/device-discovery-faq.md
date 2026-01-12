@@ -133,6 +133,13 @@ As device discovery uses passive methods to discover devices in the network, any
 
 Devices will actively be probed when changes in device characteristics are observed to make sure the existing information is up to date (typically, devices probed no more than once in a three-week period)
 
+## Are non-onboarded devices removed after a period of time?
+
+A non-onboarded device remains in the Defender portal (for more than 180 days), if one of these conditions are met:
+
+- The device is discovered by an onboarded endpoint on the same network
+- The device is discovered by an OT sensor
+
 ## My security tool raised alert on UnicastScanner.ps1 / PSScript_{GUID}.ps1 or port scanning activity initiated by it. What should I do?
 
 The active probing scripts are signed by Microsoft and are safe. You can add the following path to your exclusion list:
