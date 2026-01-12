@@ -49,17 +49,18 @@ If you're configuring windows event auditing on domain controllers:
 > [!NOTE]
 > Automatic windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
 
-Automatic windows auditing performs all of the configuration tasks automatically:
+Automatic windows auditing performs all configuration tasks automatically:
 
 - Checks current windows event auditing configurations
 - Identifies any gaps in the configuration
 - Applies any necessary changes
+- Applies auditing settings directly to the local system policy of the domain controller
 - Sends health alerts about the configuration state.
-- Applies auditing settings directly to the local system policy of the Domain Controller
 - Runs once every 24 hours.
 
 > [!NOTE]
-> Domain-level GPO settings override local configurations. Using automatic windows event collection can cause conflicts with existing Group Policy audit configurations. If you want to use automatic configuration, completely remove the GPO.
+> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or using [PowerShell](#configure-windows-event-collection-using-powershell).
+> - Domain-level GPO settings override local configurations. Using automatic windows event collection can cause conflicts with existing Group Policy audit configurations in the `audit.csv` file. If you want to use automatic configuration, completely remove the file from the local GPO store to  ensure that it doesn't override the automatic configuration. Simply unlinking or disabling a domain GPO is not enough, GPO settings apply until they are removed from the GPO itself.
 
 ### Turn on automatic windows auditing:
 
@@ -67,9 +68,17 @@ Automatic windows auditing performs all of the configuration tasks automatically
 1. In the **General** section, select **Advanced features**.
 1. Turn on **Automatic Windows auditing configuration**.​
 
-> [!NOTE]
-> If you don't select automatic Windows auditing, you must configure Windows event auditing either manually or using PowerShell.
+### Verify the automatic windows event auditing
+To make sure that automatic windows event auditing is working correctly:
+1. Check the process name: 
+    - If the process running is `senseidentity.exe`, the automatic windows event auditing is working correctly.
+    - If the process running is `svchost.exe`, you probably have a conflict with a Group Policy. 
+1. Run either the following KQL query or windows command:
 
+    - **KQL:** [Run this KQL query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Identity/MDI-Automatic%20Windows%20auditing%20configuration.md )
+    - **Windows command:** Run: `auditpol /get /category:* | findstr /V /C:"No Auditing"`
+
+ 
 ## Configure Windows event collection manually
 
 This section includes instructions for manually configuring Windows event collection in these cases:

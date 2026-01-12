@@ -105,11 +105,11 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules).
 
 ## Configure Windows event auditing
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
 
-Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+See [Configure Defender for Identity to collect Windows events automatically (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
-The Defender for Identity sensor v3.x can offer preview feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones. See [Configure auditing with the Defender for Identity sensor v3.x](configure-windows-event-collection.md#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x).
-If you do not select automatic Windows auditing configuration, you must [manually configure Windows event auditing](configure-windows-event-collection.md) in the Defender portal or using PowerShell.
+If you do not select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using Powershell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
 
  
 ## Test your prerequisites
