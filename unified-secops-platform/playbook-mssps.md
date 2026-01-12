@@ -1,10 +1,10 @@
 ---
-title: Microsoft Defender portal implementation guide for MSSPs
+title: Microsoft Defender portal implementation guide for Managed Security Service Providers (MSSPs)
 description: Implementation guide for partners and SOC architects implementing Microsoft Defender portal with multitenant management capabilities.
 author: guywi-ms
 ms.author: guywild
 ms.date: 11/20/2025
-ms.service: unified-security-operation
+ms.service: unified-security-operations
 ms.topic: concept-article
 ---
 # Microsoft Defender portal implementation guide for MSSPs
@@ -60,7 +60,7 @@ Successfully transitioning customers to the Microsoft Defender portal requires c
 
 ### Set up access to multiple customer tenants
 
-MSSPs can delegate access to customer tenants through several methods. [Learn more about delegated access options](partner-center/customers/gdap-introduction) so you can choose the approach that best fits your organization's needs and customer requirements.
+MSSPs can delegate access to customer tenants through several methods. [Learn more about delegated access options](/partner-center/customers/gdap-introduction) so you can choose the approach that best fits your organization's needs and customer requirements.
 
 >[!NOTE]
 > It’s important to remember that there are other scenarios where MSSPs should not use cross-workspace rules. For example, when the same rule applies to multiple individual workspaces, data does not need to be correlated together. For this scenario, MSSPs should push the same rule to whatever workspaces it applies to.
@@ -71,7 +71,7 @@ Some advanced scenarios using automation rules and playbooks might still require
 
 #### Unified RBAC
 When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
-- [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles.md#email--collaboration-permissions-mapping)
+- [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles#email--collaboration-permissions-mapping)
 - [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles.md#exchange-online-permissions-mapping)
 
    >[!NOTE]
@@ -191,7 +191,8 @@ Additional permission might be required for the analyst to triage and investigat
 
 Please refer here: [Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/import-rbac-roles) to import roles to get you quickly started with URBAC, or here [Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/create-custom-rbac-roles#create-a-custom-role) to create custom roles.
 --->
-For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
+
+For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
 
 ## Step 2 - Content Management
 
@@ -262,7 +263,7 @@ The Microsoft Defender portal provides all relevant information so you don't hav
   
   For more information, see [Update incident triage processes for the Defender portal](/azure/sentinel/move-to-defender?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json#update-incident-triage-processes-for-the-defender-portal).
 
-- **Alert correlation and incident merging:** Defender's correlation engine merges incidents when it recognizes common elements between alerts in separate incidents. When a new alert meets [correlation](/defender-xdr/alerts-incidents-correlation.md#incident-creation-and-alert-correlation) criteria, Defender aggregates and correlates it with other related alerts from all detection sources into a new incident. The unified incident queue reveals a more comprehensive attack, making analysts more efficient and providing a complete attack story. 
+- **Alert correlation and incident merging:** Defender's correlation engine merges incidents when it recognizes common elements between alerts in separate incidents. When a new alert meets [correlation](/defender-xdr/alerts-incidents-correlation#incident-creation-and-alert-correlation) criteria, Defender aggregates and correlates it with other related alerts from all detection sources into a new incident. The unified incident queue reveals a more comprehensive attack, making analysts more efficient and providing a complete attack story. 
 
   In [multi-workspace](/azure/sentinel/workspaces-defender-portal#primary-and-secondary-workspaces) scenarios, only alerts from a primary workspace are correlated with Microsoft Defender data. There are also scenarios where incidents cannot be merged. 
 
@@ -271,7 +272,7 @@ The Microsoft Defender portal provides all relevant information so you don't hav
 
 - **Multitenant organization:** You can view and manage incidents, alerts, and cases across customer tenants in a unified queue. Each analyst can set up their multitenant view with the tenants they're managing. For more information, see [Microsoft Defender multitenant management](mto-overview.md).
 
-- **Integration with external ticketing systems:** If an external ticketing system fetches and synchronizes with the alerts and incidents you manage, we recommend that you leverage the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0) to ensure seamless integration and efficient management of incidents and alerts across different systems. 
+- **Integration with external ticketing systems:** If an external ticketing system fetches and synchronizes with the alerts and incidents you manage, we recommend that you leverage the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview) to ensure seamless integration and efficient management of incidents and alerts across different systems.
 
   If you're using the Microsoft Sentinel SecurityInsights API to interact with Microsoft Sentinel incidents, you might need to update your automation conditions and trigger criteria due to changes in the response body.
 
@@ -298,7 +299,7 @@ Once the tenants are onboarded to multitenant management in Defender (MTO), endp
 >- For Microsoft Intune, use the Endpoint security manager role
 >- The devices in each Defender tenant must be affiliated with the corresponding Entra tenant 
 >
->For more information, see [Use Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/mem/intune/protect/mde-security-integration?toc=%2Fdefender-endpoint%2Ftoc.json&bc=%2Fdefender-endpoint%2Fbreadcrumb%2Ftoc.json&view=o365-worldwide).
+>For more information, see [Use Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/mem/intune/protect/mde-security-integration?toc=%2Fdefender-endpoint%2Ftoc.json&bc=%2Fdefender-endpoint%2Fbreadcrumb%2Ftoc.json).
 
 >[!NOTE]
 > Multitenant management in Defender (MTO) doesn't support Microsoft Defender for Business tenants.
@@ -324,7 +325,7 @@ For more information, see [Microsoft Defender for Cloud Apps overview](/defender
 #### Cloud
 **Microsoft Defender for Cloud** is integrated with Microsoft Defender. This integration lets you access Defender for Cloud alerts and incidents within the Defender portal, and provides you with richer context to investigations that span cloud resources, devices, and identities. It allows security teams to get the complete picture of an attack, including suspicious and malicious events that happen in their cloud environment.
 
-For more information, see [What is Microsoft Defender for Cloud?](/defender-for-cloud/defender-for-cloud-introduction).
+For more information, see [What is Microsoft Defender for Cloud?](../defender-for-cloud/defender-for-cloud-introduction.md).
 
 #### Exposure management
 
@@ -398,7 +399,7 @@ You can use the investment your customers have made with Microsoft and partner d
 
 - Blogs: [FAQ 1](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftechcommunity.microsoft.com%2Fblog%2Fmicrosoftsentinelblog%2Ffrequently-asked-questions-about-the-unified-security-operations-platform%2F4212048&data=05%7C02%7Ccatarinal%40microsoft.com%7Cdde550170daf4040099b08dd79270483%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638799930724641836%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=TDXvftXRO1kjSkiZHRYFg2%2Fj1Sd%2FHCENeQeuMJHSr2Q%3D&reserved=0) \| [FAQ 2](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftechcommunity.microsoft.com%2Fblog%2Fmicrosoftsentinelblog%2Funified-security-operations-platform---technical-faq%2F4189136&data=05%7C02%7Ccatarinal%40microsoft.com%7Cdde550170daf4040099b08dd79270483%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638799930724651830%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=N0Et6VOIFEU%2BMk76jVP%2Fdt3Cjrm%2FqamZPvfgNCRqNnU%3D&reserved=0)  ​
 
-- Capability differences: [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json&view=o365-worldwide)  ​
+- Capability differences: [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json)  ​
 
 - Alert correlation and incident merging: [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation)  ​
 
