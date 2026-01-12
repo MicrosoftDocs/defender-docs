@@ -1,88 +1,96 @@
 ---
-title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
-description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
+title: Configure Windows event auditing | Microsoft Defender for Identity
+description: This article describes how to configure Defender for Identity to collect Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Configure Windows event collection
+# Configure Windows event auditing
 
-This article describes how to configure windows event collection.
+This article describes how to configure windows event auditing.
 
-Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal Defender for Identity coverage, make sure that collection of windows events is properly configured.
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
 
+Defender for Identity generates health alerts when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
+If auditing is configured properly, it has minimal effect on server performance.
 
-## Configure automatic Windows event auditing with the Defender for Identity sensor v3.x
+## Before you begin
 
-Defender for Identity sensor v3.x offers preview feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones.
+If you're configuring windows event auditing on domain controllers:
 
-To turn on automatic windows auditing:
+1. Download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).  
+1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to check your current cofiguration and generate a report of any adjustments you need to make before you begin configuring windows event collection:
+
+    Use this format to generate the report:
+
+    ```powershell
+        New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -Identity "DOMAIN\ServiceAccountName" -OpenHtmlReport
+    ```
+
+    Where:
+    - `Path` is the directory where the report is saved.
+    - `Mode` indicates where the settings are collected from.
+        - In `Domain` mode, the settings are collected from the Group Policy objects (GPOs). When using `-Mode Domain`, include the `-Identity` parameter to avoid an interactive prompt.
+        - In `LocalMachine` mode, the settings are collected from the local machine.
+    - `OpenHtmlReport` opens the HTML report after the report is generated.
+    For example, to generate a report and open it in your default browser, run the following command:
+
+    ```powershell
+    New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -OpenHtmlReport
+    ```
+
+    For more information, see: [New-MDIConfigurationReport](/powershell/module/defenderforidentity/new-mdiconfigurationreport?view=defenderforidentity-latest&preserve-view=true).
+1. Review the report and make any necessary adjustments before configuring windows event collection. 
+
+## Configure Defender for Identity to collect Windows events automatically (Preview)
+
+> [!NOTE]
+> Automatic windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
+
+Automatic windows auditing performs all of the configuration tasks automatically:
+
+- Checks current windows event auditing configurations
+- Identifies any gaps in the configuration
+- Applies any necessary changes
+- Sends health alerts about the configuration state.
+- Applies auditing settings directly to the local system policy of the Domain Controller
+- Runs once every 24 hours.
+
+> [!NOTE]
+> Domain-level GPO settings override local configurations. Using automatic windows event collection can cause conflicts with existing Group Policy audit configurations. If you want to use automatic configuration, completely remove the GPO.
+
+### Turn on automatic windows auditing:
+
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**. 
 1. In the **General** section, select **Advanced features**.
 1. Turn on **Automatic Windows auditing configuration**.​
 
-If you do not select automatic Windows auditing configuration, you must manually configure Windows event auditing in the Defender portal or using PowerShell.
-
-## Manually configure Windows event auditing
-
-Configure Windows event auditing on your domain controllers to support Defender for Identity detections.
-
-Defender for Identity generates health alerts when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
-
-### Manually configure Windows event auditing using Powershell
-
-### Prerequisites
-
-Before you run Defender for Identity PowerShell commands, make sure that you download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
-
 > [!NOTE]
-> The Active Directory PowerShell module is only required when configuring Defender for Identity on domain controllers. It isn’t required on AD CS servers running the Certification Authority Role Service.
+> If you don't select automatic Windows auditing, you must configure Windows event auditing either manually or using PowerShell.
 
-### Generate a report of current configurations using PowerShell
+## Configure Windows event collection manually
 
-Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
+This section includes instructions for manually configuring Windows event collection in these cases:
 
-```powershell
-New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -Identity "DOMAIN\ServiceAccountName" -OpenHtmlReport
-```
-Where:
+- [Configure auditing on a domain controller](#configure-auditing-on-domain-controllers)
+- [Configure auditing on an AD FS Container](#configure-auditing-on-ad-fs)
+- [Configure auditing on AD CS servers](#configure-auditing-on-ad-cs)
+- [Configure auditing on Microsoft Entra Connect](#configure-auditing-on-microsoft-entra-connect)
+- [Configure auditing on the Configuration container](#configure-auditing-on-the-configuration-container)
 
-- `Path` specifies the path to save the reports to.
-- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects (GPOs). In `LocalMachine` mode, the settings are collected from the local machine.
+### Configure auditing on domain controllers
 
-    The `Domain` mode report includes only configurations set as group policies on the domain. If you have settings defined locally on your domain controllers, we recommend that you also run the [Test-MdiReadiness.ps1](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
+To configure auditing on a domain controller, you must:
 
-- `OpenHtmlReport` opens the HTML report after the report is generated.
+- [Configure Directory Services Advanced Auditing](#configure-directory-services-advanced-auditing)
+- [Configure NTLM auditing](#configure-ntlm-auditing)
+- [Configure Domain object auditing](#configure-domain-object-auditing)
 
-> [!NOTE]
-> When using `-Mode Domain`, include the `-Identity` parameter to avoid an interactive prompt.
-> For more information, see: [New-MDIConfigurationReport](/powershell/module/defenderforidentity/new-mdiconfigurationreport?view=defenderforidentity-latest&preserve-view=true).
+#### Configure Directory Services Advanced Auditing
 
-For example, to generate a report and open it in your default browser, run the following command:
-
-```powershell
-New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -OpenHtmlReport
-```
-
-For more information, see the [Defender for Identity PowerShell reference](/powershell/module/defenderforidentity/new-mdiconfigurationreport).
-
-## Configure Windows event auditing for domain controllers
-
-Update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
-
-- Advanced Audit Policy settings
-- [NTLM auditing](#configure-ntlm-auditing)
-- [Domain object auditing](#configure-domain-object-auditing)
-
-For more information, see [Advanced security auditing FAQ](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-auditing-faq).
-
-You can configure auditing on the domain controllers either in the portal or using PowerShell.
-
-### Configure Advanced Audit Policy settings in the Defender portal
-
-This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity in the Defender portal.
+This section describes how to modify your domain controller's Advanced Audit Policy settings for Defender for Identity.
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -113,7 +121,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
         > [!NOTE]
-        > <a name=failure>*</a> Noted subcategories don't support failure events. However, we recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
+        > <a name=failure>*</a> These subcategories don't support failure events. However, we recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
@@ -130,59 +138,8 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
 For more information, see the [auditpol reference documentation](/windows-server/administration/windows-commands/auditpol).
 
-### Configure Advanced Audit Policy settings using PowerShell
 
-The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
-
-The following command defines all settings for the domain, creates group policy objects, and links them.
-
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-
-To configure your settings, run:
-
-```powershell
-Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
-```
-
-Where:
-
-- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
-- `Configuration` specifies which configuration to set. Use `All` to set all configurations.
-- `CreateGpoDisabled` specifies if the GPOs are created and kept as disabled.
-- `SkipGpoLink` specifies that GPO links aren't created.
-- `Force` specifies that the configuration is set or GPOs are created without validating the current state.
-
-To view your audit policies, use the `Get-MDIConfiguration` command to show current values:
-
-```powershell
-Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
-```
-
-Where:
-
-- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
-- `Configuration` specifies which configuration to get. Use `All` to get all configurations.
-
-To test your audit policies, use the `Test-MDIConfiguration` command to get a `true` or `false` response as to whether the values are configured correctly:
-
-```powershell
-Test-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
-```
-
-Where:
-
-- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
-- `Configuration` specifies which configuration to test. Use `All` to test all configurations.
-
-For more information, see the following [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
-
-- [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
-- [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
-- [Test-MDIConfiguration](/powershell/module/defenderforidentity/test-mdiconfiguration)
-
-## Configure NTLM auditing
+#### Configure NTLM auditing
 
 When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data. This section describes the extra configuration steps that you need for auditing Windows event 8004.
 
@@ -191,7 +148,7 @@ When a Defender for Identity sensor parses Windows event 8004, Defender for Iden
 
 To configure NTLM auditing:
 
-1. After you configure your initial Advanced Audit Policy settings in the [Defender portal](#configure-advanced-audit-policy-settings-in-the-defender-portal) or [using PowerShell](#configure-advanced-audit-policy-settings-using-powershell), open **Group Policy Management**. Then go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
+1. Open **Group Policy Management**, and go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
 
 1. Configure the specified security policies as follows:
 
@@ -205,11 +162,9 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 :::image type="content" source="../media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the audit configuration for outgoing NTLM traffic to remote servers." border="false":::
 
-### Configure domain object auditing
+#### Configure domain object auditing
 
 To collect events for object changes, such as for event 4662, you must also configure object auditing on the user, group, computer, and other objects. The following procedure describes how to enable auditing in the Active Directory domain.
-
-To ensure that the domain controllers are properly configured to record the necessary events, review and audit your policies in the [Defender portal](#configure-advanced-audit-policy-settings-in-the-defender-portal) or [using PowerShell](#configure-advanced-audit-policy-settings-using-powershell) before you enable event collection. If auditing is configured properly, it has minimal effect on server performance.
 
 To configure domain object auditing:
 
@@ -263,7 +218,7 @@ To configure domain object auditing:
 > - You can also assign auditing permissions on **All descendant objects**, using only the object types detailed in the last step.
 > - The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
-## Configure auditing on AD FS
+### Configure auditing on AD FS
 
 To configure auditing on Active Directory Federation Services (AD FS):
 
@@ -285,15 +240,17 @@ To configure auditing on Active Directory Federation Services (AD FS):
 
 1. Select **OK**.
 
-### Configure Verbose logging for AD FS events
+#### Configure Verbose logging for AD FS events
 
-Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
+Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. 
+
+You can use the following PowerShell command to configure the auditing level to **Verbose**:
 
 ```powershell
 Set-AdfsProperties -AuditLevel Verbose
 ```
 
-## Configure auditing on AD CS
+### Configure auditing on AD CS
 
 If you're working with a dedicated server that has Active Directory Certificate Services (AD CS) configured, configure auditing as follows to view dedicated alerts and Secure Score reports:
 
@@ -313,6 +270,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
      certutil –setreg CA\AuditFilter 127 
      net stop certsvc && net start certsvc
     ```
+
    - To configure CA auditing in the Defender portal:
 
      1. Select **Start** > **Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**.
@@ -326,7 +284,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
 > [!NOTE]
 > Configuring **Start and Stop Active Directory Certificate Services** event auditing might cause restart delays when you're dealing with a large AD CS database. Consider removing irrelevant entries from the database. Alternatively, refrain from enabling this specific type of event.
 
-## Configure auditing on Microsoft Entra Connect
+### Configure auditing on Microsoft Entra Connect
 
 To configure auditing on Microsoft Entra Connect servers:
 
@@ -338,7 +296,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
 ![Screenshot of the Group Policy Management Editor.](media/configure-windows-event-collection/image.png)
 
-## Configure auditing on the configuration container<a name="enable-auditing-on-an-exchange-object"></a>
+### Configure auditing on the configuration container<a name="enable-auditing-on-an-exchange-object"></a>
 
 The configuration container audit is required only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
 
@@ -365,6 +323,46 @@ The configuration container audit is required only for environments that current
     ![Screenshot of the auditing settings for the Configuration container.](../media/audit-configuration.png)
 1. Select **OK**.
 
+## Configure Windows event collection using PowerShell
+
+For more information, see the [Defender for Identity PowerShell reference](/powershell/module/defenderforidentity/new-mdiconfigurationreport):
+- [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
+- [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
+
+The following commands describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
+
+**To view your audit policies**:
+
+```powershell
+Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
+```
+
+Where:
+
+- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
+- `Configuration` specifies which configuration to get. Use `All` to get all configurations.
+
+**To configure your settings**:
+
+```powershell
+Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
+```
+
+Where:
+
+- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
+- `Configuration` specifies which configuration to set. Use `All` to set all configurations.
+- `CreateGpoDisabled` specifies if the GPOs are created and kept as disabled.
+- `SkipGpoLink` specifies that GPO links aren't created.
+- `Force` specifies that the configuration is set or GPOs are created without validating the current state.
+
+The following command defines all settings for the domain, creates group policy objects, and links them.
+
+```powershell
+Set-MDIConfiguration -Mode Domain -Configuration All
+```
+
+
 ## Update legacy configurations
 
 Defender for Identity no longer requires logging 1,644 events. If you have either of the following settings enabled, you can remove them from the registry.
@@ -387,8 +385,4 @@ For more information, see:
 - [Event collection with Microsoft Defender for Identity](event-collection-overview.md)
 - [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
 - [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing)
-
-## Next step
-
-> [!div class="step-by-step"]
-> [What are Defender for Identity roles and permissions?](../role-groups.md)
+- 
