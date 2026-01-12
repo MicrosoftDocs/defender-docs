@@ -2,7 +2,7 @@
 title: Enable Defender for Containers on GCP (GKE) via portal
 description: Learn how to enable Microsoft Defender for Containers on your GKE clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
-ms.date: 11/27/2025
+ms.date: 01/12/2026
 ai-usage: ai-assisted
 ---
 
@@ -33,7 +33,9 @@ GCP-specific requirements:
 - Service account with required IAM roles
 - Cloud Shell or gcloud CLI configured
 
-## Create GCP connector
+## Connect your GCP project
+
+Before you enable Defender for Containers, you must connect your GCP project to Microsoft Defender for Cloud.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -43,24 +45,7 @@ GCP-specific requirements:
 
 1. Select **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png" alt-text="Screenshot showing how to connect a GCP project to Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png":::
-
-    :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-environment.png" alt-text="Screenshot showing adding GCP environment." lightbox="media/defender-for-kubernetes-intro/add-gcp-environment.png":::
-
-1. Select the relevant GCP connector if you have multiple:
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/relevant-connector.png" alt-text="Screenshot that shows an example GCP connector." lightbox="media/defender-for-containers-enable-plan-gke/relevant-connector-expanded.png":::
-
-## Configure connector details
-
-1. In the **Account details** section, enter:
-   - **Connector name**: A descriptive name for your GCP project
-   - **GCP project ID**: Your GCP project identifier
-   - **Resource group**: Select or create a resource group
-
-   :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-account-details.png" alt-text="Screenshot showing GCP account details configuration." lightbox="media/defender-for-kubernetes-intro/add-gcp-account-details.png":::
-
-1. Select **Next: Select plans**.
+1. To create a GCP connector and configure the required permissions, see:[Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project)
 
 ## Enable Defender for Containers features
 
@@ -86,9 +71,15 @@ GCP-specific requirements:
 
 ## Set up GCP permissions
 
-1. Download the setup script from the portal.
+You can use either Google Cloud Shell (recommended) or a local terminal with gcloud configured.
 
-1. Open Google Cloud Shell or your local terminal with gcloud configured.
+1. Log in to [Google Cloud Console](https://console.cloud.google.com/home/dashboard?project=123456&cloudshell=true).
+
+1. Select the Activate Cloud Shell icon (terminal icon).
+
+Google Cloud Shell opens in a terminal pane at the bottom of the console.
+
+1. Copy the setup script from the portal.
 
 1. Run the setup script to create the required service account and permissions:
 
@@ -256,18 +247,8 @@ To exclude specific GKE clusters from automatic provisioning:
 > - `ms_defender_container_exclude_sensors` = `true`
 > - `ms_defender_container_exclude_azurepolicy` = `true`
 
-## Best practices
 
-1. **Start with non-production**: Test on dev/test clusters first for selective deployment.
-1. **Enable all components**: Get comprehensive protection when possible.
-1. **Use Workload Identity**: Enhance security with Workload Identity.
-1. **Regular monitoring**: Check dashboard weekly for findings.
-1. **Image signing**: Implement Binary Authorization for production.
-1. **Document exclusions**: Track why certain clusters are excluded in selective deployments.
-1. **Deploy incrementally**: When using selective deployment, add one component at a time.
-1. **Monitor each step**: Verify each component before proceeding to the next.
-
-## Clean up resources
+## Disable Defender for Containers
 
 To disable Defender for Containers, follow these steps:
 
