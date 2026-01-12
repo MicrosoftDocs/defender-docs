@@ -1,18 +1,20 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 11/05/2025
+ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Configure audit policies for Windows event logs
+# Configure Windows event collection
 
-Defender for Identity detections rely on specific Windows event log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+This article describes how to configure windows event collection.
 
-This article describes how to configure the advanced audit policy settings to avoid gaps in the event logs leading to incomplete Defender for Identity coverage.
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal Defender for Identity coverage, make sure that collection of windows events is properly configured.
 
-## Configure Windows event auditing with the Defender for Identity sensor v3.x
+
+
+## Configure automatic Windows event auditing with the Defender for Identity sensor v3.x
 
 Defender for Identity sensor v3.x offers preview feature that allows automatically configure Windows event auditing on your domain controllers, applying the required Windows event auditing settings to new sensors, and fixing misconfigurations on existing ones.
 
@@ -23,13 +25,13 @@ To turn on automatic windows auditing:
 
 If you do not select automatic Windows auditing configuration, you must manually configure Windows event auditing in the Defender portal or using PowerShell.
 
-## Configure Windows event auditing with the Defender for Identity sensor v2.x
+## Manually configure Windows event auditing
 
-Configure Windows event auditing on your domain controllers to support Defender for Identity detections. 
-Defender for Identity generates health issues for each of these scenarios if they're detected. For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md).
-
+Configure Windows event auditing on your domain controllers to support Defender for Identity detections.
 
 Defender for Identity generates health alerts when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
+
+### Manually configure Windows event auditing using Powershell
 
 ### Prerequisites
 
