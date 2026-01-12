@@ -109,7 +109,7 @@ To filter the network list, select **Filter**, select the **Network monitor stat
 
 You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** still runs on the onboarded devices.
 
-## Troubleshoot device discovery
+## Troubleshoot
 
 If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery.md).
 

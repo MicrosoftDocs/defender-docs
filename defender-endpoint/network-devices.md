@@ -23,7 +23,7 @@ appliesto:
 ---
 # Set up authenticated network scans in Microsoft Defender for Endpoint
 
-Authenticated network scans allow you to discover network devices (for example: routers, switches, firewalls) deployed across your organization, and onboard them to Microsoft Defender for Endpoint. Once onboarded, you can monitor and manage the security posture of these devices using Microsoft Defender Vulnerability Management.
+Authenticated network scans provide an agentless way to discover and assess network infrastructure devices, such as switches, routers, WLAN controllers, firewalls, and VPN gateways.
 
 For more information, see [Authenticated network scans](device-discovery.md#authenticated-network-scans).
 
@@ -160,6 +160,6 @@ Newly discovered devices are displayed under the device inventory in the new **N
 
 :::image type="content" source="/defender/media/defender-endpoint/network-devices-inventory.png" alt-text="Screenshot of the network device tab in the device inventory." lightbox="/defender/media/defender-endpoint/network-devices-inventory.png":::
 
-## Troubleshooting
+## Troubleshoot
 
 If you encounter issues when setting up authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery-network-scans.md).
