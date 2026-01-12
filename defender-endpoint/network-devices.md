@@ -1,10 +1,10 @@
 ﻿---
-title: Network device discovery and vulnerability management
-description: Security recommendations and vulnerability detection are now available for operating systems of switches, routers, WLAN controllers, and firewalls.
+title: Set up authenticated network scans in Microsoft Defender for Endpoint
+description: Set up authenticated network scans to discover network devices in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -14,47 +14,25 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 search.appverid: met150
-ms.date: 03/11/2025
+ms.date: 01/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
 ---
-# Network device discovery and vulnerability management
+# Set up authenticated network scans in Microsoft Defender for Endpoint
 
+Authenticated network scans allow you to discover network devices (for example: routers, switches, firewalls) deployed across your organization, and onboard them to Microsoft Defender for Endpoint. Once onboarded, you can monitor and manage the security posture of these devices using Microsoft Defender Vulnerability Management.
 
-> [!NOTE]
-> The [Tech Community Blog: Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) (published 04-13-2021) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how to get started using these new capabilities.
-
-Network discovery capabilities are available in the **Device inventory** section of the [Microsoft Defender portal](https://security.microsoft.com) and Microsoft Defender XDR consoles.
-
-A designated Microsoft Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Once discovered, vulnerability management capabilities in Defender for Endpoint provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
-
-Once the network devices are discovered and classified, security administrators are able to receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
+For more information, see [Authenticated network scans](device-discovery.md#authenticated-network-scans).
 
 > [!NOTE]
 > The Windows authenticated scan is deprecated from December 18,2025. For more information, see [Windows authenticated scan deprecation FAQs](/defender-vulnerability-management/defender-vulnerability-management-faq#windows-authenticated-scan-deprecation-faqs).
 
-## Approach
+## Prerequisites
 
-Network devices aren't managed as standard endpoints since Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. Depending on the network topology and characteristics, a single device or a few devices onboarded to Microsoft Defender for Endpoint performs authenticated scans of network devices using SNMP (read-only).
-
-> [!NOTE]
-> Authenticated scans support `SNMPv2` and `SNMPv3`.
-
-There are two types of devices to keep in mind:
-
-- **Scanning device**: A device that's already onboarded that you use to scan the network devices.
-- **Network devices**: The network devices you plan to scan and onboard.
-
-### Vulnerability management for network devices
-
-Once the network devices are discovered and classified, security administrators are able to receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
-
-## Operating systems that are supported
-
-The following operating systems are currently supported:
+### Supported operating systems
 
 - Cisco IOS, IOS-XE, NX-OS
 - Fortinet FortiOS
@@ -63,7 +41,7 @@ The following operating systems are currently supported:
 - HPE ArubaOS, Procurve Switch Software
 - Palo Alto Networks PAN-OS
 
-More networking vendors and OS will be added over time, based on data gathered from customer usage. Therefore, you're encouraged to configure all your network devices, even if they're not specified in this list.
+We recommend that you configure all your network devices, even if they're not specified in this list.
 
 ## How to get started
 

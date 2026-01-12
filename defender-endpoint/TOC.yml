@@ -607,8 +607,8 @@
       - name: Review and assess devices
         href: assess-devices.md        
 
-    - name: Authenticated network scans
-      href: network-devices.md
+      - name: Discover network devices (network scans)
+        href: network-devices.md
     - name: Devices
       items:
       - name: Device inventory

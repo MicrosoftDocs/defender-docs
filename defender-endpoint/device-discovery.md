@@ -76,9 +76,20 @@ You select the device discovery mode in the **System** > **Settings** > **Device
 
 ### Authenticated network scans
 
-As an additional layer of discovery, [authenticated network scans](network-devices.md) use designated onboarded devices to perform agentless network scans of preconfigured network devices using supported protocols. These scans are recommended for environments that need deeper visibility into network infrastructure devices.
+Authenticated network scans provide an agentless way to discover and assess network infrastructure devices, such as switches, routers, WLAN controllers, firewalls, and VPN gateways. Designated onboarded devices in your environment periodically scan preconfigured network devices using supported protocols, offering deeper visibility into your network beyond what standard endpoint sensors can provide.
 
-Network devices aren't managed as standard endpoints, as Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. To do this, a designated Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Defender for Endpoint's vulnerability management capabilities provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
+Because network devices typically do not support onboarded sensors, Defender for Endpoint relies on remote, authenticated scans to gather information. On each network segment, one or more onboarded Windows devices act as scanning devices, performing these scans at regular intervals. Once discovered and classified, network devices are integrated into Defender for Endpoint's vulnerability management workflows, enabling security administrators to receive recommendations and review vulnerabilities.
+
+Authenticated scans use SNMP (read-only) and support both SNMPv2 and SNMPv3. The process requires you to designate which onboarded devices will act as scanners and to specify the network devices you want to scan. This approach ensures that even agentless infrastructure is included in your security and vulnerability management strategy.
+
+Once the network devices are discovered and classified, security administrators can receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
+
+> [!NOTE]
+> The Windows authenticated scan is deprecated from December 18, 2025. For more information, see [Windows authenticated scan deprecation FAQs](/defender-vulnerability-management/defender-vulnerability-management-faq#windows-authenticated-scan-deprecation-faqs).
+
+### Vulnerability management for network devices
+
+Once the network devices are discovered and classified, security administrators are able to receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
 
 For more information, see [Network devices](network-devices.md).
 
