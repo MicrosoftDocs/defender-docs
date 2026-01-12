@@ -37,6 +37,8 @@ UEBA behaviors:
 
 UEBA behaviors can be enabled independently from UEBA anomaly detection. 
 
+**Supported data sources during public preview:** AWS CloudTrail, CommonSecurityLog (CyberArk Vault, Palo Alto Threats), and GCPAuditLogs.
+
 For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md).
 
 ## November 2025
