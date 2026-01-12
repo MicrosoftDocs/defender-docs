@@ -21,7 +21,7 @@ Before you begin troubleshooting, familiarize yourself with the following articl
 
 ## Architecture overview
 
-The following diagram illustrates the data flow from log sources to Microsoft Sentinel/log anlaytics workspaces via RSyslog and the Azure Monitor Agent.
+The following diagram illustrates the data flow from log sources to Microsoft Sentinel/log analytics workspaces via RSyslog and the Azure Monitor Agent.
 
 :::image type="content"source="./media/cef-syslog-ama-troubleshooting/ama-flow.png" lightbox="./media/cef-syslog-ama-troubleshooting/ama-flow.png" alt-text="Diagram showing data flow from source to Log Analytics via RSyslog and AMA.":::
 
@@ -34,7 +34,7 @@ Key components:
 
 ### Verify logs are being received
 
-Logs may take up to 20 minutes to appear in Microsoft Sentinel after configuration.
+Logs can take up to 20 minutes to appear in Microsoft Sentinel after configuration.
 
 1. Run tcpdump to verify logs are arriving at the forwarder:
 
