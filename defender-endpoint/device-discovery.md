@@ -60,7 +60,7 @@ Defender for Endpoint discovers:
 
 ### Discovered IoT and OT devices
 
-Defender for Endpoint can discover a wide range of Internet of Things (IoT) and Operational Technology (OT) devices in your network, including printers, cameras, medical devices, industrial control systems (ICS), and more. These devices often have unique characteristics and may not support traditional security agents, making them challenging to monitor and protect. To detect these devices, you need to [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started.md).
+Defender for Endpoint can discover a wide range of Internet of Things (IoT) and Operational Technology (OT) devices in your network, including printers, cameras, medical devices, industrial control systems (ICS), and more. These devices often have unique characteristics and may not support traditional security agents, making them challenging to monitor and protect. To detect these devices, you need to [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started).
 
 ## Discovery modes and scans
 

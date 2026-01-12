@@ -84,7 +84,3 @@ Change command-line settings on your device to allow copying and change text siz
 ## Unmanaged device health state is always "Active".
 
 Temporarily, unmanaged device health state is "Active" during the standard retention period of the device inventory, regardless of their actual state.
-
-## Next steps
-
-- [Review and assess devices](assess-devices.md)
