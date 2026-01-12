@@ -18,8 +18,6 @@ If auditing is configured properly, it has minimal effect on server performance.
 
 ## Before you begin
 
-If you're configuring windows event auditing on domain controllers:
-
 1. Download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).  
 1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to check your current cofiguration and generate a report of any adjustments you need to make before you begin configuring windows event collection:
 
@@ -224,7 +222,8 @@ To configure domain object auditing:
    - **Descendant msDS-DelegatedManagedServiceAccount Objects** <sup>2</sup>
 
 > [!NOTE]
-> - You can also assign auditing permissions on **All descendant objects**, using only the object types detailed in the last step.
+>
+> - You can assign auditing permissions on **All descendant objects**, using only the object types detailed in the last step.
 > - The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
 ### Configure auditing on AD FS
@@ -269,13 +268,13 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.
 
-        :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
+    :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
 
 1. Configure auditing on the certificate authority (CA) by using one of the following methods:
 
    - To configure CA auditing by using the command line, run:
 
-     ```cmd
+    ```cmd
      certutil –setreg CA\AuditFilter 127 
      net stop certsvc && net start certsvc
     ```
@@ -371,7 +370,6 @@ The following command defines all settings for the domain, creates group policy 
 Set-MDIConfiguration -Mode Domain -Configuration All
 ```
 
-
 ## Update legacy configurations
 
 Defender for Identity no longer requires logging 1,644 events. If you have either of the following settings enabled, you can remove them from the registry.
@@ -394,4 +392,3 @@ For more information, see:
 - [Event collection with Microsoft Defender for Identity](event-collection-overview.md)
 - [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
 - [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing)
-- 
