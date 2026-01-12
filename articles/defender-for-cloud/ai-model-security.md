@@ -34,4 +34,16 @@ With AI model security:
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
 - File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
 
+## Upload and register a custom model
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Search for and select **Azure Machine Learning**.
+
+1. Select your registry.
+
+1. Select **Continue**.
+
+1. 
+
 ## Next step
