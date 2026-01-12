@@ -111,7 +111,7 @@ You can disable device discovery in the [Advanced features](advanced-features.md
 
 ## Troubleshoot device discovery
 
-If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](network-authenticated-scan-troubleshooting.md).
+If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery.md).
 
 ## Next steps
 

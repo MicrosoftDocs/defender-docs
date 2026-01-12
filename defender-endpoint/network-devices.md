@@ -166,4 +166,4 @@ Newly discovered devices are displayed under the device inventory in the new **N
 
 ## Troubleshooting
 
-If you encounter issues when setting up authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](network-authenticated-scan-troubleshooting.md).
+If you encounter issues when setting up authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery-network-scans.md).
