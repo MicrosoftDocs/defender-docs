@@ -46,6 +46,21 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### January-2026 Build: 101.25102.0005 | Release version: 30.125102.0005.0
+
+|Build:             |**101.25102.0005**    |
+|-------------------|----------------------|
+|Released:          |**January 7, 2026**|
+|Published:         |**January 7, 2026**|
+|Expiry:            |**Sep 14, 2026**|
+|Release version:   |**30.125102.0005.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
+
+#### What's new
+
+- Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications.
+
 ### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
 
 |Build:             |**101.25092.0005**    |
@@ -54,8 +69,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 22, 2025**|
 |Expiry:            |**Sep 14, 2026**|
 |Release version:   |**30.125092.0005.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.272.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
@@ -69,8 +84,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 18, 2025**|
 |Expiry:            |**Aug 09, 2026**|
 |Release version:   |**30.125092.0002.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.189.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
@@ -84,8 +99,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 15, 2025**|
 |Expiry:            |**September 06, 2026**|
 |Release version:   |**30.125102.0003.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.15.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
 
 #### What's new
 
@@ -103,8 +118,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**November 05, 2025**|
 |Expiry:            |**July 10, 2026**|
 |Release version:   |**30.125092.0001.0**|
-|Engine version:    |**1.1.25090.6000**|
-|Signature version: |**1.439.558.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
