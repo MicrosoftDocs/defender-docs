@@ -70,8 +70,20 @@ You select the device discovery mode in the **System** > **Settings** > **Device
 
 | Mode | Description | How it works | Considerations and actions | Use cases and recommendations |
 |:------------------|:------------|:--------------|:--------------|:-----------------------------|
-| Standard scan (default) | Active scan that enriches device data and discovers more devices using network protocols and active probing. | - Uses common discovery protocols and multicast queries to find devices.<br>- Actively probes observed devices for more information.<br>- Probes devices when characteristics change, typically no more than once every three weeks. | - Active probing can generate up to 50KB of traffic between the onboarded device and the probed device per attempt.<br>- To customize which devices perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery). | - Highly recommended for building a reliable and coherent device inventory.<br>- In almost all cases, organizations should have no security concerns around enabling standard discovery. For more information, see [Standard discovery security considerations](#standard-discovery-security-considerations). |
+| Standard scan (default) | Active scan that enriches device data and discovers more devices using network protocols and active probing. | - Uses common discovery protocols and multicast queries to find devices.<br>- Actively probes observed devices for more information.<br>- Probes devices when characteristics change, typically no more than once every three weeks. | - Active probing can generate up to 50KB of traffic between the onboarded device and the probed device per attempt.<br>- To customize which devices perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery). | - Highly recommended for building a reliable and coherent device inventory.<br>- In almost all cases, organizations should have no security concerns around enabling standard discovery. For more information, see [Security considerations for standard discovery](#security-considerations-for-standard-discovery). |
 | Basic scan | Passive scan that collects network events and device information without sending probes. | - Passively collects events and extracts device information from all network traffic seen by onboarded devices.<br>- Uses the **SenseNDR.exe** binary for passive network data collection.<br>- No network traffic is initiated by the scan. |Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from standard (active) scans only. | - Recommended for sensitive/legacy networks.<br>- Provides limited visibility of unmanaged endpoints. |
+
+### Security considerations for standard discovery
+
+When considering standard discovery, you may be wondering about the implications of probing, and specifically whether security tools might suspect such activity as malicious. In almost all cases, organizations should have no concerns around enabling standard discovery.  
+
+- Probing unmanaged devices is infrequent and lightweight: Each unmanaged device is typically probed no more than once every three weeks, generating less than 50KB of traffic per attempt. In contrast, malicious activity produces much more frequent and voluminous network traffic, which is easily detected by monitoring tools.
+
+- Active discovery is a standard Windows feature: Windows and many other platforms have long included active discovery to find nearby devices for functions like file sharing and printer discovery. Defender for Endpoint leverages these same methods, so network monitoring tools treat this activity as normal.
+
+- Only unmanaged devices are targeted: Device discovery intentionally avoids probing devices that are already onboarded with Defender for Endpoint. Only unmanaged or unknown devices are subject to active probing.
+
+- You can exclude specific devices or subnets: If you have network lures or sensitive devices, you can configure exclusions in Device Discovery settings. Excluded devices are not actively probed and are only discovered passively, similar to basic discovery mode.
 
 ### Authenticated network scans
 
@@ -86,9 +98,9 @@ Once the network devices are discovered and classified, security administrators 
 > [!NOTE]
 > The Windows authenticated scan is deprecated from December 18, 2025. For more information, see [Windows authenticated scan deprecation FAQs](/defender-vulnerability-management/defender-vulnerability-management-faq#windows-authenticated-scan-deprecation-faqs).
 
-For more information, see [Network devices](network-devices.md).
+For information on how to initiate network scans, see [Set up authenticated network scans](network-devices.md).
 
-### Monitored networks
+## Monitored networks
 
 Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a non-corporate network that can be ignored. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
 
@@ -98,7 +110,7 @@ Private network devices aren't listed in the inventory and aren't actively probe
 
 To override this setting, you can add networks to the monitored list. For more information, see [Select networks to monitor](configure-device-discovery.md#view-and-manage-monitored-networks).
 
-## Supported devices and protocols
+## Supported operating systems and protocols
 
 ### Supported operating systems
 
@@ -107,7 +119,7 @@ To override this setting, you can add networks to the monitored list. For more i
 - Windows Server 2019 and later
 - Azure Stack HCI OS, version 23H2 and later
 
-## Supported protocols
+### Supported protocols
 
 The following table shows which protocols are supported by each discovery mode:
 
@@ -157,9 +169,9 @@ Device discovery might also scan other commonly used ports to improve classifica
 
 Most organizations benefit from the out-of-the-box active discovery, device inventory integration, and automatic network handling. You can use additional configuration options for more granular control, targeting, and exclusions as needed for your environment.
 
-This table summarizes which capabilities device discovery provides out-of-the-box, what each additional configuration option enables, and where you can change configurable options in the UI.
+This table summarizes which capabilities device discovery provides out-of-the-box, what each additional configuration option enables, and where you can change configurable options in the Defender portal.
 
-For advanced analysis, vulnerability assessment, and hunting queries, see [Configure device discovery](configure-device-discovery.md).
+To manage device discovery options, see [Manage device discovery](configure-device-discovery.md). For advanced analysis, vulnerability assessment, and hunting queries, see [Review and assess devices](configure-device-discovery.md).
 
 | Feature/option | Default | What it includes or enables | Where to configure in the Defender portal  | More information |
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|-----------------------------------------|------------------|
@@ -168,7 +180,7 @@ For advanced analysis, vulnerability assessment, and hunting queries, see [Confi
 | Device inventory integration | Yes   | Unified view of onboarded and discovered devices. Filter, assess, and take action in inventory. | **Assets** > **Devices** | [Review devices that aren't onboarded](assess-devices.md#monitor-non-onboarded-devices-in-the-device-inventory) |
 | Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default. Can monitor/ignore specific networks. | **System** > **Settings** > **Device discovery** > **Monitored networks**   |[Network list management](configure-device-discovery.md#view-and-manage-monitored-networks)  |
 | Exclusions  | No  | Exclude IPs or device groups from scans. | **System** > **Settings** > **Device discovery** > **Exclusions** |[Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery)  |
-| Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Network device discovery and vulnerability management](network-devices.md)  |
+| Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Set up authenticated network scans](network-devices.md)  |
 | OT/IoT device discovery | No | Integrate with Defender for IoT to discover OT and enterprise IoT devices. | **System** > **Settings** > **Device discovery** > **Enterprise IoT** | [Onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) |
 | Vulnerability assessment | Yes | Assess vulnerabilities on discovered devices and get remediation guidance. For example, search for **SSH** to find recommendations on SSH vulnerabilities related to unmanaged devices. | **Exposure management > Recommendations** | [Vulnerability management overview](/defender-vulnerability-management/defender-vulnerability-management) |
 | Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](assess-devices.md#use-advanced-hunting-on-discovered-devices) |
@@ -184,18 +196,6 @@ The following table summarizes device discovery capabilities by license:
 | Defender for IoT only           | No               | No            | Yes                | Yes                     | No               |
 
 Some features (such as enterprise IoT vulnerability display) are controlled by toggles and may be off by default, depending on your license. Enabling these features may change the data shown in the inventory and UI.
-
-## Standard discovery security considerations
-
-When considering standard discovery, you may be wondering about the implications of probing, and specifically whether security tools might suspect such activity as malicious. In almost all cases, organizations should have no concerns around enabling standard discovery.  
-
-- Probing unmanaged devices is infrequent and lightweight: Each unmanaged device is typically probed no more than once every three weeks, generating less than 50KB of traffic per attempt. In contrast, malicious activity produces much more frequent and voluminous network traffic, which is easily detected by monitoring tools.
-
-- Active discovery is a standard Windows feature: Windows and many other platforms have long included active discovery to find nearby devices for functions like file sharing and printer discovery. Defender for Endpoint leverages these same methods, so network monitoring tools treat this activity as normal.
-
-- Only unmanaged devices are targeted: Device discovery intentionally avoids probing devices that are already onboarded with Defender for Endpoint. Only unmanaged or unknown devices are subject to active probing.
-
-- You can exclude specific devices or subnets: If you have network lures or sensitive devices, you can configure exclusions in Device Discovery settings. Excluded devices are not actively probed and are only discovered passively, similar to basic discovery mode.
 
 ## Next steps
 
