@@ -21,13 +21,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Configure device discovery in Defender for Endpoint
+# Manage device discovery in Defender for Endpoint
 
 [Device discovery](device-discovery.md) allows you to improve your visibility into unmanaged devices, assess their security posture, and take appropriate actions to secure them.
 
-This article describes how to set up and configure device discovery in Microsoft Defender for Endpoint. 
+This article describes how to set up and configure device discovery in Microsoft Defender for Endpoint.
 
-For operating systems that device discovery supports, see [Supported operating systems](device-discovery.md#supported-operating-systems)
+Learn about the [Supported operating systems](device-discovery.md#supported-operating-systems) for this feature.
 
 ## Set up device discovery
 
